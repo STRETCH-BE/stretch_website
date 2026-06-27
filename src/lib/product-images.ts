@@ -11,11 +11,33 @@
 // fill these in gradually. The "related solutions" thumbnails reuse each
 // product's own hero automatically — no extra files needed.
 //
+// PHOTOS vs DIAGRAMS: a plain path string is treated as a photo (fills + crops
+// its slot). For an infographic/diagram that must NOT be cropped, use an object
+// instead:  { src: '/images/products/x.jpg', fit: 'contain', ratio: '1/1', bg: '#ffffff' }
+//   • fit: 'contain' shows the whole image (no crop)
+//   • ratio matches the image shape ('1/1' square, '4/3', '16/9', …)
+//   • bg fills any letterbox margin
+//
 // Filenames are case-sensitive on Vercel: match them EXACTLY.
 // Suggested: JPG/WebP, ~1600px long edge, hero landscape ~4:3, features ~16:11.
 // =============================================================================
 
-export type ProductImageSet = { hero: string; features: string[] };
+export type ProductImage =
+  | string
+  | { src: string; fit?: 'cover' | 'contain'; ratio?: string; bg?: string };
+
+export type ProductImageSet = { hero: ProductImage; features: ProductImage[] };
+
+// Normalises a manifest entry (string OR options object) into concrete props.
+// `fallbackRatio` is the slot's default shape when an image doesn't override it.
+export function pimg(
+  img: ProductImage | undefined,
+  fallbackRatio: string,
+): { src: string; fit: 'cover' | 'contain'; ratio: string; bg?: string } {
+  if (!img) return { src: '', fit: 'cover', ratio: fallbackRatio };
+  if (typeof img === 'string') return { src: img, fit: 'cover', ratio: fallbackRatio };
+  return { src: img.src, fit: img.fit ?? 'cover', ratio: img.ratio ?? fallbackRatio, bg: img.bg };
+}
 
 export const productImages: Record<string, ProductImageSet> = {
   // ---- Polyester ----------------------------------------------------------
@@ -27,7 +49,6 @@ export const productImages: Record<string, ProductImageSet> = {
       '/images/products/polyester-acoustic-stretch-ceiling.jpg', // [2] Acoustic & washable
     ],
   },
-
   // ---- PVC film -----------------------------------------------------------
   'pvc-stretch-ceiling': {
     hero: '/images/products/pvc-stretch-ceiling-hero.jpg',
@@ -37,23 +58,26 @@ export const productImages: Record<string, ProductImageSet> = {
       '/images/products/pvc-stretch-ceiling-removable.jpg', // [2] Removable & washable
     ],
   },
-
   // ---- Acoustic -----------------------------------------------------------
   'acoustic-stretch-system': {
     hero: '/images/products/acoustic-stretch-ceiling-hero.jpg',
     features: [
-      '/images/products/acoustic-stretch-ceiling-absorbtion.jpg', // [0] Class A absorption
+      // Square infographic — show it in full (no crop) on a white panel.
+      {
+        src: '/images/products/acoustic-stretch-ceiling-absorbtion.jpg',
+        fit: 'contain',
+        ratio: '1/1',
+        bg: '#ffffff',
+      }, // [0] Class A absorption
       '/images/products/acoustic-panels.jpg', // [1] Islands & wall panels
       '/images/products/invisible-audio.jpg', // [2] Invisible audio
     ],
   },
-
   // ---- Light & Print (not requested yet — fill in when ready) -------------
   'light-print-stretch-ceiling': {
     hero: '',
     features: ['', '', ''], // [0] backlight  [1] starry sky / RGB  [2] custom print
   },
-
   // ---- Prefab (not requested yet — fill in when ready) --------------------
   'prefab-ceiling-unit': {
     hero: '',
