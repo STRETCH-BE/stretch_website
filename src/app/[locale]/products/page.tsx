@@ -18,7 +18,7 @@ import { ModalButton } from '@/components/ui/ModalButton';
 
 // Products shown as "Coming soon" on the overview grid (still link through to
 // their page). Add a slug here to flag another product.
-const COMING_SOON = ['prefab-ceiling-unit'];
+const COMING_SOON: string[] = [];
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/products', titleKey: 'productsTitle', descKey: 'productsDescription' });
