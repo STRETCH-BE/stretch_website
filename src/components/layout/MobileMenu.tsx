@@ -144,6 +144,31 @@ export default function MobileMenu() {
               </Link>
             ))}
 
+            <div
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                letterSpacing: '.18em',
+                textTransform: 'uppercase',
+                color: 'var(--text-faint-2)',
+                margin: '26px 0 12px',
+              }}
+            >
+              {t('nav.technical')}
+            </div>
+            {[
+              { href: '/samples', label: 'Request samples' },
+              { href: '/blog', label: 'Guides & specs' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                style={{ padding: '9px 0', fontSize: 15, fontWeight: 600, color: 'var(--text-muted)' }}
+              >
+                {item.label}
+              </Link>
+            ))}
+
             <button
               type="button"
               className="btn btn--primary"

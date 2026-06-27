@@ -9,12 +9,14 @@
     "languageLabel": "Language",
     "nav": {
       "solutions": "Solutions",
+      "technical": "Technical",
       "inspiration": "Inspiration",
       "partners": "Partners",
       "contact": "Contact",
       "reseller": "Become a reseller",
       "training": "Installer training",
       "allSolutions": "All solutions",
+      "allSpecs": "All specs & downloads",
       "about": "About",
       "faq": "FAQ"
     },
