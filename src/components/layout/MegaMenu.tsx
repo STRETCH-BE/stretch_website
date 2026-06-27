@@ -24,7 +24,7 @@ import Placeholder from '@/components/ui/Placeholder';
 export type MegaItem = { title: string; sub: string; href: string; soon?: boolean };
 export type MegaCategory = { icon: LucideIcon; title: string; desc: string; href: string; items: MegaItem[] };
 
-promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/mega/featured.jpg' };
+type ImagePromo = { kind: 'image'; title: string; ctaLabel: string; source: string; image?: string };
 type DarkPromo = { kind: 'dark'; eyebrow: string; title: string; body: string; ctaLabel: string; ctaHref: string };
 
 export type MegaConfig = {
@@ -40,7 +40,7 @@ export const solutionsMenu: MegaConfig = {
   railLabel: 'Browse solutions',
   allLabel: 'All solutions',
   allHref: '/products',
-  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/home/Hero.jpg' },
+  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/mega/featured.jpg' },
   categories: [
     {
       icon: Layers,
