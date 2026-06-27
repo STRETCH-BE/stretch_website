@@ -72,7 +72,7 @@ export const solutionsMenu: MegaConfig = {
       href: '/products/light-print-stretch-ceiling',
       items: [
         { title: 'Light & print ceiling', sub: 'Translucent membrane', href: '/products/light-print-stretch-ceiling' },
-        { title: 'Backlit & starry sky', sub: 'Even diffused light', href: '/products/light-print-stretch-ceiling#specs' },
+        { title: 'Starry sky', sub: 'Fibre-optic night sky', href: '/products/starry-sky' },
         { title: 'Custom print', sub: 'Any image, edge to edge', href: '/products/light-print-stretch-ceiling' },
       ],
     },
@@ -83,7 +83,7 @@ export const solutionsMenu: MegaConfig = {
       href: '/products/prefab-ceiling-unit',
       items: [
         { title: 'Prefab ceiling unit', sub: 'Click-fit installation', href: '/products/prefab-ceiling-unit', soon: true },
-        { title: 'Inspection hatch', sub: 'Discreet access', href: '/products/prefab-ceiling-unit#specs' },
+        { title: 'Inspection hatch', sub: 'Discreet access', href: '/products/inspection-hatch' },
       ],
     },
     {
