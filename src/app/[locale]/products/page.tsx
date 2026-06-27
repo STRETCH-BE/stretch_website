@@ -28,10 +28,14 @@ export default function ProductsPage({ params }: { params: { locale: string } })
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
 
+  // Sub-pages (starry sky, inspection hatch) are flagged listed:false — they
+  // have their own pages + mega-menu links but don't appear as overview cards.
+  const listed = products.filter((p) => p.listed !== false);
+
   const itemList = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    itemListElement: products.map((p, i) => ({
+    itemListElement: listed.map((p, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: p.name,
@@ -65,7 +69,7 @@ export default function ProductsPage({ params }: { params: { locale: string } })
       {/* Product grid */}
       <section className="container" style={{ paddingBottom: 'clamp(50px,6vw,90px)' }}>
         <div className="prod-grid">
-          {products.map((p) => {
+          {listed.map((p) => {
             const soon = COMING_SOON.includes(p.slug);
             return (
               <Link key={p.slug} href={`/products/${p.slug}`} className="prod-card zoom-wrap">
