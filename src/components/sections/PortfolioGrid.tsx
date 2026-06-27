@@ -55,7 +55,15 @@ export default function PortfolioGrid() {
         {shown.map((p) => (
           <figure key={p.title} className="zoom-wrap" style={{ margin: 0, border: '1px solid var(--border)', overflow: 'hidden' }}>
             <div style={{ overflow: 'hidden' }}>
-              <Placeholder label={`${p.title} — ${p.cat}`} light ratio="4/3" className="zoom-img" decorative />
+              <Placeholder
+              label={`${p.title} — ${p.cat}`}
+              src={p.image}
+              alt={`${p.title} — ${p.cat}`}
+              sizes="(max-width: 980px) 50vw, 25vw"
+              light
+              ratio="4/3"
+              className="zoom-img"
+            />
             </div>
             <figcaption style={{ padding: '18px 20px' }}>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red)', marginBottom: 9 }}>{p.cat}</div>
