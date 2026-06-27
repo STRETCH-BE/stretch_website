@@ -11,6 +11,8 @@ export type Project = {
   title: string;
   meta: string;
   featured?: boolean;
+  /** Photo path from /public, e.g. '/images/projects/foyer.jpg'. Empty = placeholder. */
+  image?: string;
 };
 
 export const projectFilters: { key: string; label: string }[] = [
@@ -62,6 +64,8 @@ export type BlogPost = {
   dateModified: string; // ISO
   author: string;
   readMinutes: number;
+  /** Optional hero photo path from /public. Empty = branded placeholder. */
+  image?: string;
   /** Body as an ordered list of {heading, paragraphs}. */
   body: { heading: string; paragraphs: string[] }[];
 };
@@ -116,6 +120,9 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-01-22',
     author: 'STRETCH',
     readMinutes: 6,
+    // Reuses the acoustic product photo. Point this at a dedicated image
+    // (e.g. '/images/blog/acoustics-explained.jpg') whenever you have one.
+    image: '/images/products/acoustic-stretch-ceiling-hero.jpg',
     body: [
       {
         heading: 'Why rooms sound harsh',
