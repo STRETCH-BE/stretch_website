@@ -34,7 +34,20 @@ type OpenOptions = {
   source?: string;
   /** Product slug for analytics, when opened from a product context. */
   product?: string;
+  /** For gated downloads: the file to deliver once the lead is submitted. */
+  download?: { url: string; filename: string; label: string };
 };
+
+/** Programmatically download a same-origin file (used after a gated submit). */
+function triggerDownload(url: string, filename: string) {
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.rel = 'noopener';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
 
 type LeadModalContextValue = {
   open: (type: ModalType, options?: OpenOptions) => void;
@@ -159,9 +172,19 @@ function LeadGenModal({
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, source, product: options.product }),
+        body: JSON.stringify({
+          ...data,
+          source,
+          product: options.product,
+          downloadedFile: options.download?.label,
+        }),
       });
       if (!res.ok) throw new Error('Request failed');
+
+      // Gated download: deliver the file now that the lead is captured.
+      if (options.download) {
+        triggerDownload(options.download.url, options.download.filename);
+      }
 
       // ---- Conversion events (best-effort, never block the UI) ----
       const consent = getConsent();
@@ -292,9 +315,21 @@ function LeadGenModal({
               >
                 {cfg.sentMsg}
               </p>
-              <button onClick={onClose} className="btn btn--dark btn--sm">
-                {t('successTitle') ? 'Close' : 'Close'}
-              </button>
+              <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+                {options.download && (
+                  <a
+                    href={options.download.url}
+                    download={options.download.filename}
+                    className="btn btn--primary btn--sm"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    Download datasheet <ArrowRight size={15} />
+                  </a>
+                )}
+                <button onClick={onClose} className="btn btn--dark btn--sm">
+                  Close
+                </button>
+              </div>
             </div>
           ) : (
             <>
