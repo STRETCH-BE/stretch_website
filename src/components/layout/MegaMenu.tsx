@@ -40,7 +40,7 @@ export const solutionsMenu: MegaConfig = {
   railLabel: 'Browse solutions',
   allLabel: 'All solutions',
   allHref: '/products',
-  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/home/Hero.jpg' },
+  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/mega/featured.jpg' },
   categories: [
     {
       icon: Layers,
