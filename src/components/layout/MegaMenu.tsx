@@ -40,7 +40,7 @@ export const solutionsMenu: MegaConfig = {
   railLabel: 'Browse solutions',
   allLabel: 'All solutions',
   allHref: '/products',
-  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/mega/featured.jpg' },
+  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/home/Hero.jpg' },
   categories: [
     {
       icon: Layers,
@@ -79,10 +79,11 @@ export const solutionsMenu: MegaConfig = {
     {
       icon: LayoutGrid,
       title: 'Prefab',
-      desc: 'Ready-made units',
+      desc: 'Aluminium, steel & wood',
       href: '/products/prefab-ceiling-unit',
       items: [
-        { title: 'Prefab ceiling unit', sub: 'Click-fit installation', href: '/products/prefab-ceiling-unit', soon: true },
+        { title: 'Prefab structures', sub: 'Beams, coving & more', href: '/products/prefab-ceiling-unit' },
+        { title: 'Prefab lighting elements', sub: 'Aluminium + stretch', href: '/products/prefab-lighting-elements' },
         { title: 'Inspection hatch', sub: 'Discreet access', href: '/products/inspection-hatch' },
       ],
     },
