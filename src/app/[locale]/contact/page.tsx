@@ -11,6 +11,7 @@ import { breadcrumbSchema, localBusinessSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
+import { pageImages } from '@/lib/page-images';
 import ContactForm from '@/components/sections/ContactForm';
 import { ModalButton } from '@/components/ui/ModalButton';
 
@@ -71,7 +72,13 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
             <ContactForm />
           </div>
           <div style={{ position: 'relative', minHeight: 380, height: '100%' }}>
-            <Placeholder label="Workshop / map" decorative style={{ minHeight: 380 }} />
+            <Placeholder
+            label="Workshop / map"
+            src={pageImages.contact}
+            alt="STRETCH workshop"
+            sizes="(max-width: 860px) 100vw, 45vw"
+            style={{ minHeight: 380 }}
+          />
             <div style={{ position: 'absolute', left: 0, bottom: 0, right: 0, background: 'var(--black)', color: '#fff', padding: '20px 24px' }}>
               <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red)', marginBottom: 8 }}>Headquarters</div>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>{contact.address.street}</div>
