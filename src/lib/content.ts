@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
     readMinutes: 6,
     // Reuses the acoustic product photo. Point this at a dedicated image
     // (e.g. '/images/blog/acoustics-explained.jpg') whenever you have one.
-    image: '/images/products/acoustic-stretch-ceiling-hero.jpg',
+    image: '/images/blog/acoustic-stretch-ceiling-hero.jpg',
     body: [
       {
         heading: 'Why rooms sound harsh',
