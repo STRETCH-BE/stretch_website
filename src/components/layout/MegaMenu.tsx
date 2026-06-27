@@ -71,9 +71,9 @@ export const solutionsMenu: MegaConfig = {
       desc: 'LED, backlight & print',
       href: '/products/light-print-stretch-ceiling',
       items: [
-        { title: 'Light & print ceiling', sub: 'Translucent membrane', href: '/products/light-print-stretch-ceiling' },
+        { title: 'Illuminated ceiling', sub: 'Backlit translucent', href: '/products/light-print-stretch-ceiling' },
         { title: 'Starry sky', sub: 'Fibre-optic night sky', href: '/products/starry-sky' },
-        { title: 'Custom print', sub: 'Any image, edge to edge', href: '/products/light-print-stretch-ceiling' },
+        { title: 'Custom print', sub: 'Any image, edge to edge', href: '/products/custom-print' },
       ],
     },
     {
@@ -92,9 +92,9 @@ export const solutionsMenu: MegaConfig = {
       desc: 'Room by room',
       href: '/inspiration',
       items: [
-        { title: 'Living & cinema', sub: 'Sound & starry sky', href: '/inspiration' },
-        { title: 'Bathroom & kitchen', sub: 'Humidity-proof', href: '/inspiration' },
-        { title: 'Office & retail', sub: 'Acoustic comfort', href: '/inspiration' },
+        { title: 'Living & cinema', sub: 'Sound & starry sky', href: '/applications/living-cinema' },
+        { title: 'Bathroom & kitchen', sub: 'Humidity-proof', href: '/applications/bathroom-kitchen' },
+        { title: 'Office & retail', sub: 'Acoustic comfort', href: '/applications/office-retail' },
         { title: 'See all projects', sub: 'The full portfolio', href: '/inspiration' },
       ],
     },
