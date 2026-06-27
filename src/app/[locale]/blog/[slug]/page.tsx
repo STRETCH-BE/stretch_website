@@ -85,7 +85,15 @@ export default function BlogPostPage({ params }: { params: { locale: string; slu
         </div>
 
         <div style={{ maxWidth: 920, margin: '0 auto clamp(32px,4vw,48px)' }}>
-          <Placeholder label={post.title} light ratio="16/8" decorative />
+          <Placeholder
+            label={post.title}
+            src={post.image}
+            alt={post.title}
+            priority
+            sizes="(max-width: 920px) 100vw, 920px"
+            light
+            ratio="16/8"
+          />
         </div>
 
         <div className="prose" style={{ maxWidth: 760, margin: '0 auto' }}>
