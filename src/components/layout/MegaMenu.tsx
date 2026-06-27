@@ -40,7 +40,7 @@ export const solutionsMenu: MegaConfig = {
   railLabel: 'Browse solutions',
   allLabel: 'All solutions',
   allHref: '/products',
-  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/mega/featured.jpg' },
+  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/home/Hero.jpg' },
   categories: [
     {
       icon: Layers,
@@ -62,7 +62,7 @@ export const solutionsMenu: MegaConfig = {
       items: [
         { title: 'Acoustic stretch system', sub: 'Up to Class A', href: '/products/acoustic-stretch-system' },
         { title: 'How acoustics work', sub: 'Absorption explained', href: '/blog/stretch-ceiling-acoustics-explained' },
-        { title: 'Technical datasheet', sub: 'αw & class values', href: '/products/acoustic-stretch-system#specs' },
+        { title: 'Technical datasheet', sub: 'αw & class values', href: '/datasheets' },
       ],
     },
     {
@@ -131,7 +131,7 @@ export const technicalMenu: MegaConfig = {
       desc: 'Datasheet & colours',
       href: '/products/polyester-stretch-ceiling#specs',
       items: [
-        { title: 'Technical datasheet', sub: 'Spans, class, warranty', href: '/products/polyester-stretch-ceiling#specs' },
+        { title: 'Technical datasheet', sub: 'Spans, class, warranty', href: '/datasheets' },
         { title: 'Colours & finishes', sub: 'Standard & custom RAL', href: '/products/polyester-stretch-ceiling' },
       ],
     },
@@ -141,7 +141,7 @@ export const technicalMenu: MegaConfig = {
       desc: 'Datasheet & colours',
       href: '/products/pvc-stretch-ceiling#specs',
       items: [
-        { title: 'Technical datasheet', sub: 'Seamless to 5.7m', href: '/products/pvc-stretch-ceiling#specs' },
+        { title: 'Technical datasheet', sub: 'Seamless to 5.7m', href: '/datasheets' },
         { title: 'Colours & finishes', sub: 'Gloss, satin, print', href: '/products/pvc-stretch-ceiling' },
       ],
     },
@@ -151,7 +151,7 @@ export const technicalMenu: MegaConfig = {
       desc: 'Absorption data',
       href: '/products/acoustic-stretch-system#specs',
       items: [
-        { title: 'Acoustic datasheet', sub: 'αw & Class A values', href: '/products/acoustic-stretch-system#specs' },
+        { title: 'Acoustic datasheet', sub: 'αw & Class A values', href: '/datasheets' },
         { title: 'Acoustics explained', sub: 'How absorption works', href: '/blog/stretch-ceiling-acoustics-explained' },
       ],
     },
