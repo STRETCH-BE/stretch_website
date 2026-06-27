@@ -12,7 +12,8 @@ export type ModalType =
   | 'dates'
   | 'partner'
   | 'call'
-  | 'samples';
+  | 'samples'
+  | 'datasheet';
 
 export type FieldKind = 'text' | 'select' | 'area';
 
@@ -156,6 +157,18 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'productLine', kind: 'select', label: 'Product line', options: ['Polyester', 'PVC film', 'Acoustic', 'Not sure yet'] },
       { name: 'colours', kind: 'text', inputType: 'text', label: 'Colours of interest', placeholder: 'e.g. White, Anthracite, Custom RAL' },
       { name: 'notes', kind: 'area', label: 'Notes', placeholder: 'Project, quantities, anything useful...', full: true },
+    ],
+  },
+  datasheet: {
+    title: 'Download the datasheet',
+    subtitle: 'Enter your details and the download will start straight away. We only use them to follow up on your enquiry.',
+    submitLabel: 'Get the datasheet',
+    sentTitle: 'Here is your datasheet',
+    sentMsg: 'Your download should start automatically — if it does not, use the button below.',
+    fields: [
+      { name: 'name', kind: 'text', inputType: 'text', label: 'Name', placeholder: 'First & last name', required: true, full: true },
+      { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@email.com', required: true },
+      { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
     ],
   },
 };

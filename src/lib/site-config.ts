@@ -168,6 +168,7 @@ export const staticRoutes = [
   '/installer-training',
   '/inspiration',
   '/samples',
+  '/datasheets',
   '/faq',
   '/blog',
   '/privacy',
