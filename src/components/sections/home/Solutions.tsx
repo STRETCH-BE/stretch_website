@@ -3,6 +3,7 @@
 import { Link } from '@/i18n/navigation';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
+import { homeImages } from '@/lib/home-images';
 
 const POLY_FEATURES = ['Seamless to 5.15m', 'Cold installation', 'Very matte look', 'Acoustic & washable'];
 const PVC_FEATURES = ['100% recyclable', 'Seamless to 5.7m', 'Easily removable', 'Acoustic & washable'];
@@ -28,7 +29,14 @@ export default function Solutions() {
       <div className="sol-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
         {/* Polyester — light card */}
         <article style={{ border: '1px solid var(--border)', background: '#fff' }}>
-          <Placeholder label="Polyester ceiling photo" light ratio="16/10" />
+          <Placeholder
+            label="Polyester ceiling photo"
+            src={homeImages.solutionsPolyester}
+            alt="Matte polyester stretch ceiling"
+            sizes="(max-width: 860px) 100vw, 45vw"
+            light
+            ratio="16/10"
+          />
           <div style={{ padding: 'clamp(26px,3vw,40px)' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
               <span style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--red)' }}>Cold mount</span>
@@ -55,7 +63,13 @@ export default function Solutions() {
 
         {/* PVC — dark card */}
         <article style={{ border: '1px solid var(--black)', background: 'var(--black)', color: '#fff' }}>
-          <Placeholder label="PVC ceiling photo" ratio="16/10" />
+          <Placeholder
+            label="PVC ceiling photo"
+            src={homeImages.solutionsPvc}
+            alt="Glossy PVC film stretch ceiling"
+            sizes="(max-width: 860px) 100vw, 45vw"
+            ratio="16/10"
+          />
           <div style={{ padding: 'clamp(26px,3vw,40px)' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
               <span style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--red)' }}>Heat mount</span>

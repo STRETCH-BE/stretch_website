@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
+import { homeImages } from '@/lib/home-images';
 
 const PROOF = [
   'Installed within one day',
@@ -60,7 +61,14 @@ export default function Hero() {
         </div>
 
         <div style={{ position: 'relative' }}>
-          <Placeholder label="Hero ceiling photo" ratio="4/3.05" />
+          <Placeholder
+            label="Hero ceiling photo"
+            src={homeImages.hero}
+            alt="A seamless STRETCH ceiling fitted in a modern interior"
+            priority
+            sizes="(max-width: 860px) 100vw, 52vw"
+            ratio="4/3.05"
+          />
           <div style={{ position: 'absolute', left: -1, bottom: -1, background: 'var(--red)', color: '#fff', padding: '16px 22px', display: 'flex', alignItems: 'center', gap: 14 }}>
             <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 30, lineHeight: 1 }}>5.0</span>
             <div style={{ lineHeight: 1.15 }}>

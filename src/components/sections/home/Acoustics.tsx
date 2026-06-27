@@ -3,6 +3,7 @@
 import { Link } from '@/i18n/navigation';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
+import { homeImages } from '@/lib/home-images';
 
 const CELLS = [
   {
@@ -69,7 +70,12 @@ export default function Acoustics() {
 
         <div className="ac-grid" style={{ display: 'grid', gridTemplateColumns: '1.05fr .95fr', gap: 'clamp(24px,3vw,48px)', alignItems: 'stretch' }}>
           <div style={{ position: 'relative', minHeight: 440 }}>
-            <Placeholder label="Acoustic install / studio" />
+            <Placeholder
+              label="Acoustic install / studio"
+              src={homeImages.acoustics}
+              alt="Acoustic stretch ceiling in a studio"
+              sizes="(max-width: 860px) 100vw, 50vw"
+            />
             <span style={{ position: 'absolute', left: 0, top: 0, background: 'var(--red)', color: '#fff', padding: '11px 16px', fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase' }}>
               Up to Class A absorption
             </span>

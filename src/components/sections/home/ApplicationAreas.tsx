@@ -4,6 +4,7 @@
 import { Link } from '@/i18n/navigation';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
+import { homeImages } from '@/lib/home-images';
 
 type Area = {
   key: string;
@@ -49,7 +50,15 @@ export default function ApplicationAreas() {
             className={`bento-cell zoom-wrap${a.dark ? ' bento-cell--dark' : ''}`}
             style={{ gridArea: a.area }}
           >
-            <Placeholder label={`${a.title} example`} light={!a.dark} className="zoom-img" decorative />
+            <Placeholder
+              label={`${a.title} example`}
+              src={homeImages.app[a.key as keyof typeof homeImages.app]}
+              alt={`STRETCH ceiling — ${a.title.toLowerCase()}`}
+              sizes="(max-width: 860px) 100vw, 33vw"
+              light={!a.dark}
+              className="zoom-img"
+              decorative
+            />
             <div className="bento-overlay">
               {a.badge && <span className="bento-badge">{a.badge}</span>}
               <div className="bento-meta">

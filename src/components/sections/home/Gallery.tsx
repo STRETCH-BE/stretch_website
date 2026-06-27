@@ -3,6 +3,7 @@
 import { Link } from '@/i18n/navigation';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
+import { homeImages } from '@/lib/home-images';
 import { projects } from '@/lib/content';
 
 const FEATURED = projects.slice(0, 5);
@@ -25,9 +26,15 @@ export default function Gallery() {
       </div>
 
       <div className="gal-grid">
-        {FEATURED.map((p) => (
+        {FEATURED.map((p, i) => (
           <Link key={p.title} href="/inspiration" className="gal-cell zoom-wrap">
-            <Placeholder label={`${p.title} project`} decorative />
+            <Placeholder
+              label={`${p.title} project`}
+              src={homeImages.gallery[i]}
+              alt={`${p.title} — ${p.cat}`}
+              sizes="(max-width: 980px) 50vw, 20vw"
+              decorative
+            />
             <div className="gal-overlay">
               <span className="gal-cat">{p.cat}</span>
               <h3 className="gal-title">{p.title}</h3>
