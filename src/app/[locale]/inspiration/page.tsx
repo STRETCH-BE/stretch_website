@@ -49,7 +49,14 @@ export default function InspirationPage({ params }: { params: { locale: string }
         <div className="ins-feat" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
           {FEATURED.map((p) => (
             <figure key={p.title} className="zoom-wrap" style={{ margin: 0, position: 'relative', overflow: 'hidden', border: '1px solid var(--border)' }}>
-              <Placeholder label={`Featured — ${p.title}`} ratio="16/10" className="zoom-img" decorative />
+              <Placeholder
+                label={`Featured — ${p.title}`}
+                src={p.image}
+                alt={`${p.title} — ${p.cat}`}
+                sizes="(max-width: 860px) 100vw, 50vw"
+                ratio="16/10"
+                className="zoom-img"
+              />
               <figcaption style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: 'clamp(22px,2.6vw,34px)', background: 'linear-gradient(to top, rgba(10,10,10,.85) 0%, rgba(10,10,10,.1) 60%, rgba(10,10,10,0) 100%)' }}>
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: '#fff', background: 'var(--red)', alignSelf: 'flex-start', padding: '5px 10px', marginBottom: 12 }}>{p.cat}</span>
                 <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(22px,2.6vw,32px)', letterSpacing: '-.02em', textTransform: 'uppercase', color: '#fff', margin: '0 0 6px' }}>{p.title}</h2>
