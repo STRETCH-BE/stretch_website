@@ -312,15 +312,16 @@ export const products: Product[] = [
   {
     slug: 'prefab-ceiling-unit',
     key: 'prefab',
-    name: 'Prefab Ceiling Unit',
-    short: 'Prefab',
-    category: 'Pre-assembled module',
-    mount: 'Click-fit',
+    name: 'Prefab Structures',
+    short: 'Prefab Structures',
+    category: 'Prefab carrier structure',
+    mount: 'Prefabricated',
+    listed: false,
     intro:
-      'Factory-assembled stretch-ceiling modules — including bathroom and inspection units — delivered ready to click into place on site.',
+      'Prefab carrier structures for stretch-ceiling projects — aluminium, steel and wood beams, coving and height-difference details, built in Belgium and shipped worldwide to our dealers.',
     summary:
-      'Factory-assembled, click-fit stretch-ceiling modules with an integrated inspection hatch, built in Belgium.',
-    chips: ['Pre-assembled', 'Fast fit', 'Inspection hatch', 'Made in Belgium'],
+      'Made-to-measure prefab structures in aluminium, steel and wood — beams for raster ceilings, coving for floating ceilings, and clean height-difference details.',
+    chips: ['Aluminium / steel / wood', 'Beams & coving', 'Made to measure', 'Shipped worldwide'],
     highlights: [
       { value: '1', label: 'Day on site' },
       { value: 'Prefab', label: 'Built off-site' },

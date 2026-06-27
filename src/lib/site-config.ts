@@ -169,6 +169,7 @@ export const staticRoutes = [
   '/inspiration',
   '/samples',
   '/datasheets',
+  '/products/prefab-lighting-elements',
   '/faq',
   '/blog',
   '/privacy',
