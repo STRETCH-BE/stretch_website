@@ -24,7 +24,7 @@ import Placeholder from '@/components/ui/Placeholder';
 export type MegaItem = { title: string; sub: string; href: string; soon?: boolean };
 export type MegaCategory = { icon: LucideIcon; title: string; desc: string; href: string; items: MegaItem[] };
 
-type ImagePromo = { kind: 'image'; title: string; ctaLabel: string; source: string };
+type ImagePromo = { kind: 'image'; title: string; ctaLabel: string; source: string; image?: string };
 type DarkPromo = { kind: 'dark'; eyebrow: string; title: string; body: string; ctaLabel: string; ctaHref: string };
 
 export type MegaConfig = {
@@ -40,7 +40,7 @@ export const solutionsMenu: MegaConfig = {
   railLabel: 'Browse solutions',
   allLabel: 'All solutions',
   allHref: '/products',
-  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions' },
+  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/home/Hero.jpg' },
   categories: [
     {
       icon: Layers,
@@ -233,7 +233,13 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
       {/* Promo */}
       {config.promo.kind === 'image' ? (
         <div className="mega-promo" style={{ position: 'relative', minHeight: 300, overflow: 'hidden' }}>
-          <Placeholder label="Featured ceiling" decorative style={{ position: 'absolute', inset: 0, height: '100%' }} />
+          <Placeholder
+            label="Featured ceiling"
+            src={config.promo.image}
+            alt={config.promo.title}
+            sizes="360px"
+            style={{ position: 'absolute', inset: 0, height: '100%' }}
+          />
           <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: 22, background: 'linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,0))' }}>
             <div style={{ color: '#fff', fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 19, lineHeight: 1.05, marginBottom: 11 }}>
               {config.promo.title}
