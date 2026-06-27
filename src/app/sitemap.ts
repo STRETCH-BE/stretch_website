@@ -6,6 +6,7 @@ import { locales, defaultLocale, localeFullCodes } from '@/i18n/config';
 import { siteUrl } from '@/lib/site-config';
 import { staticRoutes } from '@/lib/site-config';
 import { productSlugs } from '@/lib/products';
+import { applicationSlugs } from '@/lib/applications';
 import { blogSlugs, blogPosts } from '@/lib/content';
 
 function alternatesFor(route: string) {
@@ -33,8 +34,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   };
 
   const productRoutes = productSlugs.map((s) => `/products/${s}`);
+  const applicationRoutes = applicationSlugs.map((s) => `/applications/${s}`);
   const blogRoutes = blogSlugs.map((s) => `/blog/${s}`);
-  const allRoutes = [...staticRoutes, ...productRoutes, ...blogRoutes];
+  const allRoutes = [...staticRoutes, ...productRoutes, ...applicationRoutes, ...blogRoutes];
 
   const lastModFor = (route: string): Date => {
     if (route.startsWith('/blog/')) {
