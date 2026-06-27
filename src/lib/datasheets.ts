@@ -63,7 +63,7 @@ export const datasheets: Datasheet[] = [
   },
   {
     slug: 'light-print-stretch-ceiling',
-    title: 'Light & Print stretch ceiling',
+    title: 'Illuminated ceiling',
     description: 'Translucent backlit and edge-to-edge printed ceilings: light build-up, LED options and print specs.',
     category: 'Ceiling systems',
     file: '/datasheets/light-print-stretch-ceiling.pdf',

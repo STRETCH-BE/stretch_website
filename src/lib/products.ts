@@ -174,7 +174,7 @@ export const products: Product[] = [
       },
       {
         q: 'Can it be backlit or printed?',
-        a: 'Translucent films diffuse an LED field evenly with no hotspots, and any photograph, pattern or starry-sky design can be printed edge-to-edge. See the Light & Print system for the full range.',
+        a: 'Translucent films diffuse an LED field evenly with no hotspots, and any photograph, pattern or starry-sky design can be printed edge-to-edge. See the Illuminated ceiling system for the full range.',
       },
     ],
   },
@@ -248,8 +248,8 @@ export const products: Product[] = [
   {
     slug: 'light-print-stretch-ceiling',
     key: 'light',
-    name: 'Light & Print Stretch Ceiling',
-    short: 'Light & Print',
+    name: 'Illuminated Ceiling',
+    short: 'Illuminated',
     category: 'Translucent membrane',
     mount: 'Heat mount',
     intro:
@@ -498,6 +498,71 @@ export const products: Product[] = [
       {
         q: 'Can a hatch be added to an existing stretch ceiling?',
         a: 'In most cases yes. Hatches can be retrofitted into an existing ceiling, sized and positioned to suit the service that needs access behind it.',
+      },
+    ],
+  },
+  {
+    slug: 'custom-print',
+    key: 'print',
+    name: 'Custom Print Ceiling',
+    short: 'Custom Print',
+    category: 'Printed membrane',
+    mount: 'Heat or cold',
+    listed: false,
+    intro:
+      'Any photograph, artwork or pattern printed edge-to-edge across a seamless stretch ceiling — your image, wall to wall, with no visible join.',
+    summary:
+      'Edge-to-edge printed stretch ceilings: any high-resolution image, photo or brand graphic across a seamless membrane, optionally backlit.',
+    chips: ['Any image', 'Edge-to-edge', 'Backlit option', 'Seamless'],
+    highlights: [
+      { value: 'Any', label: 'Image or art' },
+      { value: 'HD', label: 'Photo-grade print' },
+      { value: 'Backlit', label: 'Optional glow' },
+      { value: '5.7m', label: 'Seamless width' },
+    ],
+    features: [
+      {
+        title: 'Your image, edge to edge',
+        body: 'Supply a photo, illustration, brand graphic or pattern and we print it across the full membrane — colour-managed and seamless, with no panel lines.',
+      },
+      {
+        title: 'Print plus backlight',
+        body: 'Combine a translucent film with an LED field to backlight the print, turning artwork or a sky scene into a soft, glowing feature ceiling.',
+      },
+      {
+        title: 'Made to your space',
+        body: 'Artwork is scaled and positioned to your exact room. We proof the file with you before production, so what you approve is what goes up.',
+      },
+    ],
+    specs: [
+      { k: 'Print', v: 'Edge-to-edge, full colour' },
+      { k: 'Resolution', v: 'Photo-grade, colour-managed' },
+      { k: 'Membrane', v: 'PVC film (opaque or translucent)' },
+      { k: 'Backlight', v: 'Optional LED field' },
+      { k: 'Max seamless width', v: '5.7 m' },
+      { k: 'Fire rating', v: 'B-s2,d0' },
+      { k: 'Cleaning', v: 'Washable' },
+      { k: 'Warranty', v: '25 years' },
+    ],
+    colours: ['Full-colour print', 'Photographic', 'Brand graphics', 'Patterns', 'Sky scenes', 'Custom artwork'],
+    applications: ['Retail', 'Hospitality', 'Home cinema', 'Office', 'Showroom', 'Restaurant'],
+    related: ['light-print-stretch-ceiling', 'starry-sky', 'pvc-stretch-ceiling'],
+    material: 'Printed PVC film',
+    countryOfOrigin: 'BE',
+    warrantyYears: 25,
+    maxSeamlessWidthM: 5.7,
+    faqs: [
+      {
+        q: 'What image quality do I need for a printed ceiling?',
+        a: 'A high-resolution file gives the best result. We review and colour-manage your artwork, scale it to the ceiling and proof it before printing, so the final result matches your expectation.',
+      },
+      {
+        q: 'Can a printed ceiling be backlit?',
+        a: 'Yes. Printed on a translucent film over an LED field, the image is evenly backlit with no hotspots — ideal for sky scenes and feature artwork.',
+      },
+      {
+        q: 'Is there a visible seam on large prints?',
+        a: 'No. The image is printed edge-to-edge across a single seamless membrane up to 5.7 m wide, so there are no panel lines across your artwork.',
       },
     ],
   },

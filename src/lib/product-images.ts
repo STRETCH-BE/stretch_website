@@ -89,7 +89,7 @@ export const productImages: Record<string, ProductImageSet> = {
   },
   // ---- Starry sky (sub-page) ----------------------------------------------
   'starry-sky': {
-    hero: '/images/products/starsky-stretch-ceiling.jpg', // a dark fibre-optic starry-sky ceiling — starry-sky-hero.jpg
+    hero: '', // a dark fibre-optic starry-sky ceiling — starry-sky-hero.jpg
     features: [
       '', // [0] A real night sky
       '', // [1] Fibre-optic & LED
@@ -98,11 +98,20 @@ export const productImages: Record<string, ProductImageSet> = {
   },
   // ---- Inspection hatch (sub-page) ----------------------------------------
   'inspection-hatch': {
-    hero: '/images/products/stretch-ceiling-inspection-hatch.jpg', // a near-invisible hatch in a stretch ceiling — inspection-hatch-hero.jpg
+    hero: '', // a near-invisible hatch in a stretch ceiling — inspection-hatch-hero.jpg
     features: [
       '', // [0] Invisible until you need it
       '', // [1] Service without damage
       '', // [2] Any size, any room
+    ],
+  },
+  // ---- Custom print (sub-page) --------------------------------------------
+  'custom-print': {
+    hero: '', // a printed / artwork ceiling — custom-print-hero.jpg
+    features: [
+      '', // [0] Your image, edge to edge
+      '', // [1] Print plus backlight
+      '', // [2] Made to your space
     ],
   },
 };
