@@ -35,6 +35,10 @@ export type Product = {
   warrantyYears?: number;
   maxSeamlessWidthM?: number;
   faqs: Faq[];
+  /** Show on the /products overview grid + ItemList. Default true; set false for
+   *  sub-pages that should have their own page + mega-menu link but no top-level
+   *  card on the overview grid. */
+  listed?: boolean;
 };
 
 export const products: Product[] = [
@@ -365,6 +369,135 @@ export const products: Product[] = [
       {
         q: 'How do you access services above a prefab ceiling?',
         a: 'Each unit can include a discreet integrated inspection hatch, so pipework and services above stay reachable without breaking the clean ceiling line.',
+      },
+    ],
+  },
+  {
+    slug: 'starry-sky',
+    key: 'starry',
+    name: 'Starry Sky Ceiling',
+    short: 'Starry Sky',
+    category: 'Fibre-optic / backlit',
+    mount: 'Backlit',
+    listed: false,
+    intro:
+      'A stretch ceiling scattered with hundreds of fibre-optic points — a calm, twinkling night sky over your cinema, bedroom or spa.',
+    summary:
+      'Fibre-optic and LED starry-sky stretch ceilings: hundreds of dimmable star points, optional shooting stars and RGB, on a seamless membrane.',
+    chips: ['Hundreds of stars', 'Dimmable', 'Optional RGB', 'Shooting stars'],
+    highlights: [
+      { value: '500+', label: 'Star points' },
+      { value: 'RGB', label: 'Colour options' },
+      { value: '1 day', label: 'Installation' },
+      { value: '25yr', label: 'Warranty' },
+    ],
+    features: [
+      {
+        title: 'A real night sky',
+        body: 'Hundreds of fibre-optic points are set behind a tensioned membrane to create a deep, twinkling star field — mapped to a constellation or scattered at random.',
+      },
+      {
+        title: 'Fibre-optic & LED',
+        body: 'A single LED light engine drives every fibre, so the stars stay cool and fully dimmable. Add a twinkle wheel for movement, RGB for colour, or shooting-star effects.',
+      },
+      {
+        title: 'Cinema, bedroom, spa',
+        body: 'Perfect where you want atmosphere without glare — home cinemas, bedrooms, spas and restaurants. Combine with an acoustic backing for a calm, quiet room.',
+      },
+    ],
+    specs: [
+      { k: 'Effect', v: 'Fibre-optic star field' },
+      { k: 'Membrane', v: 'Dark translucent / printed film' },
+      { k: 'Star points', v: 'From ~150 to 1,000+' },
+      { k: 'Light source', v: 'Single LED engine, dimmable' },
+      { k: 'Options', v: 'Twinkle, RGB, shooting stars' },
+      { k: 'Mounting', v: 'Tensioned clip profile' },
+      { k: 'Cleaning', v: 'Washable' },
+      { k: 'Warranty', v: '25 years' },
+    ],
+    colours: ['Deep blue', 'Black', 'Midnight', 'Custom print', 'Warm-white stars', 'RGB stars'],
+    applications: ['Home cinema', 'Bedroom', 'Spa & wellness', 'Restaurant', 'Hospitality', 'Kids room'],
+    related: ['light-print-stretch-ceiling', 'acoustic-stretch-system', 'pvc-stretch-ceiling'],
+    material: 'Translucent PVC film + fibre optics',
+    countryOfOrigin: 'BE',
+    warrantyYears: 25,
+    maxSeamlessWidthM: 5.7,
+    faqs: [
+      {
+        q: 'How many stars can a starry-sky ceiling have?',
+        a: 'Anywhere from around 150 points for a subtle effect to over a thousand for a dense, dramatic sky. The density is chosen to suit the room size and the mood you want.',
+      },
+      {
+        q: 'Do the fibre-optic stars give off heat?',
+        a: 'No. All the fibres are driven by a single remote LED light engine, so the points themselves stay completely cool — only the light travels through the fibre.',
+      },
+      {
+        q: 'Can the stars twinkle or change colour?',
+        a: 'Yes. An optional twinkle wheel makes the stars shimmer, RGB engines let you change colour, and shooting-star effects can be added for movement. Everything is dimmable.',
+      },
+    ],
+  },
+  {
+    slug: 'inspection-hatch',
+    key: 'hatch',
+    name: 'Inspection Hatch',
+    short: 'Inspection Hatch',
+    category: 'Access solution',
+    mount: 'Integrated',
+    listed: false,
+    intro:
+      'Discreet, serviceable access through a stretch ceiling — reach valves, junction boxes and fittings without cutting or replacing the membrane.',
+    summary:
+      'Integrated inspection hatches for stretch ceilings: near-invisible, re-openable access to services hidden above the membrane, in any size.',
+    chips: ['Near-invisible', 'Re-openable', 'Any size', 'Retrofit-ready'],
+    highlights: [
+      { value: 'Hidden', label: 'In the surface' },
+      { value: 'Any', label: 'Size & shape' },
+      { value: 'Re-open', label: 'As often as needed' },
+      { value: '1 day', label: 'Installation' },
+    ],
+    features: [
+      {
+        title: 'Invisible until you need it',
+        body: 'The hatch frame is built into the perimeter detailing and finished in the same membrane, so it disappears into the ceiling until it has to be opened.',
+      },
+      {
+        title: 'Service without damage',
+        body: 'Reach shut-off valves, junction boxes, dampers and light fittings hidden above the ceiling — and close it all up again, as many times as needed.',
+      },
+      {
+        title: 'Any size, any room',
+        body: 'From a small round access point to a large rectangular panel, sized to the service behind it. Works in new installs and as a retrofit into existing ceilings.',
+      },
+    ],
+    specs: [
+      { k: 'Type', v: 'Integrated access hatch' },
+      { k: 'Finish', v: 'Matched to ceiling membrane' },
+      { k: 'Shape', v: 'Round or rectangular' },
+      { k: 'Size', v: 'Made to measure' },
+      { k: 'Opening', v: 'Magnetic or hinged frame' },
+      { k: 'Retrofit', v: 'Yes, into existing ceilings' },
+      { k: 'Cleaning', v: 'Washable' },
+      { k: 'Warranty', v: '25 years' },
+    ],
+    colours: ['Matched to membrane', 'White', 'Off-white', 'Grey', 'Anthracite', 'Custom RAL'],
+    applications: ['Bathroom', 'Kitchen', 'Utility room', 'Office', 'Retail', 'Healthcare'],
+    related: ['prefab-ceiling-unit', 'polyester-stretch-ceiling', 'pvc-stretch-ceiling'],
+    material: 'Membrane + concealed frame',
+    countryOfOrigin: 'BE',
+    warrantyYears: 25,
+    faqs: [
+      {
+        q: 'Can you access services behind a stretch ceiling?',
+        a: 'Yes — an integrated inspection hatch gives discreet, re-openable access to valves, junction boxes and fittings above the membrane, so the ceiling never has to be cut or replaced to reach them.',
+      },
+      {
+        q: 'Is the hatch visible in the ceiling?',
+        a: 'Barely. The frame is built into the perimeter detailing and finished in the same membrane, so it blends into the surface and is only noticeable when you look for it.',
+      },
+      {
+        q: 'Can a hatch be added to an existing stretch ceiling?',
+        a: 'In most cases yes. Hatches can be retrofitted into an existing ceiling, sized and positioned to suit the service that needs access behind it.',
       },
     ],
   },
