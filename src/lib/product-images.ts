@@ -84,12 +84,12 @@ export const productImages: Record<string, ProductImageSet> = {
   },
   // ---- Prefab (coming soon — fill in when ready) --------------------------
   'prefab-ceiling-unit': {
-    hero: '',
+    hero: '/images/products/stretch-ceiling-prefab-structure.jpg',
     features: ['', '', ''], // [0] click-fit  [1] made to measure  [2] inspection hatch
   },
   // ---- Starry sky (sub-page) ----------------------------------------------
   'starry-sky': {
-    hero: '', // a dark fibre-optic starry-sky ceiling — starry-sky-hero.jpg
+    hero: '/images/products/starsky-stretch-ceiling.jpg', // a dark fibre-optic starry-sky ceiling — starry-sky-hero.jpg
     features: [
       '', // [0] A real night sky
       '', // [1] Fibre-optic & LED
@@ -98,7 +98,7 @@ export const productImages: Record<string, ProductImageSet> = {
   },
   // ---- Inspection hatch (sub-page) ----------------------------------------
   'inspection-hatch': {
-    hero: '', // a near-invisible hatch in a stretch ceiling — inspection-hatch-hero.jpg
+    hero: '/images/products/stretch-ceiling-inspection-hatch.jpg', // a near-invisible hatch in a stretch ceiling — inspection-hatch-hero.jpg
     features: [
       '', // [0] Invisible until you need it
       '', // [1] Service without damage
@@ -107,7 +107,7 @@ export const productImages: Record<string, ProductImageSet> = {
   },
   // ---- Custom print (sub-page) --------------------------------------------
   'custom-print': {
-    hero: '', // a printed / artwork ceiling — custom-print-hero.jpg
+    hero: '/images/products/printed-stretch-ceiling.jpg', // a printed / artwork ceiling — custom-print-hero.jpg
     features: [
       '', // [0] Your image, edge to edge
       '', // [1] Print plus backlight
