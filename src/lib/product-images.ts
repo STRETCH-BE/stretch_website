@@ -73,19 +73,37 @@ export const productImages: Record<string, ProductImageSet> = {
       '/images/products/invisible-audio.jpg', // [2] Invisible audio
     ],
   },
-  // ---- Light & Print (not requested yet — fill in when ready) -------------
+  // ---- Light & Print ------------------------------------------------------
   'light-print-stretch-ceiling': {
-    hero: '/images/products/shadowless-illuminated-stretch-ceiling.jpg',
+    hero: '/images/products/illuminated-stretch-ceiling.jpg',
     features: [
-      '/images/products/illuminated-stretch-ceiling-backlight-detail.jpg', // [1] In detail
-      '/images/products/led-line-stretch-ceiling.jpg', // [2] LED line lighting
-      '/images/products/printed-stretch-ceiling.jpg', // [3] Printed designs
+      '/images/products/shadowless-illuminated-stretch-ceiling.jpg', // [0] backlight
+      '', // [1] starry sky / RGB
+      '', // [2] custom print
     ],
   },
-  // ---- Prefab (not requested yet — fill in when ready) --------------------
+  // ---- Prefab (coming soon — fill in when ready) --------------------------
   'prefab-ceiling-unit': {
     hero: '',
     features: ['', '', ''], // [0] click-fit  [1] made to measure  [2] inspection hatch
+  },
+  // ---- Starry sky (sub-page) ----------------------------------------------
+  'starry-sky': {
+    hero: '', // a dark fibre-optic starry-sky ceiling — starry-sky-hero.jpg
+    features: [
+      '', // [0] A real night sky
+      '', // [1] Fibre-optic & LED
+      '', // [2] Cinema, bedroom, spa
+    ],
+  },
+  // ---- Inspection hatch (sub-page) ----------------------------------------
+  'inspection-hatch': {
+    hero: '', // a near-invisible hatch in a stretch ceiling — inspection-hatch-hero.jpg
+    features: [
+      '', // [0] Invisible until you need it
+      '', // [1] Service without damage
+      '', // [2] Any size, any room
+    ],
   },
 };
 
