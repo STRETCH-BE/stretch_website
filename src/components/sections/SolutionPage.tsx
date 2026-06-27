@@ -7,8 +7,37 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton, ModalTextLink } from '@/components/ui/ModalButton';
 import { getProduct, type Product } from '@/lib/products';
+import { productImage } from '@/lib/product-images';
+
+// Renders a colour name as a real swatch background (solid colour or a gradient
+// for translucent/RGB/print/custom finishes). Light tones get a hairline border
+// so they're visible on white.
+function swatch(name: string): { background: string; border: string } {
+  const map: Record<string, string> = {
+    white: '#ffffff',
+    'off-white': '#f3efe6',
+    'satin white': '#efece5',
+    'warm white': '#f7efdc',
+    'light grey': '#d2d3d1',
+    grey: '#9c9d9a',
+    anthracite: '#36383a',
+    sand: '#d9c4a0',
+    'black gloss': '#0b0b0b',
+    translucent: 'linear-gradient(135deg,#ffffff,#e6eef3)',
+    'translucent white': 'linear-gradient(135deg,#ffffff,#e7eff4)',
+    rgb: 'linear-gradient(135deg,#ff0040,#ffd400 35%,#00d4ff 70%,#b000ff)',
+    'starry sky': 'radial-gradient(circle at 32% 30%,#1b2a4a,#0a1326)',
+    'custom print': 'linear-gradient(135deg,#ff5a5f,#ffb400 40%,#3ad29f 75%,#3a7bd5)',
+    custom: 'linear-gradient(135deg,#c9c5be,#7d7a74)',
+    'custom ral': 'conic-gradient(from 0deg,#ff0000,#ffb400,#3ad29f,#3a7bd5,#b000ff,#ff0000)',
+  };
+  const bg = map[name.toLowerCase()] ?? '#e2ded7';
+  const lightTones = ['#ffffff', '#f3efe6', '#efece5', '#f7efdc', '#d2d3d1'];
+  return { background: bg, border: lightTones.includes(bg) ? '1px solid var(--border-input)' : '1px solid rgba(0,0,0,.06)' };
+}
 
 export default function SolutionPage({ product }: { product: Product }) {
+  const imgs = productImage(product.slug);
   const related = product.related
     .map((slug) => getProduct(slug))
     .filter((p): p is Product => Boolean(p));
@@ -55,7 +84,14 @@ export default function SolutionPage({ product }: { product: Product }) {
             </div>
           </div>
           <div style={{ position: 'relative' }}>
-            <Placeholder label={`${product.name} hero photo`} ratio="4/3.2" />
+            <Placeholder
+              label={`${product.name} hero photo`}
+              src={imgs.hero}
+              alt={`${product.name} — STRETCH`}
+              priority
+              sizes="(max-width: 860px) 100vw, 55vw"
+              ratio="4/3.2"
+            />
             <div style={{ position: 'absolute', left: -1, bottom: -1, background: 'var(--black)', color: '#fff', padding: '13px 18px', fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase' }}>
               {product.short} system
             </div>
@@ -85,7 +121,14 @@ export default function SolutionPage({ product }: { product: Product }) {
           {product.features.map((feat, i) => (
             <div key={feat.title} className={`sp-featrow${i % 2 === 1 ? ' sp-featrow--rev' : ''}`}>
               <div style={{ flex: 1.1, minWidth: 0 }}>
-                <Placeholder label={`${feat.title} — ${product.short}`} light ratio="16/11" />
+                <Placeholder
+                  label={`${feat.title} — ${product.short}`}
+                  src={imgs.features[i]}
+                  alt={`${product.short} — ${feat.title}`}
+                  sizes="(max-width: 860px) 100vw, 50vw"
+                  light
+                  ratio="16/11"
+                />
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(26px,3vw,40px)', lineHeight: 0.98, letterSpacing: '-.02em', textTransform: 'uppercase', margin: '0 0 18px' }}>{feat.title}</h3>
@@ -143,12 +186,19 @@ export default function SolutionPage({ product }: { product: Product }) {
           </div>
         </div>
         <div className="sp-colours" style={{ display: 'grid', gridTemplateColumns: 'repeat(6,1fr)', gap: 12 }}>
-          {product.colours.map((col) => (
-            <div key={col}>
-              <Placeholder label={`${col} swatch`} light ratio="1/1" decorative />
-              <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 10 }}>{col}</div>
-            </div>
-          ))}
+          {product.colours.map((col) => {
+            const sw = swatch(col);
+            return (
+              <div key={col}>
+                <div
+                  role="img"
+                  aria-label={`${col} finish`}
+                  style={{ aspectRatio: '1/1', background: sw.background, border: sw.border }}
+                />
+                <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 10 }}>{col}</div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -188,7 +238,16 @@ export default function SolutionPage({ product }: { product: Product }) {
             {related.map((rel) => (
               <Link key={rel.slug} href={`/products/${rel.slug}`} className="zoom-wrap" style={{ border: '1px solid var(--border)', textDecoration: 'none', display: 'block' }}>
                 <div style={{ overflow: 'hidden' }}>
-                  <Placeholder label={`${rel.name}`} light ratio="16/10" className="zoom-img" decorative />
+                  <Placeholder
+                    label={`${rel.name}`}
+                    src={productImage(rel.slug).hero}
+                    alt={rel.name}
+                    sizes="(max-width: 860px) 100vw, 30vw"
+                    light
+                    ratio="16/10"
+                    className="zoom-img"
+                    decorative
+                  />
                 </div>
                 <div style={{ padding: 24 }}>
                   <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--text-faint-2)', marginBottom: 10 }}>{rel.mount}</div>
