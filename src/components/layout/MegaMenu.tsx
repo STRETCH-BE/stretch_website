@@ -257,7 +257,7 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
         </div>
       )}
 
-      <style jsx>{`
+      <style jsx global>{`
         .mega-grid {
           padding: clamp(22px, 2.6vw, 34px) var(--gutter);
           display: grid;
@@ -380,7 +380,7 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
           opacity: 1;
           transform: translateX(0);
         }
-        :global(.mega-promo-cta) {
+        .mega-promo-cta {
           display: inline-flex;
           align-items: center;
           gap: 8px;
