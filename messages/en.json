@@ -39,7 +39,6 @@
       "sendMessage": "Send message"
     }
   },
-
   "meta": {
     "homeTitle": "STRETCH — A new ceiling in one day | Stretch ceilings & walls",
     "homeDescription": "Sleek, seamless stretch ceilings and walls, installed cold in a single day — no dust, no painting. Acoustic, lighting and printed options. Hand-made in Belgium.",
@@ -66,9 +65,10 @@
     "termsTitle": "Terms of use | STRETCH",
     "termsDescription": "The terms governing use of the STRETCH website, operated by Stretch Productions BV in Belgium.",
     "notFoundTitle": "Page not found | STRETCH",
-    "notFoundDescription": "The page you are looking for could not be found."
+    "notFoundDescription": "The page you are looking for could not be found.",
+    "datasheetsTitle": "Technical datasheets | STRETCH",
+    "datasheetsDescription": "Download technical datasheets for STRETCH stretch-ceiling systems — specifications, fire ratings, acoustic αw / class values and warranty details."
   },
-
   "cookies": {
     "title": "We value your privacy",
     "body": "We use cookies to run this site, measure how it is used and — with your permission — improve our marketing. Choose which categories you allow.",
@@ -86,7 +86,6 @@
     "always": "Always on",
     "privacyLink": "Privacy policy"
   },
-
   "forms": {
     "fields": {
       "company": "Company",
@@ -132,7 +131,6 @@
       "consent": "Please accept the privacy policy to continue"
     }
   },
-
   "footer": {
     "tagline": "Hand-made stretch ceilings & walls, engineered in Belgium and fitted across Europe and the US in a single day.",
     "solutionsHeading": "Solutions",
