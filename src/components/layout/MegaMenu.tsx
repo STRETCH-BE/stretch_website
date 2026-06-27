@@ -21,7 +21,7 @@ import { Link } from '@/i18n/navigation';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
 
-export type MegaItem = { title: string; sub: string; href: string };
+export type MegaItem = { title: string; sub: string; href: string; soon?: boolean };
 export type MegaCategory = { icon: LucideIcon; title: string; desc: string; href: string; items: MegaItem[] };
 
 type ImagePromo = { kind: 'image'; title: string; ctaLabel: string; source: string };
@@ -50,7 +50,7 @@ export const solutionsMenu: MegaConfig = {
       items: [
         { title: 'Polyester ceiling', sub: 'Cold mount · very matte', href: '/products/polyester-stretch-ceiling' },
         { title: 'PVC film ceiling', sub: 'Recyclable · removable', href: '/products/pvc-stretch-ceiling' },
-        { title: 'Prefab ceiling unit', sub: 'Pre-assembled & fast', href: '/products/prefab-ceiling-unit' },
+        { title: 'Prefab ceiling unit', sub: 'Pre-assembled & fast', href: '/products/prefab-ceiling-unit', soon: true },
         { title: 'All ceiling systems', sub: 'Compare the range', href: '/products' },
       ],
     },
@@ -82,7 +82,7 @@ export const solutionsMenu: MegaConfig = {
       desc: 'Ready-made units',
       href: '/products/prefab-ceiling-unit',
       items: [
-        { title: 'Prefab ceiling unit', sub: 'Click-fit installation', href: '/products/prefab-ceiling-unit' },
+        { title: 'Prefab ceiling unit', sub: 'Click-fit installation', href: '/products/prefab-ceiling-unit', soon: true },
         { title: 'Inspection hatch', sub: 'Discreet access', href: '/products/prefab-ceiling-unit#specs' },
       ],
     },
@@ -218,7 +218,10 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
           {cat.items.map((item) => (
             <Link key={item.title} href={item.href} onClick={onNavigate} className="megaitem">
               <span className="megaitem-text">
-                <span className="megaitem-t">{item.title}</span>
+                <span className="megaitem-t">
+                  {item.title}
+                  {item.soon && <span className="megaitem-soon">Coming soon</span>}
+                </span>
                 <span className="megaitem-s">{item.sub}</span>
               </span>
               <span className="megaitem-arrow" aria-hidden>→</span>
@@ -367,6 +370,22 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
           font-size: 13px;
           color: var(--text-faint);
           margin-top: 3px;
+        }
+        .megaitem-soon {
+          display: inline-block;
+          margin-left: 10px;
+          font-family: var(--font-body);
+          font-size: 9.5px;
+          font-weight: 700;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--red);
+          background: rgba(255, 0, 0, 0.09);
+          padding: 3px 7px;
+          vertical-align: middle;
+          position: relative;
+          top: -2px;
+          white-space: nowrap;
         }
         .megaitem-arrow {
           color: var(--red);
