@@ -20,31 +20,31 @@ export type ProductImageSet = { hero: string; features: string[] };
 export const productImages: Record<string, ProductImageSet> = {
   // ---- Polyester ----------------------------------------------------------
   'polyester-stretch-ceiling': {
-    hero: '/images/products/polyester-hero.jpg',
+    hero: '/images/products/polyester-stretch-ceiling-hero.jpg',
     features: [
-      '/images/products/polyester-1.jpg', // [0] Cold installation
-      '/images/products/polyester-2.jpg', // [1] A very matte finish
-      '/images/products/polyester-3.jpg', // [2] Acoustic & washable
+      '/images/products/polyester-stretch-ceiling-detail.jpg', // [0] Cold installation
+      '/images/products/polyester-stretch-ceiling-matt-finish.jpg', // [1] A very matte finish
+      '/images/products/polyester-acoustic-stretch-ceiling.jpg', // [2] Acoustic & washable
     ],
   },
 
   // ---- PVC film -----------------------------------------------------------
   'pvc-stretch-ceiling': {
-    hero: '/images/products/pvc-hero.jpg',
+    hero: '/images/products/pvc-stretch-ceiling-hero.jpg',
     features: [
-      '/images/products/pvc-1.jpg', // [0] Recyclable to raw material
-      '/images/products/pvc-2.jpg', // [1] Backlight & print ready
-      '/images/products/pvc-3.jpg', // [2] Removable & washable
+      '/images/products/pvc-stretch-ceiling-sustainable.jpg', // [0] Recyclable to raw material
+      '/images/products/pvc-stretch-ceiling-iluminated.jpg', // [1] Backlight & print ready
+      '/images/products/pvc-stretch-ceiling-removable.jpg', // [2] Removable & washable
     ],
   },
 
   // ---- Acoustic -----------------------------------------------------------
   'acoustic-stretch-system': {
-    hero: '/images/products/acoustic-hero.jpg',
+    hero: '/images/products/acoustic-stretch-ceiling-hero.jpg',
     features: [
-      '/images/products/acoustic-1.jpg', // [0] Class A absorption
-      '/images/products/acoustic-2.jpg', // [1] Islands & wall panels
-      '/images/products/acoustic-3.jpg', // [2] Invisible audio
+      '/images/products/acoustic-stretch-ceiling-absorbtion.jpg', // [0] Class A absorption
+      '/images/products/acoustic-panels.jpg', // [1] Islands & wall panels
+      '/images/products/invisible-audio.jpg', // [2] Invisible audio
     ],
   },
 
