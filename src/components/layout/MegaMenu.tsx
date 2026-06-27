@@ -217,8 +217,11 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           {cat.items.map((item) => (
             <Link key={item.title} href={item.href} onClick={onNavigate} className="megaitem">
-              <div className="megaitem-t">{item.title}</div>
-              <div className="megaitem-s">{item.sub}</div>
+              <span className="megaitem-text">
+                <span className="megaitem-t">{item.title}</span>
+                <span className="megaitem-s">{item.sub}</span>
+              </span>
+              <span className="megaitem-arrow" aria-hidden>→</span>
             </Link>
           ))}
         </div>
@@ -280,7 +283,7 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
         }
         .mega-items-label {
           color: var(--red);
-          padding: 2px 0 16px;
+          padding: 2px 0 16px 14px;
         }
         .mega-cat {
           display: flex;
@@ -314,16 +317,41 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
           justify-content: center;
         }
         .megaitem {
-          display: block;
-          padding: 13px 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+          padding: 12px 14px;
           border-bottom: 1px solid #f1efeb;
           text-decoration: none;
+          position: relative;
+          transition: background 0.15s ease, padding-left 0.15s ease;
+        }
+        .megaitem::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 3px;
+          height: 58%;
+          background: var(--red);
+          transform: translateY(-50%) scaleY(0);
+          transform-origin: center;
           transition: transform 0.15s ease;
         }
         .megaitem:hover {
-          transform: translateX(4px);
+          background: var(--surface);
+          padding-left: 20px;
+        }
+        .megaitem:hover::before {
+          transform: translateY(-50%) scaleY(1);
+        }
+        .megaitem-text {
+          display: block;
+          min-width: 0;
         }
         .megaitem-t {
+          display: block;
           font-family: var(--font-display);
           font-weight: 700;
           font-size: 17px;
@@ -335,9 +363,22 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
           color: var(--red);
         }
         .megaitem-s {
+          display: block;
           font-size: 13px;
           color: var(--text-faint);
           margin-top: 3px;
+        }
+        .megaitem-arrow {
+          color: var(--red);
+          font-size: 17px;
+          flex-shrink: 0;
+          opacity: 0;
+          transform: translateX(-6px);
+          transition: opacity 0.15s ease, transform 0.15s ease;
+        }
+        .megaitem:hover .megaitem-arrow {
+          opacity: 1;
+          transform: translateX(0);
         }
         :global(.mega-promo-cta) {
           display: inline-flex;
