@@ -75,8 +75,13 @@ export const productImages: Record<string, ProductImageSet> = {
   },
   // ---- Light & Print (not requested yet — fill in when ready) -------------
   'light-print-stretch-ceiling': {
-    hero: '',
-    features: ['', '', ''], // [0] backlight  [1] starry sky / RGB  [2] custom print
+    hero: '/images/products/illuminated-stretch-ceiling.jpg',
+    features: [
+      '/images/products/shadowless-illuminated-stretch-ceiling.jpg', // [0] Light & Print Stretch Ceiling hero photo
+      '/images/products/illuminated-stretch-ceiling-backlight-detail.jpg', // [1] In detail
+      '/images/products/led-line-stretch-ceiling.jpg', // [2] LED line lighting
+      '/images/products/printed-stretch-ceiling.jpg', // [3] Printed designs
+    ],
   },
   // ---- Prefab (not requested yet — fill in when ready) --------------------
   'prefab-ceiling-unit': {
