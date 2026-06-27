@@ -14,6 +14,11 @@ type PlaceholderProps = {
   priority?: boolean;
   /** Responsive sizes hint for next/image (avoids oversized downloads). */
   sizes?: string;
+  /** object-fit for real photos. 'cover' fills+crops (photos); 'contain' shows
+   *  the whole image without cropping (diagrams / infographics). */
+  fit?: 'cover' | 'contain';
+  /** Background behind a 'contain' image (fills any letterbox margin). */
+  bg?: string;
   /** Light tile (on light sections) vs dark tile (default) — placeholder only. */
   light?: boolean;
   /** Optional aspect ratio, e.g. "16/10". When omitted, fills its container. */
@@ -31,6 +36,8 @@ export default function Placeholder({
   alt,
   priority,
   sizes,
+  fit = 'cover',
+  bg,
   light = false,
   ratio,
   className,
@@ -48,6 +55,7 @@ export default function Placeholder({
           height: ratio ? 'auto' : '100%',
           aspectRatio: ratio,
           overflow: 'hidden',
+          background: bg,
           ...style,
         }}
       >
@@ -57,7 +65,7 @@ export default function Placeholder({
           fill
           sizes={sizes ?? '100vw'}
           priority={priority}
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: fit }}
         />
       </div>
     );
