@@ -1,0 +1,117 @@
+// Solutions overview (/products). Hero + a card per product in the catalogue,
+// plus an ItemList + BreadcrumbList JSON-LD. Each card links to its solution
+// page.
+import type { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
+import { ArrowRight } from 'lucide-react';
+import { Link } from '@/i18n/navigation';
+import { isValidLocale, type Locale } from '@/i18n/config';
+import { siteUrl } from '@/lib/site-config';
+import { products } from '@/lib/products';
+import { pageMetadata } from '@/lib/page-meta';
+import { breadcrumbSchema } from '@/lib/structured-data';
+import JsonLd from '@/components/seo/JsonLd';
+import Eyebrow from '@/components/ui/Eyebrow';
+import Placeholder from '@/components/ui/Placeholder';
+import { ModalButton } from '@/components/ui/ModalButton';
+
+export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  return pageMetadata({ locale: params.locale, route: '/products', titleKey: 'productsTitle', descKey: 'productsDescription' });
+}
+
+export default function ProductsPage({ params }: { params: { locale: string } }) {
+  if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
+  const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
+
+  const itemList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: products.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: p.name,
+      url: `${siteUrl}/${locale}/products/${p.slug}`,
+    })),
+  };
+  const crumbs = breadcrumbSchema([
+    { name: 'Home', url: `${siteUrl}/${locale}` },
+    { name: 'Solutions', url: `${siteUrl}/${locale}/products` },
+  ]);
+
+  return (
+    <>
+      <JsonLd data={itemList} />
+      <JsonLd data={crumbs} />
+
+      {/* Hero */}
+      <section className="container" style={{ padding: 'clamp(36px,5vw,72px) 0 clamp(28px,3vw,44px)' }}>
+        <Eyebrow num="01" label="Our solutions" />
+        <h1 className="h1" style={{ margin: '0 0 clamp(20px,2vw,28px)' }}>
+          Two systems.
+          <br />
+          <span className="accent">Endless</span> finishes.
+        </h1>
+        <p className="lead" style={{ maxWidth: 560, margin: 0 }}>
+          Every STRETCH ceiling is a seamless membrane tensioned by hand — then tuned for acoustics,
+          light, print or prefab. Choose by span, mounting method and finish.
+        </p>
+      </section>
+
+      {/* Product grid */}
+      <section className="container" style={{ paddingBottom: 'clamp(50px,6vw,90px)' }}>
+        <div className="prod-grid">
+          {products.map((p) => (
+            <Link key={p.slug} href={`/products/${p.slug}`} className="prod-card zoom-wrap">
+              <div style={{ overflow: 'hidden' }}>
+                <Placeholder label={`${p.name}`} light ratio="16/10" className="zoom-img" decorative />
+              </div>
+              <div className="prod-card__body">
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 12 }}>
+                  <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red)' }}>{p.mount}</span>
+                  <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>{p.category}</span>
+                </div>
+                <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(24px,2.6vw,32px)', letterSpacing: '-.02em', textTransform: 'uppercase', margin: '0 0 12px' }}>{p.short}</h2>
+                <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-muted)', margin: '0 0 18px' }}>{p.summary}</p>
+                <ul style={{ listStyle: 'none', margin: '0 0 20px', padding: 0, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  {p.chips.slice(0, 3).map((c) => (
+                    <li key={c} style={{ fontSize: 12, fontWeight: 600, border: '1px solid var(--border)', padding: '6px 11px', display: 'flex', alignItems: 'center', gap: 7 }}>
+                      <span style={{ width: 6, height: 6, background: 'var(--red)' }} />{c}
+                    </li>
+                  ))}
+                </ul>
+                <span className="lnk" style={{ fontWeight: 700, fontSize: 13.5, letterSpacing: '.04em', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 9 }}>
+                  Explore {p.short} <span style={{ color: 'var(--red)' }}>→</span>
+                </span>
+              </div>
+            </Link>
+          ))}
+
+          {/* Trailing CTA cell */}
+          <div className="prod-card prod-card--cta">
+            <div>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(24px,2.6vw,32px)', letterSpacing: '-.02em', textTransform: 'uppercase', margin: '0 0 14px', color: '#fff' }}>
+                Not sure which?
+              </h2>
+              <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--on-dark-soft)', margin: '0 0 24px' }}>
+                Tell us about your room and we will recommend the right system — free and without
+                obligation.
+              </p>
+            </div>
+            <ModalButton type="quote" source="products_grid" trackQuote className="btn btn--primary" style={{ alignSelf: 'flex-start' }}>
+              Request a free quote <ArrowRight size={16} />
+            </ModalButton>
+          </div>
+        </div>
+      </section>
+
+      <style>{`
+        .prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .prod-card { border: 1px solid var(--border); background: #fff; text-decoration: none; display: flex; flex-direction: column; }
+        .prod-card__body { padding: clamp(22px,2.4vw,30px); display: flex; flex-direction: column; flex: 1; }
+        .prod-card--cta { background: var(--black); padding: clamp(26px,3vw,38px); justify-content: space-between; gap: 20px; }
+        @media (max-width: 900px) { .prod-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .prod-grid { grid-template-columns: 1fr; } }
+      `}</style>
+    </>
+  );
+}

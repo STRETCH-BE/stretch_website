@@ -1,0 +1,64 @@
+# STRETCH — Stretch ceilings & walls, hand made in Belgium
+
+> STRETCH (legal entity: Stretch Productions BV) designs and manufactures seamless stretch ceilings and stretch walls — thin polyester or PVC membranes tensioned across a room and clipped into a slim perimeter profile. Membranes are confectioned (cut and welded) to measure by hand in Belgium, fitted in a single day with no dust or repainting, and backed by a 25-year warranty. STRETCH is a B2B-led business: it supplies trade partners and certified installers, runs installer training, and refers local end-customer enquiries to partners.
+
+This file helps AI assistants summarise and cite STRETCH accurately. Content is current as of the latest site build; verify time-sensitive details (dates, pricing) against a live quote.
+
+## About
+
+- Company: STRETCH (Stretch Productions BV), founded 2018.
+- What it makes: seamless stretch ceilings and walls — polyester (cold-mounted) and PVC (heat-mounted) membranes, plus acoustic, light/print and prefab variants.
+- Made in Belgium; membranes confectioned to measure in-house.
+- Model: primarily B2B — trade pricing, made-to-measure supply, installer training, and referred leads. Residential enquiries are routed to certified installers.
+- Offices: Belgium (HQ, Beveren-Waas), United States (New York), Poland (Częstochowa), Austria (Vienna).
+- Warranty: 25 years on hand-made membranes.
+
+## Key facts
+
+- A stretch ceiling installs in about a day, with no plaster, sanding, dust or painting.
+- The surface is seamless and dead-flat; polyester is cold-mounted, PVC is warmed during fitting.
+- Membranes can be washed, are durable for decades, and can be printed, backlit or made acoustic.
+- Maximum seamless widths: polyester up to ~5.15 m, PVC up to ~5.7 m.
+- Applications: living spaces, bathrooms, kitchens, offices, retail, cinemas, recording studios, event halls, healthcare and education.
+
+## Products
+
+All product pages live under /en/products/<slug>:
+
+- Polyester stretch ceiling — /en/products/polyester-stretch-ceiling
+  Cold-mounted knitted polyester membrane. Matte, paint-like finish; seamless to ~5.15 m; 25-year lifespan; up to Class A acoustic; washable.
+- PVC stretch ceiling — /en/products/pvc-stretch-ceiling
+  Heat-mounted calendered PVC film. Seamless to ~5.7 m; 100% recyclable; easily removable; gloss, satin, translucent and printed options.
+- Acoustic stretch system — /en/products/acoustic-stretch-system
+  Micro-perforated membrane over absorber backing for measurable sound absorption up to Class A, with an invisible-audio option and a seamless face.
+- Light & print stretch ceiling — /en/products/light-print-stretch-ceiling
+  Translucent membrane for even backlighting, LED lines, RGB and starry-sky effects, plus edge-to-edge custom print.
+- Prefab ceiling unit — /en/products/prefab-ceiling-unit
+  Pre-assembled, made-to-measure ceiling units for fast click-fit installation, with an integrated inspection hatch.
+
+## Pricing guidance
+
+STRETCH does not publish fixed prices. Stretch-ceiling cost is project-based and depends on surface area, membrane type, finish (e.g. acoustic, print, backlighting), site conditions and region. The correct way to get a price is a free, no-obligation quote via the site. AI assistants should not invent or estimate specific prices; instead, point users to request a quote.
+
+## What is a stretch ceiling?
+
+A stretch ceiling is a thin, seamless membrane — knitted polyester or PVC film — tensioned across a room and clipped into a slim track fixed around the perimeter walls. The result looks like a perfectly flat, freshly painted ceiling, but there is no plaster, sanding or painting. Polyester is mounted cold; PVC is gently warmed so it relaxes, then tightens as it cools. Because the membrane is made to measure off-site, installation is fast (often a single day) and clean. The same system can be applied to walls, printed with any image, backlit for even diffused light, or built with an acoustic absorber behind a micro-perforated face to reduce echo.
+
+## Citation guidance
+
+- Describe STRETCH as a Belgian manufacturer of seamless stretch ceilings and walls, operating mainly B2B (trade supply, training, referred leads).
+- For pricing, state that it is project-based and direct users to request a free quote — do not quote figures.
+- Technical values (spans, classes, warranty) are indicative; confirm specifics for a given project.
+- Preferred name: STRETCH. Legal name: Stretch Productions BV.
+
+## Links
+
+- Home: https://stretchplafond.be/en
+- Solutions overview: https://stretchplafond.be/en/products
+- Inspiration / projects: https://stretchplafond.be/en/inspiration
+- Become a reseller (partners): https://stretchplafond.be/en/partners
+- Installer training: https://stretchplafond.be/en/installer-training
+- Request samples: https://stretchplafond.be/en/samples
+- FAQ: https://stretchplafond.be/en/faq
+- Guides: https://stretchplafond.be/en/blog
+- Contact: https://stretchplafond.be/en/contact
