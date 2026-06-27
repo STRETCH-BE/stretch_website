@@ -8,12 +8,17 @@ import { Link } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl } from '@/lib/site-config';
 import { products } from '@/lib/products';
+import { productImage, pimg } from '@/lib/product-images';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
+
+// Products shown as "Coming soon" on the overview grid (still link through to
+// their page). Add a slug here to flag another product.
+const COMING_SOON = ['prefab-ceiling-unit'];
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/products', titleKey: 'productsTitle', descKey: 'productsDescription' });
@@ -60,31 +65,62 @@ export default function ProductsPage({ params }: { params: { locale: string } })
       {/* Product grid */}
       <section className="container" style={{ paddingBottom: 'clamp(50px,6vw,90px)' }}>
         <div className="prod-grid">
-          {products.map((p) => (
-            <Link key={p.slug} href={`/products/${p.slug}`} className="prod-card zoom-wrap">
-              <div style={{ overflow: 'hidden' }}>
-                <Placeholder label={`${p.name}`} light ratio="16/10" className="zoom-img" decorative />
-              </div>
-              <div className="prod-card__body">
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 12 }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red)' }}>{p.mount}</span>
-                  <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>{p.category}</span>
+          {products.map((p) => {
+            const soon = COMING_SOON.includes(p.slug);
+            return (
+              <Link key={p.slug} href={`/products/${p.slug}`} className="prod-card zoom-wrap">
+                <div style={{ overflow: 'hidden', position: 'relative' }}>
+                  {soon && (
+                    <span
+                      style={{
+                        position: 'absolute',
+                        top: 14,
+                        left: 14,
+                        zIndex: 2,
+                        background: 'var(--red)',
+                        color: '#fff',
+                        fontSize: 11,
+                        fontWeight: 700,
+                        letterSpacing: '.14em',
+                        textTransform: 'uppercase',
+                        padding: '7px 12px',
+                      }}
+                    >
+                      Coming soon
+                    </span>
+                  )}
+                  <Placeholder
+                    label={`${p.name}`}
+                    src={pimg(productImage(p.slug).hero, '16/10').src}
+                    alt={p.name}
+                    sizes="(max-width: 900px) 100vw, 33vw"
+                    light
+                    ratio="16/10"
+                    className="zoom-img"
+                    decorative
+                  />
                 </div>
-                <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(24px,2.6vw,32px)', letterSpacing: '-.02em', textTransform: 'uppercase', margin: '0 0 12px' }}>{p.short}</h2>
-                <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-muted)', margin: '0 0 18px' }}>{p.summary}</p>
-                <ul style={{ listStyle: 'none', margin: '0 0 20px', padding: 0, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                  {p.chips.slice(0, 3).map((c) => (
-                    <li key={c} style={{ fontSize: 12, fontWeight: 600, border: '1px solid var(--border)', padding: '6px 11px', display: 'flex', alignItems: 'center', gap: 7 }}>
-                      <span style={{ width: 6, height: 6, background: 'var(--red)' }} />{c}
-                    </li>
-                  ))}
-                </ul>
-                <span className="lnk" style={{ fontWeight: 700, fontSize: 13.5, letterSpacing: '.04em', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 9 }}>
-                  Explore {p.short} <span style={{ color: 'var(--red)' }}>→</span>
-                </span>
-              </div>
-            </Link>
-          ))}
+                <div className="prod-card__body">
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 12 }}>
+                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red)' }}>{p.mount}</span>
+                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>{p.category}</span>
+                  </div>
+                  <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(24px,2.6vw,32px)', letterSpacing: '-.02em', textTransform: 'uppercase', margin: '0 0 12px' }}>{p.short}</h2>
+                  <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-muted)', margin: '0 0 18px' }}>{p.summary}</p>
+                  <ul style={{ listStyle: 'none', margin: '0 0 20px', padding: 0, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                    {p.chips.slice(0, 3).map((c) => (
+                      <li key={c} style={{ fontSize: 12, fontWeight: 600, border: '1px solid var(--border)', padding: '6px 11px', display: 'flex', alignItems: 'center', gap: 7 }}>
+                        <span style={{ width: 6, height: 6, background: 'var(--red)' }} />{c}
+                      </li>
+                    ))}
+                  </ul>
+                  <span className="lnk" style={{ fontWeight: 700, fontSize: 13.5, letterSpacing: '.04em', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 9 }}>
+                    {soon ? 'Preview' : `Explore ${p.short}`} <span style={{ color: 'var(--red)' }}>→</span>
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
 
           {/* Trailing CTA cell */}
           <div className="prod-card prod-card--cta">
