@@ -11,6 +11,7 @@ import { breadcrumbSchema, organizationSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
+import { pageImages } from '@/lib/page-images';
 import { ModalButton } from '@/components/ui/ModalButton';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
@@ -53,7 +54,13 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
             </p>
           </div>
           <div>
-            <Placeholder label="Workshop / team" ratio="4/3.2" />
+            <Placeholder
+            label="Workshop / team"
+            src={pageImages.about}
+            alt="The STRETCH workshop and team"
+            sizes="(max-width: 860px) 100vw, 45vw"
+            ratio="4/3.2"
+          />
           </div>
         </div>
       </section>
