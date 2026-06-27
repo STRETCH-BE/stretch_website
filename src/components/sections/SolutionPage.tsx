@@ -7,7 +7,7 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton, ModalTextLink } from '@/components/ui/ModalButton';
 import { getProduct, type Product } from '@/lib/products';
-import { productImage } from '@/lib/product-images';
+import { productImage, pimg } from '@/lib/product-images';
 
 // Renders a colour name as a real swatch background (solid colour or a gradient
 // for translucent/RGB/print/custom finishes). Light tones get a hairline border
@@ -86,11 +86,13 @@ export default function SolutionPage({ product }: { product: Product }) {
           <div style={{ position: 'relative' }}>
             <Placeholder
               label={`${product.name} hero photo`}
-              src={imgs.hero}
+              src={pimg(imgs.hero, '4/3.2').src}
               alt={`${product.name} — STRETCH`}
               priority
               sizes="(max-width: 860px) 100vw, 55vw"
-              ratio="4/3.2"
+              ratio={pimg(imgs.hero, '4/3.2').ratio}
+              fit={pimg(imgs.hero, '4/3.2').fit}
+              bg={pimg(imgs.hero, '4/3.2').bg}
             />
             <div style={{ position: 'absolute', left: -1, bottom: -1, background: 'var(--black)', color: '#fff', padding: '13px 18px', fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase' }}>
               {product.short} system
@@ -118,24 +120,29 @@ export default function SolutionPage({ product }: { product: Product }) {
           <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>In detail</span>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(40px,5vw,76px)' }}>
-          {product.features.map((feat, i) => (
-            <div key={feat.title} className={`sp-featrow${i % 2 === 1 ? ' sp-featrow--rev' : ''}`}>
-              <div style={{ flex: 1.1, minWidth: 0 }}>
-                <Placeholder
-                  label={`${feat.title} — ${product.short}`}
-                  src={imgs.features[i]}
-                  alt={`${product.short} — ${feat.title}`}
-                  sizes="(max-width: 860px) 100vw, 50vw"
-                  light
-                  ratio="16/11"
-                />
+          {product.features.map((feat, i) => {
+            const f = pimg(imgs.features[i], '16/11');
+            return (
+              <div key={feat.title} className={`sp-featrow${i % 2 === 1 ? ' sp-featrow--rev' : ''}`}>
+                <div style={{ flex: 1.1, minWidth: 0 }}>
+                  <Placeholder
+                    label={`${feat.title} — ${product.short}`}
+                    src={f.src}
+                    alt={`${product.short} — ${feat.title}`}
+                    sizes="(max-width: 860px) 100vw, 50vw"
+                    fit={f.fit}
+                    bg={f.bg}
+                    light
+                    ratio={f.ratio}
+                  />
+                </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(26px,3vw,40px)', lineHeight: 0.98, letterSpacing: '-.02em', textTransform: 'uppercase', margin: '0 0 18px' }}>{feat.title}</h3>
+                  <p style={{ fontSize: 'clamp(15px,1.2vw,17px)', lineHeight: 1.6, color: 'var(--text-muted)', maxWidth: 460, margin: 0 }}>{feat.body}</p>
+                </div>
               </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(26px,3vw,40px)', lineHeight: 0.98, letterSpacing: '-.02em', textTransform: 'uppercase', margin: '0 0 18px' }}>{feat.title}</h3>
-                <p style={{ fontSize: 'clamp(15px,1.2vw,17px)', lineHeight: 1.6, color: 'var(--text-muted)', maxWidth: 460, margin: 0 }}>{feat.body}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -240,7 +247,7 @@ export default function SolutionPage({ product }: { product: Product }) {
                 <div style={{ overflow: 'hidden' }}>
                   <Placeholder
                     label={`${rel.name}`}
-                    src={productImage(rel.slug).hero}
+                    src={pimg(productImage(rel.slug).hero, '16/10').src}
                     alt={rel.name}
                     sizes="(max-width: 860px) 100vw, 30vw"
                     light
