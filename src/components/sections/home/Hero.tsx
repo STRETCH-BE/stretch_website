@@ -1,92 +1,219 @@
-// Homepage hero: oversized headline, supporting copy + dual CTA, bullet proof
-// points, and a hero image slot with the 5.0 Google rating + seamless-span tags.
+'use client';
+
+// Full-bleed, photography-led hero. Four background images crossfade (opacity,
+// 1s) on a ~5.5s timer that pauses on hover and resets when a tab is clicked.
+// Two dark gradient overlays keep the headline legible; the headline itself is
+// always rendered at full opacity (no fade-in). A pinned tab row lets visitors
+// jump straight to a slide.
+import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
 
-const PROOF = [
-  'Installed within one day',
-  'No dust or dirt during fitting',
-  'Measurable acoustic improvement',
-  'Never paint or sand again',
+type Slide = {
+  kicker: string;
+  line1: string;
+  line2: string; // shown in red
+  subhead: string;
+  image: string;
+  tabName: string;
+  tabDesc: string;
+};
+
+const SLIDES: Slide[] = [
+  {
+    kicker: 'Stretch® Ceilings — fitted in one day',
+    line1: 'A new ceiling', line2: 'in one day.',
+    subhead: 'Seamless, cold-fitted ceilings installed in a single day — no dust, no mess.',
+    image: homeImages.heroSlides.ceilings, tabName: 'Ceilings', tabDesc: 'Polyester & PVC',
+  },
+  {
+    kicker: 'Acoustic comfort — up to Class A',
+    line1: 'Acoustics,', line2: 'built in.',
+    subhead: 'Bring any room down to a comfortable noise level, up to Class A absorption.',
+    image: homeImages.heroSlides.acoustic, tabName: 'Acoustic', tabDesc: 'Panels & audio',
+  },
+  {
+    kicker: 'Stretch walls — seamless cladding',
+    line1: 'Walls that', line2: 'absorb sound.',
+    subhead: 'Seamless stretched wall cladding that absorbs sound and hides every imperfection.',
+    image: homeImages.heroSlides.walls, tabName: 'Walls', tabDesc: 'Cladding & textile',
+  },
+  {
+    kicker: 'Light & print — backlit designs',
+    line1: 'Ceilings that', line2: 'light up.',
+    subhead: 'Backlit, printed and starry-sky ceilings — your design, evenly lit.',
+    image: homeImages.heroSlides.light, tabName: 'Light & Print', tabDesc: 'Backlit & printed',
+  },
 ];
 
+const ADVANCE_MS = 5500;
+
 export default function Hero() {
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const id = setTimeout(() => setActive((a) => (a + 1) % SLIDES.length), ADVANCE_MS);
+    return () => clearTimeout(id);
+  }, [active, paused]);
+
+  const s = SLIDES[active];
+
   return (
     <section
-      className="container"
-      style={{ paddingTop: 'clamp(36px,6vw,76px)', paddingBottom: 'clamp(28px,4vw,48px)' }}
+      className="hero"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      aria-roledescription="carousel"
+      aria-label="STRETCH solutions"
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 'clamp(22px,3vw,34px)', flexWrap: 'wrap' }}>
-        <span style={{ width: 34, height: 2, background: 'var(--red)' }} />
-        <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--black)' }}>
-          Stretch® Ceilings &amp; Walls
-        </span>
-        <span style={{ fontSize: 12.5, fontWeight: 600, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>
-          — Fitted in one day
-        </span>
+      {/* Background image layers + overlays */}
+      <div className="hero-bg" aria-hidden="true">
+        {SLIDES.map((slide, i) => (
+          <div key={slide.tabName} className="hero-layer" style={{ opacity: i === active ? 1 : 0 }}>
+            <Placeholder label={`Hero — ${slide.tabName}`} src={slide.image} alt="" priority={i === 0} sizes="100vw" decorative />
+          </div>
+        ))}
+        <div className="hero-ov hero-ov--x" />
+        <div className="hero-ov hero-ov--y" />
       </div>
 
-      <h1 className="h-display" style={{ margin: 0 }}>
-        A new ceiling
-        <br />
-        in <span className="accent">one day.</span>
-      </h1>
-
-      <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: '1.05fr 1.35fr', gap: 'clamp(28px,4vw,64px)', marginTop: 'clamp(34px,4vw,56px)', alignItems: 'end' }}>
-        <div>
-          <p className="lead" style={{ maxWidth: 440, margin: '0 0 28px' }}>
-            Sleek, seamless stretch ceilings and walls — installed cold, with no dust and no mess.
-            One team, one day, a flawless finish that lasts 25 years and measurably improves the
-            acoustics of every room.
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, marginBottom: 30 }}>
-            <ModalButton type="quote" source="hero" trackQuote className="btn btn--primary">
-              Request a free quote <ArrowRight size={16} />
-            </ModalButton>
-            <Link href="/products" className="btn btn--ghost">
-              Explore solutions <ArrowRight size={16} className="btn__arrow" />
-            </Link>
-          </div>
-          <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 11 }}>
-            {PROOF.map((p) => (
-              <li key={p} style={{ display: 'flex', alignItems: 'center', gap: 13, fontSize: 14.5, fontWeight: 600 }}>
-                <span className="tick" />
-                {p}
-              </li>
-            ))}
-          </ul>
+      {/* Headline + CTAs */}
+      <div className="container hero-content">
+        <div className="hero-kicker">
+          <span className="hero-dash" />
+          <span>{s.kicker}</span>
         </div>
+        <h1 className="h-display hero-title">
+          {s.line1}
+          <br />
+          <span className="accent">{s.line2}</span>
+        </h1>
+        <p className="hero-sub">{s.subhead}</p>
+        <div className="hero-cta">
+          <ModalButton type="quote" source="hero" trackQuote className="btn btn--primary btn--lg">
+            Request a free quote <ArrowRight size={16} />
+          </ModalButton>
+          <Link href="/products" className="btn btn--ghost-light btn--lg">
+            Explore solutions <ArrowRight size={16} className="btn__arrow" />
+          </Link>
+          <span className="hero-rating">
+            <strong>5.0</strong>
+            <span className="hero-stars" aria-hidden="true">★★★★★</span>
+            <span className="hero-rating-label">Rated on Google</span>
+          </span>
+        </div>
+      </div>
 
-        <div style={{ position: 'relative' }}>
-          <Placeholder
-            label="Hero ceiling photo"
-            src={homeImages.hero}
-            alt="A seamless STRETCH ceiling fitted in a modern interior"
-            priority
-            sizes="(max-width: 860px) 100vw, 52vw"
-            ratio="4/3.05"
-          />
-          <div style={{ position: 'absolute', left: -1, bottom: -1, background: 'var(--red)', color: '#fff', padding: '16px 22px', display: 'flex', alignItems: 'center', gap: 14 }}>
-            <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 30, lineHeight: 1 }}>5.0</span>
-            <div style={{ lineHeight: 1.15 }}>
-              <div style={{ fontSize: 13, letterSpacing: '.05em' }}>★★★★★</div>
-              <div style={{ fontSize: 10.5, fontWeight: 600, letterSpacing: '.14em', textTransform: 'uppercase', opacity: 0.92 }}>
-                Rated on Google
-              </div>
-            </div>
-          </div>
-          <div style={{ position: 'absolute', right: -1, top: -1, background: 'var(--black)', color: '#fff', padding: '11px 16px', fontSize: 11, fontWeight: 700, letterSpacing: '.16em', textTransform: 'uppercase' }}>
-            Seamless to 5.7m
-          </div>
+      {/* Find-your-solution tab row */}
+      <div className="hero-tabs-bar">
+        <div className="container hero-tabs" role="tablist" aria-label="Find your solution">
+          {SLIDES.map((slide, i) => (
+            <button
+              key={slide.tabName}
+              type="button"
+              role="tab"
+              aria-selected={i === active}
+              className={`hero-tab${i === active ? ' is-active' : ''}`}
+              onClick={() => setActive(i)}
+            >
+              <span className="hero-tab-bar" aria-hidden="true" />
+              <span className="hero-tab-body">
+                <span className="hero-tab-name">{slide.tabName}</span>
+                <span className="hero-tab-desc">{slide.tabDesc}</span>
+              </span>
+              <ArrowRight size={16} className="hero-tab-arrow" aria-hidden="true" />
+            </button>
+          ))}
         </div>
       </div>
 
       <style>{`
-        @media (max-width: 860px) {
-          .hero-grid { grid-template-columns: 1fr !important; align-items: start !important; }
+        .hero {
+          position: relative;
+          min-height: 94vh;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          background: var(--black);
+          color: #fff;
+        }
+        .hero-bg { position: absolute; inset: 0; z-index: 0; }
+        .hero-layer { position: absolute; inset: 0; transition: opacity 1s ease; }
+        .hero-layer > * { width: 100%; height: 100%; }
+        .hero-ov { position: absolute; inset: 0; pointer-events: none; }
+        .hero-ov--x { background: linear-gradient(100deg, rgba(8,8,8,.9) 0%, rgba(8,8,8,.32) 50%, rgba(8,8,8,.6) 100%); }
+        .hero-ov--y { background: linear-gradient(to bottom, rgba(8,8,8,.45) 0%, rgba(8,8,8,.15) 40%, rgba(8,8,8,.8) 100%); }
+
+        .hero-content {
+          position: relative;
+          z-index: 2;
+          flex: 1 1 auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-top: clamp(48px, 9vw, 120px);
+          padding-bottom: clamp(40px, 6vw, 80px);
+        }
+        .hero-kicker {
+          display: flex; align-items: center; gap: 14px;
+          margin-bottom: clamp(18px, 2.4vw, 28px);
+          font-size: 12.5px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+          color: #fff;
+        }
+        .hero-dash { width: 34px; height: 2px; background: var(--red); flex-shrink: 0; }
+        .hero-title { margin: 0; max-width: 16ch; opacity: 1; }
+        .hero-sub {
+          font-size: clamp(15px, 1.7vw, 19px); line-height: 1.5; color: var(--on-dark-soft);
+          max-width: 46ch; margin: clamp(20px, 2.6vw, 30px) 0 clamp(26px, 3.4vw, 38px);
+        }
+        .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+        .hero-rating {
+          display: inline-flex; align-items: center; gap: 9px;
+          color: #fff; font-size: 13px;
+        }
+        .hero-rating strong { font-family: var(--font-display); font-weight: 900; font-size: 19px; line-height: 1; }
+        .hero-stars { color: var(--red); letter-spacing: .04em; font-size: 13px; }
+        .hero-rating-label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--on-dark-muted); }
+
+        .hero-tabs-bar {
+          position: relative; z-index: 2; flex: 0 0 auto;
+          background: rgba(10,10,10,.55);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border-top: 1px solid rgba(255,255,255,.16);
+        }
+        .hero-tabs { display: grid; grid-template-columns: repeat(4, 1fr); }
+        .hero-tab {
+          position: relative; cursor: pointer; font: inherit; text-align: left;
+          background: transparent; border: 0;
+          border-left: 1px solid rgba(255,255,255,.12);
+          display: flex; align-items: center; gap: 12px;
+          padding: clamp(16px, 1.8vw, 24px) clamp(14px, 1.6vw, 22px);
+          transition: background .2s;
+        }
+        .hero-tab:first-child { border-left: 0; }
+        .hero-tab:hover { background: rgba(255,255,255,.06); }
+        .hero-tab.is-active { background: rgba(255,255,255,.07); }
+        .hero-tab-bar { position: absolute; top: 0; left: 0; right: 0; height: 3px; background: rgba(255,255,255,.22); transition: background .2s; }
+        .hero-tab.is-active .hero-tab-bar { background: var(--red); }
+        .hero-tab-body { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+        .hero-tab-name { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; letter-spacing: -.01em; font-size: clamp(13px, 1.25vw, 17px); color: #fff; line-height: 1; }
+        .hero-tab-desc { font-size: 11.5px; color: rgba(255,255,255,.6); }
+        .hero-tab-arrow { color: var(--red); flex-shrink: 0; }
+
+        @media (max-width: 760px) {
+          .hero { min-height: 90vh; }
+          .hero-tabs { grid-template-columns: 1fr 1fr; }
+          .hero-tab:nth-child(2) { border-left: 1px solid rgba(255,255,255,.12); }
+          .hero-tab:nth-child(3) { border-left: 0; }
+          .hero-tab:nth-child(3), .hero-tab:nth-child(4) { border-top: 1px solid rgba(255,255,255,.12); }
+          .hero-tab-arrow { display: none; }
         }
       `}</style>
     </section>
