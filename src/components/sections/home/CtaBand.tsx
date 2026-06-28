@@ -1,16 +1,23 @@
-// Closing CTA band — dark, oversized headline with the primary quote CTA and a
-// "find your nearest dealer" link to Contact.
+// Closing CTA — a full-bleed photo band under a dark overlay (not flat black),
+// with the primary quote CTA, a dealer link and the phone line.
 import { Link } from '@/i18n/navigation';
 import { ModalButton } from '@/components/ui/ModalButton';
+import Placeholder from '@/components/ui/Placeholder';
+import { homeImages } from '@/lib/home-images';
 import { contact } from '@/lib/site-config';
 
 export default function CtaBand() {
   return (
-    <section className="section--dark" id="cta">
-      <div className="container section" style={{ textAlign: 'center' }}>
+    <section className="cta-band" id="cta">
+      <div className="cta-bg" aria-hidden="true">
+        <Placeholder label="Closing CTA — finished interior" src={homeImages.ctaBand} alt="" sizes="100vw" decorative />
+      </div>
+      <div className="cta-ov" aria-hidden="true" />
+
+      <div className="container cta-inner">
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
           <span style={{ width: 30, height: 2, background: 'var(--red)' }} />
-          <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--on-dark-faint)' }}>
+          <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--on-dark-soft)' }}>
             Ready when you are
           </span>
           <span style={{ width: 30, height: 2, background: 'var(--red)' }} />
@@ -20,7 +27,7 @@ export default function CtaBand() {
           Ready for a new ceiling<span className="accent">?</span>
         </h2>
 
-        <p style={{ fontSize: 17, lineHeight: 1.6, color: 'var(--on-dark-muted-2)', maxWidth: 560, margin: '22px auto 34px' }}>
+        <p style={{ fontSize: 17, lineHeight: 1.6, color: 'var(--on-dark-soft)', maxWidth: 560, margin: '22px auto 34px' }}>
           Tell us about your project and we will get back to you with a tailored price — free and
           without obligation, within two working days.
         </p>
@@ -34,7 +41,7 @@ export default function CtaBand() {
           </Link>
         </div>
 
-        <p style={{ marginTop: 30, fontSize: 13.5, color: 'var(--on-dark-faint)' }}>
+        <p style={{ marginTop: 30, fontSize: 13.5, color: 'var(--on-dark-soft)' }}>
           Prefer to talk?{' '}
           <a href={contact.phoneHref} style={{ color: '#fff', fontWeight: 600 }}>
             {contact.phoneDisplay}
@@ -42,6 +49,14 @@ export default function CtaBand() {
           · {contact.hoursDisplay}
         </p>
       </div>
+
+      <style>{`
+        .cta-band { position: relative; overflow: hidden; background: var(--black); text-align: center; }
+        .cta-bg { position: absolute; inset: 0; }
+        .cta-bg > * { width: 100%; height: 100%; }
+        .cta-ov { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,10,.72) 0%, rgba(10,10,10,.8) 55%, rgba(10,10,10,.88) 100%); }
+        .cta-inner { position: relative; z-index: 2; padding: clamp(76px,11vw,150px) 0; }
+      `}</style>
     </section>
   );
 }
