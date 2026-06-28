@@ -8,6 +8,7 @@ import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton, ModalTextLink } from '@/components/ui/ModalButton';
 import { getProduct, type Product } from '@/lib/products';
 import { productImage, pimg } from '@/lib/product-images';
+import ColourChart from '@/components/sections/ColourChart';
 
 // Renders a colour name as a real swatch background (solid colour or a gradient
 // for translucent/RGB/print/custom finishes). Light tones get a hairline border
@@ -192,21 +193,25 @@ export default function SolutionPage({ product }: { product: Product }) {
             </ModalButton>
           </div>
         </div>
-        <div className="sp-colours" style={{ display: 'grid', gridTemplateColumns: 'repeat(6,1fr)', gap: 12 }}>
-          {product.colours.map((col) => {
-            const sw = swatch(col);
-            return (
-              <div key={col}>
-                <div
-                  role="img"
-                  aria-label={`${col} finish`}
-                  style={{ aspectRatio: '1/1', background: sw.background, border: sw.border }}
-                />
-                <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 10 }}>{col}</div>
-              </div>
-            );
-          })}
-        </div>
+        {product.colourChart ? (
+          <ColourChart entries={product.colourChart} note="Every colour is available in standard and acoustic finishes." />
+        ) : (
+          <div className="sp-colours" style={{ display: 'grid', gridTemplateColumns: 'repeat(6,1fr)', gap: 12 }}>
+            {product.colours.map((col) => {
+              const sw = swatch(col);
+              return (
+                <div key={col}>
+                  <div
+                    role="img"
+                    aria-label={`${col} finish`}
+                    style={{ aspectRatio: '1/1', background: sw.background, border: sw.border }}
+                  />
+                  <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 10 }}>{col}</div>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </section>
 
       {/* ---------- Applications ---------- */}
