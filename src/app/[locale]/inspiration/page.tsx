@@ -48,7 +48,7 @@ export default function InspirationPage({ params }: { params: { locale: string }
       <section className="container" style={{ paddingBottom: 'clamp(40px,5vw,72px)' }}>
         <div className="ins-feat" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
           {FEATURED.map((p) => (
-            <figure key={p.title} className="zoom-wrap" style={{ margin: 0, position: 'relative', overflow: 'hidden', border: '1px solid var(--border)' }}>
+            <Link key={p.slug} href={`/inspiration/${p.slug}`} className="zoom-wrap" style={{ display: 'block', margin: 0, position: 'relative', overflow: 'hidden', border: '1px solid var(--border)', textDecoration: 'none' }}>
               <Placeholder
                 label={`Featured — ${p.title}`}
                 src={p.image}
@@ -57,12 +57,12 @@ export default function InspirationPage({ params }: { params: { locale: string }
                 ratio="16/10"
                 className="zoom-img"
               />
-              <figcaption style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: 'clamp(22px,2.6vw,34px)', background: 'linear-gradient(to top, rgba(10,10,10,.85) 0%, rgba(10,10,10,.1) 60%, rgba(10,10,10,0) 100%)' }}>
+              <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: 'clamp(22px,2.6vw,34px)', background: 'linear-gradient(to top, rgba(10,10,10,.85) 0%, rgba(10,10,10,.1) 60%, rgba(10,10,10,0) 100%)' }}>
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: '#fff', background: 'var(--red)', alignSelf: 'flex-start', padding: '5px 10px', marginBottom: 12 }}>{p.cat}</span>
                 <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(22px,2.6vw,32px)', letterSpacing: '-.02em', textTransform: 'uppercase', color: '#fff', margin: '0 0 6px' }}>{p.title}</h2>
                 <span style={{ fontSize: 13.5, color: 'var(--on-dark-soft)' }}>{p.meta}</span>
-              </figcaption>
-            </figure>
+              </div>
+            </Link>
           ))}
         </div>
       </section>
