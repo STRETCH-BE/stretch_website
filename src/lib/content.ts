@@ -7,12 +7,22 @@
 
 export type Project = {
   key: string;
+  /** URL slug for the detail page, e.g. 'van-der-valk-beveren'. */
+  slug: string;
   cat: string;
   title: string;
   meta: string;
   featured?: boolean;
-  /** Photo path from /public, e.g. '/images/projects/foyer.jpg'. Empty = placeholder. */
+  /** Hero/thumbnail photo from /public. Empty = placeholder. */
   image?: string;
+  /** One-line summary shown on the project detail hero. */
+  summary?: string;
+  /** Detail-page body paragraphs (English; drafted from the old site — verify). */
+  description?: string[];
+  /** Slugs of STRETCH solutions used (link to product pages). */
+  solutions?: string[];
+  /** Gallery image paths from /public ('' = placeholder). */
+  gallery?: string[];
 };
 
 export const projectFilters: { key: string; label: string }[] = [
@@ -36,21 +46,153 @@ export const browseSolutions: { key: string; label: string; desc: string }[] = [
 ];
 
 export const projects: Project[] = [
-  { key: 'acoustic', cat: 'Acoustic', title: 'Da Tweekaz Studio', meta: 'Belgium · Recording studio', featured: true },
-  { key: 'acoustic', cat: 'Acoustic', title: 'Mark With a K', meta: 'Belgium · Sound studio' },
-  { key: 'office', cat: 'Office', title: 'Notary Ampe Anthony', meta: 'Sint-Niklaas · Acoustic office' },
-  { key: 'commercial', cat: 'Commercial', title: 'BNP Paribas Fortis', meta: 'Brussels · Bank HQ' },
-  { key: 'commercial', cat: 'Commercial', title: 'Van der Valk', meta: 'Beveren · Event hall', featured: true },
-  { key: 'office', cat: 'Office', title: 'Johnson & Johnson', meta: 'Limerick, IE · Pharma office' },
-  { key: 'commercial', cat: 'Retail', title: 'Polette Eyewear', meta: 'Antwerp · Retail store' },
-  { key: 'bathroom', cat: 'Bathroom', title: 'CitizenM Hotel', meta: 'Prefab bathroom units' },
-  { key: 'light', cat: 'Light & Print', title: 'London Chapel', meta: 'London, UK · Backlit ceiling' },
-  { key: 'living', cat: 'Living room', title: 'Private Villa', meta: 'Knokke · Open living' },
-  { key: 'cinema', cat: 'Home cinema', title: 'Home Cinema', meta: 'Ghent · Starry sky + acoustic' },
-  { key: 'living', cat: 'Living room', title: 'City Penthouse', meta: 'Antwerp · Living room' },
-  { key: 'bathroom', cat: 'Bathroom', title: 'Wellness Spa', meta: 'Bruges · Spa bathroom' },
-  { key: 'light', cat: 'Light & Print', title: 'Rue Perrée', meta: 'Brussels · Printed art ceiling' },
+  {
+    key: 'acoustic', slug: 'da-tweekaz-studio', cat: 'Acoustic', title: 'Da Tweekaz Studio',
+    meta: 'Belgium · Recording studio', featured: true,
+    summary: 'Acoustic stretch ceiling for a hardstyle production studio.',
+    description: [
+      'The studio needed a ceiling that looked clean and controlled the room acoustically. A micro-perforated acoustic STRETCH membrane with high-density absorber backing tames reflections across the production space, so the room stays accurate to monitor in — with no visible panels overhead, just one seamless surface.',
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'acoustic', slug: 'mark-with-a-k', cat: 'Acoustic', title: 'Mark With a K',
+    meta: 'Belgium · Sound studio',
+    summary: 'Acoustic treatment for a DJ and producer’s sound room.',
+    description: [
+      'A seamless acoustic STRETCH ceiling absorbs reverberation in the production room while keeping a flawless, modern finish. The result is a calm, controlled space to work in, with the acoustic performance hidden inside the membrane.',
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'office', slug: 'notary-ampe-anthony', cat: 'Office', title: 'Notary Ampe Anthony',
+    meta: 'Sint-Niklaas · Acoustic office',
+    summary: '350 m² of acoustic stretch ceilings across a notary office.',
+    description: [
+      'Across the offices and meeting rooms of the notary practice, 350 m² of acoustic STRETCH ceilings bring the noise level down without compromising the calm, professional look of the space. The micro-perforated membrane absorbs sound while reading as a single, seamless surface from wall to wall.',
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'commercial', slug: 'bnp-paribas-fortis', cat: 'Commercial', title: 'BNP Paribas Fortis',
+    meta: 'Brussels · Bank HQ',
+    summary: 'Acoustic ceilings for a corporate banking headquarters.',
+    description: [
+      'In the open-plan floors of the bank’s headquarters, acoustic STRETCH ceilings keep speech intelligible and the workspace comfortable. The system integrates lighting and building services cleanly while delivering measurable sound absorption overhead.',
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'commercial', slug: 'van-der-valk-beveren', cat: 'Commercial', title: 'Van der Valk',
+    meta: 'Beveren · Hotel lobby & event hall', featured: true,
+    summary: 'Acoustic stretch ceilings in the hotel lobby and event spaces.',
+    description: [
+      'The hotel’s lobby and event rooms needed to feel grand but sound comfortable, even at full capacity. Acoustic STRETCH ceilings span the large rooms seamlessly and absorb reverberation, so conversations and events stay clear — with integrated lighting tuned for atmosphere.',
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'office', slug: 'johnson-and-johnson', cat: 'Office', title: 'Johnson & Johnson',
+    meta: 'Limerick, IE · Pharma office',
+    summary: 'Seamless acoustic ceilings for a pharmaceutical office.',
+    description: [
+      'In the offices of the pharmaceutical campus, STRETCH ceilings deliver a clean, hygienic, seamless finish with acoustic absorption built in. The space stays comfortable for focused work and is easy to maintain.',
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'commercial', slug: 'polette-eyewear', cat: 'Retail', title: 'Polette Eyewear',
+    meta: 'Antwerp · Retail store',
+    summary: 'A never-before-seen retail concept by architect Javier Zubiria.',
+    description: [
+      'For Polette’s store, architect Javier Zubiria designed a striking, unconventional retail concept. STRETCH ceilings carry the bold geometry of the space with a flawless finish that frames both the product and the architecture.',
+    ],
+    solutions: ['pvc-stretch-ceiling', 'light-print-stretch-ceiling'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'bathroom', slug: 'citizenm-hotel', cat: 'Bathroom', title: 'CitizenM Hotel',
+    meta: 'Prefab bathroom units',
+    summary: 'Prefab bathroom ceilings for a modular hotel build.',
+    description: [
+      'Built off-site as repeatable modules, the hotel’s bathroom pods use prefab STRETCH ceilings for a perfect, water-resistant finish in every room — installed fast and identical at scale.',
+    ],
+    solutions: ['prefab-ceiling-unit', 'pvc-stretch-ceiling'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'light', slug: 'london-chapel', cat: 'Light & Print', title: 'London Chapel',
+    meta: 'London, UK · Backlit ceiling',
+    summary: 'A backlit stretch ceiling over a restored chapel space.',
+    description: [
+      'A translucent STRETCH ceiling turns the whole soffit into a soft, even light source, washing the restored interior in glare-free illumination while concealing the LED field completely.',
+    ],
+    solutions: ['light-print-stretch-ceiling'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'living', slug: 'private-villa-knokke', cat: 'Living room', title: 'Private Villa',
+    meta: 'Knokke · Open living',
+    summary: 'A seamless matte ceiling for an open-plan coastal villa.',
+    description: [
+      'In the villa’s open living space, a very matte polyester STRETCH ceiling reads like flawless plaster from wall to wall — crisp and modern, free of the cracks and shadow lines of a conventional ceiling.',
+    ],
+    solutions: ['polyester-stretch-ceiling'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'cinema', slug: 'home-cinema-ghent', cat: 'Home cinema', title: 'Home Cinema',
+    meta: 'Ghent · Starry sky + acoustic',
+    summary: 'A starry-sky ceiling with acoustic backing for a home cinema.',
+    description: [
+      'Hundreds of fibre-optic points create a twinkling night sky above the seating, while an acoustic backing keeps the room controlled for film sound — atmosphere and performance combined in a single ceiling.',
+    ],
+    solutions: ['starry-sky', 'acoustic-stretch-system'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'living', slug: 'city-penthouse-antwerp', cat: 'Living room', title: 'City Penthouse',
+    meta: 'Antwerp · Living room',
+    summary: 'A flawless feature ceiling for a city penthouse.',
+    description: [
+      'The penthouse living space uses a seamless STRETCH ceiling with integrated lighting to keep the look minimal and the surface perfect across the open plan.',
+    ],
+    solutions: ['polyester-stretch-ceiling', 'light-print-stretch-ceiling'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'bathroom', slug: 'wellness-spa-bruges', cat: 'Bathroom', title: 'Wellness Spa',
+    meta: 'Bruges · Spa bathroom',
+    summary: 'A humidity-proof, backlit ceiling for a spa.',
+    description: [
+      'The spa needed a ceiling that handles humidity and sets a calm mood. A translucent, backlit STRETCH ceiling glows softly over the wellness area and wipes clean, unaffected by steam and moisture.',
+    ],
+    solutions: ['pvc-stretch-ceiling', 'light-print-stretch-ceiling'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'light', slug: 'rue-perree-paris', cat: 'Light & Print', title: 'Rue Perrée',
+    meta: 'Paris · Backlit gallery ceiling',
+    summary: 'An illuminated ceiling for a multi-brand gallery space.',
+    description: [
+      'At ART RECHERCHE INDUSTRIE on Rue Perrée — a gallery showcasing several brands — a luminous STRETCH ceiling provides an even, gallery-grade wash of light across the space, putting the work, not the fixtures, in focus.',
+    ],
+    solutions: ['light-print-stretch-ceiling'],
+    gallery: ['', '', ''],
+  },
 ];
+
+/** All project slugs, for static params + sitemap. */
+export const projectSlugs = projects.map((p) => p.slug);
+/** Look up a project by its slug. */
+export const getProjectBySlug = (slug: string): Project | undefined =>
+  projects.find((p) => p.slug === slug);
 
 // ---------------------------------------------------------------------------
 // Blog — drafted evergreen / educational articles (flagged for review).
