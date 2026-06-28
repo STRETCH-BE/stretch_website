@@ -15,10 +15,10 @@ export const homeImages = {
   // public/images/home/ and paste its path here (suggested names shown).
   hero: '/images/home/Hero.jpg', // (legacy single-hero slot, still on disk)
   heroSlides: {
-    ceilings: '', // → '/images/home/hero-ceilings.jpg'
-    acoustic: '', // → '/images/home/hero-acoustic.jpg'
-    walls: '', //    → '/images/home/hero-walls.jpg'
-    light: '', //    → '/images/home/hero-light.jpg'
+    ceilings: '/images/home/hero-ceilings.jpg', // → '/images/home/hero-ceilings.jpg'
+    acoustic: '/images/home/hero-acoustic.jpg', // → '/images/home/hero-acoustic.jpg'
+    walls: '/images/home/hero-walls.jpg', //    → '/images/home/hero-walls.jpg'
+    light: '/images/home/hero-light.jpg', //    → '/images/home/hero-light.jpg'
   },
 
   // WHY STRETCH — tall photo beside the benefit grid.
