@@ -27,12 +27,13 @@ export default function Gallery() {
 
       <div className="gal-grid">
         {FEATURED.map((p, i) => (
-          <Link key={p.title} href="/inspiration" className="gal-cell zoom-wrap">
+          <Link key={p.title} href={`/inspiration/${p.slug}`} className="gal-cell zoom-wrap">
             <Placeholder
               label={`${p.title} project`}
               src={homeImages.gallery[i]}
               alt={`${p.title} — ${p.cat}`}
               sizes="(max-width: 980px) 50vw, 20vw"
+              className="zoom-img"
               decorative
             />
             <div className="gal-overlay">
