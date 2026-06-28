@@ -5,7 +5,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
 import { buildAlternates } from '@/lib/seo';
-import { breadcrumbSchema } from '@/lib/structured-data';
+import { breadcrumbSchema, faqPageSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import { getProjectBySlug, projectSlugs } from '@/lib/content';
 import ProjectPage from '@/components/sections/ProjectPage';
@@ -53,6 +53,7 @@ export function ProjectView({ slug, locale }: { slug: string; locale: string }) 
   return (
     <>
       <JsonLd data={crumbs} />
+      {project.faqs && project.faqs.length > 0 && <JsonLd data={faqPageSchema(project.faqs)} />}
       <ProjectPage project={project} />
     </>
   );
