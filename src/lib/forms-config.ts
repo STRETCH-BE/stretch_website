@@ -122,6 +122,7 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
     fields: [
       { name: 'company', kind: 'text', inputType: 'text', label: 'Company', placeholder: 'Your company', required: true },
       { name: 'contactName', kind: 'text', inputType: 'text', label: 'Contact name', placeholder: 'First & last name', required: true },
+      { name: 'partnerType', kind: 'select', label: 'I want to become a', options: ['Reseller — I sell, you install', 'Dealer — I sell & install myself', 'Not sure yet'] },
       { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@company.com', required: true },
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
       { name: 'country', kind: 'text', inputType: 'text', label: 'Country', placeholder: 'Belgium' },
