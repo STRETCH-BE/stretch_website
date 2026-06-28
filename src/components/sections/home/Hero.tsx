@@ -49,7 +49,7 @@ const SLIDES: Slide[] = [
   },
 ];
 
-const ADVANCE_MS = 2500;
+const ADVANCE_MS = 3000;
 
 export default function Hero() {
   const [active, setActive] = useState(0);
