@@ -10,8 +10,25 @@
 // =============================================================================
 
 export const homeImages = {
-  // HERO — the showpiece, top of the page.
-  hero: '/images/home/Hero.jpg',
+  // HERO — the showpiece. The rotating hero crossfades 4 background images.
+  // Empty for now → branded placeholder tiles show. Drop a photo in
+  // public/images/home/ and paste its path here (suggested names shown).
+  hero: '/images/home/Hero.jpg', // (legacy single-hero slot, still on disk)
+  heroSlides: {
+    ceilings: '', // → '/images/home/hero-ceilings.jpg'
+    acoustic: '', // → '/images/home/hero-acoustic.jpg'
+    walls: '', //    → '/images/home/hero-walls.jpg'
+    light: '', //    → '/images/home/hero-light.jpg'
+  },
+
+  // WHY STRETCH — tall photo beside the benefit grid.
+  whyStretch: '', // → '/images/home/why-stretch.jpg'
+
+  // INSTALLER / PARTNER — full-height installer photo beside the red copy.
+  installer: '', // → '/images/home/installer.jpg'
+
+  // CLOSING CTA — full-bleed background photo behind the dark overlay.
+  ctaBand: '', // → '/images/home/cta-band.jpg'
 
   // SOLUTIONS — two room shots.
   solutionsPolyester: '/images/home/polyester.jpg',
