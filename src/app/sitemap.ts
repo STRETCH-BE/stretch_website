@@ -8,6 +8,7 @@ import { staticRoutes } from '@/lib/site-config';
 import { productSlugs } from '@/lib/products';
 import { applicationSlugs } from '@/lib/applications';
 import { blogSlugs, blogPosts } from '@/lib/content';
+import { techMembranes, techTopicKeys } from '@/lib/technical';
 
 function alternatesFor(route: string) {
   const languages: Record<string, string> = {};
@@ -25,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (['/contact', '/partners', '/installer-training'].includes(route)) return 0.8;
     if (route === '/inspiration' || route === '/samples' || route === '/blog') return 0.7;
     if (route.startsWith('/blog/')) return 0.6;
+    if (route.startsWith('/technical/')) return 0.6;
     return 0.4;
   };
   const changeFreqFor = (route: string): MetadataRoute.Sitemap[number]['changeFrequency'] => {
@@ -36,7 +38,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const productRoutes = productSlugs.map((s) => `/products/${s}`);
   const applicationRoutes = applicationSlugs.map((s) => `/applications/${s}`);
   const blogRoutes = blogSlugs.map((s) => `/blog/${s}`);
-  const allRoutes = [...staticRoutes, ...productRoutes, ...applicationRoutes, ...blogRoutes];
+  const technicalRoutes = Object.keys(techMembranes).flatMap((m) => techTopicKeys.map((t) => `/technical/${m}/${t}`));
+  const allRoutes = [...staticRoutes, ...productRoutes, ...applicationRoutes, ...technicalRoutes, ...blogRoutes];
 
   const lastModFor = (route: string): Date => {
     if (route.startsWith('/blog/')) {
