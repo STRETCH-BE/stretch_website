@@ -31,8 +31,8 @@ export function Ticker() {
 
 const STATS = [
   { value: '1', accent: '.', label: 'Day to install' },
-  { value: '25', accent: '.', label: 'Year lifespan' },
-  { value: '5.7', accent: 'm', label: 'Seamless span' },
+  { value: '+25', accent: '.', label: 'Year lifespan' },
+  { value: '6.4', accent: 'm', label: 'Seamless span' },
   { value: '100', accent: '%', label: 'Recyclable (PVC)' },
 ];
 
