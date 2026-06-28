@@ -9,6 +9,8 @@ export type Spec = { k: string; v: string };
 export type Highlight = { value: string; label: string };
 export type Feature = { title: string; body: string };
 export type Faq = { q: string; a: string };
+import type { ColourEntry } from '@/lib/polyester-colours';
+import { polyesterColours } from '@/lib/polyester-colours';
 
 export type Product = {
   /** URL slug (kebab-case). */
@@ -27,6 +29,8 @@ export type Product = {
   features: Feature[];
   specs: Spec[];
   colours: string[];
+  /** Optional rich colour chart (swatch + RAL + HEX). Falls back to `colours`. */
+  colourChart?: ColourEntry[];
   applications: string[];
   /** Slugs of related products. */
   related: string[];
@@ -85,6 +89,7 @@ export const products: Product[] = [
       { k: 'Warranty', v: '10 years' },
     ],
     colours: ['White', 'Off-white', 'Light grey', 'Anthracite', 'Sand', 'Custom RAL'],
+    colourChart: polyesterColours,
     applications: ['Living room', 'Bathroom', 'Office', 'Home cinema', 'Healthcare', 'Retail'],
     related: ['pvc-stretch-ceiling', 'acoustic-stretch-system', 'light-print-stretch-ceiling'],
     material: 'Knitted polyester membrane',
