@@ -17,6 +17,7 @@ export type ColourEntry = {
   ral?: string; // e.g. 'RAL 9010'
   hex: string; // on-screen preview only
   code?: string; // optional STRETCH product code
+  finish?: string; // optional finish label (e.g. 'Gloss', 'Translucent') — used by PVC
   custom?: boolean; // renders the "Custom RAL" rainbow tile
 };
 

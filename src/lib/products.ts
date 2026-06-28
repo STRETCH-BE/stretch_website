@@ -11,6 +11,7 @@ export type Feature = { title: string; body: string };
 export type Faq = { q: string; a: string };
 import type { ColourEntry } from '@/lib/polyester-colours';
 import { polyesterColours } from '@/lib/polyester-colours';
+import { pvcColours } from '@/lib/pvc-colours';
 
 export type Product = {
   /** URL slug (kebab-case). */
@@ -31,6 +32,8 @@ export type Product = {
   colours: string[];
   /** Optional rich colour chart (swatch + RAL + HEX). Falls back to `colours`. */
   colourChart?: ColourEntry[];
+  /** Optional one-line note shown beside the colour chart. */
+  colourChartNote?: string;
   applications: string[];
   /** Slugs of related products. */
   related: string[];
@@ -90,6 +93,7 @@ export const products: Product[] = [
     ],
     colours: ['White', 'Off-white', 'Light grey', 'Anthracite', 'Sand', 'Custom RAL'],
     colourChart: polyesterColours,
+    colourChartNote: 'Every colour is available in standard and acoustic finishes.',
     applications: ['Living room', 'Bathroom', 'Office', 'Home cinema', 'Healthcare', 'Retail'],
     related: ['pvc-stretch-ceiling', 'acoustic-stretch-system', 'light-print-stretch-ceiling'],
     material: 'Knitted polyester membrane',
@@ -158,6 +162,8 @@ export const products: Product[] = [
       { k: 'Warranty', v: '10 years' },
     ],
     colours: ['White', 'Satin white', 'Translucent', 'Black gloss', 'Custom print', 'Custom RAL'],
+    colourChart: pvcColours,
+    colourChartNote: 'Available in matte, satin, gloss, translucent and metallic finishes.',
     applications: ['Bathroom', 'Pool & wellness', 'Retail', 'Hospitality', 'Office', 'Home cinema'],
     related: ['polyester-stretch-ceiling', 'acoustic-stretch-system', 'light-print-stretch-ceiling'],
     material: 'Calendered PVC film',
