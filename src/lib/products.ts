@@ -128,7 +128,7 @@ export const products: Product[] = [
       'Heat-mounted PVC film stretch ceiling, 100% recyclable and removable, seamless to 6.4 m with a 10-year warranty.',
     chips: ['Seamless to 6.4 m', '100% recyclable', 'Easily removable', 'Washable'],
     highlights: [
-      { value: '5.7m', label: 'Seamless width' },
+      { value: '6.4m', label: 'Seamless width' },
       { value: 'Heat', label: 'Mounting method' },
       { value: '100%', label: 'Recyclable' },
       { value: 'A', label: 'Acoustic class' },
