@@ -11,10 +11,8 @@ import {
   Lightbulb,
   LayoutGrid,
   Home,
-  Flame,
   Circle,
   Square,
-  FileText,
   type LucideIcon,
 } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
@@ -40,7 +38,7 @@ export const solutionsMenu: MegaConfig = {
   railLabel: 'Browse solutions',
   allLabel: 'All solutions',
   allHref: '/products',
-  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/mega/featured.jpg' },
+  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/home/Hero.jpg' },
   categories: [
     {
       icon: Layers,
@@ -117,54 +115,31 @@ export const technicalMenu: MegaConfig = {
   },
   categories: [
     {
-      icon: Flame,
-      title: 'Fire safety',
-      desc: 'Reaction-to-fire & A2',
-      href: '/products/polyester-stretch-ceiling#specs',
-      items: [
-        { title: 'Polyester fire rating', sub: 'B-s1,d0 datasheet', href: '/products/polyester-stretch-ceiling#specs' },
-        { title: 'Safety questions', sub: 'Answered in the FAQ', href: '/faq' },
-      ],
-    },
-    {
       icon: Circle,
-      title: 'Polyester specs',
-      desc: 'Datasheet & colours',
-      href: '/products/polyester-stretch-ceiling#specs',
+      title: 'Polyester stretch ceiling',
+      desc: 'Cold-mounted membrane',
+      href: '/technical/polyester/datasheet',
       items: [
-        { title: 'Technical datasheet', sub: 'Spans, class, warranty', href: '/datasheets' },
-        { title: 'Colours & finishes', sub: 'Standard & custom RAL', href: '/products/polyester-stretch-ceiling' },
+        { title: 'Datasheet', sub: 'Specs & download', href: '/technical/polyester/datasheet' },
+        { title: 'Colours & finishes', sub: 'Full range & RAL', href: '/technical/polyester/colours' },
+        { title: 'Fire safety', sub: 'Reaction-to-fire & A2', href: '/technical/polyester/fire-safety' },
+        { title: 'Installation guide', sub: 'Cold mount, step by step', href: '/technical/polyester/installation' },
+        { title: 'Specification text', sub: 'For tenders & dossiers', href: '/technical/polyester/specification' },
+        { title: 'FAQ', sub: 'Common questions', href: '/technical/polyester/faq' },
       ],
     },
     {
       icon: Square,
-      title: 'PVC film specs',
-      desc: 'Datasheet & colours',
-      href: '/products/pvc-stretch-ceiling#specs',
+      title: 'PVC stretch ceiling',
+      desc: 'Heat-mounted film',
+      href: '/technical/pvc/datasheet',
       items: [
-        { title: 'Technical datasheet', sub: 'Seamless to 5.7m', href: '/datasheets' },
-        { title: 'Colours & finishes', sub: 'Gloss, satin, print', href: '/products/pvc-stretch-ceiling' },
-      ],
-    },
-    {
-      icon: AudioLines,
-      title: 'Acoustics',
-      desc: 'Absorption data',
-      href: '/products/acoustic-stretch-system#specs',
-      items: [
-        { title: 'Acoustic datasheet', sub: 'αw & Class A values', href: '/datasheets' },
-        { title: 'Acoustics explained', sub: 'How absorption works', href: '/blog/stretch-ceiling-acoustics-explained' },
-      ],
-    },
-    {
-      icon: FileText,
-      title: 'Samples & guides',
-      desc: 'Swatches & downloads',
-      href: '/samples',
-      items: [
-        { title: 'Request samples', sub: 'Physical swatches', href: '/samples' },
-        { title: 'What is a stretch ceiling?', sub: 'Plain-English guide', href: '/blog/what-is-a-stretch-ceiling' },
-        { title: 'All guides', sub: 'Read the blog', href: '/blog' },
+        { title: 'Datasheet', sub: 'Specs & download', href: '/technical/pvc/datasheet' },
+        { title: 'Colours & finishes', sub: 'Matte, satin, gloss', href: '/technical/pvc/colours' },
+        { title: 'Fire safety', sub: 'Reaction-to-fire', href: '/technical/pvc/fire-safety' },
+        { title: 'Installation guide', sub: 'Heat mount, step by step', href: '/technical/pvc/installation' },
+        { title: 'Specification text', sub: 'For tenders & dossiers', href: '/technical/pvc/specification' },
+        { title: 'FAQ', sub: 'Common questions', href: '/technical/pvc/faq' },
       ],
     },
   ],
