@@ -1,14 +1,15 @@
-// "Why stretch" — dark section, six-cell hairline grid. The sixth cell is red
-// and contains a survey CTA.
+// "Why stretch" — image-led split on a dark section: a tall photo beside a 2×2
+// grid of benefit cards. The fourth card is red and carries the survey CTA.
+import { Link } from '@/i18n/navigation';
 import Eyebrow from '@/components/ui/Eyebrow';
+import Placeholder from '@/components/ui/Placeholder';
 import { ModalTextLink } from '@/components/ui/ModalButton';
+import { homeImages } from '@/lib/home-images';
 
 const CELLS = [
   { n: '01', title: 'Fast & clean fitting', body: 'Up to 50m² per day, per two-person team. No stripping out, no debris — your room stays in use.' },
-  { n: '02', title: '25-year lifespan', body: "Maintenance-free and washable. It won't crack, flake or yellow — and it never needs repainting." },
-  { n: '03', title: '100% recyclable', body: 'Our PVC system is fully recyclable back to raw material — a circular, sustainable choice.' },
-  { n: '04', title: 'Acoustic & lit', body: 'Integrate acoustics, LED lines, backlighting and printed designs into one seamless surface.' },
-  { n: '05', title: 'Lower cost', body: 'Cheaper than a conventional suspended ceiling, with far less labour and zero finishing trades.' },
+  { n: '02', title: '25-year lifespan', body: "Maintenance-free and washable. It won't crack, flake or yellow — and never needs repainting." },
+  { n: '03', title: 'Acoustic & lit', body: 'Integrate acoustics, LED lines, backlighting and printed designs into one seamless surface.' },
 ];
 
 export default function WhyStretch() {
@@ -28,53 +29,58 @@ export default function WhyStretch() {
           </p>
         </div>
 
-        <div className="why-grid grid-lines grid-lines--dark" style={{ gridTemplateColumns: 'repeat(3,1fr)' }}>
-          {CELLS.map((c) => (
-            <div key={c.n} style={{ background: 'var(--black)', padding: 'clamp(28px,3vw,42px)' }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, color: 'var(--red)', fontSize: 14, letterSpacing: '.05em' }}>
-                {c.n}
-              </div>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 22, letterSpacing: '-.01em', margin: '18px 0 12px' }}>
-                {c.title}
-              </h3>
-              <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: 0 }}>{c.body}</p>
+        <div className="why-split">
+          <div className="why-photo">
+            <div className="why-photo-img">
+              <Placeholder label="Why STRETCH — finished room" src={homeImages.whyStretch} alt="A flawless STRETCH ceiling in a finished interior" sizes="(max-width: 900px) 100vw, 48vw" decorative />
             </div>
-          ))}
-          <div style={{ background: 'var(--red)', padding: 'clamp(28px,3vw,42px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, color: '#fff', fontSize: 14, letterSpacing: '.05em' }}>06</div>
-            <div>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 22, letterSpacing: '-.01em', margin: '18px 0 16px', color: '#fff' }}>
-                See it for your project
-              </h3>
-              <ModalTextLink
-                type="survey"
-                source="why_stretch"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: 10,
-                  color: '#fff',
-                  fontWeight: 700,
-                  fontSize: 14,
-                  letterSpacing: '.04em',
-                  textTransform: 'uppercase',
-                  borderBottom: '2px solid #fff',
-                  paddingBottom: 4,
-                }}
-              >
-                Book a survey ↗
-              </ModalTextLink>
+          </div>
+
+          <div className="why-cards">
+            {CELLS.map((c) => (
+              <div key={c.n} className="why-card">
+                <div className="why-card-n">{c.n}</div>
+                <div>
+                  <h3 className="why-card-title">{c.title}</h3>
+                  <p className="why-card-body">{c.body}</p>
+                </div>
+              </div>
+            ))}
+            <div className="why-card why-card--red">
+              <div className="why-card-n why-card-n--light">04</div>
+              <div>
+                <h3 className="why-card-title">See it for your project</h3>
+                <ModalTextLink
+                  type="survey"
+                  source="why_stretch"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 10, color: '#fff', fontWeight: 700, fontSize: 14, letterSpacing: '.04em', textTransform: 'uppercase', borderBottom: '2px solid #fff', paddingBottom: 4 }}
+                >
+                  Book a survey ↗
+                </ModalTextLink>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <style>{`
-        @media (max-width: 860px) {
-          .why-grid { grid-template-columns: 1fr 1fr !important; }
+        .why-split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: stretch; }
+        .why-photo { position: relative; overflow: hidden; min-height: 520px; border: 1px solid var(--border-dark, #2a2a2a); }
+        .why-photo-img { position: absolute; inset: 0; }
+        .why-photo-img > * { width: 100%; height: 100%; }
+        .why-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.14); }
+        .why-card { background: var(--black); padding: clamp(24px,2.6vw,38px); display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
+        .why-card--red { background: var(--red); }
+        .why-card-n { font-family: var(--font-display); font-weight: 800; color: var(--red); font-size: 14px; letter-spacing: .05em; }
+        .why-card-n--light { color: #fff; }
+        .why-card-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(18px,1.7vw,22px); letter-spacing: -.01em; margin: 0 0 12px; color: #fff; }
+        .why-card-body { font-size: 14px; line-height: 1.6; color: var(--on-dark-muted); margin: 0; }
+        @media (max-width: 900px) {
+          .why-split { grid-template-columns: 1fr; }
+          .why-photo { min-height: 340px; }
         }
-        @media (max-width: 560px) {
-          .why-grid { grid-template-columns: 1fr !important; }
+        @media (max-width: 480px) {
+          .why-cards { grid-template-columns: 1fr; }
         }
       `}</style>
     </section>
