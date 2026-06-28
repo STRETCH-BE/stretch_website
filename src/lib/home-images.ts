@@ -22,10 +22,10 @@ export const homeImages = {
   },
 
   // WHY STRETCH — tall photo beside the benefit grid.
-  whyStretch: '', // → '/images/home/why-stretch.jpg'
+  whyStretch: '/images/home/why-stretch.jpg', // → '/images/home/why-stretch.jpg'
 
   // INSTALLER / PARTNER — full-height installer photo beside the red copy.
-  installer: '', // → '/images/home/installer.jpg'
+  installer: '/images/home/installer.jpg', // → '/images/home/installer.jpg'
 
   // CLOSING CTA — full-bleed background photo behind the dark overlay.
   ctaBand: '', // → '/images/home/cta-band.jpg'
