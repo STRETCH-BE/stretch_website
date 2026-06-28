@@ -52,8 +52,8 @@ export const products: Product[] = [
     intro:
       'An aesthetic, functional stretch membrane for new build and renovation alike. Tensioned cold by hand for a flawless, very matte finish — with acoustic and washable options built in.',
     summary:
-      'Cold-mounted polyester stretch ceiling with a very matte finish, seamless to 5.15 m and a 25-year warranty.',
-    chips: ['Seamless to 5.15m', '25-year lifespan', 'Up to Class A acoustic', 'Washable'],
+      'Cold-mounted polyester stretch ceiling with a very matte finish, seamless to 5.15 m and a 10-year warranty.',
+    chips: ['Seamless to 5.15m', '+25-year lifespan', 'Up to Class A acoustic', 'Washable'],
     highlights: [
       { value: '5.15m', label: 'Seamless width' },
       { value: 'Cold', label: 'Mounting method' },
@@ -82,14 +82,14 @@ export const products: Product[] = [
       { k: 'Fire rating', v: 'B-s1,d0 (A2 option)' },
       { k: 'Acoustic', v: 'Up to Class A (perforated)' },
       { k: 'Cleaning', v: 'Washable, humidity-proof' },
-      { k: 'Warranty', v: '25 years' },
+      { k: 'Warranty', v: '10 years' },
     ],
     colours: ['White', 'Off-white', 'Light grey', 'Anthracite', 'Sand', 'Custom RAL'],
     applications: ['Living room', 'Bathroom', 'Office', 'Home cinema', 'Healthcare', 'Retail'],
     related: ['pvc-stretch-ceiling', 'acoustic-stretch-system', 'light-print-stretch-ceiling'],
     material: 'Knitted polyester membrane',
-    countryOfOrigin: 'BE',
-    warrantyYears: 25,
+    countryOfOrigin: 'EU',
+    warrantyYears: 10,
     maxSeamlessWidthM: 5.15,
     faqs: [
       {
@@ -120,8 +120,8 @@ export const products: Product[] = [
     intro:
       'A warmed PVC film tensioned on install — fully recyclable and easily removable. Replace a tired ceiling with a flawless new one in a single day.',
     summary:
-      'Heat-mounted PVC film stretch ceiling, 100% recyclable and removable, seamless to 5.7 m with a 25-year warranty.',
-    chips: ['Seamless to 5.7m', '100% recyclable', 'Easily removable', 'Washable'],
+      'Heat-mounted PVC film stretch ceiling, 100% recyclable and removable, seamless to 6.4 m with a 10-year warranty.',
+    chips: ['Seamless to 6.4 m', '100% recyclable', 'Easily removable', 'Washable'],
     highlights: [
       { value: '5.7m', label: 'Seamless width' },
       { value: 'Heat', label: 'Mounting method' },
@@ -145,20 +145,20 @@ export const products: Product[] = [
     specs: [
       { k: 'Material', v: 'Calendered PVC film' },
       { k: 'Mounting', v: 'Heat-tensioned, clip profile' },
-      { k: 'Max seamless width', v: '5.7 m' },
-      { k: 'Surface', v: 'Matte / satin / translucent' },
-      { k: 'Fire rating', v: 'B-s2,d0' },
+      { k: 'Max seamless width', v: '6.4 m' },
+      { k: 'Surface', v: 'Matte / satin / gloss / translucent' },
+      { k: 'Fire rating', v: 'B-s1,d0' },
       { k: 'Acoustic', v: 'Up to Class A (perforated)' },
       { k: 'Cleaning', v: 'Washable, humidity-proof' },
-      { k: 'Warranty', v: '25 years' },
+      { k: 'Warranty', v: '10 years' },
     ],
     colours: ['White', 'Satin white', 'Translucent', 'Black gloss', 'Custom print', 'Custom RAL'],
     applications: ['Bathroom', 'Pool & wellness', 'Retail', 'Hospitality', 'Office', 'Home cinema'],
     related: ['polyester-stretch-ceiling', 'acoustic-stretch-system', 'light-print-stretch-ceiling'],
     material: 'Calendered PVC film',
-    countryOfOrigin: 'BE',
-    warrantyYears: 25,
-    maxSeamlessWidthM: 5.7,
+    countryOfOrigin: 'PL',
+    warrantyYears: 10,
+    maxSeamlessWidthM: 6.4,
     faqs: [
       {
         q: 'What makes a PVC stretch ceiling “100% recyclable”?',
@@ -166,7 +166,7 @@ export const products: Product[] = [
       },
       {
         q: 'How wide a span can a PVC ceiling cover without a seam?',
-        a: 'Up to 5.7 m seamless — the widest in our range. Larger rooms can be covered by welding panels with a near-invisible joint or by introducing a deliberate profile line.',
+        a: 'Up to 6.4 m seamless — the widest in our range. Larger rooms can be covered by welding panels with a near-invisible joint or by introducing a deliberate profile line.',
       },
       {
         q: 'Is PVC film suitable for bathrooms and wet areas?',
@@ -194,7 +194,7 @@ export const products: Product[] = [
       { value: 'A', label: 'Absorption class' },
       { value: 'αw', label: 'Tested values' },
       { value: '0', label: 'Visible joints' },
-      { value: '25y', label: 'Lifespan' },
+      { value: '+25y', label: 'Lifespan' },
     ],
     features: [
       {
@@ -213,19 +213,19 @@ export const products: Product[] = [
     specs: [
       { k: 'Material', v: 'Perforated membrane + absorber' },
       { k: 'Mounting', v: 'Cold or heat, clip profile' },
-      { k: 'Max seamless width', v: '5.15–5.7 m' },
+      { k: 'Max seamless width', v: '5.15' },
       { k: 'Absorption', v: 'Up to Class A (αw)' },
       { k: 'Fire rating', v: 'B-s1,d0 (A2 option)' },
       { k: 'Backing', v: 'High-density polyester wool' },
       { k: 'Cleaning', v: 'Washable face' },
-      { k: 'Warranty', v: '25 years' },
+      { k: 'Warranty', v: '10 years' },
     ],
     colours: ['White', 'Off-white', 'Grey', 'Anthracite', 'Custom print', 'Custom RAL'],
     applications: ['Office', 'Restaurant', 'Studio', 'Home cinema', 'School', 'Healthcare'],
     related: ['polyester-stretch-ceiling', 'pvc-stretch-ceiling', 'light-print-stretch-ceiling'],
     material: 'Perforated membrane + polyester-wool absorber',
-    countryOfOrigin: 'BE',
-    warrantyYears: 25,
+    countryOfOrigin: 'EU',
+    warrantyYears: 10,
     faqs: [
       {
         q: 'How much does the acoustic system actually reduce noise?',
@@ -251,7 +251,7 @@ export const products: Product[] = [
     name: 'Illuminated Ceiling',
     short: 'Illuminated',
     category: 'Translucent membrane',
-    mount: 'Heat mount',
+    mount: 'Cold / heat',
     intro:
       'Translucent stretch films that turn an entire ceiling into a soft, even light source — or a printed canvas of any image you choose.',
     summary:
@@ -261,7 +261,7 @@ export const products: Product[] = [
       { value: '360°', label: 'Even diffusion' },
       { value: 'RGB', label: 'LED options' },
       { value: 'Print', label: 'Any image' },
-      { value: '5.7m', label: 'Seamless width' },
+      { value: '5.15m', label: 'Seamless width' },
     ],
     features: [
       {
@@ -279,21 +279,21 @@ export const products: Product[] = [
     ],
     specs: [
       { k: 'Material', v: 'Translucent PVC film' },
-      { k: 'Mounting', v: 'Heat-tensioned, clip profile' },
-      { k: 'Max seamless width', v: '5.7 m' },
+      { k: 'Mounting', v: 'Cold or heat, clip profile' },
+      { k: 'Max seamless width', v: '5.15 m' },
       { k: 'Light source', v: 'LED field / line, dimmable' },
       { k: 'Print', v: 'Edge-to-edge, any image' },
-      { k: 'Fire rating', v: 'B-s2,d0' },
+      { k: 'Fire rating', v: 'B-s1,d0' },
       { k: 'Cleaning', v: 'Washable' },
-      { k: 'Warranty', v: '25 years' },
+      { k: 'Warranty', v: '10 years' },
     ],
     colours: ['Translucent white', 'Warm white', 'RGB', 'Starry sky', 'Custom print', 'Custom RAL'],
     applications: ['Home cinema', 'Bathroom', 'Retail', 'Hospitality', 'Spa', 'Office'],
     related: ['pvc-stretch-ceiling', 'acoustic-stretch-system', 'polyester-stretch-ceiling'],
     material: 'Translucent PVC film',
-    countryOfOrigin: 'BE',
-    warrantyYears: 25,
-    maxSeamlessWidthM: 5.7,
+    countryOfOrigin: 'EU',
+    warrantyYears: 10,
+    maxSeamlessWidthM: 5.15,
     faqs: [
       {
         q: 'Will a backlit ceiling show hotspots from the LEDs?',
@@ -350,7 +350,7 @@ export const products: Product[] = [
       { k: 'Fire rating', v: 'B-s1,d0 (A2 option)' },
       { k: 'Acoustic', v: 'Optional absorber backing' },
       { k: 'Cleaning', v: 'Washable' },
-      { k: 'Warranty', v: '25 years' },
+      { k: 'Warranty', v: '10 years' },
     ],
     colours: ['White', 'Off-white', 'Grey', 'Anthracite', 'Custom', 'Custom RAL'],
     applications: ['Bathroom pods', 'Hotels', 'Modular build', 'Healthcare', 'Retail', 'Office'],
@@ -390,7 +390,7 @@ export const products: Product[] = [
       { value: '500+', label: 'Star points' },
       { value: 'RGB', label: 'Colour options' },
       { value: '1 day', label: 'Installation' },
-      { value: '25yr', label: 'Warranty' },
+      { value: '10yr', label: 'Warranty' },
     ],
     features: [
       {
@@ -414,15 +414,15 @@ export const products: Product[] = [
       { k: 'Options', v: 'Twinkle, RGB, shooting stars' },
       { k: 'Mounting', v: 'Tensioned clip profile' },
       { k: 'Cleaning', v: 'Washable' },
-      { k: 'Warranty', v: '25 years' },
+      { k: 'Warranty', v: '10 years' },
     ],
     colours: ['Deep blue', 'Black', 'Midnight', 'Custom print', 'Warm-white stars', 'RGB stars'],
     applications: ['Home cinema', 'Bedroom', 'Spa & wellness', 'Restaurant', 'Hospitality', 'Kids room'],
     related: ['light-print-stretch-ceiling', 'acoustic-stretch-system', 'pvc-stretch-ceiling'],
     material: 'Translucent PVC film + fibre optics',
-    countryOfOrigin: 'BE',
-    warrantyYears: 25,
-    maxSeamlessWidthM: 5.7,
+    countryOfOrigin: 'EU',
+    warrantyYears: 10,
+    maxSeamlessWidthM: 6.4,
     faqs: [
       {
         q: 'How many stars can a starry-sky ceiling have?',
@@ -479,7 +479,7 @@ export const products: Product[] = [
       { k: 'Opening', v: 'Magnetic or hinged frame' },
       { k: 'Retrofit', v: 'Yes, into existing ceilings' },
       { k: 'Cleaning', v: 'Washable' },
-      { k: 'Warranty', v: '25 years' },
+      { k: 'Warranty', v: '10 years' },
     ],
     colours: ['Matched to membrane', 'White', 'Off-white', 'Grey', 'Anthracite', 'Custom RAL'],
     applications: ['Bathroom', 'Kitchen', 'Utility room', 'Office', 'Retail', 'Healthcare'],
