@@ -21,6 +21,16 @@ export type Project = {
   description?: string[];
   /** Slugs of STRETCH solutions used (link to product pages). */
   solutions?: string[];
+  /** Story-opening subtitle shown under the title. */
+  hook?: string;
+  /** Short feature/achievement callouts, e.g. 'αw 0.95 acoustic absorption'. */
+  highlights?: string[];
+  /** Detailed products & materials used on the project. */
+  materials?: string[];
+  /** Fact-sheet rows (region, year, area, architect, dealer…). */
+  facts?: { label: string; value: string; href?: string }[];
+  /** Project-specific Q&A (rendered + FAQPage schema). */
+  faqs?: { q: string; a: string }[];
   /** Gallery image paths from /public ('' = placeholder). */
   gallery?: string[];
 };
@@ -68,10 +78,35 @@ export const projects: Project[] = [
   },
   {
     key: 'office', slug: 'notary-ampe-anthony', cat: 'Office', title: 'Notary Ampe Anthony',
-    meta: 'Sint-Niklaas · Acoustic office',
-    summary: '350 m² of acoustic stretch ceilings across a notary office.',
+    meta: 'Kruibeke · Acoustic office',
+    summary: '350 m² of acoustic stretch ceilings across a high-end notary office.',
+    hook: 'A complete high-end office fit-out where hard, reflective materials needed taming — without losing the sharp, minimal look.',
     description: [
-      'Across the offices and meeting rooms of the notary practice, 350 m² of acoustic STRETCH ceilings bring the noise level down without compromising the calm, professional look of the space. The micro-perforated membrane absorbs sound while reading as a single, seamless surface from wall to wall.',
+      'In 2019 the Ampe Anthony notary office in Kruibeke was rebuilt from the ground up as a high-end interior with a deliberately sharp, minimal look — polished concrete floors, steel window frames and plenty of hard surfaces. No expense was spared to finish it perfectly.',
+      'Those hard materials made the office acoustically live. To bring it back to a comfortable level, the entire interior received an acoustic STRETCH ceiling backed by a dedicated polyester-wool absorber mounted against the existing concrete slab, pushing the acoustic performance to a high level.',
+      'The ceiling dropped 10 cm to conceal all the technical services above it, leaving a height of 260 cm. To make the space feel taller and larger, we built large elliptical recesses into the ceiling — an optical trick that visibly lifts the room.',
+    ],
+    highlights: ['Reverberation time measured at 0.6 s', 'Large elliptical ceiling recesses for a taller feel', 'Dedicated polyester-wool absorber behind the membrane'],
+    materials: [
+      'Acoustic STRETCH ceiling',
+      'Curved bespoke aluminium frames',
+      'Polyester-wool absorber D40/50 (40 kg/m³, 50 mm)',
+      'STRETCH Design ceiling in the elliptical form',
+      'White PVC tension profiles around the perimeter',
+      'Lighting: Wever & Ducré, Delta Light',
+    ],
+    facts: [
+      { label: 'Region', value: 'Waasland (Kruibeke)' },
+      { label: 'Year', value: '2018' },
+      { label: 'Area', value: '350 m²' },
+      { label: 'Architect', value: 'Ante Architecten', href: 'https://www.ante.be/' },
+      { label: 'STRETCH dealer', value: 'Corpus Interieur', href: 'https://corpusspanplafond.be/' },
+    ],
+    faqs: [
+      { q: 'How long did the installation take?', a: 'Installing the acoustic ceilings, all the lighting and the special finishes took 7 working days.' },
+      { q: 'What reverberation time was achieved?', a: 'Measured after installation, the office reached a reverberation time of 0.6 s — the interior is, and feels, very quiet.' },
+      { q: 'How many installers worked on the project?', a: 'A team of 2 STRETCH fitters completed the whole ceiling package: the membrane, the lighting, the acoustic panels, the ceiling joinery and the elliptical structures.' },
+      { q: 'How long will the ceiling last?', a: 'Like any stretch ceiling, lifespan depends on cleaning, but it will comfortably last around 25 years. After that only the membrane might need replacing — the existing frame stays in place.' },
     ],
     solutions: ['acoustic-stretch-system'],
     gallery: ['', '', ''],
@@ -88,12 +123,30 @@ export const projects: Project[] = [
   },
   {
     key: 'commercial', slug: 'van-der-valk-beveren', cat: 'Commercial', title: 'Van der Valk',
-    meta: 'Beveren · Hotel lobby & event hall', featured: true,
-    summary: 'Acoustic stretch ceilings in the hotel lobby and event spaces.',
+    meta: 'Beveren · Hotel event hall', featured: true,
+    summary: 'Maximum acoustic absorption for a hotel event hall — with almost no height to give.',
+    hook: 'An acoustic problem that had dogged the hotel’s event hall for years, solved through the ceiling.',
     description: [
-      'The hotel’s lobby and event rooms needed to feel grand but sound comfortable, even at full capacity. Acoustic STRETCH ceilings span the large rooms seamlessly and absorb reverberation, so conversations and events stay clear — with integrated lighting tuned for atmosphere.',
+      'Tim van der Valk approached STRETCH about an acoustic problem that had affected their event space for several years. After talking it through with Michael Nicasens of STRETCH, we concluded the fix had to come from the ceiling — but the existing ceiling was only 255 cm high, leaving very little room for a system.',
+      'So we proposed a 50 mm system height that still reaches αw 0.95: maximum acoustic absorption with only a minimal drop in ceiling height. The large event rooms are spanned seamlessly, with the acoustic performance built into the membrane and the detailing — hatches, lighting, sensors and a starry-sky feature — integrated cleanly overhead.',
     ],
-    solutions: ['acoustic-stretch-system'],
+    highlights: ['αw 0.95 acoustic absorption', 'Only 50 mm system height', 'Integrated technical access hatches', 'Lighting & presence sensors', 'Starry-sky feature', 'Seamless finish around columns'],
+    materials: [
+      'Acoustic STRETCH ceiling (50 mm system)',
+      'Integrated technical hatches',
+      'Integrated lighting',
+      'Presence sensors',
+      'Starry-sky installation',
+      'Perimeter tension profiles',
+    ],
+    facts: [
+      { label: 'Venue', value: 'Van der Valk Hotel Beveren', href: 'https://www.hotelbeveren.be/' },
+      { label: 'Region', value: 'Beveren-Waas' },
+      { label: 'Existing height', value: '255 cm' },
+      { label: 'System height', value: '50 mm' },
+      { label: 'Acoustic rating', value: 'αw 0.95' },
+    ],
+    solutions: ['acoustic-stretch-system', 'starry-sky'],
     gallery: ['', '', ''],
   },
   {
@@ -179,9 +232,15 @@ export const projects: Project[] = [
   {
     key: 'light', slug: 'rue-perree-paris', cat: 'Light & Print', title: 'Rue Perrée',
     meta: 'Paris · Backlit gallery ceiling',
-    summary: 'An illuminated ceiling for a multi-brand gallery space.',
+    summary: 'An illuminated ceiling for a multi-brand gallery space in Paris.',
+    hook: 'Gallery-grade, even light across a multi-brand showroom — fixtures out of sight.',
     description: [
-      'At ART RECHERCHE INDUSTRIE on Rue Perrée — a gallery showcasing several brands — a luminous STRETCH ceiling provides an even, gallery-grade wash of light across the space, putting the work, not the fixtures, in focus.',
+      'At ART RECHERCHE INDUSTRIE on Rue Perrée in Paris — a gallery showcasing several brands — a luminous STRETCH ceiling provides an even, hotspot-free wash of light across the space. With the LED field hidden behind a translucent membrane, the work on display stays the focus, not the fixtures.',
+    ],
+    highlights: ['Even, hotspot-free illumination', 'LED field fully concealed', 'Gallery-grade colour rendering'],
+    facts: [
+      { label: 'Location', value: 'Rue Perrée, Paris (FR)' },
+      { label: 'Space', value: 'Multi-brand gallery' },
     ],
     solutions: ['light-print-stretch-ceiling'],
     gallery: ['', '', ''],
