@@ -36,7 +36,7 @@ export default function ColourChart({
         }}
       >
         <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>
-          {count} standard colours
+          {count} colours
         </span>
         {note && <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>· {note}</span>}
       </div>
@@ -51,7 +51,7 @@ export default function ColourChart({
             <div key={c.name} className="cc-item">
               <div
                 role="img"
-                aria-label={`${c.name}${c.ral ? ` (${c.ral})` : ''} finish`}
+                aria-label={`${c.name}${c.finish ? ` ${c.finish}` : ''}${c.ral ? ` (${c.ral})` : ''} finish`}
                 className="cc-sw"
                 style={{ background: bg, border }}
               />
@@ -60,6 +60,8 @@ export default function ColourChart({
                 <div className="cc-meta">Any RAL on request</div>
               ) : (
                 <div className="cc-meta">
+                  {c.finish && <span className="cc-finish">{c.finish}</span>}
+                  {c.finish && <span className="cc-dot">·</span>}
                   {c.code && <span>{c.code}</span>}
                   {c.code && <span className="cc-dot">·</span>}
                   {c.ral && <span>{c.ral}</span>}
@@ -78,6 +80,7 @@ export default function ColourChart({
         .cc-name { font-size: 13px; font-weight: 600; margin-top: 10px; line-height: 1.2; }
         .cc-meta { font-size: 11.5px; color: var(--text-faint-2); margin-top: 4px; display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
         .cc-hex { font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+        .cc-finish { color: var(--red); font-weight: 600; }
         .cc-dot { opacity: .45; }
         @media (max-width: 560px) { .cc-grid { grid-template-columns: repeat(2, 1fr); } }
       `}</style>

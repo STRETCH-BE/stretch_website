@@ -194,7 +194,7 @@ export default function SolutionPage({ product }: { product: Product }) {
           </div>
         </div>
         {product.colourChart ? (
-          <ColourChart entries={product.colourChart} note="Every colour is available in standard and acoustic finishes." />
+          <ColourChart entries={product.colourChart} note={product.colourChartNote} />
         ) : (
           <div className="sp-colours" style={{ display: 'grid', gridTemplateColumns: 'repeat(6,1fr)', gap: 12 }}>
             {product.colours.map((col) => {
