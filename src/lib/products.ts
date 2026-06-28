@@ -318,7 +318,7 @@ export const products: Product[] = [
     mount: 'Prefabricated',
     listed: false,
     intro:
-      'Prefab carrier structures for stretch-ceiling projects — aluminium, steel and wood beams, coving and height-difference details, built in Belgium and shipped worldwide to our dealers.',
+      'Prefab carrier structures for stretch-ceiling projects — aluminium, steel and wood beams, coving and height-difference details, made to measure in our Polish production and shipped worldwide to our dealers.',
     summary:
       'Made-to-measure prefab structures in aluminium, steel and wood — beams for raster ceilings, coving for floating ceilings, and clean height-difference details.',
     chips: ['Aluminium / steel / wood', 'Beams & coving', 'Made to measure', 'Shipped worldwide'],
