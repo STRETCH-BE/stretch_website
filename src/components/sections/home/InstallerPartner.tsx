@@ -1,56 +1,76 @@
-// "Become a STRETCH installer" — the red B2B recruitment band. Three numbered
-// cells (train in days / order B2B / referred leads) and dual CTAs to the
-// training and partner flows.
+// "Become a STRETCH installer" — the B2B recruitment band, now a split layout:
+// a full-height installer photo beside the red copy block (intro, three steps,
+// and the partner / training CTAs).
 import { Link } from '@/i18n/navigation';
 import Eyebrow from '@/components/ui/Eyebrow';
 import { ModalButton } from '@/components/ui/ModalButton';
+import Placeholder from '@/components/ui/Placeholder';
+import { homeImages } from '@/lib/home-images';
 
 const STEPS = [
-  { n: '01', title: 'Train in days', body: 'Hands-on certification at our Belgian HQ — confection, profiles, cold & heat mounting, light and acoustics. No prior experience needed.' },
-  { n: '02', title: 'Order B2B', body: 'Made-to-measure membranes and profiles from our workshop, at trade pricing, through a dedicated partner portal.' },
-  { n: '03', title: 'Get referred leads', body: 'We pass local customer enquiries to certified partners in their region — real projects, not just a price list.' },
+  { n: '01', title: 'Train in days', body: 'Hands-on certification at our HQ — confection, profiles, cold & heat mounting, light and acoustics.' },
+  { n: '02', title: 'Order B2B', body: 'Made-to-measure membranes and profiles at trade pricing, through a dedicated partner portal.' },
+  { n: '03', title: 'Get referred leads', body: 'We pass local customer enquiries to certified partners in their region — real projects.' },
 ];
 
 export default function InstallerPartner() {
   return (
-    <section className="section--red" id="installer">
-      <div className="container section">
-        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24, marginBottom: 'clamp(40px,5vw,64px)' }}>
-          <div>
+    <section className="ip" id="installer">
+      <div className="ip-split">
+        <div className="ip-photo">
+          <Placeholder label="STRETCH installer at work" src={homeImages.installer} alt="A certified STRETCH installer fitting a stretch ceiling" sizes="(max-width: 920px) 100vw, 50vw" decorative />
+        </div>
+
+        <div className="ip-copy">
+          <div className="ip-copy-inner">
             <Eyebrow num="05" label="For the trade" tone="dark" />
-            <h2 className="h2" style={{ color: '#fff', maxWidth: '16ch' }}>
+            <h2 className="h2" style={{ color: '#fff', maxWidth: '15ch', margin: '0 0 18px' }}>
               Become a STRETCH installer.
             </h2>
-          </div>
-          <p style={{ fontSize: 16, lineHeight: 1.6, color: 'rgba(255,255,255,.9)', maxWidth: 400, margin: 0 }}>
-            STRETCH is B2B-led. Add stretch ceilings to your offer, get trained at our HQ, order
-            made-to-measure from Belgium, and receive referred local leads.
-          </p>
-        </div>
+            <p style={{ fontSize: 15.5, lineHeight: 1.6, color: 'rgba(255,255,255,.9)', maxWidth: 460, margin: '0 0 clamp(26px,3vw,38px)' }}>
+              STRETCH is B2B-led. Add stretch ceilings to your offer, get trained at our HQ, order
+              made-to-measure from Belgium, and receive referred local leads.
+            </p>
 
-        <div className="ip-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 1, background: 'rgba(255,255,255,.3)', border: '1px solid rgba(255,255,255,.3)', marginBottom: 'clamp(32px,4vw,48px)' }}>
-          {STEPS.map((s) => (
-            <div key={s.n} style={{ background: 'var(--red)', padding: 'clamp(26px,3vw,40px)' }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, color: 'rgba(255,255,255,.7)', fontSize: 14, letterSpacing: '.05em' }}>{s.n}</div>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 22, letterSpacing: '-.01em', margin: '16px 0 11px', color: '#fff' }}>{s.title}</h3>
-              <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'rgba(255,255,255,.9)', margin: 0 }}>{s.body}</p>
+            <ul className="ip-steps">
+              {STEPS.map((s) => (
+                <li key={s.n} className="ip-step">
+                  <span className="ip-step-n">{s.n}</span>
+                  <div>
+                    <h3 className="ip-step-title">{s.title}</h3>
+                    <p className="ip-step-body">{s.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, marginTop: 'clamp(28px,3vw,38px)' }}>
+              <ModalButton type="partner" source="home_installer" className="btn btn--dark">
+                Become a partner →
+              </ModalButton>
+              <Link href="/installer-training" className="btn btn--ghost-light">
+                Explore installer training →
+              </Link>
             </div>
-          ))}
-        </div>
-
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14 }}>
-          <ModalButton type="partner" source="home_installer" className="btn btn--dark">
-            Become a reseller →
-          </ModalButton>
-          <Link href="/installer-training" className="btn btn--ghost-light">
-            See installer training →
-          </Link>
+          </div>
         </div>
       </div>
 
       <style>{`
-        @media (max-width: 820px) {
-          .ip-grid { grid-template-columns: 1fr !important; }
+        .ip { background: var(--red); }
+        .ip-split { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; min-height: 580px; }
+        .ip-photo { position: relative; overflow: hidden; }
+        .ip-photo > * { width: 100%; height: 100%; }
+        .ip-copy { background: var(--red); color: #fff; display: flex; align-items: center; }
+        .ip-copy-inner { padding: clamp(40px,5vw,84px) clamp(28px,5vw,72px); width: 100%; max-width: 620px; }
+        .ip-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; border-top: 1px solid rgba(255,255,255,.28); }
+        .ip-step { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.28); }
+        .ip-step-n { font-family: var(--font-display); font-weight: 800; color: rgba(255,255,255,.7); font-size: 14px; letter-spacing: .05em; flex-shrink: 0; padding-top: 2px; }
+        .ip-step-title { font-family: var(--font-display); font-weight: 800; font-size: 18px; letter-spacing: -.01em; margin: 0 0 6px; color: #fff; }
+        .ip-step-body { font-size: 14px; line-height: 1.55; color: rgba(255,255,255,.9); margin: 0; }
+        @media (max-width: 920px) {
+          .ip-split { grid-template-columns: 1fr; }
+          .ip-photo { min-height: 320px; order: -1; }
         }
       `}</style>
     </section>
