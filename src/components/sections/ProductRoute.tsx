@@ -11,8 +11,14 @@ import { getProduct } from '@/lib/products';
 import { productSchema, breadcrumbSchema, faqPageSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import SolutionPage from '@/components/sections/SolutionPage';
+// Prefab slugs render a bespoke page, not the standard product template. We
+// delegate here so the per-slug route file works regardless of which view it
+// imports — keeps prefab-ceiling-unit on the custom PrefabPage.
+import { prefabPages } from '@/lib/prefab';
+import { prefabMetadata, PrefabView } from '@/components/sections/PrefabRoute';
 
 export function productMetadata(slug: string, localeParam: string): Metadata {
+  if (prefabPages[slug]) return prefabMetadata(slug, localeParam);
   if (!isValidLocale(localeParam)) return {};
   const locale = localeParam as Locale;
   const product = getProduct(slug);
@@ -46,6 +52,7 @@ export function productMetadata(slug: string, localeParam: string): Metadata {
 }
 
 export function ProductView({ slug, locale: localeParam }: { slug: string; locale: string }) {
+  if (prefabPages[slug]) return <PrefabView slug={slug} locale={localeParam} />;
   const product = getProduct(slug);
   if (!product) notFound();
   if (isValidLocale(localeParam)) setRequestLocale(localeParam as Locale);
