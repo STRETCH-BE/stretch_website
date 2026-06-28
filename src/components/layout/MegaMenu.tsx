@@ -112,7 +112,6 @@ export const technicalMenu: MegaConfig = {
     body: 'Send your renovation question — we reply within two working days.',
     ctaLabel: 'Ask a question',
     ctaHref: '/contact',
-    image: '/images/home/Hero.jpg'
   },
   categories: [
     {
