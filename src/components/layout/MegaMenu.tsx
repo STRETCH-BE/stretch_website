@@ -22,7 +22,7 @@ import Placeholder from '@/components/ui/Placeholder';
 export type MegaItem = { title: string; sub: string; href: string; soon?: boolean };
 export type MegaCategory = { icon: LucideIcon; title: string; desc: string; href: string; items: MegaItem[] };
 
-type ImagePromo = { kind: 'image'; title: string; ctaLabel: string; source: string; image?: string };
+type ImagePromo = { kind: 'image'; title: string; body?: string; ctaLabel: string; source?: string; ctaHref?: string; image?: string };
 type DarkPromo = { kind: 'dark'; eyebrow: string; title: string; body: string; ctaLabel: string; ctaHref: string };
 
 export type MegaConfig = {
@@ -111,7 +111,6 @@ export const technicalMenu: MegaConfig = {
     body: 'Send your renovation question — we reply within two working days.',
     ctaLabel: 'Ask a question',
     ctaHref: '/contact',
-    source: 'header_mega_technical',
     image: '/images/home/installer.jpg',
   },
   categories: [
@@ -218,12 +217,23 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
             style={{ position: 'absolute', inset: 0, height: '100%' }}
           />
           <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: 22, background: 'linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,0))' }}>
-            <div style={{ color: '#fff', fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 19, lineHeight: 1.05, marginBottom: 11 }}>
+            <div style={{ color: '#fff', fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 19, lineHeight: 1.05, marginBottom: config.promo.body ? 8 : 11 }}>
               {config.promo.title}
             </div>
-            <ModalButton type="quote" source={config.promo.source} trackQuote className="mega-promo-cta">
-              {config.promo.ctaLabel} <span style={{ color: 'var(--red)' }}>→</span>
-            </ModalButton>
+            {config.promo.body && (
+              <p style={{ color: 'rgba(255,255,255,.85)', fontSize: 12.5, lineHeight: 1.5, margin: '0 0 14px' }}>
+                {config.promo.body}
+              </p>
+            )}
+            {config.promo.ctaHref ? (
+              <Link href={config.promo.ctaHref} onClick={onNavigate} className="mega-promo-cta">
+                {config.promo.ctaLabel} <span style={{ color: 'var(--red)' }}>→</span>
+              </Link>
+            ) : (
+              <ModalButton type="quote" source={config.promo.source ?? 'header_mega'} trackQuote className="mega-promo-cta">
+                {config.promo.ctaLabel} <span style={{ color: 'var(--red)' }}>→</span>
+              </ModalButton>
+            )}
           </div>
         </div>
       ) : (
