@@ -106,12 +106,13 @@ export const technicalMenu: MegaConfig = {
   allLabel: 'All specs & downloads',
   allHref: '/products',
   promo: {
-    kind: 'dark',
-    eyebrow: 'Need a hand?',
-    title: 'Ask our specialists',
+    kind: 'image',
+    title: 'Need a hand?',
     body: 'Send your renovation question — we reply within two working days.',
     ctaLabel: 'Ask a question',
     ctaHref: '/contact',
+    source: 'header_mega_technical',
+    image: '/images/home/installer.jpg',
   },
   categories: [
     {
