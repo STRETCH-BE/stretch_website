@@ -4,6 +4,7 @@
 // category; the grid re-renders from the static project list. Pure client
 // state, no data fetching.
 import { useMemo, useState } from 'react';
+import { Link } from '@/i18n/navigation';
 import { projects, projectFilters } from '@/lib/content';
 import Placeholder from '@/components/ui/Placeholder';
 
@@ -53,7 +54,12 @@ export default function PortfolioGrid() {
 
       <div className="pf-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
         {shown.map((p) => (
-          <figure key={p.title} className="zoom-wrap" style={{ margin: 0, border: '1px solid var(--border)', overflow: 'hidden' }}>
+          <Link
+            key={p.slug}
+            href={`/inspiration/${p.slug}`}
+            className="zoom-wrap pf-card"
+            style={{ display: 'block', margin: 0, border: '1px solid var(--border)', overflow: 'hidden', textDecoration: 'none', color: 'inherit' }}
+          >
             <div style={{ overflow: 'hidden' }}>
               <Placeholder
               label={`${p.title} — ${p.cat}`}
@@ -65,12 +71,12 @@ export default function PortfolioGrid() {
               className="zoom-img"
             />
             </div>
-            <figcaption style={{ padding: '18px 20px' }}>
+            <div style={{ padding: '18px 20px' }}>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red)', marginBottom: 9 }}>{p.cat}</div>
               <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 19, letterSpacing: '-.01em', margin: '0 0 5px' }}>{p.title}</h3>
               <div style={{ fontSize: 13, color: 'var(--text-faint)' }}>{p.meta}</div>
-            </figcaption>
-          </figure>
+            </div>
+          </Link>
         ))}
       </div>
 
