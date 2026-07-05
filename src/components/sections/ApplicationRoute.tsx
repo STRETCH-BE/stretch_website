@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
-import { buildAlternates } from '@/lib/seo';
+import { localeBase, buildAlternates } from '@/lib/seo';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import { getApplication } from '@/lib/applications';
@@ -16,8 +16,8 @@ export function applicationMetadata(slug: string, locale: string): Metadata {
   const app = getApplication(slug);
   if (!app) return {};
   const title = `${app.name} | ${brand.name}`;
-  const url = `${siteUrl}/${locale}/applications/${slug}`;
-  const ogImg = `${siteUrl}/api/og`;
+  const url = `${localeBase(locale)}/applications/${slug}`;
+  const ogImg = `${localeBase(locale as Locale)}/api/og`;
   return {
     title: { absolute: title },
     description: app.metaDescription,
@@ -41,9 +41,9 @@ export function ApplicationView({ slug, locale }: { slug: string; locale: string
   if (!app) notFound();
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${loc}` },
-    { name: 'Applications', url: `${siteUrl}/${loc}/inspiration` },
-    { name: app.shortName, url: `${siteUrl}/${loc}/applications/${slug}` },
+    { name: 'Home', url: `${localeBase(loc)}` },
+    { name: 'Applications', url: `${localeBase(loc)}/inspiration` },
+    { name: app.shortName, url: `${localeBase(loc)}/applications/${slug}` },
   ]);
 
   return (

@@ -15,6 +15,7 @@ import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
+import { localeBase } from '@/lib/seo';
 
 // Products shown as "Coming soon" on the overview grid (still link through to
 // their page). Add a slug here to flag another product.
@@ -39,12 +40,12 @@ export default function ProductsPage({ params }: { params: { locale: string } })
       '@type': 'ListItem',
       position: i + 1,
       name: p.name,
-      url: `${siteUrl}/${locale}/products/${p.slug}`,
+      url: `${localeBase(locale)}/products/${p.slug}`,
     })),
   };
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'Solutions', url: `${siteUrl}/${locale}/products` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Solutions', url: `${localeBase(locale)}/products` },
   ]);
 
   return (

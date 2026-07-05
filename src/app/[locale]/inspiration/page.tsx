@@ -14,6 +14,7 @@ import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import PortfolioGrid from '@/components/sections/PortfolioGrid';
 import { ModalButton } from '@/components/ui/ModalButton';
+import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/inspiration', titleKey: 'inspirationTitle', descKey: 'inspirationDescription' });
@@ -26,8 +27,8 @@ export default function InspirationPage({ params }: { params: { locale: string }
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'Inspiration', url: `${siteUrl}/${locale}/inspiration` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Inspiration', url: `${localeBase(locale)}/inspiration` },
   ]);
 
   return (

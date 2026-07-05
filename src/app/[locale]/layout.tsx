@@ -1,16 +1,20 @@
-// Locale layout. Validates the locale, provides messages to client components,
+// ROOT + locale layout (multi-domain i18n: all routes live under [locale], so
+// this is the app's root layout — it owns <html lang> per locale, fonts and
+// global styles). Validates the locale, provides messages to client components,
 // sets default metadata (title template, OG/robots defaults, metadataBase,
 // home alternates), and mounts the shared chrome: consent-mode defaults,
 // analytics, scroll tracking, header, footer, cookie banner, and the lead-modal
 // provider that powers every CTA.
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import { archivo } from '../fonts';
+import '../globals.css';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { locales, isValidLocale, localeFullCodes, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
-import { buildAlternates, buildOgLocales } from '@/lib/seo';
+import { localeBase, buildAlternates, buildOgLocales } from '@/lib/seo';
 import { ConsentModeDefaults, ScrollTracker, AnalyticsScripts } from '@/components/analytics';
 import { LeadModalProvider } from '@/components/LeadGenModal';
 import Header from '@/components/layout/Header';
@@ -46,16 +50,16 @@ export async function generateMetadata({
       siteName: brand.name,
       title: t('homeTitle'),
       description: t('homeDescription'),
-      url: `${siteUrl}/${locale}`,
+      url: `${localeBase(locale)}`,
       locale: ogLocale,
       alternateLocale: alternate,
-      images: [{ url: `${siteUrl}/api/og`, width: 1200, height: 630, alt: brand.name }],
+      images: [{ url: `${localeBase(locale)}/api/og`, width: 1200, height: 630, alt: brand.name }],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('homeTitle'),
       description: t('homeDescription'),
-      images: [`${siteUrl}/api/og`],
+      images: [`${localeBase(locale)}/api/og`],
     },
     icons: {
       icon: [{ url: '/favicon.ico' }, { url: '/favicon.svg', type: 'image/svg+xml' }],
@@ -77,7 +81,13 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <html
+      lang={localeFullCodes[locale] ?? locale}
+      className={`${archivo.variable}`}
+      suppressHydrationWarning
+    >
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
       {/* Consent Mode v2 defaults — must run before analytics. */}
       <ConsentModeDefaults />
       <AnalyticsScripts />
@@ -93,8 +103,10 @@ export default async function LocaleLayout({
         <ScrollTracker />
       </LeadModalProvider>
 
-      {/* Document language for assistive tech / hreflang consistency. */}
-      <span data-locale={localeFullCodes[locale]} hidden />
-    </NextIntlClientProvider>
+          {/* Document language for assistive tech / hreflang consistency. */}
+          <span data-locale={localeFullCodes[locale]} hidden />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

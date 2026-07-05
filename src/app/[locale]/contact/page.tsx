@@ -14,6 +14,7 @@ import Placeholder from '@/components/ui/Placeholder';
 import { pageImages } from '@/lib/page-images';
 import ContactForm from '@/components/sections/ContactForm';
 import { ModalButton } from '@/components/ui/ModalButton';
+import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/contact', titleKey: 'contactTitle', descKey: 'contactDescription' });
@@ -30,8 +31,8 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'Contact', url: `${siteUrl}/${locale}/contact` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Contact', url: `${localeBase(locale)}/contact` },
   ]);
 
   return (

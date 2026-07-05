@@ -10,6 +10,7 @@ import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import InlineLeadForm from '@/components/sections/InlineLeadForm';
+import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/samples', titleKey: 'samplesTitle', descKey: 'samplesDescription' });
@@ -20,8 +21,8 @@ export default function SamplesPage({ params }: { params: { locale: string } }) 
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'Samples', url: `${siteUrl}/${locale}/samples` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Samples', url: `${localeBase(locale)}/samples` },
   ]);
 
   return (

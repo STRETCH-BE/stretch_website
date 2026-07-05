@@ -11,6 +11,7 @@ import { blogPosts } from '@/lib/content';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
+import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/blog', titleKey: 'blogTitle', descKey: 'blogDescription' });
@@ -25,8 +26,8 @@ export default function BlogIndex({ params }: { params: { locale: string } }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'Guides', url: `${siteUrl}/${locale}/blog` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Guides', url: `${localeBase(locale)}/blog` },
   ]);
 
   return (

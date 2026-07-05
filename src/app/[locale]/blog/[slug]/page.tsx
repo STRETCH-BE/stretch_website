@@ -7,7 +7,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { isValidLocale, locales, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
-import { buildAlternates, buildOgLocales } from '@/lib/seo';
+import { localeBase, buildAlternates, buildOgLocales } from '@/lib/seo';
 import { getBlogPost, blogSlugs } from '@/lib/content';
 import { articleSchema, breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
@@ -26,7 +26,7 @@ export function generateMetadata({ params }: { params: { locale: string; slug: s
 
   const route = `/blog/${post.slug}`;
   const { ogLocale, alternate } = buildOgLocales(locale);
-  const ogImg = `${siteUrl}/api/og/${post.slug}`;
+  const ogImg = `${localeBase(locale)}/api/og/${post.slug}`;
 
   return {
     title: { absolute: `${post.title} | ${brand.name}` },
@@ -37,7 +37,7 @@ export function generateMetadata({ params }: { params: { locale: string; slug: s
       siteName: brand.name,
       title: post.title,
       description: post.excerpt,
-      url: `${siteUrl}/${locale}${route}`,
+      url: `${localeBase(locale)}${route}`,
       locale: ogLocale,
       alternateLocale: alternate,
       publishedTime: post.datePublished,
@@ -59,9 +59,9 @@ export default function BlogPostPage({ params }: { params: { locale: string; slu
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'Guides', url: `${siteUrl}/${locale}/blog` },
-    { name: post.title, url: `${siteUrl}/${locale}/blog/${post.slug}` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Guides', url: `${localeBase(locale)}/blog` },
+    { name: post.title, url: `${localeBase(locale)}/blog/${post.slug}` },
   ]);
 
   return (

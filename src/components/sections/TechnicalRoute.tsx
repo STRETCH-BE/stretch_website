@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
-import { buildAlternates } from '@/lib/seo';
+import { localeBase, buildAlternates } from '@/lib/seo';
 import { breadcrumbSchema, faqPageSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import { getProduct } from '@/lib/products';
@@ -52,7 +52,7 @@ export function technicalMetadata(membrane: string, topic: string, locale: strin
   const title = `${topicMeta.label} — ${m.label} | ${brand.name}`;
   const description = topicDescription(m.label, topic);
   const route = `/technical/${membrane}/${topic}`;
-  const ogImg = `${siteUrl}/api/og`;
+  const ogImg = `${localeBase(locale as Locale)}/api/og`;
   return {
     title: { absolute: title },
     description,
@@ -62,7 +62,7 @@ export function technicalMetadata(membrane: string, topic: string, locale: strin
       siteName: brand.name,
       title,
       description,
-      url: `${siteUrl}/${locale}${route}`,
+      url: `${localeBase(locale)}${route}`,
       images: [{ url: ogImg, width: 1200, height: 630, alt: brand.name }],
     },
     twitter: { card: 'summary_large_image', title, description, images: [ogImg] },
@@ -81,9 +81,9 @@ export function TechnicalView({ membrane, topic, locale }: { membrane: string; t
   const product = getProduct(m.productSlug);
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${loc}` },
-    { name: m.short, url: `${siteUrl}/${loc}/technical/${mKey}/datasheet` },
-    { name: topicMeta.label, url: `${siteUrl}/${loc}/technical/${mKey}/${tKey}` },
+    { name: 'Home', url: `${localeBase(loc)}` },
+    { name: m.short, url: `${localeBase(loc)}/technical/${mKey}/datasheet` },
+    { name: topicMeta.label, url: `${localeBase(loc)}/technical/${mKey}/${tKey}` },
   ]);
 
   return (

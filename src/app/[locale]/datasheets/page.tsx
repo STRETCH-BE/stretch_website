@@ -12,6 +12,7 @@ import { datasheetsByCategory } from '@/lib/datasheets';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import DatasheetDownloadButton from '@/components/ui/DatasheetDownloadButton';
+import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/datasheets', titleKey: 'datasheetsTitle', descKey: 'datasheetsDescription' });
@@ -23,8 +24,8 @@ export default function DatasheetsPage({ params }: { params: { locale: string } 
 
   const groups = datasheetsByCategory();
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'Datasheets', url: `${siteUrl}/${locale}/datasheets` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Datasheets', url: `${localeBase(locale)}/datasheets` },
   ]);
 
   return (

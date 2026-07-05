@@ -14,6 +14,7 @@ import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
 import InlineLeadForm from '@/components/sections/InlineLeadForm';
+import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/installer-training', titleKey: 'trainingTitle', descKey: 'trainingDescription' });
@@ -39,8 +40,8 @@ export default function TrainingPage({ params }: { params: { locale: string } })
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'Installer training', url: `${siteUrl}/${locale}/installer-training` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Installer training', url: `${localeBase(locale)}/installer-training` },
   ]);
   const course = {
     '@context': 'https://schema.org',
@@ -49,7 +50,7 @@ export default function TrainingPage({ params }: { params: { locale: string } })
     description:
       'Hands-on stretch-ceiling installer certification at the STRETCH HQ in Belgium: membrane confection, profiles, cold & heat mounting, light, acoustics, finishing and estimating.',
     provider: { '@type': 'Organization', name: brand.name, sameAs: siteUrl },
-    url: `${siteUrl}/${locale}/installer-training`,
+    url: `${localeBase(locale)}/installer-training`,
   };
 
   return (

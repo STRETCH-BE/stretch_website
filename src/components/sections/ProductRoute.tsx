@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
-import { buildAlternates, buildOgLocales } from '@/lib/seo';
+import { localeBase, buildAlternates, buildOgLocales } from '@/lib/seo';
 import { getProduct } from '@/lib/products';
 import { productSchema, breadcrumbSchema, faqPageSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
@@ -26,7 +26,7 @@ export function productMetadata(slug: string, localeParam: string): Metadata {
 
   const route = `/products/${slug}`;
   const { ogLocale, alternate } = buildOgLocales(locale);
-  const ogImg = `${siteUrl}/api/og/${slug}`;
+  const ogImg = `${localeBase(locale)}/api/og/${slug}`;
 
   return {
     title: product.name,
@@ -37,7 +37,7 @@ export function productMetadata(slug: string, localeParam: string): Metadata {
       siteName: brand.name,
       title: `${product.name} | ${brand.name}`,
       description: product.summary,
-      url: `${siteUrl}/${locale}${route}`,
+      url: `${localeBase(locale)}${route}`,
       locale: ogLocale,
       alternateLocale: alternate,
       images: [{ url: ogImg, width: 1200, height: 630, alt: product.name }],
@@ -59,9 +59,9 @@ export function ProductView({ slug, locale: localeParam }: { slug: string; local
   const locale = (isValidLocale(localeParam) ? localeParam : 'en') as Locale;
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'Solutions', url: `${siteUrl}/${locale}/products` },
-    { name: product.short, url: `${siteUrl}/${locale}/products/${slug}` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Solutions', url: `${localeBase(locale)}/products` },
+    { name: product.short, url: `${localeBase(locale)}/products/${slug}` },
   ]);
 
   return (

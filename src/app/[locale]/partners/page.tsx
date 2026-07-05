@@ -16,6 +16,7 @@ import Placeholder from '@/components/ui/Placeholder';
 import { pageImages } from '@/lib/page-images';
 import { ModalButton } from '@/components/ui/ModalButton';
 import InlineLeadForm from '@/components/sections/InlineLeadForm';
+import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/partners', titleKey: 'partnersTitle', descKey: 'partnersDescription' });
@@ -66,8 +67,8 @@ export default function PartnersPage({ params }: { params: { locale: string } })
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'Partners', url: `${siteUrl}/${locale}/partners` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Partners', url: `${localeBase(locale)}/partners` },
   ]);
 
   return (

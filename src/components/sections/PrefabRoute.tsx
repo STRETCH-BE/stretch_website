@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
-import { buildAlternates } from '@/lib/seo';
+import { localeBase, buildAlternates } from '@/lib/seo';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import { prefabPages } from '@/lib/prefab';
@@ -16,8 +16,8 @@ export function prefabMetadata(slug: string, locale: string): Metadata {
   const data = prefabPages[slug];
   if (!data) return {};
   const title = `${data.name} | ${brand.name}`;
-  const url = `${siteUrl}/${locale}/products/${slug}`;
-  const ogImg = `${siteUrl}/api/og`;
+  const url = `${localeBase(locale)}/products/${slug}`;
+  const ogImg = `${localeBase(locale as Locale)}/api/og`;
   return {
     title: { absolute: title },
     description: data.metaDescription,
@@ -41,9 +41,9 @@ export function PrefabView({ slug, locale }: { slug: string; locale: string }) {
   if (!data) notFound();
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${loc}` },
-    { name: 'Solutions', url: `${siteUrl}/${loc}/products` },
-    { name: data.name, url: `${siteUrl}/${loc}/products/${slug}` },
+    { name: 'Home', url: `${localeBase(loc)}` },
+    { name: 'Solutions', url: `${localeBase(loc)}/products` },
+    { name: data.name, url: `${localeBase(loc)}/products/${slug}` },
   ]);
 
   return (

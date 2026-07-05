@@ -7,6 +7,7 @@ import { siteUrl, brand, contact } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
+import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/privacy', titleKey: 'privacyTitle', descKey: 'privacyDescription' });
@@ -19,8 +20,8 @@ export default function PrivacyPage({ params }: { params: { locale: string } }) 
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'Privacy', url: `${siteUrl}/${locale}/privacy` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Privacy', url: `${localeBase(locale)}/privacy` },
   ]);
 
   return (

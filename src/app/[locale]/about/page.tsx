@@ -13,6 +13,7 @@ import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { pageImages } from '@/lib/page-images';
 import { ModalButton } from '@/components/ui/ModalButton';
+import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/about', titleKey: 'aboutTitle', descKey: 'aboutDescription' });
@@ -29,8 +30,8 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'About', url: `${siteUrl}/${locale}/about` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'About', url: `${localeBase(locale)}/about` },
   ]);
 
   return (

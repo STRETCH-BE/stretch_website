@@ -12,6 +12,7 @@ import { globalFaqs } from '@/lib/content';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import { ModalButton } from '@/components/ui/ModalButton';
+import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/faq', titleKey: 'faqTitle', descKey: 'faqDescription' });
@@ -22,8 +23,8 @@ export default function FaqPage({ params }: { params: { locale: string } }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${siteUrl}/${locale}` },
-    { name: 'FAQ', url: `${siteUrl}/${locale}/faq` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'FAQ', url: `${localeBase(locale)}/faq` },
   ]);
 
   return (

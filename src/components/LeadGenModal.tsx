@@ -19,6 +19,7 @@ import {
   type ReactNode,
 } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { X, ArrowRight, Check } from 'lucide-react';
 import {
   MODAL_CONFIGS,
@@ -417,6 +418,7 @@ function LeadGenModal({
                   onChange={setConsentChecked}
                   error={errors.__consent}
                   privacyLabel={t('consentPrivacy')}
+                  consentPrefix={t('consentPrefix')}
                 />
 
                 {status === 'error' && (
@@ -543,11 +545,13 @@ function ConsentRow({
   onChange,
   error,
   privacyLabel,
+  consentPrefix,
 }: {
   checked: boolean;
   onChange: (v: boolean) => void;
   error?: string;
   privacyLabel: string;
+  consentPrefix: string;
 }) {
   return (
     <div style={{ marginBottom: 18 }}>
@@ -570,10 +574,10 @@ function ConsentRow({
           style={{ marginTop: 3, width: 16, height: 16, accentColor: 'var(--red)', flex: '0 0 auto' }}
         />
         <span>
-          I agree to STRETCH processing my details to respond to my request, as described in the{' '}
-          <a href="/en/privacy" target="_blank" rel="noreferrer" style={{ color: 'var(--red)', textDecoration: 'underline' }}>
+          {consentPrefix}{' '}
+          <Link href="/privacy" target="_blank" rel="noreferrer" style={{ color: 'var(--red)', textDecoration: 'underline' }}>
             {privacyLabel}
-          </a>
+          </Link>
           .
         </span>
       </label>
