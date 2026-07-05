@@ -1,11 +1,12 @@
 import { getRequestConfig } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { isValidLocale } from './config';
+import { defaultLocale, isValidLocale } from './config';
 
 // Loads the message bundle for the active locale. Wired into next.config.mjs
-// via createNextIntlPlugin('./src/i18n/request.ts').
-export default getRequestConfig(async ({ locale }) => {
-  if (!isValidLocale(locale)) notFound();
+// via createNextIntlPlugin('./src/i18n/request.ts'). Uses the v3.22+
+// `requestLocale` API (required for domain-based routing).
+export default getRequestConfig(async ({ requestLocale }) => {
+  const requested = await requestLocale;
+  const locale = requested && isValidLocale(requested) ? requested : defaultLocale;
 
   return {
     locale,

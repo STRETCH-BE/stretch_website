@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
-import { buildAlternates, buildOgLocales } from '@/lib/seo';
+import { localeBase, buildAlternates, buildOgLocales } from '@/lib/seo';
 
 export async function pageMetadata(opts: {
   locale: string;
@@ -21,8 +21,8 @@ export async function pageMetadata(opts: {
   const { ogLocale, alternate } = buildOgLocales(locale);
   const title = t(opts.titleKey);
   const description = t(opts.descKey);
-  const ogImg = `${siteUrl}${opts.ogPath ?? '/api/og'}`;
-  const url = `${siteUrl}/${locale}${opts.route === '/' ? '' : opts.route}`;
+  const ogImg = `${localeBase(locale)}${opts.ogPath ?? '/api/og'}`;
+  const url = `${localeBase(locale)}${opts.route === '/' ? '' : opts.route}`;
 
   return {
     title: { absolute: title },

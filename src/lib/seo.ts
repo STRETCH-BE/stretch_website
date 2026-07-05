@@ -1,10 +1,20 @@
 // ============================================================================
-// SEO helpers — canonical + hreflang alternates.
-// Derives entirely from i18n/config, so adding a locale needs no change here.
+// SEO helpers — DOMAIN-AWARE canonical + hreflang alternates.
+// Each locale lives on its own domain with unprefixed URLs, so:
+//   canonical  → https://<locale-domain><route>
+//   hreflang   → one entry per locale pointing at that locale's DOMAIN
+//   x-default  → the default-locale (en) domain
+// Derives entirely from i18n/config: adding/changing a locale or domain needs
+// no change here.
 // ============================================================================
 import type { Metadata } from 'next';
-import { locales, defaultLocale, localeFullCodes, type Locale } from '@/i18n/config';
-import { siteUrl } from '@/lib/site-config';
+import {
+  locales,
+  defaultLocale,
+  localeFullCodes,
+  originForLocale,
+  type Locale,
+} from '@/i18n/config';
 
 /** Normalize a route to a clean, leading-slash path with no trailing slash. */
 function normalizeRoute(route: string): string {
@@ -12,14 +22,25 @@ function normalizeRoute(route: string): string {
   return ('/' + route.replace(/^\/+|\/+$/g, '')).replace(/\/+/g, '/');
 }
 
-/** Absolute URL for a (locale, route) pair, e.g. https://site/en/products. */
+/**
+ * Absolute base URL of a locale's own domain (no trailing slash), e.g.
+ * "https://stretchplafond.nl". Use `${localeBase(locale)}/products` wherever
+ * `${siteUrl}/${locale}/products` was used before.
+ */
+export function localeBase(locale: Locale): string {
+  return originForLocale(locale);
+}
+
+/** Absolute URL for a (locale, route) pair, e.g. https://stretchplafond.nl/products. */
 export function buildCanonical(locale: Locale, route: string): string {
-  return `${siteUrl}/${locale}${normalizeRoute(route)}`;
+  // Home resolves to the bare origin; every other route is origin + path.
+  return `${originForLocale(locale)}${normalizeRoute(route)}`;
 }
 
 /**
- * hreflang alternates for a route: one entry per locale (keyed by BCP 47 code)
- * plus x-default pointing at the default-locale version.
+ * hreflang alternates for a route: one entry per locale (keyed by BCP 47 code,
+ * pointing at that locale's domain) plus x-default pointing at the
+ * default-locale domain.
  */
 export function buildAlternates(locale: Locale, route: string): Metadata['alternates'] {
   const languages: Record<string, string> = {};
@@ -34,10 +55,10 @@ export function buildAlternates(locale: Locale, route: string): Metadata['altern
   };
 }
 
-/** OG locale + alternateLocale for a given active locale (en_BE style). */
+/** OG locale + alternateLocale for a given active locale (nl_BE style). */
 export function buildOgLocales(locale: Locale): { ogLocale: string; alternate: string[] } {
   const fmt = (code: string) => code.replace('-', '_');
-  const ogLocale = fmt(localeFullCodes[locale] ?? 'en-BE');
+  const ogLocale = fmt(localeFullCodes[locale] ?? 'en');
   const alternate = locales
     .filter((l) => l !== locale)
     .map((l) => fmt(localeFullCodes[l] ?? l));

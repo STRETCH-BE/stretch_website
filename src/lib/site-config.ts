@@ -4,8 +4,12 @@
 // by deploy (URLs, IDs) reads from env; everything brand-stable lives here.
 // ============================================================================
 
+// Primary origin — the default-locale (en / international) domain. Page URLs
+// are always built per-locale via localeBase() in src/lib/seo.ts; siteUrl is
+// only used for domain-stable identifiers (Organization @id, logo URL) so the
+// brand keeps ONE schema.org entity across all 12 domains.
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://stretchplafond.be'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://stretchplafond.com'
 ).replace(/\/$/, '');
 
 export const brand = {

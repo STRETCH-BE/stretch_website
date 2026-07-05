@@ -7,6 +7,7 @@ import { siteUrl, brand, contact, offices, salesTerritory, social } from '@/lib/
 import { locales, localeFullCodes, type Locale } from '@/i18n/config';
 import type { Product, Faq } from '@/lib/products';
 import type { BlogPost } from '@/lib/content';
+import { localeBase } from '@/lib/seo';
 
 const ORG_ID = `${siteUrl}/#organization`;
 const WEBSITE_ID = `${siteUrl}/#website`;
@@ -73,7 +74,7 @@ export function websiteSchema(opts: { hasSearch?: boolean } = {}) {
 }
 
 export function productSchema(product: Product, locale: Locale) {
-  const url = `${siteUrl}/${locale}/products/${product.slug}`;
+  const url = `${localeBase(locale)}/products/${product.slug}`;
   const image = `${siteUrl}/api/og/${product.slug}`;
 
   const additionalProperty = product.specs.map((s) => ({
@@ -164,7 +165,7 @@ export function localBusinessSchema() {
 }
 
 export function articleSchema(post: BlogPost, locale: Locale) {
-  const url = `${siteUrl}/${locale}/blog/${post.slug}`;
+  const url = `${localeBase(locale)}/blog/${post.slug}`;
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
