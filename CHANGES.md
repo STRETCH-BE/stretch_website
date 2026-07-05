@@ -1,3 +1,23 @@
+## 2026-07-05 — Multi-domain internationalization (12 locales, one domain each)
+
+**What changed**
+
+- `src/i18n/config.ts` is now the single source of truth for **12 locales** (`en, be, nl, fr, pl, de, es, pt, da, sv, no, is`) and their **production domains** (`localeDomains` map — edit domains ONLY here). `be` is a market code for Dutch-Belgium; browsers/search engines only ever see the mapped BCP-47 codes (`nl-BE`, `nl-NL`, `nb-NO`, ...).
+- **Domain-based routing** via next-intl `defineRouting({ domains })` with `localePrefix: 'as-needed'`: each domain serves ONE locale with clean, unprefixed URLs (`stretchplafond.nl/products`). Unknown hosts (localhost, `*.vercel.app` previews) keep path-prefixed access to every locale (`/fr`, `/pl`, ...) for dev & QA.
+- `middleware.ts` moved to `src/middleware.ts` — REQUIRED: with a `src/` directory Next.js only loads middleware from `src/`, the root file was silently ignored.
+- Root layout merged into `src/app/[locale]/layout.tsx` (the next-intl documented pattern) so `<html lang>` is the correct BCP-47 code per locale.
+- **SEO is fully cross-domain**: `buildCanonical`/`buildAlternates` in `src/lib/seo.ts` emit per-domain canonicals and a 13-entry hreflang cluster (12 locales + `x-default` → the `en` domain). All page/OG/JSON-LD URLs use the new `localeBase(locale)` helper. Organization `@id`/logo stay pinned to `siteUrl` (the `.com`) so the brand keeps one schema.org entity across all domains.
+- `app/sitemap.ts` replaced by **host-aware** `app/sitemap.xml/route.ts`: each domain serves ONLY its own URLs, each with `xhtml:link` hreflang alternates to the sibling domains. Static `public/robots.txt` replaced by host-aware `app/robots.txt/route.ts` (same crawl policy, per-domain `Sitemap:` line).
+- `LanguageSwitcher` is now a full 12-language dropdown that navigates **across domains** in production (preserving path + query) and falls back to in-app locale switching on dev/preview hosts.
+- Lead-modal privacy link no longer hardcodes `/en/privacy` (locale-aware `Link`), consent sentence is translated (`forms.consentPrefix`). `/training` legacy 308 redirect now uses the locale-aware `permanentRedirect`.
+- **Message bundles for all 12 locales** in `messages/` with verified key parity. Translations are solid working drafts — have a native speaker review marketing copy before launch (especially da/sv/no/is industry terms).
+
+**Deploying (Vercel)**
+
+1. Add ALL 12 domains to the same Vercel project (Settings → Domains). Do NOT set any of them to redirect — each must "Serve" the deployment. Point DNS (A/CNAME per Vercel's instructions) for each.
+2. The Host header decides the locale — no env vars required. Optionally override a domain per environment with `NEXT_PUBLIC_DOMAIN_<LOCALE>`.
+3. After launch, add each domain as a separate property in Google Search Console and submit `https://<domain>/sitemap.xml`.
+
 # CHANGES — Build log & decisions
 
 This document records the choices, assumptions, and deviations made while building the STRETCH website from the brief + design mockups, plus everything that needs human review before launch.
