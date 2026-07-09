@@ -3,7 +3,7 @@
 // history are staged as the next data sources on this platform.
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { ArrowRight, FileSpreadsheet, FolderOpen, PackageSearch, Settings2 } from 'lucide-react';
+import { ArrowRight, FileSpreadsheet, FolderOpen, PackageSearch, PencilRuler, Settings2 } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
 import { getPricebook } from '@/lib/portal/data';
@@ -55,6 +55,19 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
           <div className="portal-tile__meta">
             {t('products', { count: productCount })} · {t('version')} {meta.version}
           </div>
+          <span className="portal-tile__cta">
+            {t('open')} <ArrowRight size={14} />
+          </span>
+        </Link>
+
+        {/* Ceiling designer — live */}
+        <Link href="/portal/designer" className="portal-tile portal-tile--live">
+          <div className="portal-tile__head">
+            <PencilRuler size={20} />
+            <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
+          </div>
+          <h2>{t('tileDesigner')}</h2>
+          <p>{t('tileDesignerBody')}</p>
           <span className="portal-tile__cta">
             {t('open')} <ArrowRight size={14} />
           </span>

@@ -24,6 +24,7 @@ export default function PortalNav({ isAdmin, demo, company, email, marketsLabel 
   const items = [
     { href: '/portal', label: t('overview'), exact: true },
     { href: '/portal/pricelist', label: t('pricelist'), exact: false },
+    { href: '/portal/designer', label: t('designer'), exact: false },
     ...(isAdmin ? [{ href: '/portal/admin', label: t('admin'), exact: false }] : []),
   ];
 
