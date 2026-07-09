@@ -18,7 +18,8 @@
       "allSolutions": "Wszystkie rozwiązania",
       "allSpecs": "Wszystkie specyfikacje i pliki",
       "about": "O nas",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientLogin": "Strefa klienta"
     },
     "cta": {
       "freeQuote": "Darmowa wycena",
@@ -67,7 +68,9 @@
     "notFoundTitle": "Nie znaleziono strony | STRETCH",
     "notFoundDescription": "Strona, której szukasz, nie została znaleziona.",
     "datasheetsTitle": "Karty techniczne | STRETCH",
-    "datasheetsDescription": "Pobierz karty techniczne systemów sufitów napinanych STRETCH — specyfikacje, klasy ogniowe, wartości akustyczne αw / klasy oraz szczegóły gwarancji."
+    "datasheetsDescription": "Pobierz karty techniczne systemów sufitów napinanych STRETCH — specyfikacje, klasy ogniowe, wartości akustyczne αw / klasy oraz szczegóły gwarancji.",
+    "portalTitle": "Panel klienta | STRETCH",
+    "portalDescription": "Zaloguj się, aby zobaczyć swój cennik handlowy STRETCH i dane konta."
   },
   "cookies": {
     "title": "Szanujemy Twoją prywatność",
@@ -151,7 +154,107 @@
       "training": "Szkolenie dla montażystów",
       "inspiration": "Inspiracje",
       "about": "O nas",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientPortal": "Panel klienta"
+    }
+  },
+  "portal": {
+    "login": {
+      "eyebrow": "Panel klienta",
+      "title": "Ceny handlowe. Zawsze aktualne.",
+      "sub": "Zaloguj się, aby zobaczyć swój cennik STRETCH — synchronizowany na żywo z naszym systemem cen — a wkrótce także dokumenty i historię zamówień.",
+      "formTitle": "Logowanie",
+      "formSub": "Wyłącznie dla klientów i partnerów STRETCH",
+      "email": "E-mail",
+      "password": "Hasło",
+      "submit": "Zaloguj się",
+      "submitting": "Logowanie…",
+      "invalid": "Błędny e-mail lub hasło.",
+      "inactive": "To konto nie jest aktywne. Skontaktuj się ze STRETCH.",
+      "failed": "Logowanie nie powiodło się. Spróbuj ponownie.",
+      "demoTitle": "Tryb demo",
+      "demoBody": "Baza danych nie jest jeszcze podłączona — wypróbuj portal na tych kontach:"
+    },
+    "nav": {
+      "label": "Panel klienta",
+      "overview": "Przegląd",
+      "pricelist": "Cennik",
+      "admin": "Administracja",
+      "signOut": "Wyloguj",
+      "demoBadge": "Demo",
+      "allMarkets": "Wszystkie rynki"
+    },
+    "dash": {
+      "eyebrow": "Panel klienta",
+      "welcome": "Witamy ponownie",
+      "intro": "Zalogowano jako {name}. Poniższe dane są zawsze aktualne.",
+      "live": "Na żywo",
+      "soon": "Wkrótce",
+      "open": "Otwórz",
+      "products": "{count} produktów",
+      "version": "wersja",
+      "tilePricelist": "Cennik",
+      "tilePricelistBody": "Twoje ceny handlowe folii, profili, akcesoriów i oświetlenia magnetycznego — synchronizowane bezpośrednio z systemem cen STRETCH.",
+      "tileDocs": "Dokumenty",
+      "tileDocsBody": "Karty techniczne, certyfikaty i dokumenty zamówień w jednym miejscu.",
+      "tileOrders": "Zamówienia i oferty",
+      "tileOrdersBody": "Śledź swoje oferty, zamówienia i dostawy.",
+      "tileAdmin": "Administracja",
+      "tileAdminBody": "Synchronizuj cennik z Excela i zarządzaj kontami klientów."
+    },
+    "pricelist": {
+      "title": "Cennik",
+      "search": "Szukaj produktu lub kodu…",
+      "count": "{count} pozycji",
+      "market": "Rynek",
+      "allMarketsOpt": "Wszystkie rynki",
+      "currency": "Waluta",
+      "print": "Drukuj",
+      "exportCsv": "CSV",
+      "version": "Wersja",
+      "updated": "Aktualizacja",
+      "empty": "Brak produktów spełniających kryteria."
+    },
+    "admin": {
+      "title": "Administracja",
+      "sub": "Wgraj nowy plik Alto Pricing System, aby zaktualizować cennik wszystkich klientów, i zarządzaj dostępami.",
+      "demoNote": "Tryb demo — zmiany nie są zapisywane. Podłącz Supabase, aby przejść na wersję produkcyjną.",
+      "syncTitle": "Synchronizacja cennika",
+      "syncBody": "Wgraj skoroszyt Alto Pricing System (.xlsx). Importowane są wyłącznie bezpieczne kolumny arkusza PriceBook — marże i koszty nigdy nie opuszczają pliku.",
+      "chooseFile": "Wybierz plik…",
+      "syncButton": "Synchronizuj cennik",
+      "syncing": "Synchronizacja…",
+      "syncFailed": "Synchronizacja nie powiodła się. Sprawdź plik i spróbuj ponownie.",
+      "syncDone": "Cennik zaktualizowany.",
+      "notPersisted": "Plik jest poprawny — w trybie demo nic nie jest zapisywane.",
+      "total": "Wiersze",
+      "added": "Nowe",
+      "removed": "Usunięte",
+      "changed": "Zmiany cen",
+      "unchanged": "Bez zmian",
+      "skipped": "Pominięte",
+      "usersTitle": "Konta klientów",
+      "usersBody": "Każdy klient loguje się własnym kontem i widzi tylko przydzielone rynki.",
+      "createTitle": "Nowe konto",
+      "loading": "Wczytywanie…",
+      "loadFailed": "Nie udało się wczytać kont.",
+      "colEmail": "E-mail",
+      "colCompany": "Firma",
+      "colRole": "Rola",
+      "colMarkets": "Rynki",
+      "colStatus": "Status",
+      "roleClient": "Klient",
+      "roleAdmin": "Administrator",
+      "statusActive": "Aktywne",
+      "statusInactive": "Nieaktywne",
+      "deactivate": "Dezaktywuj",
+      "activate": "Aktywuj",
+      "allMarketsLabel": "Wszystkie rynki",
+      "tempPassword": "Hasło tymczasowe",
+      "create": "Utwórz konto",
+      "creating": "Tworzenie…",
+      "createFailed": "Nie udało się utworzyć konta.",
+      "createdOk": "Utworzono konto dla {email}."
     }
   }
 }

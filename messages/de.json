@@ -18,7 +18,8 @@
       "allSolutions": "Alle Lösungen",
       "allSpecs": "Alle Datenblätter & Downloads",
       "about": "Über uns",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientLogin": "Kundenlogin"
     },
     "cta": {
       "freeQuote": "Kostenloses Angebot",
@@ -67,7 +68,9 @@
     "notFoundTitle": "Seite nicht gefunden | STRETCH",
     "notFoundDescription": "Die gesuchte Seite konnte nicht gefunden werden.",
     "datasheetsTitle": "Technische Datenblätter | STRETCH",
-    "datasheetsDescription": "Laden Sie technische Datenblätter der STRETCH-Spanndeckensysteme herunter — Spezifikationen, Brandklassen, Akustikwerte αw / Klassen und Garantiedetails."
+    "datasheetsDescription": "Laden Sie technische Datenblätter der STRETCH-Spanndeckensysteme herunter — Spezifikationen, Brandklassen, Akustikwerte αw / Klassen und Garantiedetails.",
+    "portalTitle": "Kundenportal | STRETCH",
+    "portalDescription": "Melden Sie sich an, um Ihre STRETCH-Handelspreisliste und Kontodaten einzusehen."
   },
   "cookies": {
     "title": "Wir respektieren Ihre Privatsphäre",
@@ -151,7 +154,107 @@
       "training": "Monteur-Schulung",
       "inspiration": "Inspiration",
       "about": "Über uns",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientPortal": "Kundenportal"
+    }
+  },
+  "portal": {
+    "login": {
+      "eyebrow": "Kundenportal",
+      "title": "Ihre Handelspreise. Immer aktuell.",
+      "sub": "Melden Sie sich an, um Ihre STRETCH-Preisliste einzusehen — live mit unserem Preissystem synchronisiert — und bald auch Ihre Dokumente und Bestellhistorie.",
+      "formTitle": "Anmelden",
+      "formSub": "Exklusiv für STRETCH-Kunden & Partner",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "submit": "Anmelden",
+      "submitting": "Anmeldung…",
+      "invalid": "E-Mail oder Passwort falsch.",
+      "inactive": "Dieses Konto ist nicht aktiv. Kontaktieren Sie STRETCH.",
+      "failed": "Anmeldung fehlgeschlagen. Bitte erneut versuchen.",
+      "demoTitle": "Demomodus",
+      "demoBody": "Noch keine Datenbank verbunden — testen Sie das Portal mit diesen Konten:"
+    },
+    "nav": {
+      "label": "Kundenportal",
+      "overview": "Übersicht",
+      "pricelist": "Preisliste",
+      "admin": "Verwaltung",
+      "signOut": "Abmelden",
+      "demoBadge": "Demo",
+      "allMarkets": "Alle Märkte"
+    },
+    "dash": {
+      "eyebrow": "Kundenportal",
+      "welcome": "Willkommen zurück",
+      "intro": "Angemeldet als {name}. Ihre Daten unten sind immer aktuell.",
+      "live": "Live",
+      "soon": "Bald verfügbar",
+      "open": "Öffnen",
+      "products": "{count} Produkte",
+      "version": "Version",
+      "tilePricelist": "Preisliste",
+      "tilePricelistBody": "Ihre Handelspreise für Folien, Profile, Zubehör und Schienenbeleuchtung — direkt mit dem STRETCH-Preissystem synchronisiert.",
+      "tileDocs": "Dokumente",
+      "tileDocsBody": "Datenblätter, Zertifikate und Bestellunterlagen an einem Ort.",
+      "tileOrders": "Bestellungen & Angebote",
+      "tileOrdersBody": "Verfolgen Sie Ihre Angebote, Bestellungen und Lieferungen.",
+      "tileAdmin": "Verwaltung",
+      "tileAdminBody": "Preisliste aus Excel synchronisieren und Kundenkonten verwalten."
+    },
+    "pricelist": {
+      "title": "Preisliste",
+      "search": "Produkt oder Code suchen…",
+      "count": "{count} Positionen",
+      "market": "Markt",
+      "allMarketsOpt": "Alle Märkte",
+      "currency": "Währung",
+      "print": "Drucken",
+      "exportCsv": "CSV",
+      "version": "Version",
+      "updated": "Aktualisiert",
+      "empty": "Keine Produkte gefunden."
+    },
+    "admin": {
+      "title": "Verwaltung",
+      "sub": "Laden Sie eine neue Alto-Pricing-System-Datei hoch, um die Preisliste aller Kunden zu aktualisieren, und verwalten Sie die Zugänge.",
+      "demoNote": "Demomodus — Änderungen werden nicht gespeichert. Verbinden Sie Supabase für den Livebetrieb.",
+      "syncTitle": "Preislisten-Sync",
+      "syncBody": "Laden Sie die Alto-Pricing-System-Arbeitsmappe (.xlsx) hoch. Nur die kundensicheren PriceBook-Spalten werden importiert — Margen und Kosten verlassen die Datei nie.",
+      "chooseFile": "Datei wählen…",
+      "syncButton": "Preisliste synchronisieren",
+      "syncing": "Synchronisierung…",
+      "syncFailed": "Synchronisierung fehlgeschlagen. Datei prüfen und erneut versuchen.",
+      "syncDone": "Preisliste aktualisiert.",
+      "notPersisted": "Datei ist gültig — im Demomodus wird nichts gespeichert.",
+      "total": "Zeilen",
+      "added": "Neu",
+      "removed": "Entfernt",
+      "changed": "Preisänderungen",
+      "unchanged": "Unverändert",
+      "skipped": "Übersprungen",
+      "usersTitle": "Kundenkonten",
+      "usersBody": "Jeder Kunde meldet sich mit eigenem Konto an und sieht nur die zugewiesenen Märkte.",
+      "createTitle": "Neues Konto",
+      "loading": "Laden…",
+      "loadFailed": "Konten konnten nicht geladen werden.",
+      "colEmail": "E-Mail",
+      "colCompany": "Firma",
+      "colRole": "Rolle",
+      "colMarkets": "Märkte",
+      "colStatus": "Status",
+      "roleClient": "Kunde",
+      "roleAdmin": "Admin",
+      "statusActive": "Aktiv",
+      "statusInactive": "Inaktiv",
+      "deactivate": "Deaktivieren",
+      "activate": "Aktivieren",
+      "allMarketsLabel": "Alle Märkte",
+      "tempPassword": "Temporäres Passwort",
+      "create": "Konto erstellen",
+      "creating": "Erstellen…",
+      "createFailed": "Konto konnte nicht erstellt werden.",
+      "createdOk": "Konto für {email} erstellt."
     }
   }
 }

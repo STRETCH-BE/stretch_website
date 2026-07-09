@@ -46,8 +46,23 @@ Every variable is **optional**. See `.env.example` for the full annotated list. 
 | `RESEND_API_KEY` + `LEAD_FROM_EMAIL` | Deliver leads via [Resend](https://resend.com). |
 | `LEAD_WEBHOOK_URL` | Or POST each lead as JSON to a webhook. |
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` / `SMTP_SECURE` / `SMTP_FROM` | Or send via SMTP (Nodemailer). |
+| `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Client portal auth + database ([Supabase](https://supabase.com)). Without them `/portal` runs in demo mode. |
+| `SUPABASE_SERVICE_ROLE_KEY` | Server-only — powers the portal's admin API (pricelist sync, account management). |
 
 **Lead delivery** auto-selects a method at runtime, in priority order: Resend → webhook → SMTP → log-only. The first one whose env vars are present wins. `resend` and `nodemailer` are *optional* dependencies, imported dynamically only when configured.
+
+---
+
+## Client portal
+
+`/portal` is a login-gated client area serving the **trade pricelist**, kept
+in sync with the *Alto Pricing System* Excel: upload the workbook on
+`/portal/admin` (or run `node scripts/seed-pricebook.mjs <file.xlsx>`) and
+every client sees current prices for **their markets only** — enforced by
+Postgres row-level security. Margins/costs are never imported. With no
+Supabase env vars the portal runs in a zero-config **demo mode** (sample
+data + demo logins, listed on the login page). Full setup & data model:
+**[`docs/PORTAL.md`](docs/PORTAL.md)**.
 
 ---
 

@@ -18,7 +18,8 @@
       "allSolutions": "Toutes les solutions",
       "allSpecs": "Toutes les fiches & téléchargements",
       "about": "À propos",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientLogin": "Espace client"
     },
     "cta": {
       "freeQuote": "Devis gratuit",
@@ -67,7 +68,9 @@
     "notFoundTitle": "Page introuvable | STRETCH",
     "notFoundDescription": "La page que vous recherchez est introuvable.",
     "datasheetsTitle": "Fiches techniques | STRETCH",
-    "datasheetsDescription": "Téléchargez les fiches techniques des systèmes de plafonds tendus STRETCH — spécifications, classements au feu, valeurs acoustiques αw / classes et détails de garantie."
+    "datasheetsDescription": "Téléchargez les fiches techniques des systèmes de plafonds tendus STRETCH — spécifications, classements au feu, valeurs acoustiques αw / classes et détails de garantie.",
+    "portalTitle": "Espace client | STRETCH",
+    "portalDescription": "Connectez-vous pour consulter votre tarif professionnel STRETCH et vos données de compte."
   },
   "cookies": {
     "title": "Nous respectons votre vie privée",
@@ -151,7 +154,107 @@
       "training": "Formation installateur",
       "inspiration": "Inspiration",
       "about": "À propos",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientPortal": "Espace client"
+    }
+  },
+  "portal": {
+    "login": {
+      "eyebrow": "Espace client",
+      "title": "Vos prix pro. Toujours à jour.",
+      "sub": "Connectez-vous pour consulter votre tarif STRETCH — synchronisé en direct avec notre système de prix — et bientôt vos documents et votre historique de commandes.",
+      "formTitle": "Connexion",
+      "formSub": "Réservé aux clients & partenaires STRETCH",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "submitting": "Connexion…",
+      "invalid": "E-mail ou mot de passe incorrect.",
+      "inactive": "Ce compte n'est pas actif. Contactez STRETCH.",
+      "failed": "Échec de la connexion. Veuillez réessayer.",
+      "demoTitle": "Mode démo",
+      "demoBody": "Aucune base de données connectée — découvrez le portail avec ces comptes :"
+    },
+    "nav": {
+      "label": "Espace client",
+      "overview": "Aperçu",
+      "pricelist": "Tarif",
+      "admin": "Administration",
+      "signOut": "Se déconnecter",
+      "demoBadge": "Démo",
+      "allMarkets": "Tous les marchés"
+    },
+    "dash": {
+      "eyebrow": "Espace client",
+      "welcome": "Bon retour",
+      "intro": "Connecté en tant que {name}. Vos données ci-dessous sont toujours à jour.",
+      "live": "En direct",
+      "soon": "Bientôt",
+      "open": "Ouvrir",
+      "products": "{count} produits",
+      "version": "version",
+      "tilePricelist": "Tarif",
+      "tilePricelistBody": "Vos prix professionnels pour toiles, profilés, accessoires et éclairage sur rail — synchronisés avec le système de prix STRETCH.",
+      "tileDocs": "Documents",
+      "tileDocsBody": "Fiches techniques, certificats et documents de commande au même endroit.",
+      "tileOrders": "Commandes & devis",
+      "tileOrdersBody": "Suivez vos devis, commandes et livraisons.",
+      "tileAdmin": "Administration",
+      "tileAdminBody": "Synchronisez le tarif depuis Excel et gérez les comptes clients."
+    },
+    "pricelist": {
+      "title": "Tarif",
+      "search": "Rechercher un produit ou un code…",
+      "count": "{count} articles",
+      "market": "Marché",
+      "allMarketsOpt": "Tous les marchés",
+      "currency": "Devise",
+      "print": "Imprimer",
+      "exportCsv": "CSV",
+      "version": "Version",
+      "updated": "Mis à jour",
+      "empty": "Aucun produit ne correspond à votre recherche."
+    },
+    "admin": {
+      "title": "Administration",
+      "sub": "Chargez un nouveau fichier Alto Pricing System pour mettre à jour le tarif de tous les clients, et gérez les accès.",
+      "demoNote": "Mode démo — les modifications ne sont pas enregistrées. Connectez Supabase pour passer en production.",
+      "syncTitle": "Synchronisation du tarif",
+      "syncBody": "Chargez le classeur Alto Pricing System (.xlsx). Seules les colonnes client du PriceBook sont importées — marges et coûts ne quittent jamais le fichier.",
+      "chooseFile": "Choisir un fichier…",
+      "syncButton": "Synchroniser le tarif",
+      "syncing": "Synchronisation…",
+      "syncFailed": "Échec de la synchronisation. Vérifiez le fichier et réessayez.",
+      "syncDone": "Tarif mis à jour.",
+      "notPersisted": "Fichier valide — en mode démo, rien n'est enregistré.",
+      "total": "Lignes",
+      "added": "Nouveaux",
+      "removed": "Supprimés",
+      "changed": "Changements de prix",
+      "unchanged": "Inchangés",
+      "skipped": "Ignorés",
+      "usersTitle": "Comptes clients",
+      "usersBody": "Chaque client se connecte avec son propre compte et ne voit que les marchés que vous lui attribuez.",
+      "createTitle": "Nouveau compte",
+      "loading": "Chargement…",
+      "loadFailed": "Impossible de charger les comptes.",
+      "colEmail": "E-mail",
+      "colCompany": "Société",
+      "colRole": "Rôle",
+      "colMarkets": "Marchés",
+      "colStatus": "Statut",
+      "roleClient": "Client",
+      "roleAdmin": "Admin",
+      "statusActive": "Actif",
+      "statusInactive": "Inactif",
+      "deactivate": "Désactiver",
+      "activate": "Activer",
+      "allMarketsLabel": "Tous les marchés",
+      "tempPassword": "Mot de passe temporaire",
+      "create": "Créer le compte",
+      "creating": "Création…",
+      "createFailed": "Impossible de créer le compte.",
+      "createdOk": "Compte créé pour {email}."
     }
   }
 }

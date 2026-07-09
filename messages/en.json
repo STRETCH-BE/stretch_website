@@ -18,7 +18,8 @@
       "allSolutions": "All solutions",
       "allSpecs": "All specs & downloads",
       "about": "About",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientLogin": "Client login"
     },
     "cta": {
       "freeQuote": "Free quote",
@@ -67,7 +68,9 @@
     "notFoundTitle": "Page not found | STRETCH",
     "notFoundDescription": "The page you are looking for could not be found.",
     "datasheetsTitle": "Technical datasheets | STRETCH",
-    "datasheetsDescription": "Download technical datasheets for STRETCH stretch-ceiling systems — specifications, fire ratings, acoustic αw / class values and warranty details."
+    "datasheetsDescription": "Download technical datasheets for STRETCH stretch-ceiling systems — specifications, fire ratings, acoustic αw / class values and warranty details.",
+    "portalTitle": "Client portal | STRETCH",
+    "portalDescription": "Sign in to view your STRETCH trade pricelist and account data."
   },
   "cookies": {
     "title": "We value your privacy",
@@ -151,7 +154,107 @@
       "training": "Installer training",
       "inspiration": "Inspiration",
       "about": "About",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientPortal": "Client portal"
+    }
+  },
+  "portal": {
+    "login": {
+      "eyebrow": "Client portal",
+      "title": "Trade pricing. Always current.",
+      "sub": "Sign in to view your STRETCH trade pricelist — synced live with our pricing system — and, soon, your documents and order history.",
+      "formTitle": "Sign in",
+      "formSub": "Reserved for STRETCH clients & partners",
+      "email": "E-mail",
+      "password": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "invalid": "Incorrect e-mail or password.",
+      "inactive": "This account is not active. Contact STRETCH.",
+      "failed": "Sign-in failed. Please try again.",
+      "demoTitle": "Demo mode",
+      "demoBody": "No database connected yet — preview the portal with these accounts:"
+    },
+    "nav": {
+      "label": "Client portal",
+      "overview": "Overview",
+      "pricelist": "Pricelist",
+      "admin": "Admin",
+      "signOut": "Sign out",
+      "demoBadge": "Demo",
+      "allMarkets": "All markets"
+    },
+    "dash": {
+      "eyebrow": "Client portal",
+      "welcome": "Welcome back",
+      "intro": "Signed in as {name}. Your data below is always up to date.",
+      "live": "Live",
+      "soon": "Coming soon",
+      "open": "Open",
+      "products": "{count} products",
+      "version": "version",
+      "tilePricelist": "Pricelist",
+      "tilePricelistBody": "Your trade prices for membranes, profiles, accessories and track lighting — synced directly with the STRETCH pricing system.",
+      "tileDocs": "Documents",
+      "tileDocsBody": "Datasheets, certificates and order documents in one place.",
+      "tileOrders": "Orders & quotes",
+      "tileOrdersBody": "Track your quotes, orders and deliveries.",
+      "tileAdmin": "Administration",
+      "tileAdminBody": "Sync the pricelist from Excel and manage client accounts."
+    },
+    "pricelist": {
+      "title": "Pricelist",
+      "search": "Search product or code…",
+      "count": "{count} items",
+      "market": "Market",
+      "allMarketsOpt": "All markets",
+      "currency": "Currency",
+      "print": "Print",
+      "exportCsv": "CSV",
+      "version": "Version",
+      "updated": "Updated",
+      "empty": "No products match your search."
+    },
+    "admin": {
+      "title": "Administration",
+      "sub": "Upload a new Alto Pricing System file to update every client's pricelist, and manage who can sign in.",
+      "demoNote": "Demo mode — changes are not saved. Connect Supabase to go live.",
+      "syncTitle": "Pricelist sync",
+      "syncBody": "Upload the Alto Pricing System workbook (.xlsx). Only the client-safe PriceBook columns are imported — margins and costs never leave the file.",
+      "chooseFile": "Choose file…",
+      "syncButton": "Sync pricelist",
+      "syncing": "Syncing…",
+      "syncFailed": "Sync failed. Check the file and try again.",
+      "syncDone": "Pricelist updated.",
+      "notPersisted": "File is valid — in demo mode nothing is saved.",
+      "total": "Rows",
+      "added": "New",
+      "removed": "Removed",
+      "changed": "Price changes",
+      "unchanged": "Unchanged",
+      "skipped": "Skipped",
+      "usersTitle": "Client accounts",
+      "usersBody": "Each client signs in with their own account and only sees the markets you assign.",
+      "createTitle": "New account",
+      "loading": "Loading…",
+      "loadFailed": "Could not load accounts.",
+      "colEmail": "E-mail",
+      "colCompany": "Company",
+      "colRole": "Role",
+      "colMarkets": "Markets",
+      "colStatus": "Status",
+      "roleClient": "Client",
+      "roleAdmin": "Admin",
+      "statusActive": "Active",
+      "statusInactive": "Inactive",
+      "deactivate": "Deactivate",
+      "activate": "Activate",
+      "allMarketsLabel": "All markets",
+      "tempPassword": "Temporary password",
+      "create": "Create account",
+      "creating": "Creating…",
+      "createFailed": "Could not create the account.",
+      "createdOk": "Account created for {email}."
     }
   }
 }

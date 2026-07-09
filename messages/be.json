@@ -18,7 +18,8 @@
       "allSolutions": "Alle oplossingen",
       "allSpecs": "Alle specificaties & downloads",
       "about": "Over ons",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientLogin": "Klantenzone"
     },
     "cta": {
       "freeQuote": "Gratis offerte",
@@ -67,7 +68,9 @@
     "notFoundTitle": "Pagina niet gevonden | STRETCH",
     "notFoundDescription": "De pagina die je zoekt kon niet worden gevonden.",
     "datasheetsTitle": "Technische datasheets | STRETCH",
-    "datasheetsDescription": "Download technische datasheets van STRETCH-spanplafondsystemen — specificaties, brandklassen, akoestische αw-/klassewaarden en garantiedetails."
+    "datasheetsDescription": "Download technische datasheets van STRETCH-spanplafondsystemen — specificaties, brandklassen, akoestische αw-/klassewaarden en garantiedetails.",
+    "portalTitle": "Klantenportaal | STRETCH",
+    "portalDescription": "Meld u aan om uw STRETCH-handelsprijslijst en accountgegevens te bekijken."
   },
   "cookies": {
     "title": "We hechten waarde aan je privacy",
@@ -151,7 +154,107 @@
       "training": "Installateursopleiding",
       "inspiration": "Inspiratie",
       "about": "Over ons",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientPortal": "Klantenportaal"
+    }
+  },
+  "portal": {
+    "login": {
+      "eyebrow": "Klantenportaal",
+      "title": "Uw handelsprijzen. Altijd actueel.",
+      "sub": "Meld u aan om uw STRETCH-prijslijst te bekijken — live gesynchroniseerd met ons prijssysteem — en binnenkort ook uw documenten en bestelhistoriek.",
+      "formTitle": "Aanmelden",
+      "formSub": "Exclusief voor STRETCH-klanten & partners",
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "submit": "Aanmelden",
+      "submitting": "Aanmelden…",
+      "invalid": "Onjuist e-mailadres of wachtwoord.",
+      "inactive": "Dit account is niet actief. Neem contact op met STRETCH.",
+      "failed": "Aanmelden mislukt. Probeer opnieuw.",
+      "demoTitle": "Demomodus",
+      "demoBody": "Nog geen database gekoppeld — bekijk het portaal met deze accounts:"
+    },
+    "nav": {
+      "label": "Klantenportaal",
+      "overview": "Overzicht",
+      "pricelist": "Prijslijst",
+      "admin": "Beheer",
+      "signOut": "Afmelden",
+      "demoBadge": "Demo",
+      "allMarkets": "Alle markten"
+    },
+    "dash": {
+      "eyebrow": "Klantenportaal",
+      "welcome": "Welkom terug",
+      "intro": "Aangemeld als {name}. Uw gegevens hieronder zijn altijd actueel.",
+      "live": "Live",
+      "soon": "Binnenkort",
+      "open": "Openen",
+      "products": "{count} producten",
+      "version": "versie",
+      "tilePricelist": "Prijslijst",
+      "tilePricelistBody": "Uw handelsprijzen voor doeken, profielen, accessoires en trackverlichting — rechtstreeks gesynchroniseerd met het STRETCH-prijssysteem.",
+      "tileDocs": "Documenten",
+      "tileDocsBody": "Datasheets, certificaten en besteldocumenten op één plek.",
+      "tileOrders": "Bestellingen & offertes",
+      "tileOrdersBody": "Volg uw offertes, bestellingen en leveringen.",
+      "tileAdmin": "Beheer",
+      "tileAdminBody": "Synchroniseer de prijslijst vanuit Excel en beheer klantaccounts."
+    },
+    "pricelist": {
+      "title": "Prijslijst",
+      "search": "Zoek product of code…",
+      "count": "{count} artikelen",
+      "market": "Markt",
+      "allMarketsOpt": "Alle markten",
+      "currency": "Valuta",
+      "print": "Afdrukken",
+      "exportCsv": "CSV",
+      "version": "Versie",
+      "updated": "Bijgewerkt",
+      "empty": "Geen producten gevonden voor uw zoekopdracht."
+    },
+    "admin": {
+      "title": "Beheer",
+      "sub": "Laad een nieuw Alto Pricing System-bestand op om de prijslijst van alle klanten bij te werken, en beheer wie kan aanmelden.",
+      "demoNote": "Demomodus — wijzigingen worden niet opgeslagen. Koppel Supabase om live te gaan.",
+      "syncTitle": "Prijslijst synchroniseren",
+      "syncBody": "Laad het Alto Pricing System-werkboek (.xlsx) op. Alleen de klantveilige PriceBook-kolommen worden geïmporteerd — marges en kosten verlaten het bestand nooit.",
+      "chooseFile": "Kies bestand…",
+      "syncButton": "Synchroniseer prijslijst",
+      "syncing": "Synchroniseren…",
+      "syncFailed": "Synchronisatie mislukt. Controleer het bestand en probeer opnieuw.",
+      "syncDone": "Prijslijst bijgewerkt.",
+      "notPersisted": "Bestand is geldig — in demomodus wordt niets opgeslagen.",
+      "total": "Rijen",
+      "added": "Nieuw",
+      "removed": "Verwijderd",
+      "changed": "Prijswijzigingen",
+      "unchanged": "Ongewijzigd",
+      "skipped": "Overgeslagen",
+      "usersTitle": "Klantaccounts",
+      "usersBody": "Elke klant meldt zich aan met een eigen account en ziet enkel de markten die u toewijst.",
+      "createTitle": "Nieuw account",
+      "loading": "Laden…",
+      "loadFailed": "Accounts konden niet geladen worden.",
+      "colEmail": "E-mail",
+      "colCompany": "Bedrijf",
+      "colRole": "Rol",
+      "colMarkets": "Markten",
+      "colStatus": "Status",
+      "roleClient": "Klant",
+      "roleAdmin": "Beheerder",
+      "statusActive": "Actief",
+      "statusInactive": "Inactief",
+      "deactivate": "Deactiveren",
+      "activate": "Activeren",
+      "allMarketsLabel": "Alle markten",
+      "tempPassword": "Tijdelijk wachtwoord",
+      "create": "Account aanmaken",
+      "creating": "Aanmaken…",
+      "createFailed": "Account kon niet aangemaakt worden.",
+      "createdOk": "Account aangemaakt voor {email}."
     }
   }
 }

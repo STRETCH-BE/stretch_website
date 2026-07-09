@@ -18,7 +18,8 @@
       "allSolutions": "Alle løsninger",
       "allSpecs": "Alle spesifikasjoner & nedlastinger",
       "about": "Om oss",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientLogin": "Kundeinnlogging"
     },
     "cta": {
       "freeQuote": "Gratis tilbud",
@@ -67,7 +68,9 @@
     "notFoundTitle": "Siden ble ikke funnet | STRETCH",
     "notFoundDescription": "Siden du leter etter, ble ikke funnet.",
     "datasheetsTitle": "Tekniske datablader | STRETCH",
-    "datasheetsDescription": "Last ned tekniske datablader for STRETCH-strekktaksystemer — spesifikasjoner, brannklasser, akustiske αw-/klasseverdier og garantidetaljer."
+    "datasheetsDescription": "Last ned tekniske datablader for STRETCH-strekktaksystemer — spesifikasjoner, brannklasser, akustiske αw-/klasseverdier og garantidetaljer.",
+    "portalTitle": "Kundeportal | STRETCH",
+    "portalDescription": "Logg inn for å se STRETCH-prislisten og kontodataene dine."
   },
   "cookies": {
     "title": "Vi verner om personvernet ditt",
@@ -151,7 +154,107 @@
       "training": "Montøropplæring",
       "inspiration": "Inspirasjon",
       "about": "Om oss",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientPortal": "Kundeportal"
+    }
+  },
+  "portal": {
+    "login": {
+      "eyebrow": "Kundeportal",
+      "title": "Dine forhandlerpriser. Alltid oppdatert.",
+      "sub": "Logg inn for å se STRETCH-prislisten din — synkronisert direkte med prissystemet vårt — og snart også dokumenter og ordrehistorikk.",
+      "formTitle": "Logg inn",
+      "formSub": "Kun for STRETCH-kunder og -partnere",
+      "email": "E-post",
+      "password": "Passord",
+      "submit": "Logg inn",
+      "submitting": "Logger inn…",
+      "invalid": "Feil e-post eller passord.",
+      "inactive": "Denne kontoen er ikke aktiv. Kontakt STRETCH.",
+      "failed": "Innlogging mislyktes. Prøv igjen.",
+      "demoTitle": "Demomodus",
+      "demoBody": "Ingen database tilkoblet ennå — prøv portalen med disse kontoene:"
+    },
+    "nav": {
+      "label": "Kundeportal",
+      "overview": "Oversikt",
+      "pricelist": "Prisliste",
+      "admin": "Administrasjon",
+      "signOut": "Logg ut",
+      "demoBadge": "Demo",
+      "allMarkets": "Alle markeder"
+    },
+    "dash": {
+      "eyebrow": "Kundeportal",
+      "welcome": "Velkommen tilbake",
+      "intro": "Logget inn som {name}. Dataene nedenfor er alltid oppdaterte.",
+      "live": "Live",
+      "soon": "Kommer snart",
+      "open": "Åpne",
+      "products": "{count} produkter",
+      "version": "versjon",
+      "tilePricelist": "Prisliste",
+      "tilePricelistBody": "Dine forhandlerpriser på duker, profiler, tilbehør og skinnebelysning — synkronisert direkte med STRETCH-prissystemet.",
+      "tileDocs": "Dokumenter",
+      "tileDocsBody": "Datablader, sertifikater og ordredokumenter på ett sted.",
+      "tileOrders": "Ordrer og tilbud",
+      "tileOrdersBody": "Følg tilbud, ordrer og leveranser.",
+      "tileAdmin": "Administrasjon",
+      "tileAdminBody": "Synkroniser prislisten fra Excel og administrer kundekontoer."
+    },
+    "pricelist": {
+      "title": "Prisliste",
+      "search": "Søk produkt eller kode…",
+      "count": "{count} varer",
+      "market": "Marked",
+      "allMarketsOpt": "Alle markeder",
+      "currency": "Valuta",
+      "print": "Skriv ut",
+      "exportCsv": "CSV",
+      "version": "Versjon",
+      "updated": "Oppdatert",
+      "empty": "Ingen produkter samsvarer med søket."
+    },
+    "admin": {
+      "title": "Administrasjon",
+      "sub": "Last opp en ny Alto Pricing System-fil for å oppdatere prislisten for alle kunder, og administrer tilganger.",
+      "demoNote": "Demomodus — endringer lagres ikke. Koble til Supabase for å gå i drift.",
+      "syncTitle": "Prisliste-synk",
+      "syncBody": "Last opp Alto Pricing System-arbeidsboken (.xlsx). Kun de kundesikre PriceBook-kolonnene importeres — marginer og kostnader forlater aldri filen.",
+      "chooseFile": "Velg fil…",
+      "syncButton": "Synkroniser prisliste",
+      "syncing": "Synkroniserer…",
+      "syncFailed": "Synkronisering mislyktes. Sjekk filen og prøv igjen.",
+      "syncDone": "Prisliste oppdatert.",
+      "notPersisted": "Filen er gyldig — i demomodus lagres ingenting.",
+      "total": "Rader",
+      "added": "Nye",
+      "removed": "Fjernet",
+      "changed": "Prisendringer",
+      "unchanged": "Uendret",
+      "skipped": "Hoppet over",
+      "usersTitle": "Kundekontoer",
+      "usersBody": "Hver kunde logger inn med egen konto og ser kun markedene du tildeler.",
+      "createTitle": "Ny konto",
+      "loading": "Laster…",
+      "loadFailed": "Kunne ikke laste kontoene.",
+      "colEmail": "E-post",
+      "colCompany": "Firma",
+      "colRole": "Rolle",
+      "colMarkets": "Markeder",
+      "colStatus": "Status",
+      "roleClient": "Kunde",
+      "roleAdmin": "Admin",
+      "statusActive": "Aktiv",
+      "statusInactive": "Inaktiv",
+      "deactivate": "Deaktiver",
+      "activate": "Aktiver",
+      "allMarketsLabel": "Alle markeder",
+      "tempPassword": "Midlertidig passord",
+      "create": "Opprett konto",
+      "creating": "Oppretter…",
+      "createFailed": "Kunne ikke opprette kontoen.",
+      "createdOk": "Konto opprettet for {email}."
     }
   }
 }

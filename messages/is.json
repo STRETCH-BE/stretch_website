@@ -18,7 +18,8 @@
       "allSolutions": "Allar lausnir",
       "allSpecs": "Allar tækniupplýsingar & niðurhal",
       "about": "Um okkur",
-      "faq": "Algengar spurningar"
+      "faq": "Algengar spurningar",
+      "clientLogin": "Innskráning viðskiptavina"
     },
     "cta": {
       "freeQuote": "Ókeypis tilboð",
@@ -67,7 +68,9 @@
     "notFoundTitle": "Síða fannst ekki | STRETCH",
     "notFoundDescription": "Síðan sem þú leitar að fannst ekki.",
     "datasheetsTitle": "Tæknibliöð | STRETCH",
-    "datasheetsDescription": "Sæktu tæknibliöð fyrir STRETCH-strekkiloftakerfi — tækniupplýsingar, brunaflokkar, hljóðvistargildi αw / flokkar og ábyrgðarskilmálar."
+    "datasheetsDescription": "Sæktu tæknibliöð fyrir STRETCH-strekkiloftakerfi — tækniupplýsingar, brunaflokkar, hljóðvistargildi αw / flokkar og ábyrgðarskilmálar.",
+    "portalTitle": "Viðskiptavinagátt | STRETCH",
+    "portalDescription": "Skráðu þig inn til að sjá STRETCH-verðskrána þína og aðgangsupplýsingar."
   },
   "cookies": {
     "title": "Við virðum friðhelgi þína",
@@ -151,7 +154,107 @@
       "training": "Uppsetningarnámskeið",
       "inspiration": "Innblástur",
       "about": "Um okkur",
-      "faq": "Algengar spurningar"
+      "faq": "Algengar spurningar",
+      "clientPortal": "Viðskiptavinagátt"
+    }
+  },
+  "portal": {
+    "login": {
+      "eyebrow": "Viðskiptavinagátt",
+      "title": "Heildsöluverðin þín. Alltaf uppfærð.",
+      "sub": "Skráðu þig inn til að sjá STRETCH-verðskrána þína — samstillta í rauntíma við verðkerfið okkar — og fljótlega einnig skjöl og pöntunarsögu.",
+      "formTitle": "Innskráning",
+      "formSub": "Aðeins fyrir viðskiptavini og samstarfsaðila STRETCH",
+      "email": "Netfang",
+      "password": "Lykilorð",
+      "submit": "Skrá inn",
+      "submitting": "Skrái inn…",
+      "invalid": "Rangt netfang eða lykilorð.",
+      "inactive": "Þessi aðgangur er ekki virkur. Hafðu samband við STRETCH.",
+      "failed": "Innskráning mistókst. Reyndu aftur.",
+      "demoTitle": "Prufuhamur",
+      "demoBody": "Enginn gagnagrunnur tengdur enn — prófaðu gáttina með þessum aðgöngum:"
+    },
+    "nav": {
+      "label": "Viðskiptavinagátt",
+      "overview": "Yfirlit",
+      "pricelist": "Verðskrá",
+      "admin": "Stjórnun",
+      "signOut": "Skrá út",
+      "demoBadge": "Prufa",
+      "allMarkets": "Allir markaðir"
+    },
+    "dash": {
+      "eyebrow": "Viðskiptavinagátt",
+      "welcome": "Velkomin aftur",
+      "intro": "Skráð(ur) inn sem {name}. Gögnin hér að neðan eru alltaf uppfærð.",
+      "live": "Í beinni",
+      "soon": "Væntanlegt",
+      "open": "Opna",
+      "products": "{count} vörur",
+      "version": "útgáfa",
+      "tilePricelist": "Verðskrá",
+      "tilePricelistBody": "Heildsöluverð þín á dúkum, prófílum, fylgihlutum og brautarlýsingu — samstillt beint við verðkerfi STRETCH.",
+      "tileDocs": "Skjöl",
+      "tileDocsBody": "Tækniblöð, vottorð og pöntunarskjöl á einum stað.",
+      "tileOrders": "Pantanir og tilboð",
+      "tileOrdersBody": "Fylgstu með tilboðum, pöntunum og afhendingum.",
+      "tileAdmin": "Stjórnun",
+      "tileAdminBody": "Samstilltu verðskrána úr Excel og sýslaðu með aðganga viðskiptavina."
+    },
+    "pricelist": {
+      "title": "Verðskrá",
+      "search": "Leita að vöru eða kóða…",
+      "count": "{count} vörur",
+      "market": "Markaður",
+      "allMarketsOpt": "Allir markaðir",
+      "currency": "Gjaldmiðill",
+      "print": "Prenta",
+      "exportCsv": "CSV",
+      "version": "Útgáfa",
+      "updated": "Uppfært",
+      "empty": "Engar vörur passa við leitina."
+    },
+    "admin": {
+      "title": "Stjórnun",
+      "sub": "Hladdu upp nýrri Alto Pricing System-skrá til að uppfæra verðskrá allra viðskiptavina og sýslaðu með aðganga.",
+      "demoNote": "Prufuhamur — breytingar vistast ekki. Tengdu Supabase til að fara í loftið.",
+      "syncTitle": "Samstilling verðskrár",
+      "syncBody": "Hladdu upp Alto Pricing System-vinnubókinni (.xlsx). Aðeins öruggu PriceBook-dálkarnir eru fluttir inn — framlegð og kostnaður fara aldrei úr skránni.",
+      "chooseFile": "Velja skrá…",
+      "syncButton": "Samstilla verðskrá",
+      "syncing": "Samstilli…",
+      "syncFailed": "Samstilling mistókst. Athugaðu skrána og reyndu aftur.",
+      "syncDone": "Verðskrá uppfærð.",
+      "notPersisted": "Skráin er gild — í prufuham vistast ekkert.",
+      "total": "Línur",
+      "added": "Nýjar",
+      "removed": "Fjarlægðar",
+      "changed": "Verðbreytingar",
+      "unchanged": "Óbreyttar",
+      "skipped": "Sleppt",
+      "usersTitle": "Aðgangar viðskiptavina",
+      "usersBody": "Hver viðskiptavinur skráir sig inn með eigin aðgangi og sér aðeins þá markaði sem þú úthlutar.",
+      "createTitle": "Nýr aðgangur",
+      "loading": "Hleð…",
+      "loadFailed": "Ekki tókst að sækja aðgangana.",
+      "colEmail": "Netfang",
+      "colCompany": "Fyrirtæki",
+      "colRole": "Hlutverk",
+      "colMarkets": "Markaðir",
+      "colStatus": "Staða",
+      "roleClient": "Viðskiptavinur",
+      "roleAdmin": "Stjórnandi",
+      "statusActive": "Virkur",
+      "statusInactive": "Óvirkur",
+      "deactivate": "Gera óvirkan",
+      "activate": "Virkja",
+      "allMarketsLabel": "Allir markaðir",
+      "tempPassword": "Tímabundið lykilorð",
+      "create": "Stofna aðgang",
+      "creating": "Stofna…",
+      "createFailed": "Ekki tókst að stofna aðganginn.",
+      "createdOk": "Aðgangur stofnaður fyrir {email}."
     }
   }
 }

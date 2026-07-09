@@ -1,3 +1,25 @@
+## 2026-07-08 — Client portal (login + live pricelist)
+
+**What was built**
+
+- **`/portal`** — a login-gated client platform: dashboard, **pricelist** (category tabs, search, market filter, EUR/PLN switch, print stylesheet, CSV export — layout follows Michael's pricelist mockup restyled to the site tokens), and an **admin page** (Excel sync + client-account management). All portal routes are `noindex`, excluded from sitemaps and disallowed in robots.
+- **Data flow:** the *Alto Pricing System* Excel stays the pricing master. The admin upload (or `scripts/seed-pricebook.mjs`) reads ONLY the client-safe PriceBook columns (Category, Code, Product, Unit, Market, Price EUR, Price PLN) into a Supabase `pricebook` table. **Margin % and cost columns are never read, stored, or transmitted.**
+- **Auth & visibility:** Supabase password auth; `portal_users` profiles carry `role` (client/admin), `markets[]`, `all_markets`, `active`. Per-market price visibility is enforced with **Postgres row-level security** (see `supabase/schema.sql`), not just UI filtering — deliberate, since margins differ per market (East/West Europe, USA, UAE, Key account, Producers, Standard, rolls tiers).
+- **Zero-config demo mode** (consistent with the site's env-var philosophy): without Supabase env vars the portal runs on a bundled sample pricebook (`src/lib/portal/demo-pricebook.json`, generated from the 2026-07 workbook, 2,447 rows) with three demo logins listed on the login page. Demo mode is a preview, not a security boundary.
+- **Session refresh** composed into `src/middleware.ts` (next-intl first, then Supabase token refresh on `/portal` paths only). Root `middleware.ts` mirrors it.
+- New deps: `@supabase/supabase-js`, `@supabase/ssr`, `xlsx`. New env vars (all optional): `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`. Added `.env.example` (README referenced it but it was missing).
+- Entry points: header utility bar, mobile menu and footer "Company" column link to `/portal` (`common.nav.clientLogin` / `footer.links.clientPortal`, translated in all 12 locales; the full portal UI ships translated in all 12 message bundles — same native-review caveat as the rest).
+- Setup guide: **`docs/PORTAL.md`** (Supabase project → schema.sql → 3 env vars → seed script → admin bootstrap script).
+
+**Decisions / notes for review**
+
+- Rows are keyed on Category+Product+Market; a product rename in Excel shows as removed+added in the sync report (expected).
+- 4 PriceBook rows currently have no Price EUR (Bauf Translucent Satin/Mat White 450 cm — cost cell empty in the workbook) and are skipped with a warning at sync time; fix them in the Excel when convenient.
+- The pricelist's product grouping inside a category derives the brand from the first word of the product name for ceilings/rolls/foil-cut (MSD, Bauf, Teqtum, Renolit…). Other categories render as a single list — add richer grouping later if wanted.
+- Documents & order-history tiles on the dashboard are staged "coming soon" placeholders — the portal was explicitly designed as a platform for more client data sources.
+
+---
+
 ## 2026-07-05 — Multi-domain internationalization (12 locales, one domain each)
 
 **What changed**

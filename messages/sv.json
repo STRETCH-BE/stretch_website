@@ -18,7 +18,8 @@
       "allSolutions": "Alla lösningar",
       "allSpecs": "Alla specifikationer & nedladdningar",
       "about": "Om oss",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientLogin": "Kundinloggning"
     },
     "cta": {
       "freeQuote": "Gratis offert",
@@ -67,7 +68,9 @@
     "notFoundTitle": "Sidan hittades inte | STRETCH",
     "notFoundDescription": "Sidan du letar efter kunde inte hittas.",
     "datasheetsTitle": "Tekniska datablad | STRETCH",
-    "datasheetsDescription": "Ladda ner tekniska datablad för STRETCH-spänntaksystem — specifikationer, brandklasser, akustiska αw-/klassvärden och garantidetaljer."
+    "datasheetsDescription": "Ladda ner tekniska datablad för STRETCH-spänntaksystem — specifikationer, brandklasser, akustiska αw-/klassvärden och garantidetaljer.",
+    "portalTitle": "Kundportal | STRETCH",
+    "portalDescription": "Logga in för att se din STRETCH-prislista och dina kontouppgifter."
   },
   "cookies": {
     "title": "Vi värnar om din integritet",
@@ -151,7 +154,107 @@
       "training": "Montörsutbildning",
       "inspiration": "Inspiration",
       "about": "Om oss",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "clientPortal": "Kundportal"
+    }
+  },
+  "portal": {
+    "login": {
+      "eyebrow": "Kundportal",
+      "title": "Dina återförsäljarpriser. Alltid aktuella.",
+      "sub": "Logga in för att se din STRETCH-prislista — synkroniserad live med vårt prissystem — och snart även dina dokument och orderhistorik.",
+      "formTitle": "Logga in",
+      "formSub": "Endast för STRETCH-kunder och partner",
+      "email": "E-post",
+      "password": "Lösenord",
+      "submit": "Logga in",
+      "submitting": "Loggar in…",
+      "invalid": "Fel e-post eller lösenord.",
+      "inactive": "Kontot är inte aktivt. Kontakta STRETCH.",
+      "failed": "Inloggningen misslyckades. Försök igen.",
+      "demoTitle": "Demoläge",
+      "demoBody": "Ingen databas ansluten ännu — prova portalen med dessa konton:"
+    },
+    "nav": {
+      "label": "Kundportal",
+      "overview": "Översikt",
+      "pricelist": "Prislista",
+      "admin": "Administration",
+      "signOut": "Logga ut",
+      "demoBadge": "Demo",
+      "allMarkets": "Alla marknader"
+    },
+    "dash": {
+      "eyebrow": "Kundportal",
+      "welcome": "Välkommen tillbaka",
+      "intro": "Inloggad som {name}. Dina uppgifter nedan är alltid aktuella.",
+      "live": "Live",
+      "soon": "Kommer snart",
+      "open": "Öppna",
+      "products": "{count} produkter",
+      "version": "version",
+      "tilePricelist": "Prislista",
+      "tilePricelistBody": "Dina återförsäljarpriser på dukar, profiler, tillbehör och skenbelysning — synkroniserade direkt med STRETCH prissystem.",
+      "tileDocs": "Dokument",
+      "tileDocsBody": "Datablad, certifikat och orderdokument på ett ställe.",
+      "tileOrders": "Order & offerter",
+      "tileOrdersBody": "Följ dina offerter, order och leveranser.",
+      "tileAdmin": "Administration",
+      "tileAdminBody": "Synkronisera prislistan från Excel och hantera kundkonton."
+    },
+    "pricelist": {
+      "title": "Prislista",
+      "search": "Sök produkt eller kod…",
+      "count": "{count} artiklar",
+      "market": "Marknad",
+      "allMarketsOpt": "Alla marknader",
+      "currency": "Valuta",
+      "print": "Skriv ut",
+      "exportCsv": "CSV",
+      "version": "Version",
+      "updated": "Uppdaterad",
+      "empty": "Inga produkter matchar din sökning."
+    },
+    "admin": {
+      "title": "Administration",
+      "sub": "Ladda upp en ny Alto Pricing System-fil för att uppdatera alla kunders prislista och hantera behörigheter.",
+      "demoNote": "Demoläge — ändringar sparas inte. Anslut Supabase för skarp drift.",
+      "syncTitle": "Prislistesynk",
+      "syncBody": "Ladda upp Alto Pricing System-arbetsboken (.xlsx). Endast de kundsäkra PriceBook-kolumnerna importeras — marginaler och kostnader lämnar aldrig filen.",
+      "chooseFile": "Välj fil…",
+      "syncButton": "Synkronisera prislista",
+      "syncing": "Synkroniserar…",
+      "syncFailed": "Synkroniseringen misslyckades. Kontrollera filen och försök igen.",
+      "syncDone": "Prislistan uppdaterad.",
+      "notPersisted": "Filen är giltig — i demoläge sparas inget.",
+      "total": "Rader",
+      "added": "Nya",
+      "removed": "Borttagna",
+      "changed": "Prisändringar",
+      "unchanged": "Oförändrade",
+      "skipped": "Överhoppade",
+      "usersTitle": "Kundkonton",
+      "usersBody": "Varje kund loggar in med sitt eget konto och ser bara de marknader du tilldelar.",
+      "createTitle": "Nytt konto",
+      "loading": "Läser in…",
+      "loadFailed": "Kontona kunde inte läsas in.",
+      "colEmail": "E-post",
+      "colCompany": "Företag",
+      "colRole": "Roll",
+      "colMarkets": "Marknader",
+      "colStatus": "Status",
+      "roleClient": "Kund",
+      "roleAdmin": "Admin",
+      "statusActive": "Aktivt",
+      "statusInactive": "Inaktivt",
+      "deactivate": "Avaktivera",
+      "activate": "Aktivera",
+      "allMarketsLabel": "Alla marknader",
+      "tempPassword": "Tillfälligt lösenord",
+      "create": "Skapa konto",
+      "creating": "Skapar…",
+      "createFailed": "Kontot kunde inte skapas.",
+      "createdOk": "Konto skapat för {email}."
     }
   }
 }
