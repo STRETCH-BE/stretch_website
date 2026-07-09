@@ -182,7 +182,8 @@
       "admin": "Verwaltung",
       "signOut": "Abmelden",
       "demoBadge": "Demo",
-      "allMarkets": "Alle Märkte"
+      "allMarkets": "Alle Märkte",
+      "designer": "Decken-Designer"
     },
     "dash": {
       "eyebrow": "Kundenportal",
@@ -200,7 +201,9 @@
       "tileOrders": "Bestellungen & Angebote",
       "tileOrdersBody": "Verfolgen Sie Ihre Angebote, Bestellungen und Lieferungen.",
       "tileAdmin": "Verwaltung",
-      "tileAdminBody": "Preisliste aus Excel synchronisieren und Kundenkonten verwalten."
+      "tileAdminBody": "Preisliste aus Excel synchronisieren und Kundenkonten verwalten.",
+      "tileDesigner": "Decken-Designer",
+      "tileDesignerBody": "Zeichnen Sie die Decke aus Ihrem Aufmaß, platzieren Sie Nähte und Aussparungen, berechnen Sie den Preis und senden Sie die Bestellung — mit DXF, Grundriss- und Produktions-PDF."
     },
     "pricelist": {
       "title": "Preisliste",
@@ -255,6 +258,10 @@
       "creating": "Erstellen…",
       "createFailed": "Konto konnte nicht erstellt werden.",
       "createdOk": "Konto für {email} erstellt."
+    },
+    "designer": {
+      "eyebrow": "Decken-Designer",
+      "hint": "Zeichnen Sie die Decke aus Wand- und Diagonalmaßen, platzieren Sie Nähte und Aussparungen, prüfen Sie den Preis und bestellen Sie. Mit Save speichern Sie ein Aufmaß als Datei."
     }
   }
 }

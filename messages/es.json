@@ -182,7 +182,8 @@
       "admin": "Administración",
       "signOut": "Salir",
       "demoBadge": "Demo",
-      "allMarkets": "Todos los mercados"
+      "allMarkets": "Todos los mercados",
+      "designer": "Diseñador de techos"
     },
     "dash": {
       "eyebrow": "Portal de clientes",
@@ -200,7 +201,9 @@
       "tileOrders": "Pedidos y presupuestos",
       "tileOrdersBody": "Siga sus presupuestos, pedidos y entregas.",
       "tileAdmin": "Administración",
-      "tileAdminBody": "Sincronice la tarifa desde Excel y gestione las cuentas de clientes."
+      "tileAdminBody": "Sincronice la tarifa desde Excel y gestione las cuentas de clientes.",
+      "tileDesigner": "Diseñador de techos",
+      "tileDesignerBody": "Dibuje el techo a partir de sus medidas, coloque costuras y recortes, calcule el precio y envíe el pedido — con DXF, plano y PDF de producción."
     },
     "pricelist": {
       "title": "Tarifa",
@@ -255,6 +258,10 @@
       "creating": "Creando…",
       "createFailed": "No se pudo crear la cuenta.",
       "createdOk": "Cuenta creada para {email}."
+    },
+    "designer": {
+      "eyebrow": "Diseñador de techos",
+      "hint": "Dibuje el techo a partir de paredes y diagonales, coloque costuras y recortes, compruebe el precio y realice el pedido. Use Save para guardar una medición como archivo."
     }
   }
 }

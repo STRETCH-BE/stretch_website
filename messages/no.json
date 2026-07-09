@@ -182,7 +182,8 @@
       "admin": "Administrasjon",
       "signOut": "Logg ut",
       "demoBadge": "Demo",
-      "allMarkets": "Alle markeder"
+      "allMarkets": "Alle markeder",
+      "designer": "Takdesigner"
     },
     "dash": {
       "eyebrow": "Kundeportal",
@@ -200,7 +201,9 @@
       "tileOrders": "Ordrer og tilbud",
       "tileOrdersBody": "Følg tilbud, ordrer og leveranser.",
       "tileAdmin": "Administrasjon",
-      "tileAdminBody": "Synkroniser prislisten fra Excel og administrer kundekontoer."
+      "tileAdminBody": "Synkroniser prislisten fra Excel og administrer kundekontoer.",
+      "tileDesigner": "Takdesigner",
+      "tileDesignerBody": "Tegn taket fra målene dine, plasser skjøter og utsparinger, få prisen og send bestillingen — med DXF, plantegning og produksjons-PDF."
     },
     "pricelist": {
       "title": "Prisliste",
@@ -255,6 +258,10 @@
       "creating": "Oppretter…",
       "createFailed": "Kunne ikke opprette kontoen.",
       "createdOk": "Konto opprettet for {email}."
+    },
+    "designer": {
+      "eyebrow": "Takdesigner",
+      "hint": "Tegn taket fra vegg- og diagonalmål, plasser skjøter og utsparinger, sjekk prisen og legg inn bestillingen. Bruk Save for å lagre en måling som fil."
     }
   }
 }

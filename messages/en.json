@@ -182,7 +182,8 @@
       "admin": "Admin",
       "signOut": "Sign out",
       "demoBadge": "Demo",
-      "allMarkets": "All markets"
+      "allMarkets": "All markets",
+      "designer": "Ceiling designer"
     },
     "dash": {
       "eyebrow": "Client portal",
@@ -200,7 +201,9 @@
       "tileOrders": "Orders & quotes",
       "tileOrdersBody": "Track your quotes, orders and deliveries.",
       "tileAdmin": "Administration",
-      "tileAdminBody": "Sync the pricelist from Excel and manage client accounts."
+      "tileAdminBody": "Sync the pricelist from Excel and manage client accounts.",
+      "tileDesigner": "Ceiling designer",
+      "tileDesignerBody": "Draw the ceiling from your site measurements, position seams and cut-outs, get the price and send the order — with DXF, floorplan and production PDFs."
     },
     "pricelist": {
       "title": "Pricelist",
@@ -255,6 +258,10 @@
       "creating": "Creating…",
       "createFailed": "Could not create the account.",
       "createdOk": "Account created for {email}."
+    },
+    "designer": {
+      "eyebrow": "Ceiling designer",
+      "hint": "Draw the ceiling from wall + diagonal measurements, position seams and cut-outs, check the price and place the order. Use Save to keep a measurement file for later."
     }
   }
 }

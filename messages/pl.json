@@ -182,7 +182,8 @@
       "admin": "Administracja",
       "signOut": "Wyloguj",
       "demoBadge": "Demo",
-      "allMarkets": "Wszystkie rynki"
+      "allMarkets": "Wszystkie rynki",
+      "designer": "Projektant sufitu"
     },
     "dash": {
       "eyebrow": "Panel klienta",
@@ -200,7 +201,9 @@
       "tileOrders": "Zamówienia i oferty",
       "tileOrdersBody": "Śledź swoje oferty, zamówienia i dostawy.",
       "tileAdmin": "Administracja",
-      "tileAdminBody": "Synchronizuj cennik z Excela i zarządzaj kontami klientów."
+      "tileAdminBody": "Synchronizuj cennik z Excela i zarządzaj kontami klientów.",
+      "tileDesigner": "Projektant sufitu",
+      "tileDesignerBody": "Narysuj sufit z pomiarów, rozmieść zgrzewy i wycięcia, oblicz cenę i wyślij zamówienie — z DXF, rzutem i PDF produkcyjnym."
     },
     "pricelist": {
       "title": "Cennik",
@@ -255,6 +258,10 @@
       "creating": "Tworzenie…",
       "createFailed": "Nie udało się utworzyć konta.",
       "createdOk": "Utworzono konto dla {email}."
+    },
+    "designer": {
+      "eyebrow": "Projektant sufitu",
+      "hint": "Narysuj sufit z wymiarów ścian i przekątnych, rozmieść zgrzewy i wycięcia, sprawdź cenę i złóż zamówienie. Użyj Save, aby zapisać pomiar jako plik."
     }
   }
 }

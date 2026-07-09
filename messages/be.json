@@ -182,7 +182,8 @@
       "admin": "Beheer",
       "signOut": "Afmelden",
       "demoBadge": "Demo",
-      "allMarkets": "Alle markten"
+      "allMarkets": "Alle markten",
+      "designer": "Plafond-designer"
     },
     "dash": {
       "eyebrow": "Klantenportaal",
@@ -200,7 +201,9 @@
       "tileOrders": "Bestellingen & offertes",
       "tileOrdersBody": "Volg uw offertes, bestellingen en leveringen.",
       "tileAdmin": "Beheer",
-      "tileAdminBody": "Synchroniseer de prijslijst vanuit Excel en beheer klantaccounts."
+      "tileAdminBody": "Synchroniseer de prijslijst vanuit Excel en beheer klantaccounts.",
+      "tileDesigner": "Plafond-designer",
+      "tileDesignerBody": "Teken het plafond uit je opmeting, plaats lasnaden en uitsparingen, bereken de prijs en verstuur de bestelling — met DXF, plattegrond- en productie-PDF."
     },
     "pricelist": {
       "title": "Prijslijst",
@@ -255,6 +258,10 @@
       "creating": "Aanmaken…",
       "createFailed": "Account kon niet aangemaakt worden.",
       "createdOk": "Account aangemaakt voor {email}."
+    },
+    "designer": {
+      "eyebrow": "Plafond-designer",
+      "hint": "Teken het plafond uit muur- en diagonaalmaten, plaats lasnaden en uitsparingen, controleer de prijs en plaats de bestelling. Gebruik Save om een opmeting als bestand te bewaren."
     }
   }
 }

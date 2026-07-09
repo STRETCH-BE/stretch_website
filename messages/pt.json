@@ -182,7 +182,8 @@
       "admin": "Administração",
       "signOut": "Sair",
       "demoBadge": "Demo",
-      "allMarkets": "Todos os mercados"
+      "allMarkets": "Todos os mercados",
+      "designer": "Designer de tetos"
     },
     "dash": {
       "eyebrow": "Portal do cliente",
@@ -200,7 +201,9 @@
       "tileOrders": "Encomendas e orçamentos",
       "tileOrdersBody": "Acompanhe os seus orçamentos, encomendas e entregas.",
       "tileAdmin": "Administração",
-      "tileAdminBody": "Sincronize a tabela de preços a partir do Excel e faça a gestão das contas de clientes."
+      "tileAdminBody": "Sincronize a tabela de preços a partir do Excel e faça a gestão das contas de clientes.",
+      "tileDesigner": "Designer de tetos",
+      "tileDesignerBody": "Desenhe o teto a partir das suas medições, posicione emendas e recortes, calcule o preço e envie a encomenda — com DXF, planta e PDF de produção."
     },
     "pricelist": {
       "title": "Tabela de preços",
@@ -255,6 +258,10 @@
       "creating": "A criar…",
       "createFailed": "Não foi possível criar a conta.",
       "createdOk": "Conta criada para {email}."
+    },
+    "designer": {
+      "eyebrow": "Designer de tetos",
+      "hint": "Desenhe o teto a partir de paredes e diagonais, posicione emendas e recortes, verifique o preço e faça a encomenda. Use Save para guardar uma medição como ficheiro."
     }
   }
 }

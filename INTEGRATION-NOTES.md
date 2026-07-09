@@ -1,7 +1,9 @@
 # STRETCH website + Client Portal — integrated codebase (9 Jul 2026)
 
 This archive is your full codebase (identical to the `stretch_website-main 2`
-copy you provided / GitHub main) **with the client portal fully integrated**.
+copy you provided / GitHub main) **with the client portal fully integrated**,
+now **including the ceiling designer** at `/portal/designer` (2026-07-09 entry
+in CHANGES.md).
 
 ## What's inside vs. what's not
 
@@ -18,6 +20,11 @@ copy you provided / GitHub main) **with the client portal fully integrated**.
 
 - `/portal` — client login, dashboard, live pricelist (per-market, EUR/PLN,
   search, print, CSV), admin page (Excel sync + client accounts).
+- `/portal/designer` — the ABC Floorplan ceiling designer (measure → draw →
+  seams → quote → order). Served ONLY to signed-in users via
+  `/api/portal/designer` because it contains the foil price matrix — never
+  put it in `public/`. Orders download files + open an email draft (no
+  database yet, as agreed). Update workflow: `scripts/update-designer.md`.
 - `supabase/schema.sql` — database schema with row-level security.
 - `scripts/seed-pricebook.mjs` + `scripts/create-portal-admin.mjs` — CLI setup.
 - Header / mobile menu / footer now link to the portal ("Client login").

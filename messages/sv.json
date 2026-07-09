@@ -182,7 +182,8 @@
       "admin": "Administration",
       "signOut": "Logga ut",
       "demoBadge": "Demo",
-      "allMarkets": "Alla marknader"
+      "allMarkets": "Alla marknader",
+      "designer": "Takdesigner"
     },
     "dash": {
       "eyebrow": "Kundportal",
@@ -200,7 +201,9 @@
       "tileOrders": "Order & offerter",
       "tileOrdersBody": "Följ dina offerter, order och leveranser.",
       "tileAdmin": "Administration",
-      "tileAdminBody": "Synkronisera prislistan från Excel och hantera kundkonton."
+      "tileAdminBody": "Synkronisera prislistan från Excel och hantera kundkonton.",
+      "tileDesigner": "Takdesigner",
+      "tileDesignerBody": "Rita taket från dina mått, placera skarvar och urtag, få priset och skicka ordern — med DXF, planritning och produktions-PDF."
     },
     "pricelist": {
       "title": "Prislista",
@@ -255,6 +258,10 @@
       "creating": "Skapar…",
       "createFailed": "Kontot kunde inte skapas.",
       "createdOk": "Konto skapat för {email}."
+    },
+    "designer": {
+      "eyebrow": "Takdesigner",
+      "hint": "Rita taket från vägg- och diagonalmått, placera skarvar och urtag, kontrollera priset och lägg ordern. Använd Save för att spara en mätning som fil."
     }
   }
 }

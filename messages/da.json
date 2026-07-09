@@ -182,7 +182,8 @@
       "admin": "Administration",
       "signOut": "Log ud",
       "demoBadge": "Demo",
-      "allMarkets": "Alle markeder"
+      "allMarkets": "Alle markeder",
+      "designer": "Loftsdesigner"
     },
     "dash": {
       "eyebrow": "Kundeportal",
@@ -200,7 +201,9 @@
       "tileOrders": "Ordrer & tilbud",
       "tileOrdersBody": "Følg dine tilbud, ordrer og leveringer.",
       "tileAdmin": "Administration",
-      "tileAdminBody": "Synkronisér prislisten fra Excel og administrér kundekonti."
+      "tileAdminBody": "Synkronisér prislisten fra Excel og administrér kundekonti.",
+      "tileDesigner": "Loftsdesigner",
+      "tileDesignerBody": "Tegn loftet ud fra dine mål, placer samlinger og udskæringer, få prisen og send ordren — med DXF, plantegning og produktions-PDF."
     },
     "pricelist": {
       "title": "Prisliste",
@@ -255,6 +258,10 @@
       "creating": "Opretter…",
       "createFailed": "Kontoen kunne ikke oprettes.",
       "createdOk": "Konto oprettet til {email}."
+    },
+    "designer": {
+      "eyebrow": "Loftsdesigner",
+      "hint": "Tegn loftet ud fra væg- og diagonalmål, placer samlinger og udskæringer, tjek prisen og afgiv ordren. Brug Save til at gemme en opmåling som fil."
     }
   }
 }

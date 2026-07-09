@@ -1,3 +1,17 @@
+## 2026-07-09 — Ceiling designer in the portal (pro area)
+
+**What was built**
+
+- **`/portal/designer`** — the ABC Floorplan ceiling designer (measure → draw → seams → quote → order) now lives inside the client portal, next to the pricelist. Nav link + dashboard tile ("live") added; translated in all 12 locales.
+- **Auth-gated delivery:** the designer is a single self-contained HTML app embedded base64 in `src/lib/portal/designer-html.ts` and served ONLY through `GET /api/portal/designer` after `getPortalSession()` passes (anonymous → 307 to `/portal/login`). It is deliberately NOT in `/public` because the app contains the Stretch foil price matrix and service rates. Response headers: `private, no-store`, `X-Frame-Options: SAMEORIGIN`.
+- **Embedding:** `src/app/[locale]/portal/(app)/designer/page.tsx` renders the app full-height in an iframe pointed at the API route. The tool itself is locale-independent (English UI, as built).
+- **No database (per Michael's request):** the order flow downloads the order files (floorplan PDF, production PDF, DXF, order.json) and opens a pre-filled email draft. Persisting orders/documents server-side is a documented future step (an `/api/portal/orders` route + Supabase table + real attachment email would slot in without touching the designer).
+- **Updating the tool:** replace `abc-floorplan.html` and run the one-liner in `scripts/update-designer.md` to regenerate the embedded module. No other file changes needed.
+
+**Files:** new `src/lib/portal/designer-html.ts`, `src/app/api/portal/designer/route.ts`, `src/app/[locale]/portal/(app)/designer/page.tsx`, `scripts/update-designer.md`; modified `src/components/portal/PortalNav.tsx`, `src/app/[locale]/portal/(app)/page.tsx`, all 12 `messages/*.json` (keys `portal.nav.designer`, `portal.dash.tileDesigner*`, `portal.designer.*`).
+
+**Verified:** `tsc --noEmit` clean; `next build` succeeds; Playwright: anonymous requests to the page and the API both redirect to login, demo login → designer renders inside the portal shell, tool solves the 15-corner reference room (SVG draws, spec table computes), nav/tile/locale (nl) all OK.
+
 ## 2026-07-08 — Client portal (login + live pricelist)
 
 **What was built**

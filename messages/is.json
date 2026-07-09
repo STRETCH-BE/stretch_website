@@ -182,7 +182,8 @@
       "admin": "Stjórnun",
       "signOut": "Skrá út",
       "demoBadge": "Prufa",
-      "allMarkets": "Allir markaðir"
+      "allMarkets": "Allir markaðir",
+      "designer": "Loftahönnuður"
     },
     "dash": {
       "eyebrow": "Viðskiptavinagátt",
@@ -200,7 +201,9 @@
       "tileOrders": "Pantanir og tilboð",
       "tileOrdersBody": "Fylgstu með tilboðum, pöntunum og afhendingum.",
       "tileAdmin": "Stjórnun",
-      "tileAdminBody": "Samstilltu verðskrána úr Excel og sýslaðu með aðganga viðskiptavina."
+      "tileAdminBody": "Samstilltu verðskrána úr Excel og sýslaðu með aðganga viðskiptavina.",
+      "tileDesigner": "Loftahönnuður",
+      "tileDesignerBody": "Teiknaðu loftið út frá málunum, staðsettu samskeyti og úrtök, fáðu verðið og sendu pöntunina — með DXF, grunnmynd og framleiðslu-PDF."
     },
     "pricelist": {
       "title": "Verðskrá",
@@ -255,6 +258,10 @@
       "creating": "Stofna…",
       "createFailed": "Ekki tókst að stofna aðganginn.",
       "createdOk": "Aðgangur stofnaður fyrir {email}."
+    },
+    "designer": {
+      "eyebrow": "Loftahönnuður",
+      "hint": "Teiknaðu loftið út frá veggja- og hornalínumálum, staðsettu samskeyti og úrtök, athugaðu verðið og sendu pöntunina. Notaðu Save til að vista mælingu sem skrá."
     }
   }
 }

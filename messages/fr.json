@@ -182,7 +182,8 @@
       "admin": "Administration",
       "signOut": "Se déconnecter",
       "demoBadge": "Démo",
-      "allMarkets": "Tous les marchés"
+      "allMarkets": "Tous les marchés",
+      "designer": "Concepteur de plafond"
     },
     "dash": {
       "eyebrow": "Espace client",
@@ -200,7 +201,9 @@
       "tileOrders": "Commandes & devis",
       "tileOrdersBody": "Suivez vos devis, commandes et livraisons.",
       "tileAdmin": "Administration",
-      "tileAdminBody": "Synchronisez le tarif depuis Excel et gérez les comptes clients."
+      "tileAdminBody": "Synchronisez le tarif depuis Excel et gérez les comptes clients.",
+      "tileDesigner": "Concepteur de plafond",
+      "tileDesignerBody": "Dessinez le plafond à partir de vos mesures, placez soudures et découpes, calculez le prix et envoyez la commande — avec DXF, plan et PDF de production."
     },
     "pricelist": {
       "title": "Tarif",
@@ -255,6 +258,10 @@
       "creating": "Création…",
       "createFailed": "Impossible de créer le compte.",
       "createdOk": "Compte créé pour {email}."
+    },
+    "designer": {
+      "eyebrow": "Concepteur de plafond",
+      "hint": "Dessinez le plafond à partir des murs et des diagonales, placez soudures et découpes, vérifiez le prix et passez la commande. Utilisez Save pour conserver un fichier de mesures."
     }
   }
 }
