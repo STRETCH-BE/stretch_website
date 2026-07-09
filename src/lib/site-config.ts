@@ -154,6 +154,8 @@ export const footerNav = {
     { key: 'inspiration', href: '/inspiration' },
     { key: 'about', href: '/about' },
     { key: 'faq', href: '/faq' },
+    // Client portal — private client area (login-gated, noindex).
+    { key: 'clientPortal', href: '/portal' },
   ] as NavLink[],
   legal: [
     { key: 'privacy', href: '/privacy' },

@@ -104,6 +104,7 @@ export default function MobileMenu() {
               { href: '/faq', label: t('nav.faq') },
               { href: '/about', label: t('nav.about') },
               { href: '/contact', label: t('nav.contact') },
+              { href: '/portal', label: t('nav.clientLogin') },
             ].map((item) => (
               <Link
                 key={item.href}

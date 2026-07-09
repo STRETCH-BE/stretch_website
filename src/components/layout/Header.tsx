@@ -50,6 +50,7 @@ export default function Header() {
           <div className="only-desktop" style={{ display: 'flex', alignItems: 'center', gap: 26, fontSize: 11.5, letterSpacing: '.12em', textTransform: 'uppercase', fontWeight: 600 }}>
             <Link href="/partners" className="lnk">{t('nav.reseller')}</Link>
             <Link href="/installer-training" className="lnk">{t('nav.training')}</Link>
+            <Link href="/portal" className="lnk">{t('nav.clientLogin')}</Link>
             <span style={{ opacity: 0.4 }}>|</span>
             <a href={contact.phoneHref} className="lnk" style={{ color: 'var(--red)' }} onClick={() => analytics.phoneClick('header_utility')}>
               {contact.phoneDisplay}
