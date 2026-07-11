@@ -1,16 +1,11 @@
 // Red scrolling ticker + the four-stat band.
-const TICKER_ITEMS = [
-  'Installed in one day',
-  'Acoustic improvement',
-  '25-year lifespan',
-  '100% recyclable',
-  'Seamless to 5.7m',
-  'No dust · No paint',
-  'Hand made in Belgium',
-];
+import { useTranslations } from 'next-intl';
+
+const TICKER_COUNT = 7;
 
 export function Ticker() {
-  const run = TICKER_ITEMS.map((t) => (
+  const tr = useTranslations('home.ticker');
+  const run = Array.from({ length: TICKER_COUNT }, (_, i) => tr(String(i))).map((t) => (
     <span key={t} style={{ display: 'inline-flex', alignItems: 'center' }}>
       <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 15, letterSpacing: '.04em', textTransform: 'uppercase', padding: '15px 0' }}>
         &nbsp;&nbsp;{t}&nbsp;&nbsp;&nbsp;▪&nbsp;&nbsp;&nbsp;
@@ -30,13 +25,14 @@ export function Ticker() {
 }
 
 const STATS = [
-  { value: '1', accent: '.', label: 'Day to install' },
-  { value: '+25', accent: '.', label: 'Year lifespan' },
-  { value: '6.4', accent: 'm', label: 'Seamless span' },
-  { value: '100', accent: '%', label: 'Recyclable (PVC)' },
+  { value: '1', accent: '.' },
+  { value: '+25', accent: '.' },
+  { value: '6.4', accent: 'm' },
+  { value: '100', accent: '%' },
 ];
 
 export function Stats() {
+  const t = useTranslations('home.stats');
   return (
     <section
       className="container stats-grid"
@@ -50,14 +46,14 @@ export function Stats() {
         border: '1px solid var(--border)',
       }}
     >
-      {STATS.map((s) => (
-        <div key={s.label} style={{ background: '#fff', padding: '28px 24px' }}>
+      {STATS.map((s, i) => (
+        <div key={s.value} style={{ background: '#fff', padding: '28px 24px' }}>
           <div style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(34px,4vw,52px)', lineHeight: 1, letterSpacing: '-.03em' }}>
             {s.value}
             <span className="accent">{s.accent}</span>
           </div>
           <div style={{ fontSize: 12.5, fontWeight: 600, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--text-muted-2)', marginTop: 10 }}>
-            {s.label}
+            {t(String(i))}
           </div>
         </div>
       ))}

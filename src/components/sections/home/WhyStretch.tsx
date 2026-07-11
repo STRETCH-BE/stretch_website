@@ -1,31 +1,27 @@
 // "Why stretch" — image-led split on a dark section: a tall photo beside a 2×2
 // grid of benefit cards. The fourth card is red and carries the survey CTA.
-import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalTextLink } from '@/components/ui/ModalButton';
 import { homeImages } from '@/lib/home-images';
 
-const CELLS = [
-  { n: '01', title: 'Fast & clean fitting', body: 'Up to 50m² per day, per two-person team. No stripping out, no debris — your room stays in use.' },
-  { n: '02', title: '25-year lifespan', body: "Maintenance-free and washable. It won't crack, flake or yellow — and never needs repainting." },
-  { n: '03', title: 'Acoustic & lit', body: 'Integrate acoustics, LED lines, backlighting and printed designs into one seamless surface.' },
-];
+const CELL_NUMBERS = ['01', '02', '03'];
 
 export default function WhyStretch() {
+  const t = useTranslations('home.why');
   return (
     <section className="section--dark" id="why">
       <div className="container section">
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24, marginBottom: 'clamp(40px,5vw,68px)' }}>
           <div>
-            <Eyebrow num="01" label="Why stretch" tone="dark" />
+            <Eyebrow num="01" label={t('eyebrow')} tone="dark" />
             <h2 className="h2" style={{ maxWidth: '13ch' }}>
-              A better ceiling, by design.
+              {t('title')}
             </h2>
           </div>
           <p style={{ fontSize: 15.5, lineHeight: 1.6, color: 'var(--on-dark-muted-2)', maxWidth: 360, margin: 0 }}>
-            A single membrane, tensioned cold across the room. No demolition, no drying time, no
-            compromise — engineered to outlast conventional plasterboard.
+            {t('intro')}
           </p>
         </div>
 
@@ -37,25 +33,25 @@ export default function WhyStretch() {
           </div>
 
           <div className="why-cards">
-            {CELLS.map((c) => (
-              <div key={c.n} className="why-card">
-                <div className="why-card-n">{c.n}</div>
+            {CELL_NUMBERS.map((n, i) => (
+              <div key={n} className="why-card">
+                <div className="why-card-n">{n}</div>
                 <div>
-                  <h3 className="why-card-title">{c.title}</h3>
-                  <p className="why-card-body">{c.body}</p>
+                  <h3 className="why-card-title">{t(`cells.${i}.title`)}</h3>
+                  <p className="why-card-body">{t(`cells.${i}.body`)}</p>
                 </div>
               </div>
             ))}
             <div className="why-card why-card--red">
               <div className="why-card-n why-card-n--light">04</div>
               <div>
-                <h3 className="why-card-title">See it for your project</h3>
+                <h3 className="why-card-title">{t('seeIt')}</h3>
                 <ModalTextLink
                   type="survey"
                   source="why_stretch"
                   style={{ display: 'inline-flex', alignItems: 'center', gap: 10, color: '#fff', fontWeight: 700, fontSize: 14, letterSpacing: '.04em', textTransform: 'uppercase', borderBottom: '2px solid #fff', paddingBottom: 4 }}
                 >
-                  Book a survey ↗
+                  {t('bookSurvey')} ↗
                 </ModalTextLink>
               </div>
             </div>

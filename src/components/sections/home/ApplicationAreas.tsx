@@ -2,48 +2,40 @@
 // tile spans 2×2 and is flagged "Most popular"; cinema spans two columns. Each
 // tile links through to the Inspiration gallery.
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
 
-type Area = {
-  key: string;
-  title: string;
-  blurb: string;
-  area: string; // grid-area name
-  badge?: string;
-  dark?: boolean;
-};
-
-const AREAS: Area[] = [
-  { key: 'living', title: 'Living rooms', blurb: 'A flawless, matte ceiling that reads like fresh plaster — without the cracks.', area: 'living', badge: 'Most popular' },
-  { key: 'bathroom', title: 'Bathrooms', blurb: 'Humidity-proof and washable.', area: 'bath' },
-  { key: 'office', title: 'Offices', blurb: 'Acoustic comfort at work.', area: 'office' },
-  { key: 'cinema', title: 'Home cinemas', blurb: 'Starry skies, hidden speakers and Class A acoustics in one seamless surface.', area: 'cinema', dark: true },
-  { key: 'light', title: 'Backlit & starry', blurb: 'Even, dimmable light.', area: 'starry' },
-  { key: 'commercial', title: 'Retail & hotels', blurb: 'Printed, branded ceilings.', area: 'retail' },
+const AREAS = [
+  { key: 'living', area: 'living', badge: true },
+  { key: 'bathroom', area: 'bath' },
+  { key: 'office', area: 'office' },
+  { key: 'cinema', area: 'cinema', dark: true },
+  { key: 'light', area: 'starry' },
+  { key: 'commercial', area: 'retail' },
 ];
 
 export default function ApplicationAreas() {
+  const t = useTranslations('home.apps');
   return (
     <section className="container section" id="applications">
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20, marginBottom: 'clamp(36px,4vw,56px)' }}>
         <div>
-          <Eyebrow num="04" label="Applications" />
+          <Eyebrow num="04" label={t('eyebrow')} />
           <h2 className="h2">
-            Where stretch
+            {t('title1')}
             <br />
-            works best.
+            {t('title2')}
           </h2>
         </div>
         <p style={{ fontSize: 15.5, lineHeight: 1.6, color: 'var(--text-muted)', maxWidth: 360, margin: 0 }}>
-          From a single living room to an entire hotel — the same seamless system, tuned to the
-          demands of each space.
+          {t('intro')}
         </p>
       </div>
 
       <div className="bento">
-        {AREAS.map((a) => (
+        {AREAS.map((a, i) => (
           <Link
             key={a.key}
             href="/inspiration"
@@ -51,20 +43,20 @@ export default function ApplicationAreas() {
             style={{ gridArea: a.area }}
           >
             <Placeholder
-              label={`${a.title} example`}
+              label={`${t(`areas.${i}.title`)} example`}
               src={homeImages.app[a.key as keyof typeof homeImages.app]}
-              alt={`STRETCH ceiling — ${a.title.toLowerCase()}`}
+              alt={`STRETCH — ${t(`areas.${i}.title`)}`}
               sizes="(max-width: 860px) 100vw, 33vw"
               light={!a.dark}
               className="zoom-img"
               decorative
             />
             <div className="bento-overlay">
-              {a.badge && <span className="bento-badge">{a.badge}</span>}
+              {a.badge && <span className="bento-badge">{t('badge')}</span>}
               <div className="bento-meta">
-                <h3 className="bento-title">{a.title}</h3>
-                <p className="bento-blurb">{a.blurb}</p>
-                <span className="bento-link">View projects →</span>
+                <h3 className="bento-title">{t(`areas.${i}.title`)}</h3>
+                <p className="bento-blurb">{t(`areas.${i}.blurb`)}</p>
+                <span className="bento-link">{t('view')} →</span>
               </div>
             </div>
           </Link>

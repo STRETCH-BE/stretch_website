@@ -6,63 +6,34 @@
 // always rendered at full opacity (no fade-in). A pinned tab row lets visitors
 // jump straight to a slide.
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
 
-type Slide = {
-  kicker: string;
-  line1: string;
-  line2: string; // shown in red
-  subhead: string;
-  image: string;
-  tabName: string;
-  tabDesc: string;
-};
-
-const SLIDES: Slide[] = [
-  {
-    kicker: 'Stretch® Ceilings — fitted in one day',
-    line1: 'A new ceiling', line2: 'in one day.',
-    subhead: 'Seamless, cold-fitted ceilings installed in a single day — no dust, no mess.',
-    image: homeImages.heroSlides.ceilings, tabName: 'Ceilings', tabDesc: 'Polyester & PVC',
-  },
-  {
-    kicker: 'Acoustic comfort — up to Class A',
-    line1: 'Acoustics,', line2: 'built in.',
-    subhead: 'Bring any room down to a comfortable noise level, up to Class A absorption.',
-    image: homeImages.heroSlides.acoustic, tabName: 'Acoustic', tabDesc: 'Panels & audio',
-  },
-  {
-    kicker: 'Stretch walls — seamless cladding',
-    line1: 'Walls that', line2: 'absorb sound.',
-    subhead: 'Seamless stretched wall cladding that absorbs sound and hides every imperfection.',
-    image: homeImages.heroSlides.walls, tabName: 'Walls', tabDesc: 'Cladding & textile',
-  },
-  {
-    kicker: 'Light & print — backlit designs',
-    line1: 'Ceilings that', line2: 'light up.',
-    subhead: 'Backlit, printed and starry-sky ceilings — your design, evenly lit.',
-    image: homeImages.heroSlides.light, tabName: 'Light & Print', tabDesc: 'Backlit & printed',
-  },
+const SLIDE_IMAGES = [
+  homeImages.heroSlides.ceilings,
+  homeImages.heroSlides.acoustic,
+  homeImages.heroSlides.walls,
+  homeImages.heroSlides.light,
 ];
 
 const ADVANCE_MS = 3000;
 
 export default function Hero() {
+  const t = useTranslations('home.hero');
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     if (paused) return;
     if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const id = setTimeout(() => setActive((a) => (a + 1) % SLIDES.length), ADVANCE_MS);
+    const id = setTimeout(() => setActive((a) => (a + 1) % SLIDE_IMAGES.length), ADVANCE_MS);
     return () => clearTimeout(id);
   }, [active, paused]);
 
-  const s = SLIDES[active];
 
   return (
     <section
@@ -74,9 +45,9 @@ export default function Hero() {
     >
       {/* Background image layers + overlays */}
       <div className="hero-bg" aria-hidden="true">
-        {SLIDES.map((slide, i) => (
-          <div key={slide.tabName} className="hero-layer" style={{ opacity: i === active ? 1 : 0 }}>
-            <Placeholder label={`Hero — ${slide.tabName}`} src={slide.image} alt="" priority={i === 0} sizes="100vw" decorative />
+        {SLIDE_IMAGES.map((image, i) => (
+          <div key={image} className="hero-layer" style={{ opacity: i === active ? 1 : 0 }}>
+            <Placeholder label={`Hero — ${t(`slides.${i}.tabName`)}`} src={image} alt="" priority={i === 0} sizes="100vw" decorative />
           </div>
         ))}
         <div className="hero-ov hero-ov--x" />
@@ -87,35 +58,35 @@ export default function Hero() {
       <div className="container hero-content">
         <div className="hero-kicker">
           <span className="hero-dash" />
-          <span>{s.kicker}</span>
+          <span>{t(`slides.${active}.kicker`)}</span>
         </div>
         <h1 className="h-display hero-title">
-          {s.line1}
+          {t(`slides.${active}.line1`)}
           <br />
-          <span className="accent">{s.line2}</span>
+          <span className="accent">{t(`slides.${active}.line2`)}</span>
         </h1>
-        <p className="hero-sub">{s.subhead}</p>
+        <p className="hero-sub">{t(`slides.${active}.subhead`)}</p>
         <div className="hero-cta">
           <ModalButton type="quote" source="hero" trackQuote className="btn btn--primary btn--lg">
-            Request a free quote <ArrowRight size={16} />
+            {t('quote')} <ArrowRight size={16} />
           </ModalButton>
           <Link href="/products" className="btn btn--ghost-light btn--lg">
-            Explore solutions <ArrowRight size={16} className="btn__arrow" />
+            {t('explore')} <ArrowRight size={16} className="btn__arrow" />
           </Link>
           <span className="hero-rating">
             <strong>5.0</strong>
             <span className="hero-stars" aria-hidden="true">★★★★★</span>
-            <span className="hero-rating-label">Rated on Google</span>
+            <span className="hero-rating-label">{t('rated')}</span>
           </span>
         </div>
       </div>
 
       {/* Find-your-solution tab row */}
       <div className="hero-tabs-bar">
-        <div className="container hero-tabs" role="tablist" aria-label="Find your solution">
-          {SLIDES.map((slide, i) => (
+        <div className="container hero-tabs" role="tablist" aria-label={t('tabsAria')}>
+          {SLIDE_IMAGES.map((image, i) => (
             <button
-              key={slide.tabName}
+              key={image}
               type="button"
               role="tab"
               aria-selected={i === active}
@@ -124,8 +95,8 @@ export default function Hero() {
             >
               <span className="hero-tab-bar" aria-hidden="true" />
               <span className="hero-tab-body">
-                <span className="hero-tab-name">{slide.tabName}</span>
-                <span className="hero-tab-desc">{slide.tabDesc}</span>
+                <span className="hero-tab-name">{t(`slides.${i}.tabName`)}</span>
+                <span className="hero-tab-desc">{t(`slides.${i}.tabDesc`)}</span>
               </span>
               <ArrowRight size={16} className="hero-tab-arrow" aria-hidden="true" />
             </button>

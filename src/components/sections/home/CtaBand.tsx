@@ -1,12 +1,14 @@
 // Closing CTA — a full-bleed photo band under a dark overlay (not flat black),
 // with the primary quote CTA, a dealer link and the phone line.
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
 import { contact } from '@/lib/site-config';
 
 export default function CtaBand() {
+  const t = useTranslations('ctaBand');
   return (
     <section className="cta-band" id="cta">
       <div className="cta-bg" aria-hidden="true">
@@ -18,31 +20,30 @@ export default function CtaBand() {
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
           <span style={{ width: 30, height: 2, background: 'var(--red)' }} />
           <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--on-dark-soft)' }}>
-            Ready when you are
+            {t('kicker')}
           </span>
           <span style={{ width: 30, height: 2, background: 'var(--red)' }} />
         </span>
 
         <h2 className="h2" style={{ color: '#fff', margin: '0 auto', maxWidth: '18ch' }}>
-          Ready for a new ceiling<span className="accent">?</span>
+          {t('title')}<span className="accent">?</span>
         </h2>
 
         <p style={{ fontSize: 17, lineHeight: 1.6, color: 'var(--on-dark-soft)', maxWidth: 560, margin: '22px auto 34px' }}>
-          Tell us about your project and we will get back to you with a tailored price — free and
-          without obligation, within two working days.
+          {t('sub')}
         </p>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center' }}>
           <ModalButton type="quote" source="home_cta" trackQuote className="btn btn--primary btn--lg">
-            Request a free quote →
+            {t('quote')} →
           </ModalButton>
           <Link href="/contact" className="btn btn--ghost-light btn--lg">
-            Find your nearest dealer
+            {t('dealer')}
           </Link>
         </div>
 
         <p style={{ marginTop: 30, fontSize: 13.5, color: 'var(--on-dark-soft)' }}>
-          Prefer to talk?{' '}
+          {t('preferTalk')}{' '}
           <a href={contact.phoneHref} style={{ color: '#fff', fontWeight: 600 }}>
             {contact.phoneDisplay}
           </a>{' '}

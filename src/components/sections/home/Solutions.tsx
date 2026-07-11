@@ -1,77 +1,53 @@
 // "Two systems. One finish." — Polyester and PVC as two tall, full-image cards
 // with the copy overlaid on a bottom gradient and a subtle zoom on hover.
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
 
-type Sol = {
-  href: string;
-  img: string;
-  mount: string;
-  span: string;
-  name: string;
-  blurb: string;
-  features: string[];
-  cta: string;
-  alt: string;
-  light?: boolean;
-};
-
-const SOLUTIONS: Sol[] = [
-  {
-    href: '/products/polyester-stretch-ceiling', img: homeImages.solutionsPolyester,
-    mount: 'Cold mount', span: 'Seamless to 5.15m', name: 'Polyester',
-    blurb: 'An aesthetic, functional membrane for new build and renovation alike — installed cold, with a very matte look.',
-    features: ['Seamless to 5.15m', 'Cold installation', 'Very matte look', 'Acoustic & washable'],
-    cta: 'Explore polyester', alt: 'Matte polyester stretch ceiling', light: true,
-  },
-  {
-    href: '/products/pvc-stretch-ceiling', img: homeImages.solutionsPvc,
-    mount: 'Heat mount', span: 'Seamless to 6.4m', name: 'PVC Film',
-    blurb: 'A warmed film tensioned on install — fully recyclable and easily removable. Replace your ceiling in a single day.',
-    features: ['100% recyclable', 'Seamless to 6.4m', 'Easily removable', 'Acoustic & washable'],
-    cta: 'Explore PVC', alt: 'Glossy PVC film stretch ceiling',
-  },
+const SOLUTION_CARDS = [
+  { href: '/products/polyester-stretch-ceiling', img: homeImages.solutionsPolyester, light: true },
+  { href: '/products/pvc-stretch-ceiling', img: homeImages.solutionsPvc, light: false },
 ];
 
 export default function Solutions() {
+  const t = useTranslations('home.solutions');
   return (
     <section className="container section" id="solutions">
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20, marginBottom: 'clamp(36px,4vw,56px)' }}>
         <div>
-          <Eyebrow num="02" label="Our solutions" />
+          <Eyebrow num="02" label={t('eyebrow')} />
           <h2 className="h2">
-            Two systems.
+            {t('title1')}
             <br />
-            One finish.
+            {t('title2')}
           </h2>
         </div>
         <p style={{ fontSize: 15.5, lineHeight: 1.6, color: 'var(--text-muted)', maxWidth: 340, margin: 0 }}>
-          Polyester or PVC — both tensioned by hand for the same flawless, matte result. Choose by
-          span, removability and sustainability.
+          {t('intro')}
         </p>
       </div>
 
       <div className="sol-grid">
-        {SOLUTIONS.map((s) => (
-          <Link key={s.name} href={s.href} className="sol-card zoom-wrap">
+        {SOLUTION_CARDS.map((s, ci) => (
+          <Link key={s.href} href={s.href} className="sol-card zoom-wrap">
             <div className="sol-img">
-              <Placeholder label={`${s.name} ceiling photo`} src={s.img} alt={s.alt} sizes="(max-width: 760px) 100vw, 45vw" light={s.light} className="zoom-img" decorative />
+              <Placeholder label={`${t(`cards.${ci}.name`)} ceiling photo`} src={s.img} alt={t(`cards.${ci}.alt`)} sizes="(max-width: 760px) 100vw, 45vw" light={s.light} className="zoom-img" decorative />
             </div>
             <div className="sol-overlay">
               <div className="sol-tags">
-                <span className="sol-tag sol-tag--red">{s.mount}</span>
-                <span className="sol-tag">{s.span}</span>
+                <span className="sol-tag sol-tag--red">{t(`cards.${ci}.mount`)}</span>
+                <span className="sol-tag">{t(`cards.${ci}.span`)}</span>
               </div>
-              <h3 className="sol-name">{s.name}</h3>
-              <p className="sol-blurb">{s.blurb}</p>
+              <h3 className="sol-name">{t(`cards.${ci}.name`)}</h3>
+              <p className="sol-blurb">{t(`cards.${ci}.blurb`)}</p>
               <ul className="sol-features">
-                {s.features.map((f) => (
-                  <li key={f}><span className="tick tick--sm" />{f}</li>
+                {[0, 1, 2, 3].map((fi) => (
+                  <li key={fi}><span className="tick tick--sm" />{t(`cards.${ci}.features.${fi}`)}</li>
                 ))}
               </ul>
-              <span className="sol-link">{s.cta} <span style={{ color: 'var(--red)' }}>&rarr;</span></span>
+              <span className="sol-link">{t(`cards.${ci}.cta`)} <span style={{ color: 'var(--red)' }}>&rarr;</span></span>
             </div>
           </Link>
         ))}

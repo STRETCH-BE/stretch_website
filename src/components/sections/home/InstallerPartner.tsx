@@ -2,18 +2,16 @@
 // a full-height installer photo beside the red copy block (intro, three steps,
 // and the partner / training CTAs).
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import Eyebrow from '@/components/ui/Eyebrow';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
 
-const STEPS = [
-  { n: '01', title: 'Train in days', body: 'Hands-on certification at our HQ — confection, profiles, cold & heat mounting, light and acoustics.' },
-  { n: '02', title: 'Order B2B', body: 'Made-to-measure membranes and profiles at trade pricing, through a dedicated partner portal.' },
-  { n: '03', title: 'Get referred leads', body: 'We pass local customer enquiries to certified partners in their region — real projects.' },
-];
+const STEP_NUMBERS = ['01', '02', '03'];
 
 export default function InstallerPartner() {
+  const t = useTranslations('home.installer');
   return (
     <section className="ip" id="installer">
       <div className="ip-split">
@@ -23,22 +21,21 @@ export default function InstallerPartner() {
 
         <div className="ip-copy">
           <div className="ip-copy-inner">
-            <Eyebrow num="05" label="For the trade" tone="dark" />
+            <Eyebrow num="05" label={t('eyebrow')} tone="dark" />
             <h2 className="h2" style={{ color: '#fff', maxWidth: '15ch', margin: '0 0 18px' }}>
-              Become a STRETCH installer.
+              {t('title')}
             </h2>
             <p style={{ fontSize: 15.5, lineHeight: 1.6, color: 'rgba(255,255,255,.9)', maxWidth: 460, margin: '0 0 clamp(26px,3vw,38px)' }}>
-              STRETCH is B2B-led. Add stretch ceilings to your offer, get trained at our HQ, order
-              made-to-measure from Belgium, and receive referred local leads.
+              {t('intro')}
             </p>
 
             <ul className="ip-steps">
-              {STEPS.map((s) => (
-                <li key={s.n} className="ip-step">
-                  <span className="ip-step-n">{s.n}</span>
+              {STEP_NUMBERS.map((n, i) => (
+                <li key={n} className="ip-step">
+                  <span className="ip-step-n">{n}</span>
                   <div>
-                    <h3 className="ip-step-title">{s.title}</h3>
-                    <p className="ip-step-body">{s.body}</p>
+                    <h3 className="ip-step-title">{t(`steps.${i}.title`)}</h3>
+                    <p className="ip-step-body">{t(`steps.${i}.body`)}</p>
                   </div>
                 </li>
               ))}
@@ -46,10 +43,10 @@ export default function InstallerPartner() {
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, marginTop: 'clamp(28px,3vw,38px)' }}>
               <ModalButton type="partner" source="home_installer" className="btn btn--dark">
-                Become a partner →
+                {t('ctaPartner')} →
               </ModalButton>
               <Link href="/installer-training" className="btn btn--ghost-light">
-                Explore installer training →
+                {t('ctaTraining')} →
               </Link>
             </div>
           </div>

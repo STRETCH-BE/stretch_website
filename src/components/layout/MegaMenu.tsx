@@ -15,6 +15,7 @@ import {
   Square,
   type LucideIcon,
 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
@@ -33,119 +34,135 @@ export type MegaConfig = {
   promo: ImagePromo | DarkPromo;
 };
 
+// Structure (icons, hrefs, flags) lives here; every label comes from the
+// `megaMenu` messages namespace, keyed by category/item index.
+type Skeleton = { icon: LucideIcon; href: string; items: { href: string; soon?: boolean }[] }[];
+
+const SOLUTIONS_SKELETON: Skeleton = [
+  {
+    icon: Layers,
+    href: '/products',
+    items: [
+      { href: '/products/polyester-stretch-ceiling' },
+      { href: '/products/pvc-stretch-ceiling' },
+      { href: '/products/prefab-ceiling-unit', soon: true },
+      { href: '/products' },
+    ],
+  },
+  {
+    icon: AudioLines,
+    href: '/products/acoustic-stretch-system',
+    items: [
+      { href: '/products/acoustic-stretch-system' },
+      { href: '/blog/stretch-ceiling-acoustics-explained' },
+      { href: '/datasheets' },
+    ],
+  },
+  {
+    icon: Lightbulb,
+    href: '/products/light-print-stretch-ceiling',
+    items: [
+      { href: '/products/light-print-stretch-ceiling' },
+      { href: '/products/starry-sky' },
+      { href: '/products/custom-print' },
+    ],
+  },
+  {
+    icon: LayoutGrid,
+    href: '/products/prefab-ceiling-unit',
+    items: [
+      { href: '/products/prefab-ceiling-unit' },
+      { href: '/products/prefab-lighting-elements' },
+      { href: '/products/inspection-hatch' },
+    ],
+  },
+  {
+    icon: Home,
+    href: '/inspiration',
+    items: [
+      { href: '/applications/living-cinema' },
+      { href: '/applications/bathroom-kitchen' },
+      { href: '/applications/office-retail' },
+      { href: '/inspiration' },
+    ],
+  },
+];
+
+const TECHNICAL_SKELETON: Skeleton = [
+  {
+    icon: Circle,
+    href: '/technical/polyester/datasheet',
+    items: [
+      { href: '/technical/polyester/datasheet' },
+      { href: '/technical/polyester/colours' },
+      { href: '/technical/polyester/fire-safety' },
+      { href: '/technical/polyester/installation' },
+      { href: '/technical/polyester/specification' },
+      { href: '/technical/polyester/faq' },
+    ],
+  },
+  {
+    icon: Square,
+    href: '/technical/pvc/datasheet',
+    items: [
+      { href: '/technical/pvc/datasheet' },
+      { href: '/technical/pvc/colours' },
+      { href: '/technical/pvc/fire-safety' },
+      { href: '/technical/pvc/installation' },
+      { href: '/technical/pvc/specification' },
+      { href: '/technical/pvc/faq' },
+    ],
+  },
+];
+
+function buildCategories(skeleton: Skeleton, t: ReturnType<typeof useTranslations>): MegaCategory[] {
+  return skeleton.map((c, i) => ({
+    icon: c.icon,
+    href: c.href,
+    title: t(`cats.${i}.title`),
+    desc: t(`cats.${i}.desc`),
+    items: c.items.map((item, j) => ({
+      href: item.href,
+      soon: item.soon,
+      title: t(`cats.${i}.items.${j}.title`),
+      sub: t(`cats.${i}.items.${j}.sub`),
+    })),
+  }));
+}
+
 // --- Solutions ------------------------------------------------------------
-export const solutionsMenu: MegaConfig = {
-  railLabel: 'Browse solutions',
-  allLabel: 'All solutions',
-  allHref: '/products',
-  promo: { kind: 'image', title: 'A new ceiling in one day', ctaLabel: 'Request a quote', source: 'header_mega_solutions', image: '/images/home/Hero.jpg' },
-  categories: [
-    {
-      icon: Layers,
-      title: 'Ceilings',
-      desc: 'Polyester, PVC & seamless',
-      href: '/products',
-      items: [
-        { title: 'Polyester ceiling', sub: 'Cold mount · very matte', href: '/products/polyester-stretch-ceiling' },
-        { title: 'PVC film ceiling', sub: 'Recyclable · removable', href: '/products/pvc-stretch-ceiling' },
-        { title: 'Prefab ceiling unit', sub: 'Pre-assembled & fast', href: '/products/prefab-ceiling-unit', soon: true },
-        { title: 'All ceiling systems', sub: 'Compare the range', href: '/products' },
-      ],
-    },
-    {
-      icon: AudioLines,
-      title: 'Acoustic',
-      desc: 'Sound absorption',
-      href: '/products/acoustic-stretch-system',
-      items: [
-        { title: 'Acoustic stretch system', sub: 'Up to Class A', href: '/products/acoustic-stretch-system' },
-        { title: 'How acoustics work', sub: 'Absorption explained', href: '/blog/stretch-ceiling-acoustics-explained' },
-        { title: 'Technical datasheet', sub: 'αw & class values', href: '/datasheets' },
-      ],
-    },
-    {
-      icon: Lightbulb,
-      title: 'Light & Print',
-      desc: 'LED, backlight & print',
-      href: '/products/light-print-stretch-ceiling',
-      items: [
-        { title: 'Illuminated ceiling', sub: 'Backlit translucent', href: '/products/light-print-stretch-ceiling' },
-        { title: 'Starry sky', sub: 'Fibre-optic night sky', href: '/products/starry-sky' },
-        { title: 'Custom print', sub: 'Any image, edge to edge', href: '/products/custom-print' },
-      ],
-    },
-    {
-      icon: LayoutGrid,
-      title: 'Prefab',
-      desc: 'Aluminium, steel & wood',
-      href: '/products/prefab-ceiling-unit',
-      items: [
-        { title: 'Prefab structures', sub: 'Beams, coving & more', href: '/products/prefab-ceiling-unit' },
-        { title: 'Prefab lighting elements', sub: 'Aluminium + stretch', href: '/products/prefab-lighting-elements' },
-        { title: 'Inspection hatch', sub: 'Discreet access', href: '/products/inspection-hatch' },
-      ],
-    },
-    {
-      icon: Home,
-      title: 'Applications',
-      desc: 'Room by room',
-      href: '/inspiration',
-      items: [
-        { title: 'Living & cinema', sub: 'Sound & starry sky', href: '/applications/living-cinema' },
-        { title: 'Bathroom & kitchen', sub: 'Humidity-proof', href: '/applications/bathroom-kitchen' },
-        { title: 'Office & retail', sub: 'Acoustic comfort', href: '/applications/office-retail' },
-        { title: 'See all projects', sub: 'The full portfolio', href: '/inspiration' },
-      ],
-    },
-  ],
-};
+export function useSolutionsMenu(): MegaConfig {
+  const t = useTranslations('megaMenu.solutions');
+  return {
+    railLabel: t('railLabel'),
+    allLabel: t('allLabel'),
+    allHref: '/products',
+    promo: { kind: 'image', title: t('promoTitle'), ctaLabel: t('promoCta'), source: 'header_mega_solutions', image: '/images/home/Hero.jpg' },
+    categories: buildCategories(SOLUTIONS_SKELETON, t),
+  };
+}
 
 // --- Technical ------------------------------------------------------------
-export const technicalMenu: MegaConfig = {
-  railLabel: 'Documentation',
-  allLabel: 'All specs & downloads',
-  allHref: '/products',
-  promo: {
-    kind: 'image',
-    title: 'Need a hand?',
-    body: 'Send your renovation question — we reply within two working days.',
-    ctaLabel: 'Ask a question',
-    ctaHref: '/contact',
-    image: '/images/home/installer.jpg',
-  },
-  categories: [
-    {
-      icon: Circle,
-      title: 'Polyester stretch ceiling',
-      desc: 'Cold-mounted membrane',
-      href: '/technical/polyester/datasheet',
-      items: [
-        { title: 'Datasheet', sub: 'Specs & download', href: '/technical/polyester/datasheet' },
-        { title: 'Colours & finishes', sub: 'Full range & RAL', href: '/technical/polyester/colours' },
-        { title: 'Fire safety', sub: 'Reaction-to-fire & A2', href: '/technical/polyester/fire-safety' },
-        { title: 'Installation guide', sub: 'Cold mount, step by step', href: '/technical/polyester/installation' },
-        { title: 'Specification text', sub: 'For tenders & dossiers', href: '/technical/polyester/specification' },
-        { title: 'FAQ', sub: 'Common questions', href: '/technical/polyester/faq' },
-      ],
+export function useTechnicalMenu(): MegaConfig {
+  const t = useTranslations('megaMenu.technical');
+  return {
+    railLabel: t('railLabel'),
+    allLabel: t('allLabel'),
+    allHref: '/products',
+    promo: {
+      kind: 'image',
+      title: t('promoTitle'),
+      body: t('promoBody'),
+      ctaLabel: t('promoCta'),
+      ctaHref: '/contact',
+      image: '/images/home/installer.jpg',
     },
-    {
-      icon: Square,
-      title: 'PVC stretch ceiling',
-      desc: 'Heat-mounted film',
-      href: '/technical/pvc/datasheet',
-      items: [
-        { title: 'Datasheet', sub: 'Specs & download', href: '/technical/pvc/datasheet' },
-        { title: 'Colours & finishes', sub: 'Matte, satin, gloss', href: '/technical/pvc/colours' },
-        { title: 'Fire safety', sub: 'Reaction-to-fire', href: '/technical/pvc/fire-safety' },
-        { title: 'Installation guide', sub: 'Heat mount, step by step', href: '/technical/pvc/installation' },
-        { title: 'Specification text', sub: 'For tenders & dossiers', href: '/technical/pvc/specification' },
-        { title: 'FAQ', sub: 'Common questions', href: '/technical/pvc/faq' },
-      ],
-    },
-  ],
-};
+    categories: buildCategories(TECHNICAL_SKELETON, t),
+  };
+}
 
 export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; onNavigate: () => void }) {
+  const tm = useTranslations('megaMenu');
   const [active, setActive] = useState(0);
   const cat = config.categories[active] ?? config.categories[0];
 
@@ -196,7 +213,7 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
               <span className="megaitem-text">
                 <span className="megaitem-t">
                   {item.title}
-                  {item.soon && <span className="megaitem-soon">Coming soon</span>}
+                  {item.soon && <span className="megaitem-soon">{tm('comingSoon')}</span>}
                 </span>
                 <span className="megaitem-s">{item.sub}</span>
               </span>

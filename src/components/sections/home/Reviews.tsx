@@ -1,18 +1,20 @@
 // "Rated 5.0 on Google" — three review cards (middle one dark for rhythm).
 // Quotes are placeholder content flagged in CHANGES.md; no aggregateRating is
 // emitted in schema until backed by real review data.
+import { useTranslations } from 'next-intl';
 import Eyebrow from '@/components/ui/Eyebrow';
 import { reviews, ratingDisplay } from '@/lib/content';
 
 export default function Reviews() {
+  const t = useTranslations('home.reviews');
   return (
     <section className="section--surface" id="reviews">
       <div className="container section">
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24, marginBottom: 'clamp(36px,4vw,56px)' }}>
           <div>
-            <Eyebrow num="07" label="Reviews" />
+            <Eyebrow num="07" label={t('eyebrow')} />
             <h2 className="h2">
-              Rated {ratingDisplay.score}
+              {t('title', { score: ratingDisplay.score })}
               <span className="accent">.</span>
             </h2>
           </div>
@@ -23,7 +25,7 @@ export default function Reviews() {
             <div style={{ lineHeight: 1.3 }}>
               <div style={{ fontSize: 16, letterSpacing: '.08em', color: 'var(--red)' }}>★★★★★</div>
               <div style={{ fontSize: 12, fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text-muted-2)' }}>
-                Rated on {ratingDisplay.source}
+                {t('ratedOn', { source: ratingDisplay.source })}
               </div>
             </div>
           </div>

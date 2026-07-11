@@ -1,6 +1,7 @@
 // "Selected work" — a five-tile project strip pulled from the Inspiration
 // catalogue, linking through to the full portfolio.
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
@@ -9,19 +10,20 @@ import { projects } from '@/lib/content';
 const FEATURED = projects.slice(0, 5);
 
 export default function Gallery() {
+  const t = useTranslations('home.gallery');
   return (
     <section className="container section" id="work">
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20, marginBottom: 'clamp(34px,4vw,52px)' }}>
         <div>
-          <Eyebrow num="06" label="Selected work" />
+          <Eyebrow num="06" label={t('eyebrow')} />
           <h2 className="h2">
-            Real rooms,
+            {t('title1')}
             <br />
-            real projects.
+            {t('title2')}
           </h2>
         </div>
         <Link href="/inspiration" className="btn btn--ghost" style={{ alignSelf: 'flex-end' }}>
-          View full portfolio →
+          {t('cta')} →
         </Link>
       </div>
 

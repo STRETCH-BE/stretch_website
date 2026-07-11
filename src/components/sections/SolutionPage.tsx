@@ -3,10 +3,12 @@
 // → dark datasheet → colour swatches → applications → related → red CTA.
 // Server component; the quote/samples CTAs are the client ModalButton/-TextLink.
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton, ModalTextLink } from '@/components/ui/ModalButton';
 import { getProduct, type Product } from '@/lib/products';
+import { localizeProduct, type CatalogEntry } from '@/lib/localize-product';
 import { productImage, pimg } from '@/lib/product-images';
 import ColourChart from '@/components/sections/ColourChart';
 
@@ -37,20 +39,27 @@ function swatch(name: string): { background: string; border: string } {
   return { background: bg, border: lightTones.includes(bg) ? '1px solid var(--border-input)' : '1px solid rgba(0,0,0,.06)' };
 }
 
-export default function SolutionPage({ product }: { product: Product }) {
+export default function SolutionPage({ product: baseProduct }: { product: Product }) {
+  const t = useTranslations('productPage');
+  const tc = useTranslations('catalog');
+  const tCol = useTranslations('colourNames');
+  const product = localizeProduct(baseProduct, tc.raw(baseProduct.key) as CatalogEntry);
   const imgs = productImage(product.slug);
   const related = product.related
     .map((slug) => getProduct(slug))
-    .filter((p): p is Product => Boolean(p));
+    .filter((p): p is Product => Boolean(p))
+    .map((p) => localizeProduct(p, tc.raw(p.key) as CatalogEntry));
+  // Colour names double as swatch-lookup keys, so translate only at render time.
+  const colourLabel = (name: string) => (tCol.has(name) ? tCol(name) : name);
 
   return (
     <article>
       {/* ---------- Hero ---------- */}
       <section className="container" style={{ padding: 'clamp(24px,3vw,36px) 0 clamp(40px,5vw,72px)' }}>
         <nav aria-label="Breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, fontWeight: 600, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--text-faint-2)', marginBottom: 'clamp(26px,3vw,40px)' }}>
-          <Link href="/" className="lnk" style={{ textDecoration: 'none' }}>Home</Link>
+          <Link href="/" className="lnk" style={{ textDecoration: 'none' }}>{t('home')}</Link>
           <span>/</span>
-          <Link href="/products" className="lnk" style={{ textDecoration: 'none' }}>Solutions</Link>
+          <Link href="/products" className="lnk" style={{ textDecoration: 'none' }}>{t('solutions')}</Link>
           <span>/</span>
           <span style={{ color: 'var(--red)' }}>{product.short}</span>
         </nav>
@@ -77,10 +86,10 @@ export default function SolutionPage({ product }: { product: Product }) {
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14 }}>
               <ModalButton type="quote" source={`product_${product.key}`} product={product.name} trackQuote className="btn btn--primary">
-                Request a free quote <ArrowRight size={16} />
+                {t('quote')} <ArrowRight size={16} />
               </ModalButton>
               <a href="#specs" className="btn btn--ghost">
-                View specifications <ArrowRight size={16} className="btn__arrow" />
+                {t('viewSpecs')} <ArrowRight size={16} className="btn__arrow" />
               </a>
             </div>
           </div>
@@ -96,7 +105,7 @@ export default function SolutionPage({ product }: { product: Product }) {
               bg={pimg(imgs.hero, '4/3.2').bg}
             />
             <div style={{ position: 'absolute', left: -1, bottom: -1, background: 'var(--black)', color: '#fff', padding: '13px 18px', fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase' }}>
-              {product.short} system
+              {t('systemTag', { name: product.short })}
             </div>
           </div>
         </div>
@@ -118,7 +127,7 @@ export default function SolutionPage({ product }: { product: Product }) {
       <section className="container" style={{ padding: '0 0 clamp(50px,6vw,90px)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 13, marginBottom: 'clamp(36px,4vw,52px)' }}>
           <span style={{ color: 'var(--red)', fontWeight: 700, fontSize: 13, letterSpacing: '.16em' }}>(01)</span>
-          <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>In detail</span>
+          <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>{t('inDetail')}</span>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(40px,5vw,76px)' }}>
           {product.features.map((feat, i) => {
@@ -154,12 +163,12 @@ export default function SolutionPage({ product }: { product: Product }) {
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 13, marginBottom: 18 }}>
                 <span style={{ color: 'var(--red)', fontWeight: 700, fontSize: 13, letterSpacing: '.16em' }}>(02)</span>
-                <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--on-dark-faint)' }}>Technical specifications</span>
+                <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--on-dark-faint)' }}>{t('specsEyebrow')}</span>
               </div>
-              <h2 className="h2">The datasheet<span className="accent">.</span></h2>
+              <h2 className="h2">{t('specsTitle')}<span className="accent">.</span></h2>
             </div>
             <ModalButton type="quote" source={`product_${product.key}_spec`} product={product.name} className="btn btn--ghost-light">
-              Download spec sheet <ArrowDown size={15} />
+              {t('downloadSpec')} <ArrowDown size={15} />
             </ModalButton>
           </div>
           <div className="sp-specs" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 clamp(32px,5vw,80px)' }}>
@@ -179,22 +188,28 @@ export default function SolutionPage({ product }: { product: Product }) {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 13, marginBottom: 18 }}>
               <span style={{ color: 'var(--red)', fontWeight: 700, fontSize: 13, letterSpacing: '.16em' }}>(03)</span>
-              <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>Colours &amp; finishes</span>
+              <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>{t('coloursEyebrow')}</span>
             </div>
-            <h2 className="h2 h2--sm">Any colour you like<span className="accent">.</span></h2>
+            <h2 className="h2 h2--sm">{t('coloursTitle')}<span className="accent">.</span></h2>
           </div>
           <div style={{ maxWidth: 340 }}>
             <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--text-muted)', margin: '0 0 18px' }}>
-              Standard shades or any custom RAL — matched to your interior. Trade partners can order
-              physical swatches to hand.
+              {t('coloursNote')}
             </p>
             <ModalButton type="samples" source={`product_${product.key}_colours`} product={product.name} className="btn btn--ghost btn--sm">
-              Request samples <ArrowRight size={14} className="btn__arrow" />
+              {t('requestSamples')} <ArrowRight size={14} className="btn__arrow" />
             </ModalButton>
           </div>
         </div>
         {product.colourChart ? (
-          <ColourChart entries={product.colourChart} note={product.colourChartNote} />
+          <ColourChart
+            entries={product.colourChart.map((c) => ({
+              ...c,
+              name: colourLabel(c.name),
+              finish: c.finish ? colourLabel(c.finish) : c.finish,
+            }))}
+            note={product.colourChartNote}
+          />
         ) : (
           <div className="sp-colours" style={{ display: 'grid', gridTemplateColumns: 'repeat(6,1fr)', gap: 12 }}>
             {product.colours.map((col) => {
@@ -203,10 +218,10 @@ export default function SolutionPage({ product }: { product: Product }) {
                 <div key={col}>
                   <div
                     role="img"
-                    aria-label={`${col} finish`}
+                    aria-label={colourLabel(col)}
                     style={{ aspectRatio: '1/1', background: sw.background, border: sw.border }}
                   />
-                  <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 10 }}>{col}</div>
+                  <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 10 }}>{colourLabel(col)}</div>
                 </div>
               );
             })}
@@ -219,7 +234,7 @@ export default function SolutionPage({ product }: { product: Product }) {
         <div className="container section--sm">
           <div style={{ display: 'flex', alignItems: 'center', gap: 13, marginBottom: 26 }}>
             <span style={{ color: 'var(--red)', fontWeight: 700, fontSize: 13, letterSpacing: '.16em' }}>(04)</span>
-            <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>Where it&rsquo;s used</span>
+            <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>{t('appsEyebrow')}</span>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
             {product.applications.map((app) => (
@@ -238,12 +253,12 @@ export default function SolutionPage({ product }: { product: Product }) {
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 13, marginBottom: 18 }}>
                 <span style={{ color: 'var(--red)', fontWeight: 700, fontSize: 13, letterSpacing: '.16em' }}>(05)</span>
-                <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>Related solutions</span>
+                <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>{t('relatedEyebrow')}</span>
               </div>
-              <h2 className="h2 h2--sm">Explore the range<span className="accent">.</span></h2>
+              <h2 className="h2 h2--sm">{t('relatedTitle')}<span className="accent">.</span></h2>
             </div>
             <Link href="/products" className="lnk" style={{ fontWeight: 700, fontSize: 13.5, letterSpacing: '.05em', textTransform: 'uppercase', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-              All solutions <span style={{ color: 'var(--red)' }}>→</span>
+              {t('allSolutions')} <span style={{ color: 'var(--red)' }}>→</span>
             </Link>
           </div>
           <div className="sp-related" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 18 }}>
@@ -279,16 +294,16 @@ export default function SolutionPage({ product }: { product: Product }) {
         <div className="container section" style={{ textAlign: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 13, marginBottom: 24 }}>
             <span style={{ width: 34, height: 2, background: '#fff' }} />
-            <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: '#fff' }}>Free &amp; without obligation</span>
+            <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.2em', textTransform: 'uppercase', color: '#fff' }}>{t('ctaKicker')}</span>
             <span style={{ width: 34, height: 2, background: '#fff' }} />
           </div>
-          <h2 className="h2" style={{ color: '#fff', margin: '0 0 30px' }}>Want this ceiling<span style={{ color: 'var(--black)' }}>?</span></h2>
+          <h2 className="h2" style={{ color: '#fff', margin: '0 0 30px' }}>{t('ctaTitle')}<span style={{ color: 'var(--black)' }}>?</span></h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center' }}>
             <ModalButton type="quote" source={`product_${product.key}_cta`} product={product.name} trackQuote className="btn btn--dark">
-              Request a free quote <ArrowRight size={16} />
+              {t('quote')} <ArrowRight size={16} />
             </ModalButton>
             <Link href="/contact" className="btn btn--ghost-light">
-              Find your nearest dealer
+              {t('dealer')}
             </Link>
           </div>
         </div>
