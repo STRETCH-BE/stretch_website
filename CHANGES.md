@@ -12,6 +12,48 @@
 
 **Verified:** `tsc --noEmit` clean; `next build` succeeds; Playwright: anonymous requests to the page and the API both redirect to login, demo login → designer renders inside the portal shell, tool solves the 15-corner reference room (SVG draws, spec table computes), nav/tile/locale (nl) all OK.
 
+## 2026-07-10 — Ceiling designer cut-out fixes + per-domain SEO repairs
+
+**Ceiling designer (`src/lib/portal/designer-html.ts`)**
+
+- Corner numbers ① ② ③ always visible on rectangle cut-outs (also before any tape).
+- General 3-point solver: ANY mix of >=3 tapes over corners ①②③ now positions the
+  rectangle — including one tape each from three room corners (θ-scan + Levenberg–
+  Marquardt polish, verified against scipy least-squares). Exact 2+1 path kept.
+- Per-tape Δ accuracy report; tape lines on the plan coloured by fit (violet OK,
+  orange 1–3 cm, red >3 cm with Δ printed). Same-corner mistakes get a specific error.
+
+**SEO (every language/domain)**
+
+- REMOVED `src/app/layout.tsx`: it rendered `<html lang="en">` around the
+  `[locale]` layout's own `<html lang>` → nested/duplicate html tags on every page.
+  The `[locale]` layout (which already loads fonts + globals) is now the root, as
+  per the next-intl domain-routing pattern. Every domain now serves exactly one
+  `<html>` with the correct BCP-47 lang.
+- REMOVED `src/app/sitemap.ts`: the legacy path-prefixed sitemap was shadowing the
+  host-aware `sitemap.xml/route.ts`, so every domain served `stretchplafond.com/en…`
+  URLs (which redirect). Each domain now serves its own 53 clean URLs.
+- REMOVED `public/robots.txt`: the static file was shadowing the host-aware
+  `robots.txt/route.ts` and advertised the `.be` sitemap on all 12 domains. Robots
+  is now per-domain (correct `Sitemap:` line) and keeps the `/portal` disallows.
+- Audited per-language metadata on rendered pages: titles/descriptions localized with
+  native industry keywords (spanplafonds / plafonds tendus / Spanndecken / sufity
+  napinane / …), hreflang cluster (12 + x-default) present, canonical per domain,
+  og:locale correct, portal noindex intact.
+
+**Translation state (analysis)**
+
+- `messages/*.json`: 229 keys × 12 locales, full parity, native-quality strings.
+- Remaining untranslated surface: ~468 hardcoded English strings in code —
+  `lib/content.ts` (140: FAQs, blog, reviews), `lib/products.ts` (100),
+  `lib/prefab.ts` (31), partners page (29), `lib/technical.ts` (24),
+  `lib/forms-config.ts` (21), `lib/applications.ts` (15), installer-training (14),
+  plus ~40 in home/section components. Translating these needs the copy extracted
+  to a locale-aware content layer — recommended as dedicated phases (1: home +
+  products, 2: content.ts, 3: technical/prefab/partners/training).
+
+---
+
 ## 2026-07-08 — Client portal (login + live pricelist)
 
 **What was built**
