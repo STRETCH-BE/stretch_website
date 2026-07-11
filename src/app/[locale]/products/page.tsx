@@ -8,6 +8,7 @@ import { Link } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl } from '@/lib/site-config';
 import { products } from '@/lib/products';
+import { localizeProduct, type CatalogEntry } from '@/lib/localize-product';
 import { productImage, pimg } from '@/lib/product-images';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
@@ -29,10 +30,14 @@ export default async function ProductsPage({ params }: { params: { locale: strin
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   const t = await getTranslations('productsPage');
+  const tc = await getTranslations('catalog');
+  const tp = await getTranslations('productPage');
 
   // Sub-pages (starry sky, inspection hatch) are flagged listed:false — they
   // have their own pages + mega-menu links but don't appear as overview cards.
-  const listed = products.filter((p) => p.listed !== false);
+  const listed = products
+    .filter((p) => p.listed !== false)
+    .map((p) => localizeProduct(p, tc.raw(p.key) as CatalogEntry));
 
   const itemList = {
     '@context': 'https://schema.org',
@@ -45,8 +50,8 @@ export default async function ProductsPage({ params }: { params: { locale: strin
     })),
   };
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${localeBase(locale)}` },
-    { name: 'Solutions', url: `${localeBase(locale)}/products` },
+    { name: tp('home'), url: `${localeBase(locale)}` },
+    { name: tp('solutions'), url: `${localeBase(locale)}/products` },
   ]);
 
   return (

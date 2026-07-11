@@ -4,7 +4,7 @@ import { productMetadata, ProductView } from '@/components/sections/ProductRoute
 
 const SLUG = 'starry-sky';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return productMetadata(SLUG, params.locale);
 }
 

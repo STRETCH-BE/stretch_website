@@ -4,7 +4,7 @@ import { productMetadata, ProductView } from '@/components/sections/ProductRoute
 
 const SLUG = 'light-print-stretch-ceiling';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return productMetadata(SLUG, params.locale);
 }
 
