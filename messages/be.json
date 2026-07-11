@@ -263,5 +263,254 @@
       "eyebrow": "Plafond-designer",
       "hint": "Teken het plafond uit muur- en diagonaalmaten, plaats lasnaden en uitsparingen, controleer de prijs en plaats de bestelling. Gebruik Save om een opmeting als bestand te bewaren."
     }
+  },
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "kicker": "Stretch® plafonds — geplaatst in één dag",
+          "line1": "Een nieuw plafond",
+          "line2": "in één dag.",
+          "subhead": "Naadloze, koud gemonteerde spanplafonds, geplaatst in één dag — zonder stof, zonder rommel.",
+          "tabName": "Plafonds",
+          "tabDesc": "Polyester & PVC"
+        },
+        "1": {
+          "kicker": "Akoestisch comfort — tot klasse A",
+          "line1": "Akoestiek,",
+          "line2": "ingebouwd.",
+          "subhead": "Breng elke ruimte naar een comfortabel geluidsniveau, met absorptie tot klasse A.",
+          "tabName": "Akoestiek",
+          "tabDesc": "Panelen & audio"
+        },
+        "2": {
+          "kicker": "Spanwanden — naadloze bekleding",
+          "line1": "Wanden die",
+          "line2": "geluid absorberen.",
+          "subhead": "Naadloze gespannen wandbekleding die geluid absorbeert en elke oneffenheid verbergt.",
+          "tabName": "Wanden",
+          "tabDesc": "Bekleding & textiel"
+        },
+        "3": {
+          "kicker": "Licht & print — verlichte designs",
+          "line1": "Plafonds die",
+          "line2": "oplichten.",
+          "subhead": "Verlichte, bedrukte en sterrenhemelplafonds — uw ontwerp, egaal verlicht.",
+          "tabName": "Licht & print",
+          "tabDesc": "Verlicht & bedrukt"
+        }
+      },
+      "quote": "Vraag een gratis offerte",
+      "explore": "Ontdek de oplossingen",
+      "rated": "Beoordeeld op Google",
+      "tabsAria": "Vind uw oplossing"
+    },
+    "ticker": {
+      "0": "Geplaatst in één dag",
+      "1": "Akoestische verbetering",
+      "2": "25 jaar levensduur",
+      "3": "100% recycleerbaar",
+      "4": "Naadloos tot 5,7 m",
+      "5": "Geen stof · Geen verf",
+      "6": "Handgemaakt in België"
+    },
+    "stats": {
+      "0": "Dag voor plaatsing",
+      "1": "Jaar levensduur",
+      "2": "Naadloze overspanning",
+      "3": "Recycleerbaar (PVC)"
+    },
+    "why": {
+      "eyebrow": "Waarom een spanplafond",
+      "title": "Een beter plafond, door ontwerp.",
+      "intro": "Eén enkel doek, koud opgespannen over de hele ruimte. Geen afbraak, geen droogtijd, geen compromis — gemaakt om klassieke gipsplaat te overleven.",
+      "cells": {
+        "0": {
+          "title": "Snel & proper geplaatst",
+          "body": "Tot 50 m² per dag, per team van twee. Geen uitbraak, geen puin — uw ruimte blijft bruikbaar."
+        },
+        "1": {
+          "title": "25 jaar levensduur",
+          "body": "Onderhoudsvrij en afwasbaar. Het barst, schilfert of vergeelt niet — en moet nooit herschilderd worden."
+        },
+        "2": {
+          "title": "Akoestiek & licht",
+          "body": "Integreer akoestiek, LED-lijnen, achtergrondverlichting en bedrukte designs in één naadloos oppervlak."
+        }
+      },
+      "seeIt": "Bekijk het voor uw project",
+      "bookSurvey": "Plan een opmeting"
+    },
+    "solutions": {
+      "eyebrow": "Onze oplossingen",
+      "title1": "Twee systemen.",
+      "title2": "Eén afwerking.",
+      "intro": "Polyester of PVC — beide met de hand opgespannen voor hetzelfde vlekkeloze, matte resultaat. Kies op basis van overspanning, demonteerbaarheid en duurzaamheid.",
+      "cards": {
+        "0": {
+          "mount": "Koude montage",
+          "span": "Naadloos tot 5,15 m",
+          "name": "Polyester",
+          "blurb": "Een esthetisch, functioneel doek voor nieuwbouw én renovatie — koud geplaatst, met een zeer matte look.",
+          "features": {
+            "0": "Naadloos tot 5,15 m",
+            "1": "Koude plaatsing",
+            "2": "Zeer matte look",
+            "3": "Akoestisch & afwasbaar"
+          },
+          "cta": "Ontdek polyester",
+          "alt": "Mat polyester spanplafond"
+        },
+        "1": {
+          "mount": "Warme montage",
+          "span": "Naadloos tot 6,4 m",
+          "name": "PVC-folie",
+          "blurb": "Een verwarmde folie die bij plaatsing wordt opgespannen — volledig recycleerbaar en eenvoudig te verwijderen. Vervang uw plafond in één dag.",
+          "features": {
+            "0": "100% recycleerbaar",
+            "1": "Naadloos tot 6,4 m",
+            "2": "Eenvoudig te verwijderen",
+            "3": "Akoestisch & afwasbaar"
+          },
+          "cta": "Ontdek PVC",
+          "alt": "Glanzend PVC-folie spanplafond"
+        }
+      }
+    },
+    "acoustics": {
+      "eyebrow": "Akoestisch comfort",
+      "title1": "Akoestiek,",
+      "title2": "ingebouwd.",
+      "intro": "Meer dan een mooie afwerking. Een microgeperforeerd doek met hoogverdichte absorbers erachter tempert galm en lawaai — en maakt van harde, galmende ruimtes rustige, comfortabele plekken.",
+      "tag": "Absorptie tot klasse A",
+      "cells": {
+        "0": {
+          "title": "Akoestische panelen",
+          "body": "Hoogverdichte absorptie, verwerkt achter het naadloze doek."
+        },
+        "1": {
+          "title": "Plafondeilanden",
+          "body": "Vrijhangende baffles die grote, open ruimtes tot rust brengen."
+        },
+        "2": {
+          "title": "Wandpanelen",
+          "body": "Decoratieve absorbers die ook dienstdoen als wandafwerking."
+        },
+        "3": {
+          "title": "Onzichtbare audio",
+          "body": "Luidsprekers volledig verborgen achter de gespannen folie."
+        }
+      },
+      "cta": "Ontdek akoestische oplossingen"
+    },
+    "apps": {
+      "eyebrow": "Toepassingen",
+      "title1": "Waar een spanplafond",
+      "title2": "het best werkt.",
+      "intro": "Van één woonkamer tot een volledig hotel — hetzelfde naadloze systeem, afgestemd op de eisen van elke ruimte.",
+      "areas": {
+        "0": {
+          "title": "Woonkamers",
+          "blurb": "Een vlekkeloos, mat plafond dat oogt als vers pleisterwerk — zonder de barsten."
+        },
+        "1": {
+          "title": "Badkamers",
+          "blurb": "Vochtbestendig en afwasbaar."
+        },
+        "2": {
+          "title": "Kantoren",
+          "blurb": "Akoestisch comfort op het werk."
+        },
+        "3": {
+          "title": "Thuisbioscopen",
+          "blurb": "Sterrenhemels, verborgen luidsprekers en klasse A-akoestiek in één naadloos oppervlak."
+        },
+        "4": {
+          "title": "Verlicht & sterrenhemel",
+          "blurb": "Egaal, dimbaar licht."
+        },
+        "5": {
+          "title": "Retail & hotels",
+          "blurb": "Bedrukte plafonds in uw huisstijl."
+        }
+      },
+      "badge": "Populairst",
+      "view": "Bekijk projecten"
+    },
+    "gallery": {
+      "eyebrow": "Geselecteerd werk",
+      "title1": "Echte ruimtes,",
+      "title2": "echte projecten.",
+      "cta": "Bekijk het volledige portfolio"
+    },
+    "installer": {
+      "eyebrow": "Voor de vakman",
+      "title": "Word STRETCH-plaatser.",
+      "intro": "STRETCH is B2B-gedreven. Voeg spanplafonds toe aan uw aanbod, volg een opleiding in ons hoofdkantoor, bestel op maat vanuit België en ontvang doorverwezen lokale leads.",
+      "steps": {
+        "0": {
+          "title": "Opleiding in enkele dagen",
+          "body": "Praktijkgerichte certificering in ons hoofdkantoor — confectie, profielen, koude & warme montage, licht en akoestiek."
+        },
+        "1": {
+          "title": "Bestel B2B",
+          "body": "Doeken en profielen op maat aan handelsprijzen, via een eigen partnerportaal."
+        },
+        "2": {
+          "title": "Ontvang doorverwezen leads",
+          "body": "Wij spelen lokale klantaanvragen door aan gecertificeerde partners in hun regio — echte projecten."
+        }
+      },
+      "ctaPartner": "Word partner",
+      "ctaTraining": "Ontdek de plaatsersopleiding"
+    },
+    "reviews": {
+      "eyebrow": "Beoordelingen",
+      "title": "Score {score}",
+      "ratedOn": "Beoordeeld op {source}"
+    }
+  },
+  "ctaBand": {
+    "kicker": "Klaar wanneer u het bent",
+    "title": "Klaar voor een nieuw plafond",
+    "sub": "Vertel ons over uw project en wij bezorgen u binnen twee werkdagen een prijs op maat — gratis en vrijblijvend.",
+    "quote": "Vraag een gratis offerte",
+    "dealer": "Vind uw dichtstbijzijnde dealer",
+    "preferTalk": "Liever even bellen?"
+  },
+  "productPage": {
+    "home": "Home",
+    "solutions": "Oplossingen",
+    "quote": "Vraag een gratis offerte",
+    "viewSpecs": "Bekijk specificaties",
+    "systemTag": "{name}-systeem",
+    "inDetail": "In detail",
+    "specsEyebrow": "Technische specificaties",
+    "specsTitle": "De datasheet",
+    "downloadSpec": "Download specificatieblad",
+    "coloursEyebrow": "Kleuren & afwerkingen",
+    "coloursTitle": "Elke kleur die u wilt",
+    "coloursNote": "Standaardtinten of elke RAL-kleur op maat — afgestemd op uw interieur. Handelspartners kunnen fysieke stalen bestellen.",
+    "requestSamples": "Vraag stalen aan",
+    "appsEyebrow": "Waar het gebruikt wordt",
+    "relatedEyebrow": "Verwante oplossingen",
+    "relatedTitle": "Ontdek het gamma",
+    "allSolutions": "Alle oplossingen",
+    "ctaKicker": "Gratis & vrijblijvend",
+    "ctaTitle": "Wilt u dit plafond",
+    "dealer": "Vind uw dichtstbijzijnde dealer"
+  },
+  "productsPage": {
+    "eyebrow": "Onze oplossingen",
+    "title1": "Twee systemen.",
+    "title2accent": "Eindeloze",
+    "title2rest": "afwerkingen.",
+    "lead": "Elk STRETCH-plafond is een naadloos doek dat met de hand wordt opgespannen — en daarna wordt afgestemd op akoestiek, licht, print of prefab. Kies op basis van overspanning, montagemethode en afwerking.",
+    "comingSoon": "Binnenkort",
+    "preview": "Voorbeeld",
+    "explore": "Ontdek {name}",
+    "notSure": "Twijfelt u nog?",
+    "notSureBody": "Vertel ons over uw ruimte en wij raden het juiste systeem aan — gratis en vrijblijvend.",
+    "quote": "Vraag een gratis offerte"
   }
 }

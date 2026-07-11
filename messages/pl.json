@@ -263,5 +263,254 @@
       "eyebrow": "Projektant sufitu",
       "hint": "Narysuj sufit z wymiarów ścian i przekątnych, rozmieść zgrzewy i wycięcia, sprawdź cenę i złóż zamówienie. Użyj Save, aby zapisać pomiar jako plik."
     }
+  },
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "kicker": "Sufity Stretch® — montaż w jeden dzień",
+          "line1": "Nowy sufit",
+          "line2": "w jeden dzień.",
+          "subhead": "Bezszwowe sufity napinane montowane na zimno w jeden dzień — bez kurzu i bez bałaganu.",
+          "tabName": "Sufity",
+          "tabDesc": "Poliester i PVC"
+        },
+        "1": {
+          "kicker": "Komfort akustyczny — aż do klasy A",
+          "line1": "Akustyka",
+          "line2": "w standardzie.",
+          "subhead": "Wycisz każde pomieszczenie do komfortowego poziomu — z pochłanianiem aż do klasy A.",
+          "tabName": "Akustyka",
+          "tabDesc": "Panele i audio"
+        },
+        "2": {
+          "kicker": "Ściany napinane — bezszwowa okładzina",
+          "line1": "Ściany, które",
+          "line2": "pochłaniają dźwięk.",
+          "subhead": "Bezszwowa napinana okładzina ścienna, która pochłania dźwięk i ukrywa każdą nierówność.",
+          "tabName": "Ściany",
+          "tabDesc": "Okładziny i tekstylia"
+        },
+        "3": {
+          "kicker": "Światło i nadruk — podświetlane wzory",
+          "line1": "Sufity, które",
+          "line2": "świecą.",
+          "subhead": "Sufity podświetlane, z nadrukiem i gwiezdne niebo — Twój projekt, równomiernie oświetlony.",
+          "tabName": "Światło i nadruk",
+          "tabDesc": "Podświetlane i drukowane"
+        }
+      },
+      "quote": "Poproś o darmową wycenę",
+      "explore": "Poznaj rozwiązania",
+      "rated": "Oceniane w Google",
+      "tabsAria": "Znajdź swoje rozwiązanie"
+    },
+    "ticker": {
+      "0": "Montaż w jeden dzień",
+      "1": "Poprawa akustyki",
+      "2": "25 lat żywotności",
+      "3": "100% do recyklingu",
+      "4": "Bez łączeń do 5,7 m",
+      "5": "Bez kurzu · Bez malowania",
+      "6": "Ręcznie robione w Belgii"
+    },
+    "stats": {
+      "0": "Dzień montażu",
+      "1": "Lat żywotności",
+      "2": "Rozpiętość bez łączeń",
+      "3": "Recykling (PVC)"
+    },
+    "why": {
+      "eyebrow": "Dlaczego sufit napinany",
+      "title": "Lepszy sufit — z założenia.",
+      "intro": "Jedna membrana, napinana na zimno przez całe pomieszczenie. Bez wyburzania, bez schnięcia, bez kompromisów — zaprojektowana, by przetrwać dłużej niż tradycyjne płyty gipsowe.",
+      "cells": {
+        "0": {
+          "title": "Szybki i czysty montaż",
+          "body": "Do 50 m² dziennie na dwuosobowy zespół. Bez zrywania starych warstw i bez gruzu — pomieszczenie pozostaje w użyciu."
+        },
+        "1": {
+          "title": "25 lat żywotności",
+          "body": "Bezobsługowy i zmywalny. Nie pęka, nie łuszczy się i nie żółknie — i nigdy nie wymaga malowania."
+        },
+        "2": {
+          "title": "Akustyka i światło",
+          "body": "Połącz akustykę, linie LED, podświetlenie i nadruki w jednej bezszwowej powierzchni."
+        }
+      },
+      "seeIt": "Zobacz to w swoim projekcie",
+      "bookSurvey": "Umów pomiar"
+    },
+    "solutions": {
+      "eyebrow": "Nasze rozwiązania",
+      "title1": "Dwa systemy.",
+      "title2": "Jedno wykończenie.",
+      "intro": "Poliester lub PVC — oba napinane ręcznie, z tym samym nieskazitelnym, matowym efektem. Wybierz według rozpiętości, demontowalności i ekologii.",
+      "cards": {
+        "0": {
+          "mount": "Montaż na zimno",
+          "span": "Bez łączeń do 5,15 m",
+          "name": "Poliester",
+          "blurb": "Estetyczna, funkcjonalna membrana do nowych budynków i remontów — montowana na zimno, o bardzo matowym wyglądzie.",
+          "features": {
+            "0": "Bez łączeń do 5,15 m",
+            "1": "Montaż na zimno",
+            "2": "Bardzo matowy wygląd",
+            "3": "Akustyczny i zmywalny"
+          },
+          "cta": "Poznaj poliester",
+          "alt": "Matowy poliestrowy sufit napinany"
+        },
+        "1": {
+          "mount": "Montaż na ciepło",
+          "span": "Bez łączeń do 6,4 m",
+          "name": "Folia PVC",
+          "blurb": "Podgrzewana folia napinana podczas montażu — w pełni nadająca się do recyklingu i łatwa w demontażu. Wymień sufit w jeden dzień.",
+          "features": {
+            "0": "100% do recyklingu",
+            "1": "Bez łączeń do 6,4 m",
+            "2": "Łatwy demontaż",
+            "3": "Akustyczny i zmywalny"
+          },
+          "cta": "Poznaj PVC",
+          "alt": "Błyszczący sufit napinany z folii PVC"
+        }
+      }
+    },
+    "acoustics": {
+      "eyebrow": "Komfort akustyczny",
+      "title1": "Akustyka",
+      "title2": "w standardzie.",
+      "intro": "To więcej niż piękne wykończenie. Mikroperforowana membrana z absorberami o wysokiej gęstości tłumi pogłos i hałas — zamieniając twarde, echem niosące pomieszczenia w spokojne, komfortowe wnętrza.",
+      "tag": "Pochłanianie aż do klasy A",
+      "cells": {
+        "0": {
+          "title": "Panele akustyczne",
+          "body": "Pochłanianie o wysokiej gęstości ukryte za bezszwową membraną."
+        },
+        "1": {
+          "title": "Wyspy sufitowe",
+          "body": "Podwieszane baffle, które wyciszają duże, otwarte przestrzenie."
+        },
+        "2": {
+          "title": "Panele ścienne",
+          "body": "Dekoracyjne absorbery, które pełnią też rolę wykończenia ścian."
+        },
+        "3": {
+          "title": "Niewidzialne audio",
+          "body": "Głośniki całkowicie ukryte za napiętą folią."
+        }
+      },
+      "cta": "Poznaj rozwiązania akustyczne"
+    },
+    "apps": {
+      "eyebrow": "Zastosowania",
+      "title1": "Gdzie sufit napinany",
+      "title2": "sprawdza się najlepiej.",
+      "intro": "Od pojedynczego salonu po cały hotel — ten sam bezszwowy system, dostrojony do wymagań każdej przestrzeni.",
+      "areas": {
+        "0": {
+          "title": "Salony",
+          "blurb": "Nieskazitelny, matowy sufit wyglądający jak świeży tynk — tylko bez pęknięć."
+        },
+        "1": {
+          "title": "Łazienki",
+          "blurb": "Odporny na wilgoć i zmywalny."
+        },
+        "2": {
+          "title": "Biura",
+          "blurb": "Komfort akustyczny w pracy."
+        },
+        "3": {
+          "title": "Kina domowe",
+          "blurb": "Gwiezdne niebo, ukryte głośniki i akustyka klasy A w jednej bezszwowej powierzchni."
+        },
+        "4": {
+          "title": "Podświetlane i gwiezdne",
+          "blurb": "Równomierne, ściemnialne światło."
+        },
+        "5": {
+          "title": "Sklepy i hotele",
+          "blurb": "Sufity z nadrukiem w Twoim brandingu."
+        }
+      },
+      "badge": "Najpopularniejsze",
+      "view": "Zobacz projekty"
+    },
+    "gallery": {
+      "eyebrow": "Wybrane realizacje",
+      "title1": "Prawdziwe wnętrza,",
+      "title2": "prawdziwe projekty.",
+      "cta": "Zobacz całe portfolio"
+    },
+    "installer": {
+      "eyebrow": "Dla fachowców",
+      "title": "Zostań monterem STRETCH.",
+      "intro": "STRETCH działa w modelu B2B. Dodaj sufity napinane do swojej oferty, przeszkol się w naszej centrali, zamawiaj na wymiar z Belgii i otrzymuj lokalne zapytania od klientów.",
+      "steps": {
+        "0": {
+          "title": "Szkolenie w kilka dni",
+          "body": "Praktyczna certyfikacja w naszej centrali — konfekcja, profile, montaż na zimno i ciepło, światło i akustyka."
+        },
+        "1": {
+          "title": "Zamawiaj B2B",
+          "body": "Membrany i profile na wymiar w cenach handlowych, przez dedykowany portal partnerski."
+        },
+        "2": {
+          "title": "Otrzymuj zapytania",
+          "body": "Lokalne zapytania klientów przekazujemy certyfikowanym partnerom w ich regionie — prawdziwe projekty."
+        }
+      },
+      "ctaPartner": "Zostań partnerem",
+      "ctaTraining": "Poznaj szkolenie montera"
+    },
+    "reviews": {
+      "eyebrow": "Opinie",
+      "title": "Ocena {score}",
+      "ratedOn": "Ocena w {source}"
+    }
+  },
+  "ctaBand": {
+    "kicker": "Gotowi, gdy Ty jesteś",
+    "title": "Gotowy na nowy sufit",
+    "sub": "Opowiedz nam o swoim projekcie, a w ciągu dwóch dni roboczych wrócimy z wyceną szytą na miarę — bezpłatnie i bez zobowiązań.",
+    "quote": "Poproś o darmową wycenę",
+    "dealer": "Znajdź najbliższego dystrybutora",
+    "preferTalk": "Wolisz porozmawiać?"
+  },
+  "productPage": {
+    "home": "Strona główna",
+    "solutions": "Rozwiązania",
+    "quote": "Poproś o darmową wycenę",
+    "viewSpecs": "Zobacz specyfikację",
+    "systemTag": "System {name}",
+    "inDetail": "W szczegółach",
+    "specsEyebrow": "Specyfikacja techniczna",
+    "specsTitle": "Karta techniczna",
+    "downloadSpec": "Pobierz kartę techniczną",
+    "coloursEyebrow": "Kolory i wykończenia",
+    "coloursTitle": "Każdy kolor, jaki chcesz",
+    "coloursNote": "Odcienie standardowe lub dowolny RAL na zamówienie — dopasowany do Twojego wnętrza. Partnerzy handlowi mogą zamówić fizyczne próbniki.",
+    "requestSamples": "Zamów próbki",
+    "appsEyebrow": "Gdzie się go stosuje",
+    "relatedEyebrow": "Powiązane rozwiązania",
+    "relatedTitle": "Poznaj całą gamę",
+    "allSolutions": "Wszystkie rozwiązania",
+    "ctaKicker": "Bezpłatnie i bez zobowiązań",
+    "ctaTitle": "Chcesz taki sufit",
+    "dealer": "Znajdź najbliższego dystrybutora"
+  },
+  "productsPage": {
+    "eyebrow": "Nasze rozwiązania",
+    "title1": "Dwa systemy.",
+    "title2accent": "Nieskończone",
+    "title2rest": "wykończenia.",
+    "lead": "Każdy sufit STRETCH to bezszwowa membrana napinana ręcznie — następnie dostrajana pod akustykę, światło, nadruk lub prefabrykację. Wybierz według rozpiętości, metody montażu i wykończenia.",
+    "comingSoon": "Wkrótce",
+    "preview": "Podgląd",
+    "explore": "Poznaj {name}",
+    "notSure": "Nie wiesz, który wybrać?",
+    "notSureBody": "Opowiedz nam o swoim pomieszczeniu, a doradzimy właściwy system — bezpłatnie i bez zobowiązań.",
+    "quote": "Poproś o darmową wycenę"
   }
 }

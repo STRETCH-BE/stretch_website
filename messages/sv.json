@@ -263,5 +263,254 @@
       "eyebrow": "Takdesigner",
       "hint": "Rita taket från vägg- och diagonalmått, placera skarvar och urtag, kontrollera priset och lägg ordern. Använd Save för att spara en mätning som fil."
     }
+  },
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "kicker": "Stretch®-tak — monterade på en dag",
+          "line1": "Ett nytt tak",
+          "line2": "på en dag.",
+          "subhead": "Skarvfria spänntak som kallmonteras på en enda dag — utan damm och utan stök.",
+          "tabName": "Tak",
+          "tabDesc": "Polyester & PVC"
+        },
+        "1": {
+          "kicker": "Akustisk komfort — upp till klass A",
+          "line1": "Akustik,",
+          "line2": "inbyggd.",
+          "subhead": "Sänk ljudnivån i vilket rum som helst till en behaglig nivå — med absorption upp till klass A.",
+          "tabName": "Akustik",
+          "tabDesc": "Paneler & ljud"
+        },
+        "2": {
+          "kicker": "Spännväggar — skarvfri beklädnad",
+          "line1": "Väggar som",
+          "line2": "absorberar ljud.",
+          "subhead": "Skarvfri spänd väggbeklädnad som absorberar ljud och döljer varje ojämnhet.",
+          "tabName": "Väggar",
+          "tabDesc": "Beklädnad & textil"
+        },
+        "3": {
+          "kicker": "Ljus & print — bakbelysta designer",
+          "line1": "Tak som",
+          "line2": "lyser upp.",
+          "subhead": "Bakbelysta, printade och stjärnhimmelstak — din design, jämnt upplyst.",
+          "tabName": "Ljus & print",
+          "tabDesc": "Bakbelyst & printat"
+        }
+      },
+      "quote": "Begär en kostnadsfri offert",
+      "explore": "Utforska lösningarna",
+      "rated": "Betyg på Google",
+      "tabsAria": "Hitta din lösning"
+    },
+    "ticker": {
+      "0": "Monterat på en dag",
+      "1": "Bättre akustik",
+      "2": "25 års livslängd",
+      "3": "100 % återvinningsbart",
+      "4": "Skarvfritt upp till 5,7 m",
+      "5": "Inget damm · Ingen målning",
+      "6": "Handgjort i Belgien"
+    },
+    "stats": {
+      "0": "Dag för montering",
+      "1": "Års livslängd",
+      "2": "Skarvfri spännvidd",
+      "3": "Återvinningsbart (PVC)"
+    },
+    "why": {
+      "eyebrow": "Varför spänntak",
+      "title": "Ett bättre tak, by design.",
+      "intro": "Ett enda membran, kallspänt över hela rummet. Ingen rivning, ingen torktid, inga kompromisser — byggt för att hålla längre än vanliga gipstak.",
+      "cells": {
+        "0": {
+          "title": "Snabb & ren montering",
+          "body": "Upp till 50 m² per dag och tvåmannalag. Ingen rivning, inget skräp — rummet kan användas under tiden."
+        },
+        "1": {
+          "title": "25 års livslängd",
+          "body": "Underhållsfritt och tvättbart. Det spricker, flagnar eller gulnar inte — och behöver aldrig målas om."
+        },
+        "2": {
+          "title": "Akustik & ljus",
+          "body": "Integrera akustik, LED-linjer, bakgrundsbelysning och printade designer i en enda skarvfri yta."
+        }
+      },
+      "seeIt": "Se det i ditt projekt",
+      "bookSurvey": "Boka en uppmätning"
+    },
+    "solutions": {
+      "eyebrow": "Våra lösningar",
+      "title1": "Två system.",
+      "title2": "En finish.",
+      "intro": "Polyester eller PVC — båda handspända för samma felfria, matta resultat. Välj utifrån spännvidd, demonterbarhet och hållbarhet.",
+      "cards": {
+        "0": {
+          "mount": "Kallmontering",
+          "span": "Skarvfritt upp till 5,15 m",
+          "name": "Polyester",
+          "blurb": "Ett estetiskt, funktionellt membran för både nybygge och renovering — kallmonterat, med ett mycket matt utseende.",
+          "features": {
+            "0": "Skarvfritt upp till 5,15 m",
+            "1": "Kallmontering",
+            "2": "Mycket matt utseende",
+            "3": "Akustiskt & tvättbart"
+          },
+          "cta": "Utforska polyester",
+          "alt": "Matt spänntak i polyester"
+        },
+        "1": {
+          "mount": "Varmmontering",
+          "span": "Skarvfritt upp till 6,4 m",
+          "name": "PVC-folie",
+          "blurb": "En uppvärmd folie som spänns vid monteringen — helt återvinningsbar och lätt att demontera. Byt tak på en enda dag.",
+          "features": {
+            "0": "100 % återvinningsbart",
+            "1": "Skarvfritt upp till 6,4 m",
+            "2": "Lätt att demontera",
+            "3": "Akustiskt & tvättbart"
+          },
+          "cta": "Utforska PVC",
+          "alt": "Blankt spänntak i PVC-folie"
+        }
+      }
+    },
+    "acoustics": {
+      "eyebrow": "Akustisk komfort",
+      "title1": "Akustik,",
+      "title2": "inbyggd.",
+      "intro": "Mer än en vacker finish. Ett mikroperforerat membran med högdensitetsabsorbenter bakom tämjer efterklang och buller — och förvandlar hårda, ekande rum till lugna, behagliga miljöer.",
+      "tag": "Absorption upp till klass A",
+      "cells": {
+        "0": {
+          "title": "Akustikpaneler",
+          "body": "Högdensitetsabsorption dold bakom det skarvfria membranet."
+        },
+        "1": {
+          "title": "Taköar",
+          "body": "Frihängande bafflar som lugnar stora, öppna ytor."
+        },
+        "2": {
+          "title": "Väggpaneler",
+          "body": "Dekorativa absorbenter som samtidigt är väggfinish."
+        },
+        "3": {
+          "title": "Osynligt ljud",
+          "body": "Högtalare helt dolda bakom den spända folien."
+        }
+      },
+      "cta": "Utforska akustiklösningarna"
+    },
+    "apps": {
+      "eyebrow": "Användningsområden",
+      "title1": "Där spänntak",
+      "title2": "fungerar bäst.",
+      "intro": "Från ett enda vardagsrum till ett helt hotell — samma skarvfria system, anpassat efter varje rums krav.",
+      "areas": {
+        "0": {
+          "title": "Vardagsrum",
+          "blurb": "Ett felfritt, matt tak som ser ut som nyspacklat — fast utan sprickorna."
+        },
+        "1": {
+          "title": "Badrum",
+          "blurb": "Fukttåligt och tvättbart."
+        },
+        "2": {
+          "title": "Kontor",
+          "blurb": "Akustisk komfort på jobbet."
+        },
+        "3": {
+          "title": "Hemmabior",
+          "blurb": "Stjärnhimlar, dolda högtalare och klass A-akustik i en enda yta."
+        },
+        "4": {
+          "title": "Bakbelyst & stjärnor",
+          "blurb": "Jämnt, dimbart ljus."
+        },
+        "5": {
+          "title": "Butiker & hotell",
+          "blurb": "Printade tak med ditt varumärke."
+        }
+      },
+      "badge": "Mest populär",
+      "view": "Se projekt"
+    },
+    "gallery": {
+      "eyebrow": "Utvalda arbeten",
+      "title1": "Riktiga rum,",
+      "title2": "riktiga projekt.",
+      "cta": "Se hela portföljen"
+    },
+    "installer": {
+      "eyebrow": "För proffs",
+      "title": "Bli STRETCH-montör.",
+      "intro": "STRETCH är B2B-drivet. Lägg till spänntak i ditt utbud, utbilda dig på vårt huvudkontor, beställ måttsytt från Belgien och få hänvisade lokala förfrågningar.",
+      "steps": {
+        "0": {
+          "title": "Utbildad på några dagar",
+          "body": "Praktisk certifiering på vårt huvudkontor — konfektion, profiler, kall- & varmmontering, ljus och akustik."
+        },
+        "1": {
+          "title": "Beställ B2B",
+          "body": "Måttsydda membran och profiler till handelspriser, via en egen partnerportal."
+        },
+        "2": {
+          "title": "Få förfrågningar",
+          "body": "Vi skickar lokala kundförfrågningar vidare till certifierade partner i deras region — riktiga projekt."
+        }
+      },
+      "ctaPartner": "Bli partner",
+      "ctaTraining": "Utforska montörsutbildningen"
+    },
+    "reviews": {
+      "eyebrow": "Omdömen",
+      "title": "Betyg {score}",
+      "ratedOn": "Betyg på {source}"
+    }
+  },
+  "ctaBand": {
+    "kicker": "Redo när du är",
+    "title": "Redo för ett nytt tak",
+    "sub": "Berätta om ditt projekt så återkommer vi med ett skräddarsytt pris — kostnadsfritt och utan förpliktelser, inom två arbetsdagar.",
+    "quote": "Begär en kostnadsfri offert",
+    "dealer": "Hitta din närmaste återförsäljare",
+    "preferTalk": "Pratar du hellre med oss?"
+  },
+  "productPage": {
+    "home": "Start",
+    "solutions": "Lösningar",
+    "quote": "Begär en kostnadsfri offert",
+    "viewSpecs": "Se specifikationer",
+    "systemTag": "{name}-system",
+    "inDetail": "I detalj",
+    "specsEyebrow": "Tekniska specifikationer",
+    "specsTitle": "Databladet",
+    "downloadSpec": "Ladda ner datablad",
+    "coloursEyebrow": "Färger & finish",
+    "coloursTitle": "Vilken färg du än vill ha",
+    "coloursNote": "Standardnyanser eller valfri RAL-kulör — matchad till din interiör. Handelspartner kan beställa fysiska prover.",
+    "requestSamples": "Beställ prover",
+    "appsEyebrow": "Där det används",
+    "relatedEyebrow": "Relaterade lösningar",
+    "relatedTitle": "Utforska sortimentet",
+    "allSolutions": "Alla lösningar",
+    "ctaKicker": "Kostnadsfritt & utan förpliktelser",
+    "ctaTitle": "Vill du ha det här taket",
+    "dealer": "Hitta din närmaste återförsäljare"
+  },
+  "productsPage": {
+    "eyebrow": "Våra lösningar",
+    "title1": "Två system.",
+    "title2accent": "Oändliga",
+    "title2rest": "finisher.",
+    "lead": "Varje STRETCH-tak är ett skarvfritt membran som spänns för hand — och sedan anpassas för akustik, ljus, print eller prefab. Välj utifrån spännvidd, monteringsmetod och finish.",
+    "comingSoon": "Kommer snart",
+    "preview": "Förhandsvisning",
+    "explore": "Utforska {name}",
+    "notSure": "Osäker på vilket?",
+    "notSureBody": "Berätta om ditt rum så rekommenderar vi rätt system — kostnadsfritt och utan förpliktelser.",
+    "quote": "Begär en kostnadsfri offert"
   }
 }

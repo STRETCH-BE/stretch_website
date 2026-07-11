@@ -263,5 +263,254 @@
       "eyebrow": "Ceiling designer",
       "hint": "Draw the ceiling from wall + diagonal measurements, position seams and cut-outs, check the price and place the order. Use Save to keep a measurement file for later."
     }
+  },
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "kicker": "Stretch® Ceilings — fitted in one day",
+          "line1": "A new ceiling",
+          "line2": "in one day.",
+          "subhead": "Seamless, cold-fitted ceilings installed in a single day — no dust, no mess.",
+          "tabName": "Ceilings",
+          "tabDesc": "Polyester & PVC"
+        },
+        "1": {
+          "kicker": "Acoustic comfort — up to Class A",
+          "line1": "Acoustics,",
+          "line2": "built in.",
+          "subhead": "Bring any room down to a comfortable noise level, up to Class A absorption.",
+          "tabName": "Acoustic",
+          "tabDesc": "Panels & audio"
+        },
+        "2": {
+          "kicker": "Stretch walls — seamless cladding",
+          "line1": "Walls that",
+          "line2": "absorb sound.",
+          "subhead": "Seamless stretched wall cladding that absorbs sound and hides every imperfection.",
+          "tabName": "Walls",
+          "tabDesc": "Cladding & textile"
+        },
+        "3": {
+          "kicker": "Light & print — backlit designs",
+          "line1": "Ceilings that",
+          "line2": "light up.",
+          "subhead": "Backlit, printed and starry-sky ceilings — your design, evenly lit.",
+          "tabName": "Light & Print",
+          "tabDesc": "Backlit & printed"
+        }
+      },
+      "quote": "Request a free quote",
+      "explore": "Explore solutions",
+      "rated": "Rated on Google",
+      "tabsAria": "Find your solution"
+    },
+    "ticker": {
+      "0": "Installed in one day",
+      "1": "Acoustic improvement",
+      "2": "25-year lifespan",
+      "3": "100% recyclable",
+      "4": "Seamless to 5.7m",
+      "5": "No dust · No paint",
+      "6": "Hand made in Belgium"
+    },
+    "stats": {
+      "0": "Day to install",
+      "1": "Year lifespan",
+      "2": "Seamless span",
+      "3": "Recyclable (PVC)"
+    },
+    "why": {
+      "eyebrow": "Why stretch",
+      "title": "A better ceiling, by design.",
+      "intro": "A single membrane, tensioned cold across the room. No demolition, no drying time, no compromise — engineered to outlast conventional plasterboard.",
+      "cells": {
+        "0": {
+          "title": "Fast & clean fitting",
+          "body": "Up to 50m² per day, per two-person team. No stripping out, no debris — your room stays in use."
+        },
+        "1": {
+          "title": "25-year lifespan",
+          "body": "Maintenance-free and washable. It won't crack, flake or yellow — and never needs repainting."
+        },
+        "2": {
+          "title": "Acoustic & lit",
+          "body": "Integrate acoustics, LED lines, backlighting and printed designs into one seamless surface."
+        }
+      },
+      "seeIt": "See it for your project",
+      "bookSurvey": "Book a survey"
+    },
+    "solutions": {
+      "eyebrow": "Our solutions",
+      "title1": "Two systems.",
+      "title2": "One finish.",
+      "intro": "Polyester or PVC — both tensioned by hand for the same flawless, matte result. Choose by span, removability and sustainability.",
+      "cards": {
+        "0": {
+          "mount": "Cold mount",
+          "span": "Seamless to 5.15m",
+          "name": "Polyester",
+          "blurb": "An aesthetic, functional membrane for new build and renovation alike — installed cold, with a very matte look.",
+          "features": {
+            "0": "Seamless to 5.15m",
+            "1": "Cold installation",
+            "2": "Very matte look",
+            "3": "Acoustic & washable"
+          },
+          "cta": "Explore polyester",
+          "alt": "Matte polyester stretch ceiling"
+        },
+        "1": {
+          "mount": "Heat mount",
+          "span": "Seamless to 6.4m",
+          "name": "PVC Film",
+          "blurb": "A warmed film tensioned on install — fully recyclable and easily removable. Replace your ceiling in a single day.",
+          "features": {
+            "0": "100% recyclable",
+            "1": "Seamless to 6.4m",
+            "2": "Easily removable",
+            "3": "Acoustic & washable"
+          },
+          "cta": "Explore PVC",
+          "alt": "Glossy PVC film stretch ceiling"
+        }
+      }
+    },
+    "acoustics": {
+      "eyebrow": "Acoustic comfort",
+      "title1": "Acoustics,",
+      "title2": "built in.",
+      "intro": "More than a beautiful finish. A micro-perforated membrane backed with high-density absorbers tames reverberation and noise — turning hard, echoey rooms into calm, comfortable spaces.",
+      "tag": "Up to Class A absorption",
+      "cells": {
+        "0": {
+          "title": "Acoustic panels",
+          "body": "High-density absorption built behind the seamless membrane."
+        },
+        "1": {
+          "title": "Ceiling islands",
+          "body": "Free-hanging baffles that calm large, open spaces."
+        },
+        "2": {
+          "title": "Wall panels",
+          "body": "Decorative absorbers that double as wall finishes."
+        },
+        "3": {
+          "title": "Invisible audio",
+          "body": "Speakers hidden completely behind the stretched film."
+        }
+      },
+      "cta": "Explore acoustic solutions"
+    },
+    "apps": {
+      "eyebrow": "Applications",
+      "title1": "Where stretch",
+      "title2": "works best.",
+      "intro": "From a single living room to an entire hotel — the same seamless system, tuned to the demands of each space.",
+      "areas": {
+        "0": {
+          "title": "Living rooms",
+          "blurb": "A flawless, matte ceiling that reads like fresh plaster — without the cracks."
+        },
+        "1": {
+          "title": "Bathrooms",
+          "blurb": "Humidity-proof and washable."
+        },
+        "2": {
+          "title": "Offices",
+          "blurb": "Acoustic comfort at work."
+        },
+        "3": {
+          "title": "Home cinemas",
+          "blurb": "Starry skies, hidden speakers and Class A acoustics in one seamless surface."
+        },
+        "4": {
+          "title": "Backlit & starry",
+          "blurb": "Even, dimmable light."
+        },
+        "5": {
+          "title": "Retail & hotels",
+          "blurb": "Printed, branded ceilings."
+        }
+      },
+      "badge": "Most popular",
+      "view": "View projects"
+    },
+    "gallery": {
+      "eyebrow": "Selected work",
+      "title1": "Real rooms,",
+      "title2": "real projects.",
+      "cta": "View full portfolio"
+    },
+    "installer": {
+      "eyebrow": "For the trade",
+      "title": "Become a STRETCH installer.",
+      "intro": "STRETCH is B2B-led. Add stretch ceilings to your offer, get trained at our HQ, order made-to-measure from Belgium, and receive referred local leads.",
+      "steps": {
+        "0": {
+          "title": "Train in days",
+          "body": "Hands-on certification at our HQ — confection, profiles, cold & heat mounting, light and acoustics."
+        },
+        "1": {
+          "title": "Order B2B",
+          "body": "Made-to-measure membranes and profiles at trade pricing, through a dedicated partner portal."
+        },
+        "2": {
+          "title": "Get referred leads",
+          "body": "We pass local customer enquiries to certified partners in their region — real projects."
+        }
+      },
+      "ctaPartner": "Become a partner",
+      "ctaTraining": "Explore installer training"
+    },
+    "reviews": {
+      "eyebrow": "Reviews",
+      "title": "Rated {score}",
+      "ratedOn": "Rated on {source}"
+    }
+  },
+  "ctaBand": {
+    "kicker": "Ready when you are",
+    "title": "Ready for a new ceiling",
+    "sub": "Tell us about your project and we will get back to you with a tailored price — free and without obligation, within two working days.",
+    "quote": "Request a free quote",
+    "dealer": "Find your nearest dealer",
+    "preferTalk": "Prefer to talk?"
+  },
+  "productPage": {
+    "home": "Home",
+    "solutions": "Solutions",
+    "quote": "Request a free quote",
+    "viewSpecs": "View specifications",
+    "systemTag": "{name} system",
+    "inDetail": "In detail",
+    "specsEyebrow": "Technical specifications",
+    "specsTitle": "The datasheet",
+    "downloadSpec": "Download spec sheet",
+    "coloursEyebrow": "Colours & finishes",
+    "coloursTitle": "Any colour you like",
+    "coloursNote": "Standard shades or any custom RAL — matched to your interior. Trade partners can order physical swatches to hand.",
+    "requestSamples": "Request samples",
+    "appsEyebrow": "Where it's used",
+    "relatedEyebrow": "Related solutions",
+    "relatedTitle": "Explore the range",
+    "allSolutions": "All solutions",
+    "ctaKicker": "Free & without obligation",
+    "ctaTitle": "Want this ceiling",
+    "dealer": "Find your nearest dealer"
+  },
+  "productsPage": {
+    "eyebrow": "Our solutions",
+    "title1": "Two systems.",
+    "title2accent": "Endless",
+    "title2rest": "finishes.",
+    "lead": "Every STRETCH ceiling is a seamless membrane tensioned by hand — then tuned for acoustics, light, print or prefab. Choose by span, mounting method and finish.",
+    "comingSoon": "Coming soon",
+    "preview": "Preview",
+    "explore": "Explore {name}",
+    "notSure": "Not sure which?",
+    "notSureBody": "Tell us about your room and we will recommend the right system — free and without obligation.",
+    "quote": "Request a free quote"
   }
 }

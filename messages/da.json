@@ -263,5 +263,254 @@
       "eyebrow": "Loftsdesigner",
       "hint": "Tegn loftet ud fra væg- og diagonalmål, placer samlinger og udskæringer, tjek prisen og afgiv ordren. Brug Save til at gemme en opmåling som fil."
     }
+  },
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "kicker": "Stretch®-lofter — monteret på én dag",
+          "line1": "Et nyt loft",
+          "line2": "på én dag.",
+          "subhead": "Fugefri spændlofter, koldmonteret på en enkelt dag — uden støv og uden rod.",
+          "tabName": "Lofter",
+          "tabDesc": "Polyester & PVC"
+        },
+        "1": {
+          "kicker": "Akustisk komfort — op til klasse A",
+          "line1": "Akustik,",
+          "line2": "indbygget.",
+          "subhead": "Bring ethvert rum ned på et behageligt støjniveau — med absorption op til klasse A.",
+          "tabName": "Akustik",
+          "tabDesc": "Paneler & lyd"
+        },
+        "2": {
+          "kicker": "Spændvægge — fugefri beklædning",
+          "line1": "Vægge, der",
+          "line2": "absorberer lyd.",
+          "subhead": "Fugefri, opspændt vægbeklædning, der absorberer lyd og skjuler enhver ujævnhed.",
+          "tabName": "Vægge",
+          "tabDesc": "Beklædning & tekstil"
+        },
+        "3": {
+          "kicker": "Lys & print — bagbelyste designs",
+          "line1": "Lofter, der",
+          "line2": "lyser op.",
+          "subhead": "Bagbelyste, printede og stjernehimmel-lofter — dit design, jævnt oplyst.",
+          "tabName": "Lys & print",
+          "tabDesc": "Bagbelyst & printet"
+        }
+      },
+      "quote": "Få et gratis tilbud",
+      "explore": "Se løsningerne",
+      "rated": "Bedømt på Google",
+      "tabsAria": "Find din løsning"
+    },
+    "ticker": {
+      "0": "Monteret på én dag",
+      "1": "Bedre akustik",
+      "2": "25 års levetid",
+      "3": "100 % genanvendeligt",
+      "4": "Fugefrit op til 5,7 m",
+      "5": "Intet støv · Ingen maling",
+      "6": "Håndlavet i Belgien"
+    },
+    "stats": {
+      "0": "Dag til montering",
+      "1": "Års levetid",
+      "2": "Fugefrit spænd",
+      "3": "Genanvendeligt (PVC)"
+    },
+    "why": {
+      "eyebrow": "Hvorfor spændloft",
+      "title": "Et bedre loft, helt bevidst.",
+      "intro": "Én membran, koldt opspændt over hele rummet. Ingen nedrivning, ingen tørretid, ingen kompromiser — bygget til at holde længere end almindelige gipslofter.",
+      "cells": {
+        "0": {
+          "title": "Hurtig & ren montering",
+          "body": "Op til 50 m² om dagen pr. tomandshold. Ingen nedrivning, intet affald — rummet kan stadig bruges."
+        },
+        "1": {
+          "title": "25 års levetid",
+          "body": "Vedligeholdelsesfrit og vaskbart. Det revner, skaller eller gulner ikke — og skal aldrig males om."
+        },
+        "2": {
+          "title": "Akustik & lys",
+          "body": "Integrér akustik, LED-linjer, bagbelysning og printede designs i én fugefri flade."
+        }
+      },
+      "seeIt": "Se det i dit projekt",
+      "bookSurvey": "Book en opmåling"
+    },
+    "solutions": {
+      "eyebrow": "Vores løsninger",
+      "title1": "To systemer.",
+      "title2": "Én finish.",
+      "intro": "Polyester eller PVC — begge opspændt i hånden med samme fejlfri, matte resultat. Vælg efter spænd, demonterbarhed og bæredygtighed.",
+      "cards": {
+        "0": {
+          "mount": "Koldmontering",
+          "span": "Fugefrit op til 5,15 m",
+          "name": "Polyester",
+          "blurb": "En æstetisk, funktionel membran til både nybyggeri og renovering — monteret koldt, med et meget mat udtryk.",
+          "features": {
+            "0": "Fugefrit op til 5,15 m",
+            "1": "Koldmontering",
+            "2": "Meget mat udtryk",
+            "3": "Akustisk & vaskbart"
+          },
+          "cta": "Se polyester",
+          "alt": "Mat spændloft i polyester"
+        },
+        "1": {
+          "mount": "Varmmontering",
+          "span": "Fugefrit op til 6,4 m",
+          "name": "PVC-folie",
+          "blurb": "En opvarmet folie, der spændes op ved monteringen — fuldt genanvendelig og nem at afmontere. Udskift dit loft på en enkelt dag.",
+          "features": {
+            "0": "100 % genanvendeligt",
+            "1": "Fugefrit op til 6,4 m",
+            "2": "Let at afmontere",
+            "3": "Akustisk & vaskbart"
+          },
+          "cta": "Se PVC",
+          "alt": "Blankt spændloft i PVC-folie"
+        }
+      }
+    },
+    "acoustics": {
+      "eyebrow": "Akustisk komfort",
+      "title1": "Akustik,",
+      "title2": "indbygget.",
+      "intro": "Mere end en smuk finish. En mikroperforeret membran med højdensitetsabsorbenter bagved tæmmer efterklang og støj — og gør hårde rum med ekko til rolige, behagelige rum.",
+      "tag": "Absorption op til klasse A",
+      "cells": {
+        "0": {
+          "title": "Akustikpaneler",
+          "body": "Højdensitetsabsorption skjult bag den fugefri membran."
+        },
+        "1": {
+          "title": "Loftøer",
+          "body": "Frithængende baffler, der dæmper store, åbne rum."
+        },
+        "2": {
+          "title": "Vægpaneler",
+          "body": "Dekorative absorbenter, der samtidig fungerer som vægfinish."
+        },
+        "3": {
+          "title": "Usynlig lyd",
+          "body": "Højttalere gemt helt væk bag den opspændte folie."
+        }
+      },
+      "cta": "Se de akustiske løsninger"
+    },
+    "apps": {
+      "eyebrow": "Anvendelser",
+      "title1": "Hvor spændlofter",
+      "title2": "fungerer bedst.",
+      "intro": "Fra en enkelt stue til et helt hotel — samme fugefri system, tilpasset kravene i hvert rum.",
+      "areas": {
+        "0": {
+          "title": "Stuer",
+          "blurb": "Et fejlfrit, mat loft, der ligner nyspartlet — bare uden revnerne."
+        },
+        "1": {
+          "title": "Badeværelser",
+          "blurb": "Fugtbestandigt og vaskbart."
+        },
+        "2": {
+          "title": "Kontorer",
+          "blurb": "Akustisk komfort på arbejdet."
+        },
+        "3": {
+          "title": "Hjemmebiografer",
+          "blurb": "Stjernehimmel, skjulte højttalere og klasse A-akustik i én flade."
+        },
+        "4": {
+          "title": "Bagbelyst & stjerner",
+          "blurb": "Jævnt lys, der kan dæmpes."
+        },
+        "5": {
+          "title": "Butikker & hoteller",
+          "blurb": "Printede lofter med dit brand."
+        }
+      },
+      "badge": "Mest populær",
+      "view": "Se projekter"
+    },
+    "gallery": {
+      "eyebrow": "Udvalgte projekter",
+      "title1": "Rigtige rum,",
+      "title2": "rigtige projekter.",
+      "cta": "Se hele porteføljen"
+    },
+    "installer": {
+      "eyebrow": "Til fagfolk",
+      "title": "Bliv STRETCH-montør.",
+      "intro": "STRETCH er B2B-drevet. Tilføj spændlofter til dit sortiment, bliv uddannet på vores hovedkontor, bestil målsyet fra Belgien og modtag henviste lokale kundeemner.",
+      "steps": {
+        "0": {
+          "title": "Uddannet på få dage",
+          "body": "Praktisk certificering på vores hovedkontor — konfektion, profiler, kold- & varmmontering, lys og akustik."
+        },
+        "1": {
+          "title": "Bestil B2B",
+          "body": "Målsyede membraner og profiler til forhandlerpriser via en dedikeret partnerportal."
+        },
+        "2": {
+          "title": "Modtag kundeemner",
+          "body": "Vi sender lokale kundehenvendelser videre til certificerede partnere i deres område — rigtige projekter."
+        }
+      },
+      "ctaPartner": "Bliv partner",
+      "ctaTraining": "Se montøruddannelsen"
+    },
+    "reviews": {
+      "eyebrow": "Anmeldelser",
+      "title": "Bedømt til {score}",
+      "ratedOn": "Bedømt på {source}"
+    }
+  },
+  "ctaBand": {
+    "kicker": "Klar, når du er",
+    "title": "Klar til et nyt loft",
+    "sub": "Fortæl os om dit projekt, så vender vi tilbage med en skræddersyet pris — gratis og uforpligtende, inden for to hverdage.",
+    "quote": "Få et gratis tilbud",
+    "dealer": "Find din nærmeste forhandler",
+    "preferTalk": "Vil du hellere tale med os?"
+  },
+  "productPage": {
+    "home": "Forside",
+    "solutions": "Løsninger",
+    "quote": "Få et gratis tilbud",
+    "viewSpecs": "Se specifikationer",
+    "systemTag": "{name}-system",
+    "inDetail": "I detaljer",
+    "specsEyebrow": "Tekniske specifikationer",
+    "specsTitle": "Databladet",
+    "downloadSpec": "Download datablad",
+    "coloursEyebrow": "Farver & finish",
+    "coloursTitle": "Alle de farver, du vil have",
+    "coloursNote": "Standardnuancer eller enhver RAL-farve — matchet til dit interiør. Forhandlerpartnere kan bestille fysiske farveprøver.",
+    "requestSamples": "Bestil prøver",
+    "appsEyebrow": "Hvor det bruges",
+    "relatedEyebrow": "Relaterede løsninger",
+    "relatedTitle": "Udforsk sortimentet",
+    "allSolutions": "Alle løsninger",
+    "ctaKicker": "Gratis & uforpligtende",
+    "ctaTitle": "Vil du have dette loft",
+    "dealer": "Find din nærmeste forhandler"
+  },
+  "productsPage": {
+    "eyebrow": "Vores løsninger",
+    "title1": "To systemer.",
+    "title2accent": "Uendelige",
+    "title2rest": "finishes.",
+    "lead": "Hvert STRETCH-loft er en fugefri membran, opspændt i hånden — og derefter tilpasset akustik, lys, print eller præfab. Vælg efter spænd, monteringsmetode og finish.",
+    "comingSoon": "Kommer snart",
+    "preview": "Forhåndsvisning",
+    "explore": "Se {name}",
+    "notSure": "I tvivl om hvilket?",
+    "notSureBody": "Fortæl os om dit rum, så anbefaler vi det rette system — gratis og uforpligtende.",
+    "quote": "Få et gratis tilbud"
   }
 }

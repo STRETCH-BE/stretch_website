@@ -263,5 +263,254 @@
       "eyebrow": "Concepteur de plafond",
       "hint": "Dessinez le plafond à partir des murs et des diagonales, placez soudures et découpes, vérifiez le prix et passez la commande. Utilisez Save pour conserver un fichier de mesures."
     }
+  },
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "kicker": "Plafonds Stretch® — posés en un jour",
+          "line1": "Un nouveau plafond",
+          "line2": "en un jour.",
+          "subhead": "Des plafonds tendus sans soudure, posés à froid en une seule journée — sans poussière, sans désordre.",
+          "tabName": "Plafonds",
+          "tabDesc": "Polyester & PVC"
+        },
+        "1": {
+          "kicker": "Confort acoustique — jusqu'à la classe A",
+          "line1": "L'acoustique,",
+          "line2": "intégrée.",
+          "subhead": "Ramenez chaque pièce à un niveau sonore confortable, avec une absorption jusqu'à la classe A.",
+          "tabName": "Acoustique",
+          "tabDesc": "Panneaux & audio"
+        },
+        "2": {
+          "kicker": "Murs tendus — habillage sans soudure",
+          "line1": "Des murs qui",
+          "line2": "absorbent le son.",
+          "subhead": "Un habillage mural tendu sans soudure qui absorbe le son et masque chaque imperfection.",
+          "tabName": "Murs",
+          "tabDesc": "Habillage & textile"
+        },
+        "3": {
+          "kicker": "Lumière & impression — designs rétroéclairés",
+          "line1": "Des plafonds qui",
+          "line2": "s'illuminent.",
+          "subhead": "Plafonds rétroéclairés, imprimés et ciels étoilés — votre design, éclairé uniformément.",
+          "tabName": "Lumière & print",
+          "tabDesc": "Rétroéclairé & imprimé"
+        }
+      },
+      "quote": "Demander un devis gratuit",
+      "explore": "Découvrir les solutions",
+      "rated": "Noté sur Google",
+      "tabsAria": "Trouvez votre solution"
+    },
+    "ticker": {
+      "0": "Posé en un jour",
+      "1": "Amélioration acoustique",
+      "2": "25 ans de durée de vie",
+      "3": "100 % recyclable",
+      "4": "Sans soudure jusqu'à 5,7 m",
+      "5": "Sans poussière · Sans peinture",
+      "6": "Fait main en Belgique"
+    },
+    "stats": {
+      "0": "Jour de pose",
+      "1": "Ans de durée de vie",
+      "2": "Portée sans soudure",
+      "3": "Recyclable (PVC)"
+    },
+    "why": {
+      "eyebrow": "Pourquoi le plafond tendu",
+      "title": "Un meilleur plafond, par conception.",
+      "intro": "Une seule membrane, tendue à froid d'un mur à l'autre. Pas de démolition, pas de temps de séchage, aucun compromis — conçue pour durer plus longtemps que le plâtre traditionnel.",
+      "cells": {
+        "0": {
+          "title": "Pose rapide & propre",
+          "body": "Jusqu'à 50 m² par jour et par équipe de deux. Rien à casser, aucun gravat — votre pièce reste utilisable."
+        },
+        "1": {
+          "title": "25 ans de durée de vie",
+          "body": "Sans entretien et lavable. Ne se fissure pas, ne s'écaille pas, ne jaunit pas — et ne se repeint jamais."
+        },
+        "2": {
+          "title": "Acoustique & lumière",
+          "body": "Intégrez acoustique, lignes LED, rétroéclairage et impressions dans une seule surface sans soudure."
+        }
+      },
+      "seeIt": "Voyez-le pour votre projet",
+      "bookSurvey": "Réserver une visite technique"
+    },
+    "solutions": {
+      "eyebrow": "Nos solutions",
+      "title1": "Deux systèmes.",
+      "title2": "Une seule finition.",
+      "intro": "Polyester ou PVC — tous deux tendus à la main pour le même résultat mat et impeccable. Choisissez selon la portée, la démontabilité et la durabilité.",
+      "cards": {
+        "0": {
+          "mount": "Pose à froid",
+          "span": "Sans soudure jusqu'à 5,15 m",
+          "name": "Polyester",
+          "blurb": "Une membrane esthétique et fonctionnelle pour le neuf comme la rénovation — posée à froid, au rendu très mat.",
+          "features": {
+            "0": "Sans soudure jusqu'à 5,15 m",
+            "1": "Pose à froid",
+            "2": "Rendu très mat",
+            "3": "Acoustique & lavable"
+          },
+          "cta": "Découvrir le polyester",
+          "alt": "Plafond tendu polyester mat"
+        },
+        "1": {
+          "mount": "Pose à chaud",
+          "span": "Sans soudure jusqu'à 6,4 m",
+          "name": "Film PVC",
+          "blurb": "Un film chauffé puis tendu à la pose — entièrement recyclable et facilement démontable. Remplacez votre plafond en une journée.",
+          "features": {
+            "0": "100 % recyclable",
+            "1": "Sans soudure jusqu'à 6,4 m",
+            "2": "Facilement démontable",
+            "3": "Acoustique & lavable"
+          },
+          "cta": "Découvrir le PVC",
+          "alt": "Plafond tendu film PVC laqué"
+        }
+      }
+    },
+    "acoustics": {
+      "eyebrow": "Confort acoustique",
+      "title1": "L'acoustique,",
+      "title2": "intégrée.",
+      "intro": "Plus qu'une belle finition. Une membrane micro-perforée doublée d'absorbeurs haute densité dompte la réverbération et le bruit — et transforme les pièces dures et résonnantes en espaces calmes et confortables.",
+      "tag": "Absorption jusqu'à la classe A",
+      "cells": {
+        "0": {
+          "title": "Panneaux acoustiques",
+          "body": "Une absorption haute densité intégrée derrière la membrane sans soudure."
+        },
+        "1": {
+          "title": "Îlots de plafond",
+          "body": "Des baffles suspendus qui apaisent les grands espaces ouverts."
+        },
+        "2": {
+          "title": "Panneaux muraux",
+          "body": "Des absorbeurs décoratifs qui servent aussi de finition murale."
+        },
+        "3": {
+          "title": "Audio invisible",
+          "body": "Des haut-parleurs entièrement cachés derrière la toile tendue."
+        }
+      },
+      "cta": "Découvrir les solutions acoustiques"
+    },
+    "apps": {
+      "eyebrow": "Applications",
+      "title1": "Là où le plafond tendu",
+      "title2": "excelle.",
+      "intro": "D'un simple salon à un hôtel entier — le même système sans soudure, adapté aux exigences de chaque espace.",
+      "areas": {
+        "0": {
+          "title": "Salons",
+          "blurb": "Un plafond mat et impeccable, comme un plâtre neuf — sans les fissures."
+        },
+        "1": {
+          "title": "Salles de bain",
+          "blurb": "Résistant à l'humidité et lavable."
+        },
+        "2": {
+          "title": "Bureaux",
+          "blurb": "Le confort acoustique au travail."
+        },
+        "3": {
+          "title": "Home cinémas",
+          "blurb": "Ciels étoilés, haut-parleurs cachés et acoustique classe A en une seule surface."
+        },
+        "4": {
+          "title": "Rétroéclairé & étoilé",
+          "blurb": "Une lumière uniforme et variable."
+        },
+        "5": {
+          "title": "Commerces & hôtels",
+          "blurb": "Des plafonds imprimés à votre image."
+        }
+      },
+      "badge": "Le plus populaire",
+      "view": "Voir les projets"
+    },
+    "gallery": {
+      "eyebrow": "Réalisations choisies",
+      "title1": "De vraies pièces,",
+      "title2": "de vrais projets.",
+      "cta": "Voir tout le portfolio"
+    },
+    "installer": {
+      "eyebrow": "Pour les professionnels",
+      "title": "Devenez poseur STRETCH.",
+      "intro": "STRETCH est avant tout B2B. Ajoutez les plafonds tendus à votre offre, formez-vous à notre siège, commandez sur mesure depuis la Belgique et recevez des demandes locales qualifiées.",
+      "steps": {
+        "0": {
+          "title": "Formé en quelques jours",
+          "body": "Certification pratique à notre siège — confection, profilés, pose à froid & à chaud, lumière et acoustique."
+        },
+        "1": {
+          "title": "Commandez en B2B",
+          "body": "Toiles et profilés sur mesure à prix professionnels, via un portail partenaire dédié."
+        },
+        "2": {
+          "title": "Recevez des demandes",
+          "body": "Nous transmettons les demandes de clients locaux aux partenaires certifiés de leur région — de vrais projets."
+        }
+      },
+      "ctaPartner": "Devenir partenaire",
+      "ctaTraining": "Découvrir la formation de poseur"
+    },
+    "reviews": {
+      "eyebrow": "Avis",
+      "title": "Noté {score}",
+      "ratedOn": "Noté sur {source}"
+    }
+  },
+  "ctaBand": {
+    "kicker": "Prêts quand vous l'êtes",
+    "title": "Prêt pour un nouveau plafond",
+    "sub": "Parlez-nous de votre projet et nous revenons vers vous avec un prix sur mesure — gratuit et sans engagement, sous deux jours ouvrés.",
+    "quote": "Demander un devis gratuit",
+    "dealer": "Trouver votre revendeur le plus proche",
+    "preferTalk": "Vous préférez en parler ?"
+  },
+  "productPage": {
+    "home": "Accueil",
+    "solutions": "Solutions",
+    "quote": "Demander un devis gratuit",
+    "viewSpecs": "Voir les spécifications",
+    "systemTag": "Système {name}",
+    "inDetail": "En détail",
+    "specsEyebrow": "Spécifications techniques",
+    "specsTitle": "La fiche technique",
+    "downloadSpec": "Télécharger la fiche technique",
+    "coloursEyebrow": "Couleurs & finitions",
+    "coloursTitle": "Toutes les couleurs que vous voulez",
+    "coloursNote": "Teintes standard ou n'importe quel RAL sur mesure — assorti à votre intérieur. Les partenaires professionnels peuvent commander des échantillons physiques.",
+    "requestSamples": "Demander des échantillons",
+    "appsEyebrow": "Où on l'utilise",
+    "relatedEyebrow": "Solutions liées",
+    "relatedTitle": "Découvrez la gamme",
+    "allSolutions": "Toutes les solutions",
+    "ctaKicker": "Gratuit & sans engagement",
+    "ctaTitle": "Envie de ce plafond",
+    "dealer": "Trouver votre revendeur le plus proche"
+  },
+  "productsPage": {
+    "eyebrow": "Nos solutions",
+    "title1": "Deux systèmes.",
+    "title2accent": "D'infinies",
+    "title2rest": "finitions.",
+    "lead": "Chaque plafond STRETCH est une membrane sans soudure tendue à la main — puis adaptée à l'acoustique, la lumière, l'impression ou le préfabriqué. Choisissez selon la portée, la méthode de pose et la finition.",
+    "comingSoon": "Bientôt disponible",
+    "preview": "Aperçu",
+    "explore": "Découvrir {name}",
+    "notSure": "Vous hésitez ?",
+    "notSureBody": "Parlez-nous de votre pièce et nous vous recommanderons le bon système — gratuitement et sans engagement.",
+    "quote": "Demander un devis gratuit"
   }
 }

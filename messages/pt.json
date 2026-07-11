@@ -263,5 +263,254 @@
       "eyebrow": "Designer de tetos",
       "hint": "Desenhe o teto a partir de paredes e diagonais, posicione emendas e recortes, verifique o preço e faça a encomenda. Use Save para guardar uma medição como ficheiro."
     }
+  },
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "kicker": "Tetos Stretch® — instalados num dia",
+          "line1": "Um teto novo",
+          "line2": "num dia.",
+          "subhead": "Tetos tensados sem juntas, montados a frio num único dia — sem pó, sem confusão.",
+          "tabName": "Tetos",
+          "tabDesc": "Poliéster e PVC"
+        },
+        "1": {
+          "kicker": "Conforto acústico — até classe A",
+          "line1": "Acústica",
+          "line2": "integrada.",
+          "subhead": "Leve qualquer divisão a um nível de ruído confortável, com absorção até classe A.",
+          "tabName": "Acústica",
+          "tabDesc": "Painéis e áudio"
+        },
+        "2": {
+          "kicker": "Paredes tensadas — revestimento sem juntas",
+          "line1": "Paredes que",
+          "line2": "absorvem o som.",
+          "subhead": "Revestimento de parede tensado sem juntas que absorve o som e esconde qualquer imperfeição.",
+          "tabName": "Paredes",
+          "tabDesc": "Revestimento e têxtil"
+        },
+        "3": {
+          "kicker": "Luz e impressão — designs retroiluminados",
+          "line1": "Tetos que",
+          "line2": "se iluminam.",
+          "subhead": "Tetos retroiluminados, impressos e de céu estrelado — o seu design, iluminado uniformemente.",
+          "tabName": "Luz e impressão",
+          "tabDesc": "Retroiluminado e impresso"
+        }
+      },
+      "quote": "Peça um orçamento gratuito",
+      "explore": "Descubra as soluções",
+      "rated": "Avaliado no Google",
+      "tabsAria": "Encontre a sua solução"
+    },
+    "ticker": {
+      "0": "Instalado num dia",
+      "1": "Melhoria acústica",
+      "2": "25 anos de vida útil",
+      "3": "100 % reciclável",
+      "4": "Sem juntas até 5,7 m",
+      "5": "Sem pó · Sem pintura",
+      "6": "Feito à mão na Bélgica"
+    },
+    "stats": {
+      "0": "Dia de instalação",
+      "1": "Anos de vida útil",
+      "2": "Vão sem juntas",
+      "3": "Reciclável (PVC)"
+    },
+    "why": {
+      "eyebrow": "Porquê um teto tensado",
+      "title": "Um teto melhor, por conceção.",
+      "intro": "Uma única membrana, tensada a frio de parede a parede. Sem demolições, sem tempos de secagem, sem compromissos — concebida para durar mais do que o gesso convencional.",
+      "cells": {
+        "0": {
+          "title": "Montagem rápida e limpa",
+          "body": "Até 50 m² por dia, por equipa de duas pessoas. Sem demolição nem entulho — a divisão continua a ser usada."
+        },
+        "1": {
+          "title": "25 anos de vida útil",
+          "body": "Sem manutenção e lavável. Não fissura, não descasca, não amarelece — e nunca precisa de ser repintado."
+        },
+        "2": {
+          "title": "Acústica e luz",
+          "body": "Integre acústica, linhas LED, retroiluminação e designs impressos numa única superfície sem juntas."
+        }
+      },
+      "seeIt": "Veja-o no seu projeto",
+      "bookSurvey": "Marcar uma visita técnica"
+    },
+    "solutions": {
+      "eyebrow": "As nossas soluções",
+      "title1": "Dois sistemas.",
+      "title2": "Um só acabamento.",
+      "intro": "Poliéster ou PVC — ambos tensados à mão para o mesmo resultado mate e impecável. Escolha pelo vão, desmontabilidade e sustentabilidade.",
+      "cards": {
+        "0": {
+          "mount": "Montagem a frio",
+          "span": "Sem juntas até 5,15 m",
+          "name": "Poliéster",
+          "blurb": "Uma membrana estética e funcional para construção nova e renovação — instalada a frio, com um aspeto muito mate.",
+          "features": {
+            "0": "Sem juntas até 5,15 m",
+            "1": "Instalação a frio",
+            "2": "Aspeto muito mate",
+            "3": "Acústico e lavável"
+          },
+          "cta": "Descobrir o poliéster",
+          "alt": "Teto tensado de poliéster mate"
+        },
+        "1": {
+          "mount": "Montagem a quente",
+          "span": "Sem juntas até 6,4 m",
+          "name": "Película PVC",
+          "blurb": "Uma película aquecida e tensada na instalação — totalmente reciclável e fácil de remover. Substitua o seu teto num único dia.",
+          "features": {
+            "0": "100 % reciclável",
+            "1": "Sem juntas até 6,4 m",
+            "2": "Fácil de remover",
+            "3": "Acústico e lavável"
+          },
+          "cta": "Descobrir o PVC",
+          "alt": "Teto tensado de película PVC lacada"
+        }
+      }
+    },
+    "acoustics": {
+      "eyebrow": "Conforto acústico",
+      "title1": "Acústica",
+      "title2": "integrada.",
+      "intro": "Mais do que um belo acabamento. Uma membrana microperfurada com absorsores de alta densidade por trás doma a reverberação e o ruído — transformando divisões duras e com eco em espaços calmos e confortáveis.",
+      "tag": "Absorção até classe A",
+      "cells": {
+        "0": {
+          "title": "Painéis acústicos",
+          "body": "Absorção de alta densidade integrada atrás da membrana sem juntas."
+        },
+        "1": {
+          "title": "Ilhas de teto",
+          "body": "Bafles suspensos que acalmam grandes espaços abertos."
+        },
+        "2": {
+          "title": "Painéis de parede",
+          "body": "Absorsores decorativos que servem também de acabamento de parede."
+        },
+        "3": {
+          "title": "Áudio invisível",
+          "body": "Altifalantes totalmente escondidos atrás da película tensada."
+        }
+      },
+      "cta": "Descobrir as soluções acústicas"
+    },
+    "apps": {
+      "eyebrow": "Aplicações",
+      "title1": "Onde o teto tensado",
+      "title2": "resulta melhor.",
+      "intro": "De uma sala de estar a um hotel inteiro — o mesmo sistema sem juntas, afinado às exigências de cada espaço.",
+      "areas": {
+        "0": {
+          "title": "Salas de estar",
+          "blurb": "Um teto mate impecável que parece estuque acabado de aplicar — sem as fissuras."
+        },
+        "1": {
+          "title": "Casas de banho",
+          "blurb": "Resistente à humidade e lavável."
+        },
+        "2": {
+          "title": "Escritórios",
+          "blurb": "Conforto acústico no trabalho."
+        },
+        "3": {
+          "title": "Cinemas em casa",
+          "blurb": "Céus estrelados, altifalantes escondidos e acústica classe A numa única superfície."
+        },
+        "4": {
+          "title": "Retroiluminado e estrelado",
+          "blurb": "Luz uniforme e regulável."
+        },
+        "5": {
+          "title": "Retalho e hotéis",
+          "blurb": "Tetos impressos com a sua marca."
+        }
+      },
+      "badge": "Mais popular",
+      "view": "Ver projetos"
+    },
+    "gallery": {
+      "eyebrow": "Trabalhos selecionados",
+      "title1": "Espaços reais,",
+      "title2": "projetos reais.",
+      "cta": "Ver todo o portefólio"
+    },
+    "installer": {
+      "eyebrow": "Para profissionais",
+      "title": "Torne-se instalador STRETCH.",
+      "intro": "A STRETCH é orientada para o B2B. Acrescente tetos tensados à sua oferta, receba formação na nossa sede, encomende à medida a partir da Bélgica e receba pedidos locais referenciados.",
+      "steps": {
+        "0": {
+          "title": "Formação em dias",
+          "body": "Certificação prática na nossa sede — confeção, perfis, montagem a frio e a quente, luz e acústica."
+        },
+        "1": {
+          "title": "Encomende em B2B",
+          "body": "Membranas e perfis à medida a preços profissionais, através de um portal exclusivo para parceiros."
+        },
+        "2": {
+          "title": "Receba pedidos",
+          "body": "Encaminhamos os pedidos de clientes locais para os parceiros certificados da sua região — projetos reais."
+        }
+      },
+      "ctaPartner": "Tornar-se parceiro",
+      "ctaTraining": "Descobrir a formação de instalador"
+    },
+    "reviews": {
+      "eyebrow": "Avaliações",
+      "title": "Avaliado com {score}",
+      "ratedOn": "Avaliado no {source}"
+    }
+  },
+  "ctaBand": {
+    "kicker": "Prontos quando estiver",
+    "title": "Pronto para um teto novo",
+    "sub": "Fale-nos do seu projeto e voltaremos ao contacto com um preço à medida — grátis e sem compromisso, em dois dias úteis.",
+    "quote": "Peça um orçamento gratuito",
+    "dealer": "Encontre o revendedor mais próximo",
+    "preferTalk": "Prefere falar?"
+  },
+  "productPage": {
+    "home": "Início",
+    "solutions": "Soluções",
+    "quote": "Peça um orçamento gratuito",
+    "viewSpecs": "Ver especificações",
+    "systemTag": "Sistema {name}",
+    "inDetail": "Em detalhe",
+    "specsEyebrow": "Especificações técnicas",
+    "specsTitle": "A ficha técnica",
+    "downloadSpec": "Transferir a ficha técnica",
+    "coloursEyebrow": "Cores e acabamentos",
+    "coloursTitle": "Qualquer cor que queira",
+    "coloursNote": "Tons standard ou qualquer RAL à medida — a condizer com o seu interior. Os parceiros profissionais podem encomendar amostras físicas.",
+    "requestSamples": "Pedir amostras",
+    "appsEyebrow": "Onde se usa",
+    "relatedEyebrow": "Soluções relacionadas",
+    "relatedTitle": "Explore a gama",
+    "allSolutions": "Todas as soluções",
+    "ctaKicker": "Grátis e sem compromisso",
+    "ctaTitle": "Quer este teto",
+    "dealer": "Encontre o revendedor mais próximo"
+  },
+  "productsPage": {
+    "eyebrow": "As nossas soluções",
+    "title1": "Dois sistemas.",
+    "title2accent": "Infinitos",
+    "title2rest": "acabamentos.",
+    "lead": "Cada teto STRETCH é uma membrana sem juntas tensada à mão — depois afinada para acústica, luz, impressão ou pré-fabrico. Escolha pelo vão, método de montagem e acabamento.",
+    "comingSoon": "Brevemente",
+    "preview": "Pré-visualização",
+    "explore": "Descobrir {name}",
+    "notSure": "Não sabe qual escolher?",
+    "notSureBody": "Fale-nos da sua divisão e recomendamos o sistema certo — grátis e sem compromisso.",
+    "quote": "Peça um orçamento gratuito"
   }
 }

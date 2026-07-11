@@ -263,5 +263,254 @@
       "eyebrow": "Loftahönnuður",
       "hint": "Teiknaðu loftið út frá veggja- og hornalínumálum, staðsettu samskeyti og úrtök, athugaðu verðið og sendu pöntunina. Notaðu Save til að vista mælingu sem skrá."
     }
+  },
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "kicker": "Stretch®-loft — uppsett á einum degi",
+          "line1": "Nýtt loft",
+          "line2": "á einum degi.",
+          "subhead": "Samskeytalaus strekkiloft, kaldsett á einum degi — ekkert ryk, ekkert vesen.",
+          "tabName": "Loft",
+          "tabDesc": "Pólýester & PVC"
+        },
+        "1": {
+          "kicker": "Hljóðvist — allt að flokki A",
+          "line1": "Hljóðvist,",
+          "line2": "innbyggð.",
+          "subhead": "Færðu hvaða rými sem er niður á þægilegt hljóðstig — með ísogi allt að flokki A.",
+          "tabName": "Hljóðvist",
+          "tabDesc": "Plötur & hljóð"
+        },
+        "2": {
+          "kicker": "Strekkiveggir — samskeytalaus klæðning",
+          "line1": "Veggir sem",
+          "line2": "gleypa hljóð.",
+          "subhead": "Samskeytalaus strekkt veggklæðning sem gleypir hljóð og felur allar misfellur.",
+          "tabName": "Veggir",
+          "tabDesc": "Klæðning & textíll"
+        },
+        "3": {
+          "kicker": "Ljós & prent — baklýst hönnun",
+          "line1": "Loft sem",
+          "line2": "lýsast upp.",
+          "subhead": "Baklýst, prentuð og stjörnuhiminsloft — þín hönnun, jafnt upplýst.",
+          "tabName": "Ljós & prent",
+          "tabDesc": "Baklýst & prentað"
+        }
+      },
+      "quote": "Fáðu ókeypis tilboð",
+      "explore": "Skoðaðu lausnirnar",
+      "rated": "Einkunn á Google",
+      "tabsAria": "Finndu þína lausn"
+    },
+    "ticker": {
+      "0": "Uppsett á einum degi",
+      "1": "Bætt hljóðvist",
+      "2": "25 ára ending",
+      "3": "100% endurvinnanlegt",
+      "4": "Samskeytalaust að 5,7 m",
+      "5": "Ekkert ryk · Engin málning",
+      "6": "Handgert í Belgíu"
+    },
+    "stats": {
+      "0": "Dagur í uppsetningu",
+      "1": "Ára ending",
+      "2": "Samskeytalaust haf",
+      "3": "Endurvinnanlegt (PVC)"
+    },
+    "why": {
+      "eyebrow": "Af hverju strekkiloft",
+      "title": "Betra loft — af ásettu ráði.",
+      "intro": "Ein himna, strekkt köld yfir allt rýmið. Ekkert niðurrif, enginn þurrktími, engar málamiðlanir — hönnuð til að endast lengur en hefðbundnar gifsplötur.",
+      "cells": {
+        "0": {
+          "title": "Hröð & hrein uppsetning",
+          "body": "Allt að 50 m² á dag á hvert tveggja manna teymi. Ekkert rifið niður, ekkert rusl — rýmið nýtist áfram."
+        },
+        "1": {
+          "title": "25 ára ending",
+          "body": "Viðhaldsfrítt og þvottekta. Það sprungur ekki, flagnar ekki og gulnar ekki — og þarf aldrei að mála."
+        },
+        "2": {
+          "title": "Hljóðvist & ljós",
+          "body": "Sameinaðu hljóðvist, LED-línur, baklýsingu og prentaða hönnun í einum samskeytalausum fleti."
+        }
+      },
+      "seeIt": "Sjáðu það í þínu verkefni",
+      "bookSurvey": "Bókaðu mælingu"
+    },
+    "solutions": {
+      "eyebrow": "Lausnirnar okkar",
+      "title1": "Tvö kerfi.",
+      "title2": "Ein áferð.",
+      "intro": "Pólýester eða PVC — bæði strekkt í höndunum fyrir sömu gallalausu, möttu áferðina. Veldu eftir hafi, færanleika og sjálfbærni.",
+      "cards": {
+        "0": {
+          "mount": "Köld uppsetning",
+          "span": "Samskeytalaust að 5,15 m",
+          "name": "Pólýester",
+          "blurb": "Falleg og hagnýt himna fyrir nýbyggingar jafnt sem endurbætur — kaldsett, með mjög mattri áferð.",
+          "features": {
+            "0": "Samskeytalaust að 5,15 m",
+            "1": "Köld uppsetning",
+            "2": "Mjög mött áferð",
+            "3": "Hljóðvist & þvottekta"
+          },
+          "cta": "Skoðaðu pólýester",
+          "alt": "Matt pólýester strekkiloft"
+        },
+        "1": {
+          "mount": "Heit uppsetning",
+          "span": "Samskeytalaust að 6,4 m",
+          "name": "PVC-filma",
+          "blurb": "Hituð filma sem er strekkt við uppsetningu — fullkomlega endurvinnanleg og auðveld í niðurtekt. Skiptu um loft á einum degi.",
+          "features": {
+            "0": "100% endurvinnanlegt",
+            "1": "Samskeytalaust að 6,4 m",
+            "2": "Auðvelt að fjarlægja",
+            "3": "Hljóðvist & þvottekta"
+          },
+          "cta": "Skoðaðu PVC",
+          "alt": "Glansandi PVC-filmu strekkiloft"
+        }
+      }
+    },
+    "acoustics": {
+      "eyebrow": "Hljóðvist",
+      "title1": "Hljóðvist,",
+      "title2": "innbyggð.",
+      "intro": "Meira en falleg áferð. Örgötuð himna með þéttum ísogsplötum að baki temur bergmál og hávaða — og breytir hörðum, bergmálandi rýmum í róleg og þægileg rými.",
+      "tag": "Ísog allt að flokki A",
+      "cells": {
+        "0": {
+          "title": "Hljóðvistarplötur",
+          "body": "Þétt hljóðísog falið bak við samskeytalausu himnuna."
+        },
+        "1": {
+          "title": "Lofteyjar",
+          "body": "Hangandi hljóðdeyfar sem róa stór, opin rými."
+        },
+        "2": {
+          "title": "Veggplötur",
+          "body": "Skrautlegir hljóðdeyfar sem eru um leið veggáferð."
+        },
+        "3": {
+          "title": "Ósýnilegt hljóð",
+          "body": "Hátalarar alveg faldir bak við strekktu filmuna."
+        }
+      },
+      "cta": "Skoðaðu hljóðvistarlausnirnar"
+    },
+    "apps": {
+      "eyebrow": "Notkunarsvið",
+      "title1": "Þar sem strekkiloft",
+      "title2": "virka best.",
+      "intro": "Frá einni stofu upp í heilt hótel — sama samskeytalausa kerfið, aðlagað kröfum hvers rýmis.",
+      "areas": {
+        "0": {
+          "title": "Stofur",
+          "blurb": "Gallalaust, matt loft sem lítur út eins og nýpússað — bara án sprungnanna."
+        },
+        "1": {
+          "title": "Baðherbergi",
+          "blurb": "Rakaþolið og þvottekta."
+        },
+        "2": {
+          "title": "Skrifstofur",
+          "blurb": "Hljóðvist í vinnunni."
+        },
+        "3": {
+          "title": "Heimabíó",
+          "blurb": "Stjörnuhiminn, faldir hátalarar og hljóðvist í flokki A í einum fleti."
+        },
+        "4": {
+          "title": "Baklýst & stjörnur",
+          "blurb": "Jöfn, deyfanleg lýsing."
+        },
+        "5": {
+          "title": "Verslanir & hótel",
+          "blurb": "Prentuð loft með þínu vörumerki."
+        }
+      },
+      "badge": "Vinsælast",
+      "view": "Skoða verkefni"
+    },
+    "gallery": {
+      "eyebrow": "Valin verkefni",
+      "title1": "Alvöru rými,",
+      "title2": "alvöru verkefni.",
+      "cta": "Skoða allt safnið"
+    },
+    "installer": {
+      "eyebrow": "Fyrir fagfólk",
+      "title": "Gerstu STRETCH-uppsetjari.",
+      "intro": "STRETCH er B2B-fyrirtæki. Bættu strekkiloftum við þjónustuna þína, fáðu þjálfun í höfuðstöðvum okkar, pantaðu sérsniðið frá Belgíu og fáðu áframsendar staðbundnar fyrirspurnir.",
+      "steps": {
+        "0": {
+          "title": "Þjálfun á nokkrum dögum",
+          "body": "Verkleg vottun í höfuðstöðvum okkar — saumun, prófílar, köld & heit uppsetning, ljós og hljóðvist."
+        },
+        "1": {
+          "title": "Pantaðu B2B",
+          "body": "Sérsniðnar himnur og prófílar á heildsöluverði, í gegnum sérstaka samstarfsgátt."
+        },
+        "2": {
+          "title": "Fáðu fyrirspurnir",
+          "body": "Við sendum staðbundnar fyrirspurnir viðskiptavina áfram til vottaðra samstarfsaðila á þeirra svæði — alvöru verkefni."
+        }
+      },
+      "ctaPartner": "Gerstu samstarfsaðili",
+      "ctaTraining": "Skoðaðu uppsetjaranámið"
+    },
+    "reviews": {
+      "eyebrow": "Umsagnir",
+      "title": "Einkunn {score}",
+      "ratedOn": "Einkunn á {source}"
+    }
+  },
+  "ctaBand": {
+    "kicker": "Tilbúin þegar þú ert",
+    "title": "Til í nýtt loft",
+    "sub": "Segðu okkur frá verkefninu þínu og við svörum með sérsniðnu verði — ókeypis og án skuldbindinga, innan tveggja virkra daga.",
+    "quote": "Fáðu ókeypis tilboð",
+    "dealer": "Finndu næsta söluaðila",
+    "preferTalk": "Viltu frekar tala við okkur?"
+  },
+  "productPage": {
+    "home": "Heim",
+    "solutions": "Lausnir",
+    "quote": "Fáðu ókeypis tilboð",
+    "viewSpecs": "Skoða tæknilýsingu",
+    "systemTag": "{name}-kerfi",
+    "inDetail": "Í smáatriðum",
+    "specsEyebrow": "Tæknilýsing",
+    "specsTitle": "Tæknibladið",
+    "downloadSpec": "Sækja tæknibladið",
+    "coloursEyebrow": "Litir & áferðir",
+    "coloursTitle": "Hvaða litur sem þú vilt",
+    "coloursNote": "Staðlaðir litir eða hvaða RAL-litur sem er — í stíl við innréttinguna þína. Samstarfsaðilar geta pantað áþreifanleg litasýni.",
+    "requestSamples": "Panta sýnishorn",
+    "appsEyebrow": "Hvar það er notað",
+    "relatedEyebrow": "Tengdar lausnir",
+    "relatedTitle": "Skoðaðu úrvalið",
+    "allSolutions": "Allar lausnir",
+    "ctaKicker": "Ókeypis & án skuldbindinga",
+    "ctaTitle": "Viltu þetta loft",
+    "dealer": "Finndu næsta söluaðila"
+  },
+  "productsPage": {
+    "eyebrow": "Lausnirnar okkar",
+    "title1": "Tvö kerfi.",
+    "title2accent": "Endalausar",
+    "title2rest": "áferðir.",
+    "lead": "Hvert STRETCH-loft er samskeytalaus himna, strekkt í höndunum — svo stillt fyrir hljóðvist, ljós, prent eða forsmíði. Veldu eftir hafi, uppsetningaraðferð og áferð.",
+    "comingSoon": "Væntanlegt",
+    "preview": "Forskoðun",
+    "explore": "Skoðaðu {name}",
+    "notSure": "Ekki viss hvort hentar?",
+    "notSureBody": "Segðu okkur frá rýminu þínu og við mælum með rétta kerfinu — ókeypis og án skuldbindinga.",
+    "quote": "Fáðu ókeypis tilboð"
   }
 }

@@ -263,5 +263,254 @@
       "eyebrow": "Decken-Designer",
       "hint": "Zeichnen Sie die Decke aus Wand- und Diagonalmaßen, platzieren Sie Nähte und Aussparungen, prüfen Sie den Preis und bestellen Sie. Mit Save speichern Sie ein Aufmaß als Datei."
     }
+  },
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "kicker": "Stretch®-Decken — montiert an einem Tag",
+          "line1": "Eine neue Decke",
+          "line2": "an einem Tag.",
+          "subhead": "Fugenlose, kalt montierte Spanndecken — an einem einzigen Tag installiert, ohne Staub und ohne Chaos.",
+          "tabName": "Decken",
+          "tabDesc": "Polyester & PVC"
+        },
+        "1": {
+          "kicker": "Akustikkomfort — bis Klasse A",
+          "line1": "Akustik,",
+          "line2": "eingebaut.",
+          "subhead": "Bringen Sie jeden Raum auf ein angenehmes Geräuschniveau — mit Absorption bis Klasse A.",
+          "tabName": "Akustik",
+          "tabDesc": "Paneele & Audio"
+        },
+        "2": {
+          "kicker": "Spannwände — fugenlose Verkleidung",
+          "line1": "Wände, die",
+          "line2": "Schall schlucken.",
+          "subhead": "Fugenlose gespannte Wandverkleidung, die Schall absorbiert und jede Unebenheit verbirgt.",
+          "tabName": "Wände",
+          "tabDesc": "Verkleidung & Textil"
+        },
+        "3": {
+          "kicker": "Licht & Druck — hinterleuchtete Designs",
+          "line1": "Decken, die",
+          "line2": "leuchten.",
+          "subhead": "Hinterleuchtete, bedruckte und Sternenhimmel-Decken — Ihr Design, gleichmäßig ausgeleuchtet.",
+          "tabName": "Licht & Druck",
+          "tabDesc": "Hinterleuchtet & bedruckt"
+        }
+      },
+      "quote": "Kostenloses Angebot anfordern",
+      "explore": "Lösungen entdecken",
+      "rated": "Bewertet auf Google",
+      "tabsAria": "Finden Sie Ihre Lösung"
+    },
+    "ticker": {
+      "0": "Montiert an einem Tag",
+      "1": "Bessere Akustik",
+      "2": "25 Jahre Lebensdauer",
+      "3": "100 % recycelbar",
+      "4": "Fugenlos bis 5,7 m",
+      "5": "Kein Staub · Keine Farbe",
+      "6": "Handgemacht in Belgien"
+    },
+    "stats": {
+      "0": "Tag Montage",
+      "1": "Jahre Lebensdauer",
+      "2": "Fugenlose Spannweite",
+      "3": "Recycelbar (PVC)"
+    },
+    "why": {
+      "eyebrow": "Warum Spanndecken",
+      "title": "Eine bessere Decke, von Grund auf.",
+      "intro": "Eine einzige Membran, kalt über den Raum gespannt. Kein Abriss, keine Trockenzeit, keine Kompromisse — gebaut, um klassische Gipskartondecken zu überdauern.",
+      "cells": {
+        "0": {
+          "title": "Schnelle & saubere Montage",
+          "body": "Bis zu 50 m² pro Tag und Zweierteam. Kein Rückbau, kein Schutt — Ihr Raum bleibt nutzbar."
+        },
+        "1": {
+          "title": "25 Jahre Lebensdauer",
+          "body": "Wartungsfrei und abwaschbar. Reißt nicht, blättert nicht ab, vergilbt nicht — und muss nie gestrichen werden."
+        },
+        "2": {
+          "title": "Akustik & Licht",
+          "body": "Integrieren Sie Akustik, LED-Linien, Hinterleuchtung und bedruckte Designs in eine fugenlose Fläche."
+        }
+      },
+      "seeIt": "Sehen Sie es für Ihr Projekt",
+      "bookSurvey": "Aufmaß-Termin buchen"
+    },
+    "solutions": {
+      "eyebrow": "Unsere Lösungen",
+      "title1": "Zwei Systeme.",
+      "title2": "Ein Finish.",
+      "intro": "Polyester oder PVC — beide von Hand gespannt, für dasselbe makellose, matte Ergebnis. Wählen Sie nach Spannweite, Demontierbarkeit und Nachhaltigkeit.",
+      "cards": {
+        "0": {
+          "mount": "Kaltmontage",
+          "span": "Fugenlos bis 5,15 m",
+          "name": "Polyester",
+          "blurb": "Eine ästhetische, funktionale Membran für Neubau und Sanierung — kalt montiert, mit sehr mattem Erscheinungsbild.",
+          "features": {
+            "0": "Fugenlos bis 5,15 m",
+            "1": "Kaltmontage",
+            "2": "Sehr matte Optik",
+            "3": "Akustisch & abwaschbar"
+          },
+          "cta": "Polyester entdecken",
+          "alt": "Matte Polyester-Spanndecke"
+        },
+        "1": {
+          "mount": "Warmmontage",
+          "span": "Fugenlos bis 6,4 m",
+          "name": "PVC-Folie",
+          "blurb": "Eine erwärmte Folie, die bei der Montage gespannt wird — voll recycelbar und leicht demontierbar. Erneuern Sie Ihre Decke an einem Tag.",
+          "features": {
+            "0": "100 % recycelbar",
+            "1": "Fugenlos bis 6,4 m",
+            "2": "Leicht demontierbar",
+            "3": "Akustisch & abwaschbar"
+          },
+          "cta": "PVC entdecken",
+          "alt": "Glänzende PVC-Folien-Spanndecke"
+        }
+      }
+    },
+    "acoustics": {
+      "eyebrow": "Akustikkomfort",
+      "title1": "Akustik,",
+      "title2": "eingebaut.",
+      "intro": "Mehr als ein schönes Finish. Eine mikroperforierte Membran mit hochverdichteten Absorbern dahinter zähmt Hall und Lärm — und macht aus harten, halligen Räumen ruhige, angenehme Orte.",
+      "tag": "Absorption bis Klasse A",
+      "cells": {
+        "0": {
+          "title": "Akustikpaneele",
+          "body": "Hochverdichtete Absorption, verborgen hinter der fugenlosen Membran."
+        },
+        "1": {
+          "title": "Deckensegel",
+          "body": "Frei hängende Absorber, die große, offene Räume beruhigen."
+        },
+        "2": {
+          "title": "Wandpaneele",
+          "body": "Dekorative Absorber, die zugleich als Wandfinish dienen."
+        },
+        "3": {
+          "title": "Unsichtbares Audio",
+          "body": "Lautsprecher, komplett hinter der gespannten Folie verborgen."
+        }
+      },
+      "cta": "Akustiklösungen entdecken"
+    },
+    "apps": {
+      "eyebrow": "Einsatzbereiche",
+      "title1": "Wo Spanndecken",
+      "title2": "am besten wirken.",
+      "intro": "Vom einzelnen Wohnzimmer bis zum ganzen Hotel — dasselbe fugenlose System, abgestimmt auf die Anforderungen jedes Raums.",
+      "areas": {
+        "0": {
+          "title": "Wohnzimmer",
+          "blurb": "Eine makellose, matte Decke wie frisch verputzt — nur ohne Risse."
+        },
+        "1": {
+          "title": "Badezimmer",
+          "blurb": "Feuchtigkeitsbeständig und abwaschbar."
+        },
+        "2": {
+          "title": "Büros",
+          "blurb": "Akustikkomfort am Arbeitsplatz."
+        },
+        "3": {
+          "title": "Heimkinos",
+          "blurb": "Sternenhimmel, verborgene Lautsprecher und Klasse-A-Akustik in einer Fläche."
+        },
+        "4": {
+          "title": "Hinterleuchtet & Sterne",
+          "blurb": "Gleichmäßiges, dimmbares Licht."
+        },
+        "5": {
+          "title": "Handel & Hotels",
+          "blurb": "Bedruckte Decken in Ihrem Branding."
+        }
+      },
+      "badge": "Am beliebtesten",
+      "view": "Projekte ansehen"
+    },
+    "gallery": {
+      "eyebrow": "Ausgewählte Arbeiten",
+      "title1": "Echte Räume,",
+      "title2": "echte Projekte.",
+      "cta": "Ganzes Portfolio ansehen"
+    },
+    "installer": {
+      "eyebrow": "Für den Fachhandel",
+      "title": "Werden Sie STRETCH-Monteur.",
+      "intro": "STRETCH ist B2B-geführt. Nehmen Sie Spanndecken in Ihr Angebot auf, lassen Sie sich in unserer Zentrale schulen, bestellen Sie maßgefertigt aus Belgien und erhalten Sie vermittelte lokale Anfragen.",
+      "steps": {
+        "0": {
+          "title": "In Tagen geschult",
+          "body": "Praxisnahe Zertifizierung in unserer Zentrale — Konfektion, Profile, Kalt- & Warmmontage, Licht und Akustik."
+        },
+        "1": {
+          "title": "B2B bestellen",
+          "body": "Maßgefertigte Membranen und Profile zu Handelspreisen, über ein eigenes Partnerportal."
+        },
+        "2": {
+          "title": "Anfragen erhalten",
+          "body": "Lokale Kundenanfragen leiten wir an zertifizierte Partner in ihrer Region weiter — echte Projekte."
+        }
+      },
+      "ctaPartner": "Partner werden",
+      "ctaTraining": "Monteur-Schulung entdecken"
+    },
+    "reviews": {
+      "eyebrow": "Bewertungen",
+      "title": "Bewertet mit {score}",
+      "ratedOn": "Bewertet auf {source}"
+    }
+  },
+  "ctaBand": {
+    "kicker": "Bereit, wenn Sie es sind",
+    "title": "Bereit für eine neue Decke",
+    "sub": "Erzählen Sie uns von Ihrem Projekt — wir melden uns innerhalb von zwei Werktagen mit einem maßgeschneiderten Preis. Kostenlos und unverbindlich.",
+    "quote": "Kostenloses Angebot anfordern",
+    "dealer": "Händler in Ihrer Nähe finden",
+    "preferTalk": "Lieber sprechen?"
+  },
+  "productPage": {
+    "home": "Startseite",
+    "solutions": "Lösungen",
+    "quote": "Kostenloses Angebot anfordern",
+    "viewSpecs": "Spezifikationen ansehen",
+    "systemTag": "{name}-System",
+    "inDetail": "Im Detail",
+    "specsEyebrow": "Technische Daten",
+    "specsTitle": "Das Datenblatt",
+    "downloadSpec": "Datenblatt herunterladen",
+    "coloursEyebrow": "Farben & Oberflächen",
+    "coloursTitle": "Jede Farbe, die Sie möchten",
+    "coloursNote": "Standardtöne oder jeder RAL-Farbton nach Wunsch — passend zu Ihrem Interieur. Handelspartner können physische Muster bestellen.",
+    "requestSamples": "Muster anfordern",
+    "appsEyebrow": "Einsatzbereiche",
+    "relatedEyebrow": "Verwandte Lösungen",
+    "relatedTitle": "Das Sortiment entdecken",
+    "allSolutions": "Alle Lösungen",
+    "ctaKicker": "Kostenlos & unverbindlich",
+    "ctaTitle": "Diese Decke gewünscht",
+    "dealer": "Händler in Ihrer Nähe finden"
+  },
+  "productsPage": {
+    "eyebrow": "Unsere Lösungen",
+    "title1": "Zwei Systeme.",
+    "title2accent": "Endlose",
+    "title2rest": "Oberflächen.",
+    "lead": "Jede STRETCH-Decke ist eine fugenlose, von Hand gespannte Membran — abgestimmt auf Akustik, Licht, Druck oder Vorfertigung. Wählen Sie nach Spannweite, Montageart und Finish.",
+    "comingSoon": "Demnächst",
+    "preview": "Vorschau",
+    "explore": "{name} entdecken",
+    "notSure": "Unsicher, welches System?",
+    "notSureBody": "Erzählen Sie uns von Ihrem Raum — wir empfehlen das passende System. Kostenlos und unverbindlich.",
+    "quote": "Kostenloses Angebot anfordern"
   }
 }

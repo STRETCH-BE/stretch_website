@@ -263,5 +263,254 @@
       "eyebrow": "Takdesigner",
       "hint": "Tegn taket fra vegg- og diagonalmål, plasser skjøter og utsparinger, sjekk prisen og legg inn bestillingen. Bruk Save for å lagre en måling som fil."
     }
+  },
+  "home": {
+    "hero": {
+      "slides": {
+        "0": {
+          "kicker": "Stretch®-himlinger — montert på én dag",
+          "line1": "En ny himling",
+          "line2": "på én dag.",
+          "subhead": "Skjøtefrie strekkhimlinger som kaldmonteres på én enkelt dag — uten støv og uten rot.",
+          "tabName": "Himlinger",
+          "tabDesc": "Polyester & PVC"
+        },
+        "1": {
+          "kicker": "Akustisk komfort — opptil klasse A",
+          "line1": "Akustikk,",
+          "line2": "innebygd.",
+          "subhead": "Senk støynivået i ethvert rom til et behagelig nivå — med absorpsjon opptil klasse A.",
+          "tabName": "Akustikk",
+          "tabDesc": "Paneler & lyd"
+        },
+        "2": {
+          "kicker": "Strekkvegger — skjøtefri kledning",
+          "line1": "Vegger som",
+          "line2": "absorberer lyd.",
+          "subhead": "Skjøtefri, oppspent veggkledning som absorberer lyd og skjuler enhver ujevnhet.",
+          "tabName": "Vegger",
+          "tabDesc": "Kledning & tekstil"
+        },
+        "3": {
+          "kicker": "Lys & print — baklyste design",
+          "line1": "Himlinger som",
+          "line2": "lyser opp.",
+          "subhead": "Baklyste, printede og stjernehimmel-himlinger — din design, jevnt belyst.",
+          "tabName": "Lys & print",
+          "tabDesc": "Baklyst & printet"
+        }
+      },
+      "quote": "Be om et gratis tilbud",
+      "explore": "Utforsk løsningene",
+      "rated": "Vurdert på Google",
+      "tabsAria": "Finn din løsning"
+    },
+    "ticker": {
+      "0": "Montert på én dag",
+      "1": "Bedre akustikk",
+      "2": "25 års levetid",
+      "3": "100 % resirkulerbart",
+      "4": "Skjøtefritt opptil 5,7 m",
+      "5": "Intet støv · Ingen maling",
+      "6": "Håndlaget i Belgia"
+    },
+    "stats": {
+      "0": "Dag til montering",
+      "1": "Års levetid",
+      "2": "Skjøtefritt spenn",
+      "3": "Resirkulerbart (PVC)"
+    },
+    "why": {
+      "eyebrow": "Hvorfor strekkhimling",
+      "title": "En bedre himling, med hensikt.",
+      "intro": "Én membran, kaldt oppspent over hele rommet. Ingen riving, ingen tørketid, ingen kompromisser — laget for å vare lenger enn vanlige gipshimlinger.",
+      "cells": {
+        "0": {
+          "title": "Rask & ren montering",
+          "body": "Opptil 50 m² per dag per tomannslag. Ingen riving, intet avfall — rommet kan brukes som før."
+        },
+        "1": {
+          "title": "25 års levetid",
+          "body": "Vedlikeholdsfritt og vaskbart. Det sprekker ikke, flasser ikke og gulner ikke — og trenger aldri maling."
+        },
+        "2": {
+          "title": "Akustikk & lys",
+          "body": "Integrer akustikk, LED-linjer, baklys og printede design i én skjøtefri flate."
+        }
+      },
+      "seeIt": "Se det i ditt prosjekt",
+      "bookSurvey": "Bestill befaring"
+    },
+    "solutions": {
+      "eyebrow": "Våre løsninger",
+      "title1": "To systemer.",
+      "title2": "Én finish.",
+      "intro": "Polyester eller PVC — begge håndoppspente for samme feilfrie, matte resultat. Velg etter spenn, demonterbarhet og bærekraft.",
+      "cards": {
+        "0": {
+          "mount": "Kaldmontering",
+          "span": "Skjøtefritt opptil 5,15 m",
+          "name": "Polyester",
+          "blurb": "En estetisk, funksjonell membran for både nybygg og rehabilitering — kaldmontert, med et svært matt uttrykk.",
+          "features": {
+            "0": "Skjøtefritt opptil 5,15 m",
+            "1": "Kaldmontering",
+            "2": "Svært matt uttrykk",
+            "3": "Akustisk & vaskbart"
+          },
+          "cta": "Utforsk polyester",
+          "alt": "Matt strekkhimling i polyester"
+        },
+        "1": {
+          "mount": "Varmmontering",
+          "span": "Skjøtefritt opptil 6,4 m",
+          "name": "PVC-folie",
+          "blurb": "En oppvarmet folie som spennes ved montering — fullt resirkulerbar og enkel å demontere. Bytt himling på én enkelt dag.",
+          "features": {
+            "0": "100 % resirkulerbart",
+            "1": "Skjøtefritt opptil 6,4 m",
+            "2": "Enkel å demontere",
+            "3": "Akustisk & vaskbart"
+          },
+          "cta": "Utforsk PVC",
+          "alt": "Blank strekkhimling i PVC-folie"
+        }
+      }
+    },
+    "acoustics": {
+      "eyebrow": "Akustisk komfort",
+      "title1": "Akustikk,",
+      "title2": "innebygd.",
+      "intro": "Mer enn en vakker finish. En mikroperforert membran med høytetthetsabsorbenter bak temmer etterklang og støy — og gjør harde rom med ekko til rolige, behagelige rom.",
+      "tag": "Absorpsjon opptil klasse A",
+      "cells": {
+        "0": {
+          "title": "Akustikkpaneler",
+          "body": "Høytetthetsabsorpsjon skjult bak den skjøtefrie membranen."
+        },
+        "1": {
+          "title": "Himlingsøyer",
+          "body": "Fritthengende baffler som roer store, åpne rom."
+        },
+        "2": {
+          "title": "Veggpaneler",
+          "body": "Dekorative absorbenter som samtidig er veggfinish."
+        },
+        "3": {
+          "title": "Usynlig lyd",
+          "body": "Høyttalere helt skjult bak den oppspente folien."
+        }
+      },
+      "cta": "Utforsk akustikkløsningene"
+    },
+    "apps": {
+      "eyebrow": "Bruksområder",
+      "title1": "Der strekkhimling",
+      "title2": "fungerer best.",
+      "intro": "Fra én enkelt stue til et helt hotell — samme skjøtefrie system, tilpasset kravene i hvert rom.",
+      "areas": {
+        "0": {
+          "title": "Stuer",
+          "blurb": "En feilfri, matt himling som ser nysparklet ut — bare uten sprekkene."
+        },
+        "1": {
+          "title": "Bad",
+          "blurb": "Fukttålig og vaskbart."
+        },
+        "2": {
+          "title": "Kontorer",
+          "blurb": "Akustisk komfort på jobb."
+        },
+        "3": {
+          "title": "Hjemmekinoer",
+          "blurb": "Stjernehimler, skjulte høyttalere og klasse A-akustikk i én flate."
+        },
+        "4": {
+          "title": "Baklyst & stjerner",
+          "blurb": "Jevnt, dimbart lys."
+        },
+        "5": {
+          "title": "Butikk & hotell",
+          "blurb": "Printede himlinger med din merkevare."
+        }
+      },
+      "badge": "Mest populær",
+      "view": "Se prosjekter"
+    },
+    "gallery": {
+      "eyebrow": "Utvalgte arbeider",
+      "title1": "Ekte rom,",
+      "title2": "ekte prosjekter.",
+      "cta": "Se hele porteføljen"
+    },
+    "installer": {
+      "eyebrow": "For fagfolk",
+      "title": "Bli STRETCH-montør.",
+      "intro": "STRETCH er B2B-drevet. Legg strekkhimlinger til tilbudet ditt, få opplæring ved hovedkontoret vårt, bestill målsydd fra Belgia og motta henviste lokale henvendelser.",
+      "steps": {
+        "0": {
+          "title": "Opplært på få dager",
+          "body": "Praktisk sertifisering ved hovedkontoret vårt — konfeksjon, profiler, kald- & varmmontering, lys og akustikk."
+        },
+        "1": {
+          "title": "Bestill B2B",
+          "body": "Målsydde membraner og profiler til forhandlerpriser, via en egen partnerportal."
+        },
+        "2": {
+          "title": "Motta henvendelser",
+          "body": "Vi videreformidler lokale kundehenvendelser til sertifiserte partnere i deres region — ekte prosjekter."
+        }
+      },
+      "ctaPartner": "Bli partner",
+      "ctaTraining": "Utforsk montøropplæringen"
+    },
+    "reviews": {
+      "eyebrow": "Vurderinger",
+      "title": "Vurdert til {score}",
+      "ratedOn": "Vurdert på {source}"
+    }
+  },
+  "ctaBand": {
+    "kicker": "Klare når du er",
+    "title": "Klar for en ny himling",
+    "sub": "Fortell oss om prosjektet ditt, så kommer vi tilbake med en skreddersydd pris — gratis og uforpliktende, innen to virkedager.",
+    "quote": "Be om et gratis tilbud",
+    "dealer": "Finn din nærmeste forhandler",
+    "preferTalk": "Vil du heller snakke med oss?"
+  },
+  "productPage": {
+    "home": "Hjem",
+    "solutions": "Løsninger",
+    "quote": "Be om et gratis tilbud",
+    "viewSpecs": "Se spesifikasjoner",
+    "systemTag": "{name}-system",
+    "inDetail": "I detalj",
+    "specsEyebrow": "Tekniske spesifikasjoner",
+    "specsTitle": "Databladet",
+    "downloadSpec": "Last ned datablad",
+    "coloursEyebrow": "Farger & finish",
+    "coloursTitle": "Akkurat den fargen du vil ha",
+    "coloursNote": "Standardtoner eller hvilken som helst RAL-farge — tilpasset interiøret ditt. Forhandlerpartnere kan bestille fysiske prøver.",
+    "requestSamples": "Be om prøver",
+    "appsEyebrow": "Der det brukes",
+    "relatedEyebrow": "Relaterte løsninger",
+    "relatedTitle": "Utforsk sortimentet",
+    "allSolutions": "Alle løsninger",
+    "ctaKicker": "Gratis & uforpliktende",
+    "ctaTitle": "Vil du ha denne himlingen",
+    "dealer": "Finn din nærmeste forhandler"
+  },
+  "productsPage": {
+    "eyebrow": "Våre løsninger",
+    "title1": "To systemer.",
+    "title2accent": "Uendelige",
+    "title2rest": "finisher.",
+    "lead": "Hver STRETCH-himling er en skjøtefri membran spent opp for hånd — deretter tilpasset akustikk, lys, print eller prefab. Velg etter spenn, monteringsmetode og finish.",
+    "comingSoon": "Kommer snart",
+    "preview": "Forhåndsvisning",
+    "explore": "Utforsk {name}",
+    "notSure": "Usikker på hvilket?",
+    "notSureBody": "Fortell oss om rommet ditt, så anbefaler vi riktig system — gratis og uforpliktende.",
+    "quote": "Be om et gratis tilbud"
   }
 }
