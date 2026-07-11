@@ -1,6 +1,8 @@
 // Rich colour chart: a responsive grid of swatches, each with name + RAL + HEX.
 // Used on product pages that set `colourChart` (e.g. polyester). Light tones get
 // a hairline border so they read on white. Server component (no interactivity).
+// Entries arrive pre-localized (SolutionPage translates names/finishes).
+import { useTranslations } from 'next-intl';
 import type { ColourEntry } from '@/lib/polyester-colours';
 
 // Perceived luminance — light swatches need a border to be visible on white.
@@ -23,6 +25,7 @@ export default function ColourChart({
   entries: ColourEntry[];
   note?: string;
 }) {
+  const t = useTranslations('productPage');
   const count = entries.filter((c) => !c.custom).length;
   return (
     <div>
@@ -36,7 +39,7 @@ export default function ColourChart({
         }}
       >
         <span style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>
-          {count} colours
+          {t('chartCount', { count })}
         </span>
         {note && <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>· {note}</span>}
       </div>
@@ -57,7 +60,7 @@ export default function ColourChart({
               />
               <div className="cc-name">{c.name}</div>
               {c.custom ? (
-                <div className="cc-meta">Any RAL on request</div>
+                <div className="cc-meta">{t('anyRal')}</div>
               ) : (
                 <div className="cc-meta">
                   {c.finish && <span className="cc-finish">{c.finish}</span>}
