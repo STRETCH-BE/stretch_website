@@ -139,12 +139,12 @@ export default function InlineLeadForm({
         {status === 'sending' ? tf('sending') : <>{cfg.submitLabel} <ArrowRight size={16} /></>}
       </button>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .field--on-dark { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.28); color: #fff; }
         .field--on-dark::placeholder { color: rgba(255,255,255,.55); }
         .field--on-dark option { color: #0a0a0a; }
         @media (max-width: 560px){ .ilf-grid { grid-template-columns: 1fr !important; } }
-      `}</style>
+      ` }} />
     </form>
   );
 }

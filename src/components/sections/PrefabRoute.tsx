@@ -2,19 +2,23 @@
 // BreadcrumbList JSON-LD. notFound() for unknown slugs.
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { setRequestLocale } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
 import { localeBase, buildAlternates } from '@/lib/seo';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import { prefabPages } from '@/lib/prefab';
+import { localizePrefab } from '@/lib/localize-content';
 import PrefabPage from '@/components/sections/PrefabPage';
 
-export function prefabMetadata(slug: string, locale: string): Metadata {
+export async function prefabMetadata(slug: string, locale: string): Promise<Metadata> {
   if (!isValidLocale(locale)) return {};
-  const data = prefabPages[slug];
-  if (!data) return {};
+  const base = prefabPages[slug];
+  if (!base) return {};
+  const tpr = await getTranslations({ locale, namespace: 'prefab' });
+  const data = localizePrefab(base, tpr.raw(slug));
   const title = `${data.name} | ${brand.name}`;
   const url = `${localeBase(locale)}/products/${slug}`;
   const ogImg = `${localeBase(locale as Locale)}/api/og`;
@@ -37,13 +41,20 @@ export function prefabMetadata(slug: string, locale: string): Metadata {
 export function PrefabView({ slug, locale }: { slug: string; locale: string }) {
   if (isValidLocale(locale)) setRequestLocale(locale as Locale);
   const loc = (isValidLocale(locale) ? locale : 'en') as Locale;
-  const data = prefabPages[slug];
-  if (!data) notFound();
+  if (!prefabPages[slug]) notFound();
+  return <PrefabBody slug={slug} locale={loc} />;
+}
+
+// Split so useTranslations runs after setRequestLocale (next-intl RSC pattern).
+function PrefabBody({ slug, locale }: { slug: string; locale: Locale }) {
+  const tpr = useTranslations('prefab');
+  const tp = useTranslations('productPage');
+  const data = localizePrefab(prefabPages[slug], tpr.raw(slug));
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${localeBase(loc)}` },
-    { name: 'Solutions', url: `${localeBase(loc)}/products` },
-    { name: data.name, url: `${localeBase(loc)}/products/${slug}` },
+    { name: tp('home'), url: `${localeBase(locale)}` },
+    { name: tp('solutions'), url: `${localeBase(locale)}/products` },
+    { name: data.name, url: `${localeBase(locale)}/products/${slug}` },
   ]);
 
   return (

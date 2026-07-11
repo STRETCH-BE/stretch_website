@@ -63,7 +63,7 @@ export default function ApplicationAreas() {
         ))}
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .bento {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
@@ -147,7 +147,7 @@ export default function ApplicationAreas() {
               "living" "cinema" "bath" "office" "starry" "retail";
           }
         }
-      `}</style>
+      ` }} />
     </section>
   );
 }

@@ -5,6 +5,7 @@
 // Section numbers are computed from which optional sections are present.
 // Driven by src/lib/prefab.ts. No datasheet / colour swatches / "where it's used".
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { ArrowRight, Globe } from 'lucide-react';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
@@ -21,6 +22,8 @@ function SectionHead({ n, label }: { n: string; label: string }) {
 }
 
 export default function PrefabPage({ data }: { data: PrefabPageData }) {
+  const t = useTranslations('prefabPage');
+  const tp = useTranslations('productPage');
   // Dynamic section numbering — make + materials always present.
   const order: string[] = ['make', 'materials'];
   if (data.production) order.push('production');
@@ -32,9 +35,9 @@ export default function PrefabPage({ data }: { data: PrefabPageData }) {
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="container" style={{ paddingTop: 'clamp(20px,3vw,30px)' }}>
         <ol style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap', gap: 8, margin: 0, padding: 0, fontSize: 12.5, color: 'var(--text-faint-2)' }}>
-          <li><Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link></li>
+          <li><Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>{tp('home')}</Link></li>
           <li aria-hidden>/</li>
-          <li><Link href="/products" style={{ color: 'inherit', textDecoration: 'none' }}>Solutions</Link></li>
+          <li><Link href="/products" style={{ color: 'inherit', textDecoration: 'none' }}>{tp('solutions')}</Link></li>
           <li aria-hidden>/</li>
           <li aria-current="page" style={{ color: 'var(--text-muted)' }}>{data.name}</li>
         </ol>
@@ -49,9 +52,9 @@ export default function PrefabPage({ data }: { data: PrefabPageData }) {
             <p className="lead" style={{ maxWidth: 500, margin: '0 0 28px' }}>{data.intro}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
               <ModalButton type="quote" source={`prefab_${data.slug}`} trackQuote className="btn btn--primary">
-                Discuss a project <ArrowRight size={16} />
+                {t('discussCta')} <ArrowRight size={16} />
               </ModalButton>
-              <Link href="/partners" className="btn btn--ghost">Become a dealer</Link>
+              <Link href="/partners" className="btn btn--ghost">{t('becomeDealer')}</Link>
             </div>
           </div>
           <div style={{ minWidth: 0 }}>
@@ -125,13 +128,13 @@ export default function PrefabPage({ data }: { data: PrefabPageData }) {
                   <figure style={{ margin: 0 }}>
                     <Placeholder label={`${s.title} — technical drawing`} src={s.drawing} alt={`${s.title} — technical drawing`} sizes="(max-width: 860px) 100vw, 50vw" light ratio="4/3" />
                     <figcaption style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--text-faint-2)', marginTop: 10 }}>
-                      <span style={{ color: 'var(--red)', marginRight: 7 }}>01</span>Technical drawing
+                      <span style={{ color: 'var(--red)', marginRight: 7 }}>01</span>{t('technicalDrawing')}
                     </figcaption>
                   </figure>
                   <figure style={{ margin: 0 }}>
                     <Placeholder label={`${s.title} — installed & finished`} src={s.result} alt={`${s.title} — installed and finished`} sizes="(max-width: 860px) 100vw, 50vw" ratio="4/3" />
                     <figcaption style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--text-faint-2)', marginTop: 10 }}>
-                      <span style={{ color: 'var(--red)', marginRight: 7 }}>02</span>Installed &amp; finished
+                      <span style={{ color: 'var(--red)', marginRight: 7 }}>02</span>{t('installedFinished')}
                     </figcaption>
                   </figure>
                 </div>
@@ -146,7 +149,7 @@ export default function PrefabPage({ data }: { data: PrefabPageData }) {
         <div className="pf-world">
           <Globe size={30} strokeWidth={1.7} style={{ color: 'var(--red)', flex: '0 0 auto' }} />
           <div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(20px,2.4vw,28px)', letterSpacing: '-.01em', textTransform: 'uppercase', margin: '0 0 8px' }}>Shipped worldwide</h2>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(20px,2.4vw,28px)', letterSpacing: '-.01em', textTransform: 'uppercase', margin: '0 0 8px' }}>{t('shippedWorldwide')}</h2>
             <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-muted)', margin: 0, maxWidth: 620 }}>{data.worldwide}</p>
           </div>
         </div>
@@ -156,16 +159,16 @@ export default function PrefabPage({ data }: { data: PrefabPageData }) {
       <section className="container" style={{ paddingBottom: 'clamp(50px,6vw,90px)' }}>
         <div style={{ background: 'var(--black)', padding: 'clamp(30px,4vw,52px)', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 22 }}>
           <div>
-            <h2 className="h2 h2--sm" style={{ color: '#fff', fontSize: 'clamp(24px,3vw,34px)', margin: '0 0 8px' }}>Have a project for us?</h2>
-            <p style={{ color: 'var(--on-dark-muted)', fontSize: 14.5, lineHeight: 1.55, margin: 0, maxWidth: 470 }}>Send us the drawings or the idea — we engineer the structure, build it in-house and ship it to you.</p>
+            <h2 className="h2 h2--sm" style={{ color: '#fff', fontSize: 'clamp(24px,3vw,34px)', margin: '0 0 8px' }}>{t('ctaTitle')}</h2>
+            <p style={{ color: 'var(--on-dark-muted)', fontSize: 14.5, lineHeight: 1.55, margin: 0, maxWidth: 470 }}>{t('ctaBody')}</p>
           </div>
           <ModalButton type="quote" source={`prefab_${data.slug}_cta`} trackQuote className="btn btn--primary">
-            Discuss a project <ArrowRight size={16} />
+            {t('discussCta')} <ArrowRight size={16} />
           </ModalButton>
         </div>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .pf-hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(28px,4vw,60px); align-items: center; }
         .pf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
         .pf-card { border: 1px solid var(--border); background: #fff; padding: clamp(22px,2.6vw,30px); }
@@ -183,7 +186,7 @@ export default function PrefabPage({ data }: { data: PrefabPageData }) {
           .pf-detail-grid { grid-template-columns: 1fr; }
           .pf-show-imgs { grid-template-columns: 1fr; }
         }
-      `}</style>
+      ` }} />
     </>
   );
 }

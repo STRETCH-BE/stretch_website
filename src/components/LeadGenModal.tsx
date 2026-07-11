@@ -27,6 +27,7 @@ import {
   type ModalType,
   type FormField,
 } from '@/lib/forms-config';
+import { localizeModalConfig, type ModalMessages } from '@/lib/localize-content';
 import { analytics, sha256, normalizeEmail, normalizePhone } from '@/lib/analytics';
 import { getConsent } from '@/lib/consent';
 
@@ -97,7 +98,8 @@ function LeadGenModal({
   onClose: () => void;
 }) {
   const t = useTranslations('forms');
-  const cfg = MODAL_CONFIGS[type];
+  const tm = useTranslations('modals');
+  const cfg = localizeModalConfig(MODAL_CONFIGS[type], tm.raw(type) as ModalMessages);
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const titleId = useId();
   const descId = useId();
@@ -259,7 +261,7 @@ function LeadGenModal({
       >
         <button
           onClick={onClose}
-          aria-label={t('successTitle') ? 'Close' : 'Close'}
+          aria-label={tm('close')}
           className="ctam-x"
           style={{
             position: 'absolute',
@@ -324,11 +326,11 @@ function LeadGenModal({
                     className="btn btn--primary btn--sm"
                     style={{ textDecoration: 'none' }}
                   >
-                    Download datasheet <ArrowRight size={15} />
+                    {tm('downloadDatasheet')} <ArrowRight size={15} />
                   </a>
                 )}
                 <button onClick={onClose} className="btn btn--dark btn--sm">
-                  Close
+                  {tm('close')}
                 </button>
               </div>
             </div>
@@ -371,7 +373,10 @@ function LeadGenModal({
                 <div
                   style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 22 }}
                 >
-                  {TRAINING_DATE_DETAIL.map((d) => (
+                  {TRAINING_DATE_DETAIL.map((d, i) => ({
+                    date: (tm.raw('trainingDates') as string[])[i] ?? d.date,
+                    note: (tm.raw('trainingDateNotes') as string[])[i] ?? d.note,
+                  })).map((d) => (
                     <div
                       key={d.date}
                       style={{
@@ -480,6 +485,7 @@ function LeadGenModal({
 }
 
 function Field({ field, error }: { field: FormField; error?: string }) {
+  const tm = useTranslations('modals');
   const id = `f-${field.name}`;
   const invalid = Boolean(error);
   const describedBy = invalid ? `${id}-err` : undefined;
@@ -511,7 +517,7 @@ function Field({ field, error }: { field: FormField; error?: string }) {
           aria-describedby={describedBy}
         >
           <option value="" disabled>
-            Select…
+            {tm('select')}
           </option>
           {field.options?.map((o) => (
             <option key={o} value={o}>

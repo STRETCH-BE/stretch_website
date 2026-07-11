@@ -2,7 +2,8 @@
 // supplies per-page metadata + BreadcrumbList (and FAQPage on the faq topic).
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { setRequestLocale } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
 import { localeBase, buildAlternates } from '@/lib/seo';
@@ -18,6 +19,8 @@ import {
   type TechMembraneKey,
   type TechTopicKey,
 } from '@/lib/technical';
+import { localizeTechMembrane, type TechMembraneMessages } from '@/lib/localize-content';
+import type { Faq } from '@/lib/content';
 import TechnicalPage from '@/components/sections/TechnicalPage';
 
 export function technicalParams() {
@@ -28,29 +31,15 @@ export function technicalParams() {
   return out;
 }
 
-function topicDescription(label: string, topic: TechTopicKey): string {
-  switch (topic) {
-    case 'datasheet':
-      return `Technical datasheet for the ${label} — specifications, classifications and downloads.`;
-    case 'colours':
-      return `Colour and finish range for the ${label}, with RAL references and sample requests.`;
-    case 'fire-safety':
-      return `Reaction-to-fire classification for the ${label} — B-s1,d0 and A2 options to EN 13501-1.`;
-    case 'installation':
-      return `Step-by-step installation guide for the ${label}.`;
-    case 'specification':
-      return `Copy-ready specification (bestektekst) clause for the ${label}, for tenders and dossiers.`;
-    case 'faq':
-      return `Frequently asked questions about the ${label}.`;
-  }
-}
-
-export function technicalMetadata(membrane: string, topic: string, locale: string): Metadata {
+export async function technicalMetadata(membrane: string, topic: string, locale: string): Promise<Metadata> {
   if (!isValidLocale(locale) || !isTechMembrane(membrane) || !isTechTopic(topic)) return {};
-  const m = techMembranes[membrane];
-  const topicMeta = techTopics.find((t) => t.key === topic)!;
-  const title = `${topicMeta.label} — ${m.label} | ${brand.name}`;
-  const description = topicDescription(m.label, topic);
+  const tt = await getTranslations({ locale, namespace: 'technical' });
+  const tm = await getTranslations({ locale, namespace: 'techPage' });
+  const m = localizeTechMembrane(techMembranes[membrane], tt.raw(membrane) as TechMembraneMessages);
+  const topicIdx = techTopics.findIndex((t) => t.key === topic);
+  const topicLabel = tt(`topics.${topicIdx}.label`);
+  const title = `${topicLabel} — ${m.label} | ${brand.name}`;
+  const description = tm(`meta.${topic}`, { label: m.label });
   const route = `/technical/${membrane}/${topic}`;
   const ogImg = `${localeBase(locale as Locale)}/api/og`;
   return {
@@ -73,24 +62,30 @@ export function TechnicalView({ membrane, topic, locale }: { membrane: string; t
   if (!isTechMembrane(membrane) || !isTechTopic(topic)) notFound();
   if (isValidLocale(locale)) setRequestLocale(locale as Locale);
   const loc = (isValidLocale(locale) ? locale : 'en') as Locale;
+  return <TechnicalBody membrane={membrane as TechMembraneKey} topic={topic as TechTopicKey} locale={loc} />;
+}
 
-  const mKey = membrane as TechMembraneKey;
-  const tKey = topic as TechTopicKey;
-  const m = techMembranes[mKey];
-  const topicMeta = techTopics.find((t) => t.key === tKey)!;
+// Split so useTranslations runs after setRequestLocale (next-intl RSC pattern).
+function TechnicalBody({ membrane, topic, locale }: { membrane: TechMembraneKey; topic: TechTopicKey; locale: Locale }) {
+  const tt = useTranslations('technical');
+  const tp = useTranslations('productPage');
+  const tf = useTranslations('catalogFaqs');
+  const m = localizeTechMembrane(techMembranes[membrane], tt.raw(membrane) as TechMembraneMessages);
+  const topicIdx = techTopics.findIndex((t) => t.key === topic);
   const product = getProduct(m.productSlug);
+  const faqs = product ? ((tf.raw(product.key) as Faq[] | undefined) ?? product.faqs) : [];
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${localeBase(loc)}` },
-    { name: m.short, url: `${localeBase(loc)}/technical/${mKey}/datasheet` },
-    { name: topicMeta.label, url: `${localeBase(loc)}/technical/${mKey}/${tKey}` },
+    { name: tp('home'), url: `${localeBase(locale)}` },
+    { name: m.short, url: `${localeBase(locale)}/technical/${membrane}/datasheet` },
+    { name: tt(`topics.${topicIdx}.label`), url: `${localeBase(locale)}/technical/${membrane}/${topic}` },
   ]);
 
   return (
     <>
       <JsonLd data={crumbs} />
-      {tKey === 'faq' && product && <JsonLd data={faqPageSchema(product.faqs)} />}
-      <TechnicalPage membrane={mKey} topic={tKey} />
+      {topic === 'faq' && product && <JsonLd data={faqPageSchema(faqs)} />}
+      <TechnicalPage membrane={membrane} topic={topic} />
     </>
   );
 }

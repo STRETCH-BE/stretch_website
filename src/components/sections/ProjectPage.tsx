@@ -167,7 +167,7 @@ export default function ProjectPage({ project }: { project: Project }) {
         <Link href="/products" className="btn btn--ghost btn--sm">Explore solutions <ArrowRight size={14} /></Link>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .pj-grid { display: grid; grid-template-columns: 1fr 300px; gap: clamp(28px,4vw,56px); align-items: start; }
         .pj-grid--full { grid-template-columns: 1fr; max-width: 820px; }
         .pj-aside { position: sticky; top: 96px; }
@@ -179,7 +179,7 @@ export default function ProjectPage({ project }: { project: Project }) {
           .pj-highlights { grid-template-columns: 1fr; }
           .pj-gallery { grid-template-columns: 1fr 1fr; }
         }
-      `}</style>
+      ` }} />
     </article>
   );
 }

@@ -80,10 +80,10 @@ export default function PortfolioGrid() {
         ))}
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 860px) { .pf-grid { grid-template-columns: 1fr 1fr !important; } }
         @media (max-width: 540px) { .pf-grid { grid-template-columns: 1fr !important; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

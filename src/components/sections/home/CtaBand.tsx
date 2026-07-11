@@ -51,13 +51,13 @@ export default function CtaBand() {
         </p>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .cta-band { position: relative; overflow: hidden; background: var(--black); text-align: center; }
         .cta-bg { position: absolute; inset: 0; }
         .cta-bg > * { width: 100%; height: 100%; }
         .cta-ov { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,10,.72) 0%, rgba(10,10,10,.8) 55%, rgba(10,10,10,.88) 100%); }
         .cta-inner { position: relative; z-index: 2; padding: clamp(76px,11vw,150px) 0; }
-      `}</style>
+      ` }} />
     </section>
   );
 }

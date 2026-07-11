@@ -59,7 +59,7 @@ export default function WhyStretch() {
         </div>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .why-split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: stretch; }
         .why-photo { position: relative; overflow: hidden; min-height: 520px; border: 1px solid var(--border-dark, #2a2a2a); }
         .why-photo-img { position: absolute; inset: 0; }
@@ -78,7 +78,7 @@ export default function WhyStretch() {
         @media (max-width: 480px) {
           .why-cards { grid-template-columns: 1fr; }
         }
-      `}</style>
+      ` }} />
     </section>
   );
 }

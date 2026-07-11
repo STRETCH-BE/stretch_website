@@ -90,14 +90,14 @@ export default function Acoustics() {
         </div>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 860px) {
           .ac-grid { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 480px) {
           .ac-cells { grid-template-columns: 1fr !important; }
         }
-      `}</style>
+      ` }} />
     </section>
   );
 }

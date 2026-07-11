@@ -104,7 +104,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .hero {
           position: relative;
           min-height: 94vh;
@@ -186,7 +186,7 @@ export default function Hero() {
           .hero-tab:nth-child(3), .hero-tab:nth-child(4) { border-top: 1px solid rgba(255,255,255,.12); }
           .hero-tab-arrow { display: none; }
         }
-      `}</style>
+      ` }} />
     </section>
   );
 }

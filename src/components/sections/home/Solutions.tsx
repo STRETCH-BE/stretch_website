@@ -53,7 +53,7 @@ export default function Solutions() {
         ))}
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .sol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .sol-card { position: relative; display: block; overflow: hidden; min-height: 600px; border: 1px solid var(--border); background: var(--black); }
         .sol-img { position: absolute; inset: 0; }
@@ -76,7 +76,7 @@ export default function Solutions() {
           .sol-grid { grid-template-columns: 1fr !important; }
           .sol-card { min-height: 460px; }
         }
-      `}</style>
+      ` }} />
     </section>
   );
 }

@@ -136,7 +136,7 @@ export default function ContactForm() {
       </button>
       <p style={{ marginTop: 14, fontSize: 12.5, color: 'var(--text-faint)', textAlign: 'center' }}>{t('reassurance')}</p>
 
-      <style>{`@media (max-width: 560px){ .cf-grid { grid-template-columns: 1fr !important; } }`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `@media (max-width: 560px){ .cf-grid { grid-template-columns: 1fr !important; } }` }} />
     </form>
   );
 }

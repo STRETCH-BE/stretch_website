@@ -2,10 +2,14 @@
 // the right column renders the active topic. Datasheet/Colours/FAQ reuse product
 // data; Fire safety/Installation/Specification come from technical.ts.
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import { ModalButton } from '@/components/ui/ModalButton';
 import ColourChart from '@/components/sections/ColourChart';
 import { getProduct } from '@/lib/products';
+import { localizeProduct, type CatalogEntry } from '@/lib/localize-product';
+import { localizeTechMembrane, type TechMembraneMessages } from '@/lib/localize-content';
+import type { Faq } from '@/lib/content';
 import {
   techTopics,
   techMembranes,
@@ -20,22 +24,32 @@ export default function TechnicalPage({
   membrane: TechMembraneKey;
   topic: TechTopicKey;
 }) {
-  const m = techMembranes[membrane];
-  const product = getProduct(m.productSlug);
-  const topicMeta = techTopics.find((t) => t.key === topic)!;
+  const tt = useTranslations('technical');
+  const t = useTranslations('techPage');
+  const tc = useTranslations('catalog');
+  const tp = useTranslations('productPage');
+  const tf = useTranslations('catalogFaqs');
+  const tCol = useTranslations('colourNames');
+  const m = localizeTechMembrane(techMembranes[membrane], tt.raw(membrane) as TechMembraneMessages);
+  const baseProduct = getProduct(m.productSlug);
+  const product = baseProduct ? localizeProduct(baseProduct, tc.raw(baseProduct.key) as CatalogEntry) : undefined;
+  const faqs = baseProduct ? ((tf.raw(baseProduct.key) as Faq[] | undefined) ?? baseProduct.faqs) : [];
+  const colourLabel = (name: string) => (tCol.has(name) ? tCol(name) : name);
+  const topicIdx = techTopics.findIndex((x) => x.key === topic);
+  const topicLabel = tt(`topics.${topicIdx}.label`);
 
   return (
     <article className="container" style={{ padding: 'clamp(20px,3vw,32px) 0 clamp(50px,6vw,90px)' }}>
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" style={{ marginBottom: 'clamp(22px,3vw,34px)' }}>
         <ol style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap', gap: 8, margin: 0, padding: 0, fontSize: 12, fontWeight: 600, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>
-          <li><Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link></li>
+          <li><Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>{tp('home')}</Link></li>
           <li aria-hidden>/</li>
-          <li>Technical</li>
+          <li>{t('crumbTechnical')}</li>
           <li aria-hidden>/</li>
           <li><Link href={`/technical/${m.key}/datasheet`} style={{ color: 'inherit', textDecoration: 'none' }}>{m.short}</Link></li>
           <li aria-hidden>/</li>
-          <li aria-current="page" style={{ color: 'var(--red)' }}>{topicMeta.label}</li>
+          <li aria-current="page" style={{ color: 'var(--red)' }}>{topicLabel}</li>
         </ol>
       </nav>
 
@@ -45,12 +59,12 @@ export default function TechnicalPage({
           <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--text-faint-2)', marginBottom: 16 }}>{m.label}</div>
           <nav>
             <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 2 }}>
-              {techTopics.map((t) => {
-                const active = t.key === topic;
+              {techTopics.map((topicItem, i) => {
+                const active = topicItem.key === topic;
                 return (
-                  <li key={t.key}>
+                  <li key={topicItem.key}>
                     <Link
-                      href={`/technical/${m.key}/${t.key}`}
+                      href={`/technical/${m.key}/${topicItem.key}`}
                       className="tech-link"
                       style={{
                         borderLeft: active ? '2px solid var(--red)' : '2px solid transparent',
@@ -60,7 +74,7 @@ export default function TechnicalPage({
                       }}
                       aria-current={active ? 'page' : undefined}
                     >
-                      {t.label}
+                      {tt(`topics.${i}.label`)}
                     </Link>
                   </li>
                 );
@@ -68,17 +82,17 @@ export default function TechnicalPage({
             </ul>
           </nav>
           <Link href={`/products/${m.productSlug}`} className="btn btn--ghost btn--sm" style={{ marginTop: 22 }}>
-            View the product <ArrowRight size={14} />
+            {t('viewProduct')} <ArrowRight size={14} />
           </Link>
         </aside>
 
         {/* Content */}
         <div className="tech-body" style={{ minWidth: 0 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 13, marginBottom: 16 }}>
-            <span style={{ color: 'var(--red)', fontWeight: 700, fontSize: 13, letterSpacing: '.16em' }}>Technical</span>
+            <span style={{ color: 'var(--red)', fontWeight: 700, fontSize: 13, letterSpacing: '.16em' }}>{t('eyebrowTech')}</span>
             <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>{m.short}</span>
           </div>
-          <h1 className="h2" style={{ margin: '0 0 14px' }}>{topicMeta.label}<span className="accent">.</span></h1>
+          <h1 className="h2" style={{ margin: '0 0 14px' }}>{topicLabel}<span className="accent">.</span></h1>
           <p className="lead" style={{ maxWidth: 620, margin: '0 0 clamp(28px,3.4vw,44px)' }}>{m.blurb}</p>
 
           {topic === 'datasheet' && product && (
@@ -92,17 +106,24 @@ export default function TechnicalPage({
                 ))}
               </div>
               <ModalButton type="quote" source={`technical_${m.key}_datasheet`} product={product.name} className="btn btn--primary" >
-                Request the full datasheet <ArrowDown size={15} />
+                {t('datasheetCta')} <ArrowDown size={15} />
               </ModalButton>
             </>
           )}
 
           {topic === 'colours' && product?.colourChart && (
             <>
-              <ColourChart entries={product.colourChart} note={product.colourChartNote} />
+              <ColourChart
+                entries={product.colourChart.map((c) => ({
+                  ...c,
+                  name: colourLabel(c.name),
+                  finish: c.finish ? colourLabel(c.finish) : c.finish,
+                }))}
+                note={product.colourChartNote}
+              />
               <div style={{ marginTop: 28 }}>
                 <ModalButton type="samples" source={`technical_${m.key}_colours`} product={product.name} className="btn btn--ghost btn--sm">
-                  Request physical samples <ArrowRight size={14} />
+                  {t('samplesCta')} <ArrowRight size={14} />
                 </ModalButton>
               </div>
             </>
@@ -148,13 +169,13 @@ export default function TechnicalPage({
               <div style={{ border: '1px solid var(--border)', background: 'var(--surface)', padding: 'clamp(20px,2.6vw,30px)', fontSize: 15, lineHeight: 1.75, color: 'var(--text)', maxWidth: 720 }}>
                 {m.specification.clause}
               </div>
-              <p style={{ fontSize: 13, color: 'var(--text-faint-2)', margin: '14px 0 0' }}>Select the text above to copy it into your specification document.</p>
+              <p style={{ fontSize: 13, color: 'var(--text-faint-2)', margin: '14px 0 0' }}>{t('copyHint')}</p>
             </>
           )}
 
           {topic === 'faq' && product && (
             <div style={{ maxWidth: 760 }}>
-              {product.faqs.map((f) => (
+              {faqs.map((f) => (
                 <div key={f.q} style={{ padding: '20px 0', borderBottom: '1px solid var(--border)' }}>
                   <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(16px,1.7vw,20px)', letterSpacing: '-.01em', margin: '0 0 9px' }}>{f.q}</h2>
                   <p style={{ fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-muted)', margin: 0 }}>{f.a}</p>
@@ -166,17 +187,17 @@ export default function TechnicalPage({
           {/* CTA */}
           <div style={{ background: 'var(--black)', padding: 'clamp(26px,3.4vw,44px)', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 20, marginTop: 'clamp(40px,5vw,64px)' }}>
             <div>
-              <h2 className="h2 h2--sm" style={{ color: '#fff', fontSize: 'clamp(22px,2.6vw,30px)', margin: '0 0 8px' }}>Need a hand with the specification?</h2>
-              <p style={{ color: 'var(--on-dark-muted)', fontSize: 14.5, lineHeight: 1.55, margin: 0, maxWidth: 460 }}>Our specialists help architects and contractors get the detail right — usually within two working days.</p>
+              <h2 className="h2 h2--sm" style={{ color: '#fff', fontSize: 'clamp(22px,2.6vw,30px)', margin: '0 0 8px' }}>{t('ctaTitle')}</h2>
+              <p style={{ color: 'var(--on-dark-muted)', fontSize: 14.5, lineHeight: 1.55, margin: 0, maxWidth: 460 }}>{t('ctaBody')}</p>
             </div>
             <ModalButton type="quote" source={`technical_${m.key}_${topic}_cta`} product={m.label} className="btn btn--primary">
-              Ask our specialists <ArrowRight size={16} />
+              {t('ctaBtn')} <ArrowRight size={16} />
             </ModalButton>
           </div>
         </div>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .tech-grid { display: grid; grid-template-columns: 232px 1fr; gap: clamp(28px,4vw,64px); align-items: start; }
         .tech-rail { position: sticky; top: 96px; }
         .tech-link { display: block; padding: 9px 14px; font-size: 14px; text-decoration: none; line-height: 1.3; }
@@ -187,7 +208,7 @@ export default function TechnicalPage({
           .tech-grid { grid-template-columns: 1fr; }
           .tech-rail { position: static; border-bottom: 1px solid var(--border); padding-bottom: 18px; margin-bottom: 6px; }
         }
-      `}</style>
+      ` }} />
     </article>
   );
 }

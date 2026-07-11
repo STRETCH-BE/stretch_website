@@ -53,7 +53,7 @@ export default function InstallerPartner() {
         </div>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .ip { background: var(--red); }
         .ip-split { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; min-height: 580px; }
         .ip-photo { position: relative; overflow: hidden; }
@@ -69,7 +69,7 @@ export default function InstallerPartner() {
           .ip-split { grid-template-columns: 1fr; }
           .ip-photo { min-height: 320px; order: -1; }
         }
-      `}</style>
+      ` }} />
     </section>
   );
 }

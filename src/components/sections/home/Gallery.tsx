@@ -47,7 +47,7 @@ export default function Gallery() {
         ))}
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .gal-grid {
           display: grid;
           grid-template-columns: repeat(5, 1fr);
@@ -97,7 +97,7 @@ export default function Gallery() {
           .gal-grid { grid-template-columns: 1fr 1fr; }
           .gal-cell:nth-child(3) { display: none; }
         }
-      `}</style>
+      ` }} />
     </section>
   );
 }

@@ -57,11 +57,11 @@ export function Stats() {
           </div>
         </div>
       ))}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 720px) {
           .stats-grid { grid-template-columns: 1fr 1fr !important; }
         }
-      `}</style>
+      ` }} />
     </section>
   );
 }

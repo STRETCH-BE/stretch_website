@@ -309,7 +309,7 @@ export default function SolutionPage({ product: baseProduct }: { product: Produc
         </div>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .sp-featrow { display: flex; align-items: center; gap: clamp(28px,4vw,60px); }
         .sp-featrow--rev { flex-direction: row-reverse; }
         @media (max-width: 860px) {
@@ -322,7 +322,7 @@ export default function SolutionPage({ product: baseProduct }: { product: Produc
           .sp-highlights { grid-template-columns: 1fr 1fr !important; }
           .sp-colours { grid-template-columns: repeat(3,1fr) !important; }
         }
-      `}</style>
+      ` }} />
     </article>
   );
 }

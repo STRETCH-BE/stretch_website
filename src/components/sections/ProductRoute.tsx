@@ -69,8 +69,10 @@ export function ProductView({ slug, locale: localeParam }: { slug: string; local
 function ProductBody({ slug, locale }: { slug: string; locale: Locale }) {
   const tc = useTranslations('catalog');
   const tp = useTranslations('productPage');
+  const tf = useTranslations('catalogFaqs');
   const base = getProduct(slug)!;
   const product = localizeProduct(base, tc.raw(base.key) as CatalogEntry);
+  const faqs = (tf.raw(base.key) as typeof base.faqs | undefined) ?? base.faqs;
 
   const crumbs = breadcrumbSchema([
     { name: tp('home'), url: `${localeBase(locale)}` },
@@ -82,7 +84,7 @@ function ProductBody({ slug, locale }: { slug: string; locale: Locale }) {
     <>
       <JsonLd data={productSchema(product, locale)} />
       <JsonLd data={crumbs} />
-      <JsonLd data={faqPageSchema(product.faqs)} />
+      <JsonLd data={faqPageSchema(faqs)} />
       <SolutionPage product={base} />
     </>
   );

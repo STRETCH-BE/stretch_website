@@ -2,19 +2,23 @@
 // ApplicationPage with BreadcrumbList JSON-LD. notFound() for unknown slugs.
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { setRequestLocale } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
 import { localeBase, buildAlternates } from '@/lib/seo';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import { getApplication } from '@/lib/applications';
+import { localizeApplication, type ApplicationMessages } from '@/lib/localize-content';
 import ApplicationPage from '@/components/sections/ApplicationPage';
 
-export function applicationMetadata(slug: string, locale: string): Metadata {
+export async function applicationMetadata(slug: string, locale: string): Promise<Metadata> {
   if (!isValidLocale(locale)) return {};
-  const app = getApplication(slug);
-  if (!app) return {};
+  const base = getApplication(slug);
+  if (!base) return {};
+  const ta = await getTranslations({ locale, namespace: 'applications' });
+  const app = localizeApplication(base, ta.raw(slug) as ApplicationMessages);
   const title = `${app.name} | ${brand.name}`;
   const url = `${localeBase(locale)}/applications/${slug}`;
   const ogImg = `${localeBase(locale as Locale)}/api/og`;
@@ -37,13 +41,21 @@ export function applicationMetadata(slug: string, locale: string): Metadata {
 export function ApplicationView({ slug, locale }: { slug: string; locale: string }) {
   if (isValidLocale(locale)) setRequestLocale(locale as Locale);
   const loc = (isValidLocale(locale) ? locale : 'en') as Locale;
-  const app = getApplication(slug);
-  if (!app) notFound();
+  if (!getApplication(slug)) notFound();
+  return <ApplicationBody slug={slug} locale={loc} />;
+}
+
+// Split so useTranslations runs after setRequestLocale (next-intl RSC pattern).
+function ApplicationBody({ slug, locale }: { slug: string; locale: Locale }) {
+  const ta = useTranslations('applications');
+  const tp = useTranslations('productPage');
+  const tap = useTranslations('appPage');
+  const app = localizeApplication(getApplication(slug)!, ta.raw(slug) as ApplicationMessages);
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${localeBase(loc)}` },
-    { name: 'Applications', url: `${localeBase(loc)}/inspiration` },
-    { name: app.shortName, url: `${localeBase(loc)}/applications/${slug}` },
+    { name: tp('home'), url: `${localeBase(locale)}` },
+    { name: tap('crumbApplications'), url: `${localeBase(locale)}/inspiration` },
+    { name: app.shortName, url: `${localeBase(locale)}/applications/${slug}` },
   ]);
 
   return (

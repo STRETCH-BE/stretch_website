@@ -77,7 +77,7 @@ export default function ColourChart({
         })}
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .cc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: clamp(14px,1.6vw,20px); }
         .cc-sw { aspect-ratio: 1 / 1; border-radius: 3px; }
         .cc-name { font-size: 13px; font-weight: 600; margin-top: 10px; line-height: 1.2; }
@@ -86,7 +86,7 @@ export default function ColourChart({
         .cc-finish { color: var(--red); font-weight: 600; }
         .cc-dot { opacity: .45; }
         @media (max-width: 560px) { .cc-grid { grid-template-columns: repeat(2, 1fr); } }
-      `}</style>
+      ` }} />
     </div>
   );
 }
