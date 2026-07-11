@@ -110,7 +110,7 @@ export default function InspirationPage({ params }: { params: { locale: string }
         </div>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 760px) {
           .ins-feat { grid-template-columns: 1fr !important; }
           .ins-browse { grid-template-columns: 1fr !important; }
@@ -118,7 +118,7 @@ export default function InspirationPage({ params }: { params: { locale: string }
         @media (max-width: 980px) and (min-width: 761px) {
           .ins-browse { grid-template-columns: 1fr 1fr !important; }
         }
-      `}</style>
+      ` }} />
     </>
   );
 }

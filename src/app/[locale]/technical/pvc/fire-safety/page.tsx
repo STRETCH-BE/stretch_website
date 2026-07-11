@@ -5,7 +5,7 @@ import { technicalMetadata, TechnicalView } from '@/components/sections/Technica
 const MEMBRANE = 'pvc';
 const TOPIC = 'fire-safety';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return technicalMetadata(MEMBRANE, TOPIC, params.locale);
 }
 

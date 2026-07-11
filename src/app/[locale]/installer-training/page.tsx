@@ -168,7 +168,7 @@ export default function TrainingPage({ params }: { params: { locale: string } })
         </div>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 860px) {
           .tr-hero { grid-template-columns: 1fr !important; }
           .tr-curric { grid-template-columns: 1fr 1fr !important; }
@@ -180,7 +180,7 @@ export default function TrainingPage({ params }: { params: { locale: string } })
           .tr-curric { grid-template-columns: 1fr !important; }
           .tr-dates { grid-template-columns: 1fr !important; }
         }
-      `}</style>
+      ` }} />
     </>
   );
 }

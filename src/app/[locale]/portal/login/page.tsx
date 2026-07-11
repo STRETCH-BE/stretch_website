@@ -53,7 +53,7 @@ export default async function PortalLoginPage({ params }: { params: { locale: st
         <LoginForm demo={demo} />
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .portal-login { display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100vh - 220px); }
         .portal-login__brand { background: var(--black); padding: clamp(32px,5vw,72px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
         .portal-login__form { display: flex; align-items: center; justify-content: center; padding: clamp(28px,4vw,64px); background: var(--surface); }
@@ -61,7 +61,7 @@ export default async function PortalLoginPage({ params }: { params: { locale: st
           .portal-login { grid-template-columns: 1fr; }
           .portal-login__brand { min-height: auto; }
         }
-      `}</style>
+      ` }} />
     </div>
   );
 }

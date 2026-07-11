@@ -55,7 +55,7 @@ export default function SamplesPage({ params }: { params: { locale: string } }) 
         </div>
       </section>
 
-      <style>{`@media (max-width: 860px){ .sm-grid { grid-template-columns: 1fr !important; } }`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `@media (max-width: 860px){ .sm-grid { grid-template-columns: 1fr !important; } }` }} />
     </>
   );
 }

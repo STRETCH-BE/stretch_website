@@ -4,7 +4,7 @@ import { applicationMetadata, ApplicationView } from '@/components/sections/Appl
 
 const SLUG = 'bathroom-kitchen';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return applicationMetadata(SLUG, params.locale);
 }
 

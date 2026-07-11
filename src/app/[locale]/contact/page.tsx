@@ -129,7 +129,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         </div>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 860px) {
           .qc-grid { grid-template-columns: 1fr !important; }
           .ct-grid { grid-template-columns: 1fr !important; }
@@ -138,7 +138,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         @media (max-width: 520px) {
           .off-grid { grid-template-columns: 1fr !important; }
         }
-      `}</style>
+      ` }} />
     </>
   );
 }

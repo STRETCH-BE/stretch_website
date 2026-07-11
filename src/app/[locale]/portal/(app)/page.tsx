@@ -108,7 +108,7 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
         )}
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .portal-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
         .portal-tile { background: #fff; border: 1px solid var(--border); padding: clamp(20px,2.2vw,28px); display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: var(--text); position: relative; }
         a.portal-tile:hover { border-color: var(--black); }
@@ -123,7 +123,7 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
         .portal-tile--soon { opacity: .72; }
         @media (max-width: 980px) { .portal-tiles { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 640px) { .portal-tiles { grid-template-columns: 1fr; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }

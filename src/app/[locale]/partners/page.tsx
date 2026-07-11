@@ -295,7 +295,7 @@ export default function PartnersPage({ params }: { params: { locale: string } })
         </div>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .pt-compare-row { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 16px; padding: 14px clamp(16px,2vw,24px); border-bottom: 1px solid var(--border); font-size: 14px; min-width: 520px; }
         .pt-compare-row:last-child { border-bottom: 0; }
         .pt-compare-head { background: var(--surface); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
@@ -309,7 +309,7 @@ export default function PartnersPage({ params }: { params: { locale: string } })
         @media (max-width: 560px) {
           .pt-why { grid-template-columns: 1fr !important; }
         }
-      `}</style>
+      ` }} />
     </>
   );
 }

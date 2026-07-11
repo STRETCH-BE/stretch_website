@@ -139,7 +139,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
         </div>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 860px) {
           .ab-hero { grid-template-columns: 1fr !important; }
           .ab-stats { grid-template-columns: 1fr !important; }
@@ -147,7 +147,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           .ab-off { grid-template-columns: 1fr 1fr !important; }
         }
         @media (max-width: 520px) { .ab-off { grid-template-columns: 1fr !important; } }
-      `}</style>
+      ` }} />
     </>
   );
 }

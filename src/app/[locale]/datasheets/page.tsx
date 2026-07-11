@@ -98,7 +98,7 @@ export default function DatasheetsPage({ params }: { params: { locale: string } 
         </div>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .ds-row {
           display: flex;
           align-items: center;
@@ -124,7 +124,7 @@ export default function DatasheetsPage({ params }: { params: { locale: string } 
           .ds-cta { width: 100%; }
           .ds-cta :global(.btn) { width: 100%; justify-content: center; }
         }
-      `}</style>
+      ` }} />
     </>
   );
 }

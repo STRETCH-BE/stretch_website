@@ -64,7 +64,7 @@ export default function BlogIndex({ params }: { params: { locale: string } }) {
         </div>
       </section>
 
-      <style>{`@media (max-width: 760px){ .blog-grid { grid-template-columns: 1fr !important; } }`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `@media (max-width: 760px){ .blog-grid { grid-template-columns: 1fr !important; } }` }} />
     </>
   );
 }

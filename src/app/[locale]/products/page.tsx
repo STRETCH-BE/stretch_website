@@ -149,14 +149,14 @@ export default async function ProductsPage({ params }: { params: { locale: strin
         </div>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
         .prod-card { border: 1px solid var(--border); background: #fff; text-decoration: none; display: flex; flex-direction: column; }
         .prod-card__body { padding: clamp(22px,2.4vw,30px); display: flex; flex-direction: column; flex: 1; }
         .prod-card--cta { background: var(--black); padding: clamp(26px,3vw,38px); justify-content: space-between; gap: 20px; }
         @media (max-width: 900px) { .prod-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 600px) { .prod-grid { grid-template-columns: 1fr; } }
-      `}</style>
+      ` }} />
     </>
   );
 }

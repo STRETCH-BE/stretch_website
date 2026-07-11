@@ -4,7 +4,7 @@ import { prefabMetadata, PrefabView } from '@/components/sections/PrefabRoute';
 
 const SLUG = 'prefab-ceiling-unit';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return prefabMetadata(SLUG, params.locale);
 }
 
