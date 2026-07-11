@@ -2,7 +2,7 @@
 // category; every download is gated behind the lead modal (name/email/phone via
 // DatasheetDownloadButton → /api/lead). BreadcrumbList JSON-LD.
 import type { Metadata } from 'next';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { FileText, ShieldCheck } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl } from '@/lib/site-config';
@@ -18,14 +18,16 @@ export function generateMetadata({ params }: { params: { locale: string } }): Pr
   return pageMetadata({ locale: params.locale, route: '/datasheets', titleKey: 'datasheetsTitle', descKey: 'datasheetsDescription' });
 }
 
-export default function DatasheetsPage({ params }: { params: { locale: string } }) {
+export default async function DatasheetsPage({ params }: { params: { locale: string } }) {
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
+  const t = await getTranslations('datasheetsPage');
+  const tp = await getTranslations('productPage');
 
   const groups = datasheetsByCategory();
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${localeBase(locale)}` },
-    { name: 'Datasheets', url: `${localeBase(locale)}/datasheets` },
+    { name: tp('home'), url: `${localeBase(locale)}` },
+    { name: t('crumb'), url: `${localeBase(locale)}/datasheets` },
   ]);
 
   return (
@@ -34,14 +36,12 @@ export default function DatasheetsPage({ params }: { params: { locale: string } 
 
       {/* Hero */}
       <section className="container" style={{ padding: 'clamp(36px,5vw,72px) 0 clamp(24px,3vw,40px)' }}>
-        <Eyebrow num="01" label="Technical datasheets" />
+        <Eyebrow num="01" label={t('eyebrow')} />
         <h1 className="h1" style={{ margin: '0 0 clamp(18px,2vw,26px)' }}>
-          Specs &amp; <span className="accent">datasheets.</span>
+          {t('titleA')} <span className="accent">{t('titleB')}.</span>
         </h1>
         <p className="lead" style={{ maxWidth: 580, margin: 0 }}>
-          Download technical documentation for every STRETCH system — specifications, fire ratings,
-          acoustic class values and warranty details. Enter your details once per download and the
-          file starts immediately.
+          {t('lead')}
         </p>
       </section>
 
@@ -72,7 +72,7 @@ export default function DatasheetsPage({ params }: { params: { locale: string } 
                     <div style={{ display: 'flex', gap: 14, marginTop: 10, fontSize: 11.5, fontWeight: 600, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>
                       {sheet.format && <span>{sheet.format}</span>}
                       {sheet.sizeLabel && <span>{sheet.sizeLabel}</span>}
-                      {sheet.updated && <span>Updated {sheet.updated}</span>}
+                      {sheet.updated && <span>{t('updated', { date: sheet.updated })}</span>}
                     </div>
                   </div>
                   <div className="ds-cta">
@@ -88,10 +88,9 @@ export default function DatasheetsPage({ params }: { params: { locale: string } 
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: 11, marginTop: 8, padding: '16px 18px', background: 'var(--surface)', maxWidth: 620 }}>
           <ShieldCheck size={18} strokeWidth={1.9} style={{ color: 'var(--red)', flex: '0 0 auto', marginTop: 1 }} />
           <p style={{ fontSize: 12.5, lineHeight: 1.55, color: 'var(--text-muted)', margin: 0 }}>
-            We ask for your name, email and phone so a specialist can answer any technical questions.
-            Your details are handled per our{' '}
+            {t('privacyNote')}{' '}
             <a href={`/${locale}/privacy`} style={{ color: 'var(--red)', textDecoration: 'underline' }}>
-              privacy policy
+              {t('privacyLink')}
             </a>
             .
           </p>

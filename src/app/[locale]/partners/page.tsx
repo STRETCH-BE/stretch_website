@@ -3,7 +3,7 @@
 // and install yourself, after training) — with a comparison, shared benefits,
 // per-path how-it-works, and a tagged application form. BreadcrumbList JSON-LD.
 import type { Metadata } from 'next';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ArrowRight, TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone, Store, Wrench, Check } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { Link } from '@/i18n/navigation';
@@ -22,53 +22,25 @@ export function generateMetadata({ params }: { params: { locale: string } }): Pr
   return pageMetadata({ locale: params.locale, route: '/partners', titleKey: 'partnersTitle', descKey: 'partnersDescription' });
 }
 
-const RESELLER_POINTS = [
-  'You sell the finished, installed ceiling to your client',
-  'We install it for you, through our certified dealer network',
-  'No installation crew or skills needed on your side',
-  'Trade pricing, product imagery and referred local leads',
-];
-const DEALER_POINTS = [
-  'You sell STRETCH product within your own projects',
-  'You carry out the installation yourself',
-  'Your installer completes our hands-on training course first',
-  'Order made-to-measure from our Belgian workshop',
-];
+const WHY_ICONS = [TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone];
 
-const COMPARE: { label: string; reseller: string; dealer: string }[] = [
-  { label: 'What you sell', reseller: 'A finished, installed ceiling', dealer: 'Product within your own projects' },
-  { label: 'Who installs', reseller: 'We do — via our dealer network', dealer: 'You do, yourself' },
-  { label: 'Training', reseller: 'Not required', dealer: 'Required — hands-on course' },
-  { label: 'Best suited to', reseller: 'Designers, showrooms, contractors', dealer: 'Installers & fit-out firms' },
-];
-
-const WHY = [
-  { icon: TrendingUp, title: 'Strong margins', body: 'Trade pricing on made-to-measure membranes and profiles, with healthy margins on a premium, in-demand product.' },
-  { icon: Users, title: 'Referred leads', body: 'We pass local customer enquiries to partners in their region — real projects, not just a price list.' },
-  { icon: Package, title: 'B2B ordering', body: 'Order confectioned-to-size from our Belgian workshop through a dedicated partner portal, with reliable lead times.' },
-  { icon: MapPin, title: 'Made in Belgium', body: 'Hand-made membranes engineered in Belgium, backed by a long product warranty you can stand behind.' },
-  { icon: GraduationCap, title: 'Hands-on training', body: 'For dealers: certify your team at our HQ in days — confection, profiles, cold & heat mounting, light and acoustics.' },
-  { icon: Megaphone, title: 'Marketing support', body: 'Product imagery, samples and sales material to help you win and close stretch-ceiling work.' },
-];
-
-const RESELLER_STEPS = [
-  { n: '01', title: 'Apply as a reseller', body: 'Send a short application. We review every one personally and set up a call to understand your business.' },
-  { n: '02', title: 'Get set up', body: 'Trade pricing, samples and sales material — no training needed. Start quoting stretch ceilings right away.' },
-  { n: '03', title: 'Sell — we install', body: 'You close the sale and own the client; we and our dealers fit the ceiling, on time and to spec.' },
-];
-const DEALER_STEPS = [
-  { n: '01', title: 'Apply as a dealer', body: 'Send a short application. We review every one personally and set up a call to understand your business.' },
-  { n: '02', title: 'Train & certify', body: 'Your team completes our hands-on course at HQ: confection, profiles, cold & heat mounting, light and acoustics.' },
-  { n: '03', title: 'Order & install', body: 'Order made-to-measure, fit it yourself in a day, and receive referred local leads as they come in.' },
-];
-
-export default function PartnersPage({ params }: { params: { locale: string } }) {
+export default async function PartnersPage({ params }: { params: { locale: string } }) {
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
+  const t = await getTranslations('partnersPage');
+  const tp = await getTranslations('productPage');
+
+  const resellerPoints = t.raw('models.reseller.points') as string[];
+  const dealerPoints = t.raw('models.dealer.points') as string[];
+  const compareRows = t.raw('compare.rows') as { label: string; reseller: string; dealer: string }[];
+  const whyCards = t.raw('why.cards') as { title: string; body: string }[];
+  const resellerSteps = t.raw('how.resellerSteps') as { title: string; body: string }[];
+  const dealerSteps = t.raw('how.dealerSteps') as { title: string; body: string }[];
+  const applyPoints = t.raw('apply.points') as string[];
 
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${localeBase(locale)}` },
-    { name: 'Partners', url: `${localeBase(locale)}/partners` },
+    { name: tp('home'), url: `${localeBase(locale)}` },
+    { name: t('crumb'), url: `${localeBase(locale)}/partners` },
   ]);
 
   return (
@@ -79,23 +51,21 @@ export default function PartnersPage({ params }: { params: { locale: string } })
       <section className="container" style={{ padding: 'clamp(36px,5vw,72px) 0 clamp(40px,5vw,72px)' }}>
         <div className="pt-hero" style={{ display: 'grid', gridTemplateColumns: '1.1fr .9fr', gap: 'clamp(28px,4vw,64px)', alignItems: 'center' }}>
           <div>
-            <Eyebrow num="01" label="For the trade" />
+            <Eyebrow num="01" label={t('hero.eyebrow')} />
             <h1 className="h1" style={{ margin: '0 0 24px' }}>
-              Partner with
+              {t('hero.title')}
               <br />
               <span className="accent">STRETCH.</span>
             </h1>
             <p className="lead" style={{ maxWidth: 480, margin: '0 0 30px' }}>
-              Two ways to work with us: sell our ceilings as a finished product and let our network
-              install them, or train up and install them yourself. Either way, you get trade pricing,
-              made-to-measure supply from Belgium and referred local leads.
+              {t('hero.lead')}
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14 }}>
               <ModalButton type="partner" source="partners_hero" className="btn btn--primary">
-                Apply to become a partner <ArrowRight size={16} />
+                {t('hero.ctaApply')} <ArrowRight size={16} />
               </ModalButton>
               <ModalButton type="call" source="partners_hero" className="btn btn--ghost">
-                Book a call <ArrowRight size={16} className="btn__arrow" />
+                {t('hero.ctaCall')} <ArrowRight size={16} className="btn__arrow" />
               </ModalButton>
             </div>
           </div>
@@ -103,13 +73,13 @@ export default function PartnersPage({ params }: { params: { locale: string } })
             <Placeholder
             label="Installer / team photo"
             src={pageImages.partners}
-            alt="A STRETCH installation partner at work"
+            alt={t('hero.imageAlt')}
             sizes="(max-width: 860px) 100vw, 45vw"
             ratio="4/3.4"
           />
             <div style={{ position: 'absolute', right: -1, bottom: -1, background: 'var(--red)', color: '#fff', padding: '16px 22px' }}>
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 30, lineHeight: 1 }}>50m²</div>
-              <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', marginTop: 5 }}>Fitted per team / day</div>
+              <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', marginTop: 5 }}>{t('hero.statLabel')}</div>
             </div>
           </div>
         </div>
@@ -118,13 +88,12 @@ export default function PartnersPage({ params }: { params: { locale: string } })
       {/* Two ways to partner */}
       <section className="section--surface">
         <div className="container section">
-          <Eyebrow num="02" label="Two ways to partner" />
+          <Eyebrow num="02" label={t('models.eyebrow')} />
           <h2 className="h2 h2--sm" style={{ margin: '0 0 14px', maxWidth: '22ch' }}>
-            Reseller or dealer — pick the model that fits your business.
+            {t('models.title')}
           </h2>
           <p style={{ fontSize: 15.5, lineHeight: 1.6, color: 'var(--text-muted)', maxWidth: 620, margin: '0 0 clamp(32px,4vw,48px)' }}>
-            The difference is simple: a reseller sells the ceiling and lets us install it; a dealer
-            sells and installs it themselves after completing our training.
+            {t('models.lead')}
           </p>
 
           <div className="pt-paths" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
@@ -132,25 +101,23 @@ export default function PartnersPage({ params }: { params: { locale: string } })
             <div style={{ background: '#fff', border: '1px solid var(--border)', padding: 'clamp(26px,3vw,40px)', display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                 <span style={{ color: 'var(--red)', display: 'inline-flex' }}><Store size={26} /></span>
-                <span style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>Reseller</span>
+                <span style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>{t('models.reseller.kicker')}</span>
               </div>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(22px,2.4vw,28px)', letterSpacing: '-.02em', margin: '0 0 12px' }}>You sell. We install.</h3>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(22px,2.4vw,28px)', letterSpacing: '-.02em', margin: '0 0 12px' }}>{t('models.reseller.title')}</h3>
               <p style={{ fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-muted)', margin: '0 0 20px' }}>
-                You sell a STRETCH ceiling as a finished, installed product to your client. We and our
-                dealer network handle the installation as your partner — you focus on the sale and the
-                relationship.
+                {t('models.reseller.body')}
               </p>
               <ul style={{ listStyle: 'none', margin: '0 0 22px', padding: 0, display: 'flex', flexDirection: 'column', gap: 11 }}>
-                {RESELLER_POINTS.map((p) => (
+                {resellerPoints.map((p) => (
                   <li key={p} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 14, lineHeight: 1.45 }}>
                     <Check size={16} style={{ color: 'var(--red)', flexShrink: 0, marginTop: 2 }} />{p}
                   </li>
                 ))}
               </ul>
-              <p style={{ fontSize: 13, color: 'var(--text-faint-2)', margin: '0 0 22px' }}><strong style={{ color: 'var(--text)' }}>Best for:</strong> interior designers, architects, kitchen &amp; bathroom showrooms and contractors who want to offer ceilings without installing them.</p>
+              <p style={{ fontSize: 13, color: 'var(--text-faint-2)', margin: '0 0 22px' }}><strong style={{ color: 'var(--text)' }}>{t('models.bestForLabel')}</strong> {t('models.reseller.bestFor')}</p>
               <div style={{ marginTop: 'auto' }}>
                 <ModalButton type="partner" source="partners_reseller" className="btn btn--primary" style={{ width: '100%', justifyContent: 'center' }}>
-                  Apply as a reseller <ArrowRight size={15} />
+                  {t('models.reseller.cta')} <ArrowRight size={15} />
                 </ModalButton>
               </div>
             </div>
@@ -159,29 +126,27 @@ export default function PartnersPage({ params }: { params: { locale: string } })
             <div style={{ background: '#fff', border: '1px solid var(--border)', padding: 'clamp(26px,3vw,40px)', display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                 <span style={{ color: 'var(--red)', display: 'inline-flex' }}><Wrench size={26} /></span>
-                <span style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>Dealer</span>
-                <span style={{ marginLeft: 'auto', fontSize: 10.5, fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--red)', border: '1px solid var(--red)', padding: '4px 9px', borderRadius: 999 }}>Training required</span>
+                <span style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>{t('models.dealer.kicker')}</span>
+                <span style={{ marginLeft: 'auto', fontSize: 10.5, fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--red)', border: '1px solid var(--red)', padding: '4px 9px', borderRadius: 999 }}>{t('models.dealer.badge')}</span>
               </div>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(22px,2.4vw,28px)', letterSpacing: '-.02em', margin: '0 0 12px' }}>You sell and install.</h3>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(22px,2.4vw,28px)', letterSpacing: '-.02em', margin: '0 0 12px' }}>{t('models.dealer.title')}</h3>
               <p style={{ fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-muted)', margin: '0 0 20px' }}>
-                You sell STRETCH product within your own projects and carry out the installation
-                yourself. To become a certified dealer, your installer first completes our hands-on
-                training course at our HQ.
+                {t('models.dealer.body')}
               </p>
               <ul style={{ listStyle: 'none', margin: '0 0 22px', padding: 0, display: 'flex', flexDirection: 'column', gap: 11 }}>
-                {DEALER_POINTS.map((p) => (
+                {dealerPoints.map((p) => (
                   <li key={p} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 14, lineHeight: 1.45 }}>
                     <Check size={16} style={{ color: 'var(--red)', flexShrink: 0, marginTop: 2 }} />{p}
                   </li>
                 ))}
               </ul>
-              <p style={{ fontSize: 13, color: 'var(--text-faint-2)', margin: '0 0 22px' }}><strong style={{ color: 'var(--text)' }}>Best for:</strong> installers, fit-out firms and dry-lining specialists who want to add stretch ceilings to their own install capability.</p>
+              <p style={{ fontSize: 13, color: 'var(--text-faint-2)', margin: '0 0 22px' }}><strong style={{ color: 'var(--text)' }}>{t('models.bestForLabel')}</strong> {t('models.dealer.bestFor')}</p>
               <div style={{ marginTop: 'auto', display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
                 <ModalButton type="partner" source="partners_dealer" className="btn btn--primary" style={{ flex: '1 1 auto', justifyContent: 'center' }}>
-                  Apply as a dealer <ArrowRight size={15} />
+                  {t('models.dealer.cta')} <ArrowRight size={15} />
                 </ModalButton>
                 <Link href="/installer-training" className="btn btn--ghost btn--sm" style={{ flex: '0 0 auto' }}>
-                  See the training <ArrowRight size={14} />
+                  {t('models.dealer.trainingLink')} <ArrowRight size={14} />
                 </Link>
               </div>
             </div>
@@ -191,10 +156,10 @@ export default function PartnersPage({ params }: { params: { locale: string } })
           <div className="pt-compare" style={{ marginTop: 'clamp(24px,3vw,36px)', border: '1px solid var(--border)', background: '#fff', overflowX: 'auto' }}>
             <div className="pt-compare-row pt-compare-head" style={{ fontWeight: 700 }}>
               <div />
-              <div style={{ color: 'var(--text)' }}>Reseller</div>
-              <div style={{ color: 'var(--text)' }}>Dealer</div>
+              <div style={{ color: 'var(--text)' }}>{t('compare.resellerHead')}</div>
+              <div style={{ color: 'var(--text)' }}>{t('compare.dealerHead')}</div>
             </div>
-            {COMPARE.map((r) => (
+            {compareRows.map((r) => (
               <div key={r.label} className="pt-compare-row">
                 <div style={{ fontWeight: 600, color: 'var(--text-faint-2)' }}>{r.label}</div>
                 <div>{r.reseller}</div>
@@ -210,42 +175,44 @@ export default function PartnersPage({ params }: { params: { locale: string } })
         <div className="container section">
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24, marginBottom: 'clamp(40px,5vw,64px)' }}>
             <div>
-              <Eyebrow num="03" label="What every partner gets" tone="dark" />
-              <h2 className="h2">More margin,<br /><span className="accent">less hassle.</span></h2>
+              <Eyebrow num="03" label={t('why.eyebrow')} tone="dark" />
+              <h2 className="h2">{t('why.titleA')}<br /><span className="accent">{t('why.titleB')}.</span></h2>
             </div>
             <p style={{ fontSize: 15.5, lineHeight: 1.6, color: 'var(--on-dark-muted-2)', maxWidth: 360, margin: 0 }}>
-              Whichever model you choose, we handle the product and the supply chain — you deliver a
-              premium ceiling your customers love.
+              {t('why.lead')}
             </p>
           </div>
           <div className="pt-why grid-lines grid-lines--dark" style={{ gridTemplateColumns: 'repeat(3,1fr)' }}>
-            {WHY.map(({ icon: Icon, title, body }) => (
-              <div key={title} style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)' }}>
-                <span style={{ color: 'var(--red)', display: 'inline-flex', marginBottom: 18 }}><Icon size={26} /></span>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 21, letterSpacing: '-.01em', margin: '0 0 11px' }}>{title}</h3>
-                <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: 0 }}>{body}</p>
-              </div>
-            ))}
+            {whyCards.map((c, i) => {
+              const Icon = WHY_ICONS[i];
+              return (
+                <div key={c.title} style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)' }}>
+                  <span style={{ color: 'var(--red)', display: 'inline-flex', marginBottom: 18 }}><Icon size={26} /></span>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 21, letterSpacing: '-.01em', margin: '0 0 11px' }}>{c.title}</h3>
+                  <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: 0 }}>{c.body}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* How it works — per path */}
       <section className="container section">
-        <Eyebrow num="04" label="How it works" />
+        <Eyebrow num="04" label={t('how.eyebrow')} />
         <h2 className="h2 h2--sm" style={{ margin: '0 0 clamp(36px,4vw,52px)', maxWidth: '24ch' }}>
-          A short path to selling stretch ceilings — your way.
+          {t('how.title')}
         </h2>
         <div className="pt-flows" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(28px,4vw,48px)' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 22 }}>
               <span style={{ color: 'var(--red)', display: 'inline-flex' }}><Store size={20} /></span>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 18, letterSpacing: '.02em', textTransform: 'uppercase', margin: 0 }}>Reseller path</h3>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 18, letterSpacing: '.02em', textTransform: 'uppercase', margin: 0 }}>{t('how.resellerPath')}</h3>
             </div>
             <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
-              {RESELLER_STEPS.map((s) => (
-                <li key={s.n} style={{ borderLeft: '2px solid var(--border)', paddingLeft: 18 }}>
-                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 22, color: 'var(--red)', lineHeight: 1 }}>{s.n}</div>
+              {resellerSteps.map((s, i) => (
+                <li key={s.title} style={{ borderLeft: '2px solid var(--border)', paddingLeft: 18 }}>
+                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 22, color: 'var(--red)', lineHeight: 1 }}>{String(i + 1).padStart(2, '0')}</div>
                   <h4 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 17, margin: '8px 0 5px' }}>{s.title}</h4>
                   <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--text-muted)', margin: 0 }}>{s.body}</p>
                 </li>
@@ -255,12 +222,12 @@ export default function PartnersPage({ params }: { params: { locale: string } })
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 22 }}>
               <span style={{ color: 'var(--red)', display: 'inline-flex' }}><Wrench size={20} /></span>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 18, letterSpacing: '.02em', textTransform: 'uppercase', margin: 0 }}>Dealer path</h3>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 18, letterSpacing: '.02em', textTransform: 'uppercase', margin: 0 }}>{t('how.dealerPath')}</h3>
             </div>
             <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
-              {DEALER_STEPS.map((s) => (
-                <li key={s.n} style={{ borderLeft: '2px solid var(--border)', paddingLeft: 18 }}>
-                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 22, color: 'var(--red)', lineHeight: 1 }}>{s.n}</div>
+              {dealerSteps.map((s, i) => (
+                <li key={s.title} style={{ borderLeft: '2px solid var(--border)', paddingLeft: 18 }}>
+                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 22, color: 'var(--red)', lineHeight: 1 }}>{String(i + 1).padStart(2, '0')}</div>
                   <h4 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 17, margin: '8px 0 5px' }}>{s.title}</h4>
                   <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--text-muted)', margin: 0 }}>{s.body}</p>
                 </li>
@@ -275,13 +242,13 @@ export default function PartnersPage({ params }: { params: { locale: string } })
         <div className="container section">
           <div className="pt-apply" style={{ display: 'grid', gridTemplateColumns: '.85fr 1.15fr', gap: 'clamp(32px,4vw,64px)', alignItems: 'start' }}>
             <div>
-              <Eyebrow num="05" label="Become a partner" tone="dark" />
-              <h2 className="h2" style={{ color: '#fff', margin: '0 0 18px' }}>Apply<br /><span style={{ color: 'var(--black)' }}>today.</span></h2>
+              <Eyebrow num="05" label={t('apply.eyebrow')} tone="dark" />
+              <h2 className="h2" style={{ color: '#fff', margin: '0 0 18px' }}>{t('apply.titleA')}<br /><span style={{ color: 'var(--black)' }}>{t('apply.titleB')}.</span></h2>
               <p style={{ fontSize: 15, lineHeight: 1.6, color: '#fff', margin: '0 0 22px', maxWidth: 360 }}>
-                Tell us whether you want to resell or install — we&apos;ll take it from there.
+                {t('apply.lead')}
               </p>
               <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
-                {['We review every application personally', 'Exclusive territory where available', 'Onboarding within weeks'].map((p) => (
+                {applyPoints.map((p) => (
                   <li key={p} style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 15, color: '#fff', fontWeight: 500 }}>
                     <span style={{ width: 8, height: 8, background: '#fff', flexShrink: 0 }} />{p}
                   </li>

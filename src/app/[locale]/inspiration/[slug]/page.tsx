@@ -15,7 +15,7 @@ export function generateMetadata({
   params,
 }: {
   params: { locale: string; slug: string };
-}): Metadata {
+}): Promise<Metadata> {
   return projectMetadata(params.slug, params.locale);
 }
 
