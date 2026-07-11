@@ -7,6 +7,7 @@ import type { ModalConfig, FormField } from '@/lib/forms-config';
 import type { Application } from '@/lib/applications';
 import type { TechMembrane } from '@/lib/technical';
 import type { PrefabPageData } from '@/lib/prefab';
+import type { Project, BlogPost } from '@/lib/content';
 
 // ---- Lead modals -----------------------------------------------------------
 export type ModalMessages = {
@@ -79,6 +80,46 @@ type PrefabMessages = {
   showcase?: { heading: string; items: { title: string; meta?: string; summary: string }[] };
   worldwide: string;
 };
+
+// ---- Portfolio projects ------------------------------------------------------
+// Messages entry mirrors the translatable Project fields; facts keep their href
+// from the structural source. cat/meta are translated separately (projectCards).
+export type ProjectMessages = {
+  title: string;
+  summary?: string;
+  hook?: string;
+  description?: string[];
+  highlights?: string[];
+  materials?: string[];
+  facts?: { label: string; value: string }[];
+  faqs?: { q: string; a: string }[];
+};
+
+export function localizeProject(project: Project, raw: ProjectMessages | undefined): Project {
+  if (!raw) return project;
+  return {
+    ...project,
+    title: raw.title,
+    summary: raw.summary ?? project.summary,
+    hook: raw.hook ?? project.hook,
+    description: raw.description ?? project.description,
+    highlights: raw.highlights ?? project.highlights,
+    materials: raw.materials ?? project.materials,
+    facts:
+      project.facts && raw.facts
+        ? project.facts.map((f, i) => ({ ...f, ...raw.facts![i] }))
+        : project.facts,
+    faqs: raw.faqs ?? project.faqs,
+  };
+}
+
+// ---- Blog posts --------------------------------------------------------------
+export type BlogPostMessages = Pick<BlogPost, 'title' | 'excerpt' | 'body'>;
+
+export function localizeBlogPost(post: BlogPost, raw: BlogPostMessages | undefined): BlogPost {
+  if (!raw) return post;
+  return { ...post, title: raw.title, excerpt: raw.excerpt, body: raw.body };
+}
 
 export function localizePrefab(data: PrefabPageData, raw: PrefabMessages | undefined): PrefabPageData {
   if (!raw) return data;

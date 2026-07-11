@@ -10,9 +10,6 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { analytics } from '@/lib/analytics';
 
-const SUBJECTS = ['Request a quote', 'Find a dealer', 'Partnership', 'Installer training', 'Other'];
-const TIMELINES = ['As soon as possible', 'Within 1–3 months', 'Within 4–12 months', 'Just exploring'];
-
 type Status = 'idle' | 'sending' | 'sent' | 'error';
 
 function isEmail(v: string) {
@@ -21,6 +18,9 @@ function isEmail(v: string) {
 
 export default function ContactForm() {
   const t = useTranslations('forms');
+  const tc = useTranslations('contactPage.form');
+  const subjects = tc.raw('subjects') as string[];
+  const timelines = tc.raw('timelines') as string[];
   const [status, setStatus] = useState<Status>('idle');
   const [consent, setConsent] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -99,14 +99,14 @@ export default function ContactForm() {
         </div>
         <div>
           <label style={labelStyle} htmlFor="cf-subject">{t('fields.subject')}</label>
-          <select id="cf-subject" name="subject" className="field" defaultValue={SUBJECTS[0]}>
-            {SUBJECTS.map((s) => <option key={s}>{s}</option>)}
+          <select id="cf-subject" name="subject" className="field" defaultValue={subjects[0]}>
+            {subjects.map((s) => <option key={s}>{s}</option>)}
           </select>
         </div>
         <div>
-          <label style={labelStyle} htmlFor="cf-timeline">Timeline</label>
-          <select id="cf-timeline" name="timeline" className="field" defaultValue={TIMELINES[0]}>
-            {TIMELINES.map((s) => <option key={s}>{s}</option>)}
+          <label style={labelStyle} htmlFor="cf-timeline">{tc('timelineLabel')}</label>
+          <select id="cf-timeline" name="timeline" className="field" defaultValue={timelines[0]}>
+            {timelines.map((s) => <option key={s}>{s}</option>)}
           </select>
         </div>
         <div style={{ gridColumn: '1 / -1' }}>
@@ -119,8 +119,8 @@ export default function ContactForm() {
       <label style={{ display: 'flex', gap: 11, alignItems: 'flex-start', marginTop: 18, cursor: 'pointer', fontSize: 13.5, lineHeight: 1.5, color: 'var(--text-muted)' }}>
         <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} style={{ marginTop: 3, accentColor: 'var(--red)', width: 16, height: 16, flexShrink: 0 }} />
         <span>
-          I agree to STRETCH processing my details to respond to my request, as described in the{' '}
-          <Link href="/privacy" className="lnk" style={{ color: 'var(--red)' }}>privacy policy</Link>.
+          {tc('consentPrefix')}{' '}
+          <Link href="/privacy" className="lnk" style={{ color: 'var(--red)' }}>{tc('consentPrivacy')}</Link>.
         </span>
       </label>
       {errors.__consent && <div style={errStyle}>{errors.__consent}</div>}
@@ -132,7 +132,7 @@ export default function ContactForm() {
       )}
 
       <button type="submit" className="btn btn--primary" disabled={status === 'sending'} style={{ marginTop: 22, width: '100%', justifyContent: 'center', opacity: status === 'sending' ? 0.7 : 1 }}>
-        {status === 'sending' ? t('sending') : <>Send message <ArrowRight size={16} /></>}
+        {status === 'sending' ? t('sending') : <>{tc('submit')} <ArrowRight size={16} /></>}
       </button>
       <p style={{ marginTop: 14, fontSize: 12.5, color: 'var(--text-faint)', textAlign: 'center' }}>{t('reassurance')}</p>
 

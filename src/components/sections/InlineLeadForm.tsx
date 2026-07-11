@@ -9,6 +9,7 @@ import { ArrowRight, Check } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { MODAL_CONFIGS, TRAINING_DATE_DETAIL, type ModalType } from '@/lib/forms-config';
+import { localizeModalConfig, type ModalMessages } from '@/lib/localize-content';
 import { analytics } from '@/lib/analytics';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
@@ -27,8 +28,10 @@ export default function InlineLeadForm({
   /** Render for a dark/red background (lightens labels & borders). */
   dark?: boolean;
 }) {
-  const cfg = MODAL_CONFIGS[type];
   const tf = useTranslations('forms');
+  const ti = useTranslations('inlineLead');
+  const tm = useTranslations('modals');
+  const cfg = localizeModalConfig(MODAL_CONFIGS[type], tm.raw(type) as ModalMessages);
   const [status, setStatus] = useState<Status>('idle');
   const [consent, setConsent] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -91,7 +94,10 @@ export default function InlineLeadForm({
 
       {cfg.showDates && (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 10, marginBottom: 20 }}>
-          {TRAINING_DATE_DETAIL.map((d) => (
+          {TRAINING_DATE_DETAIL.map((d, i) => ({
+            date: (tm.raw('trainingDates') as string[])[i] ?? d.date,
+            note: (tm.raw('trainingDateNotes') as string[])[i] ?? d.note,
+          })).map((d) => (
             <div key={d.date} style={{ border: cardBorder, padding: '14px 16px', background: cardBg }}>
               <div style={{ fontWeight: 700, fontSize: 14, color: dark ? '#fff' : 'var(--black)' }}>{d.date}</div>
               <div style={{ fontSize: 12, color: dark ? 'rgba(255,255,255,.75)' : 'var(--text-faint)', marginTop: 4 }}>{d.note}</div>
@@ -123,8 +129,8 @@ export default function InlineLeadForm({
       <label style={{ display: 'flex', gap: 11, alignItems: 'flex-start', marginTop: 18, cursor: 'pointer', fontSize: 13.5, lineHeight: 1.5, color: muted }}>
         <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} style={{ marginTop: 3, accentColor: dark ? '#fff' : 'var(--red)', width: 16, height: 16, flexShrink: 0 }} />
         <span>
-          I agree to STRETCH processing my details to respond to my request, as described in the{' '}
-          <Link href="/privacy" className="lnk" style={{ color: dark ? '#fff' : 'var(--red)', textDecoration: 'underline' }}>privacy policy</Link>.
+          {ti('consentPrefix')}{' '}
+          <Link href="/privacy" className="lnk" style={{ color: dark ? '#fff' : 'var(--red)', textDecoration: 'underline' }}>{ti('consentPrivacy')}</Link>.
         </span>
       </label>
       {errors.__consent && <div style={errStyle}>{errors.__consent}</div>}

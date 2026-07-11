@@ -7,6 +7,8 @@ import { reviews, ratingDisplay } from '@/lib/content';
 
 export default function Reviews() {
   const t = useTranslations('home.reviews');
+  const tData = useTranslations('reviewsData');
+  const items = tData.raw('items') as { role: string; quote: string }[];
   return (
     <section className="section--surface" id="reviews">
       <div className="container section">
@@ -49,7 +51,7 @@ export default function Reviews() {
               >
                 <div style={{ fontSize: 15, letterSpacing: '.08em', color: 'var(--red)', marginBottom: 18 }}>★★★★★</div>
                 <blockquote style={{ margin: '0 0 24px', fontSize: 16, lineHeight: 1.6, color: dark ? 'var(--on-dark-soft)' : 'var(--text-body)', flex: 1 }}>
-                  “{r.quote}”
+                  “{items[i].quote}”
                 </blockquote>
                 <figcaption style={{ display: 'flex', alignItems: 'center', gap: 13 }}>
                   <span
@@ -65,7 +67,7 @@ export default function Reviews() {
                   </span>
                   <span>
                     <span style={{ display: 'block', fontWeight: 700, fontSize: 14 }}>{r.name}</span>
-                    <span style={{ display: 'block', fontSize: 12.5, color: dark ? 'var(--on-dark-muted)' : 'var(--text-faint)' }}>{r.role}</span>
+                    <span style={{ display: 'block', fontSize: 12.5, color: dark ? 'var(--on-dark-muted)' : 'var(--text-faint)' }}>{items[i].role}</span>
                   </span>
                 </figcaption>
               </figure>
