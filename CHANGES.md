@@ -12,6 +12,32 @@
 
 **Verified:** `tsc --noEmit` clean; `next build` succeeds; Playwright: anonymous requests to the page and the API both redirect to login, demo login → designer renders inside the portal shell, tool solves the 15-corner reference room (SVG draws, spec table computes), nav/tile/locale (nl) all OK.
 
+## 2026-07-11 — Body-copy i18n phase 1: home page, CTA band, product templates
+
+**What changed**
+
+- Extracted all hardcoded English copy from the HOME page (Hero incl. 4 slides,
+  Ticker, Stats, WhyStretch, Solutions, Acoustics, ApplicationAreas, Gallery,
+  InstallerPartner, Reviews headings), the site-wide CTA band, the solution-page
+  TEMPLATE (breadcrumbs, CTAs, section headings, colours note, datasheet labels)
+  and the products overview page into new `home`, `ctaBand`, `productPage` and
+  `productsPage` namespaces in `messages/*.json` — translated in ALL 12 locales
+  (~160 keys each, native industry terminology; 390 keys total per locale, full
+  parity verified).
+- Result: the home page and all product-page chrome now render fully native on
+  every domain (verified fr/pl/de rendered output — zero residual English in the
+  extracted sections; EN output unchanged).
+
+**Still English (phase 2+ — needs extraction + translation per surface)**
+
+- Product CATALOG text in `lib/products.ts` (names/intros/features/specs/FAQs
+  per product) — appears on product pages below the translated chrome.
+- `lib/content.ts` (global FAQs, blog posts, reviews, projects), technical.ts,
+  prefab.ts, applications.ts, forms-config.ts, partners / installer-training /
+  about page bodies.
+
+---
+
 ## 2026-07-10 — Ceiling designer cut-out fixes + per-domain SEO repairs
 
 **Ceiling designer (`src/lib/portal/designer-html.ts`)**
