@@ -4,7 +4,7 @@ import { productMetadata, ProductView } from '@/components/sections/ProductRoute
 
 const SLUG = 'custom-print';
 
-export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
   return productMetadata(SLUG, params.locale);
 }
 
