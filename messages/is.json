@@ -2373,5 +2373,1005 @@
     "shippedWorldwide": "Sent um allan heim",
     "ctaTitle": "Ertu með verkefni fyrir okkur?",
     "ctaBody": "Sendu okkur teikningarnar eða hugmyndina — við hönnum grindina, smíðum hana innanhúss og sendum hana til þín."
+  },
+  "projects": {
+    "da-tweekaz-studio": {
+      "title": "Da Tweekaz Studio",
+      "summary": "Hljóðvistarstrekkiloft og -veggir fyrir hljóðver til tónlistarframleiðslu.",
+      "hook": "Hreint, hljóðvistarstýrt rými fyrir eitt þekktasta nafnið í hardstyle-tónlist.",
+      "description": [
+        "Í upptökuveri Da Tweekaz í Hollandi meðhöndlar hljóðvistarkerfi frá STRETCH bæði loftið og veggina. Endurkast er haft í skefjum svo rýmið helst nákvæmt að vinna í — með saumlausri, nútímalegri áferð og engum sýnilegum plötum yfir höfði."
+      ],
+      "highlights": [
+        "Hljóðvistarmeðhöndlun lofts og veggja",
+        "Saumlaus áferð án platna"
+      ],
+      "materials": [
+        "STRETCH hljóðvistarloft",
+        "STRETCH Acoustic textíll (veggir)"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Holland"
+        },
+        {
+          "label": "STRETCH-söluaðili",
+          "value": "Q82 Acoustics"
+        }
+      ]
+    },
+    "mark-with-a-k": {
+      "title": "Mark With a K",
+      "summary": "Hljóðvistarmeðhöndlun á hljóðherbergi plötusnúðs og upptökustjóra.",
+      "hook": "Gallalaust, hljóðvistarstýrt rými fyrir belgískan plötusnúð og upptökustjóra.",
+      "description": [
+        "Saumlaust STRETCH hljóðvistarloft dregur í sig eftiróminn í vinnslurýminu og heldur um leið gallalausri, nútímalegri áferð. Útkoman er rólegt, vel stýrt vinnurými þar sem hljóðvistareiginleikarnir eru faldir inni í himnunni."
+      ],
+      "highlights": [
+        "Saumlaust hljóðvistarloft",
+        "Falið ísogsundirlag",
+        "Nútímaleg áferð án platna"
+      ],
+      "materials": [
+        "STRETCH hljóðvistarloft",
+        "Ísogsundirlag með miklum þéttleika"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgía"
+        },
+        {
+          "label": "Rými",
+          "value": "Hljóðver til tónlistarframleiðslu"
+        }
+      ]
+    },
+    "notary-ampe-anthony": {
+      "title": "Lögbókandastofa Ampe Anthony",
+      "summary": "350 m² af hljóðvistarstrekkiloftum í hágæða lögbókandastofu.",
+      "hook": "Heildarinnrétting hágæða skrifstofu þar sem þurfti að hemja hörð, endurkastandi efni — án þess að tapa hreinu, mínimalísku yfirbragði.",
+      "description": [
+        "Árið 2019 var lögbókandastofan Ampe Anthony í Kruibeke endurbyggð frá grunni sem hágæða innrétting með meðvitað hreinu, mínimalísku yfirbragði — slípuð steypugólf, stálgluggakarmar og fjöldi harðra yfirborða. Ekkert var til sparað svo frágangurinn yrði fullkominn.",
+        "Þessi hörðu efni gerðu skrifstofuna mjög ómmikla. Til að ná aftur þægilegu hljóðstigi fékk öll innréttingin STRETCH hljóðvistarloft með sérstöku ísogslagi úr pólýesterull, fest við steypuplötuna sem fyrir var — sem lyftir hljóðvistinni á hátt stig.",
+        "Loftið var lækkað um 10 cm til að fela allar tæknilagnir fyrir ofan og eftir stóð 260 cm lofthæð. Til að rýmið virtist hærra og stærra byggðum við stórar sporöskjulaga dældir inn í loftið — sjónblekking sem lyftir rýminu sýnilega."
+      ],
+      "highlights": [
+        "Eftirómstími mældist 0.6 s",
+        "Stórar sporöskjulaga loftdældir fyrir hærri upplifun",
+        "Sérstakt ísogslag úr pólýesterull bak við himnuna"
+      ],
+      "materials": [
+        "STRETCH hljóðvistarloft",
+        "Bogadregnir álrammar eftir máli",
+        "Ísogslag úr pólýesterull D40/50 (40 kg/m³, 50 mm)",
+        "STRETCH Design loft í sporöskjulaga forminu",
+        "Hvítir PVC-strekkiprófílar með jöðrum",
+        "Lýsing: Wever & Ducré, Delta Light"
+      ],
+      "facts": [
+        {
+          "label": "Svæði",
+          "value": "Waasland (Kruibeke)"
+        },
+        {
+          "label": "Ár",
+          "value": "2018"
+        },
+        {
+          "label": "Flatarmál",
+          "value": "350 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Ante Architecten"
+        },
+        {
+          "label": "STRETCH-söluaðili",
+          "value": "Corpus Interieur"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hversu langan tíma tók uppsetningin?",
+          "a": "Uppsetning hljóðvistarloftanna, allrar lýsingarinnar og sérfrágangsins tók 7 virka daga."
+        },
+        {
+          "q": "Hvaða eftirómstími náðist?",
+          "a": "Mælt eftir uppsetningu náði skrifstofan eftirómstíma upp á 0.6 s — innréttingin er mjög hljóðlát, og þannig upplifist hún líka."
+        },
+        {
+          "q": "Hversu margir uppsetningaraðilar unnu að verkefninu?",
+          "a": "Teymi 2 STRETCH-uppsetningaraðila kláraði allan loftapakkann: himnuna, lýsinguna, hljóðvistarplöturnar, loftasmíðina og sporöskjulaga formin."
+        },
+        {
+          "q": "Hversu lengi endist loftið?",
+          "a": "Eins og með öll strekkiloft fer endingin eftir þrifum, en það endist auðveldlega í um 25 ár. Eftir það gæti aðeins þurft að skipta um himnuna — ramminn sem fyrir er situr áfram."
+        }
+      ]
+    },
+    "bnp-paribas-fortis": {
+      "title": "BNP Paribas Fortis",
+      "summary": "2,000 m² af lýstum og hljóðvistarloftum í höfuðstöðvum bankans í Brussel.",
+      "hook": "Lýst og hljóðvistarleg STRETCH-loft um nýju höfuðstöðvar bankans við Montagne du Parc — þar á meðal matartorg á mörgum hæðum.",
+      "description": [
+        "Í höfuðstöðvum BNP Paribas Fortis í miðborg Brussel afhenti STRETCH um 2,000 m² af lýstum (STRETCH Light) og hljóðvistarlegum (STRETCH Acoustic) loftum, í samstarfi við Jaspers-Eyers Architects og NCBHAM ásamt samstarfsaðilanum Conceptexpo.",
+        "Hápunkturinn er matartorgið Barista Bar, sem tekur á móti starfsfólki og gestum á nokkrum hæðum. Hot Corner ber fram heita rétti undir lofti úr messingþynnum sem minnir á loga; Fresh Corner býður salöt hæðinni ofar; og Sweet Corner lokar hringnum með eftirréttum — hver afgreiðsla á sér spegilmynd svo hægt er að setja saman heila máltíð hvar sem er."
+      ],
+      "highlights": [
+        "≈2,000 m² af strekkiloftum",
+        "STRETCH Light + Acoustic saman",
+        "Barista Bar matartorg á mörgum hæðum",
+        "Skrautloft með messingþynnum sem “logar”"
+      ],
+      "materials": [
+        "STRETCH Light loft (lýst)",
+        "STRETCH Acoustic loft",
+        "Bogadregnir lofthlutar",
+        "Innbyggð lýsing"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Brussel (Montagne du Parc)"
+        },
+        {
+          "label": "Flatarmál",
+          "value": "2,000 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Jaspers-Eyers & NCBHAM"
+        },
+        {
+          "label": "Samstarfsaðili",
+          "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-beveren": {
+      "title": "Van der Valk",
+      "summary": "Hámarks hljóðísog fyrir viðburðasal hótels — með nánast enga hæð aflögu.",
+      "hook": "Hljóðvistarvandamál sem hafði hrjáð viðburðasal hótelsins árum saman, leyst í gegnum loftið.",
+      "description": [
+        "Tim van der Valk leitaði til STRETCH vegna hljóðvistarvandamáls sem hafði háð viðburðarými þeirra í nokkur ár. Eftir samtal við Michael Nicasens hjá STRETCH komumst við að þeirri niðurstöðu að lausnin yrði að koma úr loftinu — en loftið sem fyrir var, var aðeins 255 cm hátt og skildi eftir afar lítið pláss fyrir kerfi.",
+        "Við lögðum því til 50 mm kerfishæð sem nær samt αw 0.95: hámarks hljóðísog með aðeins lágmarks lækkun lofthæðar. Stóru viðburðasalirnir eru spenntir saumlaust, hljóðvistareiginleikarnir eru innbyggðir í himnuna og smáatriðin — lúgur, lýsing, skynjarar og stjörnuhiminn — falla snyrtilega inn í loftið."
+      ],
+      "highlights": [
+        "αw 0.95 hljóðísog",
+        "Aðeins 50 mm kerfishæð",
+        "Innbyggðar tæknilegar aðgangslúgur",
+        "Lýsing og viðveruskynjarar",
+        "Stjörnuhiminn",
+        "Saumlaus áferð kringum súlur"
+      ],
+      "materials": [
+        "STRETCH hljóðvistarloft (50 mm kerfi)",
+        "Innbyggðar tæknilúgur",
+        "Innbyggð lýsing",
+        "Viðveruskynjarar",
+        "Stjörnuhimins-uppsetning",
+        "Strekkiprófílar með jöðrum"
+      ],
+      "facts": [
+        {
+          "label": "Staður",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Svæði",
+          "value": "Beveren-Waas"
+        },
+        {
+          "label": "Núverandi hæð",
+          "value": "255 cm"
+        },
+        {
+          "label": "Kerfishæð",
+          "value": "50 mm"
+        },
+        {
+          "label": "Hljóðvistargildi",
+          "value": "αw 0.95"
+        }
+      ]
+    },
+    "johnson-and-johnson": {
+      "title": "Johnson & Johnson",
+      "summary": "Prentað, lýst loft fyrir rannsóknar- og þróunarsetur í lyfjaiðnaði.",
+      "hook": "Endurkastandi, nýstárleg loft- og lýsingarhönnun sem endurspeglar rannsóknir Johnson & Johnson á bættri sjón.",
+      "description": [
+        "STRETCH vann með Van Dijk Architects og innréttingafyrirtækinu Glennwood að loft- og lýsingarhönnun fyrir nýja starfsstöð Johnson & Johnson í Limerick City á Írlandi. Verkefnið var endurkastandi, nýstárlegt loft í takt við rannsóknar- og þróunarmarkmið hússins um bætta sjón.",
+        "Prentaða og lýsta STRETCH-loftið liggur í gegnum alla bygginguna, gefur hverju svæði sinn eigin fókus og virkar sem sjónræn leiðsögn fyrir fólk á ferð um rýmið. Nútímalegar lýsingarlausnir draga fram bæði hönnunina og endanlegt útlit."
+      ],
+      "highlights": [
+        "Sérprentun um alla bygginguna",
+        "Lýsing fyrir fókus og rötun",
+        "Endurkastandi hönnun innblásin af rannsóknum og þróun"
+      ],
+      "materials": [
+        "Prentað STRETCH-loft",
+        "Lýst (baklýst) STRETCH-loft",
+        "Innbyggð lýsing"
+      ],
+      "facts": [
+        {
+          "label": "Svæði",
+          "value": "Limerick, Írland"
+        },
+        {
+          "label": "Ár",
+          "value": "2019"
+        },
+        {
+          "label": "Flatarmál",
+          "value": "60 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Van Dijk Architects"
+        },
+        {
+          "label": "STRETCH-söluaðili",
+          "value": "Glennwood"
+        }
+      ]
+    },
+    "polette-eyewear": {
+      "title": "Polette Eyewear",
+      "summary": "Verslunarhugmynd sem aldrei hefur sést áður, eftir arkitektinn Javier Zubiria.",
+      "hook": "Verslun sem þú getur spilað á eins og hljóðfæri — óður til friðar, ástar og einingar.",
+      "description": [
+        "Antwerpen, 2022. Eftir velgengni sýningarrýmisins í París tók polette aftur höndum saman við Javier Zubiria, stofnanda Amsterdam-stúdíósins zU-Studio, um að færa Antwerpen verslunarhugmynd sem aldrei hefur sést áður. Upphafspunkturinn var eitt lag — “Imagine” eftir John Lennon — og óskin um að byggja stað tengsla og sköpunar eftir ár fjarlægðar.",
+        "Á móti gestum taka tvö risastór píanóhljómborð, eitt hvoru megin, hvort með 88 nótum. Hvítu nóturnar eru speglar frá gólfi upp í loft sem skapa tilfinningu fyrir óendanleika; svörtu nóturnar þjóna jafnframt sem hillur fyrir gleraugu polette. Í miðjunni vísar risastór hvítur bekkur til Bed-in friðarmótmæla Lennons.",
+        "Yfir höfði ber loftið aðalatriðið: skúlptúrískt píanóloksform, skáskorið eftir allri 20 metra dýpt sýningarrýmisins og byggt sem lýst STRETCH-loft sem hleypir ljósi í gegn. Hver píanónóta virkar líka í alvöru — skynjarakerfi lýsir upp næstu nótu sem á að ýta á, svo gestir geta spilað lag saman í rýminu."
+      ],
+      "highlights": [
+        "Lýstur loftskúlptúr sem hleypir ljósi í gegn",
+        "Píanóloksform eftir allri 20 m dýptinni",
+        "Gagnvirk nótulýsing stýrð af skynjurum",
+        "Sett upp á einum virkum degi"
+      ],
+      "materials": [
+        "Hljóðvistarlegt STRETCH-loft sem hleypir ljósi í gegn",
+        "Skúlptúrískt píanóloksform í lofti",
+        "Innbyggð lýsing",
+        "Nótulýsing stýrð af skynjurum"
+      ],
+      "facts": [
+        {
+          "label": "Svæði",
+          "value": "Antwerpen"
+        },
+        {
+          "label": "Ár",
+          "value": "2022"
+        },
+        {
+          "label": "Flatarmál",
+          "value": "60 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "zU-Studio · Javier Zubiria"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hversu langan tíma tók uppsetningin?",
+          "a": "Uppsetning hljóðvistarstrekkiloftsins, sem hleypir ljósi í gegn, tók einn virkan dag."
+        },
+        {
+          "q": "Hversu margir uppsetningaraðilar unnu að verkefninu?",
+          "a": "Teymi 2 STRETCH-uppsetningaraðila sá um allt verkið — loftið og lýsinguna."
+        },
+        {
+          "q": "Hversu lengi endist loftið?",
+          "a": "Eins og með öll strekkiloft fer endingin eftir þrifum, en það endist auðveldlega í um 25 ár; eftir það gæti aðeins þurft að skipta um himnuna en ramminn sem fyrir er situr áfram."
+        }
+      ]
+    },
+    "citizenm-hotel": {
+      "title": "CitizenM Hotel",
+      "summary": "Forsmíðuð, baklýst baðherbergisloft sett upp á hótelum CitizenM.",
+      "hook": "Endurtakanlegt, baklýst baðherbergisloft, smíðað utan verkstaðar fyrir hótel í tveimur heimsálfum.",
+      "description": [
+        "Fyrir einingahótel CitizenM útvegaði STRETCH forsmíðuð baðherbergisloft með baklýstri áferð sem hleypir ljósi í gegn – smíðuð utan verkstaðar sem endurtakanlegar einingar og sett upp víðs vegar í Bandaríkjunum og Evrópu, frá New York og Chicago til Miami, Los Angeles og víðar."
+      ],
+      "highlights": [
+        "Forsmíðað, byggt utan verkstaðar",
+        "Baklýst áferð sem hleypir ljósi í gegn",
+        "Endurtakanlegt í stórum stíl á fjölda hótela"
+      ],
+      "materials": [
+        "Forsmíðuð STRETCH-baðherbergiseining",
+        "STRETCH Backlit-himna (hleypir ljósi í gegn)",
+        "Innbyggð lýsing"
+      ],
+      "facts": [
+        {
+          "label": "Heimsálfur",
+          "value": "Bandaríkin og Evrópa"
+        },
+        {
+          "label": "Borgir",
+          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+        },
+        {
+          "label": "Samstarfsaðili",
+          "value": "Saniskill"
+        }
+      ]
+    },
+    "london-chapel": {
+      "title": "Kapella í London",
+      "summary": "Baklýst strekkiloft yfir endurgerðu kapellurými.",
+      "hook": "Endurgerð kapella böðuð í mjúkri, jafnri birtu frá einu lýsandi lofti.",
+      "description": [
+        "Hálfgegnsætt STRETCH-loft breytir öllum loftfletinum í mjúkan, jafnan ljósgjafa: endurgerða rýmið baðast í glýjulausri lýsingu á meðan LED-flöturinn er algjörlega falinn."
+      ],
+      "highlights": [
+        "Allt loftið sem ljósgjafi",
+        "Glýjulaus, jöfn lýsing",
+        "LED-flötur algjörlega falinn"
+      ],
+      "materials": [
+        "Hálfgegnsætt STRETCH-loft",
+        "LED-baklýsingarflötur"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "London, Bretland"
+        },
+        {
+          "label": "Rými",
+          "value": "Endurgerð kapella"
+        }
+      ]
+    },
+    "private-villa-knokke": {
+      "title": "Einkavilla",
+      "summary": "Saumlaust, matt loft fyrir opna villu við ströndina.",
+      "hook": "Saumlaust loft, slétt eins og fullkomin múrhúð, fyrir opið heimili við ströndina.",
+      "description": [
+        "Í opnu alrými villunnar lítur mjög matt STRETCH-loft úr pólýester út eins og gallalaus múrhúð milli veggja – stílhreint og nútímalegt, án sprungna og skuggalína hefðbundins lofts."
+      ],
+      "highlights": [
+        "Saumlaus áferð milli veggja",
+        "Engar sprungur eða skuggalínur",
+        "Mjög matt áferð, lík múrhúð"
+      ],
+      "materials": [
+        "STRETCH-loft úr pólýester (mjög matt)",
+        "Jaðarprófílar til strekkingar"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Knokke, Belgía"
+        },
+        {
+          "label": "Rými",
+          "value": "Opið alrými"
+        }
+      ]
+    },
+    "home-cinema-ghent": {
+      "title": "Heimabíó",
+      "summary": "Stjörnuhiminsloft með hljóðdempandi baklagi fyrir heimabíó.",
+      "hook": "Einkabíó undir tindrandi næturhimni, stillt fyrir kvikmyndahljóð.",
+      "description": [
+        "Hundruð ljósleiðarapunkta mynda tindrandi næturhiminn yfir sætunum, á meðan hljóðdempandi baklag heldur hljómburðinum í jafnvægi fyrir kvikmyndahljóðið – andrúmsloft og hljóðgæði sameinuð í einu lofti."
+      ],
+      "highlights": [
+        "Stjörnuhiminn úr ljósleiðurum",
+        "Hljóðdempandi baklag fyrir kvikmyndahljóð",
+        "Andrúmsloft og hljóðgæði í einu lofti"
+      ],
+      "materials": [
+        "STRETCH-loft með stjörnuhimni",
+        "Stjörnubreiða úr ljósleiðurum",
+        "Hljóðísogandi baklag"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Gent, Belgía"
+        },
+        {
+          "label": "Rými",
+          "value": "Heimabíó"
+        }
+      ]
+    },
+    "city-penthouse-antwerp": {
+      "title": "Þakíbúð í borginni",
+      "summary": "Gallalaust hönnunarloft fyrir þakíbúð í borginni.",
+      "hook": "Mínimalískt, fullkomlega slétt hönnunarloft fyrir þakíbúð í borginni.",
+      "description": [
+        "Í alrými þakíbúðarinnar er saumlaust STRETCH-loft með innbyggðri lýsingu sem heldur útlitinu mínimalísku og fletinum fullkomnum í öllu opna rýminu."
+      ],
+      "highlights": [
+        "Saumlaust hönnunarloft",
+        "Innbyggð lýsing",
+        "Mínimalísk, gallalaus áferð"
+      ],
+      "materials": [
+        "STRETCH-loft úr pólýester",
+        "Innbyggð lýsing"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Antwerpen, Belgía"
+        },
+        {
+          "label": "Rými",
+          "value": "Stofa í þakíbúð"
+        }
+      ]
+    },
+    "wellness-spa-bruges": {
+      "title": "Heilsulind",
+      "summary": "Rakaþolið, baklýst loft fyrir heilsulind.",
+      "hook": "Rakaþolið loft með mjúkri birtu fyrir vellíðunarrými.",
+      "description": [
+        "Heilsulindin þurfti loft sem þolir raka og skapar rólegt andrúmsloft. Hálfgegnsætt, baklýst STRETCH-loft lýsir mjúklega yfir vellíðunarsvæðinu og auðvelt er að strjúka það hreint – ósnortið af gufu og raka."
+      ],
+      "highlights": [
+        "Þolir raka og gufu",
+        "Mjúk, jöfn baklýsing",
+        "Auðvelt að strjúka hreint"
+      ],
+      "materials": [
+        "Hálfgegnsætt STRETCH-loft úr PVC",
+        "LED-baklýsingarflötur"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Brugge, Belgía"
+        },
+        {
+          "label": "Rými",
+          "value": "Heilsulind / vellíðan"
+        }
+      ]
+    },
+    "rue-perree-paris": {
+      "title": "Rue Perrée",
+      "summary": "Lýsandi loft fyrir gallerí margra vörumerkja í París.",
+      "hook": "Jöfn birta eins og í galleríi í sýningarrými margra vörumerkja – ljósabúnaður hvergi sjáanlegur.",
+      "description": [
+        "Hjá ART RECHERCHE INDUSTRIE við Rue Perrée í París – galleríi sem sýnir nokkur vörumerki – veitir lýsandi STRETCH-loft jafna, ljósblettalausa birtu um allt rýmið. Þar sem LED-flöturinn er falinn bak við hálfgegnsæja himnu er athyglin áfram á verkunum til sýnis, ekki á ljósabúnaðinum."
+      ],
+      "highlights": [
+        "Jöfn lýsing án ljósbletta",
+        "LED-flötur algjörlega falinn",
+        "Litendurgjöf eins og í galleríi"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Rue Perrée, París (FR)"
+        },
+        {
+          "label": "Rými",
+          "value": "Gallerí margra vörumerkja"
+        }
+      ]
+    }
+  },
+  "blogPosts": {
+    "posts": {
+      "what-is-a-stretch-ceiling": {
+        "title": "Hvað er strekkiloft? Einfaldur leiðarvísir",
+        "excerpt": "Strekkiloft er þunn himna sem er strekkt yfir rýmið og smellt í nettan jaðarprófíl — sett upp kalt eða með hita, á einum degi. Hér sérðu hvernig það virkar og hvar það hentar.",
+        "body": [
+          {
+            "heading": "Stutta útgáfan",
+            "paragraphs": [
+              "Strekkiloft er þunn, saumlaus himna — annaðhvort prjónað pólýester eða kalandreruð PVC-filma — sem er strekkt yfir rýmið og smellt í nettan prófíl sem festur er á veggina allan hringinn. Útkoman lítur út eins og fullkomlega slétt, nýmálað loft, en án múrverks, pússunar og málningar.",
+              "Þar sem himnan er fest í ramma en ekki beint í burðarvirkið fyrir ofan felur hún lagnir, raflagnir, ójafna steypu og gömul loft algjörlega — og uppsetningin tekur aðeins einn dag, í rými sem helst áfram með húsgögnum og í notkun."
+            ]
+          },
+          {
+            "heading": "Köld uppsetning eða heit",
+            "paragraphs": [
+              "Pólýesterhimnur eru strekktar kaldar: enginn hiti, engar gufur og enginn þurrkunartími. Þær gefa djúpa, mjög matta áferð og ná allt að 5.15 m án samskeyta.",
+              "PVC-filmur eru hitaðar við uppsetningu svo þær slakni og strekkjast síðan í gallalausan flöt þegar þær kólna. PVC er fullkomlega endurvinnanlegt, hægt að taka niður til að komast að lögnum fyrir ofan og nær allt að 5.7 m saumlaust — breiðasti kosturinn."
+            ]
+          },
+          {
+            "heading": "Hvað má fella inn í það",
+            "paragraphs": [
+              "Strekkiloft er meira en áferð. Örgötuð útgáfa með þéttri hljóðísogsmottu fyrir aftan nær allt að flokki A í hljóðísogi og róar rými full af bergmáli. Hálfgegnsæjar filmur verða að jafnri, deyfanlegri ljósgjafa án ljósbletta, og hvaða mynd sem er — þar á meðal stjörnuhiminn úr ljósleiðurum — má prenta út í jaðra.",
+              "Jafnvel hátalara má fela algjörlega bak við himnuna fyrir hreinan hljóm án sýnilegrar uppsprettu. Allt rúmast þetta í einum saumlausum fleti."
+            ]
+          },
+          {
+            "heading": "Hvar það hentar",
+            "paragraphs": [
+              "Heimili nota strekkiloft í stofum, baðherbergjum og heimabíóum; fyrirtæki í skrifstofum, veitingastöðum, stúdíóum, verslunum og gistiþjónustu. Þau henta jafnt nýbyggingum sem endurbótum, og PVC-kerfið lætur raka ekki á sig fá — sterkur kostur fyrir votrými.",
+              "Viltu vita hvort það hentar verkefninu þínu? Fáðu ókeypis tilboð án skuldbindinga og sérfræðingur svarar þér innan tveggja virkra daga."
+            ]
+          }
+        ]
+      },
+      "stretch-ceiling-acoustics-explained": {
+        "title": "Hljóðvist strekkilofta – einföld skýring",
+        "excerpt": "Örgötuð strekkt himna með þéttri hljóðísogsmottu fyrir aftan getur náð allt að flokki A í hljóðísogi — án sýnilegra hljóðvistarplatna. Hér er hvernig það virkar og hvað αw og NRC þýða.",
+        "body": [
+          {
+            "heading": "Af hverju rými hljóma hörð",
+            "paragraphs": [
+              "Harðir, sléttir fletir — gler, steypa, gifsplötur — endurkasta hljóði aftur inn í rýmið. Endurkastið hleðst upp sem eftirómur, sem gerir tal erfiðara að fylgja og tónlist eða bakgrunnshljóð þreytandi. Lausnin er að gleypa hluta af orkunni áður en hún endurkastast.",
+              "Hefðbundna leiðin er sýnilegar hljóðvistarplötur eða hljóðdempandi einingar. Með strekkilofti geturðu gert það ósýnilega."
+            ]
+          },
+          {
+            "heading": "Svona virkar hljóðvistarstrekkiloft",
+            "paragraphs": [
+              "Sýnilega hliðin er örgötuð himna: þúsundir örsmárra gata hleypa hljóðinu í gegn í þétta hljóðísogsmottu úr pólýesterull sem er fest fyrir aftan. Rýmið sýnist áfram með eitt gallalaust, saumlaust loft, en hljóðorkan er fönguð í stað þess að endurkastast.",
+              "Vel útfært nær þetta allt að flokki A í hljóðísogi — hæsta flokknum — yfir allan meðhöndlaða flötinn."
+            ]
+          },
+          {
+            "heading": "Að lesa tölurnar: αw og NRC",
+            "paragraphs": [
+              "Hljóðísog er mælt á kvarða frá 0 (endurkastar öllu) til 1 (gleypir allt). Í Evrópu er lykiltalan vegni ísogsstuðullinn αw og flokkarnir ná frá flokki A (αw ≥ 0.90) niður í flokk E. NRC (Noise Reduction Coefficient) er sambærilegt gildi í einni tölu sem er algengara í Norður-Ameríku.",
+              "Þegar þú berð saman hljóðvistarvörur eru þetta tölurnar sem skipta máli — αw, ísogsflokkurinn og NRC — frekar en óljósar fullyrðingar um „hljóðeinangrun“."
+            ]
+          },
+          {
+            "heading": "Hvar það sannar gildi sitt",
+            "paragraphs": [
+              "Upptökustúdíó, heimabíó, opin skrifstofurými, veitingastaðir, kennslustofur og heilbrigðisrými njóta öll góðs af. Sama kerfi nær líka til hangandi lofteyja og skrautlegra veggplatna þar sem heilt loft er ekki mögulegt.",
+              "Ef þú glímir við eftiróm í tilteknu rými skaltu biðja um tilboð og láta okkur vita stærðir og notkun — við ráðleggjum um réttu ísogsmottuna og áferðina."
+            ]
+          }
+        ]
+      }
+    },
+    "chrome": {
+      "readMinutes": "{count} mín. lestur",
+      "publishedOn": "Birt",
+      "updatedOn": "Uppfært",
+      "backToBlog": "Allir leiðarvísar",
+      "eyebrow": "Leiðarvísar",
+      "ctaTitle": "Ertu að hugsa um strekkiloft?",
+      "ctaBody": "Fáðu ókeypis tilboð án skuldbindinga fyrir rýmið þitt.",
+      "ctaBtn": "Fá ókeypis tilboð"
+    }
+  },
+  "inspirationPage": {
+    "eyebrow": "Innblástur",
+    "title1": "Alvöru rými,",
+    "title2a": "alvöru",
+    "title2b": "verkefni",
+    "browseEyebrow": "Skoðaðu eftir lausn",
+    "allEyebrow": "Öll verkefni",
+    "portfolioTitle": "Verkefnasafnið",
+    "ctaTitle": "Sjáðu það fyrir þér í þínu rými",
+    "quoteCta": "Fá ókeypis tilboð",
+    "exploreCta": "Skoðaðu lausnirnar",
+    "showing": "Sýnir {count}",
+    "filterAria": "Sía verkefni",
+    "filters": [
+      "Allt",
+      "Hljóðvist",
+      "Heimili",
+      "Baðherbergi",
+      "Skrifstofa",
+      "Atvinnuhúsnæði",
+      "Heimabíó",
+      "Ljós & prent"
+    ],
+    "browse": [
+      {
+        "label": "Hljóðvist",
+        "desc": "Stúdíó, skrifstofur & hljóðlát rými"
+      },
+      {
+        "label": "Ljós & prent",
+        "desc": "Baklýst & prentuð loft"
+      },
+      {
+        "label": "Heimili",
+        "desc": "Heimili & einkarými"
+      },
+      {
+        "label": "Baðherbergi",
+        "desc": "Rakaþolið & forsmíðað"
+      },
+      {
+        "label": "Skrifstofa",
+        "desc": "Góð hljóðvist í vinnunni"
+      },
+      {
+        "label": "Atvinnuhúsnæði",
+        "desc": "Verslanir, hótel & samkomustaðir"
+      }
+    ]
+  },
+  "projectPage": {
+    "crumbInspiration": "Innblástur",
+    "materialsTitle": "Vörur & efni sem notuð voru",
+    "detailsTitle": "Upplýsingar um verkefnið",
+    "solutionsUsed": "Notaðar lausnir",
+    "similarCta": "Byrjaðu á svipuðu verkefni",
+    "gallery": "Myndasafn",
+    "faqTitle": "Algengar spurningar",
+    "allProjects": "Öll verkefni",
+    "exploreSolutions": "Skoðaðu lausnirnar",
+    "photo": "mynd"
+  },
+  "reviewsData": {
+    "items": [
+      {
+        "role": "Húseigandi · Antwerpen",
+        "quote": "Þeir settu upp loftið í stofunni hjá okkur á einum degi, án nokkurs sóðaskapar. Matta áferðin lítur nákvæmlega út eins og nýpússað loft — við erum í skýjunum."
+      },
+      {
+        "role": "Arkitekt · Gent",
+        "quote": "Ég tilgreini núna STRETCH fyrir hljóðvistarloftin. Rýmið virkar sem einn hreinn flötur og eftirómurinn er horfinn — viðskiptavinir taka alltaf eftir muninum."
+      },
+      {
+        "role": "Verktaki · Sint-Niklaas",
+        "quote": "Námskeiðið kom teyminu mínu fljótt í gang við uppsetningar, og afhending eftir máli er áreiðanleg. Sem samstarfsaðilar höfum við bætt alveg nýrri þjónustu við reksturinn."
+      }
+    ]
+  },
+  "partnersPage": {
+    "crumb": "Samstarfsaðilar",
+    "hero": {
+      "eyebrow": "Fyrir fagfólk",
+      "title": "Vertu samstarfsaðili",
+      "lead": "Tvær leiðir til að vinna með okkur: seldu loftin okkar sem fullbúna vöru og láttu net okkar sjá um uppsetninguna, eða sæktu þjálfun og settu þau upp á eigin spýtur. Hvor leiðin sem verður fyrir valinu færðu fagverð, framleiðslu eftir máli frá Belgíu og áframsendar fyrirspurnir úr þínu nærumhverfi.",
+      "ctaApply": "Sæktu um samstarf",
+      "ctaCall": "Bókaðu símtal",
+      "imageAlt": "Uppsetningaraðili STRETCH að störfum",
+      "statLabel": "Uppsett á hvert teymi / dag"
+    },
+    "models": {
+      "eyebrow": "Tvær leiðir í samstarfi",
+      "title": "Söluaðili eða sölu- og uppsetningaraðili — veldu líkanið sem hentar þínum rekstri.",
+      "lead": "Munurinn er einfaldur: söluaðili selur loftið og lætur okkur um uppsetninguna; sölu- og uppsetningaraðili selur og setur upp sjálfur eftir að hafa lokið þjálfuninni okkar.",
+      "bestForLabel": "Hentar best:",
+      "reseller": {
+        "kicker": "Söluaðili",
+        "title": "Þú selur. Við setjum upp.",
+        "body": "Þú selur viðskiptavini þínum STRETCH-loft sem fullbúna, uppsetta vöru. Við og net okkar af sölu- og uppsetningaraðilum sjáum um uppsetninguna sem samstarfsaðili þinn — þú einbeitir þér að sölunni og viðskiptasambandinu.",
+        "points": [
+          "Þú selur viðskiptavini þínum fullbúið, uppsett loft",
+          "Við setjum það upp fyrir þig, í gegnum vottað net okkar af sölu- og uppsetningaraðilum",
+          "Ekkert uppsetningarteymi eða uppsetningarkunnátta nauðsynleg hjá þér",
+          "Fagverð, vörumyndir og áframsendar fyrirspurnir úr þínu nærumhverfi"
+        ],
+        "bestFor": "innanhússarkitekta, arkitekta, eldhús- og baðsýningarsali og verktaka sem vilja bjóða loft án þess að setja þau upp sjálfir.",
+        "cta": "Sæktu um að verða söluaðili"
+      },
+      "dealer": {
+        "kicker": "Sölu- og uppsetningaraðili",
+        "badge": "Þjálfun áskilin",
+        "title": "Þú selur og setur upp.",
+        "body": "Þú selur STRETCH-vörur í þínum eigin verkefnum og sérð sjálfur um uppsetninguna. Til að verða vottaður sölu- og uppsetningaraðili lýkur uppsetningaraðilinn þinn fyrst verklegu þjálfuninni okkar í höfuðstöðvunum.",
+        "points": [
+          "Þú selur STRETCH-vörur í þínum eigin verkefnum",
+          "Þú sérð sjálfur um uppsetninguna",
+          "Uppsetningaraðilinn þinn lýkur fyrst verklegu þjálfuninni okkar",
+          "Pantaðu eftir máli frá belgíska verkstæðinu okkar"
+        ],
+        "bestFor": "uppsetningaraðila, innréttingafyrirtæki og sérfræðinga í gifsvinnu sem vilja bæta strekkiloftum við eigin uppsetningarþjónustu.",
+        "cta": "Sæktu um að verða sölu- og uppsetningaraðili",
+        "trainingLink": "Sjá þjálfunina"
+      }
+    },
+    "compare": {
+      "resellerHead": "Söluaðili",
+      "dealerHead": "Sölu- og uppsetningaraðili",
+      "rows": [
+        {
+          "label": "Það sem þú selur",
+          "reseller": "Fullbúið, uppsett loft",
+          "dealer": "Vörur í þínum eigin verkefnum"
+        },
+        {
+          "label": "Hver setur upp",
+          "reseller": "Við — í gegnum net okkar af sölu- og uppsetningaraðilum",
+          "dealer": "Þú, sjálfur"
+        },
+        {
+          "label": "Þjálfun",
+          "reseller": "Ekki áskilin",
+          "dealer": "Áskilin — verklegt námskeið"
+        },
+        {
+          "label": "Hentar best",
+          "reseller": "Hönnuðum, sýningarsölum, verktökum",
+          "dealer": "Uppsetningaraðilum og innréttingafyrirtækjum"
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Það sem hver samstarfsaðili fær",
+      "titleA": "Meiri framlegð,",
+      "titleB": "minna vesen",
+      "lead": "Hvort líkanið sem þú velur sjáum við um vöruna og aðfangakeðjuna — þú afhendir hágæðaloft sem viðskiptavinir þínir elska.",
+      "cards": [
+        {
+          "title": "Sterk framlegð",
+          "body": "Fagverð á himnum og prófílum eftir máli, með heilbrigðri framlegð á eftirsóttri hágæðavöru."
+        },
+        {
+          "title": "Áframsendar fyrirspurnir",
+          "body": "Við sendum fyrirspurnir viðskiptavina áfram til samstarfsaðila á þeirra svæði — raunveruleg verkefni, ekki bara verðskrá."
+        },
+        {
+          "title": "B2B-pantanir",
+          "body": "Pantaðu sérsniðið eftir máli frá belgíska verkstæðinu okkar í gegnum sérstaka samstarfsgátt, með áreiðanlegum afhendingartíma."
+        },
+        {
+          "title": "Framleitt í Belgíu",
+          "body": "Handunnar himnur, hannaðar í Belgíu, með langri vöruábyrgð sem þú getur staðið á bak við."
+        },
+        {
+          "title": "Verkleg þjálfun",
+          "body": "Fyrir sölu- og uppsetningaraðila: vottaðu teymið þitt í höfuðstöðvunum á nokkrum dögum — sérsníðing, prófílar, köld og heit uppsetning, ljós og hljóðvist."
+        },
+        {
+          "title": "Markaðsstuðningur",
+          "body": "Vörumyndir, prufur og söluefni sem hjálpa þér að vinna og landa strekkiloftsverkefnum."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "Svona virkar það",
+      "title": "Stutt leið að sölu strekkilofta — á þinn hátt.",
+      "resellerPath": "Leið söluaðila",
+      "dealerPath": "Leið sölu- og uppsetningaraðila",
+      "resellerSteps": [
+        {
+          "title": "Sæktu um að verða söluaðili",
+          "body": "Sendu stutta umsókn. Við förum persónulega yfir hverja og eina og bókum símtal til að kynnast rekstrinum þínum."
+        },
+        {
+          "title": "Komdu þér af stað",
+          "body": "Fagverð, prufur og söluefni — engin þjálfun nauðsynleg. Byrjaðu strax að gera tilboð í strekkiloft."
+        },
+        {
+          "title": "Þú selur — við setjum upp",
+          "body": "Þú lokar sölunni og átt viðskiptasambandið; við og sölu- og uppsetningaraðilar okkar setjum loftið upp, á réttum tíma og samkvæmt lýsingu."
+        }
+      ],
+      "dealerSteps": [
+        {
+          "title": "Sæktu um að verða sölu- og uppsetningaraðili",
+          "body": "Sendu stutta umsókn. Við förum persónulega yfir hverja og eina og bókum símtal til að kynnast rekstrinum þínum."
+        },
+        {
+          "title": "Fáðu þjálfun og vottun",
+          "body": "Teymið þitt lýkur verklega námskeiðinu okkar í höfuðstöðvunum: sérsníðing, prófílar, köld og heit uppsetning, ljós og hljóðvist."
+        },
+        {
+          "title": "Pantaðu og settu upp",
+          "body": "Pantaðu eftir máli, settu upp sjálfur á einum degi og fáðu áframsendar fyrirspurnir úr þínu nærumhverfi jafnóðum og þær berast."
+        }
+      ]
+    },
+    "apply": {
+      "eyebrow": "Vertu samstarfsaðili",
+      "titleA": "Sæktu um",
+      "titleB": "í dag",
+      "lead": "Segðu okkur hvort þú vilt selja eða líka setja upp — við sjáum um framhaldið.",
+      "points": [
+        "Við förum persónulega yfir hverja umsókn",
+        "Einkasvæði þar sem það er í boði",
+        "Innleiðing á nokkrum vikum"
+      ]
+    }
+  },
+  "trainingPage": {
+    "crumb": "Þjálfun uppsetningaraðila",
+    "courseName": "STRETCH-vottun uppsetningaraðila",
+    "courseDescription": "Verkleg vottun uppsetningaraðila strekkilofta í höfuðstöðvum STRETCH í Belgíu: sérsníðing himnunnar, prófílar, köld og heit uppsetning, ljós, hljóðvist, frágangur og tilboðsgerð.",
+    "hero": {
+      "eyebrow": "Þjálfun uppsetningaraðila",
+      "titleA": "Settu upp eins og fagmaður",
+      "titleB": "á",
+      "titleC": "dögum",
+      "lead": "Verkleg vottun í belgísku höfuðstöðvunum okkar. Lærðu sérsníðingu himnunnar, prófíla, kalda og heita uppsetningu, ljós og hljóðvist — engin fyrri reynsla nauðsynleg.",
+      "ctaBook": "Bókaðu þjálfunina",
+      "ctaDates": "Sjá dagsetningar",
+      "imageLabel": "Mynd úr þjálfun / verkstæði"
+    },
+    "format": [
+      {
+        "value": "2–3",
+        "label": "Dagar, verkleg kennsla"
+      },
+      {
+        "value": "Höfuðstöðvar",
+        "label": "Beveren-Waas, Belgía"
+      },
+      {
+        "value": "1:4",
+        "label": "Leiðbeinandi á móti nemum"
+      }
+    ],
+    "curriculum": {
+      "eyebrow": "Það sem þú lærir",
+      "title": "Handverkið til fulls",
+      "lead": "Frá himnurúllu að fullbúnu, upplýstu hljóðvistarlofti — og söluhæfninni til að selja það.",
+      "items": [
+        {
+          "title": "Himna og sérsníðing",
+          "body": "Hvernig pólýester- og PVC-himnur eru mældar, skornar og soðnar saman eftir máli á verkstæðinu."
+        },
+        {
+          "title": "Jaðarprófílar",
+          "body": "Að stilla af og festa smelluprófíla fullkomlega lárétta — grunninn að lýtalausu lofti."
+        },
+        {
+          "title": "Köld og heit uppsetning",
+          "body": "Að strekkja bæði kerfin rétt: kalt pólýester og hitaða PVC-filmu, frá upphafi til enda."
+        },
+        {
+          "title": "Ljós og hljóðvist",
+          "body": "Að fella inn baklýsingu, LED-línur, prentaðar filmur og hljóðísogandi undirlag."
+        },
+        {
+          "title": "Frágangur og aðgengi",
+          "body": "Snyrtilegur jaðarfrágangur, úrtök fyrir lampa og lítt áberandi skoðunarlúgur."
+        },
+        {
+          "title": "Tilboðsgerð og sala",
+          "body": "Að mæla upp verk, gera tilboð af öryggi og kynna strekkiloft fyrir viðskiptavinum."
+        }
+      ]
+    },
+    "dates": {
+      "eyebrow": "Næstu dagsetningar",
+      "title": "Tryggðu þér sæti",
+      "lead": "Litlir hópar, fyrstur kemur, fyrstur fær. Sérsniðin námskeið á þínum stað í boði sé þess óskað.",
+      "onRequestTitle": "Eftir samkomulagi",
+      "onRequestNote": "Sérsniðið námskeið á staðnum"
+    },
+    "book": {
+      "eyebrow": "Skipuleggðu þjálfunina",
+      "titleA": "Bókaðu",
+      "titleB": "sæti",
+      "includedLabel": "Innifalið",
+      "included": [
+        "Vottorð um námslok",
+        "Byrjunarsett fyrir uppsetningaraðila",
+        "Hádegismatur og efni á staðnum"
+      ]
+    }
+  },
+  "aboutPage": {
+    "crumb": "Um okkur",
+    "hero": {
+      "eyebrow": "Um STRETCH",
+      "titleA": "Handunnið",
+      "titleB": "í",
+      "titleC": "Belgíu",
+      "lead": "{name} hannar og framleiðir saumlaus strekkiloft og strekkiveggi — þróuð í Belgíu, sett upp á einum degi og gerð til að endast áratugum saman.",
+      "imageAlt": "Verkstæði og teymi STRETCH"
+    },
+    "stats": [
+      {
+        "label": "Stofnað",
+        "sub": "Höfum byggt saumlaus loft allar götur síðan."
+      },
+      {
+        "value": "25 ára",
+        "label": "Ábyrgð",
+        "sub": "Á handunnu himnunum okkar."
+      },
+      {
+        "value": "4",
+        "label": "Skrifstofur",
+        "sub": "Belgía, Bandaríkin, Pólland og Austurríki."
+      }
+    ],
+    "story": {
+      "eyebrow": "Sagan okkar",
+      "p1": "{name} var stofnað árið {founded} út frá einfaldri sannfæringu: loft á að vera áferð sem tekið er eftir af réttum ástæðum. Hefðbundin múrhúðuð loft springa, blettast og krefjast margra daga af sóðalegri vinnu við uppsetningu og endurmálun. Strekkt himna gerir það ekki — hún fer upp hrein, fullkomlega slétt og saumlaus, oft á einum degi.",
+      "p2": "Allt hefst á belgíska verkstæðinu okkar, þar sem pólýester- og PVC-himnur eru mældar, skornar og soðnar saman eftir máli í höndunum. Þessi sérsníðing eftir máli er ástæða þess að fullbúið loft smellur svona fljótt á sinn stað á verkstað — án ryks og án endurmálunar.",
+      "p3": "Í dag störfum við fyrst og fremst í gegnum net fagaðila og vottaðra uppsetningaraðila og bjóðum kerfi eftir máli, verklega þjálfun og áframsendar fyrirspurnir úr nærumhverfinu. Frá upptökuverum til viðburðasala, frá baðherbergjum til verslana — kerfin okkar færa ljós, hljóðstjórn og lýtalausa áferð í rými um alla Evrópu og víðar.",
+      "p4": "Við erum fyrirtæki með B2B í fyrirrúmi, með skrifstofur í Belgíu, Bandaríkjunum, Póllandi og Austurríki — en hver himna ber enn sama loforðið: handunnin í Belgíu, með 25 ára ábyrgð."
+    },
+    "offices": {
+      "eyebrow": "Hvar við erum"
+    },
+    "cta": {
+      "title": "Byggjum eitthvað saumlaust.",
+      "button": "Fá ókeypis tilboð"
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Hafðu samband",
+    "titleA": "Tölum um",
+    "titleB": "loftin",
+    "cards": {
+      "call": {
+        "label": "Hringdu í okkur"
+      },
+      "email": {
+        "label": "Sendu okkur tölvupóst",
+        "sub": "Persónulegt svar innan 2 daga"
+      },
+      "chat": {
+        "label": "WhatsApp / Telegram",
+        "value": "Spjallaðu við okkur",
+        "sub": "Stuttar spurningar, skjót svör"
+      }
+    },
+    "formTitle": "Sendu okkur skilaboð",
+    "formLead": "Segðu okkur frá verkefninu þínu eða spurningunni. Sérfræðingur svarar innan tveggja virkra daga.",
+    "mapLabel": "Verkstæði / kort",
+    "mapAlt": "Verkstæði STRETCH",
+    "hqKicker": "Höfuðstöðvar",
+    "hqLocation": "{postalCode} {city}, Belgía",
+    "officesEyebrow": "Skrifstofur okkar",
+    "dealerTitle": "Viltu frekar söluaðila í nágrenninu?",
+    "dealerBody": "Fyrirspurnum frá einstaklingum vísum við til vottaðra uppsetningaraðila á þínu svæði — spurðu okkur og við komum á sambandi.",
+    "dealerCta": "Finndu næsta söluaðila",
+    "form": {
+      "subjects": [
+        "Fá tilboð",
+        "Finna söluaðila",
+        "Samstarf",
+        "Þjálfun uppsetningaraðila",
+        "Annað"
+      ],
+      "timelines": [
+        "Sem fyrst",
+        "Innan 1–3 mánaða",
+        "Innan 4–12 mánaða",
+        "Er bara að skoða"
+      ],
+      "timelineLabel": "Tímarammi",
+      "consentPrefix": "Ég samþykki að STRETCH vinni úr upplýsingum mínum til að svara fyrirspurn minni, eins og lýst er í",
+      "consentPrivacy": "persónuverndarstefnunni",
+      "submit": "Senda skilaboð"
+    }
+  },
+  "datasheetsPage": {
+    "eyebrow": "Tækniblöð",
+    "crumb": "Tækniblöð",
+    "titleA": "Tæknilýsingar og",
+    "titleB": "tækniblöð",
+    "lead": "Sæktu tæknigögn fyrir hvert STRETCH-kerfi — tæknilýsingar, brunaflokka, hljóðvistarflokka og ábyrgðarupplýsingar. Sláðu inn upplýsingarnar þínar einu sinni fyrir hvert niðurhal og niðurhalið hefst strax.",
+    "updated": "Uppfært {date}",
+    "privacyNote": "Við biðjum um nafn, netfang og símanúmer svo að sérfræðingur geti svarað tæknilegum spurningum. Farið er með upplýsingarnar þínar samkvæmt",
+    "privacyLink": "persónuverndarstefnunni"
+  },
+  "samplesPage": {
+    "eyebrow": "Litaprufur",
+    "crumb": "Prufur",
+    "titleA": "Sjáðu",
+    "titleB": "litina",
+    "lead": "Pantaðu áþreifanlegar RAL- og litaprufur af pólýester-, PVC- og hljóðvistarhimnum okkar — ókeypis fyrir fagaðila, sendar heim að dyrum.",
+    "points": [
+      "Staðlaðir litatónar og hvaða RAL-litur sem er",
+      "Pólýester-, PVC- og hljóðvistaráferðir",
+      "Sent innan tveggja virkra daga"
+    ]
+  },
+  "blogPage": {
+    "eyebrow": "Leiðbeiningar og fróðleikur",
+    "crumb": "Leiðbeiningar",
+    "titleA": "Strekkiloft,",
+    "titleB": "útskýrð",
+    "postMeta": "{date} · {minutes} mín. lestur",
+    "readArticle": "Lesa greinina"
+  },
+  "inlineLead": {
+    "consentPrefix": "Ég samþykki að STRETCH vinni úr upplýsingum mínum til að svara fyrirspurn minni, eins og lýst er í",
+    "consentPrivacy": "persónuverndarstefnunni"
   }
 }

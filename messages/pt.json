@@ -2373,5 +2373,1005 @@
     "shippedWorldwide": "Envio para todo o mundo",
     "ctaTitle": "Tem um projeto para nós?",
     "ctaBody": "Envie-nos os desenhos ou a ideia — projetamos a estrutura, construímo-la na nossa casa e enviamos-lha."
+  },
+  "projects": {
+    "da-tweekaz-studio": {
+      "title": "Da Tweekaz Studio",
+      "summary": "Teto tensionado e paredes acústicas para um estúdio de produção musical.",
+      "hook": "Uma sala limpa e acusticamente controlada para um dos nomes mais conhecidos do hardstyle.",
+      "description": [
+        "Para o estúdio de gravação dos Da Tweekaz nos Países Baixos, um sistema STRETCH acústico trata tanto o teto como as paredes, controlando as reflexões para que a sala se mantenha precisa para trabalhar — com um acabamento moderno sem juntas e sem painéis visíveis sobre a cabeça."
+      ],
+      "highlights": [
+        "Tratamento acústico do teto e das paredes",
+        "Acabamento sem juntas e sem painéis"
+      ],
+      "materials": [
+        "Teto STRETCH acústico",
+        "Têxtil STRETCH Acoustic (paredes)"
+      ],
+      "facts": [
+        {
+          "label": "País",
+          "value": "Países Baixos"
+        },
+        {
+          "label": "Revendedor STRETCH",
+          "value": "Q82 Acoustics"
+        }
+      ]
+    },
+    "mark-with-a-k": {
+      "title": "Mark With a K",
+      "summary": "Tratamento acústico para a sala de som de um DJ e produtor.",
+      "hook": "Uma sala impecável e acusticamente controlada para um DJ e produtor belga.",
+      "description": [
+        "Um teto STRETCH acústico sem juntas absorve a reverberação na sala de produção, mantendo um acabamento moderno impecável. O resultado é um espaço de trabalho calmo e controlado, com o desempenho acústico escondido dentro da membrana."
+      ],
+      "highlights": [
+        "Teto acústico sem juntas",
+        "Camada absorvente oculta",
+        "Acabamento moderno sem painéis"
+      ],
+      "materials": [
+        "Teto STRETCH acústico",
+        "Camada absorvente de alta densidade"
+      ],
+      "facts": [
+        {
+          "label": "País",
+          "value": "Bélgica"
+        },
+        {
+          "label": "Espaço",
+          "value": "Estúdio de produção musical"
+        }
+      ]
+    },
+    "notary-ampe-anthony": {
+      "title": "Notário Ampe Anthony",
+      "summary": "350 m² de tetos tensionados acústicos num escritório notarial de alto nível.",
+      "hook": "Uma remodelação completa de escritório de alta gama, onde era preciso domar materiais duros e refletores — sem perder o visual nítido e minimalista.",
+      "description": [
+        "Em 2019, o cartório notarial Ampe Anthony, em Kruibeke, foi reconstruído de raiz como um interior de alta gama com um visual deliberadamente nítido e minimalista — pavimentos de betão polido, caixilharias de aço e muitas superfícies duras. Não se poupou em nada para um acabamento perfeito.",
+        "Esses materiais duros tornavam o escritório acusticamente muito vivo. Para o devolver a um nível confortável, todo o interior recebeu um teto STRETCH acústico com um absorvente dedicado de lã de poliéster montado contra a laje de betão existente, elevando o desempenho acústico a um nível elevado.",
+        "O teto desceu 10 cm para esconder todas as infraestruturas técnicas por cima, deixando uma altura de 260 cm. Para que o espaço parecesse mais alto e maior, construímos grandes reentrâncias elípticas no teto — um truque ótico que eleva visivelmente a sala."
+      ],
+      "highlights": [
+        "Tempo de reverberação medido em 0.6 s",
+        "Grandes reentrâncias elípticas para uma sensação de maior altura",
+        "Absorvente dedicado de lã de poliéster atrás da membrana"
+      ],
+      "materials": [
+        "Teto STRETCH acústico",
+        "Estruturas curvas de alumínio à medida",
+        "Absorvente de lã de poliéster D40/50 (40 kg/m³, 50 mm)",
+        "Teto STRETCH Design na forma elíptica",
+        "Perfis de tensão em PVC branco no perímetro",
+        "Iluminação: Wever & Ducré, Delta Light"
+      ],
+      "facts": [
+        {
+          "label": "Região",
+          "value": "Waasland (Kruibeke)"
+        },
+        {
+          "label": "Ano",
+          "value": "2018"
+        },
+        {
+          "label": "Área",
+          "value": "350 m²"
+        },
+        {
+          "label": "Arquiteto",
+          "value": "Ante Architecten"
+        },
+        {
+          "label": "Revendedor STRETCH",
+          "value": "Corpus Interieur"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quanto tempo demorou a instalação?",
+          "a": "A instalação dos tetos acústicos, de toda a iluminação e dos acabamentos especiais demorou 7 dias úteis."
+        },
+        {
+          "q": "Que tempo de reverberação foi alcançado?",
+          "a": "Medido após a instalação, o escritório atingiu um tempo de reverberação de 0.6 s — o interior é, e sente-se, muito silencioso."
+        },
+        {
+          "q": "Quantos instaladores trabalharam no projeto?",
+          "a": "Uma equipa de 2 montadores STRETCH concluiu todo o pacote de teto: a membrana, a iluminação, os painéis acústicos, a carpintaria do teto e as estruturas elípticas."
+        },
+        {
+          "q": "Quanto tempo durará o teto?",
+          "a": "Como qualquer teto tensionado, a vida útil depende da limpeza, mas durará tranquilamente cerca de 25 anos. Depois disso, só a membrana poderá precisar de substituição — a estrutura existente fica no lugar."
+        }
+      ]
+    },
+    "bnp-paribas-fortis": {
+      "title": "BNP Paribas Fortis",
+      "summary": "2,000 m² de tetos iluminados e acústicos na sede do banco em Bruxelas.",
+      "hook": "Tetos STRETCH iluminados e acústicos na nova sede Montagne du Parc do banco — incluindo um food court de vários pisos.",
+      "description": [
+        "Na sede do BNP Paribas Fortis, no centro de Bruxelas, a STRETCH forneceu cerca de 2,000 m² de tetos iluminados (STRETCH Light) e acústicos (STRETCH Acoustic), em colaboração com a Jaspers-Eyers Architects e a NCBHAM, juntamente com o parceiro Conceptexpo.",
+        "Um dos destaques é o food court Barista Bar, que recebe colaboradores e visitantes em vários pisos. O Hot Corner serve pratos quentes sob um teto de lâminas de latão que evoca chamas; o Fresh Corner oferece saladas um piso acima; e o Sweet Corner fecha com sobremesas — cada balcão está espelhado, pelo que uma refeição completa pode ser composta em qualquer ponto."
+      ],
+      "highlights": [
+        "≈2,000 m² de tetos tensionados",
+        "STRETCH Light + Acoustic combinados",
+        "Food court Barista Bar de vários pisos",
+        "Teto decorativo de lâminas de latão em “chamas”"
+      ],
+      "materials": [
+        "Teto STRETCH Light (iluminado)",
+        "Teto STRETCH Acoustic",
+        "Secções de teto curvas",
+        "Iluminação integrada"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Bruxelas (Montagne du Parc)"
+        },
+        {
+          "label": "Área",
+          "value": "2,000 m²"
+        },
+        {
+          "label": "Arquiteto",
+          "value": "Jaspers-Eyers & NCBHAM"
+        },
+        {
+          "label": "Parceiro",
+          "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-beveren": {
+      "title": "Van der Valk",
+      "summary": "Máxima absorção sonora para a sala de eventos de um hotel — quase sem altura para sacrificar.",
+      "hook": "Um problema acústico que atormentava a sala de eventos do hotel há anos, resolvido através do teto.",
+      "description": [
+        "Tim van der Valk contactou a STRETCH por causa de um problema acústico que afetava o seu espaço de eventos há vários anos. Depois de o analisar com Michael Nicasens, da STRETCH, concluímos que a solução tinha de vir do teto — mas o teto existente tinha apenas 255 cm de altura, deixando muito pouco espaço para um sistema.",
+        "Propusemos então uma altura de sistema de 50 mm que, ainda assim, atinge αw 0.95: máxima absorção sonora com uma perda mínima de altura. As grandes salas de eventos são cobertas sem juntas, com o desempenho acústico integrado na membrana e os detalhes — alçapões, iluminação, sensores e um céu estrelado — integrados de forma limpa no teto."
+      ],
+      "highlights": [
+        "Absorção sonora αw 0.95",
+        "Apenas 50 mm de altura de sistema",
+        "Alçapões técnicos de acesso integrados",
+        "Iluminação e sensores de presença",
+        "Céu estrelado",
+        "Acabamento sem juntas em redor das colunas"
+      ],
+      "materials": [
+        "Teto STRETCH acústico (sistema de 50 mm)",
+        "Alçapões técnicos integrados",
+        "Iluminação integrada",
+        "Sensores de presença",
+        "Instalação de céu estrelado",
+        "Perfis de tensão perimetrais"
+      ],
+      "facts": [
+        {
+          "label": "Local",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Região",
+          "value": "Beveren-Waas"
+        },
+        {
+          "label": "Altura existente",
+          "value": "255 cm"
+        },
+        {
+          "label": "Altura do sistema",
+          "value": "50 mm"
+        },
+        {
+          "label": "Classificação acústica",
+          "value": "αw 0.95"
+        }
+      ]
+    },
+    "johnson-and-johnson": {
+      "title": "Johnson & Johnson",
+      "summary": "Um teto impresso e iluminado para uma unidade de I&D farmacêutica.",
+      "hook": "Um design de teto e iluminação refletor e inovador, em eco da investigação da Johnson & Johnson para melhorar a visão.",
+      "description": [
+        "A STRETCH colaborou com a Van Dijk Architects e com a Glennwood, especialista em interiores, no design do teto e da iluminação das novas instalações da Johnson & Johnson em Limerick City, na Irlanda. O pedido: um teto refletor e inovador, à altura dos objetivos de investigação e desenvolvimento do edifício em torno da melhoria da visão.",
+        "O teto STRETCH impresso e iluminado percorre todo o edifício, dá a cada zona o seu próprio foco e funciona como orientação visual para quem se desloca pelo espaço. Aplicações modernas de iluminação valorizam tanto o design como o resultado final."
+      ],
+      "highlights": [
+        "Impressão personalizada em todo o edifício",
+        "Iluminação para foco e orientação",
+        "Design refletor inspirado na I&D"
+      ],
+      "materials": [
+        "Teto STRETCH impresso",
+        "Teto STRETCH iluminado (retroiluminado)",
+        "Iluminação integrada"
+      ],
+      "facts": [
+        {
+          "label": "Região",
+          "value": "Limerick, Irlanda"
+        },
+        {
+          "label": "Ano",
+          "value": "2019"
+        },
+        {
+          "label": "Área",
+          "value": "60 m²"
+        },
+        {
+          "label": "Arquiteto",
+          "value": "Van Dijk Architects"
+        },
+        {
+          "label": "Revendedor STRETCH",
+          "value": "Glennwood"
+        }
+      ]
+    },
+    "polette-eyewear": {
+      "title": "Polette Eyewear",
+      "summary": "Um conceito de retalho nunca antes visto, do arquiteto Javier Zubiria.",
+      "hook": "Uma loja que se toca como um instrumento musical — um tributo à paz, ao amor e à união.",
+      "description": [
+        "Antuérpia, 2022. Após o sucesso do seu showroom de Paris, a polette voltou a juntar-se a Javier Zubiria, fundador do estúdio de Amesterdão zU-Studio, para levar a Antuérpia um conceito de retalho nunca antes visto. Tudo começou com uma única canção — “Imagine”, de John Lennon — e com o desejo de construir um lugar de ligação e criatividade após anos de distância.",
+        "Os visitantes são recebidos por dois teclados de piano gigantes, um de cada lado, cada um com 88 teclas. As teclas brancas são espelhos do chão ao teto que criam uma sensação de infinito; as teclas pretas servem de prateleiras para os óculos da polette. Ao centro, um enorme banco branco evoca o Bed-in, o protesto pacífico de Lennon.",
+        "Por cima, o teto exibe a peça central: uma forma escultórica de tampa de piano, biselada ao longo dos 20 metros de profundidade do showroom, construída como teto STRETCH iluminado e transmissor de luz. Cada tecla do piano é também funcional — um sistema de sensores acende a tecla seguinte a premir, para que os visitantes possam tocar juntos uma canção no espaço."
+      ],
+      "highlights": [
+        "Escultura de teto iluminada e transmissora de luz",
+        "Forma de tampa de piano ao longo dos 20 m de profundidade",
+        "Iluminação interativa das teclas por sensores",
+        "Instalado num único dia útil"
+      ],
+      "materials": [
+        "Teto STRETCH acústico e transmissor de luz",
+        "Forma escultórica de tampa de piano",
+        "Iluminação integrada",
+        "Iluminação das teclas controlada por sensores"
+      ],
+      "facts": [
+        {
+          "label": "Região",
+          "value": "Antuérpia"
+        },
+        {
+          "label": "Ano",
+          "value": "2022"
+        },
+        {
+          "label": "Área",
+          "value": "60 m²"
+        },
+        {
+          "label": "Arquiteto",
+          "value": "zU-Studio · Javier Zubiria"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quanto tempo demorou a instalação?",
+          "a": "A instalação do teto tensionado acústico e transmissor de luz demorou um único dia útil."
+        },
+        {
+          "q": "Quantos instaladores trabalharam no projeto?",
+          "a": "Uma equipa de 2 montadores STRETCH tratou de todo o trabalho — o teto e a iluminação."
+        },
+        {
+          "q": "Quanto tempo durará o teto?",
+          "a": "Como qualquer teto tensionado, a vida útil depende da limpeza, mas durará tranquilamente cerca de 25 anos; depois disso, só a membrana poderá precisar de substituição, ficando a estrutura existente no lugar."
+        }
+      ]
+    },
+    "citizenm-hotel": {
+      "title": "CitizenM Hotel",
+      "summary": "Tetos de casa de banho pré-fabricados e retroiluminados, implementados nos hotéis CitizenM.",
+      "hook": "Um teto de casa de banho retroiluminado e replicável, construído fora da obra para hotéis em dois continentes.",
+      "description": [
+        "Para os hotéis modulares da CitizenM, a STRETCH forneceu tetos de casa de banho pré-fabricados com um acabamento retroiluminado que deixa passar a luz — construídos fora da obra como unidades replicáveis e implementados em localizações nos EUA e na Europa, de Nova Iorque e Chicago a Miami, Los Angeles e não só."
+      ],
+      "highlights": [
+        "Pré-fabricação fora da obra",
+        "Acabamento retroiluminado que deixa passar a luz",
+        "Replicável em grande escala em muitos hotéis"
+      ],
+      "materials": [
+        "Unidade de casa de banho STRETCH pré-fabricada",
+        "Membrana STRETCH Backlit (deixa passar a luz)",
+        "Iluminação integrada"
+      ],
+      "facts": [
+        {
+          "label": "Continentes",
+          "value": "EUA e Europa"
+        },
+        {
+          "label": "Cidades",
+          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+        },
+        {
+          "label": "Parceiro",
+          "value": "Saniskill"
+        }
+      ]
+    },
+    "london-chapel": {
+      "title": "Capela de Londres",
+      "summary": "Um teto tensionado retroiluminado sobre uma capela restaurada.",
+      "hook": "Uma capela restaurada banhada por uma luz suave e uniforme, vinda de um único teto luminoso.",
+      "description": [
+        "Um teto STRETCH translúcido transforma todo o plano do teto numa fonte de luz suave e uniforme: o interior restaurado fica banhado por uma iluminação sem encandeamento, enquanto o campo de LED permanece totalmente oculto."
+      ],
+      "highlights": [
+        "Todo o teto como fonte de luz",
+        "Iluminação uniforme e sem encandeamento",
+        "Campo de LED totalmente oculto"
+      ],
+      "materials": [
+        "Teto STRETCH translúcido",
+        "Campo de retroiluminação LED"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Londres, Reino Unido"
+        },
+        {
+          "label": "Espaço",
+          "value": "Capela restaurada"
+        }
+      ]
+    },
+    "private-villa-knokke": {
+      "title": "Vivenda privada",
+      "summary": "Um teto mate sem juntas para uma vivenda costeira em plano aberto.",
+      "hook": "Um teto sem juntas, liso como estuque, para uma casa costeira em plano aberto.",
+      "description": [
+        "No espaço de estar aberto da vivenda, um teto STRETCH de poliéster muito mate parece, de parede a parede, estuque impecável — sóbrio e moderno, sem as fissuras e as linhas de sombra de um teto convencional."
+      ],
+      "highlights": [
+        "Acabamento sem juntas de parede a parede",
+        "Sem fissuras nem linhas de sombra",
+        "Aspeto muito mate, semelhante a estuque"
+      ],
+      "materials": [
+        "Teto STRETCH de poliéster (muito mate)",
+        "Perfis perimetrais de tensionamento"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Knokke, Bélgica"
+        },
+        {
+          "label": "Espaço",
+          "value": "Zona de estar em plano aberto"
+        }
+      ]
+    },
+    "home-cinema-ghent": {
+      "title": "Cinema em casa",
+      "summary": "Um teto de céu estrelado com base acústica para um cinema em casa.",
+      "hook": "Um cinema privado sob um céu noturno cintilante, afinado para o som de cinema.",
+      "description": [
+        "Centenas de pontos de fibra ótica criam um céu noturno cintilante sobre os lugares, enquanto uma base acústica mantém a sala controlada para o som de cinema — ambiente e desempenho reunidos num único teto."
+      ],
+      "highlights": [
+        "Céu estrelado em fibra ótica",
+        "Base acústica para o som de cinema",
+        "Ambiente e desempenho num único teto"
+      ],
+      "materials": [
+        "Teto STRETCH de céu estrelado",
+        "Campo de estrelas em fibra ótica",
+        "Base acústica absorvente"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Gante, Bélgica"
+        },
+        {
+          "label": "Espaço",
+          "value": "Cinema em casa"
+        }
+      ]
+    },
+    "city-penthouse-antwerp": {
+      "title": "Penthouse urbana",
+      "summary": "Um teto decorativo impecável para uma penthouse na cidade.",
+      "hook": "Um teto decorativo minimalista e perfeitamente plano para uma penthouse na cidade.",
+      "description": [
+        "A zona de estar da penthouse aposta num teto STRETCH sem juntas com iluminação integrada: o visual mantém-se minimalista e a superfície perfeita em todo o plano aberto."
+      ],
+      "highlights": [
+        "Teto decorativo sem juntas",
+        "Iluminação integrada",
+        "Acabamento minimalista e impecável"
+      ],
+      "materials": [
+        "Teto STRETCH de poliéster",
+        "Iluminação integrada"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Antuérpia, Bélgica"
+        },
+        {
+          "label": "Espaço",
+          "value": "Sala de estar da penthouse"
+        }
+      ]
+    },
+    "wellness-spa-bruges": {
+      "title": "Spa de bem-estar",
+      "summary": "Um teto retroiluminado e resistente à humidade para um spa.",
+      "hook": "Um teto resistente à humidade, de brilho suave, para um espaço de bem-estar.",
+      "description": [
+        "O spa precisava de um teto que suportasse a humidade e criasse um ambiente calmo. Um teto STRETCH translúcido e retroiluminado brilha suavemente sobre a zona de bem-estar e limpa-se com um pano, indiferente ao vapor e à humidade."
+      ],
+      "highlights": [
+        "Suporta humidade e vapor",
+        "Retroiluminação suave e uniforme",
+        "Limpa-se com um pano"
+      ],
+      "materials": [
+        "Teto STRETCH translúcido em PVC",
+        "Campo de retroiluminação LED"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Bruges, Bélgica"
+        },
+        {
+          "label": "Espaço",
+          "value": "Spa / bem-estar"
+        }
+      ]
+    },
+    "rue-perree-paris": {
+      "title": "Rue Perrée",
+      "summary": "Um teto luminoso para uma galeria multimarca em Paris.",
+      "hook": "Luz uniforme, digna de galeria, num showroom multimarca — luminárias fora de vista.",
+      "description": [
+        "Na ART RECHERCHE INDUSTRIE, na Rue Perrée, em Paris — uma galeria que apresenta várias marcas — um teto STRETCH luminoso espalha uma luz uniforme, sem pontos quentes, por todo o espaço. Com o campo de LED escondido atrás de uma membrana translúcida, o destaque fica nas peças expostas, não nas luminárias."
+      ],
+      "highlights": [
+        "Iluminação uniforme, sem pontos quentes",
+        "Campo de LED totalmente oculto",
+        "Reprodução de cor digna de galeria"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Rue Perrée, Paris (FR)"
+        },
+        {
+          "label": "Espaço",
+          "value": "Galeria multimarca"
+        }
+      ]
+    }
+  },
+  "blogPosts": {
+    "posts": {
+      "what-is-a-stretch-ceiling": {
+        "title": "O que é um teto tensionado? O guia simples",
+        "excerpt": "Um teto tensionado é uma membrana fina esticada de parede a parede e encaixada num discreto perfil perimetral — instalada a frio ou com calor, num único dia. Eis como funciona e onde faz sentido.",
+        "body": [
+          {
+            "heading": "A versão curta",
+            "paragraphs": [
+              "Um teto tensionado é uma membrana fina e sem juntas — poliéster tricotado ou película de PVC calandrada — que é esticada ao longo da divisão e encaixada num perfil discreto fixado a todo o perímetro das paredes. O resultado parece um teto perfeitamente plano e acabado de pintar, mas sem gesso, sem lixagem e sem pintura.",
+              "Como a membrana é fixada a uma estrutura própria e não diretamente à laje, esconde por completo tubagens, cablagens, betão irregular e tetos antigos — e é instalada num único dia, numa divisão que permanece mobilada e em uso."
+            ]
+          },
+          {
+            "heading": "Montagem a frio vs. montagem a quente",
+            "paragraphs": [
+              "As membranas de poliéster são tensionadas a frio: sem calor, sem vapores e sem tempo de secagem. Proporcionam um acabamento profundo, muito mate, e cobrem até 5.15 m sem juntas.",
+              "As películas de PVC são aquecidas durante a instalação para relaxarem e, ao arrefecer, esticam até uma superfície impecável. O PVC é totalmente reciclável, amovível para aceder às instalações técnicas por cima e cobre até 5.7 m sem juntas — a opção mais larga."
+            ]
+          },
+          {
+            "heading": "O que pode integrar nele",
+            "paragraphs": [
+              "Um teto tensionado é mais do que um acabamento. A versão microperfurada, com um absorsor de alta densidade por trás, atinge até classe A de absorção sonora e acalma divisões com eco. As películas translúcidas tornam-se uma fonte de luz uniforme e regulável, sem pontos quentes, e qualquer imagem — incluindo um céu estrelado em fibra ótica — pode ser impressa de borda a borda.",
+              "Até as colunas de som podem ficar totalmente escondidas atrás da membrana, para um áudio limpo e sem fonte visível. E tudo isto numa única superfície sem juntas."
+            ]
+          },
+          {
+            "heading": "Onde faz sentido",
+            "paragraphs": [
+              "Os particulares usam tetos tensionados em salas de estar, casas de banho e cinemas em casa; as empresas em escritórios, restaurantes, estúdios, retalho e hotelaria. Adequam-se tanto a construção nova como a renovação, e o sistema de PVC não se deixa afetar pela humidade, o que o torna ideal para zonas húmidas.",
+              "Quer saber se se adequa ao seu projeto? Peça um orçamento grátis e sem compromisso e um especialista responder-lhe-á em dois dias úteis."
+            ]
+          }
+        ]
+      },
+      "stretch-ceiling-acoustics-explained": {
+        "title": "A acústica dos tetos tensionados, explicada",
+        "excerpt": "Uma membrana tensionada microperfurada com um absorsor de alta densidade por trás pode atingir até classe A de absorção sonora — sem quaisquer painéis acústicos visíveis. Eis como funciona e o que significam αw e NRC.",
+        "body": [
+          {
+            "heading": "Porque é que as divisões soam duras",
+            "paragraphs": [
+              "As superfícies duras e planas — vidro, betão, gesso cartonado — refletem o som de volta para a divisão. Essas reflexões acumulam-se como reverberação, tornando a fala mais difícil de acompanhar e a música ou o ruído de fundo mais cansativos. A solução é absorver parte dessa energia antes de ela ressaltar.",
+              "Tradicionalmente, isso significa painéis acústicos ou baffles visíveis. Um teto tensionado permite fazê-lo de forma invisível."
+            ]
+          },
+          {
+            "heading": "Como funciona um teto tensionado acústico",
+            "paragraphs": [
+              "A face visível é uma membrana microperfurada: milhares de perfurações minúsculas deixam o som atravessar até um absorsor de lã de poliéster de alta densidade montado por trás. A divisão continua a mostrar um teto impecável e sem juntas, mas a energia sonora é capturada em vez de refletida.",
+              "Bem executado, o sistema atinge até classe A de absorção — a classificação mais elevada — em toda a área tratada."
+            ]
+          },
+          {
+            "heading": "Ler os números: αw e NRC",
+            "paragraphs": [
+              "A absorção sonora mede-se numa escala de 0 (totalmente refletor) a 1 (totalmente absorsor). Na Europa, o valor de referência é o coeficiente de absorção ponderado αw, e as classes correspondentes vão da classe A (αw ≥ 0.90) à classe E. O NRC (Noise Reduction Coefficient) é o índice equivalente de número único, mais usado na América do Norte.",
+              "Ao comparar produtos acústicos, procure exatamente estes valores — αw, a classe de absorção e o NRC — em vez de promessas vagas de «insonorização»."
+            ]
+          },
+          {
+            "heading": "Onde mostra o seu valor",
+            "paragraphs": [
+              "Estúdios de gravação, cinemas em casa, escritórios em open space, restaurantes, salas de aula e espaços de saúde: todos beneficiam. O mesmo sistema estende-se a ilhas de teto suspensas e painéis decorativos de parede onde um teto completo não é possível.",
+              "Se luta contra a reverberação numa divisão específica, peça um orçamento e indique-nos as dimensões e a utilização — aconselharemos o absorsor e o acabamento certos."
+            ]
+          }
+        ]
+      }
+    },
+    "chrome": {
+      "readMinutes": "{count} min de leitura",
+      "publishedOn": "Publicado",
+      "updatedOn": "Atualizado",
+      "backToBlog": "Todos os guias",
+      "eyebrow": "Guias",
+      "ctaTitle": "A pensar num teto tensionado?",
+      "ctaBody": "Receba um orçamento grátis e sem compromisso para o seu espaço.",
+      "ctaBtn": "Pedir orçamento grátis"
+    }
+  },
+  "inspirationPage": {
+    "eyebrow": "Inspiração",
+    "title1": "Espaços reais,",
+    "title2a": "projetos",
+    "title2b": "reais",
+    "browseEyebrow": "Explorar por solução",
+    "allEyebrow": "Todos os projetos",
+    "portfolioTitle": "O portefólio",
+    "ctaTitle": "Imagine-o no seu espaço",
+    "quoteCta": "Pedir orçamento grátis",
+    "exploreCta": "Explore as soluções",
+    "showing": "A mostrar {count}",
+    "filterAria": "Filtrar projetos",
+    "filters": [
+      "Todos",
+      "Acústica",
+      "Casa",
+      "Casa de banho",
+      "Escritório",
+      "Comercial",
+      "Cinema em casa",
+      "Luz e impressão"
+    ],
+    "browse": [
+      {
+        "label": "Acústica",
+        "desc": "Estúdios, escritórios e salas silenciosas"
+      },
+      {
+        "label": "Luz e impressão",
+        "desc": "Tetos retroiluminados e impressos"
+      },
+      {
+        "label": "Casa",
+        "desc": "Casas e interiores privados"
+      },
+      {
+        "label": "Casa de banho",
+        "desc": "Resistentes à humidade e pré-fabricados"
+      },
+      {
+        "label": "Escritório",
+        "desc": "Conforto acústico no trabalho"
+      },
+      {
+        "label": "Comercial",
+        "desc": "Lojas, hotéis e espaços de eventos"
+      }
+    ]
+  },
+  "projectPage": {
+    "crumbInspiration": "Inspiração",
+    "materialsTitle": "Produtos e materiais utilizados",
+    "detailsTitle": "Detalhes do projeto",
+    "solutionsUsed": "Soluções utilizadas",
+    "similarCta": "Inicie um projeto semelhante",
+    "gallery": "Galeria",
+    "faqTitle": "Perguntas frequentes",
+    "allProjects": "Todos os projetos",
+    "exploreSolutions": "Explore as soluções",
+    "photo": "foto"
+  },
+  "reviewsData": {
+    "items": [
+      {
+        "role": "Proprietário · Antuérpia",
+        "quote": "Montaram o teto da nossa sala num único dia, sem qualquer sujidade. O acabamento mate parece exatamente estuque fresco — estamos verdadeiramente encantados."
+      },
+      {
+        "role": "Arquiteto · Gante",
+        "quote": "Passei a especificar STRETCH para os tetos acústicos. A sala lê-se como uma única superfície limpa e a reverberação desapareceu — os clientes notam sempre a diferença."
+      },
+      {
+        "role": "Empreiteiro · Sint-Niklaas",
+        "quote": "Com a formação, a minha equipa começou rapidamente a montar, e o fornecimento à medida é fiável. Tornarmo-nos parceiros acrescentou um serviço totalmente novo ao nosso negócio."
+      }
+    ]
+  },
+  "partnersPage": {
+    "crumb": "Parceiros",
+    "hero": {
+      "eyebrow": "Para profissionais",
+      "title": "Torne-se parceiro da",
+      "lead": "Duas formas de trabalhar connosco: vender os nossos tetos como produto acabado e deixar a instalação à nossa rede, ou formar-se e instalá-los você mesmo. Em qualquer dos casos, obtém preços para profissionais, fabrico à medida a partir da Bélgica e contactos locais encaminhados.",
+      "ctaApply": "Candidate-se a parceiro",
+      "ctaCall": "Marcar uma chamada",
+      "imageAlt": "Um parceiro instalador STRETCH em plena obra",
+      "statLabel": "Instalados por equipa / dia"
+    },
+    "models": {
+      "eyebrow": "Duas formas de parceria",
+      "title": "Revendedor ou revendedor instalador — escolha o modelo que se adequa ao seu negócio.",
+      "lead": "A diferença é simples: o revendedor vende o teto e deixa-nos a instalação; o revendedor instalador vende e instala ele próprio, depois de concluir a nossa formação.",
+      "bestForLabel": "Ideal para:",
+      "reseller": {
+        "kicker": "Revendedor",
+        "title": "Você vende. Nós instalamos.",
+        "body": "Vende ao seu cliente um teto STRETCH como produto acabado e instalado. Nós e a nossa rede de revendedores instaladores tratamos da instalação como seu parceiro — você concentra-se na venda e na relação com o cliente.",
+        "points": [
+          "Vende ao seu cliente o teto acabado e instalado",
+          "Instalamo-lo por si, através da nossa rede certificada de revendedores instaladores",
+          "Não precisa de equipa nem de competências de instalação",
+          "Preços para profissionais, imagens de produto e contactos locais encaminhados"
+        ],
+        "bestFor": "designers de interiores, arquitetos, showrooms de cozinha e casa de banho e empreiteiros que querem propor tetos sem os instalar.",
+        "cta": "Candidate-se a revendedor"
+      },
+      "dealer": {
+        "kicker": "Revendedor instalador",
+        "badge": "Formação obrigatória",
+        "title": "Você vende e instala.",
+        "body": "Vende produto STRETCH nos seus próprios projetos e executa a instalação você mesmo. Para se tornar revendedor instalador certificado, o seu instalador conclui primeiro a nossa formação prática na nossa sede.",
+        "points": [
+          "Vende produto STRETCH nos seus próprios projetos",
+          "Executa a instalação você mesmo",
+          "O seu instalador conclui primeiro a nossa formação prática",
+          "Encomende à medida à nossa oficina belga"
+        ],
+        "bestFor": "instaladores, empresas de acabamentos e especialistas em gesso cartonado que querem acrescentar os tetos tensionados à sua própria capacidade de instalação.",
+        "cta": "Candidate-se a revendedor instalador",
+        "trainingLink": "Ver a formação"
+      }
+    },
+    "compare": {
+      "resellerHead": "Revendedor",
+      "dealerHead": "Revendedor instalador",
+      "rows": [
+        {
+          "label": "O que vende",
+          "reseller": "Um teto acabado e instalado",
+          "dealer": "Produto nos seus próprios projetos"
+        },
+        {
+          "label": "Quem instala",
+          "reseller": "Nós — através da nossa rede de revendedores instaladores",
+          "dealer": "Você mesmo"
+        },
+        {
+          "label": "Formação",
+          "reseller": "Não obrigatória",
+          "dealer": "Obrigatória — curso prático"
+        },
+        {
+          "label": "Mais indicado para",
+          "reseller": "Designers, showrooms, empreiteiros",
+          "dealer": "Instaladores e empresas de acabamentos"
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "O que cada parceiro recebe",
+      "titleA": "Mais margem,",
+      "titleB": "menos complicações",
+      "lead": "Seja qual for o modelo escolhido, nós tratamos do produto e da cadeia de fornecimento — você entrega um teto premium que os seus clientes adoram.",
+      "cards": [
+        {
+          "title": "Margens sólidas",
+          "body": "Preços para profissionais em membranas e perfis à medida, com margens saudáveis num produto premium e procurado."
+        },
+        {
+          "title": "Contactos encaminhados",
+          "body": "Encaminhamos os pedidos de clientes locais para os parceiros da sua região — projetos reais, não apenas uma lista de preços."
+        },
+        {
+          "title": "Encomendas B2B",
+          "body": "Encomende confecionado à medida à nossa oficina belga através de um portal exclusivo para parceiros, com prazos fiáveis."
+        },
+        {
+          "title": "Fabricado na Bélgica",
+          "body": "Membranas feitas à mão e desenvolvidas na Bélgica, com uma longa garantia de produto que pode defender com confiança."
+        },
+        {
+          "title": "Formação prática",
+          "body": "Para revendedores instaladores: certifique a sua equipa na nossa sede em poucos dias — confeção, perfis, montagem a frio e a quente, luz e acústica."
+        },
+        {
+          "title": "Apoio de marketing",
+          "body": "Imagens de produto, amostras e material de venda para ganhar e fechar projetos de tetos tensionados."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "Como funciona",
+      "title": "Um caminho curto para vender tetos tensionados — à sua maneira.",
+      "resellerPath": "Percurso do revendedor",
+      "dealerPath": "Percurso do revendedor instalador",
+      "resellerSteps": [
+        {
+          "title": "Candidate-se a revendedor",
+          "body": "Envie uma candidatura breve. Analisamos todas pessoalmente e marcamos uma chamada para conhecer o seu negócio."
+        },
+        {
+          "title": "Comece a trabalhar",
+          "body": "Preços para profissionais, amostras e material de venda — sem necessidade de formação. Comece já a orçamentar tetos tensionados."
+        },
+        {
+          "title": "Você vende — nós instalamos",
+          "body": "Você fecha a venda e mantém o cliente; nós e os nossos revendedores instaladores montamos o teto, a tempo e conforme especificado."
+        }
+      ],
+      "dealerSteps": [
+        {
+          "title": "Candidate-se a revendedor instalador",
+          "body": "Envie uma candidatura breve. Analisamos todas pessoalmente e marcamos uma chamada para conhecer o seu negócio."
+        },
+        {
+          "title": "Forme-se e certifique-se",
+          "body": "A sua equipa conclui o nosso curso prático na sede: confeção, perfis, montagem a frio e a quente, luz e acústica."
+        },
+        {
+          "title": "Encomende e instale",
+          "body": "Encomende à medida, instale você mesmo num dia e receba contactos locais encaminhados à medida que chegam."
+        }
+      ]
+    },
+    "apply": {
+      "eyebrow": "Torne-se parceiro",
+      "titleA": "Candidate-se",
+      "titleB": "hoje",
+      "lead": "Diga-nos se quer revender ou também instalar — nós tratamos do resto.",
+      "points": [
+        "Analisamos cada candidatura pessoalmente",
+        "Território exclusivo onde disponível",
+        "Integração em poucas semanas"
+      ]
+    }
+  },
+  "trainingPage": {
+    "crumb": "Formação de instaladores",
+    "courseName": "Certificação de instalador STRETCH",
+    "courseDescription": "Certificação prática de instalador de tetos tensionados na sede da STRETCH, na Bélgica: confeção da membrana, perfis, montagem a frio e a quente, luz, acústica, acabamentos e orçamentação.",
+    "hero": {
+      "eyebrow": "Formação de instaladores",
+      "titleA": "Instale como um profissional",
+      "titleB": "em",
+      "titleC": "dias",
+      "lead": "Certificação prática na nossa sede belga. Aprenda confeção da membrana, perfis, montagem a frio e a quente, luz e acústica — sem experiência prévia.",
+      "ctaBook": "Reserve a sua formação",
+      "ctaDates": "Ver datas",
+      "imageLabel": "Foto de formação / oficina"
+    },
+    "format": [
+      {
+        "value": "2–3",
+        "label": "Dias de prática"
+      },
+      {
+        "value": "Sede",
+        "label": "Beveren-Waas, Bélgica"
+      },
+      {
+        "value": "1:4",
+        "label": "Formador por instalador"
+      }
+    ],
+    "curriculum": {
+      "eyebrow": "O que vai aprender",
+      "title": "O ofício completo",
+      "lead": "Do rolo de membrana a um teto acabado, iluminado e acústico — e as competências comerciais para o vender.",
+      "items": [
+        {
+          "title": "Membrana e confeção",
+          "body": "Como as membranas de poliéster e PVC são medidas, cortadas e soldadas à medida na oficina."
+        },
+        {
+          "title": "Perfis perimetrais",
+          "body": "Marcar e fixar os perfis de encaixe perfeitamente nivelados — a base de um teto impecável."
+        },
+        {
+          "title": "Montagem a frio e a quente",
+          "body": "Tensionar corretamente os dois sistemas: poliéster a frio e película de PVC aquecida, do início ao fim."
+        },
+        {
+          "title": "Luz e acústica",
+          "body": "Integrar retroiluminação, linhas LED, películas impressas e camada acústica absorvente."
+        },
+        {
+          "title": "Acabamentos e acessos",
+          "body": "Remates perimetrais limpos, recortes para equipamentos e alçapões de inspeção discretos."
+        },
+        {
+          "title": "Orçamentação e venda",
+          "body": "Medir uma obra, orçamentar com confiança e apresentar os tetos tensionados aos clientes."
+        }
+      ]
+    },
+    "dates": {
+      "eyebrow": "Próximas datas",
+      "title": "Reserve o seu lugar",
+      "lead": "Grupos pequenos, por ordem de reserva. Sessões personalizadas nas suas instalações a pedido.",
+      "onRequestTitle": "A pedido",
+      "onRequestNote": "Sessão personalizada no local"
+    },
+    "book": {
+      "eyebrow": "Planeie a sua formação",
+      "titleA": "Reserve um",
+      "titleB": "lugar",
+      "includedLabel": "Incluído",
+      "included": [
+        "Certificado de conclusão",
+        "Kit de iniciação para instaladores",
+        "Almoço e materiais no local"
+      ]
+    }
+  },
+  "aboutPage": {
+    "crumb": "Sobre nós",
+    "hero": {
+      "eyebrow": "Sobre a STRETCH",
+      "titleA": "Feito à mão",
+      "titleB": "na",
+      "titleC": "Bélgica",
+      "lead": "A {name} desenha e fabrica tetos e paredes tensionados sem juntas — desenvolvidos na Bélgica, instalados num dia e feitos para durar décadas.",
+      "imageAlt": "A oficina e a equipa STRETCH"
+    },
+    "stats": [
+      {
+        "label": "Fundada",
+        "sub": "A construir tetos sem juntas desde então."
+      },
+      {
+        "value": "25 anos",
+        "label": "Garantia",
+        "sub": "Nas nossas membranas feitas à mão."
+      },
+      {
+        "value": "4",
+        "label": "Escritórios",
+        "sub": "Bélgica, EUA, Polónia e Áustria."
+      }
+    ],
+    "story": {
+      "eyebrow": "A nossa história",
+      "p1": "A {name} foi fundada em {founded} com uma convicção simples: um teto deve ser um acabamento que dá nas vistas pelas razões certas. Os tetos tradicionais de gesso fissuram, mancham e exigem dias de obra suja para instalar e repintar. Uma membrana tensionada, não — é aplicada de forma limpa, perfeitamente plana e sem juntas, muitas vezes num único dia.",
+      "p2": "Tudo começa na nossa oficina belga, onde as membranas de poliéster e PVC são medidas, cortadas e soldadas à medida, à mão. É essa confeção à medida que permite a um teto acabado encaixar tão depressa em obra, sem pó e sem repintura.",
+      "p3": "Hoje trabalhamos sobretudo através de uma rede de parceiros profissionais e instaladores certificados, fornecendo sistemas à medida, formação prática e contactos locais encaminhados. De estúdios de gravação a salas de eventos, de casas de banho ao retalho, os nossos sistemas levam luz, controlo acústico e uma superfície impecável a espaços em toda a Europa e não só.",
+      "p4": "Somos uma empresa de vocação B2B, com escritórios na Bélgica, nos Estados Unidos, na Polónia e na Áustria — mas cada membrana continua a carregar a mesma promessa: feita à mão na Bélgica, com uma garantia de 25 anos."
+    },
+    "offices": {
+      "eyebrow": "Onde estamos"
+    },
+    "cta": {
+      "title": "Vamos construir algo sem juntas.",
+      "button": "Pedir orçamento grátis"
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Contacto",
+    "titleA": "Falemos de",
+    "titleB": "tetos",
+    "cards": {
+      "call": {
+        "label": "Ligue-nos"
+      },
+      "email": {
+        "label": "Escreva-nos",
+        "sub": "Resposta pessoal em 2 dias"
+      },
+      "chat": {
+        "label": "WhatsApp / Telegram",
+        "value": "Fale connosco",
+        "sub": "Perguntas rápidas, respostas rápidas"
+      }
+    },
+    "formTitle": "Envie-nos uma mensagem",
+    "formLead": "Fale-nos do seu projeto ou da sua questão. Um especialista responde em dois dias úteis.",
+    "mapLabel": "Oficina / mapa",
+    "mapAlt": "Oficina da STRETCH",
+    "hqKicker": "Sede",
+    "hqLocation": "{postalCode} {city}, Bélgica",
+    "officesEyebrow": "Os nossos escritórios",
+    "dealerTitle": "Prefere um revendedor local?",
+    "dealerBody": "Encaminhamos os pedidos residenciais para instaladores certificados na sua região — basta pedir e colocamo-lo em contacto.",
+    "dealerCta": "Encontre o revendedor mais próximo",
+    "form": {
+      "subjects": [
+        "Pedir orçamento",
+        "Encontrar um revendedor",
+        "Parceria",
+        "Formação de instaladores",
+        "Outro"
+      ],
+      "timelines": [
+        "Assim que possível",
+        "Dentro de 1–3 meses",
+        "Dentro de 4–12 meses",
+        "Ainda estou a explorar"
+      ],
+      "timelineLabel": "Prazo",
+      "consentPrefix": "Aceito que a STRETCH trate os meus dados para responder ao meu pedido, conforme descrito na",
+      "consentPrivacy": "política de privacidade",
+      "submit": "Enviar mensagem"
+    }
+  },
+  "datasheetsPage": {
+    "eyebrow": "Fichas técnicas",
+    "crumb": "Fichas técnicas",
+    "titleA": "Especificações e",
+    "titleB": "fichas técnicas",
+    "lead": "Descarregue a documentação técnica de cada sistema STRETCH — especificações, classificações de reação ao fogo, classes acústicas e detalhes de garantia. Introduza os seus dados uma vez por transferência e o ficheiro começa de imediato.",
+    "updated": "Atualizado a {date}",
+    "privacyNote": "Pedimos o seu nome, e-mail e telefone para que um especialista possa responder a eventuais questões técnicas. Os seus dados são tratados de acordo com a nossa",
+    "privacyLink": "política de privacidade"
+  },
+  "samplesPage": {
+    "eyebrow": "Amostras de cor",
+    "crumb": "Amostras",
+    "titleA": "Veja as",
+    "titleB": "cores",
+    "lead": "Encomende amostras físicas RAL e de cor das nossas membranas de poliéster, PVC e acústicas — grátis para parceiros profissionais, entregues à sua porta.",
+    "points": [
+      "Tons padrão e qualquer RAL personalizado",
+      "Acabamentos de poliéster, PVC e acústicos",
+      "Enviadas em dois dias úteis"
+    ]
+  },
+  "blogPage": {
+    "eyebrow": "Guias e conselhos",
+    "crumb": "Guias",
+    "titleA": "Tetos tensionados,",
+    "titleB": "explicados",
+    "postMeta": "{date} · {minutes} min de leitura",
+    "readArticle": "Ler artigo"
+  },
+  "inlineLead": {
+    "consentPrefix": "Aceito que a STRETCH trate os meus dados para responder ao meu pedido, conforme descrito na",
+    "consentPrivacy": "política de privacidade"
   }
 }

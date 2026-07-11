@@ -2373,5 +2373,1005 @@
     "shippedWorldwide": "Wereldwijd verzonden",
     "ctaTitle": "Hebt u een project voor ons?",
     "ctaBody": "Stuur ons de tekeningen of het idee — wij ontwerpen de structuur, bouwen ze in eigen huis en verzenden ze naar u."
+  },
+  "projects": {
+    "da-tweekaz-studio": {
+      "title": "Da Tweekaz Studio",
+      "summary": "Akoestisch spanplafond en akoestische wanden voor een muziekproductiestudio.",
+      "hook": "Een strakke, akoestisch beheerste ruimte voor een van de bekendste hardstyle-acts.",
+      "description": [
+        "Voor de opnamestudio van Da Tweekaz in Nederland behandelt een akoestisch STRETCH-systeem zowel het plafond als de wanden. Reflecties blijven onder controle, zodat de ruimte accuraat blijft om in te werken — met een naadloze, moderne afwerking en zonder zichtbare panelen boven het hoofd."
+      ],
+      "highlights": [
+        "Akoestische behandeling van plafond en wanden",
+        "Naadloze afwerking zonder panelen"
+      ],
+      "materials": [
+        "Akoestisch STRETCH-plafond",
+        "STRETCH Acoustic textiel (wanden)"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Nederland"
+        },
+        {
+          "label": "STRETCH-verdeler",
+          "value": "Q82 Acoustics"
+        }
+      ]
+    },
+    "mark-with-a-k": {
+      "title": "Mark With a K",
+      "summary": "Akoestische behandeling voor de geluidsruimte van een dj en producer.",
+      "hook": "Een vlekkeloze, akoestisch beheerste ruimte voor een Belgische dj en producer.",
+      "description": [
+        "Een naadloos akoestisch STRETCH-plafond absorbeert de galm in de productieruimte en behoudt tegelijk een vlekkeloze, moderne afwerking. Het resultaat is een rustige, beheerste ruimte om in te werken, met de akoestische prestaties verborgen in het doek."
+      ],
+      "highlights": [
+        "Naadloos akoestisch plafond",
+        "Verborgen absorberende achterlaag",
+        "Moderne afwerking zonder panelen"
+      ],
+      "materials": [
+        "Akoestisch STRETCH-plafond",
+        "Absorberende achterlaag met hoge dichtheid"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "België"
+        },
+        {
+          "label": "Ruimte",
+          "value": "Muziekproductiestudio"
+        }
+      ]
+    },
+    "notary-ampe-anthony": {
+      "title": "Notariskantoor Ampe Anthony",
+      "summary": "350 m² akoestische spanplafonds in een hoogwaardig notariskantoor.",
+      "hook": "Een complete high-end kantoorinrichting waar harde, reflecterende materialen getemd moesten worden — zonder de strakke, minimalistische look te verliezen.",
+      "description": [
+        "In 2019 werd het notariskantoor Ampe Anthony in Kruibeke van de grond af herbouwd tot een hoogwaardig interieur met een bewust strakke, minimalistische look — gepolierde betonvloeren, stalen raamprofielen en veel harde oppervlakken. Kosten noch moeite werden gespaard om alles perfect af te werken.",
+        "Die harde materialen maakten het kantoor akoestisch erg levendig. Om het geluid weer naar een comfortabel niveau te brengen, kreeg het volledige interieur een akoestisch STRETCH-plafond met daarachter een speciale polyesterwol-absorber, gemonteerd tegen de bestaande betonplaat — wat de akoestische prestaties naar een hoog niveau tilt.",
+        "Het plafond zakte 10 cm om alle technieken erboven weg te werken, met een resterende hoogte van 260 cm. Om de ruimte hoger en groter te laten aanvoelen, bouwden we grote ellipsvormige uitsparingen in het plafond — een optische truc die de ruimte zichtbaar optilt."
+      ],
+      "highlights": [
+        "Nagalmtijd gemeten op 0.6 s",
+        "Grote ellipsvormige plafonduitsparingen voor een hoger gevoel",
+        "Speciale polyesterwol-absorber achter het doek"
+      ],
+      "materials": [
+        "Akoestisch STRETCH-plafond",
+        "Gebogen aluminium kaders op maat",
+        "Polyesterwol-absorber D40/50 (40 kg/m³, 50 mm)",
+        "STRETCH Design-plafond in de ellipsvorm",
+        "Witte PVC-spanprofielen langs de rand",
+        "Verlichting: Wever & Ducré, Delta Light"
+      ],
+      "facts": [
+        {
+          "label": "Regio",
+          "value": "Waasland (Kruibeke)"
+        },
+        {
+          "label": "Jaar",
+          "value": "2018"
+        },
+        {
+          "label": "Oppervlakte",
+          "value": "350 m²"
+        },
+        {
+          "label": "Architect",
+          "value": "Ante Architecten"
+        },
+        {
+          "label": "STRETCH-verdeler",
+          "value": "Corpus Interieur"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hoelang duurde de installatie?",
+          "a": "De installatie van de akoestische plafonds, alle verlichting en de speciale afwerkingen nam 7 werkdagen in beslag."
+        },
+        {
+          "q": "Welke nagalmtijd werd bereikt?",
+          "a": "Na de installatie werd een nagalmtijd van 0.6 s gemeten — het interieur is écht stil, en zo voelt het ook."
+        },
+        {
+          "q": "Hoeveel installateurs werkten aan het project?",
+          "a": "Een team van 2 STRETCH-monteurs realiseerde het volledige plafondpakket: het doek, de verlichting, de akoestische panelen, het plafondschrijnwerk en de ellipsvormige structuren."
+        },
+        {
+          "q": "Hoelang gaat het plafond mee?",
+          "a": "Zoals bij elk spanplafond hangt de levensduur af van het onderhoud, maar het gaat vlot zo'n 25 jaar mee. Daarna hoeft alleen het doek eventueel vervangen te worden — het bestaande kader blijft gewoon zitten."
+        }
+      ]
+    },
+    "bnp-paribas-fortis": {
+      "title": "BNP Paribas Fortis",
+      "summary": "2,000 m² verlichte en akoestische plafonds in het Brusselse hoofdkantoor van de bank.",
+      "hook": "Verlichte en akoestische STRETCH-plafonds in het nieuwe hoofdkantoor Montagne du Parc van de bank — inclusief een foodcourt over meerdere verdiepingen.",
+      "description": [
+        "In het hoofdkantoor van BNP Paribas Fortis in hartje Brussel leverde STRETCH zo'n 2,000 m² verlichte (STRETCH Light) en akoestische (STRETCH Acoustic) plafonds, in samenwerking met Jaspers-Eyers Architects en NCBHAM en met partner Conceptexpo.",
+        "Blikvanger is de Barista Bar-foodcourt, die medewerkers en bezoekers over meerdere verdiepingen ontvangt. De Hot Corner serveert warme gerechten onder een plafond van messing lamellen dat aan vlammen doet denken; de Fresh Corner biedt een verdieping hoger salades aan; en de Sweet Corner sluit af met desserts — elke toonbank is gespiegeld aanwezig, zodat een volledige maaltijd overal samengesteld kan worden."
+      ],
+      "highlights": [
+        "≈2,000 m² spanplafonds",
+        "STRETCH Light + Acoustic gecombineerd",
+        "Barista Bar-foodcourt over meerdere verdiepingen",
+        "Accentplafond met messing “vlam”-lamellen"
+      ],
+      "materials": [
+        "STRETCH Light (verlicht) plafond",
+        "STRETCH Acoustic plafond",
+        "Gebogen plafonddelen",
+        "Geïntegreerde verlichting"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Brussel (Montagne du Parc)"
+        },
+        {
+          "label": "Oppervlakte",
+          "value": "2,000 m²"
+        },
+        {
+          "label": "Architect",
+          "value": "Jaspers-Eyers & NCBHAM"
+        },
+        {
+          "label": "Partner",
+          "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-beveren": {
+      "title": "Van der Valk",
+      "summary": "Maximale geluidsabsorptie voor de evenementenzaal van een hotel — met amper hoogte om op te offeren.",
+      "hook": "Een akoestisch probleem dat de evenementenzaal van het hotel jarenlang parten speelde, opgelost via het plafond.",
+      "description": [
+        "Tim van der Valk klopte bij STRETCH aan met een akoestisch probleem dat hun evenementenruimte al enkele jaren dwarszat. Na overleg met Michael Nicasens van STRETCH concludeerden we dat de oplossing van het plafond moest komen — maar het bestaande plafond was slechts 255 cm hoog, waardoor er nauwelijks ruimte was voor een systeem.",
+        "Daarom stelden we een systeemhoogte van 50 mm voor die toch αw 0.95 haalt: maximale geluidsabsorptie met slechts een minimaal verlies aan plafondhoogte. De grote evenementenzalen zijn naadloos overspannen, met de akoestische prestaties ingebouwd in het doek en de detaillering — luiken, verlichting, sensoren en een sterrenhemel — strak boven het hoofd geïntegreerd."
+      ],
+      "highlights": [
+        "αw 0.95 geluidsabsorptie",
+        "Slechts 50 mm systeemhoogte",
+        "Geïntegreerde technische inspectieluiken",
+        "Verlichting & aanwezigheidssensoren",
+        "Sterrenhemel",
+        "Naadloze afwerking rond kolommen"
+      ],
+      "materials": [
+        "Akoestisch STRETCH-plafond (50 mm systeem)",
+        "Geïntegreerde technische luiken",
+        "Geïntegreerde verlichting",
+        "Aanwezigheidssensoren",
+        "Sterrenhemelinstallatie",
+        "Spanprofielen langs de rand"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Regio",
+          "value": "Beveren-Waas"
+        },
+        {
+          "label": "Bestaande hoogte",
+          "value": "255 cm"
+        },
+        {
+          "label": "Systeemhoogte",
+          "value": "50 mm"
+        },
+        {
+          "label": "Akoestische waarde",
+          "value": "αw 0.95"
+        }
+      ]
+    },
+    "johnson-and-johnson": {
+      "title": "Johnson & Johnson",
+      "summary": "Een bedrukt, verlicht plafond voor een farmaceutische R&D-site.",
+      "hook": "Een reflecterend, innovatief plafond- en lichtontwerp dat verwijst naar Johnson & Johnsons onderzoek naar beter zicht.",
+      "description": [
+        "STRETCH werkte samen met Van Dijk Architects en interieurbouwer Glennwood aan het plafond- en lichtontwerp voor de nieuwe vestiging van Johnson & Johnson in Limerick City, Ierland. De opdracht: een reflecterend, innovatief plafond dat aansluit bij de onderzoeks- en ontwikkelingsdoelen van het gebouw rond beter zicht.",
+        "Het bedrukte en verlichte STRETCH-plafond loopt door het hele gebouw, geeft elke zone een eigen focus en fungeert als visuele wegwijzer voor wie zich door de ruimte beweegt. Moderne lichttoepassingen versterken zowel het ontwerp als het eindresultaat."
+      ],
+      "highlights": [
+        "Print op maat door het hele gebouw",
+        "Verlichting voor focus en oriëntatie",
+        "Reflecterend, R&D-geïnspireerd ontwerp"
+      ],
+      "materials": [
+        "Bedrukt STRETCH-plafond",
+        "Verlicht STRETCH-plafond (met backlight)",
+        "Geïntegreerde verlichting"
+      ],
+      "facts": [
+        {
+          "label": "Regio",
+          "value": "Limerick, Ierland"
+        },
+        {
+          "label": "Jaar",
+          "value": "2019"
+        },
+        {
+          "label": "Oppervlakte",
+          "value": "60 m²"
+        },
+        {
+          "label": "Architect",
+          "value": "Van Dijk Architects"
+        },
+        {
+          "label": "STRETCH-verdeler",
+          "value": "Glennwood"
+        }
+      ]
+    },
+    "polette-eyewear": {
+      "title": "Polette Eyewear",
+      "summary": "Een nooit eerder gezien retailconcept van architect Javier Zubiria.",
+      "hook": "Een winkel die u kunt bespelen als een muziekinstrument — een eerbetoon aan vrede, liefde en verbondenheid.",
+      "description": [
+        "Antwerpen, 2022. Na het succes van de showroom in Parijs sloeg polette opnieuw de handen in elkaar met Javier Zubiria, oprichter van het Amsterdamse bureau zU-Studio, om een nooit eerder gezien retailconcept naar Antwerpen te brengen. Het vertrekpunt was één song — “Imagine” van John Lennon — en de wens om na jaren van afstand een plek van verbinding en creativiteit te bouwen.",
+        "Bezoekers worden verwelkomd door twee reusachtige pianoklavieren, één aan elke kant, elk met 88 toetsen. De witte toetsen zijn spiegels van vloer tot plafond die een gevoel van oneindigheid creëren; de zwarte toetsen doen dienst als schappen voor de brillen van polette. Centraal verwijst een reusachtige witte bank naar Lennons Bed-in-vredesprotest.",
+        "Boven het hoofd draagt het plafond het pronkstuk: een sculpturale pianoklepvorm, afgeschuind over de volle 20 meter diepte van de showroom en uitgevoerd als verlicht, lichtdoorlatend STRETCH-plafond. Elke pianotoets werkt bovendien echt — een sensorsysteem licht telkens de volgende toets op, zodat bezoekers samen een liedje kunnen spelen in de ruimte."
+      ],
+      "highlights": [
+        "Verlichte, lichtdoorlatende plafondsculptuur",
+        "Pianoklepvorm over de volle 20 m diepte",
+        "Interactieve toetsverlichting met sensoren",
+        "Geïnstalleerd op één werkdag"
+      ],
+      "materials": [
+        "Akoestisch, lichtdoorlatend STRETCH-plafond",
+        "Sculpturale pianoklep-plafondvorm",
+        "Geïntegreerde verlichting",
+        "Sensorgestuurde toetsverlichting"
+      ],
+      "facts": [
+        {
+          "label": "Regio",
+          "value": "Antwerpen"
+        },
+        {
+          "label": "Jaar",
+          "value": "2022"
+        },
+        {
+          "label": "Oppervlakte",
+          "value": "60 m²"
+        },
+        {
+          "label": "Architect",
+          "value": "zU-Studio · Javier Zubiria"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hoelang duurde de installatie?",
+          "a": "De installatie van het akoestische, lichtdoorlatende spanplafond nam één werkdag in beslag."
+        },
+        {
+          "q": "Hoeveel installateurs werkten aan het project?",
+          "a": "Een team van 2 STRETCH-monteurs klaarde de volledige klus — het plafond en de verlichting."
+        },
+        {
+          "q": "Hoelang gaat het plafond mee?",
+          "a": "Zoals bij elk spanplafond hangt de levensduur af van het onderhoud, maar het gaat vlot zo'n 25 jaar mee; daarna hoeft alleen het doek eventueel vervangen te worden, terwijl het bestaande kader blijft zitten."
+        }
+      ]
+    },
+    "citizenm-hotel": {
+      "title": "CitizenM Hotel",
+      "summary": "Prefab badkamerplafonds met backlight, uitgerold over de CitizenM-hotels.",
+      "hook": "Een herhaalbaar badkamerplafond met backlight, buiten de werf gebouwd voor hotels op twee continenten.",
+      "description": [
+        "Voor de modulaire hotels van CitizenM leverde STRETCH prefab badkamerplafonds met een lichtdoorlatende afwerking met backlight – buiten de werf gebouwd als herhaalbare units en uitgerold over locaties in de VS en Europa, van New York en Chicago tot Miami, Los Angeles en daarbuiten."
+      ],
+      "highlights": [
+        "Prefab, buiten de werf gebouwd",
+        "Lichtdoorlatende afwerking met backlight",
+        "Op grote schaal herhaalbaar in tal van hotels"
+      ],
+      "materials": [
+        "Prefab STRETCH-badkamerunit",
+        "STRETCH Backlit-membraan (lichtdoorlatend)",
+        "Geïntegreerde verlichting"
+      ],
+      "facts": [
+        {
+          "label": "Continenten",
+          "value": "VS & Europa"
+        },
+        {
+          "label": "Steden",
+          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+        },
+        {
+          "label": "Partner",
+          "value": "Saniskill"
+        }
+      ]
+    },
+    "london-chapel": {
+      "title": "Kapel in Londen",
+      "summary": "Een spanplafond met backlight boven een gerestaureerde kapelruimte.",
+      "hook": "Een gerestaureerde kapel, badend in zacht en gelijkmatig licht van één lichtgevend plafond.",
+      "description": [
+        "Een doorschijnend STRETCH-plafond maakt van het volledige plafondvlak één zachte, gelijkmatige lichtbron: het gerestaureerde interieur baadt in verblindingsvrij licht, terwijl het LED-veld volledig uit het zicht blijft."
+      ],
+      "highlights": [
+        "Het volledige plafond als lichtbron",
+        "Verblindingsvrije, gelijkmatige verlichting",
+        "LED-veld volledig weggewerkt"
+      ],
+      "materials": [
+        "Doorschijnend STRETCH-plafond",
+        "LED-backlightveld"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Londen, VK"
+        },
+        {
+          "label": "Ruimte",
+          "value": "Gerestaureerde kapel"
+        }
+      ]
+    },
+    "private-villa-knokke": {
+      "title": "Privévilla",
+      "summary": "Een naadloos mat plafond voor een open kustvilla.",
+      "hook": "Een naadloos, pleisterglad plafond voor een open woning aan de kust.",
+      "description": [
+        "In de open leefruimte van de villa oogt een zeer mat polyester STRETCH-plafond van muur tot muur als vlekkeloos pleisterwerk – strak en modern, zonder de scheuren en schaduwlijnen van een klassiek plafond."
+      ],
+      "highlights": [
+        "Naadloze afwerking van muur tot muur",
+        "Geen scheuren of schaduwlijnen",
+        "Zeer matte look, als pleisterwerk"
+      ],
+      "materials": [
+        "Polyester STRETCH-plafond (zeer mat)",
+        "Randprofielen voor opspanning"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Knokke, België"
+        },
+        {
+          "label": "Ruimte",
+          "value": "Open leefruimte"
+        }
+      ]
+    },
+    "home-cinema-ghent": {
+      "title": "Thuisbioscoop",
+      "summary": "Een sterrenhemelplafond met akoestische achterlaag voor een thuisbioscoop.",
+      "hook": "Een privébioscoop onder een fonkelende sterrenhemel, afgestemd op filmgeluid.",
+      "description": [
+        "Honderden glasvezelpunten vormen een fonkelende nachthemel boven de zitplaatsen, terwijl een akoestische achterlaag de ruimte onder controle houdt voor filmgeluid – sfeer en prestaties verenigd in één plafond."
+      ],
+      "highlights": [
+        "Sterrenhemel in glasvezel",
+        "Akoestische achterlaag voor filmgeluid",
+        "Sfeer en prestaties in één plafond"
+      ],
+      "materials": [
+        "STRETCH-plafond met sterrenhemel",
+        "Sterrenveld in glasvezel",
+        "Akoestisch absorberende achterlaag"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Gent, België"
+        },
+        {
+          "label": "Ruimte",
+          "value": "Thuisbioscoop"
+        }
+      ]
+    },
+    "city-penthouse-antwerp": {
+      "title": "Stadspenthouse",
+      "summary": "Een vlekkeloos designplafond voor een penthouse in de stad.",
+      "hook": "Een minimalistisch, perfect vlak designplafond voor een penthouse in de stad.",
+      "description": [
+        "De leefruimte van het penthouse kreeg een naadloos STRETCH-plafond met geïntegreerde verlichting: zo blijft de look minimalistisch en het oppervlak perfect over de hele open ruimte."
+      ],
+      "highlights": [
+        "Naadloos designplafond",
+        "Geïntegreerde verlichting",
+        "Minimalistische, vlekkeloze afwerking"
+      ],
+      "materials": [
+        "Polyester STRETCH-plafond",
+        "Geïntegreerde verlichting"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Antwerpen, België"
+        },
+        {
+          "label": "Ruimte",
+          "value": "Woonkamer van het penthouse"
+        }
+      ]
+    },
+    "wellness-spa-bruges": {
+      "title": "Wellness-spa",
+      "summary": "Een vochtbestendig plafond met backlight voor een spa.",
+      "hook": "Een vochtbestendig, zacht oplichtend plafond voor een wellnessruimte.",
+      "description": [
+        "De spa had een plafond nodig dat tegen vocht kan en voor een rustige sfeer zorgt. Een doorschijnend STRETCH-plafond met backlight licht zacht op boven de wellnesszone en is eenvoudig schoon te vegen – ongevoelig voor stoom en vocht."
+      ],
+      "highlights": [
+        "Bestand tegen vocht en stoom",
+        "Zachte, gelijkmatige backlight",
+        "Eenvoudig schoon te vegen"
+      ],
+      "materials": [
+        "Doorschijnend STRETCH-plafond in PVC",
+        "LED-backlightveld"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Brugge, België"
+        },
+        {
+          "label": "Ruimte",
+          "value": "Spa / wellness"
+        }
+      ]
+    },
+    "rue-perree-paris": {
+      "title": "Rue Perrée",
+      "summary": "Een lichtplafond voor een galerie met meerdere merken in Parijs.",
+      "hook": "Gelijkmatig licht op galerieniveau in een showroom met meerdere merken – armaturen uit het zicht.",
+      "description": [
+        "Bij ART RECHERCHE INDUSTRIE aan de Rue Perrée in Parijs – een galerie die verschillende merken toont – zorgt een lichtgevend STRETCH-plafond voor een gelijkmatige lichtdeken zonder hotspots over de hele ruimte. Doordat het LED-veld schuilgaat achter een doorschijnend doek, blijft de aandacht bij het tentoongestelde werk, niet bij de armaturen."
+      ],
+      "highlights": [
+        "Gelijkmatige verlichting zonder hotspots",
+        "LED-veld volledig weggewerkt",
+        "Kleurweergave op galerieniveau"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Rue Perrée, Parijs (FR)"
+        },
+        {
+          "label": "Ruimte",
+          "value": "Galerie met meerdere merken"
+        }
+      ]
+    }
+  },
+  "blogPosts": {
+    "posts": {
+      "what-is-a-stretch-ceiling": {
+        "title": "Wat is een spanplafond? Een gids in klare taal",
+        "excerpt": "Een spanplafond is een dun doek dat over de ruimte wordt gespannen en in een slank randprofiel wordt geklikt — koud of warm gemonteerd, op één dag geplaatst. Zo werkt het en hier komt het tot zijn recht.",
+        "body": [
+          {
+            "heading": "De korte versie",
+            "paragraphs": [
+              "Een spanplafond is een dun, naadloos doek — gebreid polyester of een gekalanderde PVC-folie — dat over de ruimte wordt gespannen en in een slank profiel wordt geklikt dat rondom op de muren is bevestigd. Het resultaat oogt als een perfect vlak, vers geschilderd plafond, maar er komt geen pleisterwerk, schuurwerk of verf aan te pas.",
+              "Omdat het doek in een kader wordt geklikt en niet rechtstreeks aan de bovenliggende structuur hangt, verbergt het leidingen, bekabeling, oneffen beton en oude plafonds volledig — en het wordt op één dag geplaatst, in een kamer die gewoon gemeubeld en in gebruik blijft."
+            ]
+          },
+          {
+            "heading": "Koude montage vs. warme montage",
+            "paragraphs": [
+              "Polyesterdoeken worden koud gespannen: geen warmte, geen dampen en geen droogtijd. Ze geven een diepe, zeer matte afwerking en overspannen tot 5.15 m zonder naad.",
+              "PVC-folies worden tijdens de plaatsing verwarmd zodat ze ontspannen, en trekken bij het afkoelen strak tot een vlekkeloos oppervlak. PVC is volledig recycleerbaar, wegneembaar voor toegang tot de technieken erboven, en overspant tot 5.7 m naadloos — de breedste optie."
+            ]
+          },
+          {
+            "heading": "Wat u er allemaal in kunt verwerken",
+            "paragraphs": [
+              "Een spanplafond is meer dan een afwerking. Een micro-geperforeerde versie met daarachter een hoogverdichte absorber haalt tot klasse A geluidsabsorptie en maakt galmende ruimtes rustig. Doorschijnende folies worden een egale, dimbare lichtbron zonder hotspots, en elk beeld — tot een sterrenhemel met glasvezels toe — kan van rand tot rand worden geprint.",
+              "Zelfs luidsprekers kunnen volledig achter het doek worden weggewerkt voor zuiver geluid zonder zichtbare bron. En dat alles in één naadloos oppervlak."
+            ]
+          },
+          {
+            "heading": "Waar het tot zijn recht komt",
+            "paragraphs": [
+              "Particulieren kiezen voor spanplafonds in woonkamers, badkamers en thuisbioscopen; bedrijven in kantoren, restaurants, studio's, retail en horeca. Ze passen zowel bij nieuwbouw als renovatie, en het PVC-systeem is ongevoelig voor vocht — ideaal dus voor natte ruimtes.",
+              "Wilt u weten of het bij uw project past? Vraag een gratis en vrijblijvende offerte aan; een specialist antwoordt u binnen twee werkdagen."
+            ]
+          }
+        ]
+      },
+      "stretch-ceiling-acoustics-explained": {
+        "title": "De akoestiek van spanplafonds, helder uitgelegd",
+        "excerpt": "Een micro-geperforeerd spandoek met daarachter een hoogverdichte absorber haalt tot klasse A geluidsabsorptie — zonder zichtbare akoestische panelen. Zo werkt het, en dit betekenen αw en NRC.",
+        "body": [
+          {
+            "heading": "Waarom ruimtes hard klinken",
+            "paragraphs": [
+              "Harde, vlakke oppervlakken — glas, beton, gipsplaat — kaatsen geluid terug de ruimte in. Die reflecties stapelen zich op tot galm, waardoor spraak moeilijker te volgen wordt en muziek of achtergrondlawaai sneller vermoeit. De oplossing: een deel van die energie absorberen vóór ze weerkaatst.",
+              "Traditioneel betekent dat zichtbare akoestische panelen of baffles. Met een spanplafond doet u het onzichtbaar."
+            ]
+          },
+          {
+            "heading": "Zo werkt een akoestisch spanplafond",
+            "paragraphs": [
+              "De zichtbare zijde is een micro-geperforeerd doek: duizenden minuscule perforaties laten het geluid door naar een hoogverdichte absorber van polyesterwol erachter. De ruimte oogt nog steeds als één vlekkeloos, naadloos plafond, maar de geluidsenergie wordt opgevangen in plaats van weerkaatst.",
+              "Goed uitgevoerd haalt dit tot klasse A absorptie — de hoogste klasse — over het volledige behandelde oppervlak."
+            ]
+          },
+          {
+            "heading": "De cijfers lezen: αw en NRC",
+            "paragraphs": [
+              "Geluidsabsorptie wordt gemeten op een schaal van 0 (volledig reflecterend) tot 1 (volledig absorberend). In Europa is het kerncijfer de gewogen absorptiecoëfficiënt αw, met bijbehorende klassen van klasse A (αw ≥ 0.90) tot klasse E. NRC (Noise Reduction Coefficient) is de gelijkwaardige eengetalswaarde die vaker in Noord-Amerika wordt gebruikt.",
+              "Vergelijkt u akoestische producten, kijk dan naar precies die cijfers — αw, de absorptieklasse en NRC — en niet naar vage beloften over \"geluidsisolatie\"."
+            ]
+          },
+          {
+            "heading": "Waar het zich bewijst",
+            "paragraphs": [
+              "Opnamestudio's, thuisbioscopen, landschapskantoren, restaurants, klaslokalen en zorgruimtes: ze varen er allemaal wel bij. Hetzelfde systeem bestaat ook als vrijhangende plafondeilanden en decoratieve wandpanelen waar een volledig plafond niet mogelijk is.",
+              "Kampt u met galm in een specifieke ruimte? Vraag een offerte aan en bezorg ons de afmetingen en het gebruik — wij adviseren u de juiste absorber en afwerking."
+            ]
+          }
+        ]
+      }
+    },
+    "chrome": {
+      "readMinutes": "{count} min leestijd",
+      "publishedOn": "Gepubliceerd",
+      "updatedOn": "Bijgewerkt",
+      "backToBlog": "Alle gidsen",
+      "eyebrow": "Gidsen",
+      "ctaTitle": "Denkt u aan een spanplafond?",
+      "ctaBody": "Ontvang een gratis en vrijblijvende offerte voor uw ruimte.",
+      "ctaBtn": "Vraag een gratis offerte aan"
+    }
+  },
+  "inspirationPage": {
+    "eyebrow": "Inspiratie",
+    "title1": "Echte ruimtes,",
+    "title2a": "echte",
+    "title2b": "projecten",
+    "browseEyebrow": "Blader per oplossing",
+    "allEyebrow": "Alle projecten",
+    "portfolioTitle": "Het portfolio",
+    "ctaTitle": "Stel het u voor in uw eigen ruimte",
+    "quoteCta": "Vraag een gratis offerte aan",
+    "exploreCta": "Ontdek de oplossingen",
+    "showing": "{count} weergegeven",
+    "filterAria": "Projecten filteren",
+    "filters": [
+      "Alles",
+      "Akoestiek",
+      "Wonen",
+      "Badkamer",
+      "Kantoor",
+      "Commercieel",
+      "Thuisbioscoop",
+      "Licht & print"
+    ],
+    "browse": [
+      {
+        "label": "Akoestiek",
+        "desc": "Studio's, kantoren & stille ruimtes"
+      },
+      {
+        "label": "Licht & print",
+        "desc": "Plafonds met backlight & print"
+      },
+      {
+        "label": "Wonen",
+        "desc": "Woningen & privé-interieurs"
+      },
+      {
+        "label": "Badkamer",
+        "desc": "Vochtbestendig & prefab"
+      },
+      {
+        "label": "Kantoor",
+        "desc": "Akoestisch comfort op het werk"
+      },
+      {
+        "label": "Commercieel",
+        "desc": "Winkels, hotels & zalen"
+      }
+    ]
+  },
+  "projectPage": {
+    "crumbInspiration": "Inspiratie",
+    "materialsTitle": "Gebruikte producten & materialen",
+    "detailsTitle": "Projectdetails",
+    "solutionsUsed": "Gebruikte oplossingen",
+    "similarCta": "Start een gelijkaardig project",
+    "gallery": "Galerij",
+    "faqTitle": "Veelgestelde vragen",
+    "allProjects": "Alle projecten",
+    "exploreSolutions": "Ontdek de oplossingen",
+    "photo": "foto"
+  },
+  "reviewsData": {
+    "items": [
+      {
+        "role": "Huiseigenaar · Antwerpen",
+        "quote": "Ze hebben het plafond van onze woonkamer op één dag geplaatst, helemaal zonder rommel. De matte afwerking oogt precies als vers pleisterwerk — we zijn er echt heel blij mee."
+      },
+      {
+        "role": "Architect · Gent",
+        "quote": "Voor akoestische plafonds schrijf ik nu STRETCH voor. De ruimte oogt als één strak vlak en de galm is weg — klanten merken het verschil altijd op."
+      },
+      {
+        "role": "Aannemer · Sint-Niklaas",
+        "quote": "Dankzij de opleiding kon mijn ploeg snel monteren, en de levering op maat is betrouwbaar. Als partner hebben we er een volledig nieuwe dienst bijgekregen."
+      }
+    ]
+  },
+  "partnersPage": {
+    "crumb": "Partners",
+    "hero": {
+      "eyebrow": "Voor de vakman",
+      "title": "Word partner van",
+      "lead": "Twee manieren om met ons samen te werken: u verkoopt onze plafonds als afgewerkt product en laat ons netwerk de plaatsing doen, of u volgt de opleiding en plaatst ze zelf. In beide gevallen krijgt u professionele voorwaarden, levering op maat vanuit België en doorverwezen lokale leads.",
+      "ctaApply": "Stel u kandidaat als partner",
+      "ctaCall": "Plan een gesprek",
+      "imageAlt": "Een STRETCH-installatiepartner aan het werk",
+      "statLabel": "Geplaatst per team / dag"
+    },
+    "models": {
+      "eyebrow": "Twee manieren om partner te worden",
+      "title": "Verdeler of dealer — kies het model dat bij uw zaak past.",
+      "lead": "Het verschil is simpel: een verdeler verkoopt het plafond en laat de plaatsing aan ons over; een dealer verkoopt én plaatst zelf, na het volgen van onze opleiding.",
+      "bestForLabel": "Ideaal voor:",
+      "reseller": {
+        "kicker": "Verdeler",
+        "title": "U verkoopt. Wij plaatsen.",
+        "body": "U verkoopt een STRETCH-plafond als afgewerkt, geplaatst product aan uw klant. Wij en ons dealernetwerk verzorgen de plaatsing als uw partner — u focust op de verkoop en de klantrelatie.",
+        "points": [
+          "U verkoopt het afgewerkte, geplaatste plafond aan uw klant",
+          "Wij plaatsen het voor u, via ons gecertificeerde dealernetwerk",
+          "Geen eigen montageteam of -kennis nodig",
+          "Professionele voorwaarden, productbeelden en doorverwezen lokale leads"
+        ],
+        "bestFor": "interieurarchitecten, architecten, keuken- en badkamershowrooms en aannemers die plafonds willen aanbieden zonder ze zelf te plaatsen.",
+        "cta": "Stel u kandidaat als verdeler"
+      },
+      "dealer": {
+        "kicker": "Dealer",
+        "badge": "Opleiding vereist",
+        "title": "U verkoopt en plaatst.",
+        "body": "U verkoopt STRETCH-producten binnen uw eigen projecten en voert de plaatsing zelf uit. Om gecertificeerd dealer te worden, volgt uw installateur eerst onze praktijkopleiding op onze hoofdzetel.",
+        "points": [
+          "U verkoopt STRETCH-producten binnen uw eigen projecten",
+          "U voert de plaatsing zelf uit",
+          "Uw installateur volgt eerst onze praktijkopleiding",
+          "Bestel op maat uit ons Belgische atelier"
+        ],
+        "bestFor": "installateurs, afwerkingsbedrijven en specialisten in droge afbouw die spanplafonds aan hun eigen plaatsingsaanbod willen toevoegen.",
+        "cta": "Stel u kandidaat als dealer",
+        "trainingLink": "Bekijk de opleiding"
+      }
+    },
+    "compare": {
+      "resellerHead": "Verdeler",
+      "dealerHead": "Dealer",
+      "rows": [
+        {
+          "label": "Wat u verkoopt",
+          "reseller": "Een afgewerkt, geplaatst plafond",
+          "dealer": "Producten binnen uw eigen projecten"
+        },
+        {
+          "label": "Wie plaatst",
+          "reseller": "Wij — via ons dealernetwerk",
+          "dealer": "U, zelf"
+        },
+        {
+          "label": "Opleiding",
+          "reseller": "Niet vereist",
+          "dealer": "Vereist — praktijkopleiding"
+        },
+        {
+          "label": "Meest geschikt voor",
+          "reseller": "Ontwerpers, showrooms, aannemers",
+          "dealer": "Installateurs & afwerkingsbedrijven"
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Wat elke partner krijgt",
+      "titleA": "Meer marge,",
+      "titleB": "minder zorgen",
+      "lead": "Welk model u ook kiest, wij zorgen voor het product en de toeleveringsketen — u levert een premium plafond waar uw klanten van houden.",
+      "cards": [
+        {
+          "title": "Sterke marges",
+          "body": "Professionele voorwaarden op doeken en profielen op maat, met gezonde marges op een premium product waar vraag naar is."
+        },
+        {
+          "title": "Doorverwezen leads",
+          "body": "Wij spelen lokale klantaanvragen door aan partners in hun regio — echte projecten, niet zomaar een prijslijst."
+        },
+        {
+          "title": "B2B-bestellingen",
+          "body": "Bestel geconfectioneerd op maat uit ons Belgische atelier via een eigen partnerportaal, met betrouwbare levertermijnen."
+        },
+        {
+          "title": "Made in Belgium",
+          "body": "Handgemaakte doeken, ontwikkeld in België en gedekt door een lange productgarantie waar u achter kunt staan."
+        },
+        {
+          "title": "Praktijkopleiding",
+          "body": "Voor dealers: certificeer uw team in enkele dagen op onze hoofdzetel — confectie, profielen, koude & warme montage, licht en akoestiek."
+        },
+        {
+          "title": "Marketingondersteuning",
+          "body": "Productbeelden, stalen en verkoopmateriaal om spanplafondopdrachten binnen te halen en af te ronden."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "Zo werkt het",
+      "title": "Een kort traject naar het verkopen van spanplafonds — op uw manier.",
+      "resellerPath": "Traject verdeler",
+      "dealerPath": "Traject dealer",
+      "resellerSteps": [
+        {
+          "title": "Stel u kandidaat als verdeler",
+          "body": "Stuur een korte aanvraag. Wij bekijken elke kandidatuur persoonlijk en plannen een gesprek om uw zaak te leren kennen."
+        },
+        {
+          "title": "Word klaargestoomd",
+          "body": "Professionele voorwaarden, stalen en verkoopmateriaal — geen opleiding nodig. Begin meteen spanplafonds te offreren."
+        },
+        {
+          "title": "U verkoopt — wij plaatsen",
+          "body": "U sluit de verkoop en behoudt de klant; wij en onze dealers plaatsen het plafond, op tijd en volgens afspraak."
+        }
+      ],
+      "dealerSteps": [
+        {
+          "title": "Stel u kandidaat als dealer",
+          "body": "Stuur een korte aanvraag. Wij bekijken elke kandidatuur persoonlijk en plannen een gesprek om uw zaak te leren kennen."
+        },
+        {
+          "title": "Volg de opleiding & certificeer",
+          "body": "Uw team volgt onze praktijkopleiding op de hoofdzetel: confectie, profielen, koude & warme montage, licht en akoestiek."
+        },
+        {
+          "title": "Bestel & plaats",
+          "body": "Bestel op maat, plaats het zelf op één dag en ontvang doorverwezen lokale leads zodra ze binnenkomen."
+        }
+      ]
+    },
+    "apply": {
+      "eyebrow": "Word partner",
+      "titleA": "Stel u",
+      "titleB": "vandaag kandidaat",
+      "lead": "Laat ons weten of u wilt verkopen of ook plaatsen — wij nemen het vanaf daar over.",
+      "points": [
+        "Wij bekijken elke kandidatuur persoonlijk",
+        "Exclusief werkgebied waar beschikbaar",
+        "Onboarding binnen enkele weken"
+      ]
+    }
+  },
+  "trainingPage": {
+    "crumb": "Installateursopleiding",
+    "courseName": "STRETCH-installateurscertificering",
+    "courseDescription": "Praktijkgerichte certificering tot spanplafondinstallateur op de STRETCH-hoofdzetel in België: confectie van het doek, profielen, koude & warme montage, licht, akoestiek, afwerking en calculatie.",
+    "hero": {
+      "eyebrow": "Installateursopleiding",
+      "titleA": "Plaats als een pro",
+      "titleB": "in",
+      "titleC": "dagen",
+      "lead": "Praktijkgerichte certificering op onze Belgische hoofdzetel. Leer confectie van het doek, profielen, koude & warme montage, licht en akoestiek — geen voorkennis nodig.",
+      "ctaBook": "Boek uw opleiding",
+      "ctaDates": "Bekijk de data",
+      "imageLabel": "Foto opleiding / atelier"
+    },
+    "format": [
+      {
+        "value": "2–3",
+        "label": "Praktijkdagen"
+      },
+      {
+        "value": "HQ",
+        "label": "Beveren-Waas, België"
+      },
+      {
+        "value": "1:4",
+        "label": "Trainer per installateur"
+      }
+    ],
+    "curriculum": {
+      "eyebrow": "Wat u leert",
+      "title": "Het volledige vak",
+      "lead": "Van een rol doek tot een afgewerkt, verlicht, akoestisch plafond — plus de commerciële vaardigheden om het te verkopen.",
+      "items": [
+        {
+          "title": "Doek & confectie",
+          "body": "Hoe polyester en PVC-doeken in het atelier op maat worden gemeten, gesneden en gelast."
+        },
+        {
+          "title": "Randprofielen",
+          "body": "Clipprofielen perfect waterpas uitzetten en bevestigen — de basis van een vlekkeloos plafond."
+        },
+        {
+          "title": "Koude & warme montage",
+          "body": "Beide systemen correct opspannen: koud polyester en verwarmde PVC-folie, van begin tot einde."
+        },
+        {
+          "title": "Licht & akoestiek",
+          "body": "Backlight, LED-lijnen, bedrukte folies en akoestische absorberende rug integreren."
+        },
+        {
+          "title": "Afwerking & toegang",
+          "body": "Strakke randafwerking, uitsparingen voor armaturen en discrete inspectieluiken."
+        },
+        {
+          "title": "Calculatie & verkoop",
+          "body": "Een werf opmeten, met vertrouwen offreren en spanplafonds overtuigend voorstellen aan klanten."
+        }
+      ]
+    },
+    "dates": {
+      "eyebrow": "Komende data",
+      "title": "Reserveer uw plaats",
+      "lead": "Kleine groepen, wie eerst boekt, eerst plaats. Sessies op locatie mogelijk op aanvraag.",
+      "onRequestTitle": "Op aanvraag",
+      "onRequestNote": "Sessie op locatie op maat"
+    },
+    "book": {
+      "eyebrow": "Plan uw opleiding",
+      "titleA": "Boek een",
+      "titleB": "plaats",
+      "includedLabel": "Inbegrepen",
+      "included": [
+        "Certificaat van deelname",
+        "Starterskit voor installateurs",
+        "Lunch & materiaal ter plaatse"
+      ]
+    }
+  },
+  "aboutPage": {
+    "crumb": "Over ons",
+    "hero": {
+      "eyebrow": "Over STRETCH",
+      "titleA": "Handgemaakt",
+      "titleB": "in",
+      "titleC": "België",
+      "lead": "{name} ontwerpt en produceert naadloze spanplafonds en -wanden — ontwikkeld in België, geplaatst op één dag en gebouwd om decennia mee te gaan.",
+      "imageAlt": "Het STRETCH-atelier en -team"
+    },
+    "stats": [
+      {
+        "label": "Opgericht",
+        "sub": "Sindsdien bouwen we naadloze plafonds."
+      },
+      {
+        "value": "25 jaar",
+        "label": "Garantie",
+        "sub": "Op onze handgemaakte doeken."
+      },
+      {
+        "value": "4",
+        "label": "Vestigingen",
+        "sub": "België, VS, Polen & Oostenrijk."
+      }
+    ],
+    "story": {
+      "eyebrow": "Ons verhaal",
+      "p1": "{name} werd opgericht in {founded} vanuit een eenvoudige overtuiging: een plafond hoort een afwerking te zijn die om de juiste redenen opvalt. Traditionele pleisterplafonds barsten, verkleuren en vragen dagen vuil werk om te plaatsen en te herschilderen. Een gespannen doek niet — het gaat proper, kaarsrecht en naadloos omhoog, vaak op één dag.",
+      "p2": "Alles begint in ons Belgische atelier, waar polyester en PVC-doeken met de hand op maat worden gemeten, gesneden en gelast. Die confectie op maat is precies wat maakt dat een afgewerkt plafond op de werf zo snel op zijn plaats klikt, zonder stof en zonder herschilderen.",
+      "p3": "Vandaag werken we hoofdzakelijk via een netwerk van vakpartners en gecertificeerde installateurs, met systemen op maat, praktijkopleiding en doorverwezen lokale leads. Van opnamestudio's tot evenementenhallen, van badkamers tot retail: onze systemen brengen licht, akoestische controle en een vlekkeloos oppervlak in ruimtes in heel Europa en daarbuiten.",
+      "p4": "We zijn een B2B-gedreven bedrijf met vestigingen in België, de Verenigde Staten, Polen en Oostenrijk — maar elk doek draagt nog steeds dezelfde belofte: handgemaakt in België, met 25 jaar garantie."
+    },
+    "offices": {
+      "eyebrow": "Waar u ons vindt"
+    },
+    "cta": {
+      "title": "Laten we samen iets naadloos bouwen.",
+      "button": "Vraag een gratis offerte aan"
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "titleA": "Laten we praten over",
+    "titleB": "plafonds",
+    "cards": {
+      "call": {
+        "label": "Bel ons"
+      },
+      "email": {
+        "label": "Mail ons",
+        "sub": "Persoonlijk antwoord binnen 2 dagen"
+      },
+      "chat": {
+        "label": "WhatsApp / Telegram",
+        "value": "Chat met ons",
+        "sub": "Korte vragen, snelle antwoorden"
+      }
+    },
+    "formTitle": "Stuur ons een bericht",
+    "formLead": "Vertel ons over uw project of vraag. Een specialist antwoordt binnen twee werkdagen.",
+    "mapLabel": "Atelier / kaart",
+    "mapAlt": "STRETCH-atelier",
+    "hqKicker": "Hoofdzetel",
+    "hqLocation": "{postalCode} {city}, België",
+    "officesEyebrow": "Onze kantoren",
+    "dealerTitle": "Liever een lokale verdeler?",
+    "dealerBody": "Particuliere aanvragen verwijzen we door naar gecertificeerde installateurs in uw regio — vraag ernaar en we brengen u in contact.",
+    "dealerCta": "Vind uw dichtstbijzijnde verdeler",
+    "form": {
+      "subjects": [
+        "Offerte aanvragen",
+        "Verdeler vinden",
+        "Samenwerking",
+        "Opleiding voor installateurs",
+        "Anders"
+      ],
+      "timelines": [
+        "Zo snel mogelijk",
+        "Binnen 1–3 maanden",
+        "Binnen 4–12 maanden",
+        "Ik oriënteer me nog"
+      ],
+      "timelineLabel": "Timing",
+      "consentPrefix": "Ik ga ermee akkoord dat STRETCH mijn gegevens verwerkt om mijn aanvraag te beantwoorden, zoals beschreven in het",
+      "consentPrivacy": "privacybeleid",
+      "submit": "Verstuur bericht"
+    }
+  },
+  "datasheetsPage": {
+    "eyebrow": "Technische fiches",
+    "crumb": "Fiches",
+    "titleA": "Specificaties &",
+    "titleB": "fiches",
+    "lead": "Download de technische documentatie van elk STRETCH-systeem — specificaties, brandklassen, akoestische klassewaarden en garantiedetails. Vul uw gegevens één keer per download in en het bestand start meteen.",
+    "updated": "Bijgewerkt op {date}",
+    "privacyNote": "We vragen uw naam, e-mailadres en telefoonnummer zodat een specialist eventuele technische vragen kan beantwoorden. Uw gegevens worden behandeld volgens ons",
+    "privacyLink": "privacybeleid"
+  },
+  "samplesPage": {
+    "eyebrow": "Kleurstalen",
+    "crumb": "Stalen",
+    "titleA": "Bekijk de",
+    "titleB": "kleuren",
+    "lead": "Bestel fysieke RAL- en kleurstalen van onze polyester-, PVC- en akoestische doeken — gratis voor vakpartners, geleverd tot aan uw deur.",
+    "points": [
+      "Standaardtinten en elke gewenste RAL-kleur",
+      "Polyester, PVC & akoestische afwerkingen",
+      "Verzonden binnen twee werkdagen"
+    ]
+  },
+  "blogPage": {
+    "eyebrow": "Gidsen & inzichten",
+    "crumb": "Gidsen",
+    "titleA": "Spanplafonds,",
+    "titleB": "uitgelegd",
+    "postMeta": "{date} · {minutes} min leestijd",
+    "readArticle": "Lees het artikel"
+  },
+  "inlineLead": {
+    "consentPrefix": "Ik ga ermee akkoord dat STRETCH mijn gegevens verwerkt om mijn aanvraag te beantwoorden, zoals beschreven in het",
+    "consentPrivacy": "privacybeleid"
   }
 }

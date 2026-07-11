@@ -2373,5 +2373,1005 @@
     "shippedWorldwide": "Skickas världen över",
     "ctaTitle": "Har du ett projekt åt oss?",
     "ctaBody": "Skicka oss ritningarna eller idén — vi konstruerar strukturen, bygger den i egen regi och skickar den till dig."
+  },
+  "projects": {
+    "da-tweekaz-studio": {
+      "title": "Da Tweekaz Studio",
+      "summary": "Akustiskt spänntak och akustiska väggar för en musikproduktionsstudio.",
+      "hook": "Ett rent, akustiskt kontrollerat rum för en av hardstylescenens mest kända akter.",
+      "description": [
+        "I Da Tweekaz inspelningsstudio i Nederländerna behandlar ett akustiskt STRETCH-system både taket och väggarna. Reflektionerna hålls under kontroll så att rummet förblir exakt att arbeta i — med en skarvfri, modern finish och inga synliga paneler ovanför huvudet."
+      ],
+      "highlights": [
+        "Akustisk behandling av tak och väggar",
+        "Skarvfri finish utan paneler"
+      ],
+      "materials": [
+        "Akustiskt STRETCH-tak",
+        "STRETCH Acoustic textil (väggar)"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Nederländerna"
+        },
+        {
+          "label": "STRETCH-återförsäljare",
+          "value": "Q82 Acoustics"
+        }
+      ]
+    },
+    "mark-with-a-k": {
+      "title": "Mark With a K",
+      "summary": "Akustisk behandling av en DJ:s och producents ljudrum.",
+      "hook": "Ett felfritt, akustiskt kontrollerat rum för en belgisk DJ och producent.",
+      "description": [
+        "Ett skarvfritt akustiskt STRETCH-tak absorberar efterklangen i produktionsrummet och behåller samtidigt en felfri, modern finish. Resultatet är ett lugnt, kontrollerat rum att arbeta i, med den akustiska prestandan dold inuti membranet."
+      ],
+      "highlights": [
+        "Skarvfritt akustiskt tak",
+        "Dold absorberande baksida",
+        "Modern finish utan paneler"
+      ],
+      "materials": [
+        "Akustiskt STRETCH-tak",
+        "Absorberande baksida med hög densitet"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgien"
+        },
+        {
+          "label": "Utrymme",
+          "value": "Musikproduktionsstudio"
+        }
+      ]
+    },
+    "notary-ampe-anthony": {
+      "title": "Notariekontoret Ampe Anthony",
+      "summary": "350 m² akustiska spänntak i ett exklusivt notariekontor.",
+      "hook": "En komplett exklusiv kontorsinredning där hårda, reflekterande material behövde tämjas — utan att förlora det skarpa, minimalistiska uttrycket.",
+      "description": [
+        "2019 byggdes notariekontoret Ampe Anthony i Kruibeke om från grunden till en exklusiv interiör med ett medvetet skarpt, minimalistiskt uttryck — polerade betonggolv, fönsterramar i stål och gott om hårda ytor. Ingenting sparades in på för att få finishen perfekt.",
+        "De hårda materialen gjorde kontoret akustiskt mycket livligt. För att få tillbaka en behaglig nivå fick hela interiören ett akustiskt STRETCH-tak med en dedikerad absorbent av polyesterull monterad mot det befintliga betongbjälklaget, vilket lyfter den akustiska prestandan till en hög nivå.",
+        "Taket sänktes 10 cm för att dölja alla tekniska installationer ovanför, med en kvarvarande höjd på 260 cm. För att rummet skulle kännas högre och större byggde vi in stora elliptiska försänkningar i taket — ett optiskt knep som synbart lyfter rummet."
+      ],
+      "highlights": [
+        "Efterklangstid uppmätt till 0.6 s",
+        "Stora elliptiska takförsänkningar för en högre känsla",
+        "Dedikerad absorbent av polyesterull bakom membranet"
+      ],
+      "materials": [
+        "Akustiskt STRETCH-tak",
+        "Böjda måttanpassade aluminiumramar",
+        "Absorbent av polyesterull D40/50 (40 kg/m³, 50 mm)",
+        "STRETCH Design-tak i den elliptiska formen",
+        "Vita PVC-spännprofiler runt kanten",
+        "Belysning: Wever & Ducré, Delta Light"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Waasland (Kruibeke)"
+        },
+        {
+          "label": "År",
+          "value": "2018"
+        },
+        {
+          "label": "Yta",
+          "value": "350 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Ante Architecten"
+        },
+        {
+          "label": "STRETCH-återförsäljare",
+          "value": "Corpus Interieur"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hur lång tid tog installationen?",
+          "a": "Att installera de akustiska taken, all belysning och specialfinisherna tog 7 arbetsdagar."
+        },
+        {
+          "q": "Vilken efterklangstid uppnåddes?",
+          "a": "Uppmätt efter installationen nådde kontoret en efterklangstid på 0.6 s — interiören är, och känns, mycket tyst."
+        },
+        {
+          "q": "Hur många montörer arbetade med projektet?",
+          "a": "Ett team på 2 STRETCH-montörer utförde hela takpaketet: membranet, belysningen, akustikpanelerna, taksnickerierna och de elliptiska strukturerna."
+        },
+        {
+          "q": "Hur länge håller taket?",
+          "a": "Som med alla spänntak beror livslängden på rengöringen, men det håller utan problem i cirka 25 år. Därefter är det bara membranet som eventuellt behöver bytas — den befintliga ramen sitter kvar."
+        }
+      ]
+    },
+    "bnp-paribas-fortis": {
+      "title": "BNP Paribas Fortis",
+      "summary": "2,000 m² belysta och akustiska tak i bankens huvudkontor i Bryssel.",
+      "hook": "Belysta och akustiska STRETCH-tak i bankens nya huvudkontor Montagne du Parc — inklusive en food court över flera våningar.",
+      "description": [
+        "I BNP Paribas Fortis huvudkontor i centrala Bryssel levererade STRETCH cirka 2,000 m² belysta (STRETCH Light) och akustiska (STRETCH Acoustic) tak, i samarbete med Jaspers-Eyers Architects och NCBHAM tillsammans med partnern Conceptexpo.",
+        "En höjdpunkt är food courten Barista Bar, som tar emot medarbetare och besökare över flera våningar. Hot Corner serverar varma rätter under ett tak av mässingslameller som för tankarna till lågor; Fresh Corner erbjuder sallader en våning upp; och Sweet Corner avrundar med desserter — varje disk är speglad, så att en hel måltid kan sättas ihop var som helst."
+      ],
+      "highlights": [
+        "≈2,000 m² spänntak",
+        "STRETCH Light + Acoustic i kombination",
+        "Barista Bar food court över flera våningar",
+        "Effekttak med mässingslameller som “lågor”"
+      ],
+      "materials": [
+        "STRETCH Light-tak (belyst)",
+        "STRETCH Acoustic-tak",
+        "Böjda taksektioner",
+        "Integrerad belysning"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "Bryssel (Montagne du Parc)"
+        },
+        {
+          "label": "Yta",
+          "value": "2,000 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Jaspers-Eyers & NCBHAM"
+        },
+        {
+          "label": "Partner",
+          "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-beveren": {
+      "title": "Van der Valk",
+      "summary": "Maximal ljudabsorption för ett hotells eventsal — med nästan ingen höjd att avvara.",
+      "hook": "Ett akustiskt problem som plågat hotellets eventsal i åratal, löst genom taket.",
+      "description": [
+        "Tim van der Valk vände sig till STRETCH med ett akustiskt problem som hade påverkat deras eventyta i flera år. Efter att ha diskuterat saken med Michael Nicasens på STRETCH kom vi fram till att lösningen måste komma från taket — men det befintliga taket var bara 255 cm högt, vilket lämnade mycket lite utrymme för ett system.",
+        "Så vi föreslog en systemhöjd på 50 mm som ändå når αw 0.95: maximal ljudabsorption med bara en minimal sänkning av takhöjden. De stora eventsalarna spänns skarvfritt, med den akustiska prestandan inbyggd i membranet och detaljerna — luckor, belysning, sensorer och en stjärnhimmel — snyggt integrerade ovanför huvudet."
+      ],
+      "highlights": [
+        "αw 0.95 ljudabsorption",
+        "Endast 50 mm systemhöjd",
+        "Integrerade tekniska åtkomstluckor",
+        "Belysning & närvarosensorer",
+        "Stjärnhimmel",
+        "Skarvfri finish runt pelare"
+      ],
+      "materials": [
+        "Akustiskt STRETCH-tak (50 mm-system)",
+        "Integrerade tekniska luckor",
+        "Integrerad belysning",
+        "Närvarosensorer",
+        "Stjärnhimmelsinstallation",
+        "Spännprofiler runt kanten"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Region",
+          "value": "Beveren-Waas"
+        },
+        {
+          "label": "Befintlig höjd",
+          "value": "255 cm"
+        },
+        {
+          "label": "Systemhöjd",
+          "value": "50 mm"
+        },
+        {
+          "label": "Akustiskt värde",
+          "value": "αw 0.95"
+        }
+      ]
+    },
+    "johnson-and-johnson": {
+      "title": "Johnson & Johnson",
+      "summary": "Ett printat, belyst tak för en farmaceutisk FoU-anläggning.",
+      "hook": "Ett reflekterande, innovativt tak- och ljusdesign som speglar Johnson & Johnsons forskning kring förbättrad syn.",
+      "description": [
+        "STRETCH samarbetade med Van Dijk Architects och inredningsföretaget Glennwood kring tak- och ljusdesignen för Johnson & Johnsons nya anläggning i Limerick City, Irland. Uppdraget var ett reflekterande, innovativt tak som matchade byggnadens forsknings- och utvecklingsmål kring förbättrad syn.",
+        "Det printade och belysta STRETCH-taket löper genom hela byggnaden, ger varje område sitt eget fokus och fungerar som visuell vägledning för människor som rör sig genom lokalerna. Moderna ljuslösningar förhöjer både designen och det färdiga intrycket."
+      ],
+      "highlights": [
+        "Specialtryck genom hela byggnaden",
+        "Belysning för fokus och orientering",
+        "Reflekterande, FoU-inspirerad design"
+      ],
+      "materials": [
+        "Printat STRETCH-tak",
+        "Belyst (bakbelyst) STRETCH-tak",
+        "Integrerad belysning"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Limerick, Irland"
+        },
+        {
+          "label": "År",
+          "value": "2019"
+        },
+        {
+          "label": "Yta",
+          "value": "60 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Van Dijk Architects"
+        },
+        {
+          "label": "STRETCH-återförsäljare",
+          "value": "Glennwood"
+        }
+      ]
+    },
+    "polette-eyewear": {
+      "title": "Polette Eyewear",
+      "summary": "Ett aldrig tidigare skådat butikskoncept av arkitekten Javier Zubiria.",
+      "hook": "En butik du kan spela på som ett musikinstrument — en hyllning till fred, kärlek och gemenskap.",
+      "description": [
+        "Antwerpen, 2022. Efter framgången med showroomet i Paris slog sig polette återigen ihop med Javier Zubiria, grundare av Amsterdamstudion zU-Studio, för att ta ett aldrig tidigare skådat butikskoncept till Antwerpen. Allt började med en enda låt — John Lennons “Imagine” — och önskan att bygga en plats för samhörighet och kreativitet efter år av distans.",
+        "Besökarna möts av två gigantiska pianoklaviaturer, en på varje sida, var och en med 88 tangenter. De vita tangenterna är speglar från golv till tak som skapar en känsla av oändlighet; de svarta tangenterna fungerar samtidigt som hyllor för polettes glasögon. I mitten anspelar en gigantisk vit bänk på Lennons fredsprotest Bed-in.",
+        "Ovanför huvudet bär taket showens stjärna: en skulptural pianolocksform, fasad längs showroomets hela 20 meter djup och byggd som ett belyst, ljusgenomsläppligt STRETCH-tak. Varje pianotangent fungerar dessutom på riktigt — ett sensorsystem tänder nästa tangent att trycka på, så att besökarna kan spela en låt tillsammans i rummet."
+      ],
+      "highlights": [
+        "Belyst, ljusgenomsläpplig takskulptur",
+        "Pianolocksform längs hela 20 m-djupet",
+        "Sensorstyrd interaktiv tangentbelysning",
+        "Installerat på en enda arbetsdag"
+      ],
+      "materials": [
+        "Akustiskt, ljusgenomsläppligt STRETCH-tak",
+        "Skulptural pianolocks-takform",
+        "Integrerad belysning",
+        "Sensorstyrd tangentbelysning"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Antwerpen"
+        },
+        {
+          "label": "År",
+          "value": "2022"
+        },
+        {
+          "label": "Yta",
+          "value": "60 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "zU-Studio · Javier Zubiria"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hur lång tid tog installationen?",
+          "a": "Att installera det akustiska, ljusgenomsläppliga spänntaket tog en enda arbetsdag."
+        },
+        {
+          "q": "Hur många montörer arbetade med projektet?",
+          "a": "Ett team på 2 STRETCH-montörer skötte hela jobbet — taket och belysningen."
+        },
+        {
+          "q": "Hur länge håller taket?",
+          "a": "Som med alla spänntak beror livslängden på rengöringen, men det håller utan problem i cirka 25 år; därefter är det bara membranet som eventuellt behöver bytas, medan den befintliga ramen sitter kvar."
+        }
+      ]
+    },
+    "citizenm-hotel": {
+      "title": "CitizenM Hotel",
+      "summary": "Prefabricerade, bakbelysta badrumstak utrullade på CitizenM-hotellen.",
+      "hook": "Ett repeterbart, bakbelyst badrumstak, byggt off-site för hotell på två kontinenter.",
+      "description": [
+        "Till CitizenM:s modulhotell levererade STRETCH prefabricerade badrumstak med en bakbelyst, ljusgenomsläpplig finish – byggda off-site som repeterbara enheter och utrullade på platser i USA och Europa, från New York och Chicago till Miami, Los Angeles med flera."
+      ],
+      "highlights": [
+        "Prefabricering off-site",
+        "Bakbelyst, ljusgenomsläpplig finish",
+        "Repeterbart i stor skala på många hotell"
+      ],
+      "materials": [
+        "Prefabricerad STRETCH-badrumsenhet",
+        "STRETCH Backlit-membran (ljusgenomsläppligt)",
+        "Integrerad belysning"
+      ],
+      "facts": [
+        {
+          "label": "Kontinenter",
+          "value": "USA & Europa"
+        },
+        {
+          "label": "Städer",
+          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+        },
+        {
+          "label": "Partner",
+          "value": "Saniskill"
+        }
+      ]
+    },
+    "london-chapel": {
+      "title": "Kapell i London",
+      "summary": "Ett bakbelyst spänntak över ett restaurerat kapellrum.",
+      "hook": "Ett restaurerat kapell badande i mjukt, jämnt ljus från ett enda lysande tak.",
+      "description": [
+        "Ett genomskinligt STRETCH-tak förvandlar hela takytan till en mjuk, jämn ljuskälla: den restaurerade interiören badar i bländfritt ljus medan LED-fältet förblir helt dolt."
+      ],
+      "highlights": [
+        "Hela taket som ljuskälla",
+        "Bländfri, jämn belysning",
+        "LED-fältet helt dolt"
+      ],
+      "materials": [
+        "Genomskinligt STRETCH-tak",
+        "LED-bakbelysningsfält"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "London, Storbritannien"
+        },
+        {
+          "label": "Utrymme",
+          "value": "Restaurerat kapell"
+        }
+      ]
+    },
+    "private-villa-knokke": {
+      "title": "Privat villa",
+      "summary": "Ett skarvfritt, matt tak för en kustvilla med öppen planlösning.",
+      "hook": "Ett skarvfritt tak, slätt som perfekt puts, för ett kusthem med öppen planlösning.",
+      "description": [
+        "I villans öppna vardagsrum upplevs ett mycket matt STRETCH-tak i polyester från vägg till vägg som felfri puts – stramt och modernt, utan de sprickor och skugglinjer som följer med ett traditionellt tak."
+      ],
+      "highlights": [
+        "Skarvfri finish från vägg till vägg",
+        "Inga sprickor eller skugglinjer",
+        "Mycket matt, putsliknande utseende"
+      ],
+      "materials": [
+        "STRETCH-tak i polyester (mycket matt)",
+        "Kantprofiler för uppspänning"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "Knokke, Belgien"
+        },
+        {
+          "label": "Utrymme",
+          "value": "Öppen planlösning"
+        }
+      ]
+    },
+    "home-cinema-ghent": {
+      "title": "Hemmabio",
+      "summary": "Ett stjärnhimmelstak med akustisk baksida för en hemmabio.",
+      "hook": "En privat biosalong under en gnistrande natthimmel, trimmad för filmljud.",
+      "description": [
+        "Hundratals fiberoptiska punkter skapar en gnistrande natthimmel ovanför fåtöljerna, medan en akustisk baksida håller rummet under kontroll för filmljudet – stämning och prestanda förenade i ett enda tak."
+      ],
+      "highlights": [
+        "Fiberoptisk stjärnhimmel",
+        "Akustisk baksida för filmljud",
+        "Stämning och prestanda i ett och samma tak"
+      ],
+      "materials": [
+        "STRETCH-tak med stjärnhimmel",
+        "Fiberoptiskt stjärnfält",
+        "Akustiskt absorberande baksida"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "Gent, Belgien"
+        },
+        {
+          "label": "Utrymme",
+          "value": "Hemmabio"
+        }
+      ]
+    },
+    "city-penthouse-antwerp": {
+      "title": "Takvåning i staden",
+      "summary": "Ett felfritt designtak för en takvåning i staden.",
+      "hook": "Ett minimalistiskt, perfekt plant designtak för en takvåning i staden.",
+      "description": [
+        "Takvåningens vardagsrum använder ett skarvfritt STRETCH-tak med integrerad belysning, så att uttrycket förblir minimalistiskt och ytan perfekt genom hela den öppna planlösningen."
+      ],
+      "highlights": [
+        "Skarvfritt designtak",
+        "Integrerad belysning",
+        "Minimalistisk, felfri finish"
+      ],
+      "materials": [
+        "STRETCH-tak i polyester",
+        "Integrerad belysning"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "Antwerpen, Belgien"
+        },
+        {
+          "label": "Utrymme",
+          "value": "Vardagsrum i takvåning"
+        }
+      ]
+    },
+    "wellness-spa-bruges": {
+      "title": "Wellness-spa",
+      "summary": "Ett fukttåligt, bakbelyst tak för ett spa.",
+      "hook": "Ett fukttåligt tak med mjukt sken för ett wellnessutrymme.",
+      "description": [
+        "Spa-anläggningen behövde ett tak som tål fukt och skapar en lugn stämning. Ett genomskinligt, bakbelyst STRETCH-tak lyser mjukt över wellnessavdelningen och torkas enkelt rent – opåverkat av ånga och fukt."
+      ],
+      "highlights": [
+        "Tål fukt och ånga",
+        "Mjukt, jämnt bakljus",
+        "Torkas enkelt rent"
+      ],
+      "materials": [
+        "Genomskinligt STRETCH-tak i PVC",
+        "LED-bakbelysningsfält"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "Brygge, Belgien"
+        },
+        {
+          "label": "Utrymme",
+          "value": "Spa / wellness"
+        }
+      ]
+    },
+    "rue-perree-paris": {
+      "title": "Rue Perrée",
+      "summary": "Ett ljustak för ett galleri med flera varumärken i Paris.",
+      "hook": "Jämnt ljus i gallerikvalitet i ett showroom med flera varumärken – armaturerna utom synhåll.",
+      "description": [
+        "Hos ART RECHERCHE INDUSTRIE på Rue Perrée i Paris – ett galleri som visar flera varumärken – ger ett lysande STRETCH-tak ett jämnt ljus utan hotspots i hela lokalen. Med LED-fältet dolt bakom ett genomskinligt membran är det de utställda verken som står i fokus – inte armaturerna."
+      ],
+      "highlights": [
+        "Jämn belysning utan hotspots",
+        "LED-fältet helt dolt",
+        "Färgåtergivning i gallerikvalitet"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "Rue Perrée, Paris (FR)"
+        },
+        {
+          "label": "Utrymme",
+          "value": "Galleri med flera varumärken"
+        }
+      ]
+    }
+  },
+  "blogPosts": {
+    "posts": {
+      "what-is-a-stretch-ceiling": {
+        "title": "Vad är ett spänntak? En enkel guide",
+        "excerpt": "Ett spänntak är ett tunt membran som spänns över rummet och kläms fast i en smäcker kantprofil — monterat kallt eller med värme, på en enda dag. Så fungerar det, och här gör det störst nytta.",
+        "body": [
+          {
+            "heading": "Den korta versionen",
+            "paragraphs": [
+              "Ett spänntak är ett tunt, skarvfritt membran — stickad polyester eller en kalandrerad PVC-folie — som spänns över rummet och kläms fast i en smäcker profil monterad runt om på väggarna. Resultatet ser ut som ett perfekt slätt, nymålat tak, men utan puts, slipning och målning.",
+              "Eftersom membranet fästs i en ram i stället för direkt i stommen ovanför döljer det rör, kablar, ojämn betong och gamla tak helt och hållet — och det kan monteras på en enda dag, i ett rum som förblir möblerat och i bruk."
+            ]
+          },
+          {
+            "heading": "Kall montering vs. varm montering",
+            "paragraphs": [
+              "Polyestermembran spänns kallt: ingen värme, inga ångor och ingen torktid. De ger en djup, mycket matt yta och klarar spännvidder upp till 5.15 m utan skarv.",
+              "PVC-folier värms under monteringen så att de mjuknar, och spänns sedan till en felfri yta när de svalnar. PVC är helt återvinningsbart, kan tas ned för åtkomst till installationerna ovanför och klarar upp till 5.7 m skarvfritt — det bredaste alternativet."
+            ]
+          },
+          {
+            "heading": "Vad du kan bygga in i det",
+            "paragraphs": [
+              "Ett spänntak är mer än en yta. En mikroperforerad version med en högdensitetsabsorbent bakom når upp till klass A ljudabsorption och gör ekiga rum lugna. Genomskinliga folier blir en jämn, dimbar ljuskälla utan hotspots, och vilken bild som helst — inklusive en stjärnhimmel i fiberoptik — kan tryckas från kant till kant.",
+              "Till och med högtalare kan döljas helt bakom membranet för ett rent ljud utan synlig källa. Allt ryms i en enda skarvfri yta."
+            ]
+          },
+          {
+            "heading": "Där det gör störst nytta",
+            "paragraphs": [
+              "Privatpersoner väljer spänntak i vardagsrum, badrum och hemmabior; företag i kontor, restauranger, studior, butiker och besöksnäring. De passar både nybygge och renovering, och PVC-systemet tål fukt utan problem, vilket gör det till ett starkt val för våtutrymmen.",
+              "Vill du veta om det passar ditt projekt? Begär en kostnadsfri offert utan förpliktelser så återkommer en specialist inom två arbetsdagar."
+            ]
+          }
+        ]
+      },
+      "stretch-ceiling-acoustics-explained": {
+        "title": "Akustik i spänntak – enkelt förklarat",
+        "excerpt": "Ett mikroperforerat spännmembran med en högdensitetsabsorbent bakom kan nå upp till klass A ljudabsorption — utan några synliga akustikpaneler. Så fungerar det, och det här betyder αw och NRC.",
+        "body": [
+          {
+            "heading": "Varför rum låter hårt",
+            "paragraphs": [
+              "Hårda, plana ytor — glas, betong, gipsskivor — kastar tillbaka ljudet in i rummet. Reflexionerna staplas på varandra som efterklang, vilket gör tal svårare att uppfatta och musik eller bakgrundsljud mer tröttande. Lösningen är att absorbera en del av energin innan den studsar.",
+              "Traditionellt betyder det synliga akustikpaneler eller bafflar. Med ett spänntak gör du det osynligt."
+            ]
+          },
+          {
+            "heading": "Så fungerar ett akustiskt spänntak",
+            "paragraphs": [
+              "Den synliga ytan är ett mikroperforerat membran: tusentals små perforeringar släpper igenom ljudet till en högdensitetsabsorbent av polyesterull monterad bakom. Rummet upplevs fortfarande som ett enda felfritt, skarvfritt tak, men ljudenergin fångas upp i stället för att reflekteras.",
+              "Rätt utfört når det upp till klass A absorption — den högsta klassningen — över hela den behandlade ytan."
+            ]
+          },
+          {
+            "heading": "Så läser du siffrorna: αw och NRC",
+            "paragraphs": [
+              "Ljudabsorption mäts på en skala från 0 (helt reflekterande) till 1 (helt absorberande). I Europa är nyckeltalet den vägda absorptionskoefficienten αw, och klasserna går från klass A (αw ≥ 0.90) ner till klass E. NRC (Noise Reduction Coefficient) är motsvarande värde uttryckt i en enda siffra, vanligare i Nordamerika.",
+              "När du jämför akustikprodukter är det de siffrorna du ska leta efter — αw, absorptionsklassen och NRC — snarare än vaga löften om ”ljudisolering”."
+            ]
+          },
+          {
+            "heading": "Där det verkligen gör skillnad",
+            "paragraphs": [
+              "Inspelningsstudior, hemmabior, öppna kontorslandskap, restauranger, klassrum och vårdmiljöer har alla nytta av det. Samma system finns som frihängande taköar och dekorativa väggpaneler där ett helt tak inte är möjligt.",
+              "Kämpar du med efterklang i ett visst rum? Begär en offert och berätta mått och användning — vi ger råd om rätt absorbent och yta."
+            ]
+          }
+        ]
+      }
+    },
+    "chrome": {
+      "readMinutes": "{count} min läsning",
+      "publishedOn": "Publicerad",
+      "updatedOn": "Uppdaterad",
+      "backToBlog": "Alla guider",
+      "eyebrow": "Guider",
+      "ctaTitle": "Funderar du på ett spänntak?",
+      "ctaBody": "Få en kostnadsfri offert utan förpliktelser för ditt utrymme.",
+      "ctaBtn": "Begär en kostnadsfri offert"
+    }
+  },
+  "inspirationPage": {
+    "eyebrow": "Inspiration",
+    "title1": "Riktiga rum,",
+    "title2a": "riktiga",
+    "title2b": "projekt",
+    "browseEyebrow": "Bläddra efter lösning",
+    "allEyebrow": "Alla projekt",
+    "portfolioTitle": "Portfolion",
+    "ctaTitle": "Tänk dig det i ditt rum",
+    "quoteCta": "Begär en kostnadsfri offert",
+    "exploreCta": "Utforska lösningarna",
+    "showing": "Visar {count}",
+    "filterAria": "Filtrera projekt",
+    "filters": [
+      "Alla",
+      "Akustik",
+      "Bostad",
+      "Badrum",
+      "Kontor",
+      "Kommersiellt",
+      "Hemmabio",
+      "Ljus & print"
+    ],
+    "browse": [
+      {
+        "label": "Akustik",
+        "desc": "Studior, kontor & tysta rum"
+      },
+      {
+        "label": "Ljus & print",
+        "desc": "Bakbelysta & printade innertak"
+      },
+      {
+        "label": "Bostad",
+        "desc": "Hem & privata interiörer"
+      },
+      {
+        "label": "Badrum",
+        "desc": "Fukttåliga & prefabricerade"
+      },
+      {
+        "label": "Kontor",
+        "desc": "Akustisk komfort på jobbet"
+      },
+      {
+        "label": "Kommersiellt",
+        "desc": "Butiker, hotell & eventlokaler"
+      }
+    ]
+  },
+  "projectPage": {
+    "crumbInspiration": "Inspiration",
+    "materialsTitle": "Använda produkter & material",
+    "detailsTitle": "Projektdetaljer",
+    "solutionsUsed": "Använda lösningar",
+    "similarCta": "Starta ett liknande projekt",
+    "gallery": "Galleri",
+    "faqTitle": "Vanliga frågor",
+    "allProjects": "Alla projekt",
+    "exploreSolutions": "Utforska lösningarna",
+    "photo": "foto"
+  },
+  "reviewsData": {
+    "items": [
+      {
+        "role": "Husägare · Antwerpen",
+        "quote": "De monterade taket i vårt vardagsrum på en enda dag, helt utan stök. Den matta ytan ser ut precis som färsk puts — vi är verkligen förtjusta."
+      },
+      {
+        "role": "Arkitekt · Gent",
+        "quote": "Jag föreskriver numera STRETCH för de akustiska taken. Rummet upplevs som en enda ren yta och efterklangen är borta — kunderna märker alltid skillnaden."
+      },
+      {
+        "role": "Entreprenör · Sint-Niklaas",
+        "quote": "Utbildningen fick snabbt igång mitt team med monteringen, och de måttanpassade leveranserna är pålitliga. Som partner har vi lagt till en helt ny tjänst i verksamheten."
+      }
+    ]
+  },
+  "partnersPage": {
+    "crumb": "Partner",
+    "hero": {
+      "eyebrow": "För proffs",
+      "title": "Bli partner med",
+      "lead": "Två sätt att samarbeta med oss: sälj våra tak som färdig produkt och låt vårt nätverk montera dem, eller utbilda dig och montera dem själv. Oavsett vilket får du proffspriser, måttanpassad tillverkning från Belgien och förmedlade lokala förfrågningar.",
+      "ctaApply": "Ansök om att bli partner",
+      "ctaCall": "Boka ett samtal",
+      "imageAlt": "En STRETCH-montagepartner i arbete",
+      "statLabel": "Monterat per team / dag"
+    },
+    "models": {
+      "eyebrow": "Två sätt att bli partner",
+      "title": "Återförsäljare eller montagepartner — välj den modell som passar din verksamhet.",
+      "lead": "Skillnaden är enkel: en återförsäljare säljer taket och låter oss montera det; en montagepartner säljer och monterar själv efter att ha gått vår utbildning.",
+      "bestForLabel": "Passar bäst för:",
+      "reseller": {
+        "kicker": "Återförsäljare",
+        "title": "Du säljer. Vi monterar.",
+        "body": "Du säljer ett STRETCH-tak som en färdig, monterad produkt till din kund. Vi och vårt nätverk av montagepartner sköter monteringen som din partner — du fokuserar på affären och kundrelationen.",
+        "points": [
+          "Du säljer det färdiga, monterade taket till din kund",
+          "Vi monterar det åt dig, via vårt certifierade nätverk av montagepartner",
+          "Inget eget montageteam eller montagekunnande behövs",
+          "Proffspriser, produktbilder och förmedlade lokala förfrågningar"
+        ],
+        "bestFor": "inredningsarkitekter, arkitekter, kök- och badrumsshowroom och entreprenörer som vill erbjuda tak utan att montera dem.",
+        "cta": "Ansök som återförsäljare"
+      },
+      "dealer": {
+        "kicker": "Montagepartner",
+        "badge": "Utbildning krävs",
+        "title": "Du säljer och monterar.",
+        "body": "Du säljer STRETCH-produkter i dina egna projekt och utför monteringen själv. För att bli certifierad montagepartner går din montör först vår praktiska utbildning på vårt huvudkontor.",
+        "points": [
+          "Du säljer STRETCH-produkter i dina egna projekt",
+          "Du utför monteringen själv",
+          "Din montör går först vår praktiska utbildning",
+          "Beställ måttanpassat från vår belgiska verkstad"
+        ],
+        "bestFor": "montörer, inredningsentreprenörer och specialister på gipsväggar som vill lägga till spänntak i sitt eget montageutbud.",
+        "cta": "Ansök som montagepartner",
+        "trainingLink": "Se utbildningen"
+      }
+    },
+    "compare": {
+      "resellerHead": "Återförsäljare",
+      "dealerHead": "Montagepartner",
+      "rows": [
+        {
+          "label": "Vad du säljer",
+          "reseller": "Ett färdigt, monterat tak",
+          "dealer": "Produkter i dina egna projekt"
+        },
+        {
+          "label": "Vem monterar",
+          "reseller": "Det gör vi — via vårt nätverk av montagepartner",
+          "dealer": "Det gör du själv"
+        },
+        {
+          "label": "Utbildning",
+          "reseller": "Krävs inte",
+          "dealer": "Krävs — praktisk kurs"
+        },
+        {
+          "label": "Passar bäst för",
+          "reseller": "Designer, showroom, entreprenörer",
+          "dealer": "Montörer & inredningsentreprenörer"
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Det här får varje partner",
+      "titleA": "Mer marginal,",
+      "titleB": "mindre krångel",
+      "lead": "Vilken modell du än väljer tar vi hand om produkten och leveranskedjan — du levererar ett premiumtak som dina kunder älskar.",
+      "cards": [
+        {
+          "title": "Starka marginaler",
+          "body": "Proffspriser på måttanpassade membran och profiler, med sunda marginaler på en efterfrågad premiumprodukt."
+        },
+        {
+          "title": "Förmedlade förfrågningar",
+          "body": "Vi skickar lokala kundförfrågningar vidare till partner i deras region — riktiga projekt, inte bara en prislista."
+        },
+        {
+          "title": "B2B-beställning",
+          "body": "Beställ konfektionerat efter mått från vår belgiska verkstad via en egen partnerportal, med pålitliga leveranstider."
+        },
+        {
+          "title": "Tillverkat i Belgien",
+          "body": "Handgjorda membran utvecklade i Belgien, med en lång produktgaranti du tryggt kan stå bakom."
+        },
+        {
+          "title": "Praktisk utbildning",
+          "body": "För montagepartner: certifiera ditt team på vårt huvudkontor på några dagar — konfektionering, profiler, kall och varm montering, ljus och akustik."
+        },
+        {
+          "title": "Marknadsföringsstöd",
+          "body": "Produktbilder, prover och säljmaterial som hjälper dig att vinna och ro hem spänntaksaffärer."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "Så funkar det",
+      "title": "En kort väg till att sälja spänntak — på ditt sätt.",
+      "resellerPath": "Spåret för återförsäljare",
+      "dealerPath": "Spåret för montagepartner",
+      "resellerSteps": [
+        {
+          "title": "Ansök som återförsäljare",
+          "body": "Skicka en kort ansökan. Vi går igenom varje ansökan personligen och bokar ett samtal för att förstå din verksamhet."
+        },
+        {
+          "title": "Kom igång",
+          "body": "Proffspriser, prover och säljmaterial — ingen utbildning behövs. Börja offerera spänntak direkt."
+        },
+        {
+          "title": "Du säljer — vi monterar",
+          "body": "Du stänger affären och äger kundrelationen; vi och våra montagepartner monterar taket, i tid och enligt specifikation."
+        }
+      ],
+      "dealerSteps": [
+        {
+          "title": "Ansök som montagepartner",
+          "body": "Skicka en kort ansökan. Vi går igenom varje ansökan personligen och bokar ett samtal för att förstå din verksamhet."
+        },
+        {
+          "title": "Utbilda & certifiera",
+          "body": "Ditt team går vår praktiska kurs på huvudkontoret: konfektionering, profiler, kall och varm montering, ljus och akustik."
+        },
+        {
+          "title": "Beställ & montera",
+          "body": "Beställ måttanpassat, montera själv på en dag och ta emot förmedlade lokala förfrågningar allteftersom de kommer in."
+        }
+      ]
+    },
+    "apply": {
+      "eyebrow": "Bli partner",
+      "titleA": "Ansök",
+      "titleB": "i dag",
+      "lead": "Berätta om du vill sälja eller även montera — vi tar det därifrån.",
+      "points": [
+        "Vi går igenom varje ansökan personligen",
+        "Exklusivt område där det är möjligt",
+        "Onboarding inom några veckor"
+      ]
+    }
+  },
+  "trainingPage": {
+    "crumb": "Montörsutbildning",
+    "courseName": "STRETCH-montörscertifiering",
+    "courseDescription": "Praktisk certifiering till spänntaksmontör på STRETCHs huvudkontor i Belgien: konfektionering av membranet, profiler, kall och varm montering, ljus, akustik, finish och kalkylering.",
+    "hero": {
+      "eyebrow": "Montörsutbildning",
+      "titleA": "Montera som ett proffs",
+      "titleB": "på",
+      "titleC": "dagar",
+      "lead": "Praktisk certifiering på vårt belgiska huvudkontor. Lär dig konfektionering av membranet, profiler, kall och varm montering, ljus och akustik — inga förkunskaper krävs.",
+      "ctaBook": "Boka din utbildning",
+      "ctaDates": "Se datum",
+      "imageLabel": "Foto från utbildning / verkstad"
+    },
+    "format": [
+      {
+        "value": "2–3",
+        "label": "Dagar, hands-on"
+      },
+      {
+        "value": "HQ",
+        "label": "Beveren-Waas, Belgien"
+      },
+      {
+        "value": "1:4",
+        "label": "Utbildare per montör"
+      }
+    ],
+    "curriculum": {
+      "eyebrow": "Det här lär du dig",
+      "title": "Hela hantverket",
+      "lead": "Från en rulle membran till ett färdigt, belyst, akustiskt tak — och säljkompetensen för att sälja det.",
+      "items": [
+        {
+          "title": "Membran & konfektionering",
+          "body": "Hur polyester- och PVC-membran mäts, skärs och svetsas efter mått i verkstaden."
+        },
+        {
+          "title": "Kantprofiler",
+          "body": "Att sätta ut och fästa clipsprofiler exakt i våg — grunden för ett felfritt tak."
+        },
+        {
+          "title": "Kall & varm montering",
+          "body": "Att spänna båda systemen rätt: kall polyester och uppvärmd PVC-folie, från början till slut."
+        },
+        {
+          "title": "Ljus & akustik",
+          "body": "Att integrera bakbelysning, LED-linjer, printade folier och akustiskt absorberande baksida."
+        },
+        {
+          "title": "Finish & åtkomst",
+          "body": "Rena kantavslut, urtag för armaturer och diskreta inspektionsluckor."
+        },
+        {
+          "title": "Kalkylering & försäljning",
+          "body": "Att mäta upp ett jobb, offerera med självförtroende och presentera spänntak övertygande för kunder."
+        }
+      ]
+    },
+    "dates": {
+      "eyebrow": "Kommande datum",
+      "title": "Boka din plats",
+      "lead": "Små grupper, först till kvarn. Skräddarsydda utbildningar på plats hos er kan ordnas på förfrågan.",
+      "onRequestTitle": "På förfrågan",
+      "onRequestNote": "Skräddarsydd utbildning på plats"
+    },
+    "book": {
+      "eyebrow": "Planera din utbildning",
+      "titleA": "Boka en",
+      "titleB": "plats",
+      "includedLabel": "Ingår",
+      "included": [
+        "Kursintyg",
+        "Startkit för montörer",
+        "Lunch & material på plats"
+      ]
+    }
+  },
+  "aboutPage": {
+    "crumb": "Om oss",
+    "hero": {
+      "eyebrow": "Om STRETCH",
+      "titleA": "Handgjort",
+      "titleB": "i",
+      "titleC": "Belgien",
+      "lead": "{name} formger och tillverkar skarvfria spänntak och spännväggar — utvecklade i Belgien, monterade på en dag och byggda för att hålla i årtionden.",
+      "imageAlt": "STRETCH-verkstaden och teamet"
+    },
+    "stats": [
+      {
+        "label": "Grundat",
+        "sub": "Har byggt skarvfria tak ända sedan dess."
+      },
+      {
+        "value": "25 år",
+        "label": "Garanti",
+        "sub": "På våra handgjorda membran."
+      },
+      {
+        "value": "4",
+        "label": "Kontor",
+        "sub": "Belgien, USA, Polen & Österrike."
+      }
+    ],
+    "story": {
+      "eyebrow": "Vår historia",
+      "p1": "{name} grundades {founded} med en enkel övertygelse: ett tak ska vara en yta man lägger märke till av rätt skäl. Traditionella putstak spricker, får fläckar och kräver dagar av smutsigt arbete för att monteras och målas om. Ett spänt membran gör inte det — det kommer upp rent, perfekt plant och skarvfritt, ofta på en enda dag.",
+      "p2": "Allt börjar i vår belgiska verkstad, där polyester- och PVC-membran mäts, skärs och svetsas efter mått för hand. Just den måttkonfektioneringen är det som gör att ett färdigt tak klickar på plats så snabbt ute på bygget — utan damm och utan ommålning.",
+      "p3": "I dag arbetar vi främst genom ett nätverk av branschpartner och certifierade montörer och levererar måttanpassade system, praktisk utbildning och förmedlade lokala förfrågningar. Från inspelningsstudior till eventhallar, från badrum till butiker — våra system ger ljus, akustisk kontroll och en felfri yta åt rum i hela Europa och därbortom.",
+      "p4": "Vi är ett B2B-drivet företag med kontor i Belgien, USA, Polen och Österrike — men varje membran bär fortfarande samma löfte: handgjort i Belgien, med 25 års garanti."
+    },
+    "offices": {
+      "eyebrow": "Här finns vi"
+    },
+    "cta": {
+      "title": "Låt oss bygga något skarvfritt.",
+      "button": "Begär en kostnadsfri offert"
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Kontakt",
+    "titleA": "Låt oss prata",
+    "titleB": "innertak",
+    "cards": {
+      "call": {
+        "label": "Ring oss"
+      },
+      "email": {
+        "label": "Mejla oss",
+        "sub": "Personligt svar inom 2 dagar"
+      },
+      "chat": {
+        "label": "WhatsApp / Telegram",
+        "value": "Chatta med oss",
+        "sub": "Snabba frågor, snabba svar"
+      }
+    },
+    "formTitle": "Skicka ett meddelande till oss",
+    "formLead": "Berätta om ditt projekt eller din fråga. En specialist svarar inom två arbetsdagar.",
+    "mapLabel": "Verkstad / karta",
+    "mapAlt": "STRETCH-verkstad",
+    "hqKicker": "Huvudkontor",
+    "hqLocation": "{postalCode} {city}, Belgien",
+    "officesEyebrow": "Våra kontor",
+    "dealerTitle": "Föredrar du en lokal återförsäljare?",
+    "dealerBody": "Privata förfrågningar hänvisar vi till certifierade montörer i din region — hör av dig så förmedlar vi kontakten.",
+    "dealerCta": "Hitta din närmaste återförsäljare",
+    "form": {
+      "subjects": [
+        "Begär en offert",
+        "Hitta en återförsäljare",
+        "Partnerskap",
+        "Montörsutbildning",
+        "Övrigt"
+      ],
+      "timelines": [
+        "Så snart som möjligt",
+        "Inom 1–3 månader",
+        "Inom 4–12 månader",
+        "Jag undersöker bara alternativen"
+      ],
+      "timelineLabel": "Tidsram",
+      "consentPrefix": "Jag samtycker till att STRETCH behandlar mina uppgifter för att besvara min förfrågan, enligt beskrivningen i",
+      "consentPrivacy": "integritetspolicyn",
+      "submit": "Skicka meddelande"
+    }
+  },
+  "datasheetsPage": {
+    "eyebrow": "Tekniska datablad",
+    "crumb": "Datablad",
+    "titleA": "Specifikationer &",
+    "titleB": "datablad",
+    "lead": "Ladda ner teknisk dokumentation för varje STRETCH-system — specifikationer, brandklasser, akustiska klassvärden och garantivillkor. Fyll i dina uppgifter en gång per nedladdning så startar filen direkt.",
+    "updated": "Uppdaterad {date}",
+    "privacyNote": "Vi ber om ditt namn, din e-post och ditt telefonnummer så att en specialist kan svara på eventuella tekniska frågor. Dina uppgifter hanteras enligt vår",
+    "privacyLink": "integritetspolicy"
+  },
+  "samplesPage": {
+    "eyebrow": "Färgprover",
+    "crumb": "Prover",
+    "titleA": "Se",
+    "titleB": "färgerna",
+    "lead": "Beställ fysiska RAL- och färgprover på våra polyester-, PVC- och akustikmembran — gratis för branschpartner, levererade till dörren.",
+    "points": [
+      "Standardnyanser och valfri RAL-kulör",
+      "Polyester-, PVC- & akustikutföranden",
+      "Skickas inom två arbetsdagar"
+    ]
+  },
+  "blogPage": {
+    "eyebrow": "Guider & insikter",
+    "crumb": "Guider",
+    "titleA": "Spänntak,",
+    "titleB": "förklarat",
+    "postMeta": "{date} · {minutes} min läsning",
+    "readArticle": "Läs artikeln"
+  },
+  "inlineLead": {
+    "consentPrefix": "Jag samtycker till att STRETCH behandlar mina uppgifter för att besvara min förfrågan, enligt beskrivningen i",
+    "consentPrivacy": "integritetspolicyn"
   }
 }

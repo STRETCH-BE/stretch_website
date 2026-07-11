@@ -2373,5 +2373,1005 @@
     "shippedWorldwide": "Weltweiter Versand",
     "ctaTitle": "Haben Sie ein Projekt für uns?",
     "ctaBody": "Senden Sie uns die Zeichnungen oder die Idee — wir konstruieren die Struktur, bauen sie im eigenen Haus und liefern sie zu Ihnen."
+  },
+  "projects": {
+    "da-tweekaz-studio": {
+      "title": "Da Tweekaz Studio",
+      "summary": "Akustische Spanndecke und Wände für ein Musikproduktionsstudio.",
+      "hook": "Ein klarer, akustisch kontrollierter Raum für einen der bekanntesten Hardstyle-Acts.",
+      "description": [
+        "Für das Aufnahmestudio von Da Tweekaz in den Niederlanden behandelt ein akustisches STRETCH-System sowohl die Decke als auch die Wände. Reflexionen bleiben unter Kontrolle, sodass der Raum präzises Arbeiten erlaubt — mit einem nahtlosen, modernen Finish und ohne sichtbare Paneele über dem Kopf."
+      ],
+      "highlights": [
+        "Akustische Behandlung von Decke und Wänden",
+        "Nahtloses Finish ohne Paneele"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke",
+        "STRETCH Acoustic Textil (Wände)"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Niederlande"
+        },
+        {
+          "label": "STRETCH-Händler",
+          "value": "Q82 Acoustics"
+        }
+      ]
+    },
+    "mark-with-a-k": {
+      "title": "Mark With a K",
+      "summary": "Akustische Behandlung für den Sound-Raum eines DJs und Produzenten.",
+      "hook": "Ein makelloser, akustisch kontrollierter Raum für einen belgischen DJ und Produzenten.",
+      "description": [
+        "Eine nahtlose akustische STRETCH-Decke absorbiert den Nachhall im Produktionsraum und bewahrt zugleich ein makelloses, modernes Finish. Das Ergebnis ist ein ruhiger, kontrollierter Arbeitsraum, dessen akustische Leistung unsichtbar in der Membran steckt."
+      ],
+      "highlights": [
+        "Nahtlose Akustikdecke",
+        "Verborgene Absorberauflage",
+        "Modernes Finish ohne Paneele"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke",
+        "Absorberauflage mit hoher Dichte"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgien"
+        },
+        {
+          "label": "Raum",
+          "value": "Musikproduktionsstudio"
+        }
+      ]
+    },
+    "notary-ampe-anthony": {
+      "title": "Notariat Ampe Anthony",
+      "summary": "350 m² akustische Spanndecken in einem hochwertigen Notariat.",
+      "hook": "Ein komplettes High-End-Büro, in dem harte, reflektierende Materialien gezähmt werden mussten — ohne den klaren, minimalistischen Look zu verlieren.",
+      "description": [
+        "2019 wurde das Notariat Ampe Anthony in Kruibeke von Grund auf neu aufgebaut: ein hochwertiges Interieur mit bewusst klarem, minimalistischem Look — polierte Betonböden, Stahlfensterrahmen und viele harte Oberflächen. Für die perfekte Ausführung wurden weder Kosten noch Mühen gescheut.",
+        "Diese harten Materialien machten das Büro akustisch sehr hallig. Um wieder ein angenehmes Niveau zu erreichen, erhielt das gesamte Interieur eine akustische STRETCH-Decke mit einem eigens dafür vorgesehenen Polyesterwolle-Absorber, montiert an der bestehenden Betondecke — das hebt die akustische Leistung auf ein hohes Niveau.",
+        "Die Decke wurde um 10 cm abgehängt, um sämtliche Technik darüber zu verbergen; es blieb eine Höhe von 260 cm. Damit der Raum höher und größer wirkt, bauten wir große elliptische Vertiefungen in die Decke ein — ein optischer Trick, der den Raum sichtbar anhebt."
+      ],
+      "highlights": [
+        "Nachhallzeit gemessen bei 0.6 s",
+        "Große elliptische Deckenvertiefungen für mehr gefühlte Höhe",
+        "Eigener Polyesterwolle-Absorber hinter der Membran"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke",
+        "Gebogene Aluminiumrahmen nach Maß",
+        "Polyesterwolle-Absorber D40/50 (40 kg/m³, 50 mm)",
+        "STRETCH Design-Decke in der elliptischen Form",
+        "Weiße PVC-Spannprofile am Rand",
+        "Beleuchtung: Wever & Ducré, Delta Light"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Waasland (Kruibeke)"
+        },
+        {
+          "label": "Jahr",
+          "value": "2018"
+        },
+        {
+          "label": "Fläche",
+          "value": "350 m²"
+        },
+        {
+          "label": "Architekt",
+          "value": "Ante Architecten"
+        },
+        {
+          "label": "STRETCH-Händler",
+          "value": "Corpus Interieur"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Wie lange dauerte die Montage?",
+          "a": "Die Montage der Akustikdecken, der gesamten Beleuchtung und der Sonderausführungen dauerte 7 Werktage."
+        },
+        {
+          "q": "Welche Nachhallzeit wurde erreicht?",
+          "a": "Nach der Montage gemessen, erreichte das Büro eine Nachhallzeit von 0.6 s — das Interieur ist sehr leise und fühlt sich auch so an."
+        },
+        {
+          "q": "Wie viele Monteure arbeiteten an dem Projekt?",
+          "a": "Ein Team aus 2 STRETCH-Monteuren realisierte das gesamte Deckenpaket: die Membran, die Beleuchtung, die Akustikpaneele, den Deckenausbau und die elliptischen Strukturen."
+        },
+        {
+          "q": "Wie lange hält die Decke?",
+          "a": "Wie bei jeder Spanndecke hängt die Lebensdauer von der Reinigung ab, aber sie hält problemlos rund 25 Jahre. Danach muss allenfalls die Membran ersetzt werden — der bestehende Rahmen bleibt an Ort und Stelle."
+        }
+      ]
+    },
+    "bnp-paribas-fortis": {
+      "title": "BNP Paribas Fortis",
+      "summary": "2,000 m² beleuchtete und akustische Decken im Brüsseler Hauptsitz der Bank.",
+      "hook": "Beleuchtete und akustische STRETCH-Decken im neuen Hauptsitz Montagne du Parc der Bank — inklusive Foodcourt über mehrere Etagen.",
+      "description": [
+        "Im Hauptsitz von BNP Paribas Fortis im Zentrum von Brüssel lieferte STRETCH rund 2,000 m² beleuchtete (STRETCH Light) und akustische (STRETCH Acoustic) Decken — gemeinsam mit Jaspers-Eyers Architects und NCBHAM sowie mit Partner Conceptexpo.",
+        "Ein Highlight ist der Foodcourt Barista Bar, der Mitarbeitende und Gäste über mehrere Etagen empfängt. Der Hot Corner serviert warme Gerichte unter einer Decke aus Messinglamellen, die an Flammen erinnert; der Fresh Corner bietet eine Etage höher Salate; und der Sweet Corner rundet das Ganze mit Desserts ab — jede Theke ist gespiegelt vorhanden, sodass sich überall eine komplette Mahlzeit zusammenstellen lässt."
+      ],
+      "highlights": [
+        "≈2,000 m² Spanndecken",
+        "STRETCH Light + Acoustic kombiniert",
+        "Foodcourt Barista Bar über mehrere Etagen",
+        "„Flammen“-Effektdecke aus Messinglamellen"
+      ],
+      "materials": [
+        "STRETCH Light Decke (beleuchtet)",
+        "STRETCH Acoustic Decke",
+        "Gebogene Deckenabschnitte",
+        "Integrierte Beleuchtung"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Brüssel (Montagne du Parc)"
+        },
+        {
+          "label": "Fläche",
+          "value": "2,000 m²"
+        },
+        {
+          "label": "Architekt",
+          "value": "Jaspers-Eyers & NCBHAM"
+        },
+        {
+          "label": "Partner",
+          "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-beveren": {
+      "title": "Van der Valk",
+      "summary": "Maximale Schallabsorption für den Veranstaltungssaal eines Hotels — bei fast keinem Höhenspielraum.",
+      "hook": "Ein akustisches Problem, das den Veranstaltungssaal des Hotels jahrelang plagte, gelöst über die Decke.",
+      "description": [
+        "Tim van der Valk wandte sich an STRETCH mit einem akustischen Problem, das ihren Veranstaltungsbereich seit mehreren Jahren beeinträchtigte. Nach einem Gespräch mit Michael Nicasens von STRETCH kamen wir zu dem Schluss, dass die Lösung von der Decke kommen musste — doch die bestehende Decke war nur 255 cm hoch und ließ kaum Platz für ein System.",
+        "Also schlugen wir eine Systemhöhe von 50 mm vor, die dennoch αw 0.95 erreicht: maximale Schallabsorption bei nur minimalem Höhenverlust. Die großen Veranstaltungsräume sind nahtlos überspannt, die akustische Leistung steckt in der Membran, und die Details — Klappen, Beleuchtung, Sensoren und ein Sternenhimmel — sind sauber über Kopf integriert."
+      ],
+      "highlights": [
+        "Schallabsorption αw 0.95",
+        "Nur 50 mm Systemhöhe",
+        "Integrierte technische Revisionsklappen",
+        "Beleuchtung & Präsenzmelder",
+        "Sternenhimmel",
+        "Nahtloses Finish rund um Säulen"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke (50-mm-System)",
+        "Integrierte technische Klappen",
+        "Integrierte Beleuchtung",
+        "Präsenzmelder",
+        "Sternenhimmel-Installation",
+        "Spannprofile am Rand"
+      ],
+      "facts": [
+        {
+          "label": "Ort",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Region",
+          "value": "Beveren-Waas"
+        },
+        {
+          "label": "Bestehende Höhe",
+          "value": "255 cm"
+        },
+        {
+          "label": "Systemhöhe",
+          "value": "50 mm"
+        },
+        {
+          "label": "Akustikwert",
+          "value": "αw 0.95"
+        }
+      ]
+    },
+    "johnson-and-johnson": {
+      "title": "Johnson & Johnson",
+      "summary": "Eine bedruckte, beleuchtete Decke für einen pharmazeutischen F&E-Standort.",
+      "hook": "Ein reflektierendes, innovatives Decken- und Lichtdesign als Echo auf Johnson & Johnsons Forschung für besseres Sehen.",
+      "description": [
+        "STRETCH arbeitete mit Van Dijk Architects und dem Innenausbauer Glennwood am Decken- und Lichtdesign für den neuen Standort von Johnson & Johnson in Limerick City, Irland. Der Auftrag: eine reflektierende, innovative Decke, die zu den Forschungs- und Entwicklungszielen des Gebäudes rund um besseres Sehen passt.",
+        "Die bedruckte und beleuchtete STRETCH-Decke zieht sich durch das gesamte Gebäude, gibt jedem Bereich seinen eigenen Fokus und dient Menschen, die sich durch den Raum bewegen, als visuelle Orientierung. Moderne Lichtanwendungen unterstreichen sowohl das Design als auch das fertige Erscheinungsbild."
+      ],
+      "highlights": [
+        "Individueller Druck im gesamten Gebäude",
+        "Beleuchtung für Fokus und Orientierung",
+        "Reflektierendes, von F&E inspiriertes Design"
+      ],
+      "materials": [
+        "Bedruckte STRETCH-Decke",
+        "Beleuchtete (hinterleuchtete) STRETCH-Decke",
+        "Integrierte Beleuchtung"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Limerick, Irland"
+        },
+        {
+          "label": "Jahr",
+          "value": "2019"
+        },
+        {
+          "label": "Fläche",
+          "value": "60 m²"
+        },
+        {
+          "label": "Architekt",
+          "value": "Van Dijk Architects"
+        },
+        {
+          "label": "STRETCH-Händler",
+          "value": "Glennwood"
+        }
+      ]
+    },
+    "polette-eyewear": {
+      "title": "Polette Eyewear",
+      "summary": "Ein nie dagewesenes Retail-Konzept des Architekten Javier Zubiria.",
+      "hook": "Ein Geschäft, das sich wie ein Musikinstrument spielen lässt — eine Hommage an Frieden, Liebe und Einheit.",
+      "description": [
+        "Antwerpen, 2022. Nach dem Erfolg des Pariser Showrooms tat sich polette erneut mit Javier Zubiria zusammen, dem Gründer des Amsterdamer Studios zU-Studio, um ein nie dagewesenes Retail-Konzept nach Antwerpen zu bringen. Am Anfang stand ein einziger Song — „Imagine“ von John Lennon — und der Wunsch, nach Jahren der Distanz einen Ort der Verbindung und Kreativität zu schaffen.",
+        "Besucher werden von zwei riesigen Klavier-Klaviaturen empfangen, eine auf jeder Seite, jede mit 88 Tasten. Die weißen Tasten sind raumhohe Spiegel, die ein Gefühl von Unendlichkeit erzeugen; die schwarzen Tasten dienen zugleich als Regale für die Brillen von polette. In der Mitte erinnert eine riesige weiße Bank an Lennons Bed-in-Friedensprotest.",
+        "Über den Köpfen trägt die Decke das Prunkstück: eine skulpturale Klavierdeckel-Form, über die gesamten 20 Meter Tiefe des Showrooms abgeschrägt und als beleuchtete, lichtdurchlässige STRETCH-Decke ausgeführt. Jede Klaviertaste funktioniert außerdem wirklich — ein Sensorsystem lässt die jeweils nächste Taste aufleuchten, sodass Besucher im Raum gemeinsam ein Lied spielen können."
+      ],
+      "highlights": [
+        "Beleuchtete, lichtdurchlässige Deckenskulptur",
+        "Klavierdeckel-Form über die gesamten 20 m Tiefe",
+        "Sensorgesteuerte interaktive Tastenbeleuchtung",
+        "Montage an einem einzigen Werktag"
+      ],
+      "materials": [
+        "Akustische, lichtdurchlässige STRETCH-Decke",
+        "Skulpturale Klavierdeckel-Deckenform",
+        "Integrierte Beleuchtung",
+        "Sensorgesteuerte Tastenbeleuchtung"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Antwerpen"
+        },
+        {
+          "label": "Jahr",
+          "value": "2022"
+        },
+        {
+          "label": "Fläche",
+          "value": "60 m²"
+        },
+        {
+          "label": "Architekt",
+          "value": "zU-Studio · Javier Zubiria"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Wie lange dauerte die Montage?",
+          "a": "Die Montage der akustischen, lichtdurchlässigen Spanndecke dauerte einen einzigen Werktag."
+        },
+        {
+          "q": "Wie viele Monteure arbeiteten an dem Projekt?",
+          "a": "Ein Team aus 2 STRETCH-Monteuren übernahm die komplette Arbeit — die Decke und die Beleuchtung."
+        },
+        {
+          "q": "Wie lange hält die Decke?",
+          "a": "Wie bei jeder Spanndecke hängt die Lebensdauer von der Reinigung ab, aber sie hält problemlos rund 25 Jahre; danach muss allenfalls die Membran ersetzt werden, während der bestehende Rahmen an Ort und Stelle bleibt."
+        }
+      ]
+    },
+    "citizenm-hotel": {
+      "title": "CitizenM Hotel",
+      "summary": "Vorgefertigte, hinterleuchtete Badezimmerdecken, ausgerollt in den CitizenM-Hotels.",
+      "hook": "Eine reproduzierbare, hinterleuchtete Badezimmerdecke, abseits der Baustelle gefertigt für Hotels auf zwei Kontinenten.",
+      "description": [
+        "Für die modularen Hotels von CitizenM lieferte STRETCH vorgefertigte Badezimmerdecken mit hinterleuchteter, lichtdurchlässiger Oberfläche – abseits der Baustelle als reproduzierbare Einheiten gefertigt und an Standorten in den USA und Europa ausgerollt, von New York und Chicago bis Miami, Los Angeles und darüber hinaus."
+      ],
+      "highlights": [
+        "Vorfertigung abseits der Baustelle",
+        "Hinterleuchtete, lichtdurchlässige Oberfläche",
+        "Im großen Maßstab reproduzierbar in vielen Hotels"
+      ],
+      "materials": [
+        "Vorgefertigte STRETCH-Badezimmereinheit",
+        "STRETCH Backlit-Membran (lichtdurchlässig)",
+        "Integrierte Beleuchtung"
+      ],
+      "facts": [
+        {
+          "label": "Kontinente",
+          "value": "USA & Europa"
+        },
+        {
+          "label": "Städte",
+          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+        },
+        {
+          "label": "Partner",
+          "value": "Saniskill"
+        }
+      ]
+    },
+    "london-chapel": {
+      "title": "Kapelle in London",
+      "summary": "Eine hinterleuchtete Spanndecke über einem restaurierten Kapellenraum.",
+      "hook": "Eine restaurierte Kapelle, getaucht in weiches, gleichmäßiges Licht aus einer einzigen leuchtenden Decke.",
+      "description": [
+        "Eine transluzente STRETCH-Decke verwandelt die gesamte Deckenfläche in eine weiche, gleichmäßige Lichtquelle: Das restaurierte Interieur liegt in blendfreiem Licht, während das LED-Feld vollständig verborgen bleibt."
+      ],
+      "highlights": [
+        "Die gesamte Decke als Lichtquelle",
+        "Blendfreie, gleichmäßige Beleuchtung",
+        "LED-Feld vollständig verborgen"
+      ],
+      "materials": [
+        "Transluzente STRETCH-Decke",
+        "LED-Hinterleuchtungsfeld"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "London, Vereinigtes Königreich"
+        },
+        {
+          "label": "Raum",
+          "value": "Restaurierte Kapelle"
+        }
+      ]
+    },
+    "private-villa-knokke": {
+      "title": "Privatvilla",
+      "summary": "Eine nahtlose, matte Decke für eine offen geschnittene Küstenvilla.",
+      "hook": "Eine nahtlose Decke, glatt wie perfekter Putz, für ein offen geschnittenes Zuhause an der Küste.",
+      "description": [
+        "Im offenen Wohnbereich der Villa wirkt eine sehr matte STRETCH-Decke aus Polyester von Wand zu Wand wie makelloser Putz – klar und modern, ohne die Risse und Schattenlinien einer konventionellen Decke."
+      ],
+      "highlights": [
+        "Nahtlose Oberfläche von Wand zu Wand",
+        "Keine Risse, keine Schattenlinien",
+        "Sehr matte Optik wie Putz"
+      ],
+      "materials": [
+        "STRETCH-Decke aus Polyester (sehr matt)",
+        "Randprofile zur Verspannung"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Knokke, Belgien"
+        },
+        {
+          "label": "Raum",
+          "value": "Offener Wohnbereich"
+        }
+      ]
+    },
+    "home-cinema-ghent": {
+      "title": "Heimkino",
+      "summary": "Eine Sternenhimmel-Decke mit akustischer Hinterlegung für ein Heimkino.",
+      "hook": "Ein privates Kino unter einem funkelnden Nachthimmel, abgestimmt auf Filmton.",
+      "description": [
+        "Hunderte Glasfaserpunkte bilden einen funkelnden Nachthimmel über den Sitzplätzen, während eine akustische Hinterlegung den Raum für den Filmton unter Kontrolle hält – Atmosphäre und Leistung vereint in einer einzigen Decke."
+      ],
+      "highlights": [
+        "Sternenhimmel aus Glasfasern",
+        "Akustische Hinterlegung für den Filmton",
+        "Atmosphäre und Leistung in einer Decke"
+      ],
+      "materials": [
+        "STRETCH-Decke mit Sternenhimmel",
+        "Sternenfeld aus Glasfasern",
+        "Akustisch absorbierende Hinterlegung"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Gent, Belgien"
+        },
+        {
+          "label": "Raum",
+          "value": "Heimkino"
+        }
+      ]
+    },
+    "city-penthouse-antwerp": {
+      "title": "Urbanes Penthouse",
+      "summary": "Eine makellose Designdecke für ein Penthouse in der Stadt.",
+      "hook": "Eine minimalistische, perfekt ebene Designdecke für ein Penthouse in der Stadt.",
+      "description": [
+        "Der Wohnbereich des Penthouses setzt auf eine nahtlose STRETCH-Decke mit integrierter Beleuchtung: Der Look bleibt minimalistisch, die Fläche über den gesamten offenen Grundriss hinweg perfekt."
+      ],
+      "highlights": [
+        "Nahtlose Designdecke",
+        "Integrierte Beleuchtung",
+        "Minimalistische, makellose Oberfläche"
+      ],
+      "materials": [
+        "STRETCH-Decke aus Polyester",
+        "Integrierte Beleuchtung"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Antwerpen, Belgien"
+        },
+        {
+          "label": "Raum",
+          "value": "Penthouse-Wohnzimmer"
+        }
+      ]
+    },
+    "wellness-spa-bruges": {
+      "title": "Wellness-Spa",
+      "summary": "Eine feuchtigkeitsbeständige, hinterleuchtete Decke für ein Spa.",
+      "hook": "Eine feuchtigkeitsbeständige, sanft leuchtende Decke für einen Wellnessbereich.",
+      "description": [
+        "Das Spa brauchte eine Decke, die Feuchtigkeit verträgt und für eine ruhige Stimmung sorgt. Eine transluzente, hinterleuchtete STRETCH-Decke leuchtet sanft über dem Wellnessbereich und lässt sich einfach abwischen – unbeeindruckt von Dampf und Feuchtigkeit."
+      ],
+      "highlights": [
+        "Verträgt Feuchtigkeit und Dampf",
+        "Sanfte, gleichmäßige Hinterleuchtung",
+        "Einfach abwischbar"
+      ],
+      "materials": [
+        "Transluzente STRETCH-Decke aus PVC",
+        "LED-Hinterleuchtungsfeld"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Brügge, Belgien"
+        },
+        {
+          "label": "Raum",
+          "value": "Spa / Wellness"
+        }
+      ]
+    },
+    "rue-perree-paris": {
+      "title": "Rue Perrée",
+      "summary": "Eine Lichtdecke für eine Multibrand-Galerie in Paris.",
+      "hook": "Gleichmäßiges Licht auf Galerie-Niveau in einem Multibrand-Showroom – Leuchten außer Sicht.",
+      "description": [
+        "Bei ART RECHERCHE INDUSTRIE in der Rue Perrée in Paris – einer Galerie, die mehrere Marken zeigt – sorgt eine leuchtende STRETCH-Decke für gleichmäßiges, hotspotfreies Licht im ganzen Raum. Da das LED-Feld hinter einer transluzenten Membran verborgen ist, bleiben die ausgestellten Arbeiten im Mittelpunkt – nicht die Leuchten."
+      ],
+      "highlights": [
+        "Gleichmäßige Beleuchtung ohne Hotspots",
+        "LED-Feld vollständig verborgen",
+        "Farbwiedergabe auf Galerie-Niveau"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Rue Perrée, Paris (FR)"
+        },
+        {
+          "label": "Raum",
+          "value": "Multibrand-Galerie"
+        }
+      ]
+    }
+  },
+  "blogPosts": {
+    "posts": {
+      "what-is-a-stretch-ceiling": {
+        "title": "Was ist eine Spanndecke? Der einfache Leitfaden",
+        "excerpt": "Eine Spanndecke ist eine dünne Membran, die über den Raum gespannt und in ein schlankes Randprofil eingeklinkt wird — kalt oder warm montiert, an einem einzigen Tag. So funktioniert sie, und hier lohnt sie sich.",
+        "body": [
+          {
+            "heading": "Die Kurzfassung",
+            "paragraphs": [
+              "Eine Spanndecke ist eine dünne, nahtlose Membran — gestricktes Polyester oder eine kalandrierte PVC-Folie —, die über den Raum gespannt und in ein schlankes, umlaufend an den Wänden befestigtes Profil eingeklinkt wird. Das Ergebnis wirkt wie eine perfekt ebene, frisch gestrichene Decke — ganz ohne Putz, Schleifen und Streichen.",
+              "Weil die Membran in einen Rahmen eingespannt und nicht direkt an der darüberliegenden Konstruktion befestigt wird, verbirgt sie Rohre, Kabel, unebenen Beton und alte Decken vollständig — und sie lässt sich an einem einzigen Tag montieren, in einem Raum, der möbliert und nutzbar bleibt."
+            ]
+          },
+          {
+            "heading": "Kaltmontage vs. Warmmontage",
+            "paragraphs": [
+              "Polyester-Membranen werden kalt gespannt: keine Hitze, keine Ausdünstungen, keine Trocknungszeit. Sie ergeben ein tiefes, sehr mattes Finish und überspannen bis zu 5.15 m ohne Naht.",
+              "PVC-Folien werden bei der Montage erwärmt, damit sie sich entspannen, und ziehen sich beim Abkühlen zu einer makellosen Fläche straff. PVC ist vollständig recycelbar, für den Zugang zur Technik darüber abnehmbar und überspannt bis zu 5.7 m nahtlos — die breiteste Option."
+            ]
+          },
+          {
+            "heading": "Was sich alles integrieren lässt",
+            "paragraphs": [
+              "Eine Spanndecke ist mehr als eine Oberfläche. Eine mikroperforierte Ausführung mit dahinterliegendem hochverdichtetem Absorber erreicht bis Klasse A Schallabsorption und macht hallige Räume ruhig. Transluzente Folien werden zur gleichmäßigen, dimmbaren Lichtfläche ohne Hotspots, und jedes Motiv — bis hin zum Glasfaser-Sternenhimmel — lässt sich randlos drucken.",
+              "Selbst Lautsprecher verschwinden komplett hinter der Membran — für sauberen Klang ohne sichtbare Quelle. Und all das in einer einzigen nahtlosen Fläche."
+            ]
+          },
+          {
+            "heading": "Wo sie sich lohnt",
+            "paragraphs": [
+              "Privatkunden setzen Spanndecken in Wohnzimmern, Bädern und Heimkinos ein; Unternehmen in Büros, Restaurants, Studios, Handel und Gastgewerbe. Sie eignen sich für Neubau und Renovierung gleichermaßen, und das PVC-System macht sich aus Feuchtigkeit nichts — ideal für Nassbereiche.",
+              "Möchten Sie wissen, ob sie zu Ihrem Projekt passt? Fordern Sie ein kostenloses, unverbindliches Angebot an — ein Spezialist meldet sich innerhalb von zwei Werktagen bei Ihnen."
+            ]
+          }
+        ]
+      },
+      "stretch-ceiling-acoustics-explained": {
+        "title": "Spanndecken-Akustik, einfach erklärt",
+        "excerpt": "Eine mikroperforierte Spannmembran mit hochverdichtetem Absorber dahinter erreicht bis Klasse A Schallabsorption — ganz ohne sichtbare Akustikpaneele. So funktioniert es, und das bedeuten αw und NRC.",
+        "body": [
+          {
+            "heading": "Warum Räume hart klingen",
+            "paragraphs": [
+              "Harte, ebene Flächen — Glas, Beton, Gipskarton — werfen Schall in den Raum zurück. Diese Reflexionen summieren sich zu Nachhall: Sprache wird schwerer verständlich, Musik und Hintergrundgeräusche ermüden schneller. Die Lösung: einen Teil dieser Energie absorbieren, bevor sie zurückgeworfen wird.",
+              "Traditionell heißt das sichtbare Akustikpaneele oder Baffles. Mit einer Spanndecke geht es unsichtbar."
+            ]
+          },
+          {
+            "heading": "So funktioniert eine akustische Spanndecke",
+            "paragraphs": [
+              "Die sichtbare Seite ist eine mikroperforierte Membran: Tausende winzige Perforationen lassen den Schall in einen dahinter montierten hochverdichteten Absorber aus Polyesterwolle durch. Der Raum zeigt weiterhin eine makellose, nahtlose Decke, doch die Schallenergie wird eingefangen statt reflektiert.",
+              "Gut ausgeführt erreicht das bis Klasse A Absorption — die höchste Klassifizierung — auf der gesamten behandelten Fläche."
+            ]
+          },
+          {
+            "heading": "Die Zahlen lesen: αw und NRC",
+            "paragraphs": [
+              "Schallabsorption wird auf einer Skala von 0 (voll reflektierend) bis 1 (voll absorbierend) gemessen. In Europa ist die maßgebliche Kennzahl der bewertete Schallabsorptionsgrad αw; die zugehörigen Klassen reichen von Klasse A (αw ≥ 0.90) bis Klasse E. NRC (Noise Reduction Coefficient) ist der entsprechende Einzahlwert, der vor allem in Nordamerika verwendet wird.",
+              "Wenn Sie Akustikprodukte vergleichen, achten Sie genau auf diese Werte — αw, die Absorptionsklasse und NRC — statt auf vage Versprechen zur „Schalldämmung“."
+            ]
+          },
+          {
+            "heading": "Wo sie sich bezahlt macht",
+            "paragraphs": [
+              "Tonstudios, Heimkinos, Großraumbüros, Restaurants, Klassenzimmer und Gesundheitsbauten profitieren gleichermaßen. Dasselbe System gibt es auch als frei hängende Deckensegel und dekorative Wandpaneele, wo eine vollflächige Decke nicht möglich ist.",
+              "Kämpfen Sie in einem bestimmten Raum mit Nachhall? Fordern Sie ein Angebot an und nennen Sie uns Maße und Nutzung — wir empfehlen Ihnen den passenden Absorber und das richtige Finish."
+            ]
+          }
+        ]
+      }
+    },
+    "chrome": {
+      "readMinutes": "{count} Min. Lesezeit",
+      "publishedOn": "Veröffentlicht",
+      "updatedOn": "Aktualisiert",
+      "backToBlog": "Alle Leitfäden",
+      "eyebrow": "Leitfäden",
+      "ctaTitle": "Denken Sie über eine Spanndecke nach?",
+      "ctaBody": "Erhalten Sie ein kostenloses, unverbindliches Angebot für Ihren Raum.",
+      "ctaBtn": "Kostenloses Angebot anfordern"
+    }
+  },
+  "inspirationPage": {
+    "eyebrow": "Inspiration",
+    "title1": "Echte Räume,",
+    "title2a": "echte",
+    "title2b": "Projekte",
+    "browseEyebrow": "Stöbern nach Lösung",
+    "allEyebrow": "Alle Projekte",
+    "portfolioTitle": "Das Portfolio",
+    "ctaTitle": "Stellen Sie es sich in Ihrem Raum vor",
+    "quoteCta": "Kostenloses Angebot anfordern",
+    "exploreCta": "Lösungen entdecken",
+    "showing": "{count} angezeigt",
+    "filterAria": "Projekte filtern",
+    "filters": [
+      "Alle",
+      "Akustik",
+      "Wohnen",
+      "Bad",
+      "Büro",
+      "Gewerbe",
+      "Heimkino",
+      "Licht & Druck"
+    ],
+    "browse": [
+      {
+        "label": "Akustik",
+        "desc": "Studios, Büros & ruhige Räume"
+      },
+      {
+        "label": "Licht & Druck",
+        "desc": "Hinterleuchtete & bedruckte Decken"
+      },
+      {
+        "label": "Wohnen",
+        "desc": "Wohnhäuser & private Innenräume"
+      },
+      {
+        "label": "Bad",
+        "desc": "Feuchtigkeitsbeständig & vorgefertigt"
+      },
+      {
+        "label": "Büro",
+        "desc": "Akustischer Komfort am Arbeitsplatz"
+      },
+      {
+        "label": "Gewerbe",
+        "desc": "Einzelhandel, Hotels & Veranstaltungsorte"
+      }
+    ]
+  },
+  "projectPage": {
+    "crumbInspiration": "Inspiration",
+    "materialsTitle": "Verwendete Produkte & Materialien",
+    "detailsTitle": "Projektdetails",
+    "solutionsUsed": "Eingesetzte Lösungen",
+    "similarCta": "Ein ähnliches Projekt starten",
+    "gallery": "Galerie",
+    "faqTitle": "Häufige Fragen",
+    "allProjects": "Alle Projekte",
+    "exploreSolutions": "Lösungen entdecken",
+    "photo": "Foto"
+  },
+  "reviewsData": {
+    "items": [
+      {
+        "role": "Hausbesitzer · Antwerpen",
+        "quote": "Sie haben die Decke in unserem Wohnzimmer an einem einzigen Tag montiert, ganz ohne Schmutz. Die matte Oberfläche sieht genau aus wie frischer Putz — wir sind wirklich begeistert."
+      },
+      {
+        "role": "Architekt · Gent",
+        "quote": "Für akustische Decken schreibe ich jetzt STRETCH aus. Der Raum wirkt wie eine einzige klare Fläche, und der Nachhall ist verschwunden — Kunden bemerken den Unterschied immer."
+      },
+      {
+        "role": "Bauunternehmer · Sint-Niklaas",
+        "quote": "Durch die Schulung konnte mein Team schnell montieren, und die Lieferung nach Maß ist zuverlässig. Als Partner haben wir unser Geschäft um einen ganz neuen Service erweitert."
+      }
+    ]
+  },
+  "partnersPage": {
+    "crumb": "Partner",
+    "hero": {
+      "eyebrow": "Für das Fachgewerbe",
+      "title": "Werden Sie Partner von",
+      "lead": "Zwei Wege der Zusammenarbeit: Sie verkaufen unsere Decken als fertiges Produkt und lassen unser Netzwerk montieren — oder Sie lassen sich schulen und montieren selbst. In beiden Fällen erhalten Sie Händlerkonditionen, Fertigung nach Maß aus Belgien und vermittelte Anfragen aus Ihrer Region.",
+      "ctaApply": "Jetzt als Partner bewerben",
+      "ctaCall": "Gespräch vereinbaren",
+      "imageAlt": "Ein STRETCH-Montagepartner bei der Arbeit",
+      "statLabel": "Montiert pro Team / Tag"
+    },
+    "models": {
+      "eyebrow": "Zwei Partnermodelle",
+      "title": "Händler oder Fachbetrieb — wählen Sie das Modell, das zu Ihrem Geschäft passt.",
+      "lead": "Der Unterschied ist einfach: Ein Händler verkauft die Decke und überlässt uns die Montage; ein Fachbetrieb verkauft und montiert selbst — nach Abschluss unserer Schulung.",
+      "bestForLabel": "Ideal für:",
+      "reseller": {
+        "kicker": "Händler",
+        "title": "Sie verkaufen. Wir montieren.",
+        "body": "Sie verkaufen Ihrem Kunden eine STRETCH-Decke als fertiges, montiertes Produkt. Wir und unser Netzwerk aus Fachbetrieben übernehmen als Ihr Partner die Montage — Sie konzentrieren sich auf Verkauf und Kundenbeziehung.",
+        "points": [
+          "Sie verkaufen Ihrem Kunden die fertige, montierte Decke",
+          "Wir montieren für Sie — über unser zertifiziertes Netzwerk aus Fachbetrieben",
+          "Kein eigenes Montageteam und kein Montage-Know-how nötig",
+          "Händlerkonditionen, Produktbilder und vermittelte Anfragen aus Ihrer Region"
+        ],
+        "bestFor": "Innenarchitekten, Architekten, Küchen- und Badstudios sowie Bauunternehmer, die Decken anbieten möchten, ohne sie selbst zu montieren.",
+        "cta": "Als Händler bewerben"
+      },
+      "dealer": {
+        "kicker": "Fachbetrieb",
+        "badge": "Schulung erforderlich",
+        "title": "Sie verkaufen und montieren.",
+        "body": "Sie verkaufen STRETCH-Produkte innerhalb Ihrer eigenen Projekte und führen die Montage selbst aus. Um zertifizierter Fachbetrieb zu werden, absolviert Ihr Monteur zunächst unsere Praxisschulung in unserer Zentrale.",
+        "points": [
+          "Sie verkaufen STRETCH-Produkte innerhalb Ihrer eigenen Projekte",
+          "Sie führen die Montage selbst aus",
+          "Ihr Monteur absolviert zuerst unsere Praxisschulung",
+          "Sie bestellen nach Maß aus unserer belgischen Werkstatt"
+        ],
+        "bestFor": "Monteure, Ausbaubetriebe und Trockenbau-Spezialisten, die Spanndecken in ihr eigenes Montageangebot aufnehmen möchten.",
+        "cta": "Als Fachbetrieb bewerben",
+        "trainingLink": "Zur Schulung"
+      }
+    },
+    "compare": {
+      "resellerHead": "Händler",
+      "dealerHead": "Fachbetrieb",
+      "rows": [
+        {
+          "label": "Was Sie verkaufen",
+          "reseller": "Eine fertige, montierte Decke",
+          "dealer": "Produkte innerhalb Ihrer eigenen Projekte"
+        },
+        {
+          "label": "Wer montiert",
+          "reseller": "Wir — über unser Netzwerk aus Fachbetrieben",
+          "dealer": "Sie selbst"
+        },
+        {
+          "label": "Schulung",
+          "reseller": "Nicht erforderlich",
+          "dealer": "Erforderlich — Praxiskurs"
+        },
+        {
+          "label": "Am besten geeignet für",
+          "reseller": "Planer, Studios, Bauunternehmer",
+          "dealer": "Monteure & Ausbaubetriebe"
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Was jeder Partner bekommt",
+      "titleA": "Mehr Marge,",
+      "titleB": "weniger Aufwand",
+      "lead": "Für welches Modell Sie sich auch entscheiden: Wir kümmern uns um Produkt und Lieferkette — Sie liefern eine Premium-Decke, die Ihre Kunden begeistert.",
+      "cards": [
+        {
+          "title": "Starke Margen",
+          "body": "Händlerkonditionen auf Membranen und Profile nach Maß — mit gesunden Margen auf ein gefragtes Premium-Produkt."
+        },
+        {
+          "title": "Vermittelte Anfragen",
+          "body": "Anfragen lokaler Kunden geben wir an Partner in deren Region weiter — echte Projekte, nicht nur eine Preisliste."
+        },
+        {
+          "title": "B2B-Bestellungen",
+          "body": "Bestellen Sie maßkonfektioniert aus unserer belgischen Werkstatt über ein eigenes Partnerportal — mit verlässlichen Lieferzeiten."
+        },
+        {
+          "title": "Made in Belgium",
+          "body": "Handgefertigte Membranen, entwickelt in Belgien — mit einer langen Produktgarantie, hinter der Sie stehen können."
+        },
+        {
+          "title": "Praxisschulung",
+          "body": "Für Fachbetriebe: Zertifizieren Sie Ihr Team in wenigen Tagen in unserer Zentrale — Konfektion, Profile, Kalt- & Warmmontage, Licht und Akustik."
+        },
+        {
+          "title": "Marketing-Unterstützung",
+          "body": "Produktbilder, Muster und Verkaufsunterlagen, mit denen Sie Spanndecken-Aufträge gewinnen und abschließen."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "So funktioniert es",
+      "title": "Der kurze Weg zum Verkauf von Spanndecken — auf Ihre Art.",
+      "resellerPath": "Weg zum Händler",
+      "dealerPath": "Weg zum Fachbetrieb",
+      "resellerSteps": [
+        {
+          "title": "Als Händler bewerben",
+          "body": "Senden Sie eine kurze Bewerbung. Wir prüfen jede persönlich und vereinbaren ein Gespräch, um Ihr Geschäft kennenzulernen."
+        },
+        {
+          "title": "Startklar werden",
+          "body": "Händlerkonditionen, Muster und Verkaufsunterlagen — keine Schulung nötig. Bieten Sie Spanndecken sofort an."
+        },
+        {
+          "title": "Sie verkaufen — wir montieren",
+          "body": "Sie schließen den Verkauf ab und behalten den Kunden; wir und unsere Fachbetriebe montieren die Decke — termingerecht und nach Vorgabe."
+        }
+      ],
+      "dealerSteps": [
+        {
+          "title": "Als Fachbetrieb bewerben",
+          "body": "Senden Sie eine kurze Bewerbung. Wir prüfen jede persönlich und vereinbaren ein Gespräch, um Ihr Geschäft kennenzulernen."
+        },
+        {
+          "title": "Schulen & zertifizieren",
+          "body": "Ihr Team absolviert unseren Praxiskurs in der Zentrale: Konfektion, Profile, Kalt- & Warmmontage, Licht und Akustik."
+        },
+        {
+          "title": "Bestellen & montieren",
+          "body": "Bestellen Sie nach Maß, montieren Sie selbst an einem Tag — und erhalten Sie laufend vermittelte Anfragen aus Ihrer Region."
+        }
+      ]
+    },
+    "apply": {
+      "eyebrow": "Partner werden",
+      "titleA": "Bewerben Sie sich",
+      "titleB": "noch heute",
+      "lead": "Sagen Sie uns, ob Sie verkaufen oder auch montieren möchten — den Rest übernehmen wir.",
+      "points": [
+        "Wir prüfen jede Bewerbung persönlich",
+        "Exklusives Gebiet, wo verfügbar",
+        "Onboarding innerhalb weniger Wochen"
+      ]
+    }
+  },
+  "trainingPage": {
+    "crumb": "Monteurschulung",
+    "courseName": "STRETCH-Monteurzertifizierung",
+    "courseDescription": "Praxisnahe Spanndecken-Monteurzertifizierung in der STRETCH-Zentrale in Belgien: Membrankonfektion, Profile, Kalt- & Warmmontage, Licht, Akustik, Finish und Kalkulation.",
+    "hero": {
+      "eyebrow": "Monteurschulung",
+      "titleA": "Montieren wie ein Profi",
+      "titleB": "in",
+      "titleC": "Tagen",
+      "lead": "Praxiszertifizierung in unserer belgischen Zentrale. Lernen Sie Membrankonfektion, Profile, Kalt- & Warmmontage, Licht und Akustik — keine Vorkenntnisse nötig.",
+      "ctaBook": "Schulung buchen",
+      "ctaDates": "Termine ansehen",
+      "imageLabel": "Foto Schulung / Werkstatt"
+    },
+    "format": [
+      {
+        "value": "2–3",
+        "label": "Praxistage"
+      },
+      {
+        "value": "Zentrale",
+        "label": "Beveren-Waas, Belgien"
+      },
+      {
+        "value": "1:4",
+        "label": "Betreuungsschlüssel"
+      }
+    ],
+    "curriculum": {
+      "eyebrow": "Was Sie lernen",
+      "title": "Das ganze Handwerk",
+      "lead": "Von der Membranrolle zur fertigen, beleuchteten Akustikdecke — samt dem kaufmännischen Rüstzeug, sie zu verkaufen.",
+      "items": [
+        {
+          "title": "Membran & Konfektion",
+          "body": "Wie Polyester- und PVC-Membranen in der Werkstatt maßgenau gemessen, zugeschnitten und verschweißt werden."
+        },
+        {
+          "title": "Randprofile",
+          "body": "Clipprofile exakt in der Waage einmessen und befestigen — das Fundament einer makellosen Decke."
+        },
+        {
+          "title": "Kalt- & Warmmontage",
+          "body": "Beide Systeme korrekt spannen: kaltes Polyester und erwärmte PVC-Folie, von Anfang bis Ende."
+        },
+        {
+          "title": "Licht & Akustik",
+          "body": "Hinterleuchtung, LED-Linien, bedruckte Folien und akustisch absorbierende Rückschicht integrieren."
+        },
+        {
+          "title": "Finish & Zugänge",
+          "body": "Saubere Randdetails, Ausschnitte für Einbauten und dezente Revisionsklappen."
+        },
+        {
+          "title": "Kalkulation & Verkauf",
+          "body": "Ein Projekt aufmessen, souverän anbieten und Spanndecken beim Kunden überzeugend positionieren."
+        }
+      ]
+    },
+    "dates": {
+      "eyebrow": "Nächste Termine",
+      "title": "Sichern Sie sich Ihren Platz",
+      "lead": "Kleine Gruppen, Vergabe nach Buchungseingang. Individuelle Schulungen vor Ort auf Anfrage.",
+      "onRequestTitle": "Auf Anfrage",
+      "onRequestNote": "Individuelle Schulung vor Ort"
+    },
+    "book": {
+      "eyebrow": "Schulung planen",
+      "titleA": "Buchen Sie einen",
+      "titleB": "Platz",
+      "includedLabel": "Inklusive",
+      "included": [
+        "Abschlusszertifikat",
+        "Monteur-Starterkit",
+        "Mittagessen & Material vor Ort"
+      ]
+    }
+  },
+  "aboutPage": {
+    "crumb": "Über uns",
+    "hero": {
+      "eyebrow": "Über STRETCH",
+      "titleA": "Handgefertigt",
+      "titleB": "in",
+      "titleC": "Belgien",
+      "lead": "{name} entwirft und fertigt nahtlose Spanndecken und -wände — entwickelt in Belgien, montiert an einem Tag und gebaut für Jahrzehnte.",
+      "imageAlt": "Die STRETCH-Werkstatt und das Team"
+    },
+    "stats": [
+      {
+        "label": "Gegründet",
+        "sub": "Seitdem bauen wir nahtlose Decken."
+      },
+      {
+        "value": "25 Jahre",
+        "label": "Garantie",
+        "sub": "Auf unsere handgefertigten Membranen."
+      },
+      {
+        "value": "4",
+        "label": "Standorte",
+        "sub": "Belgien, USA, Polen & Österreich."
+      }
+    ],
+    "story": {
+      "eyebrow": "Unsere Geschichte",
+      "p1": "{name} wurde {founded} aus einer einfachen Überzeugung gegründet: Eine Decke sollte ein Finish sein, das aus den richtigen Gründen auffällt. Klassische Putzdecken reißen, bekommen Flecken und kosten Tage voller Schmutz für Montage und Neuanstrich. Eine gespannte Membran nicht — sie kommt sauber, absolut plan und nahtlos an die Decke, oft an einem einzigen Tag.",
+      "p2": "Alles beginnt in unserer belgischen Werkstatt, wo Polyester- und PVC-Membranen von Hand maßgenau gemessen, zugeschnitten und verschweißt werden. Genau diese Maßkonfektion ist der Grund, warum sich eine fertige Decke auf der Baustelle so schnell einclipsen lässt — ohne Staub und ohne Neuanstrich.",
+      "p3": "Heute arbeiten wir vor allem über ein Netzwerk aus Fachpartnern und zertifizierten Monteuren und liefern Systeme nach Maß, Praxisschulungen und vermittelte Anfragen aus der Region. Von Tonstudios bis Eventhallen, von Bädern bis zum Einzelhandel: Unsere Systeme bringen Licht, akustische Kontrolle und eine makellose Oberfläche in Räume in ganz Europa und darüber hinaus.",
+      "p4": "Wir sind ein B2B-geprägtes Unternehmen mit Standorten in Belgien, den USA, Polen und Österreich — doch jede Membran trägt dasselbe Versprechen: handgefertigt in Belgien, mit 25 Jahren Garantie."
+    },
+    "offices": {
+      "eyebrow": "Wo Sie uns finden"
+    },
+    "cta": {
+      "title": "Bauen wir etwas Nahtloses.",
+      "button": "Kostenloses Angebot anfordern"
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Kontakt",
+    "titleA": "Sprechen wir über",
+    "titleB": "Decken",
+    "cards": {
+      "call": {
+        "label": "Rufen Sie uns an"
+      },
+      "email": {
+        "label": "Schreiben Sie uns",
+        "sub": "Persönliche Antwort innerhalb von 2 Tagen"
+      },
+      "chat": {
+        "label": "WhatsApp / Telegram",
+        "value": "Chatten Sie mit uns",
+        "sub": "Kurze Fragen, schnelle Antworten"
+      }
+    },
+    "formTitle": "Senden Sie uns eine Nachricht",
+    "formLead": "Erzählen Sie uns von Ihrem Projekt oder Ihrer Frage. Ein Spezialist antwortet innerhalb von zwei Werktagen.",
+    "mapLabel": "Werkstatt / Karte",
+    "mapAlt": "STRETCH-Werkstatt",
+    "hqKicker": "Hauptsitz",
+    "hqLocation": "{postalCode} {city}, Belgien",
+    "officesEyebrow": "Unsere Standorte",
+    "dealerTitle": "Lieber ein Händler vor Ort?",
+    "dealerBody": "Anfragen von Privatkunden leiten wir an zertifizierte Monteure in Ihrer Region weiter — fragen Sie einfach, wir stellen den Kontakt her.",
+    "dealerCta": "Finden Sie einen Händler in Ihrer Nähe",
+    "form": {
+      "subjects": [
+        "Angebot anfordern",
+        "Händler finden",
+        "Partnerschaft",
+        "Schulung für Monteure",
+        "Sonstiges"
+      ],
+      "timelines": [
+        "So schnell wie möglich",
+        "Innerhalb von 1–3 Monaten",
+        "Innerhalb von 4–12 Monaten",
+        "Ich informiere mich nur"
+      ],
+      "timelineLabel": "Zeitrahmen",
+      "consentPrefix": "Ich bin damit einverstanden, dass STRETCH meine Daten zur Beantwortung meiner Anfrage verarbeitet, wie beschrieben in der",
+      "consentPrivacy": "Datenschutzerklärung",
+      "submit": "Nachricht senden"
+    }
+  },
+  "datasheetsPage": {
+    "eyebrow": "Technische Datenblätter",
+    "crumb": "Datenblätter",
+    "titleA": "Spezifikationen &",
+    "titleB": "Datenblätter",
+    "lead": "Laden Sie die technische Dokumentation zu jedem STRETCH-System herunter — Spezifikationen, Brandklassen, akustische Klassenwerte und Garantiedetails. Geben Sie Ihre Daten einmal pro Download ein, und die Datei startet sofort.",
+    "updated": "Aktualisiert am {date}",
+    "privacyNote": "Wir fragen nach Name, E-Mail und Telefonnummer, damit ein Spezialist eventuelle technische Fragen beantworten kann. Ihre Daten behandeln wir gemäß unserer",
+    "privacyLink": "Datenschutzerklärung"
+  },
+  "samplesPage": {
+    "eyebrow": "Farbmuster",
+    "crumb": "Muster",
+    "titleA": "Sehen Sie die",
+    "titleB": "Farben",
+    "lead": "Bestellen Sie physische RAL- und Farbmuster unserer Polyester-, PVC- und Akustikmembranen — kostenlos für Fachpartner, geliefert bis an Ihre Tür.",
+    "points": [
+      "Standardtöne und jede RAL-Farbe nach Wunsch",
+      "Polyester-, PVC- & Akustik-Ausführungen",
+      "Versand innerhalb von zwei Werktagen"
+    ]
+  },
+  "blogPage": {
+    "eyebrow": "Ratgeber & Einblicke",
+    "crumb": "Ratgeber",
+    "titleA": "Spanndecken,",
+    "titleB": "erklärt",
+    "postMeta": "{date} · {minutes} Min. Lesezeit",
+    "readArticle": "Artikel lesen"
+  },
+  "inlineLead": {
+    "consentPrefix": "Ich bin damit einverstanden, dass STRETCH meine Daten zur Beantwortung meiner Anfrage verarbeitet, wie beschrieben in der",
+    "consentPrivacy": "Datenschutzerklärung"
   }
 }

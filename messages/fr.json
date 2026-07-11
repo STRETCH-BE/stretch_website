@@ -2373,5 +2373,1005 @@
     "shippedWorldwide": "Expédié dans le monde entier",
     "ctaTitle": "Un projet pour nous ?",
     "ctaBody": "Envoyez-nous les plans ou l'idée — nous étudions la structure, la fabriquons en interne et vous l'expédions."
+  },
+  "projects": {
+    "da-tweekaz-studio": {
+      "title": "Da Tweekaz Studio",
+      "summary": "Plafond tendu et murs acoustiques pour un studio de production musicale.",
+      "hook": "Une pièce épurée, maîtrisée sur le plan acoustique, pour l'un des groupes les plus connus du hardstyle.",
+      "description": [
+        "Pour le studio d'enregistrement de Da Tweekaz aux Pays-Bas, un système STRETCH acoustique traite à la fois le plafond et les murs. Les réflexions sont maîtrisées pour que la pièce reste précise à l'écoute — avec une finition moderne sans soudure et aucun panneau visible au-dessus de la tête."
+      ],
+      "highlights": [
+        "Traitement acoustique du plafond et des murs",
+        "Finition sans soudure, sans panneaux"
+      ],
+      "materials": [
+        "Plafond STRETCH acoustique",
+        "Textile STRETCH Acoustic (murs)"
+      ],
+      "facts": [
+        {
+          "label": "Pays",
+          "value": "Pays-Bas"
+        },
+        {
+          "label": "Revendeur STRETCH",
+          "value": "Q82 Acoustics"
+        }
+      ]
+    },
+    "mark-with-a-k": {
+      "title": "Mark With a K",
+      "summary": "Traitement acoustique pour la salle d'écoute d'un DJ et producteur.",
+      "hook": "Une pièce impeccable, maîtrisée sur le plan acoustique, pour un DJ et producteur belge.",
+      "description": [
+        "Un plafond STRETCH acoustique sans soudure absorbe la réverbération dans la salle de production tout en conservant une finition moderne impeccable. Le résultat : un espace de travail calme et maîtrisé, avec la performance acoustique cachée dans la membrane."
+      ],
+      "highlights": [
+        "Plafond acoustique sans soudure",
+        "Absorbant dissimulé à l'arrière",
+        "Finition moderne, sans panneaux"
+      ],
+      "materials": [
+        "Plafond STRETCH acoustique",
+        "Absorbant haute densité à l'arrière"
+      ],
+      "facts": [
+        {
+          "label": "Pays",
+          "value": "Belgique"
+        },
+        {
+          "label": "Espace",
+          "value": "Studio de production musicale"
+        }
+      ]
+    },
+    "notary-ampe-anthony": {
+      "title": "Notaire Ampe Anthony",
+      "summary": "350 m² de plafonds tendus acoustiques dans une étude notariale haut de gamme.",
+      "hook": "Un aménagement de bureaux haut de gamme complet, où il fallait dompter des matériaux durs et réfléchissants — sans perdre le look net et minimaliste.",
+      "description": [
+        "En 2019, l'étude notariale Ampe Anthony à Kruibeke a été entièrement reconstruite en un intérieur haut de gamme au look volontairement net et minimaliste — sols en béton poli, châssis en acier et de nombreuses surfaces dures. Aucune dépense n'a été épargnée pour une finition parfaite.",
+        "Ces matériaux durs rendaient les bureaux très réverbérants. Pour revenir à un niveau confortable, tout l'intérieur a reçu un plafond STRETCH acoustique doublé d'un absorbant dédié en laine de polyester, monté contre la dalle de béton existante — ce qui porte la performance acoustique à un niveau élevé.",
+        "Le plafond a été abaissé de 10 cm pour dissimuler toutes les techniques au-dessus, laissant une hauteur de 260 cm. Pour que l'espace paraisse plus haut et plus grand, nous avons créé de grands renfoncements elliptiques dans le plafond — une astuce optique qui rehausse visiblement la pièce."
+      ],
+      "highlights": [
+        "Temps de réverbération mesuré à 0.6 s",
+        "Grands renfoncements elliptiques pour une impression de hauteur",
+        "Absorbant dédié en laine de polyester derrière la membrane"
+      ],
+      "materials": [
+        "Plafond STRETCH acoustique",
+        "Cadres cintrés en aluminium sur mesure",
+        "Absorbant en laine de polyester D40/50 (40 kg/m³, 50 mm)",
+        "Plafond STRETCH Design dans la forme elliptique",
+        "Profilés de tension en PVC blanc en périphérie",
+        "Éclairage : Wever & Ducré, Delta Light"
+      ],
+      "facts": [
+        {
+          "label": "Région",
+          "value": "Waasland (Kruibeke)"
+        },
+        {
+          "label": "Année",
+          "value": "2018"
+        },
+        {
+          "label": "Surface",
+          "value": "350 m²"
+        },
+        {
+          "label": "Architecte",
+          "value": "Ante Architecten"
+        },
+        {
+          "label": "Revendeur STRETCH",
+          "value": "Corpus Interieur"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Combien de temps a duré l'installation ?",
+          "a": "La pose des plafonds acoustiques, de tout l'éclairage et des finitions spéciales a pris 7 jours ouvrés."
+        },
+        {
+          "q": "Quel temps de réverbération a été atteint ?",
+          "a": "Mesuré après l'installation, le bureau atteint un temps de réverbération de 0.6 s — l'intérieur est très calme, et cela se ressent."
+        },
+        {
+          "q": "Combien d'installateurs ont travaillé sur le projet ?",
+          "a": "Une équipe de 2 poseurs STRETCH a réalisé l'ensemble du lot plafond : la membrane, l'éclairage, les panneaux acoustiques, la menuiserie de plafond et les structures elliptiques."
+        },
+        {
+          "q": "Quelle est la durée de vie du plafond ?",
+          "a": "Comme pour tout plafond tendu, la durée de vie dépend de l'entretien, mais il tiendra sans peine environ 25 ans. Ensuite, seule la membrane devra éventuellement être remplacée — le cadre existant reste en place."
+        }
+      ]
+    },
+    "bnp-paribas-fortis": {
+      "title": "BNP Paribas Fortis",
+      "summary": "2,000 m² de plafonds lumineux et acoustiques au siège bruxellois de la banque.",
+      "hook": "Des plafonds STRETCH lumineux et acoustiques dans le nouveau siège Montagne du Parc de la banque — y compris un food court sur plusieurs étages.",
+      "description": [
+        "Au siège de BNP Paribas Fortis, au cœur de Bruxelles, STRETCH a livré environ 2,000 m² de plafonds lumineux (STRETCH Light) et acoustiques (STRETCH Acoustic), en collaboration avec Jaspers-Eyers Architects et NCBHAM, aux côtés du partenaire Conceptexpo.",
+        "Point fort : le food court Barista Bar, qui accueille collaborateurs et visiteurs sur plusieurs étages. Le Hot Corner sert des plats chauds sous un plafond de lames en laiton évoquant des flammes ; le Fresh Corner propose des salades à l'étage supérieur ; et le Sweet Corner conclut avec des desserts — chaque comptoir existe en miroir, si bien qu'un repas complet peut se composer n'importe où."
+      ],
+      "highlights": [
+        "≈2,000 m² de plafonds tendus",
+        "STRETCH Light + Acoustic combinés",
+        "Food court Barista Bar sur plusieurs étages",
+        "Plafond décoratif « flammes » en lames de laiton"
+      ],
+      "materials": [
+        "Plafond STRETCH Light (lumineux)",
+        "Plafond STRETCH Acoustic",
+        "Sections de plafond cintrées",
+        "Éclairage intégré"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Bruxelles (Montagne du Parc)"
+        },
+        {
+          "label": "Surface",
+          "value": "2,000 m²"
+        },
+        {
+          "label": "Architecte",
+          "value": "Jaspers-Eyers & NCBHAM"
+        },
+        {
+          "label": "Partenaire",
+          "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-beveren": {
+      "title": "Van der Valk",
+      "summary": "Une absorption acoustique maximale pour la salle événementielle d'un hôtel — avec presque aucune hauteur à sacrifier.",
+      "hook": "Un problème acoustique qui minait la salle événementielle de l'hôtel depuis des années, résolu par le plafond.",
+      "description": [
+        "Tim van der Valk a contacté STRETCH au sujet d'un problème acoustique qui affectait leur espace événementiel depuis plusieurs années. Après en avoir discuté avec Michael Nicasens de STRETCH, nous avons conclu que la solution devait venir du plafond — mais le plafond existant ne mesurait que 255 cm de haut, laissant très peu de place pour un système.",
+        "Nous avons donc proposé une hauteur de système de 50 mm qui atteint malgré tout αw 0.95 : une absorption acoustique maximale avec une perte de hauteur minimale. Les grandes salles événementielles sont tendues sans soudure, la performance acoustique est intégrée à la membrane et les détails — trappes, éclairage, capteurs et ciel étoilé — s'intègrent proprement au plafond."
+      ],
+      "highlights": [
+        "Absorption acoustique αw 0.95",
+        "Seulement 50 mm de hauteur de système",
+        "Trappes d'accès techniques intégrées",
+        "Éclairage & détecteurs de présence",
+        "Ciel étoilé",
+        "Finition sans soudure autour des colonnes"
+      ],
+      "materials": [
+        "Plafond STRETCH acoustique (système 50 mm)",
+        "Trappes techniques intégrées",
+        "Éclairage intégré",
+        "Détecteurs de présence",
+        "Installation ciel étoilé",
+        "Profilés de tension périphériques"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Région",
+          "value": "Beveren-Waas"
+        },
+        {
+          "label": "Hauteur existante",
+          "value": "255 cm"
+        },
+        {
+          "label": "Hauteur du système",
+          "value": "50 mm"
+        },
+        {
+          "label": "Performance acoustique",
+          "value": "αw 0.95"
+        }
+      ]
+    },
+    "johnson-and-johnson": {
+      "title": "Johnson & Johnson",
+      "summary": "Un plafond imprimé et lumineux pour un site de R&D pharmaceutique.",
+      "hook": "Un design de plafond et d'éclairage réfléchissant et innovant, en écho aux recherches de Johnson & Johnson sur l'amélioration de la vue.",
+      "description": [
+        "STRETCH a collaboré avec Van Dijk Architects et l'agenceur Glennwood sur le design du plafond et de l'éclairage du nouveau site de Johnson & Johnson à Limerick City, en Irlande. Le brief : un plafond réfléchissant et innovant, à la hauteur des objectifs de recherche et développement du bâtiment autour de l'amélioration de la vue.",
+        "Le plafond STRETCH imprimé et lumineux parcourt tout le bâtiment, donne à chaque zone son propre point focal et guide visuellement les personnes qui traversent l'espace. Des applications d'éclairage modernes subliment à la fois le design et le rendu final."
+      ],
+      "highlights": [
+        "Impression sur mesure dans tout le bâtiment",
+        "Éclairage pour la concentration et l'orientation",
+        "Design réfléchissant, inspiré de la R&D"
+      ],
+      "materials": [
+        "Plafond STRETCH imprimé",
+        "Plafond STRETCH lumineux (rétroéclairé)",
+        "Éclairage intégré"
+      ],
+      "facts": [
+        {
+          "label": "Région",
+          "value": "Limerick, Irlande"
+        },
+        {
+          "label": "Année",
+          "value": "2019"
+        },
+        {
+          "label": "Surface",
+          "value": "60 m²"
+        },
+        {
+          "label": "Architecte",
+          "value": "Van Dijk Architects"
+        },
+        {
+          "label": "Revendeur STRETCH",
+          "value": "Glennwood"
+        }
+      ]
+    },
+    "polette-eyewear": {
+      "title": "Polette Eyewear",
+      "summary": "Un concept retail inédit signé par l'architecte Javier Zubiria.",
+      "hook": "Une boutique qui se joue comme un instrument de musique — un hommage à la paix, à l'amour et à l'unité.",
+      "description": [
+        "Anvers, 2022. Après le succès de son showroom parisien, polette s'est de nouveau associée à Javier Zubiria, fondateur du studio amstellodamois zU-Studio, pour apporter à Anvers un concept retail inédit. Tout est parti d'une seule chanson — « Imagine » de John Lennon — et de l'envie de bâtir un lieu de connexion et de créativité après des années de distance.",
+        "Les visiteurs sont accueillis par deux claviers de piano géants, un de chaque côté, comptant chacun 88 touches. Les touches blanches sont des miroirs toute hauteur qui créent une sensation d'infini ; les touches noires servent d'étagères pour les lunettes polette. Au centre, un immense banc blanc fait référence au Bed-in pacifiste de Lennon.",
+        "Au plafond, le clou du spectacle : une forme sculpturale de couvercle de piano, biseautée sur les 20 mètres de profondeur du showroom et réalisée en plafond STRETCH lumineux, laissant passer la lumière. Chaque touche de piano est aussi fonctionnelle — un système de capteurs allume la touche suivante à presser, pour que les visiteurs puissent jouer un morceau ensemble dans l'espace."
+      ],
+      "highlights": [
+        "Sculpture de plafond lumineuse et translucide",
+        "Forme de couvercle de piano sur toute la profondeur de 20 m",
+        "Éclairage interactif des touches piloté par capteurs",
+        "Installé en une seule journée de travail"
+      ],
+      "materials": [
+        "Plafond STRETCH acoustique, laissant passer la lumière",
+        "Forme sculpturale de couvercle de piano",
+        "Éclairage intégré",
+        "Éclairage des touches commandé par capteurs"
+      ],
+      "facts": [
+        {
+          "label": "Région",
+          "value": "Anvers"
+        },
+        {
+          "label": "Année",
+          "value": "2022"
+        },
+        {
+          "label": "Surface",
+          "value": "60 m²"
+        },
+        {
+          "label": "Architecte",
+          "value": "zU-Studio · Javier Zubiria"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Combien de temps a duré l'installation ?",
+          "a": "La pose du plafond tendu acoustique et translucide a pris une seule journée de travail."
+        },
+        {
+          "q": "Combien d'installateurs ont travaillé sur le projet ?",
+          "a": "Une équipe de 2 poseurs STRETCH s'est chargée de tout — le plafond et l'éclairage."
+        },
+        {
+          "q": "Quelle est la durée de vie du plafond ?",
+          "a": "Comme pour tout plafond tendu, la durée de vie dépend de l'entretien, mais il tiendra sans peine environ 25 ans ; ensuite, seule la membrane devra éventuellement être remplacée, le cadre existant restant en place."
+        }
+      ]
+    },
+    "citizenm-hotel": {
+      "title": "CitizenM Hotel",
+      "summary": "Des plafonds de salle de bains préfabriqués et rétroéclairés, déployés dans les hôtels CitizenM.",
+      "hook": "Un plafond de salle de bains rétroéclairé et reproductible, fabriqué hors site pour des hôtels sur deux continents.",
+      "description": [
+        "Pour les hôtels modulaires de CitizenM, STRETCH a fourni des plafonds de salle de bains préfabriqués à la finition rétroéclairée laissant passer la lumière — fabriqués hors site en unités reproductibles, puis déployés sur des sites aux États-Unis et en Europe, de New York et Chicago à Miami, Los Angeles et au-delà."
+      ],
+      "highlights": [
+        "Préfabrication hors site",
+        "Finition rétroéclairée laissant passer la lumière",
+        "Reproductible à grande échelle dans de nombreux hôtels"
+      ],
+      "materials": [
+        "Unité de salle de bains STRETCH préfabriquée",
+        "Membrane STRETCH Backlit (laisse passer la lumière)",
+        "Éclairage intégré"
+      ],
+      "facts": [
+        {
+          "label": "Continents",
+          "value": "États-Unis & Europe"
+        },
+        {
+          "label": "Villes",
+          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+        },
+        {
+          "label": "Partenaire",
+          "value": "Saniskill"
+        }
+      ]
+    },
+    "london-chapel": {
+      "title": "Chapelle de Londres",
+      "summary": "Un plafond tendu rétroéclairé au-dessus d'une chapelle restaurée.",
+      "hook": "Une chapelle restaurée baignée d'une lumière douce et homogène, diffusée par un seul plafond lumineux.",
+      "description": [
+        "Un plafond STRETCH translucide transforme toute la surface du plafond en une source de lumière douce et homogène : l'intérieur restauré baigne dans un éclairage sans éblouissement, tandis que le champ de LED reste entièrement dissimulé."
+      ],
+      "highlights": [
+        "Tout le plafond comme source lumineuse",
+        "Éclairage homogène, sans éblouissement",
+        "Champ de LED entièrement dissimulé"
+      ],
+      "materials": [
+        "Plafond STRETCH translucide",
+        "Champ de rétroéclairage LED"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Londres, Royaume-Uni"
+        },
+        {
+          "label": "Espace",
+          "value": "Chapelle restaurée"
+        }
+      ]
+    },
+    "private-villa-knokke": {
+      "title": "Villa privée",
+      "summary": "Un plafond mat sans soudure pour une villa côtière au plan ouvert.",
+      "hook": "Un plafond sans soudure, lisse comme un plâtre parfait, pour une maison côtière au plan ouvert.",
+      "description": [
+        "Dans l'espace de vie ouvert de la villa, un plafond STRETCH en polyester très mat évoque d'un mur à l'autre un plâtre impeccable — net et moderne, sans les fissures ni les lignes d'ombre d'un plafond classique."
+      ],
+      "highlights": [
+        "Finition sans soudure d'un mur à l'autre",
+        "Ni fissures ni lignes d'ombre",
+        "Aspect très mat, façon plâtre"
+      ],
+      "materials": [
+        "Plafond STRETCH en polyester (très mat)",
+        "Profilés périphériques de tension"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Knokke, Belgique"
+        },
+        {
+          "label": "Espace",
+          "value": "Espace de vie ouvert"
+        }
+      ]
+    },
+    "home-cinema-ghent": {
+      "title": "Cinéma privé",
+      "summary": "Un plafond ciel étoilé avec fond acoustique pour un cinéma privé.",
+      "hook": "Un cinéma privé sous un ciel nocturne scintillant, accordé au son du film.",
+      "description": [
+        "Des centaines de points en fibre optique composent un ciel nocturne scintillant au-dessus des fauteuils, tandis qu'un fond acoustique garde la salle maîtrisée pour le son du film — ambiance et performance réunies dans un seul plafond."
+      ],
+      "highlights": [
+        "Ciel étoilé en fibre optique",
+        "Fond acoustique pour le son du film",
+        "Ambiance et performance dans un seul plafond"
+      ],
+      "materials": [
+        "Plafond STRETCH ciel étoilé",
+        "Champ d'étoiles en fibre optique",
+        "Fond acoustique absorbant"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Gand, Belgique"
+        },
+        {
+          "label": "Espace",
+          "value": "Cinéma privé"
+        }
+      ]
+    },
+    "city-penthouse-antwerp": {
+      "title": "Penthouse urbain",
+      "summary": "Un plafond décoratif impeccable pour un penthouse en ville.",
+      "hook": "Un plafond décoratif minimaliste et parfaitement plan pour un penthouse en ville.",
+      "description": [
+        "L'espace de vie du penthouse mise sur un plafond STRETCH sans soudure à éclairage intégré : le style reste minimaliste et la surface parfaite sur tout le plan ouvert."
+      ],
+      "highlights": [
+        "Plafond décoratif sans soudure",
+        "Éclairage intégré",
+        "Finition minimaliste et impeccable"
+      ],
+      "materials": [
+        "Plafond STRETCH en polyester",
+        "Éclairage intégré"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Anvers, Belgique"
+        },
+        {
+          "label": "Espace",
+          "value": "Séjour du penthouse"
+        }
+      ]
+    },
+    "wellness-spa-bruges": {
+      "title": "Spa wellness",
+      "summary": "Un plafond rétroéclairé et résistant à l'humidité pour un spa.",
+      "hook": "Un plafond résistant à l'humidité, doucement lumineux, pour un espace bien-être.",
+      "description": [
+        "Le spa avait besoin d'un plafond qui supporte l'humidité et installe une ambiance apaisante. Un plafond STRETCH translucide et rétroéclairé diffuse une lueur douce au-dessus de l'espace bien-être et se nettoie d'un simple coup d'éponge, insensible à la vapeur et à l'humidité."
+      ],
+      "highlights": [
+        "Supporte l'humidité et la vapeur",
+        "Rétroéclairage doux et homogène",
+        "Se nettoie d'un coup d'éponge"
+      ],
+      "materials": [
+        "Plafond STRETCH translucide en PVC",
+        "Champ de rétroéclairage LED"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Bruges, Belgique"
+        },
+        {
+          "label": "Espace",
+          "value": "Spa / bien-être"
+        }
+      ]
+    },
+    "rue-perree-paris": {
+      "title": "Rue Perrée",
+      "summary": "Un plafond lumineux pour une galerie multimarques à Paris.",
+      "hook": "Une lumière homogène, digne d'une galerie, dans un showroom multimarques — luminaires hors de vue.",
+      "description": [
+        "Chez ART RECHERCHE INDUSTRIE, rue Perrée à Paris — une galerie qui présente plusieurs marques — un plafond STRETCH lumineux diffuse une nappe de lumière homogène, sans points chauds, sur tout l'espace. Le champ de LED étant dissimulé derrière une membrane translucide, ce sont les pièces exposées qui restent au centre de l'attention, pas les luminaires."
+      ],
+      "highlights": [
+        "Éclairage homogène, sans points chauds",
+        "Champ de LED entièrement dissimulé",
+        "Rendu des couleurs digne d'une galerie"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Rue Perrée, Paris (FR)"
+        },
+        {
+          "label": "Espace",
+          "value": "Galerie multimarques"
+        }
+      ]
+    }
+  },
+  "blogPosts": {
+    "posts": {
+      "what-is-a-stretch-ceiling": {
+        "title": "Qu'est-ce qu'un plafond tendu ? Le guide simple",
+        "excerpt": "Un plafond tendu est une fine membrane tendue d'un mur à l'autre et clipsée dans un discret profilé périphérique — posée à froid ou à chaud, en une seule journée. Voici comment cela fonctionne et où cela a du sens.",
+        "body": [
+          {
+            "heading": "La version courte",
+            "paragraphs": [
+              "Un plafond tendu est une membrane fine et sans soudure — polyester tricoté ou film PVC calandré — tendue à travers la pièce et clipsée dans un profilé discret fixé au pourtour des murs. Le résultat ressemble à un plafond parfaitement plan et fraîchement peint, mais sans plâtre, sans ponçage et sans peinture.",
+              "Comme la membrane est fixée à un cadre plutôt que directement à la structure au-dessus, elle dissimule complètement tuyauteries, câblages, béton irrégulier et anciens plafonds — et elle se pose en une seule journée, dans une pièce qui reste meublée et utilisable."
+            ]
+          },
+          {
+            "heading": "Pose à froid ou pose à chaud",
+            "paragraphs": [
+              "Les membranes polyester sont tendues à froid : ni chaleur, ni émanations, ni temps de séchage. Elles offrent une finition profonde, très mate, et couvrent jusqu'à 5.15 m sans soudure.",
+              "Les films PVC sont chauffés pendant la pose pour se détendre, puis se retendent en refroidissant jusqu'à une surface impeccable. Le PVC est entièrement recyclable, démontable pour accéder aux techniques au-dessus, et couvre jusqu'à 5.7 m sans soudure — l'option la plus large."
+            ]
+          },
+          {
+            "heading": "Tout ce que vous pouvez y intégrer",
+            "paragraphs": [
+              "Un plafond tendu est bien plus qu'une finition. En version micro-perforée, doublée d'un absorbant haute densité, il atteint jusqu'à la classe A d'absorption acoustique et apaise les pièces qui résonnent. Les films translucides deviennent une source lumineuse homogène et dimmable, sans points chauds, et toute image — y compris un ciel étoilé en fibre optique — peut être imprimée bord à bord.",
+              "Des haut-parleurs peuvent même être entièrement dissimulés derrière la membrane, pour un son pur dont on ne voit pas la source. Et tout cela tient dans une seule surface sans soudure."
+            ]
+          },
+          {
+            "heading": "Où cela a du sens",
+            "paragraphs": [
+              "Les particuliers choisissent le plafond tendu pour le salon, la salle de bains ou le home cinéma ; les professionnels pour les bureaux, restaurants, studios, commerces et l'hôtellerie. Il convient au neuf comme à la rénovation, et le système PVC résiste parfaitement à l'humidité — un vrai atout dans les pièces d'eau.",
+              "Envie de savoir s'il convient à votre projet ? Demandez un devis gratuit et sans engagement : un spécialiste vous répond sous deux jours ouvrés."
+            ]
+          }
+        ]
+      },
+      "stretch-ceiling-acoustics-explained": {
+        "title": "L'acoustique des plafonds tendus, expliquée simplement",
+        "excerpt": "Une membrane tendue micro-perforée doublée d'un absorbant haute densité peut atteindre jusqu'à la classe A d'absorption acoustique — sans le moindre panneau acoustique visible. Voici comment cela fonctionne et ce que signifient αw et NRC.",
+        "body": [
+          {
+            "heading": "Pourquoi certaines pièces sonnent dur",
+            "paragraphs": [
+              "Les surfaces dures et planes — verre, béton, plaques de plâtre — renvoient le son dans la pièce. Ces réflexions s'accumulent en réverbération : la parole devient plus difficile à suivre, la musique et le bruit de fond plus fatigants. La solution consiste à absorber une partie de cette énergie avant qu'elle ne rebondisse.",
+              "Traditionnellement, cela passe par des panneaux acoustiques ou des baffles visibles. Le plafond tendu vous permet de le faire de façon invisible."
+            ]
+          },
+          {
+            "heading": "Comment fonctionne un plafond tendu acoustique",
+            "paragraphs": [
+              "La face visible est une membrane micro-perforée : des milliers de minuscules perforations laissent le son traverser jusqu'à un absorbant haute densité en laine de polyester monté derrière. La pièce garde l'aspect d'un plafond impeccable et sans soudure, mais l'énergie sonore est captée au lieu d'être réfléchie.",
+              "Bien réalisé, ce système atteint jusqu'à la classe A d'absorption — la classification la plus élevée — sur toute la surface traitée."
+            ]
+          },
+          {
+            "heading": "Lire les chiffres : αw et NRC",
+            "paragraphs": [
+              "L'absorption acoustique se mesure sur une échelle de 0 (totalement réfléchissant) à 1 (totalement absorbant). En Europe, le chiffre de référence est le coefficient d'absorption pondéré αw, avec des classes allant de la classe A (αw ≥ 0.90) à la classe E. Le NRC (Noise Reduction Coefficient) est l'indice équivalent à valeur unique, plus courant en Amérique du Nord.",
+              "Quand vous comparez des produits acoustiques, ce sont ces chiffres qu'il faut chercher — αw, la classe d'absorption et le NRC — plutôt que de vagues promesses d'« insonorisation »."
+            ]
+          },
+          {
+            "heading": "Là où il fait la différence",
+            "paragraphs": [
+              "Studios d'enregistrement, home cinémas, bureaux paysagers, restaurants, salles de classe et espaces de santé : tous y gagnent. Le même système se décline en îlots acoustiques suspendus et en panneaux muraux décoratifs là où un plafond complet n'est pas possible.",
+              "Vous luttez contre la réverbération dans une pièce précise ? Demandez un devis en indiquant les dimensions et l'usage — nous vous conseillerons l'absorbant et la finition adaptés."
+            ]
+          }
+        ]
+      }
+    },
+    "chrome": {
+      "readMinutes": "{count} min de lecture",
+      "publishedOn": "Publié",
+      "updatedOn": "Mis à jour",
+      "backToBlog": "Tous les guides",
+      "eyebrow": "Guides",
+      "ctaTitle": "Vous pensez à un plafond tendu ?",
+      "ctaBody": "Recevez un devis gratuit et sans engagement pour votre espace.",
+      "ctaBtn": "Demander un devis gratuit"
+    }
+  },
+  "inspirationPage": {
+    "eyebrow": "Inspiration",
+    "title1": "De vraies pièces,",
+    "title2a": "de vrais",
+    "title2b": "projets",
+    "browseEyebrow": "Parcourir par solution",
+    "allEyebrow": "Tous les projets",
+    "portfolioTitle": "Le portfolio",
+    "ctaTitle": "Imaginez-le dans votre espace",
+    "quoteCta": "Demander un devis gratuit",
+    "exploreCta": "Découvrir les solutions",
+    "showing": "{count} affichés",
+    "filterAria": "Filtrer les projets",
+    "filters": [
+      "Tous",
+      "Acoustique",
+      "Habitat",
+      "Salle de bains",
+      "Bureau",
+      "Commercial",
+      "Home cinéma",
+      "Lumière & impression"
+    ],
+    "browse": [
+      {
+        "label": "Acoustique",
+        "desc": "Studios, bureaux & pièces calmes"
+      },
+      {
+        "label": "Lumière & impression",
+        "desc": "Plafonds rétroéclairés & imprimés"
+      },
+      {
+        "label": "Habitat",
+        "desc": "Maisons & intérieurs privés"
+      },
+      {
+        "label": "Salle de bains",
+        "desc": "Résistant à l'humidité & préfabriqué"
+      },
+      {
+        "label": "Bureau",
+        "desc": "Confort acoustique au travail"
+      },
+      {
+        "label": "Commercial",
+        "desc": "Commerces, hôtels & salles"
+      }
+    ]
+  },
+  "projectPage": {
+    "crumbInspiration": "Inspiration",
+    "materialsTitle": "Produits & matériaux utilisés",
+    "detailsTitle": "Détails du projet",
+    "solutionsUsed": "Solutions utilisées",
+    "similarCta": "Démarrer un projet similaire",
+    "gallery": "Galerie",
+    "faqTitle": "Questions fréquentes",
+    "allProjects": "Tous les projets",
+    "exploreSolutions": "Découvrir les solutions",
+    "photo": "photo"
+  },
+  "reviewsData": {
+    "items": [
+      {
+        "role": "Propriétaire · Anvers",
+        "quote": "Ils ont posé le plafond de notre salon en une seule journée, sans la moindre saleté. La finition mate ressemble exactement à un plâtre frais — nous sommes vraiment ravis."
+      },
+      {
+        "role": "Architecte · Gand",
+        "quote": "Je prescris désormais STRETCH pour les plafonds acoustiques. La pièce se lit comme une seule surface nette et la réverbération a disparu — les clients remarquent toujours la différence."
+      },
+      {
+        "role": "Entrepreneur · Sint-Niklaas",
+        "quote": "Grâce à la formation, mon équipe a rapidement su poser, et la fourniture sur mesure est fiable. Devenir partenaire a ajouté un tout nouveau service à notre activité."
+      }
+    ]
+  },
+  "partnersPage": {
+    "crumb": "Partenaires",
+    "hero": {
+      "eyebrow": "Pour les professionnels",
+      "title": "Devenez partenaire de",
+      "lead": "Deux façons de travailler avec nous : vendre nos plafonds comme produit fini et laisser notre réseau les poser, ou vous former et les poser vous-même. Dans les deux cas, vous bénéficiez de tarifs professionnels, d'une fabrication sur mesure en Belgique et de leads locaux qui vous sont transmis.",
+      "ctaApply": "Devenir partenaire",
+      "ctaCall": "Réserver un appel",
+      "imageAlt": "Un partenaire installateur STRETCH au travail",
+      "statLabel": "Posés par équipe / jour"
+    },
+    "models": {
+      "eyebrow": "Deux façons de devenir partenaire",
+      "title": "Revendeur ou installateur-revendeur — choisissez le modèle adapté à votre activité.",
+      "lead": "La différence est simple : le revendeur vend le plafond et nous en confie la pose ; l'installateur-revendeur vend et pose lui-même, après avoir suivi notre formation.",
+      "bestForLabel": "Idéal pour :",
+      "reseller": {
+        "kicker": "Revendeur",
+        "title": "Vous vendez. Nous posons.",
+        "body": "Vous vendez un plafond STRETCH comme produit fini et posé à votre client. Avec notre réseau d'installateurs-revendeurs, nous assurons la pose à vos côtés — vous vous concentrez sur la vente et la relation client.",
+        "points": [
+          "Vous vendez à votre client le plafond fini et posé",
+          "Nous le posons pour vous, via notre réseau certifié d'installateurs-revendeurs",
+          "Aucune équipe ni compétence de pose nécessaire chez vous",
+          "Tarifs professionnels, visuels produits et leads locaux transmis"
+        ],
+        "bestFor": "architectes d'intérieur, architectes, showrooms cuisine et salle de bains et entrepreneurs qui veulent proposer des plafonds sans les poser.",
+        "cta": "Devenir revendeur"
+      },
+      "dealer": {
+        "kicker": "Installateur-revendeur",
+        "badge": "Formation requise",
+        "title": "Vous vendez et vous posez.",
+        "body": "Vous vendez les produits STRETCH dans vos propres projets et réalisez la pose vous-même. Pour devenir installateur-revendeur certifié, votre installateur suit d'abord notre formation pratique à notre siège.",
+        "points": [
+          "Vous vendez les produits STRETCH dans vos propres projets",
+          "Vous réalisez la pose vous-même",
+          "Votre installateur suit d'abord notre formation pratique",
+          "Commandez sur mesure auprès de notre atelier belge"
+        ],
+        "bestFor": "installateurs, entreprises d'aménagement et spécialistes de la cloison sèche qui veulent ajouter les plafonds tendus à leur propre capacité de pose.",
+        "cta": "Devenir installateur-revendeur",
+        "trainingLink": "Découvrir la formation"
+      }
+    },
+    "compare": {
+      "resellerHead": "Revendeur",
+      "dealerHead": "Installateur-revendeur",
+      "rows": [
+        {
+          "label": "Ce que vous vendez",
+          "reseller": "Un plafond fini et posé",
+          "dealer": "Les produits dans vos propres projets"
+        },
+        {
+          "label": "Qui pose",
+          "reseller": "Nous — via notre réseau d'installateurs-revendeurs",
+          "dealer": "Vous, vous-même"
+        },
+        {
+          "label": "Formation",
+          "reseller": "Non requise",
+          "dealer": "Requise — formation pratique"
+        },
+        {
+          "label": "Convient surtout à",
+          "reseller": "Designers, showrooms, entrepreneurs",
+          "dealer": "Installateurs & entreprises d'aménagement"
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Ce que chaque partenaire reçoit",
+      "titleA": "Plus de marge,",
+      "titleB": "moins de tracas",
+      "lead": "Quel que soit le modèle choisi, nous gérons le produit et la chaîne d'approvisionnement — vous livrez un plafond haut de gamme que vos clients adorent.",
+      "cards": [
+        {
+          "title": "Marges solides",
+          "body": "Tarifs professionnels sur les membranes et profilés sur mesure, avec de belles marges sur un produit haut de gamme et recherché."
+        },
+        {
+          "title": "Leads transmis",
+          "body": "Nous transmettons les demandes de clients locaux aux partenaires de leur région — de vrais projets, pas seulement une liste de prix."
+        },
+        {
+          "title": "Commandes B2B",
+          "body": "Commandez confectionné aux dimensions auprès de notre atelier belge via un portail partenaire dédié, avec des délais fiables."
+        },
+        {
+          "title": "Fabriqué en Belgique",
+          "body": "Des membranes faites main, conçues en Belgique et couvertes par une longue garantie produit que vous pouvez défendre."
+        },
+        {
+          "title": "Formation pratique",
+          "body": "Pour les installateurs-revendeurs : certifiez votre équipe à notre siège en quelques jours — confection, profilés, pose à froid & à chaud, lumière et acoustique."
+        },
+        {
+          "title": "Support marketing",
+          "body": "Visuels produits, échantillons et supports de vente pour décrocher et conclure vos chantiers de plafonds tendus."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "Comment ça marche",
+      "title": "Un chemin court vers la vente de plafonds tendus — à votre façon.",
+      "resellerPath": "Parcours revendeur",
+      "dealerPath": "Parcours installateur-revendeur",
+      "resellerSteps": [
+        {
+          "title": "Candidatez comme revendeur",
+          "body": "Envoyez une courte candidature. Nous examinons chacune personnellement et organisons un appel pour comprendre votre activité."
+        },
+        {
+          "title": "Lancez-vous",
+          "body": "Tarifs professionnels, échantillons et supports de vente — aucune formation nécessaire. Commencez tout de suite à chiffrer des plafonds tendus."
+        },
+        {
+          "title": "Vous vendez — nous posons",
+          "body": "Vous concluez la vente et gardez la relation client ; avec nos installateurs-revendeurs, nous posons le plafond, dans les délais et selon le cahier des charges."
+        }
+      ],
+      "dealerSteps": [
+        {
+          "title": "Candidatez comme installateur-revendeur",
+          "body": "Envoyez une courte candidature. Nous examinons chacune personnellement et organisons un appel pour comprendre votre activité."
+        },
+        {
+          "title": "Formez-vous & certifiez-vous",
+          "body": "Votre équipe suit notre formation pratique au siège : confection, profilés, pose à froid & à chaud, lumière et acoustique."
+        },
+        {
+          "title": "Commandez & posez",
+          "body": "Commandez sur mesure, posez vous-même en une journée et recevez les leads locaux transmis au fil de l'eau."
+        }
+      ]
+    },
+    "apply": {
+      "eyebrow": "Devenez partenaire",
+      "titleA": "Candidatez",
+      "titleB": "dès aujourd'hui",
+      "lead": "Dites-nous si vous voulez revendre ou poser — nous nous occupons du reste.",
+      "points": [
+        "Nous examinons chaque candidature personnellement",
+        "Territoire exclusif là où c'est possible",
+        "Intégration en quelques semaines"
+      ]
+    }
+  },
+  "trainingPage": {
+    "crumb": "Formation installateur",
+    "courseName": "Certification installateur STRETCH",
+    "courseDescription": "Certification pratique d'installateur de plafonds tendus au siège de STRETCH en Belgique : confection de la membrane, profilés, pose à froid & à chaud, lumière, acoustique, finitions et chiffrage.",
+    "hero": {
+      "eyebrow": "Formation installateur",
+      "titleA": "Posez comme un pro",
+      "titleB": "en",
+      "titleC": "jours",
+      "lead": "Certification pratique à notre siège belge. Apprenez la confection de la membrane, les profilés, la pose à froid & à chaud, la lumière et l'acoustique — aucune expérience préalable requise.",
+      "ctaBook": "Réserver votre formation",
+      "ctaDates": "Voir les dates",
+      "imageLabel": "Photo formation / atelier"
+    },
+    "format": [
+      {
+        "value": "2–3",
+        "label": "Jours de pratique"
+      },
+      {
+        "value": "Siège",
+        "label": "Beveren-Waas, Belgique"
+      },
+      {
+        "value": "1:4",
+        "label": "Ratio formateur-installateurs"
+      }
+    ],
+    "curriculum": {
+      "eyebrow": "Ce que vous apprendrez",
+      "title": "Tout le métier",
+      "lead": "Du rouleau de membrane au plafond fini, éclairé et acoustique — avec les compétences commerciales pour le vendre.",
+      "items": [
+        {
+          "title": "Membrane & confection",
+          "body": "Comment les membranes polyester et PVC sont mesurées, découpées et soudées aux dimensions à l'atelier."
+        },
+        {
+          "title": "Profilés périphériques",
+          "body": "Tracer et fixer les profilés à clipser parfaitement de niveau — la base d'un plafond impeccable."
+        },
+        {
+          "title": "Pose à froid & à chaud",
+          "body": "Tendre correctement les deux systèmes : polyester à froid et film PVC chauffé, de A à Z."
+        },
+        {
+          "title": "Lumière & acoustique",
+          "body": "Intégrer rétroéclairage, lignes LED, films imprimés et fond acoustique absorbant."
+        },
+        {
+          "title": "Finitions & accès",
+          "body": "Finitions périphériques nettes, découpes pour les équipements et trappes de visite discrètes."
+        },
+        {
+          "title": "Chiffrage & vente",
+          "body": "Métrer un chantier, chiffrer avec assurance et présenter les plafonds tendus aux clients."
+        }
+      ]
+    },
+    "dates": {
+      "eyebrow": "Prochaines dates",
+      "title": "Réservez votre place",
+      "lead": "Petits groupes, premiers inscrits, premiers servis. Sessions sur site personnalisées disponibles sur demande.",
+      "onRequestTitle": "Sur demande",
+      "onRequestNote": "Session sur site personnalisée"
+    },
+    "book": {
+      "eyebrow": "Planifiez votre formation",
+      "titleA": "Réservez une",
+      "titleB": "place",
+      "includedLabel": "Inclus",
+      "included": [
+        "Certificat de fin de formation",
+        "Kit de démarrage installateur",
+        "Déjeuner & matériel sur place"
+      ]
+    }
+  },
+  "aboutPage": {
+    "crumb": "À propos",
+    "hero": {
+      "eyebrow": "À propos de STRETCH",
+      "titleA": "Fait main",
+      "titleB": "en",
+      "titleC": "Belgique",
+      "lead": "{name} conçoit et fabrique des plafonds et murs tendus sans soudure — mis au point en Belgique, posés en une journée et faits pour durer des décennies.",
+      "imageAlt": "L'atelier et l'équipe STRETCH"
+    },
+    "stats": [
+      {
+        "label": "Fondée",
+        "sub": "Des plafonds sans soudure depuis le premier jour."
+      },
+      {
+        "value": "25 ans",
+        "label": "Garantie",
+        "sub": "Sur nos membranes faites main."
+      },
+      {
+        "value": "4",
+        "label": "Bureaux",
+        "sub": "Belgique, États-Unis, Pologne & Autriche."
+      }
+    ],
+    "story": {
+      "eyebrow": "Notre histoire",
+      "p1": "{name} a été fondée en {founded} avec une conviction simple : un plafond doit être une finition qui se remarque pour les bonnes raisons. Les plafonds traditionnels en plâtre se fissurent, se tachent et exigent des jours de travaux salissants pour être posés et repeints. Une membrane tendue, non — elle se pose proprement, parfaitement plane et sans soudure, souvent en une seule journée.",
+      "p2": "Tout commence dans notre atelier belge, où les membranes polyester et PVC sont mesurées, découpées et soudées aux dimensions à la main. C'est cette confection sur mesure qui permet à un plafond fini de se clipser si vite sur chantier, sans poussière et sans repeindre.",
+      "p3": "Aujourd'hui, nous travaillons principalement via un réseau de partenaires professionnels et d'installateurs certifiés, en fournissant des systèmes sur mesure, une formation pratique et des leads locaux transmis. Des studios d'enregistrement aux salles événementielles, des salles de bains au retail, nos systèmes apportent lumière, maîtrise acoustique et surface impeccable à des espaces dans toute l'Europe et au-delà.",
+      "p4": "Nous sommes une entreprise avant tout B2B, avec des bureaux en Belgique, aux États-Unis, en Pologne et en Autriche — mais chaque membrane porte toujours la même promesse : faite main en Belgique, avec une garantie de 25 ans."
+    },
+    "offices": {
+      "eyebrow": "Où nous trouver"
+    },
+    "cta": {
+      "title": "Construisons ensemble, sans soudure.",
+      "button": "Demander un devis gratuit"
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "titleA": "Parlons",
+    "titleB": "plafonds",
+    "cards": {
+      "call": {
+        "label": "Appelez-nous"
+      },
+      "email": {
+        "label": "Écrivez-nous",
+        "sub": "Réponse personnalisée sous 2 jours"
+      },
+      "chat": {
+        "label": "WhatsApp / Telegram",
+        "value": "Discutez avec nous",
+        "sub": "Questions rapides, réponses rapides"
+      }
+    },
+    "formTitle": "Envoyez-nous un message",
+    "formLead": "Parlez-nous de votre projet ou de votre question. Un spécialiste vous répond sous deux jours ouvrés.",
+    "mapLabel": "Atelier / plan",
+    "mapAlt": "Atelier STRETCH",
+    "hqKicker": "Siège social",
+    "hqLocation": "{postalCode} {city}, Belgique",
+    "officesEyebrow": "Nos bureaux",
+    "dealerTitle": "Vous préférez un revendeur local ?",
+    "dealerBody": "Nous orientons les demandes résidentielles vers des installateurs certifiés de votre région — demandez-nous et nous vous mettons en relation.",
+    "dealerCta": "Trouvez le revendeur le plus proche",
+    "form": {
+      "subjects": [
+        "Demander un devis",
+        "Trouver un revendeur",
+        "Partenariat",
+        "Formation installateur",
+        "Autre"
+      ],
+      "timelines": [
+        "Dès que possible",
+        "D’ici 1–3 mois",
+        "D’ici 4–12 mois",
+        "Je me renseigne simplement"
+      ],
+      "timelineLabel": "Délai",
+      "consentPrefix": "J’accepte que STRETCH traite mes données pour répondre à ma demande, comme décrit dans la",
+      "consentPrivacy": "politique de confidentialité",
+      "submit": "Envoyer le message"
+    }
+  },
+  "datasheetsPage": {
+    "eyebrow": "Fiches techniques",
+    "crumb": "Fiches",
+    "titleA": "Caractéristiques &",
+    "titleB": "fiches techniques",
+    "lead": "Téléchargez la documentation technique de chaque système STRETCH — spécifications, classements au feu, classes acoustiques et détails de garantie. Saisissez vos coordonnées une fois par téléchargement et le fichier démarre immédiatement.",
+    "updated": "Mis à jour le {date}",
+    "privacyNote": "Nous vous demandons votre nom, votre e-mail et votre téléphone afin qu’un spécialiste puisse répondre à vos questions techniques. Vos données sont traitées conformément à notre",
+    "privacyLink": "politique de confidentialité"
+  },
+  "samplesPage": {
+    "eyebrow": "Échantillons de couleur",
+    "crumb": "Échantillons",
+    "titleA": "Découvrez les",
+    "titleB": "couleurs",
+    "lead": "Commandez des échantillons physiques RAL et couleur de nos membranes polyester, PVC et acoustiques — gratuits pour les professionnels, livrés à votre porte.",
+    "points": [
+      "Teintes standard et tout RAL sur mesure",
+      "Finitions polyester, PVC & acoustiques",
+      "Expédiés sous deux jours ouvrés"
+    ]
+  },
+  "blogPage": {
+    "eyebrow": "Guides & conseils",
+    "crumb": "Guides",
+    "titleA": "Les plafonds tendus,",
+    "titleB": "expliqués",
+    "postMeta": "{date} · {minutes} min de lecture",
+    "readArticle": "Lire l’article"
+  },
+  "inlineLead": {
+    "consentPrefix": "J’accepte que STRETCH traite mes données pour répondre à ma demande, comme décrit dans la",
+    "consentPrivacy": "politique de confidentialité"
   }
 }

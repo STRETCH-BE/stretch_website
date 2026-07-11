@@ -2373,5 +2373,1005 @@
     "shippedWorldwide": "Sendes til hele verden",
     "ctaTitle": "Har du et projekt til os?",
     "ctaBody": "Send os tegningerne eller idéen — vi konstruerer strukturen, bygger den i eget hus og sender den til dig."
+  },
+  "projects": {
+    "da-tweekaz-studio": {
+      "title": "Da Tweekaz Studio",
+      "summary": "Akustisk spændloft og vægge til et musikproduktionsstudie.",
+      "hook": "Et rent, akustisk kontrolleret rum til et af hardstyle-scenens mest kendte navne.",
+      "description": [
+        "I Da Tweekaz' indspilningsstudie i Nederlandene behandler et akustisk STRETCH-system både loftet og væggene. Refleksionerne holdes under kontrol, så rummet forbliver præcist at arbejde i — med en sømløs, moderne finish og ingen synlige paneler over hovedet."
+      ],
+      "highlights": [
+        "Akustisk behandling af loft og vægge",
+        "Sømløs finish uden paneler"
+      ],
+      "materials": [
+        "Akustisk STRETCH-loft",
+        "STRETCH Acoustic tekstil (vægge)"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Nederlandene"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Q82 Acoustics"
+        }
+      ]
+    },
+    "mark-with-a-k": {
+      "title": "Mark With a K",
+      "summary": "Akustisk behandling af en DJ og producers lydrum.",
+      "hook": "Et fejlfrit, akustisk kontrolleret rum til en belgisk DJ og producer.",
+      "description": [
+        "Et sømløst akustisk STRETCH-loft absorberer efterklangen i produktionsrummet og bevarer samtidig en fejlfri, moderne finish. Resultatet er et roligt, kontrolleret rum at arbejde i, hvor den akustiske ydeevne er skjult inde i membranen."
+      ],
+      "highlights": [
+        "Sømløst akustisk loft",
+        "Skjult absorberende bagside",
+        "Moderne finish uden paneler"
+      ],
+      "materials": [
+        "Akustisk STRETCH-loft",
+        "Absorberende bagside med høj densitet"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgien"
+        },
+        {
+          "label": "Rum",
+          "value": "Musikproduktionsstudie"
+        }
+      ]
+    },
+    "notary-ampe-anthony": {
+      "title": "Notarkontoret Ampe Anthony",
+      "summary": "350 m² akustiske spændlofter i et eksklusivt notarkontor.",
+      "hook": "En komplet eksklusiv kontorindretning, hvor hårde, reflekterende materialer skulle tæmmes — uden at miste det skarpe, minimalistiske look.",
+      "description": [
+        "I 2019 blev notarkontoret Ampe Anthony i Kruibeke genopbygget fra bunden som et eksklusivt interiør med et bevidst skarpt, minimalistisk look — polerede betongulve, stålvinduesrammer og masser af hårde overflader. Der blev ikke sparet på noget for at få finishen perfekt.",
+        "De hårde materialer gjorde kontoret akustisk meget levende. For at bringe det tilbage til et behageligt niveau fik hele interiøret et akustisk STRETCH-loft med en dedikeret absorbent af polyesteruld monteret mod det eksisterende betondæk, hvilket løfter den akustiske ydeevne til et højt niveau.",
+        "Loftet blev sænket 10 cm for at skjule alle tekniske installationer ovenover, så der blev en højde på 260 cm tilbage. For at få rummet til at føles højere og større byggede vi store elliptiske forsænkninger ind i loftet — et optisk trick, der synligt løfter rummet."
+      ],
+      "highlights": [
+        "Efterklangstid målt til 0.6 s",
+        "Store elliptiske loftsforsænkninger for en højere fornemmelse",
+        "Dedikeret absorbent af polyesteruld bag membranen"
+      ],
+      "materials": [
+        "Akustisk STRETCH-loft",
+        "Buede specialfremstillede aluminiumsrammer",
+        "Absorbent af polyesteruld D40/50 (40 kg/m³, 50 mm)",
+        "STRETCH Design-loft i den elliptiske form",
+        "Hvide PVC-spændprofiler langs kanten",
+        "Belysning: Wever & Ducré, Delta Light"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Waasland (Kruibeke)"
+        },
+        {
+          "label": "År",
+          "value": "2018"
+        },
+        {
+          "label": "Areal",
+          "value": "350 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Ante Architecten"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Corpus Interieur"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hvor lang tid tog monteringen?",
+          "a": "Montering af de akustiske lofter, al belysningen og specialfinisherne tog 7 hverdage."
+        },
+        {
+          "q": "Hvilken efterklangstid blev opnået?",
+          "a": "Målt efter monteringen nåede kontoret en efterklangstid på 0.6 s — interiøret er, og føles, meget stille."
+        },
+        {
+          "q": "Hvor mange montører arbejdede på projektet?",
+          "a": "Et hold på 2 STRETCH-montører udførte hele loftpakken: membranen, belysningen, akustikpanelerne, loftssnedkerarbejdet og de elliptiske strukturer."
+        },
+        {
+          "q": "Hvor længe holder loftet?",
+          "a": "Som med ethvert spændloft afhænger levetiden af rengøringen, men det holder let omkring 25 år. Derefter er det kun membranen, der eventuelt skal udskiftes — den eksisterende ramme bliver siddende."
+        }
+      ]
+    },
+    "bnp-paribas-fortis": {
+      "title": "BNP Paribas Fortis",
+      "summary": "2,000 m² oplyste og akustiske lofter i bankens hovedsæde i Bruxelles.",
+      "hook": "Oplyste og akustiske STRETCH-lofter i bankens nye hovedsæde Montagne du Parc — inklusive en food court over flere etager.",
+      "description": [
+        "I BNP Paribas Fortis' hovedsæde i det centrale Bruxelles leverede STRETCH omkring 2,000 m² oplyste (STRETCH Light) og akustiske (STRETCH Acoustic) lofter i samarbejde med Jaspers-Eyers Architects og NCBHAM sammen med partneren Conceptexpo.",
+        "Et højdepunkt er food courten Barista Bar, som tager imod medarbejdere og besøgende over flere etager. Hot Corner serverer varme retter under et loft af messinglameller, der leder tanken hen på flammer; Fresh Corner byder på salater en etage oppe; og Sweet Corner runder af med desserter — hver disk er spejlet, så et helt måltid kan sammensættes hvor som helst."
+      ],
+      "highlights": [
+        "≈2,000 m² spændlofter",
+        "STRETCH Light + Acoustic kombineret",
+        "Barista Bar food court over flere etager",
+        "Effektloft med messinglameller som “flammer”"
+      ],
+      "materials": [
+        "STRETCH Light-loft (oplyst)",
+        "STRETCH Acoustic-loft",
+        "Buede loftsektioner",
+        "Integreret belysning"
+      ],
+      "facts": [
+        {
+          "label": "Beliggenhed",
+          "value": "Bruxelles (Montagne du Parc)"
+        },
+        {
+          "label": "Areal",
+          "value": "2,000 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Jaspers-Eyers & NCBHAM"
+        },
+        {
+          "label": "Partner",
+          "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-beveren": {
+      "title": "Van der Valk",
+      "summary": "Maksimal lydabsorption i et hotels eventsal — med næsten ingen højde at give af.",
+      "hook": "Et akustisk problem, der i årevis havde plaget hotellets eventsal, løst gennem loftet.",
+      "description": [
+        "Tim van der Valk henvendte sig til STRETCH med et akustisk problem, der havde påvirket deres eventområde i flere år. Efter at have talt det igennem med Michael Nicasens fra STRETCH konkluderede vi, at løsningen skulle komme fra loftet — men det eksisterende loft var kun 255 cm højt, så der var meget lidt plads til et system.",
+        "Derfor foreslog vi en systemhøjde på 50 mm, der alligevel når αw 0.95: maksimal lydabsorption med kun et minimalt tab af loftshøjde. De store eventsale er spændt sømløst op, med den akustiske ydeevne indbygget i membranen og detaljerne — lemme, belysning, sensorer og en stjernehimmel — rent integreret over hovedet."
+      ],
+      "highlights": [
+        "αw 0.95 lydabsorption",
+        "Kun 50 mm systemhøjde",
+        "Integrerede tekniske adgangslemme",
+        "Belysning & tilstedeværelsessensorer",
+        "Stjernehimmel",
+        "Sømløs finish omkring søjler"
+      ],
+      "materials": [
+        "Akustisk STRETCH-loft (50 mm system)",
+        "Integrerede tekniske lemme",
+        "Integreret belysning",
+        "Tilstedeværelsessensorer",
+        "Stjernehimmel-installation",
+        "Spændprofiler langs kanten"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Region",
+          "value": "Beveren-Waas"
+        },
+        {
+          "label": "Eksisterende højde",
+          "value": "255 cm"
+        },
+        {
+          "label": "Systemhøjde",
+          "value": "50 mm"
+        },
+        {
+          "label": "Akustisk værdi",
+          "value": "αw 0.95"
+        }
+      ]
+    },
+    "johnson-and-johnson": {
+      "title": "Johnson & Johnson",
+      "summary": "Et printet, oplyst loft til et farmaceutisk F&U-anlæg.",
+      "hook": "Et reflekterende, innovativt loft- og lysdesign, der afspejler Johnson & Johnsons forskning i bedre syn.",
+      "description": [
+        "STRETCH samarbejdede med Van Dijk Architects og indretningsfirmaet Glennwood om loft- og lysdesignet til Johnson & Johnsons nye anlæg i Limerick City, Irland. Opgaven lød på et reflekterende, innovativt loft, der matchede bygningens forsknings- og udviklingsmål omkring bedre syn.",
+        "Det printede og oplyste STRETCH-loft løber gennem hele bygningen, giver hvert område sit eget fokus og fungerer som visuel guide for folk, der bevæger sig gennem rummet. Moderne lysløsninger fremhæver både designet og det færdige udtryk."
+      ],
+      "highlights": [
+        "Specialprint gennem hele bygningen",
+        "Belysning til fokus og wayfinding",
+        "Reflekterende, F&U-inspireret design"
+      ],
+      "materials": [
+        "Printet STRETCH-loft",
+        "Oplyst (bagbelyst) STRETCH-loft",
+        "Integreret belysning"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Limerick, Irland"
+        },
+        {
+          "label": "År",
+          "value": "2019"
+        },
+        {
+          "label": "Areal",
+          "value": "60 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Van Dijk Architects"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Glennwood"
+        }
+      ]
+    },
+    "polette-eyewear": {
+      "title": "Polette Eyewear",
+      "summary": "Et aldrig før set retailkoncept af arkitekten Javier Zubiria.",
+      "hook": "En butik, du kan spille på som et musikinstrument — en hyldest til fred, kærlighed og fællesskab.",
+      "description": [
+        "Antwerpen, 2022. Efter succesen med showroomet i Paris slog polette sig igen sammen med Javier Zubiria, grundlægger af Amsterdam-studiet zU-Studio, for at bringe et aldrig før set retailkoncept til Antwerpen. Briefen begyndte med en enkelt sang — John Lennons “Imagine” — og ønsket om at bygge et sted for forbindelse og kreativitet efter år med afstand.",
+        "Besøgende mødes af to gigantiske klaviaturer, ét i hver side, hver med 88 tangenter. De hvide tangenter er spejle fra gulv til loft, der skaber en følelse af uendelighed; de sorte tangenter fungerer samtidig som hylder til polettes briller. I midten nikker en kæmpe hvid bænk til Lennons Bed-in-fredsprotest.",
+        "Over hovedet bærer loftet hovedattraktionen: en skulpturel klaverlågsform, skråt skåret gennem showroomets fulde 20 meters dybde og bygget som et oplyst, lysgennemtrængeligt STRETCH-loft. Hver tangent virker også — et sensorsystem lyser den næste tangent op, så besøgende kan spille en sang sammen i rummet."
+      ],
+      "highlights": [
+        "Oplyst, lysgennemtrængelig loftsskulptur",
+        "Klaverlågsform gennem hele de 20 m dybde",
+        "Sensorstyret interaktivt tangentlys",
+        "Monteret på en enkelt arbejdsdag"
+      ],
+      "materials": [
+        "Akustisk, lysgennemtrængeligt STRETCH-loft",
+        "Skulpturel klaverlågs-loftsform",
+        "Integreret belysning",
+        "Sensorstyret tangentlys"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Antwerpen"
+        },
+        {
+          "label": "År",
+          "value": "2022"
+        },
+        {
+          "label": "Areal",
+          "value": "60 m²"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "zU-Studio · Javier Zubiria"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hvor lang tid tog monteringen?",
+          "a": "Montering af det akustiske, lysgennemtrængelige spændloft tog en enkelt arbejdsdag."
+        },
+        {
+          "q": "Hvor mange montører arbejdede på projektet?",
+          "a": "Et hold på 2 STRETCH-montører klarede hele opgaven — loftet og belysningen."
+        },
+        {
+          "q": "Hvor længe holder loftet?",
+          "a": "Som med ethvert spændloft afhænger levetiden af rengøringen, men det holder let omkring 25 år; derefter er det kun membranen, der eventuelt skal udskiftes, mens den eksisterende ramme bliver siddende."
+        }
+      ]
+    },
+    "citizenm-hotel": {
+      "title": "CitizenM Hotel",
+      "summary": "Præfabrikerede, bagbelyste badeværelseslofter udrullet på CitizenM-hotellerne.",
+      "hook": "Et gentageligt, bagbelyst badeværelsesloft, bygget off-site til hoteller på to kontinenter.",
+      "description": [
+        "Til CitizenMs modulhoteller leverede STRETCH præfabrikerede badeværelseslofter med en bagbelyst finish, der slipper lyset igennem – bygget off-site som gentagelige enheder og udrullet på lokationer i USA og Europa, fra New York og Chicago til Miami, Los Angeles med flere."
+      ],
+      "highlights": [
+        "Præfabrikation off-site",
+        "Bagbelyst finish, der slipper lyset igennem",
+        "Kan gentages i stor skala på mange hoteller"
+      ],
+      "materials": [
+        "Præfabrikeret STRETCH-badeværelsesenhed",
+        "STRETCH Backlit-membran (slipper lyset igennem)",
+        "Integreret belysning"
+      ],
+      "facts": [
+        {
+          "label": "Kontinenter",
+          "value": "USA & Europa"
+        },
+        {
+          "label": "Byer",
+          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+        },
+        {
+          "label": "Partner",
+          "value": "Saniskill"
+        }
+      ]
+    },
+    "london-chapel": {
+      "title": "Kapel i London",
+      "summary": "Et bagbelyst spændloft over et restaureret kapelrum.",
+      "hook": "Et restaureret kapel badet i blødt, jævnt lys fra ét lysende loft.",
+      "description": [
+        "Et translucent STRETCH-loft forvandler hele loftsfladen til én blød, jævn lyskilde: Det restaurerede interiør bades i blændfrit lys, mens LED-feltet forbliver helt skjult."
+      ],
+      "highlights": [
+        "Hele loftet som lyskilde",
+        "Blændfri, jævn belysning",
+        "LED-felt helt skjult"
+      ],
+      "materials": [
+        "Translucent STRETCH-loft",
+        "LED-bagbelysningsfelt"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "London, Storbritannien"
+        },
+        {
+          "label": "Rum",
+          "value": "Restaureret kapel"
+        }
+      ]
+    },
+    "private-villa-knokke": {
+      "title": "Privat villa",
+      "summary": "Et sømløst, mat loft til en kystvilla med åben planløsning.",
+      "hook": "Et sømløst loft, glat som perfekt puds, til et hjem ved kysten med åben planløsning.",
+      "description": [
+        "I villaens åbne opholdsrum fremstår et meget mat STRETCH-loft af polyester fra væg til væg som fejlfri puds – skarpt og moderne, uden de revner og skyggelinjer, der følger med et traditionelt loft."
+      ],
+      "highlights": [
+        "Sømløs finish fra væg til væg",
+        "Ingen revner eller skyggelinjer",
+        "Meget mat, pudslignende udtryk"
+      ],
+      "materials": [
+        "STRETCH-loft af polyester (meget mat)",
+        "Kantprofiler til opspænding"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Knokke, Belgien"
+        },
+        {
+          "label": "Rum",
+          "value": "Åbent opholdsrum"
+        }
+      ]
+    },
+    "home-cinema-ghent": {
+      "title": "Hjemmebiograf",
+      "summary": "Et stjernehimmelloft med akustisk bagbeklædning til en hjemmebiograf.",
+      "hook": "En privat biograf under en funklende nattehimmel, afstemt til filmlyd.",
+      "description": [
+        "Hundredvis af fiberoptiske punkter skaber en funklende nattehimmel over sæderne, mens en akustisk bagbeklædning holder rummet under kontrol til filmlyden – stemning og ydeevne forenet i ét loft."
+      ],
+      "highlights": [
+        "Fiberoptisk stjernehimmel",
+        "Akustisk bagbeklædning til filmlyd",
+        "Stemning og ydeevne i ét loft"
+      ],
+      "materials": [
+        "STRETCH-loft med stjernehimmel",
+        "Fiberoptisk stjernefelt",
+        "Akustisk absorberende bagbeklædning"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Gent, Belgien"
+        },
+        {
+          "label": "Rum",
+          "value": "Hjemmebiograf"
+        }
+      ]
+    },
+    "city-penthouse-antwerp": {
+      "title": "Penthouse i byen",
+      "summary": "Et fejlfrit designloft til en penthouse i byen.",
+      "hook": "Et minimalistisk, helt plant designloft til en penthouse i byen.",
+      "description": [
+        "Penthouselejlighedens opholdsrum bruger et sømløst STRETCH-loft med integreret belysning, så udtrykket forbliver minimalistisk og overfladen perfekt i hele den åbne planløsning."
+      ],
+      "highlights": [
+        "Sømløst designloft",
+        "Integreret belysning",
+        "Minimalistisk, fejlfri finish"
+      ],
+      "materials": [
+        "STRETCH-loft af polyester",
+        "Integreret belysning"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Antwerpen, Belgien"
+        },
+        {
+          "label": "Rum",
+          "value": "Penthouse-stue"
+        }
+      ]
+    },
+    "wellness-spa-bruges": {
+      "title": "Wellness-spa",
+      "summary": "Et fugtbestandigt, bagbelyst loft til en spa.",
+      "hook": "Et fugtbestandigt loft med et blødt skær til et wellnessområde.",
+      "description": [
+        "Spaen havde brug for et loft, der tåler fugt og skaber en rolig stemning. Et translucent, bagbelyst STRETCH-loft lyser blødt over wellnessområdet og kan tørres rent – upåvirket af damp og fugt."
+      ],
+      "highlights": [
+        "Tåler fugt og damp",
+        "Blødt, jævnt baglys",
+        "Kan tørres rent"
+      ],
+      "materials": [
+        "Translucent STRETCH-loft i PVC",
+        "LED-bagbelysningsfelt"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Brugge, Belgien"
+        },
+        {
+          "label": "Rum",
+          "value": "Spa / wellness"
+        }
+      ]
+    },
+    "rue-perree-paris": {
+      "title": "Rue Perrée",
+      "summary": "Et lysloft til et galleri med flere mærker i Paris.",
+      "hook": "Jævnt lys i gallerikvalitet i et showroom med flere mærker – armaturerne ude af syne.",
+      "description": [
+        "Hos ART RECHERCHE INDUSTRIE på Rue Perrée i Paris – et galleri, der viser flere mærker – giver et lysende STRETCH-loft et jævnt lys uden hotspots i hele rummet. Med LED-feltet skjult bag en translucent membran forbliver de udstillede værker i fokus – ikke armaturerne."
+      ],
+      "highlights": [
+        "Jævn belysning uden hotspots",
+        "LED-felt helt skjult",
+        "Farvegengivelse i gallerikvalitet"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Rue Perrée, Paris (FR)"
+        },
+        {
+          "label": "Rum",
+          "value": "Galleri med flere mærker"
+        }
+      ]
+    }
+  },
+  "blogPosts": {
+    "posts": {
+      "what-is-a-stretch-ceiling": {
+        "title": "Hvad er et spændloft? En enkel guide",
+        "excerpt": "Et spændloft er en tynd membran, der spændes ud over rummet og klikkes fast i en slank kantprofil — monteret koldt eller med varme, på en enkelt dag. Her er, hvordan det virker, og hvor det giver mening.",
+        "body": [
+          {
+            "heading": "Den korte version",
+            "paragraphs": [
+              "Et spændloft er en tynd, sømløs membran — enten strikket polyester eller en kalandreret PVC-folie — der spændes ud over rummet og klikkes fast i en slank profil monteret hele vejen rundt på væggene. Resultatet ligner et perfekt plant, nymalet loft, men uden puds, slibning eller maling.",
+              "Fordi membranen monteres i en ramme i stedet for direkte på konstruktionen ovenover, skjuler den rør, ledninger, ujævn beton og gamle lofter fuldstændigt — og den kan monteres på en enkelt dag, i et rum der forbliver møbleret og i brug."
+            ]
+          },
+          {
+            "heading": "Kold montering vs. varm montering",
+            "paragraphs": [
+              "Polyestermembraner spændes op koldt: ingen varme, ingen dampe og ingen tørretid. De giver en dyb, meget mat overflade og dækker op til 5.15 m uden samlinger.",
+              "PVC-folier opvarmes under monteringen, så de slapper af, og strammer derefter op til en fejlfri overflade, når de køler ned. PVC er fuldt genanvendeligt, kan tages ned igen for adgang til installationerne ovenover og dækker op til 5.7 m sømløst — den bredeste løsning."
+            ]
+          },
+          {
+            "heading": "Hvad du kan bygge ind i det",
+            "paragraphs": [
+              "Et spændloft er mere end en overflade. En mikroperforeret version med en højdensitetsabsorbent bagved når op til klasse A lydabsorption og gør rum med ekko rolige. Translucente folier bliver til en jævn, dæmpbar lyskilde uden hotspots, og ethvert motiv — inklusive en stjernehimmel i fiberoptik — kan printes fra kant til kant.",
+              "Selv højttalere kan skjules helt bag membranen for ren lyd uden synlig kilde. Og det hele samles i én sømløs flade."
+            ]
+          },
+          {
+            "heading": "Hvor det giver mening",
+            "paragraphs": [
+              "Private bruger spændlofter i stuer, badeværelser og hjemmebiografer; virksomheder i kontorer, restauranter, studier, butikker og hoteller. De passer til både nybyggeri og renovering, og PVC-systemet tager ikke skade af fugt, hvilket gør det oplagt til vådrum.",
+              "Vil du vide, om det passer til dit projekt? Få et gratis og uforpligtende tilbud — en specialist vender tilbage inden for to hverdage."
+            ]
+          }
+        ]
+      },
+      "stretch-ceiling-acoustics-explained": {
+        "title": "Akustik i spændlofter – enkelt forklaret",
+        "excerpt": "En mikroperforeret spændt membran med en højdensitetsabsorbent bagved kan nå op til klasse A lydabsorption — helt uden synlige akustikpaneler. Her er, hvordan det virker, og hvad αw og NRC betyder.",
+        "body": [
+          {
+            "heading": "Hvorfor rum lyder hårdt",
+            "paragraphs": [
+              "Hårde, plane flader — glas, beton, gipsplader — kaster lyden tilbage i rummet. Refleksionerne hober sig op som efterklang, der gør tale sværere at følge og musik eller baggrundsstøj mere trættende. Løsningen er at absorbere noget af energien, før den kastes tilbage.",
+              "Traditionelt betyder det synlige akustikpaneler eller baffler. Med et spændloft kan du gøre det usynligt."
+            ]
+          },
+          {
+            "heading": "Sådan virker et akustisk spændloft",
+            "paragraphs": [
+              "Den synlige side er en mikroperforeret membran: tusindvis af bittesmå perforeringer lader lyden passere ind i en højdensitetsabsorbent af polyesteruld monteret bagved. Rummet fremstår stadig med ét fejlfrit, sømløst loft, men lydenergien opfanges i stedet for at blive reflekteret.",
+              "Udført rigtigt når det op til klasse A absorption — den højeste klassificering — på hele det behandlede areal."
+            ]
+          },
+          {
+            "heading": "Sådan læser du tallene: αw og NRC",
+            "paragraphs": [
+              "Lydabsorption måles på en skala fra 0 (fuldt reflekterende) til 1 (fuldt absorberende). I Europa er nøgletallet den vægtede absorptionskoefficient αw, og klasserne går fra klasse A (αw ≥ 0.90) ned til klasse E. NRC (Noise Reduction Coefficient) er den tilsvarende enkelttalsværdi, som oftere bruges i Nordamerika.",
+              "Når du sammenligner akustikprodukter, er det de tal, du skal kigge efter — αw, absorptionsklassen og NRC — frem for vage løfter om »lydisolering«."
+            ]
+          },
+          {
+            "heading": "Hvor det for alvor gør en forskel",
+            "paragraphs": [
+              "Lydstudier, hjemmebiografer, storrumskontorer, restauranter, klasselokaler og sundhedsbyggeri har alle glæde af det. Samme system fås som frithængende loftøer og dekorative vægpaneler, hvor et helt loft ikke er muligt.",
+              "Kæmper du med efterklang i et bestemt rum, så bed om et tilbud og fortæl os mål og anvendelse — vi rådgiver dig om den rette absorbent og overflade."
+            ]
+          }
+        ]
+      }
+    },
+    "chrome": {
+      "readMinutes": "{count} min. læsetid",
+      "publishedOn": "Udgivet",
+      "updatedOn": "Opdateret",
+      "backToBlog": "Alle guider",
+      "eyebrow": "Guider",
+      "ctaTitle": "Overvejer du et spændloft?",
+      "ctaBody": "Få et gratis og uforpligtende tilbud til dit rum.",
+      "ctaBtn": "Få et gratis tilbud"
+    }
+  },
+  "inspirationPage": {
+    "eyebrow": "Inspiration",
+    "title1": "Ægte rum,",
+    "title2a": "ægte",
+    "title2b": "projekter",
+    "browseEyebrow": "Gennemse efter løsning",
+    "allEyebrow": "Alle projekter",
+    "portfolioTitle": "Porteføljen",
+    "ctaTitle": "Se det for dig i dit eget rum",
+    "quoteCta": "Få et gratis tilbud",
+    "exploreCta": "Udforsk løsningerne",
+    "showing": "Viser {count}",
+    "filterAria": "Filtrér projekter",
+    "filters": [
+      "Alle",
+      "Akustik",
+      "Bolig",
+      "Badeværelse",
+      "Kontor",
+      "Erhverv",
+      "Hjemmebiograf",
+      "Lys & print"
+    ],
+    "browse": [
+      {
+        "label": "Akustik",
+        "desc": "Studier, kontorer & stille rum"
+      },
+      {
+        "label": "Lys & print",
+        "desc": "Bagbelyste & printede lofter"
+      },
+      {
+        "label": "Bolig",
+        "desc": "Boliger & private interiører"
+      },
+      {
+        "label": "Badeværelse",
+        "desc": "Fugtbestandige & præfabrikerede"
+      },
+      {
+        "label": "Kontor",
+        "desc": "Akustisk komfort på arbejdet"
+      },
+      {
+        "label": "Erhverv",
+        "desc": "Butikker, hoteller & eventlokaler"
+      }
+    ]
+  },
+  "projectPage": {
+    "crumbInspiration": "Inspiration",
+    "materialsTitle": "Anvendte produkter & materialer",
+    "detailsTitle": "Projektdetaljer",
+    "solutionsUsed": "Anvendte løsninger",
+    "similarCta": "Start et lignende projekt",
+    "gallery": "Galleri",
+    "faqTitle": "Ofte stillede spørgsmål",
+    "allProjects": "Alle projekter",
+    "exploreSolutions": "Udforsk løsningerne",
+    "photo": "foto"
+  },
+  "reviewsData": {
+    "items": [
+      {
+        "role": "Boligejer · Antwerpen",
+        "quote": "De monterede loftet i vores stue på en enkelt dag, helt uden rod. Den matte overflade ligner frisk puds på en prik — vi er virkelig begejstrede."
+      },
+      {
+        "role": "Arkitekt · Gent",
+        "quote": "Jeg foreskriver nu STRETCH til de akustiske lofter. Rummet fremstår som én ren flade, og efterklangen er væk — kunderne lægger altid mærke til forskellen."
+      },
+      {
+        "role": "Entreprenør · Sint-Niklaas",
+        "quote": "Kurset fik hurtigt mit hold i gang med at montere, og leveringen efter mål er pålidelig. Som partnere har vi føjet en helt ny ydelse til vores forretning."
+      }
+    ]
+  },
+  "partnersPage": {
+    "crumb": "Partnere",
+    "hero": {
+      "eyebrow": "Til fagfolk",
+      "title": "Bliv partner med",
+      "lead": "To måder at arbejde sammen med os på: Sælg vores lofter som et færdigt produkt og lad vores netværk montere dem, eller bliv uddannet og montér dem selv. Uanset hvad får du fagpriser, produktion efter mål fra Belgien og henviste lokale kundeemner.",
+      "ctaApply": "Ansøg om at blive partner",
+      "ctaCall": "Book et opkald",
+      "imageAlt": "En STRETCH-montagepartner i arbejde",
+      "statLabel": "Monteret pr. team / dag"
+    },
+    "models": {
+      "eyebrow": "To måder at være partner på",
+      "title": "Forhandler eller montagepartner — vælg den model, der passer til din forretning.",
+      "lead": "Forskellen er enkel: En forhandler sælger loftet og lader os montere det; en montagepartner sælger og monterer selv efter at have gennemført vores kursus.",
+      "bestForLabel": "Bedst til:",
+      "reseller": {
+        "kicker": "Forhandler",
+        "title": "Du sælger. Vi monterer.",
+        "body": "Du sælger et STRETCH-loft som et færdigt, monteret produkt til din kunde. Vi og vores netværk af montagepartnere står for monteringen som din partner — du fokuserer på salget og kunderelationen.",
+        "points": [
+          "Du sælger det færdige, monterede loft til din kunde",
+          "Vi monterer det for dig gennem vores certificerede netværk af montagepartnere",
+          "Du behøver hverken montagehold eller montagekompetencer",
+          "Fagpriser, produktbilleder og henviste lokale kundeemner"
+        ],
+        "bestFor": "indretningsarkitekter, arkitekter, køkken- og badshowrooms og entreprenører, der vil tilbyde lofter uden selv at montere dem.",
+        "cta": "Ansøg som forhandler"
+      },
+      "dealer": {
+        "kicker": "Montagepartner",
+        "badge": "Kursus påkrævet",
+        "title": "Du sælger og monterer.",
+        "body": "Du sælger STRETCH-produkter i dine egne projekter og udfører selv monteringen. For at blive certificeret montagepartner gennemfører din montør først vores praktiske kursus på vores hovedkontor.",
+        "points": [
+          "Du sælger STRETCH-produkter i dine egne projekter",
+          "Du udfører selv monteringen",
+          "Din montør gennemfører først vores praktiske kursus",
+          "Bestil efter mål fra vores belgiske værksted"
+        ],
+        "bestFor": "montører, indretningsfirmaer og specialister i gipsarbejde, der vil føje spændlofter til deres egne montageydelser.",
+        "cta": "Ansøg som montagepartner",
+        "trainingLink": "Se kurset"
+      }
+    },
+    "compare": {
+      "resellerHead": "Forhandler",
+      "dealerHead": "Montagepartner",
+      "rows": [
+        {
+          "label": "Hvad du sælger",
+          "reseller": "Et færdigt, monteret loft",
+          "dealer": "Produkter i dine egne projekter"
+        },
+        {
+          "label": "Hvem monterer",
+          "reseller": "Det gør vi — gennem vores netværk af montagepartnere",
+          "dealer": "Det gør du selv"
+        },
+        {
+          "label": "Kursus",
+          "reseller": "Ikke påkrævet",
+          "dealer": "Påkrævet — praktisk kursus"
+        },
+        {
+          "label": "Bedst egnet til",
+          "reseller": "Designere, showrooms, entreprenører",
+          "dealer": "Montører & indretningsfirmaer"
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Det får alle partnere",
+      "titleA": "Mere avance,",
+      "titleB": "mindre besvær",
+      "lead": "Uanset hvilken model du vælger, tager vi os af produktet og forsyningskæden — du leverer et premiumloft, dine kunder elsker.",
+      "cards": [
+        {
+          "title": "Stærke avancer",
+          "body": "Fagpriser på membraner og profiler efter mål med sunde avancer på et efterspurgt premiumprodukt."
+        },
+        {
+          "title": "Henviste kundeemner",
+          "body": "Vi sender lokale kundehenvendelser videre til partnere i deres region — rigtige projekter, ikke bare en prisliste."
+        },
+        {
+          "title": "B2B-bestilling",
+          "body": "Bestil konfektioneret efter mål fra vores belgiske værksted via en dedikeret partnerportal med pålidelige leveringstider."
+        },
+        {
+          "title": "Fremstillet i Belgien",
+          "body": "Håndlavede membraner udviklet i Belgien med en lang produktgaranti, du trygt kan stå inde for."
+        },
+        {
+          "title": "Praktisk kursus",
+          "body": "For montagepartnere: Certificér dit team på vores hovedkontor på få dage — konfektionering, profiler, kold og varm montering, lys og akustik."
+        },
+        {
+          "title": "Marketingstøtte",
+          "body": "Produktbilleder, prøver og salgsmateriale, der hjælper dig med at vinde og lukke opgaver med spændlofter."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "Sådan fungerer det",
+      "title": "En kort vej til at sælge spændlofter — på din måde.",
+      "resellerPath": "Forhandlersporet",
+      "dealerPath": "Montagepartnersporet",
+      "resellerSteps": [
+        {
+          "title": "Ansøg som forhandler",
+          "body": "Send en kort ansøgning. Vi gennemgår hver enkelt personligt og aftaler et opkald for at forstå din forretning."
+        },
+        {
+          "title": "Kom godt i gang",
+          "body": "Fagpriser, prøver og salgsmateriale — intet kursus nødvendigt. Begynd at tilbyde spændlofter med det samme."
+        },
+        {
+          "title": "Du sælger — vi monterer",
+          "body": "Du lukker salget og beholder kunden; vi og vores montagepartnere monterer loftet til tiden og efter specifikationen."
+        }
+      ],
+      "dealerSteps": [
+        {
+          "title": "Ansøg som montagepartner",
+          "body": "Send en kort ansøgning. Vi gennemgår hver enkelt personligt og aftaler et opkald for at forstå din forretning."
+        },
+        {
+          "title": "Uddan & certificér",
+          "body": "Dit team gennemfører vores praktiske kursus på hovedkontoret: konfektionering, profiler, kold og varm montering, lys og akustik."
+        },
+        {
+          "title": "Bestil & montér",
+          "body": "Bestil efter mål, montér selv på en dag, og modtag henviste lokale kundeemner, efterhånden som de kommer ind."
+        }
+      ]
+    },
+    "apply": {
+      "eyebrow": "Bliv partner",
+      "titleA": "Ansøg",
+      "titleB": "i dag",
+      "lead": "Fortæl os, om du vil sælge eller også montere — så tager vi den derfra.",
+      "points": [
+        "Vi gennemgår hver ansøgning personligt",
+        "Eksklusivt område, hvor det er muligt",
+        "Onboarding inden for få uger"
+      ]
+    }
+  },
+  "trainingPage": {
+    "crumb": "Montørkursus",
+    "courseName": "STRETCH-montørcertificering",
+    "courseDescription": "Praktisk certificering som spændloftsmontør på STRETCHs hovedkontor i Belgien: konfektionering af membranen, profiler, kold og varm montering, lys, akustik, finish og kalkulation.",
+    "hero": {
+      "eyebrow": "Montørkursus",
+      "titleA": "Montér som en prof",
+      "titleB": "på",
+      "titleC": "dage",
+      "lead": "Praktisk certificering på vores belgiske hovedkontor. Lær konfektionering af membranen, profiler, kold og varm montering, lys og akustik — ingen forudgående erfaring nødvendig.",
+      "ctaBook": "Book dit kursus",
+      "ctaDates": "Se datoer",
+      "imageLabel": "Foto fra kursus / værksted"
+    },
+    "format": [
+      {
+        "value": "2–3",
+        "label": "Dage, hands-on"
+      },
+      {
+        "value": "HQ",
+        "label": "Beveren-Waas, Belgien"
+      },
+      {
+        "value": "1:4",
+        "label": "Underviser pr. montør"
+      }
+    ],
+    "curriculum": {
+      "eyebrow": "Det lærer du",
+      "title": "Hele håndværket",
+      "lead": "Fra en rulle membran til et færdigt, oplyst, akustisk loft — og de kommercielle færdigheder til at sælge det.",
+      "items": [
+        {
+          "title": "Membran & konfektionering",
+          "body": "Hvordan polyester- og PVC-membraner måles, skæres og svejses efter mål på værkstedet."
+        },
+        {
+          "title": "Kantprofiler",
+          "body": "Afsætning og montering af clipsprofiler i helt vater — fundamentet for et fejlfrit loft."
+        },
+        {
+          "title": "Kold & varm montering",
+          "body": "Korrekt opspænding af begge systemer: kold polyester og opvarmet PVC-folie, fra start til slut."
+        },
+        {
+          "title": "Lys & akustik",
+          "body": "Integration af bagbelysning, LED-linjer, printede folier og akustisk absorberende bagbeklædning."
+        },
+        {
+          "title": "Finish & adgang",
+          "body": "Rene kantafslutninger, udskæringer til armaturer og diskrete inspektionslemme."
+        },
+        {
+          "title": "Kalkulation & salg",
+          "body": "Opmål en opgave, giv tilbud med sikkerhed, og præsentér spændlofter overbevisende for kunderne."
+        }
+      ]
+    },
+    "dates": {
+      "eyebrow": "Kommende datoer",
+      "title": "Reservér din plads",
+      "lead": "Små hold — først til mølle. Skræddersyede kurser på jeres adresse fås på forespørgsel.",
+      "onRequestTitle": "På forespørgsel",
+      "onRequestNote": "Skræddersyet kursus på stedet"
+    },
+    "book": {
+      "eyebrow": "Planlæg dit kursus",
+      "titleA": "Book en",
+      "titleB": "plads",
+      "includedLabel": "Inkluderet",
+      "included": [
+        "Kursusbevis",
+        "Startkit til montører",
+        "Frokost & materialer på stedet"
+      ]
+    }
+  },
+  "aboutPage": {
+    "crumb": "Om os",
+    "hero": {
+      "eyebrow": "Om STRETCH",
+      "titleA": "Håndlavet",
+      "titleB": "i",
+      "titleC": "Belgien",
+      "lead": "{name} designer og producerer sømløse spændlofter og -vægge — udviklet i Belgien, monteret på én dag og bygget til at holde i årtier.",
+      "imageAlt": "STRETCH-værkstedet og teamet"
+    },
+    "stats": [
+      {
+        "label": "Grundlagt",
+        "sub": "Har bygget sømløse lofter lige siden."
+      },
+      {
+        "value": "25 år",
+        "label": "Garanti",
+        "sub": "På vores håndlavede membraner."
+      },
+      {
+        "value": "4",
+        "label": "Kontorer",
+        "sub": "Belgien, USA, Polen & Østrig."
+      }
+    ],
+    "story": {
+      "eyebrow": "Vores historie",
+      "p1": "{name} blev grundlagt i {founded} ud fra en enkel overbevisning: Et loft skal være en overflade, man lægger mærke til af de rigtige grunde. Traditionelle pudslofter revner, får skjolder og kræver dages beskidt arbejde at montere og male om. Det gør en opspændt membran ikke — den kommer op rent, knivskarpt plant og sømløst, ofte på en enkelt dag.",
+      "p2": "Alt begynder på vores belgiske værksted, hvor polyester- og PVC-membraner måles, skæres og svejses efter mål i hånden. Netop den konfektionering efter mål er grunden til, at et færdigt loft klikker så hurtigt på plads på stedet — uden støv og uden ommaling.",
+      "p3": "I dag arbejder vi primært gennem et netværk af fagpartnere og certificerede montører og leverer systemer efter mål, praktiske kurser og henviste lokale kundeemner. Fra lydstudier til eventhaller, fra badeværelser til butikker — vores systemer bringer lys, akustisk kontrol og en fejlfri overflade til rum i hele Europa og længere ud.",
+      "p4": "Vi er en B2B-drevet virksomhed med kontorer i Belgien, USA, Polen og Østrig — men hver membran bærer stadig det samme løfte: håndlavet i Belgien med 25 års garanti."
+    },
+    "offices": {
+      "eyebrow": "Her finder du os"
+    },
+    "cta": {
+      "title": "Lad os bygge noget sømløst.",
+      "button": "Få et gratis tilbud"
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Kontakt",
+    "titleA": "Lad os tale om",
+    "titleB": "lofter",
+    "cards": {
+      "call": {
+        "label": "Ring til os"
+      },
+      "email": {
+        "label": "Skriv til os",
+        "sub": "Personligt svar inden for 2 dage"
+      },
+      "chat": {
+        "label": "WhatsApp / Telegram",
+        "value": "Chat med os",
+        "sub": "Hurtige spørgsmål, hurtige svar"
+      }
+    },
+    "formTitle": "Send os en besked",
+    "formLead": "Fortæl os om dit projekt eller spørgsmål. En specialist svarer inden for to hverdage.",
+    "mapLabel": "Værksted / kort",
+    "mapAlt": "STRETCH-værksted",
+    "hqKicker": "Hovedkontor",
+    "hqLocation": "{postalCode} {city}, Belgien",
+    "officesEyebrow": "Vores kontorer",
+    "dealerTitle": "Foretrækker du en lokal forhandler?",
+    "dealerBody": "Private henvendelser henviser vi til certificerede montører i dit område — spørg os, så skaber vi kontakten.",
+    "dealerCta": "Find din nærmeste forhandler",
+    "form": {
+      "subjects": [
+        "Få et tilbud",
+        "Find en forhandler",
+        "Partnerskab",
+        "Montørkursus",
+        "Andet"
+      ],
+      "timelines": [
+        "Hurtigst muligt",
+        "Inden for 1–3 måneder",
+        "Inden for 4–12 måneder",
+        "Jeg undersøger bare mulighederne"
+      ],
+      "timelineLabel": "Tidsramme",
+      "consentPrefix": "Jeg accepterer, at STRETCH behandler mine oplysninger for at besvare min henvendelse, som beskrevet i",
+      "consentPrivacy": "privatlivspolitikken",
+      "submit": "Send besked"
+    }
+  },
+  "datasheetsPage": {
+    "eyebrow": "Tekniske datablade",
+    "crumb": "Datablade",
+    "titleA": "Specifikationer &",
+    "titleB": "datablade",
+    "lead": "Download teknisk dokumentation for hvert STRETCH-system — specifikationer, brandklasser, akustiske klasseværdier og garantidetaljer. Indtast dine oplysninger én gang pr. download, og filen starter med det samme.",
+    "updated": "Opdateret {date}",
+    "privacyNote": "Vi beder om dit navn, din e-mail og dit telefonnummer, så en specialist kan besvare eventuelle tekniske spørgsmål. Dine oplysninger behandles i henhold til vores",
+    "privacyLink": "privatlivspolitik"
+  },
+  "samplesPage": {
+    "eyebrow": "Farveprøver",
+    "crumb": "Prøver",
+    "titleA": "Se",
+    "titleB": "farverne",
+    "lead": "Bestil fysiske RAL- og farveprøver af vores polyester-, PVC- og akustikmembraner — gratis for fagpartnere, leveret til døren.",
+    "points": [
+      "Standardnuancer og enhver RAL efter ønske",
+      "Polyester-, PVC- & akustikoverflader",
+      "Sendt inden for to hverdage"
+    ]
+  },
+  "blogPage": {
+    "eyebrow": "Guider & viden",
+    "crumb": "Guider",
+    "titleA": "Spændlofter,",
+    "titleB": "forklaret",
+    "postMeta": "{date} · {minutes} min. læsetid",
+    "readArticle": "Læs artiklen"
+  },
+  "inlineLead": {
+    "consentPrefix": "Jeg accepterer, at STRETCH behandler mine oplysninger for at besvare min henvendelse, som beskrevet i",
+    "consentPrivacy": "privatlivspolitikken"
   }
 }

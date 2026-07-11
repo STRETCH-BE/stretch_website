@@ -2373,5 +2373,1005 @@
     "shippedWorldwide": "Wysyłka na cały świat",
     "ctaTitle": "Masz dla nas projekt?",
     "ctaBody": "Prześlij nam rysunki lub pomysł — zaprojektujemy konstrukcję, zbudujemy ją u siebie i wyślemy do Ciebie."
+  },
+  "projects": {
+    "da-tweekaz-studio": {
+      "title": "Da Tweekaz Studio",
+      "summary": "Akustyczny sufit napinany i ściany akustyczne w studiu produkcji muzycznej.",
+      "hook": "Czyste, kontrolowane akustycznie pomieszczenie dla jednego z najbardziej znanych zespołów hardstyle.",
+      "description": [
+        "W studiu nagraniowym Da Tweekaz w Holandii akustyczny system STRETCH obejmuje zarówno sufit, jak i ściany. Odbicia dźwięku są pod kontrolą, więc pomieszczenie pozwala pracować precyzyjnie — z nowoczesnym wykończeniem bez łączeń i bez widocznych paneli nad głową."
+      ],
+      "highlights": [
+        "Akustyczna adaptacja sufitu i ścian",
+        "Wykończenie bez łączeń i bez paneli"
+      ],
+      "materials": [
+        "Akustyczny sufit STRETCH",
+        "Tekstylia STRETCH Acoustic (ściany)"
+      ],
+      "facts": [
+        {
+          "label": "Kraj",
+          "value": "Holandia"
+        },
+        {
+          "label": "Dystrybutor STRETCH",
+          "value": "Q82 Acoustics"
+        }
+      ]
+    },
+    "mark-with-a-k": {
+      "title": "Mark With a K",
+      "summary": "Adaptacja akustyczna pokoju odsłuchowego DJ-a i producenta.",
+      "hook": "Nieskazitelne, kontrolowane akustycznie pomieszczenie dla belgijskiego DJ-a i producenta.",
+      "description": [
+        "Akustyczny sufit STRETCH bez łączeń pochłania pogłos w pokoju produkcyjnym, zachowując przy tym nieskazitelne, nowoczesne wykończenie. Efekt to spokojna, kontrolowana przestrzeń do pracy, z parametrami akustycznymi ukrytymi wewnątrz membrany."
+      ],
+      "highlights": [
+        "Akustyczny sufit bez łączeń",
+        "Ukryta warstwa pochłaniająca",
+        "Nowoczesne wykończenie bez paneli"
+      ],
+      "materials": [
+        "Akustyczny sufit STRETCH",
+        "Warstwa pochłaniająca o wysokiej gęstości"
+      ],
+      "facts": [
+        {
+          "label": "Kraj",
+          "value": "Belgia"
+        },
+        {
+          "label": "Przestrzeń",
+          "value": "Studio produkcji muzycznej"
+        }
+      ]
+    },
+    "notary-ampe-anthony": {
+      "title": "Kancelaria notarialna Ampe Anthony",
+      "summary": "350 m² akustycznych sufitów napinanych w ekskluzywnym biurze notarialnym.",
+      "hook": "Kompletne, ekskluzywne wykończenie biura, w którym twarde, odbijające dźwięk materiały trzeba było okiełznać — nie tracąc ostrego, minimalistycznego charakteru.",
+      "description": [
+        "W 2019 roku kancelaria notarialna Ampe Anthony w Kruibeke została przebudowana od podstaw na ekskluzywne wnętrze o celowo ostrym, minimalistycznym charakterze — polerowane betonowe posadzki, stalowe ramy okien i mnóstwo twardych powierzchni. Nie szczędzono środków, by wykończyć je perfekcyjnie.",
+        "Te twarde materiały sprawiły, że biuro stało się akustycznie bardzo pogłosowe. Aby przywrócić komfortowy poziom, całe wnętrze otrzymało akustyczny sufit STRETCH z dedykowaną warstwą pochłaniającą z wełny poliestrowej, zamontowaną na istniejącym stropie betonowym — co wynosi parametry akustyczne na wysoki poziom.",
+        "Sufit obniżono o 10 cm, aby ukryć wszystkie instalacje techniczne, pozostawiając wysokość 260 cm. Aby przestrzeń wydawała się wyższa i większa, wbudowaliśmy w sufit duże eliptyczne wnęki — optyczny trik, który wyraźnie unosi pomieszczenie."
+      ],
+      "highlights": [
+        "Czas pogłosu zmierzony na poziomie 0.6 s",
+        "Duże eliptyczne wnęki sufitowe dla wrażenia wysokości",
+        "Dedykowany absorber z wełny poliestrowej za membraną"
+      ],
+      "materials": [
+        "Akustyczny sufit STRETCH",
+        "Gięte aluminiowe ramy na wymiar",
+        "Absorber z wełny poliestrowej D40/50 (40 kg/m³, 50 mm)",
+        "Sufit STRETCH Design w formie eliptycznej",
+        "Białe profile napinające PVC na obwodzie",
+        "Oświetlenie: Wever & Ducré, Delta Light"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Waasland (Kruibeke)"
+        },
+        {
+          "label": "Rok",
+          "value": "2018"
+        },
+        {
+          "label": "Powierzchnia",
+          "value": "350 m²"
+        },
+        {
+          "label": "Architekt",
+          "value": "Ante Architecten"
+        },
+        {
+          "label": "Dystrybutor STRETCH",
+          "value": "Corpus Interieur"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Jak długo trwał montaż?",
+          "a": "Montaż sufitów akustycznych, całego oświetlenia i specjalnych wykończeń zajął 7 dni roboczych."
+        },
+        {
+          "q": "Jaki czas pogłosu osiągnięto?",
+          "a": "Pomiar wykonany po montażu wykazał czas pogłosu 0.6 s — wnętrze jest naprawdę ciche i tak też się je odbiera."
+        },
+        {
+          "q": "Ilu monterów pracowało przy projekcie?",
+          "a": "Zespół 2 monterów STRETCH wykonał cały pakiet sufitowy: membranę, oświetlenie, panele akustyczne, zabudowę sufitową i konstrukcje eliptyczne."
+        },
+        {
+          "q": "Jak długo posłuży sufit?",
+          "a": "Jak w przypadku każdego sufitu napinanego, żywotność zależy od czyszczenia, ale spokojnie wytrzyma około 25 lat. Po tym czasie wymiany może wymagać jedynie membrana — istniejąca rama zostaje na miejscu."
+        }
+      ]
+    },
+    "bnp-paribas-fortis": {
+      "title": "BNP Paribas Fortis",
+      "summary": "2,000 m² podświetlanych i akustycznych sufitów w brukselskiej siedzibie banku.",
+      "hook": "Podświetlane i akustyczne sufity STRETCH w nowej siedzibie banku Montagne du Parc — w tym wielopoziomowy food court.",
+      "description": [
+        "W siedzibie BNP Paribas Fortis w centrum Brukseli STRETCH dostarczył około 2,000 m² sufitów podświetlanych (STRETCH Light) i akustycznych (STRETCH Acoustic), współpracując z Jaspers-Eyers Architects i NCBHAM oraz z partnerem Conceptexpo.",
+        "Wyróżnikiem jest food court Barista Bar, który przyjmuje pracowników i gości na kilku piętrach. Hot Corner serwuje ciepłe dania pod sufitem z mosiężnych lameli przywodzących na myśl płomienie; Fresh Corner piętro wyżej oferuje sałatki; a Sweet Corner domyka całość deserami — każda lada ma swoje lustrzane odbicie, więc pełny posiłek można skompletować w dowolnym miejscu."
+      ],
+      "highlights": [
+        "≈2,000 m² sufitów napinanych",
+        "Połączenie STRETCH Light + Acoustic",
+        "Wielopoziomowy food court Barista Bar",
+        "Dekoracyjny sufit „płomienie” z mosiężnych lameli"
+      ],
+      "materials": [
+        "Sufit STRETCH Light (podświetlany)",
+        "Sufit STRETCH Acoustic",
+        "Łukowe sekcje sufitu",
+        "Zintegrowane oświetlenie"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Bruksela (Montagne du Parc)"
+        },
+        {
+          "label": "Powierzchnia",
+          "value": "2,000 m²"
+        },
+        {
+          "label": "Architekt",
+          "value": "Jaspers-Eyers & NCBHAM"
+        },
+        {
+          "label": "Partner",
+          "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-beveren": {
+      "title": "Van der Valk",
+      "summary": "Maksymalne pochłanianie dźwięku w hotelowej sali eventowej — przy niemal zerowym zapasie wysokości.",
+      "hook": "Problem akustyczny, który latami trapił salę eventową hotelu, rozwiązany przez sufit.",
+      "description": [
+        "Tim van der Valk zwrócił się do STRETCH z problemem akustycznym, który od kilku lat dotykał ich przestrzeń eventową. Po rozmowie z Michaelem Nicasensem ze STRETCH doszliśmy do wniosku, że rozwiązanie musi przyjść od strony sufitu — ale istniejący sufit miał tylko 255 cm wysokości, zostawiając bardzo mało miejsca na system.",
+        "Zaproponowaliśmy więc system o wysokości 50 mm, który mimo to osiąga αw 0.95: maksymalne pochłanianie dźwięku przy jedynie minimalnym obniżeniu sufitu. Duże sale eventowe są przekryte bez łączeń, parametry akustyczne wbudowano w membranę, a detale — klapy, oświetlenie, czujniki i gwiezdne niebo — czysto zintegrowano nad głową."
+      ],
+      "highlights": [
+        "Pochłanianie dźwięku αw 0.95",
+        "Zaledwie 50 mm wysokości systemu",
+        "Zintegrowane techniczne klapy rewizyjne",
+        "Oświetlenie i czujniki obecności",
+        "Gwiezdne niebo",
+        "Wykończenie bez łączeń wokół kolumn"
+      ],
+      "materials": [
+        "Akustyczny sufit STRETCH (system 50 mm)",
+        "Zintegrowane klapy techniczne",
+        "Zintegrowane oświetlenie",
+        "Czujniki obecności",
+        "Instalacja gwiezdnego nieba",
+        "Obwodowe profile napinające"
+      ],
+      "facts": [
+        {
+          "label": "Obiekt",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Region",
+          "value": "Beveren-Waas"
+        },
+        {
+          "label": "Istniejąca wysokość",
+          "value": "255 cm"
+        },
+        {
+          "label": "Wysokość systemu",
+          "value": "50 mm"
+        },
+        {
+          "label": "Parametr akustyczny",
+          "value": "αw 0.95"
+        }
+      ]
+    },
+    "johnson-and-johnson": {
+      "title": "Johnson & Johnson",
+      "summary": "Sufit z nadrukiem i podświetleniem dla farmaceutycznego ośrodka R&D.",
+      "hook": "Refleksyjny, innowacyjny projekt sufitu i oświetlenia nawiązujący do badań Johnson & Johnson nad poprawą wzroku.",
+      "description": [
+        "STRETCH współpracował z Van Dijk Architects i firmą wykończeniową Glennwood przy projekcie sufitu i oświetlenia nowego obiektu Johnson & Johnson w Limerick City w Irlandii. Zadanie brzmiało: refleksyjny, innowacyjny sufit, odpowiadający celom badawczo-rozwojowym budynku związanym z poprawą wzroku.",
+        "Sufit STRETCH z nadrukiem i podświetleniem ciągnie się przez cały budynek, nadaje każdej strefie własny punkt skupienia i wizualnie prowadzi osoby poruszające się po przestrzeni. Nowoczesne rozwiązania oświetleniowe podkreślają zarówno projekt, jak i efekt końcowy."
+      ],
+      "highlights": [
+        "Indywidualny nadruk w całym budynku",
+        "Podświetlenie wspierające skupienie i orientację",
+        "Refleksyjny projekt inspirowany R&D"
+      ],
+      "materials": [
+        "Sufit STRETCH z nadrukiem",
+        "Podświetlany sufit STRETCH",
+        "Zintegrowane oświetlenie"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Limerick, Irlandia"
+        },
+        {
+          "label": "Rok",
+          "value": "2019"
+        },
+        {
+          "label": "Powierzchnia",
+          "value": "60 m²"
+        },
+        {
+          "label": "Architekt",
+          "value": "Van Dijk Architects"
+        },
+        {
+          "label": "Dystrybutor STRETCH",
+          "value": "Glennwood"
+        }
+      ]
+    },
+    "polette-eyewear": {
+      "title": "Polette Eyewear",
+      "summary": "Niespotykany dotąd koncept retailowy autorstwa architekta Javiera Zubirii.",
+      "hook": "Sklep, na którym można grać jak na instrumencie — hołd dla pokoju, miłości i jedności.",
+      "description": [
+        "Antwerpia, 2022. Po sukcesie paryskiego showroomu polette ponownie połączyła siły z Javierem Zubirią, założycielem amsterdamskiego studia zU-Studio, aby przenieść do Antwerpii niespotykany dotąd koncept retailowy. Punktem wyjścia była jedna piosenka — „Imagine” Johna Lennona — i pragnienie stworzenia miejsca bliskości i kreatywności po latach dystansu.",
+        "Odwiedzających witają dwie gigantyczne klawiatury fortepianu, po jednej z każdej strony, każda z 88 klawiszami. Białe klawisze to lustra od podłogi po sufit, tworzące wrażenie nieskończoności; czarne klawisze pełnią rolę półek na okulary polette. Pośrodku ogromna biała ławka nawiązuje do pokojowego protestu Bed-in Lennona.",
+        "Nad głową sufit niesie główną atrakcję: rzeźbiarską formę pokrywy fortepianu, ściętą ukośnie na całych 20 metrach głębokości showroomu, wykonaną jako podświetlany, przepuszczający światło sufit STRETCH. Każdy klawisz naprawdę działa — system czujników podświetla kolejny klawisz do naciśnięcia, dzięki czemu odwiedzający mogą wspólnie zagrać w tej przestrzeni piosenkę."
+      ],
+      "highlights": [
+        "Podświetlana, przepuszczająca światło rzeźba sufitowa",
+        "Forma pokrywy fortepianu na całej głębokości 20 m",
+        "Interaktywne podświetlenie klawiszy sterowane czujnikami",
+        "Montaż w jeden dzień roboczy"
+      ],
+      "materials": [
+        "Akustyczny, przepuszczający światło sufit STRETCH",
+        "Rzeźbiarska sufitowa forma pokrywy fortepianu",
+        "Zintegrowane oświetlenie",
+        "Podświetlenie klawiszy sterowane czujnikami"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Antwerpia"
+        },
+        {
+          "label": "Rok",
+          "value": "2022"
+        },
+        {
+          "label": "Powierzchnia",
+          "value": "60 m²"
+        },
+        {
+          "label": "Architekt",
+          "value": "zU-Studio · Javier Zubiria"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Jak długo trwał montaż?",
+          "a": "Montaż akustycznego, przepuszczającego światło sufitu napinanego zajął jeden dzień roboczy."
+        },
+        {
+          "q": "Ilu monterów pracowało przy projekcie?",
+          "a": "Zespół 2 monterów STRETCH wykonał całość prac — sufit i oświetlenie."
+        },
+        {
+          "q": "Jak długo posłuży sufit?",
+          "a": "Jak w przypadku każdego sufitu napinanego, żywotność zależy od czyszczenia, ale spokojnie wytrzyma około 25 lat; po tym czasie wymiany może wymagać jedynie membrana, a istniejąca rama zostaje na miejscu."
+        }
+      ]
+    },
+    "citizenm-hotel": {
+      "title": "CitizenM Hotel",
+      "summary": "Prefabrykowane, podświetlane sufity łazienkowe wdrożone w hotelach CitizenM.",
+      "hook": "Powtarzalny, podświetlany sufit łazienkowy, budowany poza placem budowy dla hoteli na dwóch kontynentach.",
+      "description": [
+        "Dla modułowych hoteli CitizenM firma STRETCH dostarczyła prefabrykowane sufity łazienkowe z podświetlanym, przepuszczającym światło wykończeniem – budowane poza placem budowy jako powtarzalne moduły i wdrażane w lokalizacjach w USA i Europie, od Nowego Jorku i Chicago po Miami, Los Angeles i dalej."
+      ],
+      "highlights": [
+        "Prefabrykacja poza placem budowy",
+        "Podświetlane, przepuszczające światło wykończenie",
+        "Powtarzalność na dużą skalę w wielu hotelach"
+      ],
+      "materials": [
+        "Prefabrykowany moduł łazienkowy STRETCH",
+        "Membrana STRETCH Backlit (przepuszczająca światło)",
+        "Zintegrowane oświetlenie"
+      ],
+      "facts": [
+        {
+          "label": "Kontynenty",
+          "value": "USA i Europa"
+        },
+        {
+          "label": "Miasta",
+          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+        },
+        {
+          "label": "Partner",
+          "value": "Saniskill"
+        }
+      ]
+    },
+    "london-chapel": {
+      "title": "Kaplica w Londynie",
+      "summary": "Podświetlany sufit napinany nad odrestaurowaną kaplicą.",
+      "hook": "Odrestaurowana kaplica skąpana w miękkim, równomiernym świetle jednego świecącego sufitu.",
+      "description": [
+        "Półprzezroczysty sufit STRETCH zamienia całą płaszczyznę sufitu w miękkie, równomierne źródło światła – odrestaurowane wnętrze wypełnia oświetlenie bez olśnienia, a pole LED pozostaje całkowicie ukryte."
+      ],
+      "highlights": [
+        "Cały sufit jako źródło światła",
+        "Równomierne oświetlenie bez olśnienia",
+        "Pole LED całkowicie ukryte"
+      ],
+      "materials": [
+        "Półprzezroczysty sufit STRETCH",
+        "Pole podświetlenia LED"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Londyn, Wielka Brytania"
+        },
+        {
+          "label": "Przestrzeń",
+          "value": "Odrestaurowana kaplica"
+        }
+      ]
+    },
+    "private-villa-knokke": {
+      "title": "Prywatna willa",
+      "summary": "Matowy sufit bez łączeń dla nadmorskiej willi o otwartym planie.",
+      "hook": "Sufit bez łączeń, gładki jak idealny tynk, dla nadmorskiego domu o otwartym planie.",
+      "description": [
+        "W otwartej przestrzeni dziennej willi bardzo matowy poliestrowy sufit STRETCH wygląda od ściany do ściany jak nieskazitelny tynk – czysto i nowocześnie, bez pęknięć i linii cieni typowych dla tradycyjnego sufitu."
+      ],
+      "highlights": [
+        "Wykończenie bez łączeń od ściany do ściany",
+        "Bez pęknięć i linii cieni",
+        "Bardzo matowy wygląd jak tynk"
+      ],
+      "materials": [
+        "Poliestrowy sufit STRETCH (bardzo matowy)",
+        "Obwodowe profile napinające"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Knokke, Belgia"
+        },
+        {
+          "label": "Przestrzeń",
+          "value": "Otwarta przestrzeń dzienna"
+        }
+      ]
+    },
+    "home-cinema-ghent": {
+      "title": "Kino domowe",
+      "summary": "Sufit z gwiezdnym niebem i warstwą akustyczną do kina domowego.",
+      "hook": "Prywatne kino pod migoczącym nocnym niebem, dostrojone do dźwięku filmowego.",
+      "description": [
+        "Setki punktów światłowodowych tworzą migoczące nocne niebo nad fotelami, a warstwa akustyczna zapewnia kontrolę nad brzmieniem filmu w pomieszczeniu – klimat i jakość dźwięku połączone w jednym suficie."
+      ],
+      "highlights": [
+        "Gwiezdne niebo ze światłowodów",
+        "Warstwa akustyczna dla dźwięku filmowego",
+        "Klimat i jakość dźwięku w jednym suficie"
+      ],
+      "materials": [
+        "Sufit STRETCH z gwiezdnym niebem",
+        "Pole gwiazd ze światłowodów",
+        "Akustyczna warstwa pochłaniająca"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Gandawa, Belgia"
+        },
+        {
+          "label": "Przestrzeń",
+          "value": "Kino domowe"
+        }
+      ]
+    },
+    "city-penthouse-antwerp": {
+      "title": "Miejski penthouse",
+      "summary": "Nieskazitelny sufit dekoracyjny do miejskiego penthouse'u.",
+      "hook": "Minimalistyczny, idealnie płaski sufit dekoracyjny do miejskiego penthouse'u.",
+      "description": [
+        "W przestrzeni dziennej penthouse'u zastosowano sufit STRETCH bez łączeń ze zintegrowanym oświetleniem – wygląd pozostaje minimalistyczny, a powierzchnia idealna w całym otwartym wnętrzu."
+      ],
+      "highlights": [
+        "Sufit dekoracyjny bez łączeń",
+        "Zintegrowane oświetlenie",
+        "Minimalistyczne, nieskazitelne wykończenie"
+      ],
+      "materials": [
+        "Poliestrowy sufit STRETCH",
+        "Zintegrowane oświetlenie"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Antwerpia, Belgia"
+        },
+        {
+          "label": "Przestrzeń",
+          "value": "Salon penthouse'u"
+        }
+      ]
+    },
+    "wellness-spa-bruges": {
+      "title": "Spa wellness",
+      "summary": "Odporny na wilgoć, podświetlany sufit do spa.",
+      "hook": "Odporny na wilgoć, delikatnie świecący sufit do strefy wellness.",
+      "description": [
+        "Spa potrzebowało sufitu, który poradzi sobie z wilgocią i zbuduje spokojny nastrój. Półprzezroczysty, podświetlany sufit STRETCH delikatnie świeci nad strefą wellness i łatwo przetrzeć go do czysta – para i wilgoć mu nie szkodzą."
+      ],
+      "highlights": [
+        "Radzi sobie z wilgocią i parą",
+        "Miękkie, równomierne podświetlenie",
+        "Łatwo przetrzeć do czysta"
+      ],
+      "materials": [
+        "Półprzezroczysty sufit STRETCH z PVC",
+        "Pole podświetlenia LED"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Brugia, Belgia"
+        },
+        {
+          "label": "Przestrzeń",
+          "value": "Spa / wellness"
+        }
+      ]
+    },
+    "rue-perree-paris": {
+      "title": "Rue Perrée",
+      "summary": "Świetlisty sufit dla galerii wielu marek w Paryżu.",
+      "hook": "Równomierne światło na poziomie galerii w showroomie wielu marek – oprawy poza polem widzenia.",
+      "description": [
+        "W ART RECHERCHE INDUSTRIE przy Rue Perrée w Paryżu – galerii prezentującej kilka marek – świetlisty sufit STRETCH zapewnia równomierną, pozbawioną jasnych plam powłokę światła w całej przestrzeni. Pole LED kryje się za półprzezroczystą membraną, więc w centrum uwagi pozostają eksponowane prace, a nie oprawy."
+      ],
+      "highlights": [
+        "Równomierne oświetlenie bez jasnych plam",
+        "Pole LED całkowicie ukryte",
+        "Odwzorowanie barw na poziomie galerii"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Rue Perrée, Paryż (FR)"
+        },
+        {
+          "label": "Przestrzeń",
+          "value": "Galeria wielu marek"
+        }
+      ]
+    }
+  },
+  "blogPosts": {
+    "posts": {
+      "what-is-a-stretch-ceiling": {
+        "title": "Czym jest sufit napinany? Prosty przewodnik",
+        "excerpt": "Sufit napinany to cienka membrana rozpięta nad pomieszczeniem i wpięta w smukły profil obwodowy — montowana na zimno lub na ciepło, w jeden dzień. Oto jak to działa i gdzie ma sens.",
+        "body": [
+          {
+            "heading": "W skrócie",
+            "paragraphs": [
+              "Sufit napinany to cienka membrana bez łączeń — dziany poliester albo kalandrowana folia PVC — rozpięta nad pomieszczeniem i wpięta w smukły profil zamocowany na ścianach po obwodzie. Efekt wygląda jak idealnie równy, świeżo pomalowany sufit, ale bez tynkowania, szlifowania i malowania.",
+              "Ponieważ membrana jest mocowana do ramy, a nie bezpośrednio do stropu, całkowicie ukrywa rury, przewody, nierówny beton i stare sufity — a montaż zajmuje jeden dzień, w pomieszczeniu, które pozostaje umeblowane i w użyciu."
+            ]
+          },
+          {
+            "heading": "Montaż na zimno czy na ciepło",
+            "paragraphs": [
+              "Membrany poliestrowe napina się na zimno: bez ciepła, bez oparów i bez czasu schnięcia. Dają głębokie, bardzo matowe wykończenie i pokrywają do 5.15 m bez łączenia.",
+              "Folie PVC podgrzewa się podczas montażu, aby się rozluźniły, a stygnąc naprężają się do nieskazitelnej powierzchni. PVC jest w pełni recyklingowalne, demontowalne, gdy trzeba dostać się do instalacji nad sufitem, i pokrywa do 5.7 m bez łączeń — to najszersza opcja."
+            ]
+          },
+          {
+            "heading": "Co możesz w nim ukryć i wbudować",
+            "paragraphs": [
+              "Sufit napinany to więcej niż wykończenie. Wersja mikroperforowana z absorberem o wysokiej gęstości za membraną osiąga aż do klasy A pochłaniania dźwięku i ucisza pomieszczenia pełne echa. Folie półprzezroczyste stają się równomiernym, ściemnialnym źródłem światła bez gorących punktów, a każdy obraz — łącznie ze światłowodowym gwiezdnym niebem — można nadrukować od krawędzi do krawędzi.",
+              "Nawet głośniki można całkowicie schować za membraną, uzyskując czysty dźwięk bez widocznego źródła. Wszystko to mieści się w jednej powierzchni bez łączeń."
+            ]
+          },
+          {
+            "heading": "Gdzie ma sens",
+            "paragraphs": [
+              "W domach sufity napinane sprawdzają się w salonach, łazienkach i kinach domowych; w biznesie — w biurach, restauracjach, studiach, handlu i hotelarstwie. Pasują do nowego budownictwa i do remontów, a system PVC jest odporny na wilgoć, więc świetnie radzi sobie w pomieszczeniach mokrych.",
+              "Chcesz wiedzieć, czy pasuje do Twojego projektu? Poproś o bezpłatną wycenę bez zobowiązań, a specjalista odezwie się w ciągu dwóch dni roboczych."
+            ]
+          }
+        ]
+      },
+      "stretch-ceiling-acoustics-explained": {
+        "title": "Akustyka sufitów napinanych — jak to działa",
+        "excerpt": "Mikroperforowana membrana napinana z absorberem o wysokiej gęstości może osiągnąć aż do klasy A pochłaniania dźwięku — bez widocznych paneli akustycznych. Oto jak to działa i co oznaczają αw i NRC.",
+        "body": [
+          {
+            "heading": "Dlaczego pomieszczenia brzmią ostro",
+            "paragraphs": [
+              "Twarde, płaskie powierzchnie — szkło, beton, płyty gipsowo-kartonowe — odbijają dźwięk z powrotem do pomieszczenia. Te odbicia nawarstwiają się jako pogłos, przez co mowa staje się trudniejsza do śledzenia, a muzyka czy szum tła bardziej męczą. Rozwiązanie: pochłonąć część tej energii, zanim się odbije.",
+              "Tradycyjnie oznacza to widoczne panele akustyczne lub baffle. Sufit napinany pozwala zrobić to niewidocznie."
+            ]
+          },
+          {
+            "heading": "Jak działa akustyczny sufit napinany",
+            "paragraphs": [
+              "Widoczna strona to mikroperforowana membrana: tysiące drobnych perforacji przepuszczają dźwięk do absorbera z wełny poliestrowej o wysokiej gęstości zamontowanego za nią. Pomieszczenie nadal wygląda jak jeden nieskazitelny sufit bez łączeń, ale energia dźwięku jest wychwytywana, a nie odbijana.",
+              "Dobrze wykonany system osiąga aż do klasy A pochłaniania — najwyższą klasyfikację — na całej pokrytej powierzchni."
+            ]
+          },
+          {
+            "heading": "Jak czytać liczby: αw i NRC",
+            "paragraphs": [
+              "Pochłanianie dźwięku mierzy się w skali od 0 (powierzchnia w pełni odbijająca) do 1 (w pełni pochłaniająca). W Europie kluczową wartością jest ważony współczynnik pochłaniania αw, a odpowiadające mu klasy biegną od klasy A (αw ≥ 0.90) do klasy E. NRC (Noise Reduction Coefficient) to równoważny jednoliczbowy wskaźnik, częściej używany w Ameryce Północnej.",
+              "Porównując produkty akustyczne, szukaj właśnie tych wartości — αw, klasy pochłaniania i NRC — a nie mglistych obietnic „wyciszenia”."
+            ]
+          },
+          {
+            "heading": "Gdzie naprawdę się opłaca",
+            "paragraphs": [
+              "Studia nagrań, kina domowe, biura open space, restauracje, sale lekcyjne i placówki ochrony zdrowia — wszystkie na tym korzystają. Ten sam system obejmuje też podwieszane wyspy sufitowe i dekoracyjne panele ścienne tam, gdzie pełny sufit nie wchodzi w grę.",
+              "Jeśli walczysz z pogłosem w konkretnym pomieszczeniu, poproś o wycenę i podaj wymiary oraz przeznaczenie — doradzimy właściwy absorber i wykończenie."
+            ]
+          }
+        ]
+      }
+    },
+    "chrome": {
+      "readMinutes": "{count} min czytania",
+      "publishedOn": "Opublikowano",
+      "updatedOn": "Zaktualizowano",
+      "backToBlog": "Wszystkie poradniki",
+      "eyebrow": "Poradniki",
+      "ctaTitle": "Myślisz o suficie napinanym?",
+      "ctaBody": "Otrzymaj bezpłatną, niezobowiązującą wycenę dla swojego wnętrza.",
+      "ctaBtn": "Poproś o bezpłatną wycenę"
+    }
+  },
+  "inspirationPage": {
+    "eyebrow": "Inspiracje",
+    "title1": "Prawdziwe wnętrza,",
+    "title2a": "prawdziwe",
+    "title2b": "realizacje",
+    "browseEyebrow": "Przeglądaj według rozwiązania",
+    "allEyebrow": "Wszystkie realizacje",
+    "portfolioTitle": "Portfolio",
+    "ctaTitle": "Wyobraź to sobie w swoim wnętrzu",
+    "quoteCta": "Poproś o bezpłatną wycenę",
+    "exploreCta": "Poznaj rozwiązania",
+    "showing": "Pokazano {count}",
+    "filterAria": "Filtruj realizacje",
+    "filters": [
+      "Wszystkie",
+      "Akustyka",
+      "Dom",
+      "Łazienka",
+      "Biuro",
+      "Komercyjne",
+      "Kino domowe",
+      "Światło i nadruk"
+    ],
+    "browse": [
+      {
+        "label": "Akustyka",
+        "desc": "Studia, biura i ciche wnętrza"
+      },
+      {
+        "label": "Światło i nadruk",
+        "desc": "Sufity podświetlane i z nadrukiem"
+      },
+      {
+        "label": "Dom",
+        "desc": "Domy i prywatne wnętrza"
+      },
+      {
+        "label": "Łazienka",
+        "desc": "Odporne na wilgoć i prefabrykowane"
+      },
+      {
+        "label": "Biuro",
+        "desc": "Komfort akustyczny w pracy"
+      },
+      {
+        "label": "Komercyjne",
+        "desc": "Sklepy, hotele i sale"
+      }
+    ]
+  },
+  "projectPage": {
+    "crumbInspiration": "Inspiracje",
+    "materialsTitle": "Użyte produkty i materiały",
+    "detailsTitle": "Szczegóły realizacji",
+    "solutionsUsed": "Zastosowane rozwiązania",
+    "similarCta": "Rozpocznij podobny projekt",
+    "gallery": "Galeria",
+    "faqTitle": "Częste pytania",
+    "allProjects": "Wszystkie realizacje",
+    "exploreSolutions": "Poznaj rozwiązania",
+    "photo": "zdjęcie"
+  },
+  "reviewsData": {
+    "items": [
+      {
+        "role": "Właściciel domu · Antwerpia",
+        "quote": "Sufit w naszym salonie zamontowali w jeden dzień, bez żadnego bałaganu. Matowe wykończenie wygląda dokładnie jak świeży tynk — jesteśmy naprawdę zachwyceni."
+      },
+      {
+        "role": "Architekt · Gandawa",
+        "quote": "W specyfikacjach sufitów akustycznych wskazuję teraz STRETCH. Wnętrze odbiera się jako jedną czystą płaszczyznę, a pogłos zniknął — klienci zawsze zauważają różnicę."
+      },
+      {
+        "role": "Wykonawca · Sint-Niklaas",
+        "quote": "Szkolenie szybko wdrożyło mój zespół w montaż, a dostawy na wymiar są niezawodne. Zostając partnerem, dodaliśmy do oferty zupełnie nową usługę."
+      }
+    ]
+  },
+  "partnersPage": {
+    "crumb": "Partnerzy",
+    "hero": {
+      "eyebrow": "Dla branży",
+      "title": "Zostań partnerem",
+      "lead": "Dwa sposoby współpracy z nami: sprzedawaj nasze sufity jako gotowy produkt i zostaw montaż naszej sieci, albo przejdź szkolenie i montuj je samodzielnie. Tak czy inaczej otrzymujesz ceny dla profesjonalistów, produkcję na wymiar z Belgii i przekazywane lokalne zapytania.",
+      "ctaApply": "Złóż wniosek o partnerstwo",
+      "ctaCall": "Umów rozmowę",
+      "imageAlt": "Partner montażowy STRETCH przy pracy",
+      "statLabel": "Montaż na ekipę / dzień"
+    },
+    "models": {
+      "eyebrow": "Dwie ścieżki partnerstwa",
+      "title": "Dystrybutor czy dealer — wybierz model dopasowany do Twojej firmy.",
+      "lead": "Różnica jest prosta: dystrybutor sprzedaje sufit, a montaż zostawia nam; dealer sprzedaje i montuje samodzielnie po ukończeniu naszego szkolenia.",
+      "bestForLabel": "Najlepsze dla:",
+      "reseller": {
+        "kicker": "Dystrybutor",
+        "title": "Ty sprzedajesz. My montujemy.",
+        "body": "Sprzedajesz swojemu klientowi sufit STRETCH jako gotowy, zamontowany produkt. My i nasza sieć dealerów zajmujemy się montażem jako Twój partner — Ty skupiasz się na sprzedaży i relacji z klientem.",
+        "points": [
+          "Sprzedajesz klientowi gotowy, zamontowany sufit",
+          "Montujemy go za Ciebie, poprzez naszą certyfikowaną sieć dealerów",
+          "Nie potrzebujesz własnej ekipy ani umiejętności montażowych",
+          "Ceny dla profesjonalistów, zdjęcia produktowe i przekazywane lokalne zapytania"
+        ],
+        "bestFor": "projektantów wnętrz, architektów, salonów kuchni i łazienek oraz wykonawców, którzy chcą oferować sufity bez ich montowania.",
+        "cta": "Zostań dystrybutorem"
+      },
+      "dealer": {
+        "kicker": "Dealer",
+        "badge": "Wymagane szkolenie",
+        "title": "Sprzedajesz i montujesz.",
+        "body": "Sprzedajesz produkty STRETCH w ramach własnych projektów i samodzielnie wykonujesz montaż. Aby zostać certyfikowanym dealerem, Twój monter najpierw kończy nasze praktyczne szkolenie w naszej centrali.",
+        "points": [
+          "Sprzedajesz produkty STRETCH w ramach własnych projektów",
+          "Montaż wykonujesz samodzielnie",
+          "Twój monter najpierw kończy nasze praktyczne szkolenie",
+          "Zamawiasz na wymiar z naszego belgijskiego zakładu"
+        ],
+        "bestFor": "monterów, firm wykończeniowych i specjalistów od zabudowy suchej, którzy chcą dodać sufity napinane do własnych usług montażowych.",
+        "cta": "Zostań dealerem",
+        "trainingLink": "Zobacz szkolenie"
+      }
+    },
+    "compare": {
+      "resellerHead": "Dystrybutor",
+      "dealerHead": "Dealer",
+      "rows": [
+        {
+          "label": "Co sprzedajesz",
+          "reseller": "Gotowy, zamontowany sufit",
+          "dealer": "Produkty w ramach własnych projektów"
+        },
+        {
+          "label": "Kto montuje",
+          "reseller": "My — poprzez naszą sieć dealerów",
+          "dealer": "Ty, samodzielnie"
+        },
+        {
+          "label": "Szkolenie",
+          "reseller": "Niewymagane",
+          "dealer": "Wymagane — kurs praktyczny"
+        },
+        {
+          "label": "Najlepiej pasuje do",
+          "reseller": "Projektanci, salony, wykonawcy",
+          "dealer": "Monterzy i firmy wykończeniowe"
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Co otrzymuje każdy partner",
+      "titleA": "Więcej marży,",
+      "titleB": "mniej kłopotów",
+      "lead": "Niezależnie od modelu, my zajmujemy się produktem i łańcuchem dostaw — Ty dostarczasz sufit klasy premium, który pokochają Twoi klienci.",
+      "cards": [
+        {
+          "title": "Mocne marże",
+          "body": "Ceny dla profesjonalistów na membrany i profile na wymiar, ze zdrową marżą na produkcie premium, na który jest popyt."
+        },
+        {
+          "title": "Przekazywane zapytania",
+          "body": "Lokalne zapytania klientów przekazujemy partnerom z ich regionu — prawdziwe projekty, nie tylko cennik."
+        },
+        {
+          "title": "Zamówienia B2B",
+          "body": "Zamawiaj konfekcjonowane na wymiar z naszego belgijskiego zakładu przez dedykowany portal partnerski, z pewnymi terminami realizacji."
+        },
+        {
+          "title": "Wyprodukowano w Belgii",
+          "body": "Ręcznie wykonane membrany, opracowane w Belgii, z długą gwarancją produktową, za którą możesz ręczyć."
+        },
+        {
+          "title": "Praktyczne szkolenie",
+          "body": "Dla dealerów: certyfikuj swój zespół w naszej centrali w kilka dni — konfekcjonowanie, profile, montaż na zimno i na ciepło, światło i akustyka."
+        },
+        {
+          "title": "Wsparcie marketingowe",
+          "body": "Zdjęcia produktowe, próbki i materiały sprzedażowe, które pomogą Ci zdobywać i domykać zlecenia na sufity napinane."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "Jak to działa",
+      "title": "Krótka droga do sprzedaży sufitów napinanych — na Twoich zasadach.",
+      "resellerPath": "Ścieżka dystrybutora",
+      "dealerPath": "Ścieżka dealera",
+      "resellerSteps": [
+        {
+          "title": "Złóż wniosek jako dystrybutor",
+          "body": "Wyślij krótkie zgłoszenie. Każde rozpatrujemy osobiście i umawiamy rozmowę, aby poznać Twoją firmę."
+        },
+        {
+          "title": "Przygotuj się do startu",
+          "body": "Ceny dla profesjonalistów, próbki i materiały sprzedażowe — bez szkolenia. Od razu zacznij wyceniać sufity napinane."
+        },
+        {
+          "title": "Ty sprzedajesz — my montujemy",
+          "body": "Ty domykasz sprzedaż i prowadzisz klienta; my i nasi dealerzy montujemy sufit — na czas i zgodnie ze specyfikacją."
+        }
+      ],
+      "dealerSteps": [
+        {
+          "title": "Złóż wniosek jako dealer",
+          "body": "Wyślij krótkie zgłoszenie. Każde rozpatrujemy osobiście i umawiamy rozmowę, aby poznać Twoją firmę."
+        },
+        {
+          "title": "Przeszkol się i zdobądź certyfikat",
+          "body": "Twój zespół kończy praktyczny kurs w naszej centrali: konfekcjonowanie, profile, montaż na zimno i na ciepło, światło i akustyka."
+        },
+        {
+          "title": "Zamawiaj i montuj",
+          "body": "Zamawiaj na wymiar, montuj samodzielnie w jeden dzień i odbieraj przekazywane lokalne zapytania na bieżąco."
+        }
+      ]
+    },
+    "apply": {
+      "eyebrow": "Zostań partnerem",
+      "titleA": "Zgłoś się",
+      "titleB": "już dziś",
+      "lead": "Powiedz nam, czy chcesz sprzedawać, czy też montować — resztą zajmiemy się my.",
+      "points": [
+        "Każde zgłoszenie rozpatrujemy osobiście",
+        "Wyłączność terytorialna tam, gdzie to możliwe",
+        "Wdrożenie w kilka tygodni"
+      ]
+    }
+  },
+  "trainingPage": {
+    "crumb": "Szkolenie dla monterów",
+    "courseName": "Certyfikacja montera STRETCH",
+    "courseDescription": "Praktyczna certyfikacja montera sufitów napinanych w centrali STRETCH w Belgii: konfekcjonowanie membrany, profile, montaż na zimno i na ciepło, światło, akustyka, wykończenie i wycena.",
+    "hero": {
+      "eyebrow": "Szkolenie dla monterów",
+      "titleA": "Montuj jak profesjonalista",
+      "titleB": "w",
+      "titleC": "dni",
+      "lead": "Praktyczna certyfikacja w naszej belgijskiej centrali. Naucz się konfekcjonowania membrany, profili, montażu na zimno i na ciepło, światła i akustyki — bez wcześniejszego doświadczenia.",
+      "ctaBook": "Zarezerwuj szkolenie",
+      "ctaDates": "Zobacz terminy",
+      "imageLabel": "Zdjęcie ze szkolenia / warsztatu"
+    },
+    "format": [
+      {
+        "value": "2–3",
+        "label": "Dni praktyki"
+      },
+      {
+        "value": "Centrala",
+        "label": "Beveren-Waas, Belgia"
+      },
+      {
+        "value": "1:4",
+        "label": "Trener na monterów"
+      }
+    ],
+    "curriculum": {
+      "eyebrow": "Czego się nauczysz",
+      "title": "Pełne rzemiosło",
+      "lead": "Od rolki membrany po gotowy, podświetlony, akustyczny sufit — plus umiejętności handlowe, by go sprzedać.",
+      "items": [
+        {
+          "title": "Membrana i konfekcjonowanie",
+          "body": "Jak membrany poliestrowe i PVC są mierzone, cięte i zgrzewane na wymiar w zakładzie."
+        },
+        {
+          "title": "Profile obwodowe",
+          "body": "Wyznaczanie i mocowanie profili zatrzaskowych idealnie w poziomie — fundament nieskazitelnego sufitu."
+        },
+        {
+          "title": "Montaż na zimno i na ciepło",
+          "body": "Prawidłowe napinanie obu systemów: zimnego poliestru i podgrzewanej folii PVC, od początku do końca."
+        },
+        {
+          "title": "Światło i akustyka",
+          "body": "Integracja podświetlenia, linii LED, folii z nadrukiem i akustycznej warstwy pochłaniającej."
+        },
+        {
+          "title": "Wykończenie i dostęp",
+          "body": "Czyste wykończenie obwodu, wycięcia pod osprzęt i dyskretne klapy rewizyjne."
+        },
+        {
+          "title": "Wycena i sprzedaż",
+          "body": "Pomiar realizacji, pewna wycena i przekonujące prezentowanie sufitów napinanych klientom."
+        }
+      ]
+    },
+    "dates": {
+      "eyebrow": "Najbliższe terminy",
+      "title": "Zarezerwuj miejsce",
+      "lead": "Małe grupy, o miejscu decyduje kolejność zgłoszeń. Na życzenie organizujemy sesje wyjazdowe u Ciebie.",
+      "onRequestTitle": "Na życzenie",
+      "onRequestNote": "Indywidualna sesja na miejscu"
+    },
+    "book": {
+      "eyebrow": "Zaplanuj szkolenie",
+      "titleA": "Zarezerwuj",
+      "titleB": "miejsce",
+      "includedLabel": "W cenie",
+      "included": [
+        "Certyfikat ukończenia",
+        "Zestaw startowy montera",
+        "Lunch i materiały na miejscu"
+      ]
+    }
+  },
+  "aboutPage": {
+    "crumb": "O nas",
+    "hero": {
+      "eyebrow": "O STRETCH",
+      "titleA": "Ręcznie wykonane",
+      "titleB": "w",
+      "titleC": "Belgii",
+      "lead": "{name} projektuje i produkuje sufity oraz ściany napinane bez łączeń — opracowane w Belgii, montowane w jeden dzień i stworzone na dekady.",
+      "imageAlt": "Zakład i zespół STRETCH"
+    },
+    "stats": [
+      {
+        "label": "Rok założenia",
+        "sub": "Od tego czasu tworzymy sufity bez łączeń."
+      },
+      {
+        "value": "25 lat",
+        "label": "Gwarancji",
+        "sub": "Na nasze ręcznie wykonane membrany."
+      },
+      {
+        "value": "4",
+        "label": "Biura",
+        "sub": "Belgia, USA, Polska i Austria."
+      }
+    ],
+    "story": {
+      "eyebrow": "Nasza historia",
+      "p1": "{name} powstał w {founded} roku z prostego przekonania: sufit powinien być wykończeniem, które zwraca uwagę z właściwych powodów. Tradycyjne sufity tynkowane pękają, plamią się, a ich wykonanie i odmalowanie to dni brudnej pracy. Napinana membrana — nie: montuje się czysto, idealnie płasko i bez łączeń, często w jeden dzień.",
+      "p2": "Wszystko zaczyna się w naszym belgijskim zakładzie, gdzie membrany poliestrowe i PVC są ręcznie mierzone, cięte i zgrzewane na wymiar. To właśnie konfekcjonowanie na wymiar sprawia, że gotowy sufit tak szybko wpina się na miejscu — bez kurzu i bez malowania.",
+      "p3": "Dziś działamy głównie poprzez sieć partnerów branżowych i certyfikowanych monterów, dostarczając systemy na wymiar, praktyczne szkolenia i przekazywane lokalne zapytania. Od studiów nagraniowych po sale eventowe, od łazienek po przestrzenie handlowe — nasze systemy wnoszą światło, kontrolę akustyki i nieskazitelną powierzchnię do wnętrz w całej Europie i poza nią.",
+      "p4": "Jesteśmy firmą przede wszystkim B2B, z biurami w Belgii, Stanach Zjednoczonych, Polsce i Austrii — ale każda membrana niesie tę samą obietnicę: ręcznie wykonana w Belgii, z 25-letnią gwarancją."
+    },
+    "offices": {
+      "eyebrow": "Gdzie jesteśmy"
+    },
+    "cta": {
+      "title": "Zbudujmy razem coś bez łączeń.",
+      "button": "Poproś o bezpłatną wycenę"
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Kontakt",
+    "titleA": "Porozmawiajmy o",
+    "titleB": "sufitach",
+    "cards": {
+      "call": {
+        "label": "Zadzwoń do nas"
+      },
+      "email": {
+        "label": "Napisz do nas",
+        "sub": "Osobista odpowiedź w ciągu 2 dni"
+      },
+      "chat": {
+        "label": "WhatsApp / Telegram",
+        "value": "Czatuj z nami",
+        "sub": "Szybkie pytania, szybkie odpowiedzi"
+      }
+    },
+    "formTitle": "Wyślij do nas wiadomość",
+    "formLead": "Opowiedz nam o swoim projekcie lub pytaniu. Specjalista odpowie w ciągu dwóch dni roboczych.",
+    "mapLabel": "Warsztat / mapa",
+    "mapAlt": "Warsztat STRETCH",
+    "hqKicker": "Siedziba główna",
+    "hqLocation": "{postalCode} {city}, Belgia",
+    "officesEyebrow": "Nasze biura",
+    "dealerTitle": "Wolisz lokalnego dystrybutora?",
+    "dealerBody": "Zapytania od klientów indywidualnych kierujemy do certyfikowanych monterów w Twoim regionie — wystarczy zapytać, a skontaktujemy Cię z nimi.",
+    "dealerCta": "Znajdź najbliższego dystrybutora",
+    "form": {
+      "subjects": [
+        "Poproś o wycenę",
+        "Znajdź dystrybutora",
+        "Współpraca",
+        "Szkolenie dla monterów",
+        "Inne"
+      ],
+      "timelines": [
+        "Jak najszybciej",
+        "W ciągu 1–3 miesięcy",
+        "W ciągu 4–12 miesięcy",
+        "Na razie się rozglądam"
+      ],
+      "timelineLabel": "Termin",
+      "consentPrefix": "Wyrażam zgodę na przetwarzanie moich danych przez STRETCH w celu odpowiedzi na moje zapytanie, zgodnie z",
+      "consentPrivacy": "polityką prywatności",
+      "submit": "Wyślij wiadomość"
+    }
+  },
+  "datasheetsPage": {
+    "eyebrow": "Karty techniczne",
+    "crumb": "Karty techniczne",
+    "titleA": "Specyfikacje i",
+    "titleB": "karty techniczne",
+    "lead": "Pobierz dokumentację techniczną każdego systemu STRETCH — specyfikacje, klasy reakcji na ogień, wartości klas akustycznych i szczegóły gwarancji. Podaj swoje dane raz przy każdym pobraniu, a plik zacznie się pobierać od razu.",
+    "updated": "Zaktualizowano {date}",
+    "privacyNote": "Prosimy o imię i nazwisko, e-mail oraz telefon, aby specjalista mógł odpowiedzieć na ewentualne pytania techniczne. Twoje dane są przetwarzane zgodnie z naszą",
+    "privacyLink": "polityką prywatności"
+  },
+  "samplesPage": {
+    "eyebrow": "Próbki kolorów",
+    "crumb": "Próbki",
+    "titleA": "Zobacz",
+    "titleB": "kolory",
+    "lead": "Zamów fizyczne próbki RAL i kolorów naszych membran poliestrowych, PVC i akustycznych — bezpłatnie dla partnerów handlowych, z dostawą pod drzwi.",
+    "points": [
+      "Standardowe odcienie i dowolny RAL na zamówienie",
+      "Wykończenia poliestrowe, PVC i akustyczne",
+      "Wysyłka w ciągu dwóch dni roboczych"
+    ]
+  },
+  "blogPage": {
+    "eyebrow": "Poradniki i wiedza",
+    "crumb": "Poradniki",
+    "titleA": "Sufity napinane,",
+    "titleB": "bez tajemnic",
+    "postMeta": "{date} · {minutes} min czytania",
+    "readArticle": "Czytaj artykuł"
+  },
+  "inlineLead": {
+    "consentPrefix": "Wyrażam zgodę na przetwarzanie moich danych przez STRETCH w celu odpowiedzi na moje zapytanie, zgodnie z",
+    "consentPrivacy": "polityką prywatności"
   }
 }
