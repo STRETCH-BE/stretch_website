@@ -498,7 +498,9 @@
     "allSolutions": "Todas as soluções",
     "ctaKicker": "Grátis e sem compromisso",
     "ctaTitle": "Quer este teto",
-    "dealer": "Encontre o revendedor mais próximo"
+    "dealer": "Encontre o revendedor mais próximo",
+    "chartCount": "{count, plural, one {# cor} other {# cores}}",
+    "anyRal": "Qualquer cor RAL sob pedido"
   },
   "productsPage": {
     "eyebrow": "As nossas soluções",
@@ -512,5 +514,963 @@
     "notSure": "Não sabe qual escolher?",
     "notSureBody": "Fale-nos da sua divisão e recomendamos o sistema certo — grátis e sem compromisso.",
     "quote": "Peça um orçamento gratuito"
+  },
+  "catalog": {
+    "polyester": {
+      "name": "Teto tensado de poliéster",
+      "short": "Polyester",
+      "category": "Membrana montada a frio",
+      "mount": "Montagem a frio",
+      "intro": "Uma membrana tensada estética e funcional para construção nova e renovação. Tensada a frio à mão para um acabamento impecável e muito mate — com opções acústicas e laváveis integradas.",
+      "summary": "Teto tensado de poliéster montado a frio com acabamento muito mate, sem juntas até 5,15 m e 10 anos de garantia.",
+      "chips": [
+        "Sem juntas até 5,15 m",
+        "+25 anos de vida útil",
+        "Acústica até classe A",
+        "Lavável"
+      ],
+      "highlights": [
+        {
+          "value": "5.15m",
+          "label": "Largura sem juntas"
+        },
+        {
+          "value": "A frio",
+          "label": "Método de montagem"
+        },
+        {
+          "value": "Mate",
+          "label": "Aspeto da superfície"
+        },
+        {
+          "value": "A",
+          "label": "Classe acústica"
+        }
+      ],
+      "features": [
+        {
+          "title": "Instalação a frio",
+          "body": "Sem canhões de calor nem tempos de secagem. A membrana de poliéster é tensada a frio e encaixada num perfil perimetral — limpo, rápido e sem vapores, mesmo em divisões ocupadas."
+        },
+        {
+          "title": "Um acabamento muito mate",
+          "body": "Uma superfície mate profunda e sem brilho que parece estuque acabado de pintar — sem as fissuras, o descascar ou as repinturas que isso implica."
+        },
+        {
+          "title": "Acústico e lavável",
+          "body": "Escolha uma versão microperfurada com absorsor para domar a reverberação. Todos os acabamentos se limpam facilmente e resistem à humidade durante 25 anos."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Membrana de poliéster tricotada"
+        },
+        {
+          "k": "Montagem",
+          "v": "Tensado a frio, perfil de clique"
+        },
+        {
+          "k": "Largura máx. sem juntas",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Superfície",
+          "v": "Muito mate"
+        },
+        {
+          "k": "Classificação ao fogo",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Acústico",
+          "v": "Até classe A (perfurado)"
+        },
+        {
+          "k": "Limpeza",
+          "v": "Lavável, resistente à humidade"
+        },
+        {
+          "k": "Garantia",
+          "v": "10 anos"
+        }
+      ],
+      "applications": [
+        "Sala de estar",
+        "Casa de banho",
+        "Escritório",
+        "Cinema em casa",
+        "Saúde",
+        "Retalho"
+      ],
+      "colourChartNote": "Todas as cores estão disponíveis em acabamento standard e acústico."
+    },
+    "pvc": {
+      "name": "Teto tensado de película PVC",
+      "short": "PVC Film",
+      "category": "Película montada a quente",
+      "mount": "Montagem a quente",
+      "intro": "Uma película de PVC aquecida e tensada na instalação — totalmente reciclável e fácil de remover. Substitua um teto cansado por um novo e impecável num único dia.",
+      "summary": "Teto tensado de película PVC montado a quente, 100 % reciclável e removível, sem juntas até 6,4 m e com 10 anos de garantia.",
+      "chips": [
+        "Sem juntas até 6,4 m",
+        "100% reciclável",
+        "Fácil de remover",
+        "Lavável"
+      ],
+      "highlights": [
+        {
+          "value": "6.4m",
+          "label": "Largura sem juntas"
+        },
+        {
+          "value": "A quente",
+          "label": "Método de montagem"
+        },
+        {
+          "value": "100%",
+          "label": "Reciclável"
+        },
+        {
+          "value": "A",
+          "label": "Classe acústica"
+        }
+      ],
+      "features": [
+        {
+          "title": "Reciclável em matéria-prima",
+          "body": "O sistema de PVC é totalmente reciclável em matéria-prima — uma escolha circular, fácil de remover e recolocar sempre que precisar."
+        },
+        {
+          "title": "Pronto para retroiluminação e impressão",
+          "body": "As películas translúcidas difundem a luz LED uniformemente e sem pontos quentes; qualquer imagem, textura ou céu estrelado pode ser impresso de ponta a ponta."
+        },
+        {
+          "title": "Removível e lavável",
+          "body": "Desencaixe para aceder às infraestruturas por cima e volte a tensar em minutos. A película limpa-se facilmente e não teme a humidade."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Película de PVC calandrada"
+        },
+        {
+          "k": "Montagem",
+          "v": "Tensado a quente, perfil de clique"
+        },
+        {
+          "k": "Largura máx. sem juntas",
+          "v": "6.4 m"
+        },
+        {
+          "k": "Superfície",
+          "v": "Mate / acetinado / brilho / translúcido"
+        },
+        {
+          "k": "Classificação ao fogo",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Acústico",
+          "v": "Até classe A (perfurado)"
+        },
+        {
+          "k": "Limpeza",
+          "v": "Lavável, resistente à humidade"
+        },
+        {
+          "k": "Garantia",
+          "v": "10 anos"
+        }
+      ],
+      "applications": [
+        "Casa de banho",
+        "Piscina e bem-estar",
+        "Retalho",
+        "Hotelaria",
+        "Escritório",
+        "Cinema em casa"
+      ],
+      "colourChartNote": "Disponível em acabamentos mate, acetinado, brilhante, translúcido e metálico."
+    },
+    "acoustic": {
+      "name": "Sistema tensado acústico",
+      "short": "Acústico",
+      "category": "Membrana fonoabsorvente",
+      "mount": "A frio / a quente",
+      "intro": "Uma membrana tensada microperfurada com absorsores de alta densidade — um teto impecável que reduz de forma mensurável a reverberação e o ruído em qualquer divisão.",
+      "summary": "Membrana tensada acústica microperfurada com reforço absorsor de alta densidade, atingindo a classe A de absorção sonora.",
+      "chips": [
+        "Até classe A",
+        "Superfície sem juntas",
+        "Opção de áudio invisível",
+        "Face lavável"
+      ],
+      "highlights": [
+        {
+          "value": "A",
+          "label": "Classe de absorção"
+        },
+        {
+          "value": "αw",
+          "label": "Valores testados"
+        },
+        {
+          "value": "0",
+          "label": "Juntas visíveis"
+        },
+        {
+          "value": "+25y",
+          "label": "Vida útil"
+        }
+      ],
+      "features": [
+        {
+          "title": "Absorção classe A",
+          "body": "A lã de poliéster de alta densidade atrás de uma face microperfurada oferece absorção sonora até classe A — sem tratamento visível."
+        },
+        {
+          "title": "Ilhas e painéis de parede",
+          "body": "Bafles suspensos e absorsores murais decorativos alargam o mesmo sistema a qualquer superfície da divisão."
+        },
+        {
+          "title": "Áudio invisível",
+          "body": "Os altifalantes montam-se completamente atrás da película para um som limpo, sem fonte visível, que preenche o espaço."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Membrana perfurada + absorsor"
+        },
+        {
+          "k": "Montagem",
+          "v": "A frio ou a quente, perfil de clique"
+        },
+        {
+          "k": "Largura máx. sem juntas",
+          "v": "5.15"
+        },
+        {
+          "k": "Absorção",
+          "v": "Até classe A (αw)"
+        },
+        {
+          "k": "Classificação ao fogo",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Reforço",
+          "v": "Lã de poliéster de alta densidade"
+        },
+        {
+          "k": "Limpeza",
+          "v": "Face lavável"
+        },
+        {
+          "k": "Garantia",
+          "v": "10 anos"
+        }
+      ],
+      "applications": [
+        "Escritório",
+        "Restaurante",
+        "Studio",
+        "Cinema em casa",
+        "Escola",
+        "Saúde"
+      ]
+    },
+    "light": {
+      "name": "Teto luminoso",
+      "short": "Iluminado",
+      "category": "Membrana translúcida",
+      "mount": "A frio / a quente",
+      "intro": "Películas tensadas translúcidas que transformam todo o teto numa fonte de luz suave e uniforme — ou numa tela impressa com a imagem que escolher.",
+      "summary": "Tetos tensados translúcidos retroiluminados e designs impressos de ponta a ponta, incluindo acabamentos de céu estrelado em fibra ótica.",
+      "chips": [
+        "Retroiluminação uniforme",
+        "Opção de linha LED",
+        "Impressão de ponta a ponta",
+        "Sem juntas"
+      ],
+      "highlights": [
+        {
+          "value": "360°",
+          "label": "Difusão uniforme"
+        },
+        {
+          "value": "RGB",
+          "label": "Opções LED"
+        },
+        {
+          "value": "Impressão",
+          "label": "Qualquer imagem"
+        },
+        {
+          "value": "5.15m",
+          "label": "Largura sem juntas"
+        }
+      ],
+      "features": [
+        {
+          "title": "Retroiluminação uniforme",
+          "body": "Uma película translúcida sobre um campo de LED difunde a luz sem pontos quentes — um céu luminoso em qualquer divisão, regulável conforme o ambiente."
+        },
+        {
+          "title": "Iluminação em linhas LED",
+          "body": "As linhas de luz embutidas integram-se sem juntas na membrana para efeitos de iluminação nítidos e arquitetónicos."
+        },
+        {
+          "title": "Designs impressos",
+          "body": "Qualquer fotografia, padrão ou textura impressa de ponta a ponta — incluindo um céu estrelado em fibra ótica."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Película PVC translúcida"
+        },
+        {
+          "k": "Montagem",
+          "v": "A frio ou a quente, perfil de clique"
+        },
+        {
+          "k": "Largura máx. sem juntas",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Fonte de luz",
+          "v": "Campo / linha LED, regulável"
+        },
+        {
+          "k": "Impressão",
+          "v": "De ponta a ponta, qualquer imagem"
+        },
+        {
+          "k": "Classificação ao fogo",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Limpeza",
+          "v": "Lavável"
+        },
+        {
+          "k": "Garantia",
+          "v": "10 anos"
+        }
+      ],
+      "applications": [
+        "Cinema em casa",
+        "Casa de banho",
+        "Retalho",
+        "Hotelaria",
+        "Spa",
+        "Escritório"
+      ]
+    },
+    "prefab": {
+      "name": "Estruturas pré-fabricadas",
+      "short": "Estruturas pré-fabricadas",
+      "category": "Estrutura portante pré-fabricada",
+      "mount": "Pré-fabricado",
+      "intro": "Estruturas portantes pré-fabricadas para projetos de tetos tensados — vigas de alumínio, aço e madeira, sancas e detalhes de diferença de altura, feitas à medida na nossa produção polaca e enviadas para os nossos revendedores em todo o mundo.",
+      "summary": "Estruturas pré-fabricadas à medida em alumínio, aço e madeira — vigas para tetos em grelha, sancas para tetos flutuantes e detalhes limpos de diferença de altura.",
+      "chips": [
+        "Alumínio / aço / madeira",
+        "Vigas e sancas",
+        "À medida",
+        "Envio mundial"
+      ],
+      "highlights": [
+        {
+          "value": "1",
+          "label": "Dia em obra"
+        },
+        {
+          "value": "Prefab",
+          "label": "Fabricado fora da obra"
+        },
+        {
+          "value": "Acesso",
+          "label": "Portinhola de inspeção"
+        },
+        {
+          "value": "25 anos",
+          "label": "Vida útil"
+        }
+      ],
+      "features": [
+        {
+          "title": "Fabricado fora da obra",
+          "body": "Os módulos são confecionados na nossa oficina belga e verificados antes de chegarem à obra."
+        },
+        {
+          "title": "Encaixe em obra",
+          "body": "As unidades pré-tensadas encaixam num aro perimetral — mínimo de especialidades, mínimo de tempo, um resultado perfeito."
+        },
+        {
+          "title": "Acesso integrado",
+          "body": "Discretas portinholas de inspeção mantêm as infraestruturas acessíveis sem quebrar a linha limpa do teto."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Membrana em aro pré-fabricado"
+        },
+        {
+          "k": "Montagem",
+          "v": "Módulo de encaixe"
+        },
+        {
+          "k": "Prazo de entrega",
+          "v": "Fabricado por encomenda"
+        },
+        {
+          "k": "Acesso",
+          "v": "Portinhola de inspeção integrada"
+        },
+        {
+          "k": "Classificação ao fogo",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Acústico",
+          "v": "Reforço absorsor opcional"
+        },
+        {
+          "k": "Limpeza",
+          "v": "Lavável"
+        },
+        {
+          "k": "Garantia",
+          "v": "10 anos"
+        }
+      ],
+      "applications": [
+        "Módulos de casa de banho",
+        "Hotéis",
+        "Construção modular",
+        "Saúde",
+        "Retalho",
+        "Escritório"
+      ]
+    },
+    "starry": {
+      "name": "Teto de céu estrelado",
+      "short": "Céu estrelado",
+      "category": "Fibra ótica / retroiluminado",
+      "mount": "Retroiluminado",
+      "intro": "Um teto tensado salpicado com centenas de pontos de fibra ótica — um céu noturno calmo e cintilante sobre o seu cinema, quarto ou spa.",
+      "summary": "Tetos tensados de céu estrelado com fibra ótica e LED: centenas de pontos reguláveis, estrelas cadentes e RGB opcionais, numa membrana sem juntas.",
+      "chips": [
+        "Centenas de estrelas",
+        "Regulável",
+        "RGB opcional",
+        "Estrelas cadentes"
+      ],
+      "highlights": [
+        {
+          "value": "500+",
+          "label": "Pontos de estrela"
+        },
+        {
+          "value": "RGB",
+          "label": "Opções de cor"
+        },
+        {
+          "value": "1 dia",
+          "label": "Instalação"
+        },
+        {
+          "value": "10 anos",
+          "label": "Garantia"
+        }
+      ],
+      "features": [
+        {
+          "title": "Um céu noturno real",
+          "body": "Centenas de pontos de fibra ótica atrás de uma membrana tensada criam um campo de estrelas profundo e cintilante — segundo uma constelação ou dispersos ao acaso."
+        },
+        {
+          "title": "Fibra ótica e LED",
+          "body": "Um único motor de luz LED alimenta todas as fibras: as estrelas mantêm-se frias e totalmente reguláveis. Acrescente uma roda de cintilação para movimento, RGB para cor ou efeitos de estrelas cadentes."
+        },
+        {
+          "title": "Cinema, quarto, spa",
+          "body": "Perfeito onde quer ambiente sem encandeamento — cinemas em casa, quartos, spas e restaurantes. Combine com reforço acústico para uma divisão calma e silenciosa."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Efeito",
+          "v": "Campo de estrelas em fibra ótica"
+        },
+        {
+          "k": "Membrana",
+          "v": "Película escura translúcida / impressa"
+        },
+        {
+          "k": "Pontos de estrela",
+          "v": "De ~150 a 1.000+"
+        },
+        {
+          "k": "Fonte de luz",
+          "v": "Um só motor LED, regulável"
+        },
+        {
+          "k": "Opções",
+          "v": "Cintilação, RGB, estrelas cadentes"
+        },
+        {
+          "k": "Montagem",
+          "v": "Perfil de clique tensado"
+        },
+        {
+          "k": "Limpeza",
+          "v": "Lavável"
+        },
+        {
+          "k": "Garantia",
+          "v": "10 anos"
+        }
+      ],
+      "applications": [
+        "Cinema em casa",
+        "Quarto",
+        "Spa e bem-estar",
+        "Restaurante",
+        "Hotelaria",
+        "Quarto de criança"
+      ]
+    },
+    "hatch": {
+      "name": "Portinhola de inspeção",
+      "short": "Portinhola de inspeção",
+      "category": "Solução de acesso",
+      "mount": "Integrado",
+      "intro": "Acesso discreto e reutilizável através de um teto tensado — alcance válvulas, caixas de derivação e acessórios sem cortar nem substituir a membrana.",
+      "summary": "Portinholas de inspeção integradas para tetos tensados: acesso quase invisível e reutilizável às infraestruturas escondidas sobre a membrana, em qualquer tamanho.",
+      "chips": [
+        "Quase invisível",
+        "Reutilizável",
+        "Qualquer tamanho",
+        "Pronto para adaptação"
+      ],
+      "highlights": [
+        {
+          "value": "Escondidos",
+          "label": "Na superfície"
+        },
+        {
+          "value": "Qualquer",
+          "label": "Tamanho e forma"
+        },
+        {
+          "value": "Reabertura",
+          "label": "As vezes que forem precisas"
+        },
+        {
+          "value": "1 dia",
+          "label": "Instalação"
+        }
+      ],
+      "features": [
+        {
+          "title": "Invisível até precisar dela",
+          "body": "O aro da portinhola integra-se no detalhe perimetral e é acabado com a mesma membrana: desaparece no teto até ter de ser aberto."
+        },
+        {
+          "title": "Manutenção sem danos",
+          "body": "Alcance válvulas de corte, caixas de derivação, registos e luminárias escondidas sobre o teto — e feche tudo de novo, as vezes que forem precisas."
+        },
+        {
+          "title": "Qualquer tamanho, qualquer divisão",
+          "body": "De um pequeno acesso redondo a um grande painel retangular, dimensionado para a infraestrutura por trás. Funciona em instalações novas e como adaptação em tetos existentes."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Tipo",
+          "v": "Portinhola de acesso integrada"
+        },
+        {
+          "k": "Acabamento",
+          "v": "A condizer com a membrana do teto"
+        },
+        {
+          "k": "Forma",
+          "v": "Redondo ou retangular"
+        },
+        {
+          "k": "Tamanho",
+          "v": "À medida"
+        },
+        {
+          "k": "Abertura",
+          "v": "Aro magnético ou com dobradiças"
+        },
+        {
+          "k": "Adaptação",
+          "v": "Sim, em tetos existentes"
+        },
+        {
+          "k": "Limpeza",
+          "v": "Lavável"
+        },
+        {
+          "k": "Garantia",
+          "v": "10 anos"
+        }
+      ],
+      "applications": [
+        "Casa de banho",
+        "Cozinha",
+        "Lavandaria",
+        "Escritório",
+        "Retalho",
+        "Saúde"
+      ]
+    },
+    "print": {
+      "name": "Teto impresso personalizado",
+      "short": "Impressão personalizada",
+      "category": "Membrana impressa",
+      "mount": "A quente ou a frio",
+      "intro": "Qualquer fotografia, arte ou padrão impresso de ponta a ponta num teto tensado sem juntas — a sua imagem, de parede a parede, sem uniões visíveis.",
+      "summary": "Tetos tensados impressos de ponta a ponta: qualquer imagem, foto ou grafismo de marca em alta resolução numa membrana sem juntas, opcionalmente retroiluminado.",
+      "chips": [
+        "Qualquer imagem",
+        "De ponta a ponta",
+        "Opção retroiluminada",
+        "Sem juntas"
+      ],
+      "highlights": [
+        {
+          "value": "Qualquer",
+          "label": "Imagem ou arte"
+        },
+        {
+          "value": "HD",
+          "label": "Impressão com qualidade fotográfica"
+        },
+        {
+          "value": "Retroiluminado",
+          "label": "Brilho opcional"
+        },
+        {
+          "value": "5.7m",
+          "label": "Largura sem juntas"
+        }
+      ],
+      "features": [
+        {
+          "title": "A sua imagem, de ponta a ponta",
+          "body": "Forneça uma foto, ilustração, grafismo de marca ou padrão e imprimimo-lo em toda a membrana — com gestão de cor e sem juntas nem linhas de painéis."
+        },
+        {
+          "title": "Impressão mais retroiluminação",
+          "body": "Combine uma película translúcida com um campo de LED para retroiluminar a impressão: uma obra ou um céu torna-se um teto decorativo de brilho suave."
+        },
+        {
+          "title": "Feito para o seu espaço",
+          "body": "A imagem é dimensionada e posicionada para a sua divisão exata. Validamos o ficheiro consigo antes da produção — o que aprovar é o que será instalado."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Impressão",
+          "v": "De ponta a ponta, a cores"
+        },
+        {
+          "k": "Resolução",
+          "v": "Qualidade foto, com gestão de cor"
+        },
+        {
+          "k": "Membrana",
+          "v": "Película PVC (opaca ou translúcida)"
+        },
+        {
+          "k": "Retroiluminação",
+          "v": "Campo LED opcional"
+        },
+        {
+          "k": "Largura máx. sem juntas",
+          "v": "5.7 m"
+        },
+        {
+          "k": "Classificação ao fogo",
+          "v": "B-s2,d0"
+        },
+        {
+          "k": "Limpeza",
+          "v": "Lavável"
+        },
+        {
+          "k": "Garantia",
+          "v": "25 anos"
+        }
+      ],
+      "applications": [
+        "Retalho",
+        "Hotelaria",
+        "Cinema em casa",
+        "Escritório",
+        "Showroom",
+        "Restaurante"
+      ]
+    }
+  },
+  "colourNames": {
+    "White": "Branco",
+    "Off-white": "Branco-sujo",
+    "Satin white": "Branco acetinado",
+    "Warm white": "Branco quente",
+    "Light grey": "Cinzento-claro",
+    "Grey": "Cinzento",
+    "Anthracite": "Antracite",
+    "Sand": "Areia",
+    "Black": "Preto",
+    "Black gloss": "Preto brilhante",
+    "Deep blue": "Azul profundo",
+    "Midnight": "Azul-meia-noite",
+    "Translucent": "Translúcido",
+    "Translucent white": "Branco translúcido",
+    "RGB": "RGB",
+    "RGB stars": "Estrelas RGB",
+    "Warm-white stars": "Estrelas branco quente",
+    "Starry sky": "Céu estrelado",
+    "Sky scenes": "Cenas de céu",
+    "Custom": "Personalizado",
+    "Custom RAL": "RAL à medida",
+    "Custom print": "Impressão personalizada",
+    "Custom artwork": "Arte própria",
+    "Brand graphics": "Grafismos de marca",
+    "Full-colour print": "Impressão a cores",
+    "Photographic": "Fotográfico",
+    "Patterns": "Padrões",
+    "Matched to membrane": "A condizer com a membrana",
+    "Pure white": "Branco puro",
+    "Traffic white": "Branco tráfego",
+    "Cream": "Creme",
+    "Oyster white": "Branco pérola",
+    "Light ivory": "Marfim claro",
+    "Beige": "Bege",
+    "Grey beige": "Bege acinzentado",
+    "Silk grey": "Cinzento seda",
+    "Pebble grey": "Cinzento seixo",
+    "Dusty grey": "Cinzento pó",
+    "Agate grey": "Cinzento ágata",
+    "Silver grey": "Cinzento prateado",
+    "Platinum grey": "Cinzento platina",
+    "Slate grey": "Cinzento ardósia",
+    "Black grey": "Cinzento-preto",
+    "Graphite black": "Preto grafite",
+    "Jet black": "Preto profundo",
+    "Bordeaux": "Bordô",
+    "Wine red": "Vermelho vinho",
+    "Oxide red": "Vermelho óxido",
+    "Red": "Vermelho",
+    "Pure orange": "Laranja puro",
+    "Golden yellow": "Amarelo dourado",
+    "Gold": "Dourado",
+    "Silver": "Prateado",
+    "Bronze": "Bronze",
+    "Champagne": "Champanhe",
+    "Cappuccino": "Cappuccino",
+    "Chocolate": "Chocolate",
+    "Pearl": "Pérola",
+    "Opal": "Opala",
+    "Blue": "Azul",
+    "Steel blue": "Azul aço",
+    "Pastel blue": "Azul pastel",
+    "Pigeon blue": "Azul-pombo",
+    "Petrol": "Azul petróleo",
+    "Pale green": "Verde pálido",
+    "Reseda green": "Verde reseda",
+    "Gloss": "Brilhante",
+    "Matte": "Mate",
+    "Satin": "Acetinado",
+    "Metallic": "Metalizado"
+  },
+  "megaMenu": {
+    "solutions": {
+      "railLabel": "Explorar soluções",
+      "allLabel": "Todas as soluções",
+      "promoTitle": "Um teto novo num dia",
+      "promoCta": "Pedir orçamento",
+      "cats": [
+        {
+          "title": "Tetos",
+          "desc": "Poliéster, PVC e sem juntas",
+          "items": [
+            {
+              "title": "Teto de poliéster",
+              "sub": "Montagem a frio · muito mate"
+            },
+            {
+              "title": "Teto de película PVC",
+              "sub": "Reciclável · removível"
+            },
+            {
+              "title": "Unidade de teto pré-fabricada",
+              "sub": "Pré-montada e rápida"
+            },
+            {
+              "title": "Todos os sistemas de teto",
+              "sub": "Compare a gama"
+            }
+          ]
+        },
+        {
+          "title": "Acústica",
+          "desc": "Absorção sonora",
+          "items": [
+            {
+              "title": "Sistema tensionado acústico",
+              "sub": "Até classe A"
+            },
+            {
+              "title": "Como funciona a acústica",
+              "sub": "A absorção explicada"
+            },
+            {
+              "title": "Ficha técnica",
+              "sub": "Valores αw e classes"
+            }
+          ]
+        },
+        {
+          "title": "Luz e impressão",
+          "desc": "LED, retroiluminação e impressão",
+          "items": [
+            {
+              "title": "Teto luminoso",
+              "sub": "Translúcido retroiluminado"
+            },
+            {
+              "title": "Céu estrelado",
+              "sub": "Céu noturno em fibra ótica"
+            },
+            {
+              "title": "Impressão personalizada",
+              "sub": "Qualquer imagem, de ponta a ponta"
+            }
+          ]
+        },
+        {
+          "title": "Prefab",
+          "desc": "Alumínio, aço e madeira",
+          "items": [
+            {
+              "title": "Estruturas pré-fabricadas",
+              "sub": "Vigas, sancas e mais"
+            },
+            {
+              "title": "Elementos de iluminação pré-fabricados",
+              "sub": "Alumínio + tela tensionada"
+            },
+            {
+              "title": "Portinhola de inspeção",
+              "sub": "Acesso discreto"
+            }
+          ]
+        },
+        {
+          "title": "Aplicações",
+          "desc": "Divisão a divisão",
+          "items": [
+            {
+              "title": "Sala e cinema",
+              "sub": "Som e céu estrelado"
+            },
+            {
+              "title": "Casa de banho e cozinha",
+              "sub": "Resistente à humidade"
+            },
+            {
+              "title": "Escritório e comércio",
+              "sub": "Conforto acústico"
+            },
+            {
+              "title": "Ver todos os projetos",
+              "sub": "O portefólio completo"
+            }
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "railLabel": "Documentação",
+      "allLabel": "Todas as especificações e downloads",
+      "promoTitle": "Precisa de ajuda?",
+      "promoBody": "Envie a sua questão de renovação — respondemos em dois dias úteis.",
+      "promoCta": "Fazer uma pergunta",
+      "cats": [
+        {
+          "title": "Teto tensionado de poliéster",
+          "desc": "Membrana montada a frio",
+          "items": [
+            {
+              "title": "Ficha técnica",
+              "sub": "Especificações e download"
+            },
+            {
+              "title": "Cores e acabamentos",
+              "sub": "Gama completa e RAL"
+            },
+            {
+              "title": "Segurança contra incêndio",
+              "sub": "Reação ao fogo e A2"
+            },
+            {
+              "title": "Guia de instalação",
+              "sub": "Montagem a frio, passo a passo"
+            },
+            {
+              "title": "Texto de especificação",
+              "sub": "Para concursos e dossiês"
+            },
+            {
+              "title": "Perguntas frequentes",
+              "sub": "Questões comuns"
+            }
+          ]
+        },
+        {
+          "title": "Teto tensionado de PVC",
+          "desc": "Película montada a quente",
+          "items": [
+            {
+              "title": "Ficha técnica",
+              "sub": "Especificações e download"
+            },
+            {
+              "title": "Cores e acabamentos",
+              "sub": "Mate, acetinado, brilhante"
+            },
+            {
+              "title": "Segurança contra incêndio",
+              "sub": "Reação ao fogo"
+            },
+            {
+              "title": "Guia de instalação",
+              "sub": "Montagem a quente, passo a passo"
+            },
+            {
+              "title": "Texto de especificação",
+              "sub": "Para concursos e dossiês"
+            },
+            {
+              "title": "Perguntas frequentes",
+              "sub": "Questões comuns"
+            }
+          ]
+        }
+      ]
+    },
+    "comingSoon": "Brevemente"
   }
 }

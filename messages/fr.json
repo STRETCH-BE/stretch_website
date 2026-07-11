@@ -498,7 +498,9 @@
     "allSolutions": "Toutes les solutions",
     "ctaKicker": "Gratuit & sans engagement",
     "ctaTitle": "Envie de ce plafond",
-    "dealer": "Trouver votre revendeur le plus proche"
+    "dealer": "Trouver votre revendeur le plus proche",
+    "chartCount": "{count, plural, one {# couleur} other {# couleurs}}",
+    "anyRal": "Toute teinte RAL sur demande"
   },
   "productsPage": {
     "eyebrow": "Nos solutions",
@@ -512,5 +514,963 @@
     "notSure": "Vous hésitez ?",
     "notSureBody": "Parlez-nous de votre pièce et nous vous recommanderons le bon système — gratuitement et sans engagement.",
     "quote": "Demander un devis gratuit"
+  },
+  "catalog": {
+    "polyester": {
+      "name": "Plafond tendu polyester",
+      "short": "Polyester",
+      "category": "Membrane posée à froid",
+      "mount": "Pose à froid",
+      "intro": "Une membrane tendue esthétique et fonctionnelle, pour le neuf comme la rénovation. Tendue à froid, à la main, pour une finition impeccable très mate — avec options acoustiques et lavables intégrées.",
+      "summary": "Plafond tendu polyester posé à froid, finition très mate, sans soudure jusqu’à 5,15 m et garanti 10 ans.",
+      "chips": [
+        "Sans soudure jusqu’à 5,15 m",
+        "+25 ans de durée de vie",
+        "Acoustique jusqu’à la classe A",
+        "Lavable"
+      ],
+      "highlights": [
+        {
+          "value": "5.15m",
+          "label": "Largeur sans soudure"
+        },
+        {
+          "value": "À froid",
+          "label": "Méthode de pose"
+        },
+        {
+          "value": "Mat",
+          "label": "Aspect de surface"
+        },
+        {
+          "value": "A",
+          "label": "Classe acoustique"
+        }
+      ],
+      "features": [
+        {
+          "title": "Pose à froid",
+          "body": "Ni canon à chaleur, ni temps de séchage. La membrane polyester est tendue à froid et clipsée dans un profilé périphérique — propre, rapide et sans émanations, même dans des pièces occupées."
+        },
+        {
+          "title": "Une finition très mate",
+          "body": "Une surface mate profonde, sans reflets, qui ressemble à un plâtre fraîchement peint — sans les fissures, l’écaillage ni les remises en peinture qui vont avec."
+        },
+        {
+          "title": "Acoustique & lavable",
+          "body": "Choisissez une version micro-perforée avec absorbeur pour dompter la réverbération. Chaque finition se nettoie d’un geste et résiste à l’humidité pendant 25 ans."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Matériau",
+          "v": "Membrane polyester tricotée"
+        },
+        {
+          "k": "Pose",
+          "v": "Tendu à froid, profilé à clip"
+        },
+        {
+          "k": "Largeur max sans soudure",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Surface",
+          "v": "Très mat"
+        },
+        {
+          "k": "Classement au feu",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Acoustique",
+          "v": "Jusqu’à la classe A (perforé)"
+        },
+        {
+          "k": "Nettoyage",
+          "v": "Lavable, résistant à l’humidité"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 ans"
+        }
+      ],
+      "applications": [
+        "Salon",
+        "Salle de bain",
+        "Bureau",
+        "Home cinéma",
+        "Santé",
+        "Commerce"
+      ],
+      "colourChartNote": "Chaque couleur est disponible en finition standard et acoustique."
+    },
+    "pvc": {
+      "name": "Plafond tendu film PVC",
+      "short": "PVC Film",
+      "category": "Film posé à chaud",
+      "mount": "Pose à chaud",
+      "intro": "Un film PVC chauffé puis tendu à la pose — entièrement recyclable et facilement démontable. Remplacez un plafond fatigué par un neuf impeccable en une seule journée.",
+      "summary": "Plafond tendu en film PVC posé à chaud, 100 % recyclable et démontable, sans soudure jusqu’à 6,4 m et garanti 10 ans.",
+      "chips": [
+        "Sans soudure jusqu’à 6,4 m",
+        "100 % recyclable",
+        "Facilement démontable",
+        "Lavable"
+      ],
+      "highlights": [
+        {
+          "value": "6.4m",
+          "label": "Largeur sans soudure"
+        },
+        {
+          "value": "À chaud",
+          "label": "Méthode de pose"
+        },
+        {
+          "value": "100%",
+          "label": "Recyclable"
+        },
+        {
+          "value": "A",
+          "label": "Classe acoustique"
+        }
+      ],
+      "features": [
+        {
+          "title": "Recyclable en matière première",
+          "body": "Le système PVC est entièrement recyclable en matière première — un choix circulaire, facile à déposer et à reposer quand vous le souhaitez."
+        },
+        {
+          "title": "Prêt pour rétroéclairage & impression",
+          "body": "Les films translucides diffusent la lumière LED uniformément, sans points chauds ; toute image, texture ou ciel étoilé peut être imprimé bord à bord."
+        },
+        {
+          "title": "Démontable & lavable",
+          "body": "Déclipsez pour accéder aux réseaux au-dessus, puis retendez en quelques minutes. Le film se nettoie d’un geste et ignore l’humidité."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Matériau",
+          "v": "Film PVC calandré"
+        },
+        {
+          "k": "Pose",
+          "v": "Tendu à chaud, profilé à clip"
+        },
+        {
+          "k": "Largeur max sans soudure",
+          "v": "6.4 m"
+        },
+        {
+          "k": "Surface",
+          "v": "Mat / satiné / laqué / translucide"
+        },
+        {
+          "k": "Classement au feu",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Acoustique",
+          "v": "Jusqu’à la classe A (perforé)"
+        },
+        {
+          "k": "Nettoyage",
+          "v": "Lavable, résistant à l’humidité"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 ans"
+        }
+      ],
+      "applications": [
+        "Salle de bain",
+        "Piscine & bien-être",
+        "Commerce",
+        "Hôtellerie",
+        "Bureau",
+        "Home cinéma"
+      ],
+      "colourChartNote": "Disponible en finitions mate, satinée, laquée, translucide et métallisée."
+    },
+    "acoustic": {
+      "name": "Système tendu acoustique",
+      "short": "Acoustique",
+      "category": "Membrane absorbant le son",
+      "mount": "À froid / à chaud",
+      "intro": "Une membrane tendue micro-perforée doublée d’absorbeurs haute densité — un plafond impeccable qui réduit de façon mesurable la réverbération et le bruit dans chaque pièce.",
+      "summary": "Membrane tendue acoustique micro-perforée avec doublage absorbant haute densité, atteignant la classe A d’absorption.",
+      "chips": [
+        "Jusqu’à la classe A",
+        "Surface sans soudure",
+        "Option audio invisible",
+        "Face lavable"
+      ],
+      "highlights": [
+        {
+          "value": "A",
+          "label": "Classe d’absorption"
+        },
+        {
+          "value": "αw",
+          "label": "Valeurs testées"
+        },
+        {
+          "value": "0",
+          "label": "Joints visibles"
+        },
+        {
+          "value": "+25y",
+          "label": "Durée de vie"
+        }
+      ],
+      "features": [
+        {
+          "title": "Absorption classe A",
+          "body": "Une laine polyester haute densité derrière une face micro-perforée offre une absorption jusqu’à la classe A — sans traitement visible."
+        },
+        {
+          "title": "Îlots & panneaux muraux",
+          "body": "Des baffles suspendus et des absorbeurs muraux décoratifs étendent le même système à toutes les surfaces de la pièce."
+        },
+        {
+          "title": "Audio invisible",
+          "body": "Les haut-parleurs se montent entièrement derrière le film pour un son pur, sans source visible, qui remplit l’espace."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Matériau",
+          "v": "Membrane perforée + absorbeur"
+        },
+        {
+          "k": "Pose",
+          "v": "À froid ou à chaud, profilé à clip"
+        },
+        {
+          "k": "Largeur max sans soudure",
+          "v": "5.15"
+        },
+        {
+          "k": "Absorption",
+          "v": "Jusqu’à la classe A (αw)"
+        },
+        {
+          "k": "Classement au feu",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Doublage",
+          "v": "Laine polyester haute densité"
+        },
+        {
+          "k": "Nettoyage",
+          "v": "Face lavable"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 ans"
+        }
+      ],
+      "applications": [
+        "Bureau",
+        "Restaurant",
+        "Studio",
+        "Home cinéma",
+        "École",
+        "Santé"
+      ]
+    },
+    "light": {
+      "name": "Plafond lumineux",
+      "short": "Lumineux",
+      "category": "Membrane translucide",
+      "mount": "À froid / à chaud",
+      "intro": "Des films tendus translucides qui transforment tout un plafond en une source de lumière douce et uniforme — ou en toile imprimée de l’image de votre choix.",
+      "summary": "Plafonds tendus translucides rétroéclairés et motifs imprimés bord à bord, y compris finitions ciel étoilé en fibre optique.",
+      "chips": [
+        "Rétroéclairage uniforme",
+        "Option ligne LED",
+        "Impression bord à bord",
+        "Sans soudure"
+      ],
+      "highlights": [
+        {
+          "value": "360°",
+          "label": "Diffusion uniforme"
+        },
+        {
+          "value": "RGB",
+          "label": "Options LED"
+        },
+        {
+          "value": "Impression",
+          "label": "Toute image"
+        },
+        {
+          "value": "5.15m",
+          "label": "Largeur sans soudure"
+        }
+      ],
+      "features": [
+        {
+          "title": "Rétroéclairage uniforme",
+          "body": "Un film translucide sur un champ de LED diffuse la lumière sans points chauds — un ciel lumineux dans chaque pièce, variable selon l’ambiance."
+        },
+        {
+          "title": "Éclairage en lignes LED",
+          "body": "Des lignes lumineuses encastrées s’intègrent sans raccord dans la membrane pour des effets d’éclairage nets et architecturaux."
+        },
+        {
+          "title": "Motifs imprimés",
+          "body": "Toute photo, motif ou texture imprimé bord à bord — y compris un ciel étoilé en fibre optique."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Matériau",
+          "v": "Film PVC translucide"
+        },
+        {
+          "k": "Pose",
+          "v": "À froid ou à chaud, profilé à clip"
+        },
+        {
+          "k": "Largeur max sans soudure",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Source lumineuse",
+          "v": "Champ / ligne LED, variable"
+        },
+        {
+          "k": "Impression",
+          "v": "Bord à bord, toute image"
+        },
+        {
+          "k": "Classement au feu",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Nettoyage",
+          "v": "Lavable"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 ans"
+        }
+      ],
+      "applications": [
+        "Home cinéma",
+        "Salle de bain",
+        "Commerce",
+        "Hôtellerie",
+        "Spa",
+        "Bureau"
+      ]
+    },
+    "prefab": {
+      "name": "Structures préfabriquées",
+      "short": "Structures préfabriquées",
+      "category": "Structure porteuse préfabriquée",
+      "mount": "Préfabriqué",
+      "intro": "Structures porteuses préfabriquées pour projets de plafonds tendus — poutres en aluminium, acier et bois, corniches et détails de différence de hauteur, fabriquées sur mesure dans notre production polonaise et expédiées à nos revendeurs dans le monde entier.",
+      "summary": "Structures préfabriquées sur mesure en aluminium, acier et bois — poutres pour plafonds à trame, corniches pour plafonds flottants et détails soignés de différence de hauteur.",
+      "chips": [
+        "Aluminium / acier / bois",
+        "Poutres & corniches",
+        "Sur mesure",
+        "Expédié dans le monde entier"
+      ],
+      "highlights": [
+        {
+          "value": "1",
+          "label": "Jour sur site"
+        },
+        {
+          "value": "Prefab",
+          "label": "Fabriqué hors site"
+        },
+        {
+          "value": "Accès",
+          "label": "Trappe de visite"
+        },
+        {
+          "value": "25 ans",
+          "label": "Durée de vie"
+        }
+      ],
+      "features": [
+        {
+          "title": "Fabriqué hors site",
+          "body": "Les modules sont confectionnés dans notre atelier belge et contrôlés avant même d’arriver sur le chantier."
+        },
+        {
+          "title": "Clipsé sur site",
+          "body": "Des unités prétendues se clipsent dans un cadre périphérique — un minimum de corps de métier, un minimum de temps, un résultat parfait."
+        },
+        {
+          "title": "Accès intégré",
+          "body": "De discrètes trappes de visite gardent les réseaux accessibles sans casser la ligne épurée du plafond."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Matériau",
+          "v": "Membrane sur cadre préfabriqué"
+        },
+        {
+          "k": "Pose",
+          "v": "Module clipsable"
+        },
+        {
+          "k": "Délai",
+          "v": "Fabriqué à la commande"
+        },
+        {
+          "k": "Accès",
+          "v": "Trappe de visite intégrée"
+        },
+        {
+          "k": "Classement au feu",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Acoustique",
+          "v": "Doublage absorbant en option"
+        },
+        {
+          "k": "Nettoyage",
+          "v": "Lavable"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 ans"
+        }
+      ],
+      "applications": [
+        "Salles de bain préfabriquées",
+        "Hôtels",
+        "Construction modulaire",
+        "Santé",
+        "Commerce",
+        "Bureau"
+      ]
+    },
+    "starry": {
+      "name": "Plafond ciel étoilé",
+      "short": "Ciel étoilé",
+      "category": "Fibre optique / rétroéclairé",
+      "mount": "Rétroéclairé",
+      "intro": "Un plafond tendu parsemé de centaines de points en fibre optique — un ciel nocturne calme et scintillant au-dessus de votre cinéma, chambre ou spa.",
+      "summary": "Plafonds tendus ciel étoilé en fibre optique et LED : des centaines de points lumineux variables, étoiles filantes et RGB en option, sur une membrane sans soudure.",
+      "chips": [
+        "Des centaines d’étoiles",
+        "Variable",
+        "RGB en option",
+        "Étoiles filantes"
+      ],
+      "highlights": [
+        {
+          "value": "500+",
+          "label": "Points d’étoiles"
+        },
+        {
+          "value": "RGB",
+          "label": "Options de couleur"
+        },
+        {
+          "value": "1 jour",
+          "label": "Pose"
+        },
+        {
+          "value": "10 ans",
+          "label": "Garantie"
+        }
+      ],
+      "features": [
+        {
+          "title": "Un vrai ciel nocturne",
+          "body": "Des centaines de points en fibre optique placés derrière une membrane tendue créent un champ d’étoiles profond et scintillant — selon une constellation ou dispersés au hasard."
+        },
+        {
+          "title": "Fibre optique & LED",
+          "body": "Un seul moteur lumineux LED alimente toutes les fibres : les étoiles restent froides et entièrement variables. Ajoutez une roue de scintillement pour le mouvement, du RGB pour la couleur ou des étoiles filantes."
+        },
+        {
+          "title": "Cinéma, chambre, spa",
+          "body": "Parfait là où l’on veut de l’ambiance sans éblouissement — home cinémas, chambres, spas et restaurants. Associez un doublage acoustique pour une pièce calme et silencieuse."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Effet",
+          "v": "Champ d’étoiles en fibre optique"
+        },
+        {
+          "k": "Membrane",
+          "v": "Film sombre translucide / imprimé"
+        },
+        {
+          "k": "Points d’étoiles",
+          "v": "De ~150 à 1 000+"
+        },
+        {
+          "k": "Source lumineuse",
+          "v": "Moteur LED unique, variable"
+        },
+        {
+          "k": "Options",
+          "v": "Scintillement, RGB, étoiles filantes"
+        },
+        {
+          "k": "Pose",
+          "v": "Profilé à clip tendu"
+        },
+        {
+          "k": "Nettoyage",
+          "v": "Lavable"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 ans"
+        }
+      ],
+      "applications": [
+        "Home cinéma",
+        "Chambre",
+        "Spa & bien-être",
+        "Restaurant",
+        "Hôtellerie",
+        "Chambre d’enfant"
+      ]
+    },
+    "hatch": {
+      "name": "Trappe de visite",
+      "short": "Trappe de visite",
+      "category": "Solution d’accès",
+      "mount": "Intégré",
+      "intro": "Un accès discret et réutilisable à travers un plafond tendu — atteignez vannes, boîtes de dérivation et appareillages sans couper ni remplacer la membrane.",
+      "summary": "Trappes de visite intégrées pour plafonds tendus : un accès quasi invisible et réouvrable aux réseaux cachés au-dessus de la membrane, dans toutes les tailles.",
+      "chips": [
+        "Quasi invisible",
+        "Réouvrable",
+        "Toutes tailles",
+        "Compatible rénovation"
+      ],
+      "highlights": [
+        {
+          "value": "Cachés",
+          "label": "Dans la surface"
+        },
+        {
+          "value": "Au choix",
+          "label": "Taille & forme"
+        },
+        {
+          "value": "Réouverture",
+          "label": "Aussi souvent que nécessaire"
+        },
+        {
+          "value": "1 jour",
+          "label": "Pose"
+        }
+      ],
+      "features": [
+        {
+          "title": "Invisible jusqu’à ce que vous en ayez besoin",
+          "body": "Le cadre de la trappe est intégré au détail périphérique et fini dans la même membrane : il disparaît dans le plafond jusqu’à ce qu’il faille l’ouvrir."
+        },
+        {
+          "title": "Entretien sans dégâts",
+          "body": "Atteignez vannes d’arrêt, boîtes de dérivation, registres et luminaires cachés au-dessus du plafond — et refermez le tout, autant de fois que nécessaire."
+        },
+        {
+          "title": "Toutes tailles, toutes pièces",
+          "body": "Du petit accès rond au grand panneau rectangulaire, dimensionné selon le réseau qu’il dessert. Pour les poses neuves comme en rénovation dans un plafond existant."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Type",
+          "v": "Trappe d’accès intégrée"
+        },
+        {
+          "k": "Finition",
+          "v": "Assorti à la membrane du plafond"
+        },
+        {
+          "k": "Forme",
+          "v": "Rond ou rectangulaire"
+        },
+        {
+          "k": "Taille",
+          "v": "Sur mesure"
+        },
+        {
+          "k": "Ouverture",
+          "v": "Cadre magnétique ou à charnières"
+        },
+        {
+          "k": "Rénovation",
+          "v": "Oui, dans des plafonds existants"
+        },
+        {
+          "k": "Nettoyage",
+          "v": "Lavable"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 ans"
+        }
+      ],
+      "applications": [
+        "Salle de bain",
+        "Cuisine",
+        "Buanderie",
+        "Bureau",
+        "Commerce",
+        "Santé"
+      ]
+    },
+    "print": {
+      "name": "Plafond imprimé sur mesure",
+      "short": "Impression sur mesure",
+      "category": "Membrane imprimée",
+      "mount": "À chaud ou à froid",
+      "intro": "Toute photo, illustration ou motif imprimé bord à bord sur un plafond tendu sans soudure — votre image, d’un mur à l’autre, sans raccord visible.",
+      "summary": "Plafonds tendus imprimés bord à bord : toute image haute résolution, photo ou visuel de marque sur une membrane sans soudure, avec rétroéclairage en option.",
+      "chips": [
+        "Toute image",
+        "Bord à bord",
+        "Option rétroéclairée",
+        "Sans soudure"
+      ],
+      "highlights": [
+        {
+          "value": "Au choix",
+          "label": "Image ou œuvre"
+        },
+        {
+          "value": "HD",
+          "label": "Impression qualité photo"
+        },
+        {
+          "value": "Rétroéclairé",
+          "label": "Halo lumineux en option"
+        },
+        {
+          "value": "5.7m",
+          "label": "Largeur sans soudure"
+        }
+      ],
+      "features": [
+        {
+          "title": "Votre image, bord à bord",
+          "body": "Fournissez une photo, une illustration, un visuel de marque ou un motif : nous l’imprimons sur toute la membrane — avec gestion des couleurs, sans soudure ni lignes de panneaux."
+        },
+        {
+          "title": "Impression plus rétroéclairage",
+          "body": "Associez un film translucide à un champ de LED pour rétroéclairer l’impression : une œuvre ou un ciel devient un plafond lumineux et doux."
+        },
+        {
+          "title": "Adapté à votre espace",
+          "body": "Le visuel est mis à l’échelle et positionné pour votre pièce exacte. Nous validons le fichier avec vous avant production : ce que vous approuvez est ce qui sera posé."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Impression",
+          "v": "Bord à bord, en quadrichromie"
+        },
+        {
+          "k": "Résolution",
+          "v": "Qualité photo, gestion des couleurs"
+        },
+        {
+          "k": "Membrane",
+          "v": "Film PVC (opaque ou translucide)"
+        },
+        {
+          "k": "Rétroéclairage",
+          "v": "Champ LED en option"
+        },
+        {
+          "k": "Largeur max sans soudure",
+          "v": "5.7 m"
+        },
+        {
+          "k": "Classement au feu",
+          "v": "B-s2,d0"
+        },
+        {
+          "k": "Nettoyage",
+          "v": "Lavable"
+        },
+        {
+          "k": "Garantie",
+          "v": "25 ans"
+        }
+      ],
+      "applications": [
+        "Commerce",
+        "Hôtellerie",
+        "Home cinéma",
+        "Bureau",
+        "Showroom",
+        "Restaurant"
+      ]
+    }
+  },
+  "colourNames": {
+    "White": "Blanc",
+    "Off-white": "Blanc cassé",
+    "Satin white": "Blanc satiné",
+    "Warm white": "Blanc chaud",
+    "Light grey": "Gris clair",
+    "Grey": "Gris",
+    "Anthracite": "Anthracite",
+    "Sand": "Sable",
+    "Black": "Noir",
+    "Black gloss": "Noir laqué",
+    "Deep blue": "Bleu profond",
+    "Midnight": "Bleu nuit",
+    "Translucent": "Translucide",
+    "Translucent white": "Blanc translucide",
+    "RGB": "RGB",
+    "RGB stars": "Étoiles RGB",
+    "Warm-white stars": "Étoiles blanc chaud",
+    "Starry sky": "Ciel étoilé",
+    "Sky scenes": "Scènes de ciel",
+    "Custom": "Sur mesure",
+    "Custom RAL": "RAL sur mesure",
+    "Custom print": "Impression sur mesure",
+    "Custom artwork": "Visuel personnalisé",
+    "Brand graphics": "Visuels de marque",
+    "Full-colour print": "Impression quadri",
+    "Photographic": "Photographique",
+    "Patterns": "Motifs",
+    "Matched to membrane": "Assorti à la membrane",
+    "Pure white": "Blanc pur",
+    "Traffic white": "Blanc signalisation",
+    "Cream": "Blanc crème",
+    "Oyster white": "Blanc perlé",
+    "Light ivory": "Ivoire clair",
+    "Beige": "Beige",
+    "Grey beige": "Beige gris",
+    "Silk grey": "Gris soie",
+    "Pebble grey": "Gris silex",
+    "Dusty grey": "Gris poussière",
+    "Agate grey": "Gris agate",
+    "Silver grey": "Gris argent",
+    "Platinum grey": "Gris platine",
+    "Slate grey": "Gris ardoise",
+    "Black grey": "Gris noir",
+    "Graphite black": "Noir graphite",
+    "Jet black": "Noir de jais",
+    "Bordeaux": "Bordeaux",
+    "Wine red": "Rouge vin",
+    "Oxide red": "Rouge oxyde",
+    "Red": "Rouge",
+    "Pure orange": "Orange pur",
+    "Golden yellow": "Jaune or",
+    "Gold": "Or",
+    "Silver": "Argent",
+    "Bronze": "Bronze",
+    "Champagne": "Champagne",
+    "Cappuccino": "Cappuccino",
+    "Chocolate": "Chocolat",
+    "Pearl": "Nacré",
+    "Opal": "Opale",
+    "Blue": "Bleu",
+    "Steel blue": "Bleu acier",
+    "Pastel blue": "Bleu pastel",
+    "Pigeon blue": "Bleu pigeon",
+    "Petrol": "Bleu pétrole",
+    "Pale green": "Vert pâle",
+    "Reseda green": "Vert réséda",
+    "Gloss": "Laqué",
+    "Matte": "Mat",
+    "Satin": "Satiné",
+    "Metallic": "Métallisé"
+  },
+  "megaMenu": {
+    "solutions": {
+      "railLabel": "Parcourir les solutions",
+      "allLabel": "Toutes les solutions",
+      "promoTitle": "Un plafond neuf en une journée",
+      "promoCta": "Demander un devis",
+      "cats": [
+        {
+          "title": "Plafonds",
+          "desc": "Polyester, PVC & sans soudure",
+          "items": [
+            {
+              "title": "Plafond polyester",
+              "sub": "Pose à froid · très mat"
+            },
+            {
+              "title": "Plafond film PVC",
+              "sub": "Recyclable · démontable"
+            },
+            {
+              "title": "Unité de plafond préfabriquée",
+              "sub": "Pré-assemblé & rapide"
+            },
+            {
+              "title": "Tous les systèmes de plafond",
+              "sub": "Comparer la gamme"
+            }
+          ]
+        },
+        {
+          "title": "Acoustique",
+          "desc": "Absorption acoustique",
+          "items": [
+            {
+              "title": "Système tendu acoustique",
+              "sub": "Jusqu’à la classe A"
+            },
+            {
+              "title": "Comment fonctionne l’acoustique",
+              "sub": "L’absorption expliquée"
+            },
+            {
+              "title": "Fiche technique",
+              "sub": "Valeurs αw & classes"
+            }
+          ]
+        },
+        {
+          "title": "Lumière & impression",
+          "desc": "LED, rétroéclairage & impression",
+          "items": [
+            {
+              "title": "Plafond lumineux",
+              "sub": "Translucide rétroéclairé"
+            },
+            {
+              "title": "Ciel étoilé",
+              "sub": "Ciel nocturne en fibre optique"
+            },
+            {
+              "title": "Impression sur mesure",
+              "sub": "Toute image, bord à bord"
+            }
+          ]
+        },
+        {
+          "title": "Prefab",
+          "desc": "Aluminium, acier & bois",
+          "items": [
+            {
+              "title": "Structures préfabriquées",
+              "sub": "Poutres, corniches & plus"
+            },
+            {
+              "title": "Éléments d’éclairage préfabriqués",
+              "sub": "Aluminium + toile tendue"
+            },
+            {
+              "title": "Trappe de visite",
+              "sub": "Accès discret"
+            }
+          ]
+        },
+        {
+          "title": "Applications",
+          "desc": "Pièce par pièce",
+          "items": [
+            {
+              "title": "Séjour & cinéma",
+              "sub": "Son & ciel étoilé"
+            },
+            {
+              "title": "Salle de bains & cuisine",
+              "sub": "Résistant à l’humidité"
+            },
+            {
+              "title": "Bureau & commerce",
+              "sub": "Confort acoustique"
+            },
+            {
+              "title": "Voir tous les projets",
+              "sub": "Le portfolio complet"
+            }
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "railLabel": "Documentation",
+      "allLabel": "Toutes les specs & téléchargements",
+      "promoTitle": "Besoin d’un coup de main ?",
+      "promoBody": "Envoyez votre question rénovation — nous répondons sous deux jours ouvrés.",
+      "promoCta": "Poser une question",
+      "cats": [
+        {
+          "title": "Plafond tendu polyester",
+          "desc": "Membrane posée à froid",
+          "items": [
+            {
+              "title": "Fiche technique",
+              "sub": "Specs & téléchargement"
+            },
+            {
+              "title": "Couleurs & finitions",
+              "sub": "Gamme complète & RAL"
+            },
+            {
+              "title": "Sécurité incendie",
+              "sub": "Réaction au feu & A2"
+            },
+            {
+              "title": "Guide de pose",
+              "sub": "Pose à froid, étape par étape"
+            },
+            {
+              "title": "Texte de prescription",
+              "sub": "Pour appels d’offres & dossiers"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Questions fréquentes"
+            }
+          ]
+        },
+        {
+          "title": "Plafond tendu PVC",
+          "desc": "Film posé à chaud",
+          "items": [
+            {
+              "title": "Fiche technique",
+              "sub": "Specs & téléchargement"
+            },
+            {
+              "title": "Couleurs & finitions",
+              "sub": "Mat, satiné, laqué"
+            },
+            {
+              "title": "Sécurité incendie",
+              "sub": "Réaction au feu"
+            },
+            {
+              "title": "Guide de pose",
+              "sub": "Pose à chaud, étape par étape"
+            },
+            {
+              "title": "Texte de prescription",
+              "sub": "Pour appels d’offres & dossiers"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Questions fréquentes"
+            }
+          ]
+        }
+      ]
+    },
+    "comingSoon": "Bientôt disponible"
   }
 }

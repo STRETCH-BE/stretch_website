@@ -498,7 +498,9 @@
     "allSolutions": "Alla lösningar",
     "ctaKicker": "Kostnadsfritt & utan förpliktelser",
     "ctaTitle": "Vill du ha det här taket",
-    "dealer": "Hitta din närmaste återförsäljare"
+    "dealer": "Hitta din närmaste återförsäljare",
+    "chartCount": "{count, plural, one {# färg} other {# färger}}",
+    "anyRal": "Alla RAL-kulörer på begäran"
   },
   "productsPage": {
     "eyebrow": "Våra lösningar",
@@ -512,5 +514,963 @@
     "notSure": "Osäker på vilket?",
     "notSureBody": "Berätta om ditt rum så rekommenderar vi rätt system — kostnadsfritt och utan förpliktelser.",
     "quote": "Begär en kostnadsfri offert"
+  },
+  "catalog": {
+    "polyester": {
+      "name": "Spänntak i polyester",
+      "short": "Polyester",
+      "category": "Kallmonterat membran",
+      "mount": "Kallmontering",
+      "intro": "Ett estetiskt, funktionellt spännmembran för både nybygge och renovering. Kallspänt för hand för en felfri, mycket matt finish — med inbyggda akustiska och tvättbara alternativ.",
+      "summary": "Kallmonterat spänntak i polyester med mycket matt finish, skarvfritt upp till 5,15 m och 10 års garanti.",
+      "chips": [
+        "Skarvfritt upp till 5,15 m",
+        "+25 års livslängd",
+        "Akustik upp till klass A",
+        "Tvättbar"
+      ],
+      "highlights": [
+        {
+          "value": "5.15m",
+          "label": "Skarvfri bredd"
+        },
+        {
+          "value": "Kallt",
+          "label": "Monteringsmetod"
+        },
+        {
+          "value": "Matt",
+          "label": "Ytans utseende"
+        },
+        {
+          "value": "A",
+          "label": "Akustikklass"
+        }
+      ],
+      "features": [
+        {
+          "title": "Kallmontering",
+          "body": "Inga värmepistoler, ingen torktid. Polyestermembranet spänns kallt och klickas i en kantprofil — rent, snabbt och utan ångor, även i rum som används."
+        },
+        {
+          "title": "En mycket matt finish",
+          "body": "En djup, reflexfri matt yta som ser ut som nymålad puts — utan sprickorna, flagningen och ommålningarna som annars följer med."
+        },
+        {
+          "title": "Akustiskt & tvättbart",
+          "body": "Välj en mikroperforerad version med absorbent för att tämja efterklangen. Alla finisher torkas rena och tål fukt i 25 år."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Stickat polyestermembran"
+        },
+        {
+          "k": "Montering",
+          "v": "Kallspänt, klickprofil"
+        },
+        {
+          "k": "Max skarvfri bredd",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Yta",
+          "v": "Mycket matt"
+        },
+        {
+          "k": "Brandklass",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akustisk",
+          "v": "Upp till klass A (perforerat)"
+        },
+        {
+          "k": "Rengöring",
+          "v": "Tvättbar, fukttålig"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Vardagsrum",
+        "Badrum",
+        "Kontor",
+        "Hemmabio",
+        "Vården",
+        "Butik"
+      ],
+      "colourChartNote": "Alla färger finns i standard- och akustikutförande."
+    },
+    "pvc": {
+      "name": "Spänntak i PVC-folie",
+      "short": "PVC Film",
+      "category": "Varmmonterad folie",
+      "mount": "Varmmontering",
+      "intro": "En uppvärmd PVC-folie som spänns vid monteringen — helt återvinningsbar och lätt att demontera. Byt ut ett trött tak mot ett felfritt nytt på en enda dag.",
+      "summary": "Varmmonterat spänntak i PVC-folie, 100 % återvinningsbart och demonterbart, skarvfritt upp till 6,4 m med 10 års garanti.",
+      "chips": [
+        "Skarvfritt upp till 6,4 m",
+        "100 % återvinningsbar",
+        "Lätt att demontera",
+        "Tvättbar"
+      ],
+      "highlights": [
+        {
+          "value": "6.4m",
+          "label": "Skarvfri bredd"
+        },
+        {
+          "value": "Varmt",
+          "label": "Monteringsmetod"
+        },
+        {
+          "value": "100%",
+          "label": "Återvinningsbar"
+        },
+        {
+          "value": "A",
+          "label": "Akustikklass"
+        }
+      ],
+      "features": [
+        {
+          "title": "Återvinningsbar till råmaterial",
+          "body": "PVC-systemet är helt återvinningsbart till råmaterial — ett cirkulärt val som är lätt att demontera och återmontera vid behov."
+        },
+        {
+          "title": "Redo för bakgrundsbelysning & print",
+          "body": "Genomskinliga folier sprider LED-ljus jämnt utan hotspots; valfri bild, textur eller stjärnhimmel kan printas kant till kant."
+        },
+        {
+          "title": "Demonterbar & tvättbar",
+          "body": "Klicka loss folien för åtkomst till installationerna ovanför och spänn om den på några minuter. Folien torkas ren och bryr sig inte om fukt."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Kalandrerad PVC-folie"
+        },
+        {
+          "k": "Montering",
+          "v": "Varmspänt, klickprofil"
+        },
+        {
+          "k": "Max skarvfri bredd",
+          "v": "6.4 m"
+        },
+        {
+          "k": "Yta",
+          "v": "Matt / satin / blank / genomskinlig"
+        },
+        {
+          "k": "Brandklass",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Akustisk",
+          "v": "Upp till klass A (perforerat)"
+        },
+        {
+          "k": "Rengöring",
+          "v": "Tvättbar, fukttålig"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Badrum",
+        "Pool & wellness",
+        "Butik",
+        "Besöksnäring",
+        "Kontor",
+        "Hemmabio"
+      ],
+      "colourChartNote": "Finns i matt, satin, blank, genomskinlig och metallisk finish."
+    },
+    "acoustic": {
+      "name": "Akustiskt spännsystem",
+      "short": "Akustisk",
+      "category": "Ljudabsorberande membran",
+      "mount": "Kallt / varmt",
+      "intro": "Ett mikroperforerat spännmembran med högdensitetsabsorbenter bakom — ett felfritt tak som mätbart minskar efterklang och buller i alla rum.",
+      "summary": "Mikroperforerat akustiskt spännmembran med högdensitetsabsorbent, som når upp till ljudabsorptionsklass A.",
+      "chips": [
+        "Upp till klass A",
+        "Skarvfri yta",
+        "Osynligt ljud som tillval",
+        "Tvättbar yta"
+      ],
+      "highlights": [
+        {
+          "value": "A",
+          "label": "Absorptionsklass"
+        },
+        {
+          "value": "αw",
+          "label": "Testade värden"
+        },
+        {
+          "value": "0",
+          "label": "Synliga skarvar"
+        },
+        {
+          "value": "+25y",
+          "label": "Livslängd"
+        }
+      ],
+      "features": [
+        {
+          "title": "Klass A-absorption",
+          "body": "Polyesterull med hög densitet bakom en mikroperforerad yta ger ljudabsorption upp till klass A — utan synlig behandling."
+        },
+        {
+          "title": "Öar & väggpaneler",
+          "body": "Frihängande bafflar och dekorativa väggabsorbenter utökar samma system till alla ytor i rummet."
+        },
+        {
+          "title": "Osynligt ljud",
+          "body": "Högtalare monteras helt bakom folien för rent, källöst ljud som fyller rummet."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Perforerat membran + absorbent"
+        },
+        {
+          "k": "Montering",
+          "v": "Kallt eller varmt, klickprofil"
+        },
+        {
+          "k": "Max skarvfri bredd",
+          "v": "5.15"
+        },
+        {
+          "k": "Absorption",
+          "v": "Upp till klass A (αw)"
+        },
+        {
+          "k": "Brandklass",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Baksida",
+          "v": "Polyesterull med hög densitet"
+        },
+        {
+          "k": "Rengöring",
+          "v": "Tvättbar yta"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Kontor",
+        "Restaurang",
+        "Studio",
+        "Hemmabio",
+        "Skola",
+        "Vården"
+      ]
+    },
+    "light": {
+      "name": "Ljustak",
+      "short": "Upplyst",
+      "category": "Genomskinligt membran",
+      "mount": "Kallt / varmt",
+      "intro": "Genomskinliga spännfolier som förvandlar ett helt tak till en mjuk, jämn ljuskälla — eller till en printad duk med valfri bild.",
+      "summary": "Genomskinliga, bakbelysta spänntak och kant-till-kant printade designer — inklusive fiberoptiska stjärnhimmelsfinisher.",
+      "chips": [
+        "Jämn bakgrundsbelysning",
+        "LED-linje som tillval",
+        "Print kant till kant",
+        "Skarvfri"
+      ],
+      "highlights": [
+        {
+          "value": "360°",
+          "label": "Jämn spridning"
+        },
+        {
+          "value": "RGB",
+          "label": "LED-alternativ"
+        },
+        {
+          "value": "Print",
+          "label": "Valfri bild"
+        },
+        {
+          "value": "5.15m",
+          "label": "Skarvfri bredd"
+        }
+      ],
+      "features": [
+        {
+          "title": "Jämn bakgrundsbelysning",
+          "body": "En genomskinlig folie över ett LED-fält sprider ljuset utan hotspots — en lysande himmel i alla rum, dimbar efter stämningen."
+        },
+        {
+          "title": "LED-linjebelysning",
+          "body": "Infällda ljuslinjer integreras sömlöst i membranet för skarpa, arkitektoniska ljuseffekter."
+        },
+        {
+          "title": "Printade designer",
+          "body": "Valfritt foto, mönster eller textur printat kant till kant — inklusive en fiberoptisk stjärnhimmel."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Genomskinlig PVC-folie"
+        },
+        {
+          "k": "Montering",
+          "v": "Kallt eller varmt, klickprofil"
+        },
+        {
+          "k": "Max skarvfri bredd",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Ljuskälla",
+          "v": "LED-fält / -linje, dimbar"
+        },
+        {
+          "k": "Print",
+          "v": "Kant till kant, valfri bild"
+        },
+        {
+          "k": "Brandklass",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Rengöring",
+          "v": "Tvättbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Hemmabio",
+        "Badrum",
+        "Butik",
+        "Besöksnäring",
+        "Spa",
+        "Kontor"
+      ]
+    },
+    "prefab": {
+      "name": "Prefabstrukturer",
+      "short": "Prefabstrukturer",
+      "category": "Prefabricerad bärstruktur",
+      "mount": "Prefabricerad",
+      "intro": "Prefabricerade bärstrukturer för spänntaksprojekt — balkar i aluminium, stål och trä, taklister och nivåskillnadsdetaljer, måttillverkade i vår polska produktion och skickade till våra återförsäljare världen över.",
+      "summary": "Måttillverkade prefabstrukturer i aluminium, stål och trä — balkar för rastertak, taklister för svävande tak och rena nivåskillnadsdetaljer.",
+      "chips": [
+        "Aluminium / stål / trä",
+        "Balkar & taklister",
+        "Måttillverkat",
+        "Skickas världen över"
+      ],
+      "highlights": [
+        {
+          "value": "1",
+          "label": "Dag på plats"
+        },
+        {
+          "value": "Prefab",
+          "label": "Byggt utanför arbetsplatsen"
+        },
+        {
+          "value": "Åtkomst",
+          "label": "Inspektionslucka"
+        },
+        {
+          "value": "25 år",
+          "label": "Livslängd"
+        }
+      ],
+      "features": [
+        {
+          "title": "Byggt utanför arbetsplatsen",
+          "body": "Modulerna konfektioneras i vår belgiska verkstad och kvalitetskontrolleras innan de når arbetsplatsen."
+        },
+        {
+          "title": "Klickmontering på plats",
+          "body": "Förspända enheter klickas i en kantram — minimalt med hantverkare, minimal tid, ett perfekt resultat."
+        },
+        {
+          "title": "Integrerad åtkomst",
+          "body": "Diskreta inspektionsluckor håller installationerna ovanför åtkomliga utan att bryta den rena taklinjen."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Membran på prefabricerad ram"
+        },
+        {
+          "k": "Montering",
+          "v": "Klickmodul"
+        },
+        {
+          "k": "Leveranstid",
+          "v": "Tillverkas på beställning"
+        },
+        {
+          "k": "Åtkomst",
+          "v": "Integrerad inspektionslucka"
+        },
+        {
+          "k": "Brandklass",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akustisk",
+          "v": "Absorbent som tillval"
+        },
+        {
+          "k": "Rengöring",
+          "v": "Tvättbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Badrumsmoduler",
+        "Hotell",
+        "Modulär konstruktion",
+        "Vården",
+        "Butik",
+        "Kontor"
+      ]
+    },
+    "starry": {
+      "name": "Stjärnhimmelstak",
+      "short": "Stjärnhimmel",
+      "category": "Fiberoptik / bakbelyst",
+      "mount": "Bakbelyst",
+      "intro": "Ett spänntak översållat med hundratals fiberoptiska punkter — en lugn, gnistrande natthimmel över din bio, ditt sovrum eller spa.",
+      "summary": "Stjärnhimmels-spänntak med fiberoptik och LED: hundratals dimbara stjärnpunkter, valfria stjärnfall och RGB, på ett skarvfritt membran.",
+      "chips": [
+        "Hundratals stjärnor",
+        "Dimbar",
+        "RGB som tillval",
+        "Stjärnfall"
+      ],
+      "highlights": [
+        {
+          "value": "500+",
+          "label": "Stjärnpunkter"
+        },
+        {
+          "value": "RGB",
+          "label": "Färgalternativ"
+        },
+        {
+          "value": "1 dag",
+          "label": "Montering"
+        },
+        {
+          "value": "10 år",
+          "label": "Garanti"
+        }
+      ],
+      "features": [
+        {
+          "title": "En riktig natthimmel",
+          "body": "Hundratals fiberoptiska punkter bakom ett spänt membran skapar ett djupt, gnistrande stjärnfält — lagt efter en stjärnbild eller slumpmässigt utspritt."
+        },
+        {
+          "title": "Fiberoptik & LED",
+          "body": "En enda LED-ljusmotor driver alla fibrer, så stjärnorna förblir svala och helt dimbara. Lägg till ett blinkhjul för rörelse, RGB för färg eller stjärnfallseffekter."
+        },
+        {
+          "title": "Bio, sovrum, spa",
+          "body": "Perfekt där du vill ha stämning utan bländning — hemmabior, sovrum, spa och restauranger. Kombinera med akustisk baksida för ett lugnt, tyst rum."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Effekt",
+          "v": "Fiberoptiskt stjärnfält"
+        },
+        {
+          "k": "Membran",
+          "v": "Mörk genomskinlig / printad folie"
+        },
+        {
+          "k": "Stjärnpunkter",
+          "v": "Från ~150 till 1 000+"
+        },
+        {
+          "k": "Ljuskälla",
+          "v": "En LED-motor, dimbar"
+        },
+        {
+          "k": "Alternativ",
+          "v": "Blinkande, RGB, stjärnfall"
+        },
+        {
+          "k": "Montering",
+          "v": "Spänd klickprofil"
+        },
+        {
+          "k": "Rengöring",
+          "v": "Tvättbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Hemmabio",
+        "Sovrum",
+        "Spa & wellness",
+        "Restaurang",
+        "Besöksnäring",
+        "Barnrum"
+      ]
+    },
+    "hatch": {
+      "name": "Inspektionslucka",
+      "short": "Inspektionslucka",
+      "category": "Åtkomstlösning",
+      "mount": "Integrerad",
+      "intro": "Diskret, servicevänlig åtkomst genom ett spänntak — nå ventiler, kopplingsdosor och armaturer utan att skära i eller byta membranet.",
+      "summary": "Integrerade inspektionsluckor för spänntak: nästan osynlig, återöppningsbar åtkomst till installationer dolda ovanför membranet, i alla storlekar.",
+      "chips": [
+        "Nästan osynlig",
+        "Återöppningsbar",
+        "Alla storlekar",
+        "Redo för eftermontering"
+      ],
+      "highlights": [
+        {
+          "value": "Dolda",
+          "label": "I ytan"
+        },
+        {
+          "value": "Valfri",
+          "label": "Storlek & form"
+        },
+        {
+          "value": "Återöppning",
+          "label": "Så ofta som det behövs"
+        },
+        {
+          "value": "1 dag",
+          "label": "Montering"
+        }
+      ],
+      "features": [
+        {
+          "title": "Osynlig tills du behöver den",
+          "body": "Luckans ram är inbyggd i kantdetaljen och klädd med samma membran — den försvinner i taket tills den måste öppnas."
+        },
+        {
+          "title": "Service utan skador",
+          "body": "Nå avstängningsventiler, kopplingsdosor, spjäll och armaturer dolda ovanför taket — och stäng allt igen, så ofta som det behövs."
+        },
+        {
+          "title": "Alla storlekar, alla rum",
+          "body": "Från en liten rund åtkomstpunkt till en stor rektangulär panel, dimensionerad efter installationen bakom. Fungerar vid nyinstallation och som eftermontering i befintliga tak."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Typ",
+          "v": "Integrerad åtkomstlucka"
+        },
+        {
+          "k": "Finish",
+          "v": "Matchar takmembranet"
+        },
+        {
+          "k": "Form",
+          "v": "Rund eller rektangulär"
+        },
+        {
+          "k": "Storlek",
+          "v": "Måttillverkat"
+        },
+        {
+          "k": "Öppning",
+          "v": "Magnetisk eller gångjärnsförsedd ram"
+        },
+        {
+          "k": "Eftermontering",
+          "v": "Ja, i befintliga tak"
+        },
+        {
+          "k": "Rengöring",
+          "v": "Tvättbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Badrum",
+        "Kök",
+        "Grovkök",
+        "Kontor",
+        "Butik",
+        "Vården"
+      ]
+    },
+    "print": {
+      "name": "Printat tak på beställning",
+      "short": "Print på beställning",
+      "category": "Printat membran",
+      "mount": "Varmt eller kallt",
+      "intro": "Valfritt foto, konstverk eller mönster printat kant till kant på ett skarvfritt spänntak — din bild, från vägg till vägg, utan synliga skarvar.",
+      "summary": "Kant-till-kant printade spänntak: valfri högupplöst bild, foto eller varumärkesgrafik på ett skarvfritt membran, valfritt bakbelyst.",
+      "chips": [
+        "Valfri bild",
+        "Kant till kant",
+        "Bakbelyst tillval",
+        "Skarvfri"
+      ],
+      "highlights": [
+        {
+          "value": "Valfri",
+          "label": "Bild eller konst"
+        },
+        {
+          "value": "HD",
+          "label": "Print i fotokvalitet"
+        },
+        {
+          "value": "Bakbelyst",
+          "label": "Valfri glöd"
+        },
+        {
+          "value": "5.7m",
+          "label": "Skarvfri bredd"
+        }
+      ],
+      "features": [
+        {
+          "title": "Din bild, kant till kant",
+          "body": "Lämna ett foto, en illustration, varumärkesgrafik eller ett mönster så printar vi det över hela membranet — färghanterat och skarvfritt, utan panellinjer."
+        },
+        {
+          "title": "Print plus bakgrundsbelysning",
+          "body": "Kombinera en genomskinlig folie med ett LED-fält för att bakbelysa trycket — konst eller himmelsmotiv blir ett mjukt, glödande accenttak."
+        },
+        {
+          "title": "Anpassat till ditt rum",
+          "body": "Motivet skalas och positioneras för ditt exakta rum. Vi stämmer av filen med dig före produktion — det du godkänner är det som sätts upp."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Print",
+          "v": "Kant till kant, i fullfärg"
+        },
+        {
+          "k": "Upplösning",
+          "v": "Fotokvalitet, färghanterad"
+        },
+        {
+          "k": "Membran",
+          "v": "PVC-folie (täckande eller genomskinlig)"
+        },
+        {
+          "k": "Bakgrundsbelysning",
+          "v": "LED-fält som tillval"
+        },
+        {
+          "k": "Max skarvfri bredd",
+          "v": "5.7 m"
+        },
+        {
+          "k": "Brandklass",
+          "v": "B-s2,d0"
+        },
+        {
+          "k": "Rengöring",
+          "v": "Tvättbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "25 år"
+        }
+      ],
+      "applications": [
+        "Butik",
+        "Besöksnäring",
+        "Hemmabio",
+        "Kontor",
+        "Showroom",
+        "Restaurang"
+      ]
+    }
+  },
+  "colourNames": {
+    "White": "Vit",
+    "Off-white": "Benvit",
+    "Satin white": "Satinvit",
+    "Warm white": "Varmvit",
+    "Light grey": "Ljusgrå",
+    "Grey": "Grå",
+    "Anthracite": "Antracit",
+    "Sand": "Sand",
+    "Black": "Svart",
+    "Black gloss": "Svart blank",
+    "Deep blue": "Djupblå",
+    "Midnight": "Midnattsblå",
+    "Translucent": "Genomskinlig",
+    "Translucent white": "Genomskinlig vit",
+    "RGB": "RGB",
+    "RGB stars": "RGB-stjärnor",
+    "Warm-white stars": "Varmvita stjärnor",
+    "Starry sky": "Stjärnhimmel",
+    "Sky scenes": "Himmelsmotiv",
+    "Custom": "Egen",
+    "Custom RAL": "Valfri RAL",
+    "Custom print": "Eget print",
+    "Custom artwork": "Eget motiv",
+    "Brand graphics": "Varumärkesgrafik",
+    "Full-colour print": "Fullfärgsprint",
+    "Photographic": "Fotografisk",
+    "Patterns": "Mönster",
+    "Matched to membrane": "Matchar membranet",
+    "Pure white": "Renvit",
+    "Traffic white": "Trafikvit",
+    "Cream": "Krämvit",
+    "Oyster white": "Pärlvit",
+    "Light ivory": "Ljus elfenben",
+    "Beige": "Beige",
+    "Grey beige": "Gråbeige",
+    "Silk grey": "Sidengrå",
+    "Pebble grey": "Kiselgrå",
+    "Dusty grey": "Dammgrå",
+    "Agate grey": "Agatgrå",
+    "Silver grey": "Silvergrå",
+    "Platinum grey": "Platinagrå",
+    "Slate grey": "Skiffergrå",
+    "Black grey": "Svartgrå",
+    "Graphite black": "Grafitsvart",
+    "Jet black": "Djupsvart",
+    "Bordeaux": "Bordeaux",
+    "Wine red": "Vinröd",
+    "Oxide red": "Oxidröd",
+    "Red": "Röd",
+    "Pure orange": "Renorange",
+    "Golden yellow": "Guldgul",
+    "Gold": "Guld",
+    "Silver": "Silver",
+    "Bronze": "Brons",
+    "Champagne": "Champagne",
+    "Cappuccino": "Cappuccino",
+    "Chocolate": "Chokladbrun",
+    "Pearl": "Pärlemor",
+    "Opal": "Opal",
+    "Blue": "Blå",
+    "Steel blue": "Stålblå",
+    "Pastel blue": "Pastellblå",
+    "Pigeon blue": "Duvblå",
+    "Petrol": "Petrol",
+    "Pale green": "Blekgrön",
+    "Reseda green": "Resedagrön",
+    "Gloss": "Högglans",
+    "Matte": "Matt",
+    "Satin": "Satin",
+    "Metallic": "Metallic"
+  },
+  "megaMenu": {
+    "solutions": {
+      "railLabel": "Utforska lösningar",
+      "allLabel": "Alla lösningar",
+      "promoTitle": "Ett nytt tak på en dag",
+      "promoCta": "Begär offert",
+      "cats": [
+        {
+          "title": "Tak",
+          "desc": "Polyester, PVC & skarvfritt",
+          "items": [
+            {
+              "title": "Polyestertak",
+              "sub": "Kall montering · mycket matt"
+            },
+            {
+              "title": "PVC-folietak",
+              "sub": "Återvinningsbar · demonterbar"
+            },
+            {
+              "title": "Prefab takenhet",
+              "sub": "Förmonterad & snabb"
+            },
+            {
+              "title": "Alla taksystem",
+              "sub": "Jämför sortimentet"
+            }
+          ]
+        },
+        {
+          "title": "Akustik",
+          "desc": "Ljudabsorption",
+          "items": [
+            {
+              "title": "Akustiskt spänntak",
+              "sub": "Upp till klass A"
+            },
+            {
+              "title": "Så fungerar akustik",
+              "sub": "Absorption förklarad"
+            },
+            {
+              "title": "Tekniskt datablad",
+              "sub": "αw- & klassvärden"
+            }
+          ]
+        },
+        {
+          "title": "Ljus & print",
+          "desc": "LED, bakgrundsbelysning & print",
+          "items": [
+            {
+              "title": "Ljustak",
+              "sub": "Bakbelyst genomskinlig"
+            },
+            {
+              "title": "Stjärnhimmel",
+              "sub": "Fiberoptisk natthimmel"
+            },
+            {
+              "title": "Eget print",
+              "sub": "Vilken bild som helst, kant till kant"
+            }
+          ]
+        },
+        {
+          "title": "Prefab",
+          "desc": "Aluminium, stål & trä",
+          "items": [
+            {
+              "title": "Prefabstrukturer",
+              "sub": "Balkar, lister & mer"
+            },
+            {
+              "title": "Prefab ljuselement",
+              "sub": "Aluminium + spännduk"
+            },
+            {
+              "title": "Inspektionslucka",
+              "sub": "Diskret åtkomst"
+            }
+          ]
+        },
+        {
+          "title": "Användningsområden",
+          "desc": "Rum för rum",
+          "items": [
+            {
+              "title": "Vardagsrum & bio",
+              "sub": "Ljud & stjärnhimmel"
+            },
+            {
+              "title": "Badrum & kök",
+              "sub": "Fukttålig"
+            },
+            {
+              "title": "Kontor & butik",
+              "sub": "Akustisk komfort"
+            },
+            {
+              "title": "Se alla projekt",
+              "sub": "Hela portföljen"
+            }
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "railLabel": "Dokumentation",
+      "allLabel": "Alla specifikationer & nedladdningar",
+      "promoTitle": "Behöver du hjälp?",
+      "promoBody": "Skicka din renoveringsfråga — vi svarar inom två arbetsdagar.",
+      "promoCta": "Ställ en fråga",
+      "cats": [
+        {
+          "title": "Polyester spänntak",
+          "desc": "Kallmonterat membran",
+          "items": [
+            {
+              "title": "Datablad",
+              "sub": "Specifikationer & nedladdning"
+            },
+            {
+              "title": "Färger & finish",
+              "sub": "Hela sortimentet & RAL"
+            },
+            {
+              "title": "Brandsäkerhet",
+              "sub": "Brandreaktion & A2"
+            },
+            {
+              "title": "Monteringsguide",
+              "sub": "Kall montering, steg för steg"
+            },
+            {
+              "title": "Föreskrivningstext",
+              "sub": "För upphandlingar & underlag"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Vanliga frågor"
+            }
+          ]
+        },
+        {
+          "title": "PVC spänntak",
+          "desc": "Varmmonterad folie",
+          "items": [
+            {
+              "title": "Datablad",
+              "sub": "Specifikationer & nedladdning"
+            },
+            {
+              "title": "Färger & finish",
+              "sub": "Matt, satin, högglans"
+            },
+            {
+              "title": "Brandsäkerhet",
+              "sub": "Brandreaktion"
+            },
+            {
+              "title": "Monteringsguide",
+              "sub": "Varm montering, steg för steg"
+            },
+            {
+              "title": "Föreskrivningstext",
+              "sub": "För upphandlingar & underlag"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Vanliga frågor"
+            }
+          ]
+        }
+      ]
+    },
+    "comingSoon": "Kommer snart"
   }
 }

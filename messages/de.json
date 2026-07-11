@@ -498,7 +498,9 @@
     "allSolutions": "Alle Lösungen",
     "ctaKicker": "Kostenlos & unverbindlich",
     "ctaTitle": "Diese Decke gewünscht",
-    "dealer": "Händler in Ihrer Nähe finden"
+    "dealer": "Händler in Ihrer Nähe finden",
+    "chartCount": "{count, plural, one {# Farbe} other {# Farben}}",
+    "anyRal": "Jede RAL-Farbe auf Anfrage"
   },
   "productsPage": {
     "eyebrow": "Unsere Lösungen",
@@ -512,5 +514,963 @@
     "notSure": "Unsicher, welches System?",
     "notSureBody": "Erzählen Sie uns von Ihrem Raum — wir empfehlen das passende System. Kostenlos und unverbindlich.",
     "quote": "Kostenloses Angebot anfordern"
+  },
+  "catalog": {
+    "polyester": {
+      "name": "Polyester-Spanndecke",
+      "short": "Polyester",
+      "category": "Kalt montierte Membran",
+      "mount": "Kaltmontage",
+      "intro": "Eine ästhetische, funktionale Spannmembran für Neubau und Sanierung. Von Hand kalt gespannt für ein makelloses, sehr mattes Finish — mit integrierten Akustik- und abwaschbaren Optionen.",
+      "summary": "Kalt montierte Polyester-Spanndecke mit sehr mattem Finish, fugenlos bis 5,15 m und mit 10 Jahren Garantie.",
+      "chips": [
+        "Fugenlos bis 5,15 m",
+        "+25 Jahre Lebensdauer",
+        "Akustik bis Klasse A",
+        "Abwaschbar"
+      ],
+      "highlights": [
+        {
+          "value": "5.15m",
+          "label": "Fugenlose Breite"
+        },
+        {
+          "value": "Kalt",
+          "label": "Montageart"
+        },
+        {
+          "value": "Matt",
+          "label": "Oberflächenoptik"
+        },
+        {
+          "value": "A",
+          "label": "Akustikklasse"
+        }
+      ],
+      "features": [
+        {
+          "title": "Kaltmontage",
+          "body": "Keine Heißluftgebläse, keine Trockenzeit. Die Polyestermembran wird kalt gespannt und in ein Umfangsprofil geklippt — sauber, schnell und dampffrei, selbst in bewohnten Räumen."
+        },
+        {
+          "title": "Ein sehr mattes Finish",
+          "body": "Eine tiefe, blendfreie matte Oberfläche wie frisch gestrichener Putz — ohne die Risse, das Abblättern und das Neustreichen, die damit einhergehen."
+        },
+        {
+          "title": "Akustisch & abwaschbar",
+          "body": "Wählen Sie eine mikroperforierte Version mit Absorber, um den Nachhall zu zähmen. Jede Oberfläche lässt sich abwischen und widersteht 25 Jahre lang Feuchtigkeit."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Gestrickte Polyestermembran"
+        },
+        {
+          "k": "Montage",
+          "v": "Kalt gespannt, Klippprofil"
+        },
+        {
+          "k": "Max. fugenlose Breite",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Oberfläche",
+          "v": "Sehr matt"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akustisch",
+          "v": "Bis Klasse A (perforiert)"
+        },
+        {
+          "k": "Reinigung",
+          "v": "Abwaschbar, feuchtigkeitsbeständig"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 Jahre"
+        }
+      ],
+      "applications": [
+        "Wohnzimmer",
+        "Badezimmer",
+        "Büro",
+        "Heimkino",
+        "Gesundheitswesen",
+        "Einzelhandel"
+      ],
+      "colourChartNote": "Jede Farbe ist in Standard- und Akustikausführung erhältlich."
+    },
+    "pvc": {
+      "name": "PVC-Folien-Spanndecke",
+      "short": "PVC Film",
+      "category": "Warm montierte Folie",
+      "mount": "Warmmontage",
+      "intro": "Eine erwärmte PVC-Folie, die bei der Montage gespannt wird — voll recycelbar und leicht demontierbar. Ersetzen Sie eine müde Decke an einem einzigen Tag durch eine makellose neue.",
+      "summary": "Warm montierte PVC-Folien-Spanndecke, 100 % recycelbar und demontierbar, fugenlos bis 6,4 m, mit 10 Jahren Garantie.",
+      "chips": [
+        "Fugenlos bis 6,4 m",
+        "100 % recycelbar",
+        "Leicht demontierbar",
+        "Abwaschbar"
+      ],
+      "highlights": [
+        {
+          "value": "6.4m",
+          "label": "Fugenlose Breite"
+        },
+        {
+          "value": "Warm",
+          "label": "Montageart"
+        },
+        {
+          "value": "100%",
+          "label": "Recycelbar"
+        },
+        {
+          "value": "A",
+          "label": "Akustikklasse"
+        }
+      ],
+      "features": [
+        {
+          "title": "Recycelbar zum Rohstoff",
+          "body": "Das PVC-System ist vollständig zum Rohstoff recycelbar — eine zirkuläre Wahl, leicht zu demontieren und bei Bedarf wieder zu montieren."
+        },
+        {
+          "title": "Bereit für Backlight & Druck",
+          "body": "Transluzente Folien verteilen LED-Licht gleichmäßig ohne Hotspots; jedes Bild, jede Textur oder ein Sternenhimmel lässt sich randlos drucken."
+        },
+        {
+          "title": "Demontierbar & abwaschbar",
+          "body": "Zum Zugriff auf die Technik darüber einfach ausklippen und in Minuten wieder spannen. Die Folie lässt sich abwischen und macht sich aus Feuchtigkeit nichts."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Kalandrierte PVC-Folie"
+        },
+        {
+          "k": "Montage",
+          "v": "Warm gespannt, Klippprofil"
+        },
+        {
+          "k": "Max. fugenlose Breite",
+          "v": "6.4 m"
+        },
+        {
+          "k": "Oberfläche",
+          "v": "Matt / Satin / Glanz / transluzent"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Akustisch",
+          "v": "Bis Klasse A (perforiert)"
+        },
+        {
+          "k": "Reinigung",
+          "v": "Abwaschbar, feuchtigkeitsbeständig"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 Jahre"
+        }
+      ],
+      "applications": [
+        "Badezimmer",
+        "Pool & Wellness",
+        "Einzelhandel",
+        "Hotellerie",
+        "Büro",
+        "Heimkino"
+      ],
+      "colourChartNote": "Erhältlich in matten, satinierten, glänzenden, transluzenten und metallischen Oberflächen."
+    },
+    "acoustic": {
+      "name": "Akustisches Spannsystem",
+      "short": "Akustisch",
+      "category": "Schallabsorbierende Membran",
+      "mount": "Kalt / warm",
+      "intro": "Eine mikroperforierte Spannmembran mit hochverdichteten Absorbern dahinter — eine makellose Decke, die Nachhall und Lärm in jedem Raum messbar reduziert.",
+      "summary": "Mikroperforierte akustische Spannmembran mit hochverdichteter Absorber-Hinterlage, bis Schallabsorptionsklasse A.",
+      "chips": [
+        "Bis Klasse A",
+        "Fugenlose Fläche",
+        "Option unsichtbares Audio",
+        "Abwaschbare Oberfläche"
+      ],
+      "highlights": [
+        {
+          "value": "A",
+          "label": "Absorptionsklasse"
+        },
+        {
+          "value": "αw",
+          "label": "Geprüfte Werte"
+        },
+        {
+          "value": "0",
+          "label": "Sichtbare Fugen"
+        },
+        {
+          "value": "+25y",
+          "label": "Lebensdauer"
+        }
+      ],
+      "features": [
+        {
+          "title": "Absorption Klasse A",
+          "body": "Hochverdichtete Polyesterwolle hinter einer mikroperforierten Oberfläche liefert Schallabsorption bis Klasse A — ohne sichtbare Maßnahmen."
+        },
+        {
+          "title": "Deckensegel & Wandpaneele",
+          "body": "Frei hängende Deckensegel und dekorative Wandabsorber erweitern dasselbe System auf jede Fläche im Raum."
+        },
+        {
+          "title": "Unsichtbares Audio",
+          "body": "Lautsprecher werden komplett hinter der Folie montiert — für sauberen, quellenlosen Klang, der den Raum füllt."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Perforierte Membran + Absorber"
+        },
+        {
+          "k": "Montage",
+          "v": "Kalt oder warm, Klippprofil"
+        },
+        {
+          "k": "Max. fugenlose Breite",
+          "v": "5.15"
+        },
+        {
+          "k": "Absorption",
+          "v": "Bis Klasse A (αw)"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Hinterlage",
+          "v": "Hochverdichtete Polyesterwolle"
+        },
+        {
+          "k": "Reinigung",
+          "v": "Abwaschbare Oberfläche"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 Jahre"
+        }
+      ],
+      "applications": [
+        "Büro",
+        "Restaurant",
+        "Studio",
+        "Heimkino",
+        "Schule",
+        "Gesundheitswesen"
+      ]
+    },
+    "light": {
+      "name": "Leuchtdecke",
+      "short": "Leuchtend",
+      "category": "Transluzente Membran",
+      "mount": "Kalt / warm",
+      "intro": "Transluzente Spannfolien, die eine ganze Decke in eine weiche, gleichmäßige Lichtquelle verwandeln — oder in eine bedruckte Leinwand mit Ihrem Wunschmotiv.",
+      "summary": "Transluzente, hinterleuchtete Spanndecken und randlos gedruckte Designs — einschließlich Glasfaser-Sternenhimmel.",
+      "chips": [
+        "Gleichmäßiges Backlight",
+        "LED-Linien-Option",
+        "Randloser Druck",
+        "Fugenlos"
+      ],
+      "highlights": [
+        {
+          "value": "360°",
+          "label": "Gleichmäßige Streuung"
+        },
+        {
+          "value": "RGB",
+          "label": "LED-Optionen"
+        },
+        {
+          "value": "Druck",
+          "label": "Jedes Motiv"
+        },
+        {
+          "value": "5.15m",
+          "label": "Fugenlose Breite"
+        }
+      ],
+      "features": [
+        {
+          "title": "Gleichmäßige Hinterleuchtung",
+          "body": "Eine transluzente Folie über einem LED-Feld verteilt das Licht ohne Hotspots — ein leuchtender Himmel in jedem Raum, dimmbar je nach Stimmung."
+        },
+        {
+          "title": "LED-Linienbeleuchtung",
+          "body": "Eingelassene Lichtlinien integrieren sich nahtlos in die Membran — für klare, architektonische Lichteffekte."
+        },
+        {
+          "title": "Bedruckte Designs",
+          "body": "Jedes Foto, Muster oder jede Textur randlos gedruckt — inklusive Glasfaser-Sternenhimmel."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Transluzente PVC-Folie"
+        },
+        {
+          "k": "Montage",
+          "v": "Kalt oder warm, Klippprofil"
+        },
+        {
+          "k": "Max. fugenlose Breite",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Lichtquelle",
+          "v": "LED-Feld / -Linie, dimmbar"
+        },
+        {
+          "k": "Druck",
+          "v": "Randlos, jedes Motiv"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Reinigung",
+          "v": "Abwaschbar"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 Jahre"
+        }
+      ],
+      "applications": [
+        "Heimkino",
+        "Badezimmer",
+        "Einzelhandel",
+        "Hotellerie",
+        "Spa",
+        "Büro"
+      ]
+    },
+    "prefab": {
+      "name": "Vorgefertigte Strukturen",
+      "short": "Vorgefertigte Strukturen",
+      "category": "Vorgefertigte Tragstruktur",
+      "mount": "Vorgefertigt",
+      "intro": "Vorgefertigte Tragstrukturen für Spanndecken-Projekte — Balken aus Aluminium, Stahl und Holz, Vouten und Höhenversatz-Details, nach Maß in unserer polnischen Produktion gefertigt und weltweit an unsere Händler versandt.",
+      "summary": "Maßgefertigte Vorfertigungs-Strukturen aus Aluminium, Stahl und Holz — Balken für Rasterdecken, Vouten für schwebende Decken und saubere Höhenversatz-Details.",
+      "chips": [
+        "Aluminium / Stahl / Holz",
+        "Balken & Voutenprofile",
+        "Nach Maß",
+        "Weltweiter Versand"
+      ],
+      "highlights": [
+        {
+          "value": "1",
+          "label": "Tag vor Ort"
+        },
+        {
+          "value": "Prefab",
+          "label": "Vorgefertigt im Werk"
+        },
+        {
+          "value": "Zugang",
+          "label": "Revisionsklappe"
+        },
+        {
+          "value": "25 J.",
+          "label": "Lebensdauer"
+        }
+      ],
+      "features": [
+        {
+          "title": "Vorgefertigt im Werk",
+          "body": "Die Module werden in unserer belgischen Werkstatt konfektioniert und qualitätsgeprüft, bevor sie die Baustelle erreichen."
+        },
+        {
+          "title": "Klickmontage vor Ort",
+          "body": "Vorgespannte Einheiten klicken in einen Umfangsrahmen — minimale Gewerke, minimale Zeit, ein perfektes Ergebnis."
+        },
+        {
+          "title": "Integrierter Zugang",
+          "body": "Diskrete Revisionsklappen halten die Technik darüber erreichbar, ohne die klare Deckenlinie zu unterbrechen."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Membran auf Vorfertigungsrahmen"
+        },
+        {
+          "k": "Montage",
+          "v": "Klick-Modul"
+        },
+        {
+          "k": "Lieferzeit",
+          "v": "Auf Bestellung gefertigt"
+        },
+        {
+          "k": "Zugang",
+          "v": "Integrierte Revisionsklappe"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akustisch",
+          "v": "Optionale Absorber-Hinterlage"
+        },
+        {
+          "k": "Reinigung",
+          "v": "Abwaschbar"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 Jahre"
+        }
+      ],
+      "applications": [
+        "Badezimmermodule",
+        "Hotels",
+        "Modularer Aufbau",
+        "Gesundheitswesen",
+        "Einzelhandel",
+        "Büro"
+      ]
+    },
+    "starry": {
+      "name": "Sternenhimmel-Decke",
+      "short": "Sternenhimmel",
+      "category": "Glasfaser / hinterleuchtet",
+      "mount": "Hinterleuchtet",
+      "intro": "Eine Spanndecke mit Hunderten Glasfaserpunkten — ein ruhiger, funkelnder Nachthimmel über Ihrem Kino, Schlafzimmer oder Spa.",
+      "summary": "Sternenhimmel-Spanndecken mit Glasfaser und LED: Hunderte dimmbare Sternpunkte, optional Sternschnuppen und RGB, auf einer fugenlosen Membran.",
+      "chips": [
+        "Hunderte Sterne",
+        "Dimmbar",
+        "Optionales RGB",
+        "Sternschnuppen"
+      ],
+      "highlights": [
+        {
+          "value": "500+",
+          "label": "Sternpunkte"
+        },
+        {
+          "value": "RGB",
+          "label": "Farboptionen"
+        },
+        {
+          "value": "1 Tag",
+          "label": "Montage"
+        },
+        {
+          "value": "10 J.",
+          "label": "Garantie"
+        }
+      ],
+      "features": [
+        {
+          "title": "Ein echter Nachthimmel",
+          "body": "Hunderte Glasfaserpunkte hinter einer gespannten Membran erzeugen ein tiefes, funkelndes Sternenfeld — als Sternbild angeordnet oder zufällig verteilt."
+        },
+        {
+          "title": "Glasfaser & LED",
+          "body": "Eine einzige LED-Lichteinheit versorgt alle Fasern — die Sterne bleiben kühl und sind voll dimmbar. Ergänzen Sie ein Funkelrad für Bewegung, RGB für Farbe oder Sternschnuppen-Effekte."
+        },
+        {
+          "title": "Kino, Schlafzimmer, Spa",
+          "body": "Perfekt, wo Atmosphäre ohne Blendung gewünscht ist — Heimkinos, Schlafzimmer, Spas und Restaurants. Mit akustischer Hinterlage wird der Raum ruhig und leise."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Effekt",
+          "v": "Glasfaser-Sternenfeld"
+        },
+        {
+          "k": "Membran",
+          "v": "Dunkle transluzente / bedruckte Folie"
+        },
+        {
+          "k": "Sternpunkte",
+          "v": "Von ~150 bis 1.000+"
+        },
+        {
+          "k": "Lichtquelle",
+          "v": "Eine LED-Einheit, dimmbar"
+        },
+        {
+          "k": "Optionen",
+          "v": "Funkeln, RGB, Sternschnuppen"
+        },
+        {
+          "k": "Montage",
+          "v": "Gespanntes Klippprofil"
+        },
+        {
+          "k": "Reinigung",
+          "v": "Abwaschbar"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 Jahre"
+        }
+      ],
+      "applications": [
+        "Heimkino",
+        "Schlafzimmer",
+        "Spa & Wellness",
+        "Restaurant",
+        "Hotellerie",
+        "Kinderzimmer"
+      ]
+    },
+    "hatch": {
+      "name": "Revisionsklappe",
+      "short": "Revisionsklappe",
+      "category": "Zugangslösung",
+      "mount": "Integriert",
+      "intro": "Diskreter, wartungsfreundlicher Zugang durch die Spanndecke — erreichen Sie Ventile, Abzweigdosen und Armaturen, ohne die Membran zu zerschneiden oder zu ersetzen.",
+      "summary": "Integrierte Revisionsklappen für Spanndecken: nahezu unsichtbarer, wieder öffenbarer Zugang zur Technik über der Membran, in jeder Größe.",
+      "chips": [
+        "Nahezu unsichtbar",
+        "Wieder öffenbar",
+        "Jede Größe",
+        "Nachrüstbar"
+      ],
+      "highlights": [
+        {
+          "value": "Verborgen",
+          "label": "In der Fläche"
+        },
+        {
+          "value": "Beliebig",
+          "label": "Größe & Form"
+        },
+        {
+          "value": "Wieder öffnen",
+          "label": "So oft wie nötig"
+        },
+        {
+          "value": "1 Tag",
+          "label": "Montage"
+        }
+      ],
+      "features": [
+        {
+          "title": "Unsichtbar, bis Sie sie brauchen",
+          "body": "Der Klappenrahmen ist in das Umfangsdetail integriert und mit derselben Membran bespannt — er verschwindet in der Decke, bis er geöffnet werden muss."
+        },
+        {
+          "title": "Wartung ohne Schäden",
+          "body": "Erreichen Sie Absperrventile, Abzweigdosen, Klappen und Leuchten über der Decke — und verschließen Sie alles wieder, so oft wie nötig."
+        },
+        {
+          "title": "Jede Größe, jeder Raum",
+          "body": "Vom kleinen runden Zugangspunkt bis zum großen rechteckigen Paneel — passend zur dahinterliegenden Technik. Für Neuinstallationen und zum Nachrüsten in bestehende Decken."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Typ",
+          "v": "Integrierte Zugangsklappe"
+        },
+        {
+          "k": "Oberfläche",
+          "v": "Passend zur Deckenmembran"
+        },
+        {
+          "k": "Form",
+          "v": "Rund oder rechteckig"
+        },
+        {
+          "k": "Größe",
+          "v": "Nach Maß"
+        },
+        {
+          "k": "Öffnung",
+          "v": "Magnetischer oder Scharnierrahmen"
+        },
+        {
+          "k": "Nachrüstung",
+          "v": "Ja, in bestehende Decken"
+        },
+        {
+          "k": "Reinigung",
+          "v": "Abwaschbar"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 Jahre"
+        }
+      ],
+      "applications": [
+        "Badezimmer",
+        "Küche",
+        "Hauswirtschaftsraum",
+        "Büro",
+        "Einzelhandel",
+        "Gesundheitswesen"
+      ]
+    },
+    "print": {
+      "name": "Individuell bedruckte Decke",
+      "short": "Individueller Druck",
+      "category": "Bedruckte Membran",
+      "mount": "Warm oder kalt",
+      "intro": "Jedes Foto, Kunstwerk oder Muster randlos auf eine fugenlose Spanndecke gedruckt — Ihr Motiv, von Wand zu Wand, ohne sichtbare Naht.",
+      "summary": "Randlos bedruckte Spanndecken: jedes hochauflösende Bild, Foto oder Markenmotiv auf einer fugenlosen Membran, optional hinterleuchtet.",
+      "chips": [
+        "Jedes Motiv",
+        "Randlos",
+        "Backlight-Option",
+        "Fugenlos"
+      ],
+      "highlights": [
+        {
+          "value": "Beliebig",
+          "label": "Bild oder Kunst"
+        },
+        {
+          "value": "HD",
+          "label": "Druck in Fotoqualität"
+        },
+        {
+          "value": "Hinterleuchtet",
+          "label": "Optionales Leuchten"
+        },
+        {
+          "value": "5.7m",
+          "label": "Fugenlose Breite"
+        }
+      ],
+      "features": [
+        {
+          "title": "Ihr Motiv, randlos",
+          "body": "Liefern Sie ein Foto, eine Illustration, ein Markenmotiv oder Muster — wir drucken es über die gesamte Membran, farbverbindlich und fugenlos, ohne Panel-Linien."
+        },
+        {
+          "title": "Druck plus Backlight",
+          "body": "Kombinieren Sie eine transluzente Folie mit einem LED-Feld, um den Druck zu hinterleuchten — Kunstwerk oder Himmelsmotiv wird zur sanft leuchtenden Feature-Decke."
+        },
+        {
+          "title": "Passend zu Ihrem Raum",
+          "body": "Das Motiv wird exakt auf Ihren Raum skaliert und positioniert. Wir stimmen die Datei vor der Produktion mit Ihnen ab — was Sie freigeben, wird montiert."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Druck",
+          "v": "Randlos, vollfarbig"
+        },
+        {
+          "k": "Auflösung",
+          "v": "Fotoqualität, farbverbindlich"
+        },
+        {
+          "k": "Membran",
+          "v": "PVC-Folie (opak oder transluzent)"
+        },
+        {
+          "k": "Hinterleuchtung",
+          "v": "Optionales LED-Feld"
+        },
+        {
+          "k": "Max. fugenlose Breite",
+          "v": "5.7 m"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s2,d0"
+        },
+        {
+          "k": "Reinigung",
+          "v": "Abwaschbar"
+        },
+        {
+          "k": "Garantie",
+          "v": "25 Jahre"
+        }
+      ],
+      "applications": [
+        "Einzelhandel",
+        "Hotellerie",
+        "Heimkino",
+        "Büro",
+        "Showroom",
+        "Restaurant"
+      ]
+    }
+  },
+  "colourNames": {
+    "White": "Weiß",
+    "Off-white": "Cremeweiß",
+    "Satin white": "Satinweiß",
+    "Warm white": "Warmweiß",
+    "Light grey": "Hellgrau",
+    "Grey": "Grau",
+    "Anthracite": "Anthrazit",
+    "Sand": "Sand",
+    "Black": "Schwarz",
+    "Black gloss": "Schwarz glänzend",
+    "Deep blue": "Tiefblau",
+    "Midnight": "Mitternachtsblau",
+    "Translucent": "Transluzent",
+    "Translucent white": "Transluzentes Weiß",
+    "RGB": "RGB",
+    "RGB stars": "RGB-Sterne",
+    "Warm-white stars": "Warmweiße Sterne",
+    "Starry sky": "Sternenhimmel",
+    "Sky scenes": "Himmelsmotive",
+    "Custom": "Individuell",
+    "Custom RAL": "RAL nach Wunsch",
+    "Custom print": "Individueller Druck",
+    "Custom artwork": "Eigenes Motiv",
+    "Brand graphics": "Markenmotive",
+    "Full-colour print": "Vollfarbdruck",
+    "Photographic": "Fotografisch",
+    "Patterns": "Muster",
+    "Matched to membrane": "Passend zur Membran",
+    "Pure white": "Reinweiß",
+    "Traffic white": "Verkehrsweiß",
+    "Cream": "Cremeweiß",
+    "Oyster white": "Perlweiß",
+    "Light ivory": "Hellelfenbein",
+    "Beige": "Beige",
+    "Grey beige": "Graubeige",
+    "Silk grey": "Seidengrau",
+    "Pebble grey": "Kieselgrau",
+    "Dusty grey": "Staubgrau",
+    "Agate grey": "Achatgrau",
+    "Silver grey": "Silbergrau",
+    "Platinum grey": "Platingrau",
+    "Slate grey": "Schiefergrau",
+    "Black grey": "Schwarzgrau",
+    "Graphite black": "Graphitschwarz",
+    "Jet black": "Tiefschwarz",
+    "Bordeaux": "Bordeauxrot",
+    "Wine red": "Weinrot",
+    "Oxide red": "Oxidrot",
+    "Red": "Rot",
+    "Pure orange": "Reinorange",
+    "Golden yellow": "Goldgelb",
+    "Gold": "Gold",
+    "Silver": "Silber",
+    "Bronze": "Bronze",
+    "Champagne": "Champagner",
+    "Cappuccino": "Cappuccino",
+    "Chocolate": "Schokoladenbraun",
+    "Pearl": "Perlmutt",
+    "Opal": "Opal",
+    "Blue": "Blau",
+    "Steel blue": "Stahlblau",
+    "Pastel blue": "Pastellblau",
+    "Pigeon blue": "Taubenblau",
+    "Petrol": "Petrol",
+    "Pale green": "Blassgrün",
+    "Reseda green": "Resedagrün",
+    "Gloss": "Glänzend",
+    "Matte": "Matt",
+    "Satin": "Satiniert",
+    "Metallic": "Metallic"
+  },
+  "megaMenu": {
+    "solutions": {
+      "railLabel": "Lösungen entdecken",
+      "allLabel": "Alle Lösungen",
+      "promoTitle": "Eine neue Decke an einem Tag",
+      "promoCta": "Angebot anfordern",
+      "cats": [
+        {
+          "title": "Decken",
+          "desc": "Polyester, PVC & nahtlos",
+          "items": [
+            {
+              "title": "Polyesterdecke",
+              "sub": "Kaltmontage · sehr matt"
+            },
+            {
+              "title": "PVC-Folien-Decke",
+              "sub": "Recycelbar · abnehmbar"
+            },
+            {
+              "title": "Prefab-Deckenelement",
+              "sub": "Vormontiert & schnell"
+            },
+            {
+              "title": "Alle Deckensysteme",
+              "sub": "Sortiment vergleichen"
+            }
+          ]
+        },
+        {
+          "title": "Akustik",
+          "desc": "Schallabsorption",
+          "items": [
+            {
+              "title": "Akustik-Spannsystem",
+              "sub": "Bis Klasse A"
+            },
+            {
+              "title": "So funktioniert Akustik",
+              "sub": "Absorption erklärt"
+            },
+            {
+              "title": "Technisches Datenblatt",
+              "sub": "αw- & Klassenwerte"
+            }
+          ]
+        },
+        {
+          "title": "Licht & Druck",
+          "desc": "LED, Hinterleuchtung & Druck",
+          "items": [
+            {
+              "title": "Lichtdecke",
+              "sub": "Hinterleuchtet transluzent"
+            },
+            {
+              "title": "Sternenhimmel",
+              "sub": "Glasfaser-Nachthimmel"
+            },
+            {
+              "title": "Individueller Druck",
+              "sub": "Jedes Motiv, randlos"
+            }
+          ]
+        },
+        {
+          "title": "Prefab",
+          "desc": "Aluminium, Stahl & Holz",
+          "items": [
+            {
+              "title": "Prefab-Strukturen",
+              "sub": "Balken, Vouten & mehr"
+            },
+            {
+              "title": "Prefab-Lichtelemente",
+              "sub": "Aluminium + Spannfolie"
+            },
+            {
+              "title": "Revisionsklappe",
+              "sub": "Diskreter Zugang"
+            }
+          ]
+        },
+        {
+          "title": "Anwendungen",
+          "desc": "Raum für Raum",
+          "items": [
+            {
+              "title": "Wohnen & Kino",
+              "sub": "Klang & Sternenhimmel"
+            },
+            {
+              "title": "Bad & Küche",
+              "sub": "Feuchtigkeitsbeständig"
+            },
+            {
+              "title": "Büro & Einzelhandel",
+              "sub": "Akustischer Komfort"
+            },
+            {
+              "title": "Alle Projekte ansehen",
+              "sub": "Das komplette Portfolio"
+            }
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "railLabel": "Dokumentation",
+      "allLabel": "Alle Daten & Downloads",
+      "promoTitle": "Brauchen Sie Hilfe?",
+      "promoBody": "Senden Sie Ihre Renovierungsfrage — wir antworten innerhalb von zwei Werktagen.",
+      "promoCta": "Frage stellen",
+      "cats": [
+        {
+          "title": "Polyester-Spanndecke",
+          "desc": "Kalt montierte Membran",
+          "items": [
+            {
+              "title": "Datenblatt",
+              "sub": "Daten & Download"
+            },
+            {
+              "title": "Farben & Oberflächen",
+              "sub": "Komplettes Sortiment & RAL"
+            },
+            {
+              "title": "Brandschutz",
+              "sub": "Brandverhalten & A2"
+            },
+            {
+              "title": "Montageanleitung",
+              "sub": "Kaltmontage, Schritt für Schritt"
+            },
+            {
+              "title": "Ausschreibungstext",
+              "sub": "Für Ausschreibungen & Unterlagen"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Häufige Fragen"
+            }
+          ]
+        },
+        {
+          "title": "PVC-Spanndecke",
+          "desc": "Warm montierte Folie",
+          "items": [
+            {
+              "title": "Datenblatt",
+              "sub": "Daten & Download"
+            },
+            {
+              "title": "Farben & Oberflächen",
+              "sub": "Matt, satiniert, glänzend"
+            },
+            {
+              "title": "Brandschutz",
+              "sub": "Brandverhalten"
+            },
+            {
+              "title": "Montageanleitung",
+              "sub": "Warmmontage, Schritt für Schritt"
+            },
+            {
+              "title": "Ausschreibungstext",
+              "sub": "Für Ausschreibungen & Unterlagen"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Häufige Fragen"
+            }
+          ]
+        }
+      ]
+    },
+    "comingSoon": "Demnächst"
   }
 }

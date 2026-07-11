@@ -498,7 +498,9 @@
     "allSolutions": "Todas las soluciones",
     "ctaKicker": "Gratis y sin compromiso",
     "ctaTitle": "Quieres este techo",
-    "dealer": "Encuentra tu distribuidor más cercano"
+    "dealer": "Encuentra tu distribuidor más cercano",
+    "chartCount": "{count, plural, one {# color} other {# colores}}",
+    "anyRal": "Cualquier color RAL bajo pedido"
   },
   "productsPage": {
     "eyebrow": "Nuestras soluciones",
@@ -512,5 +514,963 @@
     "notSure": "¿No sabes cuál elegir?",
     "notSureBody": "Cuéntanos cómo es tu estancia y te recomendaremos el sistema adecuado — gratis y sin compromiso.",
     "quote": "Solicita un presupuesto gratis"
+  },
+  "catalog": {
+    "polyester": {
+      "name": "Techo tensado de poliéster",
+      "short": "Polyester",
+      "category": "Membrana montada en frío",
+      "mount": "Montaje en frío",
+      "intro": "Una membrana tensada estética y funcional para obra nueva y reforma. Tensada en frío a mano para un acabado impecable y muy mate — con opciones acústicas y lavables integradas.",
+      "summary": "Techo tensado de poliéster montado en frío con acabado muy mate, sin juntas hasta 5,15 m y 10 años de garantía.",
+      "chips": [
+        "Sin juntas hasta 5,15 m",
+        "+25 años de vida útil",
+        "Acústica hasta clase A",
+        "Lavable"
+      ],
+      "highlights": [
+        {
+          "value": "5.15m",
+          "label": "Anchura sin juntas"
+        },
+        {
+          "value": "En frío",
+          "label": "Método de montaje"
+        },
+        {
+          "value": "Mate",
+          "label": "Aspecto superficial"
+        },
+        {
+          "value": "A",
+          "label": "Clase acústica"
+        }
+      ],
+      "features": [
+        {
+          "title": "Instalación en frío",
+          "body": "Sin cañones de calor ni tiempos de secado. La membrana de poliéster se tensa en frío y se encaja en un perfil perimetral — limpio, rápido y sin vapores, incluso en estancias ocupadas."
+        },
+        {
+          "title": "Un acabado muy mate",
+          "body": "Una superficie mate profunda y sin reflejos que parece yeso recién pintado — sin las grietas, el descascarillado ni los repintados que conlleva."
+        },
+        {
+          "title": "Acústico y lavable",
+          "body": "Elige una versión microperforada con absorbente para domar la reverberación. Todos los acabados se limpian con un paño y resisten la humedad durante 25 años."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Membrana de poliéster tricotada"
+        },
+        {
+          "k": "Montaje",
+          "v": "Tensado en frío, perfil de clip"
+        },
+        {
+          "k": "Anchura máx. sin juntas",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Superficie",
+          "v": "Muy mate"
+        },
+        {
+          "k": "Clasificación al fuego",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Acústico",
+          "v": "Hasta clase A (perforado)"
+        },
+        {
+          "k": "Limpieza",
+          "v": "Lavable, resistente a la humedad"
+        },
+        {
+          "k": "Garantía",
+          "v": "10 años"
+        }
+      ],
+      "applications": [
+        "Salón",
+        "Baño",
+        "Oficina",
+        "Cine en casa",
+        "Sanidad",
+        "Retail"
+      ],
+      "colourChartNote": "Todos los colores están disponibles en acabado estándar y acústico."
+    },
+    "pvc": {
+      "name": "Techo tensado de lámina PVC",
+      "short": "PVC Film",
+      "category": "Lámina montada en caliente",
+      "mount": "Montaje en caliente",
+      "intro": "Una lámina de PVC calentada y tensada durante la instalación — totalmente reciclable y fácil de desmontar. Sustituye un techo cansado por uno impecable en un solo día.",
+      "summary": "Techo tensado de lámina PVC montado en caliente, 100 % reciclable y desmontable, sin juntas hasta 6,4 m y con 10 años de garantía.",
+      "chips": [
+        "Sin juntas hasta 6,4 m",
+        "100 % reciclable",
+        "Fácil de desmontar",
+        "Lavable"
+      ],
+      "highlights": [
+        {
+          "value": "6.4m",
+          "label": "Anchura sin juntas"
+        },
+        {
+          "value": "En caliente",
+          "label": "Método de montaje"
+        },
+        {
+          "value": "100%",
+          "label": "Reciclable"
+        },
+        {
+          "value": "A",
+          "label": "Clase acústica"
+        }
+      ],
+      "features": [
+        {
+          "title": "Reciclable a materia prima",
+          "body": "El sistema de PVC es totalmente reciclable a materia prima — una elección circular, fácil de desmontar y volver a montar cuando lo necesites."
+        },
+        {
+          "title": "Listo para retroiluminación e impresión",
+          "body": "Las láminas translúcidas difunden la luz LED de forma uniforme y sin puntos calientes; cualquier imagen, textura o cielo estrellado puede imprimirse de borde a borde."
+        },
+        {
+          "title": "Desmontable y lavable",
+          "body": "Desencaja la lámina para acceder a las instalaciones de arriba y vuelve a tensarla en minutos. La lámina se limpia con un paño y no teme la humedad."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Lámina de PVC calandrada"
+        },
+        {
+          "k": "Montaje",
+          "v": "Tensado en caliente, perfil de clip"
+        },
+        {
+          "k": "Anchura máx. sin juntas",
+          "v": "6.4 m"
+        },
+        {
+          "k": "Superficie",
+          "v": "Mate / satinado / brillo / translúcido"
+        },
+        {
+          "k": "Clasificación al fuego",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Acústico",
+          "v": "Hasta clase A (perforado)"
+        },
+        {
+          "k": "Limpieza",
+          "v": "Lavable, resistente a la humedad"
+        },
+        {
+          "k": "Garantía",
+          "v": "10 años"
+        }
+      ],
+      "applications": [
+        "Baño",
+        "Piscina y wellness",
+        "Retail",
+        "Hostelería",
+        "Oficina",
+        "Cine en casa"
+      ],
+      "colourChartNote": "Disponible en acabados mate, satinado, brillo, translúcido y metálico."
+    },
+    "acoustic": {
+      "name": "Sistema tensado acústico",
+      "short": "Acústico",
+      "category": "Membrana fonoabsorbente",
+      "mount": "En frío / en caliente",
+      "intro": "Una membrana tensada microperforada con absorbentes de alta densidad — un techo impecable que reduce de forma medible la reverberación y el ruido en cualquier estancia.",
+      "summary": "Membrana tensada acústica microperforada con trasdós absorbente de alta densidad, que alcanza la clase A de absorción.",
+      "chips": [
+        "Hasta clase A",
+        "Superficie sin juntas",
+        "Opción de audio invisible",
+        "Cara lavable"
+      ],
+      "highlights": [
+        {
+          "value": "A",
+          "label": "Clase de absorción"
+        },
+        {
+          "value": "αw",
+          "label": "Valores ensayados"
+        },
+        {
+          "value": "0",
+          "label": "Juntas visibles"
+        },
+        {
+          "value": "+25y",
+          "label": "Vida útil"
+        }
+      ],
+      "features": [
+        {
+          "title": "Absorción clase A",
+          "body": "La lana de poliéster de alta densidad tras una cara microperforada ofrece absorción acústica hasta clase A — sin tratamiento visible."
+        },
+        {
+          "title": "Islas y paneles murales",
+          "body": "Bafles suspendidos y absorbentes murales decorativos extienden el mismo sistema a cualquier superficie de la estancia."
+        },
+        {
+          "title": "Audio invisible",
+          "body": "Los altavoces se montan completamente detrás de la lámina para un sonido limpio, sin fuente visible, que llena el espacio."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Membrana perforada + absorbente"
+        },
+        {
+          "k": "Montaje",
+          "v": "En frío o caliente, perfil de clip"
+        },
+        {
+          "k": "Anchura máx. sin juntas",
+          "v": "5.15"
+        },
+        {
+          "k": "Absorción",
+          "v": "Hasta clase A (αw)"
+        },
+        {
+          "k": "Clasificación al fuego",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Trasdós",
+          "v": "Lana de poliéster de alta densidad"
+        },
+        {
+          "k": "Limpieza",
+          "v": "Cara lavable"
+        },
+        {
+          "k": "Garantía",
+          "v": "10 años"
+        }
+      ],
+      "applications": [
+        "Oficina",
+        "Restaurante",
+        "Studio",
+        "Cine en casa",
+        "Colegio",
+        "Sanidad"
+      ]
+    },
+    "light": {
+      "name": "Techo luminoso",
+      "short": "Iluminado",
+      "category": "Membrana translúcida",
+      "mount": "En frío / en caliente",
+      "intro": "Láminas tensadas translúcidas que convierten todo el techo en una fuente de luz suave y uniforme — o en un lienzo impreso con la imagen que elijas.",
+      "summary": "Techos tensados translúcidos retroiluminados y diseños impresos de borde a borde, incluidos acabados de cielo estrellado de fibra óptica.",
+      "chips": [
+        "Retroiluminación uniforme",
+        "Opción de línea LED",
+        "Impresión de borde a borde",
+        "Sin juntas"
+      ],
+      "highlights": [
+        {
+          "value": "360°",
+          "label": "Difusión uniforme"
+        },
+        {
+          "value": "RGB",
+          "label": "Opciones LED"
+        },
+        {
+          "value": "Impresión",
+          "label": "Cualquier imagen"
+        },
+        {
+          "value": "5.15m",
+          "label": "Anchura sin juntas"
+        }
+      ],
+      "features": [
+        {
+          "title": "Retroiluminación uniforme",
+          "body": "Una lámina translúcida sobre un campo de LED difunde la luz sin puntos calientes — un cielo luminoso en cualquier estancia, regulable según el ambiente."
+        },
+        {
+          "title": "Iluminación en líneas LED",
+          "body": "Las líneas de luz empotradas se integran sin juntas en la membrana para efectos de iluminación nítidos y arquitectónicos."
+        },
+        {
+          "title": "Diseños impresos",
+          "body": "Cualquier fotografía, patrón o textura impresa de borde a borde — incluido un cielo estrellado de fibra óptica."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Lámina PVC translúcida"
+        },
+        {
+          "k": "Montaje",
+          "v": "En frío o caliente, perfil de clip"
+        },
+        {
+          "k": "Anchura máx. sin juntas",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Fuente de luz",
+          "v": "Campo / línea LED, regulable"
+        },
+        {
+          "k": "Impresión",
+          "v": "De borde a borde, cualquier imagen"
+        },
+        {
+          "k": "Clasificación al fuego",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Limpieza",
+          "v": "Lavable"
+        },
+        {
+          "k": "Garantía",
+          "v": "10 años"
+        }
+      ],
+      "applications": [
+        "Cine en casa",
+        "Baño",
+        "Retail",
+        "Hostelería",
+        "Spa",
+        "Oficina"
+      ]
+    },
+    "prefab": {
+      "name": "Estructuras prefabricadas",
+      "short": "Estructuras prefabricadas",
+      "category": "Estructura portante prefabricada",
+      "mount": "Prefabricado",
+      "intro": "Estructuras portantes prefabricadas para proyectos de techos tensados — vigas de aluminio, acero y madera, molduras y detalles de cambio de altura, fabricadas a medida en nuestra producción polaca y enviadas a nuestros distribuidores de todo el mundo.",
+      "summary": "Estructuras prefabricadas a medida en aluminio, acero y madera — vigas para techos reticulares, molduras para techos flotantes y detalles limpios de cambio de altura.",
+      "chips": [
+        "Aluminio / acero / madera",
+        "Vigas y molduras",
+        "A medida",
+        "Envío mundial"
+      ],
+      "highlights": [
+        {
+          "value": "1",
+          "label": "Día en obra"
+        },
+        {
+          "value": "Prefab",
+          "label": "Fabricado fuera de obra"
+        },
+        {
+          "value": "Acceso",
+          "label": "Trampilla de inspección"
+        },
+        {
+          "value": "25 años",
+          "label": "Vida útil"
+        }
+      ],
+      "features": [
+        {
+          "title": "Fabricado fuera de obra",
+          "body": "Los módulos se confeccionan en nuestro taller belga y pasan control de calidad antes de llegar a la obra."
+        },
+        {
+          "title": "Montaje a clic en obra",
+          "body": "Las unidades pretensadas encajan en un marco perimetral — mínimos oficios, mínimo tiempo, un resultado perfecto."
+        },
+        {
+          "title": "Acceso integrado",
+          "body": "Discretas trampillas de inspección mantienen accesibles las instalaciones sin romper la línea limpia del techo."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Material",
+          "v": "Membrana sobre marco prefabricado"
+        },
+        {
+          "k": "Montaje",
+          "v": "Módulo de clic"
+        },
+        {
+          "k": "Plazo de entrega",
+          "v": "Fabricado bajo pedido"
+        },
+        {
+          "k": "Acceso",
+          "v": "Trampilla de inspección integrada"
+        },
+        {
+          "k": "Clasificación al fuego",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Acústico",
+          "v": "Trasdós absorbente opcional"
+        },
+        {
+          "k": "Limpieza",
+          "v": "Lavable"
+        },
+        {
+          "k": "Garantía",
+          "v": "10 años"
+        }
+      ],
+      "applications": [
+        "Baños modulares",
+        "Hoteles",
+        "Construcción modular",
+        "Sanidad",
+        "Retail",
+        "Oficina"
+      ]
+    },
+    "starry": {
+      "name": "Techo de cielo estrellado",
+      "short": "Cielo estrellado",
+      "category": "Fibra óptica / retroiluminado",
+      "mount": "Retroiluminado",
+      "intro": "Un techo tensado salpicado de cientos de puntos de fibra óptica — un cielo nocturno tranquilo y parpadeante sobre tu cine, dormitorio o spa.",
+      "summary": "Techos tensados de cielo estrellado con fibra óptica y LED: cientos de puntos regulables, estrellas fugaces y RGB opcionales, sobre una membrana sin juntas.",
+      "chips": [
+        "Cientos de estrellas",
+        "Regulable",
+        "RGB opcional",
+        "Estrellas fugaces"
+      ],
+      "highlights": [
+        {
+          "value": "500+",
+          "label": "Puntos de estrella"
+        },
+        {
+          "value": "RGB",
+          "label": "Opciones de color"
+        },
+        {
+          "value": "1 día",
+          "label": "Instalación"
+        },
+        {
+          "value": "10 años",
+          "label": "Garantía"
+        }
+      ],
+      "features": [
+        {
+          "title": "Un cielo nocturno real",
+          "body": "Cientos de puntos de fibra óptica tras una membrana tensada crean un campo de estrellas profundo y parpadeante — siguiendo una constelación o dispersos al azar."
+        },
+        {
+          "title": "Fibra óptica y LED",
+          "body": "Un solo motor de luz LED alimenta todas las fibras: las estrellas se mantienen frías y son totalmente regulables. Añade una rueda de parpadeo para movimiento, RGB para color o efectos de estrellas fugaces."
+        },
+        {
+          "title": "Cine, dormitorio, spa",
+          "body": "Perfecto donde quieres ambiente sin deslumbramiento — cines en casa, dormitorios, spas y restaurantes. Combínalo con trasdós acústico para una estancia serena y silenciosa."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Efecto",
+          "v": "Campo de estrellas de fibra óptica"
+        },
+        {
+          "k": "Membrana",
+          "v": "Lámina oscura translúcida / impresa"
+        },
+        {
+          "k": "Puntos de estrella",
+          "v": "De ~150 a 1.000+"
+        },
+        {
+          "k": "Fuente de luz",
+          "v": "Un solo motor LED, regulable"
+        },
+        {
+          "k": "Opciones",
+          "v": "Parpadeo, RGB, estrellas fugaces"
+        },
+        {
+          "k": "Montaje",
+          "v": "Perfil de clip tensado"
+        },
+        {
+          "k": "Limpieza",
+          "v": "Lavable"
+        },
+        {
+          "k": "Garantía",
+          "v": "10 años"
+        }
+      ],
+      "applications": [
+        "Cine en casa",
+        "Dormitorio",
+        "Spa y wellness",
+        "Restaurante",
+        "Hostelería",
+        "Habitación infantil"
+      ]
+    },
+    "hatch": {
+      "name": "Trampilla de inspección",
+      "short": "Trampilla de inspección",
+      "category": "Solución de acceso",
+      "mount": "Integrado",
+      "intro": "Acceso discreto y reutilizable a través de un techo tensado — llega a válvulas, cajas de conexión y accesorios sin cortar ni sustituir la membrana.",
+      "summary": "Trampillas de inspección integradas para techos tensados: acceso casi invisible y reabrible a las instalaciones ocultas sobre la membrana, en cualquier tamaño.",
+      "chips": [
+        "Casi invisible",
+        "Reabrible",
+        "Cualquier tamaño",
+        "Apto para adaptación"
+      ],
+      "highlights": [
+        {
+          "value": "Ocultos",
+          "label": "En la superficie"
+        },
+        {
+          "value": "Cualquiera",
+          "label": "Tamaño y forma"
+        },
+        {
+          "value": "Reapertura",
+          "label": "Tantas veces como haga falta"
+        },
+        {
+          "value": "1 día",
+          "label": "Instalación"
+        }
+      ],
+      "features": [
+        {
+          "title": "Invisible hasta que la necesitas",
+          "body": "El marco de la trampilla se integra en el detalle perimetral y se acaba con la misma membrana: desaparece en el techo hasta que hay que abrirla."
+        },
+        {
+          "title": "Mantenimiento sin daños",
+          "body": "Llega a llaves de paso, cajas de conexión, compuertas y luminarias ocultas sobre el techo — y ciérralo todo de nuevo tantas veces como haga falta."
+        },
+        {
+          "title": "Cualquier tamaño, cualquier estancia",
+          "body": "Desde un pequeño acceso redondo hasta un gran panel rectangular, dimensionado según la instalación que hay detrás. Sirve en obra nueva y como adaptación en techos existentes."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Tipo",
+          "v": "Trampilla de acceso integrada"
+        },
+        {
+          "k": "Acabado",
+          "v": "A juego con la membrana del techo"
+        },
+        {
+          "k": "Forma",
+          "v": "Redondo o rectangular"
+        },
+        {
+          "k": "Tamaño",
+          "v": "A medida"
+        },
+        {
+          "k": "Apertura",
+          "v": "Marco magnético o con bisagras"
+        },
+        {
+          "k": "Adaptación",
+          "v": "Sí, en techos existentes"
+        },
+        {
+          "k": "Limpieza",
+          "v": "Lavable"
+        },
+        {
+          "k": "Garantía",
+          "v": "10 años"
+        }
+      ],
+      "applications": [
+        "Baño",
+        "Cocina",
+        "Lavadero",
+        "Oficina",
+        "Retail",
+        "Sanidad"
+      ]
+    },
+    "print": {
+      "name": "Techo impreso a medida",
+      "short": "Impresión a medida",
+      "category": "Membrana impresa",
+      "mount": "En caliente o frío",
+      "intro": "Cualquier fotografía, obra o patrón impreso de borde a borde en un techo tensado sin juntas — tu imagen, de pared a pared, sin uniones visibles.",
+      "summary": "Techos tensados impresos de borde a borde: cualquier imagen, foto o gráfico de marca en alta resolución sobre una membrana sin juntas, opcionalmente retroiluminado.",
+      "chips": [
+        "Cualquier imagen",
+        "De borde a borde",
+        "Opción retroiluminada",
+        "Sin juntas"
+      ],
+      "highlights": [
+        {
+          "value": "Cualquiera",
+          "label": "Imagen o arte"
+        },
+        {
+          "value": "HD",
+          "label": "Impresión con calidad fotográfica"
+        },
+        {
+          "value": "Retroiluminado",
+          "label": "Brillo opcional"
+        },
+        {
+          "value": "5.7m",
+          "label": "Anchura sin juntas"
+        }
+      ],
+      "features": [
+        {
+          "title": "Tu imagen, de borde a borde",
+          "body": "Entrega una foto, ilustración, gráfico de marca o patrón y lo imprimimos en toda la membrana — con gestión de color y sin juntas ni líneas de paneles."
+        },
+        {
+          "title": "Impresión más retroiluminación",
+          "body": "Combina una lámina translúcida con un campo de LED para retroiluminar la impresión: una obra o un cielo se convierte en un techo protagonista de brillo suave."
+        },
+        {
+          "title": "Hecho para tu espacio",
+          "body": "La imagen se escala y se posiciona para tu estancia exacta. Aprobamos el archivo contigo antes de producir: lo que apruebas es lo que se instala."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Impresión",
+          "v": "De borde a borde, a todo color"
+        },
+        {
+          "k": "Resolución",
+          "v": "Calidad foto, con gestión de color"
+        },
+        {
+          "k": "Membrana",
+          "v": "Lámina PVC (opaca o translúcida)"
+        },
+        {
+          "k": "Retroiluminación",
+          "v": "Campo LED opcional"
+        },
+        {
+          "k": "Anchura máx. sin juntas",
+          "v": "5.7 m"
+        },
+        {
+          "k": "Clasificación al fuego",
+          "v": "B-s2,d0"
+        },
+        {
+          "k": "Limpieza",
+          "v": "Lavable"
+        },
+        {
+          "k": "Garantía",
+          "v": "25 años"
+        }
+      ],
+      "applications": [
+        "Retail",
+        "Hostelería",
+        "Cine en casa",
+        "Oficina",
+        "Showroom",
+        "Restaurante"
+      ]
+    }
+  },
+  "colourNames": {
+    "White": "Blanco",
+    "Off-white": "Blanco roto",
+    "Satin white": "Blanco satinado",
+    "Warm white": "Blanco cálido",
+    "Light grey": "Gris claro",
+    "Grey": "Gris",
+    "Anthracite": "Antracita",
+    "Sand": "Arena",
+    "Black": "Negro",
+    "Black gloss": "Negro brillo",
+    "Deep blue": "Azul profundo",
+    "Midnight": "Azul medianoche",
+    "Translucent": "Translúcido",
+    "Translucent white": "Blanco translúcido",
+    "RGB": "RGB",
+    "RGB stars": "Estrellas RGB",
+    "Warm-white stars": "Estrellas blanco cálido",
+    "Starry sky": "Cielo estrellado",
+    "Sky scenes": "Escenas de cielo",
+    "Custom": "Personalizado",
+    "Custom RAL": "RAL a medida",
+    "Custom print": "Impresión a medida",
+    "Custom artwork": "Arte propio",
+    "Brand graphics": "Gráficos de marca",
+    "Full-colour print": "Impresión a todo color",
+    "Photographic": "Fotográfico",
+    "Patterns": "Patrones",
+    "Matched to membrane": "A juego con la membrana",
+    "Pure white": "Blanco puro",
+    "Traffic white": "Blanco tráfico",
+    "Cream": "Crema",
+    "Oyster white": "Blanco ostra",
+    "Light ivory": "Marfil claro",
+    "Beige": "Beige",
+    "Grey beige": "Beige grisáceo",
+    "Silk grey": "Gris seda",
+    "Pebble grey": "Gris guijarro",
+    "Dusty grey": "Gris polvo",
+    "Agate grey": "Gris ágata",
+    "Silver grey": "Gris plata",
+    "Platinum grey": "Gris platino",
+    "Slate grey": "Gris pizarra",
+    "Black grey": "Gris negruzco",
+    "Graphite black": "Negro grafito",
+    "Jet black": "Negro intenso",
+    "Bordeaux": "Burdeos",
+    "Wine red": "Rojo vino",
+    "Oxide red": "Rojo óxido",
+    "Red": "Rojo",
+    "Pure orange": "Naranja puro",
+    "Golden yellow": "Amarillo oro",
+    "Gold": "Oro",
+    "Silver": "Plata",
+    "Bronze": "Bronce",
+    "Champagne": "Champán",
+    "Cappuccino": "Capuchino",
+    "Chocolate": "Chocolate",
+    "Pearl": "Perla",
+    "Opal": "Ópalo",
+    "Blue": "Azul",
+    "Steel blue": "Azul acero",
+    "Pastel blue": "Azul pastel",
+    "Pigeon blue": "Azul colombino",
+    "Petrol": "Azul petróleo",
+    "Pale green": "Verde pálido",
+    "Reseda green": "Verde reseda",
+    "Gloss": "Brillo",
+    "Matte": "Mate",
+    "Satin": "Satinado",
+    "Metallic": "Metalizado"
+  },
+  "megaMenu": {
+    "solutions": {
+      "railLabel": "Explorar soluciones",
+      "allLabel": "Todas las soluciones",
+      "promoTitle": "Un techo nuevo en un día",
+      "promoCta": "Solicitar presupuesto",
+      "cats": [
+        {
+          "title": "Techos",
+          "desc": "Poliéster, PVC y sin juntas",
+          "items": [
+            {
+              "title": "Techo de poliéster",
+              "sub": "Montaje en frío · muy mate"
+            },
+            {
+              "title": "Techo de lámina PVC",
+              "sub": "Reciclable · desmontable"
+            },
+            {
+              "title": "Unidad de techo prefabricada",
+              "sub": "Premontada y rápida"
+            },
+            {
+              "title": "Todos los sistemas de techo",
+              "sub": "Compara la gama"
+            }
+          ]
+        },
+        {
+          "title": "Acústica",
+          "desc": "Absorción acústica",
+          "items": [
+            {
+              "title": "Sistema tensado acústico",
+              "sub": "Hasta clase A"
+            },
+            {
+              "title": "Cómo funciona la acústica",
+              "sub": "La absorción explicada"
+            },
+            {
+              "title": "Ficha técnica",
+              "sub": "Valores αw y clases"
+            }
+          ]
+        },
+        {
+          "title": "Luz e impresión",
+          "desc": "LED, retroiluminación e impresión",
+          "items": [
+            {
+              "title": "Techo luminoso",
+              "sub": "Translúcido retroiluminado"
+            },
+            {
+              "title": "Cielo estrellado",
+              "sub": "Cielo nocturno de fibra óptica"
+            },
+            {
+              "title": "Impresión a medida",
+              "sub": "Cualquier imagen, de borde a borde"
+            }
+          ]
+        },
+        {
+          "title": "Prefab",
+          "desc": "Aluminio, acero y madera",
+          "items": [
+            {
+              "title": "Estructuras prefabricadas",
+              "sub": "Vigas, molduras y más"
+            },
+            {
+              "title": "Elementos de iluminación prefabricados",
+              "sub": "Aluminio + membrana tensada"
+            },
+            {
+              "title": "Trampilla de inspección",
+              "sub": "Acceso discreto"
+            }
+          ]
+        },
+        {
+          "title": "Aplicaciones",
+          "desc": "Estancia por estancia",
+          "items": [
+            {
+              "title": "Salón y cine",
+              "sub": "Sonido y cielo estrellado"
+            },
+            {
+              "title": "Baño y cocina",
+              "sub": "Resistente a la humedad"
+            },
+            {
+              "title": "Oficina y comercio",
+              "sub": "Confort acústico"
+            },
+            {
+              "title": "Ver todos los proyectos",
+              "sub": "El portafolio completo"
+            }
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "railLabel": "Documentación",
+      "allLabel": "Todas las especificaciones y descargas",
+      "promoTitle": "¿Necesitas ayuda?",
+      "promoBody": "Envía tu consulta de reforma: respondemos en dos días laborables.",
+      "promoCta": "Hacer una pregunta",
+      "cats": [
+        {
+          "title": "Techo tensado de poliéster",
+          "desc": "Membrana montada en frío",
+          "items": [
+            {
+              "title": "Ficha técnica",
+              "sub": "Especificaciones y descarga"
+            },
+            {
+              "title": "Colores y acabados",
+              "sub": "Gama completa y RAL"
+            },
+            {
+              "title": "Seguridad contra incendios",
+              "sub": "Reacción al fuego y A2"
+            },
+            {
+              "title": "Guía de instalación",
+              "sub": "Montaje en frío, paso a paso"
+            },
+            {
+              "title": "Texto de especificación",
+              "sub": "Para licitaciones y expedientes"
+            },
+            {
+              "title": "Preguntas frecuentes",
+              "sub": "Preguntas habituales"
+            }
+          ]
+        },
+        {
+          "title": "Techo tensado de PVC",
+          "desc": "Lámina montada en caliente",
+          "items": [
+            {
+              "title": "Ficha técnica",
+              "sub": "Especificaciones y descarga"
+            },
+            {
+              "title": "Colores y acabados",
+              "sub": "Mate, satinado, brillo"
+            },
+            {
+              "title": "Seguridad contra incendios",
+              "sub": "Reacción al fuego"
+            },
+            {
+              "title": "Guía de instalación",
+              "sub": "Montaje en caliente, paso a paso"
+            },
+            {
+              "title": "Texto de especificación",
+              "sub": "Para licitaciones y expedientes"
+            },
+            {
+              "title": "Preguntas frecuentes",
+              "sub": "Preguntas habituales"
+            }
+          ]
+        }
+      ]
+    },
+    "comingSoon": "Próximamente"
   }
 }

@@ -498,7 +498,9 @@
     "allSolutions": "Alle oplossingen",
     "ctaKicker": "Gratis & vrijblijvend",
     "ctaTitle": "Wilt u dit plafond",
-    "dealer": "Vind uw dichtstbijzijnde dealer"
+    "dealer": "Vind uw dichtstbijzijnde dealer",
+    "chartCount": "{count, plural, one {# kleur} other {# kleuren}}",
+    "anyRal": "Elke RAL-kleur op aanvraag"
   },
   "productsPage": {
     "eyebrow": "Onze oplossingen",
@@ -512,5 +514,963 @@
     "notSure": "Twijfelt u nog?",
     "notSureBody": "Vertel ons over uw ruimte en wij raden het juiste systeem aan — gratis en vrijblijvend.",
     "quote": "Vraag een gratis offerte"
+  },
+  "catalog": {
+    "polyester": {
+      "name": "Polyester spanplafond",
+      "short": "Polyester",
+      "category": "Koud gemonteerd doek",
+      "mount": "Koude montage",
+      "intro": "Een esthetisch, functioneel spandoek voor nieuwbouw én renovatie. Met de hand koud opgespannen voor een vlekkeloze, zeer matte afwerking — met ingebouwde akoestische en afwasbare opties.",
+      "summary": "Koud gemonteerd polyester spanplafond met een zeer matte afwerking, naadloos tot 5,15 m en 10 jaar garantie.",
+      "chips": [
+        "Naadloos tot 5,15 m",
+        "+25 jaar levensduur",
+        "Akoestiek tot klasse A",
+        "Afwasbaar"
+      ],
+      "highlights": [
+        {
+          "value": "5.15m",
+          "label": "Naadloze breedte"
+        },
+        {
+          "value": "Koud",
+          "label": "Montagemethode"
+        },
+        {
+          "value": "Mat",
+          "label": "Uitstraling"
+        },
+        {
+          "value": "A",
+          "label": "Akoestische klasse"
+        }
+      ],
+      "features": [
+        {
+          "title": "Koude plaatsing",
+          "body": "Geen heteluchtkanonnen, geen droogtijd. Het polyester doek wordt koud opgespannen en in een randprofiel geklikt — proper, snel en dampvrij, zelfs in gebruikte ruimtes."
+        },
+        {
+          "title": "Een zeer matte afwerking",
+          "body": "Een diep, niet-spiegelend mat oppervlak dat oogt als vers geschilderd pleisterwerk — zonder de barsten, schilfers of schilderbeurten die daarbij horen."
+        },
+        {
+          "title": "Akoestisch & afwasbaar",
+          "body": "Kies een microgeperforeerde versie met absorber om galm te temmen. Elke afwerking is afneembaar en 25 jaar bestand tegen vocht."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiaal",
+          "v": "Gebreid polyester doek"
+        },
+        {
+          "k": "Montage",
+          "v": "Koud gespannen, klikprofiel"
+        },
+        {
+          "k": "Max. naadloze breedte",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Oppervlak",
+          "v": "Zeer mat"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akoestisch",
+          "v": "Tot klasse A (geperforeerd)"
+        },
+        {
+          "k": "Reiniging",
+          "v": "Afwasbaar, vochtbestendig"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 jaar"
+        }
+      ],
+      "applications": [
+        "Woonkamer",
+        "Badkamer",
+        "Kantoor",
+        "Thuisbioscoop",
+        "Zorgsector",
+        "Retail"
+      ],
+      "colourChartNote": "Elke kleur is beschikbaar in standaard en akoestische uitvoering."
+    },
+    "pvc": {
+      "name": "PVC-folie spanplafond",
+      "short": "PVC Film",
+      "category": "Warm gemonteerde folie",
+      "mount": "Warme montage",
+      "intro": "Een verwarmde PVC-folie die bij plaatsing wordt opgespannen — volledig recycleerbaar en eenvoudig te verwijderen. Vervang een vermoeid plafond in één dag door een vlekkeloos nieuw exemplaar.",
+      "summary": "Warm gemonteerd PVC-folie spanplafond, 100% recycleerbaar en verwijderbaar, naadloos tot 6,4 m met 10 jaar garantie.",
+      "chips": [
+        "Naadloos tot 6,4 m",
+        "100% recycleerbaar",
+        "Eenvoudig te verwijderen",
+        "Afwasbaar"
+      ],
+      "highlights": [
+        {
+          "value": "6.4m",
+          "label": "Naadloze breedte"
+        },
+        {
+          "value": "Warm",
+          "label": "Montagemethode"
+        },
+        {
+          "value": "100%",
+          "label": "Recycleerbaar"
+        },
+        {
+          "value": "A",
+          "label": "Akoestische klasse"
+        }
+      ],
+      "features": [
+        {
+          "title": "Recycleerbaar tot grondstof",
+          "body": "Het PVC-systeem is volledig recycleerbaar tot grondstof — een circulaire keuze die u eenvoudig kunt verwijderen en herplaatsen wanneer nodig."
+        },
+        {
+          "title": "Klaar voor backlight & print",
+          "body": "Doorschijnende folies verspreiden LED-licht egaal zonder hotspots; elk beeld, elke textuur of sterrenhemel kan randloos geprint worden."
+        },
+        {
+          "title": "Verwijderbaar & afwasbaar",
+          "body": "Klik het doek los voor toegang tot de technieken erboven en span het in enkele minuten opnieuw op. De folie is afneembaar en trekt zich van vocht niets aan."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiaal",
+          "v": "Gekalanderde PVC-folie"
+        },
+        {
+          "k": "Montage",
+          "v": "Warm gespannen, klikprofiel"
+        },
+        {
+          "k": "Max. naadloze breedte",
+          "v": "6.4 m"
+        },
+        {
+          "k": "Oppervlak",
+          "v": "Mat / satijn / glans / doorschijnend"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Akoestisch",
+          "v": "Tot klasse A (geperforeerd)"
+        },
+        {
+          "k": "Reiniging",
+          "v": "Afwasbaar, vochtbestendig"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 jaar"
+        }
+      ],
+      "applications": [
+        "Badkamer",
+        "Zwembad & wellness",
+        "Retail",
+        "Horeca",
+        "Kantoor",
+        "Thuisbioscoop"
+      ],
+      "colourChartNote": "Beschikbaar in matte, satijnen, glanzende, doorschijnende en metallic afwerkingen."
+    },
+    "acoustic": {
+      "name": "Akoestisch spansysteem",
+      "short": "Akoestisch",
+      "category": "Geluidsabsorberend doek",
+      "mount": "Koud / warm",
+      "intro": "Een microgeperforeerd spandoek met hoogverdichte absorbers erachter — een vlekkeloos plafond dat galm en lawaai meetbaar vermindert in elke ruimte.",
+      "summary": "Microgeperforeerd akoestisch spandoek met hoogverdichte absorber, tot klasse A geluidsabsorptie.",
+      "chips": [
+        "Tot klasse A",
+        "Naadloos oppervlak",
+        "Optie onzichtbare audio",
+        "Afwasbaar oppervlak"
+      ],
+      "highlights": [
+        {
+          "value": "A",
+          "label": "Absorptieklasse"
+        },
+        {
+          "value": "αw",
+          "label": "Geteste waarden"
+        },
+        {
+          "value": "0",
+          "label": "Zichtbare naden"
+        },
+        {
+          "value": "+25y",
+          "label": "Levensduur"
+        }
+      ],
+      "features": [
+        {
+          "title": "Klasse A-absorptie",
+          "body": "Hoogverdichte polyesterwol achter een microgeperforeerd doek levert tot klasse A geluidsabsorptie — zonder zichtbare behandeling."
+        },
+        {
+          "title": "Eilanden & wandpanelen",
+          "body": "Vrijhangende baffles en decoratieve wandabsorbers breiden hetzelfde systeem uit naar elk oppervlak in de ruimte."
+        },
+        {
+          "title": "Onzichtbare audio",
+          "body": "Luidsprekers worden volledig achter de folie gemonteerd voor zuiver, bronloos geluid dat de ruimte vult."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiaal",
+          "v": "Geperforeerd doek + absorber"
+        },
+        {
+          "k": "Montage",
+          "v": "Koud of warm, klikprofiel"
+        },
+        {
+          "k": "Max. naadloze breedte",
+          "v": "5.15"
+        },
+        {
+          "k": "Absorptie",
+          "v": "Tot klasse A (αw)"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Rugvulling",
+          "v": "Hoogverdichte polyesterwol"
+        },
+        {
+          "k": "Reiniging",
+          "v": "Afwasbaar oppervlak"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 jaar"
+        }
+      ],
+      "applications": [
+        "Kantoor",
+        "Restaurant",
+        "Studio",
+        "Thuisbioscoop",
+        "School",
+        "Zorgsector"
+      ]
+    },
+    "light": {
+      "name": "Lichtplafond",
+      "short": "Verlicht",
+      "category": "Doorschijnend doek",
+      "mount": "Koud / warm",
+      "intro": "Doorschijnende spanfolies die een volledig plafond veranderen in een zachte, egale lichtbron — of in een geprint canvas met het beeld van uw keuze.",
+      "summary": "Doorschijnende, verlichte spanplafonds en randloos bedrukte designs — inclusief sterrenhemels met glasvezel.",
+      "chips": [
+        "Egale verlichting",
+        "Optie LED-lijn",
+        "Randloze print",
+        "Naadloos"
+      ],
+      "highlights": [
+        {
+          "value": "360°",
+          "label": "Egale spreiding"
+        },
+        {
+          "value": "RGB",
+          "label": "LED-opties"
+        },
+        {
+          "value": "Print",
+          "label": "Elk beeld"
+        },
+        {
+          "value": "5.15m",
+          "label": "Naadloze breedte"
+        }
+      ],
+      "features": [
+        {
+          "title": "Egale achtergrondverlichting",
+          "body": "Een doorschijnende folie over een LED-veld verspreidt het licht zonder hotspots — een lichtgevende hemel in elke ruimte, dimbaar naar sfeer."
+        },
+        {
+          "title": "LED-lijnverlichting",
+          "body": "Verzonken lichtlijnen integreren naadloos in het doek voor strakke, architecturale lichteffecten."
+        },
+        {
+          "title": "Bedrukte designs",
+          "body": "Elke foto, elk patroon of elke textuur randloos geprint — inclusief een sterrenhemel met glasvezel."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiaal",
+          "v": "Doorschijnende PVC-folie"
+        },
+        {
+          "k": "Montage",
+          "v": "Koud of warm, klikprofiel"
+        },
+        {
+          "k": "Max. naadloze breedte",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Lichtbron",
+          "v": "LED-veld / -lijn, dimbaar"
+        },
+        {
+          "k": "Print",
+          "v": "Randloos, elk beeld"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Reiniging",
+          "v": "Afwasbaar"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 jaar"
+        }
+      ],
+      "applications": [
+        "Thuisbioscoop",
+        "Badkamer",
+        "Retail",
+        "Horeca",
+        "Spa",
+        "Kantoor"
+      ]
+    },
+    "prefab": {
+      "name": "Prefabstructuren",
+      "short": "Prefabstructuren",
+      "category": "Prefab draagstructuur",
+      "mount": "Geprefabriceerd",
+      "intro": "Prefab draagstructuren voor spanplafondprojecten — balken in aluminium, staal en hout, kroonlijsten en hoogteverschil-details, op maat gemaakt in onze Poolse productie en wereldwijd verzonden naar onze dealers.",
+      "summary": "Prefabstructuren op maat in aluminium, staal en hout — balken voor rasterplafonds, kroonlijsten voor zwevende plafonds en strakke hoogteverschil-details.",
+      "chips": [
+        "Aluminium / staal / hout",
+        "Balken & kroonlijsten",
+        "Op maat gemaakt",
+        "Wereldwijd verzonden"
+      ],
+      "highlights": [
+        {
+          "value": "1",
+          "label": "Dag op de werf"
+        },
+        {
+          "value": "Prefab",
+          "label": "Gebouwd buiten de werf"
+        },
+        {
+          "value": "Toegang",
+          "label": "Inspectieluik"
+        },
+        {
+          "value": "25 jr",
+          "label": "Levensduur"
+        }
+      ],
+      "features": [
+        {
+          "title": "Gebouwd buiten de werf",
+          "body": "Modules worden geconfectioneerd in ons Belgische atelier en gecontroleerd op kwaliteit vóór ze de werf bereiken."
+        },
+        {
+          "title": "Klikmontage op de werf",
+          "body": "Voorgespannen units klikken in een omtrekkader — minimale werken, minimale tijd, een perfect resultaat."
+        },
+        {
+          "title": "Geïntegreerde toegang",
+          "body": "Discrete inspectieluiken houden de technieken erboven bereikbaar zonder de strakke plafondlijn te doorbreken."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiaal",
+          "v": "Doek op prefab kader"
+        },
+        {
+          "k": "Montage",
+          "v": "Klikmodule"
+        },
+        {
+          "k": "Levertermijn",
+          "v": "Op bestelling gemaakt"
+        },
+        {
+          "k": "Toegang",
+          "v": "Geïntegreerd inspectieluik"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akoestisch",
+          "v": "Optionele absorber"
+        },
+        {
+          "k": "Reiniging",
+          "v": "Afwasbaar"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 jaar"
+        }
+      ],
+      "applications": [
+        "Badkamerunits",
+        "Hotels",
+        "Modulaire opbouw",
+        "Zorgsector",
+        "Retail",
+        "Kantoor"
+      ]
+    },
+    "starry": {
+      "name": "Sterrenhemelplafond",
+      "short": "Sterrenhemel",
+      "category": "Glasvezel / verlicht",
+      "mount": "Verlicht",
+      "intro": "Een spanplafond bezaaid met honderden glasvezelpunten — een rustige, fonkelende sterrenhemel boven uw bioscoop, slaapkamer of wellness.",
+      "summary": "Sterrenhemel-spanplafonds met glasvezel en LED: honderden dimbare sterrenpunten, optioneel vallende sterren en RGB, op een naadloos doek.",
+      "chips": [
+        "Honderden sterren",
+        "Dimbaar",
+        "Optioneel RGB",
+        "Vallende sterren"
+      ],
+      "highlights": [
+        {
+          "value": "500+",
+          "label": "Sterrenpunten"
+        },
+        {
+          "value": "RGB",
+          "label": "Kleuropties"
+        },
+        {
+          "value": "1 dag",
+          "label": "Plaatsing"
+        },
+        {
+          "value": "10 jr",
+          "label": "Garantie"
+        }
+      ],
+      "features": [
+        {
+          "title": "Een echte sterrenhemel",
+          "body": "Honderden glasvezelpunten achter een gespannen doek vormen een diep, fonkelend sterrenveld — volgens een sterrenbeeld of willekeurig verspreid."
+        },
+        {
+          "title": "Glasvezel & LED",
+          "body": "Eén LED-lichtbron voedt alle vezels, zodat de sterren koel blijven en volledig dimbaar zijn. Voeg een twinkelwiel toe voor beweging, RGB voor kleur of vallende sterren als effect."
+        },
+        {
+          "title": "Bioscoop, slaapkamer, wellness",
+          "body": "Perfect waar u sfeer zonder verblinding wilt — thuisbioscopen, slaapkamers, wellness en restaurants. Combineer met een akoestische rug voor een rustige, stille ruimte."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Effect",
+          "v": "Glasvezel sterrenveld"
+        },
+        {
+          "k": "Doek",
+          "v": "Donkere doorschijnende / bedrukte folie"
+        },
+        {
+          "k": "Sterrenpunten",
+          "v": "Van ~150 tot 1.000+"
+        },
+        {
+          "k": "Lichtbron",
+          "v": "Eén LED-bron, dimbaar"
+        },
+        {
+          "k": "Opties",
+          "v": "Twinkelen, RGB, vallende sterren"
+        },
+        {
+          "k": "Montage",
+          "v": "Gespannen klikprofiel"
+        },
+        {
+          "k": "Reiniging",
+          "v": "Afwasbaar"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 jaar"
+        }
+      ],
+      "applications": [
+        "Thuisbioscoop",
+        "Slaapkamer",
+        "Spa & wellness",
+        "Restaurant",
+        "Horeca",
+        "Kinderkamer"
+      ]
+    },
+    "hatch": {
+      "name": "Inspectieluik",
+      "short": "Inspectieluik",
+      "category": "Toegangsoplossing",
+      "mount": "Geïntegreerd",
+      "intro": "Discrete, onderhoudsvriendelijke toegang door een spanplafond — bereik kranen, aftakdozen en armaturen zonder het doek te snijden of te vervangen.",
+      "summary": "Geïntegreerde inspectieluiken voor spanplafonds: bijna onzichtbare, heropenbare toegang tot technieken boven het doek, in elk formaat.",
+      "chips": [
+        "Bijna onzichtbaar",
+        "Heropenbaar",
+        "Elk formaat",
+        "Geschikt voor retrofit"
+      ],
+      "highlights": [
+        {
+          "value": "Verborgen",
+          "label": "In het oppervlak"
+        },
+        {
+          "value": "Elke",
+          "label": "Formaat & vorm"
+        },
+        {
+          "value": "Heropenen",
+          "label": "Zo vaak als nodig"
+        },
+        {
+          "value": "1 dag",
+          "label": "Plaatsing"
+        }
+      ],
+      "features": [
+        {
+          "title": "Onzichtbaar tot u het nodig hebt",
+          "body": "Het kader van het luik zit verwerkt in de randafwerking en is afgewerkt met hetzelfde doek — het verdwijnt in het plafond tot het geopend moet worden."
+        },
+        {
+          "title": "Onderhoud zonder schade",
+          "body": "Bereik afsluitkranen, aftakdozen, kleppen en verlichtingsarmaturen boven het plafond — en sluit alles weer af, zo vaak als nodig."
+        },
+        {
+          "title": "Elk formaat, elke ruimte",
+          "body": "Van een klein rond toegangspunt tot een groot rechthoekig paneel, op maat van de techniek erachter. Voor nieuwe installaties én als retrofit in bestaande plafonds."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Type",
+          "v": "Geïntegreerd toegangsluik"
+        },
+        {
+          "k": "Afwerking",
+          "v": "Afgestemd op het plafonddoek"
+        },
+        {
+          "k": "Vorm",
+          "v": "Rond of rechthoekig"
+        },
+        {
+          "k": "Formaat",
+          "v": "Op maat gemaakt"
+        },
+        {
+          "k": "Opening",
+          "v": "Magnetisch of scharnierend kader"
+        },
+        {
+          "k": "Retrofit",
+          "v": "Ja, in bestaande plafonds"
+        },
+        {
+          "k": "Reiniging",
+          "v": "Afwasbaar"
+        },
+        {
+          "k": "Garantie",
+          "v": "10 jaar"
+        }
+      ],
+      "applications": [
+        "Badkamer",
+        "Keuken",
+        "Bergruimte",
+        "Kantoor",
+        "Retail",
+        "Zorgsector"
+      ]
+    },
+    "print": {
+      "name": "Bedrukt plafond op maat",
+      "short": "Print op maat",
+      "category": "Bedrukt doek",
+      "mount": "Warm of koud",
+      "intro": "Elke foto, illustratie of elk patroon randloos geprint op een naadloos spanplafond — uw beeld, van muur tot muur, zonder zichtbare naad.",
+      "summary": "Randloos bedrukte spanplafonds: elk beeld, elke foto of huisstijlgraphic in hoge resolutie op een naadloos doek, optioneel verlicht.",
+      "chips": [
+        "Elk beeld",
+        "Randloos",
+        "Optie backlight",
+        "Naadloos"
+      ],
+      "highlights": [
+        {
+          "value": "Elke",
+          "label": "Beeld of kunst"
+        },
+        {
+          "value": "HD",
+          "label": "Print in fotokwaliteit"
+        },
+        {
+          "value": "Verlicht",
+          "label": "Optionele gloed"
+        },
+        {
+          "value": "5.7m",
+          "label": "Naadloze breedte"
+        }
+      ],
+      "features": [
+        {
+          "title": "Uw beeld, van rand tot rand",
+          "body": "Lever een foto, illustratie, huisstijlgraphic of patroon aan en wij printen die over het volledige doek — met kleurbeheer en naadloos, zonder paneellijnen."
+        },
+        {
+          "title": "Print plus backlight",
+          "body": "Combineer een doorschijnende folie met een LED-veld om de print te verlichten — zo wordt een kunstwerk of luchtfoto een zacht, gloeiend accentplafond."
+        },
+        {
+          "title": "Op maat van uw ruimte",
+          "body": "Het beeld wordt geschaald en gepositioneerd op uw exacte ruimte. We keuren het bestand samen met u goed vóór productie — wat u goedkeurt, is wat er komt te hangen."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Print",
+          "v": "Randloos, in fullcolour"
+        },
+        {
+          "k": "Resolutie",
+          "v": "Fotokwaliteit, met kleurbeheer"
+        },
+        {
+          "k": "Doek",
+          "v": "PVC-folie (dekkend of doorschijnend)"
+        },
+        {
+          "k": "Achtergrondverlichting",
+          "v": "Optioneel LED-veld"
+        },
+        {
+          "k": "Max. naadloze breedte",
+          "v": "5.7 m"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s2,d0"
+        },
+        {
+          "k": "Reiniging",
+          "v": "Afwasbaar"
+        },
+        {
+          "k": "Garantie",
+          "v": "25 jaar"
+        }
+      ],
+      "applications": [
+        "Retail",
+        "Horeca",
+        "Thuisbioscoop",
+        "Kantoor",
+        "Showroom",
+        "Restaurant"
+      ]
+    }
+  },
+  "colourNames": {
+    "White": "Wit",
+    "Off-white": "Gebroken wit",
+    "Satin white": "Satijnwit",
+    "Warm white": "Warmwit",
+    "Light grey": "Lichtgrijs",
+    "Grey": "Grijs",
+    "Anthracite": "Antraciet",
+    "Sand": "Zand",
+    "Black": "Zwart",
+    "Black gloss": "Zwart glanzend",
+    "Deep blue": "Diepblauw",
+    "Midnight": "Middernachtblauw",
+    "Translucent": "Doorschijnend",
+    "Translucent white": "Doorschijnend wit",
+    "RGB": "RGB",
+    "RGB stars": "RGB-sterren",
+    "Warm-white stars": "Warmwitte sterren",
+    "Starry sky": "Sterrenhemel",
+    "Sky scenes": "Luchttaferelen",
+    "Custom": "Op maat",
+    "Custom RAL": "RAL op maat",
+    "Custom print": "Print op maat",
+    "Custom artwork": "Eigen beeld",
+    "Brand graphics": "Huisstijlgraphics",
+    "Full-colour print": "Fullcolourprint",
+    "Photographic": "Fotografisch",
+    "Patterns": "Patronen",
+    "Matched to membrane": "Afgestemd op het doek",
+    "Pure white": "Zuiver wit",
+    "Traffic white": "Verkeerswit",
+    "Cream": "Crème",
+    "Oyster white": "Parelwit",
+    "Light ivory": "Licht ivoor",
+    "Beige": "Beige",
+    "Grey beige": "Grijsbeige",
+    "Silk grey": "Zijdegrijs",
+    "Pebble grey": "Kiezelgrijs",
+    "Dusty grey": "Stofgrijs",
+    "Agate grey": "Agaatgrijs",
+    "Silver grey": "Zilvergrijs",
+    "Platinum grey": "Platinagrijs",
+    "Slate grey": "Leigrijs",
+    "Black grey": "Zwartgrijs",
+    "Graphite black": "Grafietzwart",
+    "Jet black": "Gitzwart",
+    "Bordeaux": "Bordeauxrood",
+    "Wine red": "Wijnrood",
+    "Oxide red": "Oxiderood",
+    "Red": "Rood",
+    "Pure orange": "Zuiver oranje",
+    "Golden yellow": "Goudgeel",
+    "Gold": "Goud",
+    "Silver": "Zilver",
+    "Bronze": "Brons",
+    "Champagne": "Champagne",
+    "Cappuccino": "Cappuccino",
+    "Chocolate": "Chocoladebruin",
+    "Pearl": "Parelmoer",
+    "Opal": "Opaal",
+    "Blue": "Blauw",
+    "Steel blue": "Staalblauw",
+    "Pastel blue": "Pastelblauw",
+    "Pigeon blue": "Duifblauw",
+    "Petrol": "Petrol",
+    "Pale green": "Bleekgroen",
+    "Reseda green": "Resedagroen",
+    "Gloss": "Hoogglans",
+    "Matte": "Mat",
+    "Satin": "Satijn",
+    "Metallic": "Metallic"
+  },
+  "megaMenu": {
+    "solutions": {
+      "railLabel": "Bekijk oplossingen",
+      "allLabel": "Alle oplossingen",
+      "promoTitle": "Een nieuw plafond in één dag",
+      "promoCta": "Vraag een offerte aan",
+      "cats": [
+        {
+          "title": "Plafonds",
+          "desc": "Polyester, PVC & naadloos",
+          "items": [
+            {
+              "title": "Polyester plafond",
+              "sub": "Koude montage · zeer mat"
+            },
+            {
+              "title": "PVC-folieplafond",
+              "sub": "Recycleerbaar · demonteerbaar"
+            },
+            {
+              "title": "Prefab plafondunit",
+              "sub": "Voorgemonteerd & snel"
+            },
+            {
+              "title": "Alle plafondsystemen",
+              "sub": "Vergelijk het gamma"
+            }
+          ]
+        },
+        {
+          "title": "Akoestiek",
+          "desc": "Geluidsabsorptie",
+          "items": [
+            {
+              "title": "Akoestisch spansysteem",
+              "sub": "Tot klasse A"
+            },
+            {
+              "title": "Hoe akoestiek werkt",
+              "sub": "Absorptie uitgelegd"
+            },
+            {
+              "title": "Technische fiche",
+              "sub": "αw- & klassewaarden"
+            }
+          ]
+        },
+        {
+          "title": "Licht & print",
+          "desc": "LED, backlight & print",
+          "items": [
+            {
+              "title": "Lichtplafond",
+              "sub": "Doorschijnend met backlight"
+            },
+            {
+              "title": "Sterrenhemel",
+              "sub": "Glasvezel-sterrenhemel"
+            },
+            {
+              "title": "Print op maat",
+              "sub": "Elk beeld, van rand tot rand"
+            }
+          ]
+        },
+        {
+          "title": "Prefab",
+          "desc": "Aluminium, staal & hout",
+          "items": [
+            {
+              "title": "Prefab structuren",
+              "sub": "Balken, kroonlijsten & meer"
+            },
+            {
+              "title": "Prefab verlichtingselementen",
+              "sub": "Aluminium + spandoek"
+            },
+            {
+              "title": "Inspectieluik",
+              "sub": "Discrete toegang"
+            }
+          ]
+        },
+        {
+          "title": "Toepassingen",
+          "desc": "Ruimte per ruimte",
+          "items": [
+            {
+              "title": "Wonen & cinema",
+              "sub": "Geluid & sterrenhemel"
+            },
+            {
+              "title": "Badkamer & keuken",
+              "sub": "Vochtbestendig"
+            },
+            {
+              "title": "Kantoor & retail",
+              "sub": "Akoestisch comfort"
+            },
+            {
+              "title": "Bekijk alle projecten",
+              "sub": "Het volledige portfolio"
+            }
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "railLabel": "Documentatie",
+      "allLabel": "Alle specificaties & downloads",
+      "promoTitle": "Hulp nodig?",
+      "promoBody": "Stuur uw renovatievraag — we antwoorden binnen twee werkdagen.",
+      "promoCta": "Stel een vraag",
+      "cats": [
+        {
+          "title": "Polyester spanplafond",
+          "desc": "Koud gemonteerd doek",
+          "items": [
+            {
+              "title": "Technische fiche",
+              "sub": "Specificaties & download"
+            },
+            {
+              "title": "Kleuren & afwerkingen",
+              "sub": "Volledig gamma & RAL"
+            },
+            {
+              "title": "Brandveiligheid",
+              "sub": "Brandreactie & A2"
+            },
+            {
+              "title": "Installatiegids",
+              "sub": "Koude montage, stap voor stap"
+            },
+            {
+              "title": "Bestektekst",
+              "sub": "Voor bestekken & dossiers"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Veelgestelde vragen"
+            }
+          ]
+        },
+        {
+          "title": "PVC spanplafond",
+          "desc": "Warm gemonteerde folie",
+          "items": [
+            {
+              "title": "Technische fiche",
+              "sub": "Specificaties & download"
+            },
+            {
+              "title": "Kleuren & afwerkingen",
+              "sub": "Mat, satijn, hoogglans"
+            },
+            {
+              "title": "Brandveiligheid",
+              "sub": "Brandreactie"
+            },
+            {
+              "title": "Installatiegids",
+              "sub": "Warme montage, stap voor stap"
+            },
+            {
+              "title": "Bestektekst",
+              "sub": "Voor bestekken & dossiers"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Veelgestelde vragen"
+            }
+          ]
+        }
+      ]
+    },
+    "comingSoon": "Binnenkort"
   }
 }

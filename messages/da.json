@@ -498,7 +498,9 @@
     "allSolutions": "Alle løsninger",
     "ctaKicker": "Gratis & uforpligtende",
     "ctaTitle": "Vil du have dette loft",
-    "dealer": "Find din nærmeste forhandler"
+    "dealer": "Find din nærmeste forhandler",
+    "chartCount": "{count, plural, one {# farve} other {# farver}}",
+    "anyRal": "Enhver RAL-farve på forespørgsel"
   },
   "productsPage": {
     "eyebrow": "Vores løsninger",
@@ -512,5 +514,963 @@
     "notSure": "I tvivl om hvilket?",
     "notSureBody": "Fortæl os om dit rum, så anbefaler vi det rette system — gratis og uforpligtende.",
     "quote": "Få et gratis tilbud"
+  },
+  "catalog": {
+    "polyester": {
+      "name": "Spændloft i polyester",
+      "short": "Polyester",
+      "category": "Koldmonteret membran",
+      "mount": "Koldmontering",
+      "intro": "En æstetisk, funktionel spændmembran til både nybyggeri og renovering. Håndspændt koldt for en fejlfri, meget mat finish — med indbyggede akustiske og vaskbare muligheder.",
+      "summary": "Koldmonteret spændloft i polyester med meget mat finish, fugefrit op til 5,15 m og 10 års garanti.",
+      "chips": [
+        "Fugefrit op til 5,15 m",
+        "+25 års levetid",
+        "Akustik op til klasse A",
+        "Vaskbar"
+      ],
+      "highlights": [
+        {
+          "value": "5.15m",
+          "label": "Fugefri bredde"
+        },
+        {
+          "value": "Koldt",
+          "label": "Monteringsmetode"
+        },
+        {
+          "value": "Mat",
+          "label": "Overfladeudseende"
+        },
+        {
+          "value": "A",
+          "label": "Akustikklasse"
+        }
+      ],
+      "features": [
+        {
+          "title": "Koldmontering",
+          "body": "Ingen varmekanoner, ingen tørretid. Polyestermembranen spændes koldt og klikkes ind i et kantprofil — rent, hurtigt og uden dampe, selv i rum i brug."
+        },
+        {
+          "title": "En meget mat finish",
+          "body": "En dyb, refleksfri mat overflade, der ligner nymalet puds — uden de revner, afskalninger og ommalinger, der følger med."
+        },
+        {
+          "title": "Akustisk & vaskbar",
+          "body": "Vælg en mikroperforeret version med absorbent for at tæmme efterklangen. Alle finishes kan tørres rene og modstår fugt i 25 år."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiale",
+          "v": "Strikket polyestermembran"
+        },
+        {
+          "k": "Montering",
+          "v": "Koldspændt, klikprofil"
+        },
+        {
+          "k": "Maks. fugefri bredde",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Overflade",
+          "v": "Meget mat"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akustisk",
+          "v": "Op til klasse A (perforeret)"
+        },
+        {
+          "k": "Rengøring",
+          "v": "Vaskbar, fugtbestandig"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Stue",
+        "Badeværelse",
+        "Kontor",
+        "Hjemmebiograf",
+        "Sundhedssektoren",
+        "Detailhandel"
+      ],
+      "colourChartNote": "Alle farver fås i standard- og akustikudførelse."
+    },
+    "pvc": {
+      "name": "Spændloft i PVC-folie",
+      "short": "PVC Film",
+      "category": "Varmmonteret folie",
+      "mount": "Varmmontering",
+      "intro": "En opvarmet PVC-folie, der spændes op ved montering — fuldt genanvendelig og nem at afmontere. Udskift et træt loft med et fejlfrit nyt på en enkelt dag.",
+      "summary": "Varmmonteret spændloft i PVC-folie, 100 % genanvendeligt og aftageligt, fugefrit op til 6,4 m med 10 års garanti.",
+      "chips": [
+        "Fugefrit op til 6,4 m",
+        "100% genanvendelig",
+        "Let at afmontere",
+        "Vaskbar"
+      ],
+      "highlights": [
+        {
+          "value": "6.4m",
+          "label": "Fugefri bredde"
+        },
+        {
+          "value": "Varmt",
+          "label": "Monteringsmetode"
+        },
+        {
+          "value": "100%",
+          "label": "Genanvendelig"
+        },
+        {
+          "value": "A",
+          "label": "Akustikklasse"
+        }
+      ],
+      "features": [
+        {
+          "title": "Genanvendelig til råmateriale",
+          "body": "PVC-systemet er fuldt genanvendeligt til råmateriale — et cirkulært valg, der er nemt at afmontere og genmontere efter behov."
+        },
+        {
+          "title": "Klar til bagbelysning & print",
+          "body": "Translucente folier spreder LED-lys jævnt uden hotspots; ethvert billede, tekstur eller stjernehimmel kan printes kant til kant."
+        },
+        {
+          "title": "Aftagelig & vaskbar",
+          "body": "Klik folien af for adgang til installationerne ovenover, og spænd den op igen på få minutter. Folien tørres ren og tager ikke skade af fugt."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiale",
+          "v": "Kalandreret PVC-folie"
+        },
+        {
+          "k": "Montering",
+          "v": "Varmspændt, klikprofil"
+        },
+        {
+          "k": "Maks. fugefri bredde",
+          "v": "6.4 m"
+        },
+        {
+          "k": "Overflade",
+          "v": "Mat / satin / blank / translucent"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Akustisk",
+          "v": "Op til klasse A (perforeret)"
+        },
+        {
+          "k": "Rengøring",
+          "v": "Vaskbar, fugtbestandig"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Badeværelse",
+        "Pool & wellness",
+        "Detailhandel",
+        "Hotelbranchen",
+        "Kontor",
+        "Hjemmebiograf"
+      ],
+      "colourChartNote": "Fås i mat, satin, blank, translucent og metallisk finish."
+    },
+    "acoustic": {
+      "name": "Akustisk spændsystem",
+      "short": "Akustisk",
+      "category": "Lydabsorberende membran",
+      "mount": "Koldt / varmt",
+      "intro": "En mikroperforeret spændmembran med højdensitetsabsorbenter bagved — et fejlfrit loft, der målbart reducerer efterklang og støj i ethvert rum.",
+      "summary": "Mikroperforeret akustisk spændmembran med højdensitetsabsorbent, der når op til lydabsorptionsklasse A.",
+      "chips": [
+        "Op til klasse A",
+        "Fugefri overflade",
+        "Usynlig lyd som tilvalg",
+        "Vaskbar front"
+      ],
+      "highlights": [
+        {
+          "value": "A",
+          "label": "Absorptionsklasse"
+        },
+        {
+          "value": "αw",
+          "label": "Testede værdier"
+        },
+        {
+          "value": "0",
+          "label": "Synlige samlinger"
+        },
+        {
+          "value": "+25y",
+          "label": "Levetid"
+        }
+      ],
+      "features": [
+        {
+          "title": "Klasse A-absorption",
+          "body": "Polyesteruld med høj densitet bag en mikroperforeret front giver lydabsorption op til klasse A — uden synlig behandling."
+        },
+        {
+          "title": "Øer & vægpaneler",
+          "body": "Frithængende baffler og dekorative vægabsorbenter udvider samme system til alle rummets flader."
+        },
+        {
+          "title": "Usynlig lyd",
+          "body": "Højttalere monteres helt bag folien for ren, kildeløs lyd, der fylder rummet."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiale",
+          "v": "Perforeret membran + absorbent"
+        },
+        {
+          "k": "Montering",
+          "v": "Koldt eller varmt, klikprofil"
+        },
+        {
+          "k": "Maks. fugefri bredde",
+          "v": "5.15"
+        },
+        {
+          "k": "Absorption",
+          "v": "Op til klasse A (αw)"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Bagbeklædning",
+          "v": "Polyesteruld med høj densitet"
+        },
+        {
+          "k": "Rengøring",
+          "v": "Vaskbar front"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Kontor",
+        "Restaurant",
+        "Studio",
+        "Hjemmebiograf",
+        "Skole",
+        "Sundhedssektoren"
+      ]
+    },
+    "light": {
+      "name": "Lysloft",
+      "short": "Oplyst",
+      "category": "Translucent membran",
+      "mount": "Koldt / varmt",
+      "intro": "Translucente spændfolier, der forvandler et helt loft til en blød, jævn lyskilde — eller til et printet lærred med et billede efter eget valg.",
+      "summary": "Translucente, bagbelyste spændlofter og kant-til-kant printede designs — inklusive fiberoptiske stjernehimmel-finishes.",
+      "chips": [
+        "Jævn bagbelysning",
+        "LED-linje som tilvalg",
+        "Print kant til kant",
+        "Fugefri"
+      ],
+      "highlights": [
+        {
+          "value": "360°",
+          "label": "Jævn spredning"
+        },
+        {
+          "value": "RGB",
+          "label": "LED-muligheder"
+        },
+        {
+          "value": "Print",
+          "label": "Ethvert billede"
+        },
+        {
+          "value": "5.15m",
+          "label": "Fugefri bredde"
+        }
+      ],
+      "features": [
+        {
+          "title": "Jævn bagbelysning",
+          "body": "En translucent folie over et LED-felt spreder lyset uden hotspots — en lysende himmel i ethvert rum, dæmpbar efter stemningen."
+        },
+        {
+          "title": "LED-linjebelysning",
+          "body": "Indbyggede lyslinjer integreres sømløst i membranen for skarpe, arkitektoniske lyseffekter."
+        },
+        {
+          "title": "Printede designs",
+          "body": "Ethvert foto, mønster eller tekstur printet kant til kant — inklusive en fiberoptisk stjernehimmel."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiale",
+          "v": "Translucent PVC-folie"
+        },
+        {
+          "k": "Montering",
+          "v": "Koldt eller varmt, klikprofil"
+        },
+        {
+          "k": "Maks. fugefri bredde",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Lyskilde",
+          "v": "LED-felt / -linje, dæmpbar"
+        },
+        {
+          "k": "Print",
+          "v": "Kant til kant, ethvert billede"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Rengøring",
+          "v": "Vaskbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Hjemmebiograf",
+        "Badeværelse",
+        "Detailhandel",
+        "Hotelbranchen",
+        "Spa",
+        "Kontor"
+      ]
+    },
+    "prefab": {
+      "name": "Præfab-strukturer",
+      "short": "Præfab-strukturer",
+      "category": "Præfab bærestruktur",
+      "mount": "Præfabrikeret",
+      "intro": "Præfab bærestrukturer til spændloftsprojekter — bjælker i aluminium, stål og træ, gesimser og niveauskift-detaljer, målsyet i vores polske produktion og sendt til vores forhandlere verden over.",
+      "summary": "Målsyede præfab-strukturer i aluminium, stål og træ — bjælker til rasterlofter, gesimser til svævende lofter og rene niveauskift-detaljer.",
+      "chips": [
+        "Aluminium / stål / træ",
+        "Bjælker & gesimser",
+        "Efter mål",
+        "Sendes verden over"
+      ],
+      "highlights": [
+        {
+          "value": "1",
+          "label": "Dag på stedet"
+        },
+        {
+          "value": "Prefab",
+          "label": "Bygget uden for pladsen"
+        },
+        {
+          "value": "Adgang",
+          "label": "Inspektionslem"
+        },
+        {
+          "value": "25 år",
+          "label": "Levetid"
+        }
+      ],
+      "features": [
+        {
+          "title": "Bygget uden for pladsen",
+          "body": "Modulerne konfektioneres på vores belgiske værksted og kvalitetskontrolleres, før de når byggepladsen."
+        },
+        {
+          "title": "Klikmontering på stedet",
+          "body": "Forspændte enheder klikkes ind i en kantramme — minimalt med fag, minimal tid, et perfekt resultat."
+        },
+        {
+          "title": "Integreret adgang",
+          "body": "Diskrete inspektionslemme holder installationerne ovenover tilgængelige uden at bryde den rene loftslinje."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiale",
+          "v": "Membran på præfab-ramme"
+        },
+        {
+          "k": "Montering",
+          "v": "Klik-modul"
+        },
+        {
+          "k": "Leveringstid",
+          "v": "Fremstillet på bestilling"
+        },
+        {
+          "k": "Adgang",
+          "v": "Integreret inspektionslem"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akustisk",
+          "v": "Absorbent som tilvalg"
+        },
+        {
+          "k": "Rengøring",
+          "v": "Vaskbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Badeværelsesmoduler",
+        "Hoteller",
+        "Modulær opbygning",
+        "Sundhedssektoren",
+        "Detailhandel",
+        "Kontor"
+      ]
+    },
+    "starry": {
+      "name": "Stjernehimmel-loft",
+      "short": "Stjernehimmel",
+      "category": "Fiberoptik / bagbelyst",
+      "mount": "Bagbelyst",
+      "intro": "Et spændloft oversået med hundredvis af fiberoptiske punkter — en rolig, funklende nattehimmel over din biograf, dit soveværelse eller din spa.",
+      "summary": "Stjernehimmel-spændlofter med fiberoptik og LED: hundredvis af dæmpbare stjernepunkter, valgfrie stjerneskud og RGB, på en fugefri membran.",
+      "chips": [
+        "Hundredvis af stjerner",
+        "Dæmpbar",
+        "RGB som tilvalg",
+        "Stjerneskud"
+      ],
+      "highlights": [
+        {
+          "value": "500+",
+          "label": "Stjernepunkter"
+        },
+        {
+          "value": "RGB",
+          "label": "Farvemuligheder"
+        },
+        {
+          "value": "1 dag",
+          "label": "Montering"
+        },
+        {
+          "value": "10 år",
+          "label": "Garanti"
+        }
+      ],
+      "features": [
+        {
+          "title": "En ægte nattehimmel",
+          "body": "Hundredvis af fiberoptiske punkter bag en spændt membran skaber et dybt, funklende stjernefelt — sat efter et stjernebillede eller spredt tilfældigt."
+        },
+        {
+          "title": "Fiberoptik & LED",
+          "body": "En enkelt LED-lysenhed driver alle fibre, så stjernerne forbliver kølige og kan dæmpes helt. Tilføj et blinkehjul for bevægelse, RGB for farve eller stjerneskudseffekter."
+        },
+        {
+          "title": "Biograf, soveværelse, spa",
+          "body": "Perfekt, hvor du vil have stemning uden blænding — hjemmebiografer, soveværelser, spa og restauranter. Kombinér med akustisk bagbeklædning for et roligt, stille rum."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Effekt",
+          "v": "Fiberoptisk stjernefelt"
+        },
+        {
+          "k": "Membran",
+          "v": "Mørk translucent / printet folie"
+        },
+        {
+          "k": "Stjernepunkter",
+          "v": "Fra ~150 til 1.000+"
+        },
+        {
+          "k": "Lyskilde",
+          "v": "Én LED-enhed, dæmpbar"
+        },
+        {
+          "k": "Muligheder",
+          "v": "Blink, RGB, stjerneskud"
+        },
+        {
+          "k": "Montering",
+          "v": "Spændt klikprofil"
+        },
+        {
+          "k": "Rengøring",
+          "v": "Vaskbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Hjemmebiograf",
+        "Soveværelse",
+        "Spa & wellness",
+        "Restaurant",
+        "Hotelbranchen",
+        "Børneværelse"
+      ]
+    },
+    "hatch": {
+      "name": "Inspektionslem",
+      "short": "Inspektionslem",
+      "category": "Adgangsløsning",
+      "mount": "Integreret",
+      "intro": "Diskret, servicevenlig adgang gennem et spændloft — nå ventiler, samledåser og armaturer uden at skære i eller udskifte membranen.",
+      "summary": "Integrerede inspektionslemme til spændlofter: næsten usynlig, genåbnelig adgang til installationer skjult over membranen, i alle størrelser.",
+      "chips": [
+        "Næsten usynlig",
+        "Kan genåbnes",
+        "Alle størrelser",
+        "Klar til eftermontering"
+      ],
+      "highlights": [
+        {
+          "value": "Skjult",
+          "label": "I overfladen"
+        },
+        {
+          "value": "Enhver",
+          "label": "Størrelse & form"
+        },
+        {
+          "value": "Genåbning",
+          "label": "Så ofte som nødvendigt"
+        },
+        {
+          "value": "1 dag",
+          "label": "Montering"
+        }
+      ],
+      "features": [
+        {
+          "title": "Usynlig, indtil du får brug for den",
+          "body": "Lemmens ramme er bygget ind i kantdetaljen og beklædt med samme membran — den forsvinder i loftet, indtil den skal åbnes."
+        },
+        {
+          "title": "Service uden skader",
+          "body": "Nå stopventiler, samledåser, spjæld og armaturer skjult over loftet — og luk det hele igen, så ofte det er nødvendigt."
+        },
+        {
+          "title": "Alle størrelser, alle rum",
+          "body": "Fra et lille rundt adgangspunkt til et stort rektangulært panel, tilpasset installationen bagved. Fungerer ved nyinstallation og som eftermontering i eksisterende lofter."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Type",
+          "v": "Integreret adgangslem"
+        },
+        {
+          "k": "Finish",
+          "v": "Matcher loftmembranen"
+        },
+        {
+          "k": "Form",
+          "v": "Rund eller rektangulær"
+        },
+        {
+          "k": "Størrelse",
+          "v": "Efter mål"
+        },
+        {
+          "k": "Åbning",
+          "v": "Magnetisk eller hængslet ramme"
+        },
+        {
+          "k": "Eftermontering",
+          "v": "Ja, i eksisterende lofter"
+        },
+        {
+          "k": "Rengøring",
+          "v": "Vaskbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Badeværelse",
+        "Køkken",
+        "Bryggers",
+        "Kontor",
+        "Detailhandel",
+        "Sundhedssektoren"
+      ]
+    },
+    "print": {
+      "name": "Printet loft efter mål",
+      "short": "Print efter mål",
+      "category": "Printet membran",
+      "mount": "Varmt eller koldt",
+      "intro": "Ethvert foto, kunstværk eller mønster printet kant til kant på et fugefrit spændloft — dit billede, fra væg til væg, uden synlige samlinger.",
+      "summary": "Kant-til-kant printede spændlofter: ethvert højopløst billede, foto eller brandmotiv på en fugefri membran, valgfrit bagbelyst.",
+      "chips": [
+        "Ethvert billede",
+        "Kant til kant",
+        "Bagbelyst mulighed",
+        "Fugefri"
+      ],
+      "highlights": [
+        {
+          "value": "Enhver",
+          "label": "Billede eller kunst"
+        },
+        {
+          "value": "HD",
+          "label": "Print i fotokvalitet"
+        },
+        {
+          "value": "Bagbelyst",
+          "label": "Valgfri glød"
+        },
+        {
+          "value": "5.7m",
+          "label": "Fugefri bredde"
+        }
+      ],
+      "features": [
+        {
+          "title": "Dit billede, kant til kant",
+          "body": "Lever et foto, en illustration, et brandmotiv eller mønster, og vi printer det over hele membranen — farvestyret og fugefrit, uden panellinjer."
+        },
+        {
+          "title": "Print plus bagbelysning",
+          "body": "Kombinér en translucent folie med et LED-felt for at bagbelyse printet — kunst eller himmelmotiv bliver til et blødt, lysende blikfangsloft."
+        },
+        {
+          "title": "Tilpasset dit rum",
+          "body": "Motivet skaleres og placeres til dit præcise rum. Vi godkender filen sammen med dig før produktion — det, du godkender, er det, der kommer op."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Print",
+          "v": "Kant til kant, i fuld farve"
+        },
+        {
+          "k": "Opløsning",
+          "v": "Fotokvalitet, farvestyret"
+        },
+        {
+          "k": "Membran",
+          "v": "PVC-folie (uigennemsigtig eller translucent)"
+        },
+        {
+          "k": "Bagbelysning",
+          "v": "LED-felt som tilvalg"
+        },
+        {
+          "k": "Maks. fugefri bredde",
+          "v": "5.7 m"
+        },
+        {
+          "k": "Brandklasse",
+          "v": "B-s2,d0"
+        },
+        {
+          "k": "Rengøring",
+          "v": "Vaskbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "25 år"
+        }
+      ],
+      "applications": [
+        "Detailhandel",
+        "Hotelbranchen",
+        "Hjemmebiograf",
+        "Kontor",
+        "Showroom",
+        "Restaurant"
+      ]
+    }
+  },
+  "colourNames": {
+    "White": "Hvid",
+    "Off-white": "Råhvid",
+    "Satin white": "Satinhvid",
+    "Warm white": "Varm hvid",
+    "Light grey": "Lysegrå",
+    "Grey": "Grå",
+    "Anthracite": "Antracit",
+    "Sand": "Sand",
+    "Black": "Sort",
+    "Black gloss": "Sort blank",
+    "Deep blue": "Dyb blå",
+    "Midnight": "Midnatsblå",
+    "Translucent": "Translucent",
+    "Translucent white": "Translucent hvid",
+    "RGB": "RGB",
+    "RGB stars": "RGB-stjerner",
+    "Warm-white stars": "Varmhvide stjerner",
+    "Starry sky": "Stjernehimmel",
+    "Sky scenes": "Himmelmotiver",
+    "Custom": "Individuel",
+    "Custom RAL": "Valgfri RAL",
+    "Custom print": "Print efter mål",
+    "Custom artwork": "Eget motiv",
+    "Brand graphics": "Brandgrafik",
+    "Full-colour print": "Print i fuld farve",
+    "Photographic": "Fotografisk",
+    "Patterns": "Mønstre",
+    "Matched to membrane": "Matcher membranen",
+    "Pure white": "Ren hvid",
+    "Traffic white": "Trafikhvid",
+    "Cream": "Creme",
+    "Oyster white": "Østershvid",
+    "Light ivory": "Lys elfenben",
+    "Beige": "Beige",
+    "Grey beige": "Gråbeige",
+    "Silk grey": "Silkegrå",
+    "Pebble grey": "Kiselgrå",
+    "Dusty grey": "Støvgrå",
+    "Agate grey": "Agatgrå",
+    "Silver grey": "Sølvgrå",
+    "Platinum grey": "Platingrå",
+    "Slate grey": "Skifergrå",
+    "Black grey": "Sortgrå",
+    "Graphite black": "Grafitsort",
+    "Jet black": "Dybsort",
+    "Bordeaux": "Bordeaux",
+    "Wine red": "Vinrød",
+    "Oxide red": "Oxidrød",
+    "Red": "Rød",
+    "Pure orange": "Ren orange",
+    "Golden yellow": "Guldgul",
+    "Gold": "Guld",
+    "Silver": "Sølv",
+    "Bronze": "Bronze",
+    "Champagne": "Champagne",
+    "Cappuccino": "Cappuccino",
+    "Chocolate": "Chokoladebrun",
+    "Pearl": "Perlemor",
+    "Opal": "Opal",
+    "Blue": "Blå",
+    "Steel blue": "Stålblå",
+    "Pastel blue": "Pastelblå",
+    "Pigeon blue": "Dueblå",
+    "Petrol": "Petroleumsblå",
+    "Pale green": "Bleggrøn",
+    "Reseda green": "Resedagrøn",
+    "Gloss": "Højglans",
+    "Matte": "Mat",
+    "Satin": "Satin",
+    "Metallic": "Metallic"
+  },
+  "megaMenu": {
+    "solutions": {
+      "railLabel": "Se løsninger",
+      "allLabel": "Alle løsninger",
+      "promoTitle": "Et nyt loft på én dag",
+      "promoCta": "Få et tilbud",
+      "cats": [
+        {
+          "title": "Lofter",
+          "desc": "Polyester, PVC & sømløst",
+          "items": [
+            {
+              "title": "Polyesterloft",
+              "sub": "Kold montering · meget mat"
+            },
+            {
+              "title": "PVC-folieloft",
+              "sub": "Genanvendelig · aftagelig"
+            },
+            {
+              "title": "Præfab loftunit",
+              "sub": "Formonteret & hurtig"
+            },
+            {
+              "title": "Alle loftsystemer",
+              "sub": "Sammenlign sortimentet"
+            }
+          ]
+        },
+        {
+          "title": "Akustik",
+          "desc": "Lydabsorption",
+          "items": [
+            {
+              "title": "Akustisk stræksystem",
+              "sub": "Op til klasse A"
+            },
+            {
+              "title": "Sådan virker akustik",
+              "sub": "Absorption forklaret"
+            },
+            {
+              "title": "Teknisk datablad",
+              "sub": "αw- & klasseværdier"
+            }
+          ]
+        },
+        {
+          "title": "Lys & print",
+          "desc": "LED, bagbelysning & print",
+          "items": [
+            {
+              "title": "Lysloft",
+              "sub": "Bagbelyst translucent"
+            },
+            {
+              "title": "Stjernehimmel",
+              "sub": "Fiberoptisk nattehimmel"
+            },
+            {
+              "title": "Print efter mål",
+              "sub": "Ethvert billede, kant til kant"
+            }
+          ]
+        },
+        {
+          "title": "Prefab",
+          "desc": "Aluminium, stål & træ",
+          "items": [
+            {
+              "title": "Præfab strukturer",
+              "sub": "Bjælker, gesimser & mere"
+            },
+            {
+              "title": "Præfab lyselementer",
+              "sub": "Aluminium + strækdug"
+            },
+            {
+              "title": "Inspektionslem",
+              "sub": "Diskret adgang"
+            }
+          ]
+        },
+        {
+          "title": "Anvendelser",
+          "desc": "Rum for rum",
+          "items": [
+            {
+              "title": "Stue & biograf",
+              "sub": "Lyd & stjernehimmel"
+            },
+            {
+              "title": "Badeværelse & køkken",
+              "sub": "Fugtbestandig"
+            },
+            {
+              "title": "Kontor & detail",
+              "sub": "Akustisk komfort"
+            },
+            {
+              "title": "Se alle projekter",
+              "sub": "Hele porteføljen"
+            }
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "railLabel": "Dokumentation",
+      "allLabel": "Alle specs & downloads",
+      "promoTitle": "Brug for hjælp?",
+      "promoBody": "Send dit renoveringsspørgsmål — vi svarer inden for to hverdage.",
+      "promoCta": "Stil et spørgsmål",
+      "cats": [
+        {
+          "title": "Polyester spændloft",
+          "desc": "Koldmonteret membran",
+          "items": [
+            {
+              "title": "Datablad",
+              "sub": "Specs & download"
+            },
+            {
+              "title": "Farver & finish",
+              "sub": "Hele sortimentet & RAL"
+            },
+            {
+              "title": "Brandsikkerhed",
+              "sub": "Brandreaktion & A2"
+            },
+            {
+              "title": "Monteringsvejledning",
+              "sub": "Kold montering, trin for trin"
+            },
+            {
+              "title": "Udbudstekst",
+              "sub": "Til udbud & sager"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Almindelige spørgsmål"
+            }
+          ]
+        },
+        {
+          "title": "PVC spændloft",
+          "desc": "Varmmonteret folie",
+          "items": [
+            {
+              "title": "Datablad",
+              "sub": "Specs & download"
+            },
+            {
+              "title": "Farver & finish",
+              "sub": "Mat, satin, højglans"
+            },
+            {
+              "title": "Brandsikkerhed",
+              "sub": "Brandreaktion"
+            },
+            {
+              "title": "Monteringsvejledning",
+              "sub": "Varm montering, trin for trin"
+            },
+            {
+              "title": "Udbudstekst",
+              "sub": "Til udbud & sager"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Almindelige spørgsmål"
+            }
+          ]
+        }
+      ]
+    },
+    "comingSoon": "Kommer snart"
   }
 }

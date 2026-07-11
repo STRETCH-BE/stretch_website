@@ -498,7 +498,9 @@
     "allSolutions": "Alle løsninger",
     "ctaKicker": "Gratis & uforpliktende",
     "ctaTitle": "Vil du ha denne himlingen",
-    "dealer": "Finn din nærmeste forhandler"
+    "dealer": "Finn din nærmeste forhandler",
+    "chartCount": "{count, plural, one {# farge} other {# farger}}",
+    "anyRal": "Enhver RAL-farge på forespørsel"
   },
   "productsPage": {
     "eyebrow": "Våre løsninger",
@@ -512,5 +514,963 @@
     "notSure": "Usikker på hvilket?",
     "notSureBody": "Fortell oss om rommet ditt, så anbefaler vi riktig system — gratis og uforpliktende.",
     "quote": "Be om et gratis tilbud"
+  },
+  "catalog": {
+    "polyester": {
+      "name": "Strekkhimling i polyester",
+      "short": "Polyester",
+      "category": "Kaldmontert membran",
+      "mount": "Kaldmontering",
+      "intro": "En estetisk, funksjonell strekkmembran for både nybygg og rehabilitering. Håndspent kaldt for en feilfri, svært matt finish — med innebygde akustiske og vaskbare alternativer.",
+      "summary": "Kaldmontert strekkhimling i polyester med svært matt finish, skjøtefri opptil 5,15 m og 10 års garanti.",
+      "chips": [
+        "Skjøtefritt opptil 5,15 m",
+        "+25 års levetid",
+        "Akustikk opptil klasse A",
+        "Vaskbar"
+      ],
+      "highlights": [
+        {
+          "value": "5.15m",
+          "label": "Skjøtefri bredde"
+        },
+        {
+          "value": "Kaldt",
+          "label": "Monteringsmetode"
+        },
+        {
+          "value": "Matt",
+          "label": "Overflateutseende"
+        },
+        {
+          "value": "A",
+          "label": "Akustikklasse"
+        }
+      ],
+      "features": [
+        {
+          "title": "Kaldmontering",
+          "body": "Ingen varmepistoler, ingen tørketid. Polyestermembranen spennes kaldt og klikkes inn i et kantprofil — rent, raskt og uten damp, selv i rom som er i bruk."
+        },
+        {
+          "title": "En svært matt finish",
+          "body": "En dyp, refleksfri matt overflate som ser ut som nymalt puss — uten sprekkene, flassingen og ommalingen som følger med."
+        },
+        {
+          "title": "Akustisk & vaskbar",
+          "body": "Velg en mikroperforert versjon med absorbent for å temme etterklangen. Alle finisher kan tørkes rene og tåler fuktighet i 25 år."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiale",
+          "v": "Strikket polyestermembran"
+        },
+        {
+          "k": "Montering",
+          "v": "Kaldspent, klikkprofil"
+        },
+        {
+          "k": "Maks. skjøtefri bredde",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Overflate",
+          "v": "Svært matt"
+        },
+        {
+          "k": "Brannklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akustisk",
+          "v": "Opptil klasse A (perforert)"
+        },
+        {
+          "k": "Rengjøring",
+          "v": "Vaskbar, fukttålig"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Stue",
+        "Bad",
+        "Kontor",
+        "Hjemmekino",
+        "Helsevesen",
+        "Butikk"
+      ],
+      "colourChartNote": "Alle farger er tilgjengelige i standard- og akustikkutførelse."
+    },
+    "pvc": {
+      "name": "Strekkhimling i PVC-folie",
+      "short": "PVC Film",
+      "category": "Varmmontert folie",
+      "mount": "Varmmontering",
+      "intro": "En oppvarmet PVC-folie som spennes ved montering — fullt resirkulerbar og enkel å demontere. Bytt ut en sliten himling med en feilfri ny på én enkelt dag.",
+      "summary": "Varmmontert strekkhimling i PVC-folie, 100 % resirkulerbar og avtakbar, skjøtefri opptil 6,4 m med 10 års garanti.",
+      "chips": [
+        "Skjøtefritt opptil 6,4 m",
+        "100 % gjenvinnbar",
+        "Enkel å demontere",
+        "Vaskbar"
+      ],
+      "highlights": [
+        {
+          "value": "6.4m",
+          "label": "Skjøtefri bredde"
+        },
+        {
+          "value": "Varmt",
+          "label": "Monteringsmetode"
+        },
+        {
+          "value": "100%",
+          "label": "Resirkulerbar"
+        },
+        {
+          "value": "A",
+          "label": "Akustikklasse"
+        }
+      ],
+      "features": [
+        {
+          "title": "Resirkulerbar til råmateriale",
+          "body": "PVC-systemet er fullt resirkulerbart til råmateriale — et sirkulært valg som er enkelt å demontere og montere på nytt ved behov."
+        },
+        {
+          "title": "Klar for baklys & print",
+          "body": "Gjennomskinnelige folier sprer LED-lys jevnt uten lyspunkter; ethvert bilde, tekstur eller stjernehimmel kan printes kant til kant."
+        },
+        {
+          "title": "Avtakbar & vaskbar",
+          "body": "Klikk folien løs for tilgang til installasjonene over, og spenn den opp igjen på få minutter. Folien tørkes ren og bryr seg ikke om fukt."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiale",
+          "v": "Kalandrert PVC-folie"
+        },
+        {
+          "k": "Montering",
+          "v": "Varmspent, klikkprofil"
+        },
+        {
+          "k": "Maks. skjøtefri bredde",
+          "v": "6.4 m"
+        },
+        {
+          "k": "Overflate",
+          "v": "Matt / sateng / blank / gjennomskinnelig"
+        },
+        {
+          "k": "Brannklasse",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Akustisk",
+          "v": "Opptil klasse A (perforert)"
+        },
+        {
+          "k": "Rengjøring",
+          "v": "Vaskbar, fukttålig"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Bad",
+        "Basseng & velvære",
+        "Butikk",
+        "Hotellbransjen",
+        "Kontor",
+        "Hjemmekino"
+      ],
+      "colourChartNote": "Tilgjengelig i matt, sateng, blank, gjennomskinnelig og metallisk finish."
+    },
+    "acoustic": {
+      "name": "Akustisk strekksystem",
+      "short": "Akustisk",
+      "category": "Lydabsorberende membran",
+      "mount": "Kaldt / varmt",
+      "intro": "En mikroperforert strekkmembran med høytetthetsabsorbenter bak — en feilfri himling som målbart reduserer etterklang og støy i ethvert rom.",
+      "summary": "Mikroperforert akustisk strekkmembran med høytetthetsabsorbent, som når opptil lydabsorpsjonsklasse A.",
+      "chips": [
+        "Opptil klasse A",
+        "Skjøtefri overflate",
+        "Usynlig lyd som tilvalg",
+        "Vaskbar front"
+      ],
+      "highlights": [
+        {
+          "value": "A",
+          "label": "Absorpsjonsklasse"
+        },
+        {
+          "value": "αw",
+          "label": "Testede verdier"
+        },
+        {
+          "value": "0",
+          "label": "Synlige skjøter"
+        },
+        {
+          "value": "+25y",
+          "label": "Levetid"
+        }
+      ],
+      "features": [
+        {
+          "title": "Klasse A-absorpsjon",
+          "body": "Polyesterull med høy tetthet bak en mikroperforert front gir lydabsorpsjon opptil klasse A — uten synlig behandling."
+        },
+        {
+          "title": "Øyer & veggpaneler",
+          "body": "Fritthengende baffler og dekorative veggabsorbenter utvider samme system til alle flater i rommet."
+        },
+        {
+          "title": "Usynlig lyd",
+          "body": "Høyttalere monteres helt bak folien for ren lyd uten synlig kilde som fyller rommet."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiale",
+          "v": "Perforert membran + absorbent"
+        },
+        {
+          "k": "Montering",
+          "v": "Kaldt eller varmt, klikkprofil"
+        },
+        {
+          "k": "Maks. skjøtefri bredde",
+          "v": "5.15"
+        },
+        {
+          "k": "Absorpsjon",
+          "v": "Opptil klasse A (αw)"
+        },
+        {
+          "k": "Brannklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Bakside",
+          "v": "Polyesterull med høy tetthet"
+        },
+        {
+          "k": "Rengjøring",
+          "v": "Vaskbar front"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Kontor",
+        "Restaurant",
+        "Studio",
+        "Hjemmekino",
+        "Skole",
+        "Helsevesen"
+      ]
+    },
+    "light": {
+      "name": "Lyshimling",
+      "short": "Opplyst",
+      "category": "Gjennomskinnelig membran",
+      "mount": "Kaldt / varmt",
+      "intro": "Gjennomskinnelige strekkfolier som gjør en hel himling om til en myk, jevn lyskilde — eller til et printet lerret med et bilde du velger.",
+      "summary": "Gjennomskinnelige, baklyste strekkhimlinger og kant-til-kant printede design — inkludert fiberoptiske stjernehimmel-finisher.",
+      "chips": [
+        "Jevnt baklys",
+        "LED-linje som tilvalg",
+        "Print kant til kant",
+        "Skjøtefri"
+      ],
+      "highlights": [
+        {
+          "value": "360°",
+          "label": "Jevn spredning"
+        },
+        {
+          "value": "RGB",
+          "label": "LED-alternativer"
+        },
+        {
+          "value": "Print",
+          "label": "Ethvert bilde"
+        },
+        {
+          "value": "5.15m",
+          "label": "Skjøtefri bredde"
+        }
+      ],
+      "features": [
+        {
+          "title": "Jevn baklysning",
+          "body": "En gjennomskinnelig folie over et LED-felt sprer lyset uten lyspunkter — en lysende himmel i ethvert rom, dimbar etter stemningen."
+        },
+        {
+          "title": "LED-linjebelysning",
+          "body": "Innfelte lyslinjer integreres sømløst i membranen for skarpe, arkitektoniske lyseffekter."
+        },
+        {
+          "title": "Printede design",
+          "body": "Ethvert fotografi, mønster eller tekstur printet kant til kant — inkludert en fiberoptisk stjernehimmel."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiale",
+          "v": "Gjennomskinnelig PVC-folie"
+        },
+        {
+          "k": "Montering",
+          "v": "Kaldt eller varmt, klikkprofil"
+        },
+        {
+          "k": "Maks. skjøtefri bredde",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Lyskilde",
+          "v": "LED-felt / -linje, dimbar"
+        },
+        {
+          "k": "Print",
+          "v": "Kant til kant, ethvert bilde"
+        },
+        {
+          "k": "Brannklasse",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Rengjøring",
+          "v": "Vaskbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Hjemmekino",
+        "Bad",
+        "Butikk",
+        "Hotellbransjen",
+        "Spa",
+        "Kontor"
+      ]
+    },
+    "prefab": {
+      "name": "Prefab-strukturer",
+      "short": "Prefab-strukturer",
+      "category": "Prefab bærestruktur",
+      "mount": "Prefabrikkert",
+      "intro": "Prefab bærestrukturer for strekkhimlingsprosjekter — bjelker i aluminium, stål og tre, gesimser og nivåforskjell-detaljer, laget på mål i vår polske produksjon og sendt til forhandlerne våre verden over.",
+      "summary": "Målsydde prefab-strukturer i aluminium, stål og tre — bjelker for rasterhimlinger, gesimser for svevende himlinger og rene nivåforskjell-detaljer.",
+      "chips": [
+        "Aluminium / stål / tre",
+        "Bjelker & gesimser",
+        "Etter mål",
+        "Sendes verden over"
+      ],
+      "highlights": [
+        {
+          "value": "1",
+          "label": "Dag på stedet"
+        },
+        {
+          "value": "Prefab",
+          "label": "Bygget utenfor byggeplassen"
+        },
+        {
+          "value": "Tilgang",
+          "label": "Inspeksjonsluke"
+        },
+        {
+          "value": "25 år",
+          "label": "Levetid"
+        }
+      ],
+      "features": [
+        {
+          "title": "Bygget utenfor byggeplassen",
+          "body": "Modulene konfeksjoneres på vårt belgiske verksted og kvalitetskontrolleres før de når byggeplassen."
+        },
+        {
+          "title": "Klikkmontering på stedet",
+          "body": "Forspente enheter klikkes inn i en kantramme — minimalt med fag, minimal tid, et perfekt resultat."
+        },
+        {
+          "title": "Integrert tilgang",
+          "body": "Diskrete inspeksjonsluker holder installasjonene over tilgjengelige uten å bryte den rene himlingslinjen."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiale",
+          "v": "Membran på prefab-ramme"
+        },
+        {
+          "k": "Montering",
+          "v": "Klikkmodul"
+        },
+        {
+          "k": "Leveringstid",
+          "v": "Laget på bestilling"
+        },
+        {
+          "k": "Tilgang",
+          "v": "Integrert inspeksjonsluke"
+        },
+        {
+          "k": "Brannklasse",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akustisk",
+          "v": "Absorbent som tilvalg"
+        },
+        {
+          "k": "Rengjøring",
+          "v": "Vaskbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Baderomsmoduler",
+        "Hoteller",
+        "Modulær oppbygning",
+        "Helsevesen",
+        "Butikk",
+        "Kontor"
+      ]
+    },
+    "starry": {
+      "name": "Stjernehimmel-himling",
+      "short": "Stjernehimmel",
+      "category": "Fiberoptikk / baklyst",
+      "mount": "Baklyst",
+      "intro": "En strekkhimling strødd med hundrevis av fiberoptiske punkter — en rolig, glitrende nattehimmel over kinoen, soverommet eller spaet ditt.",
+      "summary": "Stjernehimmel-strekkhimlinger med fiberoptikk og LED: hundrevis av dimbare stjernepunkter, valgfrie stjerneskudd og RGB, på en skjøtefri membran.",
+      "chips": [
+        "Hundrevis av stjerner",
+        "Dimbar",
+        "RGB som tilvalg",
+        "Stjerneskudd"
+      ],
+      "highlights": [
+        {
+          "value": "500+",
+          "label": "Stjernepunkter"
+        },
+        {
+          "value": "RGB",
+          "label": "Fargevalg"
+        },
+        {
+          "value": "1 dag",
+          "label": "Montering"
+        },
+        {
+          "value": "10 år",
+          "label": "Garanti"
+        }
+      ],
+      "features": [
+        {
+          "title": "En ekte nattehimmel",
+          "body": "Hundrevis av fiberoptiske punkter bak en oppspent membran skaper et dypt, glitrende stjernefelt — lagt etter et stjernebilde eller spredt tilfeldig."
+        },
+        {
+          "title": "Fiberoptikk & LED",
+          "body": "Én enkelt LED-lysmotor driver alle fibrene, så stjernene holder seg kjølige og kan dimmes helt. Legg til et blinkehjul for bevegelse, RGB for farge eller stjerneskudd-effekter."
+        },
+        {
+          "title": "Kino, soverom, spa",
+          "body": "Perfekt der du vil ha stemning uten blending — hjemmekinoer, soverom, spa og restauranter. Kombiner med akustisk bakside for et rolig, stille rom."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Effekt",
+          "v": "Fiberoptisk stjernefelt"
+        },
+        {
+          "k": "Membran",
+          "v": "Mørk gjennomskinnelig / printet folie"
+        },
+        {
+          "k": "Stjernepunkter",
+          "v": "Fra ~150 til 1 000+"
+        },
+        {
+          "k": "Lyskilde",
+          "v": "Én LED-motor, dimbar"
+        },
+        {
+          "k": "Alternativer",
+          "v": "Blinking, RGB, stjerneskudd"
+        },
+        {
+          "k": "Montering",
+          "v": "Spent klikkprofil"
+        },
+        {
+          "k": "Rengjøring",
+          "v": "Vaskbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Hjemmekino",
+        "Soverom",
+        "Spa & velvære",
+        "Restaurant",
+        "Hotellbransjen",
+        "Barnerom"
+      ]
+    },
+    "hatch": {
+      "name": "Inspeksjonsluke",
+      "short": "Inspeksjonsluke",
+      "category": "Tilgangsløsning",
+      "mount": "Integrert",
+      "intro": "Diskret, servicevennlig tilgang gjennom en strekkhimling — nå ventiler, koblingsbokser og armaturer uten å skjære i eller bytte membranen.",
+      "summary": "Integrerte inspeksjonsluker for strekkhimlinger: nesten usynlig, gjenåpnbar tilgang til installasjoner skjult over membranen, i alle størrelser.",
+      "chips": [
+        "Nesten usynlig",
+        "Kan gjenåpnes",
+        "Alle størrelser",
+        "Klar for ettermontering"
+      ],
+      "highlights": [
+        {
+          "value": "Skjult",
+          "label": "I overflaten"
+        },
+        {
+          "value": "Hvilken som helst",
+          "label": "Størrelse & form"
+        },
+        {
+          "value": "Gjenåpning",
+          "label": "Så ofte som nødvendig"
+        },
+        {
+          "value": "1 dag",
+          "label": "Montering"
+        }
+      ],
+      "features": [
+        {
+          "title": "Usynlig til du trenger den",
+          "body": "Lukens ramme er bygget inn i kantdetaljen og kledd med samme membran — den forsvinner i himlingen til den må åpnes."
+        },
+        {
+          "title": "Service uten skader",
+          "body": "Nå stengeventiler, koblingsbokser, spjeld og armaturer skjult over himlingen — og lukk alt igjen, så ofte som nødvendig."
+        },
+        {
+          "title": "Alle størrelser, alle rom",
+          "body": "Fra et lite rundt tilgangspunkt til et stort rektangulært panel, dimensjonert etter installasjonen bak. Fungerer ved nyinstallasjon og som ettermontering i eksisterende himlinger."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Type",
+          "v": "Integrert tilgangsluke"
+        },
+        {
+          "k": "Finish",
+          "v": "Matcher himlingsmembranen"
+        },
+        {
+          "k": "Form",
+          "v": "Rund eller rektangulær"
+        },
+        {
+          "k": "Størrelse",
+          "v": "Etter mål"
+        },
+        {
+          "k": "Åpning",
+          "v": "Magnetisk eller hengslet ramme"
+        },
+        {
+          "k": "Ettermontering",
+          "v": "Ja, i eksisterende himlinger"
+        },
+        {
+          "k": "Rengjøring",
+          "v": "Vaskbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "10 år"
+        }
+      ],
+      "applications": [
+        "Bad",
+        "Kjøkken",
+        "Vaskerom",
+        "Kontor",
+        "Butikk",
+        "Helsevesen"
+      ]
+    },
+    "print": {
+      "name": "Printet himling på mål",
+      "short": "Print på mål",
+      "category": "Printet membran",
+      "mount": "Varmt eller kaldt",
+      "intro": "Ethvert fotografi, kunstverk eller mønster printet kant til kant på en skjøtefri strekkhimling — bildet ditt, fra vegg til vegg, uten synlige skjøter.",
+      "summary": "Kant-til-kant printede strekkhimlinger: ethvert høyoppløst bilde, foto eller merkevaregrafikk på en skjøtefri membran, valgfritt baklyst.",
+      "chips": [
+        "Ethvert bilde",
+        "Kant til kant",
+        "Baklyst tilvalg",
+        "Skjøtefri"
+      ],
+      "highlights": [
+        {
+          "value": "Hvilken som helst",
+          "label": "Bilde eller kunst"
+        },
+        {
+          "value": "HD",
+          "label": "Print i fotokvalitet"
+        },
+        {
+          "value": "Baklyst",
+          "label": "Valgfri glød"
+        },
+        {
+          "value": "5.7m",
+          "label": "Skjøtefri bredde"
+        }
+      ],
+      "features": [
+        {
+          "title": "Ditt bilde, kant til kant",
+          "body": "Lever et foto, en illustrasjon, merkevaregrafikk eller et mønster, så printer vi det over hele membranen — fargestyrt og skjøtefritt, uten panellinjer."
+        },
+        {
+          "title": "Print pluss baklys",
+          "body": "Kombiner en gjennomskinnelig folie med et LED-felt for å baklyse trykket — kunstverk eller himmelmotiv blir en myk, glødende effekthimling."
+        },
+        {
+          "title": "Tilpasset ditt rom",
+          "body": "Motivet skaleres og plasseres for ditt nøyaktige rom. Vi godkjenner filen sammen med deg før produksjon — det du godkjenner, er det som monteres."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Print",
+          "v": "Kant til kant, i fullfarge"
+        },
+        {
+          "k": "Oppløsning",
+          "v": "Fotokvalitet, fargestyrt"
+        },
+        {
+          "k": "Membran",
+          "v": "PVC-folie (ugjennomsiktig eller gjennomskinnelig)"
+        },
+        {
+          "k": "Baklys",
+          "v": "LED-felt som tilvalg"
+        },
+        {
+          "k": "Maks. skjøtefri bredde",
+          "v": "5.7 m"
+        },
+        {
+          "k": "Brannklasse",
+          "v": "B-s2,d0"
+        },
+        {
+          "k": "Rengjøring",
+          "v": "Vaskbar"
+        },
+        {
+          "k": "Garanti",
+          "v": "25 år"
+        }
+      ],
+      "applications": [
+        "Butikk",
+        "Hotellbransjen",
+        "Hjemmekino",
+        "Kontor",
+        "Showroom",
+        "Restaurant"
+      ]
+    }
+  },
+  "colourNames": {
+    "White": "Hvit",
+    "Off-white": "Offwhite",
+    "Satin white": "Satenghvit",
+    "Warm white": "Varmhvit",
+    "Light grey": "Lysegrå",
+    "Grey": "Grå",
+    "Anthracite": "Antrasitt",
+    "Sand": "Sand",
+    "Black": "Svart",
+    "Black gloss": "Svart blank",
+    "Deep blue": "Dypblå",
+    "Midnight": "Midnattsblå",
+    "Translucent": "Gjennomskinnelig",
+    "Translucent white": "Gjennomskinnelig hvit",
+    "RGB": "RGB",
+    "RGB stars": "RGB-stjerner",
+    "Warm-white stars": "Varmhvite stjerner",
+    "Starry sky": "Stjernehimmel",
+    "Sky scenes": "Himmelmotiver",
+    "Custom": "Egendefinert",
+    "Custom RAL": "Valgfri RAL",
+    "Custom print": "Egendefinert print",
+    "Custom artwork": "Eget motiv",
+    "Brand graphics": "Merkevaregrafikk",
+    "Full-colour print": "Fullfargeprint",
+    "Photographic": "Fotografisk",
+    "Patterns": "Mønstre",
+    "Matched to membrane": "Matcher membranen",
+    "Pure white": "Renhvit",
+    "Traffic white": "Trafikkhvit",
+    "Cream": "Kremhvit",
+    "Oyster white": "Østershvit",
+    "Light ivory": "Lys elfenben",
+    "Beige": "Beige",
+    "Grey beige": "Gråbeige",
+    "Silk grey": "Silkegrå",
+    "Pebble grey": "Kiselgrå",
+    "Dusty grey": "Støvgrå",
+    "Agate grey": "Agatgrå",
+    "Silver grey": "Sølvgrå",
+    "Platinum grey": "Platinagrå",
+    "Slate grey": "Skifergrå",
+    "Black grey": "Svartgrå",
+    "Graphite black": "Grafittsvart",
+    "Jet black": "Dypsvart",
+    "Bordeaux": "Bordeaux",
+    "Wine red": "Vinrød",
+    "Oxide red": "Oksidrød",
+    "Red": "Rød",
+    "Pure orange": "Ren oransje",
+    "Golden yellow": "Gyllengul",
+    "Gold": "Gull",
+    "Silver": "Sølv",
+    "Bronze": "Bronse",
+    "Champagne": "Champagne",
+    "Cappuccino": "Cappuccino",
+    "Chocolate": "Sjokoladebrun",
+    "Pearl": "Perlemor",
+    "Opal": "Opal",
+    "Blue": "Blå",
+    "Steel blue": "Stålblå",
+    "Pastel blue": "Pastellblå",
+    "Pigeon blue": "Dueblå",
+    "Petrol": "Petrol",
+    "Pale green": "Blekgrønn",
+    "Reseda green": "Resedagrønn",
+    "Gloss": "Høyglans",
+    "Matte": "Matt",
+    "Satin": "Satin",
+    "Metallic": "Metallic"
+  },
+  "megaMenu": {
+    "solutions": {
+      "railLabel": "Utforsk løsninger",
+      "allLabel": "Alle løsninger",
+      "promoTitle": "Et nytt tak på én dag",
+      "promoCta": "Be om tilbud",
+      "cats": [
+        {
+          "title": "Himlinger",
+          "desc": "Polyester, PVC & sømløst",
+          "items": [
+            {
+              "title": "Polyesterhimling",
+              "sub": "Kald montering · svært matt"
+            },
+            {
+              "title": "PVC-foliehimling",
+              "sub": "Gjenvinnbar · avtakbar"
+            },
+            {
+              "title": "Prefab himlingsenhet",
+              "sub": "Ferdigmontert & rask"
+            },
+            {
+              "title": "Alle himlingssystemer",
+              "sub": "Sammenlign utvalget"
+            }
+          ]
+        },
+        {
+          "title": "Akustikk",
+          "desc": "Lydabsorpsjon",
+          "items": [
+            {
+              "title": "Akustisk strekksystem",
+              "sub": "Opptil klasse A"
+            },
+            {
+              "title": "Slik fungerer akustikk",
+              "sub": "Absorpsjon forklart"
+            },
+            {
+              "title": "Teknisk datablad",
+              "sub": "αw- & klasseverdier"
+            }
+          ]
+        },
+        {
+          "title": "Lys & print",
+          "desc": "LED, baklys & print",
+          "items": [
+            {
+              "title": "Lyshimling",
+              "sub": "Baklyst gjennomskinnelig"
+            },
+            {
+              "title": "Stjernehimmel",
+              "sub": "Fiberoptisk nattehimmel"
+            },
+            {
+              "title": "Egendefinert print",
+              "sub": "Hvilket som helst bilde, kant til kant"
+            }
+          ]
+        },
+        {
+          "title": "Prefab",
+          "desc": "Aluminium, stål & tre",
+          "items": [
+            {
+              "title": "Prefab-strukturer",
+              "sub": "Bjelker, gesimser & mer"
+            },
+            {
+              "title": "Prefab lyselementer",
+              "sub": "Aluminium + strekkduk"
+            },
+            {
+              "title": "Inspeksjonsluke",
+              "sub": "Diskret tilgang"
+            }
+          ]
+        },
+        {
+          "title": "Bruksområder",
+          "desc": "Rom for rom",
+          "items": [
+            {
+              "title": "Stue & kino",
+              "sub": "Lyd & stjernehimmel"
+            },
+            {
+              "title": "Bad & kjøkken",
+              "sub": "Fukttålig"
+            },
+            {
+              "title": "Kontor & butikk",
+              "sub": "Akustisk komfort"
+            },
+            {
+              "title": "Se alle prosjekter",
+              "sub": "Hele porteføljen"
+            }
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "railLabel": "Dokumentasjon",
+      "allLabel": "Alle spesifikasjoner & nedlastinger",
+      "promoTitle": "Trenger du hjelp?",
+      "promoBody": "Send renoveringsspørsmålet ditt — vi svarer innen to virkedager.",
+      "promoCta": "Still et spørsmål",
+      "cats": [
+        {
+          "title": "Polyester strekkhimling",
+          "desc": "Kaldmontert membran",
+          "items": [
+            {
+              "title": "Datablad",
+              "sub": "Spesifikasjoner & nedlasting"
+            },
+            {
+              "title": "Farger & finish",
+              "sub": "Hele utvalget & RAL"
+            },
+            {
+              "title": "Brannsikkerhet",
+              "sub": "Brannreaksjon & A2"
+            },
+            {
+              "title": "Monteringsveiledning",
+              "sub": "Kald montering, steg for steg"
+            },
+            {
+              "title": "Beskrivelsestekst",
+              "sub": "For anbud & dokumentasjon"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Vanlige spørsmål"
+            }
+          ]
+        },
+        {
+          "title": "PVC strekkhimling",
+          "desc": "Varmmontert folie",
+          "items": [
+            {
+              "title": "Datablad",
+              "sub": "Spesifikasjoner & nedlasting"
+            },
+            {
+              "title": "Farger & finish",
+              "sub": "Matt, satin, høyglans"
+            },
+            {
+              "title": "Brannsikkerhet",
+              "sub": "Brannreaksjon"
+            },
+            {
+              "title": "Monteringsveiledning",
+              "sub": "Varm montering, steg for steg"
+            },
+            {
+              "title": "Beskrivelsestekst",
+              "sub": "For anbud & dokumentasjon"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Vanlige spørsmål"
+            }
+          ]
+        }
+      ]
+    },
+    "comingSoon": "Kommer snart"
   }
 }

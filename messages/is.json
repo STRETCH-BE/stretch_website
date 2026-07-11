@@ -498,7 +498,9 @@
     "allSolutions": "Allar lausnir",
     "ctaKicker": "Ókeypis & án skuldbindinga",
     "ctaTitle": "Viltu þetta loft",
-    "dealer": "Finndu næsta söluaðila"
+    "dealer": "Finndu næsta söluaðila",
+    "chartCount": "{count, plural, one {# litur} other {# litir}}",
+    "anyRal": "Hvaða RAL-litur sem er eftir ósk"
   },
   "productsPage": {
     "eyebrow": "Lausnirnar okkar",
@@ -512,5 +514,963 @@
     "notSure": "Ekki viss hvort hentar?",
     "notSureBody": "Segðu okkur frá rýminu þínu og við mælum með rétta kerfinu — ókeypis og án skuldbindinga.",
     "quote": "Fáðu ókeypis tilboð"
+  },
+  "catalog": {
+    "polyester": {
+      "name": "Pólýester strekkiloft",
+      "short": "Polyester",
+      "category": "Kaldsett himna",
+      "mount": "Köld uppsetning",
+      "intro": "Falleg og hagnýt strekkihimna fyrir nýbyggingar jafnt sem endurbætur. Handstrekt köld fyrir gallalausa, mjög matta áferð — með innbyggðum hljóðvistar- og þvottheldum valkostum.",
+      "summary": "Kaldsett pólýester strekkiloft með mjög mattri áferð, samskeytalaust að 5,15 m og með 10 ára ábyrgð.",
+      "chips": [
+        "Samskeytalaust að 5,15 m",
+        "+25 ára ending",
+        "Hljóðvist allt að flokki A",
+        "Þvottekta"
+      ],
+      "highlights": [
+        {
+          "value": "5.15m",
+          "label": "Samskeytalaus breidd"
+        },
+        {
+          "value": "Kalt",
+          "label": "Uppsetningaraðferð"
+        },
+        {
+          "value": "Matt",
+          "label": "Yfirborðsútlit"
+        },
+        {
+          "value": "A",
+          "label": "Hljóðvistarflokkur"
+        }
+      ],
+      "features": [
+        {
+          "title": "Köld uppsetning",
+          "body": "Engar hitabyssur, enginn þurrktími. Pólýesterhimnan er strekkt köld og smellt í jaðarprófíl — hreint, hratt og gufulaust, jafnvel í rýmum í notkun."
+        },
+        {
+          "title": "Mjög mött áferð",
+          "body": "Djúpt, endurskinslaust matt yfirborð sem lítur út eins og nýmálað múrverk — án sprungna, flögnunar og endurmálunar sem því fylgir."
+        },
+        {
+          "title": "Hljóðvist & þvottekta",
+          "body": "Veldu örgataða útgáfu með ísogsplötu til að temja bergmálið. Allar áferðir má strjúka hreinar og þola raka í 25 ár."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Efni",
+          "v": "Prjónuð pólýesterhimna"
+        },
+        {
+          "k": "Uppsetning",
+          "v": "Kaldstrekkt, smelluprófíll"
+        },
+        {
+          "k": "Hám. samskeytalaus breidd",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Yfirborð",
+          "v": "Mjög matt"
+        },
+        {
+          "k": "Brunaflokkur",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Hljóðvist",
+          "v": "Allt að flokki A (götuð)"
+        },
+        {
+          "k": "Þrif",
+          "v": "Þvottekta, rakaþolið"
+        },
+        {
+          "k": "Ábyrgð",
+          "v": "10 ár"
+        }
+      ],
+      "applications": [
+        "Stofa",
+        "Baðherbergi",
+        "Skrifstofa",
+        "Heimabíó",
+        "Heilbrigðisþjónusta",
+        "Verslun"
+      ],
+      "colourChartNote": "Allir litir eru fáanlegir í hefðbundinni og hljóðdempandi útfærslu."
+    },
+    "pvc": {
+      "name": "Strekkiloft úr PVC-filmu",
+      "short": "PVC Film",
+      "category": "Heitsett filma",
+      "mount": "Heit uppsetning",
+      "intro": "Hituð PVC-filma sem er strekkt við uppsetningu — fullkomlega endurvinnanleg og auðveld í niðurtekt. Skiptu þreyttu lofti út fyrir gallalaust nýtt á einum degi.",
+      "summary": "Heitsett strekkiloft úr PVC-filmu, 100% endurvinnanlegt og fjarlægjanlegt, samskeytalaust að 6,4 m með 10 ára ábyrgð.",
+      "chips": [
+        "Samskeytalaust að 6,4 m",
+        "100% endurvinnanlegt",
+        "Auðvelt að fjarlægja",
+        "Þvottekta"
+      ],
+      "highlights": [
+        {
+          "value": "6.4m",
+          "label": "Samskeytalaus breidd"
+        },
+        {
+          "value": "Heitt",
+          "label": "Uppsetningaraðferð"
+        },
+        {
+          "value": "100%",
+          "label": "Endurvinnanlegt"
+        },
+        {
+          "value": "A",
+          "label": "Hljóðvistarflokkur"
+        }
+      ],
+      "features": [
+        {
+          "title": "Endurvinnanlegt í hráefni",
+          "body": "PVC-kerfið er fullkomlega endurvinnanlegt í hráefni — hringrásarval sem auðvelt er að fjarlægja og setja upp aftur hvenær sem þarf."
+        },
+        {
+          "title": "Tilbúið fyrir baklýsingu & prent",
+          "body": "Hálfgegnsæjar filmur dreifa LED-ljósi jafnt án ljósbletta; hvaða mynd, áferð eða stjörnuhiminn sem er má prenta út í kanta."
+        },
+        {
+          "title": "Fjarlægjanlegt & þvottekta",
+          "body": "Smelltu filmunni af til að komast að lögnunum fyrir ofan og strekktu hana aftur á nokkrum mínútum. Filman strýkst hrein og kippir sér ekki upp við raka."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Efni",
+          "v": "Völsuð PVC-filma"
+        },
+        {
+          "k": "Uppsetning",
+          "v": "Heitstrekkt, smelluprófíll"
+        },
+        {
+          "k": "Hám. samskeytalaus breidd",
+          "v": "6.4 m"
+        },
+        {
+          "k": "Yfirborð",
+          "v": "Matt / satín / gljáandi / hálfgegnsætt"
+        },
+        {
+          "k": "Brunaflokkur",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Hljóðvist",
+          "v": "Allt að flokki A (götuð)"
+        },
+        {
+          "k": "Þrif",
+          "v": "Þvottekta, rakaþolið"
+        },
+        {
+          "k": "Ábyrgð",
+          "v": "10 ár"
+        }
+      ],
+      "applications": [
+        "Baðherbergi",
+        "Sundlaug & vellíðan",
+        "Verslun",
+        "Gistigeirinn",
+        "Skrifstofa",
+        "Heimabíó"
+      ],
+      "colourChartNote": "Fáanlegt í mattri, satín, gljáandi, hálfgegnsærri og málmkenndri áferð."
+    },
+    "acoustic": {
+      "name": "Hljóðvistarstrekkikerfi",
+      "short": "Hljóðvist",
+      "category": "Hljóðísogandi himna",
+      "mount": "Kalt / heitt",
+      "intro": "Örgötuð strekkihimna með þéttum hljóðísogsplötum að baki — gallalaust loft sem dregur mælanlega úr bergmáli og hávaða í hvaða rými sem er.",
+      "summary": "Örgötuð hljóðvistarstrekkihimna með þéttri ísogsplötu, nær hljóðísogi allt að flokki A.",
+      "chips": [
+        "Allt að flokki A",
+        "Samskeytalaus flötur",
+        "Valkostur: ósýnilegt hljóð",
+        "Þvottekta yfirborð"
+      ],
+      "highlights": [
+        {
+          "value": "A",
+          "label": "Ísogsflokkur"
+        },
+        {
+          "value": "αw",
+          "label": "Prófuð gildi"
+        },
+        {
+          "value": "0",
+          "label": "Sýnileg samskeyti"
+        },
+        {
+          "value": "+25y",
+          "label": "Ending"
+        }
+      ],
+      "features": [
+        {
+          "title": "Ísog í flokki A",
+          "body": "Þétt pólýesterull bak við örgataðan flöt gefur hljóðísog allt að flokki A — án sýnilegrar meðhöndlunar."
+        },
+        {
+          "title": "Eyjar & veggplötur",
+          "body": "Hangandi hljóðdeyfar og skrautlegar veggísogsplötur víkka sama kerfi yfir á hvaða flöt sem er í rýminu."
+        },
+        {
+          "title": "Ósýnilegt hljóð",
+          "body": "Hátalarar eru settir alveg bak við filmuna fyrir hreinan hljóm án sýnilegs uppruna sem fyllir rýmið."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Efni",
+          "v": "Götuð himna + ísogsplata"
+        },
+        {
+          "k": "Uppsetning",
+          "v": "Kalt eða heitt, smelluprófíll"
+        },
+        {
+          "k": "Hám. samskeytalaus breidd",
+          "v": "5.15"
+        },
+        {
+          "k": "Ísog",
+          "v": "Allt að flokki A (αw)"
+        },
+        {
+          "k": "Brunaflokkur",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Bakstykki",
+          "v": "Þétt pólýesterull"
+        },
+        {
+          "k": "Þrif",
+          "v": "Þvottekta yfirborð"
+        },
+        {
+          "k": "Ábyrgð",
+          "v": "10 ár"
+        }
+      ],
+      "applications": [
+        "Skrifstofa",
+        "Veitingastaður",
+        "Studio",
+        "Heimabíó",
+        "Skóli",
+        "Heilbrigðisþjónusta"
+      ]
+    },
+    "light": {
+      "name": "Ljósloft",
+      "short": "Upplýst",
+      "category": "Hálfgegnsæ himna",
+      "mount": "Kalt / heitt",
+      "intro": "Hálfgegnsæjar strekkifilmur sem breyta heilu lofti í mjúkan, jafnan ljósgjafa — eða í prentaðan striga með hvaða mynd sem þú velur.",
+      "summary": "Hálfgegnsæ, baklýst strekkiloft og hönnun prentuð út í kanta — þar á meðal stjörnuhimins-áferðir með ljósleiðurum.",
+      "chips": [
+        "Jöfn baklýsing",
+        "Valkostur: LED-lína",
+        "Prent út í kanta",
+        "Samskeytalaust"
+      ],
+      "highlights": [
+        {
+          "value": "360°",
+          "label": "Jöfn dreifing"
+        },
+        {
+          "value": "RGB",
+          "label": "LED-valkostir"
+        },
+        {
+          "value": "Prent",
+          "label": "Hvaða mynd sem er"
+        },
+        {
+          "value": "5.15m",
+          "label": "Samskeytalaus breidd"
+        }
+      ],
+      "features": [
+        {
+          "title": "Jöfn baklýsing",
+          "body": "Hálfgegnsæ filma yfir LED-fleti dreifir ljósinu án ljósbletta — lýsandi himinn í hvaða rými sem er, deyfanlegur eftir stemningu."
+        },
+        {
+          "title": "LED-línulýsing",
+          "body": "Innfelldar ljóslínur falla óaðfinnanlega inn í himnuna fyrir skörp, byggingarfræðileg ljósáhrif."
+        },
+        {
+          "title": "Prentuð hönnun",
+          "body": "Hvaða ljósmynd, mynstur eða áferð sem er, prentuð út í kanta — þar á meðal stjörnuhiminn með ljósleiðurum."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Efni",
+          "v": "Hálfgegnsæ PVC-filma"
+        },
+        {
+          "k": "Uppsetning",
+          "v": "Kalt eða heitt, smelluprófíll"
+        },
+        {
+          "k": "Hám. samskeytalaus breidd",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Ljósgjafi",
+          "v": "LED-flötur / -lína, deyfanlegt"
+        },
+        {
+          "k": "Prent",
+          "v": "Út í kanta, hvaða mynd sem er"
+        },
+        {
+          "k": "Brunaflokkur",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Þrif",
+          "v": "Þvottekta"
+        },
+        {
+          "k": "Ábyrgð",
+          "v": "10 ár"
+        }
+      ],
+      "applications": [
+        "Heimabíó",
+        "Baðherbergi",
+        "Verslun",
+        "Gistigeirinn",
+        "Spa",
+        "Skrifstofa"
+      ]
+    },
+    "prefab": {
+      "name": "Forsmíðaðar grindur",
+      "short": "Forsmíðaðar grindur",
+      "category": "Forsmíðuð burðargrind",
+      "mount": "Forsmíðað",
+      "intro": "Forsmíðaðar burðargrindur fyrir strekkiloftsverkefni — bitar úr áli, stáli og viði, loftlistar og hæðarmunar-smáatriði, sérsmíðað í pólsku framleiðslunni okkar og sent til söluaðila um allan heim.",
+      "summary": "Sérsniðnar forsmíðaðar burðargrindur úr áli, stáli og viði — bitar fyrir rastaloft, loftlistar fyrir svífandi loft og hrein hæðarmunar-smáatriði.",
+      "chips": [
+        "Ál / stál / viður",
+        "Bitar & loftlistar",
+        "Sérsniðið",
+        "Sent um allan heim"
+      ],
+      "highlights": [
+        {
+          "value": "1",
+          "label": "Dagur á staðnum"
+        },
+        {
+          "value": "Prefab",
+          "label": "Smíðað utan verkstaðar"
+        },
+        {
+          "value": "Aðgangur",
+          "label": "Skoðunarlúga"
+        },
+        {
+          "value": "25 ár",
+          "label": "Ending"
+        }
+      ],
+      "features": [
+        {
+          "title": "Smíðað utan verkstaðar",
+          "body": "Einingarnar eru saumaðar á belgíska verkstæðinu okkar og gæðaprófaðar áður en þær koma á verkstað."
+        },
+        {
+          "title": "Smellt saman á staðnum",
+          "body": "Forstrekktar einingar smellast í jaðarramma — lágmarks iðnaðarmenn, lágmarks tími, fullkomin niðurstaða."
+        },
+        {
+          "title": "Innbyggður aðgangur",
+          "body": "Lítt áberandi skoðunarlúgur halda lögnum fyrir ofan aðgengilegum án þess að rjúfa hreina loftlínuna."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Efni",
+          "v": "Himna á forsmíðaðri grind"
+        },
+        {
+          "k": "Uppsetning",
+          "v": "Smellueining"
+        },
+        {
+          "k": "Afhendingartími",
+          "v": "Framleitt eftir pöntun"
+        },
+        {
+          "k": "Aðgangur",
+          "v": "Innbyggð skoðunarlúga"
+        },
+        {
+          "k": "Brunaflokkur",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Hljóðvist",
+          "v": "Valkvæð ísogsplata"
+        },
+        {
+          "k": "Þrif",
+          "v": "Þvottekta"
+        },
+        {
+          "k": "Ábyrgð",
+          "v": "10 ár"
+        }
+      ],
+      "applications": [
+        "Baðherbergiseiningar",
+        "Hótel",
+        "Einingasmíði",
+        "Heilbrigðisþjónusta",
+        "Verslun",
+        "Skrifstofa"
+      ]
+    },
+    "starry": {
+      "name": "Stjörnuhiminsloft",
+      "short": "Stjörnuhiminn",
+      "category": "Ljósleiðari / baklýst",
+      "mount": "Baklýst",
+      "intro": "Strekkiloft stráð hundruðum ljósleiðarapunkta — rólegur, tindrandi næturhiminn yfir bíóinu, svefnherberginu eða heilsulindinni.",
+      "summary": "Stjörnuhimins-strekkiloft með ljósleiðurum og LED: hundruð deyfanlegra stjörnupunkta, valkvæð stjörnuhröp og RGB, á samskeytalausri himnu.",
+      "chips": [
+        "Hundruð stjarna",
+        "Deyfanlegt",
+        "Valkvætt RGB",
+        "Stjörnuhröp"
+      ],
+      "highlights": [
+        {
+          "value": "500+",
+          "label": "Stjörnupunktar"
+        },
+        {
+          "value": "RGB",
+          "label": "Litavalkostir"
+        },
+        {
+          "value": "1 dagur",
+          "label": "Uppsetning"
+        },
+        {
+          "value": "10 ár",
+          "label": "Ábyrgð"
+        }
+      ],
+      "features": [
+        {
+          "title": "Alvöru næturhiminn",
+          "body": "Hundruð ljósleiðarapunkta bak við strekkta himnu mynda djúpa, tindrandi stjörnubreiðu — raðað eftir stjörnumerki eða dreift af handahófi."
+        },
+        {
+          "title": "Ljósleiðari & LED",
+          "body": "Ein LED-ljósvél knýr alla þræðina svo stjörnurnar haldast kaldar og alveg deyfanlegar. Bættu við blikkhjóli fyrir hreyfingu, RGB fyrir liti eða stjörnuhröpum."
+        },
+        {
+          "title": "Bíó, svefnherbergi, heilsulind",
+          "body": "Fullkomið þar sem þú vilt stemningu án glýju — heimabíó, svefnherbergi, heilsulindir og veitingastaðir. Sameinaðu við hljóðísogsbak fyrir rólegt, hljóðlátt rými."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Áhrif",
+          "v": "Stjörnubreiða úr ljósleiðurum"
+        },
+        {
+          "k": "Himna",
+          "v": "Dökk hálfgegnsæ / prentuð filma"
+        },
+        {
+          "k": "Stjörnupunktar",
+          "v": "Frá ~150 upp í 1.000+"
+        },
+        {
+          "k": "Ljósgjafi",
+          "v": "Ein LED-vél, deyfanleg"
+        },
+        {
+          "k": "Valkostir",
+          "v": "Blik, RGB, stjörnuhröp"
+        },
+        {
+          "k": "Uppsetning",
+          "v": "Strekktur smelluprófíll"
+        },
+        {
+          "k": "Þrif",
+          "v": "Þvottekta"
+        },
+        {
+          "k": "Ábyrgð",
+          "v": "10 ár"
+        }
+      ],
+      "applications": [
+        "Heimabíó",
+        "Svefnherbergi",
+        "Heilsulind & vellíðan",
+        "Veitingastaður",
+        "Gistigeirinn",
+        "Barnaherbergi"
+      ]
+    },
+    "hatch": {
+      "name": "Skoðunarlúga",
+      "short": "Skoðunarlúga",
+      "category": "Aðgangslausn",
+      "mount": "Innbyggt",
+      "intro": "Lítt áberandi þjónustuaðgangur í gegnum strekkiloft — náðu í loka, tengidósir og búnað án þess að skera eða skipta um himnuna.",
+      "summary": "Innbyggðar skoðunarlúgur fyrir strekkiloft: nánast ósýnilegur, enduropnanlegur aðgangur að lögnum yfir himnunni, í hvaða stærð sem er.",
+      "chips": [
+        "Nánast ósýnileg",
+        "Enduropnanleg",
+        "Öll stærð",
+        "Tilbúið til eftirásetningar"
+      ],
+      "highlights": [
+        {
+          "value": "Falið",
+          "label": "Í fletinum"
+        },
+        {
+          "value": "Hvaða sem er",
+          "label": "Stærð & lögun"
+        },
+        {
+          "value": "Enduropnun",
+          "label": "Eins oft og þarf"
+        },
+        {
+          "value": "1 dagur",
+          "label": "Uppsetning"
+        }
+      ],
+      "features": [
+        {
+          "title": "Ósýnileg þar til þú þarft á henni að halda",
+          "body": "Rammi lúgunnar er innbyggður í jaðarfráganginn og klæddur sömu himnu — hún hverfur inn í loftið þar til þarf að opna hana."
+        },
+        {
+          "title": "Þjónusta án skemmda",
+          "body": "Náðu í lokunarloka, tengidósir, spjöld og lampa falda yfir loftinu — og lokaðu öllu aftur, eins oft og þarf."
+        },
+        {
+          "title": "Öll stærð, öll rými",
+          "body": "Frá litlum hringlaga aðgangspunkti upp í stóra rétthyrnda plötu, sniðna að lögninni fyrir aftan. Virkar í nýjum uppsetningum og sem viðbót í eldri loft."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Tegund",
+          "v": "Innbyggð aðgangslúga"
+        },
+        {
+          "k": "Áferð",
+          "v": "Í stíl við lofthimnuna"
+        },
+        {
+          "k": "Lögun",
+          "v": "Hringlaga eða rétthyrnd"
+        },
+        {
+          "k": "Stærð",
+          "v": "Sérsniðið"
+        },
+        {
+          "k": "Opnun",
+          "v": "Segulrammi eða á lömum"
+        },
+        {
+          "k": "Eftirásetning",
+          "v": "Já, í eldri loft"
+        },
+        {
+          "k": "Þrif",
+          "v": "Þvottekta"
+        },
+        {
+          "k": "Ábyrgð",
+          "v": "10 ár"
+        }
+      ],
+      "applications": [
+        "Baðherbergi",
+        "Eldhús",
+        "Þvottahús",
+        "Skrifstofa",
+        "Verslun",
+        "Heilbrigðisþjónusta"
+      ]
+    },
+    "print": {
+      "name": "Sérprentað loft",
+      "short": "Sérsniðið prent",
+      "category": "Prentuð himna",
+      "mount": "Heitt eða kalt",
+      "intro": "Hvaða ljósmynd, listaverk eða mynstur sem er, prentað út í kanta á samskeytalausu strekkilofti — myndin þín, vegg í vegg, án sýnilegra samskeyta.",
+      "summary": "Strekkiloft prentuð út í kanta: hvaða háupplausnarmynd, ljósmynd eða vörumerkjagrafík sem er á samskeytalausri himnu, með valkvæðri baklýsingu.",
+      "chips": [
+        "Hvaða mynd sem er",
+        "Út í kanta",
+        "Baklýsingarvalkostur",
+        "Samskeytalaust"
+      ],
+      "highlights": [
+        {
+          "value": "Hvaða sem er",
+          "label": "Mynd eða listaverk"
+        },
+        {
+          "value": "HD",
+          "label": "Prent í ljósmyndagæðum"
+        },
+        {
+          "value": "Baklýst",
+          "label": "Valkvæður bjarmi"
+        },
+        {
+          "value": "5.7m",
+          "label": "Samskeytalaus breidd"
+        }
+      ],
+      "features": [
+        {
+          "title": "Myndin þín, út í kanta",
+          "body": "Leggðu til ljósmynd, teikningu, vörumerkjagrafík eða mynstur og við prentum það yfir alla himnuna — litastýrt og samskeytalaust, án plötulína."
+        },
+        {
+          "title": "Prent auk baklýsingar",
+          "body": "Sameinaðu hálfgegnsæja filmu og LED-flöt til að baklýsa prentið — listaverk eða himinmynd verður að mjúku, lýsandi loftverki."
+        },
+        {
+          "title": "Sniðið að þínu rými",
+          "body": "Myndefnið er skalað og staðsett nákvæmlega fyrir þitt rými. Við samþykkjum skrána með þér fyrir framleiðslu — það sem þú samþykkir er það sem fer upp."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Prent",
+          "v": "Út í kanta, í fullum litum"
+        },
+        {
+          "k": "Upplausn",
+          "v": "Ljósmyndagæði, litastýrt"
+        },
+        {
+          "k": "Himna",
+          "v": "PVC-filma (ógegnsæ eða hálfgegnsæ)"
+        },
+        {
+          "k": "Baklýsing",
+          "v": "Valkvæður LED-flötur"
+        },
+        {
+          "k": "Hám. samskeytalaus breidd",
+          "v": "5.7 m"
+        },
+        {
+          "k": "Brunaflokkur",
+          "v": "B-s2,d0"
+        },
+        {
+          "k": "Þrif",
+          "v": "Þvottekta"
+        },
+        {
+          "k": "Ábyrgð",
+          "v": "25 ár"
+        }
+      ],
+      "applications": [
+        "Verslun",
+        "Gistigeirinn",
+        "Heimabíó",
+        "Skrifstofa",
+        "Sýningarsalur",
+        "Veitingastaður"
+      ]
+    }
+  },
+  "colourNames": {
+    "White": "Hvítt",
+    "Off-white": "Beinhvítt",
+    "Satin white": "Satínhvítt",
+    "Warm white": "Hlýhvítt",
+    "Light grey": "Ljósgrátt",
+    "Grey": "Grátt",
+    "Anthracite": "Antrasít",
+    "Sand": "Sandlitt",
+    "Black": "Svart",
+    "Black gloss": "Svart gljáandi",
+    "Deep blue": "Djúpblátt",
+    "Midnight": "Miðnæturblátt",
+    "Translucent": "Hálfgegnsætt",
+    "Translucent white": "Hálfgegnsætt hvítt",
+    "RGB": "RGB",
+    "RGB stars": "RGB-stjörnur",
+    "Warm-white stars": "Hlýhvítar stjörnur",
+    "Starry sky": "Stjörnuhiminn",
+    "Sky scenes": "Himinmyndir",
+    "Custom": "Sérsniðið",
+    "Custom RAL": "Valfrjáls RAL",
+    "Custom print": "Sérsniðið prent",
+    "Custom artwork": "Eigin mynd",
+    "Brand graphics": "Vörumerkjagrafík",
+    "Full-colour print": "Prent í fullum litum",
+    "Photographic": "Ljósmyndalegt",
+    "Patterns": "Mynstur",
+    "Matched to membrane": "Í stíl við himnuna",
+    "Pure white": "Hreinhvítt",
+    "Traffic white": "Umferðarhvítt",
+    "Cream": "Rjómahvítt",
+    "Oyster white": "Perluhvítt",
+    "Light ivory": "Ljóst fílabein",
+    "Beige": "Beis",
+    "Grey beige": "Grábeis",
+    "Silk grey": "Silkigrátt",
+    "Pebble grey": "Malargrátt",
+    "Dusty grey": "Rykgrátt",
+    "Agate grey": "Agatgrátt",
+    "Silver grey": "Silfurgrátt",
+    "Platinum grey": "Platínugrátt",
+    "Slate grey": "Skífugrátt",
+    "Black grey": "Svartgrátt",
+    "Graphite black": "Grafítsvart",
+    "Jet black": "Djúpsvart",
+    "Bordeaux": "Bordeaux-rautt",
+    "Wine red": "Vínrautt",
+    "Oxide red": "Oxíðrautt",
+    "Red": "Rautt",
+    "Pure orange": "Hreint appelsínugult",
+    "Golden yellow": "Gullgult",
+    "Gold": "Gull",
+    "Silver": "Silfur",
+    "Bronze": "Brons",
+    "Champagne": "Kampavín",
+    "Cappuccino": "Cappuccino",
+    "Chocolate": "Súkkulaðibrúnt",
+    "Pearl": "Perla",
+    "Opal": "Ópall",
+    "Blue": "Blátt",
+    "Steel blue": "Stálblátt",
+    "Pastel blue": "Pastellblátt",
+    "Pigeon blue": "Dúfublátt",
+    "Petrol": "Petrólblátt",
+    "Pale green": "Fölgrænt",
+    "Reseda green": "Resedagrænt",
+    "Gloss": "Gljáandi",
+    "Matte": "Matt",
+    "Satin": "Satín",
+    "Metallic": "Málmgljái"
+  },
+  "megaMenu": {
+    "solutions": {
+      "railLabel": "Skoða lausnir",
+      "allLabel": "Allar lausnir",
+      "promoTitle": "Nýtt loft á einum degi",
+      "promoCta": "Fá tilboð",
+      "cats": [
+        {
+          "title": "Loft",
+          "desc": "Pólýester, PVC & saumlaust",
+          "items": [
+            {
+              "title": "Pólýesterloft",
+              "sub": "Köld uppsetning · mjög matt"
+            },
+            {
+              "title": "PVC-filmuloft",
+              "sub": "Endurvinnanlegt · fjarlægjanlegt"
+            },
+            {
+              "title": "Forsmíðuð lofteining",
+              "sub": "Forsamsett & fljótlegt"
+            },
+            {
+              "title": "Öll loftakerfi",
+              "sub": "Berðu saman úrvalið"
+            }
+          ]
+        },
+        {
+          "title": "Hljóðvist",
+          "desc": "Hljóðísog",
+          "items": [
+            {
+              "title": "Hljóðvistarstrekkikerfi",
+              "sub": "Allt að flokki A"
+            },
+            {
+              "title": "Svona virkar hljóðvist",
+              "sub": "Ísog útskýrt"
+            },
+            {
+              "title": "Tæknilegt gagnablað",
+              "sub": "αw- og flokkagildi"
+            }
+          ]
+        },
+        {
+          "title": "Ljós & prent",
+          "desc": "LED, baklýsing & prent",
+          "items": [
+            {
+              "title": "Ljósaloft",
+              "sub": "Baklýst hálfgegnsætt"
+            },
+            {
+              "title": "Stjörnuhiminn",
+              "sub": "Ljósleiðara-næturhiminn"
+            },
+            {
+              "title": "Sérsniðið prent",
+              "sub": "Hvaða mynd sem er, út í kanta"
+            }
+          ]
+        },
+        {
+          "title": "Prefab",
+          "desc": "Ál, stál & viður",
+          "items": [
+            {
+              "title": "Forsmíðaðar einingar",
+              "sub": "Bitar, listar & fleira"
+            },
+            {
+              "title": "Forsmíðaðar ljósaeiningar",
+              "sub": "Ál + strekkidúkur"
+            },
+            {
+              "title": "Skoðunarlúga",
+              "sub": "Lítt áberandi aðgangur"
+            }
+          ]
+        },
+        {
+          "title": "Notkunarsvið",
+          "desc": "Herbergi fyrir herbergi",
+          "items": [
+            {
+              "title": "Stofa & bíó",
+              "sub": "Hljóð & stjörnuhiminn"
+            },
+            {
+              "title": "Baðherbergi & eldhús",
+              "sub": "Rakaþolið"
+            },
+            {
+              "title": "Skrifstofa & verslun",
+              "sub": "Hljóðvistarþægindi"
+            },
+            {
+              "title": "Sjá öll verkefni",
+              "sub": "Allt safnið"
+            }
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "railLabel": "Skjölun",
+      "allLabel": "Allar upplýsingar & niðurhal",
+      "promoTitle": "Vantar þig aðstoð?",
+      "promoBody": "Sendu spurningu um endurbætur — við svörum innan tveggja virkra daga.",
+      "promoCta": "Spyrja spurningar",
+      "cats": [
+        {
+          "title": "Pólýester strekkiloft",
+          "desc": "Kaldsett himna",
+          "items": [
+            {
+              "title": "Gagnablað",
+              "sub": "Upplýsingar & niðurhal"
+            },
+            {
+              "title": "Litir & áferðir",
+              "sub": "Allt úrvalið & RAL"
+            },
+            {
+              "title": "Brunavarnir",
+              "sub": "Brunaviðbrögð & A2"
+            },
+            {
+              "title": "Uppsetningarleiðbeiningar",
+              "sub": "Köld uppsetning, skref fyrir skref"
+            },
+            {
+              "title": "Útboðstexti",
+              "sub": "Fyrir útboð & gögn"
+            },
+            {
+              "title": "Algengar spurningar",
+              "sub": "Algengar spurningar"
+            }
+          ]
+        },
+        {
+          "title": "PVC strekkiloft",
+          "desc": "Heitsett filma",
+          "items": [
+            {
+              "title": "Gagnablað",
+              "sub": "Upplýsingar & niðurhal"
+            },
+            {
+              "title": "Litir & áferðir",
+              "sub": "Matt, satín, gljáandi"
+            },
+            {
+              "title": "Brunavarnir",
+              "sub": "Brunaviðbrögð"
+            },
+            {
+              "title": "Uppsetningarleiðbeiningar",
+              "sub": "Heit uppsetning, skref fyrir skref"
+            },
+            {
+              "title": "Útboðstexti",
+              "sub": "Fyrir útboð & gögn"
+            },
+            {
+              "title": "Algengar spurningar",
+              "sub": "Algengar spurningar"
+            }
+          ]
+        }
+      ]
+    },
+    "comingSoon": "Væntanlegt"
   }
 }

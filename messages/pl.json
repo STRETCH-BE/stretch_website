@@ -498,7 +498,9 @@
     "allSolutions": "Wszystkie rozwiązania",
     "ctaKicker": "Bezpłatnie i bez zobowiązań",
     "ctaTitle": "Chcesz taki sufit",
-    "dealer": "Znajdź najbliższego dystrybutora"
+    "dealer": "Znajdź najbliższego dystrybutora",
+    "chartCount": "{count, plural, one {# kolor} few {# kolory} many {# kolorów} other {# koloru}}",
+    "anyRal": "Dowolny kolor RAL na zamówienie"
   },
   "productsPage": {
     "eyebrow": "Nasze rozwiązania",
@@ -512,5 +514,963 @@
     "notSure": "Nie wiesz, który wybrać?",
     "notSureBody": "Opowiedz nam o swoim pomieszczeniu, a doradzimy właściwy system — bezpłatnie i bez zobowiązań.",
     "quote": "Poproś o darmową wycenę"
+  },
+  "catalog": {
+    "polyester": {
+      "name": "Poliestrowy sufit napinany",
+      "short": "Polyester",
+      "category": "Membrana montowana na zimno",
+      "mount": "Montaż na zimno",
+      "intro": "Estetyczna, funkcjonalna membrana napinana do nowych budynków i remontów. Napinana ręcznie na zimno dla nieskazitelnego, bardzo matowego wykończenia — z wbudowanymi opcjami akustycznymi i zmywalnymi.",
+      "summary": "Montowany na zimno poliestrowy sufit napinany o bardzo matowym wykończeniu, bez łączeń do 5,15 m, z 10-letnią gwarancją.",
+      "chips": [
+        "Bez łączeń do 5,15 m",
+        "+25 lat żywotności",
+        "Akustyka aż do klasy A",
+        "Zmywalny"
+      ],
+      "highlights": [
+        {
+          "value": "5.15m",
+          "label": "Szerokość bez łączeń"
+        },
+        {
+          "value": "Na zimno",
+          "label": "Metoda montażu"
+        },
+        {
+          "value": "Mat",
+          "label": "Wygląd powierzchni"
+        },
+        {
+          "value": "A",
+          "label": "Klasa akustyczna"
+        }
+      ],
+      "features": [
+        {
+          "title": "Montaż na zimno",
+          "body": "Bez nagrzewnic i bez czasu schnięcia. Membrana poliestrowa jest napinana na zimno i wpinana w profil obwodowy — czysto, szybko i bez oparów, nawet w użytkowanych pomieszczeniach."
+        },
+        {
+          "title": "Bardzo matowe wykończenie",
+          "body": "Głęboko matowa, nieodbijająca światła powierzchnia, która wygląda jak świeżo pomalowany tynk — bez pęknięć, łuszczenia i odmalowywania."
+        },
+        {
+          "title": "Akustyczny i zmywalny",
+          "body": "Wybierz wersję mikroperforowaną z absorberem, aby okiełznać pogłos. Każde wykończenie łatwo się czyści i przez 25 lat jest odporne na wilgoć."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiał",
+          "v": "Dzianinowa membrana poliestrowa"
+        },
+        {
+          "k": "Montaż",
+          "v": "Napinany na zimno, profil zatrzaskowy"
+        },
+        {
+          "k": "Maks. szerokość bez łączeń",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Powierzchnia",
+          "v": "Bardzo matowy"
+        },
+        {
+          "k": "Klasa ogniowa",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akustyczny",
+          "v": "Aż do klasy A (perforowany)"
+        },
+        {
+          "k": "Czyszczenie",
+          "v": "Zmywalny, odporny na wilgoć"
+        },
+        {
+          "k": "Gwarancja",
+          "v": "10 lat"
+        }
+      ],
+      "applications": [
+        "Salon",
+        "Łazienka",
+        "Biuro",
+        "Kino domowe",
+        "Ochrona zdrowia",
+        "Handel"
+      ],
+      "colourChartNote": "Każdy kolor jest dostępny w wykończeniu standardowym i akustycznym."
+    },
+    "pvc": {
+      "name": "Sufit napinany z folii PVC",
+      "short": "PVC Film",
+      "category": "Folia montowana na ciepło",
+      "mount": "Montaż na ciepło",
+      "intro": "Podgrzewana folia PVC napinana podczas montażu — w pełni nadająca się do recyklingu i łatwa w demontażu. Wymień zmęczony sufit na nieskazitelnie nowy w jeden dzień.",
+      "summary": "Montowany na ciepło sufit napinany z folii PVC, w 100% nadający się do recyklingu i demontażu, bez łączeń do 6,4 m, z 10-letnią gwarancją.",
+      "chips": [
+        "Bez łączeń do 6,4 m",
+        "W 100% zdatny do recyklingu",
+        "Łatwy demontaż",
+        "Zmywalny"
+      ],
+      "highlights": [
+        {
+          "value": "6.4m",
+          "label": "Szerokość bez łączeń"
+        },
+        {
+          "value": "Na ciepło",
+          "label": "Metoda montażu"
+        },
+        {
+          "value": "100%",
+          "label": "Do recyklingu"
+        },
+        {
+          "value": "A",
+          "label": "Klasa akustyczna"
+        }
+      ],
+      "features": [
+        {
+          "title": "Recykling do surowca",
+          "body": "System PVC w pełni poddaje się recyklingowi do surowca — cyrkularny wybór, który łatwo zdemontować i zamontować ponownie, kiedy zajdzie potrzeba."
+        },
+        {
+          "title": "Gotowe pod podświetlenie i nadruk",
+          "body": "Półprzezroczyste folie równomiernie rozpraszają światło LED bez punktowych prześwitów; każdy obraz, tekstura lub gwiezdne niebo mogą być drukowane od krawędzi do krawędzi."
+        },
+        {
+          "title": "Demontowalny i zmywalny",
+          "body": "Wypnij folię, aby uzyskać dostęp do instalacji powyżej, i napnij ją ponownie w kilka minut. Folia łatwo się czyści i nie straszna jej wilgoć."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiał",
+          "v": "Kalandrowana folia PVC"
+        },
+        {
+          "k": "Montaż",
+          "v": "Napinany na ciepło, profil zatrzaskowy"
+        },
+        {
+          "k": "Maks. szerokość bez łączeń",
+          "v": "6.4 m"
+        },
+        {
+          "k": "Powierzchnia",
+          "v": "Mat / satyna / połysk / półprzezroczysty"
+        },
+        {
+          "k": "Klasa ogniowa",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Akustyczny",
+          "v": "Aż do klasy A (perforowany)"
+        },
+        {
+          "k": "Czyszczenie",
+          "v": "Zmywalny, odporny na wilgoć"
+        },
+        {
+          "k": "Gwarancja",
+          "v": "10 lat"
+        }
+      ],
+      "applications": [
+        "Łazienka",
+        "Basen i wellness",
+        "Handel",
+        "Hotelarstwo",
+        "Biuro",
+        "Kino domowe"
+      ],
+      "colourChartNote": "Dostępne w wykończeniu matowym, satynowym, błyszczącym, półprzezroczystym i metalicznym."
+    },
+    "acoustic": {
+      "name": "Akustyczny system napinany",
+      "short": "Akustyczny",
+      "category": "Membrana dźwiękochłonna",
+      "mount": "Na zimno / na ciepło",
+      "intro": "Mikroperforowana membrana napinana z absorberami o wysokiej gęstości — nieskazitelny sufit, który mierzalnie ogranicza pogłos i hałas w każdym pomieszczeniu.",
+      "summary": "Mikroperforowana akustyczna membrana napinana z absorberem o wysokiej gęstości, osiągająca pochłanianie dźwięku aż do klasy A.",
+      "chips": [
+        "Aż do klasy A",
+        "Bezszwowa powierzchnia",
+        "Opcja niewidzialnego audio",
+        "Zmywalna powierzchnia"
+      ],
+      "highlights": [
+        {
+          "value": "A",
+          "label": "Klasa pochłaniania"
+        },
+        {
+          "value": "αw",
+          "label": "Wartości badane"
+        },
+        {
+          "value": "0",
+          "label": "Widoczne łączenia"
+        },
+        {
+          "value": "+25y",
+          "label": "Żywotność"
+        }
+      ],
+      "features": [
+        {
+          "title": "Pochłanianie klasy A",
+          "body": "Wełna poliestrowa o wysokiej gęstości za mikroperforowaną powierzchnią zapewnia pochłanianie dźwięku aż do klasy A — bez widocznych zabiegów."
+        },
+        {
+          "title": "Wyspy i panele ścienne",
+          "body": "Podwieszane baffle i dekoracyjne absorbery ścienne rozszerzają ten sam system na każdą powierzchnię w pomieszczeniu."
+        },
+        {
+          "title": "Niewidzialne audio",
+          "body": "Głośniki montuje się całkowicie za folią — czysty dźwięk bez widocznego źródła wypełnia całe wnętrze."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiał",
+          "v": "Membrana perforowana + absorber"
+        },
+        {
+          "k": "Montaż",
+          "v": "Na zimno lub ciepło, profil zatrzaskowy"
+        },
+        {
+          "k": "Maks. szerokość bez łączeń",
+          "v": "5.15"
+        },
+        {
+          "k": "Pochłanianie",
+          "v": "Aż do klasy A (αw)"
+        },
+        {
+          "k": "Klasa ogniowa",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Wypełnienie",
+          "v": "Wełna poliestrowa o wysokiej gęstości"
+        },
+        {
+          "k": "Czyszczenie",
+          "v": "Zmywalna powierzchnia"
+        },
+        {
+          "k": "Gwarancja",
+          "v": "10 lat"
+        }
+      ],
+      "applications": [
+        "Biuro",
+        "Restauracja",
+        "Studio",
+        "Kino domowe",
+        "Szkoła",
+        "Ochrona zdrowia"
+      ]
+    },
+    "light": {
+      "name": "Sufit świetlny",
+      "short": "Podświetlany",
+      "category": "Membrana półprzezroczysta",
+      "mount": "Na zimno / na ciepło",
+      "intro": "Półprzezroczyste folie napinane, które zamieniają cały sufit w miękkie, równomierne źródło światła — lub w drukowane płótno z dowolnym obrazem.",
+      "summary": "Półprzezroczyste, podświetlane sufity napinane i wzory drukowane od krawędzi do krawędzi — w tym wykończenia gwiezdne niebo ze światłowodami.",
+      "chips": [
+        "Równomierne podświetlenie",
+        "Opcja linii LED",
+        "Nadruk od krawędzi do krawędzi",
+        "Bez łączeń"
+      ],
+      "highlights": [
+        {
+          "value": "360°",
+          "label": "Równomierne rozproszenie"
+        },
+        {
+          "value": "RGB",
+          "label": "Opcje LED"
+        },
+        {
+          "value": "Nadruk",
+          "label": "Dowolny obraz"
+        },
+        {
+          "value": "5.15m",
+          "label": "Szerokość bez łączeń"
+        }
+      ],
+      "features": [
+        {
+          "title": "Równomierne podświetlenie",
+          "body": "Półprzezroczysta folia nad polem LED rozprasza światło bez punktowych prześwitów — świetlisty sufit w każdym wnętrzu, ściemnialny do nastroju."
+        },
+        {
+          "title": "Oświetlenie liniowe LED",
+          "body": "Wpuszczane linie świetlne bezszwowo integrują się z membraną, tworząc wyraziste, architektoniczne efekty świetlne."
+        },
+        {
+          "title": "Drukowane wzory",
+          "body": "Dowolne zdjęcie, wzór lub tekstura drukowane od krawędzi do krawędzi — w tym nocne niebo ze światłowodami."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiał",
+          "v": "Półprzezroczysta folia PVC"
+        },
+        {
+          "k": "Montaż",
+          "v": "Na zimno lub ciepło, profil zatrzaskowy"
+        },
+        {
+          "k": "Maks. szerokość bez łączeń",
+          "v": "5.15 m"
+        },
+        {
+          "k": "Źródło światła",
+          "v": "Pole / linia LED, ściemnialne"
+        },
+        {
+          "k": "Nadruk",
+          "v": "Od krawędzi do krawędzi, dowolny obraz"
+        },
+        {
+          "k": "Klasa ogniowa",
+          "v": "B-s1,d0"
+        },
+        {
+          "k": "Czyszczenie",
+          "v": "Zmywalny"
+        },
+        {
+          "k": "Gwarancja",
+          "v": "10 lat"
+        }
+      ],
+      "applications": [
+        "Kino domowe",
+        "Łazienka",
+        "Handel",
+        "Hotelarstwo",
+        "Spa",
+        "Biuro"
+      ]
+    },
+    "prefab": {
+      "name": "Konstrukcje prefabrykowane",
+      "short": "Konstrukcje prefabrykowane",
+      "category": "Prefabrykowana konstrukcja nośna",
+      "mount": "Prefabrykowane",
+      "intro": "Prefabrykowane konstrukcje nośne do projektów sufitów napinanych — belki z aluminium, stali i drewna, gzymsy i detale różnic wysokości, produkowane na wymiar w naszym polskim zakładzie i wysyłane do dealerów na całym świecie.",
+      "summary": "Prefabrykowane konstrukcje na wymiar z aluminium, stali i drewna — belki do sufitów rastrowych, gzymsy do sufitów pływających i czyste detale różnic wysokości.",
+      "chips": [
+        "Aluminium / stal / drewno",
+        "Belki i gzymsy",
+        "Na wymiar",
+        "Wysyłka na cały świat"
+      ],
+      "highlights": [
+        {
+          "value": "1",
+          "label": "Dzień na miejscu"
+        },
+        {
+          "value": "Prefab",
+          "label": "Budowane poza placem budowy"
+        },
+        {
+          "value": "Dostęp",
+          "label": "Klapa rewizyjna"
+        },
+        {
+          "value": "25 lat",
+          "label": "Żywotność"
+        }
+      ],
+      "features": [
+        {
+          "title": "Budowane poza placem budowy",
+          "body": "Moduły są konfekcjonowane w naszym belgijskim warsztacie i sprawdzane jakościowo, zanim trafią na budowę."
+        },
+        {
+          "title": "Montaż zatrzaskowy na miejscu",
+          "body": "Wstępnie napięte moduły wpinają się w ramę obwodową — minimum ekip, minimum czasu, perfekcyjny efekt."
+        },
+        {
+          "title": "Zintegrowany dostęp",
+          "body": "Dyskretne klapy rewizyjne zapewniają dostęp do instalacji powyżej, nie przerywając czystej linii sufitu."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Materiał",
+          "v": "Membrana na ramie prefabrykowanej"
+        },
+        {
+          "k": "Montaż",
+          "v": "Moduł zatrzaskowy"
+        },
+        {
+          "k": "Czas realizacji",
+          "v": "Na zamówienie"
+        },
+        {
+          "k": "Dostęp",
+          "v": "Zintegrowana klapa rewizyjna"
+        },
+        {
+          "k": "Klasa ogniowa",
+          "v": "B-s1,d0 (A2 option)"
+        },
+        {
+          "k": "Akustyczny",
+          "v": "Opcjonalny absorber"
+        },
+        {
+          "k": "Czyszczenie",
+          "v": "Zmywalny"
+        },
+        {
+          "k": "Gwarancja",
+          "v": "10 lat"
+        }
+      ],
+      "applications": [
+        "Moduły łazienkowe",
+        "Hotele",
+        "Budowa modułowa",
+        "Ochrona zdrowia",
+        "Handel",
+        "Biuro"
+      ]
+    },
+    "starry": {
+      "name": "Sufit gwiezdne niebo",
+      "short": "Gwiezdne niebo",
+      "category": "Światłowody / podświetlany",
+      "mount": "Podświetlany",
+      "intro": "Sufit napinany usiany setkami punktów światłowodowych — spokojne, migoczące nocne niebo nad Twoim kinem, sypialnią lub spa.",
+      "summary": "Sufity napinane gwiezdne niebo ze światłowodami i LED: setki ściemnialnych punktów, opcjonalne spadające gwiazdy i RGB, na bezszwowej membranie.",
+      "chips": [
+        "Setki gwiazd",
+        "Ściemnialny",
+        "Opcjonalne RGB",
+        "Spadające gwiazdy"
+      ],
+      "highlights": [
+        {
+          "value": "500+",
+          "label": "Punkty gwiazd"
+        },
+        {
+          "value": "RGB",
+          "label": "Opcje kolorów"
+        },
+        {
+          "value": "1 dzień",
+          "label": "Montaż"
+        },
+        {
+          "value": "10 lat",
+          "label": "Gwarancja"
+        }
+      ],
+      "features": [
+        {
+          "title": "Prawdziwe nocne niebo",
+          "body": "Setki punktów światłowodowych za napiętą membraną tworzą głębokie, migoczące pole gwiazd — ułożone w konstelację lub rozrzucone losowo."
+        },
+        {
+          "title": "Światłowody i LED",
+          "body": "Jeden moduł LED zasila wszystkie światłowody, dzięki czemu gwiazdy pozostają chłodne i w pełni ściemnialne. Dodaj koło migotania dla ruchu, RGB dla koloru lub efekt spadających gwiazd."
+        },
+        {
+          "title": "Kino, sypialnia, spa",
+          "body": "Idealny tam, gdzie liczy się nastrój bez oślepiania — kina domowe, sypialnie, spa i restauracje. Połącz z wypełnieniem akustycznym dla spokojnego, cichego wnętrza."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Efekt",
+          "v": "Pole gwiazd ze światłowodów"
+        },
+        {
+          "k": "Membrana",
+          "v": "Ciemna półprzezroczysta / drukowana folia"
+        },
+        {
+          "k": "Punkty gwiazd",
+          "v": "Od ~150 do 1000+"
+        },
+        {
+          "k": "Źródło światła",
+          "v": "Jeden moduł LED, ściemnialny"
+        },
+        {
+          "k": "Opcje",
+          "v": "Migotanie, RGB, spadające gwiazdy"
+        },
+        {
+          "k": "Montaż",
+          "v": "Napinany profil zatrzaskowy"
+        },
+        {
+          "k": "Czyszczenie",
+          "v": "Zmywalny"
+        },
+        {
+          "k": "Gwarancja",
+          "v": "10 lat"
+        }
+      ],
+      "applications": [
+        "Kino domowe",
+        "Sypialnia",
+        "Spa i wellness",
+        "Restauracja",
+        "Hotelarstwo",
+        "Pokój dziecięcy"
+      ]
+    },
+    "hatch": {
+      "name": "Klapa rewizyjna",
+      "short": "Klapa rewizyjna",
+      "category": "Rozwiązanie dostępowe",
+      "mount": "Zintegrowane",
+      "intro": "Dyskretny, serwisowy dostęp przez sufit napinany — dosięgniesz zaworów, puszek i osprzętu bez cięcia i wymiany membrany.",
+      "summary": "Zintegrowane klapy rewizyjne do sufitów napinanych: niemal niewidoczny, wielokrotnie otwierany dostęp do instalacji ukrytych nad membraną, w dowolnym rozmiarze.",
+      "chips": [
+        "Niemal niewidoczna",
+        "Wielokrotnego otwierania",
+        "Dowolny rozmiar",
+        "Gotowe do doposażenia"
+      ],
+      "highlights": [
+        {
+          "value": "Ukryte",
+          "label": "W powierzchni"
+        },
+        {
+          "value": "Dowolny",
+          "label": "Rozmiar i kształt"
+        },
+        {
+          "value": "Ponowne otwarcie",
+          "label": "Tak często, jak trzeba"
+        },
+        {
+          "value": "1 dzień",
+          "label": "Montaż"
+        }
+      ],
+      "features": [
+        {
+          "title": "Niewidoczna, dopóki jej nie potrzebujesz",
+          "body": "Rama klapy jest wbudowana w detal obwodowy i wykończona tą samą membraną — znika w suficie, dopóki nie trzeba jej otworzyć."
+        },
+        {
+          "title": "Serwis bez uszkodzeń",
+          "body": "Dosięgnij zaworów odcinających, puszek, przepustnic i opraw ukrytych nad sufitem — i zamknij wszystko z powrotem, tyle razy, ile trzeba."
+        },
+        {
+          "title": "Dowolny rozmiar, dowolne wnętrze",
+          "body": "Od małego okrągłego punktu dostępu po duży prostokątny panel — dopasowany do instalacji za nim. Sprawdza się w nowych montażach i jako doposażenie istniejących sufitów."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Typ",
+          "v": "Zintegrowana klapa dostępowa"
+        },
+        {
+          "k": "Wykończenie",
+          "v": "Dopasowana do membrany sufitu"
+        },
+        {
+          "k": "Kształt",
+          "v": "Okrągła lub prostokątna"
+        },
+        {
+          "k": "Rozmiar",
+          "v": "Na wymiar"
+        },
+        {
+          "k": "Otwieranie",
+          "v": "Rama magnetyczna lub na zawiasach"
+        },
+        {
+          "k": "Doposażenie",
+          "v": "Tak, w istniejące sufity"
+        },
+        {
+          "k": "Czyszczenie",
+          "v": "Zmywalny"
+        },
+        {
+          "k": "Gwarancja",
+          "v": "10 lat"
+        }
+      ],
+      "applications": [
+        "Łazienka",
+        "Kuchnia",
+        "Pomieszczenie gospodarcze",
+        "Biuro",
+        "Handel",
+        "Ochrona zdrowia"
+      ]
+    },
+    "print": {
+      "name": "Sufit z nadrukiem na wymiar",
+      "short": "Nadruk na wymiar",
+      "category": "Membrana z nadrukiem",
+      "mount": "Na ciepło lub zimno",
+      "intro": "Dowolne zdjęcie, grafika lub wzór drukowane od krawędzi do krawędzi na bezszwowym suficie napinanym — Twój obraz od ściany do ściany, bez widocznych łączeń.",
+      "summary": "Sufity napinane z nadrukiem od krawędzi do krawędzi: dowolny obraz, zdjęcie lub grafika marki w wysokiej rozdzielczości na bezszwowej membranie, opcjonalnie podświetlane.",
+      "chips": [
+        "Dowolny obraz",
+        "Od krawędzi do krawędzi",
+        "Opcja podświetlenia",
+        "Bez łączeń"
+      ],
+      "highlights": [
+        {
+          "value": "Dowolny",
+          "label": "Obraz lub grafika"
+        },
+        {
+          "value": "HD",
+          "label": "Nadruk w jakości foto"
+        },
+        {
+          "value": "Podświetlany",
+          "label": "Opcjonalna poświata"
+        },
+        {
+          "value": "5.7m",
+          "label": "Szerokość bez łączeń"
+        }
+      ],
+      "features": [
+        {
+          "title": "Twój obraz, od krawędzi do krawędzi",
+          "body": "Dostarcz zdjęcie, ilustrację, grafikę marki lub wzór, a my wydrukujemy je na całej membranie — z zarządzaniem barwą, bezszwowo i bez linii paneli."
+        },
+        {
+          "title": "Nadruk plus podświetlenie",
+          "body": "Połącz półprzezroczystą folię z polem LED, aby podświetlić nadruk — grafika lub scena nieba stanie się miękkim, świecącym sufitem dekoracyjnym."
+        },
+        {
+          "title": "Dopasowane do Twojej przestrzeni",
+          "body": "Grafika jest skalowana i pozycjonowana dokładnie pod Twoje pomieszczenie. Plik zatwierdzamy z Tobą przed produkcją — to, co zaakceptujesz, trafia na sufit."
+        }
+      ],
+      "specs": [
+        {
+          "k": "Nadruk",
+          "v": "Od krawędzi do krawędzi, w pełnym kolorze"
+        },
+        {
+          "k": "Rozdzielczość",
+          "v": "Jakość foto, zarządzanie barwą"
+        },
+        {
+          "k": "Membrana",
+          "v": "Folia PVC (nieprzezroczysta lub półprzezroczysta)"
+        },
+        {
+          "k": "Podświetlenie",
+          "v": "Opcjonalne pole LED"
+        },
+        {
+          "k": "Maks. szerokość bez łączeń",
+          "v": "5.7 m"
+        },
+        {
+          "k": "Klasa ogniowa",
+          "v": "B-s2,d0"
+        },
+        {
+          "k": "Czyszczenie",
+          "v": "Zmywalny"
+        },
+        {
+          "k": "Gwarancja",
+          "v": "25 lat"
+        }
+      ],
+      "applications": [
+        "Handel",
+        "Hotelarstwo",
+        "Kino domowe",
+        "Biuro",
+        "Salon wystawowy",
+        "Restauracja"
+      ]
+    }
+  },
+  "colourNames": {
+    "White": "Biały",
+    "Off-white": "Złamana biel",
+    "Satin white": "Biel satynowa",
+    "Warm white": "Ciepła biel",
+    "Light grey": "Jasnoszary",
+    "Grey": "Szary",
+    "Anthracite": "Antracyt",
+    "Sand": "Piaskowy",
+    "Black": "Czarny",
+    "Black gloss": "Czarny połysk",
+    "Deep blue": "Głęboki błękit",
+    "Midnight": "Granat północy",
+    "Translucent": "Półprzezroczysty",
+    "Translucent white": "Biel półprzezroczysta",
+    "RGB": "RGB",
+    "RGB stars": "Gwiazdy RGB",
+    "Warm-white stars": "Gwiazdy ciepła biel",
+    "Starry sky": "Gwiezdne niebo",
+    "Sky scenes": "Sceny nieba",
+    "Custom": "Na zamówienie",
+    "Custom RAL": "Dowolny RAL",
+    "Custom print": "Nadruk na zamówienie",
+    "Custom artwork": "Własna grafika",
+    "Brand graphics": "Grafiki marki",
+    "Full-colour print": "Nadruk pełnokolorowy",
+    "Photographic": "Fotograficzny",
+    "Patterns": "Wzory",
+    "Matched to membrane": "Dopasowane do membrany",
+    "Pure white": "Biel czysta",
+    "Traffic white": "Biel drogowa",
+    "Cream": "Kremowy",
+    "Oyster white": "Biel ostrygowa",
+    "Light ivory": "Jasna kość słoniowa",
+    "Beige": "Beżowy",
+    "Grey beige": "Szarobeżowy",
+    "Silk grey": "Szary jedwabisty",
+    "Pebble grey": "Szary krzemienny",
+    "Dusty grey": "Szary pylisty",
+    "Agate grey": "Szary agatowy",
+    "Silver grey": "Srebrnoszary",
+    "Platinum grey": "Szary platynowy",
+    "Slate grey": "Szary łupkowy",
+    "Black grey": "Czarnoszary",
+    "Graphite black": "Czarny grafitowy",
+    "Jet black": "Czarny głęboki",
+    "Bordeaux": "Bordowy",
+    "Wine red": "Czerwień winna",
+    "Oxide red": "Czerwień tlenkowa",
+    "Red": "Czerwony",
+    "Pure orange": "Pomarańczowy czysty",
+    "Golden yellow": "Żółty złocisty",
+    "Gold": "Złoty",
+    "Silver": "Srebrny",
+    "Bronze": "Brąz",
+    "Champagne": "Szampański",
+    "Cappuccino": "Cappuccino",
+    "Chocolate": "Czekoladowy",
+    "Pearl": "Perłowy",
+    "Opal": "Opalowy",
+    "Blue": "Niebieski",
+    "Steel blue": "Błękit stalowy",
+    "Pastel blue": "Błękit pastelowy",
+    "Pigeon blue": "Błękit gołębi",
+    "Petrol": "Petrol",
+    "Pale green": "Zieleń blada",
+    "Reseda green": "Zieleń rezedowa",
+    "Gloss": "Połysk",
+    "Matte": "Mat",
+    "Satin": "Satyna",
+    "Metallic": "Metaliczny"
+  },
+  "megaMenu": {
+    "solutions": {
+      "railLabel": "Przeglądaj rozwiązania",
+      "allLabel": "Wszystkie rozwiązania",
+      "promoTitle": "Nowy sufit w jeden dzień",
+      "promoCta": "Poproś o wycenę",
+      "cats": [
+        {
+          "title": "Sufity",
+          "desc": "Poliester, PVC i bez łączeń",
+          "items": [
+            {
+              "title": "Sufit poliestrowy",
+              "sub": "Montaż na zimno · bardzo matowy"
+            },
+            {
+              "title": "Sufit z folii PVC",
+              "sub": "Do recyklingu · demontowalny"
+            },
+            {
+              "title": "Prefabrykowany moduł sufitowy",
+              "sub": "Zmontowany fabrycznie i szybki"
+            },
+            {
+              "title": "Wszystkie systemy sufitowe",
+              "sub": "Porównaj ofertę"
+            }
+          ]
+        },
+        {
+          "title": "Akustyka",
+          "desc": "Pochłanianie dźwięku",
+          "items": [
+            {
+              "title": "Akustyczny system napinany",
+              "sub": "Aż do klasy A"
+            },
+            {
+              "title": "Jak działa akustyka",
+              "sub": "Pochłanianie w pigułce"
+            },
+            {
+              "title": "Karta techniczna",
+              "sub": "Wartości αw i klasy"
+            }
+          ]
+        },
+        {
+          "title": "Światło i nadruk",
+          "desc": "LED, podświetlenie i nadruk",
+          "items": [
+            {
+              "title": "Sufit świetlny",
+              "sub": "Podświetlany, półprzezroczysty"
+            },
+            {
+              "title": "Gwiezdne niebo",
+              "sub": "Światłowodowe nocne niebo"
+            },
+            {
+              "title": "Nadruk na zamówienie",
+              "sub": "Dowolny obraz, po same krawędzie"
+            }
+          ]
+        },
+        {
+          "title": "Prefab",
+          "desc": "Aluminium, stal i drewno",
+          "items": [
+            {
+              "title": "Konstrukcje prefabrykowane",
+              "sub": "Belki, gzymsy i więcej"
+            },
+            {
+              "title": "Prefabrykowane elementy oświetleniowe",
+              "sub": "Aluminium + membrana"
+            },
+            {
+              "title": "Klapa rewizyjna",
+              "sub": "Dyskretny dostęp"
+            }
+          ]
+        },
+        {
+          "title": "Zastosowania",
+          "desc": "Pomieszczenie po pomieszczeniu",
+          "items": [
+            {
+              "title": "Salon i kino",
+              "sub": "Dźwięk i gwiezdne niebo"
+            },
+            {
+              "title": "Łazienka i kuchnia",
+              "sub": "Odporny na wilgoć"
+            },
+            {
+              "title": "Biuro i handel",
+              "sub": "Komfort akustyczny"
+            },
+            {
+              "title": "Zobacz wszystkie realizacje",
+              "sub": "Pełne portfolio"
+            }
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "railLabel": "Dokumentacja",
+      "allLabel": "Wszystkie specyfikacje i pliki",
+      "promoTitle": "Potrzebujesz pomocy?",
+      "promoBody": "Wyślij pytanie o remont — odpowiadamy w ciągu dwóch dni roboczych.",
+      "promoCta": "Zadaj pytanie",
+      "cats": [
+        {
+          "title": "Sufit napinany poliestrowy",
+          "desc": "Membrana montowana na zimno",
+          "items": [
+            {
+              "title": "Karta techniczna",
+              "sub": "Specyfikacje i pobieranie"
+            },
+            {
+              "title": "Kolory i wykończenia",
+              "sub": "Pełna oferta i RAL"
+            },
+            {
+              "title": "Bezpieczeństwo pożarowe",
+              "sub": "Reakcja na ogień i A2"
+            },
+            {
+              "title": "Instrukcja montażu",
+              "sub": "Montaż na zimno, krok po kroku"
+            },
+            {
+              "title": "Tekst specyfikacji",
+              "sub": "Do przetargów i dokumentacji"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Częste pytania"
+            }
+          ]
+        },
+        {
+          "title": "Sufit napinany PVC",
+          "desc": "Folia montowana na ciepło",
+          "items": [
+            {
+              "title": "Karta techniczna",
+              "sub": "Specyfikacje i pobieranie"
+            },
+            {
+              "title": "Kolory i wykończenia",
+              "sub": "Mat, satyna, połysk"
+            },
+            {
+              "title": "Bezpieczeństwo pożarowe",
+              "sub": "Reakcja na ogień"
+            },
+            {
+              "title": "Instrukcja montażu",
+              "sub": "Montaż na ciepło, krok po kroku"
+            },
+            {
+              "title": "Tekst specyfikacji",
+              "sub": "Do przetargów i dokumentacji"
+            },
+            {
+              "title": "FAQ",
+              "sub": "Częste pytania"
+            }
+          ]
+        }
+      ]
+    },
+    "comingSoon": "Wkrótce"
   }
 }
