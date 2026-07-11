@@ -2,12 +2,13 @@
 // plus an ItemList + BreadcrumbList JSON-LD. Each card links to its solution
 // page.
 import type { Metadata } from 'next';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl } from '@/lib/site-config';
 import { products } from '@/lib/products';
+import { localizeProduct, type CatalogEntry } from '@/lib/localize-product';
 import { productImage, pimg } from '@/lib/product-images';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
@@ -25,13 +26,18 @@ export function generateMetadata({ params }: { params: { locale: string } }): Pr
   return pageMetadata({ locale: params.locale, route: '/products', titleKey: 'productsTitle', descKey: 'productsDescription' });
 }
 
-export default function ProductsPage({ params }: { params: { locale: string } }) {
+export default async function ProductsPage({ params }: { params: { locale: string } }) {
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
+  const t = await getTranslations('productsPage');
+  const tc = await getTranslations('catalog');
+  const tp = await getTranslations('productPage');
 
   // Sub-pages (starry sky, inspection hatch) are flagged listed:false — they
   // have their own pages + mega-menu links but don't appear as overview cards.
-  const listed = products.filter((p) => p.listed !== false);
+  const listed = products
+    .filter((p) => p.listed !== false)
+    .map((p) => localizeProduct(p, tc.raw(p.key) as CatalogEntry));
 
   const itemList = {
     '@context': 'https://schema.org',
@@ -44,8 +50,8 @@ export default function ProductsPage({ params }: { params: { locale: string } })
     })),
   };
   const crumbs = breadcrumbSchema([
-    { name: 'Home', url: `${localeBase(locale)}` },
-    { name: 'Solutions', url: `${localeBase(locale)}/products` },
+    { name: tp('home'), url: `${localeBase(locale)}` },
+    { name: tp('solutions'), url: `${localeBase(locale)}/products` },
   ]);
 
   return (
@@ -55,15 +61,14 @@ export default function ProductsPage({ params }: { params: { locale: string } })
 
       {/* Hero */}
       <section className="container" style={{ padding: 'clamp(36px,5vw,72px) 0 clamp(28px,3vw,44px)' }}>
-        <Eyebrow num="01" label="Our solutions" />
+        <Eyebrow num="01" label={t('eyebrow')} />
         <h1 className="h1" style={{ margin: '0 0 clamp(20px,2vw,28px)' }}>
-          Two systems.
+          {t('title1')}
           <br />
-          <span className="accent">Endless</span> finishes.
+          <span className="accent">{t('title2accent')}</span> {t('title2rest')}
         </h1>
         <p className="lead" style={{ maxWidth: 560, margin: 0 }}>
-          Every STRETCH ceiling is a seamless membrane tensioned by hand — then tuned for acoustics,
-          light, print or prefab. Choose by span, mounting method and finish.
+          {t('lead')}
         </p>
       </section>
 
@@ -91,7 +96,7 @@ export default function ProductsPage({ params }: { params: { locale: string } })
                         padding: '7px 12px',
                       }}
                     >
-                      Coming soon
+                      {t('comingSoon')}
                     </span>
                   )}
                   <Placeholder
@@ -120,7 +125,7 @@ export default function ProductsPage({ params }: { params: { locale: string } })
                     ))}
                   </ul>
                   <span className="lnk" style={{ fontWeight: 700, fontSize: 13.5, letterSpacing: '.04em', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 9 }}>
-                    {soon ? 'Preview' : `Explore ${p.short}`} <span style={{ color: 'var(--red)' }}>→</span>
+                    {soon ? t('preview') : t('explore', { name: p.short })} <span style={{ color: 'var(--red)' }}>→</span>
                   </span>
                 </div>
               </Link>
@@ -131,15 +136,14 @@ export default function ProductsPage({ params }: { params: { locale: string } })
           <div className="prod-card prod-card--cta">
             <div>
               <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(24px,2.6vw,32px)', letterSpacing: '-.02em', textTransform: 'uppercase', margin: '0 0 14px', color: '#fff' }}>
-                Not sure which?
+                {t('notSure')}
               </h2>
               <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--on-dark-soft)', margin: '0 0 24px' }}>
-                Tell us about your room and we will recommend the right system — free and without
-                obligation.
+                {t('notSureBody')}
               </p>
             </div>
             <ModalButton type="quote" source="products_grid" trackQuote className="btn btn--primary" style={{ alignSelf: 'flex-start' }}>
-              Request a free quote <ArrowRight size={16} />
+              {t('quote')} <ArrowRight size={16} />
             </ModalButton>
           </div>
         </div>
