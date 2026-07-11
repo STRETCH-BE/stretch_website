@@ -1,6 +1,6 @@
 ## 2026-07-09 — Ceiling designer in the portal (pro area)
 
-**What was built**
+**What was built** 
 
 - **`/portal/designer`** — the ABC Floorplan ceiling designer (measure → draw → seams → quote → order) now lives inside the client portal, next to the pricelist. Nav link + dashboard tile ("live") added; translated in all 12 locales.
 - **Auth-gated delivery:** the designer is a single self-contained HTML app embedded base64 in `src/lib/portal/designer-html.ts` and served ONLY through `GET /api/portal/designer` after `getPortalSession()` passes (anonymous → 307 to `/portal/login`). It is deliberately NOT in `/public` because the app contains the Stretch foil price matrix and service rates. Response headers: `private, no-store`, `X-Frame-Options: SAMEORIGIN`.
