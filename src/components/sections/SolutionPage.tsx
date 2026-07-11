@@ -8,7 +8,6 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton, ModalTextLink } from '@/components/ui/ModalButton';
 import { getProduct, type Product } from '@/lib/products';
-import { localizeProduct, type CatalogEntry } from '@/lib/localize-product';
 import { productImage, pimg } from '@/lib/product-images';
 import ColourChart from '@/components/sections/ColourChart';
 
@@ -39,18 +38,12 @@ function swatch(name: string): { background: string; border: string } {
   return { background: bg, border: lightTones.includes(bg) ? '1px solid var(--border-input)' : '1px solid rgba(0,0,0,.06)' };
 }
 
-export default function SolutionPage({ product: baseProduct }: { product: Product }) {
+export default function SolutionPage({ product }: { product: Product }) {
   const t = useTranslations('productPage');
-  const tc = useTranslations('catalog');
-  const tCol = useTranslations('colourNames');
-  const product = localizeProduct(baseProduct, tc.raw(baseProduct.key) as CatalogEntry);
   const imgs = productImage(product.slug);
   const related = product.related
     .map((slug) => getProduct(slug))
-    .filter((p): p is Product => Boolean(p))
-    .map((p) => localizeProduct(p, tc.raw(p.key) as CatalogEntry));
-  // Colour names double as swatch-lookup keys, so translate only at render time.
-  const colourLabel = (name: string) => (tCol.has(name) ? tCol(name) : name);
+    .filter((p): p is Product => Boolean(p));
 
   return (
     <article>
@@ -202,14 +195,7 @@ export default function SolutionPage({ product: baseProduct }: { product: Produc
           </div>
         </div>
         {product.colourChart ? (
-          <ColourChart
-            entries={product.colourChart.map((c) => ({
-              ...c,
-              name: colourLabel(c.name),
-              finish: c.finish ? colourLabel(c.finish) : c.finish,
-            }))}
-            note={product.colourChartNote}
-          />
+          <ColourChart entries={product.colourChart} note={product.colourChartNote} />
         ) : (
           <div className="sp-colours" style={{ display: 'grid', gridTemplateColumns: 'repeat(6,1fr)', gap: 12 }}>
             {product.colours.map((col) => {
@@ -218,10 +204,10 @@ export default function SolutionPage({ product: baseProduct }: { product: Produc
                 <div key={col}>
                   <div
                     role="img"
-                    aria-label={colourLabel(col)}
+                    aria-label={`${col} finish`}
                     style={{ aspectRatio: '1/1', background: sw.background, border: sw.border }}
                   />
-                  <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 10 }}>{colourLabel(col)}</div>
+                  <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 10 }}>{col}</div>
                 </div>
               );
             })}

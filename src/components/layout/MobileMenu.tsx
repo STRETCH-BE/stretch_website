@@ -13,7 +13,6 @@ import { analytics } from '@/lib/analytics';
 
 export default function MobileMenu() {
   const t = useTranslations('common');
-  const tc = useTranslations('catalog');
   const pathname = usePathname();
   const { open: openModal } = useLeadModal();
   const [open, setOpen] = useState(false);
@@ -142,7 +141,7 @@ export default function MobileMenu() {
                 href={`/products/${p.slug}`}
                 style={{ padding: '9px 0', fontSize: 15, fontWeight: 600, color: 'var(--text-muted)' }}
               >
-                {tc(`${p.key}.name`)}
+                {p.name}
               </Link>
             ))}
 

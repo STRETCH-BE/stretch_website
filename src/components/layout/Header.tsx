@@ -11,15 +11,13 @@ import { contact } from '@/lib/site-config';
 import { ModalButton } from '@/components/ui/ModalButton';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenu from './MobileMenu';
-import MegaMenu, { useSolutionsMenu, useTechnicalMenu } from './MegaMenu';
+import MegaMenu, { solutionsMenu, technicalMenu } from './MegaMenu';
 import { analytics } from '@/lib/analytics';
 
 type OpenMenu = 'solutions' | 'technical' | null;
 
 export default function Header() {
   const t = useTranslations('common');
-  const solutionsMenu = useSolutionsMenu();
-  const technicalMenu = useTechnicalMenu();
   const pathname = usePathname();
   const [open, setOpen] = useState<OpenMenu>(null);
 

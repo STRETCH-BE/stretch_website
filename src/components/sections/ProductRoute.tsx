@@ -3,13 +3,11 @@
 // and centralises metadata + JSON-LD (Product, BreadcrumbList, FAQPage).
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { useTranslations } from 'next-intl';
-import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
 import { localeBase, buildAlternates, buildOgLocales } from '@/lib/seo';
 import { getProduct } from '@/lib/products';
-import { localizeProduct, type CatalogEntry } from '@/lib/localize-product';
 import { productSchema, breadcrumbSchema, faqPageSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import SolutionPage from '@/components/sections/SolutionPage';
@@ -19,14 +17,12 @@ import SolutionPage from '@/components/sections/SolutionPage';
 import { prefabPages } from '@/lib/prefab';
 import { prefabMetadata, PrefabView } from '@/components/sections/PrefabRoute';
 
-export async function productMetadata(slug: string, localeParam: string): Promise<Metadata> {
+export function productMetadata(slug: string, localeParam: string): Metadata {
   if (prefabPages[slug]) return prefabMetadata(slug, localeParam);
   if (!isValidLocale(localeParam)) return {};
   const locale = localeParam as Locale;
-  const base = getProduct(slug);
-  if (!base) return {};
-  const tc = await getTranslations({ locale, namespace: 'catalog' });
-  const product = localizeProduct(base, tc.raw(base.key) as CatalogEntry);
+  const product = getProduct(slug);
+  if (!product) return {};
 
   const route = `/products/${slug}`;
   const { ogLocale, alternate } = buildOgLocales(locale);
@@ -57,24 +53,14 @@ export async function productMetadata(slug: string, localeParam: string): Promis
 
 export function ProductView({ slug, locale: localeParam }: { slug: string; locale: string }) {
   if (prefabPages[slug]) return <PrefabView slug={slug} locale={localeParam} />;
-  const base = getProduct(slug);
-  if (!base) notFound();
+  const product = getProduct(slug);
+  if (!product) notFound();
   if (isValidLocale(localeParam)) setRequestLocale(localeParam as Locale);
   const locale = (isValidLocale(localeParam) ? localeParam : 'en') as Locale;
 
-  return <ProductBody slug={slug} locale={locale} />;
-}
-
-// Split so useTranslations runs after setRequestLocale (next-intl RSC pattern).
-function ProductBody({ slug, locale }: { slug: string; locale: Locale }) {
-  const tc = useTranslations('catalog');
-  const tp = useTranslations('productPage');
-  const base = getProduct(slug)!;
-  const product = localizeProduct(base, tc.raw(base.key) as CatalogEntry);
-
   const crumbs = breadcrumbSchema([
-    { name: tp('home'), url: `${localeBase(locale)}` },
-    { name: tp('solutions'), url: `${localeBase(locale)}/products` },
+    { name: 'Home', url: `${localeBase(locale)}` },
+    { name: 'Solutions', url: `${localeBase(locale)}/products` },
     { name: product.short, url: `${localeBase(locale)}/products/${slug}` },
   ]);
 
@@ -83,7 +69,7 @@ function ProductBody({ slug, locale }: { slug: string; locale: Locale }) {
       <JsonLd data={productSchema(product, locale)} />
       <JsonLd data={crumbs} />
       <JsonLd data={faqPageSchema(product.faqs)} />
-      <SolutionPage product={base} />
+      <SolutionPage product={product} />
     </>
   );
 }
