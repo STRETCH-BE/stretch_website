@@ -1472,5 +1472,906 @@
       ]
     },
     "comingSoon": "Kommer snart"
+  },
+  "modals": {
+    "quote": {
+      "title": "Få et gratis tilbud",
+      "subtitle": "Fortæl os om dit projekt, så vender vi tilbage med en skræddersyet pris.",
+      "submitLabel": "Send forespørgsel",
+      "sentTitle": "Forespørgsel modtaget",
+      "sentMsg": "Tak — en specialist svarer inden for to hverdage.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og efternavn"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "rooms": {
+          "label": "Rum",
+          "options": [
+            "1 rum",
+            "2 rum",
+            "3 rum",
+            "4 rum",
+            "Flere end 4"
+          ]
+        },
+        "timeline": {
+          "label": "Tidshorisont",
+          "options": [
+            "Hurtigst muligt",
+            "Inden for 1–3 måneder",
+            "Inden for 4–12 måneder",
+            "Jeg undersøger bare"
+          ]
+        },
+        "message": {
+          "label": "Dit projekt",
+          "placeholder": "Areal, beliggenhed, alt hvad der kan hjælpe..."
+        }
+      }
+    },
+    "survey": {
+      "title": "Book en opmåling",
+      "subtitle": "Vi måler op og rådgiver på stedet — gratis og uforpligtende.",
+      "submitLabel": "Bestil opmåling",
+      "sentTitle": "Opmåling bestilt",
+      "sentMsg": "Tak — vi kontakter dig for at aftale et passende tidspunkt.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og efternavn"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "address": {
+          "label": "Adresse",
+          "placeholder": "Gade, by"
+        },
+        "preferredTime": {
+          "label": "Foretrukket tidspunkt",
+          "options": [
+            "Formiddag",
+            "Eftermiddag",
+            "Fleksibel"
+          ]
+        },
+        "rooms": {
+          "label": "Rum",
+          "options": [
+            "1 rum",
+            "2 rum",
+            "3 rum",
+            "4+ rum"
+          ]
+        }
+      }
+    },
+    "training": {
+      "title": "Book dit kursus",
+      "subtitle": "Praktisk certificering på vores belgiske hovedkontor — udfyld dine oplysninger, så bekræfter vi.",
+      "submitLabel": "Reservér min plads",
+      "sentTitle": "Plads reserveret",
+      "sentMsg": "Tak — vi bekræfter din plads og sender al praktisk info.",
+      "fields": {
+        "fullName": {
+          "label": "Fulde navn",
+          "placeholder": "For- og efternavn"
+        },
+        "company": {
+          "label": "Virksomhed",
+          "placeholder": "Din virksomhed"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Foretrukken dato",
+          "options": [
+            "15.–16. sep. 2026",
+            "06.–08. okt. 2026",
+            "17.–18. nov. 2026",
+            "Skræddersyet session hos jer"
+          ]
+        },
+        "attendees": {
+          "label": "Deltagere",
+          "options": [
+            "1 person",
+            "2 personer",
+            "3 personer",
+            "4+ personer"
+          ]
+        }
+      }
+    },
+    "dates": {
+      "title": "Kommende kursusdatoer",
+      "subtitle": "Vælg en dato og reservér din plads — små hold, først til mølle.",
+      "submitLabel": "Reservér min plads",
+      "sentTitle": "Plads reserveret",
+      "sentMsg": "Tak — vi bekræfter din plads og sender al praktisk info.",
+      "fields": {
+        "fullName": {
+          "label": "Fulde navn",
+          "placeholder": "For- og efternavn"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Foretrukken dato",
+          "options": [
+            "15.–16. sep. 2026",
+            "06.–08. okt. 2026",
+            "17.–18. nov. 2026",
+            "Skræddersyet session hos jer"
+          ]
+        }
+      }
+    },
+    "partner": {
+      "title": "Ansøg om at blive partner",
+      "subtitle": "Fortæl os om din virksomhed — vi gennemgår hver ansøgning personligt.",
+      "submitLabel": "Send ansøgning",
+      "sentTitle": "Ansøgning modtaget",
+      "sentMsg": "Tak — vores partnerteam gennemgår den og vender tilbage inden for to hverdage.",
+      "fields": {
+        "company": {
+          "label": "Virksomhed",
+          "placeholder": "Din virksomhed"
+        },
+        "contactName": {
+          "label": "Kontaktperson",
+          "placeholder": "For- og efternavn"
+        },
+        "partnerType": {
+          "label": "Jeg vil gerne være",
+          "options": [
+            "Forhandler — jeg sælger, I monterer",
+            "Forhandler med montage — jeg sælger og monterer selv",
+            "Ved det ikke endnu"
+          ]
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "country": {
+          "label": "Land",
+          "placeholder": "Belgien"
+        },
+        "activity": {
+          "label": "Aktivitet",
+          "options": [
+            "Byggeri & renovering",
+            "Indvendig indretning",
+            "Gips / puds",
+            "El / belysning",
+            "Andet"
+          ]
+        },
+        "notes": {
+          "label": "Om din virksomhed",
+          "placeholder": "Teamstørrelse, regioner I dækker, nuværende aktivitet..."
+        }
+      }
+    },
+    "call": {
+      "title": "Book et opkald",
+      "subtitle": "Skriv dit nummer og et godt tidspunkt — så ringer vi dig op.",
+      "submitLabel": "Bestil opkald",
+      "sentTitle": "Opkald bestilt",
+      "sentMsg": "Tak — vi ringer på det ønskede tidspunkt.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og efternavn"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "bestTime": {
+          "label": "Bedste tidspunkt",
+          "options": [
+            "Formiddag",
+            "Eftermiddag",
+            "Tidlig aften"
+          ]
+        },
+        "topic": {
+          "label": "Emne",
+          "options": [
+            "Et tilbud",
+            "Partnerskab",
+            "Kursus",
+            "Teknisk spørgsmål",
+            "Andet"
+          ]
+        }
+      }
+    },
+    "samples": {
+      "title": "Bestil farveprøver",
+      "subtitle": "Bestil fysiske RAL- / farveprøver — gratis for professionelle partnere.",
+      "submitLabel": "Bestil prøver",
+      "sentTitle": "Prøver bestilt",
+      "sentMsg": "Tak — vi sender dine prøver og følger op inden for to hverdage.",
+      "fields": {
+        "company": {
+          "label": "Virksomhed",
+          "placeholder": "Din virksomhed"
+        },
+        "contactName": {
+          "label": "Kontaktperson",
+          "placeholder": "For- og efternavn"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "shippingAddress": {
+          "label": "Leveringsadresse",
+          "placeholder": "Gade, postnummer, by"
+        },
+        "productLine": {
+          "label": "Produktlinje",
+          "options": [
+            "Polyester",
+            "PVC-folie",
+            "Akustik",
+            "Ved det ikke endnu"
+          ]
+        },
+        "colours": {
+          "label": "Ønskede farver",
+          "placeholder": "f.eks. hvid, antracit, valgfri RAL"
+        },
+        "notes": {
+          "label": "Bemærkninger",
+          "placeholder": "Projekt, mængder, alt hvad der kan hjælpe..."
+        }
+      }
+    },
+    "datasheet": {
+      "title": "Download databladet",
+      "subtitle": "Indtast dine oplysninger, så starter downloaden med det samme. Vi bruger dem kun til at følge op på din henvendelse.",
+      "submitLabel": "Hent databladet",
+      "sentTitle": "Her er dit datablad",
+      "sentMsg": "Downloaden burde starte automatisk — hvis ikke, så brug knappen nedenfor.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og efternavn"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        }
+      }
+    },
+    "trainingDates": [
+      "15.–16. sep. 2026",
+      "06.–08. okt. 2026",
+      "17.–18. nov. 2026",
+      "Skræddersyet session hos jer"
+    ],
+    "trainingDateNotes": [
+      "Beveren-Waas · 4 pladser",
+      "Beveren-Waas · 6 pladser",
+      "Beveren-Waas · 8 pladser"
+    ],
+    "close": "Luk",
+    "downloadDatasheet": "Download datablad",
+    "select": "Vælg…"
+  },
+  "faqPage": {
+    "items": [
+      {
+        "q": "Hvad er et spændloft?",
+        "a": "Et spændloft er en tynd, sømløs membran — polyester eller PVC-folie — der spændes ud over rummet og klikkes fast i en smal kantprofil. Det ligner et perfekt glat, malet loft, men monteres uden puds, slibning og maling og skjuler alt, hvad der sidder ovenover."
+      },
+      {
+        "q": "Hvor lang tid tager monteringen?",
+        "a": "De fleste rum er færdige på en enkelt dag. Et hold på to personer monterer op til cirka 50 m² om dagen. Koldmonteret polyester kræver ingen tørretid, så rummet kan bruges med det samme."
+      },
+      {
+        "q": "Sviner det? Skal jeg flytte ud imens?",
+        "a": "Nej. Der er ingen nedrivning, støv, slibning eller maling, så monteringen kan foregå i et møbleret, beboet rum. Det eksisterende loft kan som regel blive siddende ovenover."
+      },
+      {
+        "q": "Hvor længe holder et spændloft?",
+        "a": "Vores systemer leveres med 25 års garanti. Overfladen er vaskbar og fugtbestandig og vil hverken revne, skalle af, gulne eller skulle males om."
+      },
+      {
+        "q": "Kan det forbedre akustikken?",
+        "a": "Ja. En mikroperforeret version med absorberende bagside når op til klasse A lydabsorption og ser fuldstændig ud som standardoverfladen — efterklang og støj reduceres målbart."
+      },
+      {
+        "q": "Hvor bredt et loft kan I montere uden samling?",
+        "a": "Op til 5.7 m sømløst med PVC-folie og op til 5.15 m med polyester. Større spænd dækkes med en næsten usynlig svejsesamling eller en bevidst placeret profillinje."
+      },
+      {
+        "q": "Kan jeg få belysning, bagbelysning eller et printet design?",
+        "a": "Ja. Translucente folier giver et jævnt, dæmpbart bagbelyst lys uden synlige lyspunkter, LED-lyslinjer kan integreres i fladen, og ethvert motiv — også en stjernehimmel — kan printes fra kant til kant."
+      },
+      {
+        "q": "Hvad koster et spændloft?",
+        "a": "Prisen afhænger af projektet — af arealet, systemet, overfladen og eventuelle lys- eller akustikløsninger. Få et gratis og uforpligtende tilbud, så svarer en specialist inden for to hverdage."
+      },
+      {
+        "q": "Samarbejder I med entreprenører og forhandlere?",
+        "a": "Ja. STRETCH er B2B-drevet: Vi uddanner montører på vores belgiske hovedkontor, leverer membraner efter mål via en B2B-portal og henviser lokale kunder til certificerede partnere. Se siderne Partnere og Montøruddannelse."
+      }
+    ],
+    "eyebrow": "FAQ",
+    "titleA": "Gode",
+    "titleB": "spørgsmål",
+    "lead": "Alt det, folk typisk spørger om spændlofter — montering, levetid, akustik, spænd og pris. Stadig i tvivl? Spørg os bare.",
+    "asideKicker": "Har du stadig et spørgsmål?",
+    "asideTitle": "Tal med en spændloft-specialist.",
+    "asideBody": "Fortæl os om dit rum, så svarer vi — gratis og uforpligtende.",
+    "asideCta": "Få et gratis tilbud"
+  },
+  "catalogFaqs": {
+    "polyester": [
+      {
+        "q": "Hvor lang tid tager det at montere et spændloft i polyester?",
+        "a": "De fleste rum er færdige på en enkelt dag. Et hold på to personer monterer op til cirka 50 m² om dagen, og fordi membranen spændes koldt, er der ingen tørretid, før rummet kan bruges igen."
+      },
+      {
+        "q": "Er den kolde montering virkelig støvfri?",
+        "a": "Ja. Det eksisterende loft rives ikke ned, og der hverken slibes eller males. Membranen klikkes fast i en smal kantprofil, så monteringen er ren nok til at foregå i møblerede, beboede rum."
+      },
+      {
+        "q": "Kan et polyesterloft forbedre rummets akustik?",
+        "a": "En mikroperforeret version med en bagvedliggende højdensitetsabsorbent når op til klasse A lydabsorption. Den ser fuldstændig ud som standardoverfladen, men reducerer efterklang og støj målbart."
+      },
+      {
+        "q": "Hvordan rengør og vedligeholder jeg det?",
+        "a": "Tør det af med en fugtig klud. Overfladen er vaskbar og fugtbestandig, revner, skaller eller gulner ikke og skal aldrig males om i hele garantiperioden på 25 år."
+      }
+    ],
+    "pvc": [
+      {
+        "q": "Hvorfor er et PVC-spændloft ”100 % genanvendeligt”?",
+        "a": "Folien kan genanvendes til råmateriale, når den er udtjent, og den kan tages ned undervejs — du kan klikke den af for at komme til installationerne ovenover og spænde den op igen på få minutter i stedet for at rive et gipsloft ned og udskifte det."
+      },
+      {
+        "q": "Hvor stort et spænd kan et PVC-loft dække uden samling?",
+        "a": "Op til 6.4 m sømløst — det bredeste i vores sortiment. Større rum dækkes ved at svejse baner sammen med en næsten usynlig samling eller ved at indføre en bevidst placeret profillinje."
+      },
+      {
+        "q": "Egner PVC-folie sig til badeværelser og vådrum?",
+        "a": "Ja. Den er fuldt vaskbar og fugtbestandig, hvilket gør den til et populært valg i badeværelser, svømmehaller og wellnessområder, hvor et malet loft ville boble op eller få skjolder."
+      },
+      {
+        "q": "Kan den bagbelyses eller printes?",
+        "a": "Translucente folier spreder et LED-felt jævnt uden synlige lyspunkter, og ethvert fotografi, mønster eller stjernehimmel-design kan printes fra kant til kant. Se systemet Lysloft for hele sortimentet."
+      }
+    ],
+    "acoustic": [
+      {
+        "q": "Hvor meget dæmper det akustiske system egentlig støjen?",
+        "a": "Med højdensitetsabsorbenten bagved når det op til klasse A absorption (den højeste klasse), målt som αw-værdier. I praksis forvandler det et hårdt rum med ekko til et roligt, behageligt rum — uden synlige akustikpaneler."
+      },
+      {
+        "q": "Ser den akustiske overflade anderledes ud end et almindeligt loft?",
+        "a": "Nej. Absorptionen sker bag en mikroperforeret membran, så loftet fremstår som én fejlfri, sømløs flade — behandlingen er usynlig."
+      },
+      {
+        "q": "Kan højttalere skjules bag loftet?",
+        "a": "Ja. Højttalere kan monteres helt bag den spændte folie, så lyden er ren og uden synlig kilde — en populær løsning i hjemmebiografer og studier."
+      },
+      {
+        "q": "Hvor gør det akustiske system størst gavn?",
+        "a": "Alle steder, hvor efterklang er et problem: kontorer, restauranter, lydstudier, skoler, sundhedsbyggeri og hjemmebiografer. Det kan også udvides til frithængende øer og vægpaneler."
+      }
+    ],
+    "light": [
+      {
+        "q": "Kan man se LED'erne som lyspunkter i et bagbelyst loft?",
+        "a": "Nej. Den translucente folie ligger over et LED-felt og spreder lyset jævnt over hele fladen, så du ser et blødt, ensartet skær i stedet for enkelte punkter."
+      },
+      {
+        "q": "Hvad kan der printes på loftet?",
+        "a": "Stort set ethvert billede, mønster eller enhver tekstur i høj opløsning — printet fra kant til kant uden synlig samling. Et populært valg er en stjernehimmel i fiberoptik til biografer og soveværelser."
+      },
+      {
+        "q": "Kan lyset dæmpes eller skifte farve?",
+        "a": "Ja. Bagbelyste lofter kan dæmpes, og RGB-LED-løsninger lader dig skifte farve og stemning. LED-lyslinjer kan desuden forsænkes i membranen for en skarp arkitektonisk effekt."
+      }
+    ],
+    "prefab": [
+      {
+        "q": "Hvad er et præfabrikeret spændloftsmodul?",
+        "a": "Det er et komplet loftsmodul — ramme og spændt membran — samlet og kvalitetskontrolleret på vores belgiske værksted og leveret klar til at klikke ind i en kantramme på byggepladsen."
+      },
+      {
+        "q": "Hvorfor vælge præfab frem for montering på stedet?",
+        "a": "Præfabrikerede moduler passer til modulbyggeri og ensartede rum som hotelbadeværelser og badekabiner: Det meste af arbejdet sker væk fra byggepladsen, så monteringen kræver et minimum af fag og tid."
+      },
+      {
+        "q": "Hvordan kommer man til installationerne over et præfabrikeret loft?",
+        "a": "Hvert modul kan få en diskret, integreret inspektionslem, så rør og installationer ovenover forbliver tilgængelige uden at bryde den rene loftslinje."
+      }
+    ],
+    "starry": [
+      {
+        "q": "Hvor mange stjerner kan et stjernehimmel-loft have?",
+        "a": "Fra omkring 150 punkter for en diskret effekt til over tusind for en tæt, dramatisk himmel. Tætheden vælges efter rummets størrelse og den stemning, du ønsker."
+      },
+      {
+        "q": "Afgiver fiberoptik-stjernerne varme?",
+        "a": "Nej. Alle fibrene drives af én enkelt fjernplaceret LED-lyskilde, så selve punkterne forbliver helt kolde — kun lyset bevæger sig gennem fiberen."
+      },
+      {
+        "q": "Kan stjernerne blinke eller skifte farve?",
+        "a": "Ja. Et blinkehjul (tilvalg) får stjernerne til at glimte, RGB-lyskilder lader dig skifte farve, og der kan tilføjes stjerneskudseffekter for bevægelse. Det hele kan dæmpes."
+      }
+    ],
+    "hatch": [
+      {
+        "q": "Kan man komme til installationerne bag et spændloft?",
+        "a": "Ja — en integreret inspektionslem giver diskret adgang, der kan åbnes igen og igen, til ventiler, samledåser og tilslutninger over membranen, så loftet aldrig skal skæres op eller udskiftes for at nå dem."
+      },
+      {
+        "q": "Kan man se lemmen i loftet?",
+        "a": "Næsten ikke. Rammen er bygget ind i kantdetaljen og beklædt med samme membran, så den går i ét med fladen og først bemærkes, når man leder efter den."
+      },
+      {
+        "q": "Kan en lem tilføjes i et eksisterende spændloft?",
+        "a": "I de fleste tilfælde ja. Lemme kan eftermonteres i et eksisterende loft og dimensioneres og placeres efter den installation, der skal være adgang til bagved."
+      }
+    ],
+    "print": [
+      {
+        "q": "Hvilken billedkvalitet skal jeg bruge til et printet loft?",
+        "a": "En fil i høj opløsning giver det bedste resultat. Vi gennemgår og farvestyrer dit materiale, skalerer det til loftet og laver en prøve inden print, så det færdige resultat lever op til din forventning."
+      },
+      {
+        "q": "Kan et printet loft bagbelyses?",
+        "a": "Ja. Printet på en translucent folie over et LED-felt bliver billedet jævnt bagbelyst uden synlige lyspunkter — ideelt til himmelmotiver og markante kunstværker."
+      },
+      {
+        "q": "Er der en synlig samling på store print?",
+        "a": "Nej. Billedet printes fra kant til kant på én sømløs membran i op til 5.7 m bredde, så der løber ingen banelinjer hen over dit motiv."
+      }
+    ]
+  },
+  "applications": {
+    "living-cinema": {
+      "name": "Stuer & hjemmebiograf",
+      "shortName": "Stue & biograf",
+      "eyebrow": "Stue & biograf",
+      "metaDescription": "Spændlofter til stuer og hjemmebiografer — sømløse overflader, integreret belysning, stjernehimle i fiberoptik og bedre akustik, monteret på én dag.",
+      "intro": "Et fejlfrit loft sætter tonen i et opholdsrum. STRETCH giver dig en perfekt glat, sømløs overflade — med skjult belysning, en fiberoptisk stjernehimmel til biografen og akustisk komfort, alt sammen koldmonteret på en enkelt dag.",
+      "benefits": [
+        {
+          "title": "En sømløs, perfekt finish",
+          "body": "Ingen revner, ingen samlinger og aldrig mere maling — en glat membran spændt fra væg til væg, i dyb mat eller enhver farve, du ønsker."
+        },
+        {
+          "title": "Stemning som i biografen",
+          "body": "Tilføj en fiberoptisk stjernehimmel, integrerede LED-linjer og dæmpbart baglys, og skab den perfekte stemning til filmaftener."
+        },
+        {
+          "title": "Roligere, mere stille rum",
+          "body": "En akustisk membran tæmmer ekkoet i åbne opholdsrum, så samtale og lyd føles varmere og klarere."
+        }
+      ]
+    },
+    "bathroom-kitchen": {
+      "name": "Badeværelser & køkkener",
+      "shortName": "Bad & køkken",
+      "eyebrow": "Bad & køkken",
+      "metaDescription": "Fugtbestandige spændlofter til badeværelser og køkkener — vandtætte, skimmelresistente og lette at aftørre, med integreret belysning, monteret på én dag.",
+      "intro": "Badeværelser og køkkener er hårde ved lofter. En STRETCH-membran er vandtæt, skimmelresistent og vaskbar — den skjuler rør og kanaler bag en fejlfri overflade, med spots og udsugning integreret pænt.",
+      "benefits": [
+        {
+          "title": "Fugt- og vandbestandig",
+          "body": "Membranen tager sig ikke af damp og stænk og vil aldrig skalle af, plette eller mugne som et malet eller pudset loft."
+        },
+        {
+          "title": "Vaskbar overflade",
+          "body": "En hurtig aftørring holder det som nyt — ideelt over brusere, badekar og madlavningszoner."
+        },
+        {
+          "title": "Pænt integrerede installationer",
+          "body": "Spots, højttalere, udsugning og inspektionslemme integreres alle i overfladen og skjuler rørene ovenover."
+        }
+      ]
+    },
+    "office-retail": {
+      "name": "Kontorer & detailhandel",
+      "shortName": "Kontor & retail",
+      "eyebrow": "Kontor & retail",
+      "metaDescription": "Spændlofter til kontorer, detail og hoteller/restauranter — akustik op til klasse A, printede lofter med dit brand og integreret belysning, hurtigt monteret uden gener.",
+      "intro": "Erhvervslokaler skal se skarpe ud og lyde rigtigt. STRETCH leverer akustisk komfort op til klasse A, printede lofter med dit brand og integreret belysning — koldmonteret og hurtigt, med minimal gene for et lokale i drift.",
+      "benefits": [
+        {
+          "title": "Akustisk komfort op til klasse A",
+          "body": "Et mikroperforeret akustikloft dæmper efterklangen i åbne kontorer, mødelokaler og restauranter, så tale bliver tydeligere."
+        },
+        {
+          "title": "Printede lofter med dit brand",
+          "body": "Print ethvert billede, mønster eller brandmotiv fra kant til kant — et markant blikfang til detail, showrooms og restaurationsbranchen."
+        },
+        {
+          "title": "Hurtig montering uden gener",
+          "body": "Kold montering betyder intet støv og intet rod, og de fleste rum er færdige på en enkelt dag — ideelt til lokaler i brug."
+        }
+      ]
+    }
+  },
+  "appPage": {
+    "crumbApplications": "Anvendelser",
+    "quoteCta": "Få et gratis tilbud",
+    "seeProjects": "Se projekter",
+    "recommended": "Anbefalede løsninger",
+    "selectedWork": "Udvalgte projekter",
+    "explore": "Udforsk",
+    "ctaTitle": "Planlægger du et projekt med {name}?",
+    "ctaBody": "Fortæl os om dit rum, så anbefaler vi det rette system — gratis og uforpligtende."
+  },
+  "projectCards": {
+    "cats": {
+      "Acoustic": "Akustik",
+      "Office": "Kontor",
+      "Commercial": "Erhverv",
+      "Retail": "Detail",
+      "Bathroom": "Badeværelse",
+      "Light & Print": "Lys & print",
+      "Living room": "Stue",
+      "Home cinema": "Hjemmebiograf"
+    },
+    "metas": {
+      "da-tweekaz-studio": "Holland · Indspilningsstudie",
+      "mark-with-a-k": "Belgien · Lydstudie",
+      "notary-ampe-anthony": "Kruibeke · Akustisk kontor",
+      "bnp-paribas-fortis": "Bruxelles · Bankhovedsæde",
+      "van-der-valk-beveren": "Beveren · Hotellets eventsal",
+      "johnson-and-johnson": "Limerick, IE · Farma R&D-anlæg",
+      "polette-eyewear": "Antwerpen · Retail-konceptbutik",
+      "citizenm-hotel": "USA & Europa · Præfabrikerede badmoduler",
+      "london-chapel": "London, UK · Bagbelyst loft",
+      "private-villa-knokke": "Knokke · Åbent opholdsrum",
+      "home-cinema-ghent": "Gent · Stjernehimmel + akustik",
+      "city-penthouse-antwerp": "Antwerpen · Stue",
+      "wellness-spa-bruges": "Brugge · Spa-badeværelse",
+      "rue-perree-paris": "Paris · Bagbelyst galleriloft"
+    }
+  },
+  "technical": {
+    "topics": [
+      {
+        "label": "Datablad",
+        "sub": "Specifikationer & download"
+      },
+      {
+        "label": "Farver & overflader",
+        "sub": "Fuldt sortiment"
+      },
+      {
+        "label": "Brandsikkerhed",
+        "sub": "Reaktion på brand & A2"
+      },
+      {
+        "label": "Monteringsguide",
+        "sub": "Trin for trin"
+      },
+      {
+        "label": "Udbudstekst",
+        "sub": "Til udbud"
+      },
+      {
+        "label": "FAQ",
+        "sub": "Almindelige spørgsmål"
+      }
+    ],
+    "polyester": {
+      "label": "Spændloft i polyester",
+      "short": "Polyester",
+      "blurb": "Koldmonteret polyestermembran — et meget mat, sømløst loft, der spændes op med håndkraft.",
+      "fireSafety": {
+        "intro": "Polyestermembranen er klassificeret B-s1,d0 efter EN 13501-1 — brandhæmmende, med meget begrænset røgudvikling og uden brændende dråber. Hvor de strengeste brandkrav gælder, fås en ubrændbar A2-s1,d0-version.",
+        "rows": [
+          {
+            "k": "Standardklassifikation",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Ubrændbar variant",
+            "v": "A2-s1,d0"
+          },
+          {
+            "k": "Røgudvikling",
+            "v": "s1 — meget begrænset"
+          },
+          {
+            "k": "Brændende dråber",
+            "v": "d0 — ingen"
+          },
+          {
+            "k": "Prøvningsstandard",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Klassifikationen B-s1,d0 betyder, at membranen er brandhæmmende (B), udvikler meget lidt røg (s1) og ikke afgiver brændende dråber (d0) — den kombination, de fleste offentlige og kommercielle interiører kræver.",
+          "Til flugtveje, højhuse, hospitaler og andre projekter, hvor der kræves en ubrændbar beklædning, opfylder A2-s1,d0-versionen det skærpede krav — med samme sømløse, meget matte udseende.",
+          "Certifikater for reaktion på brand og ydeevnedeklarationer kan rekvireres til din branddokumentation."
+        ]
+      },
+      "installation": {
+        "intro": "Polyester spændes op koldt — ingen varmekanoner, ingen tørretid, ingen dampe. Et hold på to personer er typisk færdigt med et rum på en enkelt dag, selv i møblerede rum, der er i brug.",
+        "steps": [
+          {
+            "title": "Opmåling",
+            "body": "Rummet lasermåles, og membranen skæres og svejses til ét sømløst panel på op til 5.15 m i bredden, tilpasset rummets præcise form."
+          },
+          {
+            "title": "Montér kantprofilen",
+            "body": "En slank klikprofil fastgøres på væg eller loft i den valgte højde og følger lige stræk, kurver og hjørner."
+          },
+          {
+            "title": "Spænd op koldt med håndkraft",
+            "body": "Den kolde membran klikkes fast i profilen og spændes op med håndkraft hen over rummet — tromlestram til en helt plan overflade, uden brug af varme."
+          },
+          {
+            "title": "Finish & detaljer",
+            "body": "Kanter, hjørner og eventuel integreret belysning eller inspektionslemme færdiggøres. Der er ingen tørretid, så rummet er rent og kan bruges med det samme."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "En klar-til-brug klausul til udbuds- og beskrivelsesdokumenter. Tilpas værdierne i kantede parenteser til dit projekt.",
+        "clause": "Levering og montering af et koldopspændt spændloftsystem i polyester [STRETCH eller godkendt tilsvarende]. Membranen skal være et strikket polyestertekstil, der spændes koldt op i en kantprofil med klikfæste uden brug af varme og danner en sømløs, meget mat overflade på op til 5.15 m i bredden. Reaktion på brand skal være klasse B-s1,d0 efter EN 13501-1 (klasse A2-s1,d0, hvor det er angivet). Systemet skal være vaskbart og fugtbestandigt, egnet til montering i rum i brug, og leveres med [10] års producentgaranti. Farve: [RAL ____]. Hvor der stilles krav om akustisk ydeevne, leveres en mikroperforeret membran med bagvedliggende absorbent i høj densitet, der opnår lydabsorption op til klasse A."
+      }
+    },
+    "pvc": {
+      "label": "Spændloft i PVC",
+      "short": "PVC-folie",
+      "blurb": "Varmmonteret PVC-folie — fuldt genanvendelig, aftagelig og sømløs op til 6.4 m.",
+      "fireSafety": {
+        "intro": "PVC-folien er klassificeret B-s1,d0 efter EN 13501-1 — brandhæmmende, med meget begrænset røgudvikling og uden brændende dråber.",
+        "rows": [
+          {
+            "k": "Klassifikation",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Røgudvikling",
+            "v": "s1 — meget begrænset"
+          },
+          {
+            "k": "Brændende dråber",
+            "v": "d0 — ingen"
+          },
+          {
+            "k": "Prøvningsstandard",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Klassifikationen B-s1,d0 betyder, at folien er brandhæmmende (B), udvikler meget lidt røg (s1) og ikke afgiver brændende dråber (d0), hvilket gør den egnet til langt de fleste private og kommercielle interiører.",
+          "Da folien er aftagelig, kan den klikkes af og spændes op igen, når der skal være adgang til installationerne ovenover — uden at brandegenskaberne påvirkes.",
+          "Certifikater for reaktion på brand og ydeevnedeklarationer kan rekvireres til din branddokumentation."
+        ]
+      },
+      "installation": {
+        "intro": "PVC-folien varmes op og spændes ved monteringen — et træt loft bliver til et fejlfrit nyt på en enkelt dag, mens den gamle overflade bliver siddende ovenover.",
+        "steps": [
+          {
+            "title": "Opmåling",
+            "body": "Rummet måles op, og folien højfrekvenssvejses på mål med en harpunkant hele vejen rundt — formet efter rummet og sømløs op til 6.4 m i bredden."
+          },
+          {
+            "title": "Montér kantprofilen",
+            "body": "En harpun-/klikprofil fastgøres hele vejen rundt i den valgte højde og følger væglinjen og eventuelle detaljer."
+          },
+          {
+            "title": "Varme & opspænding",
+            "body": "Rummet varmes op med en varmekilde, så folien blødgøres; harpunkanten hægtes i profilen, og folien spændes stram og plan, mens den køler af."
+          },
+          {
+            "title": "Finish & detaljer",
+            "body": "Kanter, hjørner, belysningsarmaturer og inspektionslemme færdiggøres. Folien tørres nemt ren og kan bruges med det samme."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "En klar-til-brug klausul til udbuds- og beskrivelsesdokumenter. Tilpas værdierne i kantede parenteser til dit projekt.",
+        "clause": "Levering og montering af et varmopspændt spændloftsystem i PVC-folie [STRETCH eller godkendt tilsvarende]. Membranen skal være en kalandreret PVC-folie, svejset på mål og opspændt i en kantprofil med harpun-/klikfæste, som danner en sømløs overflade på op til 6.4 m i bredden i [mat / satin / blank / translucent] finish. Reaktion på brand skal være klasse B-s1,d0 efter EN 13501-1. Folien skal være 100% genanvendelig, aftagelig og kunne spændes op igen for adgang til hulrummet ovenover, være vaskbar og fugtbestandig samt leveres med [10] års producentgaranti. Farve/finish: [____]. Hvor der er foreskrevet bagbelysning, leveres en translucent folie over et LED-felt, der giver et jævnt lys uden synlige lyspunkter."
+      }
+    }
+  },
+  "techPage": {
+    "crumbTechnical": "Teknik",
+    "viewProduct": "Se produktet",
+    "eyebrowTech": "Teknik",
+    "datasheetCta": "Anmod om det fulde datablad",
+    "samplesCta": "Bestil fysiske prøver",
+    "copyHint": "Markér teksten ovenfor for at kopiere den ind i dit udbudsdokument.",
+    "ctaTitle": "Brug for en hånd med udbudsteksten?",
+    "ctaBody": "Vores specialister hjælper arkitekter og entreprenører med at få detaljerne på plads — som regel inden for to hverdage.",
+    "ctaBtn": "Spørg vores specialister",
+    "meta": {
+      "datasheet": "Teknisk datablad for {label} — specifikationer, klassifikationer og downloads.",
+      "colours": "Farve- og overfladeprogram for {label}, med RAL-referencer og prøvebestilling.",
+      "fire-safety": "Brandklassifikation for {label} — B-s1,d0 og A2-muligheder efter EN 13501-1.",
+      "installation": "Trin-for-trin monteringsguide til {label}.",
+      "specification": "Klar-til-brug udbudstekst for {label} — til udbud og dokumentation.",
+      "faq": "Ofte stillede spørgsmål om {label}."
+    }
+  },
+  "prefab": {
+    "prefab-ceiling-unit": {
+      "name": "Prefab-strukturer",
+      "eyebrow": "Prefab-strukturer",
+      "metaDescription": "Prefab-bærestrukturer efter mål til spændlofter — bjælker i aluminium, stål og træ, gesimser og niveauspring-detaljer, skåret, svejset og pulverlakeret i eget hus og sendt til hele verden.",
+      "intro": "Prefab-bærestrukturer til spændloftsprojekter — bjælker til raster- og gitterlofter, gesimser til svævende lofter og rene niveauspring-detaljer. Hver struktur laves efter mål ud fra dine tegninger, helt i eget hus i vores egen polske produktion, og sendes til vores forhandlere i hele verden.",
+      "makeHeading": "Hvad vi bygger",
+      "make": [
+        {
+          "title": "Bjælker — raster- & gitterlofter",
+          "body": "Færdigbyggede bjælker, der rammer en spændt membran ind som raster- eller gitterloft — gentagelige moduler, i vinkel til millimeteren og klar til montering på pladsen."
+        },
+        {
+          "title": "Gesimser — svævende lofter",
+          "body": "Gesimser langs kanten, der løfter spændloftet fri af væggene og giver en svævende effekt med skyggefuge — med kanal til skjult belysning, hvor der er brug for det."
+        },
+        {
+          "title": "Niveauspring-afslutninger",
+          "body": "Trinvise bæringer i flere niveauer, der fører en spændt membran rent hen over højdespring — uden rod eller gætværk på pladsen."
+        }
+      ],
+      "materialsHeading": "Bygget i aluminium, stål eller træ",
+      "materials": [
+        {
+          "title": "Aluminium",
+          "body": "Let, stift og korrosionsfrit — ideelt til store spænd, fugtige rum og integrerede belysningsprofiler."
+        },
+        {
+          "title": "Stål",
+          "body": "Maksimal styrke til store strukturer og tunge spænd, pulverlakeret efter miljøet."
+        },
+        {
+          "title": "Træ (MDF / multiplex)",
+          "body": "MDF, multiplex og andre plader fræset i form til varme, komplekse eller buede former."
+        }
+      ],
+      "production": {
+        "heading": "Lavet i eget hus, lavet efter mål",
+        "body": "Hver struktur konstrueres efter dine tegninger og bygges helt i eget hus i vores egen polske produktion. Skæring, svejsning og pulverlakering foregår under samme tag — så vi styrer kvalitet og finish fra råprofil til struktur i kasse, klar til afsendelse.",
+        "details": [
+          {
+            "title": "Skæring",
+            "body": "Profiler skåret i præcise længder og vinkler, så strukturen samles i vinkel og uden slør."
+          },
+          {
+            "title": "Svejsning",
+            "body": "Rene, stærke svejsninger — slebet tilbage og finishet, så samlingerne forsvinder i strukturen."
+          },
+          {
+            "title": "Pulverlakering",
+            "body": "En holdbar pulverlakeret finish i enhver RAL, påført i eget hus for en ensartet, slidstærk overflade."
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "Fra tegning til færdig struktur",
+        "items": [
+          {
+            "title": "Rasterloft",
+            "meta": "Aluminium",
+            "summary": "Den tekniske tegning af et gitter af rasterbjælker ved siden af den færdige struktur, monteret og membranfinishet på pladsen."
+          },
+          {
+            "title": "Svævende gesimsloft",
+            "meta": "Aluminiumsgesims",
+            "summary": "En svævende gesims-detalje, fra produktionstegning til det monterede resultat med membranfinish."
+          }
+        ]
+      },
+      "worldwide": "Hver struktur pakkes i kasse og sendes til hele verden, så vores forhandlere overalt kan tilbyde det samme rene, gentagelige resultat — uden eget værksted."
+    },
+    "prefab-lighting-elements": {
+      "name": "Prefab-lyselementer",
+      "eyebrow": "Prefab-lyselementer",
+      "metaDescription": "Prefab-lyselementer bygget på en aluminiumsstruktur og finishet med en STRETCH-membran — lysgesimser, lyslinjer og bagbelyste elementer, konstrueret efter dine tegninger, bygget i eget hus og sendt til hele verden.",
+      "intro": "Færdigmonterede lyselementer bygget på en aluminiumsstruktur og finishet med vores spændte membran — lysgesimser, lyslinjer og bagbelyste elementer. Konstrueret efter dine tegninger, bygget i eget hus i vores polske produktion og sendt til vores forhandlere i hele verden.",
+      "makeHeading": "Hvad vi bygger",
+      "make": [
+        {
+          "title": "Lysgesimser",
+          "body": "Gesimser langs kanten, der bader en væg eller et loft i jævnt, skjult lys — bygget som et monteringsklart aluminiumselement."
+        },
+        {
+          "title": "Lyslinjer",
+          "body": "Skarpe, forsænkede lyslinjer integreret i en spændt overflade for ren, arkitektonisk belysning."
+        },
+        {
+          "title": "Bagbelyste elementer",
+          "body": "Bagbelyste paneler og former finishet med en translucent spændt membran for en jævn glød uden hotspots."
+        }
+      ],
+      "materialsHeading": "Sådan bygges de",
+      "materials": [
+        {
+          "title": "Aluminiumsstruktur",
+          "body": "En præcis, stiv aluminiumsramme fremstillet efter dine mål — rygraden i hvert lyselement."
+        },
+        {
+          "title": "LED & diffusion",
+          "body": "Dæmpbar LED, dimensioneret og placeret til jævnt lys, mens membranen spreder lyset blødt."
+        },
+        {
+          "title": "Finish med spændt membran",
+          "body": "En translucent eller printet STRETCH-membran spændt over rammen for en fejlfri lysende overflade."
+        }
+      ],
+      "showcase": {
+        "heading": "Fra tegning til færdigt element",
+        "items": [
+          {
+            "title": "Lysgesims",
+            "meta": "Aluminium + membran",
+            "summary": "Tegningen af en lysgesims langs kanten ved siden af det færdige, lysende element monteret på stedet."
+          },
+          {
+            "title": "Bagbelyst element",
+            "meta": "Aluminium + LED + membran",
+            "summary": "Et bagbelyst panel, fra produktionstegning til det jævne, hotspotfri færdige resultat."
+          }
+        ]
+      },
+      "worldwide": "Som alle vores prefab-elementer pakkes lyselementerne i kasser og sendes til hele verden — bygget og testet her, klar til montering dér."
+    }
+  },
+  "prefabPage": {
+    "discussCta": "Drøft et projekt",
+    "becomeDealer": "Bliv forhandler",
+    "technicalDrawing": "Teknisk tegning",
+    "installedFinished": "Monteret & færdig",
+    "shippedWorldwide": "Sendes til hele verden",
+    "ctaTitle": "Har du et projekt til os?",
+    "ctaBody": "Send os tegningerne eller idéen — vi konstruerer strukturen, bygger den i eget hus og sender den til dig."
   }
 }

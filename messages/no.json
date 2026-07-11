@@ -1472,5 +1472,906 @@
       ]
     },
     "comingSoon": "Kommer snart"
+  },
+  "modals": {
+    "quote": {
+      "title": "Be om et gratis tilbud",
+      "subtitle": "Fortell oss om prosjektet ditt, så kommer vi tilbake med en skreddersydd pris.",
+      "submitLabel": "Send forespørsel",
+      "sentTitle": "Forespørsel mottatt",
+      "sentMsg": "Takk — en spesialist svarer innen to virkedager.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og etternavn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "rooms": {
+          "label": "Rom",
+          "options": [
+            "1 rom",
+            "2 rom",
+            "3 rom",
+            "4 rom",
+            "Flere enn 4"
+          ]
+        },
+        "timeline": {
+          "label": "Tidsplan",
+          "options": [
+            "Så snart som mulig",
+            "Innen 1–3 måneder",
+            "Innen 4–12 måneder",
+            "Jeg bare undersøker"
+          ]
+        },
+        "message": {
+          "label": "Prosjektet ditt",
+          "placeholder": "Areal, sted, alt som kan være nyttig..."
+        }
+      }
+    },
+    "survey": {
+      "title": "Bestill befaring",
+      "subtitle": "Vi måler opp og gir råd på stedet — gratis og uforpliktende.",
+      "submitLabel": "Be om befaring",
+      "sentTitle": "Befaring forespurt",
+      "sentMsg": "Takk — vi kontakter deg for å avtale et tidspunkt som passer.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og etternavn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "address": {
+          "label": "Adresse",
+          "placeholder": "Gate, sted"
+        },
+        "preferredTime": {
+          "label": "Ønsket tidspunkt",
+          "options": [
+            "Formiddag",
+            "Ettermiddag",
+            "Fleksibel"
+          ]
+        },
+        "rooms": {
+          "label": "Rom",
+          "options": [
+            "1 rom",
+            "2 rom",
+            "3 rom",
+            "4+ rom"
+          ]
+        }
+      }
+    },
+    "training": {
+      "title": "Bestill kurset ditt",
+      "subtitle": "Praktisk sertifisering ved vårt belgiske hovedkontor — legg igjen opplysningene dine, så bekrefter vi.",
+      "submitLabel": "Reserver plassen min",
+      "sentTitle": "Forespørsel sendt",
+      "sentMsg": "Takk — vi bekrefter plassen din og sender praktisk informasjon.",
+      "fields": {
+        "fullName": {
+          "label": "Fullt navn",
+          "placeholder": "For- og etternavn"
+        },
+        "company": {
+          "label": "Firma",
+          "placeholder": "Firmaet ditt"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Ønsket dato",
+          "options": [
+            "15.–16. sep. 2026",
+            "06.–08. okt. 2026",
+            "17.–18. nov. 2026",
+            "Skreddersydd økt hos dere"
+          ]
+        },
+        "attendees": {
+          "label": "Deltakere",
+          "options": [
+            "1 person",
+            "2 personer",
+            "3 personer",
+            "4+ personer"
+          ]
+        }
+      }
+    },
+    "dates": {
+      "title": "Kommende kursdatoer",
+      "subtitle": "Velg en dato og reserver plassen din — små grupper, førstemann til mølla.",
+      "submitLabel": "Reserver plassen min",
+      "sentTitle": "Forespørsel sendt",
+      "sentMsg": "Takk — vi bekrefter plassen din og sender praktisk informasjon.",
+      "fields": {
+        "fullName": {
+          "label": "Fullt navn",
+          "placeholder": "For- og etternavn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Ønsket dato",
+          "options": [
+            "15.–16. sep. 2026",
+            "06.–08. okt. 2026",
+            "17.–18. nov. 2026",
+            "Skreddersydd økt hos dere"
+          ]
+        }
+      }
+    },
+    "partner": {
+      "title": "Søk om å bli partner",
+      "subtitle": "Fortell oss om firmaet ditt — vi vurderer hver søknad personlig.",
+      "submitLabel": "Send søknad",
+      "sentTitle": "Søknad mottatt",
+      "sentMsg": "Takk — partnerteamet vårt vurderer søknaden og kommer tilbake innen to virkedager.",
+      "fields": {
+        "company": {
+          "label": "Firma",
+          "placeholder": "Firmaet ditt"
+        },
+        "contactName": {
+          "label": "Kontaktperson",
+          "placeholder": "For- og etternavn"
+        },
+        "partnerType": {
+          "label": "Jeg vil bli",
+          "options": [
+            "Forhandler — jeg selger, dere monterer",
+            "Forhandler med montering — jeg selger og monterer selv",
+            "Ikke sikker ennå"
+          ]
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "country": {
+          "label": "Land",
+          "placeholder": "Belgia"
+        },
+        "activity": {
+          "label": "Virksomhet",
+          "options": [
+            "Bygg og renovering",
+            "Innredning / interiør",
+            "Gips / puss",
+            "Elektro / belysning",
+            "Annet"
+          ]
+        },
+        "notes": {
+          "label": "Om virksomheten din",
+          "placeholder": "Teamstørrelse, regioner dere dekker, nåværende aktivitet..."
+        }
+      }
+    },
+    "call": {
+      "title": "Bestill en samtale",
+      "subtitle": "Legg igjen nummeret ditt og et tidspunkt som passer — så ringer vi deg tilbake.",
+      "submitLabel": "Be om å bli oppringt",
+      "sentTitle": "Samtale bestilt",
+      "sentMsg": "Takk — vi ringer deg på ønsket tidspunkt.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og etternavn"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "bestTime": {
+          "label": "Beste tidspunkt",
+          "options": [
+            "Formiddag",
+            "Ettermiddag",
+            "Tidlig kveld"
+          ]
+        },
+        "topic": {
+          "label": "Tema",
+          "options": [
+            "Et tilbud",
+            "Partnerskap",
+            "Kurs",
+            "Teknisk spørsmål",
+            "Annet"
+          ]
+        }
+      }
+    },
+    "samples": {
+      "title": "Bestill fargeprøver",
+      "subtitle": "Bestill fysiske RAL- / fargeprøver — gratis for profesjonelle partnere.",
+      "submitLabel": "Bestill prøver",
+      "sentTitle": "Prøver bestilt",
+      "sentMsg": "Takk — vi sender prøvene dine og følger opp innen to virkedager.",
+      "fields": {
+        "company": {
+          "label": "Firma",
+          "placeholder": "Firmaet ditt"
+        },
+        "contactName": {
+          "label": "Kontaktperson",
+          "placeholder": "For- og etternavn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "shippingAddress": {
+          "label": "Leveringsadresse",
+          "placeholder": "Gate, postnummer, sted"
+        },
+        "productLine": {
+          "label": "Produktlinje",
+          "options": [
+            "Polyester",
+            "PVC-folie",
+            "Akustikk",
+            "Ikke sikker ennå"
+          ]
+        },
+        "colours": {
+          "label": "Aktuelle farger",
+          "placeholder": "f.eks. hvit, antrasitt, valgfri RAL"
+        },
+        "notes": {
+          "label": "Merknader",
+          "placeholder": "Prosjekt, mengder, alt som kan være nyttig..."
+        }
+      }
+    },
+    "datasheet": {
+      "title": "Last ned databladet",
+      "subtitle": "Fyll inn opplysningene dine, så starter nedlastingen med en gang. Vi bruker dem kun til å følge opp henvendelsen din.",
+      "submitLabel": "Få databladet",
+      "sentTitle": "Her er databladet ditt",
+      "sentMsg": "Nedlastingen skal starte automatisk — hvis ikke, bruk knappen nedenfor.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og etternavn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        }
+      }
+    },
+    "trainingDates": [
+      "15.–16. sep. 2026",
+      "06.–08. okt. 2026",
+      "17.–18. nov. 2026",
+      "Skreddersydd økt hos dere"
+    ],
+    "trainingDateNotes": [
+      "Beveren-Waas · 4 plasser",
+      "Beveren-Waas · 6 plasser",
+      "Beveren-Waas · 8 plasser"
+    ],
+    "close": "Lukk",
+    "downloadDatasheet": "Last ned datablad",
+    "select": "Velg…"
+  },
+  "faqPage": {
+    "items": [
+      {
+        "q": "Hva er en strekkhimling?",
+        "a": "En strekkhimling er en tynn, sømløs membran — polyester eller PVC-folie — som spennes over rommet og klikkes inn i en smal kantprofil. Den ser ut som et perfekt slett, malt tak, men monteres uten puss, sliping og maling og skjuler alt som ligger over."
+      },
+      {
+        "q": "Hvor lang tid tar monteringen?",
+        "a": "De fleste rom er ferdige på én enkelt dag. Et tomannslag monterer opptil rundt 50 m² per dag. Kaldmontert polyester trenger ingen tørketid, så rommet kan brukes umiddelbart."
+      },
+      {
+        "q": "Blir det griseri? Må jeg flytte ut?",
+        "a": "Nei. Det er ingen riving, støv, sliping eller maling, så monteringen kan skje i et møblert rom som er i bruk. Det eksisterende taket kan som regel bli værende over."
+      },
+      {
+        "q": "Hvor lenge varer en strekkhimling?",
+        "a": "Systemene våre leveres med 25 års garanti. Overflaten er vaskbar og fukttålig, og vil verken sprekke, flasse, gulne eller trenge ommaling."
+      },
+      {
+        "q": "Kan den forbedre akustikken?",
+        "a": "Ja. En mikroperforert versjon med absorbent bak når opptil klasse A lydabsorpsjon og ser helt lik standardutførelsen ut — etterklang og støy reduseres målbart."
+      },
+      {
+        "q": "Hvor bred himling kan dere montere uten skjøt?",
+        "a": "Opptil 5.7 m sømløst med PVC-folie og opptil 5.15 m med polyester. Større spenn dekkes med en nesten usynlig sveiseskjøt eller en bevisst plassert profillinje."
+      },
+      {
+        "q": "Kan jeg få belysning, baklys eller et trykket design?",
+        "a": "Ja. Gjennomskinnelige folier gir et jevnt, dimbart baklys uten synlige lyspunkter, LED-lyslinjer kan integreres i flaten, og et hvilket som helst motiv — også en stjernehimmel — kan trykkes fra kant til kant."
+      },
+      {
+        "q": "Hva koster en strekkhimling?",
+        "a": "Prisen avhenger av prosjektet — av arealet, systemet, overflaten og eventuelle lys- eller akustikkløsninger. Be om et gratis og uforpliktende tilbud, så svarer en spesialist innen to virkedager."
+      },
+      {
+        "q": "Samarbeider dere med entreprenører og forhandlere?",
+        "a": "Ja. STRETCH er B2B-drevet: Vi lærer opp montører ved vårt belgiske hovedkontor, leverer membraner etter mål via en B2B-portal og henviser lokale kunder til sertifiserte partnere. Se sidene Partnere og Montøropplæring."
+      }
+    ],
+    "eyebrow": "FAQ",
+    "titleA": "Gode",
+    "titleB": "spørsmål",
+    "lead": "Alt folk vanligvis lurer på om strekkhimlinger — montering, levetid, akustikk, spenn og pris. Fortsatt usikker? Bare spør oss.",
+    "asideKicker": "Har du fortsatt et spørsmål?",
+    "asideTitle": "Snakk med en strekkhimling-spesialist.",
+    "asideBody": "Fortell oss om rommet ditt, så svarer vi — gratis og uforpliktende.",
+    "asideCta": "Be om et gratis tilbud"
+  },
+  "catalogFaqs": {
+    "polyester": [
+      {
+        "q": "Hvor lang tid tar det å montere en strekkhimling i polyester?",
+        "a": "De fleste rom er ferdige på én enkelt dag. Et tomannslag monterer opptil rundt 50 m² per dag, og siden membranen spennes kaldt, er det ingen tørketid før rommet kan brukes igjen."
+      },
+      {
+        "q": "Er den kalde monteringen virkelig støvfri?",
+        "a": "Ja. Det eksisterende taket rives ikke, og det verken slipes eller males. Membranen klikkes inn i en smal kantprofil, så monteringen er ren nok til å utføres i møblerte rom som er i bruk."
+      },
+      {
+        "q": "Kan en polyesterhimling forbedre akustikken i rommet?",
+        "a": "En mikroperforert versjon med en høytetthetsabsorbent bak når opptil klasse A lydabsorpsjon. Den ser helt lik standardutførelsen ut, men reduserer etterklang og støy målbart."
+      },
+      {
+        "q": "Hvordan rengjør og vedlikeholder jeg den?",
+        "a": "Tørk over med en fuktig klut. Overflaten er vaskbar og fukttålig, sprekker, flasser eller gulner ikke, og trenger aldri ommaling i løpet av hele garantitiden på 25 år."
+      }
+    ],
+    "pvc": [
+      {
+        "q": "Hvorfor er en strekkhimling i PVC «100 % resirkulerbar»?",
+        "a": "Folien kan resirkuleres til råmateriale når den er utbrukt, og den kan demonteres underveis — du kan klikke den løs for å komme til installasjonene over og spenne den opp igjen på få minutter, i stedet for å rive ut og erstatte en gipshimling."
+      },
+      {
+        "q": "Hvor stort spenn kan en PVC-himling dekke uten skjøt?",
+        "a": "Opptil 6.4 m sømløst — det bredeste i sortimentet vårt. Større rom dekkes ved å sveise baner sammen med en nesten usynlig skjøt eller ved å legge inn en bevisst plassert profillinje."
+      },
+      {
+        "q": "Egner PVC-folie seg til bad og våtrom?",
+        "a": "Ja. Den er fullt vaskbar og fukttålig, noe som gjør den til et populært valg på bad, i svømmehaller og velværeområder der et malt tak ville boblet eller fått skjolder."
+      },
+      {
+        "q": "Kan den baklyses eller trykkes?",
+        "a": "Gjennomskinnelige folier sprer et LED-felt jevnt uten synlige lyspunkter, og et hvilket som helst fotografi, mønster eller stjernehimmel-design kan trykkes fra kant til kant. Se systemet Lyshimling for hele sortimentet."
+      }
+    ],
+    "acoustic": [
+      {
+        "q": "Hvor mye reduserer det akustiske systemet støyen egentlig?",
+        "a": "Med høytetthetsabsorbenten bak når det opptil klasse A absorpsjon (den høyeste klassen), målt som αw-verdier. I praksis gjør det et hardt rom med mye ekko om til et rolig, behagelig rom — uten synlige akustikkpaneler."
+      },
+      {
+        "q": "Ser den akustiske utførelsen annerledes ut enn en vanlig himling?",
+        "a": "Nei. Absorpsjonen skjer bak en mikroperforert membran, så himlingen fremstår som én feilfri, sømløs flate — tiltaket er usynlig."
+      },
+      {
+        "q": "Kan høyttalere skjules bak himlingen?",
+        "a": "Ja. Høyttalere kan monteres helt bak den spente folien for ren lyd uten synlig kilde — et populært valg for hjemmekinoer og studioer."
+      },
+      {
+        "q": "Hvor er det akustiske systemet mest nyttig?",
+        "a": "Overalt der etterklang er et problem: kontorer, restauranter, lydstudioer, skoler, helsebygg og hjemmekinoer. Det kan også utvides til frithengende øyer og veggpaneler."
+      }
+    ],
+    "light": [
+      {
+        "q": "Vises LED-ene som lyspunkter i en baklyst himling?",
+        "a": "Nei. Den gjennomskinnelige folien ligger over et LED-felt og sprer lyset jevnt over hele flaten, så du ser en myk, ensartet glød i stedet for enkeltpunkter."
+      },
+      {
+        "q": "Hva kan trykkes på himlingen?",
+        "a": "I praksis et hvilket som helst høyoppløst bilde, mønster eller tekstur — trykt fra kant til kant uten synlig skjøt. Et vanlig valg er en fiberoptisk stjernehimmel for kinoer og soverom."
+      },
+      {
+        "q": "Kan lyset dimmes eller skifte farge?",
+        "a": "Ja. Baklyste himlinger er dimbare, og RGB-LED-løsninger lar deg endre farge og stemning. LED-lyslinjer kan dessuten felles inn i membranen for en skarp arkitektonisk effekt."
+      }
+    ],
+    "prefab": [
+      {
+        "q": "Hva er en prefabrikkert strekkhimling-modul?",
+        "a": "Det er en komplett himlingsmodul — ramme og oppspent membran — som settes sammen og kvalitetskontrolleres på vårt belgiske verksted, og leveres klar til å klikkes inn i en kantramme på byggeplassen."
+      },
+      {
+        "q": "Hvorfor velge prefab fremfor montering på stedet?",
+        "a": "Prefab-moduler passer for modulbygg og repeterende rom som hotellbad og baderomskabiner: Det meste av arbeidet skjer utenfor byggeplassen, så monteringen krever et minimum av fag og tid."
+      },
+      {
+        "q": "Hvordan når man installasjonene over en prefab-himling?",
+        "a": "Hver modul kan få en diskré, integrert inspeksjonsluke, slik at rør og installasjoner over forblir tilgjengelige uten å bryte den rene himlingslinjen."
+      }
+    ],
+    "starry": [
+      {
+        "q": "Hvor mange stjerner kan en stjernehimmel ha?",
+        "a": "Fra rundt 150 punkter for en subtil effekt til over tusen for en tett, dramatisk himmel. Tettheten velges ut fra rommets størrelse og stemningen du ønsker."
+      },
+      {
+        "q": "Avgir fiberoptikk-stjernene varme?",
+        "a": "Nei. Alle fibrene drives av én enkelt LED-lyskilde plassert et annet sted, så selve punktene holder seg helt kalde — bare lyset beveger seg gjennom fiberen."
+      },
+      {
+        "q": "Kan stjernene blinke eller skifte farge?",
+        "a": "Ja. Et valgfritt blinkehjul får stjernene til å glitre, RGB-lyskilder lar deg endre farge, og stjerneskudd-effekter kan legges til for bevegelse. Alt kan dimmes."
+      }
+    ],
+    "hatch": [
+      {
+        "q": "Kommer man til installasjoner bak en strekkhimling?",
+        "a": "Ja — en integrert inspeksjonsluke gir diskré tilgang som kan åpnes igjen og igjen, til ventiler, koblingsbokser og tilkoblinger over membranen, slik at himlingen aldri må skjæres opp eller skiftes ut for å nå dem."
+      },
+      {
+        "q": "Er luken synlig i himlingen?",
+        "a": "Knapt. Rammen er bygget inn i kantdetaljen og kledd med samme membran, så den går i ett med flaten og legges først merke til når du leter etter den."
+      },
+      {
+        "q": "Kan en luke ettermonteres i en eksisterende strekkhimling?",
+        "a": "I de fleste tilfeller, ja. Luker kan ettermonteres i en eksisterende himling, dimensjonert og plassert etter installasjonen som skal være tilgjengelig bak."
+      }
+    ],
+    "print": [
+      {
+        "q": "Hvilken bildekvalitet trenger jeg til en trykket himling?",
+        "a": "En høyoppløst fil gir best resultat. Vi gjennomgår og fargestyrer materialet ditt, skalerer det til himlingen og lager en prøve før trykking, slik at sluttresultatet svarer til forventningen din."
+      },
+      {
+        "q": "Kan en trykket himling baklyses?",
+        "a": "Ja. Trykt på en gjennomskinnelig folie over et LED-felt blir bildet jevnt baklyst uten synlige lyspunkter — ideelt for himmelmotiver og iøynefallende kunst."
+      },
+      {
+        "q": "Er det en synlig skjøt på store trykk?",
+        "a": "Nei. Bildet trykkes fra kant til kant på én sømløs membran i opptil 5.7 m bredde, så ingen banelinjer krysser motivet ditt."
+      }
+    ]
+  },
+  "applications": {
+    "living-cinema": {
+      "name": "Stuer & hjemmekino",
+      "shortName": "Stue & kino",
+      "eyebrow": "Stue & kino",
+      "metaDescription": "Strekkhimlinger for stuer og hjemmekinoer — sømløse overflater, integrert belysning, stjernehimler i fiberoptikk og bedre akustikk, montert på én dag.",
+      "intro": "En feilfri himling setter tonen i et oppholdsrom. STRETCH gir deg en perfekt glatt, sømløs overflate — med skjult belysning, en fiberoptisk stjernehimmel til kinoen og akustisk komfort, alt kaldmontert på én enkelt dag.",
+      "benefits": [
+        {
+          "title": "En sømløs, perfekt finish",
+          "body": "Ingen sprekker, ingen skjøter og aldri mer maling — en glatt membran spent fra vegg til vegg, i dyp matt eller i akkurat den fargen du ønsker."
+        },
+        {
+          "title": "Stemning som på kino",
+          "body": "Legg til en fiberoptisk stjernehimmel, integrerte LED-linjer og dimbart bakoverlys for den perfekte stemningen på filmkvelden."
+        },
+        {
+          "title": "Roligere, stillere rom",
+          "body": "En akustisk membran temmer ekkoet i åpne oppholdsrom, slik at samtale og lyd oppleves varmere og klarere."
+        }
+      ]
+    },
+    "bathroom-kitchen": {
+      "name": "Bad & kjøkken",
+      "shortName": "Bad & kjøkken",
+      "eyebrow": "Bad & kjøkken",
+      "metaDescription": "Fukttålige strekkhimlinger for bad og kjøkken — vanntette, muggresistente og lette å tørke av, med integrert belysning, montert på én enkelt dag.",
+      "intro": "Bad og kjøkken er tøffe mot himlinger. En STRETCH-membran er vanntett, muggresistent og vaskbar — den skjuler rør og kanaler bak en feilfri overflate, med downlights og avtrekk pent integrert.",
+      "benefits": [
+        {
+          "title": "Fukt- og vannbestandig",
+          "body": "Membranen bryr seg ikke om damp og sprut, og vil aldri flasse, flekke eller mugne som en malt eller pusset himling."
+        },
+        {
+          "title": "Vaskbar overflate",
+          "body": "En rask avtørking holder den som ny — ideelt over dusj, badekar og matlagingssoner."
+        },
+        {
+          "title": "Pent integrerte installasjoner",
+          "body": "Downlights, høyttalere, avtrekk og inspeksjonsluker integreres i overflaten og skjuler rørene over."
+        }
+      ]
+    },
+    "office-retail": {
+      "name": "Kontor & butikk",
+      "shortName": "Kontor & butikk",
+      "eyebrow": "Kontor & butikk",
+      "metaDescription": "Strekkhimlinger for kontor, butikk og servering — akustikk opptil klasse A, printede himlinger med din merkevare og integrert belysning, raskt montert uten avbrudd.",
+      "intro": "Næringslokaler må se skarpe ut og låte riktig. STRETCH leverer akustisk komfort opptil klasse A, printede himlinger med din merkevare og integrert belysning — kaldmontert og raskt, med minimale forstyrrelser for et lokale i drift.",
+      "benefits": [
+        {
+          "title": "Akustisk komfort opptil klasse A",
+          "body": "En mikroperforert akustikkhimling reduserer etterklangen i åpne kontorer, møterom og restauranter, for tydeligere tale."
+        },
+        {
+          "title": "Printede himlinger med din merkevare",
+          "body": "Print et hvilket som helst bilde, mønster eller merkevaremotiv fra kant til kant — et slående blikkfang for butikk, showroom og servering."
+        },
+        {
+          "title": "Rask montering uten forstyrrelser",
+          "body": "Kald montering betyr null støv og null rot, og de fleste rom er ferdige på én enkelt dag — ideelt for lokaler i bruk."
+        }
+      ]
+    }
+  },
+  "appPage": {
+    "crumbApplications": "Bruksområder",
+    "quoteCta": "Be om et gratis tilbud",
+    "seeProjects": "Se prosjekter",
+    "recommended": "Anbefalte løsninger",
+    "selectedWork": "Utvalgte arbeider",
+    "explore": "Utforsk",
+    "ctaTitle": "Planlegger du et prosjekt for {name}?",
+    "ctaBody": "Fortell oss om rommet ditt, så anbefaler vi riktig system — gratis og uforpliktende."
+  },
+  "projectCards": {
+    "cats": {
+      "Acoustic": "Akustikk",
+      "Office": "Kontor",
+      "Commercial": "Næring",
+      "Retail": "Butikk",
+      "Bathroom": "Bad",
+      "Light & Print": "Lys & print",
+      "Living room": "Stue",
+      "Home cinema": "Hjemmekino"
+    },
+    "metas": {
+      "da-tweekaz-studio": "Nederland · Innspillingsstudio",
+      "mark-with-a-k": "Belgia · Lydstudio",
+      "notary-ampe-anthony": "Kruibeke · Akustisk kontor",
+      "bnp-paribas-fortis": "Brussel · Bankhovedkontor",
+      "van-der-valk-beveren": "Beveren · Hotellets eventsal",
+      "johnson-and-johnson": "Limerick, IE · FoU-anlegg for farmasi",
+      "polette-eyewear": "Antwerpen · Konseptbutikk",
+      "citizenm-hotel": "USA & Europa · Prefabrikkerte baderomsmoduler",
+      "london-chapel": "London, UK · Baklyst himling",
+      "private-villa-knokke": "Knokke · Åpen stue",
+      "home-cinema-ghent": "Gent · Stjernehimmel + akustikk",
+      "city-penthouse-antwerp": "Antwerpen · Stue",
+      "wellness-spa-bruges": "Brugge · Spabad",
+      "rue-perree-paris": "Paris · Baklyst gallerihimling"
+    }
+  },
+  "technical": {
+    "topics": [
+      {
+        "label": "Datablad",
+        "sub": "Spesifikasjoner & nedlasting"
+      },
+      {
+        "label": "Farger & overflater",
+        "sub": "Hele sortimentet"
+      },
+      {
+        "label": "Brannsikkerhet",
+        "sub": "Brannreaksjon & A2"
+      },
+      {
+        "label": "Monteringsveiledning",
+        "sub": "Trinn for trinn"
+      },
+      {
+        "label": "Beskrivelsestekst",
+        "sub": "For anbud"
+      },
+      {
+        "label": "FAQ",
+        "sub": "Vanlige spørsmål"
+      }
+    ],
+    "polyester": {
+      "label": "Strekkhimling i polyester",
+      "short": "Polyester",
+      "blurb": "Kaldmontert polyestermembran — en svært matt, sømløs himling som strammes for hånd.",
+      "fireSafety": {
+        "intro": "Polyestermembranen er klassifisert B-s1,d0 etter EN 13501-1 — flammehemmende, med svært begrenset røykutvikling og uten brennende dråper. Der de strengeste brannkravene gjelder, finnes en ubrennbar A2-s1,d0-versjon.",
+        "rows": [
+          {
+            "k": "Standardklassifisering",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Ubrennbart alternativ",
+            "v": "A2-s1,d0"
+          },
+          {
+            "k": "Røykutvikling",
+            "v": "s1 — svært begrenset"
+          },
+          {
+            "k": "Brennende dråper",
+            "v": "d0 — ingen"
+          },
+          {
+            "k": "Prøvingsstandard",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Klassifiseringen B-s1,d0 betyr at membranen er flammehemmende (B), utvikler svært lite røyk (s1) og ikke avgir brennende dråper (d0) — kombinasjonen de fleste offentlige og kommersielle interiører krever.",
+          "For rømningsveier, høyhus, sykehus og andre prosjekter der det kreves en ubrennbar kledning, oppfyller A2-s1,d0-versjonen det strengere kravet — med samme sømløse, svært matte utseende.",
+          "Sertifikater for brannreaksjon og ytelseserklæringer er tilgjengelige på forespørsel til branndokumentasjonen din."
+        ]
+      },
+      "installation": {
+        "intro": "Polyester strammes kaldt — ingen varmekanoner, ingen tørketid, ingen damp. Et tomannslag blir vanligvis ferdig med et rom på én dag, selv i møblerte rom som er i bruk.",
+        "steps": [
+          {
+            "title": "Oppmåling",
+            "body": "Rommet lasermåles, og membranen skjæres og sveises til ett sømløst felt på inntil 5.15 m bredde, tilpasset rommets nøyaktige form."
+          },
+          {
+            "title": "Monter kantprofilen",
+            "body": "En slank klikkprofil festes på vegg eller himling i valgt høyde og følger rette strekk, kurver og hjørner."
+          },
+          {
+            "title": "Stram kaldt for hånd",
+            "body": "Den kalde membranen klikkes inn i profilen og strammes for hånd over rommet — trommestram til en helt plan flate, helt uten varme."
+          },
+          {
+            "title": "Finish & detaljer",
+            "body": "Kanter, hjørner og eventuell integrert belysning eller inspeksjonsluker ferdigstilles. Ingen tørketid — rommet er rent og kan tas i bruk med én gang."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "En klausul klar til å kopieres inn i beskrivelses- og anbudsdokumenter. Tilpass verdiene i hakeparentes til prosjektet ditt.",
+        "clause": "Levering og montering av et kaldstrammet strekkhimlingssystem i polyester [STRETCH eller godkjent likeverdig]. Membranen skal være en strikket polyestertekstil som strammes kaldt i en kantprofil med klikkfeste uten varmetilførsel, og danner en sømløs, svært matt flate på inntil 5.15 m bredde. Brannreaksjonen skal være klasse B-s1,d0 etter EN 13501-1 (klasse A2-s1,d0 der det er angitt). Systemet skal være vaskbart og fukttålig, egnet for montering i rom som er i bruk, og leveres med [10] års produsentgaranti. Farge: [RAL ____]. Der det stilles krav til akustisk ytelse, skal det leveres en mikroperforert membran med bakenforliggende absorbent med høy tetthet, som oppnår lydabsorpsjon opptil klasse A."
+      }
+    },
+    "pvc": {
+      "label": "Strekkhimling i PVC",
+      "short": "PVC-folie",
+      "blurb": "Varmmontert PVC-folie — fullt resirkulerbar, avtakbar og sømløs inntil 6.4 m.",
+      "fireSafety": {
+        "intro": "PVC-folien er klassifisert B-s1,d0 etter EN 13501-1 — flammehemmende, med svært begrenset røykutvikling og uten brennende dråper.",
+        "rows": [
+          {
+            "k": "Klassifisering",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Røykutvikling",
+            "v": "s1 — svært begrenset"
+          },
+          {
+            "k": "Brennende dråper",
+            "v": "d0 — ingen"
+          },
+          {
+            "k": "Prøvingsstandard",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Klassifiseringen B-s1,d0 betyr at folien er flammehemmende (B), utvikler svært lite røyk (s1) og ikke avgir brennende dråper (d0), noe som gjør den egnet for de aller fleste bolig- og næringsinteriører.",
+          "Siden folien er avtakbar, kan den klikkes løs og strammes på nytt for tilgang til installasjonene over — uten at brannegenskapene påvirkes.",
+          "Sertifikater for brannreaksjon og ytelseserklæringer er tilgjengelige på forespørsel til branndokumentasjonen din."
+        ]
+      },
+      "installation": {
+        "intro": "PVC-folien varmes og strammes under monteringen — en sliten himling blir en feilfri ny på én dag, mens den gamle overflaten blir værende over.",
+        "steps": [
+          {
+            "title": "Oppmåling",
+            "body": "Rommet måles opp, og folien høyfrekvenssveises i riktig mål med en harpunkant rundt det hele — formet etter rommet og sømløs inntil 6.4 m bredde."
+          },
+          {
+            "title": "Monter kantprofilen",
+            "body": "En harpun-/klikkprofil festes rundt rommet i valgt høyde og følger vegglinjen og eventuelle detaljer."
+          },
+          {
+            "title": "Varme & stramming",
+            "body": "Rommet varmes opp med en varmekilde slik at folien mykner; harpunkanten hektes i profilen, og folien strammer seg glatt og plan når den kjølner."
+          },
+          {
+            "title": "Finish & detaljer",
+            "body": "Kanter, hjørner, belysningsarmaturer og inspeksjonsluker ferdigstilles. Folien tørkes enkelt ren og kan brukes umiddelbart."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "En klausul klar til å kopieres inn i beskrivelses- og anbudsdokumenter. Tilpass verdiene i hakeparentes til prosjektet ditt.",
+        "clause": "Levering og montering av et varmstrammet strekkhimlingssystem i PVC-folie [STRETCH eller godkjent likeverdig]. Membranen skal være en kalandrert PVC-folie, sveiset i riktig mål og strammet i en kantprofil med harpun-/klikkfeste, som danner en sømløs flate på inntil 6.4 m bredde i [matt / sateng / blank / gjennomskinnelig] utførelse. Brannreaksjonen skal være klasse B-s1,d0 etter EN 13501-1. Folien skal være 100% resirkulerbar, avtakbar og mulig å stramme på nytt for tilgang til hulrommet over, vaskbar og fukttålig, og leveres med [10] års produsentgaranti. Farge/utførelse: [____]. Der det er foreskrevet baklys, skal det leveres en gjennomskinnelig folie over et LED-felt, for jevnt lys uten synlige lyspunkter."
+      }
+    }
+  },
+  "techPage": {
+    "crumbTechnical": "Teknisk",
+    "viewProduct": "Se produktet",
+    "eyebrowTech": "Teknisk",
+    "datasheetCta": "Be om det fullstendige databladet",
+    "samplesCta": "Be om fysiske prøver",
+    "copyHint": "Marker teksten over for å kopiere den inn i beskrivelsesdokumentet ditt.",
+    "ctaTitle": "Trenger du hjelp med beskrivelsesteksten?",
+    "ctaBody": "Spesialistene våre hjelper arkitekter og entreprenører med å få detaljene riktige — vanligvis innen to virkedager.",
+    "ctaBtn": "Spør spesialistene våre",
+    "meta": {
+      "datasheet": "Teknisk datablad for {label} — spesifikasjoner, klassifiseringer og nedlastinger.",
+      "colours": "Farge- og overflatesortiment for {label}, med RAL-referanser og prøvebestilling.",
+      "fire-safety": "Brannklassifisering for {label} — B-s1,d0 og A2-alternativer etter EN 13501-1.",
+      "installation": "Trinnvis monteringsveiledning for {label}.",
+      "specification": "Beskrivelsestekst klar til å kopieres for {label} — til anbud og dokumentasjon.",
+      "faq": "Vanlige spørsmål om {label}."
+    }
+  },
+  "prefab": {
+    "prefab-ceiling-unit": {
+      "name": "Prefab-strukturer",
+      "eyebrow": "Prefab-strukturer",
+      "metaDescription": "Prefabrikkerte bærestrukturer etter mål for strekkhimlinger — bjelker i aluminium, stål og tre, gesimser og nivåforskjell-detaljer, kappet, sveiset og pulverlakkert hos oss og sendt verden over.",
+      "intro": "Prefabrikkerte bærestrukturer for strekkhimlingsprosjekter — bjelker til raster- og gitterhimlinger, gesimser til svevende himlinger og rene nivåforskjell-detaljer. Hver struktur lages etter mål ut fra tegningene dine, helt i eget hus i vår egen polske produksjon, og sendes verden over til våre forhandlere.",
+      "makeHeading": "Hva vi bygger",
+      "make": [
+        {
+          "title": "Bjelker — raster- og gitterhimlinger",
+          "body": "Ferdigbygde bjelker som rammer inn en strukket membran til en raster- eller gitterhimling — repeterbare moduler, i vinkel på millimeteren og klare for montering på byggeplassen."
+        },
+        {
+          "title": "Gesimser — svevende himlinger",
+          "body": "Gesimser langs kanten som løfter strekkhimlingen fri fra veggene for en svevende effekt med skyggefuge, med kanal for skjult belysning der det trengs."
+        },
+        {
+          "title": "Nivåforskjell-avslutninger",
+          "body": "Trinnvise bæringer i flere nivåer som fører en strukket membran rent over høydeforskjeller — uten rot eller gjettverk på byggeplassen."
+        }
+      ],
+      "materialsHeading": "Bygget i aluminium, stål eller tre",
+      "materials": [
+        {
+          "title": "Aluminium",
+          "body": "Lett, stivt og korrosjonsfritt — ideelt for store spenn, fuktige rom og integrerte belysningsprofiler."
+        },
+        {
+          "title": "Stål",
+          "body": "Maksimal styrke for store strukturer og tunge spenn, pulverlakkert tilpasset miljøet."
+        },
+        {
+          "title": "Tre (MDF / kryssfiner)",
+          "body": "MDF, kryssfiner og andre plater frest i form for varme, komplekse eller buede former."
+        }
+      ],
+      "production": {
+        "heading": "Laget i eget hus, laget etter mål",
+        "body": "Hver struktur konstrueres etter tegningene dine og bygges helt i eget hus i vår egen polske produksjon. Kapping, sveising og pulverlakkering skjer under samme tak — slik styrer vi kvalitet og finish fra råprofil til strukturen står i kasse, klar til forsendelse.",
+        "details": [
+          {
+            "title": "Kapping",
+            "body": "Profiler kappet i presise lengder og vinkler, slik at strukturen settes sammen i vinkel og uten slark."
+          },
+          {
+            "title": "Sveising",
+            "body": "Rene, sterke sveiser — slipt tilbake og finpusset slik at skjøtene forsvinner inn i strukturen."
+          },
+          {
+            "title": "Pulverlakkering",
+            "body": "En slitesterk pulverlakkert finish i enhver RAL, påført i eget hus for en jevn, robust overflate."
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "Fra tegning til ferdig struktur",
+        "items": [
+          {
+            "title": "Rasterhimling",
+            "meta": "Aluminium",
+            "summary": "Den tekniske tegningen av et gitter med rasterbjelker, ved siden av den ferdige strukturen montert og membrankledd på byggeplassen."
+          },
+          {
+            "title": "Svevende gesimshimling",
+            "meta": "Aluminiumsgesims",
+            "summary": "En svevende gesimsdetalj, fra produksjonstegning til det monterte, membrankledde resultatet."
+          }
+        ]
+      },
+      "worldwide": "Hver struktur pakkes i kasse og sendes verden over, slik at forhandlerne våre hvor som helst kan tilby det samme rene, repeterbare resultatet — uten eget verksted."
+    },
+    "prefab-lighting-elements": {
+      "name": "Prefab-lyselementer",
+      "eyebrow": "Prefab-lyselementer",
+      "metaDescription": "Prefab-lyselementer bygget på en aluminiumsstruktur og kledd med en STRETCH-membran — lysgesimser, lyslinjer og baklyste elementer, konstruert etter tegningene dine, bygget i eget hus og sendt verden over.",
+      "intro": "Ferdigmonterte lyselementer bygget på en aluminiumsstruktur og kledd med vår strekkmembran — lysgesimser, lyslinjer og baklyste elementer. Konstruert etter tegningene dine, bygget i eget hus i vår polske produksjon og sendt verden over til våre forhandlere.",
+      "makeHeading": "Hva vi bygger",
+      "make": [
+        {
+          "title": "Lysgesimser",
+          "body": "Gesimser langs kanten som bader en vegg eller himling i jevnt, skjult lys — bygget som et monteringsklart aluminiumselement."
+        },
+        {
+          "title": "Lyslinjer",
+          "body": "Skarpe, innfelte lyslinjer integrert i en strukket flate for ren, arkitektonisk belysning."
+        },
+        {
+          "title": "Baklyste elementer",
+          "body": "Baklyste paneler og former kledd med en gjennomskinnelig strekkmembran for en jevn glød uten hotspots."
+        }
+      ],
+      "materialsHeading": "Slik bygges de",
+      "materials": [
+        {
+          "title": "Aluminiumsstruktur",
+          "body": "En presis, stiv aluminiumsramme maskinert etter dine mål — ryggraden i hvert lyselement."
+        },
+        {
+          "title": "LED og diffusjon",
+          "body": "Dimbar LED, dimensjonert og plassert for jevnt lys, med membranen som sprer lyset mykt."
+        },
+        {
+          "title": "Finish med strekkmembran",
+          "body": "En gjennomskinnelig eller printet STRETCH-membran spent over rammen for en feilfri lysende flate."
+        }
+      ],
+      "showcase": {
+        "heading": "Fra tegning til ferdig element",
+        "items": [
+          {
+            "title": "Lysgesims",
+            "meta": "Aluminium + membran",
+            "summary": "Tegningen av en lysgesims langs kanten, ved siden av det ferdige, lysende elementet montert på stedet."
+          },
+          {
+            "title": "Baklyst element",
+            "meta": "Aluminium + LED + membran",
+            "summary": "Et baklyst panel, fra produksjonstegning til det jevne, hotspotfrie ferdige resultatet."
+          }
+        ]
+      },
+      "worldwide": "Som alle prefab-elementene våre pakkes lyselementene i kasser og sendes verden over — bygget og testet her, klare til montering der."
+    }
+  },
+  "prefabPage": {
+    "discussCta": "Diskuter et prosjekt",
+    "becomeDealer": "Bli forhandler",
+    "technicalDrawing": "Teknisk tegning",
+    "installedFinished": "Montert & ferdig",
+    "shippedWorldwide": "Sendes verden over",
+    "ctaTitle": "Har du et prosjekt til oss?",
+    "ctaBody": "Send oss tegningene eller ideen — vi konstruerer strukturen, bygger den i eget hus og sender den til deg."
   }
 }

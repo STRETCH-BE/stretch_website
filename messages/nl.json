@@ -1472,5 +1472,906 @@
       ]
     },
     "comingSoon": "Binnenkort"
+  },
+  "modals": {
+    "quote": {
+      "title": "Vraag een gratis offerte aan",
+      "subtitle": "Vertel ons over uw project en wij bezorgen u een prijs op maat.",
+      "submitLabel": "Verstuur aanvraag",
+      "sentTitle": "Aanvraag ontvangen",
+      "sentMsg": "Bedankt — een specialist antwoordt binnen twee werkdagen.",
+      "fields": {
+        "name": {
+          "label": "Naam",
+          "placeholder": "Voor- en achternaam"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "rooms": {
+          "label": "Kamers",
+          "options": [
+            "1 kamer",
+            "2 kamers",
+            "3 kamers",
+            "4 kamers",
+            "Meer dan 4"
+          ]
+        },
+        "timeline": {
+          "label": "Timing",
+          "options": [
+            "Zo snel mogelijk",
+            "Binnen 1–3 maanden",
+            "Binnen 4–12 maanden",
+            "Nog aan het verkennen"
+          ]
+        },
+        "message": {
+          "label": "Uw project",
+          "placeholder": "Oppervlakte, locatie, alles wat nuttig is..."
+        }
+      }
+    },
+    "survey": {
+      "title": "Plan een plaatsbezoek",
+      "subtitle": "Wij meten op en adviseren ter plaatse — gratis en vrijblijvend.",
+      "submitLabel": "Plaatsbezoek aanvragen",
+      "sentTitle": "Plaatsbezoek aangevraagd",
+      "sentMsg": "Bedankt — we contacteren u om een geschikt moment af te spreken.",
+      "fields": {
+        "name": {
+          "label": "Naam",
+          "placeholder": "Voor- en achternaam"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "address": {
+          "label": "Adres",
+          "placeholder": "Straat, gemeente"
+        },
+        "preferredTime": {
+          "label": "Voorkeursmoment",
+          "options": [
+            "Voormiddag",
+            "Namiddag",
+            "Flexibel"
+          ]
+        },
+        "rooms": {
+          "label": "Kamers",
+          "options": [
+            "1 kamer",
+            "2 kamers",
+            "3 kamers",
+            "4+ kamers"
+          ]
+        }
+      }
+    },
+    "training": {
+      "title": "Boek uw opleiding",
+      "subtitle": "Praktijkgerichte certificering in ons Belgisch hoofdkantoor — laat uw gegevens achter en wij bevestigen.",
+      "submitLabel": "Reserveer mijn plaats",
+      "sentTitle": "Plaats aangevraagd",
+      "sentMsg": "Bedankt — we bevestigen uw plaats en sturen alle praktische info.",
+      "fields": {
+        "fullName": {
+          "label": "Volledige naam",
+          "placeholder": "Voor- en achternaam"
+        },
+        "company": {
+          "label": "Bedrijf",
+          "placeholder": "Uw bedrijf"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Voorkeursdatum",
+          "options": [
+            "15–16 sep 2026",
+            "06–08 okt 2026",
+            "17–18 nov 2026",
+            "Sessie op maat op locatie"
+          ]
+        },
+        "attendees": {
+          "label": "Deelnemers",
+          "options": [
+            "1 persoon",
+            "2 personen",
+            "3 personen",
+            "4+ personen"
+          ]
+        }
+      }
+    },
+    "dates": {
+      "title": "Komende opleidingsdata",
+      "subtitle": "Kies een datum en reserveer uw plaats — kleine groepen, snel volzet.",
+      "submitLabel": "Reserveer mijn plaats",
+      "sentTitle": "Plaats aangevraagd",
+      "sentMsg": "Bedankt — we bevestigen uw plaats en sturen alle praktische info.",
+      "fields": {
+        "fullName": {
+          "label": "Volledige naam",
+          "placeholder": "Voor- en achternaam"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Voorkeursdatum",
+          "options": [
+            "15–16 sep 2026",
+            "06–08 okt 2026",
+            "17–18 nov 2026",
+            "Sessie op maat op locatie"
+          ]
+        }
+      }
+    },
+    "partner": {
+      "title": "Stel u kandidaat als partner",
+      "subtitle": "Vertel ons over uw bedrijf — we bekijken elke kandidatuur persoonlijk.",
+      "submitLabel": "Verstuur kandidatuur",
+      "sentTitle": "Kandidatuur ontvangen",
+      "sentMsg": "Bedankt — ons partnerteam bekijkt uw kandidatuur en antwoordt binnen twee werkdagen.",
+      "fields": {
+        "company": {
+          "label": "Bedrijf",
+          "placeholder": "Uw bedrijf"
+        },
+        "contactName": {
+          "label": "Contactpersoon",
+          "placeholder": "Voor- en achternaam"
+        },
+        "partnerType": {
+          "label": "Ik wil me aansluiten als",
+          "options": [
+            "Verdeler — ik verkoop, u plaatst",
+            "Dealer — ik verkoop en plaats zelf",
+            "Nog niet zeker"
+          ]
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "country": {
+          "label": "Land",
+          "placeholder": "België"
+        },
+        "activity": {
+          "label": "Activiteit",
+          "options": [
+            "Bouw & renovatie",
+            "Interieurafwerking",
+            "Droogbouw / pleisterwerken",
+            "Elektriciteit / verlichting",
+            "Andere"
+          ]
+        },
+        "notes": {
+          "label": "Over uw bedrijf",
+          "placeholder": "Teamgrootte, regio's die u bedient, huidige activiteiten..."
+        }
+      }
+    },
+    "call": {
+      "title": "Plan een belafspraak",
+      "subtitle": "Laat uw nummer en een geschikt moment achter — wij bellen u terug.",
+      "submitLabel": "Belafspraak aanvragen",
+      "sentTitle": "Belafspraak aangevraagd",
+      "sentMsg": "Bedankt — we bellen u op het gekozen moment.",
+      "fields": {
+        "name": {
+          "label": "Naam",
+          "placeholder": "Voor- en achternaam"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "bestTime": {
+          "label": "Beste moment",
+          "options": [
+            "Voormiddag",
+            "Namiddag",
+            "Vooravond"
+          ]
+        },
+        "topic": {
+          "label": "Onderwerp",
+          "options": [
+            "Een offerte",
+            "Partnerschap",
+            "Opleiding",
+            "Technische vraag",
+            "Andere"
+          ]
+        }
+      }
+    },
+    "samples": {
+      "title": "Vraag kleurstalen aan",
+      "subtitle": "Bestel fysieke RAL- / kleurstalen — gratis voor professionele partners.",
+      "submitLabel": "Stalen aanvragen",
+      "sentTitle": "Stalen aangevraagd",
+      "sentMsg": "Bedankt — we versturen uw stalen en volgen op binnen twee werkdagen.",
+      "fields": {
+        "company": {
+          "label": "Bedrijf",
+          "placeholder": "Uw bedrijf"
+        },
+        "contactName": {
+          "label": "Contactpersoon",
+          "placeholder": "Voor- en achternaam"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "shippingAddress": {
+          "label": "Leveringsadres",
+          "placeholder": "Straat, postcode, gemeente"
+        },
+        "productLine": {
+          "label": "Productlijn",
+          "options": [
+            "Polyester",
+            "PVC-folie",
+            "Akoestisch",
+            "Nog niet zeker"
+          ]
+        },
+        "colours": {
+          "label": "Gewenste kleuren",
+          "placeholder": "bv. Wit, Antraciet, RAL op maat"
+        },
+        "notes": {
+          "label": "Opmerkingen",
+          "placeholder": "Project, aantallen, alles wat nuttig is..."
+        }
+      }
+    },
+    "datasheet": {
+      "title": "Download de technische fiche",
+      "subtitle": "Vul uw gegevens in en de download start meteen. We gebruiken ze enkel om uw aanvraag op te volgen.",
+      "submitLabel": "Ontvang de technische fiche",
+      "sentTitle": "Hier is uw technische fiche",
+      "sentMsg": "Uw download start normaal automatisch — zo niet, gebruik dan de knop hieronder.",
+      "fields": {
+        "name": {
+          "label": "Naam",
+          "placeholder": "Voor- en achternaam"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        }
+      }
+    },
+    "trainingDates": [
+      "15–16 sep 2026",
+      "06–08 okt 2026",
+      "17–18 nov 2026",
+      "Sessie op maat op locatie"
+    ],
+    "trainingDateNotes": [
+      "Beveren-Waas · 4 plaatsen",
+      "Beveren-Waas · 6 plaatsen",
+      "Beveren-Waas · 8 plaatsen"
+    ],
+    "close": "Sluiten",
+    "downloadDatasheet": "Download technische fiche",
+    "select": "Selecteer…"
+  },
+  "faqPage": {
+    "items": [
+      {
+        "q": "Wat is een spanplafond?",
+        "a": "Een spanplafond is een dun, naadloos doek — polyester of pvc-folie — dat over de ruimte wordt gespannen en in een smal randprofiel wordt geklikt. Het oogt als een perfect strak geschilderd plafond, maar wordt geplaatst zonder pleisterwerk, schuren of schilderen en verbergt alles wat erboven zit."
+      },
+      {
+        "q": "Hoe lang duurt de plaatsing?",
+        "a": "De meeste ruimtes zijn op één dag klaar. Een team van twee plaatst tot ongeveer 50 m² per dag. Koud gemonteerd polyester heeft geen droogtijd nodig, dus de ruimte is meteen weer bruikbaar."
+      },
+      {
+        "q": "Geeft het veel rommel? Moet ik het huis uit?",
+        "a": "Nee. Er is geen afbraak, stof, schuur- of schilderwerk, dus de plaatsing kan gewoon in een gemeubelde, bewoonde ruimte gebeuren. Het bestaande plafond kan er meestal onder blijven zitten."
+      },
+      {
+        "q": "Hoe lang gaat een spanplafond mee?",
+        "a": "Onze systemen hebben 25 jaar garantie. Het oppervlak is afwasbaar en vochtbestendig, en zal nooit barsten, afbladderen, vergelen of herschilderd moeten worden."
+      },
+      {
+        "q": "Kan het de akoestiek verbeteren?",
+        "a": "Ja. Een micro-geperforeerde versie met absorberende rug haalt tot klasse A geluidsabsorptie en is niet te onderscheiden van de standaardafwerking — de galm en het lawaai nemen meetbaar af."
+      },
+      {
+        "q": "Hoe breed kan een plafond zijn zonder naad?",
+        "a": "Tot 5.7 m naadloos met pvc-folie, en tot 5.15 m met polyester. Grotere overspanningen krijgen een vrijwel onzichtbare lasnaad of een bewust geplaatste profiellijn."
+      },
+      {
+        "q": "Kan ik verlichting, backlight of een bedrukt ontwerp krijgen?",
+        "a": "Ja. Doorschijnende folies geven een egaal, dimbaar backlight zonder hotspots, LED-lijnverlichting wordt in het oppervlak geïntegreerd, en elk beeld — ook een sterrenhemel — kan van rand tot rand worden geprint."
+      },
+      {
+        "q": "Wat kost een spanplafond?",
+        "a": "De prijs hangt af van het project — van de oppervlakte, het systeem, de afwerking en eventuele verlichtings- of akoestische opties. Vraag een gratis en vrijblijvende offerte aan en een specialist antwoordt binnen twee werkdagen."
+      },
+      {
+        "q": "Werken jullie met aannemers en verdelers?",
+        "a": "Ja. STRETCH is B2B-gedreven: we leiden installateurs op in ons Belgische hoofdkantoor, leveren doeken op maat via een B2B-portaal en verwijzen lokale klanten door naar gecertificeerde partners. Zie de pagina's Partners en Installateursopleiding."
+      }
+    ],
+    "eyebrow": "FAQ",
+    "titleA": "Goede",
+    "titleB": "vragen",
+    "lead": "Alles wat mensen doorgaans vragen over spanplafonds — plaatsing, levensduur, akoestiek, overspanningen en prijs. Nog twijfels? Vraag het ons gewoon.",
+    "asideKicker": "Nog een vraag?",
+    "asideTitle": "Praat met een spanplafondspecialist.",
+    "asideBody": "Vertel ons over uw ruimte en we antwoorden — gratis en vrijblijvend.",
+    "asideCta": "Vraag een gratis offerte aan"
+  },
+  "catalogFaqs": {
+    "polyester": [
+      {
+        "q": "Hoe lang duurt de plaatsing van een polyester spanplafond?",
+        "a": "De meeste ruimtes zijn op één dag klaar. Een team van twee plaatst tot ongeveer 50 m² per dag, en omdat het doek koud wordt gespannen is er geen droogtijd — de ruimte is meteen weer bruikbaar."
+      },
+      {
+        "q": "Is de koude montage echt stofvrij?",
+        "a": "Ja. Het bestaande plafond wordt niet uitgebroken en er wordt niet geschuurd of geschilderd. Het doek klikt in een smal randprofiel, dus de plaatsing is schoon genoeg voor gemeubelde, bewoonde ruimtes."
+      },
+      {
+        "q": "Kan een polyester plafond de akoestiek van een ruimte verbeteren?",
+        "a": "Een micro-geperforeerde versie met een hoogdichte absorber erachter haalt tot klasse A geluidsabsorptie. Ze oogt identiek aan de standaardafwerking, maar vermindert galm en lawaai meetbaar."
+      },
+      {
+        "q": "Hoe onderhoud ik het?",
+        "a": "Gewoon afnemen met een vochtige doek. Het oppervlak is afwasbaar en vochtbestendig, zal niet barsten, afbladderen of vergelen, en hoeft tijdens de volledige 25 jaar garantie nooit herschilderd te worden."
+      }
+    ],
+    "pvc": [
+      {
+        "q": "Waarom is een pvc-spanplafond '100% recycleerbaar'?",
+        "a": "De folie kan aan het einde van haar levensduur tot grondstof worden gerecycleerd, én ze is tijdens het gebruik wegneembaar — u klikt ze los om bij de technieken erboven te komen en spant ze in enkele minuten opnieuw, in plaats van een gipsplafond uit te breken en te vervangen."
+      },
+      {
+        "q": "Hoe breed kan een pvc-plafond zijn zonder naad?",
+        "a": "Tot 6.4 m naadloos — het breedste uit ons gamma. Grotere ruimtes worden gedekt door panelen te lassen met een vrijwel onzichtbare naad of door een bewust geplaatste profiellijn."
+      },
+      {
+        "q": "Is pvc-folie geschikt voor badkamers en natte ruimtes?",
+        "a": "Ja. Ze is volledig afwasbaar en vochtbestendig, wat haar populair maakt in badkamers, zwembaden en wellnessruimtes waar een geschilderd plafond zou blazen of vlekken."
+      },
+      {
+        "q": "Kan ze verlicht of bedrukt worden?",
+        "a": "Doorschijnende folies verspreiden een LED-veld egaal en zonder hotspots, en elke foto, elk patroon of sterrenhemelontwerp kan van rand tot rand worden geprint. Bekijk het verlichte plafondsysteem voor het volledige gamma."
+      }
+    ],
+    "acoustic": [
+      {
+        "q": "Hoeveel lawaai haalt het akoestische systeem echt weg?",
+        "a": "Met de hoogdichte absorberende rug haalt het tot klasse A absorptie (de hoogste klasse), gemeten als αw-waarden. In de praktijk wordt een harde, galmende ruimte zo een rustige, comfortabele ruimte — zonder zichtbare akoestische panelen."
+      },
+      {
+        "q": "Ziet de akoestische afwerking er anders uit dan een gewoon plafond?",
+        "a": "Nee. De absorptie gebeurt achter een micro-geperforeerd doek, dus het plafond oogt als één vlekkeloos, naadloos oppervlak — de behandeling is onzichtbaar."
+      },
+      {
+        "q": "Kunnen luidsprekers achter het plafond worden verborgen?",
+        "a": "Ja. Luidsprekers kunnen volledig achter het gespannen doek worden gemonteerd voor strak, bronloos geluid — een populaire optie voor thuisbioscopen en studio's."
+      },
+      {
+        "q": "Waar is het akoestische systeem het nuttigst?",
+        "a": "Overal waar galm een probleem is: kantoren, restaurants, opnamestudio's, scholen, zorgruimtes en thuisbioscopen. Het is ook uitbreidbaar naar vrijhangende eilanden en wandpanelen."
+      }
+    ],
+    "light": [
+      {
+        "q": "Zijn de LED's als hotspots zichtbaar in een verlicht plafond?",
+        "a": "Nee. De doorschijnende folie ligt over een LED-veld en verspreidt het licht egaal over het hele oppervlak — u ziet een zachte, uniforme gloed in plaats van afzonderlijke punten."
+      },
+      {
+        "q": "Wat kan er op het plafond worden geprint?",
+        "a": "Zowat elk beeld, patroon of elke textuur in hoge resolutie — geprint van rand tot rand, zonder zichtbare naad. Een veelgekozen optie is een glasvezel-sterrenhemel voor bioscopen en slaapkamers."
+      },
+      {
+        "q": "Kan de verlichting gedimd worden of van kleur veranderen?",
+        "a": "Ja. Verlichte plafonds zijn dimbaar en met RGB-LED-opties verandert u kleur en sfeer. LED-lijnverlichting kan bovendien in het doek worden verzonken voor een strak architecturaal effect."
+      }
+    ],
+    "prefab": [
+      {
+        "q": "Wat is een prefab spanplafondunit?",
+        "a": "Een complete plafondmodule — kader plus gespannen doek — die in ons Belgische atelier wordt geassembleerd en gecontroleerd, en vervolgens klaar wordt geleverd om op de werf in een randkader te klikken."
+      },
+      {
+        "q": "Waarom kiezen voor prefab in plaats van plaatsing ter plaatse?",
+        "a": "Prefab units zijn ideaal voor modulaire bouw en repetitieve ruimtes zoals hotelbadkamers en badkamerpods: het meeste werk gebeurt off-site, dus de plaatsing vraagt minimale werkuren en amper verschillende vakmensen."
+      },
+      {
+        "q": "Hoe bereikt u de technieken boven een prefab plafond?",
+        "a": "Elke unit kan een discreet geïntegreerd inspectieluik krijgen, zodat leidingen en technieken erboven bereikbaar blijven zonder de strakke plafondlijn te doorbreken."
+      }
+    ],
+    "starry": [
+      {
+        "q": "Hoeveel sterren kan een sterrenhemelplafond hebben?",
+        "a": "Van zo'n 150 punten voor een subtiel effect tot meer dan duizend voor een dichte, spectaculaire hemel. De dichtheid wordt afgestemd op de grootte van de ruimte en de sfeer die u wilt."
+      },
+      {
+        "q": "Geven de glasvezelsterren warmte af?",
+        "a": "Nee. Alle vezels worden gevoed door één centrale LED-lichtbron op afstand, dus de punten zelf blijven volledig koel — alleen het licht reist door de vezel."
+      },
+      {
+        "q": "Kunnen de sterren twinkelen of van kleur veranderen?",
+        "a": "Ja. Een optioneel twinkelwiel laat de sterren fonkelen, met RGB-lichtbronnen verandert u de kleur, en voor beweging zijn vallende-stereffecten mogelijk. Alles is dimbaar."
+      }
+    ],
+    "hatch": [
+      {
+        "q": "Kunt u bij de technieken achter een spanplafond?",
+        "a": "Ja — een geïntegreerd inspectieluik geeft discrete, telkens opnieuw te openen toegang tot kranen, aftakdozen en aansluitingen boven het doek, zodat het plafond nooit opengesneden of vervangen hoeft te worden om erbij te komen."
+      },
+      {
+        "q": "Is het luik zichtbaar in het plafond?",
+        "a": "Amper. Het kader zit in de randafwerking verwerkt en is met hetzelfde doek afgewerkt, waardoor het in het oppervlak opgaat en pas opvalt als u ernaar zoekt."
+      },
+      {
+        "q": "Kan een luik worden toegevoegd aan een bestaand spanplafond?",
+        "a": "In de meeste gevallen wel. Luiken kunnen achteraf in een bestaand plafond worden ingebouwd, op maat en op de juiste plaats voor de techniek die erachter bereikbaar moet zijn."
+      }
+    ],
+    "print": [
+      {
+        "q": "Welke beeldkwaliteit heb ik nodig voor een bedrukt plafond?",
+        "a": "Een bestand in hoge resolutie geeft het beste resultaat. Wij controleren en kleurmanagen uw beeldmateriaal, schalen het naar het plafond en maken een proef vóór het printen, zodat het eindresultaat aan uw verwachting beantwoordt."
+      },
+      {
+        "q": "Kan een bedrukt plafond verlicht worden?",
+        "a": "Ja. Geprint op een doorschijnende folie boven een LED-veld wordt het beeld egaal verlicht, zonder hotspots — ideaal voor luchttaferelen en opvallende kunstwerken."
+      },
+      {
+        "q": "Is er een zichtbare naad op grote prints?",
+        "a": "Nee. Het beeld wordt van rand tot rand geprint op één naadloos doek tot 5.7 m breed, dus er lopen geen paneellijnen door uw ontwerp."
+      }
+    ]
+  },
+  "applications": {
+    "living-cinema": {
+      "name": "Woonkamers & thuisbioscoop",
+      "shortName": "Wonen & cinema",
+      "eyebrow": "Wonen & cinema",
+      "metaDescription": "Spanplafonds voor woonkamers en thuisbioscopen — naadloze afwerking, geïntegreerde verlichting, sterrenhemels in glasvezel en betere akoestiek, geplaatst op één dag.",
+      "intro": "Een vlekkeloos plafond bepaalt de sfeer van een leefruimte. STRETCH geeft u een perfect strakke, naadloze afwerking — met verborgen verlichting, een glasvezel sterrenhemel voor de bioscoop en akoestisch comfort, alles koud gemonteerd op één dag.",
+      "benefits": [
+        {
+          "title": "Een naadloze, perfecte afwerking",
+          "body": "Geen barsten, geen naden en nooit meer schilderen — een strak doek gespannen van muur tot muur, in diep mat of in elke kleur die u wenst."
+        },
+        {
+          "title": "Sfeer als in de cinema",
+          "body": "Voeg een glasvezel sterrenhemel, geïntegreerde LED-lijnen en dimbaar backlight toe voor de perfecte sfeer tijdens filmavonden."
+        },
+        {
+          "title": "Rustigere, stillere ruimtes",
+          "body": "Een akoestisch doek tempert de galm in open leefruimtes, zodat gesprekken en geluid warmer en helderder klinken."
+        }
+      ]
+    },
+    "bathroom-kitchen": {
+      "name": "Badkamers & keukens",
+      "shortName": "Badkamer & keuken",
+      "eyebrow": "Badkamer & keuken",
+      "metaDescription": "Vochtbestendige spanplafonds voor badkamer en keuken — waterdicht, schimmelwerend en afwasbaar, met geïntegreerde verlichting, geplaatst op één dag.",
+      "intro": "Badkamers en keukens zijn zwaar voor plafonds. Een STRETCH-doek is waterdicht, schimmelwerend en afwasbaar — het verbergt leidingen en kanalen achter een vlekkeloos oppervlak, met netjes geïntegreerde spots en afzuiging.",
+      "benefits": [
+        {
+          "title": "Vocht- en waterbestendig",
+          "body": "Het doek trekt zich niets aan van stoom en spatten en zal nooit afbladderen, vlekken of schimmelen zoals een geschilderd of gepleisterd plafond."
+        },
+        {
+          "title": "Afwasbaar oppervlak",
+          "body": "Een snelle veeg en het oogt weer als nieuw — ideaal boven douche, bad en kookzone."
+        },
+        {
+          "title": "Strak geïntegreerde techniek",
+          "body": "Spots, luidsprekers, afzuiging en inspectieluiken worden netjes in het oppervlak geïntegreerd en verbergen de leidingen erboven."
+        }
+      ]
+    },
+    "office-retail": {
+      "name": "Kantoren & retail",
+      "shortName": "Kantoor & retail",
+      "eyebrow": "Kantoor & retail",
+      "metaDescription": "Spanplafonds voor kantoren, retail en horeca — akoestiek tot klasse A, bedrukte plafonds in uw huisstijl en geïntegreerde verlichting, snel geplaatst zonder overlast.",
+      "intro": "Commerciële ruimtes moeten er strak uitzien én goed klinken. STRETCH levert akoestisch comfort tot klasse A, bedrukte plafonds in uw huisstijl en geïntegreerde verlichting — koud en snel gemonteerd, met minimale hinder voor een werkende ruimte.",
+      "benefits": [
+        {
+          "title": "Akoestisch comfort tot klasse A",
+          "body": "Een microgeperforeerd akoestisch plafond vermindert de galm in open kantoren, vergaderzalen en restaurants voor verstaanbaardere gesprekken."
+        },
+        {
+          "title": "Bedrukte plafonds in uw huisstijl",
+          "body": "Druk elk beeld, patroon of merklogo af van rand tot rand — een opvallende blikvanger voor retail, showrooms en horeca."
+        },
+        {
+          "title": "Snelle plaatsing zonder overlast",
+          "body": "Koude montage betekent geen stof en geen rommel; de meeste ruimtes zijn op één dag klaar — ideaal voor panden in gebruik."
+        }
+      ]
+    }
+  },
+  "appPage": {
+    "crumbApplications": "Toepassingen",
+    "quoteCta": "Vraag een gratis offerte aan",
+    "seeProjects": "Bekijk projecten",
+    "recommended": "Aanbevolen oplossingen",
+    "selectedWork": "Geselecteerd werk",
+    "explore": "Ontdek",
+    "ctaTitle": "Plant u een project voor {name}?",
+    "ctaBody": "Vertel ons over uw ruimte en wij raden het juiste systeem aan — gratis en vrijblijvend."
+  },
+  "projectCards": {
+    "cats": {
+      "Acoustic": "Akoestisch",
+      "Office": "Kantoor",
+      "Commercial": "Commercieel",
+      "Retail": "Retail",
+      "Bathroom": "Badkamer",
+      "Light & Print": "Licht & print",
+      "Living room": "Woonkamer",
+      "Home cinema": "Thuisbioscoop"
+    },
+    "metas": {
+      "da-tweekaz-studio": "Nederland · Opnamestudio",
+      "mark-with-a-k": "België · Geluidsstudio",
+      "notary-ampe-anthony": "Kruibeke · Akoestisch kantoor",
+      "bnp-paribas-fortis": "Brussel · Hoofdkantoor bank",
+      "van-der-valk-beveren": "Beveren · Evenementenzaal hotel",
+      "johnson-and-johnson": "Limerick, IE · Farma R&D-site",
+      "polette-eyewear": "Antwerpen · Retail conceptstore",
+      "citizenm-hotel": "VS & Europa · Prefab badkamerunits",
+      "london-chapel": "Londen, VK · Plafond met backlight",
+      "private-villa-knokke": "Knokke · Open leefruimte",
+      "home-cinema-ghent": "Gent · Sterrenhemel + akoestiek",
+      "city-penthouse-antwerp": "Antwerpen · Woonkamer",
+      "wellness-spa-bruges": "Brugge · Spa-badkamer",
+      "rue-perree-paris": "Parijs · Galerijplafond met backlight"
+    }
+  },
+  "technical": {
+    "topics": [
+      {
+        "label": "Technische fiche",
+        "sub": "Specificaties & download"
+      },
+      {
+        "label": "Kleuren & afwerkingen",
+        "sub": "Volledig gamma"
+      },
+      {
+        "label": "Brandveiligheid",
+        "sub": "Brandreactie & A2"
+      },
+      {
+        "label": "Plaatsingsgids",
+        "sub": "Stap voor stap"
+      },
+      {
+        "label": "Bestektekst",
+        "sub": "Voor aanbestedingen"
+      },
+      {
+        "label": "FAQ",
+        "sub": "Veelgestelde vragen"
+      }
+    ],
+    "polyester": {
+      "label": "Polyester spanplafond",
+      "short": "Polyester",
+      "blurb": "Polyestermembraan in koude montage — een zeer mat, naadloos plafond dat met de hand wordt opgespannen.",
+      "fireSafety": {
+        "intro": "Het polyestermembraan is geclassificeerd als B-s1,d0 volgens EN 13501-1 — brandvertragend, met zeer beperkte rookontwikkeling en zonder brandende druppels. Waar de strengste brandeisen gelden, is een onbrandbare A2-s1,d0-versie beschikbaar.",
+        "rows": [
+          {
+            "k": "Standaardclassificatie",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Onbrandbare optie",
+            "v": "A2-s1,d0"
+          },
+          {
+            "k": "Rookontwikkeling",
+            "v": "s1 — zeer beperkt"
+          },
+          {
+            "k": "Brandende druppels",
+            "v": "d0 — geen"
+          },
+          {
+            "k": "Testnorm",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "De classificatie B-s1,d0 betekent dat het membraan brandvertragend is (B), zeer weinig rook produceert (s1) en geen brandende druppels afgeeft (d0) — de combinatie die de meeste publieke en commerciële interieurs vereisen.",
+          "Voor vluchtwegen, hoogbouw, ziekenhuizen en andere projecten waar een onbrandbare bekleding wordt voorgeschreven, voldoet de A2-s1,d0-versie aan die strengere eis, met behoud van hetzelfde naadloze, zeer matte uitzicht.",
+          "Brandreactiecertificaten en prestatieverklaringen zijn op aanvraag beschikbaar voor uw branddossier."
+        ]
+      },
+      "installation": {
+        "intro": "Polyester wordt koud opgespannen — geen warmtekanonnen, geen droogtijd, geen dampen. Een team van twee personen werkt een ruimte doorgaans in één dag af, ook in gemeubelde, bewoonde ruimtes.",
+        "steps": [
+          {
+            "title": "Opname & opmeting",
+            "body": "De ruimte wordt met de laser opgemeten en het membraan wordt versneden en gelast tot één naadloos paneel tot 5.15 m breed, exact in de vorm van de ruimte."
+          },
+          {
+            "title": "Randprofiel plaatsen",
+            "body": "Een slank klemprofiel wordt op de gekozen hoogte aan wand of plafond bevestigd, en volgt rechte stukken, rondingen en hoeken."
+          },
+          {
+            "title": "Koud opspannen met de hand",
+            "body": "Het koude membraan wordt in het profiel geklikt en met de hand over de ruimte opgespannen, trommelstrak tot een perfect vlak oppervlak — volledig zonder warmte."
+          },
+          {
+            "title": "Afwerking & detaillering",
+            "body": "Randen, hoeken en eventuele geïntegreerde verlichting of inspectieluiken worden afgewerkt. Er is geen droogtijd, dus de ruimte blijft schoon en is meteen weer bruikbaar."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Een kant-en-klare clausule voor bestek- en aanbestedingsdocumenten. Pas de waarden tussen haakjes aan uw project aan.",
+        "clause": "Leveren en plaatsen van een koud opgespannen polyester spanplafondsysteem [STRETCH of goedgekeurd gelijkwaardig]. Het membraan bestaat uit een gebreid polyestertextiel dat zonder toepassing van warmte koud in een omlopend klemprofiel wordt opgespannen en zo een naadloos, zeer mat oppervlak vormt tot 5.15 m breed. De brandreactie dient klasse B-s1,d0 volgens EN 13501-1 te bedragen (klasse A2-s1,d0 waar aangegeven). Het systeem dient afwasbaar en vochtbestendig te zijn, geschikt voor plaatsing in gebruikte ruimtes, en voorzien van een fabrieksgarantie van [10] jaar. Kleur: [RAL ____]. Waar een akoestische prestatie is voorgeschreven, dient een microgeperforeerd membraan met een absorberende rug in hoge dichtheid te worden voorzien, met een geluidsabsorptie tot klasse A."
+      }
+    },
+    "pvc": {
+      "label": "PVC spanplafond",
+      "short": "PVC-folie",
+      "blurb": "Warm gemonteerde PVC-folie — volledig recycleerbaar, wegneembaar en naadloos tot 6.4 m.",
+      "fireSafety": {
+        "intro": "De PVC-folie is geclassificeerd als B-s1,d0 volgens EN 13501-1 — brandvertragend, met zeer beperkte rookontwikkeling en zonder brandende druppels.",
+        "rows": [
+          {
+            "k": "Classificatie",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Rookontwikkeling",
+            "v": "s1 — zeer beperkt"
+          },
+          {
+            "k": "Brandende druppels",
+            "v": "d0 — geen"
+          },
+          {
+            "k": "Testnorm",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "De classificatie B-s1,d0 betekent dat de folie brandvertragend is (B), zeer weinig rook produceert (s1) en geen brandende druppels afgeeft (d0), waardoor ze geschikt is voor de overgrote meerderheid van residentiële en commerciële interieurs.",
+          "Omdat de folie wegneembaar is, kan ze worden losgeklikt en opnieuw opgespannen voor toegang tot de technieken erboven, zonder dat de brandprestaties worden aangetast.",
+          "Brandreactiecertificaten en prestatieverklaringen zijn op aanvraag beschikbaar voor uw branddossier."
+        ]
+      },
+      "installation": {
+        "intro": "PVC-folie wordt bij de plaatsing verwarmd en opgespannen — een vermoeid plafond wordt in één dag een vlekkeloos nieuw plafond, terwijl het oude plafond er gewoon achter blijft zitten.",
+        "steps": [
+          {
+            "title": "Opname & opmeting",
+            "body": "De ruimte wordt opgemeten en de folie wordt hoogfrequent op maat gelast met een omlopende harpoenrand, in de vorm van de ruimte en naadloos tot 6.4 m breed."
+          },
+          {
+            "title": "Randprofiel plaatsen",
+            "body": "Een harpoen-/klemprofiel wordt rondom de ruimte op de gekozen hoogte bevestigd, langs de wandlijn en eventuele bijzonderheden."
+          },
+          {
+            "title": "Verwarmen & opspannen",
+            "body": "De ruimte wordt met een warmtebron opgewarmd om de folie soepel te maken; de harpoenrand wordt in het profiel gehaakt en de folie spant zich bij het afkoelen strak en vlak op."
+          },
+          {
+            "title": "Afwerking & detaillering",
+            "body": "Randen, hoeken, verlichtingsarmaturen en inspectieluiken worden afgewerkt. De folie laat zich eenvoudig schoonwrijven en is meteen gebruiksklaar."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Een kant-en-klare clausule voor bestek- en aanbestedingsdocumenten. Pas de waarden tussen haakjes aan uw project aan.",
+        "clause": "Leveren en plaatsen van een warm opgespannen spanplafondsysteem in PVC-folie [STRETCH of goedgekeurd gelijkwaardig]. Het membraan bestaat uit een gekalanderde PVC-folie, op maat gelast en opgespannen in een omlopend harpoen-/klemprofiel, en vormt een naadloos oppervlak tot 6.4 m breed in [matte / satijnen / glanzende / doorschijnende] afwerking. De brandreactie dient klasse B-s1,d0 volgens EN 13501-1 te bedragen. De folie dient 100% recycleerbaar, wegneembaar en opnieuw opspanbaar te zijn voor toegang tot het plenum erboven, afwasbaar en vochtbestendig, en voorzien van een fabrieksgarantie van [10] jaar. Kleur/afwerking: [____]. Waar backlight is voorgeschreven, dient een doorschijnende folie over een LED-veld te worden voorzien voor een gelijkmatige verlichting zonder hotspots."
+      }
+    }
+  },
+  "techPage": {
+    "crumbTechnical": "Technisch",
+    "viewProduct": "Bekijk het product",
+    "eyebrowTech": "Technisch",
+    "datasheetCta": "Vraag de volledige technische fiche aan",
+    "samplesCta": "Vraag fysieke stalen aan",
+    "copyHint": "Selecteer de tekst hierboven om deze naar uw bestekdocument te kopiëren.",
+    "ctaTitle": "Hulp nodig bij de bestektekst?",
+    "ctaBody": "Onze specialisten helpen architecten en aannemers om de details juist te krijgen — meestal binnen twee werkdagen.",
+    "ctaBtn": "Vraag het aan onze specialisten",
+    "meta": {
+      "datasheet": "Technische fiche van het {label} — specificaties, classificaties en downloads.",
+      "colours": "Kleuren- en afwerkingsgamma van het {label}, met RAL-referenties en staalaanvraag.",
+      "fire-safety": "Brandreactieclassificatie van het {label} — B-s1,d0 en A2-opties volgens EN 13501-1.",
+      "installation": "Stapsgewijze plaatsingsgids voor het {label}.",
+      "specification": "Kant-en-klare bestektekst voor het {label}, voor aanbestedingen en dossiers.",
+      "faq": "Veelgestelde vragen over het {label}."
+    }
+  },
+  "prefab": {
+    "prefab-ceiling-unit": {
+      "name": "Prefab structuren",
+      "eyebrow": "Prefab structuren",
+      "metaDescription": "Prefab draagstructuren op maat voor spanplafonds — balken in aluminium, staal en hout, kroonlijsten en hoogteverschildetails, in eigen huis gezaagd, gelast en gepoedercoat en wereldwijd verzonden.",
+      "intro": "Prefab draagstructuren voor spanplafondprojecten — balken voor raster- en gridplafonds, kroonlijsten voor zwevende plafonds en strakke hoogteverschildetails. Elke structuur wordt op maat gemaakt volgens uw tekeningen, volledig in eigen huis in onze eigen Poolse productie, en wereldwijd naar onze verdelers verzonden.",
+      "makeHeading": "Wat wij bouwen",
+      "make": [
+        {
+          "title": "Balken — raster- & gridplafonds",
+          "body": "Voorgebouwde balken die een spandoek tot een raster- of gridplafond kaderen — herhaalbare modules, haaks tot op de millimeter en klaar voor montage op de werf."
+        },
+        {
+          "title": "Kroonlijsten — zwevende plafonds",
+          "body": "Omtrekkroonlijsten die een spanplafond van de muren lichten voor een zwevend effect met schaduwvoeg, met waar nodig een kanaal voor verborgen verlichting."
+        },
+        {
+          "title": "Hoogteverschilafwerkingen",
+          "body": "Getrapte en multiniveau dragers die een spandoek strak over hoogteverschillen leiden — zonder geknutsel of giswerk op de werf."
+        }
+      ],
+      "materialsHeading": "Gebouwd in aluminium, staal of hout",
+      "materials": [
+        {
+          "title": "Aluminium",
+          "body": "Licht, stijf en corrosievrij — ideaal voor grote overspanningen, vochtige ruimtes en geïntegreerde verlichtingsprofielen."
+        },
+        {
+          "title": "Staal",
+          "body": "Maximale sterkte voor grote structuren en zware overspanningen, gepoedercoat afgestemd op de omgeving."
+        },
+        {
+          "title": "Hout (MDF / multiplex)",
+          "body": "MDF, multiplex en andere platen in vorm gefreesd voor warme, complexe of gebogen vormen."
+        }
+      ],
+      "production": {
+        "heading": "In eigen huis gemaakt, op maat gemaakt",
+        "body": "Elke structuur wordt ontworpen volgens uw tekeningen en volledig in eigen huis gebouwd in onze eigen Poolse productie. Zagen, lassen en poedercoaten gebeuren allemaal onder één dak — zo bewaken wij kwaliteit en afwerking van ruw profiel tot gekratte, verzendklare structuur.",
+        "details": [
+          {
+            "title": "Zagen",
+            "body": "Profielen op exacte lengtes en hoeken gezaagd, zodat de structuur haaks en zuiver in elkaar past."
+          },
+          {
+            "title": "Lassen",
+            "body": "Strakke, sterke lasnaden — teruggeslepen en afgewerkt zodat de verbindingen in de structuur verdwijnen."
+          },
+          {
+            "title": "Poedercoaten",
+            "body": "Een duurzame poedercoating in elke RAL, in eigen huis aangebracht voor een egaal, slijtvast oppervlak."
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "Van tekening tot afgewerkte structuur",
+        "items": [
+          {
+            "title": "Rasterplafond",
+            "meta": "Aluminium",
+            "summary": "De technische tekening van een rasterbalkengrid, naast de afgewerkte structuur, geplaatst en met doek afgewerkt op de werf."
+          },
+          {
+            "title": "Zwevend kroonlijstplafond",
+            "meta": "Aluminium kroonlijst",
+            "summary": "Een zwevend kroonlijstdetail, van productietekening tot het geplaatste, met doek afgewerkte resultaat."
+          }
+        ]
+      },
+      "worldwide": "Elke structuur wordt gekrat en wereldwijd verzonden, zodat onze verdelers overal hetzelfde strakke, herhaalbare resultaat kunnen bieden — zonder eigen atelier."
+    },
+    "prefab-lighting-elements": {
+      "name": "Prefab lichtelementen",
+      "eyebrow": "Prefab lichtelementen",
+      "metaDescription": "Prefab lichtelementen op een aluminium structuur, afgewerkt met een STRETCH-doek — lichtkoven, lichtlijnen en elementen met backlight, ontworpen volgens uw tekeningen, in eigen huis gebouwd en wereldwijd verzonden.",
+      "intro": "Voorgemonteerde lichtelementen op een aluminium structuur, afgewerkt met ons spandoek — lichtkoven, lichtlijnen en elementen met backlight. Ontworpen volgens uw tekeningen, in eigen huis gebouwd in onze Poolse productie en wereldwijd naar onze verdelers verzonden.",
+      "makeHeading": "Wat wij bouwen",
+      "make": [
+        {
+          "title": "Lichtkoven",
+          "body": "Omtrekkoven die een muur of plafond met egaal, verborgen licht overspoelen — gebouwd als montageklaar aluminium element."
+        },
+        {
+          "title": "Lichtlijnen",
+          "body": "Strakke, verzonken lichtlijnen geïntegreerd in een spanoppervlak voor zuivere, architecturale verlichting."
+        },
+        {
+          "title": "Elementen met backlight",
+          "body": "Panelen en vormen met backlight, afgewerkt met een doorschijnend spandoek voor een egale gloed zonder hotspots."
+        }
+      ],
+      "materialsHeading": "Hoe ze gebouwd worden",
+      "materials": [
+        {
+          "title": "Aluminium structuur",
+          "body": "Een precies, stijf aluminium frame gefreesd op uw afmetingen — de ruggengraat van elk lichtelement."
+        },
+        {
+          "title": "LED & diffusie",
+          "body": "Dimbare LED, gedimensioneerd en geplaatst voor een egale lichtopbrengst, met het doek dat het licht zacht verspreidt."
+        },
+        {
+          "title": "Afwerking met spandoek",
+          "body": "Een doorschijnend of bedrukt STRETCH-doek over het frame gespannen voor een vlekkeloos lichtgevend oppervlak."
+        }
+      ],
+      "showcase": {
+        "heading": "Van tekening tot afgewerkt element",
+        "items": [
+          {
+            "title": "Lichtkoof",
+            "meta": "Aluminium + doek",
+            "summary": "De tekening van een omtreklichtkoof, naast het afgewerkte, oplichtende element geplaatst op de werf."
+          },
+          {
+            "title": "Element met backlight",
+            "meta": "Aluminium + LED + doek",
+            "summary": "Een paneel met backlight, van productietekening tot het egale eindresultaat zonder hotspots."
+          }
+        ]
+      },
+      "worldwide": "Zoals al onze prefab elementen worden ook lichtelementen gekrat en wereldwijd verzonden — hier gebouwd en getest, daar klaar voor montage."
+    }
+  },
+  "prefabPage": {
+    "discussCta": "Bespreek een project",
+    "becomeDealer": "Word verdeler",
+    "technicalDrawing": "Technische tekening",
+    "installedFinished": "Geplaatst & afgewerkt",
+    "shippedWorldwide": "Wereldwijd verzonden",
+    "ctaTitle": "Hebt u een project voor ons?",
+    "ctaBody": "Stuur ons de tekeningen of het idee — wij ontwerpen de structuur, bouwen ze in eigen huis en verzenden ze naar u."
   }
 }

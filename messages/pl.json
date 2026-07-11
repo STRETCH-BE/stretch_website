@@ -1472,5 +1472,906 @@
       ]
     },
     "comingSoon": "Wkrótce"
+  },
+  "modals": {
+    "quote": {
+      "title": "Poproś o bezpłatną wycenę",
+      "subtitle": "Opowiedz nam o swoim projekcie, a przygotujemy dla Ciebie indywidualną wycenę.",
+      "submitLabel": "Wyślij zapytanie",
+      "sentTitle": "Otrzymaliśmy Twoje zapytanie",
+      "sentMsg": "Dziękujemy — specjalista odpowie w ciągu dwóch dni roboczych.",
+      "fields": {
+        "name": {
+          "label": "Imię i nazwisko",
+          "placeholder": "Imię i nazwisko"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "rooms": {
+          "label": "Pomieszczenia",
+          "options": [
+            "1 pomieszczenie",
+            "2 pomieszczenia",
+            "3 pomieszczenia",
+            "4 pomieszczenia",
+            "Więcej niż 4"
+          ]
+        },
+        "timeline": {
+          "label": "Termin",
+          "options": [
+            "Jak najszybciej",
+            "W ciągu 1–3 miesięcy",
+            "W ciągu 4–12 miesięcy",
+            "Na razie się rozglądam"
+          ]
+        },
+        "message": {
+          "label": "Twój projekt",
+          "placeholder": "Powierzchnia, lokalizacja, wszystko, co może pomóc..."
+        }
+      }
+    },
+    "survey": {
+      "title": "Umów pomiar na miejscu",
+      "subtitle": "Zmierzymy i doradzimy na miejscu — bezpłatnie i bez zobowiązań.",
+      "submitLabel": "Umów pomiar",
+      "sentTitle": "Zgłoszenie przyjęte",
+      "sentMsg": "Dziękujemy — skontaktujemy się, aby ustalić dogodny termin.",
+      "fields": {
+        "name": {
+          "label": "Imię i nazwisko",
+          "placeholder": "Imię i nazwisko"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "address": {
+          "label": "Adres",
+          "placeholder": "Ulica, miejscowość"
+        },
+        "preferredTime": {
+          "label": "Preferowana pora",
+          "options": [
+            "Rano",
+            "Po południu",
+            "Elastycznie"
+          ]
+        },
+        "rooms": {
+          "label": "Pomieszczenia",
+          "options": [
+            "1 pomieszczenie",
+            "2 pomieszczenia",
+            "3 pomieszczenia",
+            "4+ pomieszczenia"
+          ]
+        }
+      }
+    },
+    "training": {
+      "title": "Zarezerwuj szkolenie",
+      "subtitle": "Praktyczna certyfikacja w naszej belgijskiej siedzibie — zostaw dane, a potwierdzimy Twój udział.",
+      "submitLabel": "Rezerwuję miejsce",
+      "sentTitle": "Zgłoszenie przyjęte",
+      "sentMsg": "Dziękujemy — potwierdzimy Twoje miejsce i wyślemy szczegóły organizacyjne.",
+      "fields": {
+        "fullName": {
+          "label": "Imię i nazwisko",
+          "placeholder": "Imię i nazwisko"
+        },
+        "company": {
+          "label": "Firma",
+          "placeholder": "Twoja firma"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Preferowany termin",
+          "options": [
+            "15–16 wrz 2026",
+            "06–08 paź 2026",
+            "17–18 lis 2026",
+            "Indywidualna sesja wyjazdowa"
+          ]
+        },
+        "attendees": {
+          "label": "Uczestnicy",
+          "options": [
+            "1 osoba",
+            "2 osoby",
+            "3 osoby",
+            "4+ osoby"
+          ]
+        }
+      }
+    },
+    "dates": {
+      "title": "Najbliższe terminy szkoleń",
+      "subtitle": "Wybierz termin i zarezerwuj miejsce — małe grupy, decyduje kolejność zgłoszeń.",
+      "submitLabel": "Rezerwuję miejsce",
+      "sentTitle": "Zgłoszenie przyjęte",
+      "sentMsg": "Dziękujemy — potwierdzimy Twoje miejsce i wyślemy szczegóły organizacyjne.",
+      "fields": {
+        "fullName": {
+          "label": "Imię i nazwisko",
+          "placeholder": "Imię i nazwisko"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Preferowany termin",
+          "options": [
+            "15–16 wrz 2026",
+            "06–08 paź 2026",
+            "17–18 lis 2026",
+            "Indywidualna sesja wyjazdowa"
+          ]
+        }
+      }
+    },
+    "partner": {
+      "title": "Zostań partnerem",
+      "subtitle": "Opowiedz nam o swojej firmie — każde zgłoszenie rozpatrujemy osobiście.",
+      "submitLabel": "Wyślij zgłoszenie",
+      "sentTitle": "Zgłoszenie otrzymane",
+      "sentMsg": "Dziękujemy — nasz zespół partnerski przeanalizuje zgłoszenie i odezwie się w ciągu dwóch dni roboczych.",
+      "fields": {
+        "company": {
+          "label": "Firma",
+          "placeholder": "Twoja firma"
+        },
+        "contactName": {
+          "label": "Osoba kontaktowa",
+          "placeholder": "Imię i nazwisko"
+        },
+        "partnerType": {
+          "label": "Chcę zostać",
+          "options": [
+            "Dystrybutorem — ja sprzedaję, wy montujecie",
+            "Dealerem — sam sprzedaję i montuję",
+            "Jeszcze nie wiem"
+          ]
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "country": {
+          "label": "Kraj",
+          "placeholder": "Belgia"
+        },
+        "activity": {
+          "label": "Działalność",
+          "options": [
+            "Budownictwo i remonty",
+            "Wykończenie wnętrz",
+            "Suche zabudowy / tynkowanie",
+            "Elektryka / oświetlenie",
+            "Inna"
+          ]
+        },
+        "notes": {
+          "label": "O Twojej firmie",
+          "placeholder": "Wielkość zespołu, obsługiwane regiony, obecna działalność..."
+        }
+      }
+    },
+    "call": {
+      "title": "Umów rozmowę",
+      "subtitle": "Zostaw numer i dogodną porę — oddzwonimy.",
+      "submitLabel": "Zamów rozmowę",
+      "sentTitle": "Rozmowa zamówiona",
+      "sentMsg": "Dziękujemy — zadzwonimy o wybranej porze.",
+      "fields": {
+        "name": {
+          "label": "Imię i nazwisko",
+          "placeholder": "Imię i nazwisko"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "bestTime": {
+          "label": "Najlepsza pora",
+          "options": [
+            "Rano",
+            "Po południu",
+            "Wczesnym wieczorem"
+          ]
+        },
+        "topic": {
+          "label": "Temat",
+          "options": [
+            "Wycena",
+            "Współpraca partnerska",
+            "Szkolenie",
+            "Pytanie techniczne",
+            "Inny"
+          ]
+        }
+      }
+    },
+    "samples": {
+      "title": "Zamów próbki kolorów",
+      "subtitle": "Zamów fizyczne próbniki RAL / kolorów — bezpłatnie dla partnerów handlowych.",
+      "submitLabel": "Zamów próbki",
+      "sentTitle": "Próbki zamówione",
+      "sentMsg": "Dziękujemy — wyślemy próbki i odezwiemy się w ciągu dwóch dni roboczych.",
+      "fields": {
+        "company": {
+          "label": "Firma",
+          "placeholder": "Twoja firma"
+        },
+        "contactName": {
+          "label": "Osoba kontaktowa",
+          "placeholder": "Imię i nazwisko"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "shippingAddress": {
+          "label": "Adres wysyłki",
+          "placeholder": "Ulica, kod pocztowy, miejscowość"
+        },
+        "productLine": {
+          "label": "Linia produktowa",
+          "options": [
+            "Poliester",
+            "Folia PVC",
+            "Akustyczna",
+            "Jeszcze nie wiem"
+          ]
+        },
+        "colours": {
+          "label": "Interesujące Cię kolory",
+          "placeholder": "np. biały, antracyt, niestandardowy RAL"
+        },
+        "notes": {
+          "label": "Uwagi",
+          "placeholder": "Projekt, ilości, wszystko, co może pomóc..."
+        }
+      }
+    },
+    "datasheet": {
+      "title": "Pobierz kartę techniczną",
+      "subtitle": "Podaj swoje dane, a pobieranie rozpocznie się od razu. Wykorzystamy je wyłącznie do obsługi Twojego zapytania.",
+      "submitLabel": "Pobierz kartę",
+      "sentTitle": "Oto Twoja karta techniczna",
+      "sentMsg": "Pobieranie powinno rozpocząć się automatycznie — jeśli nie, użyj przycisku poniżej.",
+      "fields": {
+        "name": {
+          "label": "Imię i nazwisko",
+          "placeholder": "Imię i nazwisko"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        }
+      }
+    },
+    "trainingDates": [
+      "15–16 wrz 2026",
+      "06–08 paź 2026",
+      "17–18 lis 2026",
+      "Indywidualna sesja wyjazdowa"
+    ],
+    "trainingDateNotes": [
+      "Beveren-Waas · 4 miejsca",
+      "Beveren-Waas · 6 miejsc",
+      "Beveren-Waas · 8 miejsc"
+    ],
+    "close": "Zamknij",
+    "downloadDatasheet": "Pobierz kartę techniczną",
+    "select": "Wybierz…"
+  },
+  "faqPage": {
+    "items": [
+      {
+        "q": "Co to jest sufit napinany?",
+        "a": "Sufit napinany to cienka membrana bez łączeń — poliestrowa lub z folii PVC — napinana nad pomieszczeniem i wpinana w wąski profil obwodowy. Wygląda jak idealnie gładki, pomalowany sufit, ale montuje się go bez tynkowania, szlifowania i malowania, a przy tym zakrywa wszystko, co znajduje się nad nim."
+      },
+      {
+        "q": "Ile trwa montaż?",
+        "a": "Większość pomieszczeń jest gotowa w jeden dzień. Dwuosobowa ekipa montuje do około 50 m² dziennie. Poliester montowany na zimno nie wymaga schnięcia, więc z pomieszczenia można korzystać od razu."
+      },
+      {
+        "q": "Czy montaż brudzi? Muszę się wyprowadzić?",
+        "a": "Nie. Nie ma wyburzania, kurzu, szlifowania ani malowania, więc montaż może odbyć się w umeblowanym, zamieszkanym pomieszczeniu. Dotychczasowy sufit zwykle może zostać na swoim miejscu."
+      },
+      {
+        "q": "Jak długo wytrzymuje sufit napinany?",
+        "a": "Nasze systemy mają 25 lat gwarancji. Powierzchnia jest zmywalna i odporna na wilgoć — nie pęka, nie łuszczy się, nie żółknie i nigdy nie wymaga odmalowania."
+      },
+      {
+        "q": "Czy może poprawić akustykę?",
+        "a": "Tak. Wersja mikroperforowana z warstwą absorbera osiąga aż do klasy A pochłaniania dźwięku, a wygląda identycznie jak wykończenie standardowe — pogłos i hałas maleją w mierzalny sposób."
+      },
+      {
+        "q": "Jak szeroki sufit można zamontować bez łączenia?",
+        "a": "Do 5.7 m bez łączeń przy folii PVC i do 5.15 m przy poliestrze. Większe rozpiętości pokrywamy niemal niewidoczną zgrzewaną spoiną lub celowo poprowadzoną linią profilu."
+      },
+      {
+        "q": "Czy mogę mieć oświetlenie, podświetlenie lub nadruk?",
+        "a": "Tak. Folie półprzezroczyste dają równomierne, ściemnialne podświetlenie bez widocznych punktów, liniowe oświetlenie LED integruje się z powierzchnią, a każdy obraz — także gwiezdne niebo — można nadrukować od krawędzi do krawędzi."
+      },
+      {
+        "q": "Ile kosztuje sufit napinany?",
+        "a": "Cena zależy od projektu — od powierzchni, systemu, wykończenia oraz opcji oświetleniowych i akustycznych. Poproś o bezpłatną, niezobowiązującą wycenę, a specjalista odpowie w ciągu dwóch dni roboczych."
+      },
+      {
+        "q": "Czy współpracujecie z wykonawcami i dystrybutorami?",
+        "a": "Tak. STRETCH działa przede wszystkim w modelu B2B: szkolimy monterów w naszej belgijskiej siedzibie, dostarczamy membrany na wymiar przez portal B2B, a klientów lokalnych kierujemy do certyfikowanych partnerów. Zobacz strony Partnerzy i Szkolenia dla monterów."
+      }
+    ],
+    "eyebrow": "FAQ",
+    "titleA": "Dobre",
+    "titleB": "pytania",
+    "lead": "Wszystko, o co ludzie zwykle pytają w sprawie sufitów napinanych — montaż, trwałość, akustyka, rozpiętości i cena. Nadal masz wątpliwości? Po prostu zapytaj.",
+    "asideKicker": "Masz jeszcze pytanie?",
+    "asideTitle": "Porozmawiaj ze specjalistą od sufitów napinanych.",
+    "asideBody": "Opowiedz nam o swoim pomieszczeniu, a odpowiemy — bezpłatnie i bez zobowiązań.",
+    "asideCta": "Poproś o bezpłatną wycenę"
+  },
+  "catalogFaqs": {
+    "polyester": [
+      {
+        "q": "Ile trwa montaż poliestrowego sufitu napinanego?",
+        "a": "Większość pomieszczeń jest gotowa w jeden dzień. Dwuosobowa ekipa montuje do około 50 m² dziennie, a ponieważ membrana napinana jest na zimno, nie ma czasu schnięcia — z pomieszczenia można korzystać od razu."
+      },
+      {
+        "q": "Czy montaż na zimno naprawdę odbywa się bez kurzu?",
+        "a": "Tak. Nie ma wyburzania istniejącego sufitu, szlifowania ani malowania. Membrana wpina się w wąski profil obwodowy, więc montaż jest na tyle czysty, że można go przeprowadzić w umeblowanych, zamieszkanych pomieszczeniach."
+      },
+      {
+        "q": "Czy sufit poliestrowy może poprawić akustykę pomieszczenia?",
+        "a": "Wersja mikroperforowana z absorberem o wysokiej gęstości osiąga aż do klasy A pochłaniania dźwięku. Wygląda identycznie jak wykończenie standardowe, ale w mierzalny sposób redukuje pogłos i hałas."
+      },
+      {
+        "q": "Jak go czyścić i konserwować?",
+        "a": "Wystarczy przetrzeć wilgotną ściereczką. Powierzchnia jest zmywalna i odporna na wilgoć, nie pęka, nie łuszczy się i nie żółknie, a przez całe 25 lat gwarancji nie wymaga odmalowania."
+      }
+    ],
+    "pvc": [
+      {
+        "q": "Dlaczego sufit napinany z PVC jest „w 100% zdatny do recyklingu”?",
+        "a": "Folia po zakończeniu użytkowania nadaje się do recyklingu z odzyskiem surowca, a w trakcie użytkowania można ją demontować — wystarczy ją wypiąć, aby dostać się do instalacji powyżej, i ponownie napiąć w kilka minut, zamiast zrywać i wymieniać sufit z płyt gipsowo-kartonowych."
+      },
+      {
+        "q": "Jaką rozpiętość może pokryć sufit PVC bez łączenia?",
+        "a": "Do 6.4 m bez łączeń — najwięcej w naszej ofercie. Większe pomieszczenia pokrywa się, zgrzewając bryty niemal niewidoczną spoiną albo wprowadzając celowo poprowadzoną linię profilu."
+      },
+      {
+        "q": "Czy folia PVC nadaje się do łazienek i pomieszczeń mokrych?",
+        "a": "Tak. Jest w pełni zmywalna i odporna na wilgoć, dlatego chętnie wybiera się ją do łazienek, basenów i stref wellness, gdzie malowany sufit pokryłby się pęcherzami lub plamami."
+      },
+      {
+        "q": "Czy można ją podświetlić lub zadrukować?",
+        "a": "Folie półprzezroczyste równomiernie rozpraszają światło pola LED, bez widocznych punktów, a każde zdjęcie, wzór czy projekt gwiezdnego nieba można nadrukować od krawędzi do krawędzi. Pełną gamę znajdziesz w systemie sufitów podświetlanych."
+      }
+    ],
+    "acoustic": [
+      {
+        "q": "O ile system akustyczny naprawdę redukuje hałas?",
+        "a": "Z absorberem o wysokiej gęstości osiąga aż do klasy A pochłaniania (najwyższa klasa), mierzonego wartościami αw. W praktyce twarde, pogłosowe pomieszczenie zamienia się w spokojną, komfortową przestrzeń — bez żadnych widocznych paneli akustycznych."
+      },
+      {
+        "q": "Czy wykończenie akustyczne wygląda inaczej niż zwykły sufit?",
+        "a": "Nie. Pochłanianie zachodzi za mikroperforowaną membraną, więc sufit wygląda jak jedna nieskazitelna powierzchnia bez łączeń — cała warstwa akustyczna jest niewidoczna."
+      },
+      {
+        "q": "Czy za sufitem można ukryć głośniki?",
+        "a": "Tak. Głośniki można zamontować całkowicie za napiętą folią, uzyskując czysty dźwięk bez widocznego źródła — to popularne rozwiązanie w kinach domowych i studiach."
+      },
+      {
+        "q": "Gdzie system akustyczny sprawdza się najlepiej?",
+        "a": "Wszędzie tam, gdzie pogłos jest problemem: w biurach, restauracjach, studiach nagrań, szkołach, placówkach medycznych i kinach domowych. Można go też rozszerzyć o podwieszane wyspy i panele ścienne."
+      }
+    ],
+    "light": [
+      {
+        "q": "Czy na podświetlanym suficie widać punkty diod LED?",
+        "a": "Nie. Półprzezroczysta folia leży nad polem LED i równomiernie rozprasza światło po całej powierzchni, więc widzisz miękką, jednolitą poświatę zamiast pojedynczych punktów."
+      },
+      {
+        "q": "Co można nadrukować na suficie?",
+        "a": "Praktycznie każdy obraz, wzór lub teksturę w wysokiej rozdzielczości — nadruk od krawędzi do krawędzi, bez widocznych łączeń. Częstym wyborem jest światłowodowe gwiezdne niebo do kin i sypialni."
+      },
+      {
+        "q": "Czy oświetlenie można ściemniać lub zmieniać jego kolor?",
+        "a": "Tak. Sufity podświetlane są ściemnialne, a opcje LED RGB pozwalają zmieniać kolor i nastrój. Liniowe oświetlenie LED można też wpuścić w membranę, uzyskując wyrazisty, architektoniczny efekt."
+      }
+    ],
+    "prefab": [
+      {
+        "q": "Co to jest prefabrykowany moduł sufitu napinanego?",
+        "a": "To kompletny moduł sufitowy — rama i napięta membrana — montowany i sprawdzany jakościowo w naszym belgijskim warsztacie, a następnie dostarczany gotowy do wpięcia w ramę obwodową na budowie."
+      },
+      {
+        "q": "Dlaczego wybrać prefabrykat zamiast montażu na miejscu?",
+        "a": "Moduły prefabrykowane sprawdzają się w budownictwie modułowym i powtarzalnych pomieszczeniach, takich jak łazienki hotelowe i gotowe kabiny łazienkowe: większość pracy odbywa się poza budową, więc montaż wymaga minimum ekip i minimum czasu."
+      },
+      {
+        "q": "Jak dostać się do instalacji nad sufitem prefabrykowanym?",
+        "a": "Każdy moduł może mieć dyskretną, zintegrowaną klapę rewizyjną, dzięki której rury i instalacje powyżej pozostają dostępne bez naruszania czystej linii sufitu."
+      }
+    ],
+    "starry": [
+      {
+        "q": "Ile gwiazd może mieć sufit gwiezdne niebo?",
+        "a": "Od około 150 punktów dla subtelnego efektu po ponad tysiąc dla gęstego, spektakularnego nieba. Gęstość dobiera się do wielkości pomieszczenia i nastroju, jaki chcesz uzyskać."
+      },
+      {
+        "q": "Czy światłowodowe gwiazdy wydzielają ciepło?",
+        "a": "Nie. Wszystkie włókna zasila jeden oddalony projektor LED, więc same punkty pozostają całkowicie chłodne — włóknem wędruje wyłącznie światło."
+      },
+      {
+        "q": "Czy gwiazdy mogą migotać lub zmieniać kolor?",
+        "a": "Tak. Opcjonalna tarcza migotania sprawia, że gwiazdy się mienią, projektory RGB pozwalają zmieniać kolor, a dla ruchu można dodać efekt spadających gwiazd. Wszystko jest ściemnialne."
+      }
+    ],
+    "hatch": [
+      {
+        "q": "Czy można dostać się do instalacji za sufitem napinanym?",
+        "a": "Tak — zintegrowana klapa rewizyjna daje dyskretny, wielokrotnie otwierany dostęp do zaworów, puszek i przyłączy nad membraną, więc sufitu nigdy nie trzeba rozcinać ani wymieniać, aby do nich dotrzeć."
+      },
+      {
+        "q": "Czy klapa jest widoczna na suficie?",
+        "a": "Ledwie. Rama jest wbudowana w wykończenie obwodowe i pokryta tą samą membraną, więc stapia się z powierzchnią i zauważysz ją dopiero wtedy, gdy zaczniesz jej szukać."
+      },
+      {
+        "q": "Czy klapę można dodać do istniejącego sufitu napinanego?",
+        "a": "W większości przypadków tak. Klapy można domontować w istniejącym suficie, dobierając ich wymiar i położenie do instalacji, która ma być za nimi dostępna."
+      }
+    ],
+    "print": [
+      {
+        "q": "Jakiej jakości obrazu potrzebuję do sufitu z nadrukiem?",
+        "a": "Najlepszy rezultat daje plik w wysokiej rozdzielczości. Sprawdzamy i kalibrujemy kolorystycznie Twój projekt, skalujemy go do sufitu i wykonujemy proof przed drukiem, aby efekt końcowy odpowiadał Twoim oczekiwaniom."
+      },
+      {
+        "q": "Czy sufit z nadrukiem może być podświetlany?",
+        "a": "Tak. Wydrukowany na folii półprzezroczystej nad polem LED obraz jest równomiernie podświetlony, bez widocznych punktów — idealne rozwiązanie dla motywów nieba i efektownych grafik."
+      },
+      {
+        "q": "Czy na dużych wydrukach widać łączenie?",
+        "a": "Nie. Obraz drukowany jest od krawędzi do krawędzi na jednej membranie bez łączeń o szerokości do 5.7 m, więc przez Twoją grafikę nie biegną żadne linie paneli."
+      }
+    ]
+  },
+  "applications": {
+    "living-cinema": {
+      "name": "Salony i kino domowe",
+      "shortName": "Salon i kino",
+      "eyebrow": "Salon i kino",
+      "metaDescription": "Sufity napinane do salonów i kin domowych — wykończenie bez łączeń, zintegrowane oświetlenie, gwiezdne niebo ze światłowodów i lepsza akustyka, montaż w jeden dzień.",
+      "intro": "Nieskazitelny sufit nadaje ton przestrzeni dziennej. STRETCH daje Ci idealnie gładkie wykończenie bez łączeń — z ukrytym oświetleniem, światłowodowym gwiezdnym niebem do kina i komfortem akustycznym. Całość montowana na zimno w jeden dzień.",
+      "benefits": [
+        {
+          "title": "Idealne wykończenie bez łączeń",
+          "body": "Żadnych pęknięć, łączeń ani malowania — gładka membrana napięta od ściany do ściany, w głębokim macie lub dowolnym kolorze."
+        },
+        {
+          "title": "Klimat prawdziwego kina",
+          "body": "Dodaj gwiezdne niebo ze światłowodów, zintegrowane linie LED i ściemniane podświetlenie, by stworzyć idealny nastrój na filmowe wieczory."
+        },
+        {
+          "title": "Spokojniejsze, cichsze wnętrza",
+          "body": "Membrana akustyczna okiełznuje echo w otwartych przestrzeniach dziennych — rozmowy i dźwięk brzmią cieplej i wyraźniej."
+        }
+      ]
+    },
+    "bathroom-kitchen": {
+      "name": "Łazienki i kuchnie",
+      "shortName": "Łazienka i kuchnia",
+      "eyebrow": "Łazienka i kuchnia",
+      "metaDescription": "Odporne na wilgoć sufity napinane do łazienek i kuchni — wodoodporne, odporne na pleśń i zmywalne, ze zintegrowanym oświetleniem, montaż w jeden dzień.",
+      "intro": "Łazienki i kuchnie to trudne warunki dla sufitów. Membrana STRETCH jest wodoodporna, odporna na pleśń i zmywalna — ukrywa rury i przewody za nieskazitelną powierzchnią, ze schludnie zintegrowanymi oprawami i wentylacją.",
+      "benefits": [
+        {
+          "title": "Odporność na wilgoć i wodę",
+          "body": "Membranie niestraszna para i zachlapania — nie łuszczy się, nie plami ani nie pleśnieje jak sufit malowany czy tynkowany."
+        },
+        {
+          "title": "Zmywalna powierzchnia",
+          "body": "Szybkie przetarcie i wygląda jak nowa — idealna nad prysznicem, wanną i strefą gotowania."
+        },
+        {
+          "title": "Schludnie zintegrowane instalacje",
+          "body": "Oprawy, głośniki, wentylacja i klapy rewizyjne integrują się z powierzchnią, ukrywając rury nad sufitem."
+        }
+      ]
+    },
+    "office-retail": {
+      "name": "Biura i handel",
+      "shortName": "Biuro i handel",
+      "eyebrow": "Biuro i handel",
+      "metaDescription": "Sufity napinane do biur, handlu i gastronomii — akustyka klasy A, sufity z nadrukiem marki i zintegrowane oświetlenie, szybki montaż bez zakłóceń.",
+      "intro": "Przestrzenie komercyjne muszą świetnie wyglądać i dobrze brzmieć. STRETCH zapewnia komfort akustyczny klasy A, sufity z nadrukiem marki i zintegrowane oświetlenie — montowane na zimno i szybko, z minimalnymi zakłóceniami dla działającego obiektu.",
+      "benefits": [
+        {
+          "title": "Komfort akustyczny klasy A",
+          "body": "Mikroperforowany sufit akustyczny ogranicza pogłos w otwartych biurach, salach konferencyjnych i restauracjach, poprawiając zrozumiałość mowy."
+        },
+        {
+          "title": "Sufity z nadrukiem marki",
+          "body": "Nadrukuj dowolny obraz, wzór lub grafikę marki od krawędzi do krawędzi — efektowny akcent dla handlu, salonów ekspozycyjnych i gastronomii."
+        },
+        {
+          "title": "Szybki montaż bez zakłóceń",
+          "body": "Montaż na zimno oznacza brak kurzu i bałaganu, a większość pomieszczeń jest gotowa w jeden dzień — idealnie dla obiektów w użytkowaniu."
+        }
+      ]
+    }
+  },
+  "appPage": {
+    "crumbApplications": "Zastosowania",
+    "quoteCta": "Poproś o bezpłatną wycenę",
+    "seeProjects": "Zobacz projekty",
+    "recommended": "Polecane rozwiązania",
+    "selectedWork": "Wybrane realizacje",
+    "explore": "Odkryj",
+    "ctaTitle": "Planujesz projekt: {name}?",
+    "ctaBody": "Opowiedz nam o swojej przestrzeni, a doradzimy właściwy system — bezpłatnie i bez zobowiązań."
+  },
+  "projectCards": {
+    "cats": {
+      "Acoustic": "Akustyka",
+      "Office": "Biuro",
+      "Commercial": "Komercyjne",
+      "Retail": "Handel",
+      "Bathroom": "Łazienka",
+      "Light & Print": "Światło i nadruk",
+      "Living room": "Salon",
+      "Home cinema": "Kino domowe"
+    },
+    "metas": {
+      "da-tweekaz-studio": "Holandia · Studio nagrań",
+      "mark-with-a-k": "Belgia · Studio dźwiękowe",
+      "notary-ampe-anthony": "Kruibeke · Biuro akustyczne",
+      "bnp-paribas-fortis": "Bruksela · Siedziba banku",
+      "van-der-valk-beveren": "Beveren · Hotelowa sala eventowa",
+      "johnson-and-johnson": "Limerick, IE · Ośrodek R&D farmacji",
+      "polette-eyewear": "Antwerpia · Sklep koncepcyjny",
+      "citizenm-hotel": "USA i Europa · Prefabrykowane moduły łazienkowe",
+      "london-chapel": "Londyn, UK · Sufit podświetlany",
+      "private-villa-knokke": "Knokke · Otwarta przestrzeń dzienna",
+      "home-cinema-ghent": "Gandawa · Gwiezdne niebo + akustyka",
+      "city-penthouse-antwerp": "Antwerpia · Salon",
+      "wellness-spa-bruges": "Brugia · Łazienka spa",
+      "rue-perree-paris": "Paryż · Podświetlany sufit galerii"
+    }
+  },
+  "technical": {
+    "topics": [
+      {
+        "label": "Karta techniczna",
+        "sub": "Dane i pliki do pobrania"
+      },
+      {
+        "label": "Kolory i wykończenia",
+        "sub": "Pełna gama"
+      },
+      {
+        "label": "Bezpieczeństwo pożarowe",
+        "sub": "Reakcja na ogień i A2"
+      },
+      {
+        "label": "Instrukcja montażu",
+        "sub": "Krok po kroku"
+      },
+      {
+        "label": "Tekst specyfikacji",
+        "sub": "Do przetargów"
+      },
+      {
+        "label": "FAQ",
+        "sub": "Częste pytania"
+      }
+    ],
+    "polyester": {
+      "label": "Poliestrowy sufit napinany",
+      "short": "Poliester",
+      "blurb": "Membrana poliestrowa w montażu na zimno — bardzo matowy sufit bez łączeń, napinany ręcznie.",
+      "fireSafety": {
+        "intro": "Membrana poliestrowa ma klasyfikację B-s1,d0 według EN 13501-1 — jest trudnozapalna, o bardzo ograniczonym wydzielaniu dymu i bez płonących kropli. Tam, gdzie obowiązują najostrzejsze wymagania przeciwpożarowe, dostępna jest niepalna wersja A2-s1,d0.",
+        "rows": [
+          {
+            "k": "Klasyfikacja standardowa",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Wersja niepalna",
+            "v": "A2-s1,d0"
+          },
+          {
+            "k": "Wydzielanie dymu",
+            "v": "s1 — bardzo ograniczone"
+          },
+          {
+            "k": "Płonące krople",
+            "v": "d0 — brak"
+          },
+          {
+            "k": "Norma badawcza",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Klasyfikacja B-s1,d0 oznacza, że membrana jest trudnozapalna (B), wydziela bardzo mało dymu (s1) i nie uwalnia płonących kropli (d0) — to połączenie wymagane w większości wnętrz publicznych i komercyjnych.",
+          "Na drogach ewakuacyjnych, w budynkach wysokich, szpitalach i innych projektach, w których wymagana jest okładzina niepalna, wersja A2-s1,d0 spełnia to wyższe wymaganie, zachowując ten sam bardzo matowy wygląd bez łączeń.",
+          "Certyfikaty reakcji na ogień i deklaracje właściwości użytkowych są dostępne na życzenie, do włączenia do dokumentacji przeciwpożarowej."
+        ]
+      },
+      "installation": {
+        "intro": "Poliester napina się na zimno — bez nagrzewnic, bez czasu schnięcia, bez oparów. Dwuosobowy zespół zwykle kończy pomieszczenie w jeden dzień, także we wnętrzach umeblowanych i użytkowanych.",
+        "steps": [
+          {
+            "title": "Pomiar i inwentaryzacja",
+            "body": "Pomieszczenie jest mierzone laserowo, a membrana jest docinana i zgrzewana w jeden panel bez łączeń o szerokości do 5.15 m, dokładnie w kształcie pomieszczenia."
+          },
+          {
+            "title": "Montaż profilu obwodowego",
+            "body": "Smukły profil zatrzaskowy mocuje się do ściany lub sufitu na wybranej wysokości, prowadząc go po odcinkach prostych, łukach i narożnikach."
+          },
+          {
+            "title": "Ręczne napinanie na zimno",
+            "body": "Zimną membranę wpina się w profil i ręcznie napina w poprzek pomieszczenia, aż do uzyskania idealnie płaskiej, napiętej jak bęben powierzchni — całkowicie bez użycia ciepła."
+          },
+          {
+            "title": "Wykończenie i detale",
+            "body": "Krawędzie, narożniki oraz zintegrowane oświetlenie czy klapy rewizyjne zostają wykończone. Nie ma czasu schnięcia, więc pomieszczenie pozostaje czyste i od razu wraca do użytku."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Gotowa do skopiowania klauzula do specyfikacji i dokumentów przetargowych. Dostosuj wartości w nawiasach do swojego projektu.",
+        "clause": "Dostawa i montaż systemu poliestrowego sufitu napinanego montowanego na zimno [STRETCH lub zatwierdzony równoważny]. Membranę stanowi dzianina poliestrowa napinana na zimno w obwodowym profilu zatrzaskowym, bez użycia ciepła, tworząca bardzo matową powierzchnię bez łączeń o szerokości do 5.15 m. Reakcja na ogień: klasa B-s1,d0 według EN 13501-1 (klasa A2-s1,d0 tam, gdzie wskazano). System ma być zmywalny i odporny na wilgoć, przystosowany do montażu w pomieszczeniach użytkowanych, oraz objęty gwarancją producenta na [10] lat. Kolor: [RAL ____]. Tam, gdzie wymagane są parametry akustyczne, należy zastosować membranę mikroperforowaną z wkładem pochłaniającym o wysokiej gęstości, zapewniającą pochłanianie dźwięku aż do klasy A."
+      }
+    },
+    "pvc": {
+      "label": "Sufit napinany PVC",
+      "short": "Folia PVC",
+      "blurb": "Folia PVC montowana na ciepło — w pełni nadająca się do recyklingu, demontowalna i bez łączeń do 6.4 m.",
+      "fireSafety": {
+        "intro": "Folia PVC ma klasyfikację B-s1,d0 według EN 13501-1 — jest trudnozapalna, o bardzo ograniczonym wydzielaniu dymu i bez płonących kropli.",
+        "rows": [
+          {
+            "k": "Klasyfikacja",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Wydzielanie dymu",
+            "v": "s1 — bardzo ograniczone"
+          },
+          {
+            "k": "Płonące krople",
+            "v": "d0 — brak"
+          },
+          {
+            "k": "Norma badawcza",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Klasyfikacja B-s1,d0 oznacza, że folia jest trudnozapalna (B), wydziela bardzo mało dymu (s1) i nie uwalnia płonących kropli (d0), dzięki czemu nadaje się do zdecydowanej większości wnętrz mieszkalnych i komercyjnych.",
+          "Ponieważ folia jest demontowalna, można ją wypiąć i ponownie napiąć, aby uzyskać dostęp do instalacji powyżej — bez wpływu na jej właściwości ogniowe.",
+          "Certyfikaty reakcji na ogień i deklaracje właściwości użytkowych są dostępne na życzenie, do dokumentacji przeciwpożarowej."
+        ]
+      },
+      "installation": {
+        "intro": "Folię PVC podczas montażu podgrzewa się i napina — zmęczony sufit w jeden dzień staje się nieskazitelnie nowy, a stara powierzchnia zostaje na swoim miejscu nad nim.",
+        "steps": [
+          {
+            "title": "Pomiar i inwentaryzacja",
+            "body": "Pomieszczenie jest mierzone, a folia zgrzewana wysokoczęstotliwościowo na wymiar, z obwodową krawędzią harpunową — w kształcie pomieszczenia i bez łączeń do szerokości 6.4 m."
+          },
+          {
+            "title": "Montaż profilu obwodowego",
+            "body": "Profil harpunowy/zatrzaskowy mocuje się wokół pomieszczenia na wybranej wysokości, wzdłuż linii ścian i wszelkich elementów."
+          },
+          {
+            "title": "Podgrzanie i napinanie",
+            "body": "Pomieszczenie ogrzewa się źródłem ciepła, aby uelastycznić folię; krawędź harpunową zaczepia się w profilu, a folia w miarę stygnięcia napina się gładko i płasko."
+          },
+          {
+            "title": "Wykończenie i detale",
+            "body": "Krawędzie, narożniki, oprawy oświetleniowe i klapy rewizyjne zostają wykończone. Folię wystarczy przetrzeć — i od razu nadaje się do użytku."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Gotowa do skopiowania klauzula do specyfikacji i dokumentów przetargowych. Dostosuj wartości w nawiasach do swojego projektu.",
+        "clause": "Dostawa i montaż systemu sufitu napinanego z folii PVC montowanego na ciepło [STRETCH lub zatwierdzony równoważny]. Membranę stanowi kalandrowana folia PVC, zgrzewana na wymiar i napinana w obwodowym profilu harpunowym/zatrzaskowym, tworząca powierzchnię bez łączeń o szerokości do 6.4 m, w wykończeniu [matowym / satynowym / błyszczącym / półprzezroczystym]. Reakcja na ogień: klasa B-s1,d0 według EN 13501-1. Folia ma być w 100% zdatna do recyklingu, demontowalna i umożliwiająca ponowne napięcie w celu dostępu do przestrzeni nad sufitem, zmywalna i odporna na wilgoć, oraz objęta gwarancją producenta na [10] lat. Kolor/wykończenie: [____]. Tam, gdzie przewidziano podświetlenie, należy zastosować folię półprzezroczystą nad polem LED, zapewniającą równomierne światło bez widocznych punktów świetlnych."
+      }
+    }
+  },
+  "techPage": {
+    "crumbTechnical": "Dane techniczne",
+    "viewProduct": "Zobacz produkt",
+    "eyebrowTech": "Dane techniczne",
+    "datasheetCta": "Poproś o pełną kartę techniczną",
+    "samplesCta": "Zamów fizyczne próbki",
+    "copyHint": "Zaznacz powyższy tekst, aby skopiować go do swojej specyfikacji.",
+    "ctaTitle": "Potrzebujesz pomocy ze specyfikacją?",
+    "ctaBody": "Nasi specjaliści pomagają architektom i wykonawcom dopiąć każdy szczegół — zwykle w ciągu dwóch dni roboczych.",
+    "ctaBtn": "Zapytaj naszych specjalistów",
+    "meta": {
+      "datasheet": "Karta techniczna — {label}: dane, klasyfikacje i pliki do pobrania.",
+      "colours": "Gama kolorów i wykończeń — {label}, z referencjami RAL i możliwością zamówienia próbek.",
+      "fire-safety": "Klasyfikacja reakcji na ogień — {label}: B-s1,d0 oraz opcje A2 według EN 13501-1.",
+      "installation": "Instrukcja montażu krok po kroku — {label}.",
+      "specification": "Gotowy do skopiowania tekst specyfikacji — {label}. Do przetargów i dokumentacji.",
+      "faq": "Najczęstsze pytania — {label}."
+    }
+  },
+  "prefab": {
+    "prefab-ceiling-unit": {
+      "name": "Konstrukcje prefabrykowane",
+      "eyebrow": "Konstrukcje prefabrykowane",
+      "metaDescription": "Prefabrykowane konstrukcje nośne na wymiar do sufitów napinanych — belki z aluminium, stali i drewna, gzymsy i detale różnic wysokości; cięte, spawane i malowane proszkowo u nas i wysyłane na cały świat.",
+      "intro": "Prefabrykowane konstrukcje nośne do projektów sufitów napinanych — belki do sufitów rastrowych i kratowych, gzymsy do sufitów pływających oraz czyste detale różnic wysokości. Każdą konstrukcję wykonujemy na wymiar według Twoich rysunków, w całości we własnym zakładzie produkcyjnym w Polsce, i wysyłamy na cały świat do naszych dystrybutorów.",
+      "makeHeading": "Co budujemy",
+      "make": [
+        {
+          "title": "Belki — sufity rastrowe i kratowe",
+          "body": "Prefabrykowane belki, które ujmują napinaną membranę w sufit rastrowy lub kratowy — powtarzalne moduły, kątowo dokładne co do milimetra i gotowe do montażu na budowie."
+        },
+        {
+          "title": "Gzymsy — sufity pływające",
+          "body": "Gzymsy obwodowe, które odsuwają sufit napinany od ścian, tworząc efekt pływania z cieniem dylatacyjnym, z kanałem na ukryte oświetlenie tam, gdzie trzeba."
+        },
+        {
+          "title": "Wykończenia różnic wysokości",
+          "body": "Stopniowane i wielopoziomowe konstrukcje nośne, które czysto prowadzą membranę przez zmiany wysokości — bez prowizorki i zgadywania na budowie."
+        }
+      ],
+      "materialsHeading": "Z aluminium, stali lub drewna",
+      "materials": [
+        {
+          "title": "Aluminium",
+          "body": "Lekkie, sztywne i odporne na korozję — idealne do dużych rozpiętości, wilgotnych pomieszczeń i zintegrowanych profili oświetleniowych."
+        },
+        {
+          "title": "Stal",
+          "body": "Maksymalna wytrzymałość dla dużych konstrukcji i ciężkich rozpiętości, malowana proszkowo odpowiednio do środowiska."
+        },
+        {
+          "title": "Drewno (MDF / sklejka)",
+          "body": "MDF, sklejka i inne płyty frezowane w kształt dla ciepłych, złożonych lub łukowych form."
+        }
+      ],
+      "production": {
+        "heading": "Wykonane u nas, wykonane na wymiar",
+        "body": "Każda konstrukcja powstaje według Twoich rysunków, w całości w naszym własnym zakładzie produkcyjnym w Polsce. Cięcie, spawanie i malowanie proszkowe odbywają się pod jednym dachem — dzięki temu kontrolujemy jakość i wykończenie od surowego profilu po zapakowaną w skrzynię, gotową do wysyłki konstrukcję.",
+        "details": [
+          {
+            "title": "Cięcie",
+            "body": "Profile cięte na dokładne długości i kąty, dzięki czemu konstrukcja składa się prosto i pod kątem."
+          },
+          {
+            "title": "Spawanie",
+            "body": "Czyste, mocne spoiny — zeszlifowane i wykończone tak, że łączenia znikają w konstrukcji."
+          },
+          {
+            "title": "Malowanie proszkowe",
+            "body": "Trwała powłoka proszkowa w dowolnym RAL, nakładana u nas dla jednolitej, odpornej na zużycie powierzchni."
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "Od rysunku do gotowej konstrukcji",
+        "items": [
+          {
+            "title": "Sufit rastrowy",
+            "meta": "Aluminium",
+            "summary": "Rysunek techniczny kraty belek rastrowych obok gotowej konstrukcji, zamontowanej i wykończonej membraną na budowie."
+          },
+          {
+            "title": "Pływający sufit gzymsowy",
+            "meta": "Gzyms aluminiowy",
+            "summary": "Detal pływającego gzymsu — od rysunku produkcyjnego po zamontowany efekt wykończony membraną."
+          }
+        ]
+      },
+      "worldwide": "Każdą konstrukcję pakujemy w skrzynię i wysyłamy na cały świat, aby nasi dystrybutorzy wszędzie mogli oferować ten sam czysty, powtarzalny rezultat — bez własnego warsztatu."
+    },
+    "prefab-lighting-elements": {
+      "name": "Prefabrykowane elementy świetlne",
+      "eyebrow": "Prefabrykowane elementy świetlne",
+      "metaDescription": "Prefabrykowane elementy świetlne na konstrukcji aluminiowej, wykończone membraną STRETCH — świecące gzymsy, linie świetlne i elementy podświetlane; projektowane według Twoich rysunków, budowane u nas i wysyłane na cały świat.",
+      "intro": "Wstępnie zmontowane elementy świetlne na konstrukcji aluminiowej, wykończone naszą napinaną membraną — świecące gzymsy, linie świetlne i elementy podświetlane. Projektowane według Twoich rysunków, budowane w naszym zakładzie w Polsce i wysyłane na cały świat do naszych dystrybutorów.",
+      "makeHeading": "Co budujemy",
+      "make": [
+        {
+          "title": "Świecące gzymsy",
+          "body": "Gzymsy obwodowe, które omywają ścianę lub sufit równym, ukrytym światłem — budowane jako gotowy do montażu element aluminiowy."
+        },
+        {
+          "title": "Linie świetlne",
+          "body": "Precyzyjne, wpuszczane linie świetlne zintegrowane z napinaną powierzchnią dla czystego, architektonicznego oświetlenia."
+        },
+        {
+          "title": "Elementy podświetlane",
+          "body": "Podświetlane panele i formy wykończone półprzezroczystą membraną, dające równą poświatę bez punktów świetlnych."
+        }
+      ],
+      "materialsHeading": "Jak powstają",
+      "materials": [
+        {
+          "title": "Konstrukcja aluminiowa",
+          "body": "Precyzyjna, sztywna rama aluminiowa obrabiana pod Twoje wymiary — kręgosłup każdego elementu świetlnego."
+        },
+        {
+          "title": "LED i dyfuzja",
+          "body": "Ściemnialne LED, dobrane i rozmieszczone dla równomiernego światła, z membraną miękko je rozpraszającą."
+        },
+        {
+          "title": "Wykończenie membraną",
+          "body": "Półprzezroczysta lub zadrukowana membrana STRETCH napięta na ramie daje nieskazitelną świecącą powierzchnię."
+        }
+      ],
+      "showcase": {
+        "heading": "Od rysunku do gotowego elementu",
+        "items": [
+          {
+            "title": "Świecący gzyms",
+            "meta": "Aluminium + membrana",
+            "summary": "Rysunek obwodowego świecącego gzymsu obok gotowego, świecącego elementu zamontowanego na miejscu."
+          },
+          {
+            "title": "Element podświetlany",
+            "meta": "Aluminium + LED + membrana",
+            "summary": "Podświetlany panel — od rysunku produkcyjnego po równomierny efekt końcowy bez punktów świetlnych."
+          }
+        ]
+      },
+      "worldwide": "Jak wszystkie nasze elementy prefabrykowane, elementy świetlne pakujemy w skrzynie i wysyłamy na cały świat — zbudowane i przetestowane u nas, gotowe do montażu u Ciebie."
+    }
+  },
+  "prefabPage": {
+    "discussCta": "Omów projekt",
+    "becomeDealer": "Zostań dystrybutorem",
+    "technicalDrawing": "Rysunek techniczny",
+    "installedFinished": "Zamontowane i wykończone",
+    "shippedWorldwide": "Wysyłka na cały świat",
+    "ctaTitle": "Masz dla nas projekt?",
+    "ctaBody": "Prześlij nam rysunki lub pomysł — zaprojektujemy konstrukcję, zbudujemy ją u siebie i wyślemy do Ciebie."
   }
 }

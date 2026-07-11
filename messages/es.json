@@ -1472,5 +1472,906 @@
       ]
     },
     "comingSoon": "Próximamente"
+  },
+  "modals": {
+    "quote": {
+      "title": "Solicitar presupuesto gratuito",
+      "subtitle": "Cuéntanos tu proyecto y te responderemos con un precio a medida.",
+      "submitLabel": "Enviar solicitud",
+      "sentTitle": "Solicitud recibida",
+      "sentMsg": "Gracias — un especialista te responderá en dos días laborables.",
+      "fields": {
+        "name": {
+          "label": "Nombre",
+          "placeholder": "Nombre y apellidos"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+32 ..."
+        },
+        "rooms": {
+          "label": "Estancias",
+          "options": [
+            "1 estancia",
+            "2 estancias",
+            "3 estancias",
+            "4 estancias",
+            "Más de 4"
+          ]
+        },
+        "timeline": {
+          "label": "Plazo",
+          "options": [
+            "Lo antes posible",
+            "En 1–3 meses",
+            "En 4–12 meses",
+            "Solo estoy mirando"
+          ]
+        },
+        "message": {
+          "label": "Tu proyecto",
+          "placeholder": "Superficie, ubicación, cualquier dato útil..."
+        }
+      }
+    },
+    "survey": {
+      "title": "Reserva una visita técnica",
+      "subtitle": "Medimos y te asesoramos in situ — gratis y sin compromiso.",
+      "submitLabel": "Solicitar visita",
+      "sentTitle": "Visita solicitada",
+      "sentMsg": "Gracias — te contactaremos para acordar un momento que te venga bien.",
+      "fields": {
+        "name": {
+          "label": "Nombre",
+          "placeholder": "Nombre y apellidos"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+32 ..."
+        },
+        "address": {
+          "label": "Dirección",
+          "placeholder": "Calle, ciudad"
+        },
+        "preferredTime": {
+          "label": "Horario preferido",
+          "options": [
+            "Mañana",
+            "Tarde",
+            "Flexible"
+          ]
+        },
+        "rooms": {
+          "label": "Estancias",
+          "options": [
+            "1 estancia",
+            "2 estancias",
+            "3 estancias",
+            "4+ estancias"
+          ]
+        }
+      }
+    },
+    "training": {
+      "title": "Reserva tu formación",
+      "subtitle": "Certificación práctica en nuestra sede belga — déjanos tus datos y te confirmaremos.",
+      "submitLabel": "Solicitar mi plaza",
+      "sentTitle": "Plaza solicitada",
+      "sentMsg": "Gracias — confirmaremos tu plaza y te enviaremos toda la información práctica.",
+      "fields": {
+        "fullName": {
+          "label": "Nombre completo",
+          "placeholder": "Nombre y apellidos"
+        },
+        "company": {
+          "label": "Empresa",
+          "placeholder": "Tu empresa"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Fecha preferida",
+          "options": [
+            "15–16 sep 2026",
+            "06–08 oct 2026",
+            "17–18 nov 2026",
+            "Sesión a medida in situ"
+          ]
+        },
+        "attendees": {
+          "label": "Asistentes",
+          "options": [
+            "1 persona",
+            "2 personas",
+            "3 personas",
+            "4+ personas"
+          ]
+        }
+      }
+    },
+    "dates": {
+      "title": "Próximas fechas de formación",
+      "subtitle": "Elige una fecha y reserva tu plaza — grupos reducidos, por orden de reserva.",
+      "submitLabel": "Solicitar mi plaza",
+      "sentTitle": "Plaza solicitada",
+      "sentMsg": "Gracias — confirmaremos tu plaza y te enviaremos toda la información práctica.",
+      "fields": {
+        "fullName": {
+          "label": "Nombre completo",
+          "placeholder": "Nombre y apellidos"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Fecha preferida",
+          "options": [
+            "15–16 sep 2026",
+            "06–08 oct 2026",
+            "17–18 nov 2026",
+            "Sesión a medida in situ"
+          ]
+        }
+      }
+    },
+    "partner": {
+      "title": "Solicita ser partner",
+      "subtitle": "Cuéntanos sobre tu empresa — revisamos cada solicitud personalmente.",
+      "submitLabel": "Enviar solicitud",
+      "sentTitle": "Solicitud recibida",
+      "sentMsg": "Gracias — nuestro equipo de partners la revisará y te responderá en dos días laborables.",
+      "fields": {
+        "company": {
+          "label": "Empresa",
+          "placeholder": "Tu empresa"
+        },
+        "contactName": {
+          "label": "Persona de contacto",
+          "placeholder": "Nombre y apellidos"
+        },
+        "partnerType": {
+          "label": "Quiero ser",
+          "options": [
+            "Distribuidor — yo vendo, vosotros instaláis",
+            "Distribuidor instalador — vendo e instalo yo mismo",
+            "Aún no lo sé"
+          ]
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+32 ..."
+        },
+        "country": {
+          "label": "País",
+          "placeholder": "Bélgica"
+        },
+        "activity": {
+          "label": "Actividad",
+          "options": [
+            "Construcción y reformas",
+            "Acondicionamiento de interiores",
+            "Yeso laminado / enlucidos",
+            "Electricidad / iluminación",
+            "Otra"
+          ]
+        },
+        "notes": {
+          "label": "Sobre tu negocio",
+          "placeholder": "Tamaño del equipo, zonas que cubres, actividad actual..."
+        }
+      }
+    },
+    "call": {
+      "title": "Reserva una llamada",
+      "subtitle": "Déjanos tu número y una buena hora — te llamaremos.",
+      "submitLabel": "Solicitar llamada",
+      "sentTitle": "Llamada solicitada",
+      "sentMsg": "Gracias — te llamaremos a la hora que prefieras.",
+      "fields": {
+        "name": {
+          "label": "Nombre",
+          "placeholder": "Nombre y apellidos"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+32 ..."
+        },
+        "bestTime": {
+          "label": "Mejor hora",
+          "options": [
+            "Mañana",
+            "Tarde",
+            "Última hora de la tarde"
+          ]
+        },
+        "topic": {
+          "label": "Tema",
+          "options": [
+            "Un presupuesto",
+            "Colaboración",
+            "Formación",
+            "Consulta técnica",
+            "Otro"
+          ]
+        }
+      }
+    },
+    "samples": {
+      "title": "Solicita muestras de color",
+      "subtitle": "Pide muestras físicas RAL / de color — gratis para partners profesionales.",
+      "submitLabel": "Solicitar muestras",
+      "sentTitle": "Muestras solicitadas",
+      "sentMsg": "Gracias — te enviaremos las muestras y te contactaremos en dos días laborables.",
+      "fields": {
+        "company": {
+          "label": "Empresa",
+          "placeholder": "Tu empresa"
+        },
+        "contactName": {
+          "label": "Persona de contacto",
+          "placeholder": "Nombre y apellidos"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+32 ..."
+        },
+        "shippingAddress": {
+          "label": "Dirección de envío",
+          "placeholder": "Calle, código postal, ciudad"
+        },
+        "productLine": {
+          "label": "Línea de producto",
+          "options": [
+            "Poliéster",
+            "Lámina de PVC",
+            "Acústica",
+            "Aún no lo sé"
+          ]
+        },
+        "colours": {
+          "label": "Colores de interés",
+          "placeholder": "p. ej. blanco, antracita, RAL personalizado"
+        },
+        "notes": {
+          "label": "Notas",
+          "placeholder": "Proyecto, cantidades, cualquier dato útil..."
+        }
+      }
+    },
+    "datasheet": {
+      "title": "Descarga la ficha técnica",
+      "subtitle": "Introduce tus datos y la descarga empezará al momento. Solo los usaremos para hacer seguimiento de tu consulta.",
+      "submitLabel": "Obtener la ficha técnica",
+      "sentTitle": "Aquí tienes tu ficha técnica",
+      "sentMsg": "La descarga debería empezar automáticamente — si no, usa el botón de abajo.",
+      "fields": {
+        "name": {
+          "label": "Nombre",
+          "placeholder": "Nombre y apellidos"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+32 ..."
+        }
+      }
+    },
+    "trainingDates": [
+      "15–16 sep 2026",
+      "06–08 oct 2026",
+      "17–18 nov 2026",
+      "Sesión a medida in situ"
+    ],
+    "trainingDateNotes": [
+      "Beveren-Waas · 4 plazas",
+      "Beveren-Waas · 6 plazas",
+      "Beveren-Waas · 8 plazas"
+    ],
+    "close": "Cerrar",
+    "downloadDatasheet": "Descargar ficha técnica",
+    "select": "Seleccionar…"
+  },
+  "faqPage": {
+    "items": [
+      {
+        "q": "¿Qué es un techo tensado?",
+        "a": "Un techo tensado es una membrana fina y sin juntas — poliéster o lámina de PVC — que se tensa sobre la estancia y se encaja en un discreto perfil perimetral. Parece un techo pintado perfectamente liso, pero se instala sin yeso, sin lijar y sin pintar, y oculta todo lo que hay encima."
+      },
+      {
+        "q": "¿Cuánto tarda la instalación?",
+        "a": "La mayoría de las estancias quedan terminadas en un solo día. Un equipo de dos personas instala hasta unos 50 m² al día. El poliéster de montaje en frío no necesita tiempo de secado, así que la estancia puede usarse de inmediato."
+      },
+      {
+        "q": "¿Ensucia mucho? ¿Tengo que irme de casa?",
+        "a": "No. No hay demolición, polvo, lijado ni pintura, así que la instalación puede hacerse en una estancia amueblada y habitada. El techo existente normalmente puede quedarse debajo."
+      },
+      {
+        "q": "¿Cuánto dura un techo tensado?",
+        "a": "Nuestros sistemas tienen 25 años de garantía. La superficie es lavable y resistente a la humedad, y no se agrieta, no se descascarilla, no amarillea ni necesita repintarse."
+      },
+      {
+        "q": "¿Puede mejorar la acústica?",
+        "a": "Sí. Una versión microperforada con respaldo absorbente alcanza hasta clase A de absorción acústica y es idéntica a simple vista al acabado estándar — la reverberación y el ruido se reducen de forma medible."
+      },
+      {
+        "q": "¿Cuál es el ancho máximo sin juntas?",
+        "a": "Hasta 5.7 m sin juntas con lámina de PVC y hasta 5.15 m con poliéster. Las luces mayores se cubren con una soldadura casi invisible o con una línea de perfil colocada a propósito."
+      },
+      {
+        "q": "¿Puedo tener iluminación, retroiluminación o un diseño impreso?",
+        "a": "Sí. Las láminas translúcidas dan una retroiluminación uniforme y regulable, sin puntos calientes; la iluminación lineal LED se integra en la superficie, y cualquier imagen — incluido un cielo estrellado — puede imprimirse de borde a borde."
+      },
+      {
+        "q": "¿Cuánto cuesta un techo tensado?",
+        "a": "El precio depende del proyecto: de la superficie, el sistema, el acabado y las opciones de iluminación o acústica. Solicita un presupuesto gratuito y sin compromiso y un especialista te responderá en dos días laborables."
+      },
+      {
+        "q": "¿Trabajáis con contratistas y distribuidores?",
+        "a": "Sí. STRETCH es una empresa orientada al B2B: formamos a instaladores en nuestra sede belga, suministramos membranas a medida a través de un portal B2B y derivamos a los clientes locales a socios certificados. Consulta las páginas Socios y Formación de instaladores."
+      }
+    ],
+    "eyebrow": "FAQ",
+    "titleA": "Buenas",
+    "titleB": "preguntas",
+    "lead": "Todo lo que la gente suele preguntar sobre techos tensados: instalación, vida útil, acústica, luces y precio. ¿Aún tienes dudas? Pregúntanos sin más.",
+    "asideKicker": "¿Te queda alguna pregunta?",
+    "asideTitle": "Habla con un especialista en techos tensados.",
+    "asideBody": "Cuéntanos cómo es tu estancia y te respondemos — gratis y sin compromiso.",
+    "asideCta": "Solicitar presupuesto gratuito"
+  },
+  "catalogFaqs": {
+    "polyester": [
+      {
+        "q": "¿Cuánto tarda en instalarse un techo tensado de poliéster?",
+        "a": "La mayoría de las estancias quedan terminadas en un solo día. Un equipo de dos personas instala hasta unos 50 m² al día y, como la membrana se tensa en frío, no hay tiempo de secado antes de volver a usar la estancia."
+      },
+      {
+        "q": "¿El montaje en frío es realmente sin polvo?",
+        "a": "Sí. No se demuele el techo existente, no se lija y no se pinta. La membrana se encaja en un discreto perfil perimetral, así que la instalación es lo bastante limpia para hacerse en estancias amuebladas y habitadas."
+      },
+      {
+        "q": "¿Un techo de poliéster puede mejorar la acústica de la estancia?",
+        "a": "Una versión microperforada con respaldo absorbente de alta densidad alcanza hasta clase A de absorción acústica. A la vista es idéntica al acabado estándar, pero reduce la reverberación y el ruido de forma medible."
+      },
+      {
+        "q": "¿Cómo lo limpio y lo mantengo?",
+        "a": "Basta con pasar un paño húmedo. La superficie es lavable y resistente a la humedad, no se agrieta, no se descascarilla ni amarillea, y no necesita repintarse en ningún momento de sus 25 años de garantía."
+      }
+    ],
+    "pvc": [
+      {
+        "q": "¿Por qué un techo tensado de PVC es «100 % reciclable»?",
+        "a": "La lámina se recicla como materia prima al final de su vida útil y, además, es desmontable durante el uso: puedes desencajarla para acceder a las instalaciones de arriba y volver a tensarla en minutos, en lugar de arrancar y sustituir un techo de pladur."
+      },
+      {
+        "q": "¿Qué luz puede cubrir un techo de PVC sin juntas?",
+        "a": "Hasta 6.4 m sin juntas, la mayor de nuestra gama. Las estancias más grandes se cubren soldando paños con una unión casi invisible o introduciendo una línea de perfil colocada a propósito."
+      },
+      {
+        "q": "¿La lámina de PVC sirve para baños y zonas húmedas?",
+        "a": "Sí. Es totalmente lavable y resistente a la humedad, por lo que es una opción muy popular en baños, piscinas y zonas de wellness, donde un techo pintado se ampollaría o mancharía."
+      },
+      {
+        "q": "¿Se puede retroiluminar o imprimir?",
+        "a": "Las láminas translúcidas difunden un campo de LED de manera uniforme, sin puntos calientes, y cualquier fotografía, patrón o diseño de cielo estrellado puede imprimirse de borde a borde. Consulta el sistema de techo iluminado para ver toda la gama."
+      }
+    ],
+    "acoustic": [
+      {
+        "q": "¿Cuánto ruido reduce realmente el sistema acústico?",
+        "a": "Con el respaldo absorbente de alta densidad alcanza hasta clase A de absorción (la calificación más alta), medida en valores αw. En la práctica, convierte una estancia dura y con eco en un espacio tranquilo y confortable, sin ningún panel acústico a la vista."
+      },
+      {
+        "q": "¿El acabado acústico se ve diferente de un techo normal?",
+        "a": "No. La absorción ocurre detrás de una membrana microperforada, así que el techo se percibe como una única superficie impecable y sin juntas: el tratamiento es invisible."
+      },
+      {
+        "q": "¿Se pueden esconder altavoces detrás del techo?",
+        "a": "Sí. Los altavoces pueden montarse completamente detrás de la lámina tensada para un sonido limpio, sin fuente visible — una opción muy popular en cines en casa y estudios."
+      },
+      {
+        "q": "¿Dónde resulta más útil el sistema acústico?",
+        "a": "Allí donde la reverberación es un problema: oficinas, restaurantes, estudios de grabación, colegios, espacios sanitarios y cines en casa. También puede extenderse a islas suspendidas y paneles de pared."
+      }
+    ],
+    "light": [
+      {
+        "q": "¿Un techo retroiluminado deja ver los puntos de los LED?",
+        "a": "No. La lámina translúcida se coloca sobre un campo de LED y difunde la luz uniformemente por toda la superficie, así que ves un resplandor suave y homogéneo en lugar de puntos individuales."
+      },
+      {
+        "q": "¿Qué se puede imprimir en el techo?",
+        "a": "Prácticamente cualquier imagen, patrón o textura en alta resolución — impresa de borde a borde, sin juntas visibles. Una elección habitual es el cielo estrellado de fibra óptica para cines y dormitorios."
+      },
+      {
+        "q": "¿La iluminación se puede regular o cambiar de color?",
+        "a": "Sí. Los techos retroiluminados son regulables, y las opciones LED RGB te permiten cambiar el color y el ambiente. La iluminación lineal LED también puede empotrarse en la membrana para un efecto arquitectónico muy definido."
+      }
+    ],
+    "prefab": [
+      {
+        "q": "¿Qué es un módulo prefabricado de techo tensado?",
+        "a": "Es un módulo de techo completo — marco y membrana tensada — ensamblado y verificado en nuestro taller belga, que se entrega listo para encajar en un marco perimetral en obra."
+      },
+      {
+        "q": "¿Por qué elegir prefabricado en vez de montaje en obra?",
+        "a": "Los módulos prefabricados encajan en la construcción modular y en estancias repetitivas como baños de hotel y baños prefabricados: la mayor parte del trabajo se hace fuera de la obra, así que la instalación requiere un mínimo de oficios y de tiempo."
+      },
+      {
+        "q": "¿Cómo se accede a las instalaciones sobre un techo prefabricado?",
+        "a": "Cada módulo puede incluir una discreta trampilla de inspección integrada, de modo que las tuberías e instalaciones de arriba siguen siendo accesibles sin romper la línea limpia del techo."
+      }
+    ],
+    "starry": [
+      {
+        "q": "¿Cuántas estrellas puede tener un techo de cielo estrellado?",
+        "a": "Desde unos 150 puntos para un efecto sutil hasta más de mil para un cielo denso y espectacular. La densidad se elige según el tamaño de la estancia y el ambiente que quieras."
+      },
+      {
+        "q": "¿Las estrellas de fibra óptica desprenden calor?",
+        "a": "No. Todas las fibras se alimentan de un único proyector LED remoto, así que los puntos permanecen completamente fríos: por la fibra solo viaja la luz."
+      },
+      {
+        "q": "¿Las estrellas pueden titilar o cambiar de color?",
+        "a": "Sí. Una rueda de titileo opcional hace que las estrellas brillen con destellos, los proyectores RGB permiten cambiar el color y se pueden añadir efectos de estrellas fugaces para dar movimiento. Todo es regulable."
+      }
+    ],
+    "hatch": [
+      {
+        "q": "¿Se puede acceder a las instalaciones detrás de un techo tensado?",
+        "a": "Sí — una trampilla de inspección integrada da acceso discreto y reutilizable a válvulas, cajas de conexiones y accesorios sobre la membrana, de modo que nunca hay que cortar ni sustituir el techo para llegar a ellos."
+      },
+      {
+        "q": "¿La trampilla se ve en el techo?",
+        "a": "Apenas. El marco va integrado en el remate perimetral y acabado con la misma membrana, así que se funde con la superficie y solo se nota si la buscas."
+      },
+      {
+        "q": "¿Se puede añadir una trampilla a un techo tensado ya instalado?",
+        "a": "En la mayoría de los casos, sí. Las trampillas pueden instalarse a posteriori en un techo existente, con el tamaño y la posición adecuados a la instalación que deba quedar accesible detrás."
+      }
+    ],
+    "print": [
+      {
+        "q": "¿Qué calidad de imagen necesito para un techo impreso?",
+        "a": "Un archivo en alta resolución da el mejor resultado. Revisamos y gestionamos el color de tu diseño, lo escalamos al techo y hacemos una prueba antes de imprimir, para que el resultado final coincida con lo que esperas."
+      },
+      {
+        "q": "¿Un techo impreso puede retroiluminarse?",
+        "a": "Sí. Impresa en una lámina translúcida sobre un campo de LED, la imagen queda retroiluminada de manera uniforme y sin puntos calientes — ideal para escenas de cielo y obras destacadas."
+      },
+      {
+        "q": "¿Hay juntas visibles en las impresiones grandes?",
+        "a": "No. La imagen se imprime de borde a borde sobre una única membrana sin juntas de hasta 5.7 m de ancho, así que ninguna línea de paño cruza tu diseño."
+      }
+    ]
+  },
+  "applications": {
+    "living-cinema": {
+      "name": "Salones y cine en casa",
+      "shortName": "Salón y cine",
+      "eyebrow": "Salón y cine",
+      "metaDescription": "Techos tensados para salones y cines en casa — acabados sin juntas, iluminación integrada, cielos estrellados de fibra óptica y mejor acústica, instalados en un día.",
+      "intro": "Un techo impecable marca el tono de un espacio de vida. STRETCH te ofrece un acabado perfectamente liso y sin juntas — con iluminación oculta, un cielo estrellado de fibra óptica para el cine y confort acústico, todo con montaje en frío en un solo día.",
+      "benefits": [
+        {
+          "title": "Un acabado perfecto, sin juntas",
+          "body": "Sin grietas, sin uniones y sin volver a pintar — una membrana lisa tensada de pared a pared, en mate profundo o en el color que prefieras."
+        },
+        {
+          "title": "Ambiente de cine",
+          "body": "Añade un cielo estrellado de fibra óptica, líneas LED integradas y retroiluminación regulable para lograr el ambiente perfecto en tus noches de cine."
+        },
+        {
+          "title": "Estancias más tranquilas y silenciosas",
+          "body": "Una membrana acústica doma el eco de los espacios abiertos: la conversación y el sonido se perciben más cálidos y nítidos."
+        }
+      ]
+    },
+    "bathroom-kitchen": {
+      "name": "Baños y cocinas",
+      "shortName": "Baño y cocina",
+      "eyebrow": "Baño y cocina",
+      "metaDescription": "Techos tensados resistentes a la humedad para baños y cocinas — impermeables, antimoho y fáciles de limpiar, con iluminación integrada, instalados en un solo día.",
+      "intro": "Baños y cocinas castigan los techos. Una membrana STRETCH es impermeable, antimoho y lavable — oculta tuberías y conductos tras una superficie impecable, con focos y extracción perfectamente integrados.",
+      "benefits": [
+        {
+          "title": "Resistente a la humedad y al agua",
+          "body": "A la membrana no le afectan el vapor ni las salpicaduras: no se descascarilla, no se mancha ni cría moho como un techo pintado o enlucido."
+        },
+        {
+          "title": "Superficie lavable",
+          "body": "Una pasada rápida y queda como nueva — ideal sobre duchas, bañeras y zonas de cocción."
+        },
+        {
+          "title": "Instalaciones integradas con limpieza",
+          "body": "Focos, altavoces, extracción y trampillas de inspección se integran en la superficie, ocultando las tuberías superiores."
+        }
+      ]
+    },
+    "office-retail": {
+      "name": "Oficinas y retail",
+      "shortName": "Oficina y retail",
+      "eyebrow": "Oficina y retail",
+      "metaDescription": "Techos tensados para oficinas, retail y hostelería — acústica de clase A, techos impresos con tu marca e iluminación integrada, instalados rápido y sin molestias.",
+      "intro": "Los espacios comerciales deben lucir impecables y sonar bien. STRETCH aporta confort acústico de clase A, techos impresos con tu marca e iluminación integrada — con montaje en frío y rápido, y mínimas molestias para un espacio en funcionamiento.",
+      "benefits": [
+        {
+          "title": "Confort acústico de clase A",
+          "body": "Un techo acústico microperforado reduce la reverberación en oficinas abiertas, salas de reuniones y restaurantes, para un habla más clara."
+        },
+        {
+          "title": "Techos impresos con tu marca",
+          "body": "Imprime cualquier imagen, patrón o gráfico de marca de borde a borde — un elemento llamativo para retail, showrooms y hostelería."
+        },
+        {
+          "title": "Instalación rápida y sin molestias",
+          "body": "El montaje en frío no genera polvo ni suciedad, y la mayoría de las salas quedan listas en un día — ideal para locales en uso."
+        }
+      ]
+    }
+  },
+  "appPage": {
+    "crumbApplications": "Aplicaciones",
+    "quoteCta": "Solicitar presupuesto gratuito",
+    "seeProjects": "Ver proyectos",
+    "recommended": "Soluciones recomendadas",
+    "selectedWork": "Trabajos destacados",
+    "explore": "Explorar",
+    "ctaTitle": "¿Planeas un proyecto de {name}?",
+    "ctaBody": "Cuéntanos cómo es tu espacio y te recomendaremos el sistema adecuado — gratis y sin compromiso."
+  },
+  "projectCards": {
+    "cats": {
+      "Acoustic": "Acústica",
+      "Office": "Oficina",
+      "Commercial": "Comercial",
+      "Retail": "Retail",
+      "Bathroom": "Baño",
+      "Light & Print": "Luz e impresión",
+      "Living room": "Salón",
+      "Home cinema": "Cine en casa"
+    },
+    "metas": {
+      "da-tweekaz-studio": "Países Bajos · Estudio de grabación",
+      "mark-with-a-k": "Bélgica · Estudio de sonido",
+      "notary-ampe-anthony": "Kruibeke · Oficina acústica",
+      "bnp-paribas-fortis": "Bruselas · Sede bancaria",
+      "van-der-valk-beveren": "Beveren · Sala de eventos de hotel",
+      "johnson-and-johnson": "Limerick, IE · Centro de I+D farmacéutico",
+      "polette-eyewear": "Amberes · Concept store de retail",
+      "citizenm-hotel": "EE. UU. y Europa · Baños prefabricados",
+      "london-chapel": "Londres, UK · Techo retroiluminado",
+      "private-villa-knokke": "Knokke · Salón abierto",
+      "home-cinema-ghent": "Gante · Cielo estrellado + acústica",
+      "city-penthouse-antwerp": "Amberes · Salón",
+      "wellness-spa-bruges": "Brujas · Baño de spa",
+      "rue-perree-paris": "París · Techo de galería retroiluminado"
+    }
+  },
+  "technical": {
+    "topics": [
+      {
+        "label": "Ficha técnica",
+        "sub": "Datos y descarga"
+      },
+      {
+        "label": "Colores y acabados",
+        "sub": "Gama completa"
+      },
+      {
+        "label": "Seguridad contra incendios",
+        "sub": "Reacción al fuego y A2"
+      },
+      {
+        "label": "Guía de instalación",
+        "sub": "Paso a paso"
+      },
+      {
+        "label": "Texto de especificación",
+        "sub": "Para licitaciones"
+      },
+      {
+        "label": "FAQ",
+        "sub": "Preguntas habituales"
+      }
+    ],
+    "polyester": {
+      "label": "Techo tensado de poliéster",
+      "short": "Poliéster",
+      "blurb": "Membrana de poliéster con montaje en frío — un techo muy mate y sin juntas, tensado a mano.",
+      "fireSafety": {
+        "intro": "La membrana de poliéster está clasificada B-s1,d0 según EN 13501-1 — ignífuga, con una producción de humo muy limitada y sin gotas inflamadas. Donde rigen los requisitos contra incendios más estrictos, existe una versión incombustible A2-s1,d0.",
+        "rows": [
+          {
+            "k": "Clasificación estándar",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Opción incombustible",
+            "v": "A2-s1,d0"
+          },
+          {
+            "k": "Producción de humo",
+            "v": "s1 — muy limitada"
+          },
+          {
+            "k": "Gotas inflamadas",
+            "v": "d0 — ninguna"
+          },
+          {
+            "k": "Norma de ensayo",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "La clasificación B-s1,d0 significa que la membrana es ignífuga (B), produce muy poco humo (s1) y no desprende gotas inflamadas (d0) — la combinación que exigen la mayoría de los interiores públicos y comerciales.",
+          "Para vías de evacuación, edificios de gran altura, hospitales y otros proyectos donde se prescribe un revestimiento incombustible, la versión A2-s1,d0 cumple ese requisito superior manteniendo el mismo aspecto sin juntas y muy mate.",
+          "Los certificados de reacción al fuego y las declaraciones de prestaciones están disponibles bajo petición para incluirlos en tu dossier contra incendios."
+        ]
+      },
+      "installation": {
+        "intro": "El poliéster se tensa en frío — sin cañones de calor, sin tiempos de secado, sin vapores. Un equipo de dos personas suele terminar una estancia en un solo día, incluso en espacios amueblados y ocupados.",
+        "steps": [
+          {
+            "title": "Replanteo y medición",
+            "body": "La estancia se mide con láser y la membrana se corta y se suelda en un único panel sin juntas de hasta 5.15 m de ancho, con la forma exacta de la habitación."
+          },
+          {
+            "title": "Colocación del perfil perimetral",
+            "body": "Un discreto perfil de clip se fija a la pared o al techo a la altura elegida, siguiendo tramos rectos, curvas y esquinas."
+          },
+          {
+            "title": "Tensado en frío a mano",
+            "body": "La membrana fría se encaja en el perfil y se tensa a mano de lado a lado de la estancia, hasta quedar tirante como un tambor y perfectamente plana — sin aplicar calor."
+          },
+          {
+            "title": "Acabados y detalles",
+            "body": "Se rematan bordes, esquinas y cualquier iluminación integrada o trampilla de inspección. No hay tiempo de secado, así que la estancia queda limpia y vuelve a usarse de inmediato."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Una cláusula lista para copiar en pliegos y licitaciones. Ajusta los valores entre corchetes a tu proyecto.",
+        "clause": "Suministro e instalación de un sistema de techo tensado de poliéster tensado en frío [STRETCH o equivalente aprobado]. La membrana será un textil de poliéster tricotado, tensado en frío en un perfil perimetral de clip sin aplicación de calor, formando una superficie sin juntas y muy mate de hasta 5.15 m de ancho. La reacción al fuego será de clase B-s1,d0 según EN 13501-1 (clase A2-s1,d0 donde se indique). El sistema será lavable y resistente a la humedad, apto para su instalación en espacios ocupados, y contará con una garantía del fabricante de [10] años. Color: [RAL ____]. Donde se prescriba una prestación acústica, se dispondrá una membrana microperforada con respaldo absorbente de alta densidad que alcance una absorción acústica hasta clase A."
+      }
+    },
+    "pvc": {
+      "label": "Techo tensado de PVC",
+      "short": "Lámina de PVC",
+      "blurb": "Lámina de PVC con montaje en caliente — totalmente reciclable, desmontable y sin juntas hasta 6.4 m.",
+      "fireSafety": {
+        "intro": "La lámina de PVC está clasificada B-s1,d0 según EN 13501-1 — ignífuga, con un desarrollo de humo muy limitado y sin gotas inflamadas.",
+        "rows": [
+          {
+            "k": "Clasificación",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Producción de humo",
+            "v": "s1 — muy limitada"
+          },
+          {
+            "k": "Gotas inflamadas",
+            "v": "d0 — ninguna"
+          },
+          {
+            "k": "Norma de ensayo",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "La clasificación B-s1,d0 significa que la lámina es ignífuga (B), produce muy poco humo (s1) y no desprende gotas inflamadas (d0), por lo que es apta para la gran mayoría de interiores residenciales y comerciales.",
+          "Como la lámina es desmontable, puede soltarse y volver a tensarse para acceder a las instalaciones superiores sin afectar a su comportamiento al fuego.",
+          "Los certificados de reacción al fuego y las declaraciones de prestaciones están disponibles bajo petición para tu dossier contra incendios."
+        ]
+      },
+      "installation": {
+        "intro": "La lámina de PVC se calienta y se tensa durante la instalación — un techo cansado se convierte en uno nuevo e impecable en un solo día, con la superficie antigua en su sitio, oculta detrás.",
+        "steps": [
+          {
+            "title": "Replanteo y medición",
+            "body": "La estancia se mide y la lámina se suelda a medida por alta frecuencia con un borde de arpón perimetral, con la forma de la habitación y sin juntas hasta 6.4 m de ancho."
+          },
+          {
+            "title": "Colocación del perfil perimetral",
+            "body": "Un perfil de arpón/clip se fija alrededor de la estancia a la altura elegida, siguiendo la línea de pared y cualquier singularidad."
+          },
+          {
+            "title": "Calor y tensado",
+            "body": "El espacio se calienta con una fuente de calor para ablandar la lámina; el borde de arpón se engancha en el perfil y la lámina queda tensa y plana al enfriarse."
+          },
+          {
+            "title": "Acabados y detalles",
+            "body": "Se rematan bordes, esquinas, luminarias y trampillas de inspección. La lámina se limpia con un paño y queda operativa de inmediato."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Una cláusula lista para copiar en pliegos y licitaciones. Ajusta los valores entre corchetes a tu proyecto.",
+        "clause": "Suministro e instalación de un sistema de techo tensado de lámina de PVC tensada en caliente [STRETCH o equivalente aprobado]. La membrana será una lámina de PVC calandrada, soldada a medida y tensada mediante un perfil perimetral de arpón/clip, formando una superficie sin juntas de hasta 6.4 m de ancho en acabado [mate / satinado / brillo / translúcido]. La reacción al fuego será de clase B-s1,d0 según EN 13501-1. La lámina será 100% reciclable, desmontable y podrá volver a tensarse para acceder al plénum superior; será lavable y resistente a la humedad, y contará con una garantía del fabricante de [10] años. Color/acabado: [____]. Donde se prescriba retroiluminación, se dispondrá una lámina translúcida sobre un campo de LED para una iluminación uniforme y sin puntos calientes."
+      }
+    }
+  },
+  "techPage": {
+    "crumbTechnical": "Técnica",
+    "viewProduct": "Ver el producto",
+    "eyebrowTech": "Técnica",
+    "datasheetCta": "Solicita la ficha técnica completa",
+    "samplesCta": "Solicita muestras físicas",
+    "copyHint": "Selecciona el texto de arriba para copiarlo en tu documento de especificación.",
+    "ctaTitle": "¿Necesitas ayuda con la especificación?",
+    "ctaBody": "Nuestros especialistas ayudan a arquitectos y contratistas a afinar cada detalle — normalmente en dos días laborables.",
+    "ctaBtn": "Pregunta a nuestros especialistas",
+    "meta": {
+      "datasheet": "Ficha técnica del {label} — especificaciones, clasificaciones y descargas.",
+      "colours": "Gama de colores y acabados del {label}, con referencias RAL y solicitud de muestras.",
+      "fire-safety": "Clasificación de reacción al fuego del {label} — opciones B-s1,d0 y A2 según EN 13501-1.",
+      "installation": "Guía de instalación paso a paso del {label}.",
+      "specification": "Texto de especificación del {label} listo para copiar, para licitaciones y dossieres.",
+      "faq": "Preguntas frecuentes sobre el {label}."
+    }
+  },
+  "prefab": {
+    "prefab-ceiling-unit": {
+      "name": "Estructuras prefabricadas",
+      "eyebrow": "Estructuras prefabricadas",
+      "metaDescription": "Estructuras portantes prefabricadas a medida para techos tensados — vigas de aluminio, acero y madera, molduras y detalles de desnivel; cortadas, soldadas y lacadas al polvo en casa y enviadas a todo el mundo.",
+      "intro": "Estructuras portantes prefabricadas para proyectos de techo tensado — vigas para techos reticulares y de retícula, molduras para techos flotantes y detalles limpios de cambio de altura. Cada estructura se fabrica a medida según tus planos, íntegramente en casa en nuestra propia producción polaca, y se envía a todo el mundo a nuestros distribuidores.",
+      "makeHeading": "Qué fabricamos",
+      "make": [
+        {
+          "title": "Vigas — techos reticulares y de retícula",
+          "body": "Vigas premontadas que enmarcan una membrana tensada en un techo reticular o de retícula — módulos repetibles, a escuadra al milímetro y listos para montar en obra."
+        },
+        {
+          "title": "Molduras — techos flotantes",
+          "body": "Molduras perimetrales que despegan el techo tensado de las paredes para un efecto flotante con junta de sombra, con canal para iluminación oculta donde haga falta."
+        },
+        {
+          "title": "Acabados de cambio de altura",
+          "body": "Soportes escalonados y multinivel que llevan la membrana tensada a través de los desniveles con limpieza — sin apaños ni improvisación en obra."
+        }
+      ],
+      "materialsHeading": "Fabricadas en aluminio, acero o madera",
+      "materials": [
+        {
+          "title": "Aluminio",
+          "body": "Ligero, rígido y libre de corrosión — ideal para grandes luces, estancias húmedas y perfiles de iluminación integrados."
+        },
+        {
+          "title": "Acero",
+          "body": "Máxima resistencia para grandes estructuras y luces pesadas, lacado al polvo según el entorno."
+        },
+        {
+          "title": "Madera (MDF / multiplex)",
+          "body": "MDF, multiplex y otros tableros mecanizados a forma para volúmenes cálidos, complejos o curvos."
+        }
+      ],
+      "production": {
+        "heading": "Hechas en casa, hechas a medida",
+        "body": "Cada estructura se calcula según tus planos y se fabrica íntegramente en casa, en nuestra propia producción polaca. Corte, soldadura y lacado al polvo suceden bajo un mismo techo — así controlamos calidad y acabado desde el perfil en bruto hasta la estructura embalada y lista para enviar.",
+        "details": [
+          {
+            "title": "Corte",
+            "body": "Perfiles cortados a longitudes y ángulos precisos, para que la estructura encaje a escuadra y sin holguras."
+          },
+          {
+            "title": "Soldadura",
+            "body": "Soldaduras limpias y sólidas — repasadas y acabadas para que las uniones desaparezcan en la estructura."
+          },
+          {
+            "title": "Lacado al polvo",
+            "body": "Un acabado lacado al polvo duradero en cualquier RAL, aplicado en casa para una superficie uniforme y resistente."
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "Del plano a la estructura acabada",
+        "items": [
+          {
+            "title": "Techo reticular",
+            "meta": "Aluminio",
+            "summary": "El plano técnico de una retícula de vigas, junto a la estructura acabada, montada y rematada con membrana en obra."
+          },
+          {
+            "title": "Techo flotante con moldura",
+            "meta": "Moldura de aluminio",
+            "summary": "Un detalle de moldura flotante, del plano de producción al resultado montado y acabado con membrana."
+          }
+        ]
+      },
+      "worldwide": "Cada estructura se embala y se envía a todo el mundo, para que nuestros distribuidores, estén donde estén, ofrezcan el mismo resultado limpio y repetible — sin taller propio."
+    },
+    "prefab-lighting-elements": {
+      "name": "Elementos luminosos prefabricados",
+      "eyebrow": "Elementos luminosos prefabricados",
+      "metaDescription": "Elementos luminosos prefabricados sobre estructura de aluminio y acabados con membrana STRETCH — molduras luminosas, líneas de luz y elementos retroiluminados, calculados según tus planos, fabricados en casa y enviados a todo el mundo.",
+      "intro": "Elementos luminosos premontados sobre una estructura de aluminio y acabados con nuestra membrana tensada — molduras luminosas, líneas de luz y elementos retroiluminados. Calculados según tus planos, fabricados en casa en nuestra producción polaca y enviados a todo el mundo a nuestros distribuidores.",
+      "makeHeading": "Qué fabricamos",
+      "make": [
+        {
+          "title": "Molduras luminosas",
+          "body": "Molduras perimetrales que bañan una pared o un techo con luz uniforme y oculta — construidas como elemento de aluminio listo para montar."
+        },
+        {
+          "title": "Líneas de luz",
+          "body": "Líneas de luz empotradas y nítidas, integradas en una superficie tensada para una iluminación arquitectónica limpia."
+        },
+        {
+          "title": "Elementos retroiluminados",
+          "body": "Paneles y formas retroiluminados, acabados con membrana tensada translúcida para un brillo uniforme y sin puntos calientes."
+        }
+      ],
+      "materialsHeading": "Cómo se fabrican",
+      "materials": [
+        {
+          "title": "Estructura de aluminio",
+          "body": "Un marco de aluminio preciso y rígido, mecanizado a tus medidas — la columna vertebral de cada elemento luminoso."
+        },
+        {
+          "title": "LED y difusión",
+          "body": "LED regulable, dimensionado y colocado para un flujo uniforme, con la membrana difundiendo la luz con suavidad."
+        },
+        {
+          "title": "Acabado de membrana tensada",
+          "body": "Una membrana STRETCH translúcida o impresa, tensada sobre el marco para una superficie luminosa impecable."
+        }
+      ],
+      "showcase": {
+        "heading": "Del plano al elemento acabado",
+        "items": [
+          {
+            "title": "Moldura luminosa",
+            "meta": "Aluminio + membrana",
+            "summary": "El plano de una moldura de luz perimetral, junto al elemento acabado y encendido, montado en obra."
+          },
+          {
+            "title": "Elemento retroiluminado",
+            "meta": "Aluminio + LED + membrana",
+            "summary": "Un panel retroiluminado, del plano de producción al resultado final uniforme y sin puntos calientes."
+          }
+        ]
+      },
+      "worldwide": "Como todos nuestros elementos prefabricados, los elementos luminosos se embalan y se envían a todo el mundo — fabricados y probados aquí, listos para instalar allí."
+    }
+  },
+  "prefabPage": {
+    "discussCta": "Hablar de un proyecto",
+    "becomeDealer": "Hazte distribuidor",
+    "technicalDrawing": "Plano técnico",
+    "installedFinished": "Montado y acabado",
+    "shippedWorldwide": "Envío a todo el mundo",
+    "ctaTitle": "¿Tienes un proyecto para nosotros?",
+    "ctaBody": "Envíanos los planos o la idea — calculamos la estructura, la fabricamos en casa y te la enviamos."
   }
 }

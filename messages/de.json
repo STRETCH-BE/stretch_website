@@ -1472,5 +1472,906 @@
       ]
     },
     "comingSoon": "Demnächst"
+  },
+  "modals": {
+    "quote": {
+      "title": "Kostenloses Angebot anfordern",
+      "subtitle": "Erzählen Sie uns von Ihrem Projekt und wir melden uns mit einem maßgeschneiderten Preis.",
+      "submitLabel": "Anfrage senden",
+      "sentTitle": "Anfrage erhalten",
+      "sentMsg": "Danke — ein Spezialist antwortet innerhalb von zwei Werktagen.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Vor- und Nachname"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "rooms": {
+          "label": "Räume",
+          "options": [
+            "1 Raum",
+            "2 Räume",
+            "3 Räume",
+            "4 Räume",
+            "Mehr als 4"
+          ]
+        },
+        "timeline": {
+          "label": "Zeitrahmen",
+          "options": [
+            "So bald wie möglich",
+            "In 1–3 Monaten",
+            "In 4–12 Monaten",
+            "Ich informiere mich nur"
+          ]
+        },
+        "message": {
+          "label": "Ihr Projekt",
+          "placeholder": "Fläche, Ort, alles Nützliche..."
+        }
+      }
+    },
+    "survey": {
+      "title": "Aufmaß vor Ort buchen",
+      "subtitle": "Wir messen auf und beraten vor Ort — kostenlos und unverbindlich.",
+      "submitLabel": "Termin anfragen",
+      "sentTitle": "Termin angefragt",
+      "sentMsg": "Danke — wir melden uns, um einen passenden Zeitpunkt zu vereinbaren.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Vor- und Nachname"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "address": {
+          "label": "Adresse",
+          "placeholder": "Straße, Ort"
+        },
+        "preferredTime": {
+          "label": "Wunschzeit",
+          "options": [
+            "Vormittags",
+            "Nachmittags",
+            "Flexibel"
+          ]
+        },
+        "rooms": {
+          "label": "Räume",
+          "options": [
+            "1 Raum",
+            "2 Räume",
+            "3 Räume",
+            "4+ Räume"
+          ]
+        }
+      }
+    },
+    "training": {
+      "title": "Ihre Schulung buchen",
+      "subtitle": "Praxisnahe Zertifizierung an unserem belgischen Hauptsitz — hinterlassen Sie Ihre Daten und wir bestätigen.",
+      "submitLabel": "Meinen Platz anfragen",
+      "sentTitle": "Platz angefragt",
+      "sentMsg": "Danke — wir bestätigen Ihren Platz und senden alle Details zur Teilnahme.",
+      "fields": {
+        "fullName": {
+          "label": "Vollständiger Name",
+          "placeholder": "Vor- und Nachname"
+        },
+        "company": {
+          "label": "Firma",
+          "placeholder": "Ihre Firma"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Wunschtermin",
+          "options": [
+            "15.–16. Sep. 2026",
+            "06.–08. Okt. 2026",
+            "17.–18. Nov. 2026",
+            "Individuelle Vor-Ort-Schulung"
+          ]
+        },
+        "attendees": {
+          "label": "Teilnehmer",
+          "options": [
+            "1 Person",
+            "2 Personen",
+            "3 Personen",
+            "4+ Personen"
+          ]
+        }
+      }
+    },
+    "dates": {
+      "title": "Kommende Schulungstermine",
+      "subtitle": "Wählen Sie einen Termin und sichern Sie sich Ihren Platz — kleine Gruppen, Vergabe nach Eingang.",
+      "submitLabel": "Meinen Platz anfragen",
+      "sentTitle": "Platz angefragt",
+      "sentMsg": "Danke — wir bestätigen Ihren Platz und senden alle Details zur Teilnahme.",
+      "fields": {
+        "fullName": {
+          "label": "Vollständiger Name",
+          "placeholder": "Vor- und Nachname"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Wunschtermin",
+          "options": [
+            "15.–16. Sep. 2026",
+            "06.–08. Okt. 2026",
+            "17.–18. Nov. 2026",
+            "Individuelle Vor-Ort-Schulung"
+          ]
+        }
+      }
+    },
+    "partner": {
+      "title": "Als Partner bewerben",
+      "subtitle": "Erzählen Sie uns von Ihrem Unternehmen — wir prüfen jede Bewerbung persönlich.",
+      "submitLabel": "Bewerbung absenden",
+      "sentTitle": "Bewerbung erhalten",
+      "sentMsg": "Danke — unser Partnerteam prüft Ihre Bewerbung und meldet sich innerhalb von zwei Werktagen.",
+      "fields": {
+        "company": {
+          "label": "Firma",
+          "placeholder": "Ihre Firma"
+        },
+        "contactName": {
+          "label": "Ansprechpartner",
+          "placeholder": "Vor- und Nachname"
+        },
+        "partnerType": {
+          "label": "Ich bewerbe mich als",
+          "options": [
+            "Händler — ich verkaufe, Sie montieren",
+            "Fachpartner — ich verkaufe und montiere selbst",
+            "Noch unsicher"
+          ]
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "country": {
+          "label": "Land",
+          "placeholder": "Belgien"
+        },
+        "activity": {
+          "label": "Tätigkeit",
+          "options": [
+            "Bau & Renovierung",
+            "Innenausbau",
+            "Trockenbau / Verputz",
+            "Elektro / Beleuchtung",
+            "Sonstiges"
+          ]
+        },
+        "notes": {
+          "label": "Über Ihr Unternehmen",
+          "placeholder": "Teamgröße, abgedeckte Regionen, aktuelle Tätigkeit..."
+        }
+      }
+    },
+    "call": {
+      "title": "Rückruf vereinbaren",
+      "subtitle": "Hinterlassen Sie Ihre Nummer und eine passende Zeit — wir rufen Sie zurück.",
+      "submitLabel": "Rückruf anfordern",
+      "sentTitle": "Rückruf angefordert",
+      "sentMsg": "Danke — wir rufen Sie zur gewünschten Zeit an.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Vor- und Nachname"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "bestTime": {
+          "label": "Beste Zeit",
+          "options": [
+            "Vormittags",
+            "Nachmittags",
+            "Früher Abend"
+          ]
+        },
+        "topic": {
+          "label": "Thema",
+          "options": [
+            "Ein Angebot",
+            "Partnerschaft",
+            "Schulung",
+            "Technische Frage",
+            "Sonstiges"
+          ]
+        }
+      }
+    },
+    "samples": {
+      "title": "Farbmuster anfordern",
+      "subtitle": "Bestellen Sie physische RAL- / Farbmuster — kostenlos für Handelspartner.",
+      "submitLabel": "Muster anfordern",
+      "sentTitle": "Muster angefordert",
+      "sentMsg": "Danke — wir versenden Ihre Muster und melden uns innerhalb von zwei Werktagen.",
+      "fields": {
+        "company": {
+          "label": "Firma",
+          "placeholder": "Ihre Firma"
+        },
+        "contactName": {
+          "label": "Ansprechpartner",
+          "placeholder": "Vor- und Nachname"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "shippingAddress": {
+          "label": "Lieferadresse",
+          "placeholder": "Straße, PLZ, Ort"
+        },
+        "productLine": {
+          "label": "Produktlinie",
+          "options": [
+            "Polyester",
+            "PVC-Folie",
+            "Akustik",
+            "Noch unsicher"
+          ]
+        },
+        "colours": {
+          "label": "Gewünschte Farben",
+          "placeholder": "z. B. Weiß, Anthrazit, Sonder-RAL"
+        },
+        "notes": {
+          "label": "Anmerkungen",
+          "placeholder": "Projekt, Mengen, alles Nützliche..."
+        }
+      }
+    },
+    "datasheet": {
+      "title": "Datenblatt herunterladen",
+      "subtitle": "Geben Sie Ihre Daten ein und der Download startet sofort. Wir nutzen sie nur, um Ihre Anfrage zu bearbeiten.",
+      "submitLabel": "Datenblatt erhalten",
+      "sentTitle": "Hier ist Ihr Datenblatt",
+      "sentMsg": "Der Download sollte automatisch starten — falls nicht, nutzen Sie den Button unten.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Vor- und Nachname"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        }
+      }
+    },
+    "trainingDates": [
+      "15.–16. Sep. 2026",
+      "06.–08. Okt. 2026",
+      "17.–18. Nov. 2026",
+      "Individuelle Vor-Ort-Schulung"
+    ],
+    "trainingDateNotes": [
+      "Beveren-Waas · 4 Plätze",
+      "Beveren-Waas · 6 Plätze",
+      "Beveren-Waas · 8 Plätze"
+    ],
+    "close": "Schließen",
+    "downloadDatasheet": "Datenblatt herunterladen",
+    "select": "Auswählen…"
+  },
+  "faqPage": {
+    "items": [
+      {
+        "q": "Was ist eine Spanndecke?",
+        "a": "Eine Spanndecke ist eine dünne, nahtlose Membran — Polyester oder PVC-Folie —, die über den Raum gespannt und in ein schmales Randprofil eingeklipst wird. Sie sieht aus wie eine perfekt glatt gestrichene Decke, wird aber ohne Putz, Schleifen und Streichen montiert und verbirgt alles, was darüber liegt."
+      },
+      {
+        "q": "Wie lange dauert die Montage?",
+        "a": "Die meisten Räume sind an einem einzigen Tag fertig. Ein Zwei-Personen-Team montiert bis zu rund 50 m² pro Tag. Kalt montiertes Polyester braucht keine Trocknungszeit — der Raum ist sofort wieder nutzbar."
+      },
+      {
+        "q": "Macht das Schmutz? Muss ich ausziehen?",
+        "a": "Nein. Es gibt keinen Abriss, keinen Staub, kein Schleifen und kein Streichen — die Montage kann daher in einem möblierten, bewohnten Raum stattfinden. Die bestehende Decke kann meist darunter bleiben."
+      },
+      {
+        "q": "Wie lange hält eine Spanndecke?",
+        "a": "Auf unsere Systeme geben wir 25 Jahre Garantie. Die Oberfläche ist abwaschbar und feuchtigkeitsbeständig; sie reißt nicht, blättert nicht ab, vergilbt nicht und muss nie neu gestrichen werden."
+      },
+      {
+        "q": "Kann sie die Akustik verbessern?",
+        "a": "Ja. Eine mikroperforierte Version mit Absorberrücken erreicht bis Klasse A Schallabsorption und ist von der Standardausführung nicht zu unterscheiden — Nachhall und Lärm gehen messbar zurück."
+      },
+      {
+        "q": "Wie breit kann eine Decke ohne Naht sein?",
+        "a": "Bis zu 5.7 m nahtlos mit PVC-Folie und bis zu 5.15 m mit Polyester. Größere Spannweiten werden mit einer nahezu unsichtbaren Schweißnaht oder einer bewusst gesetzten Profillinie ausgeführt."
+      },
+      {
+        "q": "Kann ich Beleuchtung, Hinterleuchtung oder ein bedrucktes Design haben?",
+        "a": "Ja. Transluzente Folien liefern ein gleichmäßiges, dimmbares Backlight ohne Hotspots, LED-Lichtlinien lassen sich in die Fläche integrieren, und jedes Motiv — auch ein Sternenhimmel — kann randlos gedruckt werden."
+      },
+      {
+        "q": "Was kostet eine Spanndecke?",
+        "a": "Der Preis ist projektabhängig — er richtet sich nach Fläche, System, Oberfläche sowie Licht- und Akustikoptionen. Fordern Sie ein kostenloses, unverbindliches Angebot an; ein Spezialist antwortet innerhalb von zwei Werktagen."
+      },
+      {
+        "q": "Arbeiten Sie mit Bauunternehmen und Händlern zusammen?",
+        "a": "Ja. STRETCH ist B2B-orientiert: Wir schulen Monteure in unserem belgischen Hauptsitz, liefern Membranen nach Maß über ein B2B-Portal und vermitteln lokale Kunden an zertifizierte Partner. Siehe die Seiten Partner und Monteur-Schulung."
+      }
+    ],
+    "eyebrow": "FAQ",
+    "titleA": "Gute",
+    "titleB": "Fragen",
+    "lead": "Alles, was zu Spanndecken üblicherweise gefragt wird — Montage, Lebensdauer, Akustik, Spannweiten und Kosten. Noch unsicher? Fragen Sie einfach.",
+    "asideKicker": "Noch eine Frage?",
+    "asideTitle": "Sprechen Sie mit einem Spanndecken-Spezialisten.",
+    "asideBody": "Erzählen Sie uns von Ihrem Raum und wir antworten — kostenlos und unverbindlich.",
+    "asideCta": "Kostenloses Angebot anfordern"
+  },
+  "catalogFaqs": {
+    "polyester": [
+      {
+        "q": "Wie lange dauert die Montage einer Polyester-Spanndecke?",
+        "a": "Die meisten Räume sind an einem einzigen Tag fertig. Ein Zwei-Personen-Team montiert bis zu rund 50 m² pro Tag, und da die Membran kalt gespannt wird, gibt es keine Trocknungszeit — der Raum ist sofort wieder nutzbar."
+      },
+      {
+        "q": "Ist die Kaltmontage wirklich staubfrei?",
+        "a": "Ja. Die bestehende Decke wird nicht abgerissen, es wird weder geschliffen noch gestrichen. Die Membran wird in ein schmales Randprofil eingeklipst — die Montage ist sauber genug für möblierte, bewohnte Räume."
+      },
+      {
+        "q": "Kann eine Polyester-Decke die Raumakustik verbessern?",
+        "a": "Eine mikroperforierte Version mit hochdichtem Absorberrücken erreicht bis Klasse A Schallabsorption. Sie sieht aus wie die Standardausführung, reduziert Nachhall und Lärm aber messbar."
+      },
+      {
+        "q": "Wie reinige und pflege ich sie?",
+        "a": "Einfach mit einem feuchten Tuch abwischen. Die Oberfläche ist abwaschbar und feuchtigkeitsbeständig, reißt nicht, blättert nicht ab, vergilbt nicht und muss während der gesamten 25 Jahre Garantie nie neu gestrichen werden."
+      }
+    ],
+    "pvc": [
+      {
+        "q": "Was macht eine PVC-Spanndecke „100 % recycelbar“?",
+        "a": "Die Folie lässt sich am Ende ihrer Lebensdauer zu Rohmaterial recyceln — und sie ist während der Nutzung demontierbar: Sie können sie ausklipsen, um an die Technik darüber zu gelangen, und in Minuten neu spannen, statt eine Gipskartondecke herauszureißen und zu ersetzen."
+      },
+      {
+        "q": "Welche Spannweite deckt eine PVC-Decke ohne Naht ab?",
+        "a": "Bis zu 6.4 m nahtlos — der größte Wert in unserem Sortiment. Größere Räume werden durch verschweißte Bahnen mit nahezu unsichtbarer Naht oder durch eine bewusst gesetzte Profillinie abgedeckt."
+      },
+      {
+        "q": "Eignet sich PVC-Folie für Badezimmer und Feuchträume?",
+        "a": "Ja. Sie ist voll abwaschbar und feuchtigkeitsbeständig — deshalb ist sie beliebt in Badezimmern, Schwimmbädern und Wellnessbereichen, wo eine gestrichene Decke Blasen werfen oder Flecken bekommen würde."
+      },
+      {
+        "q": "Kann sie hinterleuchtet oder bedruckt werden?",
+        "a": "Transluzente Folien streuen ein LED-Feld gleichmäßig ohne Hotspots, und jedes Foto, Muster oder Sternenhimmel-Design kann randlos gedruckt werden. Das komplette Sortiment finden Sie beim System Lichtdecke."
+      }
+    ],
+    "acoustic": [
+      {
+        "q": "Wie stark reduziert das Akustiksystem den Lärm tatsächlich?",
+        "a": "Mit dem hochdichten Absorberrücken erreicht es bis Klasse A Absorption (die höchste Einstufung), gemessen als αw-Werte. In der Praxis wird aus einem harten, halligen Raum ein ruhiger, angenehmer Raum — ganz ohne sichtbare Akustikpaneele."
+      },
+      {
+        "q": "Sieht die Akustikausführung anders aus als eine normale Decke?",
+        "a": "Nein. Die Absorption geschieht hinter einer mikroperforierten Membran — die Decke wirkt als eine makellose, nahtlose Fläche, die Maßnahme bleibt unsichtbar."
+      },
+      {
+        "q": "Können Lautsprecher hinter der Decke versteckt werden?",
+        "a": "Ja. Lautsprecher lassen sich komplett hinter der gespannten Folie montieren — für sauberen Klang ohne sichtbare Quelle, eine beliebte Option für Heimkinos und Studios."
+      },
+      {
+        "q": "Wo ist das Akustiksystem am nützlichsten?",
+        "a": "Überall dort, wo Nachhall ein Problem ist: Büros, Restaurants, Tonstudios, Schulen, Gesundheitsbauten und Heimkinos. Es lässt sich auch auf frei hängende Inseln und Wandpaneele ausweiten."
+      }
+    ],
+    "light": [
+      {
+        "q": "Zeigt eine hinterleuchtete Decke Hotspots der LEDs?",
+        "a": "Nein. Die transluzente Folie liegt über einem LED-Feld und streut das Licht gleichmäßig über die gesamte Fläche — Sie sehen ein weiches, einheitliches Leuchten statt einzelner Punkte."
+      },
+      {
+        "q": "Was kann auf die Decke gedruckt werden?",
+        "a": "Praktisch jedes hochauflösende Bild, Muster oder jede Textur — randlos gedruckt, ohne sichtbare Naht. Eine beliebte Wahl ist der Glasfaser-Sternenhimmel für Kinos und Schlafzimmer."
+      },
+      {
+        "q": "Lässt sich das Licht dimmen oder die Farbe wechseln?",
+        "a": "Ja. Hinterleuchtete Decken sind dimmbar, und mit RGB-LED-Optionen wechseln Sie Farbe und Stimmung. LED-Lichtlinien können zudem in die Membran eingelassen werden — für einen klaren architektonischen Effekt."
+      }
+    ],
+    "prefab": [
+      {
+        "q": "Was ist ein Spanndecken-Fertigmodul?",
+        "a": "Ein komplettes Deckenmodul — Rahmen und gespannte Membran —, das in unserer belgischen Werkstatt montiert und qualitätsgeprüft wird und dann fertig zum Einklicken in einen Randrahmen auf die Baustelle geliefert wird."
+      },
+      {
+        "q": "Warum vorgefertigt statt Montage vor Ort?",
+        "a": "Fertigmodule eignen sich für modulares Bauen und sich wiederholende Räume wie Hotelbäder und Badpods: Der Großteil der Arbeit passiert außerhalb der Baustelle, die Montage braucht daher kaum Gewerke und kaum Zeit."
+      },
+      {
+        "q": "Wie erreicht man die Technik über einer Fertigmodul-Decke?",
+        "a": "Jedes Modul kann eine dezente, integrierte Revisionsklappe erhalten, damit Leitungen und Technik darüber erreichbar bleiben, ohne die klare Deckenlinie zu unterbrechen."
+      }
+    ],
+    "starry": [
+      {
+        "q": "Wie viele Sterne kann eine Sternenhimmel-Decke haben?",
+        "a": "Von rund 150 Punkten für einen dezenten Effekt bis über tausend für einen dichten, dramatischen Himmel. Die Dichte wird auf Raumgröße und gewünschte Stimmung abgestimmt."
+      },
+      {
+        "q": "Geben die Glasfaser-Sterne Wärme ab?",
+        "a": "Nein. Alle Fasern werden von einer einzigen, entfernt montierten LED-Lichtquelle gespeist — die Punkte selbst bleiben völlig kühl, nur das Licht wandert durch die Faser."
+      },
+      {
+        "q": "Können die Sterne funkeln oder die Farbe wechseln?",
+        "a": "Ja. Ein optionales Funkelrad lässt die Sterne glitzern, RGB-Lichtquellen ermöglichen Farbwechsel, und für Bewegung lassen sich Sternschnuppen-Effekte ergänzen. Alles ist dimmbar."
+      }
+    ],
+    "hatch": [
+      {
+        "q": "Kommt man an die Technik hinter einer Spanndecke?",
+        "a": "Ja — eine integrierte Revisionsklappe bietet dezenten, immer wieder öffenbaren Zugang zu Ventilen, Abzweigdosen und Anschlüssen über der Membran. Die Decke muss also nie aufgeschnitten oder ersetzt werden, um sie zu erreichen."
+      },
+      {
+        "q": "Ist die Klappe in der Decke sichtbar?",
+        "a": "Kaum. Der Rahmen ist in das Randdetail eingearbeitet und mit derselben Membran bespannt — er verschmilzt mit der Fläche und fällt erst auf, wenn man gezielt danach sucht."
+      },
+      {
+        "q": "Kann eine Klappe in eine bestehende Spanndecke eingebaut werden?",
+        "a": "In den meisten Fällen ja. Klappen lassen sich in eine bestehende Decke nachrüsten — in Größe und Position passend zu der Technik, die dahinter zugänglich sein muss."
+      }
+    ],
+    "print": [
+      {
+        "q": "Welche Bildqualität brauche ich für eine bedruckte Decke?",
+        "a": "Eine hochauflösende Datei liefert das beste Ergebnis. Wir prüfen Ihr Motiv, stimmen die Farben ab, skalieren es auf die Decke und erstellen vor dem Druck einen Proof — damit das Endergebnis Ihrer Erwartung entspricht."
+      },
+      {
+        "q": "Kann eine bedruckte Decke hinterleuchtet werden?",
+        "a": "Ja. Auf transluzente Folie über einem LED-Feld gedruckt, wird das Bild gleichmäßig und ohne Hotspots hinterleuchtet — ideal für Himmelmotive und markante Kunstwerke."
+      },
+      {
+        "q": "Gibt es bei großen Drucken eine sichtbare Naht?",
+        "a": "Nein. Das Bild wird randlos auf eine einzige nahtlose Membran mit bis zu 5.7 m Breite gedruckt — keine Bahnenlinien quer durch Ihr Motiv."
+      }
+    ]
+  },
+  "applications": {
+    "living-cinema": {
+      "name": "Wohnzimmer & Heimkino",
+      "shortName": "Wohnen & Kino",
+      "eyebrow": "Wohnen & Kino",
+      "metaDescription": "Spanndecken für Wohnzimmer und Heimkinos — nahtlose Oberflächen, integrierte Beleuchtung, Glasfaser-Sternenhimmel und bessere Akustik, montiert an einem Tag.",
+      "intro": "Eine makellose Decke prägt die Atmosphäre eines Wohnraums. STRETCH bietet Ihnen eine perfekt glatte, nahtlose Oberfläche — mit verdeckter Beleuchtung, einem Glasfaser-Sternenhimmel fürs Kino und akustischem Komfort, alles kalt montiert an einem einzigen Tag.",
+      "benefits": [
+        {
+          "title": "Ein nahtloses, perfektes Finish",
+          "body": "Keine Risse, keine Fugen, kein Neustreichen — eine glatte Membran, von Wand zu Wand gespannt, in tiefem Matt oder jeder gewünschten Farbe."
+        },
+        {
+          "title": "Atmosphäre wie im Kino",
+          "body": "Ergänzen Sie einen Glasfaser-Sternenhimmel, integrierte LED-Linien und dimmbares Backlight für die perfekte Stimmung am Filmabend."
+        },
+        {
+          "title": "Ruhigere, leisere Räume",
+          "body": "Eine akustische Membran zähmt den Hall in offenen Wohnbereichen — Gespräche und Klang wirken wärmer und klarer."
+        }
+      ]
+    },
+    "bathroom-kitchen": {
+      "name": "Badezimmer & Küchen",
+      "shortName": "Bad & Küche",
+      "eyebrow": "Bad & Küche",
+      "metaDescription": "Feuchtigkeitsbeständige Spanndecken für Bad und Küche — wasserdicht, schimmelresistent und abwaschbar, mit integrierter Beleuchtung, montiert an einem Tag.",
+      "intro": "Badezimmer und Küchen fordern Decken stark. Eine STRETCH-Membran ist wasserdicht, schimmelresistent und abwaschbar — sie verbirgt Rohre und Leitungen hinter einer makellosen Fläche, mit sauber integrierten Spots und Abluft.",
+      "benefits": [
+        {
+          "title": "Feuchtigkeits- und wasserbeständig",
+          "body": "Der Membran machen Dampf und Spritzer nichts aus — sie blättert nicht ab, fleckt nicht und schimmelt nicht wie eine gestrichene oder verputzte Decke."
+        },
+        {
+          "title": "Abwaschbare Oberfläche",
+          "body": "Kurz abwischen, und sie sieht aus wie neu — ideal über Dusche, Badewanne und Kochzone."
+        },
+        {
+          "title": "Sauber integrierte Technik",
+          "body": "Spots, Lautsprecher, Abluft und Revisionsklappen fügen sich in die Fläche ein und verbergen die Rohre darüber."
+        }
+      ]
+    },
+    "office-retail": {
+      "name": "Büros & Einzelhandel",
+      "shortName": "Büro & Retail",
+      "eyebrow": "Büro & Retail",
+      "metaDescription": "Spanndecken für Büro, Handel und Gastronomie — Akustik bis Klasse A, bedruckte Decken im Markendesign und integrierte Beleuchtung, schnell und sauber montiert.",
+      "intro": "Gewerbliche Räume müssen gut aussehen und gut klingen. STRETCH liefert akustischen Komfort bis Klasse A, bedruckte Decken im Markendesign und integrierte Beleuchtung — kalt und schnell montiert, mit minimaler Störung des laufenden Betriebs.",
+      "benefits": [
+        {
+          "title": "Akustischer Komfort bis Klasse A",
+          "body": "Eine mikroperforierte Akustikdecke senkt den Nachhall in offenen Büros, Besprechungsräumen und Restaurants — für bessere Sprachverständlichkeit."
+        },
+        {
+          "title": "Bedruckte Decken im Markendesign",
+          "body": "Drucken Sie jedes Bild, Muster oder Markenmotiv randlos — ein starker Blickfang für Einzelhandel, Showrooms und Gastronomie."
+        },
+        {
+          "title": "Schnelle, störungsarme Montage",
+          "body": "Kaltmontage bedeutet kein Staub und kein Schmutz; die meisten Räume sind an einem Tag fertig — ideal für genutzte Objekte."
+        }
+      ]
+    }
+  },
+  "appPage": {
+    "crumbApplications": "Anwendungen",
+    "quoteCta": "Kostenloses Angebot anfordern",
+    "seeProjects": "Projekte ansehen",
+    "recommended": "Empfohlene Lösungen",
+    "selectedWork": "Ausgewählte Arbeiten",
+    "explore": "Entdecken",
+    "ctaTitle": "Sie planen ein Projekt: {name}?",
+    "ctaBody": "Erzählen Sie uns von Ihrem Raum, und wir empfehlen das passende System — kostenlos und unverbindlich."
+  },
+  "projectCards": {
+    "cats": {
+      "Acoustic": "Akustik",
+      "Office": "Büro",
+      "Commercial": "Gewerbe",
+      "Retail": "Einzelhandel",
+      "Bathroom": "Badezimmer",
+      "Light & Print": "Licht & Druck",
+      "Living room": "Wohnzimmer",
+      "Home cinema": "Heimkino"
+    },
+    "metas": {
+      "da-tweekaz-studio": "Niederlande · Aufnahmestudio",
+      "mark-with-a-k": "Belgien · Tonstudio",
+      "notary-ampe-anthony": "Kruibeke · Akustikbüro",
+      "bnp-paribas-fortis": "Brüssel · Bankzentrale",
+      "van-der-valk-beveren": "Beveren · Hotel-Eventsaal",
+      "johnson-and-johnson": "Limerick, IE · Pharma-F&E-Standort",
+      "polette-eyewear": "Antwerpen · Retail-Konzeptstore",
+      "citizenm-hotel": "USA & Europa · Vorgefertigte Badmodule",
+      "london-chapel": "London, UK · Hinterleuchtete Decke",
+      "private-villa-knokke": "Knokke · Offener Wohnbereich",
+      "home-cinema-ghent": "Gent · Sternenhimmel + Akustik",
+      "city-penthouse-antwerp": "Antwerpen · Wohnzimmer",
+      "wellness-spa-bruges": "Brügge · Spa-Badezimmer",
+      "rue-perree-paris": "Paris · Hinterleuchtete Galeriedecke"
+    }
+  },
+  "technical": {
+    "topics": [
+      {
+        "label": "Datenblatt",
+        "sub": "Daten & Download"
+      },
+      {
+        "label": "Farben & Oberflächen",
+        "sub": "Komplettes Sortiment"
+      },
+      {
+        "label": "Brandschutz",
+        "sub": "Brandverhalten & A2"
+      },
+      {
+        "label": "Montageanleitung",
+        "sub": "Schritt für Schritt"
+      },
+      {
+        "label": "Ausschreibungstext",
+        "sub": "Für Ausschreibungen"
+      },
+      {
+        "label": "FAQ",
+        "sub": "Häufige Fragen"
+      }
+    ],
+    "polyester": {
+      "label": "Polyester-Spanndecke",
+      "short": "Polyester",
+      "blurb": "Kalt montierte Polyester-Membran — eine sehr matte, nahtlose Decke, von Hand gespannt.",
+      "fireSafety": {
+        "intro": "Die Polyester-Membran ist nach EN 13501-1 in B-s1,d0 klassifiziert — schwer entflammbar, mit sehr geringer Rauchentwicklung und ohne brennendes Abtropfen. Wo die strengsten Brandschutzanforderungen gelten, ist eine nichtbrennbare Version in A2-s1,d0 erhältlich.",
+        "rows": [
+          {
+            "k": "Standardklassifizierung",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Nichtbrennbare Option",
+            "v": "A2-s1,d0"
+          },
+          {
+            "k": "Rauchentwicklung",
+            "v": "s1 — sehr begrenzt"
+          },
+          {
+            "k": "Brennendes Abtropfen",
+            "v": "d0 — keines"
+          },
+          {
+            "k": "Prüfnorm",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Die Klassifizierung B-s1,d0 bedeutet: Die Membran ist schwer entflammbar (B), entwickelt sehr wenig Rauch (s1) und zeigt kein brennendes Abtropfen (d0) — die Kombination, die die meisten öffentlichen und gewerblichen Innenräume verlangen.",
+          "Für Fluchtwege, Hochhäuser, Krankenhäuser und andere Projekte, in denen eine nichtbrennbare Bekleidung vorgeschrieben ist, erfüllt die Version A2-s1,d0 diese höhere Anforderung — bei gleicher nahtloser, sehr matter Optik.",
+          "Zertifikate zum Brandverhalten und Leistungserklärungen sind auf Anfrage für Ihre Brandschutzunterlagen erhältlich."
+        ]
+      },
+      "installation": {
+        "intro": "Polyester wird kalt gespannt — keine Heißluftgebläse, keine Trocknungszeit, keine Dämpfe. Ein Zwei-Personen-Team schließt einen Raum in der Regel an einem einzigen Tag ab, auch in möblierten, genutzten Räumen.",
+        "steps": [
+          {
+            "title": "Aufmaß & Vermessung",
+            "body": "Der Raum wird per Laser vermessen; die Membran wird zugeschnitten und zu einem einzigen nahtlosen Paneel von bis zu 5.15 m Breite verschweißt — passgenau in der Form des Raums."
+          },
+          {
+            "title": "Randprofil montieren",
+            "body": "Ein schlankes Klemmprofil wird in der gewünschten Höhe an Wand oder Decke befestigt und folgt geraden Strecken, Rundungen und Ecken."
+          },
+          {
+            "title": "Kalt von Hand spannen",
+            "body": "Die kalte Membran wird in das Profil eingeklipst und von Hand über den Raum gespannt — trommelstraff zu einer perfekt ebenen Fläche, ganz ohne Wärme."
+          },
+          {
+            "title": "Abschluss & Details",
+            "body": "Kanten, Ecken sowie integrierte Beleuchtung oder Revisionsklappen werden ausgearbeitet. Es gibt keine Trocknungszeit — der Raum bleibt sauber und ist sofort wieder nutzbar."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Eine kopierfertige Klausel für Ausschreibungs- und Leistungsverzeichnistexte. Passen Sie die Werte in eckigen Klammern an Ihr Projekt an.",
+        "clause": "Liefern und Montieren einer kalt gespannten Polyester-Spanndecke als System [STRETCH oder anerkannt gleichwertig]. Die Membran besteht aus einem gewirkten Polyestertextil, das ohne Wärmeeinsatz kalt in ein umlaufendes Klemm-Randprofil gespannt wird und eine nahtlose, sehr matte Fläche von bis zu 5.15 m Breite bildet. Das Brandverhalten muss der Klasse B-s1,d0 nach EN 13501-1 entsprechen (Klasse A2-s1,d0, wo angegeben). Das System muss abwaschbar und feuchtigkeitsbeständig sein, für die Montage in genutzten Räumen geeignet sein und eine Herstellergarantie von [10] Jahren aufweisen. Farbe: [RAL ____]. Wo eine akustische Leistung vorgeschrieben ist, ist eine mikroperforierte Membran mit hochdichter Absorberauflage vorzusehen, die eine Schallabsorption bis Klasse A erreicht."
+      }
+    },
+    "pvc": {
+      "label": "PVC-Spanndecke",
+      "short": "PVC-Folie",
+      "blurb": "Warm montierte PVC-Folie — vollständig recycelbar, abnehmbar und nahtlos bis 6.4 m.",
+      "fireSafety": {
+        "intro": "Die PVC-Folie ist nach EN 13501-1 in B-s1,d0 klassifiziert — schwer entflammbar, mit sehr geringer Rauchentwicklung und ohne brennendes Abtropfen.",
+        "rows": [
+          {
+            "k": "Klassifizierung",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Rauchentwicklung",
+            "v": "s1 — sehr begrenzt"
+          },
+          {
+            "k": "Brennendes Abtropfen",
+            "v": "d0 — keines"
+          },
+          {
+            "k": "Prüfnorm",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Die Klassifizierung B-s1,d0 bedeutet: Die Folie ist schwer entflammbar (B), entwickelt sehr wenig Rauch (s1) und zeigt kein brennendes Abtropfen (d0) — damit ist sie für die große Mehrheit der Wohn- und Gewerberäume geeignet.",
+          "Da die Folie abnehmbar ist, kann sie ausgeklipst und neu gespannt werden, um an die darüberliegende Technik zu gelangen — ohne Einfluss auf ihr Brandverhalten.",
+          "Zertifikate zum Brandverhalten und Leistungserklärungen sind auf Anfrage für Ihre Brandschutzunterlagen erhältlich."
+        ]
+      },
+      "installation": {
+        "intro": "Die PVC-Folie wird bei der Montage erwärmt und gespannt — aus einer müden Decke wird an einem einzigen Tag eine makellos neue, während die alte Oberfläche einfach darüber verbleibt.",
+        "steps": [
+          {
+            "title": "Aufmaß & Vermessung",
+            "body": "Der Raum wird vermessen; die Folie wird per Hochfrequenz maßgenau verschweißt und erhält eine umlaufende Harpunenkante — geformt nach dem Raum und nahtlos bis 6.4 m Breite."
+          },
+          {
+            "title": "Randprofil montieren",
+            "body": "Ein Harpunen-/Klemmprofil wird rundum in der gewünschten Höhe befestigt und folgt dem Wandverlauf und allen Besonderheiten."
+          },
+          {
+            "title": "Erwärmen & Spannen",
+            "body": "Der Raum wird mit einer Wärmequelle erwärmt, um die Folie geschmeidig zu machen; die Harpunenkante wird in das Profil eingehängt, und beim Abkühlen spannt sich die Folie straff und eben."
+          },
+          {
+            "title": "Abschluss & Details",
+            "body": "Kanten, Ecken, Leuchten und Revisionsklappen werden fertiggestellt. Die Folie lässt sich einfach abwischen und ist sofort einsatzbereit."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Eine kopierfertige Klausel für Ausschreibungs- und Leistungsverzeichnistexte. Passen Sie die Werte in eckigen Klammern an Ihr Projekt an.",
+        "clause": "Liefern und Montieren einer warm gespannten PVC-Folien-Spanndecke als System [STRETCH oder anerkannt gleichwertig]. Die Membran besteht aus einer kalandrierten PVC-Folie, die maßgenau verschweißt und über ein umlaufendes Harpunen-/Klemmprofil gespannt wird und eine nahtlose Fläche von bis zu 6.4 m Breite in [matter / satinierter / glänzender / transluzenter] Ausführung bildet. Das Brandverhalten muss der Klasse B-s1,d0 nach EN 13501-1 entsprechen. Die Folie muss zu 100% recycelbar, abnehmbar und für den Zugang zum darüberliegenden Hohlraum neu spannbar sein, abwaschbar und feuchtigkeitsbeständig, und eine Herstellergarantie von [10] Jahren aufweisen. Farbe/Ausführung: [____]. Wo eine Hinterleuchtung vorgeschrieben ist, ist eine transluzente Folie über einem LED-Feld vorzusehen — für gleichmäßiges Licht ohne Hotspots."
+      }
+    }
+  },
+  "techPage": {
+    "crumbTechnical": "Technik",
+    "viewProduct": "Zum Produkt",
+    "eyebrowTech": "Technik",
+    "datasheetCta": "Vollständiges Datenblatt anfordern",
+    "samplesCta": "Materialmuster anfordern",
+    "copyHint": "Markieren Sie den Text oben, um ihn in Ihr Ausschreibungsdokument zu kopieren.",
+    "ctaTitle": "Brauchen Sie Hilfe beim Ausschreibungstext?",
+    "ctaBody": "Unsere Spezialisten helfen Architekten und Bauunternehmern, jedes Detail richtig zu lösen — in der Regel innerhalb von zwei Werktagen.",
+    "ctaBtn": "Unsere Spezialisten fragen",
+    "meta": {
+      "datasheet": "Technisches Datenblatt zur {label} — Spezifikationen, Klassifizierungen und Downloads.",
+      "colours": "Farb- und Oberflächensortiment der {label}, mit RAL-Referenzen und Musterbestellung.",
+      "fire-safety": "Brandverhaltensklassifizierung der {label} — B-s1,d0 und A2-Optionen nach EN 13501-1.",
+      "installation": "Schritt-für-Schritt-Montageanleitung für die {label}.",
+      "specification": "Kopierfertiger Ausschreibungstext für die {label} — für Ausschreibungen und Unterlagen.",
+      "faq": "Häufig gestellte Fragen zur {label}."
+    }
+  },
+  "prefab": {
+    "prefab-ceiling-unit": {
+      "name": "Prefab-Strukturen",
+      "eyebrow": "Prefab-Strukturen",
+      "metaDescription": "Maßgefertigte Prefab-Tragstrukturen für Spanndecken — Träger aus Aluminium, Stahl und Holz, Vouten und Höhenversatz-Details, im eigenen Haus zugeschnitten, geschweißt, pulverbeschichtet und weltweit versandt.",
+      "intro": "Prefab-Tragstrukturen für Spanndecken-Projekte — Träger für Raster- und Gitterdecken, Vouten für schwebende Decken und saubere Höhenversatz-Details. Jede Struktur wird nach Ihren Zeichnungen nach Maß gefertigt, komplett im eigenen Haus in unserer eigenen polnischen Produktion, und weltweit an unsere Händler versandt.",
+      "makeHeading": "Was wir bauen",
+      "make": [
+        {
+          "title": "Träger — Raster- & Gitterdecken",
+          "body": "Vorgefertigte Träger, die eine Spannmembran zur Raster- oder Gitterdecke fassen — wiederholbare Module, auf den Millimeter im Winkel und fertig für die Montage auf der Baustelle."
+        },
+        {
+          "title": "Vouten — schwebende Decken",
+          "body": "Umlaufende Vouten, die eine Spanndecke von den Wänden abheben — für einen schwebenden Effekt mit Schattenfuge, bei Bedarf mit Kanal für verdeckte Beleuchtung."
+        },
+        {
+          "title": "Höhenversatz-Details",
+          "body": "Gestufte und mehrstufige Träger, die eine Spannmembran sauber über Höhensprünge führen — ohne Bastelei und Rätselraten auf der Baustelle."
+        }
+      ],
+      "materialsHeading": "Gebaut aus Aluminium, Stahl oder Holz",
+      "materials": [
+        {
+          "title": "Aluminium",
+          "body": "Leicht, steif und korrosionsfrei — ideal für große Spannweiten, Feuchträume und integrierte Beleuchtungsprofile."
+        },
+        {
+          "title": "Stahl",
+          "body": "Maximale Festigkeit für große Strukturen und schwere Spannweiten, pulverbeschichtet passend zur Umgebung."
+        },
+        {
+          "title": "Holz (MDF / Multiplex)",
+          "body": "MDF, Multiplex und andere Platten in Form gefräst — für warme, komplexe oder geschwungene Formen."
+        }
+      ],
+      "production": {
+        "heading": "Im eigenen Haus gefertigt, nach Maß gefertigt",
+        "body": "Jede Struktur wird nach Ihren Zeichnungen konstruiert und komplett im eigenen Haus in unserer eigenen polnischen Produktion gebaut. Zuschnitt, Schweißen und Pulverbeschichtung geschehen unter einem Dach — so kontrollieren wir Qualität und Finish vom Rohprofil bis zur verpackten, versandfertigen Struktur.",
+        "details": [
+          {
+            "title": "Zuschnitt",
+            "body": "Profile auf präzise Längen und Winkel zugeschnitten, damit die Struktur exakt und im Winkel zusammengeht."
+          },
+          {
+            "title": "Schweißen",
+            "body": "Saubere, feste Schweißnähte — verschliffen und nachbearbeitet, sodass die Verbindungen in der Struktur verschwinden."
+          },
+          {
+            "title": "Pulverbeschichtung",
+            "body": "Ein langlebiges pulverbeschichtetes Finish in jedem RAL, im eigenen Haus aufgebracht — für eine gleichmäßige, strapazierfähige Oberfläche."
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "Von der Zeichnung zur fertigen Struktur",
+        "items": [
+          {
+            "title": "Rasterdecke",
+            "meta": "Aluminium",
+            "summary": "Die technische Zeichnung eines Rasterträger-Gitters, daneben die fertige Struktur — montiert und mit Membran bespannt auf der Baustelle."
+          },
+          {
+            "title": "Schwebende Voutendecke",
+            "meta": "Aluminium-Voute",
+            "summary": "Ein schwebendes Voutendetail, von der Produktionszeichnung bis zum montierten, mit Membran bespannten Ergebnis."
+          }
+        ]
+      },
+      "worldwide": "Jede Struktur wird verpackt und weltweit versandt, damit unsere Händler überall dasselbe saubere, wiederholbare Ergebnis anbieten können — ohne eigene Werkstatt."
+    },
+    "prefab-lighting-elements": {
+      "name": "Prefab-Lichtelemente",
+      "eyebrow": "Prefab-Lichtelemente",
+      "metaDescription": "Prefab-Lichtelemente auf Aluminiumstruktur, bespannt mit einer STRETCH-Membran — Lichtvouten, Lichtlinien und hinterleuchtete Elemente, nach Ihren Zeichnungen konstruiert, im eigenen Haus gebaut und weltweit versandt.",
+      "intro": "Vormontierte Lichtelemente auf einer Aluminiumstruktur, bespannt mit unserer Spannmembran — Lichtvouten, Lichtlinien und hinterleuchtete Elemente. Nach Ihren Zeichnungen konstruiert, im eigenen Haus in unserer polnischen Produktion gebaut und weltweit an unsere Händler versandt.",
+      "makeHeading": "Was wir bauen",
+      "make": [
+        {
+          "title": "Lichtvouten",
+          "body": "Umlaufende Vouten, die eine Wand oder Decke mit gleichmäßigem, verdecktem Licht fluten — gebaut als montagefertiges Aluminiumelement."
+        },
+        {
+          "title": "Lichtlinien",
+          "body": "Präzise, eingelassene Lichtlinien, integriert in eine gespannte Fläche — für klare, architektonische Beleuchtung."
+        },
+        {
+          "title": "Hinterleuchtete Elemente",
+          "body": "Hinterleuchtete Paneele und Formen, bespannt mit transluzenter Spannmembran — für ein gleichmäßiges Leuchten ohne Hotspots."
+        }
+      ],
+      "materialsHeading": "So werden sie gebaut",
+      "materials": [
+        {
+          "title": "Aluminiumstruktur",
+          "body": "Ein präziser, steifer Aluminiumrahmen, auf Ihre Maße gefertigt — das Rückgrat jedes Lichtelements."
+        },
+        {
+          "title": "LED & Diffusion",
+          "body": "Dimmbare LED, dimensioniert und platziert für gleichmäßige Lichtausbeute, während die Membran das Licht weich streut."
+        },
+        {
+          "title": "Spannmembran-Finish",
+          "body": "Eine transluzente oder bedruckte STRETCH-Membran, über den Rahmen gespannt — für eine makellose Leuchtfläche."
+        }
+      ],
+      "showcase": {
+        "heading": "Von der Zeichnung zum fertigen Element",
+        "items": [
+          {
+            "title": "Lichtvoute",
+            "meta": "Aluminium + Membran",
+            "summary": "Die Zeichnung einer umlaufenden Lichtvoute, daneben das fertige, leuchtende Element — montiert vor Ort."
+          },
+          {
+            "title": "Hinterleuchtetes Element",
+            "meta": "Aluminium + LED + Membran",
+            "summary": "Ein hinterleuchtetes Paneel, von der Produktionszeichnung bis zum gleichmäßigen, hotspotfreien Endergebnis."
+          }
+        ]
+      },
+      "worldwide": "Wie alle unsere Prefab-Elemente werden auch Lichtelemente verpackt und weltweit versandt — hier gebaut und getestet, dort montagefertig."
+    }
+  },
+  "prefabPage": {
+    "discussCta": "Projekt besprechen",
+    "becomeDealer": "Händler werden",
+    "technicalDrawing": "Technische Zeichnung",
+    "installedFinished": "Montiert & fertiggestellt",
+    "shippedWorldwide": "Weltweiter Versand",
+    "ctaTitle": "Haben Sie ein Projekt für uns?",
+    "ctaBody": "Senden Sie uns die Zeichnungen oder die Idee — wir konstruieren die Struktur, bauen sie im eigenen Haus und liefern sie zu Ihnen."
   }
 }

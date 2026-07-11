@@ -1472,5 +1472,906 @@
       ]
     },
     "comingSoon": "Kommer snart"
+  },
+  "modals": {
+    "quote": {
+      "title": "Begär en kostnadsfri offert",
+      "subtitle": "Berätta om ditt projekt så återkommer vi med ett skräddarsytt pris.",
+      "submitLabel": "Skicka förfrågan",
+      "sentTitle": "Förfrågan mottagen",
+      "sentMsg": "Tack — en specialist svarar inom två arbetsdagar.",
+      "fields": {
+        "name": {
+          "label": "Namn",
+          "placeholder": "För- och efternamn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "rooms": {
+          "label": "Rum",
+          "options": [
+            "1 rum",
+            "2 rum",
+            "3 rum",
+            "4 rum",
+            "Fler än 4"
+          ]
+        },
+        "timeline": {
+          "label": "Tidsplan",
+          "options": [
+            "Så snart som möjligt",
+            "Inom 1–3 månader",
+            "Inom 4–12 månader",
+            "Jag undersöker bara"
+          ]
+        },
+        "message": {
+          "label": "Ditt projekt",
+          "placeholder": "Yta, plats, allt som kan vara till hjälp..."
+        }
+      }
+    },
+    "survey": {
+      "title": "Boka ett platsbesök",
+      "subtitle": "Vi mäter upp och ger råd på plats — gratis och utan förpliktelser.",
+      "submitLabel": "Boka platsbesök",
+      "sentTitle": "Förfrågan skickad",
+      "sentMsg": "Tack — vi kontaktar dig för att hitta en tid som passar.",
+      "fields": {
+        "name": {
+          "label": "Namn",
+          "placeholder": "För- och efternamn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "address": {
+          "label": "Adress",
+          "placeholder": "Gata, ort"
+        },
+        "preferredTime": {
+          "label": "Önskad tid",
+          "options": [
+            "Förmiddag",
+            "Eftermiddag",
+            "Flexibel"
+          ]
+        },
+        "rooms": {
+          "label": "Rum",
+          "options": [
+            "1 rum",
+            "2 rum",
+            "3 rum",
+            "4+ rum"
+          ]
+        }
+      }
+    },
+    "training": {
+      "title": "Boka din utbildning",
+      "subtitle": "Praktisk certifiering på vårt belgiska huvudkontor — lämna dina uppgifter så bekräftar vi.",
+      "submitLabel": "Reservera min plats",
+      "sentTitle": "Platsförfrågan skickad",
+      "sentMsg": "Tack — vi bekräftar din plats och skickar all praktisk information.",
+      "fields": {
+        "fullName": {
+          "label": "Fullständigt namn",
+          "placeholder": "För- och efternamn"
+        },
+        "company": {
+          "label": "Företag",
+          "placeholder": "Ditt företag"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Önskat datum",
+          "options": [
+            "15–16 sep 2026",
+            "06–08 okt 2026",
+            "17–18 nov 2026",
+            "Skräddarsydd session på plats"
+          ]
+        },
+        "attendees": {
+          "label": "Deltagare",
+          "options": [
+            "1 person",
+            "2 personer",
+            "3 personer",
+            "4+ personer"
+          ]
+        }
+      }
+    },
+    "dates": {
+      "title": "Kommande utbildningsdatum",
+      "subtitle": "Välj ett datum och reservera din plats — små grupper, först till kvarn.",
+      "submitLabel": "Reservera min plats",
+      "sentTitle": "Platsförfrågan skickad",
+      "sentMsg": "Tack — vi bekräftar din plats och skickar all praktisk information.",
+      "fields": {
+        "fullName": {
+          "label": "Fullständigt namn",
+          "placeholder": "För- och efternamn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Önskat datum",
+          "options": [
+            "15–16 sep 2026",
+            "06–08 okt 2026",
+            "17–18 nov 2026",
+            "Skräddarsydd session på plats"
+          ]
+        }
+      }
+    },
+    "partner": {
+      "title": "Ansök om att bli partner",
+      "subtitle": "Berätta om ditt företag — vi går igenom varje ansökan personligen.",
+      "submitLabel": "Skicka ansökan",
+      "sentTitle": "Ansökan mottagen",
+      "sentMsg": "Tack — vårt partnerteam går igenom den och återkommer inom två arbetsdagar.",
+      "fields": {
+        "company": {
+          "label": "Företag",
+          "placeholder": "Ditt företag"
+        },
+        "contactName": {
+          "label": "Kontaktperson",
+          "placeholder": "För- och efternamn"
+        },
+        "partnerType": {
+          "label": "Jag vill bli",
+          "options": [
+            "Återförsäljare — jag säljer, ni monterar",
+            "Återförsäljare och montör — jag säljer och monterar själv",
+            "Vet inte än"
+          ]
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "country": {
+          "label": "Land",
+          "placeholder": "Belgien"
+        },
+        "activity": {
+          "label": "Verksamhet",
+          "options": [
+            "Bygg & renovering",
+            "Inredning / lokalanpassning",
+            "Gips / puts",
+            "El / belysning",
+            "Annat"
+          ]
+        },
+        "notes": {
+          "label": "Om ditt företag",
+          "placeholder": "Teamstorlek, regioner ni täcker, nuvarande verksamhet..."
+        }
+      }
+    },
+    "call": {
+      "title": "Boka ett samtal",
+      "subtitle": "Lämna ditt nummer och en tid som passar — vi ringer upp dig.",
+      "submitLabel": "Bli uppringd",
+      "sentTitle": "Samtal bokat",
+      "sentMsg": "Tack — vi ringer dig på den tid som passar dig.",
+      "fields": {
+        "name": {
+          "label": "Namn",
+          "placeholder": "För- och efternamn"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "bestTime": {
+          "label": "Bästa tid",
+          "options": [
+            "Förmiddag",
+            "Eftermiddag",
+            "Tidig kväll"
+          ]
+        },
+        "topic": {
+          "label": "Ämne",
+          "options": [
+            "En offert",
+            "Partnerskap",
+            "Utbildning",
+            "Teknisk fråga",
+            "Annat"
+          ]
+        }
+      }
+    },
+    "samples": {
+      "title": "Beställ färgprover",
+      "subtitle": "Beställ fysiska RAL- / färgprover — gratis för professionella partner.",
+      "submitLabel": "Beställ prover",
+      "sentTitle": "Prover beställda",
+      "sentMsg": "Tack — vi skickar dina prover och följer upp inom två arbetsdagar.",
+      "fields": {
+        "company": {
+          "label": "Företag",
+          "placeholder": "Ditt företag"
+        },
+        "contactName": {
+          "label": "Kontaktperson",
+          "placeholder": "För- och efternamn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "shippingAddress": {
+          "label": "Leveransadress",
+          "placeholder": "Gata, postnummer, ort"
+        },
+        "productLine": {
+          "label": "Produktlinje",
+          "options": [
+            "Polyester",
+            "PVC-folie",
+            "Akustik",
+            "Vet inte än"
+          ]
+        },
+        "colours": {
+          "label": "Färger av intresse",
+          "placeholder": "t.ex. vit, antracit, valfri RAL"
+        },
+        "notes": {
+          "label": "Övrigt",
+          "placeholder": "Projekt, mängder, allt som kan vara till hjälp..."
+        }
+      }
+    },
+    "datasheet": {
+      "title": "Ladda ner databladet",
+      "subtitle": "Fyll i dina uppgifter så startar nedladdningen direkt. Vi använder dem bara för att följa upp din förfrågan.",
+      "submitLabel": "Hämta databladet",
+      "sentTitle": "Här är ditt datablad",
+      "sentMsg": "Nedladdningen bör starta automatiskt — om inte, använd knappen nedan.",
+      "fields": {
+        "name": {
+          "label": "Namn",
+          "placeholder": "För- och efternamn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        }
+      }
+    },
+    "trainingDates": [
+      "15–16 sep 2026",
+      "06–08 okt 2026",
+      "17–18 nov 2026",
+      "Skräddarsydd session på plats"
+    ],
+    "trainingDateNotes": [
+      "Beveren-Waas · 4 platser",
+      "Beveren-Waas · 6 platser",
+      "Beveren-Waas · 8 platser"
+    ],
+    "close": "Stäng",
+    "downloadDatasheet": "Ladda ner datablad",
+    "select": "Välj…"
+  },
+  "faqPage": {
+    "items": [
+      {
+        "q": "Vad är ett spänntak?",
+        "a": "Ett spänntak är ett tunt, skarvfritt membran — polyester eller PVC-folie — som spänns över rummet och kläms fast i en smal kantprofil. Det ser ut som ett perfekt slätt, målat innertak, men monteras utan puts, slipning och målning och döljer allt som finns ovanför."
+      },
+      {
+        "q": "Hur lång tid tar monteringen?",
+        "a": "De flesta rum är klara på en enda dag. Ett tvåmannateam monterar upp till cirka 50 m² per dag. Kallmonterad polyester behöver ingen torktid, så rummet kan användas direkt."
+      },
+      {
+        "q": "Blir det stökigt? Måste jag flytta ut?",
+        "a": "Nej. Det förekommer ingen rivning, inget damm, ingen slipning och ingen målning, så monteringen kan ske i ett möblerat rum som används. Det befintliga taket kan oftast sitta kvar ovanför."
+      },
+      {
+        "q": "Hur länge håller ett spänntak?",
+        "a": "Våra system har 25 års garanti. Ytan är tvättbar och fukttålig och kommer inte att spricka, flagna, gulna eller behöva målas om."
+      },
+      {
+        "q": "Kan det förbättra akustiken?",
+        "a": "Ja. En mikroperforerad version med absorbent bakom når upp till klass A ljudabsorption och ser exakt ut som standardytan — efterklang och buller minskar mätbart."
+      },
+      {
+        "q": "Hur brett tak kan ni montera utan skarv?",
+        "a": "Upp till 5.7 m skarvfritt med PVC-folie och upp till 5.15 m med polyester. Större spännvidder täcks med en nästan osynlig svetsad skarv eller en medvetet placerad profillinje."
+      },
+      {
+        "q": "Kan jag få belysning, bakgrundsbelysning eller ett tryckt motiv?",
+        "a": "Ja. Genomskinliga folier ger ett jämnt, dimbart bakbelyst ljus utan synliga ljuspunkter, LED-ljuslinjer kan integreras i ytan, och vilken bild som helst — även en stjärnhimmel — kan tryckas från kant till kant."
+      },
+      {
+        "q": "Vad kostar ett spänntak?",
+        "a": "Priset beror på projektet — på ytan, systemet, finishen och eventuella ljus- eller akustiklösningar. Begär en kostnadsfri offert utan förpliktelser, så svarar en specialist inom två arbetsdagar."
+      },
+      {
+        "q": "Samarbetar ni med entreprenörer och återförsäljare?",
+        "a": "Ja. STRETCH är B2B-drivet: vi utbildar montörer på vårt belgiska huvudkontor, levererar måttanpassade membraner via en B2B-portal och hänvisar lokala kunder till certifierade partner. Se sidorna Partner och Montörsutbildning."
+      }
+    ],
+    "eyebrow": "FAQ",
+    "titleA": "Bra",
+    "titleB": "frågor",
+    "lead": "Allt som folk brukar fråga om spänntak — montering, livslängd, akustik, spännvidder och pris. Fortfarande osäker? Fråga oss bara.",
+    "asideKicker": "Har du fler frågor?",
+    "asideTitle": "Prata med en spänntaksspecialist.",
+    "asideBody": "Berätta om ditt rum så svarar vi — gratis och utan förpliktelser.",
+    "asideCta": "Begär en kostnadsfri offert"
+  },
+  "catalogFaqs": {
+    "polyester": [
+      {
+        "q": "Hur lång tid tar det att montera ett spänntak i polyester?",
+        "a": "De flesta rum är klara på en enda dag. Ett tvåmannateam monterar upp till cirka 50 m² per dag, och eftersom membranet spänns kallt finns ingen torktid innan rummet kan användas igen."
+      },
+      {
+        "q": "Är den kalla monteringen verkligen dammfri?",
+        "a": "Ja. Det befintliga taket rivs inte, och det förekommer varken slipning eller målning. Membranet kläms fast i en smal kantprofil, så monteringen är ren nog att utföras i möblerade rum som används."
+      },
+      {
+        "q": "Kan ett polyestertak förbättra rummets akustik?",
+        "a": "En mikroperforerad version med en absorbent med hög densitet bakom når upp till klass A ljudabsorption. Den ser exakt ut som standardytan men minskar efterklang och buller mätbart."
+      },
+      {
+        "q": "Hur rengör och underhåller jag det?",
+        "a": "Torka av det med en fuktig trasa. Ytan är tvättbar och fukttålig, spricker, flagnar eller gulnar inte och behöver aldrig målas om under hela garantitiden på 25 år."
+      }
+    ],
+    "pvc": [
+      {
+        "q": "Varför är ett spänntak i PVC ”100 % återvinningsbart”?",
+        "a": "Folien kan återvinnas till råmaterial när den tjänat ut, och den är demonterbar under användning — du kan lossa den för att komma åt installationerna ovanför och spänna om den på några minuter, i stället för att riva ut och ersätta ett gipstak."
+      },
+      {
+        "q": "Hur stor spännvidd klarar ett PVC-tak utan skarv?",
+        "a": "Upp till 6.4 m skarvfritt — störst i vårt sortiment. Större rum täcks genom att våder svetsas samman med en nästan osynlig skarv eller genom en medvetet placerad profillinje."
+      },
+      {
+        "q": "Passar PVC-folie i badrum och våtutrymmen?",
+        "a": "Ja. Den är helt tvättbar och fukttålig, vilket gör den populär i badrum, pooler och wellnessutrymmen där ett målat tak skulle bubbla eller få fläckar."
+      },
+      {
+        "q": "Kan den bakbelysas eller tryckas?",
+        "a": "Genomskinliga folier sprider ett LED-fält jämnt utan synliga ljuspunkter, och vilket foto, mönster eller stjärnhimmelsmotiv som helst kan tryckas från kant till kant. Se systemet Ljustak för hela sortimentet."
+      }
+    ],
+    "acoustic": [
+      {
+        "q": "Hur mycket minskar det akustiska systemet egentligen bullret?",
+        "a": "Med absorbenten med hög densitet bakom når det upp till klass A absorption (den högsta klassen), mätt som αw-värden. I praktiken förvandlas ett hårt, ekande rum till en lugn och behaglig miljö — utan några synliga akustikpaneler."
+      },
+      {
+        "q": "Ser den akustiska ytan annorlunda ut än ett vanligt tak?",
+        "a": "Nej. Absorptionen sker bakom ett mikroperforerat membran, så taket upplevs som en enda felfri, skarvfri yta — åtgärden är osynlig."
+      },
+      {
+        "q": "Kan högtalare döljas bakom taket?",
+        "a": "Ja. Högtalare kan monteras helt bakom den spända folien för ett rent ljud utan synlig källa — ett populärt val för hemmabior och studior."
+      },
+      {
+        "q": "Var gör det akustiska systemet störst nytta?",
+        "a": "Överallt där efterklang är ett problem: kontor, restauranger, inspelningsstudior, skolor, vårdmiljöer och hemmabior. Det kan även utökas med frihängande öar och väggpaneler."
+      }
+    ],
+    "light": [
+      {
+        "q": "Syns LED-lamporna som ljuspunkter i ett bakbelyst tak?",
+        "a": "Nej. Den genomskinliga folien ligger över ett LED-fält och sprider ljuset jämnt över hela ytan, så du ser ett mjukt, enhetligt sken i stället för enskilda punkter."
+      },
+      {
+        "q": "Vad kan tryckas på taket?",
+        "a": "I princip vilken högupplöst bild, vilket mönster eller vilken textur som helst — tryckt från kant till kant utan synlig skarv. Ett vanligt val är en fiberoptisk stjärnhimmel för biosalonger och sovrum."
+      },
+      {
+        "q": "Kan belysningen dimras eller byta färg?",
+        "a": "Ja. Bakbelysta tak är dimbara, och med RGB-LED kan du ändra färg och stämning. LED-ljuslinjer kan dessutom fällas in i membranet för en skarp arkitektonisk effekt."
+      }
+    ],
+    "prefab": [
+      {
+        "q": "Vad är en prefabricerad spänntaksmodul?",
+        "a": "Det är en komplett takmodul — ram och spänt membran — som monteras och kvalitetskontrolleras i vår belgiska verkstad och levereras färdig att klicka fast i en kantram på plats."
+      },
+      {
+        "q": "Varför välja prefab i stället för montering på plats?",
+        "a": "Prefabmoduler passar modulbyggande och likadana rum som hotellbadrum och badrumsmoduler: det mesta av arbetet sker utanför byggplatsen, så monteringen kräver ett minimum av yrkesgrupper och tid."
+      },
+      {
+        "q": "Hur kommer man åt installationerna ovanför ett prefabtak?",
+        "a": "Varje modul kan förses med en diskret, integrerad inspektionslucka, så att rör och installationer ovanför förblir åtkomliga utan att den rena taklinjen bryts."
+      }
+    ],
+    "starry": [
+      {
+        "q": "Hur många stjärnor kan ett stjärnhimmelstak ha?",
+        "a": "Från runt 150 punkter för en subtil effekt till över tusen för en tät, dramatisk himmel. Tätheten väljs efter rummets storlek och den stämning du vill skapa."
+      },
+      {
+        "q": "Avger fiberoptikstjärnorna värme?",
+        "a": "Nej. Alla fibrer drivs av en enda separat placerad LED-ljuskälla, så själva punkterna förblir helt svala — bara ljuset färdas genom fibern."
+      },
+      {
+        "q": "Kan stjärnorna tindra eller byta färg?",
+        "a": "Ja. Ett tindringshjul (tillval) får stjärnorna att glittra, RGB-ljuskällor låter dig byta färg, och stjärnfallseffekter kan läggas till för rörelse. Allt är dimbart."
+      }
+    ],
+    "hatch": [
+      {
+        "q": "Kommer man åt installationer bakom ett spänntak?",
+        "a": "Ja — en integrerad inspektionslucka ger diskret åtkomst som kan öppnas gång på gång till ventiler, kopplingsdosor och anslutningar ovanför membranet, så taket behöver aldrig skäras upp eller bytas för att nå dem."
+      },
+      {
+        "q": "Syns luckan i taket?",
+        "a": "Knappt. Ramen byggs in i kantdetaljen och kläs med samma membran, så den smälter in i ytan och märks först när man letar efter den."
+      },
+      {
+        "q": "Kan en lucka läggas till i ett befintligt spänntak?",
+        "a": "I de flesta fall, ja. Luckor kan eftermonteras i ett befintligt tak och storleks- och placeringsanpassas efter den installation som ska vara åtkomlig bakom."
+      }
+    ],
+    "print": [
+      {
+        "q": "Vilken bildkvalitet behöver jag för ett tryckt tak?",
+        "a": "En högupplöst fil ger bäst resultat. Vi granskar och färghanterar ditt material, skalar det till taket och tar fram ett provtryck före tryckningen, så att slutresultatet motsvarar din förväntan."
+      },
+      {
+        "q": "Kan ett tryckt tak bakbelysas?",
+        "a": "Ja. Tryckt på en genomskinlig folie över ett LED-fält blir bilden jämnt bakbelyst utan synliga ljuspunkter — perfekt för himmelsmotiv och utmärkande konstverk."
+      },
+      {
+        "q": "Syns det någon skarv på stora tryck?",
+        "a": "Nej. Bilden trycks från kant till kant på ett enda skarvfritt membran upp till 5.7 m brett, så inga vådlinjer korsar ditt motiv."
+      }
+    ]
+  },
+  "applications": {
+    "living-cinema": {
+      "name": "Vardagsrum & hemmabio",
+      "shortName": "Vardagsrum & bio",
+      "eyebrow": "Vardagsrum & bio",
+      "metaDescription": "Spänntak för vardagsrum och hemmabior — skarvfria ytor, integrerad belysning, stjärnhimlar i fiberoptik och bättre akustik, monterat på en dag.",
+      "intro": "Ett felfritt tak sätter tonen i ett vardagsrum. STRETCH ger dig en perfekt slät, skarvfri yta — med dold belysning, en fiberoptisk stjärnhimmel för bion och akustisk komfort, allt kallmonterat på en enda dag.",
+      "benefits": [
+        {
+          "title": "En skarvfri, perfekt finish",
+          "body": "Inga sprickor, inga skarvar och ingen ommålning — ett slätt membran spänt från vägg till vägg, i djup matt eller valfri kulör."
+        },
+        {
+          "title": "Stämning som på bio",
+          "body": "Lägg till en fiberoptisk stjärnhimmel, integrerade LED-linjer och dimbart bakgrundsljus för perfekt stämning på filmkvällen."
+        },
+        {
+          "title": "Lugnare, tystare rum",
+          "body": "Ett akustiskt membran tämjer ekot i öppna sällskapsytor, så att samtal och ljud känns varmare och klarare."
+        }
+      ]
+    },
+    "bathroom-kitchen": {
+      "name": "Badrum & kök",
+      "shortName": "Badrum & kök",
+      "eyebrow": "Badrum & kök",
+      "metaDescription": "Fukttåliga spänntak för badrum och kök — vattentäta, mögelresistenta och avtorkningsbara, med integrerad belysning, monterade på en enda dag.",
+      "intro": "Badrum och kök sliter hårt på tak. Ett STRETCH-membran är vattentätt, mögelresistent och tvättbart — det döljer rör och kanaler bakom en felfri yta, med spotlights och ventilation snyggt integrerade.",
+      "benefits": [
+        {
+          "title": "Fukt- och vattentåligt",
+          "body": "Membranet rycker på axlarna åt ånga och stänk och kommer aldrig att flagna, fläckas eller mögla som ett målat eller putsat tak."
+        },
+        {
+          "title": "Tvättbar yta",
+          "body": "En snabb avtorkning håller det som nytt — perfekt ovanför dusch, badkar och matlagningszoner."
+        },
+        {
+          "title": "Snyggt integrerade installationer",
+          "body": "Spotlights, högtalare, ventilation och inspektionsluckor integreras i ytan och döljer rören ovanför."
+        }
+      ]
+    },
+    "office-retail": {
+      "name": "Kontor & butik",
+      "shortName": "Kontor & butik",
+      "eyebrow": "Kontor & butik",
+      "metaDescription": "Spänntak för kontor, butik och besöksnäring — akustik upp till klass A, printade tak med ditt varumärke och integrerad belysning, snabbt monterat utan störningar.",
+      "intro": "Kommersiella miljöer måste se skarpa ut och låta rätt. STRETCH levererar akustisk komfort upp till klass A, printade tak med ditt varumärke och integrerad belysning — kallmonterat och snabbt, med minimala störningar i en verksamhet i drift.",
+      "benefits": [
+        {
+          "title": "Akustisk komfort upp till klass A",
+          "body": "Ett mikroperforerat akustiktak minskar efterklangen i öppna kontor, mötesrum och restauranger, för tydligare tal."
+        },
+        {
+          "title": "Printade tak med ditt varumärke",
+          "body": "Printa valfri bild, mönster eller varumärkesgrafik från kant till kant — en slående detalj för butiker, showrooms och besöksnäring."
+        },
+        {
+          "title": "Snabb montering utan störningar",
+          "body": "Kall montering betyder inget damm och inget stök, och de flesta rum är klara på en enda dag — perfekt för lokaler i drift."
+        }
+      ]
+    }
+  },
+  "appPage": {
+    "crumbApplications": "Användningsområden",
+    "quoteCta": "Begär en kostnadsfri offert",
+    "seeProjects": "Se projekt",
+    "recommended": "Rekommenderade lösningar",
+    "selectedWork": "Utvalda arbeten",
+    "explore": "Utforska",
+    "ctaTitle": "Planerar du ett projekt för {name}?",
+    "ctaBody": "Berätta om ditt utrymme så rekommenderar vi rätt system — gratis och utan förpliktelser."
+  },
+  "projectCards": {
+    "cats": {
+      "Acoustic": "Akustik",
+      "Office": "Kontor",
+      "Commercial": "Kommersiellt",
+      "Retail": "Butik",
+      "Bathroom": "Badrum",
+      "Light & Print": "Ljus & print",
+      "Living room": "Vardagsrum",
+      "Home cinema": "Hemmabio"
+    },
+    "metas": {
+      "da-tweekaz-studio": "Nederländerna · Inspelningsstudio",
+      "mark-with-a-k": "Belgien · Ljudstudio",
+      "notary-ampe-anthony": "Kruibeke · Akustiskt kontor",
+      "bnp-paribas-fortis": "Bryssel · Bankhuvudkontor",
+      "van-der-valk-beveren": "Beveren · Hotellets eventsal",
+      "johnson-and-johnson": "Limerick, IE · FoU-anläggning för läkemedel",
+      "polette-eyewear": "Antwerpen · Konceptbutik",
+      "citizenm-hotel": "USA & Europa · Prefabricerade badrumsmoduler",
+      "london-chapel": "London, UK · Bakbelyst tak",
+      "private-villa-knokke": "Knokke · Öppen sällskapsyta",
+      "home-cinema-ghent": "Gent · Stjärnhimmel + akustik",
+      "city-penthouse-antwerp": "Antwerpen · Vardagsrum",
+      "wellness-spa-bruges": "Brygge · Spabadrum",
+      "rue-perree-paris": "Paris · Bakbelyst galleritak"
+    }
+  },
+  "technical": {
+    "topics": [
+      {
+        "label": "Datablad",
+        "sub": "Specifikationer & nedladdning"
+      },
+      {
+        "label": "Färger & utföranden",
+        "sub": "Hela sortimentet"
+      },
+      {
+        "label": "Brandsäkerhet",
+        "sub": "Brandreaktion & A2"
+      },
+      {
+        "label": "Monteringsguide",
+        "sub": "Steg för steg"
+      },
+      {
+        "label": "Föreskrivningstext",
+        "sub": "För upphandlingar"
+      },
+      {
+        "label": "FAQ",
+        "sub": "Vanliga frågor"
+      }
+    ],
+    "polyester": {
+      "label": "Spänntak i polyester",
+      "short": "Polyester",
+      "blurb": "Kallmonterat polyestermembran — ett mycket matt, skarvfritt tak som spänns för hand.",
+      "fireSafety": {
+        "intro": "Polyestermembranet är klassificerat B-s1,d0 enligt EN 13501-1 — flamskyddat, med mycket begränsad rökutveckling och utan brinnande droppar. Där de strängaste brandkraven gäller finns en obrännbar version i A2-s1,d0.",
+        "rows": [
+          {
+            "k": "Standardklassificering",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Obrännbart alternativ",
+            "v": "A2-s1,d0"
+          },
+          {
+            "k": "Rökutveckling",
+            "v": "s1 — mycket begränsad"
+          },
+          {
+            "k": "Brinnande droppar",
+            "v": "d0 — inga"
+          },
+          {
+            "k": "Provningsstandard",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Klassificeringen B-s1,d0 innebär att membranet är flamskyddat (B), utvecklar mycket lite rök (s1) och inte avger brinnande droppar (d0) — den kombination som de flesta offentliga och kommersiella miljöer kräver.",
+          "För utrymningsvägar, höga byggnader, sjukhus och andra projekt där en obrännbar beklädnad föreskrivs uppfyller A2-s1,d0-versionen det högre kravet — med samma skarvfria, mycket matta utseende.",
+          "Certifikat för brandreaktion och prestandadeklarationer finns på begäran för din branddokumentation."
+        ]
+      },
+      "installation": {
+        "intro": "Polyester spänns kallt — inga värmekanoner, ingen torktid, inga ångor. Ett tvåmannateam blir vanligtvis klart med ett rum på en enda dag, även i möblerade utrymmen som används.",
+        "steps": [
+          {
+            "title": "Uppmätning",
+            "body": "Rummet lasermäts och membranet skärs och svetsas till en enda skarvfri våd på upp till 5.15 m bredd, exakt efter rummets form."
+          },
+          {
+            "title": "Montera kantprofilen",
+            "body": "En smäcker klickprofil monteras på vägg eller tak på vald höjd och följer raka sträckor, kurvor och hörn."
+          },
+          {
+            "title": "Spänn kallt för hand",
+            "body": "Det kalla membranet klickas fast i profilen och spänns för hand över rummet — trumspänt till en perfekt plan yta, helt utan värme."
+          },
+          {
+            "title": "Finish & detaljer",
+            "body": "Kanter, hörn och eventuell integrerad belysning eller inspektionsluckor färdigställs. Ingen torktid — rummet är rent och kan användas direkt."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "En klausul färdig att kopiera in i förfrågningsunderlag och beskrivningar. Anpassa värdena inom hakparentes till ditt projekt.",
+        "clause": "Leverans och montering av ett kallspänt spänntakssystem i polyester [STRETCH eller godkänd likvärdig]. Membranet ska vara en stickad polyestertextil som spänns kallt i en kantprofil med klickfäste utan värmetillförsel och bildar en skarvfri, mycket matt yta på upp till 5.15 m bredd. Brandreaktionen ska vara klass B-s1,d0 enligt EN 13501-1 (klass A2-s1,d0 där så anges). Systemet ska vara tvättbart och fukttåligt, lämpligt för montering i lokaler i drift, och levereras med [10] års tillverkargaranti. Kulör: [RAL ____]. Där akustisk prestanda föreskrivs ska ett mikroperforerat membran med bakomliggande absorbent av hög densitet användas, med ljudabsorption upp till klass A."
+      }
+    },
+    "pvc": {
+      "label": "Spänntak i PVC",
+      "short": "PVC-folie",
+      "blurb": "Varmmonterad PVC-folie — helt återvinningsbar, demonterbar och skarvfri upp till 6.4 m.",
+      "fireSafety": {
+        "intro": "PVC-folien är klassificerad B-s1,d0 enligt EN 13501-1 — flamskyddad, med mycket begränsad rökutveckling och utan brinnande droppar.",
+        "rows": [
+          {
+            "k": "Klassificering",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Rökutveckling",
+            "v": "s1 — mycket begränsad"
+          },
+          {
+            "k": "Brinnande droppar",
+            "v": "d0 — inga"
+          },
+          {
+            "k": "Provningsstandard",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Klassificeringen B-s1,d0 innebär att folien är flamskyddad (B), utvecklar mycket lite rök (s1) och inte avger brinnande droppar (d0), vilket gör den lämplig för de allra flesta bostäder och kommersiella miljöer.",
+          "Eftersom folien är demonterbar kan den knäppas loss och spännas om för åtkomst till installationerna ovanför — utan att brandegenskaperna påverkas.",
+          "Certifikat för brandreaktion och prestandadeklarationer finns på begäran för din branddokumentation."
+        ]
+      },
+      "installation": {
+        "intro": "PVC-folien värms och spänns vid montaget — ett trött tak blir ett felfritt nytt på en enda dag, med den gamla ytan kvar ovanför.",
+        "steps": [
+          {
+            "title": "Uppmätning",
+            "body": "Rummet mäts upp och folien högfrekvenssvetsas till rätt mått med en harpunkant runt om — formad efter rummet och skarvfri upp till 6.4 m bredd."
+          },
+          {
+            "title": "Montera kantprofilen",
+            "body": "En harpun-/klickprofil monteras runt rummet på vald höjd och följer vägglinjen och eventuella detaljer."
+          },
+          {
+            "title": "Värm & spänn",
+            "body": "Utrymmet värms med en värmekälla så att folien mjuknar; harpunkanten hakas i profilen och folien spänns slät och plan när den svalnar."
+          },
+          {
+            "title": "Finish & detaljer",
+            "body": "Kanter, hörn, armaturer och inspektionsluckor färdigställs. Folien torkas enkelt ren och kan användas direkt."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "En klausul färdig att kopiera in i förfrågningsunderlag och beskrivningar. Anpassa värdena inom hakparentes till ditt projekt.",
+        "clause": "Leverans och montering av ett varmspänt spänntakssystem i PVC-folie [STRETCH eller godkänd likvärdig]. Membranet ska vara en kalandrerad PVC-folie, svetsad till rätt mått och spänd i en kantprofil med harpun-/klickfäste, som bildar en skarvfri yta på upp till 6.4 m bredd i [matt / satin / blank / genomskinlig] finish. Brandreaktionen ska vara klass B-s1,d0 enligt EN 13501-1. Folien ska vara 100% återvinningsbar, demonterbar och möjlig att spänna om för åtkomst till utrymmet ovanför, tvättbar och fukttålig, och levereras med [10] års tillverkargaranti. Kulör/finish: [____]. Där bakbelysning föreskrivs ska en genomskinlig folie över ett LED-fält användas, för ett jämnt ljus utan synliga ljuspunkter."
+      }
+    }
+  },
+  "techPage": {
+    "crumbTechnical": "Teknik",
+    "viewProduct": "Se produkten",
+    "eyebrowTech": "Teknik",
+    "datasheetCta": "Beställ det fullständiga databladet",
+    "samplesCta": "Beställ fysiska prover",
+    "copyHint": "Markera texten ovan för att kopiera in den i ditt föreskrivningsdokument.",
+    "ctaTitle": "Behöver du hjälp med föreskrivningstexten?",
+    "ctaBody": "Våra specialister hjälper arkitekter och entreprenörer att få detaljerna rätt — oftast inom två arbetsdagar.",
+    "ctaBtn": "Fråga våra specialister",
+    "meta": {
+      "datasheet": "Tekniskt datablad för {label} — specifikationer, klassificeringar och nedladdningar.",
+      "colours": "Färg- och utförandesortiment för {label}, med RAL-referenser och provbeställning.",
+      "fire-safety": "Brandklassificering för {label} — B-s1,d0 och A2-alternativ enligt EN 13501-1.",
+      "installation": "Steg-för-steg-monteringsguide för {label}.",
+      "specification": "Föreskrivningstext färdig att kopiera för {label} — för upphandlingar och underlag.",
+      "faq": "Vanliga frågor om {label}."
+    }
+  },
+  "prefab": {
+    "prefab-ceiling-unit": {
+      "name": "Prefabstrukturer",
+      "eyebrow": "Prefabstrukturer",
+      "metaDescription": "Måttanpassade prefabricerade bärstrukturer för spänntak — balkar i aluminium, stål och trä, lister och nivåskillnadsdetaljer, kapade, svetsade och pulverlackerade i egen regi och skickade världen över.",
+      "intro": "Prefabricerade bärstrukturer för spänntaksprojekt — balkar för raster- och rutnätstak, lister för svävande tak och rena nivåskillnadsdetaljer. Varje struktur tillverkas måttanpassad efter dina ritningar, helt i egen regi i vår egen polska produktion, och skickas världen över till våra återförsäljare.",
+      "makeHeading": "Vad vi bygger",
+      "make": [
+        {
+          "title": "Balkar — raster- & rutnätstak",
+          "body": "Färdigbyggda balkar som ramar in ett spänt membran till ett raster- eller rutnätstak — repeterbara moduler, vinkelräta på millimetern och klara att montera på plats."
+        },
+        {
+          "title": "Lister — svävande tak",
+          "body": "Lister runt kanten som lyfter spänntaket från väggarna för en svävande effekt med skuggfog, med kanal för dold belysning där det behövs."
+        },
+        {
+          "title": "Nivåskillnadsavslut",
+          "body": "Stegade bärverk i flera nivåer som för ett spänt membran rent över höjdskillnader — utan plottrigt platsbygge eller gissningar."
+        }
+      ],
+      "materialsHeading": "Byggda i aluminium, stål eller trä",
+      "materials": [
+        {
+          "title": "Aluminium",
+          "body": "Lätt, styvt och korrosionsfritt — perfekt för stora spann, fuktiga rum och integrerade belysningsprofiler."
+        },
+        {
+          "title": "Stål",
+          "body": "Maximal styrka för stora strukturer och tunga spann, pulverlackerat efter miljön."
+        },
+        {
+          "title": "Trä (MDF / plywood)",
+          "body": "MDF, plywood och andra skivor frästa i form för varma, komplexa eller böjda former."
+        }
+      ],
+      "production": {
+        "heading": "Tillverkat i egen regi, tillverkat efter mått",
+        "body": "Varje struktur konstrueras efter dina ritningar och byggs helt i egen regi i vår egen polska produktion. Kapning, svetsning och pulverlackering sker under samma tak — så vi styr kvalitet och finish från råprofil till emballerad struktur, klar att skicka.",
+        "details": [
+          {
+            "title": "Kapning",
+            "body": "Profiler kapade i exakta längder och vinklar, så att strukturen går ihop vinkelrätt och utan glapp."
+          },
+          {
+            "title": "Svetsning",
+            "body": "Rena, starka svetsar — slipade och finbearbetade så att fogarna försvinner in i strukturen."
+          },
+          {
+            "title": "Pulverlackering",
+            "body": "En slitstark pulverlackerad finish i valfri RAL, applicerad i egen regi för en jämn, tålig yta."
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "Från ritning till färdig struktur",
+        "items": [
+          {
+            "title": "Rastertak",
+            "meta": "Aluminium",
+            "summary": "Den tekniska ritningen av ett rutnät av rasterbalkar, bredvid den färdiga strukturen monterad och membranklädd på plats."
+          },
+          {
+            "title": "Svävande listtak",
+            "meta": "Aluminiumlist",
+            "summary": "En svävande listdetalj, från produktionsritning till det monterade, membranklädda resultatet."
+          }
+        ]
+      },
+      "worldwide": "Varje struktur emballeras och skickas världen över, så att våra återförsäljare var som helst kan erbjuda samma rena, repeterbara resultat — utan egen verkstad."
+    },
+    "prefab-lighting-elements": {
+      "name": "Prefabricerade ljuselement",
+      "eyebrow": "Prefabricerade ljuselement",
+      "metaDescription": "Prefabricerade ljuselement byggda på en aluminiumstruktur och klädda med ett STRETCH-membran — ljusvalv, ljuslinjer och bakbelysta element, konstruerade efter dina ritningar, byggda i egen regi och skickade världen över.",
+      "intro": "Förmonterade ljuselement byggda på en aluminiumstruktur och klädda med vårt spännmembran — ljusvalv, ljuslinjer och bakbelysta element. Konstruerade efter dina ritningar, byggda i egen regi i vår polska produktion och skickade världen över till våra återförsäljare.",
+      "makeHeading": "Vad vi bygger",
+      "make": [
+        {
+          "title": "Ljusvalv",
+          "body": "Valv runt kanten som sköljer en vägg eller ett tak med jämnt, dolt ljus — byggda som ett monteringsfärdigt aluminiumelement."
+        },
+        {
+          "title": "Ljuslinjer",
+          "body": "Skarpa, infällda ljuslinjer integrerade i en spänd yta för ren, arkitektonisk belysning."
+        },
+        {
+          "title": "Bakbelysta element",
+          "body": "Bakbelysta paneler och former klädda med ett genomskinligt spännmembran för ett jämnt sken utan hotspots."
+        }
+      ],
+      "materialsHeading": "Så byggs de",
+      "materials": [
+        {
+          "title": "Aluminiumstruktur",
+          "body": "En exakt, styv aluminiumram bearbetad efter dina mått — ryggraden i varje ljuselement."
+        },
+        {
+          "title": "LED & diffusion",
+          "body": "Dimbar LED, dimensionerad och placerad för jämnt ljusflöde, med membranet som sprider ljuset mjukt."
+        },
+        {
+          "title": "Finish med spännmembran",
+          "body": "Ett genomskinligt eller printat STRETCH-membran spänt över ramen för en felfri lysande yta."
+        }
+      ],
+      "showcase": {
+        "heading": "Från ritning till färdigt element",
+        "items": [
+          {
+            "title": "Ljusvalv",
+            "meta": "Aluminium + membran",
+            "summary": "Ritningen av ett ljusvalv runt kanten, bredvid det färdiga, lysande elementet monterat på plats."
+          },
+          {
+            "title": "Bakbelyst element",
+            "meta": "Aluminium + LED + membran",
+            "summary": "En bakbelyst panel, från produktionsritning till det jämna, hotspotfria slutresultatet."
+          }
+        ]
+      },
+      "worldwide": "Som alla våra prefabelement emballeras och skickas ljuselementen världen över — byggda och testade här, klara att montera där."
+    }
+  },
+  "prefabPage": {
+    "discussCta": "Diskutera ett projekt",
+    "becomeDealer": "Bli återförsäljare",
+    "technicalDrawing": "Teknisk ritning",
+    "installedFinished": "Monterat & färdigt",
+    "shippedWorldwide": "Skickas världen över",
+    "ctaTitle": "Har du ett projekt åt oss?",
+    "ctaBody": "Skicka oss ritningarna eller idén — vi konstruerar strukturen, bygger den i egen regi och skickar den till dig."
   }
 }

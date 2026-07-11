@@ -1472,5 +1472,906 @@
       ]
     },
     "comingSoon": "Væntanlegt"
+  },
+  "modals": {
+    "quote": {
+      "title": "Fá ókeypis tilboð",
+      "subtitle": "Segðu okkur frá verkefninu þínu og við svörum með sérsniðnu verði.",
+      "submitLabel": "Senda fyrirspurn",
+      "sentTitle": "Fyrirspurn móttekin",
+      "sentMsg": "Takk — sérfræðingur svarar innan tveggja virkra daga.",
+      "fields": {
+        "name": {
+          "label": "Nafn",
+          "placeholder": "Fornafn og eftirnafn"
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+32 ..."
+        },
+        "rooms": {
+          "label": "Herbergi",
+          "options": [
+            "1 herbergi",
+            "2 herbergi",
+            "3 herbergi",
+            "4 herbergi",
+            "Fleiri en 4"
+          ]
+        },
+        "timeline": {
+          "label": "Tímarammi",
+          "options": [
+            "Sem fyrst",
+            "Innan 1–3 mánaða",
+            "Innan 4–12 mánaða",
+            "Er bara að skoða"
+          ]
+        },
+        "message": {
+          "label": "Verkefnið þitt",
+          "placeholder": "Flatarmál, staðsetning, allt sem gagnast..."
+        }
+      }
+    },
+    "survey": {
+      "title": "Bóka mælingu á staðnum",
+      "subtitle": "Við mælum og ráðleggjum á staðnum — ókeypis og án skuldbindinga.",
+      "submitLabel": "Óska eftir mælingu",
+      "sentTitle": "Beiðni móttekin",
+      "sentMsg": "Takk — við höfum samband til að finna hentugan tíma.",
+      "fields": {
+        "name": {
+          "label": "Nafn",
+          "placeholder": "Fornafn og eftirnafn"
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+32 ..."
+        },
+        "address": {
+          "label": "Heimilisfang",
+          "placeholder": "Gata, staður"
+        },
+        "preferredTime": {
+          "label": "Æskilegur tími",
+          "options": [
+            "Fyrir hádegi",
+            "Eftir hádegi",
+            "Sveigjanlegt"
+          ]
+        },
+        "rooms": {
+          "label": "Herbergi",
+          "options": [
+            "1 herbergi",
+            "2 herbergi",
+            "3 herbergi",
+            "4+ herbergi"
+          ]
+        }
+      }
+    },
+    "training": {
+      "title": "Bókaðu námskeiðið þitt",
+      "subtitle": "Verkleg vottun í höfuðstöðvum okkar í Belgíu — skildu eftir upplýsingar og við staðfestum.",
+      "submitLabel": "Óska eftir sæti",
+      "sentTitle": "Beiðni send",
+      "sentMsg": "Takk — við staðfestum sætið þitt og sendum nánari upplýsingar.",
+      "fields": {
+        "fullName": {
+          "label": "Fullt nafn",
+          "placeholder": "Fornafn og eftirnafn"
+        },
+        "company": {
+          "label": "Fyrirtæki",
+          "placeholder": "Fyrirtækið þitt"
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Æskileg dagsetning",
+          "options": [
+            "15.–16. sep. 2026",
+            "06.–08. okt. 2026",
+            "17.–18. nóv. 2026",
+            "Sérsniðin þjálfun á staðnum"
+          ]
+        },
+        "attendees": {
+          "label": "Þátttakendur",
+          "options": [
+            "1 einstaklingur",
+            "2 einstaklingar",
+            "3 einstaklingar",
+            "4+ einstaklingar"
+          ]
+        }
+      }
+    },
+    "dates": {
+      "title": "Næstu námskeiðsdagar",
+      "subtitle": "Veldu dagsetningu og tryggðu þér sæti — litlir hópar, fyrstur kemur, fyrstur fær.",
+      "submitLabel": "Óska eftir sæti",
+      "sentTitle": "Beiðni send",
+      "sentMsg": "Takk — við staðfestum sætið þitt og sendum nánari upplýsingar.",
+      "fields": {
+        "fullName": {
+          "label": "Fullt nafn",
+          "placeholder": "Fornafn og eftirnafn"
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Æskileg dagsetning",
+          "options": [
+            "15.–16. sep. 2026",
+            "06.–08. okt. 2026",
+            "17.–18. nóv. 2026",
+            "Sérsniðin þjálfun á staðnum"
+          ]
+        }
+      }
+    },
+    "partner": {
+      "title": "Sæktu um að verða samstarfsaðili",
+      "subtitle": "Segðu okkur frá fyrirtækinu þínu — við förum persónulega yfir hverja umsókn.",
+      "submitLabel": "Senda umsókn",
+      "sentTitle": "Umsókn móttekin",
+      "sentMsg": "Takk — samstarfsteymið okkar fer yfir umsóknina og svarar innan tveggja virkra daga.",
+      "fields": {
+        "company": {
+          "label": "Fyrirtæki",
+          "placeholder": "Fyrirtækið þitt"
+        },
+        "contactName": {
+          "label": "Tengiliður",
+          "placeholder": "Fornafn og eftirnafn"
+        },
+        "partnerType": {
+          "label": "Ég vil verða",
+          "options": [
+            "Söluaðili — ég sel, þið setjið upp",
+            "Sölu- og uppsetningaraðili — ég sel og set upp sjálfur",
+            "Ekki viss ennþá"
+          ]
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+32 ..."
+        },
+        "country": {
+          "label": "Land",
+          "placeholder": "Belgía"
+        },
+        "activity": {
+          "label": "Starfsemi",
+          "options": [
+            "Byggingar og endurbætur",
+            "Innréttingar",
+            "Gifsklæðningar / múrverk",
+            "Rafmagn / lýsing",
+            "Annað"
+          ]
+        },
+        "notes": {
+          "label": "Um fyrirtækið þitt",
+          "placeholder": "Stærð teymis, svæði sem þið þjónið, núverandi starfsemi..."
+        }
+      }
+    },
+    "call": {
+      "title": "Bóka símtal",
+      "subtitle": "Skildu eftir númerið þitt og hentugan tíma — við hringjum til baka.",
+      "submitLabel": "Óska eftir símtali",
+      "sentTitle": "Beiðni send",
+      "sentMsg": "Takk — við hringjum á þeim tíma sem þú valdir.",
+      "fields": {
+        "name": {
+          "label": "Nafn",
+          "placeholder": "Fornafn og eftirnafn"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+32 ..."
+        },
+        "bestTime": {
+          "label": "Besti tíminn",
+          "options": [
+            "Fyrir hádegi",
+            "Eftir hádegi",
+            "Snemma kvölds"
+          ]
+        },
+        "topic": {
+          "label": "Efni",
+          "options": [
+            "Tilboð",
+            "Samstarf",
+            "Námskeið",
+            "Tæknileg spurning",
+            "Annað"
+          ]
+        }
+      }
+    },
+    "samples": {
+      "title": "Panta litaprufur",
+      "subtitle": "Pantaðu áþreifanlegar RAL- / litaprufur — ókeypis fyrir samstarfsaðila.",
+      "submitLabel": "Panta prufur",
+      "sentTitle": "Prufur pantaðar",
+      "sentMsg": "Takk — við póstsendum prufurnar og fylgjum eftir innan tveggja virkra daga.",
+      "fields": {
+        "company": {
+          "label": "Fyrirtæki",
+          "placeholder": "Fyrirtækið þitt"
+        },
+        "contactName": {
+          "label": "Tengiliður",
+          "placeholder": "Fornafn og eftirnafn"
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+32 ..."
+        },
+        "shippingAddress": {
+          "label": "Sendingarheimilisfang",
+          "placeholder": "Gata, póstnúmer, staður"
+        },
+        "productLine": {
+          "label": "Vörulína",
+          "options": [
+            "Pólýester",
+            "PVC-filma",
+            "Hljóðvist",
+            "Ekki viss ennþá"
+          ]
+        },
+        "colours": {
+          "label": "Óskalitir",
+          "placeholder": "t.d. hvítt, antrasít, sérsniðið RAL"
+        },
+        "notes": {
+          "label": "Athugasemdir",
+          "placeholder": "Verkefni, magn, allt sem gagnast..."
+        }
+      }
+    },
+    "datasheet": {
+      "title": "Sækja tækniblaðið",
+      "subtitle": "Sláðu inn upplýsingarnar þínar og niðurhalið hefst strax. Við notum þær eingöngu til að fylgja eftir fyrirspurninni þinni.",
+      "submitLabel": "Fá tækniblaðið",
+      "sentTitle": "Hér er tækniblaðið þitt",
+      "sentMsg": "Niðurhalið ætti að hefjast sjálfkrafa — ef ekki, notaðu hnappinn hér fyrir neðan.",
+      "fields": {
+        "name": {
+          "label": "Nafn",
+          "placeholder": "Fornafn og eftirnafn"
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+32 ..."
+        }
+      }
+    },
+    "trainingDates": [
+      "15.–16. sep. 2026",
+      "06.–08. okt. 2026",
+      "17.–18. nóv. 2026",
+      "Sérsniðin þjálfun á staðnum"
+    ],
+    "trainingDateNotes": [
+      "Beveren-Waas · 4 sæti",
+      "Beveren-Waas · 6 sæti",
+      "Beveren-Waas · 8 sæti"
+    ],
+    "close": "Loka",
+    "downloadDatasheet": "Sækja tækniblað",
+    "select": "Velja…"
+  },
+  "faqPage": {
+    "items": [
+      {
+        "q": "Hvað er strekkiloft?",
+        "a": "Strekkiloft er þunn, saumlaus himna — pólýester eða PVC-filma — sem er strekkt yfir rýmið og smellt í nettan jaðarprófíl. Það lítur út eins og fullkomlega slétt, málað loft en er sett upp án múrvinnu, slípunar og málningar og felur allt sem er fyrir ofan."
+      },
+      {
+        "q": "Hvað tekur uppsetningin langan tíma?",
+        "a": "Flest rými eru tilbúin á einum degi. Tveggja manna teymi setur upp allt að um 50 m² á dag. Pólýester með köldu uppsetningunni þarf engan þurrktíma, svo rýmið er nothæft strax."
+      },
+      {
+        "q": "Fylgir þessu sóðaskapur? Þarf ég að flytja út?",
+        "a": "Nei. Það er ekkert niðurrif, ekkert ryk, engin slípun og engin málning, svo uppsetningin getur farið fram í rými með húsgögnum sem er í notkun. Gamla loftið getur yfirleitt verið áfram fyrir ofan."
+      },
+      {
+        "q": "Hvað endist strekkiloft lengi?",
+        "a": "Kerfin okkar eru með 25 ára ábyrgð. Yfirborðið er þvottekta og rakaþolið og mun hvorki springa, flagna, gulna né þurfa endurmálun."
+      },
+      {
+        "q": "Getur það bætt hljóðvistina?",
+        "a": "Já. Örgötuð útgáfa með hljóðísogslagi á bakhliðinni nær allt að flokki A í hljóðísogi en lítur nákvæmlega eins út og staðalútfærslan — eftirómur og hávaði minnka mælanlega."
+      },
+      {
+        "q": "Hvað getur loftið verið breitt án samskeyta?",
+        "a": "Allt að 5.7 m saumlaust með PVC-filmu og allt að 5.15 m með pólýester. Stærri haf eru þakin með nánast ósýnilegum soðnum samskeytum eða meðvitaðri prófíllínu."
+      },
+      {
+        "q": "Get ég fengið lýsingu, baklýsingu eða prentaða hönnun?",
+        "a": "Já. Hálfgegnsæjar filmur gefa jafna, dimmanlega baklýsingu án ljósbletta, LED-ljóslínur falla inn í flötinn og hvaða mynd sem er — þar á meðal stjörnuhiminn — er hægt að prenta út í jaðra."
+      },
+      {
+        "q": "Hvað kostar strekkiloft?",
+        "a": "Verðið fer eftir verkefninu — eftir flatarmáli, kerfi, áferð og hvers kyns ljósa- eða hljóðvistarlausnum. Fáðu ókeypis tilboð án skuldbindinga og sérfræðingur svarar innan tveggja virkra daga."
+      },
+      {
+        "q": "Vinnið þið með verktökum og söluaðilum?",
+        "a": "Já. STRETCH er B2B-fyrirtæki: við þjálfum uppsetningaraðila í belgísku höfuðstöðvunum okkar, afhendum himnur eftir máli í gegnum B2B-gátt og vísum staðbundnum viðskiptavinum á vottaða samstarfsaðila. Sjá síðurnar Samstarfsaðilar og Þjálfun uppsetningaraðila."
+      }
+    ],
+    "eyebrow": "Algengar spurningar",
+    "titleA": "Góðar",
+    "titleB": "spurningar",
+    "lead": "Allt sem fólk spyr venjulega um strekkiloft — uppsetning, ending, hljóðvist, breidd og verð. Enn í vafa? Spurðu okkur bara.",
+    "asideKicker": "Ertu enn með spurningu?",
+    "asideTitle": "Talaðu við sérfræðing í strekkiloftum.",
+    "asideBody": "Segðu okkur frá rýminu þínu og við svörum — ókeypis og án skuldbindinga.",
+    "asideCta": "Fá ókeypis tilboð"
+  },
+  "catalogFaqs": {
+    "polyester": [
+      {
+        "q": "Hvað tekur langan tíma að setja upp strekkiloft úr pólýester?",
+        "a": "Flest rými eru tilbúin á einum degi. Tveggja manna teymi setur upp allt að um 50 m² á dag, og þar sem himnan er strekkt köld er enginn þurrktími áður en rýmið er aftur í notkun."
+      },
+      {
+        "q": "Er kalda uppsetningin í alvöru ryklaus?",
+        "a": "Já. Gamla loftið er ekki rifið niður, ekkert er slípað og ekkert málað. Himnan smellur í nettan jaðarprófíl, svo uppsetningin er nógu hrein til að fara fram í rýmum með húsgögnum sem eru í notkun."
+      },
+      {
+        "q": "Getur pólýesterloft bætt hljóðvist rýmisins?",
+        "a": "Örgötuð útgáfa með þéttu hljóðísogslagi á bakhliðinni nær allt að flokki A í hljóðísogi. Hún lítur nákvæmlega eins út og staðalútfærslan en dregur mælanlega úr eftirómi og hávaða."
+      },
+      {
+        "q": "Hvernig þríf ég og viðheld því?",
+        "a": "Strjúktu yfir það með rökum klút. Yfirborðið er þvottekta og rakaþolið, springur hvorki, flagnar né gulnar og þarf aldrei endurmálun á öllum 25 ára ábyrgðartímanum."
+      }
+    ],
+    "pvc": [
+      {
+        "q": "Hvers vegna er PVC-strekkiloft „100% endurvinnanlegt“?",
+        "a": "Filman er endurvinnanleg í hráefni þegar líftíma hennar lýkur, og hana má taka niður meðan á notkun stendur — þú smellir henni úr til að komast að lögnunum fyrir ofan og strekkir hana aftur á nokkrum mínútum, í stað þess að rífa niður og endurnýja gifsloft."
+      },
+      {
+        "q": "Hvað getur PVC-loft spannað breitt haf án samskeyta?",
+        "a": "Allt að 6.4 m saumlaust — það breiðasta í úrvalinu okkar. Stærri rými eru þakin með því að sjóða saman dúka með nánast ósýnilegum samskeytum eða með því að setja meðvitaða prófíllínu."
+      },
+      {
+        "q": "Hentar PVC-filma fyrir baðherbergi og vot rými?",
+        "a": "Já. Hún er algjörlega þvottekta og rakaþolin, sem gerir hana að vinsælum kosti í baðherbergjum, sundlaugum og vellíðunarrýmum þar sem málað loft myndi blöðrast eða fá bletti."
+      },
+      {
+        "q": "Er hægt að baklýsa hana eða prenta á hana?",
+        "a": "Hálfgegnsæjar filmur dreifa ljósi frá LED-fleti jafnt og án ljósbletta, og hvaða ljósmynd, mynstur eða stjörnuhimin sem er má prenta út í jaðra. Sjá kerfið Lýst loft fyrir allt úrvalið."
+      }
+    ],
+    "acoustic": [
+      {
+        "q": "Hversu mikið dregur hljóðvistarkerfið raunverulega úr hávaða?",
+        "a": "Með þétta hljóðísogslaginu á bakhliðinni nær það allt að flokki A í ísogi (hæsta flokknum), mælt sem αw-gildi. Í reynd breytir það hörðu rými með miklum eftirómi í rólegt og þægilegt rými — án nokkurra sýnilegra hljóðvistarplatna."
+      },
+      {
+        "q": "Lítur hljóðvistarútfærslan öðruvísi út en venjulegt loft?",
+        "a": "Nei. Ísogið gerist bak við örgataða himnu, svo loftið birtist sem einn gallalaus, saumlaus flötur — meðferðin er ósýnileg."
+      },
+      {
+        "q": "Er hægt að fela hátalara bak við loftið?",
+        "a": "Já. Hátalara má festa alveg bak við strekktu filmuna fyrir hreinan hljóm án sýnilegs uppruna — vinsæll kostur fyrir heimabíó og hljóðver."
+      },
+      {
+        "q": "Hvar nýtist hljóðvistarkerfið best?",
+        "a": "Alls staðar þar sem eftirómur er vandamál: á skrifstofum, veitingastöðum, í upptökuverum, skólum, heilbrigðisrýmum og heimabíóum. Það má einnig útvíkka í fríhangandi eyjar og veggplötur."
+      }
+    ],
+    "light": [
+      {
+        "q": "Sjást LED-ljósin sem blettir í baklýstu lofti?",
+        "a": "Nei. Hálfgegnsæja filman liggur yfir LED-fleti og dreifir ljósinu jafnt um allan flötinn, svo þú sérð mjúka, jafna birtu í stað einstakra punkta."
+      },
+      {
+        "q": "Hvað er hægt að prenta á loftið?",
+        "a": "Nánast hvaða háupplausnarmynd, mynstur eða áferð sem er — prentað út í jaðra án sýnilegra samskeyta. Algengt val er stjörnuhiminn úr ljósleiðurum fyrir bíósali og svefnherbergi."
+      },
+      {
+        "q": "Er hægt að dimma lýsinguna eða breyta um lit?",
+        "a": "Já. Baklýst loft eru dimmanleg og RGB-LED-möguleikar leyfa þér að breyta lit og stemningu. LED-ljóslínur má einnig fella inn í himnuna fyrir skarpa, byggingarlistræna áferð."
+      }
+    ],
+    "prefab": [
+      {
+        "q": "Hvað er forsmíðuð strekkilofts-eining?",
+        "a": "Það er fullbúin lofteining — rammi og strekkt himna — sett saman og gæðaprófuð á belgíska verkstæðinu okkar og afhent tilbúin til að smella í jaðarramma á verkstað."
+      },
+      {
+        "q": "Af hverju að velja forsmíðað frekar en uppsetningu á staðnum?",
+        "a": "Forsmíðaðar einingar henta einingahúsabyggingum og endurteknum rýmum eins og hótelbaðherbergjum og baðherbergiseiningum: mest af vinnunni fer fram utan verkstaðar, svo uppsetningin krefst lágmarks iðngreina og lágmarks tíma."
+      },
+      {
+        "q": "Hvernig kemst maður að lögnum fyrir ofan forsmíðað loft?",
+        "a": "Hver eining getur fengið látlausa, innbyggða skoðunarlúgu, svo pípulagnir og lagnir fyrir ofan haldast aðgengilegar án þess að rjúfa hreina loftlínuna."
+      }
+    ],
+    "starry": [
+      {
+        "q": "Hvað getur stjörnuhiminsloft haft margar stjörnur?",
+        "a": "Allt frá um 150 punktum fyrir látlaus áhrif upp í yfir þúsund fyrir þéttan, tilkomumikinn himin. Þéttleikinn er valinn eftir stærð rýmisins og stemningunni sem þú vilt ná."
+      },
+      {
+        "q": "Gefa ljósleiðarastjörnurnar frá sér hita?",
+        "a": "Nei. Allir þræðirnir eru drifnir af einni LED-ljósvél sem er staðsett annars staðar, svo punktarnir sjálfir haldast alveg kaldir — aðeins ljósið ferðast eftir þræðinum."
+      },
+      {
+        "q": "Geta stjörnurnar blikað eða skipt um lit?",
+        "a": "Já. Valfrjálst blikhjól lætur stjörnurnar tindra, RGB-ljósvélar leyfa litabreytingar og bæta má við stjörnuhrapsáhrifum fyrir hreyfingu. Allt er dimmanlegt."
+      }
+    ],
+    "hatch": [
+      {
+        "q": "Kemst maður að lögnum bak við strekkiloft?",
+        "a": "Já — innbyggð skoðunarlúga veitir látlausan aðgang sem má opna aftur og aftur að ventlum, tengidósum og tengingum fyrir ofan himnuna, svo aldrei þarf að skera loftið eða skipta því út til að ná til þeirra."
+      },
+      {
+        "q": "Er lúgan sýnileg í loftinu?",
+        "a": "Varla. Ramminn er felldur inn í jaðarfráganginn og klæddur sömu himnu, svo hún rennur saman við flötinn og tekur maður fyrst eftir henni þegar leitað er að henni."
+      },
+      {
+        "q": "Er hægt að bæta lúgu við strekkiloft sem er þegar uppi?",
+        "a": "Í flestum tilfellum, já. Lúgur má setja eftir á í loft sem fyrir er, í stærð og staðsetningu sem hentar lögninni sem þarf að vera aðgengileg fyrir aftan."
+      }
+    ],
+    "print": [
+      {
+        "q": "Hvaða myndgæði þarf ég fyrir prentað loft?",
+        "a": "Háupplausnarskrá gefur besta útkomu. Við yfirförum og litstýrum myndefninu þínu, skölum það að loftinu og gerum prófun fyrir prentun, svo lokaútkoman standist væntingar þínar."
+      },
+      {
+        "q": "Er hægt að baklýsa prentað loft?",
+        "a": "Já. Prentuð á hálfgegnsæja filmu yfir LED-fleti er myndin jafnbaklýst án ljósbletta — fullkomið fyrir himinmyndir og áberandi listaverk."
+      },
+      {
+        "q": "Eru sýnileg samskeyti á stórum prentunum?",
+        "a": "Nei. Myndin er prentuð út í jaðra á eina saumlausa himnu allt að 5.7 m breiða, svo engar dúklínur liggja yfir myndefnið þitt."
+      }
+    ]
+  },
+  "applications": {
+    "living-cinema": {
+      "name": "Stofur & heimabíó",
+      "shortName": "Stofa & bíó",
+      "eyebrow": "Stofa & bíó",
+      "metaDescription": "Strekkiloft fyrir stofur og heimabíó — saumlaus áferð, innfelld lýsing, stjörnuhiminn úr ljósleiðurum og betri hljóðvist, sett upp á einum degi.",
+      "intro": "Gallalaust loft setur tóninn fyrir stofuna. STRETCH gefur þér fullkomlega slétta, saumlausa áferð — með falinni lýsingu, stjörnuhimni úr ljósleiðurum fyrir bíóið og hljóðvistarþægindum, allt sett upp kalt á einum degi.",
+      "benefits": [
+        {
+          "title": "Saumlaus, fullkomin áferð",
+          "body": "Engar sprungur, engin samskeyti og aldrei aftur málningarvinna — slétt himna strekkt vegg í vegg, í djúpmattri áferð eða hvaða lit sem þú vilt."
+        },
+        {
+          "title": "Stemning eins og í bíói",
+          "body": "Bættu við stjörnuhimni úr ljósleiðurum, innfelldum LED-línum og deyfanlegri baklýsingu og skapaðu fullkomna stemningu fyrir bíókvöldin."
+        },
+        {
+          "title": "Rólegri og hljóðlátari rými",
+          "body": "Hljóðvistarhimna temur bergmál í opnum rýmum svo samtöl og hljóð verða hlýrri og skýrari."
+        }
+      ]
+    },
+    "bathroom-kitchen": {
+      "name": "Baðherbergi & eldhús",
+      "shortName": "Bað & eldhús",
+      "eyebrow": "Bað & eldhús",
+      "metaDescription": "Rakaþolin strekkiloft fyrir baðherbergi og eldhús — vatnsheld, mygluvarin og auðþrifin, með innfelldri lýsingu, sett upp á einum degi.",
+      "intro": "Baðherbergi og eldhús fara illa með loft. STRETCH-himna er vatnsheld, mygluvarin og þvottekta — hún felur lagnir og stokka bak við gallalausan flöt, með snyrtilega innfelldum ljósum og útsogi.",
+      "benefits": [
+        {
+          "title": "Raka- og vatnsheld",
+          "body": "Himnan kippir sér ekki upp við gufu og skvettur — hún flagnar ekki, blettast ekki og myglar ekki eins og málað eða múrað loft."
+        },
+        {
+          "title": "Auðþrifinn flötur",
+          "body": "Ein fljótleg stroka og loftið lítur út sem nýtt — tilvalið yfir sturtu, baðkari og eldunarsvæði."
+        },
+        {
+          "title": "Snyrtilega innfelldur búnaður",
+          "body": "Ljós, hátalarar, útsog og skoðunarlúgur falla inn í flötinn og fela lagnirnar fyrir ofan."
+        }
+      ]
+    },
+    "office-retail": {
+      "name": "Skrifstofur & verslun",
+      "shortName": "Skrifstofa & verslun",
+      "eyebrow": "Skrifstofa & verslun",
+      "metaDescription": "Strekkiloft fyrir skrifstofur, verslun og veitingarými — hljóðvist allt að flokki A, prentuð loft með vörumerkinu og innfelld lýsing, sett upp hratt án rasks.",
+      "intro": "Atvinnuhúsnæði þarf að líta vel út og hljóma rétt. STRETCH veitir hljóðvistarþægindi allt að flokki A, prentuð loft með vörumerkinu þínu og innfellda lýsingu — sett upp kalt og hratt, með lágmarksraski fyrir rými í notkun.",
+      "benefits": [
+        {
+          "title": "Hljóðvistarþægindi allt að flokki A",
+          "body": "Örgatað hljóðvistarloft dregur úr eftirómi í opnum skrifstofum, fundarherbergjum og veitingastöðum svo tal verður skýrara."
+        },
+        {
+          "title": "Prentuð loft með vörumerkinu",
+          "body": "Prentaðu hvaða mynd, mynstur eða vörumerkjagrafík sem er út í jaðra — áhrifamikill þáttur fyrir verslanir, sýningarsali og veitingarými."
+        },
+        {
+          "title": "Hröð uppsetning án rasks",
+          "body": "Köld uppsetning þýðir ekkert ryk og ekkert drasl, og flest rými klárast á einum degi — tilvalið fyrir húsnæði í notkun."
+        }
+      ]
+    }
+  },
+  "appPage": {
+    "crumbApplications": "Notkunarsvið",
+    "quoteCta": "Fá ókeypis tilboð",
+    "seeProjects": "Skoða verkefni",
+    "recommended": "Ráðlagðar lausnir",
+    "selectedWork": "Valin verkefni",
+    "explore": "Skoða nánar",
+    "ctaTitle": "Ertu með verkefni í huga: {name}?",
+    "ctaBody": "Segðu okkur frá rýminu þínu og við mælum með rétta kerfinu — ókeypis og án skuldbindinga."
+  },
+  "projectCards": {
+    "cats": {
+      "Acoustic": "Hljóðvist",
+      "Office": "Skrifstofa",
+      "Commercial": "Atvinnuhúsnæði",
+      "Retail": "Verslun",
+      "Bathroom": "Baðherbergi",
+      "Light & Print": "Ljós & prent",
+      "Living room": "Stofa",
+      "Home cinema": "Heimabíó"
+    },
+    "metas": {
+      "da-tweekaz-studio": "Holland · Upptökuver",
+      "mark-with-a-k": "Belgía · Hljóðver",
+      "notary-ampe-anthony": "Kruibeke · Skrifstofa með hljóðvist",
+      "bnp-paribas-fortis": "Brussel · Höfuðstöðvar banka",
+      "van-der-valk-beveren": "Beveren · Viðburðasalur hótels",
+      "johnson-and-johnson": "Limerick, IE · Rannsóknasetur lyfjafyrirtækis",
+      "polette-eyewear": "Antwerpen · Hugmyndaverslun",
+      "citizenm-hotel": "BNA & Evrópa · Forsmíðaðar baðeiningar",
+      "london-chapel": "London, UK · Baklýst loft",
+      "private-villa-knokke": "Knokke · Opið stofurými",
+      "home-cinema-ghent": "Gent · Stjörnuhiminn + hljóðvist",
+      "city-penthouse-antwerp": "Antwerpen · Stofa",
+      "wellness-spa-bruges": "Brugge · Baðherbergi í heilsulind",
+      "rue-perree-paris": "París · Baklýst gallerísloft"
+    }
+  },
+  "technical": {
+    "topics": [
+      {
+        "label": "Tækniblað",
+        "sub": "Tæknigögn og niðurhal"
+      },
+      {
+        "label": "Litir og áferðir",
+        "sub": "Allt úrvalið"
+      },
+      {
+        "label": "Brunavarnir",
+        "sub": "Brunaviðbrögð og A2"
+      },
+      {
+        "label": "Uppsetningarleiðbeiningar",
+        "sub": "Skref fyrir skref"
+      },
+      {
+        "label": "Útboðstexti",
+        "sub": "Fyrir útboð"
+      },
+      {
+        "label": "FAQ",
+        "sub": "Algengar spurningar"
+      }
+    ],
+    "polyester": {
+      "label": "Strekkiloft úr pólýester",
+      "short": "Pólýester",
+      "blurb": "Pólýesterhimna í kaldri uppsetningu — mjög matt, saumlaust loft sem er strekkt með höndunum.",
+      "fireSafety": {
+        "intro": "Pólýesterhimnan er flokkuð B-s1,d0 samkvæmt EN 13501-1 — eldtefjandi, með mjög takmarkaðri reykmyndun og án logandi dropa. Þar sem ströngustu brunakröfur gilda er í boði óbrennanleg útgáfa í flokki A2-s1,d0.",
+        "rows": [
+          {
+            "k": "Stöðluð flokkun",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Óbrennanlegur valkostur",
+            "v": "A2-s1,d0"
+          },
+          {
+            "k": "Reykmyndun",
+            "v": "s1 — mjög takmörkuð"
+          },
+          {
+            "k": "Logandi dropar",
+            "v": "d0 — engir"
+          },
+          {
+            "k": "Prófunarstaðall",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Flokkunin B-s1,d0 þýðir að himnan er eldtefjandi (B), myndar mjög lítinn reyk (s1) og gefur ekki frá sér logandi dropa (d0) — sú samsetning sem flest opinber rými og atvinnurými krefjast.",
+          "Fyrir flóttaleiðir, háhýsi, sjúkrahús og önnur verkefni þar sem krafist er óbrennanlegrar klæðningar uppfyllir A2-s1,d0-útgáfan þá strangari kröfu — með sama saumlausa, mjög matta útlitinu.",
+          "Vottorð um brunaviðbrögð og yfirlýsingar um nothæfi eru fáanleg sé þess óskað, til að leggja með brunagögnum verkefnisins."
+        ]
+      },
+      "installation": {
+        "intro": "Pólýester er strekkt kalt — engar hitabyssur, enginn þurrktími, engar gufur. Tveggja manna teymi lýkur alla jafna heilu rými á einum degi, jafnvel í húsgagnabúnum rýmum í notkun.",
+        "steps": [
+          {
+            "title": "Mæling",
+            "body": "Rýmið er lasermælt og himnan skorin og soðin saman í eitt saumlaust stykki, allt að 5.15 m á breidd, nákvæmlega í lögun rýmisins."
+          },
+          {
+            "title": "Jaðarprófíll settur upp",
+            "body": "Grannur smelluprófíll er festur á vegg eða loft í valinni hæð og fylgir beinum köflum, bogum og hornum."
+          },
+          {
+            "title": "Strekkt kalt með höndunum",
+            "body": "Kalda himnan er smellt í prófílinn og strekkt með höndunum yfir rýmið — trommustrekkt í fullkomlega slétt yfirborð, algjörlega án hita."
+          },
+          {
+            "title": "Frágangur og smáatriði",
+            "body": "Gengið er frá brúnum, hornum og innbyggðri lýsingu eða skoðunarlúgum. Enginn þurrktími — rýmið er hreint og strax tilbúið til notkunar."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Tilbúið ákvæði til að afrita í útboðs- og verklýsingargögn. Aðlagaðu gildin innan hornklofa að verkefninu þínu.",
+        "clause": "Útvega skal og setja upp kaldstrekkt strekkiloftskerfi úr pólýester [STRETCH eða samþykkt jafngilt]. Himnan skal vera prjónað pólýesterefni, strekkt kalt í jaðarprófíl með smellufestingu án hitanotkunar, og mynda saumlaust, mjög matt yfirborð allt að 5.15 m á breidd. Brunaviðbrögð skulu vera í flokki B-s1,d0 samkvæmt EN 13501-1 (flokki A2-s1,d0 þar sem það er tilgreint). Kerfið skal vera þvottekta og rakaþolið, hæft til uppsetningar í rýmum í notkun, og með [10] ára framleiðandaábyrgð. Litur: [RAL ____]. Þar sem krafist er hljóðvistareiginleika skal nota örgataða himnu með þéttu ísogsundirlagi sem nær hljóðísogi allt að flokki A."
+      }
+    },
+    "pvc": {
+      "label": "Strekkiloft úr PVC",
+      "short": "PVC-filma",
+      "blurb": "Heitt uppsett PVC-filma — að fullu endurvinnanleg, fjarlægjanleg og saumlaus allt að 6.4 m.",
+      "fireSafety": {
+        "intro": "PVC-filman er flokkuð B-s1,d0 samkvæmt EN 13501-1 — eldtefjandi, með mjög takmarkaðri reykmyndun og án logandi dropa.",
+        "rows": [
+          {
+            "k": "Flokkun",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Reykmyndun",
+            "v": "s1 — mjög takmörkuð"
+          },
+          {
+            "k": "Logandi dropar",
+            "v": "d0 — engir"
+          },
+          {
+            "k": "Prófunarstaðall",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Flokkunin B-s1,d0 þýðir að filman er eldtefjandi (B), myndar mjög lítinn reyk (s1) og gefur ekki frá sér logandi dropa (d0), sem gerir hana hæfa fyrir langflest íbúðar- og atvinnurými.",
+          "Þar sem filman er fjarlægjanleg má smella henni úr og strekkja á ný til að komast að lögnum fyrir ofan — án þess að brunaeiginleikar hennar skerðist.",
+          "Vottorð um brunaviðbrögð og yfirlýsingar um nothæfi eru fáanleg sé þess óskað, fyrir brunagögn verkefnisins."
+        ]
+      },
+      "installation": {
+        "intro": "PVC-filman er hituð og strekkt við uppsetningu — þreytt loft verður gallalaust nýtt á einum degi, og gamla yfirborðið fær að vera á sínum stað fyrir ofan.",
+        "steps": [
+          {
+            "title": "Mæling",
+            "body": "Rýmið er mælt og filman hátíðnisoðin í rétta stærð með harpúnbrún allan hringinn — löguð eftir rýminu og saumlaus allt að 6.4 m á breidd."
+          },
+          {
+            "title": "Jaðarprófíll settur upp",
+            "body": "Harpún-/smelluprófíll er festur hringinn í kringum rýmið í valinni hæð og fylgir veggjalínunni og öllum sérkennum."
+          },
+          {
+            "title": "Hitun og strekking",
+            "body": "Rýmið er hitað með hitagjafa svo filman mýkist; harpúnbrúnin er krækt í prófílinn og filman strekkist slétt og flöt þegar hún kólnar."
+          },
+          {
+            "title": "Frágangur og smáatriði",
+            "body": "Gengið er frá brúnum, hornum, lömpum og skoðunarlúgum. Filman þrífst með rökum klút og er strax tilbúin til notkunar."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Tilbúið ákvæði til að afrita í útboðs- og verklýsingargögn. Aðlagaðu gildin innan hornklofa að verkefninu þínu.",
+        "clause": "Útvega skal og setja upp heitstrekkt strekkiloftskerfi úr PVC-filmu [STRETCH eða samþykkt jafngilt]. Himnan skal vera völsuð PVC-filma, soðin í rétta stærð og strekkt í jaðarprófíl með harpún-/smellufestingu, og mynda saumlaust yfirborð allt að 6.4 m á breidd með [mattri / satín / gljáandi / hálfgegnsærri] áferð. Brunaviðbrögð skulu vera í flokki B-s1,d0 samkvæmt EN 13501-1. Filman skal vera 100% endurvinnanleg, fjarlægjanleg og strekkjanleg á ný til að komast að rýminu fyrir ofan, þvottekta og rakaþolin, og með [10] ára framleiðandaábyrgð. Litur/áferð: [____]. Þar sem baklýsing er tilgreind skal nota hálfgegnsæja filmu yfir LED-fleti fyrir jafna lýsingu án ljósbletta."
+      }
+    }
+  },
+  "techPage": {
+    "crumbTechnical": "Tæknilegt",
+    "viewProduct": "Skoða vöruna",
+    "eyebrowTech": "Tæknilegt",
+    "datasheetCta": "Fáðu tækniblaðið í heild",
+    "samplesCta": "Fáðu efnissýnishorn send",
+    "copyHint": "Veldu textann hér að ofan til að afrita hann í útboðsgögnin þín.",
+    "ctaTitle": "Vantar þig aðstoð við útboðstextann?",
+    "ctaBody": "Sérfræðingar okkar hjálpa arkitektum og verktökum að útfæra smáatriðin rétt — yfirleitt innan tveggja virkra daga.",
+    "ctaBtn": "Spurðu sérfræðinga okkar",
+    "meta": {
+      "datasheet": "Tækniblað fyrir {label} — tæknilýsingar, flokkanir og niðurhal.",
+      "colours": "Úrval lita og áferða fyrir {label}, með RAL-tilvísunum og pöntun sýnishorna.",
+      "fire-safety": "Brunaflokkun fyrir {label} — B-s1,d0 og A2 valkostir samkvæmt EN 13501-1.",
+      "installation": "Uppsetningarleiðbeiningar skref fyrir skref fyrir {label}.",
+      "specification": "Útboðstexti tilbúinn til afritunar fyrir {label} — fyrir útboð og verkgögn.",
+      "faq": "Algengar spurningar um {label}."
+    }
+  },
+  "prefab": {
+    "prefab-ceiling-unit": {
+      "name": "Forsmíðaðar burðargrindur",
+      "eyebrow": "Forsmíðaðar burðargrindur",
+      "metaDescription": "Forsmíðaðar burðargrindur eftir máli fyrir strekkiloft — bitar úr áli, stáli og viði, listar og hæðarmunardeili, sagað, soðið og duftlakkað hjá okkur og sent um allan heim.",
+      "intro": "Forsmíðaðar burðargrindur fyrir strekkiloftsverkefni — bitar fyrir raster- og grindarloft, listar fyrir svífandi loft og hrein hæðarmunardeili. Hver grind er smíðuð eftir máli samkvæmt teikningum þínum, alfarið innanhúss í okkar eigin framleiðslu í Póllandi, og send söluaðilum okkar um allan heim.",
+      "makeHeading": "Hvað við smíðum",
+      "make": [
+        {
+          "title": "Bitar — raster- og grindarloft",
+          "body": "Forsmíðaðir bitar sem ramma strekkta himnu inn í raster- eða grindarloft — endurtakanlegar einingar, hornréttar upp á millimetra og tilbúnar til uppsetningar á staðnum."
+        },
+        {
+          "title": "Listar — svífandi loft",
+          "body": "Listar meðfram jöðrum sem lyfta strekkiloftinu frá veggjunum og skapa svífandi áhrif með skuggafúgu, með rás fyrir falda lýsingu þar sem þarf."
+        },
+        {
+          "title": "Frágangur við hæðarmun",
+          "body": "Þrepaskiptar burðargrindur á mörgum hæðum sem leiða strekkta himnu hreint yfir hæðarbreytingar — ekkert fúsk eða ágiskanir á staðnum."
+        }
+      ],
+      "materialsHeading": "Smíðað úr áli, stáli eða viði",
+      "materials": [
+        {
+          "title": "Ál",
+          "body": "Létt, stíft og tærist ekki — tilvalið fyrir stór höf, rök rými og innfellda lýsingarprófíla."
+        },
+        {
+          "title": "Stál",
+          "body": "Hámarksstyrkur fyrir stórar grindur og þung höf, duftlakkað eftir aðstæðum."
+        },
+        {
+          "title": "Viður (MDF / krossviður)",
+          "body": "MDF, krossviður og aðrar plötur fræstar í form fyrir hlý, flókin eða bogadregin form."
+        }
+      ],
+      "production": {
+        "heading": "Smíðað innanhúss, smíðað eftir máli",
+        "body": "Hver grind er hönnuð eftir teikningum þínum og smíðuð alfarið innanhúss í okkar eigin framleiðslu í Póllandi. Sögun, suða og duftlökkun fara öll fram undir einu þaki — þannig stýrum við gæðum og áferð frá hráum prófíl að grind í kassa, tilbúinni til sendingar.",
+        "details": [
+          {
+            "title": "Sögun",
+            "body": "Prófílar sagaðir í nákvæmar lengdir og horn svo grindin passi saman hornrétt og án skekkju."
+          },
+          {
+            "title": "Suða",
+            "body": "Hreinar, sterkar suður — slípaðar niður og frágengnar svo samskeytin hverfa inn í grindina."
+          },
+          {
+            "title": "Duftlökkun",
+            "body": "Endingargóð duftlökkuð áferð í hvaða RAL-lit sem er, borin á innanhúss fyrir jafnan, slitsterkan flöt."
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "Frá teikningu að fullbúinni grind",
+        "items": [
+          {
+            "title": "Rasterloft",
+            "meta": "Ál",
+            "summary": "Tækniteikning af rastergrindarbitum við hlið fullbúnu grindarinnar, uppsettrar og klæddrar himnu á staðnum."
+          },
+          {
+            "title": "Svífandi listaloft",
+            "meta": "Állisti",
+            "summary": "Svífandi listadeili, frá framleiðsluteikningu að uppsettri niðurstöðu klæddri himnu."
+          }
+        ]
+      },
+      "worldwide": "Hver grind er sett í kassa og send um allan heim, svo söluaðilar okkar hvar sem er geta boðið sömu hreinu, endurtakanlegu niðurstöðuna — án eigin verkstæðis."
+    },
+    "prefab-lighting-elements": {
+      "name": "Forsmíðaðar lýsingareiningar",
+      "eyebrow": "Forsmíðaðar lýsingareiningar",
+      "metaDescription": "Forsmíðaðar lýsingareiningar byggðar á álgrind og klæddar STRETCH-himnu — lýsandi listar, ljóslínur og baklýstir fletir, hannaðar eftir teikningum þínum, smíðaðar innanhúss og sendar um allan heim.",
+      "intro": "Forsamsettar lýsingareiningar byggðar á álgrind og klæddar strekkihimnu okkar — lýsandi listar, ljóslínur og baklýstir fletir. Hannaðar eftir teikningum þínum, smíðaðar innanhúss í framleiðslu okkar í Póllandi og sendar söluaðilum okkar um allan heim.",
+      "makeHeading": "Hvað við smíðum",
+      "make": [
+        {
+          "title": "Lýsandi listar",
+          "body": "Listar meðfram jöðrum sem baða vegg eða loft í jafnri, falinni birtu — smíðaðir sem áleining tilbúin til uppsetningar."
+        },
+        {
+          "title": "Ljóslínur",
+          "body": "Skarpar, innfelldar ljóslínur felldar inn í strekktan flöt fyrir hreina, byggingarlistræna lýsingu."
+        },
+        {
+          "title": "Baklýstir fletir",
+          "body": "Baklýst spjöld og form klædd hálfgegnsærri strekkihimnu fyrir jafnan bjarma án ljósbletta."
+        }
+      ],
+      "materialsHeading": "Svona eru þær smíðaðar",
+      "materials": [
+        {
+          "title": "Álgrind",
+          "body": "Nákvæm, stíf álgrind unnin eftir þínum málum — burðarásinn í hverri lýsingareiningu."
+        },
+        {
+          "title": "LED og ljósdreifing",
+          "body": "Deyfanleg LED, valin og staðsett fyrir jafna birtu, og himnan dreifir ljósinu mjúklega."
+        },
+        {
+          "title": "Áferð með strekkihimnu",
+          "body": "Hálfgegnsæ eða prentuð STRETCH-himna strekkt yfir grindina fyrir gallalausan lýsandi flöt."
+        }
+      ],
+      "showcase": {
+        "heading": "Frá teikningu að fullbúinni einingu",
+        "items": [
+          {
+            "title": "Lýsandi listi",
+            "meta": "Ál + himna",
+            "summary": "Teikning af lýsandi lista meðfram jöðrum við hlið fullbúnu, lýsandi einingarinnar uppsettrar á staðnum."
+          },
+          {
+            "title": "Baklýstur flötur",
+            "meta": "Ál + LED + himna",
+            "summary": "Baklýst spjald, frá framleiðsluteikningu að jafnri, fullbúinni niðurstöðu án ljósbletta."
+          }
+        ]
+      },
+      "worldwide": "Eins og allar forsmíðaðar einingar okkar eru lýsingareiningarnar settar í kassa og sendar um allan heim — smíðaðar og prófaðar hér, tilbúnar til uppsetningar þar."
+    }
+  },
+  "prefabPage": {
+    "discussCta": "Ræða verkefni",
+    "becomeDealer": "Gerast söluaðili",
+    "technicalDrawing": "Tækniteikning",
+    "installedFinished": "Uppsett & frágengið",
+    "shippedWorldwide": "Sent um allan heim",
+    "ctaTitle": "Ertu með verkefni fyrir okkur?",
+    "ctaBody": "Sendu okkur teikningarnar eða hugmyndina — við hönnum grindina, smíðum hana innanhúss og sendum hana til þín."
   }
 }

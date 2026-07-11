@@ -1472,5 +1472,906 @@
       ]
     },
     "comingSoon": "Coming soon"
+  },
+  "modals": {
+    "quote": {
+      "title": "Request a free quote",
+      "subtitle": "Tell us about your project and we will get back to you with a tailored price.",
+      "submitLabel": "Send request",
+      "sentTitle": "Request received",
+      "sentMsg": "Thanks — a specialist will reply within two working days.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "First & last name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+32 ..."
+        },
+        "rooms": {
+          "label": "Rooms",
+          "options": [
+            "1 room",
+            "2 rooms",
+            "3 rooms",
+            "4 rooms",
+            "More than 4"
+          ]
+        },
+        "timeline": {
+          "label": "Timeline",
+          "options": [
+            "As soon as possible",
+            "Within 1–3 months",
+            "Within 4–12 months",
+            "Just exploring"
+          ]
+        },
+        "message": {
+          "label": "Your project",
+          "placeholder": "Surface, location, anything useful..."
+        }
+      }
+    },
+    "survey": {
+      "title": "Book a site survey",
+      "subtitle": "We measure up and advise on site — free and without obligation.",
+      "submitLabel": "Request survey",
+      "sentTitle": "Survey requested",
+      "sentMsg": "Thanks — we will contact you to arrange a convenient time.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "First & last name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+32 ..."
+        },
+        "address": {
+          "label": "Address",
+          "placeholder": "Street, city"
+        },
+        "preferredTime": {
+          "label": "Preferred time",
+          "options": [
+            "Morning",
+            "Afternoon",
+            "Flexible"
+          ]
+        },
+        "rooms": {
+          "label": "Rooms",
+          "options": [
+            "1 room",
+            "2 rooms",
+            "3 rooms",
+            "4+ rooms"
+          ]
+        }
+      }
+    },
+    "training": {
+      "title": "Book your training",
+      "subtitle": "Hands-on certification at our Belgian HQ — leave your details and we will confirm.",
+      "submitLabel": "Request my seat",
+      "sentTitle": "Seat requested",
+      "sentMsg": "Thanks — we will confirm your spot and send joining details.",
+      "fields": {
+        "fullName": {
+          "label": "Full name",
+          "placeholder": "First & last name"
+        },
+        "company": {
+          "label": "Company",
+          "placeholder": "Your company"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Preferred date",
+          "options": [
+            "15–16 Sep 2026",
+            "06–08 Oct 2026",
+            "17–18 Nov 2026",
+            "Custom on-site session"
+          ]
+        },
+        "attendees": {
+          "label": "Attendees",
+          "options": [
+            "1 person",
+            "2 people",
+            "3 people",
+            "4+ people"
+          ]
+        }
+      }
+    },
+    "dates": {
+      "title": "Upcoming training dates",
+      "subtitle": "Pick a date and reserve your seat — small groups, booked first-come.",
+      "submitLabel": "Request my seat",
+      "sentTitle": "Seat requested",
+      "sentMsg": "Thanks — we will confirm your spot and send joining details.",
+      "fields": {
+        "fullName": {
+          "label": "Full name",
+          "placeholder": "First & last name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Preferred date",
+          "options": [
+            "15–16 Sep 2026",
+            "06–08 Oct 2026",
+            "17–18 Nov 2026",
+            "Custom on-site session"
+          ]
+        }
+      }
+    },
+    "partner": {
+      "title": "Apply to become a partner",
+      "subtitle": "Tell us about your company — we review every application personally.",
+      "submitLabel": "Submit application",
+      "sentTitle": "Application received",
+      "sentMsg": "Thanks — our partner team will review and get back to you within two working days.",
+      "fields": {
+        "company": {
+          "label": "Company",
+          "placeholder": "Your company"
+        },
+        "contactName": {
+          "label": "Contact name",
+          "placeholder": "First & last name"
+        },
+        "partnerType": {
+          "label": "I want to become a",
+          "options": [
+            "Reseller — I sell, you install",
+            "Dealer — I sell & install myself",
+            "Not sure yet"
+          ]
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+32 ..."
+        },
+        "country": {
+          "label": "Country",
+          "placeholder": "Belgium"
+        },
+        "activity": {
+          "label": "Activity",
+          "options": [
+            "Building & renovation",
+            "Interior fit-out",
+            "Dry-lining / plastering",
+            "Electrical / lighting",
+            "Other"
+          ]
+        },
+        "notes": {
+          "label": "About your business",
+          "placeholder": "Team size, regions you cover, current activity..."
+        }
+      }
+    },
+    "call": {
+      "title": "Book a call",
+      "subtitle": "Leave your number and a good time — we will call you back.",
+      "submitLabel": "Request a call",
+      "sentTitle": "Call requested",
+      "sentMsg": "Thanks — we will call you at your preferred time.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "First & last name"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+32 ..."
+        },
+        "bestTime": {
+          "label": "Best time",
+          "options": [
+            "Morning",
+            "Afternoon",
+            "Early evening"
+          ]
+        },
+        "topic": {
+          "label": "Topic",
+          "options": [
+            "A quote",
+            "Partnership",
+            "Training",
+            "Technical question",
+            "Other"
+          ]
+        }
+      }
+    },
+    "samples": {
+      "title": "Request colour samples",
+      "subtitle": "Order physical RAL / colour swatches — free for trade partners.",
+      "submitLabel": "Request samples",
+      "sentTitle": "Samples requested",
+      "sentMsg": "Thanks — we will post your swatches and follow up within two working days.",
+      "fields": {
+        "company": {
+          "label": "Company",
+          "placeholder": "Your company"
+        },
+        "contactName": {
+          "label": "Contact name",
+          "placeholder": "First & last name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+32 ..."
+        },
+        "shippingAddress": {
+          "label": "Shipping address",
+          "placeholder": "Street, postcode, city"
+        },
+        "productLine": {
+          "label": "Product line",
+          "options": [
+            "Polyester",
+            "PVC film",
+            "Acoustic",
+            "Not sure yet"
+          ]
+        },
+        "colours": {
+          "label": "Colours of interest",
+          "placeholder": "e.g. White, Anthracite, Custom RAL"
+        },
+        "notes": {
+          "label": "Notes",
+          "placeholder": "Project, quantities, anything useful..."
+        }
+      }
+    },
+    "datasheet": {
+      "title": "Download the datasheet",
+      "subtitle": "Enter your details and the download will start straight away. We only use them to follow up on your enquiry.",
+      "submitLabel": "Get the datasheet",
+      "sentTitle": "Here is your datasheet",
+      "sentMsg": "Your download should start automatically — if it does not, use the button below.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "First & last name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+32 ..."
+        }
+      }
+    },
+    "trainingDates": [
+      "15–16 Sep 2026",
+      "06–08 Oct 2026",
+      "17–18 Nov 2026",
+      "Custom on-site session"
+    ],
+    "trainingDateNotes": [
+      "Beveren-Waas · 4 seats",
+      "Beveren-Waas · 6 seats",
+      "Beveren-Waas · 8 seats"
+    ],
+    "close": "Close",
+    "downloadDatasheet": "Download datasheet",
+    "select": "Select…"
+  },
+  "faqPage": {
+    "items": [
+      {
+        "q": "What is a stretch ceiling?",
+        "a": "A stretch ceiling is a thin, seamless membrane — polyester or PVC film — tensioned across a room and clipped into a slim perimeter profile. It looks like a perfectly flat painted ceiling but installs with no plaster, no sanding and no painting, and hides everything above it."
+      },
+      {
+        "q": "How long does installation take?",
+        "a": "Most rooms are finished in a single day. A two-person team fits up to roughly 50 m² per day. Cold-mounted polyester needs no drying time, so the room is usable immediately."
+      },
+      {
+        "q": "Is it messy? Do I need to move out?",
+        "a": "No. There is no demolition, dust, sanding or painting, so installation can take place in a furnished, occupied room. The existing ceiling can usually stay in place underneath."
+      },
+      {
+        "q": "How long does a stretch ceiling last?",
+        "a": "Our systems carry a 25-year warranty. The surface is washable and humidity-proof, and will not crack, flake, yellow or need repainting."
+      },
+      {
+        "q": "Can it improve acoustics?",
+        "a": "Yes. A micro-perforated, absorber-backed version reaches up to Class A sound absorption while looking identical to the standard finish — measurably reducing reverberation and noise."
+      },
+      {
+        "q": "What is the widest ceiling you can install without a seam?",
+        "a": "Up to 5.7 m seamless with PVC film, and up to 5.15 m with polyester. Larger spans are covered with a near-invisible welded joint or a deliberate profile line."
+      },
+      {
+        "q": "Can I have lighting, backlighting or a printed design?",
+        "a": "Yes. Translucent films give an even, dimmable backlight with no hotspots, LED line lighting integrates into the surface, and any image — including a starry sky — can be printed edge-to-edge."
+      },
+      {
+        "q": "How much does a stretch ceiling cost?",
+        "a": "Pricing is project-based — it depends on the surface area, the system, finish and any lighting or acoustic options. Request a free, no-obligation quote and a specialist will reply within two working days."
+      },
+      {
+        "q": "Do you work with contractors and resellers?",
+        "a": "Yes. STRETCH is B2B-led: we train installers at our Belgian HQ, supply made-to-measure membranes through a B2B portal, and refer local customers to certified partners. See the Partners and Installer training pages."
+      }
+    ],
+    "eyebrow": "FAQ",
+    "titleA": "Good",
+    "titleB": "questions",
+    "lead": "Everything people usually ask about stretch ceilings — installation, lifespan, acoustics, spans and cost. Still unsure? Just ask.",
+    "asideKicker": "Still have a question?",
+    "asideTitle": "Talk to a stretch-ceiling specialist.",
+    "asideBody": "Tell us about your room and we’ll answer — free and without obligation.",
+    "asideCta": "Request a free quote"
+  },
+  "catalogFaqs": {
+    "polyester": [
+      {
+        "q": "How long does a polyester stretch ceiling take to install?",
+        "a": "Most rooms are completed in a single day. A two-person team fits up to roughly 50 m² per day, and because the membrane is tensioned cold there is no drying time before the room is back in use."
+      },
+      {
+        "q": "Is the cold-mount method really dust-free?",
+        "a": "Yes. There is no demolition of the existing ceiling, no sanding and no painting. The membrane clips into a slim perimeter profile, so installation is clean enough to carry out in furnished, occupied rooms."
+      },
+      {
+        "q": "Can a polyester ceiling improve a room’s acoustics?",
+        "a": "A micro-perforated version backed with a high-density absorber reaches up to Class A sound absorption. It looks identical to the standard finish but measurably reduces reverberation and noise."
+      },
+      {
+        "q": "How do I clean and maintain it?",
+        "a": "Wipe it down with a damp cloth. The surface is washable and humidity-proof, will not crack, flake or yellow, and never needs repainting across its 25-year warranty."
+      }
+    ],
+    "pvc": [
+      {
+        "q": "What makes a PVC stretch ceiling “100% recyclable”?",
+        "a": "The film is recyclable back to raw material at the end of its life, and it is removable during use — you can unclip it to reach the services above and re-tension it in minutes, rather than tearing out and replacing a plasterboard ceiling."
+      },
+      {
+        "q": "How wide a span can a PVC ceiling cover without a seam?",
+        "a": "Up to 6.4 m seamless — the widest in our range. Larger rooms can be covered by welding panels with a near-invisible joint or by introducing a deliberate profile line."
+      },
+      {
+        "q": "Is PVC film suitable for bathrooms and wet areas?",
+        "a": "Yes. It is fully washable and humidity-proof, which makes it a popular choice for bathrooms, pools and wellness areas where a painted ceiling would blister or stain."
+      },
+      {
+        "q": "Can it be backlit or printed?",
+        "a": "Translucent films diffuse an LED field evenly with no hotspots, and any photograph, pattern or starry-sky design can be printed edge-to-edge. See the Illuminated ceiling system for the full range."
+      }
+    ],
+    "acoustic": [
+      {
+        "q": "How much does the acoustic system actually reduce noise?",
+        "a": "With the high-density absorber backing it reaches up to Class A absorption (the highest rating), measured as αw values. In practice that turns a hard, echoey room into a calm, comfortable space without any visible acoustic panels."
+      },
+      {
+        "q": "Does the acoustic finish look different from a normal ceiling?",
+        "a": "No. The absorption happens behind a micro-perforated membrane, so the ceiling reads as one flawless, seamless surface — the treatment is invisible."
+      },
+      {
+        "q": "Can speakers be hidden behind the ceiling?",
+        "a": "Yes. Loudspeakers can be mounted completely behind the stretched film for clean, sourceless sound — a popular option for home cinemas and studios."
+      },
+      {
+        "q": "Where is the acoustic system most useful?",
+        "a": "Anywhere reverberation is a problem: offices, restaurants, recording studios, schools, healthcare spaces and home cinemas. It can also extend to free-hanging islands and wall panels."
+      }
+    ],
+    "light": [
+      {
+        "q": "Will a backlit ceiling show hotspots from the LEDs?",
+        "a": "No. The translucent film sits over an LED field and diffuses the light evenly across the whole surface, so you see a soft, uniform glow rather than individual points."
+      },
+      {
+        "q": "What can be printed on the ceiling?",
+        "a": "Effectively any high-resolution image, pattern or texture — printed edge-to-edge with no visible seam. A common choice is a fibre-optic starry-sky ceiling for cinemas and bedrooms."
+      },
+      {
+        "q": "Can the lighting be dimmed or change colour?",
+        "a": "Yes. Backlit ceilings are dimmable, and RGB LED options let you change colour and mood. LED line lighting can also be recessed into the membrane for a crisp architectural effect."
+      }
+    ],
+    "prefab": [
+      {
+        "q": "What is a prefab stretch-ceiling unit?",
+        "a": "It is a complete ceiling module — frame and tensioned membrane — assembled and quality-checked in our Belgian workshop, then delivered ready to click into a perimeter frame on site."
+      },
+      {
+        "q": "Why choose prefab over an on-site fit?",
+        "a": "Prefab units suit modular construction and repeatable rooms such as hotel bathrooms and bathroom pods: most of the work happens off-site, so installation needs minimal trades and minimal time."
+      },
+      {
+        "q": "How do you access services above a prefab ceiling?",
+        "a": "Each unit can include a discreet integrated inspection hatch, so pipework and services above stay reachable without breaking the clean ceiling line."
+      }
+    ],
+    "starry": [
+      {
+        "q": "How many stars can a starry-sky ceiling have?",
+        "a": "Anywhere from around 150 points for a subtle effect to over a thousand for a dense, dramatic sky. The density is chosen to suit the room size and the mood you want."
+      },
+      {
+        "q": "Do the fibre-optic stars give off heat?",
+        "a": "No. All the fibres are driven by a single remote LED light engine, so the points themselves stay completely cool — only the light travels through the fibre."
+      },
+      {
+        "q": "Can the stars twinkle or change colour?",
+        "a": "Yes. An optional twinkle wheel makes the stars shimmer, RGB engines let you change colour, and shooting-star effects can be added for movement. Everything is dimmable."
+      }
+    ],
+    "hatch": [
+      {
+        "q": "Can you access services behind a stretch ceiling?",
+        "a": "Yes — an integrated inspection hatch gives discreet, re-openable access to valves, junction boxes and fittings above the membrane, so the ceiling never has to be cut or replaced to reach them."
+      },
+      {
+        "q": "Is the hatch visible in the ceiling?",
+        "a": "Barely. The frame is built into the perimeter detailing and finished in the same membrane, so it blends into the surface and is only noticeable when you look for it."
+      },
+      {
+        "q": "Can a hatch be added to an existing stretch ceiling?",
+        "a": "In most cases yes. Hatches can be retrofitted into an existing ceiling, sized and positioned to suit the service that needs access behind it."
+      }
+    ],
+    "print": [
+      {
+        "q": "What image quality do I need for a printed ceiling?",
+        "a": "A high-resolution file gives the best result. We review and colour-manage your artwork, scale it to the ceiling and proof it before printing, so the final result matches your expectation."
+      },
+      {
+        "q": "Can a printed ceiling be backlit?",
+        "a": "Yes. Printed on a translucent film over an LED field, the image is evenly backlit with no hotspots — ideal for sky scenes and feature artwork."
+      },
+      {
+        "q": "Is there a visible seam on large prints?",
+        "a": "No. The image is printed edge-to-edge across a single seamless membrane up to 5.7 m wide, so there are no panel lines across your artwork."
+      }
+    ]
+  },
+  "applications": {
+    "living-cinema": {
+      "name": "Living rooms & home cinema",
+      "shortName": "Living & cinema",
+      "eyebrow": "Living & cinema",
+      "metaDescription": "Stretch ceilings for living rooms and home cinemas — seamless finishes, integrated lighting, fibre-optic starry skies and better acoustics, fitted in a day.",
+      "intro": "A flawless ceiling sets the tone of a living space. STRETCH gives you a perfectly smooth, seamless finish — with hidden lighting, a fibre-optic starry sky for the cinema, and acoustic comfort, all fitted cold in a single day.",
+      "benefits": [
+        {
+          "title": "A seamless, perfect finish",
+          "body": "No cracks, no joins and no repainting — a smooth membrane tensioned wall to wall, in a deep matte or any colour you like."
+        },
+        {
+          "title": "Cinema-ready atmosphere",
+          "body": "Add a fibre-optic starry sky, integrated LED lines and dimmable backlight to set the perfect mood for movie nights."
+        },
+        {
+          "title": "Calmer, quieter rooms",
+          "body": "An acoustic membrane tames echo in open-plan living spaces, so conversation and sound feel warmer and clearer."
+        }
+      ]
+    },
+    "bathroom-kitchen": {
+      "name": "Bathrooms & kitchens",
+      "shortName": "Bathroom & kitchen",
+      "eyebrow": "Bathroom & kitchen",
+      "metaDescription": "Humidity-proof stretch ceilings for bathrooms and kitchens — waterproof, mould-resistant and wipe-clean, with integrated lighting, fitted in a single day.",
+      "intro": "Bathrooms and kitchens are tough on ceilings. A STRETCH membrane is waterproof, mould-resistant and wipe-clean — hiding pipework and ducting behind a flawless surface, with downlights and extraction integrated neatly.",
+      "benefits": [
+        {
+          "title": "Humidity- and water-proof",
+          "body": "The membrane shrugs off steam and splashes and will not flake, stain or grow mould like a painted or plastered ceiling."
+        },
+        {
+          "title": "Wipe-clean surface",
+          "body": "A quick wipe keeps it looking new — ideal above showers, baths and cooking zones."
+        },
+        {
+          "title": "Neat, integrated services",
+          "body": "Downlights, speakers, extraction and inspection hatches all integrate into the surface, hiding the pipework above."
+        }
+      ]
+    },
+    "office-retail": {
+      "name": "Offices & retail",
+      "shortName": "Office & retail",
+      "eyebrow": "Office & retail",
+      "metaDescription": "Stretch ceilings for offices, retail and hospitality — Class A acoustics, branded printed ceilings and integrated lighting, installed fast with minimal disruption.",
+      "intro": "Commercial spaces need to look sharp and sound right. STRETCH delivers Class A acoustic comfort, branded printed ceilings and integrated lighting — installed cold and fast, with minimal disruption to a working space.",
+      "benefits": [
+        {
+          "title": "Class A acoustic comfort",
+          "body": "A micro-perforated acoustic ceiling cuts reverberation in open offices, meeting rooms and restaurants for clearer speech."
+        },
+        {
+          "title": "Branded, printed ceilings",
+          "body": "Print any image, pattern or brand graphic edge-to-edge — a striking feature for retail, showrooms and hospitality."
+        },
+        {
+          "title": "Fast, low-disruption fit",
+          "body": "Cold installation means no dust and no mess, with most rooms finished in a single day — ideal for occupied premises."
+        }
+      ]
+    }
+  },
+  "appPage": {
+    "crumbApplications": "Applications",
+    "quoteCta": "Request a free quote",
+    "seeProjects": "See projects",
+    "recommended": "Recommended solutions",
+    "selectedWork": "Selected work",
+    "explore": "Explore",
+    "ctaTitle": "Planning a {name} project?",
+    "ctaBody": "Tell us about your space and we will recommend the right system — free and without obligation."
+  },
+  "projectCards": {
+    "cats": {
+      "Acoustic": "Acoustic",
+      "Office": "Office",
+      "Commercial": "Commercial",
+      "Retail": "Retail",
+      "Bathroom": "Bathroom",
+      "Light & Print": "Light & Print",
+      "Living room": "Living room",
+      "Home cinema": "Home cinema"
+    },
+    "metas": {
+      "da-tweekaz-studio": "Netherlands · Recording studio",
+      "mark-with-a-k": "Belgium · Sound studio",
+      "notary-ampe-anthony": "Kruibeke · Acoustic office",
+      "bnp-paribas-fortis": "Brussels · Bank HQ",
+      "van-der-valk-beveren": "Beveren · Hotel event hall",
+      "johnson-and-johnson": "Limerick, IE · Pharma R&D facility",
+      "polette-eyewear": "Antwerp · Retail concept store",
+      "citizenm-hotel": "USA & Europe · Prefab bathroom units",
+      "london-chapel": "London, UK · Backlit ceiling",
+      "private-villa-knokke": "Knokke · Open living",
+      "home-cinema-ghent": "Ghent · Starry sky + acoustic",
+      "city-penthouse-antwerp": "Antwerp · Living room",
+      "wellness-spa-bruges": "Bruges · Spa bathroom",
+      "rue-perree-paris": "Paris · Backlit gallery ceiling"
+    }
+  },
+  "technical": {
+    "topics": [
+      {
+        "label": "Datasheet",
+        "sub": "Specs & download"
+      },
+      {
+        "label": "Colours & finishes",
+        "sub": "Full range"
+      },
+      {
+        "label": "Fire safety",
+        "sub": "Reaction-to-fire & A2"
+      },
+      {
+        "label": "Installation guide",
+        "sub": "Step by step"
+      },
+      {
+        "label": "Specification text",
+        "sub": "For tenders"
+      },
+      {
+        "label": "FAQ",
+        "sub": "Common questions"
+      }
+    ],
+    "polyester": {
+      "label": "Polyester stretch ceiling",
+      "short": "Polyester",
+      "blurb": "Cold-mounted polyester membrane — a very matte, seamless ceiling tensioned by hand.",
+      "fireSafety": {
+        "intro": "The polyester membrane is classified B-s1,d0 to EN 13501-1 — flame-retardant, with very limited smoke and no flaming droplets. A non-combustible A2-s1,d0 version is available where the strictest fire requirements apply.",
+        "rows": [
+          {
+            "k": "Standard classification",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Non-combustible option",
+            "v": "A2-s1,d0"
+          },
+          {
+            "k": "Smoke production",
+            "v": "s1 — very limited"
+          },
+          {
+            "k": "Flaming droplets",
+            "v": "d0 — none"
+          },
+          {
+            "k": "Test standard",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "The classification B-s1,d0 means the membrane is flame-retardant (B), produces very little smoke (s1) and releases no burning droplets (d0) — the combination most public and commercial interiors require.",
+          "For escape routes, high-rise buildings, hospitals and other projects where a non-combustible lining is specified, the A2-s1,d0 version meets that higher requirement while keeping the same seamless, very matte appearance.",
+          "Reaction-to-fire certificates and declarations of performance are available on request for inclusion in your fire dossier."
+        ]
+      },
+      "installation": {
+        "intro": "Polyester is tensioned cold — no heat guns, no drying time, no fumes. A two-person team typically completes a room in a single day, even in furnished, occupied spaces.",
+        "steps": [
+          {
+            "title": "Survey & measure",
+            "body": "The room is laser-measured and the membrane is cut and welded to a single seamless panel up to 5.15 m wide, made to the exact shape of the room."
+          },
+          {
+            "title": "Fit the perimeter profile",
+            "body": "A slim clip profile is fixed to the wall or ceiling at the chosen height, following straight runs, curves and corners."
+          },
+          {
+            "title": "Tension cold by hand",
+            "body": "The cold membrane is clipped into the profile and hand-tensioned across the room, pulling drum-tight to a perfectly flat surface — with no heat involved."
+          },
+          {
+            "title": "Finish & detailing",
+            "body": "Edges, corners and any integrated lighting or inspection hatches are detailed. There is no drying time, so the room is clean and back in use immediately."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "A copy-ready clause for tender and bestek documents. Adjust the bracketed values to your project.",
+        "clause": "Supply and install a cold-tensioned polyester stretch ceiling system [STRETCH or approved equivalent]. The membrane shall be a knitted polyester textile, tensioned cold into a perimeter clip profile without the application of heat, forming a seamless, very matte surface up to 5.15 m wide. Reaction to fire shall be class B-s1,d0 to EN 13501-1 (class A2-s1,d0 where indicated). The system shall be washable and humidity-resistant, suitable for installation in occupied spaces, and carry a manufacturer warranty of [10] years. Colour: [RAL ____]. Where an acoustic performance is specified, provide a micro-perforated membrane with high-density absorber backing achieving sound absorption up to class A."
+      }
+    },
+    "pvc": {
+      "label": "PVC stretch ceiling",
+      "short": "PVC film",
+      "blurb": "Heat-mounted PVC film — fully recyclable, removable and seamless to 6.4 m.",
+      "fireSafety": {
+        "intro": "The PVC film is classified B-s1,d0 to EN 13501-1 — flame-retardant, with very limited smoke development and no flaming droplets.",
+        "rows": [
+          {
+            "k": "Classification",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Smoke production",
+            "v": "s1 — very limited"
+          },
+          {
+            "k": "Flaming droplets",
+            "v": "d0 — none"
+          },
+          {
+            "k": "Test standard",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "The classification B-s1,d0 means the film is flame-retardant (B), produces very little smoke (s1) and releases no burning droplets (d0), making it suitable for the great majority of residential and commercial interiors.",
+          "Because the film is removable, it can be unclipped and re-tensioned for access to the services above without affecting its fire performance.",
+          "Reaction-to-fire certificates and declarations of performance are available on request for your fire dossier."
+        ]
+      },
+      "installation": {
+        "intro": "PVC film is warmed and tensioned on install — a tired ceiling becomes a flawless new one in a single day, with the old surface left in place underneath.",
+        "steps": [
+          {
+            "title": "Survey & measure",
+            "body": "The room is measured and the film is high-frequency welded to size with a perimeter harpoon edge, made to the shape of the room and seamless up to 6.4 m wide."
+          },
+          {
+            "title": "Fit the perimeter profile",
+            "body": "A harpoon/clip profile is fixed around the room at the chosen height, following the wall line and any features."
+          },
+          {
+            "title": "Heat & tension",
+            "body": "The space is warmed with a heat source to soften the film; the harpoon edge is hooked into the profile and the film tensions taut and flat as it cools."
+          },
+          {
+            "title": "Finish & detailing",
+            "body": "Edges, corners, light fittings and inspection hatches are finished. The film wipes clean and is immediately serviceable."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "A copy-ready clause for tender and bestek documents. Adjust the bracketed values to your project.",
+        "clause": "Supply and install a heat-tensioned PVC film stretch ceiling system [STRETCH or approved equivalent]. The membrane shall be a calendered PVC film, welded to size and tensioned with a perimeter harpoon/clip profile, forming a seamless surface up to 6.4 m wide in [matte / satin / gloss / translucent] finish. Reaction to fire shall be class B-s1,d0 to EN 13501-1. The film shall be 100% recyclable, removable and re-tensionable for access to the void above, washable and humidity-resistant, and carry a manufacturer warranty of [10] years. Colour/finish: [____]. Where backlighting is specified, provide a translucent film over an LED field for even, hotspot-free illumination."
+      }
+    }
+  },
+  "techPage": {
+    "crumbTechnical": "Technical",
+    "viewProduct": "View the product",
+    "eyebrowTech": "Technical",
+    "datasheetCta": "Request the full datasheet",
+    "samplesCta": "Request physical samples",
+    "copyHint": "Select the text above to copy it into your specification document.",
+    "ctaTitle": "Need a hand with the specification?",
+    "ctaBody": "Our specialists help architects and contractors get the detail right — usually within two working days.",
+    "ctaBtn": "Ask our specialists",
+    "meta": {
+      "datasheet": "Technical datasheet for the {label} — specifications, classifications and downloads.",
+      "colours": "Colour and finish range for the {label}, with RAL references and sample requests.",
+      "fire-safety": "Reaction-to-fire classification for the {label} — B-s1,d0 and A2 options to EN 13501-1.",
+      "installation": "Step-by-step installation guide for the {label}.",
+      "specification": "Copy-ready specification (bestektekst) clause for the {label}, for tenders and dossiers.",
+      "faq": "Frequently asked questions about the {label}."
+    }
+  },
+  "prefab": {
+    "prefab-ceiling-unit": {
+      "name": "Prefab Structures",
+      "eyebrow": "Prefab structures",
+      "metaDescription": "Made-to-measure prefab carrier structures for stretch ceilings — aluminium, steel and wood beams, coving and height-difference details, cut, welded and powder-coated in-house and shipped worldwide.",
+      "intro": "Prefab carrier structures for stretch-ceiling projects — beams for raster and grid ceilings, coving for floating ceilings, and clean height-difference details. Every structure is made to measure to your drawings, entirely in-house in our own Polish production, and shipped worldwide to our dealers.",
+      "makeHeading": "What we build",
+      "make": [
+        {
+          "title": "Beams — raster & grid ceilings",
+          "body": "Pre-built beams that frame a stretch membrane into a raster or grid ceiling — repeatable modules, square to the millimetre and ready to mount on site."
+        },
+        {
+          "title": "Coving — floating ceilings",
+          "body": "Perimeter coving that lifts a stretch ceiling off the walls for a floating, shadow-gap effect, with a channel for concealed lighting where needed."
+        },
+        {
+          "title": "Height-difference finishes",
+          "body": "Stepped and multi-level carriers that take a stretch membrane across height changes cleanly — no messy build-up or guesswork on site."
+        }
+      ],
+      "materialsHeading": "Built in aluminium, steel or wood",
+      "materials": [
+        {
+          "title": "Aluminium",
+          "body": "Lightweight, rigid and corrosion-free — ideal for large spans, humid rooms and integrated lighting profiles."
+        },
+        {
+          "title": "Steel",
+          "body": "Maximum strength for large structures and heavy spans, powder-coated to suit the environment."
+        },
+        {
+          "title": "Wood (MDF / multiplex)",
+          "body": "MDF, multiplex and other boards machined to shape for warm, complex or curved forms."
+        }
+      ],
+      "production": {
+        "heading": "Made in-house, made to measure",
+        "body": "Every structure is engineered to your drawings and built entirely in-house in our own Polish production. Cutting, welding and powder-coating all happen under one roof — so we control quality and finish from raw profile to crated, ready-to-ship structure.",
+        "details": [
+          {
+            "title": "Cutting",
+            "body": "Profiles cut to precise lengths and angles, so the structure goes together square and true."
+          },
+          {
+            "title": "Welding",
+            "body": "Clean, strong welds — ground back and finished so the joints disappear into the structure."
+          },
+          {
+            "title": "Powder-coating",
+            "body": "A durable powder-coated finish in any RAL, applied in-house for a consistent, hard-wearing surface."
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "From drawing to finished structure",
+        "items": [
+          {
+            "title": "Raster grid ceiling",
+            "meta": "Aluminium",
+            "summary": "The technical drawing of a raster beam grid, next to the finished structure installed and membrane-finished on site."
+          },
+          {
+            "title": "Floating coving ceiling",
+            "meta": "Aluminium coving",
+            "summary": "A floating coving detail, from the production drawing to the installed, membrane-finished result."
+          }
+        ]
+      },
+      "worldwide": "Every structure is crated and shipped worldwide, so our dealers anywhere can offer the same clean, repeatable result — without a workshop of their own."
+    },
+    "prefab-lighting-elements": {
+      "name": "Prefab Lighting Elements",
+      "eyebrow": "Prefab lighting elements",
+      "metaDescription": "Prefab lighting elements built from an aluminium structure and finished with a STRETCH membrane — luminous coves, light lines and backlit features, engineered to your drawings, built in-house and shipped worldwide.",
+      "intro": "Pre-assembled lighting elements built from an aluminium structure and finished with our stretch membrane — luminous coves, light lines and backlit features. Engineered to your drawings, built in-house in our Polish production, and shipped worldwide to our dealers.",
+      "makeHeading": "What we build",
+      "make": [
+        {
+          "title": "Luminous coves",
+          "body": "Perimeter coves that wash a wall or ceiling with even, hidden light — built as a ready-to-mount aluminium element."
+        },
+        {
+          "title": "Light lines",
+          "body": "Crisp recessed light lines integrated into a stretch surface for clean, architectural lighting."
+        },
+        {
+          "title": "Backlit features",
+          "body": "Backlit panels and shapes finished with a translucent stretch membrane for an even, hotspot-free glow."
+        }
+      ],
+      "materialsHeading": "How they are built",
+      "materials": [
+        {
+          "title": "Aluminium structure",
+          "body": "A precise, rigid aluminium frame machined to your dimensions — the backbone of every lighting element."
+        },
+        {
+          "title": "LED & diffusion",
+          "body": "Dimmable LED, sized and placed for even output, with the membrane diffusing the light smoothly."
+        },
+        {
+          "title": "Stretch membrane finish",
+          "body": "A translucent or printed STRETCH membrane tensioned over the frame for a flawless luminous surface."
+        }
+      ],
+      "showcase": {
+        "heading": "From drawing to finished element",
+        "items": [
+          {
+            "title": "Luminous cove",
+            "meta": "Aluminium + membrane",
+            "summary": "The drawing of a perimeter light cove, next to the finished, glowing element installed on site."
+          },
+          {
+            "title": "Backlit feature",
+            "meta": "Aluminium + LED + membrane",
+            "summary": "A backlit feature panel, from production drawing to the even, hotspot-free finished result."
+          }
+        ]
+      },
+      "worldwide": "Like all our prefab elements, lighting features are crated and shipped worldwide — built and tested here, ready to install there."
+    }
+  },
+  "prefabPage": {
+    "discussCta": "Discuss a project",
+    "becomeDealer": "Become a dealer",
+    "technicalDrawing": "Technical drawing",
+    "installedFinished": "Installed & finished",
+    "shippedWorldwide": "Shipped worldwide",
+    "ctaTitle": "Have a project for us?",
+    "ctaBody": "Send us the drawings or the idea — we engineer the structure, build it in-house and ship it to you."
   }
 }

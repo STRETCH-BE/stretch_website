@@ -1472,5 +1472,906 @@
       ]
     },
     "comingSoon": "Bientôt disponible"
+  },
+  "modals": {
+    "quote": {
+      "title": "Demander un devis gratuit",
+      "subtitle": "Parlez-nous de votre projet et nous reviendrons vers vous avec un prix sur mesure.",
+      "submitLabel": "Envoyer la demande",
+      "sentTitle": "Demande bien reçue",
+      "sentMsg": "Merci — un spécialiste vous répondra sous deux jours ouvrés.",
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Prénom et nom"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+32 ..."
+        },
+        "rooms": {
+          "label": "Pièces",
+          "options": [
+            "1 pièce",
+            "2 pièces",
+            "3 pièces",
+            "4 pièces",
+            "Plus de 4"
+          ]
+        },
+        "timeline": {
+          "label": "Délai",
+          "options": [
+            "Dès que possible",
+            "D'ici 1 à 3 mois",
+            "D'ici 4 à 12 mois",
+            "Je me renseigne simplement"
+          ]
+        },
+        "message": {
+          "label": "Votre projet",
+          "placeholder": "Surface, localisation, toute info utile..."
+        }
+      }
+    },
+    "survey": {
+      "title": "Réserver une visite technique",
+      "subtitle": "Nous prenons les mesures et vous conseillons sur place — gratuit et sans engagement.",
+      "submitLabel": "Demander une visite",
+      "sentTitle": "Visite demandée",
+      "sentMsg": "Merci — nous vous contacterons pour convenir d'un moment qui vous arrange.",
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Prénom et nom"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+32 ..."
+        },
+        "address": {
+          "label": "Adresse",
+          "placeholder": "Rue, ville"
+        },
+        "preferredTime": {
+          "label": "Moment préféré",
+          "options": [
+            "Matin",
+            "Après-midi",
+            "Flexible"
+          ]
+        },
+        "rooms": {
+          "label": "Pièces",
+          "options": [
+            "1 pièce",
+            "2 pièces",
+            "3 pièces",
+            "4 pièces ou plus"
+          ]
+        }
+      }
+    },
+    "training": {
+      "title": "Réserver votre formation",
+      "subtitle": "Certification pratique à notre siège belge — laissez vos coordonnées et nous confirmerons.",
+      "submitLabel": "Réserver ma place",
+      "sentTitle": "Place demandée",
+      "sentMsg": "Merci — nous confirmerons votre place et vous enverrons les infos pratiques.",
+      "fields": {
+        "fullName": {
+          "label": "Nom complet",
+          "placeholder": "Prénom et nom"
+        },
+        "company": {
+          "label": "Société",
+          "placeholder": "Votre société"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Date préférée",
+          "options": [
+            "15–16 sept. 2026",
+            "06–08 oct. 2026",
+            "17–18 nov. 2026",
+            "Session sur mesure sur site"
+          ]
+        },
+        "attendees": {
+          "label": "Participants",
+          "options": [
+            "1 personne",
+            "2 personnes",
+            "3 personnes",
+            "4 personnes ou plus"
+          ]
+        }
+      }
+    },
+    "dates": {
+      "title": "Prochaines dates de formation",
+      "subtitle": "Choisissez une date et réservez votre place — petits groupes, premier arrivé, premier servi.",
+      "submitLabel": "Réserver ma place",
+      "sentTitle": "Place demandée",
+      "sentMsg": "Merci — nous confirmerons votre place et vous enverrons les infos pratiques.",
+      "fields": {
+        "fullName": {
+          "label": "Nom complet",
+          "placeholder": "Prénom et nom"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+32 ..."
+        },
+        "preferredDate": {
+          "label": "Date préférée",
+          "options": [
+            "15–16 sept. 2026",
+            "06–08 oct. 2026",
+            "17–18 nov. 2026",
+            "Session sur mesure sur site"
+          ]
+        }
+      }
+    },
+    "partner": {
+      "title": "Postuler pour devenir partenaire",
+      "subtitle": "Parlez-nous de votre société — nous étudions chaque candidature personnellement.",
+      "submitLabel": "Envoyer ma candidature",
+      "sentTitle": "Candidature bien reçue",
+      "sentMsg": "Merci — notre équipe partenaires l'étudiera et reviendra vers vous sous deux jours ouvrés.",
+      "fields": {
+        "company": {
+          "label": "Société",
+          "placeholder": "Votre société"
+        },
+        "contactName": {
+          "label": "Personne de contact",
+          "placeholder": "Prénom et nom"
+        },
+        "partnerType": {
+          "label": "Je souhaite devenir",
+          "options": [
+            "Revendeur — je vends, vous installez",
+            "Revendeur-installateur — je vends et j'installe moi-même",
+            "Je ne sais pas encore"
+          ]
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+32 ..."
+        },
+        "country": {
+          "label": "Pays",
+          "placeholder": "Belgique"
+        },
+        "activity": {
+          "label": "Activité",
+          "options": [
+            "Construction & rénovation",
+            "Aménagement intérieur",
+            "Cloisons sèches / plâtrerie",
+            "Électricité / éclairage",
+            "Autre"
+          ]
+        },
+        "notes": {
+          "label": "À propos de votre société",
+          "placeholder": "Taille de l'équipe, régions couvertes, activité actuelle..."
+        }
+      }
+    },
+    "call": {
+      "title": "Réserver un appel",
+      "subtitle": "Laissez votre numéro et un moment qui vous convient — nous vous rappellerons.",
+      "submitLabel": "Demander un rappel",
+      "sentTitle": "Rappel demandé",
+      "sentMsg": "Merci — nous vous appellerons au moment choisi.",
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Prénom et nom"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+32 ..."
+        },
+        "bestTime": {
+          "label": "Meilleur moment",
+          "options": [
+            "Matin",
+            "Après-midi",
+            "Début de soirée"
+          ]
+        },
+        "topic": {
+          "label": "Sujet",
+          "options": [
+            "Un devis",
+            "Partenariat",
+            "Formation",
+            "Question technique",
+            "Autre"
+          ]
+        }
+      }
+    },
+    "samples": {
+      "title": "Demander des échantillons de couleur",
+      "subtitle": "Commandez des échantillons physiques RAL / couleurs — gratuits pour les partenaires professionnels.",
+      "submitLabel": "Demander les échantillons",
+      "sentTitle": "Échantillons demandés",
+      "sentMsg": "Merci — nous vous enverrons vos échantillons et reviendrons vers vous sous deux jours ouvrés.",
+      "fields": {
+        "company": {
+          "label": "Société",
+          "placeholder": "Votre société"
+        },
+        "contactName": {
+          "label": "Personne de contact",
+          "placeholder": "Prénom et nom"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+32 ..."
+        },
+        "shippingAddress": {
+          "label": "Adresse de livraison",
+          "placeholder": "Rue, code postal, ville"
+        },
+        "productLine": {
+          "label": "Gamme",
+          "options": [
+            "Polyester",
+            "Film PVC",
+            "Acoustique",
+            "Je ne sais pas encore"
+          ]
+        },
+        "colours": {
+          "label": "Couleurs souhaitées",
+          "placeholder": "ex. Blanc, Anthracite, RAL personnalisé"
+        },
+        "notes": {
+          "label": "Remarques",
+          "placeholder": "Projet, quantités, toute info utile..."
+        }
+      }
+    },
+    "datasheet": {
+      "title": "Télécharger la fiche technique",
+      "subtitle": "Saisissez vos coordonnées et le téléchargement démarrera aussitôt. Nous les utilisons uniquement pour assurer le suivi de votre demande.",
+      "submitLabel": "Obtenir la fiche technique",
+      "sentTitle": "Voici votre fiche technique",
+      "sentMsg": "Le téléchargement devrait démarrer automatiquement — sinon, utilisez le bouton ci-dessous.",
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Prénom et nom"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+32 ..."
+        }
+      }
+    },
+    "trainingDates": [
+      "15–16 sept. 2026",
+      "06–08 oct. 2026",
+      "17–18 nov. 2026",
+      "Session sur mesure sur site"
+    ],
+    "trainingDateNotes": [
+      "Beveren-Waas · 4 places",
+      "Beveren-Waas · 6 places",
+      "Beveren-Waas · 8 places"
+    ],
+    "close": "Fermer",
+    "downloadDatasheet": "Télécharger la fiche technique",
+    "select": "Sélectionner…"
+  },
+  "faqPage": {
+    "items": [
+      {
+        "q": "Qu'est-ce qu'un plafond tendu ?",
+        "a": "Un plafond tendu est une membrane fine et sans soudure — polyester ou film PVC — tendue d'un mur à l'autre et clipsée dans un profilé périphérique discret. Il ressemble à un plafond peint parfaitement lisse, mais se pose sans plâtre, sans ponçage ni peinture, et cache tout ce qui se trouve au-dessus."
+      },
+      {
+        "q": "Combien de temps dure la pose ?",
+        "a": "La plupart des pièces sont terminées en une seule journée. Une équipe de deux personnes pose jusqu'à environ 50 m² par jour. Le polyester posé à froid ne demande aucun temps de séchage : la pièce est utilisable immédiatement."
+      },
+      {
+        "q": "Est-ce salissant ? Dois-je quitter les lieux ?",
+        "a": "Non. Pas de démolition, pas de poussière, pas de ponçage ni de peinture : la pose peut se faire dans une pièce meublée et occupée. Le plafond existant peut généralement rester en place dessous."
+      },
+      {
+        "q": "Quelle est la durée de vie d'un plafond tendu ?",
+        "a": "Nos systèmes sont garantis 25 ans. La surface est lavable et résistante à l'humidité ; elle ne se fissure pas, ne s'écaille pas, ne jaunit pas et ne demande jamais de nouvelle peinture."
+      },
+      {
+        "q": "Peut-il améliorer l'acoustique ?",
+        "a": "Oui. Une version micro-perforée doublée d'un absorbant atteint jusqu'à la classe A d'absorption acoustique, tout en restant identique à la finition standard — la réverbération et le bruit diminuent de façon mesurable."
+      },
+      {
+        "q": "Quelle est la largeur maximale sans soudure ?",
+        "a": "Jusqu'à 5.7 m sans soudure avec un film PVC, et jusqu'à 5.15 m avec du polyester. Les portées supérieures sont couvertes par une soudure quasi invisible ou par une ligne de profilé assumée."
+      },
+      {
+        "q": "Puis-je avoir un éclairage, un rétroéclairage ou un design imprimé ?",
+        "a": "Oui. Les films translucides diffusent un rétroéclairage homogène et dimmable, sans points chauds ; l'éclairage linéaire LED s'intègre dans la surface, et toute image — y compris un ciel étoilé — peut être imprimée bord à bord."
+      },
+      {
+        "q": "Combien coûte un plafond tendu ?",
+        "a": "Le prix dépend du projet : de la surface, du système, de la finition et des options d'éclairage ou d'acoustique. Demandez un devis gratuit et sans engagement — un spécialiste vous répond sous deux jours ouvrés."
+      },
+      {
+        "q": "Travaillez-vous avec des entrepreneurs et des revendeurs ?",
+        "a": "Oui. STRETCH est avant tout B2B : nous formons les installateurs à notre siège belge, fournissons des membranes sur mesure via un portail B2B et orientons les clients locaux vers des partenaires certifiés. Voir les pages Partenaires et Formation installateurs."
+      }
+    ],
+    "eyebrow": "FAQ",
+    "titleA": "Bonnes",
+    "titleB": "questions",
+    "lead": "Tout ce que l'on nous demande sur les plafonds tendus — pose, durée de vie, acoustique, portées et prix. Encore un doute ? Posez-nous la question.",
+    "asideKicker": "Encore une question ?",
+    "asideTitle": "Parlez à un spécialiste du plafond tendu.",
+    "asideBody": "Décrivez-nous votre pièce et nous vous répondons — gratuit et sans engagement.",
+    "asideCta": "Demander un devis gratuit"
+  },
+  "catalogFaqs": {
+    "polyester": [
+      {
+        "q": "Combien de temps prend la pose d'un plafond tendu en polyester ?",
+        "a": "La plupart des pièces sont terminées en une seule journée. Une équipe de deux personnes pose jusqu'à environ 50 m² par jour, et comme la membrane est tendue à froid, il n'y a aucun temps de séchage avant de réutiliser la pièce."
+      },
+      {
+        "q": "La pose à froid est-elle vraiment sans poussière ?",
+        "a": "Oui. Pas de démolition du plafond existant, pas de ponçage, pas de peinture. La membrane se clipse dans un profilé périphérique discret : la pose est assez propre pour se faire dans des pièces meublées et occupées."
+      },
+      {
+        "q": "Un plafond en polyester peut-il améliorer l'acoustique d'une pièce ?",
+        "a": "Une version micro-perforée doublée d'un absorbant haute densité atteint jusqu'à la classe A d'absorption acoustique. Elle est identique à la finition standard, mais réduit la réverbération et le bruit de façon mesurable."
+      },
+      {
+        "q": "Comment le nettoyer et l'entretenir ?",
+        "a": "Un simple coup de chiffon humide suffit. La surface est lavable et résistante à l'humidité, ne se fissure pas, ne s'écaille pas, ne jaunit pas et ne demande aucune remise en peinture pendant ses 25 ans de garantie."
+      }
+    ],
+    "pvc": [
+      {
+        "q": "Pourquoi un plafond tendu PVC est-il « 100 % recyclable » ?",
+        "a": "Le film est recyclable en matière première en fin de vie, et il est démontable pendant l'usage : vous pouvez le déclipser pour accéder aux techniques au-dessus et le retendre en quelques minutes, au lieu de démolir et remplacer un plafond en plaques de plâtre."
+      },
+      {
+        "q": "Quelle portée un plafond PVC peut-il couvrir sans soudure ?",
+        "a": "Jusqu'à 6.4 m sans soudure — la plus grande largeur de notre gamme. Les pièces plus grandes sont couvertes en soudant des lés avec une jonction quasi invisible ou en introduisant une ligne de profilé assumée."
+      },
+      {
+        "q": "Le film PVC convient-il aux salles de bains et pièces humides ?",
+        "a": "Oui. Il est entièrement lavable et résistant à l'humidité, ce qui en fait un choix apprécié pour les salles de bains, piscines et espaces bien-être, là où un plafond peint cloquerait ou se tacherait."
+      },
+      {
+        "q": "Peut-il être rétroéclairé ou imprimé ?",
+        "a": "Les films translucides diffusent un champ de LED de façon homogène, sans points chauds, et toute photo, tout motif ou ciel étoilé peut être imprimé bord à bord. Voir le système de plafond lumineux pour la gamme complète."
+      }
+    ],
+    "acoustic": [
+      {
+        "q": "De combien le système acoustique réduit-il réellement le bruit ?",
+        "a": "Avec son absorbant haute densité, il atteint jusqu'à la classe A d'absorption (la meilleure note), mesurée en valeurs αw. Concrètement, une pièce dure et résonnante devient un espace calme et confortable, sans aucun panneau acoustique visible."
+      },
+      {
+        "q": "La finition acoustique se distingue-t-elle d'un plafond normal ?",
+        "a": "Non. L'absorption se fait derrière une membrane micro-perforée : le plafond apparaît comme une seule surface impeccable et sans soudure — le traitement est invisible."
+      },
+      {
+        "q": "Peut-on cacher des enceintes derrière le plafond ?",
+        "a": "Oui. Les haut-parleurs peuvent être montés entièrement derrière le film tendu pour un son net, sans source visible — une option appréciée pour les home cinémas et les studios."
+      },
+      {
+        "q": "Où le système acoustique est-il le plus utile ?",
+        "a": "Partout où la réverbération pose problème : bureaux, restaurants, studios d'enregistrement, écoles, espaces de santé et home cinémas. Il se décline aussi en îlots suspendus et en panneaux muraux."
+      }
+    ],
+    "light": [
+      {
+        "q": "Un plafond rétroéclairé laisse-t-il voir les points des LED ?",
+        "a": "Non. Le film translucide recouvre un champ de LED et diffuse la lumière uniformément sur toute la surface : vous voyez une lueur douce et homogène plutôt que des points individuels."
+      },
+      {
+        "q": "Que peut-on imprimer sur le plafond ?",
+        "a": "Pratiquement toute image, motif ou texture en haute résolution — imprimé bord à bord, sans soudure visible. Un choix courant : le ciel étoilé en fibre optique pour les salles de cinéma et les chambres."
+      },
+      {
+        "q": "L'éclairage peut-il être dimmé ou changer de couleur ?",
+        "a": "Oui. Les plafonds rétroéclairés sont dimmables, et les options LED RGB permettent de changer la couleur et l'ambiance. L'éclairage linéaire LED peut aussi être encastré dans la membrane pour un effet architectural très net."
+      }
+    ],
+    "prefab": [
+      {
+        "q": "Qu'est-ce qu'un module de plafond tendu préfabriqué ?",
+        "a": "C'est un module de plafond complet — cadre et membrane tendue — assemblé et contrôlé dans notre atelier belge, puis livré prêt à clipser dans un cadre périphérique sur chantier."
+      },
+      {
+        "q": "Pourquoi choisir le préfabriqué plutôt qu'une pose sur site ?",
+        "a": "Les modules préfabriqués conviennent à la construction modulaire et aux pièces répétitives comme les salles de bains d'hôtel et les salles de bains préfabriquées : l'essentiel du travail se fait hors site, la pose demande donc un minimum de corps de métier et de temps."
+      },
+      {
+        "q": "Comment accéder aux techniques au-dessus d'un plafond préfabriqué ?",
+        "a": "Chaque module peut intégrer une trappe de visite discrète, pour que les conduites et techniques au-dessus restent accessibles sans casser la ligne épurée du plafond."
+      }
+    ],
+    "starry": [
+      {
+        "q": "Combien d'étoiles un plafond ciel étoilé peut-il compter ?",
+        "a": "D'environ 150 points pour un effet subtil à plus d'un millier pour un ciel dense et spectaculaire. La densité se choisit selon la taille de la pièce et l'ambiance recherchée."
+      },
+      {
+        "q": "Les étoiles en fibre optique dégagent-elles de la chaleur ?",
+        "a": "Non. Toutes les fibres sont alimentées par une seule source LED déportée : les points restent parfaitement froids — seule la lumière voyage dans la fibre."
+      },
+      {
+        "q": "Les étoiles peuvent-elles scintiller ou changer de couleur ?",
+        "a": "Oui. Une roue de scintillement en option fait miroiter les étoiles, les sources RGB permettent de changer de couleur, et des effets d'étoiles filantes peuvent ajouter du mouvement. Le tout est dimmable."
+      }
+    ],
+    "hatch": [
+      {
+        "q": "Peut-on accéder aux techniques derrière un plafond tendu ?",
+        "a": "Oui — une trappe de visite intégrée offre un accès discret et réouvrable aux vannes, boîtes de dérivation et raccords au-dessus de la membrane : il n'est jamais nécessaire de découper ou de remplacer le plafond pour les atteindre."
+      },
+      {
+        "q": "La trappe est-elle visible dans le plafond ?",
+        "a": "À peine. Le cadre est intégré dans la finition périphérique et habillé de la même membrane : il se fond dans la surface et ne se remarque que si on le cherche."
+      },
+      {
+        "q": "Peut-on ajouter une trappe à un plafond tendu existant ?",
+        "a": "Dans la plupart des cas, oui. Les trappes peuvent être installées après coup dans un plafond existant, dimensionnées et positionnées selon la technique qui doit rester accessible derrière."
+      }
+    ],
+    "print": [
+      {
+        "q": "Quelle qualité d'image faut-il pour un plafond imprimé ?",
+        "a": "Un fichier haute résolution donne le meilleur résultat. Nous vérifions et calibrons les couleurs de votre visuel, le mettons à l'échelle du plafond et réalisons une épreuve avant impression, pour que le résultat final corresponde à votre attente."
+      },
+      {
+        "q": "Un plafond imprimé peut-il être rétroéclairé ?",
+        "a": "Oui. Imprimée sur un film translucide posé sur un champ de LED, l'image est rétroéclairée uniformément, sans points chauds — idéal pour les ciels et les visuels d'exception."
+      },
+      {
+        "q": "Y a-t-il une soudure visible sur les grands formats ?",
+        "a": "Non. L'image est imprimée bord à bord sur une seule membrane sans soudure jusqu'à 5.7 m de large : aucune ligne de panneau ne traverse votre visuel."
+      }
+    ]
+  },
+  "applications": {
+    "living-cinema": {
+      "name": "Salons & home cinéma",
+      "shortName": "Salon & cinéma",
+      "eyebrow": "Salon & cinéma",
+      "metaDescription": "Plafonds tendus pour salons et home cinémas — finition sans soudure, éclairage intégré, ciels étoilés en fibre optique et meilleure acoustique, posés en une journée.",
+      "intro": "Un plafond impeccable donne le ton d'une pièce de vie. STRETCH vous offre une finition parfaitement lisse et sans soudure — avec éclairage caché, ciel étoilé en fibre optique pour le cinéma et confort acoustique, le tout posé à froid en une seule journée.",
+      "benefits": [
+        {
+          "title": "Une finition parfaite, sans soudure",
+          "body": "Ni fissures, ni raccords, ni peinture à refaire — une membrane lisse tendue d'un mur à l'autre, en mat profond ou dans la couleur de votre choix."
+        },
+        {
+          "title": "Une ambiance digne du cinéma",
+          "body": "Ajoutez un ciel étoilé en fibre optique, des lignes LED intégrées et un rétroéclairage dimmable pour créer l'ambiance parfaite de vos soirées cinéma."
+        },
+        {
+          "title": "Des pièces plus calmes et silencieuses",
+          "body": "Une membrane acoustique dompte l'écho des espaces de vie ouverts : conversations et sons paraissent plus chaleureux et plus clairs."
+        }
+      ]
+    },
+    "bathroom-kitchen": {
+      "name": "Salles de bains & cuisines",
+      "shortName": "Salle de bains & cuisine",
+      "eyebrow": "Salle de bains & cuisine",
+      "metaDescription": "Plafonds tendus résistants à l'humidité pour salles de bains et cuisines — étanches, anti-moisissures et lavables, avec éclairage intégré, posés en une journée.",
+      "intro": "Salles de bains et cuisines mettent les plafonds à rude épreuve. Une membrane STRETCH est étanche, anti-moisissures et lavable — elle dissimule tuyauteries et gaines derrière une surface impeccable, avec spots et extraction intégrés proprement.",
+      "benefits": [
+        {
+          "title": "Résistant à l'humidité et à l'eau",
+          "body": "La membrane ignore vapeur et éclaboussures : elle ne s'écaille pas, ne se tache pas et ne moisit pas comme un plafond peint ou plâtré."
+        },
+        {
+          "title": "Une surface lavable",
+          "body": "Un simple coup d'éponge lui rend son aspect neuf — idéal au-dessus des douches, baignoires et zones de cuisson."
+        },
+        {
+          "title": "Des équipements intégrés proprement",
+          "body": "Spots, enceintes, extraction et trappes de visite s'intègrent tous dans la surface, en dissimulant les tuyauteries au-dessus."
+        }
+      ]
+    },
+    "office-retail": {
+      "name": "Bureaux & commerces",
+      "shortName": "Bureau & commerce",
+      "eyebrow": "Bureau & commerce",
+      "metaDescription": "Plafonds tendus pour bureaux, commerces et horeca — acoustique de classe A, plafonds imprimés à votre image et éclairage intégré, posés vite et sans perturbation.",
+      "intro": "Les espaces commerciaux doivent avoir de l'allure et bien sonner. STRETCH apporte un confort acoustique de classe A, des plafonds imprimés à votre image et un éclairage intégré — posés à froid et rapidement, avec un minimum de perturbation pour un espace en activité.",
+      "benefits": [
+        {
+          "title": "Confort acoustique de classe A",
+          "body": "Un plafond acoustique micro-perforé réduit la réverbération dans les bureaux ouverts, salles de réunion et restaurants, pour une parole plus intelligible."
+        },
+        {
+          "title": "Des plafonds imprimés à votre image",
+          "body": "Imprimez n'importe quelle image, motif ou visuel de marque bord à bord — un élément fort pour le retail, les showrooms et l'horeca."
+        },
+        {
+          "title": "Une pose rapide, sans perturbation",
+          "body": "La pose à froid signifie ni poussière ni désordre, la plupart des pièces étant terminées en une journée — idéal pour des locaux occupés."
+        }
+      ]
+    }
+  },
+  "appPage": {
+    "crumbApplications": "Applications",
+    "quoteCta": "Demander un devis gratuit",
+    "seeProjects": "Voir les projets",
+    "recommended": "Solutions recommandées",
+    "selectedWork": "Réalisations choisies",
+    "explore": "Explorer",
+    "ctaTitle": "Vous planifiez un projet {name} ?",
+    "ctaBody": "Parlez-nous de votre espace et nous vous recommanderons le bon système — gratuit et sans engagement."
+  },
+  "projectCards": {
+    "cats": {
+      "Acoustic": "Acoustique",
+      "Office": "Bureau",
+      "Commercial": "Commercial",
+      "Retail": "Retail",
+      "Bathroom": "Salle de bains",
+      "Light & Print": "Lumière & impression",
+      "Living room": "Salon",
+      "Home cinema": "Home cinéma"
+    },
+    "metas": {
+      "da-tweekaz-studio": "Pays-Bas · Studio d'enregistrement",
+      "mark-with-a-k": "Belgique · Studio son",
+      "notary-ampe-anthony": "Kruibeke · Bureau acoustique",
+      "bnp-paribas-fortis": "Bruxelles · Siège bancaire",
+      "van-der-valk-beveren": "Beveren · Salle événementielle d'hôtel",
+      "johnson-and-johnson": "Limerick, IE · Site R&D pharmaceutique",
+      "polette-eyewear": "Anvers · Concept store retail",
+      "citizenm-hotel": "USA & Europe · Salles de bains préfabriquées",
+      "london-chapel": "Londres, UK · Plafond rétroéclairé",
+      "private-villa-knokke": "Knokke · Séjour ouvert",
+      "home-cinema-ghent": "Gand · Ciel étoilé + acoustique",
+      "city-penthouse-antwerp": "Anvers · Salon",
+      "wellness-spa-bruges": "Bruges · Salle de bains spa",
+      "rue-perree-paris": "Paris · Plafond de galerie rétroéclairé"
+    }
+  },
+  "technical": {
+    "topics": [
+      {
+        "label": "Fiche technique",
+        "sub": "Caractéristiques & téléchargement"
+      },
+      {
+        "label": "Couleurs & finitions",
+        "sub": "Gamme complète"
+      },
+      {
+        "label": "Sécurité incendie",
+        "sub": "Réaction au feu & A2"
+      },
+      {
+        "label": "Guide de pose",
+        "sub": "Étape par étape"
+      },
+      {
+        "label": "Texte de prescription",
+        "sub": "Pour les appels d'offres"
+      },
+      {
+        "label": "FAQ",
+        "sub": "Questions fréquentes"
+      }
+    ],
+    "polyester": {
+      "label": "Plafond tendu polyester",
+      "short": "Polyester",
+      "blurb": "Membrane polyester posée à froid — un plafond très mat et sans soudure, tendu à la main.",
+      "fireSafety": {
+        "intro": "La membrane polyester est classée B-s1,d0 selon EN 13501-1 — ignifuge, avec une production de fumée très limitée et sans gouttelettes enflammées. Une version incombustible A2-s1,d0 est disponible là où s'appliquent les exigences incendie les plus strictes.",
+        "rows": [
+          {
+            "k": "Classement standard",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Option incombustible",
+            "v": "A2-s1,d0"
+          },
+          {
+            "k": "Production de fumée",
+            "v": "s1 — très limitée"
+          },
+          {
+            "k": "Gouttelettes enflammées",
+            "v": "d0 — aucune"
+          },
+          {
+            "k": "Norme d'essai",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Le classement B-s1,d0 signifie que la membrane est ignifuge (B), produit très peu de fumée (s1) et ne libère aucune gouttelette enflammée (d0) — la combinaison exigée par la plupart des intérieurs publics et commerciaux.",
+          "Pour les voies d'évacuation, les immeubles de grande hauteur, les hôpitaux et les autres projets où un revêtement incombustible est prescrit, la version A2-s1,d0 répond à cette exigence supérieure tout en conservant le même aspect sans soudure et très mat.",
+          "Les certificats de réaction au feu et les déclarations de performances sont disponibles sur demande pour votre dossier incendie."
+        ]
+      },
+      "installation": {
+        "intro": "Le polyester se tend à froid — sans canon à chaleur, sans temps de séchage, sans émanations. Une équipe de deux personnes termine généralement une pièce en une seule journée, même dans des espaces meublés et occupés.",
+        "steps": [
+          {
+            "title": "Relevé & métré",
+            "body": "La pièce est mesurée au laser et la membrane est découpée et assemblée en un seul panneau sans soudure jusqu'à 5.15 m de large, aux dimensions exactes de la pièce."
+          },
+          {
+            "title": "Pose du profilé périphérique",
+            "body": "Un profilé à clipser discret est fixé au mur ou au plafond à la hauteur choisie, en suivant les lignes droites, les courbes et les angles."
+          },
+          {
+            "title": "Tension à froid, à la main",
+            "body": "La membrane froide est clipsée dans le profilé et tendue à la main d'un bout à l'autre de la pièce, jusqu'à une surface parfaitement plane, tendue comme un tambour — sans aucun apport de chaleur."
+          },
+          {
+            "title": "Finitions & détails",
+            "body": "Les bords, les angles et les éventuels éclairages intégrés ou trappes de visite sont soignés. Aucun temps de séchage : la pièce reste propre et immédiatement utilisable."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Une clause prête à copier pour vos cahiers des charges et appels d'offres. Adaptez les valeurs entre crochets à votre projet.",
+        "clause": "Fourniture et pose d'un système de plafond tendu polyester tendu à froid [STRETCH ou équivalent approuvé]. La membrane sera un textile polyester tricoté, tendu à froid dans un profilé périphérique à clipser sans apport de chaleur, formant une surface sans soudure et très mate jusqu'à 5.15 m de large. La réaction au feu sera de classe B-s1,d0 selon EN 13501-1 (classe A2-s1,d0 si indiqué). Le système sera lavable et résistant à l'humidité, adapté à une pose en locaux occupés, et couvert par une garantie fabricant de [10] ans. Couleur : [RAL ____]. Lorsqu'une performance acoustique est prescrite, prévoir une membrane micro-perforée avec dossier absorbant haute densité offrant une absorption acoustique jusqu'à la classe A."
+      }
+    },
+    "pvc": {
+      "label": "Plafond tendu PVC",
+      "short": "Film PVC",
+      "blurb": "Film PVC posé à chaud — entièrement recyclable, démontable et sans soudure jusqu'à 6.4 m.",
+      "fireSafety": {
+        "intro": "Le film PVC est classé B-s1,d0 selon EN 13501-1 — ignifuge, avec un dégagement de fumée très limité et sans gouttelettes enflammées.",
+        "rows": [
+          {
+            "k": "Classement",
+            "v": "B-s1,d0"
+          },
+          {
+            "k": "Production de fumée",
+            "v": "s1 — très limitée"
+          },
+          {
+            "k": "Gouttelettes enflammées",
+            "v": "d0 — aucune"
+          },
+          {
+            "k": "Norme d'essai",
+            "v": "EN 13501-1"
+          }
+        ],
+        "body": [
+          "Le classement B-s1,d0 signifie que le film est ignifuge (B), produit très peu de fumée (s1) et ne libère aucune gouttelette enflammée (d0), ce qui le rend adapté à la grande majorité des intérieurs résidentiels et commerciaux.",
+          "Le film étant démontable, il peut être déclipsé puis retendu pour accéder aux réseaux situés au-dessus, sans altérer ses performances au feu.",
+          "Les certificats de réaction au feu et les déclarations de performances sont disponibles sur demande pour votre dossier incendie."
+        ]
+      },
+      "installation": {
+        "intro": "Le film PVC est chauffé et tendu lors de la pose — un plafond fatigué devient un plafond neuf et impeccable en une seule journée, l'ancienne surface restant en place au-dessus.",
+        "steps": [
+          {
+            "title": "Relevé & métré",
+            "body": "La pièce est mesurée et le film est soudé à dimension par haute fréquence avec un bord harpon périphérique, réalisé à la forme de la pièce et sans soudure jusqu'à 6.4 m de large."
+          },
+          {
+            "title": "Pose du profilé périphérique",
+            "body": "Un profilé harpon/à clipser est fixé tout autour de la pièce à la hauteur choisie, en suivant la ligne des murs et les éventuelles particularités."
+          },
+          {
+            "title": "Chauffe & mise en tension",
+            "body": "L'espace est chauffé à l'aide d'une source de chaleur pour assouplir le film ; le bord harpon est accroché dans le profilé et le film se tend, net et plan, en refroidissant."
+          },
+          {
+            "title": "Finitions & détails",
+            "body": "Bords, angles, luminaires et trappes de visite sont finalisés. Le film se nettoie d'un simple coup d'éponge et est immédiatement utilisable."
+          }
+        ]
+      },
+      "specification": {
+        "intro": "Une clause prête à copier pour vos cahiers des charges et appels d'offres. Adaptez les valeurs entre crochets à votre projet.",
+        "clause": "Fourniture et pose d'un système de plafond tendu en film PVC tendu à chaud [STRETCH ou équivalent approuvé]. La membrane sera un film PVC calandré, soudé à dimension et tendu dans un profilé périphérique harpon/à clipser, formant une surface sans soudure jusqu'à 6.4 m de large en finition [mate / satinée / laquée / translucide]. La réaction au feu sera de classe B-s1,d0 selon EN 13501-1. Le film sera 100% recyclable, démontable et pourra être retendu pour l'accès au plénum ; il sera lavable et résistant à l'humidité, et couvert par une garantie fabricant de [10] ans. Couleur/finition : [____]. Lorsqu'un rétroéclairage est prescrit, prévoir un film translucide posé devant un champ de LED pour un éclairage homogène, sans points chauds."
+      }
+    }
+  },
+  "techPage": {
+    "crumbTechnical": "Technique",
+    "viewProduct": "Voir le produit",
+    "eyebrowTech": "Technique",
+    "datasheetCta": "Demander la fiche technique complète",
+    "samplesCta": "Demander des échantillons physiques",
+    "copyHint": "Sélectionnez le texte ci-dessus pour le copier dans votre document de prescription.",
+    "ctaTitle": "Besoin d'aide pour la prescription ?",
+    "ctaBody": "Nos spécialistes aident architectes et entrepreneurs à soigner chaque détail — généralement sous deux jours ouvrés.",
+    "ctaBtn": "Demander à nos spécialistes",
+    "meta": {
+      "datasheet": "Fiche technique du {label} — caractéristiques, classements et téléchargements.",
+      "colours": "Gamme de couleurs et de finitions du {label}, avec références RAL et demande d'échantillons.",
+      "fire-safety": "Classement de réaction au feu du {label} — options B-s1,d0 et A2 selon EN 13501-1.",
+      "installation": "Guide de pose étape par étape du {label}.",
+      "specification": "Texte de prescription prêt à copier pour le {label}, pour appels d'offres et dossiers.",
+      "faq": "Questions fréquentes sur le {label}."
+    }
+  },
+  "prefab": {
+    "prefab-ceiling-unit": {
+      "name": "Structures préfabriquées",
+      "eyebrow": "Structures préfabriquées",
+      "metaDescription": "Structures porteuses préfabriquées sur mesure pour plafonds tendus — poutres en aluminium, acier et bois, corniches et détails de différence de hauteur, découpées, soudées et thermolaquées en interne, expédiées dans le monde entier.",
+      "intro": "Des structures porteuses préfabriquées pour vos projets de plafonds tendus — poutres pour plafonds à caissons et à trame, corniches pour plafonds flottants et détails soignés de différence de hauteur. Chaque structure est fabriquée sur mesure d'après vos plans, entièrement en interne dans notre propre production polonaise, et expédiée dans le monde entier à nos revendeurs.",
+      "makeHeading": "Ce que nous fabriquons",
+      "make": [
+        {
+          "title": "Poutres — plafonds à caissons & à trame",
+          "body": "Des poutres préassemblées qui encadrent une membrane tendue en plafond à caissons ou à trame — des modules répétables, d'équerre au millimètre près et prêts à monter sur chantier."
+        },
+        {
+          "title": "Corniches — plafonds flottants",
+          "body": "Des corniches périphériques qui détachent le plafond tendu des murs pour un effet flottant à joint creux, avec si besoin un canal pour l'éclairage dissimulé."
+        },
+        {
+          "title": "Finitions de différence de hauteur",
+          "body": "Des supports en gradins et multi-niveaux qui font franchir proprement les changements de hauteur à la membrane tendue — sans bricolage ni approximation sur chantier."
+        }
+      ],
+      "materialsHeading": "Fabriquées en aluminium, acier ou bois",
+      "materials": [
+        {
+          "title": "Aluminium",
+          "body": "Léger, rigide et inoxydable — idéal pour les grandes portées, les pièces humides et les profilés d'éclairage intégrés."
+        },
+        {
+          "title": "Acier",
+          "body": "Une résistance maximale pour les grandes structures et les portées lourdes, thermolaqué selon l'environnement."
+        },
+        {
+          "title": "Bois (MDF / multiplex)",
+          "body": "MDF, multiplex et autres panneaux usinés en forme pour des volumes chaleureux, complexes ou courbes."
+        }
+      ],
+      "production": {
+        "heading": "Fabriquées en interne, fabriquées sur mesure",
+        "body": "Chaque structure est étudiée d'après vos plans et fabriquée entièrement en interne dans notre propre production polonaise. Découpe, soudure et thermolaquage se font sous un même toit — nous maîtrisons ainsi la qualité et la finition, du profilé brut à la structure en caisse, prête à expédier.",
+        "details": [
+          {
+            "title": "Découpe",
+            "body": "Des profilés coupés à longueurs et angles précis, pour une structure qui s'assemble d'équerre et sans jeu."
+          },
+          {
+            "title": "Soudure",
+            "body": "Des soudures nettes et solides — meulées et finies pour que les jonctions disparaissent dans la structure."
+          },
+          {
+            "title": "Thermolaquage",
+            "body": "Une finition thermolaquée durable dans tout RAL, appliquée en interne pour une surface homogène et résistante."
+          }
+        ]
+      },
+      "showcase": {
+        "heading": "Du plan à la structure finie",
+        "items": [
+          {
+            "title": "Plafond à trame",
+            "meta": "Aluminium",
+            "summary": "Le plan technique d'une trame de poutres, à côté de la structure finie, posée et habillée de sa membrane sur chantier."
+          },
+          {
+            "title": "Plafond flottant à corniche",
+            "meta": "Corniche aluminium",
+            "summary": "Un détail de corniche flottante, du plan de production au résultat posé et fini avec sa membrane."
+          }
+        ]
+      },
+      "worldwide": "Chaque structure est mise en caisse et expédiée dans le monde entier, pour que nos revendeurs, où qu'ils soient, offrent le même résultat net et répétable — sans atelier à eux."
+    },
+    "prefab-lighting-elements": {
+      "name": "Éléments lumineux préfabriqués",
+      "eyebrow": "Éléments lumineux préfabriqués",
+      "metaDescription": "Éléments lumineux préfabriqués sur structure aluminium, finis avec une membrane STRETCH — corniches lumineuses, lignes de lumière et éléments rétroéclairés, étudiés d'après vos plans, fabriqués en interne et expédiés dans le monde entier.",
+      "intro": "Des éléments lumineux préassemblés, construits sur une structure aluminium et finis avec notre membrane tendue — corniches lumineuses, lignes de lumière et éléments rétroéclairés. Étudiés d'après vos plans, fabriqués en interne dans notre production polonaise et expédiés dans le monde entier à nos revendeurs.",
+      "makeHeading": "Ce que nous fabriquons",
+      "make": [
+        {
+          "title": "Corniches lumineuses",
+          "body": "Des corniches périphériques qui baignent un mur ou un plafond d'une lumière homogène et dissimulée — construites comme un élément aluminium prêt à monter."
+        },
+        {
+          "title": "Lignes de lumière",
+          "body": "Des lignes de lumière encastrées et nettes, intégrées dans une surface tendue pour un éclairage architectural épuré."
+        },
+        {
+          "title": "Éléments rétroéclairés",
+          "body": "Des panneaux et formes rétroéclairés, finis avec une membrane tendue translucide pour une lueur homogène, sans points chauds."
+        }
+      ],
+      "materialsHeading": "Comment ils sont fabriqués",
+      "materials": [
+        {
+          "title": "Structure aluminium",
+          "body": "Un cadre aluminium précis et rigide, usiné à vos dimensions — l'ossature de chaque élément lumineux."
+        },
+        {
+          "title": "LED & diffusion",
+          "body": "Des LED dimmables, dimensionnées et positionnées pour un flux homogène, la membrane diffusant la lumière en douceur."
+        },
+        {
+          "title": "Finition membrane tendue",
+          "body": "Une membrane STRETCH translucide ou imprimée, tendue sur le cadre pour une surface lumineuse impeccable."
+        }
+      ],
+      "showcase": {
+        "heading": "Du plan à l'élément fini",
+        "items": [
+          {
+            "title": "Corniche lumineuse",
+            "meta": "Aluminium + membrane",
+            "summary": "Le plan d'une corniche lumineuse périphérique, à côté de l'élément fini et allumé, posé sur chantier."
+          },
+          {
+            "title": "Élément rétroéclairé",
+            "meta": "Aluminium + LED + membrane",
+            "summary": "Un panneau rétroéclairé, du plan de production au résultat fini, homogène et sans points chauds."
+          }
+        ]
+      },
+      "worldwide": "Comme tous nos éléments préfabriqués, les éléments lumineux sont mis en caisse et expédiés dans le monde entier — fabriqués et testés ici, prêts à poser là-bas."
+    }
+  },
+  "prefabPage": {
+    "discussCta": "Discuter d'un projet",
+    "becomeDealer": "Devenir revendeur",
+    "technicalDrawing": "Plan technique",
+    "installedFinished": "Posé & fini",
+    "shippedWorldwide": "Expédié dans le monde entier",
+    "ctaTitle": "Un projet pour nous ?",
+    "ctaBody": "Envoyez-nous les plans ou l'idée — nous étudions la structure, la fabriquons en interne et vous l'expédions."
   }
 }
