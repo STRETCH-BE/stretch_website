@@ -1,3 +1,40 @@
+## 2026-07-26 — Prefab Structures page: hero title fix + first real photos
+
+**What changed**
+
+- **Hero title no longer runs behind the photo.** The prefab pages used the
+  full-page `.h1` scale (up to 142px) inside a half-width hero column, so
+  "PREFAB STRUCTURES" (and worse, long localized names) bled under the hero
+  image. `PrefabPage` now sizes the hero `<h1>` per locale (`H1_SIZE` map,
+  largest size at which that locale's longest word still fits the column at any
+  viewport — measured in Archivo wdth 125), with `text-wrap: balance` +
+  hyphenation/wrap safety nets. Verified headless across all 12 locales × 7
+  viewport widths × both prefab pages: zero overflow / overlap / mid-word
+  breaks. (Done in TS rather than `:lang()` CSS because the currently deployed
+  tree still nests two `<html>` elements — the outer `lang="en"` would defeat
+  `:lang()`; see the 11 Jul SEO-fix notes.)
+- **Production photos added** (`public/images/prefab/`): laser cutting, laser
+  welding and powder-coating photos now fill the three "Made in-house" detail
+  slots (`detail-cutting.jpg`, `detail-welding.jpg`, `detail-powdercoating.jpg`).
+- **"Floating coving ceiling" showcase is now the BelOrta case** (Sint-Katelijne-
+  Waver): production drawing SP-2025-11-45 (A1 sheet rendered from the AutoCAD
+  PDF to `show-coving-drawing.png`), the installed round coving
+  (`show-coving-result.jpg`) and the finished space with the red acoustic
+  cylinders (`show-coving-result2.jpg`). `PrefabShowcase` gained an optional
+  `result2` slot — when present the showcase renders a 3-up row (drawing /
+  installed / finished space) with a new numbered caption. New i18n key
+  `prefabPage.finishedSpace` added to all 12 locales.
+- **"Raster grid ceiling" showcase** keeps its placeholders — photos still to
+  come from Michael.
+- **Removed `src/app/sitemap.ts`** (route collision): it shadowed the host-aware
+  `src/app/sitemap.xml/route.ts` and made `next dev`/`next build` fail outright
+  ("same specificity as an optional catch-all route"). This re-applies part of
+  the 11 Jul SEO fix (commit 107a835) that this tree was missing.
+
+**Verified:** `tsc --noEmit` clean; `next build` (fonts stubbed offline) OK;
+Playwright screenshots of hero (en/pl/sv/is, desktop+mobile), production grid
+and 3-up showcase all render correctly.
+
 ## 2026-07-09 — Ceiling designer in the portal (pro area)
 
 **What was built** 
