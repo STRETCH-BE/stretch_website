@@ -5,12 +5,32 @@
 // Section numbers are computed from which optional sections are present.
 // Driven by src/lib/prefab.ts. No datasheet / colour swatches / "where it's used".
 import { Link } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, Globe } from 'lucide-react';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Eyebrow from '@/components/ui/Eyebrow';
 import type { PrefabPageData } from '@/lib/prefab';
+
+// Hero title sizes per locale — the largest size at which that locale's longest
+// word (measured in Archivo wdth 125, upper-case) still fits the hero column at
+// every viewport, so no locale ever mid-word-breaks or bleeds behind the photo.
+// (Done per locale in TS rather than :lang() CSS so it works regardless of the
+// <html lang> value.) Keyed by app locale; anything missing gets the default.
+const H1_SIZE: Record<string, string> = {
+  be: 'clamp(27px, 3.4vw, 50px)', // "lichtelementen"
+  nl: 'clamp(27px, 3.4vw, 50px)',
+  fr: 'clamp(28px, 3.7vw, 54px)', // "préfabriquées"
+  es: 'clamp(28px, 3.7vw, 54px)', // "prefabricadas"
+  pt: 'clamp(27px, 3.6vw, 52px)', // "pré-fabricadas"
+  de: 'clamp(26px, 3.4vw, 50px)', // "Lichtelemente"
+  da: 'clamp(28px, 3.8vw, 55px)', // "lyselementer"
+  no: 'clamp(28px, 3.8vw, 55px)',
+  pl: 'clamp(26px, 3.2vw, 47px)', // "prefabrykowane"
+  is: 'clamp(25px, 3.2vw, 46px)', // "lýsingareiningar"
+  sv: 'clamp(23px, 2.9vw, 42px)', // "Prefabstrukturer"
+};
+const H1_SIZE_DEFAULT = 'clamp(32px, 4.6vw, 64px)';
 
 function SectionHead({ n, label }: { n: string; label: string }) {
   return (
@@ -24,6 +44,8 @@ function SectionHead({ n, label }: { n: string; label: string }) {
 export default function PrefabPage({ data }: { data: PrefabPageData }) {
   const t = useTranslations('prefabPage');
   const tp = useTranslations('productPage');
+  const locale = useLocale();
+  const h1Size = H1_SIZE[locale] ?? H1_SIZE_DEFAULT;
   // Dynamic section numbering — make + materials always present.
   const order: string[] = ['make', 'materials'];
   if (data.production) order.push('production');
@@ -48,7 +70,7 @@ export default function PrefabPage({ data }: { data: PrefabPageData }) {
         <div className="pf-hero">
           <div style={{ minWidth: 0 }}>
             <Eyebrow num="01" label={data.eyebrow} />
-            <h1 className="h1" style={{ margin: '0 0 clamp(16px,2vw,24px)' }}>{data.name}</h1>
+            <h1 className="h1" style={{ fontSize: h1Size, margin: '0 0 clamp(16px,2vw,24px)' }}>{data.name}</h1>
             <p className="lead" style={{ maxWidth: 500, margin: '0 0 28px' }}>{data.intro}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
               <ModalButton type="quote" source={`prefab_${data.slug}`} trackQuote className="btn btn--primary">
@@ -124,19 +146,27 @@ export default function PrefabPage({ data }: { data: PrefabPageData }) {
                   {s.meta && <span className="pf-show-meta">{s.meta}</span>}
                   <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-muted)', margin: '10px 0 0', maxWidth: 640 }}>{s.summary}</p>
                 </div>
-                <div className="pf-show-imgs">
+                <div className={`pf-show-imgs${s.result2 ? ' pf-show-imgs--3' : ''}`}>
                   <figure style={{ margin: 0 }}>
-                    <Placeholder label={`${s.title} — technical drawing`} src={s.drawing} alt={`${s.title} — technical drawing`} sizes="(max-width: 860px) 100vw, 50vw" light ratio="4/3" />
+                    <Placeholder label={`${s.title} — technical drawing`} src={s.drawing} alt={`${s.title} — technical drawing`} sizes={s.result2 ? '(max-width: 860px) 100vw, 33vw' : '(max-width: 860px) 100vw, 50vw'} light ratio="4/3" />
                     <figcaption style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--text-faint-2)', marginTop: 10 }}>
                       <span style={{ color: 'var(--red)', marginRight: 7 }}>01</span>{t('technicalDrawing')}
                     </figcaption>
                   </figure>
                   <figure style={{ margin: 0 }}>
-                    <Placeholder label={`${s.title} — installed & finished`} src={s.result} alt={`${s.title} — installed and finished`} sizes="(max-width: 860px) 100vw, 50vw" ratio="4/3" />
+                    <Placeholder label={`${s.title} — installed & finished`} src={s.result} alt={`${s.title} — installed and finished`} sizes={s.result2 ? '(max-width: 860px) 100vw, 33vw' : '(max-width: 860px) 100vw, 50vw'} ratio="4/3" />
                     <figcaption style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--text-faint-2)', marginTop: 10 }}>
                       <span style={{ color: 'var(--red)', marginRight: 7 }}>02</span>{t('installedFinished')}
                     </figcaption>
                   </figure>
+                  {s.result2 && (
+                    <figure style={{ margin: 0 }}>
+                      <Placeholder label={`${s.title} — the finished space`} src={s.result2} alt={`${s.title} — the finished space`} sizes="(max-width: 860px) 100vw, 33vw" ratio="4/3" />
+                      <figcaption style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--text-faint-2)', marginTop: 10 }}>
+                        <span style={{ color: 'var(--red)', marginRight: 7 }}>03</span>{t('finishedSpace')}
+                      </figcaption>
+                    </figure>
+                  )}
                 </div>
               </div>
             ))}
@@ -170,6 +200,10 @@ export default function PrefabPage({ data }: { data: PrefabPageData }) {
 
       <style dangerouslySetInnerHTML={{ __html: `
         .pf-hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(28px,4vw,60px); align-items: center; }
+        /* Long page names ("Prefab Structures", "Konstrukcje prefabrykowane", …) in a
+           half-width column: size down from the full-page .h1 so the title never
+           runs behind the hero photo, and let extreme words hyphenate/wrap. */
+        .pf-hero .h1 { line-height: 0.94; letter-spacing: -.02em; text-wrap: balance; hyphens: auto; overflow-wrap: anywhere; }
         .pf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
         .pf-card { border: 1px solid var(--border); background: #fff; padding: clamp(22px,2.6vw,30px); }
         .pf-mat { border-left: 2px solid var(--red); background: var(--surface); padding: clamp(18px,2.2vw,26px); }
@@ -179,12 +213,13 @@ export default function PrefabPage({ data }: { data: PrefabPageData }) {
         .pf-show-head { margin-bottom: clamp(18px,2.2vw,26px); }
         .pf-show-meta { display: inline-block; margin-top: 8px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
         .pf-show-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px,2vw,24px); }
+        .pf-show-imgs--3 { grid-template-columns: 1fr 1fr 1fr; }
         .pf-world { display: flex; gap: 18px; align-items: flex-start; border: 1px solid var(--border); background: var(--surface); padding: clamp(22px,3vw,34px); }
         @media (max-width: 900px) {
           .pf-hero { grid-template-columns: 1fr; }
           .pf-grid { grid-template-columns: 1fr; }
           .pf-detail-grid { grid-template-columns: 1fr; }
-          .pf-show-imgs { grid-template-columns: 1fr; }
+          .pf-show-imgs, .pf-show-imgs--3 { grid-template-columns: 1fr; }
         }
       ` }} />
     </>

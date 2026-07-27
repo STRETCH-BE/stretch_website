@@ -8,8 +8,9 @@
 //
 // Section image slots:
 //   • production.details  → one photo each (cutting / welding / powder-coating)
-//   • showcase.items      → TWO photos each: a technical `drawing` + the
-//                           installed/finished `result`, shown side by side.
+//   • showcase.items      → a technical `drawing` + the installed/finished
+//                           `result`, side by side. Optional `result2` (e.g. a
+//                           wider shot of the finished space) makes it a 3-up row.
 // Filenames are case-sensitive on Vercel — match them exactly.
 // =============================================================================
 
@@ -21,6 +22,7 @@ export type PrefabShowcase = {
   summary: string;
   drawing: string; // technical drawing
   result: string; // installed & finished photo
+  result2?: string; // optional extra photo — the finished space (renders a 3-up row)
 };
 
 export type PrefabPageData = {
@@ -68,17 +70,18 @@ export const prefabStructures: PrefabPageData = {
     heading: 'Made in-house, made to measure',
     body: 'Every structure is engineered to your drawings and built entirely in-house in our own Polish production. Cutting, welding and powder-coating all happen under one roof — so we control quality and finish from raw profile to crated, ready-to-ship structure.',
     details: [
-      { title: 'Cutting', body: 'Profiles cut to precise lengths and angles, so the structure goes together square and true.', image: '' }, // prefab/detail-cutting.jpg
-      { title: 'Welding', body: 'Clean, strong welds — ground back and finished so the joints disappear into the structure.', image: '' }, // prefab/detail-welding.jpg
-      { title: 'Powder-coating', body: 'A durable powder-coated finish in any RAL, applied in-house for a consistent, hard-wearing surface.', image: '' }, // prefab/detail-powdercoating.jpg
+      { title: 'Cutting', body: 'Profiles cut to precise lengths and angles, so the structure goes together square and true.', image: '/images/prefab/detail-cutting.jpg' },
+      { title: 'Welding', body: 'Clean, strong welds — ground back and finished so the joints disappear into the structure.', image: '/images/prefab/detail-welding.jpg' },
+      { title: 'Powder-coating', body: 'A durable powder-coated finish in any RAL, applied in-house for a consistent, hard-wearing surface.', image: '/images/prefab/detail-powdercoating.jpg' },
     ],
   },
 
   showcase: {
     heading: 'From drawing to finished structure',
     items: [
-      { title: 'Raster grid ceiling', meta: 'Aluminium', summary: 'The technical drawing of a raster beam grid, next to the finished structure installed and membrane-finished on site.', drawing: '', result: '' }, // prefab/show-raster-drawing.jpg / -result.jpg
-      { title: 'Floating coving ceiling', meta: 'Aluminium coving', summary: 'A floating coving detail, from the production drawing to the installed, membrane-finished result.', drawing: '', result: '' }, // prefab/show-coving-drawing.jpg / -result.jpg
+      { title: 'Raster grid ceiling', meta: 'Aluminium', summary: 'The technical drawing of a raster beam grid, next to the finished structure installed and membrane-finished on site.', drawing: '', result: '' }, // prefab/show-raster-drawing.jpg / -result.jpg — photos still to come
+      // BelOrta (Sint-Katelijne-Waver): production drawing SP-2025-11-45 + the installed round coving + the finished space.
+      { title: 'Floating coving ceiling', meta: 'Aluminium coving', summary: 'A floating coving detail, from the production drawing to the installed, membrane-finished result.', drawing: '/images/prefab/show-coving-drawing.png', result: '/images/prefab/show-coving-result.jpg', result2: '/images/prefab/show-coving-result2.jpg' },
     ],
   },
 
