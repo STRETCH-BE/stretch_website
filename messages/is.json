@@ -2076,7 +2076,8 @@
       "city-penthouse-antwerp": "Antwerpen · Stofa",
       "wellness-spa-bruges": "Brugge · Baðherbergi í heilsulind",
       "rue-perree-paris": "París · Baklýst gallerísloft"
-    }
+    },
+    "comingSoon": "Myndir væntanlegar"
   },
   "technical": {
     "topics": [
@@ -2675,29 +2676,37 @@
     },
     "citizenm-hotel": {
       "title": "CitizenM Hotel",
-      "summary": "Forsmíðuð, baklýst baðherbergisloft sett upp á hótelum CitizenM.",
-      "hook": "Endurtakanlegt, baklýst baðherbergisloft, smíðað utan verkstaðar fyrir hótel í tveimur heimsálfum.",
+      "summary": "Baklýst forsmíðuð baðherbergisloft fyrir CitizenM-hótelin — 2.608 einingar í Evrópu og Bandaríkjunum.",
+      "hook": "Eitt baklýst loft sem hægt er að taka niður — hannað einu sinni og endurtekið í 2.608 forsmíðuðum baðherbergiseiningum í tveimur heimsálfum.",
       "description": [
-        "Fyrir einingahótel CitizenM útvegaði STRETCH forsmíðuð baðherbergisloft með baklýstri áferð sem hleypir ljósi í gegn – smíðuð utan verkstaðar sem endurtakanlegar einingar og sett upp víðs vegar í Bandaríkjunum og Evrópu, frá New York og Chicago til Miami, Los Angeles og víðar."
+        "CitizenM byggir hótel sín úr forsmíðuðum einingum og samstarfsaðilinn Saniskill framleiðir fyrirferðarlitlu baðherbergiseiningarnar. STRETCH hannaði og afhenti upplýsta loftið í hverri einingu: ljóshleypandi STRETCH Backlit-dúk sem breytir öllu lofti litla rýmisins í mjúkan, jafnan ljósgjafa.",
+        "Hvert loft er byggt úr tveimur upplýstum strekkloftsplötum — og hverja plötu má taka niður. Sami hluturinn og ber ljósið gegnir hlutverki skoðunarlúgu: lagnir fyrir ofan eininguna eru alltaf aðgengilegar án einnar einustu aukaopnunar í hreinum fletinum.",
+        "Alls voru 2.608 sturtueiningar afhentar í Evrópu og Ameríku — frá Paris Opera og Rådhuspladsen í Kaupmannahöfn til New York, Chicago, Miami Brickell, Washington DC, Seattle, San Francisco, Los Angeles og Nuenen. Einingarnar eru byggðar utan verkstaðar og koma allar með sama endurtakanlega hótelfráganginn."
       ],
       "highlights": [
-        "Forsmíðað, byggt utan verkstaðar",
-        "Baklýst áferð sem hleypir ljósi í gegn",
-        "Endurtakanlegt í stórum stíl á fjölda hótela"
+        "2.608 forsmíðaðar sturtueiningar í tveimur heimsálfum",
+        "Tvær baklýstar plötur í hverju lofti",
+        "Hverja plötu má taka niður — loftið er um leið skoðunarlúga",
+        "Rakaþolinn dúkur sem má þrífa"
       ],
       "materials": [
-        "Forsmíðuð STRETCH-baðherbergiseining",
-        "STRETCH Backlit-himna (hleypir ljósi í gegn)",
+        "Forsmíðuð STRETCH-loftaeining (tvær plötur í einingu)",
+        "STRETCH Backlit-dúkur (ljóshleypandi)",
+        "Plötur sem má taka niður — skoðunarlúga yfir allan flötinn",
         "Innbyggð lýsing"
       ],
       "facts": [
         {
           "label": "Heimsálfur",
-          "value": "Bandaríkin og Evrópa"
+          "value": "Bandaríkin & Evrópa"
+        },
+        {
+          "label": "Einingar",
+          "value": "2.608 sturtueiningar"
         },
         {
           "label": "Borgir",
-          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+          "value": "París, Kaupmannahöfn, New York, Chicago, Miami, Washington DC, Seattle, San Francisco, LA, Nuenen"
         },
         {
           "label": "Samstarfsaðili",

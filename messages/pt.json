@@ -2076,7 +2076,8 @@
       "city-penthouse-antwerp": "Antuérpia · Sala de estar",
       "wellness-spa-bruges": "Bruges · Casa de banho de spa",
       "rue-perree-paris": "Paris · Teto de galeria retroiluminado"
-    }
+    },
+    "comingSoon": "Fotos em breve"
   },
   "technical": {
     "topics": [
@@ -2675,29 +2676,37 @@
     },
     "citizenm-hotel": {
       "title": "CitizenM Hotel",
-      "summary": "Tetos de casa de banho pré-fabricados e retroiluminados, implementados nos hotéis CitizenM.",
-      "hook": "Um teto de casa de banho retroiluminado e replicável, construído fora da obra para hotéis em dois continentes.",
+      "summary": "Tetos retroiluminados pré-fabricados para as casas de banho dos hotéis CitizenM — 2.608 pods na Europa e nos EUA.",
+      "hook": "Um teto luminoso amovível — concebido uma vez, repetido em 2.608 pods de casa de banho pré-fabricados em dois continentes.",
       "description": [
-        "Para os hotéis modulares da CitizenM, a STRETCH forneceu tetos de casa de banho pré-fabricados com um acabamento retroiluminado que deixa passar a luz — construídos fora da obra como unidades replicáveis e implementados em localizações nos EUA e na Europa, de Nova Iorque e Chicago a Miami, Los Angeles e não só."
+        "A CitizenM constrói os seus hotéis com módulos pré-fabricados; o parceiro Saniskill produz os pods de casa de banho compactos. A STRETCH concebeu e forneceu o teto iluminado de cada pod: uma membrana STRETCH Backlit translúcida que transforma todo o teto do pequeno espaço numa fonte de luz suave e uniforme.",
+        "Cada teto é composto por dois painéis de teto tensionado iluminados — e cada painel é amovível. O mesmo elemento que transporta a luz funciona como alçapão de inspeção: as instalações técnicas acima do pod ficam acessíveis sem uma única abertura extra a quebrar a superfície limpa.",
+        "No total foram entregues 2.608 pods de duche na Europa e na América — de Paris Opera e da Rådhuspladsen de Copenhaga a Nova Iorque, Chicago, Miami Brickell, Washington DC, Seattle, São Francisco, Los Angeles e Nuenen. Construída off-site, cada unidade chega com o mesmo acabamento hoteleiro repetível."
       ],
       "highlights": [
-        "Pré-fabricação fora da obra",
-        "Acabamento retroiluminado que deixa passar a luz",
-        "Replicável em grande escala em muitos hotéis"
+        "2.608 pods de duche pré-fabricados em dois continentes",
+        "Dois painéis retroiluminados por teto",
+        "Cada painel é amovível — o teto funciona como alçapão de inspeção",
+        "Membrana resistente à humidade e lavável"
       ],
       "materials": [
-        "Unidade de casa de banho STRETCH pré-fabricada",
-        "Membrana STRETCH Backlit (deixa passar a luz)",
+        "Elemento de teto STRETCH pré-fabricado (dois painéis por pod)",
+        "Membrana STRETCH Backlit (translúcida)",
+        "Painéis amovíveis — alçapão de inspeção em toda a superfície",
         "Iluminação integrada"
       ],
       "facts": [
         {
           "label": "Continentes",
-          "value": "EUA e Europa"
+          "value": "EUA & Europa"
+        },
+        {
+          "label": "Unidades",
+          "value": "2.608 pods de duche"
         },
         {
           "label": "Cidades",
-          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+          "value": "Paris, Copenhaga, Nova Iorque, Chicago, Miami, Washington DC, Seattle, São Francisco, LA, Nuenen"
         },
         {
           "label": "Parceiro",

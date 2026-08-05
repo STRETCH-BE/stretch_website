@@ -2076,7 +2076,8 @@
       "city-penthouse-antwerp": "Anvers · Salon",
       "wellness-spa-bruges": "Bruges · Salle de bains spa",
       "rue-perree-paris": "Paris · Plafond de galerie rétroéclairé"
-    }
+    },
+    "comingSoon": "Photos à venir"
   },
   "technical": {
     "topics": [
@@ -2675,19 +2676,23 @@
     },
     "citizenm-hotel": {
       "title": "CitizenM Hotel",
-      "summary": "Des plafonds de salle de bains préfabriqués et rétroéclairés, déployés dans les hôtels CitizenM.",
-      "hook": "Un plafond de salle de bains rétroéclairé et reproductible, fabriqué hors site pour des hôtels sur deux continents.",
+      "summary": "Plafonds rétroéclairés préfabriqués pour les salles de bains des hôtels CitizenM — 2 608 pods en Europe et aux États-Unis.",
+      "hook": "Un plafond lumineux amovible — conçu une seule fois, reproduit dans 2 608 pods de salle de bains préfabriqués sur deux continents.",
       "description": [
-        "Pour les hôtels modulaires de CitizenM, STRETCH a fourni des plafonds de salle de bains préfabriqués à la finition rétroéclairée laissant passer la lumière — fabriqués hors site en unités reproductibles, puis déployés sur des sites aux États-Unis et en Europe, de New York et Chicago à Miami, Los Angeles et au-delà."
+        "CitizenM construit ses hôtels à partir de modules préfabriqués, le partenaire Saniskill produisant les pods de salle de bains compacts. STRETCH a conçu et fourni le plafond lumineux de chaque pod : une membrane STRETCH Backlit translucide qui transforme tout le plafond de ce petit espace en une source de lumière douce et homogène.",
+        "Chaque plafond se compose de deux panneaux de plafond tendu lumineux — et chaque panneau est amovible. L’élément qui porte la lumière sert aussi de trappe d’inspection : les techniques au-dessus du pod restent accessibles sans la moindre ouverture supplémentaire dans la surface épurée.",
+        "Au total, 2 608 pods de douche ont été livrés en Europe et en Amérique — de Paris Opéra et de Rådhuspladsen à Copenhague jusqu’à New York, Chicago, Miami Brickell, Washington DC, Seattle, San Francisco, Los Angeles et Nuenen. Construits hors site, tous les pods arrivent avec la même finition hôtelière, parfaitement reproductible."
       ],
       "highlights": [
-        "Préfabrication hors site",
-        "Finition rétroéclairée laissant passer la lumière",
-        "Reproductible à grande échelle dans de nombreux hôtels"
+        "2 608 pods de douche préfabriqués sur deux continents",
+        "Deux panneaux lumineux par plafond",
+        "Chaque panneau est amovible — le plafond fait office de trappe d’inspection",
+        "Membrane résistante à l’humidité et lavable"
       ],
       "materials": [
-        "Unité de salle de bains STRETCH préfabriquée",
-        "Membrane STRETCH Backlit (laisse passer la lumière)",
+        "Élément de plafond STRETCH préfabriqué (deux panneaux par pod)",
+        "Membrane STRETCH Backlit (translucide)",
+        "Panneaux amovibles — trappe d’inspection sur toute la surface",
         "Éclairage intégré"
       ],
       "facts": [
@@ -2696,8 +2701,12 @@
           "value": "États-Unis & Europe"
         },
         {
+          "label": "Unités",
+          "value": "2 608 pods de douche"
+        },
+        {
           "label": "Villes",
-          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+          "value": "Paris, Copenhague, New York, Chicago, Miami, Washington DC, Seattle, San Francisco, LA, Nuenen"
         },
         {
           "label": "Partenaire",

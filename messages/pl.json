@@ -2076,7 +2076,8 @@
       "city-penthouse-antwerp": "Antwerpia · Salon",
       "wellness-spa-bruges": "Brugia · Łazienka spa",
       "rue-perree-paris": "Paryż · Podświetlany sufit galerii"
-    }
+    },
+    "comingSoon": "Zdjęcia wkrótce"
   },
   "technical": {
     "topics": [
@@ -2675,19 +2676,23 @@
     },
     "citizenm-hotel": {
       "title": "CitizenM Hotel",
-      "summary": "Prefabrykowane, podświetlane sufity łazienkowe wdrożone w hotelach CitizenM.",
-      "hook": "Powtarzalny, podświetlany sufit łazienkowy, budowany poza placem budowy dla hoteli na dwóch kontynentach.",
+      "summary": "Podświetlane prefabrykowane sufity łazienkowe dla hoteli CitizenM — 2 608 podów w Europie i USA.",
+      "hook": "Jeden zdejmowany, podświetlany sufit — zaprojektowany raz, powtórzony w 2 608 prefabrykowanych podach łazienkowych na dwóch kontynentach.",
       "description": [
-        "Dla modułowych hoteli CitizenM firma STRETCH dostarczyła prefabrykowane sufity łazienkowe z podświetlanym, przepuszczającym światło wykończeniem – budowane poza placem budowy jako powtarzalne moduły i wdrażane w lokalizacjach w USA i Europie, od Nowego Jorku i Chicago po Miami, Los Angeles i dalej."
+        "CitizenM buduje swoje hotele z prefabrykowanych modułów, a partner Saniskill produkuje kompaktowe pody łazienkowe. STRETCH zaprojektował i dostarczył podświetlany sufit każdego poda: przepuszczającą światło membranę STRETCH Backlit, która zamienia cały sufit niewielkiego wnętrza w miękkie, równomierne źródło światła.",
+        "Każdy sufit składa się z dwóch podświetlanych paneli sufitu napinanego — a każdy panel można zdjąć. Ten sam element, który niesie światło, pełni funkcję klapy rewizyjnej: instalacje nad podem pozostają dostępne bez ani jednego dodatkowego otworu w czystej powierzchni.",
+        "Łącznie dostarczono 2 608 podów prysznicowych w Europie i Ameryce — od Paris Opera i kopenhaskiego Rådhuspladsen po Nowy Jork, Chicago, Miami Brickell, Waszyngton, Seattle, San Francisco, Los Angeles i Nuenen. Budowane poza placem budowy, wszystkie jednostki mają to samo powtarzalne, hotelowe wykończenie."
       ],
       "highlights": [
-        "Prefabrykacja poza placem budowy",
-        "Podświetlane, przepuszczające światło wykończenie",
-        "Powtarzalność na dużą skalę w wielu hotelach"
+        "2 608 prefabrykowanych podów prysznicowych na dwóch kontynentach",
+        "Dwa podświetlane panele na sufit",
+        "Każdy panel zdejmowany — sufit pełni rolę klapy rewizyjnej",
+        "Membrana odporna na wilgoć, zmywalna"
       ],
       "materials": [
-        "Prefabrykowany moduł łazienkowy STRETCH",
+        "Prefabrykowany element sufitowy STRETCH (dwa panele na pod)",
         "Membrana STRETCH Backlit (przepuszczająca światło)",
+        "Zdejmowane panele — klapa rewizyjna na całej powierzchni",
         "Zintegrowane oświetlenie"
       ],
       "facts": [
@@ -2696,8 +2701,12 @@
           "value": "USA i Europa"
         },
         {
+          "label": "Liczba jednostek",
+          "value": "2 608 podów prysznicowych"
+        },
+        {
           "label": "Miasta",
-          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+          "value": "Paryż, Kopenhaga, Nowy Jork, Chicago, Miami, Waszyngton, Seattle, San Francisco, LA, Nuenen"
         },
         {
           "label": "Partner",

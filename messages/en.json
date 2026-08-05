@@ -2076,7 +2076,8 @@
       "city-penthouse-antwerp": "Antwerp · Living room",
       "wellness-spa-bruges": "Bruges · Spa bathroom",
       "rue-perree-paris": "Paris · Backlit gallery ceiling"
-    }
+    },
+    "comingSoon": "Photos coming soon"
   },
   "technical": {
     "topics": [
@@ -2675,19 +2676,23 @@
     },
     "citizenm-hotel": {
       "title": "CitizenM Hotel",
-      "summary": "Prefab backlit bathroom ceilings rolled out across CitizenM hotels.",
-      "hook": "A repeatable, backlit bathroom ceiling, built off-site for hotels across two continents.",
+      "summary": "Backlit prefab bathroom ceilings for CitizenM hotels — 2,608 pods across Europe and the USA.",
+      "hook": "One removable, backlit ceiling design — engineered once, repeated across 2,608 prefab bathroom pods on two continents.",
       "description": [
-        "For CitizenM’s modular hotels, STRETCH supplied prefab bathroom ceilings with a backlit, light-transmitting finish — built off-site as repeatable units and rolled out across locations in the USA and Europe, from New York and Chicago to Miami, Los Angeles and beyond."
+        "CitizenM builds its hotels from prefabricated modules, with partner Saniskill producing the compact bathroom pods. STRETCH engineered and supplied the illuminated ceiling for each pod: a backlit, light-transmitting STRETCH membrane that turns the whole ceiling of the small space into a soft, even light source.",
+        "Each ceiling is built from two illuminated stretch-ceiling panels — and every panel is removable. The same element that carries the light doubles as an inspection hatch, so the services above the pod stay reachable without a single extra opening breaking the clean surface.",
+        "In total 2,608 shower pods were delivered across Europe and America — from Paris Opera and Copenhagen Rådhuspladsen to New York, Chicago, Miami Brickell, Washington DC, Seattle, San Francisco, Los Angeles and Nuenen. Built off-site, every unit arrives with the same repeatable, hotel-grade finish."
       ],
       "highlights": [
-        "Prefab, off-site construction",
-        "Backlit, light-transmitting finish",
-        "Repeatable at scale across many hotels"
+        "2,608 prefab shower pods on two continents",
+        "Two backlit panels per ceiling",
+        "Every panel removable — the ceiling doubles as an inspection hatch",
+        "Humidity-proof, wipeable membrane"
       ],
       "materials": [
-        "Prefab STRETCH bathroom unit",
+        "Prefab STRETCH ceiling element (two panels per pod)",
         "STRETCH Backlit (light-transmitting) membrane",
+        "Removable panels — full-surface inspection hatch",
         "Integrated lighting"
       ],
       "facts": [
@@ -2696,8 +2701,12 @@
           "value": "USA & Europe"
         },
         {
+          "label": "Units",
+          "value": "2,608 shower pods"
+        },
+        {
           "label": "Cities",
-          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+          "value": "Paris, Copenhagen, New York, Chicago, Miami, Washington DC, Seattle, San Francisco, LA, Nuenen"
         },
         {
           "label": "Partner",

@@ -2076,7 +2076,8 @@
       "city-penthouse-antwerp": "Antwerpen · Wohnzimmer",
       "wellness-spa-bruges": "Brügge · Spa-Badezimmer",
       "rue-perree-paris": "Paris · Hinterleuchtete Galeriedecke"
-    }
+    },
+    "comingSoon": "Fotos folgen in Kürze"
   },
   "technical": {
     "topics": [
@@ -2675,19 +2676,23 @@
     },
     "citizenm-hotel": {
       "title": "CitizenM Hotel",
-      "summary": "Vorgefertigte, hinterleuchtete Badezimmerdecken, ausgerollt in den CitizenM-Hotels.",
-      "hook": "Eine reproduzierbare, hinterleuchtete Badezimmerdecke, abseits der Baustelle gefertigt für Hotels auf zwei Kontinenten.",
+      "summary": "Hinterleuchtete Prefab-Baddecken für die CitizenM-Hotels — 2.608 Pods in Europa und den USA.",
+      "hook": "Eine abnehmbare, hinterleuchtete Decke — einmal entwickelt, 2.608-mal in Prefab-Bad-Pods auf zwei Kontinenten wiederholt.",
       "description": [
-        "Für die modularen Hotels von CitizenM lieferte STRETCH vorgefertigte Badezimmerdecken mit hinterleuchteter, lichtdurchlässiger Oberfläche – abseits der Baustelle als reproduzierbare Einheiten gefertigt und an Standorten in den USA und Europa ausgerollt, von New York und Chicago bis Miami, Los Angeles und darüber hinaus."
+        "CitizenM baut seine Hotels aus vorgefertigten Modulen; Partner Saniskill fertigt die kompakten Bad-Pods. STRETCH entwickelte und lieferte die beleuchtete Decke jedes Pods: eine lichtdurchlässige STRETCH-Backlit-Membran, die die gesamte Decke des kleinen Raums in eine weiche, gleichmäßige Lichtquelle verwandelt.",
+        "Jede Decke besteht aus zwei beleuchteten Spanndecken-Paneelen — und jedes Paneel ist abnehmbar. Dasselbe Element, das das Licht trägt, dient zugleich als Revisionsklappe: Die Technik über dem Pod bleibt erreichbar, ohne dass eine einzige zusätzliche Öffnung die klare Fläche unterbricht.",
+        "Insgesamt wurden 2.608 Dusch-Pods in Europa und Amerika ausgeliefert — von Paris Opera und der Kopenhagener Rådhuspladsen bis New York, Chicago, Miami Brickell, Washington DC, Seattle, San Francisco, Los Angeles und Nuenen. Off-site gebaut, kommt jede Einheit mit demselben wiederholbaren Hotel-Finish an."
       ],
       "highlights": [
-        "Vorfertigung abseits der Baustelle",
-        "Hinterleuchtete, lichtdurchlässige Oberfläche",
-        "Im großen Maßstab reproduzierbar in vielen Hotels"
+        "2.608 Prefab-Dusch-Pods auf zwei Kontinenten",
+        "Zwei hinterleuchtete Paneele pro Decke",
+        "Jedes Paneel abnehmbar — die Decke ist zugleich Revisionsklappe",
+        "Feuchtraumgeeignete, abwaschbare Membran"
       ],
       "materials": [
-        "Vorgefertigte STRETCH-Badezimmereinheit",
-        "STRETCH Backlit-Membran (lichtdurchlässig)",
+        "Prefab-STRETCH-Deckenelement (zwei Paneele pro Pod)",
+        "STRETCH-Backlit-Membran (lichtdurchlässig)",
+        "Abnehmbare Paneele — Revisionsklappe über die volle Fläche",
         "Integrierte Beleuchtung"
       ],
       "facts": [
@@ -2696,8 +2701,12 @@
           "value": "USA & Europa"
         },
         {
+          "label": "Einheiten",
+          "value": "2.608 Dusch-Pods"
+        },
+        {
           "label": "Städte",
-          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+          "value": "Paris, Kopenhagen, New York, Chicago, Miami, Washington DC, Seattle, San Francisco, LA, Nuenen"
         },
         {
           "label": "Partner",

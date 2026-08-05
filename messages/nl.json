@@ -2076,7 +2076,8 @@
       "city-penthouse-antwerp": "Antwerpen · Woonkamer",
       "wellness-spa-bruges": "Brugge · Spa-badkamer",
       "rue-perree-paris": "Parijs · Galerijplafond met backlight"
-    }
+    },
+    "comingSoon": "Foto's volgen binnenkort"
   },
   "technical": {
     "topics": [
@@ -2675,19 +2676,23 @@
     },
     "citizenm-hotel": {
       "title": "CitizenM Hotel",
-      "summary": "Prefab badkamerplafonds met backlight, uitgerold over de CitizenM-hotels.",
-      "hook": "Een herhaalbaar badkamerplafond met backlight, buiten de werf gebouwd voor hotels op twee continenten.",
+      "summary": "Verlichte prefab badkamerplafonds voor de CitizenM-hotels — 2.608 pods in Europa en de VS.",
+      "hook": "Eén wegneembaar, verlicht plafondontwerp — één keer uitgewerkt, herhaald in 2.608 prefab badkamerpods op twee continenten.",
       "description": [
-        "Voor de modulaire hotels van CitizenM leverde STRETCH prefab badkamerplafonds met een lichtdoorlatende afwerking met backlight – buiten de werf gebouwd als herhaalbare units en uitgerold over locaties in de VS en Europa, van New York en Chicago tot Miami, Los Angeles en daarbuiten."
+        "CitizenM bouwt zijn hotels uit prefab modules, waarbij partner Saniskill de compacte badkamerpods produceert. STRETCH ontwikkelde en leverde het verlichte plafond van elke pod: een lichtdoorlatend STRETCH Backlit-doek dat het volledige plafond van de kleine ruimte verandert in een zachte, egale lichtbron.",
+        "Elk plafond bestaat uit twee verlichte spanplafondpanelen — en elk paneel is wegneembaar. Hetzelfde element dat het licht draagt, doet dienst als inspectieluik: de technieken boven de pod blijven bereikbaar zonder één extra opening in het strakke oppervlak.",
+        "In totaal werden 2.608 douchepods geleverd in Europa en Amerika — van Paris Opera en Rådhuspladsen in Kopenhagen tot New York, Chicago, Miami Brickell, Washington DC, Seattle, San Francisco, Los Angeles en Nuenen. Off-site gebouwd, met voor elke unit dezelfde herhaalbare hotelafwerking."
       ],
       "highlights": [
-        "Prefab, buiten de werf gebouwd",
-        "Lichtdoorlatende afwerking met backlight",
-        "Op grote schaal herhaalbaar in tal van hotels"
+        "2.608 prefab douchepods op twee continenten",
+        "Twee verlichte panelen per plafond",
+        "Elk paneel wegneembaar — het plafond is meteen ook inspectieluik",
+        "Vochtbestendig, afwasbaar doek"
       ],
       "materials": [
-        "Prefab STRETCH-badkamerunit",
-        "STRETCH Backlit-membraan (lichtdoorlatend)",
+        "Prefab STRETCH-plafondelement (twee panelen per pod)",
+        "STRETCH Backlit (lichtdoorlatend) doek",
+        "Wegneembare panelen — inspectieluik over het volledige vlak",
         "Geïntegreerde verlichting"
       ],
       "facts": [
@@ -2696,8 +2701,12 @@
           "value": "VS & Europa"
         },
         {
+          "label": "Aantal units",
+          "value": "2.608 douchepods"
+        },
+        {
           "label": "Steden",
-          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+          "value": "Parijs, Kopenhagen, New York, Chicago, Miami, Washington DC, Seattle, San Francisco, LA, Nuenen"
         },
         {
           "label": "Partner",

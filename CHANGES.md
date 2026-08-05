@@ -1,3 +1,24 @@
+## 2026-08-05 — Portfolio: CitizenM case study + first project photos + "coming soon"
+
+- **CitizenM Hotel rewritten as a full case study** (facts from saniskill.nl and
+  the old stretchplafond.be post): Saniskill builds the prefab pods, STRETCH
+  engineered the illuminated ceiling — TWO backlit stretch panels per pod, every
+  panel removable so the ceiling doubles as a full-surface inspection hatch;
+  2,608 shower pods delivered across Europe & America (Paris Opera, Copenhagen
+  Rådhuspladsen, NYC, Chicago, Miami Brickell, Washington DC, Seattle, SF, LA,
+  Nuenen). New facts row (Units), solutions now incl. `inspection-hatch`,
+  featured on the grid. Copy translated in ALL 12 locales (`projects.citizenm-hotel`).
+- **First real portfolio photos** (`public/images/projects/`): CitizenM (hero +
+  6-image gallery incl. the standalone pod product shot), BNP Paribas Fortis
+  (luminous oval hero + 3 gallery), Polette Eyewear (piano-lid hero + 3 gallery,
+  now featured), Rue Perrée (luminous gallery hero + 2 gallery).
+- **"Photos coming soon" chip** on portfolio cards without a photo
+  (`PortfolioGrid`, new `projectCards.comingSoon` key ×12 locales).
+- **Held back for later** (no matching project pages yet, per Michael): ZEBRA
+  Huis, Creneau–AFAS Lounge, Candor, Vier Emmershof, Tenback–Goesten Opdam and
+  code-named villa sets JPV-210 / VP-193 / VDB-222 — photo sets received and
+  archived, waiting for project titles/details.
+
 ## 2026-07-26 — Prefab Structures page: hero title fix + first real photos
 
 **What changed**

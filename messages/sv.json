@@ -2076,7 +2076,8 @@
       "city-penthouse-antwerp": "Antwerpen · Vardagsrum",
       "wellness-spa-bruges": "Brygge · Spabadrum",
       "rue-perree-paris": "Paris · Bakbelyst galleritak"
-    }
+    },
+    "comingSoon": "Foton kommer snart"
   },
   "technical": {
     "topics": [
@@ -2675,19 +2676,23 @@
     },
     "citizenm-hotel": {
       "title": "CitizenM Hotel",
-      "summary": "Prefabricerade, bakbelysta badrumstak utrullade på CitizenM-hotellen.",
-      "hook": "Ett repeterbart, bakbelyst badrumstak, byggt off-site för hotell på två kontinenter.",
+      "summary": "Bakbelysta prefab-badrumstak för CitizenM-hotellen — 2 608 pods i Europa och USA.",
+      "hook": "En avtagbar, bakbelyst taklösning — utvecklad en gång, upprepad i 2 608 prefabricerade badrumspoddar på två kontinenter.",
       "description": [
-        "Till CitizenM:s modulhotell levererade STRETCH prefabricerade badrumstak med en bakbelyst, ljusgenomsläpplig finish – byggda off-site som repeterbara enheter och utrullade på platser i USA och Europa, från New York och Chicago till Miami, Los Angeles med flera."
+        "CitizenM bygger sina hotell av prefabricerade moduler, och partnern Saniskill tillverkar de kompakta badrumspoddarna. STRETCH utvecklade och levererade det upplysta taket i varje pod: ett ljusgenomsläppligt STRETCH Backlit-membran som förvandlar hela taket i det lilla utrymmet till en mjuk, jämn ljuskälla.",
+        "Varje tak består av två upplysta spänntakspaneler — och varje panel är avtagbar. Samma element som bär ljuset fungerar som inspektionslucka: installationerna ovanför podden förblir åtkomliga utan en enda extra öppning i den rena ytan.",
+        "Totalt levererades 2 608 duschpoddar i Europa och Amerika — från Paris Opera och Rådhuspladsen i Köpenhamn till New York, Chicago, Miami Brickell, Washington DC, Seattle, San Francisco, Los Angeles och Nuenen. Byggda off-site anländer alla enheter med samma repeterbara hotellfinish."
       ],
       "highlights": [
-        "Prefabricering off-site",
-        "Bakbelyst, ljusgenomsläpplig finish",
-        "Repeterbart i stor skala på många hotell"
+        "2 608 prefabricerade duschpoddar på två kontinenter",
+        "Två bakbelysta paneler per tak",
+        "Varje panel är avtagbar — taket fungerar som inspektionslucka",
+        "Fukttåligt, avtorkbart membran"
       ],
       "materials": [
-        "Prefabricerad STRETCH-badrumsenhet",
+        "Prefabricerat STRETCH-takelement (två paneler per pod)",
         "STRETCH Backlit-membran (ljusgenomsläppligt)",
+        "Avtagbara paneler — inspektionslucka över hela ytan",
         "Integrerad belysning"
       ],
       "facts": [
@@ -2696,8 +2701,12 @@
           "value": "USA & Europa"
         },
         {
+          "label": "Enheter",
+          "value": "2 608 duschpoddar"
+        },
+        {
           "label": "Städer",
-          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+          "value": "Paris, Köpenhamn, New York, Chicago, Miami, Washington DC, Seattle, San Francisco, LA, Nuenen"
         },
         {
           "label": "Partner",

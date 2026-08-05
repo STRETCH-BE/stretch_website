@@ -2076,7 +2076,8 @@
       "city-penthouse-antwerp": "Antwerpen · Stue",
       "wellness-spa-bruges": "Brugge · Spa-badeværelse",
       "rue-perree-paris": "Paris · Bagbelyst galleriloft"
-    }
+    },
+    "comingSoon": "Fotos på vej"
   },
   "technical": {
     "topics": [
@@ -2675,19 +2676,23 @@
     },
     "citizenm-hotel": {
       "title": "CitizenM Hotel",
-      "summary": "Præfabrikerede, bagbelyste badeværelseslofter udrullet på CitizenM-hotellerne.",
-      "hook": "Et gentageligt, bagbelyst badeværelsesloft, bygget off-site til hoteller på to kontinenter.",
+      "summary": "Bagbelyste præfab-badeværelseslofter til CitizenM-hotellerne — 2.608 pods i Europa og USA.",
+      "hook": "Ét aftageligt, bagbelyst loftdesign — udviklet én gang, gentaget i 2.608 præfabrikerede badeværelsespods på to kontinenter.",
       "description": [
-        "Til CitizenMs modulhoteller leverede STRETCH præfabrikerede badeværelseslofter med en bagbelyst finish, der slipper lyset igennem – bygget off-site som gentagelige enheder og udrullet på lokationer i USA og Europa, fra New York og Chicago til Miami, Los Angeles med flere."
+        "CitizenM bygger sine hoteller af præfabrikerede moduler, og partneren Saniskill producerer de kompakte badeværelsespods. STRETCH udviklede og leverede det oplyste loft i hver pod: en lysgennemtrængelig STRETCH Backlit-membran, der forvandler hele loftet i det lille rum til en blød, jævn lyskilde.",
+        "Hvert loft består af to oplyste stretchloft-paneler — og hvert panel kan tages ned. Det samme element, der bærer lyset, fungerer som inspektionslem: Installationerne over podden er altid tilgængelige, uden at en eneste ekstra åbning bryder den rene flade.",
+        "I alt blev der leveret 2.608 brusepods i Europa og Amerika — fra Paris Opera og Rådhuspladsen i København til New York, Chicago, Miami Brickell, Washington DC, Seattle, San Francisco, Los Angeles og Nuenen. Bygget off-site ankommer hver enhed med den samme gentagelige hotelfinish."
       ],
       "highlights": [
-        "Præfabrikation off-site",
-        "Bagbelyst finish, der slipper lyset igennem",
-        "Kan gentages i stor skala på mange hoteller"
+        "2.608 præfab-brusepods på to kontinenter",
+        "To bagbelyste paneler pr. loft",
+        "Hvert panel kan tages ned — loftet fungerer som inspektionslem",
+        "Fugtbestandig membran, der kan tørres af"
       ],
       "materials": [
-        "Præfabrikeret STRETCH-badeværelsesenhed",
-        "STRETCH Backlit-membran (slipper lyset igennem)",
+        "Præfab STRETCH-loftelement (to paneler pr. pod)",
+        "STRETCH Backlit-membran (lysgennemtrængelig)",
+        "Aftagelige paneler — inspektionslem i fuld flade",
         "Integreret belysning"
       ],
       "facts": [
@@ -2696,8 +2701,12 @@
           "value": "USA & Europa"
         },
         {
+          "label": "Enheder",
+          "value": "2.608 brusepods"
+        },
+        {
           "label": "Byer",
-          "value": "New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen"
+          "value": "Paris, København, New York, Chicago, Miami, Washington DC, Seattle, San Francisco, LA, Nuenen"
         },
         {
           "label": "Partner",
