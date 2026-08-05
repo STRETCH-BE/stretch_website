@@ -18,7 +18,7 @@ export const pageImages = {
   partners: '', // public/images/pages/partners.jpg
 
   // Installer training page — a workshop / training-in-progress photo (4:3).
-  training: '', // public/images/pages/training.jpg
+  training: '/images/pages/training.jpg', // membrane tuck-in during a workshop session
 
   // About page — your workshop or team (4:3).
   about: '', // public/images/pages/about.jpg

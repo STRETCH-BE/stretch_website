@@ -77,9 +77,9 @@ export const productImages: Record<string, ProductImageSet> = {
   'light-print-stretch-ceiling': {
     hero: '/images/products/illuminated-stretch-ceiling.jpg',
     features: [
-      '/images/products/shadowless-illuminated-stretch-ceiling.jpg', // [0] backlight
-      '', // [1] starry sky / RGB
-      '', // [2] custom print
+      '/images/products/shadowless-illuminated-stretch-ceiling.jpg', // [0] Even backlighting
+      '', // [1] LED line lighting
+      '/images/products/illuminated-printed-stretch-ceiling.jpg', // [2] Printed designs (Veta interieur bathroom)
     ],
   },
   // ---- Prefab (coming soon — fill in when ready) --------------------------
@@ -109,9 +109,9 @@ export const productImages: Record<string, ProductImageSet> = {
   'custom-print': {
     hero: '/images/products/printed-stretch-ceiling.jpg', // a printed / artwork ceiling — custom-print-hero.jpg
     features: [
-      '', // [0] Your image, edge to edge
-      '', // [1] Print plus backlight
-      '', // [2] Made to your space
+      '', // [0] Your image, edge to edge — awaiting Bert Demasure_Blondeel Argendael print03.jpg
+      '/images/products/printed-backlit-stretch-ceiling.jpg', // [1] Print plus backlight (Glennwood / Johnson & Johnson)
+      '/images/products/custom-print-made-to-your-space.jpg', // [2] Made to your space (showroom coving)
     ],
   },
 };

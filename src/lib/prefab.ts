@@ -50,7 +50,7 @@ export const prefabStructures: PrefabPageData = {
     'Made-to-measure prefab carrier structures for stretch ceilings — aluminium, steel and wood beams, coving and height-difference details, cut, welded and powder-coated in-house and shipped worldwide.',
   intro:
     'Prefab carrier structures for stretch-ceiling projects — beams for raster and grid ceilings, coving for floating ceilings, and clean height-difference details. Every structure is made to measure to your drawings, entirely in-house in our own Polish production, and shipped worldwide to our dealers.',
-  hero: '', // public/images/prefab/prefab-structures-hero.jpg
+  hero: '/images/prefab/prefab-structures-hero.jpg', // Uhoda tower — red backlit grid ceiling
 
   makeHeading: 'What we build',
   make: [
@@ -98,7 +98,7 @@ export const prefabLighting: PrefabPageData = {
     'Prefab lighting elements built from an aluminium structure and finished with a STRETCH membrane — luminous coves, light lines and backlit features, engineered to your drawings, built in-house and shipped worldwide.',
   intro:
     'Pre-assembled lighting elements built from an aluminium structure and finished with our stretch membrane — luminous coves, light lines and backlit features. Engineered to your drawings, built in-house in our Polish production, and shipped worldwide to our dealers.',
-  hero: '', // public/images/prefab/prefab-lighting-hero.jpg
+  hero: '/images/prefab/prefab-lighting-hero.jpg', // CitizenM San Francisco — lit ceiling element
 
   makeHeading: 'What we build',
   make: [

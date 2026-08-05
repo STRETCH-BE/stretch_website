@@ -12,6 +12,7 @@ import { TRAINING_DATE_DETAIL } from '@/lib/forms-config';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
+import { pageImages } from '@/lib/page-images';
 import { ModalButton } from '@/components/ui/ModalButton';
 import InlineLeadForm from '@/components/sections/InlineLeadForm';
 import { localeBase } from '@/lib/seo';
@@ -70,7 +71,7 @@ export default async function TrainingPage({ params }: { params: { locale: strin
             </div>
           </div>
           <div style={{ position: 'relative' }}>
-            <Placeholder label={t('hero.imageLabel')} ratio="4/3.4" />
+            <Placeholder label={t('hero.imageLabel')} src={pageImages.training} sizes="(max-width: 860px) 100vw, 50vw" priority ratio="4/3.4" />
           </div>
         </div>
 
