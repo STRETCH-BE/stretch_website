@@ -35,6 +35,23 @@
 Playwright screenshots of hero (en/pl/sv/is, desktop+mobile), production grid
 and 3-up showcase all render correctly.
 
+**Same day, second batch — six more photos placed:**
+
+- Prefab Structures hero → `prefab/prefab-structures-hero.jpg` (Uhoda tower red
+  backlit grid); Prefab Lighting Elements hero → `prefab/prefab-lighting-hero.jpg`
+  (CitizenM San Francisco).
+- Illuminated page "Printed designs" → `products/illuminated-printed-stretch-ceiling.jpg`
+  (Veta interieur bathroom print).
+- Custom-print page "Print plus backlight" → `products/printed-backlit-stretch-ceiling.jpg`
+  (Glennwood / Johnson & Johnson); "Made to your space" →
+  `products/custom-print-made-to-your-space.jpg` (showroom coving).
+- Installer-training hero now wired to `pageImages.training` →
+  `pages/training.jpg` (membrane tuck-in shot); the page previously rendered a
+  bare placeholder with no `src` at all.
+- Still awaiting files: "Your image, edge to edge" (Bert Demasure_Blondeel
+  Argendael print03.jpg), partners "Installer / team photo" (installer.jpg),
+  and an "LED line lighting" photo for the Illuminated page.
+
 ## 2026-07-09 — Ceiling designer in the portal (pro area)
 
 **What was built** 
