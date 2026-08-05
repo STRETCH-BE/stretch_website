@@ -68,7 +68,7 @@ export default function PortfolioGrid() {
             className="zoom-wrap pf-card"
             style={{ display: 'block', margin: 0, border: '1px solid var(--border)', overflow: 'hidden', textDecoration: 'none', color: 'inherit' }}
           >
-            <div style={{ overflow: 'hidden' }}>
+            <div style={{ overflow: 'hidden', position: 'relative' }}>
               <Placeholder
               label={`${title(p.slug, p.title)} — ${cat(p.cat)}`}
               src={p.image}
@@ -78,6 +78,12 @@ export default function PortfolioGrid() {
               ratio="4/3"
               className="zoom-img"
             />
+              {/* No photo yet → "coming soon" chip over the placeholder tile. */}
+              {!p.image && (
+                <span style={{ position: 'absolute', top: 10, left: 10, background: 'var(--black)', color: '#fff', fontSize: 10, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', padding: '6px 10px' }}>
+                  {tpc('comingSoon')}
+                </span>
+              )}
             </div>
             <div style={{ padding: '18px 20px' }}>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red)', marginBottom: 9 }}>{cat(p.cat)}</div>
