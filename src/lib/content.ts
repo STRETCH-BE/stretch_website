@@ -128,6 +128,7 @@ export const projects: Project[] = [
   {
     key: 'commercial', slug: 'bnp-paribas-fortis', cat: 'Commercial', title: 'BNP Paribas Fortis',
     meta: 'Brussels · Bank HQ',
+    image: '/images/projects/bnp-paribas-fortis-luminous-ceiling.jpg',
     summary: '2,000 m² of illuminated and acoustic ceilings at the bank’s Brussels headquarters.',
     hook: 'Illuminated and acoustic STRETCH ceilings across the bank’s new Montagne du Parc headquarters — including a multi-floor food court.',
     description: [
@@ -143,7 +144,11 @@ export const projects: Project[] = [
       { label: 'Partner', value: 'Conceptexpo' },
     ],
     solutions: ['light-print-stretch-ceiling', 'acoustic-stretch-system'],
-    gallery: ['', '', ''],
+    gallery: [
+      '/images/projects/bnp-paribas-fortis-food-court.jpg',
+      '/images/projects/bnp-paribas-fortis-curved-ceiling.jpg',
+      '/images/projects/bnp-paribas-fortis-printed-detail.jpg',
+    ],
   },
   {
     key: 'commercial', slug: 'van-der-valk-beveren', cat: 'Commercial', title: 'Van der Valk',
@@ -196,7 +201,8 @@ export const projects: Project[] = [
   },
   {
     key: 'commercial', slug: 'polette-eyewear', cat: 'Retail', title: 'Polette Eyewear',
-    meta: 'Antwerp · Retail concept store',
+    meta: 'Antwerp · Retail concept store', featured: true,
+    image: '/images/projects/polette-eyewear-piano-ceiling.jpg',
     summary: 'A never-before-seen retail concept by architect Javier Zubiria.',
     hook: 'A shop you can play like a musical instrument — a tribute to peace, love and unity.',
     description: [
@@ -218,25 +224,40 @@ export const projects: Project[] = [
       { q: 'How long will the ceiling last?', a: 'Like any stretch ceiling, lifespan depends on cleaning, but it will comfortably last around 25 years; after that only the membrane might need replacing, with the existing frame staying in place.' },
     ],
     solutions: ['light-print-stretch-ceiling', 'acoustic-stretch-system'],
-    gallery: ['', '', ''],
+    gallery: [
+      '/images/projects/polette-eyewear-illuminated-lid.jpg',
+      '/images/projects/polette-eyewear-sculpture.jpg',
+      '/images/projects/polette-eyewear-keys.jpg',
+    ],
   },
   {
     key: 'bathroom', slug: 'citizenm-hotel', cat: 'Bathroom', title: 'CitizenM Hotel',
-    meta: 'USA & Europe · Prefab bathroom units',
-    summary: 'Prefab backlit bathroom ceilings rolled out across CitizenM hotels.',
-    hook: 'A repeatable, backlit bathroom ceiling, built off-site for hotels across two continents.',
+    meta: 'USA & Europe · Prefab bathroom units', featured: true,
+    image: '/images/projects/citizenm-paris-opera-bathroom-pod.jpg',
+    summary: 'Backlit prefab bathroom ceilings for CitizenM hotels — 2,608 pods across Europe and the USA.',
+    hook: 'One removable, backlit ceiling design — engineered once, repeated across 2,608 prefab bathroom pods on two continents.',
     description: [
-      'For CitizenM’s modular hotels, STRETCH supplied prefab bathroom ceilings with a backlit, light-transmitting finish — built off-site as repeatable units and rolled out across locations in the USA and Europe, from New York and Chicago to Miami, Los Angeles and beyond.',
+      'CitizenM builds its hotels from prefabricated modules, with partner Saniskill producing the compact bathroom pods. STRETCH engineered and supplied the illuminated ceiling for each pod: a backlit, light-transmitting STRETCH membrane that turns the whole ceiling of the small space into a soft, even light source.',
+      'Each ceiling is built from two illuminated stretch-ceiling panels — and every panel is removable. The same element that carries the light doubles as an inspection hatch, so the services above the pod stay reachable without a single extra opening breaking the clean surface.',
+      'In total 2,608 shower pods were delivered across Europe and America — from Paris Opera and Copenhagen Rådhuspladsen to New York, Chicago, Miami Brickell, Washington DC, Seattle, San Francisco, Los Angeles and Nuenen. Built off-site, every unit arrives with the same repeatable, hotel-grade finish.',
     ],
-    highlights: ['Prefab, off-site construction', 'Backlit, light-transmitting finish', 'Repeatable at scale across many hotels'],
-    materials: ['Prefab STRETCH bathroom unit', 'STRETCH Backlit (light-transmitting) membrane', 'Integrated lighting'],
+    highlights: ['2,608 prefab shower pods on two continents', 'Two backlit panels per ceiling', 'Every panel removable — the ceiling doubles as an inspection hatch', 'Humidity-proof, wipeable membrane'],
+    materials: ['Prefab STRETCH ceiling element (two panels per pod)', 'STRETCH Backlit (light-transmitting) membrane', 'Removable panels — full-surface inspection hatch', 'Integrated lighting'],
     facts: [
       { label: 'Continents', value: 'USA & Europe' },
-      { label: 'Cities', value: 'New York, Chicago, Miami, LA, Seattle, San Francisco, Nuenen' },
-      { label: 'Partner', value: 'Saniskill', href: 'https://saniskill.nl/' },
+      { label: 'Units', value: '2,608 shower pods' },
+      { label: 'Cities', value: 'Paris, Copenhagen, New York, Chicago, Miami, Washington DC, Seattle, San Francisco, LA, Nuenen' },
+      { label: 'Partner', value: 'Saniskill', href: 'https://saniskill.nl/portfolio/citizenm-hotel-group/' },
     ],
-    solutions: ['prefab-ceiling-unit', 'light-print-stretch-ceiling'],
-    gallery: ['', '', ''],
+    solutions: ['prefab-ceiling-unit', 'light-print-stretch-ceiling', 'inspection-hatch'],
+    gallery: [
+      '/images/projects/citizenm-prefab-bathroom-pod.jpg',
+      '/images/projects/citizenm-pod-interior.jpg',
+      '/images/projects/citizenm-copenhagen-radhuspladsen.jpg',
+      '/images/projects/citizenm-seattle-pioneer-square.jpg',
+      '/images/projects/citizenm-washington-dc-capitol.jpg',
+      '/images/projects/citizenm-paris-opera-2.jpg',
+    ],
   },
   {
     key: 'light', slug: 'london-chapel', cat: 'Light & Print', title: 'London Chapel',
@@ -326,6 +347,7 @@ export const projects: Project[] = [
   {
     key: 'light', slug: 'rue-perree-paris', cat: 'Light & Print', title: 'Rue Perrée',
     meta: 'Paris · Backlit gallery ceiling',
+    image: '/images/projects/rue-perree-luminous-gallery.jpg',
     summary: 'An illuminated ceiling for a multi-brand gallery space in Paris.',
     hook: 'Gallery-grade, even light across a multi-brand showroom — fixtures out of sight.',
     description: [
@@ -337,7 +359,10 @@ export const projects: Project[] = [
       { label: 'Space', value: 'Multi-brand gallery' },
     ],
     solutions: ['light-print-stretch-ceiling'],
-    gallery: ['', '', ''],
+    gallery: [
+      '/images/projects/rue-perree-boutique.jpg',
+      '/images/projects/rue-perree-bar.jpg',
+    ],
   },
 ];
 
