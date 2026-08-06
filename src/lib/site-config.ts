@@ -35,9 +35,9 @@ export const brand = {
 export const contact = {
   email: 'info@stretchgroup.be',
   leadDestination: process.env.LEAD_DESTINATION || 'leads@stretchgroup.be',
-  phone: '+3232846818',
-  phoneDisplay: '+32 3 284 68 18',
-  phoneHref: 'tel:+3232846818',
+  phone: '+32474522090',
+  phoneDisplay: '+32 474 52 20 90',
+  phoneHref: 'tel:+32474522090',
   whatsapp: '+32474522090',
   whatsappHref: 'https://wa.me/32474522090',
   telegram: 'https://t.me/STRETCH_OFFICE',

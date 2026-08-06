@@ -44,7 +44,7 @@ export const getPortalSession = cache(async (): Promise<PortalSession | null> =>
 
   const { data: profile } = await supabase
     .from('portal_users')
-    .select('id, email, company, role, markets, all_markets, active')
+    .select('id, email, company, role, account_type, markets, all_markets, active')
     .eq('id', user.id)
     .maybeSingle();
 
@@ -56,6 +56,8 @@ export const getPortalSession = cache(async (): Promise<PortalSession | null> =>
       email: profile.email,
       company: profile.company,
       role: profile.role === 'admin' ? 'admin' : 'client',
+      // Legacy rows (pre-b2c migration) default to the dealer experience.
+      accountType: profile.account_type === 'b2c' ? 'b2c' : 'b2b',
       markets: profile.markets ?? [],
       allMarkets: Boolean(profile.all_markets),
       active: true,

@@ -39,16 +39,30 @@ export type PricebookMeta = {
 
 export type PortalRole = 'client' | 'admin';
 
+/**
+ * Account tier. `b2c` = self-registered consumer account: own account area,
+ * but NO trade pricing and NO designer. `b2b` = dealer/trade account (created
+ * by an admin, or a b2c account upgraded by an admin) with market-based
+ * pricing visibility. Admins are implicitly b2b.
+ */
+export type AccountType = 'b2c' | 'b2b';
+
 export type PortalProfile = {
   id: string;
   email: string;
   company: string | null;
   role: PortalRole;
+  accountType: AccountType;
   /** Price groups this account may see (ignored when allMarkets). */
   markets: string[];
   allMarkets: boolean;
   active: boolean;
 };
+
+/** Trade areas (pricelist, designer) are for b2b accounts and admins only. */
+export function hasTradeAccess(profile: PortalProfile): boolean {
+  return profile.role === 'admin' || profile.accountType === 'b2b';
+}
 
 export type PortalSession = {
   profile: PortalProfile;

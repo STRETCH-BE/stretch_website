@@ -14,8 +14,9 @@
 // =============================================================================
 
 export const pageImages = {
-  // Partners page — an installer / team / handshake photo (portrait-ish 4:3).
-  partners: '', // public/images/pages/partners.jpg
+  // Partners page — same installer photo as the homepage installer section
+  // (the file lives in the repo's public/ from the home-page image set).
+  partners: '/images/home/installer.jpg',
 
   // Installer training page — a workshop / training-in-progress photo (4:3).
   training: '/images/pages/training.jpg', // membrane tuck-in during a workshop session
