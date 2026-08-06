@@ -15,17 +15,21 @@ import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
+import { AddToInquiryButton } from '@/components/materials/Inquiry';
 import { getMaterialGroup, materialGroupSlugs } from '@/lib/materials';
+import { localizeMaterialGroup, type MaterialGroupMessages } from '@/lib/localize-content';
 
 export function generateStaticParams() {
   return locales.flatMap((locale) => materialGroupSlugs.map((group) => ({ locale, group })));
 }
 
-export function generateMetadata({ params }: { params: { locale: string; group: string } }): Metadata {
+export async function generateMetadata({ params }: { params: { locale: string; group: string } }): Promise<Metadata> {
   if (!isValidLocale(params.locale)) return {};
-  const g = getMaterialGroup(params.group);
-  if (!g) return {};
+  const base = getMaterialGroup(params.group);
+  if (!base) return {};
   const locale = params.locale as Locale;
+  const tData = await getTranslations({ locale, namespace: 'materialsData' });
+  const g = localizeMaterialGroup(base, tData.has(`${base.slug}.name`) ? (tData.raw(base.slug) as MaterialGroupMessages) : undefined);
   const url = `${localeBase(locale)}/materials/${g.slug}`;
   const ogImg = `${localeBase(locale)}/api/og`;
   return {
@@ -43,10 +47,12 @@ export function generateMetadata({ params }: { params: { locale: string; group: 
 export default async function MaterialGroupPage({ params }: { params: { locale: string; group: string } }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   setRequestLocale(locale);
-  const g = getMaterialGroup(params.group);
-  if (!g) notFound();
+  const base = getMaterialGroup(params.group);
+  if (!base) notFound();
 
   const t = await getTranslations('materials');
+  const tData = await getTranslations('materialsData');
+  const g = localizeMaterialGroup(base!, tData.has(`${base!.slug}.name`) ? (tData.raw(base!.slug) as MaterialGroupMessages) : undefined);
   const tp = await getTranslations('productPage');
 
   const crumbs = breadcrumbSchema([
@@ -88,9 +94,12 @@ export default async function MaterialGroupPage({ params }: { params: { locale: 
               <div style={{ padding: '18px 0 0' }}>
                 <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 18, letterSpacing: '-.01em', margin: '0 0 7px' }}>{item.name}</h2>
                 <p style={{ fontSize: 13.5, lineHeight: 1.6, color: 'var(--text-muted)', margin: '0 0 14px' }}>{item.body}</p>
-                <ModalButton type="quote" source={`materials_${g.slug}`} product={item.name} trackQuote className="btn btn--primary btn--sm">
-                  {t('requestQuote')} <ArrowRight size={14} />
-                </ModalButton>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  <ModalButton type="quote" source={`materials_${g.slug}`} product={item.name} trackQuote className="btn btn--primary btn--sm">
+                    {t('requestQuote')} <ArrowRight size={14} />
+                  </ModalButton>
+                  <AddToInquiryButton group={g.name} name={item.name} />
+                </div>
               </div>
             </article>
           ))}

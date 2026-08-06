@@ -13,6 +13,7 @@ import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { materialGroups } from '@/lib/materials';
+import { localizeMaterialGroup, type MaterialGroupMessages } from '@/lib/localize-content';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({
@@ -28,6 +29,10 @@ export default async function MaterialsPage({ params }: { params: { locale: stri
   setRequestLocale(locale);
   const t = await getTranslations('materials');
   const tp = await getTranslations('productPage');
+  const tData = await getTranslations('materialsData');
+  const groups = materialGroups.map((g) =>
+    localizeMaterialGroup(g, tData.has(`${g.slug}.name`) ? (tData.raw(g.slug) as MaterialGroupMessages) : undefined),
+  );
 
   const crumbs = breadcrumbSchema([
     { name: tp('home'), url: `${localeBase(locale)}` },
@@ -70,7 +75,7 @@ export default async function MaterialsPage({ params }: { params: { locale: stri
       {/* Group cards */}
       <section className="container" style={{ paddingBottom: 'clamp(44px,5vw,72px)' }}>
         <div className="mt-grid">
-          {materialGroups.map((g) => (
+          {groups.map((g) => (
             <Link key={g.slug} href={`/materials/${g.slug}`} className="mt-card zoom-wrap">
               <div style={{ overflow: 'hidden' }}>
                 <Placeholder label={g.name} src={g.items.find((i) => i.image)?.image ?? ''} alt={g.name} sizes="(max-width: 860px) 100vw, 33vw" light ratio="16/10" className="zoom-img" />
