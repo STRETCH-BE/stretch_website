@@ -72,6 +72,7 @@ export default function Header() {
         <nav className="only-desktop" aria-label="Primary" style={{ display: 'flex', alignItems: 'center', gap: 30, fontSize: 13.5, fontWeight: 600, letterSpacing: '.03em', textTransform: 'uppercase' }}>
           <NavDrop label={t('nav.solutions')} href="/products" active={open === 'solutions'} onEnter={() => setOpen('solutions')} />
           <NavDrop label={t('nav.technical')} href="/products" active={open === 'technical'} onEnter={() => setOpen('technical')} />
+          <Link href="/materials" className="lnk" onMouseEnter={close}>{t('nav.materials')}</Link>
           <Link href="/inspiration" className="lnk" onMouseEnter={close}>{t('nav.inspiration')}</Link>
           <Link href="/partners" className="lnk" onMouseEnter={close}>{t('nav.partners')}</Link>
           <Link href="/faq" className="lnk" onMouseEnter={close}>{t('nav.faq')}</Link>

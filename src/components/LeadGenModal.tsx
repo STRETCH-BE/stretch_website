@@ -371,6 +371,13 @@ function LeadGenModal({
                 {cfg.subtitle}
               </p>
 
+              {/* The item this request is about (materials catalogue / product CTAs) */}
+              {options.product && (
+                <p style={{ display: 'inline-block', background: 'var(--surface)', border: '1px solid var(--border)', padding: '8px 12px', fontSize: 12.5, fontWeight: 700, letterSpacing: '.04em', margin: '-10px 0 22px' }}>
+                  <span style={{ color: 'var(--red)', marginRight: 8 }}>●</span>{options.product}
+                </p>
+              )}
+
               {cfg.showDates && (
                 <div
                   style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 22 }}
