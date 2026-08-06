@@ -151,3 +151,33 @@ export function localizePrefab(data: PrefabPageData, raw: PrefabMessages | undef
     worldwide: raw.worldwide,
   };
 }
+
+// ---- Materials catalogue -----------------------------------------------------
+// Messages entry (`materialsData.<slug>`) mirrors the translatable fields of a
+// MaterialGroup; images/slugs stay from code. Items merge by index.
+import type { MaterialGroup } from '@/lib/materials';
+
+export type MaterialGroupMessages = {
+  name: string;
+  eyebrow: string;
+  metaTitle: string;
+  metaDescription: string;
+  intro: string;
+  items: { name: string; body: string }[];
+};
+
+export function localizeMaterialGroup(
+  group: MaterialGroup,
+  raw: MaterialGroupMessages | undefined,
+): MaterialGroup {
+  if (!raw) return group;
+  return {
+    ...group,
+    name: raw.name ?? group.name,
+    eyebrow: raw.eyebrow ?? group.eyebrow,
+    metaTitle: raw.metaTitle ?? group.metaTitle,
+    metaDescription: raw.metaDescription ?? group.metaDescription,
+    intro: raw.intro ?? group.intro,
+    items: group.items.map((it, i) => ({ ...it, ...raw.items?.[i] })),
+  };
+}
