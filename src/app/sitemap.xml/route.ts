@@ -19,6 +19,7 @@ import { productSlugs } from '@/lib/products';
 import { applicationSlugs } from '@/lib/applications';
 import { blogSlugs, blogPosts, projectSlugs } from '@/lib/content';
 import { techMembranes, techTopicKeys } from '@/lib/technical';
+import { materialGroupSlugs } from '@/lib/materials';
 
 export const dynamic = 'force-dynamic';
 
@@ -34,12 +35,14 @@ function collectRoutes(): string[] {
     techTopicKeys.map((t) => `/technical/${m}/${t}`),
   );
   const projectRoutes = projectSlugs.map((s) => `/inspiration/${s}`);
+  const materialRoutes = materialGroupSlugs.map((s) => `/materials/${s}`);
   return [
     ...staticRoutes,
     ...productRoutes,
     ...applicationRoutes,
     ...technicalRoutes,
     ...projectRoutes,
+    ...materialRoutes,
     ...blogRoutes,
   ];
 }
