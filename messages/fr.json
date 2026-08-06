@@ -2099,7 +2099,15 @@
       "home-cinema-ghent": "Gand · Ciel étoilé + acoustique",
       "city-penthouse-antwerp": "Anvers · Salon",
       "wellness-spa-bruges": "Bruges · Salle de bains spa",
-      "rue-perree-paris": "Paris · Plafond de galerie rétroéclairé"
+      "rue-perree-paris": "Paris · Plafond de galerie rétroéclairé",
+      "vier-emmershof-lokeren": "Lokeren · Maison en forêt",
+      "vp-193": "Flandre-Orientale · Résidence privée",
+      "jpv-210": "Belgique · Résidence privée",
+      "ben-home-vdb-222": "Sint-Pauwels · Maison quasi neutre en énergie",
+      "vap-sint-pauwels": "Sint-Pauwels · Villa blanche",
+      "goesten-opdam": "Belgique · Aménagement de bureaux",
+      "dhl-zaventem": "Zaventem · Salle de réunion Boeing 737",
+      "veta-interieur-showroom": "Dendermonde · Showroom salle de bains"
     },
     "comingSoon": "Photos à venir"
   },
@@ -2896,6 +2904,258 @@
           "value": "Galerie multimarques"
         }
       ]
+    },
+    "vier-emmershof-lokeren": {
+      "title": "’t Vier Emmershof",
+      "summary": "Des plafonds tendus acoustiques dans toute une résidence sculpturale en forêt.",
+      "hook": "Une maison sculpturale parmi les épicéas, aussi calme à l’intérieur que la forêt qui l’entoure.",
+      "description": [
+        "À ’t Vier Emmershof, à Lokeren, une résidence sculpturale prend place entre des épicéas préservés ; sa façade arrière entièrement vitrée fait entrer la forêt dans les pièces de vie. Les finitions naturelles composent un intérieur chaleureux et paisible.",
+        "Des plafonds STRETCH acoustiques traversent toute la maison et absorbent les réflexions que tout ce vitrage amplifierait autrement — et des éléments muraux acoustiques habillés de textile imprimé prolongent le traitement au-delà du plan du plafond."
+      ],
+      "highlights": [
+        "Plafonds acoustiques dans toute la maison",
+        "Éléments muraux acoustiques en textile imprimé",
+        "Façade arrière vitrée — vue sur la forêt, acoustique maîtrisée"
+      ],
+      "materials": [
+        "Plafond STRETCH acoustique",
+        "Éléments muraux acoustiques avec textile imprimé"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Lokeren, Belgique"
+        },
+        {
+          "label": "Architecte",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Revendeur STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vp-193": {
+      "title": "Villa VP-193",
+      "summary": "Des plafonds acoustiques pour une villa parée de grès, pensée autour de la lumière et de l’intimité.",
+      "hook": "Une maison qui s’affirme sans hausser le ton — grès indien à l’extérieur, acoustique apaisée à l’intérieur.",
+      "description": [
+        "La Villa VP-193 porte une façade en grès indien qui donne à la maison chaleur et caractère. Ses pièces de vie s’ouvrent vers l’arrière, où de grands pans vitrés encadrent une forêt d’épicéas, tandis qu’un généreux jardin intérieur à l’avant préserve à la fois l’apport de lumière du jour et l’intimité. Un porte-à-faux audacieux forme la terrasse couverte et le carport.",
+        "À l’intérieur, des plafonds STRETCH acoustiques gardent confortables les volumes ouverts aux surfaces dures, avec un éclairage Kreon intégré à fleur de toile."
+      ],
+      "highlights": [
+        "Plafond acoustique dans les pièces de vie ouvertes",
+        "Éclairage Kreon intégré à fleur de plafond",
+        "Façade en grès avec terrasse en porte-à-faux"
+      ],
+      "materials": [
+        "Plafond STRETCH acoustique",
+        "Éclairage intégré (Kreon, entre autres)"
+      ],
+      "facts": [
+        {
+          "label": "Région",
+          "value": "Flandre-Orientale, Belgique"
+        },
+        {
+          "label": "Architecte",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Revendeur STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "jpv-210": {
+      "title": "Villa JPV-210",
+      "summary": "Des plafonds blancs sans soudure pour une villa minimaliste tout en blanc.",
+      "hook": "Blanc sur blanc : une villa minimaliste où le plafond devait disparaître complètement.",
+      "description": [
+        "La Villa JPV-210 est un exercice de réduction — des volumes blancs empilés à l’extérieur, et des intérieurs où murs, menuiseries et sols se fondent en une seule surface lumineuse. Dans une maison aussi pure, la moindre soudure ou le moindre luminaire apparent romprait le charme.",
+        "Des plafonds STRETCH sans soudure prolongent ce même blanc ininterrompu au-dessus de la tête, en rendant ces volumes ouverts aux surfaces dures agréables à vivre."
+      ],
+      "highlights": [
+        "Plafonds blanc mat sans soudure dans toute la maison",
+        "Aucune soudure ni profilé apparent",
+        "Du calme dans des volumes ouverts aux surfaces dures"
+      ],
+      "materials": [
+        "Plafond STRETCH sans soudure, blanc mat"
+      ],
+      "facts": [
+        {
+          "label": "Pays",
+          "value": "Belgique"
+        },
+        {
+          "label": "Espace",
+          "value": "Villa privée"
+        }
+      ]
+    },
+    "ben-home-vdb-222": {
+      "title": "Maison BEN VDB-222",
+      "summary": "Des plafonds acoustiques pour une maison en forêt quasi neutre en énergie, pensée autour de l’unité.",
+      "hook": "Un maximum de vitrage, une connexion maximale avec les arbres — sans renoncer au calme ni à l’intimité.",
+      "description": [
+        "L’unité est le fil conducteur de cette résidence BEN (quasi neutre en énergie) à Sint-Pauwels : de généreuses baies vitrées et un plan ouvert relient la maison à la verdure environnante, en équilibre soigné avec l’intimité et une sensation d’abri.",
+        "Des plafonds STRETCH acoustiques tempèrent cette ouverture — en absorbant le son dans les volumes vitrés et ouverts — avec des luminaires Delta Light proprement intégrés dans la toile."
+      ],
+      "highlights": [
+        "Plafond acoustique sur tout le plan ouvert",
+        "Éclairage Delta Light intégré",
+        "Construction quasi neutre en énergie (BEN)"
+      ],
+      "materials": [
+        "Plafond STRETCH acoustique",
+        "Éclairage intégré (Delta Light, entre autres)"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Sint-Pauwels, Belgique"
+        },
+        {
+          "label": "Architecte",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Revendeur STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vap-sint-pauwels": {
+      "title": "VAP — Sint-Pauwels",
+      "summary": "Des plafonds acoustiques pour une villa d’un blanc lumineux, inspirée par l’eau.",
+      "hook": "Une villa blanche pour une famille que l’eau attire — des plafonds qui captent la lumière comme une mer calme.",
+      "description": [
+        "Cette villa d’un blanc lumineux (projet VA-176) reflète le lien de ses propriétaires avec l’eau : des surfaces claires et des plans de plafond qui captent les reflets comme une mer étale. Le bureau à domicile peut se détacher pour devenir une suite à l’identité propre.",
+        "Des plafonds STRETCH acoustiques parcourent les pièces de vie, associés à un éclairage Kreon, et gardent cet intérieur blanc et net aussi apaisant pour l’oreille que pour l’œil."
+      ],
+      "highlights": [
+        "Plafonds acoustiques dans chaque pièce de vie",
+        "Éclairage Kreon intégré",
+        "Bureau convertible en suite d’amis"
+      ],
+      "materials": [
+        "Plafond STRETCH acoustique",
+        "Éclairage intégré (Kreon, entre autres)"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Sint-Pauwels, Belgique"
+        },
+        {
+          "label": "Année",
+          "value": "2022–2023"
+        },
+        {
+          "label": "Architecte",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Revendeur STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "goesten-opdam": {
+      "title": "Goesten & Opdam",
+      "summary": "Un plafond acoustique assorti à la palette pour un aménagement de bureaux inspiré par la nature.",
+      "hook": "De l’acoustique dans une teinte RAL sur mesure, au-dessus d’un bureau qui fait entrer l’extérieur.",
+      "description": [
+        "Les bureaux de Goesten & Opdam, aménagés avec l’agenceur Tenback, s’inspirent de la nature — jusqu’au mur d’accent en feuillage derrière la banque d’accueil courbe.",
+        "Au-dessus, un plafond STRETCH acoustique dans une teinte RAL sur mesure relie toute la palette, tout en gardant l’espace de travail silencieux."
+      ],
+      "highlights": [
+        "Plafond acoustique dans une teinte RAL sur mesure",
+        "Intérieur de bureau sur le thème de la nature"
+      ],
+      "materials": [
+        "Plafond STRETCH acoustique (teinte RAL sur mesure)"
+      ],
+      "facts": [
+        {
+          "label": "Pays",
+          "value": "Belgique"
+        },
+        {
+          "label": "Agenceur d’intérieur",
+          "value": "Tenback"
+        }
+      ]
+    },
+    "dhl-zaventem": {
+      "title": "DHL Zaventem",
+      "summary": "Un plafond acoustique habillé de Camira dans une salle de réunion Boeing 737 grandeur nature.",
+      "hook": "Une salle de conférence construite comme un fuselage de Boeing 737 — avec une acoustique à la hauteur de l’idée.",
+      "description": [
+        "Pour l’équipe DHL de Zaventem, le revendeur Ideal Acoustics a construit un espace de réunion pas comme les autres : une section grandeur nature d’un fuselage de Boeing 737, en plein cœur des bureaux.",
+        "Des plafonds STRETCH acoustiques finis en textile Camira habillent l’espace — la coque spectaculaire offre ainsi un vrai confort acoustique pour les réunions."
+      ],
+      "highlights": [
+        "Salle de réunion en fuselage de Boeing 737 grandeur nature",
+        "Plafond acoustique habillé de textile Camira"
+      ],
+      "materials": [
+        "Plafond STRETCH acoustique",
+        "Finition en textile Camira"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Zaventem, Belgique"
+        },
+        {
+          "label": "Année",
+          "value": "2023"
+        },
+        {
+          "label": "Revendeur STRETCH",
+          "value": "Ideal Acoustics"
+        },
+        {
+          "label": "Client",
+          "value": "DHL"
+        }
+      ]
+    },
+    "veta-interieur-showroom": {
+      "title": "Veta Interieur",
+      "summary": "Des plafonds imprimés et lumineux dans un showroom salle de bains de 350 m².",
+      "hook": "Dix-huit univers de salle de bains sous un même toit — des plafonds imprimés et lumineux qui plantent chaque décor.",
+      "description": [
+        "Le showroom de 350 m² de Veta Interieur à Termonde met en scène des expériences de salle de bains complètes, fruit de 25 ans de design et de savoir-faire, avec des matériaux importés directement d’Italie et d’Espagne.",
+        "STRETCH a livré des plafonds lumineux imprimés bord à bord — une lumière douce et uniforme au-dessus de la tête, qui transforme chaque salle de bains d’exposition en scène immersive."
+      ],
+      "highlights": [
+        "Showroom de 350 m²",
+        "Plafonds imprimés + rétroéclairés",
+        "Salles de bains d’exposition immersives"
+      ],
+      "materials": [
+        "Plafond STRETCH Backlit (translucide)",
+        "Impression sur mesure bord à bord"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Termonde, Belgique"
+        },
+        {
+          "label": "Année",
+          "value": "2022"
+        },
+        {
+          "label": "Client",
+          "value": "Veta Interieur"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3425,6 +3685,140 @@
     "dealerBody": "Les comptes professionnels voient les prix pro en direct dans le portail client — et commandent à leurs conditions.",
     "dealerCta": "Connexion prix pro",
     "partnerCta": "Devenir partenaire",
-    "backToAll": "Tous les matériaux"
+    "backToAll": "Tous les matériaux",
+    "addToList": "Ajouter à la demande",
+    "inList": "Sur votre liste",
+    "barLabel": "Liste de demande",
+    "inquiryTitle": "Votre liste de demande",
+    "inquirySub": "Un seul message, tous vos articles — nous répondons avec prix, disponibilité et délai, généralement le jour même.",
+    "removeLabel": "Retirer",
+    "formName": "Nom",
+    "formCompany": "Société (facultatif)",
+    "formEmail": "E-mail",
+    "formPhone": "Téléphone (facultatif)",
+    "formMessage": "Message (facultatif)",
+    "consent": "J’accepte que STRETCH traite mes données pour répondre à ma demande —",
+    "privacyLabel": "politique de confidentialité",
+    "send": "Envoyer la demande",
+    "sending": "Envoi…",
+    "sentTitle": "Demande envoyée",
+    "sentBody": "Merci — nous revenons vers vous avec prix, disponibilité et délai, généralement le jour même.",
+    "sendError": "Une erreur s’est produite — réessayez ou écrivez-nous directement.",
+    "closeLabel": "Fermer"
+  },
+  "materialsData": {
+    "profiles": {
+      "name": "Profilés & rails",
+      "eyebrow": "Profilés",
+      "metaTitle": "Profilés pour plafond tendu — aluminium & PVC | STRETCH",
+      "metaDescription": "Profilés de plafond tendu en aluminium et PVC, profilés à ligne LED et embouts, directement de notre propre production. Demandez un devis — nous répondons avec prix et délai.",
+      "intro": "Les rails qui tiennent chaque plafond STRETCH : profilés périphériques en aluminium et en PVC, profilés à ligne LED et pièces de finition — les mêmes profilés que nos propres poseurs utilisent, coupés et expédiés depuis notre production.",
+      "items": [
+        {
+          "name": "Profilés aluminium pour plafond tendu",
+          "body": "Profilés périphériques et de séparation rigides en aluminium, pour pose à froid comme à chaud — en longueurs droites, prêts à poser."
+        },
+        {
+          "name": "Profilés PVC pour plafond tendu",
+          "body": "Profilés harpon flexibles en PVC pour murs courbes et périmètres simples."
+        },
+        {
+          "name": "Profilés à ligne LED & embouts",
+          "body": "Profilés encastrés qui dessinent une ligne de lumière nette dans la toile, avec embouts assortis (16 / 31 mm)."
+        },
+        {
+          "name": "Profilé Tracklight 48V",
+          "body": "Le rail magnétique 48V qui s’intègre à fleur dans un plafond tendu — l’épine dorsale du système tracklight."
+        }
+      ]
+    },
+    "fabrics": {
+      "name": "Toiles & films",
+      "eyebrow": "Toiles",
+      "metaTitle": "Toile de plafond tendu & film PVC — rouleaux, coupe à longueur, sur mesure | STRETCH",
+      "metaDescription": "Film PVC pour plafond tendu (MSD, Bauf, Teqtum, Renolit) en rouleau, coupé à longueur ou soudé sur mesure avec harpon. Finitions mat, laqué, translucide et couleur. Demandez un devis.",
+      "intro": "La toile comme il vous la faut : des rouleaux complets pour votre propre confection, du film coupé à longueur, ou un plafond fini sur mesure soudé avec harpon — en finitions mate, satinée, laquée, translucide et couleur des grandes marques de film.",
+      "items": [
+        {
+          "name": "Film PVC en rouleau",
+          "body": "Film MSD, Bauf, Teqtum et Renolit au rouleau — gammes mat/satiné, laqué, translucide, couleur, métallisé et Black & White."
+        },
+        {
+          "name": "Film coupé à longueur",
+          "body": "Les mêmes gammes de film, coupées à la longueur qu’il vous faut — sans acheter un rouleau complet."
+        },
+        {
+          "name": "Plafonds sur mesure",
+          "body": "Votre plafond soudé aux dimensions dans notre production, harpon compris — prêt à accrocher dans le profilé."
+        },
+        {
+          "name": "Film translucide (rétroéclairé)",
+          "body": "Toile translucide pour plafonds lumineux et caissons lumineux, jusqu’à 5 m sans soudure."
+        }
+      ]
+    },
+    "lighting": {
+      "name": "Éclairage",
+      "eyebrow": "Éclairage",
+      "metaTitle": "Éclairage plafond tendu — tracklight 48V, modules LED, anneaux pour spots | STRETCH",
+      "metaDescription": "L’éclairage des plafonds tendus : tracklights magnétiques 48V, spots et luminaires à grille, modules LED pour plafonds rétroéclairés et anneaux pour spots/anneaux de protection. Demandez un devis.",
+      "intro": "Tout ce qui éclaire un plafond STRETCH : la famille tracklight magnétique 48V, les modules LED pour plafonds rétroéclairés et les anneaux qui finissent proprement chaque spot.",
+      "items": [
+        {
+          "name": "Système Tracklight 48V",
+          "body": "Spots magnétiques, luminaires à grille et connecteurs pour le rail 48V affleurant — remplacez et repositionnez les luminaires à la main."
+        },
+        {
+          "name": "Modules LED pour plafonds rétroéclairés",
+          "body": "Des champs LED uniformes et gradables qui transforment une toile translucide en source lumineuse sans soudure."
+        },
+        {
+          "name": "Anneaux pour spots & anneaux de protection",
+          "body": "Des anneaux de tous diamètres (4.5–300 mm) qui renforcent les découpes pour spots, capteurs et ventilation."
+        }
+      ]
+    },
+    "accessories": {
+      "name": "Accessoires",
+      "eyebrow": "Accessoires",
+      "metaTitle": "Accessoires plafond tendu — harpon, anneaux, fixations | STRETCH",
+      "metaDescription": "Accessoires pour plafond tendu : harpon, anneaux de protection, colle, fixations et pièces de finition — tout ce qui entoure la toile. Demandez un devis.",
+      "intro": "Les petites pièces qui font un travail net : harpon à souder, anneaux de protection, colle et fixations — les consommables que chaque poseur utilise en continu.",
+      "items": [
+        {
+          "name": "Harpon",
+          "body": "Le bord soudé qui verrouille la toile dans le profilé — vendu au rouleau."
+        },
+        {
+          "name": "Anneaux de protection",
+          "body": "Anneaux autocollants de 4.5 à 300 mm pour spots, crochets, conduits et capteurs."
+        },
+        {
+          "name": "Colle & fixations",
+          "body": "Colle AKFIX, vis et les consommables de pose utilisés sur chaque chantier."
+        }
+      ]
+    },
+    "tools-cleaning": {
+      "name": "Outillage & nettoyage",
+      "eyebrow": "Outillage",
+      "metaTitle": "Outillage plafond tendu & STRETCH Cleaner | STRETCH",
+      "metaDescription": "Outils à main pour la pose de plafonds tendus et le STRETCH Cleaner qui garde les toiles impeccables (1 L et 5 L). Demandez un devis.",
+      "intro": "Les outils à main du poseur et le nettoyant conçu pour les toiles tendues — les mêmes produits que dans notre salle de formation et nos propres camionnettes.",
+      "items": [
+        {
+          "name": "Outils à main de pose",
+          "body": "Spatules et outils à main profilés pour rentrer la toile sans l’endommager."
+        },
+        {
+          "name": "STRETCH Cleaner 1 L",
+          "body": "Le nettoyant sûr pour la toile, contre les traces de doigts, la poussière et le voile de chantier."
+        },
+        {
+          "name": "STRETCH Cleaner 5 L",
+          "body": "Le même nettoyant en format atelier, pour les revendeurs et les gros utilisateurs."
+        }
+      ]
+    }
   }
 }

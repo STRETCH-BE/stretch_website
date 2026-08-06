@@ -1,3 +1,29 @@
+## 2026-08-06 (4) — Inquiry list + full translation pass (materials data & 8 migrated projects)
+
+- **Inquiry list (materials step 2)** — `src/components/materials/Inquiry.tsx`:
+  "Add to inquiry" toggle on every item card, floating bar (item count) fixed
+  bottom-right across the catalogue (`materials/layout.tsx` mounts the provider
+  + bar; list survives navigation between group pages via sessionStorage
+  `stretch_inquiry_v1`). Panel = item list with remove + one combined form
+  (name/company/email/phone/message, consent checkbox → /privacy, `_gotcha`
+  honeypot) → POST `/api/lead` with `source: materials_inquiry` and all items
+  joined into one line. Success state clears the list. 19 UI keys in the
+  `materials` namespace, translated ×12.
+- **Materials data localized** — new `materialsData` namespace ×12 (5 groups:
+  name/eyebrow/metaTitle/metaDescription/intro + 17 items name/body), overlay
+  via new `localizeMaterialGroup` in `localize-content.ts`, wired with has()
+  guards into /materials overview, group pages and their generateMetadata
+  (localized `<title>`/description per locale — each still ends "| STRETCH").
+- **8 migrated projects translated ×12** — `projects.<slug>` entries (title/
+  summary/hook/description/highlights/materials/facts) for vier-emmershof-
+  lokeren, vp-193, jpv-210, ben-home-vdb-222, vap-sint-pauwels, goesten-opdam,
+  dhl-zaventem, veta-interieur-showroom in all 11 non-EN locales (be = nl);
+  plus localized `projectCards.metas.<slug>` ×12 (the "City · Type" line on
+  cards + detail pages). Brand names, dimensions and units preserved exactly.
+- Verified: typecheck clean, build 920/920 pages, 0 MISSING_MESSAGE; Polish
+  spot-checks (Profile i szyny, Willa VP-193, inquiry flow add→bar→panel all
+  localized).
+
 ## 2026-08-06 (3) — Materials catalogue: the shop's successor (quote-list, no checkout)
 
 - **New public section `/materials`** + 5 group pages (profiles, fabrics,

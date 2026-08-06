@@ -2099,7 +2099,15 @@
       "home-cinema-ghent": "Gent · Sterrenhemel + akoestiek",
       "city-penthouse-antwerp": "Antwerpen · Woonkamer",
       "wellness-spa-bruges": "Brugge · Spa-badkamer",
-      "rue-perree-paris": "Parijs · Galerijplafond met backlight"
+      "rue-perree-paris": "Parijs · Galerijplafond met backlight",
+      "vier-emmershof-lokeren": "Lokeren · Boswoning",
+      "vp-193": "Oost-Vlaanderen · Privéwoning",
+      "jpv-210": "België · Privéwoning",
+      "ben-home-vdb-222": "Sint-Pauwels · Bijna-energieneutrale woning",
+      "vap-sint-pauwels": "Sint-Pauwels · Witte villa",
+      "goesten-opdam": "België · Kantoorinrichting",
+      "dhl-zaventem": "Zaventem · Boeing 737-vergaderruimte",
+      "veta-interieur-showroom": "Dendermonde · Badkamershowroom"
     },
     "comingSoon": "Foto's volgen binnenkort"
   },
@@ -2896,6 +2904,258 @@
           "value": "Galerie met meerdere merken"
         }
       ]
+    },
+    "vier-emmershof-lokeren": {
+      "title": "’t Vier Emmershof",
+      "summary": "Akoestische spanplafonds door de hele sculpturale boswoning.",
+      "hook": "Een sculpturale woning tussen de sparren, binnen even rustig als het bos eromheen.",
+      "description": [
+        "Bij ’t Vier Emmershof in Lokeren staat een sculpturale woning tussen bewaard gebleven sparren; de volledig beglaasde achtergevel haalt het bos tot in de leefruimtes. Natuurlijke afwerkingen zorgen voor een warm, rustig interieur.",
+        "Akoestische STRETCH-plafonds lopen door de hele woning en absorberen de reflecties die al dat glas anders zou versterken — en akoestische wandelementen, afgewerkt met bedrukt textiel, trekken de behandeling door tot voorbij het plafondvlak."
+      ],
+      "highlights": [
+        "Akoestische plafonds in de hele woning",
+        "Akoestische wandelementen met bedrukt textiel",
+        "Beglaasde achtergevel — uitzicht op het bos, beheerste akoestiek"
+      ],
+      "materials": [
+        "Akoestisch STRETCH-plafond",
+        "Akoestische wandelementen met bedrukt textiel"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Lokeren, België"
+        },
+        {
+          "label": "Architect",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-verdeler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vp-193": {
+      "title": "Villa VP-193",
+      "summary": "Akoestische plafonds voor een met zandsteen beklede villa, ontworpen rond licht en privacy.",
+      "hook": "Een woning die mag opvallen zonder te schreeuwen — Indiase zandsteen buiten, rustige akoestiek binnen.",
+      "description": [
+        "Villa VP-193 draagt een gevel van Indiase zandsteen die de woning warmte en karakter geeft. De leefruimtes richten zich naar achteren, waar grote glaspartijen een sparrenbos omkaderen, terwijl een royale binnentuin aan de voorzijde volop daglicht binnenlaat en de privacy bewaart. Een gedurfde uitkraging vormt het overdekte terras en de carport.",
+        "Binnen houden akoestische STRETCH-plafonds de open ruimtes met veel harde oppervlakken comfortabel, met Kreon-verlichting die vlak in het doek is geïntegreerd."
+      ],
+      "highlights": [
+        "Akoestisch plafond in de open leefruimtes",
+        "Vlak geïntegreerde Kreon-verlichting",
+        "Zandstenen gevel met uitkragend terras"
+      ],
+      "materials": [
+        "Akoestisch STRETCH-plafond",
+        "Geïntegreerde verlichting (o.a. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Regio",
+          "value": "Oost-Vlaanderen, België"
+        },
+        {
+          "label": "Architect",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-verdeler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "jpv-210": {
+      "title": "Villa JPV-210",
+      "summary": "Naadloze witte plafonds voor een volledig witte, minimalistische villa.",
+      "hook": "Wit op wit: een minimalistische villa waar het plafond volledig moest verdwijnen.",
+      "description": [
+        "Villa JPV-210 is een oefening in reductie — gestapelde witte volumes aan de buitenzijde, en interieurs waarin wanden, maatwerk en vloeren opgaan in één helder vlak. In een woning zo puur zou elke plafondnaad of zichtbare armatuur de betovering doorbreken.",
+        "Naadloze STRETCH-plafonds zetten datzelfde ononderbroken wit boven het hoofd voort en houden de harde, open volumes comfortabel om in te wonen."
+      ],
+      "highlights": [
+        "Overal naadloze matwitte plafonds",
+        "Geen zichtbare naden of afwerkingsprofielen",
+        "Rust in harde, open volumes"
+      ],
+      "materials": [
+        "Naadloos STRETCH-plafond, matwit"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "België"
+        },
+        {
+          "label": "Ruimte",
+          "value": "Privévilla"
+        }
+      ]
+    },
+    "ben-home-vdb-222": {
+      "title": "BEN-woning VDB-222",
+      "summary": "Akoestische plafonds voor een bijna-energieneutrale boswoning waar eenheid centraal staat.",
+      "hook": "Maximaal glas, maximale verbinding met de bomen — zonder aan rust of privacy in te boeten.",
+      "description": [
+        "Eenheid is het leidende principe van deze BEN-woning (bijna energieneutraal) in Sint-Pauwels: royale beglazing en een open plan verbinden de woning met het omringende groen, zorgvuldig in evenwicht met privacy en een gevoel van geborgenheid.",
+        "Akoestische STRETCH-plafonds temperen die openheid — ze absorberen het geluid in de beglaasde, open volumes — met armaturen van Delta Light die strak in het doek zijn geïntegreerd."
+      ],
+      "highlights": [
+        "Akoestisch plafond over het hele open plan",
+        "Geïntegreerde verlichting van Delta Light",
+        "Bijna-energieneutrale (BEN) woning"
+      ],
+      "materials": [
+        "Akoestisch STRETCH-plafond",
+        "Geïntegreerde verlichting (o.a. Delta Light)"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Sint-Pauwels, België"
+        },
+        {
+          "label": "Architect",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-verdeler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vap-sint-pauwels": {
+      "title": "VAP — Sint-Pauwels",
+      "summary": "Akoestische plafonds voor een helderwitte villa, geïnspireerd op water.",
+      "hook": "Een witte villa voor een gezin met een hart voor water — plafonds die het licht vangen als een kalme zee.",
+      "description": [
+        "Deze helderwitte villa (project VA-176) weerspiegelt de band van haar bewoners met water: lichte oppervlakken en plafondvlakken die reflecties opvangen als een stille zee. Het thuiskantoor kan worden afgesplitst tot een suite met een eigen identiteit.",
+        "Akoestische STRETCH-plafonds lopen door alle leefruimtes, gecombineerd met Kreon-verlichting, en houden het frisse witte interieur even rustig voor het oor als voor het oog."
+      ],
+      "highlights": [
+        "Akoestische plafonds in elke leefruimte",
+        "Geïntegreerde Kreon-verlichting",
+        "Kantoor omvormbaar tot gastensuite"
+      ],
+      "materials": [
+        "Akoestisch STRETCH-plafond",
+        "Geïntegreerde verlichting (o.a. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Sint-Pauwels, België"
+        },
+        {
+          "label": "Jaar",
+          "value": "2022–2023"
+        },
+        {
+          "label": "Architect",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-verdeler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "goesten-opdam": {
+      "title": "Goesten & Opdam",
+      "summary": "Een akoestisch plafond in bijpassende kleur voor een natuurgeïnspireerde kantoorinrichting.",
+      "hook": "Akoestiek in een RAL-kleur op maat, boven een kantoor dat het buitengevoel naar binnen haalt.",
+      "description": [
+        "De kantoren van Goesten & Opdam, ingericht met interieurbouwer Tenback, halen hun inspiratie uit de natuur — tot en met de accentwand vol bladgroen achter de gebogen receptiebalie.",
+        "Daarboven trekt een akoestisch STRETCH-plafond in een RAL-kleur op maat het kleurenpalet door en houdt het de werkruimte aangenaam stil."
+      ],
+      "highlights": [
+        "Akoestisch plafond in een RAL-kleur op maat",
+        "Kantoorinterieur met natuurthema"
+      ],
+      "materials": [
+        "Akoestisch STRETCH-plafond (RAL-kleur op maat)"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "België"
+        },
+        {
+          "label": "Interieurbouwer",
+          "value": "Tenback"
+        }
+      ]
+    },
+    "dhl-zaventem": {
+      "title": "DHL Zaventem",
+      "summary": "Een met Camira bekleed akoestisch plafond in een levensgrote Boeing 737-vergaderruimte.",
+      "hook": "Een vergaderzaal gebouwd als de romp van een Boeing 737 — met akoestiek die het idee waarmaakt.",
+      "description": [
+        "Voor het DHL-team in Zaventem bouwde verdeler Ideal Acoustics een vergaderruimte als geen ander: een levensgrote sectie van een Boeing 737-romp, midden in het kantoor.",
+        "Akoestische STRETCH-plafonds, afgewerkt met Camira-textiel, bekleden de ruimte — zodat de spectaculaire schil ook serieus akoestisch comfort levert voor vergaderingen."
+      ],
+      "highlights": [
+        "Vergaderruimte als levensgrote Boeing 737-romp",
+        "Akoestisch plafond bekleed met Camira-textiel"
+      ],
+      "materials": [
+        "Akoestisch STRETCH-plafond",
+        "Afwerking in Camira-textiel"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Zaventem, België"
+        },
+        {
+          "label": "Jaar",
+          "value": "2023"
+        },
+        {
+          "label": "STRETCH-verdeler",
+          "value": "Ideal Acoustics"
+        },
+        {
+          "label": "Opdrachtgever",
+          "value": "DHL"
+        }
+      ]
+    },
+    "veta-interieur-showroom": {
+      "title": "Veta Interieur",
+      "summary": "Bedrukte, verlichte plafonds in een badkamershowroom van 350 m².",
+      "hook": "Achttien badkamerwerelden onder één dak — bedrukte, lichtgevende plafonds die elke scène neerzetten.",
+      "description": [
+        "De 350 m² grote showroom van Veta Interieur in Dendermonde ensceneert complete badkamerbelevingen, gebouwd op 25 jaar ontwerp en vakmanschap, met materialen die rechtstreeks uit Italië en Spanje worden ingevoerd.",
+        "STRETCH leverde verlichte plafonds met print van rand tot rand — zacht, gelijkmatig licht van bovenaf dat elke modelbadkamer verandert in een immersieve scène."
+      ],
+      "highlights": [
+        "Showroom van 350 m²",
+        "Bedrukte + verlichte plafonds",
+        "Immersieve modelbadkamers"
+      ],
+      "materials": [
+        "STRETCH Backlit-plafond (lichtdoorlatend)",
+        "Print op maat van rand tot rand"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Dendermonde, België"
+        },
+        {
+          "label": "Jaar",
+          "value": "2022"
+        },
+        {
+          "label": "Opdrachtgever",
+          "value": "Veta Interieur"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3425,6 +3685,140 @@
     "dealerBody": "Handelsaccounts zien live handelsprijzen voor dit alles in het klantenportaal — en bestellen aan eigen voorwaarden.",
     "dealerCta": "Inloggen voor handelsprijzen",
     "partnerCta": "Word partner",
-    "backToAll": "Alle materialen"
+    "backToAll": "Alle materialen",
+    "addToList": "Toevoegen aan aanvraag",
+    "inList": "Op uw lijst",
+    "barLabel": "Aanvraaglijst",
+    "inquiryTitle": "Uw aanvraaglijst",
+    "inquirySub": "Eén bericht, al uw items — wij antwoorden met prijs, beschikbaarheid en levertermijn, meestal dezelfde werkdag.",
+    "removeLabel": "Verwijderen",
+    "formName": "Naam",
+    "formCompany": "Bedrijf (optioneel)",
+    "formEmail": "E-mail",
+    "formPhone": "Telefoon (optioneel)",
+    "formMessage": "Bericht (optioneel)",
+    "consent": "Ik ga akkoord dat STRETCH mijn gegevens verwerkt om mijn aanvraag te beantwoorden —",
+    "privacyLabel": "privacybeleid",
+    "send": "Aanvraag versturen",
+    "sending": "Versturen…",
+    "sentTitle": "Aanvraag verstuurd",
+    "sentBody": "Bedankt — we komen bij u terug met prijzen, beschikbaarheid en levertermijn, meestal dezelfde werkdag.",
+    "sendError": "Er ging iets mis — probeer het opnieuw of mail ons rechtstreeks.",
+    "closeLabel": "Sluiten"
+  },
+  "materialsData": {
+    "profiles": {
+      "name": "Profielen & rails",
+      "eyebrow": "Profielen",
+      "metaTitle": "Spanplafondprofielen — aluminium & PVC | STRETCH",
+      "metaDescription": "Spanplafondprofielen in aluminium en PVC, LED-lijnprofielen en eindkappen, rechtstreeks uit eigen productie. Vraag een offerte aan — wij antwoorden met prijs en levertermijn.",
+      "intro": "De rails die elk STRETCH-plafond dragen: randprofielen in aluminium en PVC, LED-lijnprofielen en afwerkstukken — dezelfde profielen die onze eigen plaatsers gebruiken, op lengte gezaagd en verzonden vanuit onze productie.",
+      "items": [
+        {
+          "name": "Aluminium spanplafondprofielen",
+          "body": "Stijve rand- en scheidingsprofielen in aluminium voor koude en warme montage — rechte lengtes, klaar om te plaatsen."
+        },
+        {
+          "name": "PVC-spanplafondprofielen",
+          "body": "Flexibele PVC-harpoenprofielen voor gebogen wanden en eenvoudige randafwerking."
+        },
+        {
+          "name": "LED-lijnprofielen & eindkappen",
+          "body": "Inbouwprofielen die een strakke lichtlijn in het doek zetten, met bijpassende eindkappen (16 / 31 mm)."
+        },
+        {
+          "name": "Tracklight 48V-profiel",
+          "body": "De magnetische 48V-rail die vlak in een spanplafond integreert — de ruggengraat van het tracklightsysteem."
+        }
+      ]
+    },
+    "fabrics": {
+      "name": "Doeken & folies",
+      "eyebrow": "Doeken",
+      "metaTitle": "Spanplafonddoek & PVC-folie — op rol, op lengte gesneden, op maat | STRETCH",
+      "metaDescription": "PVC-spanplafondfolie (MSD, Bauf, Teqtum, Renolit) op rol, op lengte gesneden of op maat gelast met harpoen. In mat, glanzend, lichtdoorlatend en kleur. Vraag een offerte aan.",
+      "intro": "Doek zoals u het nodig hebt: volle rollen voor uw eigen confectie, folie op lengte gesneden, of een afgewerkt plafond op maat gelast met harpoen — in mat, satijn, glanzend, lichtdoorlatend en kleur, van de grote foliemerken.",
+      "items": [
+        {
+          "name": "PVC-folie op rol",
+          "body": "Folie van MSD, Bauf, Teqtum en Renolit per rol — in mat/satijn, glanzend, lichtdoorlatend, kleur, metallic en de Black & White-reeksen."
+        },
+        {
+          "name": "Folie op lengte gesneden",
+          "body": "Dezelfde foliereeksen, gesneden op de lengte die u nodig hebt — geen volle rol vereist."
+        },
+        {
+          "name": "Plafonds op maat",
+          "body": "Uw plafond op maat gelast in onze productie, inclusief harpoen — klaar om in het profiel te hangen."
+        },
+        {
+          "name": "Lichtdoorlatende (backlit) folie",
+          "body": "Lichtdoorlatend doek voor verlichte plafonds en lichtbakken, tot 5 m naadloos."
+        }
+      ]
+    },
+    "lighting": {
+      "name": "Verlichting",
+      "eyebrow": "Verlichting",
+      "metaTitle": "Spanplafondverlichting — 48V tracklight, LED-modules, spotringen | STRETCH",
+      "metaDescription": "Verlichting voor spanplafonds: magnetische 48V tracklights, spots en grille-armaturen, LED-modules voor verlichte plafonds en spotringen/beschermringen. Vraag een offerte aan.",
+      "intro": "Alles wat een STRETCH-plafond verlicht: de magnetische 48V tracklight-familie, LED-veldmodules voor verlichte plafonds en de ringen die elke spot strak afwerken.",
+      "items": [
+        {
+          "name": "Tracklight 48V-systeem",
+          "body": "Magnetische spots, grille-armaturen en connectoren voor de vlak ingebouwde 48V-rail — armaturen wisselt en verplaatst u met de hand."
+        },
+        {
+          "name": "LED-modules voor verlichte plafonds",
+          "body": "Gelijkmatige, dimbare LED-velden die een lichtdoorlatend doek veranderen in één naadloze lichtbron."
+        },
+        {
+          "name": "Spotringen & beschermringen",
+          "body": "Ringen in elke diameter (4.5–300 mm) die uitsparingen voor spots, sensoren en ventilatie verstevigen."
+        }
+      ]
+    },
+    "accessories": {
+      "name": "Accessoires",
+      "eyebrow": "Accessoires",
+      "metaTitle": "Spanplafondaccessoires — harpoen, ringen, bevestiging | STRETCH",
+      "metaDescription": "Spanplafondaccessoires: harpoen, beschermringen, lijm, bevestigingsmateriaal en afwerkstukken — alles rond het doek. Vraag een offerte aan.",
+      "intro": "De kleine onderdelen die het werk strak afmaken: harpoen om te lassen, beschermringen, lijm en bevestigingsmateriaal — de verbruiksmaterialen waar elke plaatser doorheen gaat.",
+      "items": [
+        {
+          "name": "Harpoen",
+          "body": "De gelaste rand die het doek in het profiel vergrendelt — per rol verkrijgbaar."
+        },
+        {
+          "name": "Beschermringen",
+          "body": "Zelfklevende ringen van 4.5 tot 300 mm voor spots, haken, leidingen en sensoren."
+        },
+        {
+          "name": "Lijm & bevestigingsmateriaal",
+          "body": "AKFIX-lijm, schroeven en het montagemateriaal dat op elke bouwplaats wordt gebruikt."
+        }
+      ]
+    },
+    "tools-cleaning": {
+      "name": "Gereedschap & reiniging",
+      "eyebrow": "Gereedschap",
+      "metaTitle": "Spanplafondgereedschap & STRETCH Cleaner | STRETCH",
+      "metaDescription": "Handgereedschap voor de montage van spanplafonds en de STRETCH Cleaner die het doek vlekkeloos houdt (1 L en 5 L). Vraag een offerte aan.",
+      "intro": "Handgereedschap voor plaatsers en de reiniger die speciaal voor spanplafonddoek is ontwikkeld — dezelfde producten als in ons opleidingslokaal en onze eigen bestelwagens.",
+      "items": [
+        {
+          "name": "Handgereedschap voor montage",
+          "body": "Spatels en handgereedschap, gevormd om doek zonder schade in het profiel te werken."
+        },
+        {
+          "name": "STRETCH Cleaner 1 L",
+          "body": "De reiniger die veilig is voor het doek — voor vingerafdrukken, stof en aanslag uit de bouwfase."
+        },
+        {
+          "name": "STRETCH Cleaner 5 L",
+          "body": "Dezelfde reiniger in werkplaatsformaat, voor verdelers en grootverbruikers."
+        }
+      ]
+    }
   }
 }

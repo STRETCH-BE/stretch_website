@@ -2099,7 +2099,15 @@
       "home-cinema-ghent": "Gent · Sternenhimmel + Akustik",
       "city-penthouse-antwerp": "Antwerpen · Wohnzimmer",
       "wellness-spa-bruges": "Brügge · Spa-Badezimmer",
-      "rue-perree-paris": "Paris · Hinterleuchtete Galeriedecke"
+      "rue-perree-paris": "Paris · Hinterleuchtete Galeriedecke",
+      "vier-emmershof-lokeren": "Lokeren · Waldhaus",
+      "vp-193": "Ostflandern · Privathaus",
+      "jpv-210": "Belgien · Privathaus",
+      "ben-home-vdb-222": "Sint-Pauwels · Fast-Nullenergiehaus",
+      "vap-sint-pauwels": "Sint-Pauwels · Weiße Villa",
+      "goesten-opdam": "Belgien · Büroausbau",
+      "dhl-zaventem": "Zaventem · Boeing-737-Besprechungsraum",
+      "veta-interieur-showroom": "Dendermonde · Badezimmer-Showroom"
     },
     "comingSoon": "Fotos folgen in Kürze"
   },
@@ -2896,6 +2904,258 @@
           "value": "Multibrand-Galerie"
         }
       ]
+    },
+    "vier-emmershof-lokeren": {
+      "title": "’t Vier Emmershof",
+      "summary": "Akustische Spanndecken durch ein skulpturales Wohnhaus im Wald.",
+      "hook": "Ein skulpturales Haus zwischen den Fichten — innen so ruhig wie der Wald ringsum.",
+      "description": [
+        "Beim ’t Vier Emmershof in Lokeren steht ein skulpturales Wohnhaus zwischen erhaltenen Fichten; die vollständig verglaste Rückfassade holt den Wald bis in die Wohnräume. Natürliche Oberflächen prägen ein warmes, ruhiges Interieur.",
+        "Akustische STRETCH-Decken ziehen sich durch das ganze Haus und absorbieren die Reflexionen, die all das Glas sonst verstärken würde — und akustische Wandelemente mit bedrucktem Textil führen die Behandlung über die Deckenebene hinaus."
+      ],
+      "highlights": [
+        "Akustikdecken im ganzen Haus",
+        "Akustische Wandelemente mit bedrucktem Textil",
+        "Verglaste Rückfassade — Waldblick, kontrollierte Akustik"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke",
+        "Akustische Wandelemente mit bedrucktem Textil"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Lokeren, Belgien"
+        },
+        {
+          "label": "Architekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-Händler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vp-193": {
+      "title": "Villa VP-193",
+      "summary": "Akustikdecken für eine mit Sandstein verkleidete Villa, entworfen um Licht und Privatsphäre.",
+      "hook": "Ein Haus, das auffallen darf, ohne laut zu werden — indischer Sandstein außen, ruhige Akustik innen.",
+      "description": [
+        "Die Villa VP-193 trägt eine Fassade aus indischem Sandstein, die dem Haus Wärme und Charakter verleiht. Die Wohnräume orientieren sich nach hinten, wo große Glasflächen einen Fichtenwald rahmen, während ein großzügiger Innengarten an der Vorderseite viel Tageslicht hereinholt und die Privatsphäre wahrt. Eine kühne Auskragung bildet die überdachte Terrasse und den Carport.",
+        "Im Inneren halten akustische STRETCH-Decken die offenen Räume mit ihren harten Oberflächen komfortabel — mit Kreon-Leuchten, flächenbündig in die Membran integriert."
+      ],
+      "highlights": [
+        "Akustikdecke in den offenen Wohnräumen",
+        "Flächenbündig integrierte Kreon-Beleuchtung",
+        "Sandsteinfassade mit auskragender Terrasse"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke",
+        "Integrierte Beleuchtung (u. a. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Ostflandern, Belgien"
+        },
+        {
+          "label": "Architekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-Händler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "jpv-210": {
+      "title": "Villa JPV-210",
+      "summary": "Nahtlose weiße Decken für eine ganz in Weiß gehaltene minimalistische Villa.",
+      "hook": "Weiß auf Weiß: eine minimalistische Villa, in der die Decke vollständig verschwinden musste.",
+      "description": [
+        "Die Villa JPV-210 ist eine Übung in Reduktion — gestapelte weiße Volumen außen und Innenräume, in denen Wände, Einbauten und Böden zu einer einzigen hellen Fläche verschmelzen. In einem so puren Haus würde jede Deckennaht, jede sichtbare Leuchte den Zauber brechen.",
+        "Nahtlose STRETCH-Decken führen dasselbe ununterbrochene Weiß über Kopf weiter und machen die harten, offenen Volumen angenehm bewohnbar."
+      ],
+      "highlights": [
+        "Durchgehend nahtlose Decken in Mattweiß",
+        "Keine sichtbaren Nähte oder Profile",
+        "Ruhe in harten, offenen Volumen"
+      ],
+      "materials": [
+        "Nahtlose STRETCH-Decke, mattweiß"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgien"
+        },
+        {
+          "label": "Raum",
+          "value": "Privatvilla"
+        }
+      ]
+    },
+    "ben-home-vdb-222": {
+      "title": "BEN-Haus VDB-222",
+      "summary": "Akustikdecken für ein fast energieneutrales Haus im Wald, entworfen um den Gedanken der Einheit.",
+      "hook": "Maximales Glas, maximale Verbindung zu den Bäumen — ohne auf Ruhe oder Privatsphäre zu verzichten.",
+      "description": [
+        "Einheit ist das Leitprinzip dieses BEN-Wohnhauses (fast energieneutral) in Sint-Pauwels: großzügige Verglasung und ein offener Grundriss verbinden das Haus mit dem umgebenden Grün — sorgfältig ausbalanciert mit Privatsphäre und einem Gefühl von Geborgenheit.",
+        "Akustische STRETCH-Decken mildern die Offenheit — sie absorbieren den Schall in den verglasten, offenen Volumen — mit Leuchten von Delta Light, sauber in die Membran integriert."
+      ],
+      "highlights": [
+        "Akustikdecke über den gesamten offenen Grundriss",
+        "Integrierte Beleuchtung von Delta Light",
+        "Fast energieneutrale Bauweise (BEN)"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke",
+        "Integrierte Beleuchtung (u. a. Delta Light)"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Sint-Pauwels, Belgien"
+        },
+        {
+          "label": "Architekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-Händler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vap-sint-pauwels": {
+      "title": "VAP — Sint-Pauwels",
+      "summary": "Akustikdecken für eine strahlend weiße Villa, inspiriert vom Wasser.",
+      "hook": "Eine weiße Villa für eine Familie, die es ans Wasser zieht — Decken, die das Licht einfangen wie eine ruhige See.",
+      "description": [
+        "Diese strahlend weiße Villa (Projekt VA-176) spiegelt die Verbundenheit ihrer Bewohner mit dem Wasser: helle Oberflächen und Deckenflächen, die Reflexionen aufnehmen wie eine stille See. Das Homeoffice lässt sich zu einer Suite mit eigener Identität abtrennen.",
+        "Akustische STRETCH-Decken ziehen sich durch die Wohnräume, kombiniert mit Kreon-Beleuchtung — und halten das klare weiße Interieur für das Ohr so ruhig wie für das Auge."
+      ],
+      "highlights": [
+        "Akustikdecken in jedem Wohnraum",
+        "Integrierte Kreon-Beleuchtung",
+        "Büro wandelbar zur Gästesuite"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke",
+        "Integrierte Beleuchtung (u. a. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Sint-Pauwels, Belgien"
+        },
+        {
+          "label": "Jahr",
+          "value": "2022–2023"
+        },
+        {
+          "label": "Architekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-Händler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "goesten-opdam": {
+      "title": "Goesten & Opdam",
+      "summary": "Eine farblich abgestimmte Akustikdecke für einen von der Natur inspirierten Büroausbau.",
+      "hook": "Akustik in der RAL-Wunschfarbe, über einem Büro, das das Draußen nach innen holt.",
+      "description": [
+        "Die Büros von Goesten & Opdam, ausgebaut mit dem Innenausbauer Tenback, nehmen die Natur zum Vorbild — bis hin zur Akzentwand aus Blattwerk hinter dem geschwungenen Empfangstresen.",
+        "Darüber bindet eine akustische STRETCH-Decke in einer RAL-Wunschfarbe die Palette zusammen und hält den Arbeitsbereich zugleich ruhig."
+      ],
+      "highlights": [
+        "Akustikdecke in RAL-Wunschfarbe",
+        "Büro-Interieur im Zeichen der Natur"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke (RAL-Wunschfarbe)"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgien"
+        },
+        {
+          "label": "Innenausbau",
+          "value": "Tenback"
+        }
+      ]
+    },
+    "dhl-zaventem": {
+      "title": "DHL Zaventem",
+      "summary": "Eine mit Camira bespannte Akustikdecke in einem Boeing 737-Besprechungsraum in Originalgröße.",
+      "hook": "Ein Konferenzraum, gebaut als Rumpf einer Boeing 737 — mit einer Akustik, die der Idee gerecht wird.",
+      "description": [
+        "Für das DHL-Team in Zaventem baute Händler Ideal Acoustics einen Besprechungsraum, wie es keinen zweiten gibt: einen Abschnitt eines Boeing 737-Rumpfs in Originalgröße, mitten im Büro.",
+        "Akustische STRETCH-Decken mit Camira-Textil kleiden den Raum aus — die spektakuläre Hülle liefert damit auch ernsthaften akustischen Komfort für Besprechungen."
+      ],
+      "highlights": [
+        "Besprechungsraum als Boeing 737-Rumpf in Originalgröße",
+        "Akustikdecke mit Camira-Textil bespannt"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke",
+        "Finish in Camira-Textil"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Zaventem, Belgien"
+        },
+        {
+          "label": "Jahr",
+          "value": "2023"
+        },
+        {
+          "label": "STRETCH-Händler",
+          "value": "Ideal Acoustics"
+        },
+        {
+          "label": "Auftraggeber",
+          "value": "DHL"
+        }
+      ]
+    },
+    "veta-interieur-showroom": {
+      "title": "Veta Interieur",
+      "summary": "Bedruckte, beleuchtete Decken in einem 350 m² großen Badezimmer-Showroom.",
+      "hook": "Achtzehn Badwelten unter einem Dach — bedruckte, leuchtende Decken inszenieren jede einzelne.",
+      "description": [
+        "Der 350 m² große Showroom von Veta Interieur in Dendermonde inszeniert komplette Baderlebnisse — aufgebaut auf 25 Jahren Design und Handwerkskunst, mit Materialien, die direkt aus Italien und Spanien importiert werden.",
+        "STRETCH lieferte beleuchtete Decken mit Druck von Kante zu Kante — weiches, gleichmäßiges Licht über Kopf, das jedes Ausstellungsbad in eine immersive Szene verwandelt."
+      ],
+      "highlights": [
+        "Showroom mit 350 m²",
+        "Bedruckte + hinterleuchtete Decken",
+        "Immersive Ausstellungsbäder"
+      ],
+      "materials": [
+        "STRETCH Backlit-Decke (lichtdurchlässig)",
+        "Individueller Druck von Kante zu Kante"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Dendermonde, Belgien"
+        },
+        {
+          "label": "Jahr",
+          "value": "2022"
+        },
+        {
+          "label": "Auftraggeber",
+          "value": "Veta Interieur"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3425,6 +3685,140 @@
     "dealerBody": "Händlerkonten sehen im Kundenportal live Händlerpreise — und bestellen zu eigenen Konditionen.",
     "dealerCta": "Login Händlerpreise",
     "partnerCta": "Partner werden",
-    "backToAll": "Alle Materialien"
+    "backToAll": "Alle Materialien",
+    "addToList": "Zur Anfrage hinzufügen",
+    "inList": "Auf Ihrer Liste",
+    "barLabel": "Anfrageliste",
+    "inquiryTitle": "Ihre Anfrageliste",
+    "inquirySub": "Eine Nachricht, alle Artikel — wir antworten mit Preis, Verfügbarkeit und Lieferzeit, meist am selben Werktag.",
+    "removeLabel": "Entfernen",
+    "formName": "Name",
+    "formCompany": "Firma (optional)",
+    "formEmail": "E-Mail",
+    "formPhone": "Telefon (optional)",
+    "formMessage": "Nachricht (optional)",
+    "consent": "Ich bin einverstanden, dass STRETCH meine Daten zur Beantwortung meiner Anfrage verarbeitet —",
+    "privacyLabel": "Datenschutzerklärung",
+    "send": "Anfrage senden",
+    "sending": "Wird gesendet…",
+    "sentTitle": "Anfrage gesendet",
+    "sentBody": "Danke — wir melden uns mit Preisen, Verfügbarkeit und Lieferzeit, meist am selben Werktag.",
+    "sendError": "Etwas ist schiefgelaufen — bitte erneut versuchen oder direkt mailen.",
+    "closeLabel": "Schließen"
+  },
+  "materialsData": {
+    "profiles": {
+      "name": "Profile & Schienen",
+      "eyebrow": "Profile",
+      "metaTitle": "Spanndecken-Profile — Aluminium & PVC | STRETCH",
+      "metaDescription": "Spanndecken-Profile aus Aluminium und PVC, LED-Linien-Profile und Endkappen, direkt aus eigener Produktion. Angebot anfragen — wir antworten mit Preis und Lieferzeit.",
+      "intro": "Die Schienen, die jede STRETCH-Decke halten: Randprofile aus Aluminium und PVC, LED-Linien-Profile und Abschlussstücke — dieselben Profile, die unsere eigenen Monteure verwenden, zugeschnitten und versendet aus unserer Produktion.",
+      "items": [
+        {
+          "name": "Aluminium-Spanndeckenprofile",
+          "body": "Starre Rand- und Trennprofile aus Aluminium für Kalt- und Warmmontage — gerade Längen, montagefertig."
+        },
+        {
+          "name": "PVC-Spanndeckenprofile",
+          "body": "Flexible PVC-Harpunenprofile für geschwungene Wände und einfache Randabschlüsse."
+        },
+        {
+          "name": "LED-Linien-Profile & Endkappen",
+          "body": "Einbauprofile, die eine klare Lichtlinie in die Membran setzen, mit passenden Endkappen (16 / 31 mm)."
+        },
+        {
+          "name": "Tracklight 48V-Profil",
+          "body": "Die magnetische 48V-Schiene, die flächenbündig in eine Spanndecke integriert wird — das Rückgrat des Tracklight-Systems."
+        }
+      ]
+    },
+    "fabrics": {
+      "name": "Folien & Tücher",
+      "eyebrow": "Folien",
+      "metaTitle": "Spanndeckentuch & PVC-Folie — auf Rolle, als Zuschnitt, nach Maß | STRETCH",
+      "metaDescription": "PVC-Spanndeckenfolie (MSD, Bauf, Teqtum, Renolit) auf der Rolle, als Zuschnitt oder nach Maß mit Harpune verschweißt. Matt, glänzend, transluzent und farbig. Angebot anfragen.",
+      "intro": "Membran, wie Sie sie brauchen: ganze Rollen für die eigene Konfektion, Folie als Zuschnitt oder eine fertige, nach Maß mit Harpune verschweißte Decke — matt, satiniert, glänzend, transluzent und farbig, von den großen Folienmarken.",
+      "items": [
+        {
+          "name": "PVC-Folie auf der Rolle",
+          "body": "Folie von MSD, Bauf, Teqtum und Renolit rollenweise — Matt/Satin, Glanz, transluzent, Farbe, Metallic und die Black & White-Serien."
+        },
+        {
+          "name": "Folie als Zuschnitt",
+          "body": "Dieselben Folienserien, zugeschnitten auf die Länge, die Sie brauchen — ganz ohne volle Rolle."
+        },
+        {
+          "name": "Decken nach Maß",
+          "body": "Ihre Decke, in unserer Produktion auf Maß verschweißt, Harpune inklusive — fertig zum Einhängen ins Profil."
+        },
+        {
+          "name": "Transluzente (hinterleuchtbare) Folie",
+          "body": "Lichtdurchlässige Membran für beleuchtete Decken und Lichtkästen, bis 5 m nahtlos."
+        }
+      ]
+    },
+    "lighting": {
+      "name": "Beleuchtung",
+      "eyebrow": "Beleuchtung",
+      "metaTitle": "Spanndecken-Beleuchtung — 48V Tracklight, LED-Module, Spotringe | STRETCH",
+      "metaDescription": "Beleuchtung für Spanndecken: magnetische 48V-Tracklights, Spots und Rasterleuchten, LED-Module für hinterleuchtete Decken und Spotringe/Schutzringe. Angebot anfragen.",
+      "intro": "Alles, was eine STRETCH-Decke beleuchtet: die magnetische 48V-Tracklight-Familie, LED-Flächenmodule für hinterleuchtete Decken und die Ringe, die jeden Spot sauber abschließen.",
+      "items": [
+        {
+          "name": "Tracklight 48V-System",
+          "body": "Magnetische Spots, Rasterleuchten und Verbinder für die flächenbündige 48V-Schiene — Leuchten lassen sich von Hand wechseln und versetzen."
+        },
+        {
+          "name": "LED-Module für hinterleuchtete Decken",
+          "body": "Gleichmäßige, dimmbare LED-Felder, die eine transluzente Membran in eine nahtlose Lichtquelle verwandeln."
+        },
+        {
+          "name": "Spotringe & Schutzringe",
+          "body": "Ringe in jedem Durchmesser (4.5–300 mm), die Ausschnitte für Spots, Sensoren und Lüftung verstärken."
+        }
+      ]
+    },
+    "accessories": {
+      "name": "Zubehör",
+      "eyebrow": "Zubehör",
+      "metaTitle": "Spanndecken-Zubehör — Harpune, Ringe, Befestigung | STRETCH",
+      "metaDescription": "Spanndecken-Zubehör: Harpune, Schutzringe, Kleber, Befestigungsmaterial und Abschlussstücke — alles rund um die Membran. Angebot anfragen.",
+      "intro": "Die kleinen Teile, die für ein sauberes Ergebnis sorgen: Harpune zum Schweißen, Schutzringe, Kleber und Befestigungsmaterial — die Verbrauchsmaterialien, die jedem Monteur ständig durch die Hände gehen.",
+      "items": [
+        {
+          "name": "Harpune",
+          "body": "Die angeschweißte Kante, die die Membran im Profil verriegelt — rollenweise erhältlich."
+        },
+        {
+          "name": "Schutzringe",
+          "body": "Selbstklebende Ringe von 4.5 bis 300 mm für Spots, Haken, Rohre und Sensoren."
+        },
+        {
+          "name": "Kleber & Befestigung",
+          "body": "AKFIX-Kleber, Schrauben und das Montage-Verbrauchsmaterial, das auf jeder Baustelle zum Einsatz kommt."
+        }
+      ]
+    },
+    "tools-cleaning": {
+      "name": "Werkzeug & Reinigung",
+      "eyebrow": "Werkzeug",
+      "metaTitle": "Spanndecken-Werkzeug & STRETCH Cleaner | STRETCH",
+      "metaDescription": "Handwerkzeug für die Spanndecken-Montage und der STRETCH Cleaner, der Membranen makellos hält (1 L und 5 L). Angebot anfragen.",
+      "intro": "Handwerkzeug für Monteure und der Reiniger, der eigens für Spannmembranen entwickelt wurde — dieselben Produkte wie in unserem Schulungsraum und in unseren eigenen Transportern.",
+      "items": [
+        {
+          "name": "Montage-Handwerkzeug",
+          "body": "Spachtel und Handwerkzeuge, geformt zum beschädigungsfreien Einarbeiten der Membran."
+        },
+        {
+          "name": "STRETCH Cleaner 1 L",
+          "body": "Der membranschonende Reiniger gegen Fingerabdrücke, Staub und Baustellenschleier."
+        },
+        {
+          "name": "STRETCH Cleaner 5 L",
+          "body": "Derselbe Reiniger in der Werkstattgröße — für Händler und Vielnutzer."
+        }
+      ]
+    }
   }
 }

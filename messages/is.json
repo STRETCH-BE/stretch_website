@@ -2099,7 +2099,15 @@
       "home-cinema-ghent": "Gent · Stjörnuhiminn + hljóðvist",
       "city-penthouse-antwerp": "Antwerpen · Stofa",
       "wellness-spa-bruges": "Brugge · Baðherbergi í heilsulind",
-      "rue-perree-paris": "París · Baklýst gallerísloft"
+      "rue-perree-paris": "París · Baklýst gallerísloft",
+      "vier-emmershof-lokeren": "Lokeren · Skógarhús",
+      "vp-193": "Austur-Flæmingjaland · Einkaheimili",
+      "jpv-210": "Belgía · Einkaheimili",
+      "ben-home-vdb-222": "Sint-Pauwels · Nær orkuhlutlaust heimili",
+      "vap-sint-pauwels": "Sint-Pauwels · Hvít villa",
+      "goesten-opdam": "Belgía · Skrifstofuinnrétting",
+      "dhl-zaventem": "Zaventem · Boeing 737 fundarherbergi",
+      "veta-interieur-showroom": "Dendermonde · Baðherbergjasýningarsalur"
     },
     "comingSoon": "Myndir væntanlegar"
   },
@@ -2896,6 +2904,258 @@
           "value": "Gallerí margra vörumerkja"
         }
       ]
+    },
+    "vier-emmershof-lokeren": {
+      "title": "’t Vier Emmershof",
+      "summary": "Hljóðdempandi strekkloft í gegnum skúlptúrískt hús í miðjum skógi.",
+      "hook": "Skúlptúrískt heimili á milli grenitrjánna — jafn kyrrlátt að innan og skógurinn í kring.",
+      "description": [
+        "Á ’t Vier Emmershof í Lokeren stendur skúlptúrískt íbúðarhús á milli varðveittra grenitrjáa, og bakhliðin, sem er alveg úr gleri, dregur skóginn inn í íverurýmin. Náttúruleg efni skapa hlýtt og kyrrlátt innra rými.",
+        "Hljóðdempandi STRETCH-loft liggja í gegnum allt húsið og gleypa endurkastið sem allt þetta gler myndi annars magna upp — og hljóðdempandi veggeiningar, klæddar prentuðum textíl, halda meðferðinni áfram út fyrir loftflötinn."
+      ],
+      "highlights": [
+        "Hljóðdempandi loft um allt heimilið",
+        "Hljóðdempandi veggeiningar með prentuðum textíl",
+        "Glerjuð bakhlið — skógarútsýni og stýrður hljómburður"
+      ],
+      "materials": [
+        "Hljóðdempandi STRETCH-loft",
+        "Hljóðdempandi veggeiningar með prentuðum textíl"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Lokeren, Belgíu"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-söluaðili",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vp-193": {
+      "title": "Villa VP-193",
+      "summary": "Hljóðdempandi loft fyrir sandsteinsklædda villu, byggða í kringum birtu og næði.",
+      "hook": "Heimili sem fær að skera sig úr án þess að hrópa — indverskur sandsteinn að utan, róleg hljóðvist að innan.",
+      "description": [
+        "Villa VP-193 klæðist framhlið úr indverskum sandsteini sem gefur húsinu hlýju og karakter. Íverurýmin snúa að bakhliðinni, þar sem stórir glerfletir ramma inn greniskóg, en rúmgóður innigarður að framan heldur dagsbirtunni hátt á lofti og næðinu óskertu. Djörf svífandi útbygging myndar yfirbyggðu veröndina og bílskýlið.",
+        "Innandyra halda hljóðdempandi STRETCH-loft opnu rýmunum með hörðu yfirborði þægilegum, með Kreon-lýsingu felldri slétt inn í dúkinn."
+      ],
+      "highlights": [
+        "Hljóðdempandi loft yfir opnu íverurýmunum",
+        "Kreon-lýsing felld slétt inn í loftið",
+        "Sandsteinsframhlið með svífandi verönd"
+      ],
+      "materials": [
+        "Hljóðdempandi STRETCH-loft",
+        "Innfelld lýsing (m.a. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Svæði",
+          "value": "Austur-Flæmingjaland, Belgíu"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-söluaðili",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "jpv-210": {
+      "title": "Villa JPV-210",
+      "summary": "Samskeytalaus hvít loft fyrir alhvíta mínimalíska villu.",
+      "hook": "Hvítt á hvítu: mínimalísk villa þar sem loftið átti að hverfa alveg.",
+      "description": [
+        "Villa JPV-210 er æfing í einföldun — staflaðir hvítir formhlutar að utan og innirými þar sem veggir, innréttingar og gólf renna saman í einn bjartan flöt. Í svo hreinu húsi myndi minnsta samskeyti eða sýnilegt ljósastæði í loftinu rjúfa töfrana.",
+        "Samskeytalaus STRETCH-loft halda sama óslitna hvíta litnum yfir höfði og gera hörðu, opnu rýmin þægileg til að búa í."
+      ],
+      "highlights": [
+        "Samskeytalaus matthvít loft alls staðar",
+        "Engin sýnileg samskeyti eða listar",
+        "Ró í hörðum, opnum rýmum"
+      ],
+      "materials": [
+        "Samskeytalaust STRETCH-loft, matthvítt"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgía"
+        },
+        {
+          "label": "Rými",
+          "value": "Einbýlishús"
+        }
+      ]
+    },
+    "ben-home-vdb-222": {
+      "title": "BEN-hús VDB-222",
+      "summary": "Hljóðdempandi loft fyrir nær orkuhlutlaust skógarhús, byggt í kringum heild.",
+      "hook": "Hámark af gleri, hámarkstenging við trén — án þess að fórna ró eða næði.",
+      "description": [
+        "Heild er leiðarstef þessa BEN-húss (nær orkuhlutlaust) í Sint-Pauwels: ríkulegt gler og opið skipulag tengja húsið við gróðurinn í kring, vandlega vegið á móti næði og skjóltilfinningu.",
+        "Hljóðdempandi STRETCH-loft milda opnunina — gleypa hljóð í glerjuðu, opnu rýmunum — með lýsingu frá Delta Light felldri snyrtilega inn í dúkinn."
+      ],
+      "highlights": [
+        "Hljóðdempandi loft yfir öllu opna skipulaginu",
+        "Innfelld Delta Light lýsing",
+        "Nær orkuhlutlaus bygging (BEN)"
+      ],
+      "materials": [
+        "Hljóðdempandi STRETCH-loft",
+        "Innfelld lýsing (m.a. Delta Light)"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Sint-Pauwels, Belgíu"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-söluaðili",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vap-sint-pauwels": {
+      "title": "VAP — Sint-Pauwels",
+      "summary": "Hljóðdempandi loft fyrir bjarta hvíta villu, innblásna af vatni.",
+      "hook": "Hvít villa fyrir fjölskyldu sem dregst að vatni — loft sem fanga birtuna eins og lygn sjór.",
+      "description": [
+        "Þessi bjarta hvíta villa (verkefni VA-176) endurspeglar tengsl eigendanna við vatn: ljósir fletir og loftfletir sem fanga endurkast eins og spegilsléttur sjór. Heimaskrifstofa getur orðið að sjálfstæðri íbúðareiningu með sinn eigin karakter.",
+        "Hljóðdempandi STRETCH-loft liggja í gegnum íverurýmin, ásamt Kreon-lýsingu, og halda stílhreinu hvítu innra rýminu jafn rólegu fyrir eyrað og augað."
+      ],
+      "highlights": [
+        "Hljóðdempandi loft í öllum íverurýmum",
+        "Innfelld Kreon-lýsing",
+        "Skrifstofa sem getur orðið gestaíbúð"
+      ],
+      "materials": [
+        "Hljóðdempandi STRETCH-loft",
+        "Innfelld lýsing (m.a. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Sint-Pauwels, Belgíu"
+        },
+        {
+          "label": "Ár",
+          "value": "2022–2023"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-söluaðili",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "goesten-opdam": {
+      "title": "Goesten & Opdam",
+      "summary": "Hljóðdempandi loft í sérvöldum lit fyrir náttúruinnblásna skrifstofuinnréttingu.",
+      "hook": "Hljóðvist í sérvöldum RAL-lit, yfir skrifstofu sem sækir náttúruna inn.",
+      "description": [
+        "Skrifstofur Goesten & Opdam, innréttaðar með innréttingasmiðnum Tenback, sækja innblástur í náttúruna — allt niður í laufgræna vegginn bak við bogadregna móttökuborðið.",
+        "Yfir öllu bindur hljóðdempandi STRETCH-loft í sérvöldum RAL-lit litapallettuna saman og heldur vinnurýminu um leið hljóðlátu."
+      ],
+      "highlights": [
+        "Hljóðdempandi loft í sérvöldum RAL-lit",
+        "Náttúruinnblásin skrifstofuinnrétting"
+      ],
+      "materials": [
+        "Hljóðdempandi STRETCH-loft (sérvalinn RAL-litur)"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgía"
+        },
+        {
+          "label": "Innréttingasmiður",
+          "value": "Tenback"
+        }
+      ]
+    },
+    "dhl-zaventem": {
+      "title": "DHL Zaventem",
+      "summary": "Hljóðdempandi loft klætt Camira-textíl í fundarherbergi sem er Boeing 737 í fullri stærð.",
+      "hook": "Ráðstefnuherbergi byggt sem skrokkur Boeing 737 — með hljóðvist í takt við hugmyndina.",
+      "description": [
+        "Fyrir DHL-teymið í Zaventem byggði söluaðilinn Ideal Acoustics fundarrými ólíkt öllum öðrum: skrokkhluta úr Boeing 737 í fullri stærð, inni á miðri skrifstofunni.",
+        "Hljóðdempandi STRETCH-loft klædd Camira-textíl fóðra rýmið, svo að glæsilega skelin skilar líka alvöru hljóðvist fyrir fundina."
+      ],
+      "highlights": [
+        "Fundarherbergi sem Boeing 737 skrokkur í fullri stærð",
+        "Hljóðdempandi loft klætt Camira-textíl"
+      ],
+      "materials": [
+        "Hljóðdempandi STRETCH-loft",
+        "Áferð úr Camira-textíl"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Zaventem, Belgíu"
+        },
+        {
+          "label": "Ár",
+          "value": "2023"
+        },
+        {
+          "label": "STRETCH-söluaðili",
+          "value": "Ideal Acoustics"
+        },
+        {
+          "label": "Viðskiptavinur",
+          "value": "DHL"
+        }
+      ]
+    },
+    "veta-interieur-showroom": {
+      "title": "Veta Interieur",
+      "summary": "Prentuð, upplýst loft í 350 m² sýningarsal fyrir baðherbergi.",
+      "hook": "Átján baðherbergisheimar undir einu þaki — prentuð, lýsandi loft setja sviðið fyrir hvern og einn.",
+      "description": [
+        "350 m² sýningarsalur Veta Interieur í Dendermonde sviðsetur heildstæða baðherbergisupplifun, byggða á 25 ára hönnun og handverki með efnum sem flutt eru inn beint frá Ítalíu og Spáni.",
+        "STRETCH afhenti upplýst loft með prenti út í hvert horn — mjúk, jöfn birta að ofan sem breytir hverju sýningarbaðherbergi í lifandi sviðsmynd."
+      ],
+      "highlights": [
+        "350 m² sýningarsalur",
+        "Prentuð + baklýst loft",
+        "Sýningarbaðherbergi sem umlykja gesti"
+      ],
+      "materials": [
+        "STRETCH Backlit-loft (hleypir ljósi í gegn)",
+        "Sérprent út í hvert horn"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Dendermonde, Belgíu"
+        },
+        {
+          "label": "Ár",
+          "value": "2022"
+        },
+        {
+          "label": "Viðskiptavinur",
+          "value": "Veta Interieur"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3425,6 +3685,140 @@
     "dealerBody": "Fyrirtækjaaðgangar sjá söluaðilaverð í rauntíma í þjónustugáttinni — og panta á eigin kjörum.",
     "dealerCta": "Innskráning fyrir verð",
     "partnerCta": "Gerast samstarfsaðili",
-    "backToAll": "Öll efni"
+    "backToAll": "Öll efni",
+    "addToList": "Bæta við fyrirspurn",
+    "inList": "Á listanum þínum",
+    "barLabel": "Fyrirspurnarlisti",
+    "inquiryTitle": "Fyrirspurnarlistinn þinn",
+    "inquirySub": "Ein skilaboð, allar vörurnar — við svörum með verði, framboði og afhendingartíma, yfirleitt samdægurs.",
+    "removeLabel": "Fjarlægja",
+    "formName": "Nafn",
+    "formCompany": "Fyrirtæki (valfrjálst)",
+    "formEmail": "Netfang",
+    "formPhone": "Sími (valfrjálst)",
+    "formMessage": "Skilaboð (valfrjálst)",
+    "consent": "Ég samþykki að STRETCH vinni úr upplýsingum mínum til að svara fyrirspurninni —",
+    "privacyLabel": "persónuverndarstefna",
+    "send": "Senda fyrirspurn",
+    "sending": "Sendi…",
+    "sentTitle": "Fyrirspurn send",
+    "sentBody": "Takk — við svörum með verði, framboði og afhendingartíma, yfirleitt samdægurs.",
+    "sendError": "Eitthvað fór úrskeiðis — reyndu aftur eða sendu okkur tölvupóst beint.",
+    "closeLabel": "Loka"
+  },
+  "materialsData": {
+    "profiles": {
+      "name": "Prófílar & brautir",
+      "eyebrow": "Prófílar",
+      "metaTitle": "Strekkloftsprófílar — ál & PVC | STRETCH",
+      "metaDescription": "Strekkloftsprófílar úr áli og PVC, LED-línuprófílar og endastykki, beint úr eigin framleiðslu. Óskaðu eftir tilboði — við svörum með verði og afhendingartíma.",
+      "intro": "Brautirnar sem halda hverju STRETCH-lofti: jaðarprófílar úr áli og PVC, LED-línuprófílar og frágangsstykki — sömu prófílar og okkar eigin uppsetningarmenn nota, skornir og sendir úr framleiðslunni okkar.",
+      "items": [
+        {
+          "name": "Álprófílar fyrir strekkloft",
+          "body": "Stífir jaðar- og skilprófílar úr áli fyrir kalda og heita uppsetningu — beinar lengdir, tilbúnar í uppsetningu."
+        },
+        {
+          "name": "PVC-prófílar fyrir strekkloft",
+          "body": "Sveigjanlegir PVC-harpúnprófílar fyrir bogadregna veggi og einfaldan jaðarfrágang."
+        },
+        {
+          "name": "LED-línuprófílar & endastykki",
+          "body": "Innfelldir prófílar sem teikna skarpa ljóslínu í dúkinn, með endastykkjum í stíl (16 / 31 mm)."
+        },
+        {
+          "name": "Tracklight 48V prófíll",
+          "body": "Segulbrautin 48V sem fellur slétt inn í strekkloftið — burðarásinn í tracklight-kerfinu."
+        }
+      ]
+    },
+    "fabrics": {
+      "name": "Dúkar & filmur",
+      "eyebrow": "Dúkar",
+      "metaTitle": "Strekkloftsdúkur & PVC-filma — á rúllu, skorið í lengd, sérsniðið | STRETCH",
+      "metaDescription": "PVC-filma fyrir strekkloft (MSD, Bauf, Teqtum, Renolit) á rúllu, skorin í lengd eða soðin eftir máli með harpún. Matt, glansandi, hálfgegnsæ og lituð áferð. Óskaðu eftir tilboði.",
+      "intro": "Dúkur eins og þú þarft hann: heilar rúllur fyrir eigin framleiðslu, filma skorin í lengd eða fullbúið loft soðið eftir máli með harpún — í mattri, satín, glansandi, hálfgegnsærri og litaðri áferð frá stóru filmumerkjunum.",
+      "items": [
+        {
+          "name": "PVC-filma á rúllu",
+          "body": "Filma frá MSD, Bauf, Teqtum og Renolit á rúllu — matt/satín, glans, hálfgegnsæ, litir, metallic og Black & White línur."
+        },
+        {
+          "name": "Filma skorin í lengd",
+          "body": "Sömu filmulínur skornar í nákvæmlega þá lengd sem þú þarft — engin heil rúlla nauðsynleg."
+        },
+        {
+          "name": "Loft eftir máli",
+          "body": "Loftið þitt soðið eftir máli í framleiðslunni okkar, með harpún — tilbúið til að hengja í prófílinn."
+        },
+        {
+          "name": "Hálfgegnsæ (baklýst) filma",
+          "body": "Dúkur sem hleypir ljósi í gegn, fyrir upplýst loft og ljóskassa, allt að 5 m án samskeyta."
+        }
+      ]
+    },
+    "lighting": {
+      "name": "Lýsing",
+      "eyebrow": "Lýsing",
+      "metaTitle": "Strekkloftslýsing — 48V tracklight, LED-einingar, kastarahringir | STRETCH",
+      "metaDescription": "Lýsing fyrir strekkloft: 48V segulbrautarlýsing, kastarar og grille-lampar, LED-einingar fyrir baklýst loft og kastarahringir/hlífðarhringir. Óskaðu eftir tilboði.",
+      "intro": "Allt sem lýsir upp STRETCH-loft: 48V tracklight-fjölskyldan með seglum, LED-flataeiningar fyrir baklýst loft og hringirnir sem ganga snyrtilega frá hverjum kastara.",
+      "items": [
+        {
+          "name": "Tracklight 48V kerfi",
+          "body": "Segulfestir kastarar, grille-lampar og tengistykki fyrir 48V brautina sem fellur slétt inn — skiptu um og færðu lampa með höndunum."
+        },
+        {
+          "name": "LED-einingar fyrir baklýst loft",
+          "body": "Jafnir, deyfanlegir LED-fletir sem breyta hálfgegnsæjum dúki í samfelldan ljósgjafa."
+        },
+        {
+          "name": "Kastarahringir & hlífðarhringir",
+          "body": "Hringir í öllum þvermálum (4.5–300 mm) sem styrkja úrtök fyrir kastara, skynjara og loftræstingu."
+        }
+      ]
+    },
+    "accessories": {
+      "name": "Fylgihlutir",
+      "eyebrow": "Fylgihlutir",
+      "metaTitle": "Fylgihlutir fyrir strekkloft — harpún, hringir, festingar | STRETCH",
+      "metaDescription": "Fylgihlutir fyrir strekkloft: harpún, hlífðarhringir, lím, festingar og frágangsstykki — allt í kringum dúkinn. Óskaðu eftir tilboði.",
+      "intro": "Smáhlutirnir sem gera verkið snyrtilegt: harpún til suðu, hlífðarhringir, lím og festingar — rekstrarvörurnar sem hver uppsetningarmaður notar jafnt og þétt.",
+      "items": [
+        {
+          "name": "Harpún",
+          "body": "Soðni kanturinn sem læsir dúknum í prófílinn — seldur á rúllu."
+        },
+        {
+          "name": "Hlífðarhringir",
+          "body": "Sjálflímandi hringir frá 4.5 til 300 mm fyrir kastara, króka, lagnir og skynjara."
+        },
+        {
+          "name": "Lím & festingar",
+          "body": "AKFIX-lím, skrúfur og uppsetningarvörurnar sem notaðar eru á hverjum verkstað."
+        }
+      ]
+    },
+    "tools-cleaning": {
+      "name": "Verkfæri & þrif",
+      "eyebrow": "Verkfæri",
+      "metaTitle": "Strekkloftsverkfæri & STRETCH Cleaner | STRETCH",
+      "metaDescription": "Handverkfæri til uppsetningar á strekkloftum og STRETCH Cleaner sem heldur dúkunum flekklausum (1 L og 5 L). Óskaðu eftir tilboði.",
+      "intro": "Handverkfæri uppsetningarmannsins og hreinsiefnið sem gert er fyrir strekkdúka — sömu vörur og í kennslurýminu okkar og okkar eigin bílum.",
+      "items": [
+        {
+          "name": "Handverkfæri til uppsetningar",
+          "body": "Spaðar og handverkfæri löguð til að þrýsta dúknum inn án skemmda."
+        },
+        {
+          "name": "STRETCH Cleaner 1 L",
+          "body": "Hreinsiefnið sem er öruggt fyrir dúkinn — gegn fingraförum, ryki og himnu af verkstað."
+        },
+        {
+          "name": "STRETCH Cleaner 5 L",
+          "body": "Sama hreinsiefni í verkstæðisstærð fyrir söluaðila og stórnotendur."
+        }
+      ]
+    }
   }
 }

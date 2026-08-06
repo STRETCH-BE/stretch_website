@@ -2099,7 +2099,15 @@
       "home-cinema-ghent": "Gandawa · Gwiezdne niebo + akustyka",
       "city-penthouse-antwerp": "Antwerpia · Salon",
       "wellness-spa-bruges": "Brugia · Łazienka spa",
-      "rue-perree-paris": "Paryż · Podświetlany sufit galerii"
+      "rue-perree-paris": "Paryż · Podświetlany sufit galerii",
+      "vier-emmershof-lokeren": "Lokeren · Dom w lesie",
+      "vp-193": "Flandria Wschodnia · Rezydencja prywatna",
+      "jpv-210": "Belgia · Rezydencja prywatna",
+      "ben-home-vdb-222": "Sint-Pauwels · Dom niemal zeroenergetyczny",
+      "vap-sint-pauwels": "Sint-Pauwels · Biała willa",
+      "goesten-opdam": "Belgia · Aranżacja biura",
+      "dhl-zaventem": "Zaventem · Sala konferencyjna Boeing 737",
+      "veta-interieur-showroom": "Dendermonde · Salon łazienek"
     },
     "comingSoon": "Zdjęcia wkrótce"
   },
@@ -2896,6 +2904,258 @@
           "value": "Galeria wielu marek"
         }
       ]
+    },
+    "vier-emmershof-lokeren": {
+      "title": "’t Vier Emmershof",
+      "summary": "Akustyczne sufity napinane w rzeźbiarskiej rezydencji pośród lasu.",
+      "hook": "Rzeźbiarski dom pośród świerków — w środku równie spokojny jak otaczający go las.",
+      "description": [
+        "W ’t Vier Emmershof w Lokeren rzeźbiarska rezydencja stoi pośród zachowanych świerków, a w pełni przeszklona tylna elewacja wprowadza las do wnętrz dziennych. Naturalne wykończenia tworzą ciepłe, wyciszone wnętrze.",
+        "Akustyczne sufity STRETCH biegną przez cały dom, pochłaniając odbicia dźwięku, które tyle szkła by wzmacniało — a akustyczne panele ścienne wykończone tkaniną z nadrukiem przenoszą to rozwiązanie poza płaszczyznę sufitu."
+      ],
+      "highlights": [
+        "Sufity akustyczne w całym domu",
+        "Akustyczne panele ścienne z tkaniny z nadrukiem",
+        "Przeszklona tylna elewacja — widok na las, kontrolowana akustyka"
+      ],
+      "materials": [
+        "Akustyczny sufit napinany STRETCH",
+        "Akustyczne panele ścienne z tkaniną z nadrukiem"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Lokeren, Belgia"
+        },
+        {
+          "label": "Architekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Dystrybutor STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vp-193": {
+      "title": "Willa VP-193",
+      "summary": "Sufity akustyczne w willi obłożonej piaskowcem, zaprojektowanej wokół światła i prywatności.",
+      "hook": "Dom, który wyróżnia się bez krzyku — indyjski piaskowiec na zewnątrz, spokojna akustyka w środku.",
+      "description": [
+        "Willa VP-193 nosi elewację z indyjskiego piaskowca, która nadaje domowi ciepła i charakteru. Strefy dzienne otwierają się na tył działki, gdzie wielkie tafle szkła kadrują świerkowy las, a obszerny ogród wewnętrzny od frontu zapewnia dużo światła dziennego bez utraty prywatności. Śmiały wspornik tworzy zadaszony taras i wiatę garażową.",
+        "Wewnątrz akustyczne sufity STRETCH zapewniają komfort w otwartych przestrzeniach pełnych twardych powierzchni, a oprawy Kreon są zlicowane z membraną."
+      ],
+      "highlights": [
+        "Sufit akustyczny w otwartych strefach dziennych",
+        "Oświetlenie Kreon zlicowane z sufitem",
+        "Elewacja z piaskowca i taras wspornikowy"
+      ],
+      "materials": [
+        "Akustyczny sufit napinany STRETCH",
+        "Zintegrowane oświetlenie (m.in. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Flandria Wschodnia, Belgia"
+        },
+        {
+          "label": "Architekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Dystrybutor STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "jpv-210": {
+      "title": "Willa JPV-210",
+      "summary": "Bezszwowe białe sufity w całkowicie białej, minimalistycznej willi.",
+      "hook": "Biel na bieli: minimalistyczna willa, w której sufit miał całkowicie zniknąć.",
+      "description": [
+        "Willa JPV-210 to ćwiczenie z redukcji — na zewnątrz spiętrzone białe bryły, a we wnętrzach ściany, stolarka i podłogi stapiają się w jedną jasną płaszczyznę. W tak czystym domu każde łączenie sufitu czy widoczna oprawa zburzyłyby ten efekt.",
+        "Bezszwowe sufity STRETCH prowadzą tę samą nieprzerwaną biel nad głową, zapewniając komfort życia w twardych, otwartych bryłach."
+      ],
+      "highlights": [
+        "Bezszwowe sufity w matowej bieli w całym domu",
+        "Bez widocznych łączeń i listew",
+        "Spokój w twardych, otwartych bryłach"
+      ],
+      "materials": [
+        "Bezszwowy sufit STRETCH, biały mat"
+      ],
+      "facts": [
+        {
+          "label": "Kraj",
+          "value": "Belgia"
+        },
+        {
+          "label": "Obiekt",
+          "value": "Willa prywatna"
+        }
+      ]
+    },
+    "ben-home-vdb-222": {
+      "title": "Dom BEN VDB-222",
+      "summary": "Sufity akustyczne w niemal zeroenergetycznym domu pośród lasu, zbudowanym wokół idei jedności.",
+      "hook": "Maksimum szkła, maksimum kontaktu z drzewami — bez rezygnacji z ciszy i prywatności.",
+      "description": [
+        "Jedność to myśl przewodnia tej rezydencji BEN (niemal zeroenergetycznej) w Sint-Pauwels: rozległe przeszklenia i otwarty plan łączą dom z otaczającą zielenią, starannie wyważone względem prywatności i poczucia schronienia.",
+        "Akustyczne sufity STRETCH łagodzą tę otwartość — pochłaniając dźwięk w przeszklonych, otwartych bryłach — a oprawy Delta Light są czysto wkomponowane w membranę."
+      ],
+      "highlights": [
+        "Sufit akustyczny nad całym otwartym planem",
+        "Zintegrowane oświetlenie Delta Light",
+        "Budynek niemal zeroenergetyczny (BEN)"
+      ],
+      "materials": [
+        "Akustyczny sufit napinany STRETCH",
+        "Zintegrowane oświetlenie (m.in. Delta Light)"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Sint-Pauwels, Belgia"
+        },
+        {
+          "label": "Architekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Dystrybutor STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vap-sint-pauwels": {
+      "title": "VAP — Sint-Pauwels",
+      "summary": "Sufity akustyczne w jasnej, białej willi inspirowanej wodą.",
+      "hook": "Biała willa dla rodziny, którą ciągnie do wody — sufity łapiące światło jak spokojne morze.",
+      "description": [
+        "Ta jasna, biała willa (projekt VA-176) odzwierciedla związek właścicieli z wodą: jasne powierzchnie i płaszczyzny sufitów zbierają odbicia niczym tafla spokojnego morza. Domowe biuro można w razie potrzeby wydzielić jako niezależny apartament o własnej tożsamości.",
+        "Akustyczne sufity STRETCH biegną przez strefy dzienne, w parze z oświetleniem Kreon, dzięki czemu krystalicznie białe wnętrze jest równie spokojne dla ucha, co dla oka."
+      ],
+      "highlights": [
+        "Sufity akustyczne we wszystkich strefach dziennych",
+        "Zintegrowane oświetlenie Kreon",
+        "Biuro do przekształcenia w apartament gościnny"
+      ],
+      "materials": [
+        "Akustyczny sufit napinany STRETCH",
+        "Zintegrowane oświetlenie (m.in. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Sint-Pauwels, Belgia"
+        },
+        {
+          "label": "Rok",
+          "value": "2022–2023"
+        },
+        {
+          "label": "Architekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Dystrybutor STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "goesten-opdam": {
+      "title": "Goesten & Opdam",
+      "summary": "Sufit akustyczny w dopasowanym kolorze dla biura inspirowanego naturą.",
+      "hook": "Akustyka w niestandardowym kolorze RAL nad biurem, które wpuszcza naturę do środka.",
+      "description": [
+        "Biura Goesten & Opdam, zrealizowane z wykonawcą wnętrz Tenback, czerpią z natury — aż po zieloną ścianę dekoracyjną za zaokrągloną ladą recepcji.",
+        "Nad głowami akustyczny sufit STRETCH w niestandardowym kolorze RAL spina paletę barw i wycisza przestrzeń pracy."
+      ],
+      "highlights": [
+        "Sufit akustyczny w niestandardowym kolorze RAL",
+        "Wnętrze biura inspirowane naturą"
+      ],
+      "materials": [
+        "Akustyczny sufit napinany STRETCH (niestandardowy kolor RAL)"
+      ],
+      "facts": [
+        {
+          "label": "Kraj",
+          "value": "Belgia"
+        },
+        {
+          "label": "Wykonawca wnętrz",
+          "value": "Tenback"
+        }
+      ]
+    },
+    "dhl-zaventem": {
+      "title": "DHL Zaventem",
+      "summary": "Sufit akustyczny wykończony tkaniną Camira w sali spotkań w kształcie samolotu Boeing 737 naturalnej wielkości.",
+      "hook": "Sala konferencyjna zbudowana jak kadłub samolotu Boeing 737 — z akustyką na miarę tego pomysłu.",
+      "description": [
+        "Dla zespołu DHL w Zaventem dystrybutor Ideal Acoustics zbudował salę spotkań, jakiej nie ma nigdzie indziej: naturalnej wielkości sekcję kadłuba samolotu Boeing 737 — w samym środku biura.",
+        "Przestrzeń wyłożono akustycznymi sufitami STRETCH wykończonymi tkaniną Camira, dzięki czemu ta spektakularna konstrukcja zapewnia też pełny komfort akustyczny podczas spotkań."
+      ],
+      "highlights": [
+        "Sala spotkań w kadłubie samolotu Boeing 737 naturalnej wielkości",
+        "Sufit akustyczny wykończony tkaniną Camira"
+      ],
+      "materials": [
+        "Akustyczny sufit napinany STRETCH",
+        "Wykończenie tkaniną Camira"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Zaventem, Belgia"
+        },
+        {
+          "label": "Rok",
+          "value": "2023"
+        },
+        {
+          "label": "Dystrybutor STRETCH",
+          "value": "Ideal Acoustics"
+        },
+        {
+          "label": "Klient",
+          "value": "DHL"
+        }
+      ]
+    },
+    "veta-interieur-showroom": {
+      "title": "Veta Interieur",
+      "summary": "Zadrukowane, podświetlane sufity w showroomie łazienek o powierzchni 350 m².",
+      "hook": "Osiemnaście łazienkowych światów pod jednym dachem — zadrukowane, świecące sufity budują każdą scenę.",
+      "description": [
+        "Showroom Veta Interieur o powierzchni 350 m² w Dendermonde prezentuje kompletne aranżacje łazienek — efekt 25 lat projektowania i rzemiosła, z materiałami sprowadzanymi bezpośrednio z Włoch i Hiszpanii.",
+        "STRETCH dostarczył podświetlane sufity z nadrukiem od krawędzi do krawędzi — miękkie, równomierne światło z góry zamienia każdą łazienkę pokazową w immersyjną scenę."
+      ],
+      "highlights": [
+        "Showroom o powierzchni 350 m²",
+        "Sufity z nadrukiem i podświetleniem",
+        "Immersyjne łazienki pokazowe"
+      ],
+      "materials": [
+        "Sufit STRETCH Backlit (przepuszczający światło)",
+        "Indywidualny nadruk od krawędzi do krawędzi"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Dendermonde, Belgia"
+        },
+        {
+          "label": "Rok",
+          "value": "2022"
+        },
+        {
+          "label": "Klient",
+          "value": "Veta Interieur"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3425,6 +3685,140 @@
     "dealerBody": "Konta handlowe widzą aktualne ceny dealerskie w portalu klienta — i zamawiają na własnych warunkach.",
     "dealerCta": "Zaloguj się po ceny",
     "partnerCta": "Zostań partnerem",
-    "backToAll": "Wszystkie materiały"
+    "backToAll": "Wszystkie materiały",
+    "addToList": "Dodaj do zapytania",
+    "inList": "Na Twojej liście",
+    "barLabel": "Lista zapytania",
+    "inquiryTitle": "Twoja lista zapytania",
+    "inquirySub": "Jedna wiadomość, wszystkie pozycje — odpowiemy z ceną, dostępnością i terminem, zwykle tego samego dnia roboczego.",
+    "removeLabel": "Usuń",
+    "formName": "Imię i nazwisko",
+    "formCompany": "Firma (opcjonalnie)",
+    "formEmail": "E-mail",
+    "formPhone": "Telefon (opcjonalnie)",
+    "formMessage": "Wiadomość (opcjonalnie)",
+    "consent": "Zgadzam się na przetwarzanie moich danych przez STRETCH w celu odpowiedzi na zapytanie —",
+    "privacyLabel": "polityka prywatności",
+    "send": "Wyślij zapytanie",
+    "sending": "Wysyłanie…",
+    "sentTitle": "Zapytanie wysłane",
+    "sentBody": "Dziękujemy — odpowiemy z cenami, dostępnością i terminem, zwykle tego samego dnia roboczego.",
+    "sendError": "Coś poszło nie tak — spróbuj ponownie lub napisz do nas bezpośrednio.",
+    "closeLabel": "Zamknij"
+  },
+  "materialsData": {
+    "profiles": {
+      "name": "Profile i szyny",
+      "eyebrow": "Profile",
+      "metaTitle": "Profile do sufitów napinanych — aluminium i PVC | STRETCH",
+      "metaDescription": "Profile aluminiowe i PVC do sufitów napinanych, profile do linii świetlnych LED i zaślepki — prosto z naszej własnej produkcji. Zapytaj o wycenę — w odpowiedzi podamy cenę i termin dostawy.",
+      "intro": "Szyny, które trzymają każdy sufit STRETCH: aluminiowe i PVC profile obwodowe, profile do linii świetlnych LED oraz elementy wykończeniowe — te same profile, których używają nasi monterzy, cięte i wysyłane z naszej produkcji.",
+      "items": [
+        {
+          "name": "Aluminiowe profile do sufitów napinanych",
+          "body": "Sztywne aluminiowe profile obwodowe i rozdzielające do montażu na zimno i na gorąco — proste odcinki, gotowe do montażu."
+        },
+        {
+          "name": "Profile PVC do sufitów napinanych",
+          "body": "Elastyczne profile harpunowe z PVC do ścian łukowych i prostych obwodów."
+        },
+        {
+          "name": "Profile do linii świetlnych LED i zaślepki",
+          "body": "Profile wpuszczane, które tworzą w membranie wyraźną linię światła, z dopasowanymi zaślepkami (16 / 31 mm)."
+        },
+        {
+          "name": "Profil Tracklight 48V",
+          "body": "Magnetyczna szyna 48V licująca się z sufitem napinanym — kręgosłup systemu tracklight."
+        }
+      ]
+    },
+    "fabrics": {
+      "name": "Tkaniny i folie",
+      "eyebrow": "Tkaniny",
+      "metaTitle": "Tkanina i folia PVC do sufitów napinanych — w rolkach, cięta na długość, na wymiar | STRETCH",
+      "metaDescription": "Folia PVC do sufitów napinanych (MSD, Bauf, Teqtum, Renolit) w rolce, cięta na długość lub zgrzewana na wymiar z harpunem. Wykończenia matowe, błyszczące, transłucentne i kolorowe. Zapytaj o wycenę.",
+      "intro": "Membrana w formie dopasowanej do potrzeb: całe rolki do własnego konfekcjonowania, folia cięta na długość albo gotowy sufit zgrzewany na wymiar z harpunem — w wykończeniu matowym, satynowym, błyszczącym, transłucentnym i w kolorach, od wiodących marek folii.",
+      "items": [
+        {
+          "name": "Folia PVC w rolce",
+          "body": "Folie MSD, Bauf, Teqtum i Renolit w rolkach — linie mat/satyna, połysk, transłucentne, kolorowe, metaliczne oraz Black & White."
+        },
+        {
+          "name": "Folia cięta na długość",
+          "body": "Te same linie folii cięte na potrzebną długość — bez konieczności kupowania całej rolki."
+        },
+        {
+          "name": "Sufity na wymiar",
+          "body": "Sufit zgrzewany na wymiar w naszej produkcji, z harpunem w komplecie — gotowy do zawieszenia w profilu."
+        },
+        {
+          "name": "Folia transłucentna (do podświetleń)",
+          "body": "Membrana przepuszczająca światło do sufitów podświetlanych i kasetonów świetlnych, bezszwowo do 5 m."
+        }
+      ]
+    },
+    "lighting": {
+      "name": "Oświetlenie",
+      "eyebrow": "Oświetlenie",
+      "metaTitle": "Oświetlenie do sufitów napinanych — tracklight 48V, moduły LED, pierścienie do opraw | STRETCH",
+      "metaDescription": "Oświetlenie do sufitów napinanych: magnetyczne szynoprzewody 48V, reflektorki i oprawy rastrowe, moduły LED do sufitów podświetlanych oraz pierścienie montażowe i ochronne. Zapytaj o wycenę.",
+      "intro": "Wszystko, co oświetla sufit STRETCH: rodzina magnetycznych szyn tracklight 48V, moduły LED tworzące pola światła w sufitach podświetlanych oraz pierścienie, które czysto wykańczają każdy punkt świetlny.",
+      "items": [
+        {
+          "name": "System Tracklight 48V",
+          "body": "Magnetyczne reflektorki, oprawy rastrowe i łączniki do zlicowanej szyny 48V — oprawy można przekładać i przestawiać ręcznie."
+        },
+        {
+          "name": "Moduły LED do sufitów podświetlanych",
+          "body": "Równomierne, ściemnialne pola LED, które zamieniają transłucentną membranę w jednolite źródło światła."
+        },
+        {
+          "name": "Pierścienie do opraw i pierścienie ochronne",
+          "body": "Pierścienie o każdej średnicy (4.5–300 mm), które wzmacniają otwory pod oprawy, czujniki i wentylację."
+        }
+      ]
+    },
+    "accessories": {
+      "name": "Akcesoria",
+      "eyebrow": "Akcesoria",
+      "metaTitle": "Akcesoria do sufitów napinanych — harpun, pierścienie, mocowania | STRETCH",
+      "metaDescription": "Akcesoria do sufitów napinanych: harpun, pierścienie ochronne, klej, mocowania i elementy wykończeniowe — wszystko wokół membrany. Zapytaj o wycenę.",
+      "intro": "Drobne elementy, które decydują o czystym montażu: harpun do zgrzewania, pierścienie ochronne, klej i mocowania — materiały eksploatacyjne, które zużywa każdy monter.",
+      "items": [
+        {
+          "name": "Harpun",
+          "body": "Zgrzewana krawędź, która blokuje membranę w profilu — sprzedawany na rolki."
+        },
+        {
+          "name": "Pierścienie ochronne",
+          "body": "Samoprzylepne pierścienie od 4.5 do 300 mm do opraw, haków, rur i czujników."
+        },
+        {
+          "name": "Klej i mocowania",
+          "body": "Klej AKFIX, wkręty i montażowe materiały eksploatacyjne używane na każdej budowie."
+        }
+      ]
+    },
+    "tools-cleaning": {
+      "name": "Narzędzia i czyszczenie",
+      "eyebrow": "Narzędzia",
+      "metaTitle": "Narzędzia do sufitów napinanych i STRETCH Cleaner | STRETCH",
+      "metaDescription": "Ręczne narzędzia montażowe do sufitów napinanych oraz STRETCH Cleaner, który utrzymuje membrany w nieskazitelnej czystości (1 L i 5 L). Zapytaj o wycenę.",
+      "intro": "Ręczne narzędzia dla montera i środek czyszczący stworzony do membran napinanych — te same produkty, których używamy w naszej sali szkoleniowej i w naszych własnych busach.",
+      "items": [
+        {
+          "name": "Ręczne narzędzia montażowe",
+          "body": "Szpachelki i narzędzia ręczne wyprofilowane do wsuwania membrany w profil bez uszkodzeń."
+        },
+        {
+          "name": "STRETCH Cleaner 1 L",
+          "body": "Bezpieczny dla membrany środek czyszczący na odciski palców, kurz i budowlany nalot."
+        },
+        {
+          "name": "STRETCH Cleaner 5 L",
+          "body": "Ten sam środek w warsztatowym rozmiarze dla dystrybutorów i intensywnych użytkowników."
+        }
+      ]
+    }
   }
 }

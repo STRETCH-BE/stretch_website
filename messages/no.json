@@ -2099,7 +2099,15 @@
       "home-cinema-ghent": "Gent · Stjernehimmel + akustikk",
       "city-penthouse-antwerp": "Antwerpen · Stue",
       "wellness-spa-bruges": "Brugge · Spabad",
-      "rue-perree-paris": "Paris · Baklyst gallerihimling"
+      "rue-perree-paris": "Paris · Baklyst gallerihimling",
+      "vier-emmershof-lokeren": "Lokeren · Skogsbolig",
+      "vp-193": "Øst-Flandern · Privatbolig",
+      "jpv-210": "Belgia · Privatbolig",
+      "ben-home-vdb-222": "Sint-Pauwels · Nesten energinøytral bolig",
+      "vap-sint-pauwels": "Sint-Pauwels · Hvit villa",
+      "goesten-opdam": "Belgia · Kontorinnredning",
+      "dhl-zaventem": "Zaventem · Boeing 737-møterom",
+      "veta-interieur-showroom": "Dendermonde · Baderomsshowroom"
     },
     "comingSoon": "Bilder kommer snart"
   },
@@ -2896,6 +2904,258 @@
           "value": "Galleri med flere merker"
         }
       ]
+    },
+    "vier-emmershof-lokeren": {
+      "title": "’t Vier Emmershof",
+      "summary": "Akustiske strekktak gjennom en skulpturell bolig midt i skogen.",
+      "hook": "Et skulpturelt hjem blant grantrærne — like rolig innvendig som skogen rundt.",
+      "description": [
+        "På ’t Vier Emmershof i Lokeren ligger en skulpturell bolig mellom bevarte grantrær, og bakfasaden helt i glass trekker skogen inn i oppholdsrommene. Naturlige materialer skaper et varmt og rolig interiør.",
+        "Akustiske STRETCH-tak går gjennom hele hjemmet og absorberer refleksjonene alt glasset ellers ville forsterket — og akustiske veggelementer kledd med trykket tekstil fører behandlingen videre utover takflaten."
+      ],
+      "highlights": [
+        "Akustiske tak i hele hjemmet",
+        "Akustiske veggelementer med trykket tekstil",
+        "Bakfasade i glass — skogsutsikt og kontrollert akustikk"
+      ],
+      "materials": [
+        "Akustisk STRETCH-tak",
+        "Akustiske veggelementer med trykket tekstil"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Lokeren, Belgia"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vp-193": {
+      "title": "Villa VP-193",
+      "summary": "Akustiske tak til en sandsteinskledd villa bygget rundt lys og privatliv.",
+      "hook": "Et hjem som får skille seg ut uten å rope — indisk sandstein utenpå, rolig akustikk inni.",
+      "description": [
+        "Villa VP-193 bærer en fasade av indisk sandstein som gir huset varme og karakter. Oppholdsrommene vender seg mot baksiden, der store glassflater rammer inn en granskog, mens en romslig innvendig hage mot forsiden holder dagslyset høyt og privatlivet intakt. Et dristig utkraget parti danner den overbygde terrassen og carporten.",
+        "Innvendig holder akustiske STRETCH-tak de åpne rommene med harde overflater behagelige, med Kreon-belysning integrert i flukt med duken."
+      ],
+      "highlights": [
+        "Akustisk tak over de åpne oppholdsrommene",
+        "Kreon-belysning integrert i flukt med taket",
+        "Sandsteinsfasade med utkraget terrasse"
+      ],
+      "materials": [
+        "Akustisk STRETCH-tak",
+        "Integrert belysning (bl.a. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Øst-Flandern, Belgia"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "jpv-210": {
+      "title": "Villa JPV-210",
+      "summary": "Sømløse hvite tak til en helhvit minimalistisk villa.",
+      "hook": "Hvitt på hvitt: en minimalistisk villa der taket skulle forsvinne helt.",
+      "description": [
+        "Villa JPV-210 er en øvelse i reduksjon — stablede hvite volumer utvendig, og interiører der vegger, snekkerarbeid og gulv løses opp i én lys flate. I et så rendyrket hus ville selv den minste skjøt eller synlige armatur i taket bryte fortryllelsen.",
+        "Sømløse STRETCH-tak fører det samme ubrutte hvite videre over hodet og gjør de harde, åpne volumene behagelige å bo i."
+      ],
+      "highlights": [
+        "Sømløse matthvite tak overalt",
+        "Ingen synlige skjøter eller lister",
+        "Ro i harde, åpne rom"
+      ],
+      "materials": [
+        "Sømløst STRETCH-tak, matt hvitt"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgia"
+        },
+        {
+          "label": "Rom",
+          "value": "Privat villa"
+        }
+      ]
+    },
+    "ben-home-vdb-222": {
+      "title": "BEN-bolig VDB-222",
+      "summary": "Akustiske tak til en nesten energinøytral bolig i skogen, bygget rundt helhet.",
+      "hook": "Maksimalt med glass, maksimal kontakt med trærne — uten å gi slipp på ro eller privatliv.",
+      "description": [
+        "Helhet er det bærende prinsippet i denne BEN-boligen (nesten energinøytral) i Sint-Pauwels: store glassflater og en åpen planløsning knytter huset til det grønne rundt, nøye balansert mot privatliv og en følelse av ly.",
+        "Akustiske STRETCH-tak demper åpenheten — de absorberer lyd i de glasskledde, åpne volumene — med armaturer fra Delta Light rent integrert i duken."
+      ],
+      "highlights": [
+        "Akustisk tak over hele den åpne planløsningen",
+        "Integrert Delta Light-belysning",
+        "Nesten energinøytralt bygg (BEN)"
+      ],
+      "materials": [
+        "Akustisk STRETCH-tak",
+        "Integrert belysning (bl.a. Delta Light)"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Sint-Pauwels, Belgia"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vap-sint-pauwels": {
+      "title": "VAP — Sint-Pauwels",
+      "summary": "Akustiske tak til en lys hvit villa inspirert av vann.",
+      "hook": "En hvit villa for en familie som trekkes mot vann — tak som fanger lyset som en stille sjø.",
+      "description": [
+        "Denne lyse, hvite villaen (prosjekt VA-176) speiler eiernes forhold til vann: lyse overflater og takflater som fanger refleksjoner som en blikkstille sjø. Et hjemmekontor kan skilles ut som en suite med sin helt egen identitet.",
+        "Akustiske STRETCH-tak går igjen i alle oppholdsrom, sammen med Kreon-belysning, og holder det knivskarpe hvite interiøret like rolig for øret som for øyet."
+      ],
+      "highlights": [
+        "Akustiske tak i alle oppholdsrom",
+        "Integrert Kreon-belysning",
+        "Kontor som kan bli gjestesuite"
+      ],
+      "materials": [
+        "Akustisk STRETCH-tak",
+        "Integrert belysning (bl.a. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Sint-Pauwels, Belgia"
+        },
+        {
+          "label": "År",
+          "value": "2022–2023"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "goesten-opdam": {
+      "title": "Goesten & Opdam",
+      "summary": "Et fargetilpasset akustikktak til en naturinspirert kontorinnredning.",
+      "hook": "Akustikk i en spesialvalgt RAL-farge, over et kontor som henter naturen inn.",
+      "description": [
+        "Kontorene til Goesten & Opdam, innredet sammen med interiørbyggeren Tenback, henter inspirasjonen fra naturen — helt ned til den frodige planteveggen bak den buede resepsjonsdisken.",
+        "Over det hele binder et akustisk STRETCH-tak i en spesialvalgt RAL-farge paletten sammen og holder samtidig arbeidsplassen stille."
+      ],
+      "highlights": [
+        "Akustikktak i spesialvalgt RAL-farge",
+        "Naturinspirert kontorinteriør"
+      ],
+      "materials": [
+        "Akustisk STRETCH-tak (spesialvalgt RAL-farge)"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgia"
+        },
+        {
+          "label": "Interiørbygger",
+          "value": "Tenback"
+        }
+      ]
+    },
+    "dhl-zaventem": {
+      "title": "DHL Zaventem",
+      "summary": "Et Camira-kledd akustikktak i et møterom formet som en Boeing 737 i full størrelse.",
+      "hook": "Et konferanserom bygget som en Boeing 737-flykropp — med akustikk på høyde med idéen.",
+      "description": [
+        "For DHL-teamet i Zaventem bygde forhandleren Ideal Acoustics et møterom utenom det vanlige: en seksjon av en Boeing 737-flykropp i full størrelse, midt i kontoret.",
+        "Akustiske STRETCH-tak kledd med Camira-tekstil kler rommet innvendig, slik at det spektakulære skallet også leverer skikkelig akustisk komfort for møtene."
+      ],
+      "highlights": [
+        "Møterom som Boeing 737-flykropp i full størrelse",
+        "Akustikktak kledd i Camira-tekstil"
+      ],
+      "materials": [
+        "Akustisk STRETCH-tak",
+        "Overflate i Camira-tekstil"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Zaventem, Belgia"
+        },
+        {
+          "label": "År",
+          "value": "2023"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Ideal Acoustics"
+        },
+        {
+          "label": "Kunde",
+          "value": "DHL"
+        }
+      ]
+    },
+    "veta-interieur-showroom": {
+      "title": "Veta Interieur",
+      "summary": "Trykte, opplyste tak i et 350 m² stort baderomsshowroom.",
+      "hook": "Atten baderomsverdener under ett tak — trykte, glødende tak setter scenen for hver av dem.",
+      "description": [
+        "Veta Interieurs 350 m² store showroom i Dendermonde iscenesetter komplette baderomsopplevelser, bygget på 25 år med design og håndverk og materialer importert direkte fra Italia og Spania.",
+        "STRETCH leverte opplyste tak med trykk fra kant til kant — et mykt, jevnt lys ovenfra som gjør hvert utstillingsbad til en scene du trer rett inn i."
+      ],
+      "highlights": [
+        "350 m² showroom",
+        "Trykte + baklyste tak",
+        "Utstillingsbad du trer rett inn i"
+      ],
+      "materials": [
+        "STRETCH Backlit-tak (gjennomskinnelig)",
+        "Spesialtrykk fra kant til kant"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Dendermonde, Belgia"
+        },
+        {
+          "label": "År",
+          "value": "2022"
+        },
+        {
+          "label": "Kunde",
+          "value": "Veta Interieur"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3425,6 +3685,140 @@
     "dealerBody": "Forhandlerkontoer ser live forhandlerpriser i kundeportalen — og bestiller på egne vilkår.",
     "dealerCta": "Logg inn for priser",
     "partnerCta": "Bli partner",
-    "backToAll": "Alle materialer"
+    "backToAll": "Alle materialer",
+    "addToList": "Legg til i forespørsel",
+    "inList": "På listen din",
+    "barLabel": "Forespørselsliste",
+    "inquiryTitle": "Din forespørselsliste",
+    "inquirySub": "Én melding, alle varene dine — vi svarer med pris, tilgjengelighet og leveringstid, som regel samme virkedag.",
+    "removeLabel": "Fjern",
+    "formName": "Navn",
+    "formCompany": "Firma (valgfritt)",
+    "formEmail": "E-post",
+    "formPhone": "Telefon (valgfritt)",
+    "formMessage": "Melding (valgfritt)",
+    "consent": "Jeg godtar at STRETCH behandler opplysningene mine for å besvare forespørselen —",
+    "privacyLabel": "personvernerklæring",
+    "send": "Send forespørsel",
+    "sending": "Sender…",
+    "sentTitle": "Forespørsel sendt",
+    "sentBody": "Takk — vi kommer tilbake med priser, tilgjengelighet og leveringstid, som regel samme virkedag.",
+    "sendError": "Noe gikk galt — prøv igjen eller send oss en e-post direkte.",
+    "closeLabel": "Lukk"
+  },
+  "materialsData": {
+    "profiles": {
+      "name": "Profiler & skinner",
+      "eyebrow": "Profiler",
+      "metaTitle": "Strekktakprofiler — aluminium & PVC | STRETCH",
+      "metaDescription": "Strekktakprofiler i aluminium og PVC, LED-linjeprofiler og endestykker, rett fra vår egen produksjon. Be om tilbud — vi svarer med pris og leveringstid.",
+      "intro": "Skinnene som holder hvert STRETCH-tak: kantprofiler i aluminium og PVC, LED-linjeprofiler og avslutningsdeler — de samme profilene våre egne montører bruker, kappet og sendt fra vår produksjon.",
+      "items": [
+        {
+          "name": "Strekktakprofiler i aluminium",
+          "body": "Stive kant- og delingsprofiler i aluminium for kald og varm montering — rette lengder, klare til montering."
+        },
+        {
+          "name": "Strekktakprofiler i PVC",
+          "body": "Fleksible PVC-harpunprofiler for buede vegger og enkle kantløsninger."
+        },
+        {
+          "name": "LED-linjeprofiler & endestykker",
+          "body": "Innfelte profiler som tegner en skarp lyslinje i duken, med matchende endestykker (16 / 31 mm)."
+        },
+        {
+          "name": "Tracklight 48V-profil",
+          "body": "Den magnetiske 48V-skinnen som integreres i flukt med et strekktak — ryggraden i tracklight-systemet."
+        }
+      ]
+    },
+    "fabrics": {
+      "name": "Duker & folier",
+      "eyebrow": "Duker",
+      "metaTitle": "Strekktakduk & PVC-folie — på rull, kappet i lengde, etter mål | STRETCH",
+      "metaDescription": "PVC-folie til strekktak (MSD, Bauf, Teqtum, Renolit) på rull, kappet i lengde eller sveiset etter mål med harpun. Matte, blanke, translusente og fargede utførelser. Be om tilbud.",
+      "intro": "Duk slik du trenger den: hele ruller til egen konfeksjon, folie kappet i lengde eller et ferdig tak sveiset etter mål med harpun — i matte, sateng, blanke, translusente og fargede utførelser fra de store foliemerkene.",
+      "items": [
+        {
+          "name": "PVC-folie på rull",
+          "body": "Folie fra MSD, Bauf, Teqtum og Renolit på rull — matt/sateng, blank, translusent, farge, metallic og Black & White-serier."
+        },
+        {
+          "name": "Folie kappet i lengde",
+          "body": "De samme folieseriene kappet i akkurat den lengden du trenger — uten å kjøpe en hel rull."
+        },
+        {
+          "name": "Tak etter mål",
+          "body": "Taket ditt sveiset etter mål i vår produksjon, med harpun inkludert — klart til å henges i profilen."
+        },
+        {
+          "name": "Translusent (baklyst) folie",
+          "body": "Duk som slipper lyset gjennom, til opplyste tak og lysbokser, opptil 5 m uten skjøt."
+        }
+      ]
+    },
+    "lighting": {
+      "name": "Belysning",
+      "eyebrow": "Belysning",
+      "metaTitle": "Strekktakbelysning — 48V tracklight, LED-moduler, spotringer | STRETCH",
+      "metaDescription": "Belysning til strekktak: magnetiske 48V-tracklights, spotter og grille-armaturer, LED-moduler til baklyste tak og spotringer/beskyttelsesringer. Be om tilbud.",
+      "intro": "Alt som lyser opp et STRETCH-tak: den magnetiske 48V tracklight-familien, LED-feltmoduler til baklyste tak og ringene som gir hver spot en ren avslutning.",
+      "items": [
+        {
+          "name": "Tracklight 48V-system",
+          "body": "Magnetiske spotter, grille-armaturer og koblinger til den innfelte 48V-skinnen — bytt og flytt armaturer for hånd."
+        },
+        {
+          "name": "LED-moduler til baklyste tak",
+          "body": "Jevne, dimbare LED-felt som gjør en translusent duk til én sømløs lyskilde."
+        },
+        {
+          "name": "Spotringer & beskyttelsesringer",
+          "body": "Ringer i alle diametre (4.5–300 mm) som forsterker utsparinger til spotter, sensorer og ventilasjon."
+        }
+      ]
+    },
+    "accessories": {
+      "name": "Tilbehør",
+      "eyebrow": "Tilbehør",
+      "metaTitle": "Strekktaktilbehør — harpun, ringer, festemidler | STRETCH",
+      "metaDescription": "Tilbehør til strekktak: harpun, beskyttelsesringer, lim, festemidler og avslutningsdeler — alt rundt duken. Be om tilbud.",
+      "intro": "Smådelene som gjør jobben ren: harpun til sveising, beskyttelsesringer, lim og festemidler — forbruksvarene enhver montør stadig går gjennom.",
+      "items": [
+        {
+          "name": "Harpun",
+          "body": "Den sveisede kanten som låser duken i profilen — selges per rull."
+        },
+        {
+          "name": "Beskyttelsesringer",
+          "body": "Selvklebende ringer fra 4.5 til 300 mm til spotter, kroker, rør og sensorer."
+        },
+        {
+          "name": "Lim & festemidler",
+          "body": "AKFIX-lim, skruer og monteringsartiklene som brukes på hver byggeplass."
+        }
+      ]
+    },
+    "tools-cleaning": {
+      "name": "Verktøy & rengjøring",
+      "eyebrow": "Verktøy",
+      "metaTitle": "Strekktakverktøy & STRETCH Cleaner | STRETCH",
+      "metaDescription": "Håndverktøy for montering av strekktak og STRETCH Cleaner som holder dukene plettfrie (1 L og 5 L). Be om tilbud.",
+      "intro": "Montørens håndverktøy og rengjøringsmiddelet laget for strekkduker — de samme produktene som i kursrommet vårt og våre egne biler.",
+      "items": [
+        {
+          "name": "Håndverktøy for montering",
+          "body": "Sparkler og håndverktøy formet for å føre duken inn uten skader."
+        },
+        {
+          "name": "STRETCH Cleaner 1 L",
+          "body": "Det dukvennlige rengjøringsmiddelet mot fingeravtrykk, støv og byggeplasshinne."
+        },
+        {
+          "name": "STRETCH Cleaner 5 L",
+          "body": "Samme rengjøringsmiddel i verkstedstørrelse for forhandlere og storforbrukere."
+        }
+      ]
+    }
   }
 }

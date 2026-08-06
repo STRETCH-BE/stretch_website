@@ -2099,7 +2099,15 @@
       "home-cinema-ghent": "Gante · Céu estrelado + acústica",
       "city-penthouse-antwerp": "Antuérpia · Sala de estar",
       "wellness-spa-bruges": "Bruges · Casa de banho de spa",
-      "rue-perree-paris": "Paris · Teto de galeria retroiluminado"
+      "rue-perree-paris": "Paris · Teto de galeria retroiluminado",
+      "vier-emmershof-lokeren": "Lokeren · Casa na floresta",
+      "vp-193": "Flandres Oriental · Residência privada",
+      "jpv-210": "Bélgica · Residência privada",
+      "ben-home-vdb-222": "Sint-Pauwels · Casa quase neutra em energia",
+      "vap-sint-pauwels": "Sint-Pauwels · Vivenda branca",
+      "goesten-opdam": "Bélgica · Remodelação de escritórios",
+      "dhl-zaventem": "Zaventem · Sala de reuniões Boeing 737",
+      "veta-interieur-showroom": "Dendermonde · Showroom de casas de banho"
     },
     "comingSoon": "Fotos em breve"
   },
@@ -2896,6 +2904,258 @@
           "value": "Galeria multimarca"
         }
       ]
+    },
+    "vier-emmershof-lokeren": {
+      "title": "’t Vier Emmershof",
+      "summary": "Tetos tensionados acústicos ao longo de uma residência escultórica na floresta.",
+      "hook": "Uma casa escultórica entre abetos, tão serena por dentro como a floresta que a rodeia.",
+      "description": [
+        "Em ’t Vier Emmershof, em Lokeren, uma residência escultórica ergue-se entre abetos preservados; a fachada posterior totalmente envidraçada traz a floresta para dentro das zonas de estar. Os acabamentos naturais criam um interior quente e tranquilo.",
+        "Os tetos acústicos STRETCH percorrem toda a casa, absorvendo as reflexões que tanto vidro amplificaria — e elementos acústicos de parede acabados com têxtil impresso prolongam o tratamento para lá do plano do teto."
+      ],
+      "highlights": [
+        "Tetos acústicos em toda a casa",
+        "Elementos acústicos de parede em têxtil impresso",
+        "Fachada posterior envidraçada — vista para a floresta, acústica controlada"
+      ],
+      "materials": [
+        "Teto tensionado acústico STRETCH",
+        "Elementos acústicos de parede com têxtil impresso"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Lokeren, Bélgica"
+        },
+        {
+          "label": "Arquiteto",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Distribuidor STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vp-193": {
+      "title": "Villa VP-193",
+      "summary": "Tetos acústicos para uma moradia revestida a arenito, pensada em torno da luz e da privacidade.",
+      "hook": "Uma casa que se destaca sem estridência — arenito indiano por fora, acústica serena por dentro.",
+      "description": [
+        "A Villa VP-193 veste uma fachada de arenito indiano que dá calor e carácter à casa. As zonas de estar viram-se para as traseiras, onde grandes planos de vidro enquadram uma floresta de abetos, enquanto um generoso jardim interior na frente garante muita luz natural sem comprometer a privacidade. Uma consola arrojada forma o terraço coberto e o abrigo para o automóvel.",
+        "No interior, os tetos acústicos STRETCH mantêm confortáveis os espaços abertos e de superfícies duras, com iluminação Kreon integrada à face na membrana."
+      ],
+      "highlights": [
+        "Teto acústico em todas as zonas de estar abertas",
+        "Iluminação Kreon integrada à face",
+        "Fachada em arenito com terraço em consola"
+      ],
+      "materials": [
+        "Teto tensionado acústico STRETCH",
+        "Iluminação integrada (Kreon, entre outros)"
+      ],
+      "facts": [
+        {
+          "label": "Região",
+          "value": "Flandres Oriental, Bélgica"
+        },
+        {
+          "label": "Arquiteto",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Distribuidor STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "jpv-210": {
+      "title": "Villa JPV-210",
+      "summary": "Tetos brancos sem juntas para uma moradia minimalista totalmente branca.",
+      "hook": "Branco sobre branco: uma moradia minimalista onde o teto tinha de desaparecer por completo.",
+      "description": [
+        "A Villa JPV-210 é um exercício de redução — volumes brancos empilhados no exterior e interiores onde paredes, carpintaria e pavimentos se fundem numa única superfície luminosa. Numa casa tão pura, qualquer junta ou aparelho no teto quebraria o encanto.",
+        "Os tetos STRETCH sem juntas prolongam o mesmo branco ininterrupto sobre a cabeça, tornando confortáveis de habitar os volumes abertos e de superfícies duras."
+      ],
+      "highlights": [
+        "Tetos branco mate sem juntas em toda a casa",
+        "Sem juntas nem remates visíveis",
+        "Serenidade em volumes abertos e de superfícies duras"
+      ],
+      "materials": [
+        "Teto STRETCH sem juntas, branco mate"
+      ],
+      "facts": [
+        {
+          "label": "País",
+          "value": "Bélgica"
+        },
+        {
+          "label": "Espaço",
+          "value": "Moradia privada"
+        }
+      ]
+    },
+    "ben-home-vdb-222": {
+      "title": "Casa BEN VDB-222",
+      "summary": "Tetos acústicos para uma casa na floresta quase neutra em energia, construída em torno da unidade.",
+      "hook": "Máximo de vidro, máxima ligação às árvores — sem abdicar do sossego nem da privacidade.",
+      "description": [
+        "A unidade é o princípio orientador desta residência BEN (quase neutra em energia) em Sint-Pauwels: envidraçados generosos e uma planta aberta ligam a casa ao verde envolvente, num equilíbrio cuidado com a privacidade e a sensação de abrigo.",
+        "Os tetos acústicos STRETCH temperam essa abertura — absorvendo o som nos volumes abertos e envidraçados — com aparelhos Delta Light integrados de forma limpa na membrana."
+      ],
+      "highlights": [
+        "Teto acústico em toda a planta aberta",
+        "Iluminação Delta Light integrada",
+        "Construção quase neutra em energia (BEN)"
+      ],
+      "materials": [
+        "Teto tensionado acústico STRETCH",
+        "Iluminação integrada (Delta Light, entre outros)"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Sint-Pauwels, Bélgica"
+        },
+        {
+          "label": "Arquiteto",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Distribuidor STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vap-sint-pauwels": {
+      "title": "VAP — Sint-Pauwels",
+      "summary": "Tetos acústicos para uma moradia branca e luminosa inspirada na água.",
+      "hook": "Uma moradia branca para uma família atraída pela água — tetos que captam a luz como um mar calmo.",
+      "description": [
+        "Esta moradia branca e luminosa (projeto VA-176) reflete a ligação dos proprietários à água: superfícies claras e planos de teto que captam os reflexos como um mar sereno. O escritório pode autonomizar-se numa suite com identidade própria.",
+        "Os tetos acústicos STRETCH percorrem as zonas de estar, combinados com iluminação Kreon, mantendo o interior branco e nítido tão sereno para o ouvido como para o olhar."
+      ],
+      "highlights": [
+        "Tetos acústicos em todas as zonas de estar",
+        "Integração de iluminação Kreon",
+        "Escritório convertível em suite de hóspedes"
+      ],
+      "materials": [
+        "Teto tensionado acústico STRETCH",
+        "Iluminação integrada (Kreon, entre outros)"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Sint-Pauwels, Bélgica"
+        },
+        {
+          "label": "Ano",
+          "value": "2022–2023"
+        },
+        {
+          "label": "Arquiteto",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "Distribuidor STRETCH",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "goesten-opdam": {
+      "title": "Goesten & Opdam",
+      "summary": "Um teto acústico em cor personalizada para uns escritórios inspirados na natureza.",
+      "hook": "Acústica numa cor RAL personalizada, sobre um escritório que traz o exterior para dentro.",
+      "description": [
+        "Os escritórios da Goesten & Opdam, executados com o construtor de interiores Tenback, inspiram-se na natureza — até à parede verde de destaque atrás do balcão curvo da receção.",
+        "Por cima, um teto acústico STRETCH numa cor RAL personalizada une a paleta e mantém o espaço de trabalho silencioso."
+      ],
+      "highlights": [
+        "Teto acústico em cor RAL personalizada",
+        "Interior de escritório inspirado na natureza"
+      ],
+      "materials": [
+        "Teto tensionado acústico STRETCH (cor RAL personalizada)"
+      ],
+      "facts": [
+        {
+          "label": "País",
+          "value": "Bélgica"
+        },
+        {
+          "label": "Construtor de interiores",
+          "value": "Tenback"
+        }
+      ]
+    },
+    "dhl-zaventem": {
+      "title": "DHL Zaventem",
+      "summary": "Um teto acústico revestido a têxtil Camira dentro de uma sala de reuniões em forma de Boeing 737 à escala real.",
+      "hook": "Uma sala de conferências construída como a fuselagem de um Boeing 737 — com uma acústica à altura da ideia.",
+      "description": [
+        "Para a equipa da DHL em Zaventem, o distribuidor Ideal Acoustics construiu um espaço de reuniões único: uma secção à escala real da fuselagem de um Boeing 737, em pleno escritório.",
+        "Tetos acústicos STRETCH acabados com têxtil Camira revestem o espaço, para que a espetacular estrutura garanta também um sério conforto acústico nas reuniões."
+      ],
+      "highlights": [
+        "Sala de reuniões numa fuselagem de Boeing 737 à escala real",
+        "Teto acústico revestido com têxtil Camira"
+      ],
+      "materials": [
+        "Teto tensionado acústico STRETCH",
+        "Acabamento têxtil Camira"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Zaventem, Bélgica"
+        },
+        {
+          "label": "Ano",
+          "value": "2023"
+        },
+        {
+          "label": "Distribuidor STRETCH",
+          "value": "Ideal Acoustics"
+        },
+        {
+          "label": "Cliente",
+          "value": "DHL"
+        }
+      ]
+    },
+    "veta-interieur-showroom": {
+      "title": "Veta Interieur",
+      "summary": "Tetos impressos e iluminados num showroom de casas de banho de 350 m².",
+      "hook": "Dezoito mundos de casa de banho sob o mesmo teto — tetos impressos e luminosos a compor cada cenário.",
+      "description": [
+        "O showroom de 350 m² da Veta Interieur em Dendermonde encena experiências completas de casa de banho, assentes em 25 anos de design e mestria artesanal, com materiais importados diretamente de Itália e Espanha.",
+        "A STRETCH forneceu tetos iluminados com impressão de ponta a ponta — uma luz suave e uniforme sobre a cabeça que transforma cada casa de banho de exposição num cenário imersivo."
+      ],
+      "highlights": [
+        "Showroom de 350 m²",
+        "Tetos impressos e retroiluminados",
+        "Casas de banho de exposição imersivas"
+      ],
+      "materials": [
+        "Teto STRETCH Backlit (translúcido)",
+        "Impressão personalizada de ponta a ponta"
+      ],
+      "facts": [
+        {
+          "label": "Localização",
+          "value": "Dendermonde, Bélgica"
+        },
+        {
+          "label": "Ano",
+          "value": "2022"
+        },
+        {
+          "label": "Cliente",
+          "value": "Veta Interieur"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3425,6 +3685,140 @@
     "dealerBody": "As contas profissionais veem preços de revenda em direto no portal de clientes — e encomendam com as suas condições.",
     "dealerCta": "Entrar para preços pro",
     "partnerCta": "Torne-se parceiro",
-    "backToAll": "Todos os materiais"
+    "backToAll": "Todos os materiais",
+    "addToList": "Adicionar ao pedido",
+    "inList": "Na sua lista",
+    "barLabel": "Lista de pedido",
+    "inquiryTitle": "A sua lista de pedido",
+    "inquirySub": "Uma só mensagem, todos os artigos — respondemos com preço, disponibilidade e prazo, normalmente no próprio dia útil.",
+    "removeLabel": "Remover",
+    "formName": "Nome",
+    "formCompany": "Empresa (opcional)",
+    "formEmail": "E-mail",
+    "formPhone": "Telefone (opcional)",
+    "formMessage": "Mensagem (opcional)",
+    "consent": "Aceito que a STRETCH trate os meus dados para responder ao meu pedido —",
+    "privacyLabel": "política de privacidade",
+    "send": "Enviar pedido",
+    "sending": "A enviar…",
+    "sentTitle": "Pedido enviado",
+    "sentBody": "Obrigado — voltaremos ao seu contacto com preços, disponibilidade e prazo, normalmente no próprio dia útil.",
+    "sendError": "Algo correu mal — tente novamente ou escreva-nos diretamente.",
+    "closeLabel": "Fechar"
+  },
+  "materialsData": {
+    "profiles": {
+      "name": "Perfis e calhas",
+      "eyebrow": "Perfis",
+      "metaTitle": "Perfis para tetos tensionados — alumínio e PVC | STRETCH",
+      "metaDescription": "Perfis de alumínio e PVC para tetos tensionados, perfis para linhas LED e tampas de remate, diretamente da nossa própria produção. Peça um orçamento — respondemos com preço e prazo de entrega.",
+      "intro": "As calhas que sustentam cada teto STRETCH: perfis perimetrais de alumínio e PVC, perfis para linhas LED e peças de remate — os mesmos perfis que os nossos próprios instaladores usam, cortados e expedidos a partir da nossa produção.",
+      "items": [
+        {
+          "name": "Perfis de alumínio para tetos tensionados",
+          "body": "Perfis rígidos de alumínio, perimetrais e de separação, para montagem a frio e a quente — varas retas, prontas a aplicar."
+        },
+        {
+          "name": "Perfis de PVC para tetos tensionados",
+          "body": "Perfis de arpão flexíveis em PVC para paredes curvas e perímetros simples."
+        },
+        {
+          "name": "Perfis para linhas LED e tampas de remate",
+          "body": "Perfis embutidos que desenham uma linha de luz nítida na membrana, com tampas de remate a condizer (16 / 31 mm)."
+        },
+        {
+          "name": "Perfil Tracklight 48V",
+          "body": "A calha magnética de 48V que se integra à face num teto tensionado — a espinha dorsal do sistema tracklight."
+        }
+      ]
+    },
+    "fabrics": {
+      "name": "Telas e películas",
+      "eyebrow": "Telas",
+      "metaTitle": "Tela e película PVC para tetos tensionados — em rolo, ao corte, à medida | STRETCH",
+      "metaDescription": "Película PVC para tetos tensionados (MSD, Bauf, Teqtum, Renolit) em rolo, cortada ao comprimento ou soldada à medida com arpão. Acabamentos mate, brilhante, translúcido e de cor. Peça um orçamento.",
+      "intro": "A membrana tal como precisa dela: rolos completos para a sua própria confeção, película cortada ao comprimento ou um teto acabado, soldado à medida com arpão — em acabamentos mate, acetinado, brilhante, translúcido e de cor das principais marcas de película.",
+      "items": [
+        {
+          "name": "Película PVC em rolo",
+          "body": "Película MSD, Bauf, Teqtum e Renolit ao rolo — gamas mate/acetinado, brilhante, translúcido, cor, metalizado e Black & White."
+        },
+        {
+          "name": "Película cortada ao comprimento",
+          "body": "As mesmas gamas de película, cortadas ao comprimento de que precisa — sem ter de comprar o rolo inteiro."
+        },
+        {
+          "name": "Tetos feitos à medida",
+          "body": "O seu teto soldado à medida na nossa produção, com arpão incluído — pronto a montar no perfil."
+        },
+        {
+          "name": "Película translúcida (retroiluminada)",
+          "body": "Membrana que deixa passar a luz, para tetos iluminados e caixas de luz, sem juntas até 5 m."
+        }
+      ]
+    },
+    "lighting": {
+      "name": "Iluminação",
+      "eyebrow": "Iluminação",
+      "metaTitle": "Iluminação para tetos tensionados — tracklight 48V, módulos LED, anéis para focos | STRETCH",
+      "metaDescription": "Iluminação para tetos tensionados: calhas magnéticas de 48V, focos e luminárias de grelha, módulos LED para tetos retroiluminados e anéis para focos/anéis de proteção. Peça um orçamento.",
+      "intro": "Tudo o que ilumina um teto STRETCH: a família de calhas magnéticas tracklight de 48V, módulos LED para campos de luz em tetos retroiluminados e os anéis que rematam cada foco com limpeza.",
+      "items": [
+        {
+          "name": "Sistema Tracklight 48V",
+          "body": "Focos magnéticos, luminárias de grelha e conectores para a calha de 48V embutida à face — troque e reposicione os aparelhos à mão."
+        },
+        {
+          "name": "Módulos LED para tetos retroiluminados",
+          "body": "Campos LED uniformes e reguláveis que transformam uma membrana translúcida numa fonte de luz contínua."
+        },
+        {
+          "name": "Anéis para focos e anéis de proteção",
+          "body": "Anéis em todos os diâmetros (4.5–300 mm) que reforçam os recortes para focos, sensores e ventilação."
+        }
+      ]
+    },
+    "accessories": {
+      "name": "Acessórios",
+      "eyebrow": "Acessórios",
+      "metaTitle": "Acessórios para tetos tensionados — arpão, anéis, fixações | STRETCH",
+      "metaDescription": "Acessórios para tetos tensionados: arpão, anéis de proteção, cola, fixações e peças de remate — tudo o que envolve a membrana. Peça um orçamento.",
+      "intro": "As pequenas peças que fazem um trabalho limpo: arpão para soldar, anéis de proteção, cola e fixações — os consumíveis que qualquer instalador gasta no dia a dia.",
+      "items": [
+        {
+          "name": "Arpão",
+          "body": "O rebordo soldado que fixa a membrana no perfil — vendido ao rolo."
+        },
+        {
+          "name": "Anéis de proteção",
+          "body": "Anéis autocolantes de 4.5 a 300 mm para focos, ganchos, tubos e sensores."
+        },
+        {
+          "name": "Cola e fixações",
+          "body": "Cola AKFIX, parafusos e os consumíveis de montagem usados em todas as obras."
+        }
+      ]
+    },
+    "tools-cleaning": {
+      "name": "Ferramentas e limpeza",
+      "eyebrow": "Ferramentas",
+      "metaTitle": "Ferramentas para tetos tensionados e STRETCH Cleaner | STRETCH",
+      "metaDescription": "Ferramentas manuais de instalação para tetos tensionados e o STRETCH Cleaner que mantém as membranas impecáveis (1 L e 5 L). Peça um orçamento.",
+      "intro": "Ferramentas manuais para o instalador e o produto de limpeza criado para membranas tensionadas — os mesmos produtos da nossa sala de formação e das nossas próprias carrinhas.",
+      "items": [
+        {
+          "name": "Ferramentas manuais de instalação",
+          "body": "Espátulas e ferramentas manuais desenhadas para encaixar a membrana sem a danificar."
+        },
+        {
+          "name": "STRETCH Cleaner 1 L",
+          "body": "O produto de limpeza seguro para a membrana, contra dedadas, pó e a película da obra."
+        },
+        {
+          "name": "STRETCH Cleaner 5 L",
+          "body": "O mesmo produto de limpeza no formato de oficina, para distribuidores e utilizadores intensivos."
+        }
+      ]
+    }
   }
 }

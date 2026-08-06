@@ -2099,7 +2099,15 @@
       "home-cinema-ghent": "Gent · Stjernehimmel + akustik",
       "city-penthouse-antwerp": "Antwerpen · Stue",
       "wellness-spa-bruges": "Brugge · Spa-badeværelse",
-      "rue-perree-paris": "Paris · Bagbelyst galleriloft"
+      "rue-perree-paris": "Paris · Bagbelyst galleriloft",
+      "vier-emmershof-lokeren": "Lokeren · Skovbolig",
+      "vp-193": "Østflandern · Privatbolig",
+      "jpv-210": "Belgien · Privatbolig",
+      "ben-home-vdb-222": "Sint-Pauwels · Næsten energineutralt hjem",
+      "vap-sint-pauwels": "Sint-Pauwels · Hvid villa",
+      "goesten-opdam": "Belgien · Kontorindretning",
+      "dhl-zaventem": "Zaventem · Boeing 737-mødelokale",
+      "veta-interieur-showroom": "Dendermonde · Badeværelsesshowroom"
     },
     "comingSoon": "Fotos på vej"
   },
@@ -2896,6 +2904,258 @@
           "value": "Galleri med flere mærker"
         }
       ]
+    },
+    "vier-emmershof-lokeren": {
+      "title": "’t Vier Emmershof",
+      "summary": "Akustiske stretchlofter gennem en skulpturel bolig midt i skoven.",
+      "hook": "Et skulpturelt hjem mellem grantræerne — lige så roligt indenfor som skoven omkring det.",
+      "description": [
+        "På ’t Vier Emmershof i Lokeren ligger en skulpturel bolig mellem bevarede grantræer, og bagfacaden helt i glas trækker skoven ind i opholdsrummene. Naturlige materialer skaber et varmt og roligt interiør.",
+        "Akustiske STRETCH-lofter går gennem hele hjemmet og absorberer de refleksioner, alt det glas ellers ville forstærke — og akustiske vægelementer beklædt med printet tekstil fører behandlingen videre ud over loftfladen."
+      ],
+      "highlights": [
+        "Akustiske lofter i hele hjemmet",
+        "Akustiske vægelementer med printet tekstil",
+        "Bagfacade i glas — skovudsigt og kontrolleret akustik"
+      ],
+      "materials": [
+        "Akustisk STRETCH-loft",
+        "Akustiske vægelementer med printet tekstil"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Lokeren, Belgien"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vp-193": {
+      "title": "Villa VP-193",
+      "summary": "Akustiske lofter til en sandstensbeklædt villa bygget op om lys og privatliv.",
+      "hook": "Et hjem, der får lov at skille sig ud uden at råbe — indisk sandsten udenpå, rolig akustik indeni.",
+      "description": [
+        "Villa VP-193 bærer en facade af indisk sandsten, der giver huset varme og karakter. Opholdsrummene vender mod baghaven, hvor store glaspartier indrammer en granskov, mens en rummelig gårdhave mod gaden holder dagslyset højt og privatlivet intakt. En markant udkragning danner den overdækkede terrasse og carporten.",
+        "Indenfor holder akustiske STRETCH-lofter de åbne rum med hårde overflader behagelige, med Kreon-belysning integreret i plan med membranen."
+      ],
+      "highlights": [
+        "Akustisk loft i de åbne opholdsrum",
+        "Kreon-belysning integreret i plan",
+        "Sandstensfacade med udkraget terrasse"
+      ],
+      "materials": [
+        "Akustisk STRETCH-loft",
+        "Integreret belysning (bl.a. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "Østflandern, Belgien"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "jpv-210": {
+      "title": "Villa JPV-210",
+      "summary": "Sømløse hvide lofter til en helt hvid minimalistisk villa.",
+      "hook": "Hvidt på hvidt: en minimalistisk villa, hvor loftet skulle forsvinde helt.",
+      "description": [
+        "Villa JPV-210 er en øvelse i reduktion — stablede hvide volumener udvendigt og interiører, hvor vægge, snedkerarbejde og gulve smelter sammen til én lys flade. I et så rendyrket hus ville selv den mindste samling eller et synligt armatur i loftet bryde fortryllelsen.",
+        "Sømløse STRETCH-lofter fører det samme ubrudte hvide videre over hovedet og gør de hårde, åbne volumener behagelige at bo i."
+      ],
+      "highlights": [
+        "Sømløse mathvide lofter overalt",
+        "Ingen synlige samlinger eller lister",
+        "Ro i hårde, åbne rum"
+      ],
+      "materials": [
+        "Sømløst STRETCH-loft, mat hvid"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgien"
+        },
+        {
+          "label": "Rum",
+          "value": "Privat villa"
+        }
+      ]
+    },
+    "ben-home-vdb-222": {
+      "title": "BEN-bolig VDB-222",
+      "summary": "Akustiske lofter til en næsten energineutral bolig i skoven, bygget op om helhed.",
+      "hook": "Maksimalt glas, maksimal forbindelse til træerne — uden at give afkald på ro eller privatliv.",
+      "description": [
+        "Helhed er det bærende princip i denne BEN-bolig (næsten energineutral) i Sint-Pauwels: store glaspartier og en åben planløsning forbinder huset med det grønne omkring det, nøje afvejet mod privatliv og en følelse af læ.",
+        "Akustiske STRETCH-lofter dæmper åbenheden — de absorberer lyden i de glasklædte, åbne rum — med armaturer fra Delta Light rent integreret i membranen."
+      ],
+      "highlights": [
+        "Akustisk loft i hele den åbne planløsning",
+        "Integreret Delta Light-belysning",
+        "Næsten energineutralt byggeri (BEN)"
+      ],
+      "materials": [
+        "Akustisk STRETCH-loft",
+        "Integreret belysning (bl.a. Delta Light)"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Sint-Pauwels, Belgien"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vap-sint-pauwels": {
+      "title": "VAP — Sint-Pauwels",
+      "summary": "Akustiske lofter til en lys hvid villa inspireret af vand.",
+      "hook": "En hvid villa til en familie, der drages mod vand — lofter, der fanger lyset som et roligt hav.",
+      "description": [
+        "Denne lyse, hvide villa (projekt VA-176) afspejler ejernes forhold til vand: lyse overflader og loftflader, der opfanger refleksioner som et stille hav. Et hjemmekontor kan skilles fra som en suite med sin helt egen identitet.",
+        "Akustiske STRETCH-lofter går igen i alle opholdsrum, parret med Kreon-belysning, så det knivskarpe hvide interiør er lige så roligt for øret som for øjet."
+      ],
+      "highlights": [
+        "Akustiske lofter i alle opholdsrum",
+        "Integreret Kreon-belysning",
+        "Kontor, der kan blive til gæstesuite"
+      ],
+      "materials": [
+        "Akustisk STRETCH-loft",
+        "Integreret belysning (bl.a. Kreon)"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Sint-Pauwels, Belgien"
+        },
+        {
+          "label": "År",
+          "value": "2022–2023"
+        },
+        {
+          "label": "Arkitekt",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "goesten-opdam": {
+      "title": "Goesten & Opdam",
+      "summary": "Et farvetilpasset akustisk loft til en naturinspireret kontorindretning.",
+      "hook": "Akustik i en specialvalgt RAL-farve over et kontor, der henter naturen indenfor.",
+      "description": [
+        "Goesten & Opdams kontorer, indrettet sammen med interiørbyggeren Tenback, henter deres inspiration i naturen — helt ned til den grønne plantevæg bag den buede receptionsdisk.",
+        "Ovenover binder et akustisk STRETCH-loft i en specialvalgt RAL-farve paletten sammen og holder samtidig arbejdspladsen rolig."
+      ],
+      "highlights": [
+        "Akustisk loft i specialvalgt RAL-farve",
+        "Naturinspireret kontorinteriør"
+      ],
+      "materials": [
+        "Akustisk STRETCH-loft (specialvalgt RAL-farve)"
+      ],
+      "facts": [
+        {
+          "label": "Land",
+          "value": "Belgien"
+        },
+        {
+          "label": "Interiørbygger",
+          "value": "Tenback"
+        }
+      ]
+    },
+    "dhl-zaventem": {
+      "title": "DHL Zaventem",
+      "summary": "Et Camira-beklædt akustisk loft i et mødelokale formet som en Boeing 737 i fuld størrelse.",
+      "hook": "Et konferencelokale bygget som en Boeing 737-flykrop — med akustik, der matcher idéen.",
+      "description": [
+        "Til DHL-teamet i Zaventem byggede forhandleren Ideal Acoustics et mødelokale ud over det sædvanlige: en sektion af en Boeing 737-flykrop i fuld størrelse — midt på kontoret.",
+        "Akustiske STRETCH-lofter beklædt med Camira-tekstil klæder rummet indvendigt, så den spektakulære skal også leverer seriøs akustisk komfort til møderne."
+      ],
+      "highlights": [
+        "Mødelokale som Boeing 737-flykrop i fuld størrelse",
+        "Akustisk loft beklædt med Camira-tekstil"
+      ],
+      "materials": [
+        "Akustisk STRETCH-loft",
+        "Camira-tekstilbeklædning"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Zaventem, Belgien"
+        },
+        {
+          "label": "År",
+          "value": "2023"
+        },
+        {
+          "label": "STRETCH-forhandler",
+          "value": "Ideal Acoustics"
+        },
+        {
+          "label": "Kunde",
+          "value": "DHL"
+        }
+      ]
+    },
+    "veta-interieur-showroom": {
+      "title": "Veta Interieur",
+      "summary": "Printede, oplyste lofter i et 350 m² stort badeværelsesshowroom.",
+      "hook": "Atten badeværelsesuniverser under ét tag — printede, lysende lofter sætter scenen for hvert enkelt.",
+      "description": [
+        "Veta Interieurs 350 m² store showroom i Dendermonde iscenesætter komplette badeværelsesoplevelser, bygget på 25 års design og håndværk med materialer importeret direkte fra Italien og Spanien.",
+        "STRETCH leverede oplyste lofter med print fra kant til kant — et blødt, jævnt lys ovenfra, der forvandler hvert udstillingsbad til en scene, man træder helt ind i."
+      ],
+      "highlights": [
+        "350 m² showroom",
+        "Printede + gennemlyste lofter",
+        "Udstillingsbade, man træder helt ind i"
+      ],
+      "materials": [
+        "STRETCH Backlit-loft (lysgennemtrængeligt)",
+        "Specialprint fra kant til kant"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Dendermonde, Belgien"
+        },
+        {
+          "label": "År",
+          "value": "2022"
+        },
+        {
+          "label": "Kunde",
+          "value": "Veta Interieur"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3425,6 +3685,140 @@
     "dealerBody": "Forhandlerkonti ser live forhandlerpriser i kundeportalen — og bestiller på egne vilkår.",
     "dealerCta": "Log ind for priser",
     "partnerCta": "Bliv partner",
-    "backToAll": "Alle materialer"
+    "backToAll": "Alle materialer",
+    "addToList": "Føj til forespørgsel",
+    "inList": "På din liste",
+    "barLabel": "Forespørgselsliste",
+    "inquiryTitle": "Din forespørgselsliste",
+    "inquirySub": "Én besked, alle dine varer — vi svarer med pris, tilgængelighed og leveringstid, som regel samme hverdag.",
+    "removeLabel": "Fjern",
+    "formName": "Navn",
+    "formCompany": "Firma (valgfrit)",
+    "formEmail": "E-mail",
+    "formPhone": "Telefon (valgfrit)",
+    "formMessage": "Besked (valgfrit)",
+    "consent": "Jeg accepterer, at STRETCH behandler mine oplysninger for at besvare min forespørgsel —",
+    "privacyLabel": "privatlivspolitik",
+    "send": "Send forespørgsel",
+    "sending": "Sender…",
+    "sentTitle": "Forespørgsel sendt",
+    "sentBody": "Tak — vi vender tilbage med priser, tilgængelighed og leveringstid, som regel samme hverdag.",
+    "sendError": "Noget gik galt — prøv igen, eller skriv direkte til os.",
+    "closeLabel": "Luk"
+  },
+  "materialsData": {
+    "profiles": {
+      "name": "Profiler & skinner",
+      "eyebrow": "Profiler",
+      "metaTitle": "Profiler til stretchlofter — aluminium & PVC | STRETCH",
+      "metaDescription": "Stretchloft-profiler i aluminium og PVC, LED-linjeprofiler og endestykker — direkte fra vores egen produktion. Bed om et tilbud — vi svarer med pris og leveringstid.",
+      "intro": "Skinnerne, der holder hvert STRETCH-loft: kantprofiler i aluminium og PVC, LED-linjeprofiler og afslutningsstykker — de samme profiler, vores egne montører bruger, skåret til og afsendt fra vores produktion.",
+      "items": [
+        {
+          "name": "Aluminiumsprofiler til stretchlofter",
+          "body": "Stive kant- og delingsprofiler i aluminium til kold og varm montering — lige længder, klar til montage."
+        },
+        {
+          "name": "PVC-profiler til stretchlofter",
+          "body": "Fleksible PVC-harpunprofiler til buede vægge og enkle kantløsninger."
+        },
+        {
+          "name": "LED-linjeprofiler & endestykker",
+          "body": "Indbyggede profiler, der tegner en skarp lyslinje i membranen, med matchende endestykker (16 / 31 mm)."
+        },
+        {
+          "name": "Tracklight 48V-profil",
+          "body": "Den magnetiske 48V-skinne, der integreres i plan med et stretchloft — rygraden i tracklight-systemet."
+        }
+      ]
+    },
+    "fabrics": {
+      "name": "Duge & folier",
+      "eyebrow": "Duge",
+      "metaTitle": "Stretchloft-dug & PVC-folie — på rulle, i længde, efter mål | STRETCH",
+      "metaDescription": "PVC-folie til stretchlofter (MSD, Bauf, Teqtum, Renolit) på rulle, skåret i længde eller svejset efter mål med harpun. Mat, blank, translucent og i farver. Bed om et tilbud.",
+      "intro": "Membran, som du har brug for den: hele ruller til din egen konfektion, folie skåret i længde eller et færdigt loft svejset efter mål med harpun — i mat, satin, blank, translucent og farvede udgaver fra de store foliemærker.",
+      "items": [
+        {
+          "name": "PVC-folie på rulle",
+          "body": "Folie fra MSD, Bauf, Teqtum og Renolit på rulle — mat/satin, blank, translucent, farver, metallic samt Black & White-serier."
+        },
+        {
+          "name": "Folie skåret i længde",
+          "body": "De samme folieserier skåret i præcis den længde, du skal bruge — uden at købe en hel rulle."
+        },
+        {
+          "name": "Lofter efter mål",
+          "body": "Dit loft svejset efter mål i vores produktion, inklusive harpun — klar til at hænge i profilen."
+        },
+        {
+          "name": "Translucent folie (backlit)",
+          "body": "Lysgennemtrængelig membran til lysende lofter og lyskasser, op til 5 m uden samlinger."
+        }
+      ]
+    },
+    "lighting": {
+      "name": "Belysning",
+      "eyebrow": "Belysning",
+      "metaTitle": "Belysning til stretchlofter — 48V tracklight, LED-moduler, spotringe | STRETCH",
+      "metaDescription": "Belysning til stretchlofter: magnetiske 48V-tracklights, spots og grille-armaturer, LED-moduler til gennemlyste lofter samt spotringe/beskyttelsesringe. Bed om et tilbud.",
+      "intro": "Alt det, der lyser et STRETCH-loft op: den magnetiske 48V tracklight-familie, LED-feltmoduler til gennemlyste lofter og ringene, der giver hver spot en ren afslutning.",
+      "items": [
+        {
+          "name": "Tracklight 48V-system",
+          "body": "Magnetiske spots, grille-armaturer og samlestykker til den planintegrerede 48V-skinne — skift og flyt armaturer med hånden."
+        },
+        {
+          "name": "LED-moduler til gennemlyste lofter",
+          "body": "Jævne, dæmpbare LED-felter, der forvandler en translucent membran til én sammenhængende lyskilde."
+        },
+        {
+          "name": "Spotringe & beskyttelsesringe",
+          "body": "Ringe i alle diametre (4.5–300 mm), der forstærker udskæringer til spots, sensorer og ventilation."
+        }
+      ]
+    },
+    "accessories": {
+      "name": "Tilbehør",
+      "eyebrow": "Tilbehør",
+      "metaTitle": "Tilbehør til stretchlofter — harpun, ringe, befæstigelse | STRETCH",
+      "metaDescription": "Tilbehør til stretchlofter: harpun, beskyttelsesringe, lim, befæstigelse og afslutningsstykker — alt omkring membranen. Bed om et tilbud.",
+      "intro": "De små dele, der gør arbejdet rent: harpun til svejsning, beskyttelsesringe, lim og befæstigelse — de forbrugsvarer, hver montør konstant bruger af.",
+      "items": [
+        {
+          "name": "Harpun",
+          "body": "Den svejsede kant, der låser membranen fast i profilen — sælges pr. rulle."
+        },
+        {
+          "name": "Beskyttelsesringe",
+          "body": "Selvklæbende ringe fra 4.5 til 300 mm til spots, kroge, rør og sensorer."
+        },
+        {
+          "name": "Lim & befæstigelse",
+          "body": "AKFIX-lim, skruer og de monteringsartikler, der bruges på enhver byggeplads."
+        }
+      ]
+    },
+    "tools-cleaning": {
+      "name": "Værktøj & rengøring",
+      "eyebrow": "Værktøj",
+      "metaTitle": "Værktøj til stretchlofter & STRETCH Cleaner | STRETCH",
+      "metaDescription": "Håndværktøj til montering af stretchlofter og STRETCH Cleaner, der holder membranerne pletfri (1 L og 5 L). Bed om et tilbud.",
+      "intro": "Montørens håndværktøj og rengøringsmidlet udviklet til stretchmembraner — de samme produkter som i vores undervisningslokale og vores egne montagebiler.",
+      "items": [
+        {
+          "name": "Håndværktøj til montering",
+          "body": "Spartler og håndværktøj formet til at lægge membranen ind uden skader."
+        },
+        {
+          "name": "STRETCH Cleaner 1 L",
+          "body": "Det membranvenlige rengøringsmiddel mod fingeraftryk, støv og byggepladsfilm."
+        },
+        {
+          "name": "STRETCH Cleaner 5 L",
+          "body": "Samme rengøringsmiddel i værkstedsstørrelse til forhandlere og storforbrugere."
+        }
+      ]
+    }
   }
 }

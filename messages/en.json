@@ -2099,7 +2099,15 @@
       "home-cinema-ghent": "Ghent · Starry sky + acoustic",
       "city-penthouse-antwerp": "Antwerp · Living room",
       "wellness-spa-bruges": "Bruges · Spa bathroom",
-      "rue-perree-paris": "Paris · Backlit gallery ceiling"
+      "rue-perree-paris": "Paris · Backlit gallery ceiling",
+      "vier-emmershof-lokeren": "Lokeren · Forest residence",
+      "vp-193": "East Flanders · Private residence",
+      "jpv-210": "Belgium · Private residence",
+      "ben-home-vdb-222": "Sint-Pauwels · Near-energy-neutral home",
+      "vap-sint-pauwels": "Sint-Pauwels · White villa",
+      "goesten-opdam": "Belgium · Office fit-out",
+      "dhl-zaventem": "Zaventem · Boeing 737 meeting room",
+      "veta-interieur-showroom": "Dendermonde · Bathroom showroom"
     },
     "comingSoon": "Photos coming soon"
   },
@@ -2896,6 +2904,258 @@
           "value": "Multi-brand gallery"
         }
       ]
+    },
+    "vier-emmershof-lokeren": {
+      "title": "’t Vier Emmershof",
+      "summary": "Acoustic stretch ceilings through a sculptural forest residence.",
+      "hook": "A sculptural home among the spruce trees, kept just as calm inside as the forest around it.",
+      "description": [
+        "At ’t Vier Emmershof in Lokeren, a sculptural residence sits between preserved spruce trees, its fully glazed rear facade pulling the forest into the living spaces. Natural finishes shape a warm, quiet interior.",
+        "Acoustic STRETCH ceilings run through the home, absorbing the reflections all that glass would otherwise amplify — and acoustic wall elements finished with printed textile extend the treatment beyond the ceiling plane."
+      ],
+      "highlights": [
+        "Acoustic ceilings throughout the home",
+        "Printed-textile acoustic wall elements",
+        "Glazed rear facade — forest views, controlled acoustics"
+      ],
+      "materials": [
+        "Acoustic STRETCH ceiling",
+        "Acoustic wall elements with printed textile"
+      ],
+      "facts": [
+        {
+          "label": "Location",
+          "value": "Lokeren, Belgium"
+        },
+        {
+          "label": "Architect",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH dealer",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vp-193": {
+      "title": "Villa VP-193",
+      "summary": "Acoustic ceilings for a sandstone-clad villa built around light and privacy.",
+      "hook": "A home allowed to stand out without shouting — Indian sandstone outside, calm acoustics inside.",
+      "description": [
+        "Villa VP-193 wears a facade of Indian sandstone that gives the house warmth and character. Its living spaces turn to the rear, where large glass planes frame a spruce forest, while a generous interior garden at the front keeps daylight high and privacy intact. A bold cantilever forms the covered terrace and carport.",
+        "Inside, acoustic STRETCH ceilings keep the open, hard-surfaced spaces comfortable, with Kreon lighting integrated flush into the membrane."
+      ],
+      "highlights": [
+        "Acoustic ceiling across the open living spaces",
+        "Flush-integrated Kreon lighting",
+        "Sandstone facade with cantilevered terrace"
+      ],
+      "materials": [
+        "Acoustic STRETCH ceiling",
+        "Integrated lighting (Kreon a.o.)"
+      ],
+      "facts": [
+        {
+          "label": "Region",
+          "value": "East Flanders, Belgium"
+        },
+        {
+          "label": "Architect",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH dealer",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "jpv-210": {
+      "title": "Villa JPV-210",
+      "summary": "Seamless white ceilings for an all-white minimalist villa.",
+      "hook": "White on white: a minimalist villa where the ceiling had to disappear completely.",
+      "description": [
+        "Villa JPV-210 is an exercise in reduction — stacked white volumes outside, and interiors where walls, joinery and floors dissolve into a single bright surface. In a house this pure, any ceiling seam or fixture would break the spell.",
+        "Seamless STRETCH ceilings carry the same uninterrupted white overhead, keeping the hard, open volumes comfortable to live in."
+      ],
+      "highlights": [
+        "Seamless matte-white ceilings throughout",
+        "No visible seams or trims",
+        "Calm in hard, open volumes"
+      ],
+      "materials": [
+        "Seamless STRETCH ceiling, matte white"
+      ],
+      "facts": [
+        {
+          "label": "Country",
+          "value": "Belgium"
+        },
+        {
+          "label": "Space",
+          "value": "Private villa"
+        }
+      ]
+    },
+    "ben-home-vdb-222": {
+      "title": "BEN Home VDB-222",
+      "summary": "Acoustic ceilings for a near-energy-neutral forest home built around unity.",
+      "hook": "Maximum glass, maximum connection to the trees — without giving up quiet or privacy.",
+      "description": [
+        "Unity is the guiding principle of this BEN (nearly energy-neutral) residence in Sint-Pauwels: generous glazing and an open plan connect the house to the surrounding greenery, balanced carefully against privacy and a sense of shelter.",
+        "Acoustic STRETCH ceilings temper the openness — absorbing sound across the glazed, open volumes — with Delta Light fixtures integrated cleanly into the membrane."
+      ],
+      "highlights": [
+        "Acoustic ceiling across the open plan",
+        "Integrated Delta Light lighting",
+        "Near-energy-neutral (BEN) build"
+      ],
+      "materials": [
+        "Acoustic STRETCH ceiling",
+        "Integrated lighting (Delta Light a.o.)"
+      ],
+      "facts": [
+        {
+          "label": "Location",
+          "value": "Sint-Pauwels, Belgium"
+        },
+        {
+          "label": "Architect",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH dealer",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "vap-sint-pauwels": {
+      "title": "VAP — Sint-Pauwels",
+      "summary": "Acoustic ceilings for a bright white villa inspired by water.",
+      "hook": "A white villa for a family drawn to water — ceilings that catch the light like a calm sea.",
+      "description": [
+        "This bright white villa (project VA-176) reflects its owners’ connection to water: light surfaces and ceiling planes that pick up reflections like a still sea. A home office can split off into a suite with an identity of its own.",
+        "Acoustic STRETCH ceilings run through the living spaces, paired with Kreon lighting, keeping the crisp white interior as calm to the ear as it is to the eye."
+      ],
+      "highlights": [
+        "Acoustic ceilings in every living space",
+        "Kreon lighting integration",
+        "Convertible office / guest-suite layout"
+      ],
+      "materials": [
+        "Acoustic STRETCH ceiling",
+        "Integrated lighting (Kreon a.o.)"
+      ],
+      "facts": [
+        {
+          "label": "Location",
+          "value": "Sint-Pauwels, Belgium"
+        },
+        {
+          "label": "Year",
+          "value": "2022–2023"
+        },
+        {
+          "label": "Architect",
+          "value": "Inzicht Architecten"
+        },
+        {
+          "label": "STRETCH dealer",
+          "value": "Plafondlux BV"
+        }
+      ]
+    },
+    "goesten-opdam": {
+      "title": "Goesten & Opdam",
+      "summary": "A colour-matched acoustic ceiling for a nature-inspired office fit-out.",
+      "hook": "Acoustics in a custom RAL colour, over an office that brings the outside in.",
+      "description": [
+        "The Goesten & Opdam offices, fitted out with interior builder Tenback, take their cue from nature — down to the leafy feature wall behind the curved reception desk.",
+        "Overhead, an acoustic STRETCH ceiling in a custom RAL colour ties the palette together while keeping the workspace quiet."
+      ],
+      "highlights": [
+        "Acoustic ceiling in a custom RAL colour",
+        "Nature-themed office interior"
+      ],
+      "materials": [
+        "Acoustic STRETCH ceiling (custom RAL colour)"
+      ],
+      "facts": [
+        {
+          "label": "Country",
+          "value": "Belgium"
+        },
+        {
+          "label": "Interior builder",
+          "value": "Tenback"
+        }
+      ]
+    },
+    "dhl-zaventem": {
+      "title": "DHL Zaventem",
+      "summary": "A Camira-clad acoustic ceiling inside a full-scale Boeing 737 meeting room.",
+      "hook": "A conference room built as a Boeing 737 fuselage — with acoustics to match the idea.",
+      "description": [
+        "For the DHL team in Zaventem, dealer Ideal Acoustics built a meeting space unlike any other: a full-scale section of a Boeing 737 fuselage, right in the office.",
+        "Acoustic STRETCH ceilings finished with Camira textile line the space, so the spectacular shell also delivers serious acoustic comfort for meetings."
+      ],
+      "highlights": [
+        "Full-scale Boeing 737 fuselage meeting room",
+        "Acoustic ceiling clad in Camira textile"
+      ],
+      "materials": [
+        "Acoustic STRETCH ceiling",
+        "Camira textile finish"
+      ],
+      "facts": [
+        {
+          "label": "Location",
+          "value": "Zaventem, Belgium"
+        },
+        {
+          "label": "Year",
+          "value": "2023"
+        },
+        {
+          "label": "STRETCH dealer",
+          "value": "Ideal Acoustics"
+        },
+        {
+          "label": "Client",
+          "value": "DHL"
+        }
+      ]
+    },
+    "veta-interieur-showroom": {
+      "title": "Veta Interieur",
+      "summary": "Printed, illuminated ceilings across a 350 m² bathroom showroom.",
+      "hook": "Eighteen bathroom worlds under one roof — printed, glowing ceilings setting each scene.",
+      "description": [
+        "Veta Interieur’s 350 m² showroom in Dendermonde stages complete bathroom experiences, built on 25 years of design and craftsmanship with materials imported directly from Italy and Spain.",
+        "STRETCH delivered illuminated ceilings with edge-to-edge print — soft, even light overhead that turns each display bathroom into an immersive scene."
+      ],
+      "highlights": [
+        "350 m² showroom",
+        "Printed + backlit ceilings",
+        "Immersive display bathrooms"
+      ],
+      "materials": [
+        "STRETCH Backlit (light-transmitting) ceiling",
+        "Edge-to-edge custom print"
+      ],
+      "facts": [
+        {
+          "label": "Location",
+          "value": "Dendermonde, Belgium"
+        },
+        {
+          "label": "Year",
+          "value": "2022"
+        },
+        {
+          "label": "Client",
+          "value": "Veta Interieur"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3425,6 +3685,140 @@
     "dealerBody": "Trade accounts see live trade prices for all of this in the client portal — and order with their own conditions.",
     "dealerCta": "Log in for trade prices",
     "partnerCta": "Become a partner",
-    "backToAll": "All materials"
+    "backToAll": "All materials",
+    "addToList": "Add to inquiry",
+    "inList": "On your list",
+    "barLabel": "Inquiry list",
+    "inquiryTitle": "Your inquiry list",
+    "inquirySub": "One message, all your items — we reply with price, availability and delivery, usually the same working day.",
+    "removeLabel": "Remove",
+    "formName": "Name",
+    "formCompany": "Company (optional)",
+    "formEmail": "Email",
+    "formPhone": "Phone (optional)",
+    "formMessage": "Message (optional)",
+    "consent": "I agree to STRETCH processing my details to respond to my request —",
+    "privacyLabel": "privacy policy",
+    "send": "Send inquiry",
+    "sending": "Sending…",
+    "sentTitle": "Inquiry sent",
+    "sentBody": "Thank you — we will get back to you with prices, availability and delivery, usually the same working day.",
+    "sendError": "Something went wrong — please try again or email us directly.",
+    "closeLabel": "Close"
+  },
+  "materialsData": {
+    "profiles": {
+      "name": "Profiles & tracks",
+      "eyebrow": "Profiles",
+      "metaTitle": "Stretch ceiling profiles — aluminium & PVC | STRETCH",
+      "metaDescription": "Aluminium and PVC stretch-ceiling profiles, LED-line profiles and end caps, straight from our own production. Request a quote — we reply with price and delivery.",
+      "intro": "The rails that hold every STRETCH ceiling: aluminium and PVC perimeter profiles, LED-line profiles and finishing pieces — the same profiles our own installers use, cut and shipped from our production.",
+      "items": [
+        {
+          "name": "Aluminium stretch-ceiling profiles",
+          "body": "Rigid aluminium perimeter and separation profiles for cold and heat mounting — straight lengths, ready to fit."
+        },
+        {
+          "name": "PVC stretch-ceiling profiles",
+          "body": "Flexible PVC harpoon profiles for curved walls and simple perimeters."
+        },
+        {
+          "name": "LED-line profiles & end caps",
+          "body": "Recessed profiles that put a crisp light line into the membrane, with matching end caps (16 / 31 mm)."
+        },
+        {
+          "name": "Tracklight 48V profile",
+          "body": "The magnetic 48V track that integrates flush into a stretch ceiling — the backbone of the tracklight system."
+        }
+      ]
+    },
+    "fabrics": {
+      "name": "Fabrics & foils",
+      "eyebrow": "Fabrics",
+      "metaTitle": "Stretch ceiling fabric & PVC foil — rolls, cut to length, made to measure | STRETCH",
+      "metaDescription": "PVC stretch-ceiling foil (MSD, Bauf, Teqtum, Renolit) on the roll, cut to length, or welded made-to-measure with harpoon. Matte, glossy, translucent and colour finishes. Request a quote.",
+      "intro": "Membrane the way you need it: full rolls for your own confection, foil cut to length, or a finished made-to-measure ceiling welded with harpoon — in matte, satin, glossy, translucent and colour finishes from the major foil brands.",
+      "items": [
+        {
+          "name": "PVC foil on the roll",
+          "body": "MSD, Bauf, Teqtum and Renolit foil by the roll — matte/satin, glossy, translucent, colour, metallic and Black & White ranges."
+        },
+        {
+          "name": "Foil cut to length",
+          "body": "The same foil ranges cut to the length you need — no full roll required."
+        },
+        {
+          "name": "Made-to-measure ceilings",
+          "body": "Your ceiling welded to size in our production, harpoon included — ready to hang in the profile."
+        },
+        {
+          "name": "Translucent (backlit) foil",
+          "body": "Light-transmitting membrane for illuminated ceilings and light boxes, up to 5 m seamless."
+        }
+      ]
+    },
+    "lighting": {
+      "name": "Lighting",
+      "eyebrow": "Lighting",
+      "metaTitle": "Stretch ceiling lighting — 48V tracklight, LED modules, spotrings | STRETCH",
+      "metaDescription": "Lighting for stretch ceilings: magnetic 48V tracklights, spot and grille lights, LED modules for backlit ceilings and spotrings/protective rings. Request a quote.",
+      "intro": "Everything that lights a STRETCH ceiling: the magnetic 48V tracklight family, LED field modules for backlit ceilings, and the rings that finish every spot cleanly.",
+      "items": [
+        {
+          "name": "Tracklight 48V system",
+          "body": "Magnetic spots, grille lights and connectors for the flush 48V track — swap and reposition fixtures by hand."
+        },
+        {
+          "name": "LED modules for backlit ceilings",
+          "body": "Even, dimmable LED fields that turn a translucent membrane into a seamless light source."
+        },
+        {
+          "name": "Spotrings & protective rings",
+          "body": "Rings in every diameter (4.5–300 mm) that reinforce cut-outs for spots, sensors and ventilation."
+        }
+      ]
+    },
+    "accessories": {
+      "name": "Accessories",
+      "eyebrow": "Accessories",
+      "metaTitle": "Stretch ceiling accessories — harpoon, rings, fixings | STRETCH",
+      "metaDescription": "Stretch-ceiling accessories: harpoon, protective rings, glue, fixings and finishing pieces — everything around the membrane. Request a quote.",
+      "intro": "The small parts that make a clean job: harpoon for welding, protective rings, glue and fixings — the consumables every installer runs through.",
+      "items": [
+        {
+          "name": "Harpoon",
+          "body": "The welded edge that locks the membrane into the profile — sold by the roll."
+        },
+        {
+          "name": "Protective rings",
+          "body": "Self-adhesive rings from 4.5 to 300 mm for spots, hooks, pipes and sensors."
+        },
+        {
+          "name": "Glue & fixings",
+          "body": "AKFIX glue, screws and the mounting consumables used on every site."
+        }
+      ]
+    },
+    "tools-cleaning": {
+      "name": "Tools & cleaning",
+      "eyebrow": "Tools",
+      "metaTitle": "Stretch ceiling tools & STRETCH Cleaner | STRETCH",
+      "metaDescription": "Installation hand tools for stretch ceilings and the STRETCH Cleaner that keeps membranes spotless (1 L and 5 L). Request a quote.",
+      "intro": "Installer hand tools and the cleaner made for stretch membranes — the same products from our training room and our own vans.",
+      "items": [
+        {
+          "name": "Installation hand tools",
+          "body": "Spatulas and hand tools shaped for tucking membrane without damage."
+        },
+        {
+          "name": "STRETCH Cleaner 1 L",
+          "body": "The membrane-safe cleaner for fingerprints, dust and building-site film."
+        },
+        {
+          "name": "STRETCH Cleaner 5 L",
+          "body": "The same cleaner in the workshop size for dealers and heavy users."
+        }
+      ]
+    }
   }
 }
