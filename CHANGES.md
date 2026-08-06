@@ -1,3 +1,24 @@
+## 2026-08-06 (2) — Portfolio: 8 case studies migrated from the old site
+
+- Migrated from old stretchplafond.be pages (EN copy distilled from the Dutch
+  originals; `projects` messages translations = follow-up, EN falls back
+  meanwhile via new has() guards in ProjectRoute): ’t Vier Emmershof (Lokeren),
+  Villa VP-193, Villa JPV-210, BEN Home VDB-222 (Sint-Pauwels), VAP — Sint-
+  Pauwels (VA-176), Goesten & Opdam, DHL Zaventem (Boeing 737 meeting room),
+  Veta Interieur showroom (Dendermonde). Portfolio now 22 projects (matches the
+  old site's inspiration section).
+- Photos processed into `public/images/projects/` for Vier Emmershof, VP-193,
+  JPV-210, VDB-222 (hero 16:9 + 3-image 4:3 galleries) and Goesten & Opdam
+  (hero); Veta reuses the illuminated-print photo; VAP + DHL show the
+  "photos coming soon" chip until their photo sets arrive.
+- Fixed: ProjectRoute crashed the title (MISSING_MESSAGE → blank h1) for any
+  project without a messages entry; both localizeProject call sites now guard
+  with tpr.has() and fall back to the English source. (PortfolioGrid already
+  guarded.)
+- Review notes for Michael: Goesten & Opdam copy is inferred from the photo +
+  old listing line (RAL-colour acoustic ceiling, Tenback) — please verify;
+  facts for JPV-210 kept minimal (old page is offline).
+
 ## 2026-08-06 — Phone, partners photo, portal accounts (B2C signup), lead email
 
 - **Company phone** → `+32 474 52 20 90` (`lib/site-config.ts`: phone/phoneDisplay/
