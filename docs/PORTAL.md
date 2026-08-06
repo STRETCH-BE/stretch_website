@@ -111,3 +111,34 @@ The dashboard already stages the next data sources (documents, orders). To
 add one: create a table + RLS policy in Supabase mirroring `pricebook`'s
 pattern, a data helper in `src/lib/portal/`, and a page under
 `src/app/[locale]/portal/(app)/`. The session/auth plumbing is shared.
+
+---
+
+## Self-registration (B2C) + account tiers — added 6 Aug 2026
+
+The portal now has TWO account tiers on top of the existing roles:
+
+- **b2c** — anyone can create this account themselves on `/portal/login`
+  (Create account tab, Supabase mode only). They get their own account area
+  (dashboard + staged documents/orders), but **no pricelist and no designer**
+  — those embed trade pricing. Enforced in the pages, the designer API route
+  AND by Postgres RLS (a b2c profile has no markets, so the pricebook policy
+  returns zero rows even if application code had a bug).
+- **b2b** — dealer/trade account: everything as before (market-based pricing,
+  designer). Created by an admin, or a b2c account upgraded via the admin
+  panel's new "Upgrade to B2B" action (then assign markets).
+
+Implementation notes:
+
+- `portal_users.account_type` column ('b2c' | 'b2b', default 'b2b' so all
+  pre-existing accounts stay dealers). `supabase/schema.sql` contains both the
+  fresh-install column and the one-line `alter table` migration for existing
+  databases — run it once in the Supabase SQL editor.
+- Signup: `POST /api/portal/signup` → `auth.signUp` (Supabase sends the
+  confirmation email) + service-role insert of the b2c profile. The login
+  route self-heals a missing profile as b2c, so users created directly in the
+  Supabase dashboard can also sign in.
+- **Demo mode is now opt-in.** Without Supabase env vars the login page shows
+  a "portal launching soon" notice and no credentials work. Set
+  `NEXT_PUBLIC_PORTAL_DEMO=1` (preview deployments only!) to restore the old
+  listed demo accounts. Never set it in production.

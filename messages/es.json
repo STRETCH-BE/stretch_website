@@ -173,7 +173,19 @@
       "inactive": "Esta cuenta no está activa. Contacte con STRETCH.",
       "failed": "No se pudo iniciar sesión. Inténtelo de nuevo.",
       "demoTitle": "Modo demo",
-      "demoBody": "Aún sin base de datos conectada — pruebe el portal con estas cuentas:"
+      "demoBody": "Aún sin base de datos conectada — pruebe el portal con estas cuentas:",
+      "tabSignIn": "Iniciar sesión",
+      "tabSignup": "Crear cuenta",
+      "signupSub": "Cuenta gratuita — acceso inmediato",
+      "company": "Empresa (opcional)",
+      "passwordHint": "Mínimo 8 caracteres.",
+      "signupSubmit": "Crear cuenta",
+      "signupSubmitting": "Creando…",
+      "signupDoneTitle": "Revise su correo",
+      "signupDoneBody": "Le hemos enviado un enlace de confirmación. Haga clic y luego inicie sesión con su correo y contraseña.",
+      "signupExists": "Ya existe una cuenta con este correo: inicie sesión.",
+      "unavailableTitle": "Portal disponible pronto",
+      "unavailableBody": "El portal de clientes se está activando. Contáctenos y configuraremos su acceso."
     },
     "nav": {
       "label": "Portal de clientes",
@@ -203,7 +215,12 @@
       "tileAdmin": "Administración",
       "tileAdminBody": "Sincronice la tarifa desde Excel y gestione las cuentas de clientes.",
       "tileDesigner": "Diseñador de techos",
-      "tileDesignerBody": "Dibuje el techo a partir de sus medidas, coloque costuras y recortes, calcule el precio y envíe el pedido — con DXF, plano y PDF de producción."
+      "tileDesignerBody": "Dibuje el techo a partir de sus medidas, coloque costuras y recortes, calcule el precio y envíe el pedido — con DXF, plano y PDF de producción.",
+      "tileAccount": "Su cuenta",
+      "tileAccountBody": "Los datos de su cuenta STRETCH. Presupuestos, documentos e historial de pedidos aparecerán aquí.",
+      "tileTrade": "Acceso profesional",
+      "tileTradeBody": "¿Instalador o distribuidor? Obtenga precios de distribuidor y el diseñador de techos con una cuenta profesional.",
+      "tradeCta": "Hágase partner"
     },
     "pricelist": {
       "title": "Tarifa",
@@ -257,7 +274,11 @@
       "create": "Crear cuenta",
       "creating": "Creando…",
       "createFailed": "No se pudo crear la cuenta.",
-      "createdOk": "Cuenta creada para {email}."
+      "createdOk": "Cuenta creada para {email}.",
+      "makeB2b": "Subir a B2B",
+      "makeB2c": "Poner en B2C",
+      "typeB2b": "B2B",
+      "typeB2c": "B2C"
     },
     "designer": {
       "eyebrow": "Diseñador de techos",

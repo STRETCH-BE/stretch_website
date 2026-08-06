@@ -173,7 +173,19 @@
       "inactive": "Denne konto er ikke aktiv. Kontakt STRETCH.",
       "failed": "Login mislykkedes. Prøv igen.",
       "demoTitle": "Demotilstand",
-      "demoBody": "Ingen database tilsluttet endnu — prøv portalen med disse konti:"
+      "demoBody": "Ingen database tilsluttet endnu — prøv portalen med disse konti:",
+      "tabSignIn": "Log ind",
+      "tabSignup": "Opret konto",
+      "signupSub": "Gratis konto — adgang med det samme",
+      "company": "Firma (valgfrit)",
+      "passwordHint": "Mindst 8 tegn.",
+      "signupSubmit": "Opret konto",
+      "signupSubmitting": "Opretter…",
+      "signupDoneTitle": "Tjek din indbakke",
+      "signupDoneBody": "Vi har sendt dig et bekræftelseslink. Klik på det, og log derefter ind med din e-mail og adgangskode.",
+      "signupExists": "Der findes allerede en konto med denne e-mail — log ind.",
+      "unavailableTitle": "Portalen åbner snart",
+      "unavailableBody": "Kundeportalen er ved at blive aktiveret. Kontakt os, så opsætter vi din adgang."
     },
     "nav": {
       "label": "Kundeportal",
@@ -203,7 +215,12 @@
       "tileAdmin": "Administration",
       "tileAdminBody": "Synkronisér prislisten fra Excel og administrér kundekonti.",
       "tileDesigner": "Loftsdesigner",
-      "tileDesignerBody": "Tegn loftet ud fra dine mål, placer samlinger og udskæringer, få prisen og send ordren — med DXF, plantegning og produktions-PDF."
+      "tileDesignerBody": "Tegn loftet ud fra dine mål, placer samlinger og udskæringer, få prisen og send ordren — med DXF, plantegning og produktions-PDF.",
+      "tileAccount": "Din konto",
+      "tileAccountBody": "Dine STRETCH-kontooplysninger. Tilbud, dokumenter og ordrehistorik vises her.",
+      "tileTrade": "Forhandleradgang",
+      "tileTradeBody": "Montør eller forhandler? Få forhandlerpriser og loftdesigneren med en forhandlerkonto.",
+      "tradeCta": "Bliv partner"
     },
     "pricelist": {
       "title": "Prisliste",
@@ -257,7 +274,11 @@
       "create": "Opret konto",
       "creating": "Opretter…",
       "createFailed": "Kontoen kunne ikke oprettes.",
-      "createdOk": "Konto oprettet til {email}."
+      "createdOk": "Konto oprettet til {email}.",
+      "makeB2b": "Opgrader til B2B",
+      "makeB2c": "Sæt til B2C",
+      "typeB2b": "B2B",
+      "typeB2c": "B2C"
     },
     "designer": {
       "eyebrow": "Loftsdesigner",

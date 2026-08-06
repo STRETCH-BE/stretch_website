@@ -173,7 +173,19 @@
       "inactive": "Ce compte n'est pas actif. Contactez STRETCH.",
       "failed": "Échec de la connexion. Veuillez réessayer.",
       "demoTitle": "Mode démo",
-      "demoBody": "Aucune base de données connectée — découvrez le portail avec ces comptes :"
+      "demoBody": "Aucune base de données connectée — découvrez le portail avec ces comptes :",
+      "tabSignIn": "Se connecter",
+      "tabSignup": "Créer un compte",
+      "signupSub": "Compte gratuit — accès immédiat",
+      "company": "Société (facultatif)",
+      "passwordHint": "Au moins 8 caractères.",
+      "signupSubmit": "Créer le compte",
+      "signupSubmitting": "Création…",
+      "signupDoneTitle": "Vérifiez votre boîte mail",
+      "signupDoneBody": "Nous vous avons envoyé un lien de confirmation. Cliquez dessus, puis connectez-vous avec votre e-mail et votre mot de passe.",
+      "signupExists": "Un compte existe déjà avec cet e-mail — connectez-vous.",
+      "unavailableTitle": "Portail bientôt disponible",
+      "unavailableBody": "Le portail client est en cours d’activation. Contactez-nous et nous configurerons votre accès."
     },
     "nav": {
       "label": "Espace client",
@@ -203,7 +215,12 @@
       "tileAdmin": "Administration",
       "tileAdminBody": "Synchronisez le tarif depuis Excel et gérez les comptes clients.",
       "tileDesigner": "Concepteur de plafond",
-      "tileDesignerBody": "Dessinez le plafond à partir de vos mesures, placez soudures et découpes, calculez le prix et envoyez la commande — avec DXF, plan et PDF de production."
+      "tileDesignerBody": "Dessinez le plafond à partir de vos mesures, placez soudures et découpes, calculez le prix et envoyez la commande — avec DXF, plan et PDF de production.",
+      "tileAccount": "Votre compte",
+      "tileAccountBody": "Les données de votre compte STRETCH. Devis, documents et historique de commandes apparaîtront ici.",
+      "tileTrade": "Accès pro",
+      "tileTradeBody": "Installateur ou revendeur ? Obtenez les prix pro et le designer de plafonds avec un compte professionnel.",
+      "tradeCta": "Devenir partenaire"
     },
     "pricelist": {
       "title": "Tarif",
@@ -257,7 +274,11 @@
       "create": "Créer le compte",
       "creating": "Création…",
       "createFailed": "Impossible de créer le compte.",
-      "createdOk": "Compte créé pour {email}."
+      "createdOk": "Compte créé pour {email}.",
+      "makeB2b": "Passer en B2B",
+      "makeB2c": "Passer en B2C",
+      "typeB2b": "B2B",
+      "typeB2c": "B2C"
     },
     "designer": {
       "eyebrow": "Concepteur de plafond",

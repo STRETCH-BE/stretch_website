@@ -173,7 +173,19 @@
       "inactive": "This account is not active. Contact STRETCH.",
       "failed": "Sign-in failed. Please try again.",
       "demoTitle": "Demo mode",
-      "demoBody": "No database connected yet — preview the portal with these accounts:"
+      "demoBody": "No database connected yet — preview the portal with these accounts:",
+      "tabSignIn": "Sign in",
+      "tabSignup": "Create account",
+      "signupSub": "Free account — instant access",
+      "company": "Company (optional)",
+      "passwordHint": "At least 8 characters.",
+      "signupSubmit": "Create account",
+      "signupSubmitting": "Creating…",
+      "signupDoneTitle": "Check your inbox",
+      "signupDoneBody": "We sent you a confirmation link. Click it, then sign in with your email and password.",
+      "signupExists": "An account with this email already exists — sign in instead.",
+      "unavailableTitle": "Portal launching soon",
+      "unavailableBody": "The client portal is being activated. Contact us and we will set up your access."
     },
     "nav": {
       "label": "Client portal",
@@ -203,7 +215,12 @@
       "tileAdmin": "Administration",
       "tileAdminBody": "Sync the pricelist from Excel and manage client accounts.",
       "tileDesigner": "Ceiling designer",
-      "tileDesignerBody": "Draw the ceiling from your site measurements, position seams and cut-outs, get the price and send the order — with DXF, floorplan and production PDFs."
+      "tileDesignerBody": "Draw the ceiling from your site measurements, position seams and cut-outs, get the price and send the order — with DXF, floorplan and production PDFs.",
+      "tileAccount": "Your account",
+      "tileAccountBody": "Your STRETCH account details. Quotes, documents and order history will appear here.",
+      "tileTrade": "Trade access",
+      "tileTradeBody": "Installer or reseller? Get dealer pricing and the ceiling designer with a trade account.",
+      "tradeCta": "Become a partner"
     },
     "pricelist": {
       "title": "Pricelist",
@@ -257,7 +274,11 @@
       "create": "Create account",
       "creating": "Creating…",
       "createFailed": "Could not create the account.",
-      "createdOk": "Account created for {email}."
+      "createdOk": "Account created for {email}.",
+      "makeB2b": "Upgrade to B2B",
+      "makeB2c": "Set to B2C",
+      "typeB2b": "B2B",
+      "typeB2c": "B2C"
     },
     "designer": {
       "eyebrow": "Ceiling designer",

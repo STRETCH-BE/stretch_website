@@ -173,7 +173,19 @@
       "inactive": "To konto nie jest aktywne. Skontaktuj się ze STRETCH.",
       "failed": "Logowanie nie powiodło się. Spróbuj ponownie.",
       "demoTitle": "Tryb demo",
-      "demoBody": "Baza danych nie jest jeszcze podłączona — wypróbuj portal na tych kontach:"
+      "demoBody": "Baza danych nie jest jeszcze podłączona — wypróbuj portal na tych kontach:",
+      "tabSignIn": "Zaloguj się",
+      "tabSignup": "Utwórz konto",
+      "signupSub": "Bezpłatne konto — natychmiastowy dostęp",
+      "company": "Firma (opcjonalnie)",
+      "passwordHint": "Co najmniej 8 znaków.",
+      "signupSubmit": "Utwórz konto",
+      "signupSubmitting": "Tworzenie…",
+      "signupDoneTitle": "Sprawdź skrzynkę",
+      "signupDoneBody": "Wysłaliśmy link potwierdzający. Kliknij go, a następnie zaloguj się e-mailem i hasłem.",
+      "signupExists": "Konto z tym adresem e-mail już istnieje — zaloguj się.",
+      "unavailableTitle": "Portal wkrótce",
+      "unavailableBody": "Portal klienta jest właśnie aktywowany. Skontaktuj się z nami, a skonfigurujemy Twój dostęp."
     },
     "nav": {
       "label": "Panel klienta",
@@ -203,7 +215,12 @@
       "tileAdmin": "Administracja",
       "tileAdminBody": "Synchronizuj cennik z Excela i zarządzaj kontami klientów.",
       "tileDesigner": "Projektant sufitu",
-      "tileDesignerBody": "Narysuj sufit z pomiarów, rozmieść zgrzewy i wycięcia, oblicz cenę i wyślij zamówienie — z DXF, rzutem i PDF produkcyjnym."
+      "tileDesignerBody": "Narysuj sufit z pomiarów, rozmieść zgrzewy i wycięcia, oblicz cenę i wyślij zamówienie — z DXF, rzutem i PDF produkcyjnym.",
+      "tileAccount": "Twoje konto",
+      "tileAccountBody": "Dane Twojego konta STRETCH. Wyceny, dokumenty i historia zamówień pojawią się tutaj.",
+      "tileTrade": "Dostęp handlowy",
+      "tileTradeBody": "Monter lub dystrybutor? Z kontem handlowym otrzymasz ceny dealerskie i projektant sufitów.",
+      "tradeCta": "Zostań partnerem"
     },
     "pricelist": {
       "title": "Cennik",
@@ -257,7 +274,11 @@
       "create": "Utwórz konto",
       "creating": "Tworzenie…",
       "createFailed": "Nie udało się utworzyć konta.",
-      "createdOk": "Utworzono konto dla {email}."
+      "createdOk": "Utworzono konto dla {email}.",
+      "makeB2b": "Zmień na B2B",
+      "makeB2c": "Zmień na B2C",
+      "typeB2b": "B2B",
+      "typeB2c": "B2C"
     },
     "designer": {
       "eyebrow": "Projektant sufitu",

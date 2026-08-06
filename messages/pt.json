@@ -173,7 +173,19 @@
       "inactive": "Esta conta não está ativa. Contacte a STRETCH.",
       "failed": "Falha ao iniciar sessão. Tente novamente.",
       "demoTitle": "Modo demo",
-      "demoBody": "Ainda sem base de dados ligada — experimente o portal com estas contas:"
+      "demoBody": "Ainda sem base de dados ligada — experimente o portal com estas contas:",
+      "tabSignIn": "Iniciar sessão",
+      "tabSignup": "Criar conta",
+      "signupSub": "Conta gratuita — acesso imediato",
+      "company": "Empresa (opcional)",
+      "passwordHint": "Pelo menos 8 caracteres.",
+      "signupSubmit": "Criar conta",
+      "signupSubmitting": "A criar…",
+      "signupDoneTitle": "Verifique o seu e-mail",
+      "signupDoneBody": "Enviámos-lhe um link de confirmação. Clique nele e depois inicie sessão com o seu e-mail e palavra-passe.",
+      "signupExists": "Já existe uma conta com este e-mail — inicie sessão.",
+      "unavailableTitle": "Portal em breve",
+      "unavailableBody": "O portal de clientes está a ser ativado. Contacte-nos e configuraremos o seu acesso."
     },
     "nav": {
       "label": "Portal do cliente",
@@ -203,7 +215,12 @@
       "tileAdmin": "Administração",
       "tileAdminBody": "Sincronize a tabela de preços a partir do Excel e faça a gestão das contas de clientes.",
       "tileDesigner": "Designer de tetos",
-      "tileDesignerBody": "Desenhe o teto a partir das suas medições, posicione emendas e recortes, calcule o preço e envie a encomenda — com DXF, planta e PDF de produção."
+      "tileDesignerBody": "Desenhe o teto a partir das suas medições, posicione emendas e recortes, calcule o preço e envie a encomenda — com DXF, planta e PDF de produção.",
+      "tileAccount": "A sua conta",
+      "tileAccountBody": "Os dados da sua conta STRETCH. Orçamentos, documentos e histórico de encomendas aparecerão aqui.",
+      "tileTrade": "Acesso profissional",
+      "tileTradeBody": "Instalador ou revendedor? Obtenha preços de revenda e o designer de tetos com uma conta profissional.",
+      "tradeCta": "Torne-se parceiro"
     },
     "pricelist": {
       "title": "Tabela de preços",
@@ -257,7 +274,11 @@
       "create": "Criar conta",
       "creating": "A criar…",
       "createFailed": "Não foi possível criar a conta.",
-      "createdOk": "Conta criada para {email}."
+      "createdOk": "Conta criada para {email}.",
+      "makeB2b": "Mudar para B2B",
+      "makeB2c": "Mudar para B2C",
+      "typeB2b": "B2B",
+      "typeB2c": "B2C"
     },
     "designer": {
       "eyebrow": "Designer de tetos",

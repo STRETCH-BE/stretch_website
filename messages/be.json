@@ -173,7 +173,19 @@
       "inactive": "Dit account is niet actief. Neem contact op met STRETCH.",
       "failed": "Aanmelden mislukt. Probeer opnieuw.",
       "demoTitle": "Demomodus",
-      "demoBody": "Nog geen database gekoppeld — bekijk het portaal met deze accounts:"
+      "demoBody": "Nog geen database gekoppeld — bekijk het portaal met deze accounts:",
+      "tabSignIn": "Inloggen",
+      "tabSignup": "Account aanmaken",
+      "signupSub": "Gratis account — meteen toegang",
+      "company": "Bedrijf (optioneel)",
+      "passwordHint": "Minstens 8 tekens.",
+      "signupSubmit": "Account aanmaken",
+      "signupSubmitting": "Bezig…",
+      "signupDoneTitle": "Check uw mailbox",
+      "signupDoneBody": "We stuurden u een bevestigingslink. Klik erop en log daarna in met uw e-mail en wachtwoord.",
+      "signupExists": "Er bestaat al een account met dit e-mailadres — log in.",
+      "unavailableTitle": "Portaal komt eraan",
+      "unavailableBody": "Het klantenportaal wordt geactiveerd. Neem contact op en we zetten uw toegang klaar."
     },
     "nav": {
       "label": "Klantenportaal",
@@ -203,7 +215,12 @@
       "tileAdmin": "Beheer",
       "tileAdminBody": "Synchroniseer de prijslijst vanuit Excel en beheer klantaccounts.",
       "tileDesigner": "Plafond-designer",
-      "tileDesignerBody": "Teken het plafond uit je opmeting, plaats lasnaden en uitsparingen, bereken de prijs en verstuur de bestelling — met DXF, plattegrond- en productie-PDF."
+      "tileDesignerBody": "Teken het plafond uit je opmeting, plaats lasnaden en uitsparingen, bereken de prijs en verstuur de bestelling — met DXF, plattegrond- en productie-PDF.",
+      "tileAccount": "Uw account",
+      "tileAccountBody": "Uw STRETCH-accountgegevens. Offertes, documenten en bestelhistoriek verschijnen hier.",
+      "tileTrade": "Handelstoegang",
+      "tileTradeBody": "Plaatser of verdeler? Krijg dealerprijzen en de plafonddesigner met een handelsaccount.",
+      "tradeCta": "Word partner"
     },
     "pricelist": {
       "title": "Prijslijst",
@@ -257,7 +274,11 @@
       "create": "Account aanmaken",
       "creating": "Aanmaken…",
       "createFailed": "Account kon niet aangemaakt worden.",
-      "createdOk": "Account aangemaakt voor {email}."
+      "createdOk": "Account aangemaakt voor {email}.",
+      "makeB2b": "Upgrade naar B2B",
+      "makeB2c": "Zet op B2C",
+      "typeB2b": "B2B",
+      "typeB2c": "B2C"
     },
     "designer": {
       "eyebrow": "Plafond-designer",

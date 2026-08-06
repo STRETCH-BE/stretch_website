@@ -20,12 +20,20 @@ create table if not exists public.portal_users (
   email       text not null unique,
   company     text,
   role        text not null default 'client' check (role in ('client', 'admin')),
+  -- b2c = self-registered account (own area, NO trade pricing / designer);
+  -- b2b = dealer/trade account. Default b2b keeps pre-existing accounts valid.
+  account_type text not null default 'b2b' check (account_type in ('b2c', 'b2b')),
   -- Price groups this account may see (values match pricebook.market).
   markets     text[] not null default '{}',
   all_markets boolean not null default false,
   active      boolean not null default true,
   created_at  timestamptz not null default now()
 );
+
+-- Existing databases (created before the b2c/b2b split): run this once.
+alter table public.portal_users
+  add column if not exists account_type text not null default 'b2b'
+  check (account_type in ('b2c', 'b2b'));
 
 -- ---------------------------------------------------------------------------
 -- 2. Pricebook — flat product × market pricelist (mirrors the Excel PriceBook)

@@ -173,7 +173,19 @@
       "inactive": "Dieses Konto ist nicht aktiv. Kontaktieren Sie STRETCH.",
       "failed": "Anmeldung fehlgeschlagen. Bitte erneut versuchen.",
       "demoTitle": "Demomodus",
-      "demoBody": "Noch keine Datenbank verbunden — testen Sie das Portal mit diesen Konten:"
+      "demoBody": "Noch keine Datenbank verbunden — testen Sie das Portal mit diesen Konten:",
+      "tabSignIn": "Anmelden",
+      "tabSignup": "Konto erstellen",
+      "signupSub": "Kostenloses Konto — sofortiger Zugang",
+      "company": "Firma (optional)",
+      "passwordHint": "Mindestens 8 Zeichen.",
+      "signupSubmit": "Konto erstellen",
+      "signupSubmitting": "Wird erstellt…",
+      "signupDoneTitle": "Prüfen Sie Ihr Postfach",
+      "signupDoneBody": "Wir haben Ihnen einen Bestätigungslink gesendet. Klicken Sie darauf und melden Sie sich dann mit E-Mail und Passwort an.",
+      "signupExists": "Mit dieser E-Mail existiert bereits ein Konto — bitte anmelden.",
+      "unavailableTitle": "Portal startet bald",
+      "unavailableBody": "Das Kundenportal wird gerade aktiviert. Kontaktieren Sie uns und wir richten Ihren Zugang ein."
     },
     "nav": {
       "label": "Kundenportal",
@@ -203,7 +215,12 @@
       "tileAdmin": "Verwaltung",
       "tileAdminBody": "Preisliste aus Excel synchronisieren und Kundenkonten verwalten.",
       "tileDesigner": "Decken-Designer",
-      "tileDesignerBody": "Zeichnen Sie die Decke aus Ihrem Aufmaß, platzieren Sie Nähte und Aussparungen, berechnen Sie den Preis und senden Sie die Bestellung — mit DXF, Grundriss- und Produktions-PDF."
+      "tileDesignerBody": "Zeichnen Sie die Decke aus Ihrem Aufmaß, platzieren Sie Nähte und Aussparungen, berechnen Sie den Preis und senden Sie die Bestellung — mit DXF, Grundriss- und Produktions-PDF.",
+      "tileAccount": "Ihr Konto",
+      "tileAccountBody": "Ihre STRETCH-Kontodaten. Angebote, Dokumente und Bestellhistorie erscheinen hier.",
+      "tileTrade": "Händlerzugang",
+      "tileTradeBody": "Monteur oder Händler? Mit einem Händlerkonto erhalten Sie Händlerpreise und den Deckendesigner.",
+      "tradeCta": "Partner werden"
     },
     "pricelist": {
       "title": "Preisliste",
@@ -257,7 +274,11 @@
       "create": "Konto erstellen",
       "creating": "Erstellen…",
       "createFailed": "Konto konnte nicht erstellt werden.",
-      "createdOk": "Konto für {email} erstellt."
+      "createdOk": "Konto für {email} erstellt.",
+      "makeB2b": "Auf B2B hochstufen",
+      "makeB2c": "Auf B2C setzen",
+      "typeB2b": "B2B",
+      "typeB2c": "B2C"
     },
     "designer": {
       "eyebrow": "Decken-Designer",

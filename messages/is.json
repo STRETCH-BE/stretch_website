@@ -173,7 +173,19 @@
       "inactive": "Þessi aðgangur er ekki virkur. Hafðu samband við STRETCH.",
       "failed": "Innskráning mistókst. Reyndu aftur.",
       "demoTitle": "Prufuhamur",
-      "demoBody": "Enginn gagnagrunnur tengdur enn — prófaðu gáttina með þessum aðgöngum:"
+      "demoBody": "Enginn gagnagrunnur tengdur enn — prófaðu gáttina með þessum aðgöngum:",
+      "tabSignIn": "Innskráning",
+      "tabSignup": "Stofna aðgang",
+      "signupSub": "Ókeypis aðgangur — strax",
+      "company": "Fyrirtæki (valfrjálst)",
+      "passwordHint": "Að minnsta kosti 8 stafir.",
+      "signupSubmit": "Stofna aðgang",
+      "signupSubmitting": "Stofna…",
+      "signupDoneTitle": "Athugaðu pósthólfið",
+      "signupDoneBody": "Við sendum þér staðfestingartengil. Smelltu á hann og skráðu þig svo inn með netfangi og lykilorði.",
+      "signupExists": "Aðgangur með þessu netfangi er þegar til — skráðu þig inn.",
+      "unavailableTitle": "Þjónustugáttin opnar fljótlega",
+      "unavailableBody": "Verið er að virkja þjónustugáttina. Hafðu samband og við setjum upp aðganginn þinn."
     },
     "nav": {
       "label": "Viðskiptavinagátt",
@@ -203,7 +215,12 @@
       "tileAdmin": "Stjórnun",
       "tileAdminBody": "Samstilltu verðskrána úr Excel og sýslaðu með aðganga viðskiptavina.",
       "tileDesigner": "Loftahönnuður",
-      "tileDesignerBody": "Teiknaðu loftið út frá málunum, staðsettu samskeyti og úrtök, fáðu verðið og sendu pöntunina — með DXF, grunnmynd og framleiðslu-PDF."
+      "tileDesignerBody": "Teiknaðu loftið út frá málunum, staðsettu samskeyti og úrtök, fáðu verðið og sendu pöntunina — með DXF, grunnmynd og framleiðslu-PDF.",
+      "tileAccount": "Aðgangurinn þinn",
+      "tileAccountBody": "Upplýsingar um STRETCH-aðganginn þinn. Tilboð, skjöl og pöntunarsaga birtast hér.",
+      "tileTrade": "Söluaðilaaðgangur",
+      "tileTradeBody": "Uppsetningaraðili eða söluaðili? Fáðu söluaðilaverð og loftahönnuðinn með fyrirtækjaaðgangi.",
+      "tradeCta": "Gerast samstarfsaðili"
     },
     "pricelist": {
       "title": "Verðskrá",
@@ -257,7 +274,11 @@
       "create": "Stofna aðgang",
       "creating": "Stofna…",
       "createFailed": "Ekki tókst að stofna aðganginn.",
-      "createdOk": "Aðgangur stofnaður fyrir {email}."
+      "createdOk": "Aðgangur stofnaður fyrir {email}.",
+      "makeB2b": "Uppfæra í B2B",
+      "makeB2c": "Setja í B2C",
+      "typeB2b": "B2B",
+      "typeB2c": "B2C"
     },
     "designer": {
       "eyebrow": "Loftahönnuður",

@@ -173,7 +173,19 @@
       "inactive": "Kontot är inte aktivt. Kontakta STRETCH.",
       "failed": "Inloggningen misslyckades. Försök igen.",
       "demoTitle": "Demoläge",
-      "demoBody": "Ingen databas ansluten ännu — prova portalen med dessa konton:"
+      "demoBody": "Ingen databas ansluten ännu — prova portalen med dessa konton:",
+      "tabSignIn": "Logga in",
+      "tabSignup": "Skapa konto",
+      "signupSub": "Gratis konto — direkt åtkomst",
+      "company": "Företag (valfritt)",
+      "passwordHint": "Minst 8 tecken.",
+      "signupSubmit": "Skapa konto",
+      "signupSubmitting": "Skapar…",
+      "signupDoneTitle": "Kolla din inkorg",
+      "signupDoneBody": "Vi har skickat en bekräftelselänk. Klicka på den och logga sedan in med din e-post och ditt lösenord.",
+      "signupExists": "Det finns redan ett konto med denna e-post — logga in.",
+      "unavailableTitle": "Portalen öppnar snart",
+      "unavailableBody": "Kundportalen håller på att aktiveras. Kontakta oss så ordnar vi din åtkomst."
     },
     "nav": {
       "label": "Kundportal",
@@ -203,7 +215,12 @@
       "tileAdmin": "Administration",
       "tileAdminBody": "Synkronisera prislistan från Excel och hantera kundkonton.",
       "tileDesigner": "Takdesigner",
-      "tileDesignerBody": "Rita taket från dina mått, placera skarvar och urtag, få priset och skicka ordern — med DXF, planritning och produktions-PDF."
+      "tileDesignerBody": "Rita taket från dina mått, placera skarvar och urtag, få priset och skicka ordern — med DXF, planritning och produktions-PDF.",
+      "tileAccount": "Ditt konto",
+      "tileAccountBody": "Dina STRETCH-kontouppgifter. Offerter, dokument och orderhistorik visas här.",
+      "tileTrade": "Återförsäljaråtkomst",
+      "tileTradeBody": "Montör eller återförsäljare? Få återförsäljarpriser och takdesignern med ett företagskonto.",
+      "tradeCta": "Bli partner"
     },
     "pricelist": {
       "title": "Prislista",
@@ -257,7 +274,11 @@
       "create": "Skapa konto",
       "creating": "Skapar…",
       "createFailed": "Kontot kunde inte skapas.",
-      "createdOk": "Konto skapat för {email}."
+      "createdOk": "Konto skapat för {email}.",
+      "makeB2b": "Uppgradera till B2B",
+      "makeB2c": "Sätt till B2C",
+      "typeB2b": "B2B",
+      "typeB2c": "B2C"
     },
     "designer": {
       "eyebrow": "Takdesigner",

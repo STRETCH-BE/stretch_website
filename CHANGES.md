@@ -1,3 +1,29 @@
+## 2026-08-06 — Phone, partners photo, portal accounts (B2C signup), lead email
+
+- **Company phone** → `+32 474 52 20 90` (`lib/site-config.ts`: phone/phoneDisplay/
+  phoneHref; used by header, footer, contact, JSON-LD). Old +32 3 284 68 18 removed.
+- **Partners page hero photo**: `pageImages.partners` now reuses the homepage
+  installer photo (`/images/home/installer.jpg`).
+- **Portal — open self-registration with account tiers** (see docs/PORTAL.md):
+  new `account_type` ('b2c'|'b2b') on `portal_users` (+ one-line migration for
+  existing DBs in schema.sql). "Create account" tab on /portal/login →
+  `POST /api/portal/signup` (Supabase signUp + b2c profile; login self-heals a
+  missing profile). B2C accounts get their own dashboard (account tile + trade
+  upsell) but NO pricelist/designer — enforced in pages, the designer API route
+  and by RLS (no markets granted). Admin panel: B2B/B2C badge + one-click
+  Upgrade to B2B / Set to B2C; admin-created accounts stay b2b. 21 new portal
+  i18n keys translated in all 12 locales.
+- **Demo logins hidden by default**: demo mode (and its listed credentials) now
+  requires `NEXT_PUBLIC_PORTAL_DEMO=1`; without Supabase env vars the login
+  page shows a "portal launching soon" notice and no credentials work.
+- **Lead email**: no code change needed — `lib/deliver.ts` already tries
+  Resend → webhook → SMTP. Following the re-sound.be pattern (Power Automate →
+  leads@stretchgroup.be), set `LEAD_WEBHOOK_URL` in Vercel to the same Power
+  Automate flow URL. `LEAD_DESTINATION` already defaults to leads@stretchgroup.be.
+- **CTA audit fix**: the quote/lead modal (`LeadGenModal`) was the only form
+  WITHOUT the `_gotcha` honeypot (ContactForm + InlineLeadForm had it) — added,
+  so all lead entry points now share the same spam protection.
+
 ## 2026-08-05 — Portfolio: CitizenM case study + first project photos + "coming soon"
 
 - **CitizenM Hotel rewritten as a full case study** (facts from saniskill.nl and
