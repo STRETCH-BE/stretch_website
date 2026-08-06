@@ -4,6 +4,7 @@
 // decoded per request. Rendered inside an <iframe> on /portal/designer.
 import { NextRequest, NextResponse } from 'next/server';
 import { getPortalSession } from '@/lib/portal/auth';
+import { hasTradeAccess } from '@/lib/portal/types';
 import { DESIGNER_HTML_B64 } from '@/lib/portal/designer-html';
 
 export const dynamic = 'force-dynamic';
@@ -12,6 +13,10 @@ export async function GET(request: NextRequest) {
   const session = await getPortalSession();
   if (!session) {
     return NextResponse.redirect(new URL('/portal/login', request.url));
+  }
+  // The designer embeds the trade price matrix — b2b/admin accounts only.
+  if (!hasTradeAccess(session.profile)) {
+    return NextResponse.redirect(new URL('/portal', request.url));
   }
   const html = Buffer.from(DESIGNER_HTML_B64, 'base64').toString('utf8');
   return new NextResponse(html, {

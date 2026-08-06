@@ -3,9 +3,10 @@
 // history are staged as the next data sources on this platform.
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { ArrowRight, FileSpreadsheet, FolderOpen, PackageSearch, PencilRuler, Settings2 } from 'lucide-react';
+import { ArrowRight, FileSpreadsheet, FolderOpen, Handshake, PackageSearch, PencilRuler, Settings2, UserRound } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
+import { hasTradeAccess } from '@/lib/portal/types';
 import { getPricebook } from '@/lib/portal/data';
 
 export default async function PortalOverviewPage({ params }: { params: { locale: string } }) {
@@ -16,7 +17,10 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
   if (!session) return null; // (app) layout already redirects
   const t = await getTranslations('portal.dash');
 
-  const { rows, meta } = await getPricebook(session);
+  // B2C accounts never load pricing data — trade tiles are replaced by the
+  // account tile + an upgrade-to-dealer tile.
+  const trade = hasTradeAccess(session.profile);
+  const { rows, meta } = trade ? await getPricebook(session) : { rows: [], meta: { version: '', fx_eur_pln: null, source: null, updated_at: '' } };
   const productCount = new Set(rows.map((r) => `${r.category}||${r.product}`)).size;
 
   const name = session.profile.company ?? session.profile.email;
@@ -44,34 +48,63 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
       </p>
 
       <div className="portal-tiles">
-        {/* Pricelist — live */}
-        <Link href="/portal/pricelist" className="portal-tile portal-tile--live">
-          <div className="portal-tile__head">
-            <FileSpreadsheet size={20} />
-            <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
-          </div>
-          <h2>{t('tilePricelist')}</h2>
-          <p>{t('tilePricelistBody')}</p>
-          <div className="portal-tile__meta">
-            {t('products', { count: productCount })} · {t('version')} {meta.version}
-          </div>
-          <span className="portal-tile__cta">
-            {t('open')} <ArrowRight size={14} />
-          </span>
-        </Link>
+        {trade ? (
+          <>
+            {/* Pricelist — live (trade accounts) */}
+            <Link href="/portal/pricelist" className="portal-tile portal-tile--live">
+              <div className="portal-tile__head">
+                <FileSpreadsheet size={20} />
+                <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
+              </div>
+              <h2>{t('tilePricelist')}</h2>
+              <p>{t('tilePricelistBody')}</p>
+              <div className="portal-tile__meta">
+                {t('products', { count: productCount })} · {t('version')} {meta.version}
+              </div>
+              <span className="portal-tile__cta">
+                {t('open')} <ArrowRight size={14} />
+              </span>
+            </Link>
 
-        {/* Ceiling designer — live */}
-        <Link href="/portal/designer" className="portal-tile portal-tile--live">
-          <div className="portal-tile__head">
-            <PencilRuler size={20} />
-            <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
-          </div>
-          <h2>{t('tileDesigner')}</h2>
-          <p>{t('tileDesignerBody')}</p>
-          <span className="portal-tile__cta">
-            {t('open')} <ArrowRight size={14} />
-          </span>
-        </Link>
+            {/* Ceiling designer — live (trade accounts) */}
+            <Link href="/portal/designer" className="portal-tile portal-tile--live">
+              <div className="portal-tile__head">
+                <PencilRuler size={20} />
+                <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
+              </div>
+              <h2>{t('tileDesigner')}</h2>
+              <p>{t('tileDesignerBody')}</p>
+              <span className="portal-tile__cta">
+                {t('open')} <ArrowRight size={14} />
+              </span>
+            </Link>
+          </>
+        ) : (
+          <>
+            {/* B2C: the account itself */}
+            <div className="portal-tile">
+              <div className="portal-tile__head">
+                <UserRound size={20} />
+                <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
+              </div>
+              <h2>{t('tileAccount')}</h2>
+              <p>{t('tileAccountBody')}</p>
+              <div className="portal-tile__meta">{session.profile.email}</div>
+            </div>
+
+            {/* B2C: upgrade to a trade (dealer) account */}
+            <Link href="/partners" className="portal-tile portal-tile--live">
+              <div className="portal-tile__head">
+                <Handshake size={20} />
+              </div>
+              <h2>{t('tileTrade')}</h2>
+              <p>{t('tileTradeBody')}</p>
+              <span className="portal-tile__cta">
+                {t('tradeCta')} <ArrowRight size={14} />
+              </span>
+            </Link>
+          </>
+        )}
 
         {/* Documents — staged next data source */}
         <div className="portal-tile portal-tile--soon" aria-disabled>

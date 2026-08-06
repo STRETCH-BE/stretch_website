@@ -1,6 +1,9 @@
-// CLIENT PORTAL — login (/portal/login).
-// Split layout: black brand panel + the credential form. When Supabase is not
-// configured the page runs in demo mode and lists the preview accounts.
+// CLIENT PORTAL — login + signup (/portal/login).
+// Split layout: black brand panel + the credential form. Supabase mode also
+// offers open self-registration (B2C accounts). Without Supabase the portal is
+// closed — demo mode (with the preview accounts listed) only appears when
+// NEXT_PUBLIC_PORTAL_DEMO=1 is set, so demo credentials never show on the
+// production site by accident.
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { redirect } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
@@ -17,7 +20,11 @@ export default async function PortalLoginPage({ params }: { params: { locale: st
   if (session) redirect({ href: '/portal', locale });
 
   const t = await getTranslations('portal.login');
-  const demo = !isSupabaseConfigured();
+  const configured = isSupabaseConfigured();
+  const demo = !configured && process.env.NEXT_PUBLIC_PORTAL_DEMO === '1';
+  // Supabase live → real login + open B2C signup. Demo flag → demo login.
+  // Neither → the portal is closed for now ("being activated" notice).
+  const mode: 'live' | 'demo' | 'closed' = configured ? 'live' : demo ? 'demo' : 'closed';
 
   return (
     <div className="portal-login">
@@ -50,7 +57,7 @@ export default async function PortalLoginPage({ params }: { params: { locale: st
       </section>
 
       <section className="portal-login__form">
-        <LoginForm demo={demo} />
+        <LoginForm mode={mode} />
       </section>
 
       <style dangerouslySetInnerHTML={{ __html: `

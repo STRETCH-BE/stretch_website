@@ -28,11 +28,16 @@ export default async function PortalAppLayout({
     <div style={{ background: 'var(--surface)', minHeight: '60vh' }}>
       <PortalNav
         isAdmin={profile.role === 'admin'}
+        trade={profile.role === 'admin' || profile.accountType === 'b2b'}
         demo={session!.demo}
         company={profile.company ?? profile.email}
         email={profile.email}
         marketsLabel={
-          profile.allMarkets ? t('allMarkets') : profile.markets.join(' · ') || '—'
+          profile.role !== 'admin' && profile.accountType === 'b2c'
+            ? '—'
+            : profile.allMarkets
+              ? t('allMarkets')
+              : profile.markets.join(' · ') || '—'
         }
       />
       {children}

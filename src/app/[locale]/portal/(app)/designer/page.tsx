@@ -4,8 +4,10 @@
 // route and embedded full-height here. Keeping it in an iframe isolates its
 // styles/scripts from the site and lets us update it by swapping one file.
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { redirect } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
+import { hasTradeAccess } from '@/lib/portal/types';
 
 export default async function PortalDesignerPage({ params }: { params: { locale: string } }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
@@ -13,6 +15,7 @@ export default async function PortalDesignerPage({ params }: { params: { locale:
 
   const session = await getPortalSession();
   if (!session) return null; // (app) layout already redirects
+  if (!hasTradeAccess(session.profile)) redirect({ href: '/portal', locale }); // trade accounts only
 
   const t = await getTranslations('portal.designer');
 

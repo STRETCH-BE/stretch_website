@@ -3,8 +3,10 @@
 // in Supabase mode), then hands off to the interactive client view. Layout and
 // interaction follow Michael's pricelist mockup, restyled to the site tokens.
 import { setRequestLocale } from 'next-intl/server';
+import { redirect } from '@/i18n/navigation';
 import { isValidLocale, localeFullCodes, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
+import { hasTradeAccess } from '@/lib/portal/types';
 import { getPricebook } from '@/lib/portal/data';
 import PricelistView from '@/components/portal/PricelistView';
 
@@ -14,6 +16,7 @@ export default async function PortalPricelistPage({ params }: { params: { locale
 
   const session = await getPortalSession();
   if (!session) return null; // (app) layout already redirects
+  if (!hasTradeAccess(session.profile)) redirect({ href: '/portal', locale }); // trade accounts only
 
   const { rows, meta } = await getPricebook(session);
 
