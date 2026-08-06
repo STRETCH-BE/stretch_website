@@ -1,3 +1,23 @@
+## 2026-08-06 (3) — Materials catalogue: the shop's successor (quote-list, no checkout)
+
+- **New public section `/materials`** + 5 group pages (profiles, fabrics,
+  lighting, accessories, tools-cleaning) — `src/lib/materials.ts` is the control
+  panel (item families curated from the Alto pricebook categories + old shop;
+  NO prices ever; image slots in `public/images/materials/`).
+- Every item's button opens the existing QUOTE MODAL pre-filled with the
+  product (`ModalButton product=…`, source `materials_<group>`); the modal now
+  shows the selected item as a chip. Leads arrive through the normal pipeline
+  with the product named.
+- Each group page targets an old shop keyword ("spanplafond profielen",
+  "spanplafond doek", …) — these are the 301 targets for the old shop URLs
+  (see webshop-seo-analysis.xlsx). "No webshop, on purpose" note + dealer band
+  (portal login / become a partner) on every page.
+- Wired: header + mobile nav ("Materials", `common.nav.materials` ×12), sitemap
+  (staticRoutes + per-group routes), meta keys ×12, full `materials` UI
+  namespace translated ×12. Group/item DATA is EN for now (translation overlay
+  later, same as projects).
+- Step 2 (later): "add to inquiry" list across items with one combined send.
+
 ## 2026-08-06 (2) — Portfolio: 8 case studies migrated from the old site
 
 - Migrated from old stretchplafond.be pages (EN copy distilled from the Dutch

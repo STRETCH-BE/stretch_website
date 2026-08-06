@@ -19,7 +19,8 @@
       "allSpecs": "Alle spesifikasjoner & nedlastinger",
       "about": "Om oss",
       "faq": "FAQ",
-      "clientLogin": "Kundeinnlogging"
+      "clientLogin": "Kundeinnlogging",
+      "materials": "Materialer"
     },
     "cta": {
       "freeQuote": "Gratis tilbud",
@@ -70,7 +71,9 @@
     "datasheetsTitle": "Tekniske datablader | STRETCH",
     "datasheetsDescription": "Last ned tekniske datablader for STRETCH-strekktaksystemer — spesifikasjoner, brannklasser, akustiske αw-/klasseverdier og garantidetaljer.",
     "portalTitle": "Kundeportal | STRETCH",
-    "portalDescription": "Logg inn for å se STRETCH-prislisten og kontodataene dine."
+    "portalDescription": "Logg inn for å se STRETCH-prislisten og kontodataene dine.",
+    "materialsTitle": "Materialer og tilbehør til strekktak | STRETCH",
+    "materialsDescription": "Profiler, duker og folier, belysning, tilbehør, verktøy og STRETCH Cleaner — be om tilbud per vare, og vi svarer med pris og leveringstid. Uten nettbutikk."
   },
   "cookies": {
     "title": "Vi verner om personvernet ditt",
@@ -3404,5 +3407,24 @@
   "inlineLead": {
     "consentPrefix": "Jeg samtykker i at STRETCH behandler opplysningene mine for å besvare henvendelsen min, som beskrevet i",
     "consentPrivacy": "personvernerklæringen"
+  },
+  "materials": {
+    "eyebrow": "Materialer og tilbehør",
+    "title": "Materialer",
+    "intro": "Profiler, membran, belysning og alle forbruksmaterialer rundt strekktak — de samme materialene som produksjonen og montørene våre bruker. Velg det du trenger og be om tilbud; vi svarer personlig med pris og leveringstid.",
+    "how1Title": "Velg varene dine",
+    "how1Body": "Bla gjennom produktfamiliene — ingen priser på nett, ingen handlekurv, ingen konto.",
+    "how2Title": "Be om tilbud",
+    "how2Body": "Ett klikk per vare åpner tilbudsskjemaet med produktet ferdig utfylt.",
+    "how3Title": "Raskt svar",
+    "how3Body": "Du får pris, tilgjengelighet og leveringstid på e-post — og betaler med faktura eller betalingslenke.",
+    "browse": "{count} produktfamilier",
+    "requestQuote": "Be om tilbud",
+    "noCheckout": "Bevisst ingen nettbutikk: du ber om et tilbud, og vi svarer personlig med pris, tilgjengelighet og leveringstid — som regel samme virkedag. Større volumer og forhandlervilkår inkludert.",
+    "dealerTitle": "Montør eller forhandler?",
+    "dealerBody": "Forhandlerkontoer ser live forhandlerpriser i kundeportalen — og bestiller på egne vilkår.",
+    "dealerCta": "Logg inn for priser",
+    "partnerCta": "Bli partner",
+    "backToAll": "Alle materialer"
   }
 }

@@ -19,7 +19,8 @@
       "allSpecs": "All specs & downloads",
       "about": "About",
       "faq": "FAQ",
-      "clientLogin": "Client login"
+      "clientLogin": "Client login",
+      "materials": "Materials"
     },
     "cta": {
       "freeQuote": "Free quote",
@@ -70,7 +71,9 @@
     "datasheetsTitle": "Technical datasheets | STRETCH",
     "datasheetsDescription": "Download technical datasheets for STRETCH stretch-ceiling systems — specifications, fire ratings, acoustic αw / class values and warranty details.",
     "portalTitle": "Client portal | STRETCH",
-    "portalDescription": "Sign in to view your STRETCH trade pricelist and account data."
+    "portalDescription": "Sign in to view your STRETCH trade pricelist and account data.",
+    "materialsTitle": "Stretch ceiling materials & supplies | STRETCH",
+    "materialsDescription": "Profiles, fabrics & foils, lighting, accessories, tools and STRETCH Cleaner — request a quote per item and we reply with price and delivery. No webshop needed."
   },
   "cookies": {
     "title": "We value your privacy",
@@ -3404,5 +3407,24 @@
   "inlineLead": {
     "consentPrefix": "I agree to STRETCH processing my details to respond to my request, as described in the",
     "consentPrivacy": "privacy policy"
+  },
+  "materials": {
+    "eyebrow": "Materials & supplies",
+    "title": "Materials",
+    "intro": "Profiles, membrane, lighting and every consumable around a stretch ceiling — the same materials our own production and installers use. Pick what you need and request a quote; we reply personally with price and delivery.",
+    "how1Title": "Pick your items",
+    "how1Body": "Browse the product families — no prices online, no cart, no account needed.",
+    "how2Title": "Request a quote",
+    "how2Body": "One click per item opens the quote form with the product already filled in.",
+    "how3Title": "We reply fast",
+    "how3Body": "You get price, availability and delivery by email — and pay by invoice or payment link.",
+    "browse": "{count} product families",
+    "requestQuote": "Request a quote",
+    "noCheckout": "No webshop, on purpose: you request a quote and we answer personally with price, availability and delivery — usually the same working day. Larger volumes and dealer conditions included.",
+    "dealerTitle": "Installer or reseller?",
+    "dealerBody": "Trade accounts see live trade prices for all of this in the client portal — and order with their own conditions.",
+    "dealerCta": "Log in for trade prices",
+    "partnerCta": "Become a partner",
+    "backToAll": "All materials"
   }
 }

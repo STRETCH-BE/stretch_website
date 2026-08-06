@@ -19,7 +19,8 @@
       "allSpecs": "Toutes les fiches & téléchargements",
       "about": "À propos",
       "faq": "FAQ",
-      "clientLogin": "Espace client"
+      "clientLogin": "Espace client",
+      "materials": "Matériaux"
     },
     "cta": {
       "freeQuote": "Devis gratuit",
@@ -70,7 +71,9 @@
     "datasheetsTitle": "Fiches techniques | STRETCH",
     "datasheetsDescription": "Téléchargez les fiches techniques des systèmes de plafonds tendus STRETCH — spécifications, classements au feu, valeurs acoustiques αw / classes et détails de garantie.",
     "portalTitle": "Espace client | STRETCH",
-    "portalDescription": "Connectez-vous pour consulter votre tarif professionnel STRETCH et vos données de compte."
+    "portalDescription": "Connectez-vous pour consulter votre tarif professionnel STRETCH et vos données de compte.",
+    "materialsTitle": "Matériaux & fournitures plafond tendu | STRETCH",
+    "materialsDescription": "Profilés, toiles & films, éclairage, accessoires, outillage et STRETCH Cleaner — demandez un devis par article, nous répondons avec prix et délai. Sans boutique en ligne."
   },
   "cookies": {
     "title": "Nous respectons votre vie privée",
@@ -3404,5 +3407,24 @@
   "inlineLead": {
     "consentPrefix": "J’accepte que STRETCH traite mes données pour répondre à ma demande, comme décrit dans la",
     "consentPrivacy": "politique de confidentialité"
+  },
+  "materials": {
+    "eyebrow": "Matériaux & fournitures",
+    "title": "Matériaux",
+    "intro": "Profilés, membrane, éclairage et tous les consommables du plafond tendu — les mêmes matériaux que notre production et nos poseurs utilisent. Choisissez ce qu’il vous faut et demandez un devis ; nous répondons personnellement avec prix et délai.",
+    "how1Title": "Choisissez vos articles",
+    "how1Body": "Parcourez les familles de produits — pas de prix en ligne, pas de panier, pas de compte.",
+    "how2Title": "Demandez un devis",
+    "how2Body": "Un clic par article ouvre le formulaire de devis avec le produit déjà rempli.",
+    "how3Title": "Réponse rapide",
+    "how3Body": "Vous recevez prix, disponibilité et délai par e-mail — paiement par facture ou lien de paiement.",
+    "browse": "{count} familles de produits",
+    "requestQuote": "Demander un devis",
+    "noCheckout": "Pas de boutique en ligne, volontairement : vous demandez un devis et nous répondons personnellement avec prix, disponibilité et délai — généralement le jour même. Volumes importants et conditions revendeur inclus.",
+    "dealerTitle": "Installateur ou revendeur ?",
+    "dealerBody": "Les comptes professionnels voient les prix pro en direct dans le portail client — et commandent à leurs conditions.",
+    "dealerCta": "Connexion prix pro",
+    "partnerCta": "Devenir partenaire",
+    "backToAll": "Tous les matériaux"
   }
 }

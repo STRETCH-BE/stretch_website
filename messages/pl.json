@@ -19,7 +19,8 @@
       "allSpecs": "Wszystkie specyfikacje i pliki",
       "about": "O nas",
       "faq": "FAQ",
-      "clientLogin": "Strefa klienta"
+      "clientLogin": "Strefa klienta",
+      "materials": "Materiały"
     },
     "cta": {
       "freeQuote": "Darmowa wycena",
@@ -70,7 +71,9 @@
     "datasheetsTitle": "Karty techniczne | STRETCH",
     "datasheetsDescription": "Pobierz karty techniczne systemów sufitów napinanych STRETCH — specyfikacje, klasy ogniowe, wartości akustyczne αw / klasy oraz szczegóły gwarancji.",
     "portalTitle": "Panel klienta | STRETCH",
-    "portalDescription": "Zaloguj się, aby zobaczyć swój cennik handlowy STRETCH i dane konta."
+    "portalDescription": "Zaloguj się, aby zobaczyć swój cennik handlowy STRETCH i dane konta.",
+    "materialsTitle": "Materiały i akcesoria do sufitów napinanych | STRETCH",
+    "materialsDescription": "Profile, tkaniny i folie, oświetlenie, akcesoria, narzędzia i STRETCH Cleaner — zapytaj o wycenę przy każdym produkcie, odpowiemy z ceną i terminem. Bez sklepu internetowego."
   },
   "cookies": {
     "title": "Szanujemy Twoją prywatność",
@@ -3404,5 +3407,24 @@
   "inlineLead": {
     "consentPrefix": "Wyrażam zgodę na przetwarzanie moich danych przez STRETCH w celu odpowiedzi na moje zapytanie, zgodnie z",
     "consentPrivacy": "polityką prywatności"
+  },
+  "materials": {
+    "eyebrow": "Materiały i akcesoria",
+    "title": "Materiały",
+    "intro": "Profile, membrana, oświetlenie i wszystkie materiały wokół sufitu napinanego — te same, których używa nasza produkcja i monterzy. Wybierz, czego potrzebujesz, i poproś o wycenę; odpowiemy osobiście z ceną i terminem.",
+    "how1Title": "Wybierz produkty",
+    "how1Body": "Przeglądaj rodziny produktów — bez cen online, bez koszyka, bez konta.",
+    "how2Title": "Poproś o wycenę",
+    "how2Body": "Jedno kliknięcie otwiera formularz z wpisanym już produktem.",
+    "how3Title": "Szybka odpowiedź",
+    "how3Body": "Cenę, dostępność i termin dostajesz e-mailem — płatność fakturą lub linkiem.",
+    "browse": "{count} rodzin produktów",
+    "requestQuote": "Zapytaj o wycenę",
+    "noCheckout": "Celowo bez sklepu: prosisz o wycenę, a my odpowiadamy osobiście z ceną, dostępnością i terminem — zwykle tego samego dnia roboczego. Większe ilości i warunki dealerskie w cenie.",
+    "dealerTitle": "Monter lub dystrybutor?",
+    "dealerBody": "Konta handlowe widzą aktualne ceny dealerskie w portalu klienta — i zamawiają na własnych warunkach.",
+    "dealerCta": "Zaloguj się po ceny",
+    "partnerCta": "Zostań partnerem",
+    "backToAll": "Wszystkie materiały"
   }
 }

@@ -19,7 +19,8 @@
       "allSpecs": "Alla specifikationer & nedladdningar",
       "about": "Om oss",
       "faq": "FAQ",
-      "clientLogin": "Kundinloggning"
+      "clientLogin": "Kundinloggning",
+      "materials": "Material"
     },
     "cta": {
       "freeQuote": "Gratis offert",
@@ -70,7 +71,9 @@
     "datasheetsTitle": "Tekniska datablad | STRETCH",
     "datasheetsDescription": "Ladda ner tekniska datablad för STRETCH-spänntaksystem — specifikationer, brandklasser, akustiska αw-/klassvärden och garantidetaljer.",
     "portalTitle": "Kundportal | STRETCH",
-    "portalDescription": "Logga in för att se din STRETCH-prislista och dina kontouppgifter."
+    "portalDescription": "Logga in för att se din STRETCH-prislista och dina kontouppgifter.",
+    "materialsTitle": "Material och tillbehör för spänntak | STRETCH",
+    "materialsDescription": "Profiler, dukar och folier, belysning, tillbehör, verktyg och STRETCH Cleaner — begär offert per artikel så svarar vi med pris och leveranstid. Utan webbshop."
   },
   "cookies": {
     "title": "Vi värnar om din integritet",
@@ -3404,5 +3407,24 @@
   "inlineLead": {
     "consentPrefix": "Jag samtycker till att STRETCH behandlar mina uppgifter för att besvara min förfrågan, enligt beskrivningen i",
     "consentPrivacy": "integritetspolicyn"
+  },
+  "materials": {
+    "eyebrow": "Material och tillbehör",
+    "title": "Material",
+    "intro": "Profiler, membran, belysning och alla förbrukningsmaterial kring spänntak — samma material som vår produktion och våra montörer använder. Välj vad du behöver och begär offert; vi svarar personligen med pris och leveranstid.",
+    "how1Title": "Välj dina artiklar",
+    "how1Body": "Bläddra bland produktfamiljerna — inga priser online, ingen varukorg, inget konto.",
+    "how2Title": "Begär offert",
+    "how2Body": "Ett klick per artikel öppnar offertformuläret med produkten ifylld.",
+    "how3Title": "Snabbt svar",
+    "how3Body": "Du får pris, tillgänglighet och leveranstid via e-post — och betalar via faktura eller betallänk.",
+    "browse": "{count} produktfamiljer",
+    "requestQuote": "Begär offert",
+    "noCheckout": "Medvetet ingen webbshop: du begär en offert och vi svarar personligen med pris, tillgänglighet och leveranstid — oftast samma arbetsdag. Större volymer och återförsäljarvillkor ingår.",
+    "dealerTitle": "Montör eller återförsäljare?",
+    "dealerBody": "Företagskonton ser aktuella återförsäljarpriser i kundportalen — och beställer på egna villkor.",
+    "dealerCta": "Logga in för priser",
+    "partnerCta": "Bli partner",
+    "backToAll": "Allt material"
   }
 }

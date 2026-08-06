@@ -19,7 +19,8 @@
       "allSpecs": "Todas as fichas e downloads",
       "about": "Sobre nós",
       "faq": "FAQ",
-      "clientLogin": "Área de cliente"
+      "clientLogin": "Área de cliente",
+      "materials": "Materiais"
     },
     "cta": {
       "freeQuote": "Orçamento grátis",
@@ -70,7 +71,9 @@
     "datasheetsTitle": "Fichas técnicas | STRETCH",
     "datasheetsDescription": "Descarregue as fichas técnicas dos sistemas de tetos tensados STRETCH — especificações, classes de fogo, valores acústicos αw / classes e detalhes de garantia.",
     "portalTitle": "Portal do cliente | STRETCH",
-    "portalDescription": "Inicie sessão para consultar a sua tabela de preços profissional STRETCH e os dados da conta."
+    "portalDescription": "Inicie sessão para consultar a sua tabela de preços profissional STRETCH e os dados da conta.",
+    "materialsTitle": "Materiais e consumíveis para teto tensionado | STRETCH",
+    "materialsDescription": "Perfis, telas e películas, iluminação, acessórios, ferramentas e STRETCH Cleaner — peça orçamento por artigo e respondemos com preço e prazo. Sem loja online."
   },
   "cookies": {
     "title": "Valorizamos a sua privacidade",
@@ -3404,5 +3407,24 @@
   "inlineLead": {
     "consentPrefix": "Aceito que a STRETCH trate os meus dados para responder ao meu pedido, conforme descrito na",
     "consentPrivacy": "política de privacidade"
+  },
+  "materials": {
+    "eyebrow": "Materiais e consumíveis",
+    "title": "Materiais",
+    "intro": "Perfis, membrana, iluminação e todos os consumíveis do teto tensionado — os mesmos materiais que a nossa produção e instaladores usam. Escolha o que precisa e peça orçamento; respondemos pessoalmente com preço e prazo.",
+    "how1Title": "Escolha os artigos",
+    "how1Body": "Percorra as famílias de produtos — sem preços online, sem carrinho, sem conta.",
+    "how2Title": "Peça orçamento",
+    "how2Body": "Um clique por artigo abre o formulário com o produto já preenchido.",
+    "how3Title": "Resposta rápida",
+    "how3Body": "Recebe preço, disponibilidade e prazo por e-mail — e paga por fatura ou link de pagamento.",
+    "browse": "{count} famílias de produtos",
+    "requestQuote": "Pedir orçamento",
+    "noCheckout": "Sem loja online, de propósito: pede orçamento e respondemos pessoalmente com preço, disponibilidade e prazo — normalmente no próprio dia útil. Volumes maiores e condições de revenda incluídos.",
+    "dealerTitle": "Instalador ou revendedor?",
+    "dealerBody": "As contas profissionais veem preços de revenda em direto no portal de clientes — e encomendam com as suas condições.",
+    "dealerCta": "Entrar para preços pro",
+    "partnerCta": "Torne-se parceiro",
+    "backToAll": "Todos os materiais"
   }
 }

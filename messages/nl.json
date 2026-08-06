@@ -19,7 +19,8 @@
       "allSpecs": "Alle specificaties & downloads",
       "about": "Over ons",
       "faq": "FAQ",
-      "clientLogin": "Klantenzone"
+      "clientLogin": "Klantenzone",
+      "materials": "Materialen"
     },
     "cta": {
       "freeQuote": "Gratis offerte",
@@ -70,7 +71,9 @@
     "datasheetsTitle": "Technische datasheets | STRETCH",
     "datasheetsDescription": "Download technische datasheets van STRETCH-spanplafondsystemen — specificaties, brandklassen, akoestische αw-/klassewaarden en garantiedetails.",
     "portalTitle": "Klantenportaal | STRETCH",
-    "portalDescription": "Meld u aan om uw STRETCH-handelsprijslijst en accountgegevens te bekijken."
+    "portalDescription": "Meld u aan om uw STRETCH-handelsprijslijst en accountgegevens te bekijken.",
+    "materialsTitle": "Spanplafond materialen & benodigdheden | STRETCH",
+    "materialsDescription": "Profielen, doeken & folies, verlichting, accessoires, gereedschap en STRETCH Cleaner — vraag per item een offerte en wij antwoorden met prijs en levertermijn. Zonder webshop."
   },
   "cookies": {
     "title": "We hechten waarde aan je privacy",
@@ -3404,5 +3407,24 @@
   "inlineLead": {
     "consentPrefix": "Ik ga ermee akkoord dat STRETCH mijn gegevens verwerkt om mijn aanvraag te beantwoorden, zoals beschreven in het",
     "consentPrivacy": "privacybeleid"
+  },
+  "materials": {
+    "eyebrow": "Materialen & benodigdheden",
+    "title": "Materialen",
+    "intro": "Profielen, doek, verlichting en alle verbruiksmaterialen rond een spanplafond — dezelfde materialen die onze eigen productie en plaatsers gebruiken. Kies wat u nodig hebt en vraag een offerte; wij antwoorden persoonlijk met prijs en levertermijn.",
+    "how1Title": "Kies uw items",
+    "how1Body": "Blader door de productfamilies — geen prijzen online, geen winkelmandje, geen account nodig.",
+    "how2Title": "Vraag een offerte",
+    "how2Body": "Eén klik per item opent het offerteformulier met het product al ingevuld.",
+    "how3Title": "Snel antwoord",
+    "how3Body": "U krijgt prijs, beschikbaarheid en levertermijn per e-mail — en betaalt via factuur of betaallink.",
+    "browse": "{count} productfamilies",
+    "requestQuote": "Offerte aanvragen",
+    "noCheckout": "Bewust geen webshop: u vraagt een offerte en wij antwoorden persoonlijk met prijs, beschikbaarheid en levertermijn — meestal dezelfde werkdag. Grotere volumes en dealervoorwaarden inbegrepen.",
+    "dealerTitle": "Plaatser of verdeler?",
+    "dealerBody": "Handelsaccounts zien live handelsprijzen voor dit alles in het klantenportaal — en bestellen aan eigen voorwaarden.",
+    "dealerCta": "Inloggen voor handelsprijzen",
+    "partnerCta": "Word partner",
+    "backToAll": "Alle materialen"
   }
 }

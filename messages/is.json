@@ -19,7 +19,8 @@
       "allSpecs": "Allar tækniupplýsingar & niðurhal",
       "about": "Um okkur",
       "faq": "Algengar spurningar",
-      "clientLogin": "Innskráning viðskiptavina"
+      "clientLogin": "Innskráning viðskiptavina",
+      "materials": "Efni"
     },
     "cta": {
       "freeQuote": "Ókeypis tilboð",
@@ -70,7 +71,9 @@
     "datasheetsTitle": "Tæknibliöð | STRETCH",
     "datasheetsDescription": "Sæktu tæknibliöð fyrir STRETCH-strekkiloftakerfi — tækniupplýsingar, brunaflokkar, hljóðvistargildi αw / flokkar og ábyrgðarskilmálar.",
     "portalTitle": "Viðskiptavinagátt | STRETCH",
-    "portalDescription": "Skráðu þig inn til að sjá STRETCH-verðskrána þína og aðgangsupplýsingar."
+    "portalDescription": "Skráðu þig inn til að sjá STRETCH-verðskrána þína og aðgangsupplýsingar.",
+    "materialsTitle": "Efni og fylgihlutir fyrir strekkloft | STRETCH",
+    "materialsDescription": "Prófílar, dúkar og filmur, lýsing, fylgihlutir, verkfæri og STRETCH Cleaner — biddu um tilboð fyrir hverja vöru og við svörum með verði og afhendingartíma. Án vefverslunar."
   },
   "cookies": {
     "title": "Við virðum friðhelgi þína",
@@ -3404,5 +3407,24 @@
   "inlineLead": {
     "consentPrefix": "Ég samþykki að STRETCH vinni úr upplýsingum mínum til að svara fyrirspurn minni, eins og lýst er í",
     "consentPrivacy": "persónuverndarstefnunni"
+  },
+  "materials": {
+    "eyebrow": "Efni og fylgihlutir",
+    "title": "Efni",
+    "intro": "Prófílar, dúkur, lýsing og allt efni í kringum strekkloft — sama efnið og framleiðslan okkar og uppsetningaraðilar nota. Veldu það sem þú þarft og biddu um tilboð; við svörum persónulega með verði og afhendingartíma.",
+    "how1Title": "Veldu vörur",
+    "how1Body": "Skoðaðu vöruflokkana — engin verð á netinu, engin karfa, enginn aðgangur nauðsynlegur.",
+    "how2Title": "Biddu um tilboð",
+    "how2Body": "Einn smellur á vöru opnar tilboðsformið með vöruna þegar útfyllta.",
+    "how3Title": "Hratt svar",
+    "how3Body": "Þú færð verð, framboð og afhendingartíma í tölvupósti — og greiðir með reikningi eða greiðslutengli.",
+    "browse": "{count} vöruflokkar",
+    "requestQuote": "Biðja um tilboð",
+    "noCheckout": "Viljandi engin vefverslun: þú biður um tilboð og við svörum persónulega með verði, framboði og afhendingartíma — yfirleitt samdægurs. Stærri magn og söluaðilakjör innifalin.",
+    "dealerTitle": "Uppsetningaraðili eða söluaðili?",
+    "dealerBody": "Fyrirtækjaaðgangar sjá söluaðilaverð í rauntíma í þjónustugáttinni — og panta á eigin kjörum.",
+    "dealerCta": "Innskráning fyrir verð",
+    "partnerCta": "Gerast samstarfsaðili",
+    "backToAll": "Öll efni"
   }
 }

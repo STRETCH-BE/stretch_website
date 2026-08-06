@@ -19,7 +19,8 @@
       "allSpecs": "Todas las fichas y descargas",
       "about": "Sobre nosotros",
       "faq": "FAQ",
-      "clientLogin": "Acceso clientes"
+      "clientLogin": "Acceso clientes",
+      "materials": "Materiales"
     },
     "cta": {
       "freeQuote": "Presupuesto gratis",
@@ -70,7 +71,9 @@
     "datasheetsTitle": "Fichas técnicas | STRETCH",
     "datasheetsDescription": "Descarga las fichas técnicas de los sistemas de techos tensados STRETCH — especificaciones, clasificación al fuego, valores acústicos αw / clases y detalles de garantía.",
     "portalTitle": "Portal de clientes | STRETCH",
-    "portalDescription": "Inicie sesión para consultar su tarifa profesional STRETCH y los datos de su cuenta."
+    "portalDescription": "Inicie sesión para consultar su tarifa profesional STRETCH y los datos de su cuenta.",
+    "materialsTitle": "Materiales y suministros para techo tensado | STRETCH",
+    "materialsDescription": "Perfiles, telas y láminas, iluminación, accesorios, herramientas y STRETCH Cleaner — pida presupuesto por artículo y respondemos con precio y plazo. Sin tienda online."
   },
   "cookies": {
     "title": "Valoramos tu privacidad",
@@ -3404,5 +3407,24 @@
   "inlineLead": {
     "consentPrefix": "Acepto que STRETCH trate mis datos para responder a mi solicitud, tal como se describe en la",
     "consentPrivacy": "política de privacidad"
+  },
+  "materials": {
+    "eyebrow": "Materiales y suministros",
+    "title": "Materiales",
+    "intro": "Perfiles, membrana, iluminación y todos los consumibles del techo tensado — los mismos materiales que usan nuestra producción e instaladores. Elija lo que necesita y pida presupuesto; respondemos personalmente con precio y plazo.",
+    "how1Title": "Elija sus artículos",
+    "how1Body": "Explore las familias de productos — sin precios online, sin carrito, sin cuenta.",
+    "how2Title": "Pida presupuesto",
+    "how2Body": "Un clic por artículo abre el formulario con el producto ya rellenado.",
+    "how3Title": "Respuesta rápida",
+    "how3Body": "Recibe precio, disponibilidad y plazo por correo — y paga por factura o enlace de pago.",
+    "browse": "{count} familias de productos",
+    "requestQuote": "Pedir presupuesto",
+    "noCheckout": "Sin tienda online, a propósito: usted pide presupuesto y respondemos personalmente con precio, disponibilidad y plazo — normalmente el mismo día laborable. Volúmenes grandes y condiciones de distribuidor incluidos.",
+    "dealerTitle": "¿Instalador o distribuidor?",
+    "dealerBody": "Las cuentas profesionales ven precios de distribuidor en vivo en el portal de clientes — y piden con sus propias condiciones.",
+    "dealerCta": "Acceso precios pro",
+    "partnerCta": "Hágase partner",
+    "backToAll": "Todos los materiales"
   }
 }

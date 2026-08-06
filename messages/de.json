@@ -19,7 +19,8 @@
       "allSpecs": "Alle Datenblätter & Downloads",
       "about": "Über uns",
       "faq": "FAQ",
-      "clientLogin": "Kundenlogin"
+      "clientLogin": "Kundenlogin",
+      "materials": "Material"
     },
     "cta": {
       "freeQuote": "Kostenloses Angebot",
@@ -70,7 +71,9 @@
     "datasheetsTitle": "Technische Datenblätter | STRETCH",
     "datasheetsDescription": "Laden Sie technische Datenblätter der STRETCH-Spanndeckensysteme herunter — Spezifikationen, Brandklassen, Akustikwerte αw / Klassen und Garantiedetails.",
     "portalTitle": "Kundenportal | STRETCH",
-    "portalDescription": "Melden Sie sich an, um Ihre STRETCH-Handelspreisliste und Kontodaten einzusehen."
+    "portalDescription": "Melden Sie sich an, um Ihre STRETCH-Handelspreisliste und Kontodaten einzusehen.",
+    "materialsTitle": "Spanndecken-Material & Zubehör | STRETCH",
+    "materialsDescription": "Profile, Folien & Tücher, Beleuchtung, Zubehör, Werkzeug und STRETCH Cleaner — pro Artikel Angebot anfragen, wir antworten mit Preis und Lieferzeit. Ohne Webshop."
   },
   "cookies": {
     "title": "Wir respektieren Ihre Privatsphäre",
@@ -3404,5 +3407,24 @@
   "inlineLead": {
     "consentPrefix": "Ich bin damit einverstanden, dass STRETCH meine Daten zur Beantwortung meiner Anfrage verarbeitet, wie beschrieben in der",
     "consentPrivacy": "Datenschutzerklärung"
+  },
+  "materials": {
+    "eyebrow": "Material & Zubehör",
+    "title": "Material",
+    "intro": "Profile, Membran, Beleuchtung und alle Verbrauchsmaterialien rund um die Spanndecke — dieselben Materialien, die unsere Produktion und Monteure verwenden. Wählen Sie aus und fragen Sie ein Angebot an; wir antworten persönlich mit Preis und Lieferzeit.",
+    "how1Title": "Artikel wählen",
+    "how1Body": "Produktfamilien durchsehen — keine Preise online, kein Warenkorb, kein Konto nötig.",
+    "how2Title": "Angebot anfragen",
+    "how2Body": "Ein Klick pro Artikel öffnet das Angebotsformular mit vorausgefülltem Produkt.",
+    "how3Title": "Schnelle Antwort",
+    "how3Body": "Preis, Verfügbarkeit und Lieferzeit kommen per E-Mail — bezahlt wird per Rechnung oder Zahlungslink.",
+    "browse": "{count} Produktfamilien",
+    "requestQuote": "Angebot anfragen",
+    "noCheckout": "Bewusst kein Webshop: Sie fragen ein Angebot an und wir antworten persönlich mit Preis, Verfügbarkeit und Lieferzeit — meist am selben Werktag. Größere Mengen und Händlerkonditionen inklusive.",
+    "dealerTitle": "Monteur oder Händler?",
+    "dealerBody": "Händlerkonten sehen im Kundenportal live Händlerpreise — und bestellen zu eigenen Konditionen.",
+    "dealerCta": "Login Händlerpreise",
+    "partnerCta": "Partner werden",
+    "backToAll": "Alle Materialien"
   }
 }
