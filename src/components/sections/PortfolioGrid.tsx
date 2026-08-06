@@ -14,7 +14,9 @@ export default function PortfolioGrid() {
   const tpc = useTranslations('projectCards');
   const tpr = useTranslations('projects');
   const title = (slug: string, fallback: string) =>
-    (tpr.raw(slug) as { title?: string } | undefined)?.title ?? fallback;
+    // has() guard: newly migrated projects have no messages entry yet — fall
+    // back to the English title from content.ts without a MISSING_MESSAGE log.
+    tpr.has(`${slug}.title`) ? ((tpr.raw(slug) as { title?: string }).title ?? fallback) : fallback;
   const cat = (c: string) => (tpc.has(`cats.${c}`) ? tpc(`cats.${c}`) : c);
   const meta = (slug: string, m: string) => (tpc.has(`metas.${slug}`) ? tpc(`metas.${slug}`) : m);
   const [active, setActive] = useState('all');

@@ -364,6 +364,183 @@ export const projects: Project[] = [
       '/images/projects/rue-perree-bar.jpg',
     ],
   },
+  // ---- Migrated from the old stretchplafond.be portfolio (6 Aug 2026) ------
+  // EN copy distilled from the old Dutch case-study pages; translations for the
+  // `projects` messages namespace are a follow-up step (EN renders meanwhile).
+  {
+    key: 'living', slug: 'vier-emmershof-lokeren', cat: 'Living room', title: '’t Vier Emmershof',
+    meta: 'Lokeren · Forest residence',
+    image: '/images/projects/vier-emmershof-hero.jpg',
+    summary: 'Acoustic stretch ceilings through a sculptural forest residence.',
+    hook: 'A sculptural home among the spruce trees, kept just as calm inside as the forest around it.',
+    description: [
+      'At ’t Vier Emmershof in Lokeren, a sculptural residence sits between preserved spruce trees, its fully glazed rear facade pulling the forest into the living spaces. Natural finishes shape a warm, quiet interior.',
+      'Acoustic STRETCH ceilings run through the home, absorbing the reflections all that glass would otherwise amplify — and acoustic wall elements finished with printed textile extend the treatment beyond the ceiling plane.',
+    ],
+    highlights: ['Acoustic ceilings throughout the home', 'Printed-textile acoustic wall elements', 'Glazed rear facade — forest views, controlled acoustics'],
+    materials: ['Acoustic STRETCH ceiling', 'Acoustic wall elements with printed textile'],
+    facts: [
+      { label: 'Location', value: 'Lokeren, Belgium' },
+      { label: 'Architect', value: 'Inzicht Architecten' },
+      { label: 'STRETCH dealer', value: 'Plafondlux BV' },
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: [
+      '/images/projects/vier-emmershof-interior.jpg',
+      '/images/projects/vier-emmershof-sculpture.jpg',
+      '/images/projects/vier-emmershof-bath.jpg',
+    ],
+  },
+  {
+    key: 'living', slug: 'vp-193', cat: 'Living room', title: 'Villa VP-193',
+    meta: 'East Flanders · Private residence',
+    image: '/images/projects/vp-193-hero.jpg',
+    summary: 'Acoustic ceilings for a sandstone-clad villa built around light and privacy.',
+    hook: 'A home allowed to stand out without shouting — Indian sandstone outside, calm acoustics inside.',
+    description: [
+      'Villa VP-193 wears a facade of Indian sandstone that gives the house warmth and character. Its living spaces turn to the rear, where large glass planes frame a spruce forest, while a generous interior garden at the front keeps daylight high and privacy intact. A bold cantilever forms the covered terrace and carport.',
+      'Inside, acoustic STRETCH ceilings keep the open, hard-surfaced spaces comfortable, with Kreon lighting integrated flush into the membrane.',
+    ],
+    highlights: ['Acoustic ceiling across the open living spaces', 'Flush-integrated Kreon lighting', 'Sandstone facade with cantilevered terrace'],
+    materials: ['Acoustic STRETCH ceiling', 'Integrated lighting (Kreon a.o.)'],
+    facts: [
+      { label: 'Region', value: 'East Flanders, Belgium' },
+      { label: 'Architect', value: 'Inzicht Architecten' },
+      { label: 'STRETCH dealer', value: 'Plafondlux BV' },
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: [
+      '/images/projects/vp-193-kitchen.jpg',
+      '/images/projects/vp-193-hall.jpg',
+      '/images/projects/vp-193-exterior.jpg',
+    ],
+  },
+  {
+    key: 'living', slug: 'jpv-210', cat: 'Living room', title: 'Villa JPV-210',
+    meta: 'Belgium · Private residence',
+    image: '/images/projects/jpv-210-hero.jpg',
+    summary: 'Seamless white ceilings for an all-white minimalist villa.',
+    hook: 'White on white: a minimalist villa where the ceiling had to disappear completely.',
+    description: [
+      'Villa JPV-210 is an exercise in reduction — stacked white volumes outside, and interiors where walls, joinery and floors dissolve into a single bright surface. In a house this pure, any ceiling seam or fixture would break the spell.',
+      'Seamless STRETCH ceilings carry the same uninterrupted white overhead, keeping the hard, open volumes comfortable to live in.',
+    ],
+    highlights: ['Seamless matte-white ceilings throughout', 'No visible seams or trims', 'Calm in hard, open volumes'],
+    materials: ['Seamless STRETCH ceiling, matte white'],
+    facts: [
+      { label: 'Country', value: 'Belgium' },
+      { label: 'Space', value: 'Private villa' },
+    ],
+    solutions: ['polyester-stretch-ceiling', 'acoustic-stretch-system'],
+    gallery: [
+      '/images/projects/jpv-210-kitchen.jpg',
+      '/images/projects/jpv-210-living.jpg',
+      '/images/projects/jpv-210-stairs.jpg',
+    ],
+  },
+  {
+    key: 'living', slug: 'ben-home-vdb-222', cat: 'Living room', title: 'BEN Home VDB-222',
+    meta: 'Sint-Pauwels · Near-energy-neutral home',
+    image: '/images/projects/vdb-222-hero.jpg',
+    summary: 'Acoustic ceilings for a near-energy-neutral forest home built around unity.',
+    hook: 'Maximum glass, maximum connection to the trees — without giving up quiet or privacy.',
+    description: [
+      'Unity is the guiding principle of this BEN (nearly energy-neutral) residence in Sint-Pauwels: generous glazing and an open plan connect the house to the surrounding greenery, balanced carefully against privacy and a sense of shelter.',
+      'Acoustic STRETCH ceilings temper the openness — absorbing sound across the glazed, open volumes — with Delta Light fixtures integrated cleanly into the membrane.',
+    ],
+    highlights: ['Acoustic ceiling across the open plan', 'Integrated Delta Light lighting', 'Near-energy-neutral (BEN) build'],
+    materials: ['Acoustic STRETCH ceiling', 'Integrated lighting (Delta Light a.o.)'],
+    facts: [
+      { label: 'Location', value: 'Sint-Pauwels, Belgium' },
+      { label: 'Architect', value: 'Inzicht Architecten' },
+      { label: 'STRETCH dealer', value: 'Plafondlux BV' },
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: [
+      '/images/projects/vdb-222-living.jpg',
+      '/images/projects/vdb-222-terrace.jpg',
+      '/images/projects/vdb-222-bath.jpg',
+    ],
+  },
+  {
+    key: 'living', slug: 'vap-sint-pauwels', cat: 'Living room', title: 'VAP — Sint-Pauwels',
+    meta: 'Sint-Pauwels · White villa',
+    summary: 'Acoustic ceilings for a bright white villa inspired by water.',
+    hook: 'A white villa for a family drawn to water — ceilings that catch the light like a calm sea.',
+    description: [
+      'This bright white villa (project VA-176) reflects its owners’ connection to water: light surfaces and ceiling planes that pick up reflections like a still sea. A home office can split off into a suite with an identity of its own.',
+      'Acoustic STRETCH ceilings run through the living spaces, paired with Kreon lighting, keeping the crisp white interior as calm to the ear as it is to the eye.',
+    ],
+    highlights: ['Acoustic ceilings in every living space', 'Kreon lighting integration', 'Convertible office / guest-suite layout'],
+    materials: ['Acoustic STRETCH ceiling', 'Integrated lighting (Kreon a.o.)'],
+    facts: [
+      { label: 'Location', value: 'Sint-Pauwels, Belgium' },
+      { label: 'Year', value: '2022–2023' },
+      { label: 'Architect', value: 'Inzicht Architecten' },
+      { label: 'STRETCH dealer', value: 'Plafondlux BV' },
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: ['', '', ''], // photos to come (old site: STRETCH-Van-Akeleyn set)
+  },
+  {
+    key: 'office', slug: 'goesten-opdam', cat: 'Office', title: 'Goesten & Opdam',
+    meta: 'Belgium · Office fit-out',
+    image: '/images/projects/goesten-opdam-hero.jpg',
+    summary: 'A colour-matched acoustic ceiling for a nature-inspired office fit-out.',
+    hook: 'Acoustics in a custom RAL colour, over an office that brings the outside in.',
+    description: [
+      'The Goesten & Opdam offices, fitted out with interior builder Tenback, take their cue from nature — down to the leafy feature wall behind the curved reception desk.',
+      'Overhead, an acoustic STRETCH ceiling in a custom RAL colour ties the palette together while keeping the workspace quiet.',
+    ],
+    highlights: ['Acoustic ceiling in a custom RAL colour', 'Nature-themed office interior'],
+    materials: ['Acoustic STRETCH ceiling (custom RAL colour)'],
+    facts: [
+      { label: 'Country', value: 'Belgium' },
+      { label: 'Interior builder', value: 'Tenback' },
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: ['', '', ''],
+  },
+  {
+    key: 'office', slug: 'dhl-zaventem', cat: 'Office', title: 'DHL Zaventem',
+    meta: 'Zaventem · Boeing 737 meeting room',
+    summary: 'A Camira-clad acoustic ceiling inside a full-scale Boeing 737 meeting room.',
+    hook: 'A conference room built as a Boeing 737 fuselage — with acoustics to match the idea.',
+    description: [
+      'For the DHL team in Zaventem, dealer Ideal Acoustics built a meeting space unlike any other: a full-scale section of a Boeing 737 fuselage, right in the office.',
+      'Acoustic STRETCH ceilings finished with Camira textile line the space, so the spectacular shell also delivers serious acoustic comfort for meetings.',
+    ],
+    highlights: ['Full-scale Boeing 737 fuselage meeting room', 'Acoustic ceiling clad in Camira textile'],
+    materials: ['Acoustic STRETCH ceiling', 'Camira textile finish'],
+    facts: [
+      { label: 'Location', value: 'Zaventem, Belgium' },
+      { label: 'Year', value: '2023' },
+      { label: 'STRETCH dealer', value: 'Ideal Acoustics' },
+      { label: 'Client', value: 'DHL' },
+    ],
+    solutions: ['acoustic-stretch-system'],
+    gallery: ['', '', ''], // photos to come (old site: Ideal Acoustics set)
+  },
+  {
+    key: 'commercial', slug: 'veta-interieur-showroom', cat: 'Retail', title: 'Veta Interieur',
+    meta: 'Dendermonde · Bathroom showroom',
+    image: '/images/products/illuminated-printed-stretch-ceiling.jpg',
+    summary: 'Printed, illuminated ceilings across a 350 m² bathroom showroom.',
+    hook: 'Eighteen bathroom worlds under one roof — printed, glowing ceilings setting each scene.',
+    description: [
+      'Veta Interieur’s 350 m² showroom in Dendermonde stages complete bathroom experiences, built on 25 years of design and craftsmanship with materials imported directly from Italy and Spain.',
+      'STRETCH delivered illuminated ceilings with edge-to-edge print — soft, even light overhead that turns each display bathroom into an immersive scene.',
+    ],
+    highlights: ['350 m² showroom', 'Printed + backlit ceilings', 'Immersive display bathrooms'],
+    materials: ['STRETCH Backlit (light-transmitting) ceiling', 'Edge-to-edge custom print'],
+    facts: [
+      { label: 'Location', value: 'Dendermonde, Belgium' },
+      { label: 'Year', value: '2022' },
+      { label: 'Client', value: 'Veta Interieur' },
+    ],
+    solutions: ['custom-print', 'light-print-stretch-ceiling'],
+    gallery: ['', '', ''],
+  },
 ];
 
 /** All project slugs, for static params + sitemap. */

@@ -22,7 +22,9 @@ export async function projectMetadata(slug: string, locale: string): Promise<Met
   if (!base) return {};
   const tpr = await getTranslations({ locale, namespace: 'projects' });
   const tpc = await getTranslations({ locale, namespace: 'projectCards' });
-  const project = localizeProject(base, tpr.raw(slug) as ProjectMessages);
+  // Projects without a messages entry yet (newly migrated) fall back to the
+  // English source in content.ts — has() guard avoids MISSING_MESSAGE.
+  const project = localizeProject(base, tpr.has(`${slug}.title`) ? (tpr.raw(slug) as ProjectMessages) : undefined);
   const meta = tpc.has(`metas.${slug}`) ? tpc(`metas.${slug}`) : project.meta;
   const title = `${project.title} — ${meta} | ${brand.name}`;
   const description = project.summary ?? `${project.title} — a STRETCH ceiling project. ${meta}.`;
@@ -56,7 +58,10 @@ function ProjectBody({ slug, locale }: { slug: string; locale: Locale }) {
   const tpr = useTranslations('projects');
   const tp = useTranslations('productPage');
   const tpp = useTranslations('projectPage');
-  const project = localizeProject(getProjectBySlug(slug)!, tpr.raw(slug) as ProjectMessages);
+  const project = localizeProject(
+    getProjectBySlug(slug)!,
+    tpr.has(`${slug}.title`) ? (tpr.raw(slug) as ProjectMessages) : undefined,
+  );
 
   const crumbs = breadcrumbSchema([
     { name: tp('home'), url: `${localeBase(locale)}` },
