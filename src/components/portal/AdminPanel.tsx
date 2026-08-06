@@ -12,6 +12,8 @@ type PortalUserRow = {
   email: string;
   company: string | null;
   role: 'client' | 'admin';
+  /** b2c = self-registered (no trade areas); b2b = dealer/trade account. */
+  accountType?: 'b2c' | 'b2b';
   markets: string[];
   allMarkets: boolean;
   active: boolean;
@@ -335,6 +337,24 @@ function UsersCard({ demo }: { demo: boolean }) {
     }
   }
 
+  // Upgrade a self-registered B2C account to B2B (or downgrade back). Markets
+  // are assigned via the existing account tools — a fresh B2B without markets
+  // sees an empty pricelist until markets are granted.
+  async function toggleType(u: PortalUserRow) {
+    setNotice(null);
+    const next = (u.accountType ?? 'b2b') === 'b2c' ? 'b2b' : 'b2c';
+    const res = await fetch('/api/portal/users', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: u.id, accountType: next }),
+    });
+    const data = await res.json().catch(() => null);
+    if (data?.ok) {
+      if (!data.persisted) setNotice(t('demoNote'));
+      setUsers((prev) => prev?.map((x) => (x.id === u.id ? { ...x, accountType: next } : x)) ?? null);
+    }
+  }
+
   return (
     <section className="card">
       <div className="card__head">
@@ -385,14 +405,33 @@ function UsersCard({ demo }: { demo: boolean }) {
                 <tr key={u.id} className={u.active ? '' : 'off'}>
                   <td>{u.email}</td>
                   <td>{u.company ?? '—'}</td>
-                  <td>{u.role === 'admin' ? t('roleAdmin') : t('roleClient')}</td>
+                  <td>
+                    {u.role === 'admin' ? (
+                      t('roleAdmin')
+                    ) : (
+                      <>
+                        {t('roleClient')}{' '}
+                        <span className={(u.accountType ?? 'b2b') === 'b2b' ? 'pill pill--on' : 'pill'}>
+                          {(u.accountType ?? 'b2b') === 'b2b' ? t('typeB2b') : t('typeB2c')}
+                        </span>
+                      </>
+                    )}
+                  </td>
                   <td className="mkts">{u.allMarkets ? t('allMarketsLabel') : u.markets.join(', ') || '—'}</td>
                   <td>
                     <span className={u.active ? 'pill pill--on' : 'pill'}>
                       {u.active ? t('statusActive') : t('statusInactive')}
                     </span>
                   </td>
-                  <td style={{ textAlign: 'right' }}>
+                  <td style={{ textAlign: 'right', whiteSpace: 'nowrap' }}>
+                    {u.role !== 'admin' && (
+                      <>
+                        <button type="button" className="linkbtn" onClick={() => toggleType(u)}>
+                          {(u.accountType ?? 'b2b') === 'b2c' ? t('makeB2b') : t('makeB2c')}
+                        </button>
+                        {' · '}
+                      </>
+                    )}
                     <button type="button" className="linkbtn" onClick={() => toggleActive(u)}>
                       {u.active ? t('deactivate') : t('activate')}
                     </button>

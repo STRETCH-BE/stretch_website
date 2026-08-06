@@ -180,6 +180,8 @@ function LeadGenModal({
           source,
           product: options.product,
           downloadedFile: options.download?.label,
+          // Honeypot — /api/lead silently drops submissions where this is set.
+          _gotcha: String(fd.get('_gotcha') ?? ''),
         }),
       });
       if (!res.ok) throw new Error('Request failed');
@@ -405,6 +407,8 @@ function LeadGenModal({
               )}
 
               <form onSubmit={handleSubmit} noValidate>
+                {/* Honeypot field (bots fill it, humans never see it) */}
+                <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }} />
                 <div
                   style={{
                     display: 'grid',

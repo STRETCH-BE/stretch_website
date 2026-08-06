@@ -1,23 +1,30 @@
 'use client';
 
-// CLIENT PORTAL — credential form. Posts to /api/portal/login, then refreshes
-// so the server layout picks up the new session. In demo mode the preview
-// accounts are listed right on the card (demo mode is intentionally public).
+// CLIENT PORTAL — credential card with Sign in / Create account tabs.
+// mode='live'   → real Supabase login + open B2C self-registration.
+// mode='demo'   → demo login; the preview accounts are listed on the card
+//                 (only when NEXT_PUBLIC_PORTAL_DEMO=1 — never by default).
+// mode='closed' → portal not configured: a "being activated" notice, no form.
 import { useState, type FormEvent } from 'react';
 import { useRouter } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
-import { ArrowUpRight, Lock } from 'lucide-react';
+import { ArrowUpRight, Lock, MailCheck, UserRoundPlus } from 'lucide-react';
 import { DEMO_USERS } from '@/lib/portal/demo-users';
 
-export default function LoginForm({ demo }: { demo: boolean }) {
+type Mode = 'live' | 'demo' | 'closed';
+
+export default function LoginForm({ mode }: { mode: Mode }) {
   const t = useTranslations('portal.login');
   const router = useRouter();
+  const [tab, setTab] = useState<'signin' | 'signup'>('signin');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [company, setCompany] = useState('');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [signupDone, setSignupDone] = useState(false);
 
-  async function submit(e: FormEvent) {
+  async function submitSignin(e: FormEvent) {
     e.preventDefault();
     if (busy) return;
     setBusy(true);
@@ -34,7 +41,9 @@ export default function LoginForm({ demo }: { demo: boolean }) {
         return;
       }
       const data = await res.json().catch(() => null);
-      setError(data?.error === 'inactive' ? t('inactive') : t('invalid'));
+      setError(
+        data?.error === 'inactive' ? t('inactive') : data?.error === 'unavailable' ? t('unavailableBody') : t('invalid'),
+      );
     } catch {
       setError(t('failed'));
     } finally {
@@ -42,21 +51,153 @@ export default function LoginForm({ demo }: { demo: boolean }) {
     }
   }
 
+  async function submitSignup(e: FormEvent) {
+    e.preventDefault();
+    if (busy) return;
+    setBusy(true);
+    setError(null);
+    try {
+      const res = await fetch('/api/portal/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password, company }),
+      });
+      const data = await res.json().catch(() => null);
+      if (res.ok && data?.ok) {
+        if (data.confirm) {
+          setSignupDone(true);
+        } else {
+          // No email confirmation required → sign straight in.
+          const login = await fetch('/api/portal/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password }),
+          });
+          if (login.ok) {
+            router.replace('/portal');
+            router.refresh();
+            return;
+          }
+          setSignupDone(true);
+        }
+        return;
+      }
+      setError(data?.error === 'exists' ? t('signupExists') : t('failed'));
+    } catch {
+      setError(t('failed'));
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  // --- Portal closed (no Supabase, no demo flag) ---------------------------
+  if (mode === 'closed') {
+    return (
+      <div style={{ width: '100%', maxWidth: 440 }}>
+        <div style={{ background: '#fff', border: '1px solid var(--border)', padding: 'clamp(26px,3vw,40px)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
+            <span style={{ background: 'var(--black)', color: '#fff', width: 38, height: 38, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Lock size={16} />
+            </span>
+            <div style={{ fontWeight: 800, fontSize: 15, letterSpacing: '.04em', textTransform: 'uppercase' }}>{t('unavailableTitle')}</div>
+          </div>
+          <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: 14.5, lineHeight: 1.6 }}>{t('unavailableBody')}</p>
+        </div>
+      </div>
+    );
+  }
+
+  // --- Signup confirmation sent --------------------------------------------
+  if (signupDone) {
+    return (
+      <div style={{ width: '100%', maxWidth: 440 }}>
+        <div style={{ background: '#fff', border: '1px solid var(--border)', padding: 'clamp(26px,3vw,40px)' }} role="status">
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
+            <span style={{ background: 'var(--red)', color: '#fff', width: 38, height: 38, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+              <MailCheck size={17} />
+            </span>
+            <div style={{ fontWeight: 800, fontSize: 15, letterSpacing: '.04em', textTransform: 'uppercase' }}>{t('signupDoneTitle')}</div>
+          </div>
+          <p style={{ margin: '0 0 18px', color: 'var(--text-muted)', fontSize: 14.5, lineHeight: 1.6 }}>{t('signupDoneBody')}</p>
+          <button
+            type="button"
+            className="btn btn--ghost"
+            onClick={() => {
+              setSignupDone(false);
+              setTab('signin');
+              setPassword('');
+            }}
+          >
+            {t('tabSignIn')}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const signup = mode === 'live' && tab === 'signup';
+
   return (
     <div style={{ width: '100%', maxWidth: 440 }}>
+      {/* Sign in / Create account tabs (signup only in live mode) */}
+      {mode === 'live' && (
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', marginBottom: -1 }}>
+          {(['signin', 'signup'] as const).map((k) => (
+            <button
+              key={k}
+              type="button"
+              onClick={() => {
+                setTab(k);
+                setError(null);
+              }}
+              style={{
+                font: 'inherit',
+                fontSize: 12,
+                fontWeight: 800,
+                letterSpacing: '.1em',
+                textTransform: 'uppercase',
+                padding: '13px 10px',
+                cursor: 'pointer',
+                background: tab === k ? '#fff' : 'var(--surface)',
+                color: tab === k ? 'var(--black)' : 'var(--text-muted-2)',
+                border: '1px solid var(--border)',
+                borderBottom: tab === k ? '1px solid #fff' : '1px solid var(--border)',
+              }}
+            >
+              {k === 'signin' ? t('tabSignIn') : t('tabSignup')}
+            </button>
+          ))}
+        </div>
+      )}
+
       <form
-        onSubmit={submit}
-        style={{ background: '#fff', border: '1px solid var(--border)', padding: 'clamp(26px,3vw,40px)' }}
+        onSubmit={signup ? submitSignup : submitSignin}
+        style={{ background: '#fff', border: '1px solid var(--border)', borderTop: mode === 'live' ? 'none' : undefined, padding: 'clamp(26px,3vw,40px)' }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
           <span style={{ background: 'var(--black)', color: '#fff', width: 38, height: 38, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Lock size={16} />
+            {signup ? <UserRoundPlus size={16} /> : <Lock size={16} />}
           </span>
           <div>
-            <div style={{ fontWeight: 800, fontSize: 15, letterSpacing: '.04em', textTransform: 'uppercase' }}>{t('formTitle')}</div>
-            <div style={{ fontSize: 12.5, color: 'var(--text-muted-2)' }}>{t('formSub')}</div>
+            <div style={{ fontWeight: 800, fontSize: 15, letterSpacing: '.04em', textTransform: 'uppercase' }}>
+              {signup ? t('tabSignup') : t('formTitle')}
+            </div>
+            <div style={{ fontSize: 12.5, color: 'var(--text-muted-2)' }}>{signup ? t('signupSub') : t('formSub')}</div>
           </div>
         </div>
+
+        {signup && (
+          <label className="portal-field">
+            <span>{t('company')}</span>
+            <input
+              type="text"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+              autoComplete="organization"
+              placeholder="Company BV (optional)"
+            />
+          </label>
+        )}
 
         <label className="portal-field">
           <span>{t('email')}</span>
@@ -75,10 +216,12 @@ export default function LoginForm({ demo }: { demo: boolean }) {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            autoComplete="current-password"
+            autoComplete={signup ? 'new-password' : 'current-password'}
             required
+            minLength={signup ? 8 : undefined}
             placeholder="••••••••••"
           />
+          {signup && <em style={{ display: 'block', fontStyle: 'normal', fontSize: 12, color: 'var(--text-faint)', marginTop: 6 }}>{t('passwordHint')}</em>}
         </label>
 
         {error && (
@@ -88,11 +231,11 @@ export default function LoginForm({ demo }: { demo: boolean }) {
         )}
 
         <button type="submit" className="btn btn--primary" disabled={busy} style={{ width: '100%', justifyContent: 'center' }}>
-          {busy ? t('submitting') : t('submit')} <ArrowUpRight size={15} />
+          {signup ? (busy ? t('signupSubmitting') : t('signupSubmit')) : busy ? t('submitting') : t('submit')} <ArrowUpRight size={15} />
         </button>
       </form>
 
-      {demo && (
+      {mode === 'demo' && (
         <aside
           style={{ marginTop: 16, border: '1px dashed var(--border-input)', background: '#fff', padding: '16px 18px', fontSize: 13 }}
         >
