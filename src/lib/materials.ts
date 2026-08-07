@@ -20,6 +20,12 @@ export type MaterialItem = {
   body: string;
   /** Photo from /public, e.g. '/images/materials/alu-profile.jpg'. '' = placeholder. */
   image: string;
+  /**
+   * Optional version checkboxes shown on the item card (canonical keys; labels
+   * come from the `materials` messages namespace as variant<Key>). The visitor's
+   * selection is appended to the product name in the quote modal / inquiry list.
+   */
+  variants?: ('standard' | 'acoustic' | 'translucent')[];
 };
 
 export type MaterialGroup = {
@@ -30,6 +36,8 @@ export type MaterialGroup = {
   metaTitle: string;
   metaDescription: string;
   intro: string;
+  /** Group-card photo on /materials. Falls back to the first item photo. */
+  cover?: string;
   items: MaterialItem[];
 };
 
@@ -43,10 +51,11 @@ export const materialGroups: MaterialGroup[] = [
       'Aluminium and PVC stretch-ceiling profiles, LED-line profiles and end caps, straight from our own production. Request a quote — we reply with price and delivery.',
     intro:
       'The rails that hold every STRETCH ceiling: aluminium and PVC perimeter profiles, LED-line profiles and finishing pieces — the same profiles our own installers use, cut and shipped from our production.',
+    cover: '/images/materials/group-profiles.jpg',
     items: [
-      { name: 'Aluminium stretch-ceiling profiles', body: 'Rigid aluminium perimeter and separation profiles for cold and heat mounting — straight lengths, ready to fit.', image: '' },
-      { name: 'PVC stretch-ceiling profiles', body: 'Flexible PVC harpoon profiles for curved walls and simple perimeters.', image: '' },
-      { name: 'LED-line profiles & end caps', body: 'Recessed profiles that put a crisp light line into the membrane, with matching end caps (16 / 31 mm).', image: '' },
+      { name: 'Aluminium stretch-ceiling profiles', body: 'Rigid aluminium perimeter and separation profiles for cold and heat mounting — straight lengths, ready to fit.', image: '/images/materials/alu-profiles.jpg' },
+      { name: 'PVC stretch-ceiling profiles', body: 'Flexible PVC harpoon profiles for curved walls and simple perimeters.', image: '/images/materials/pvc-profiles.jpg' },
+      { name: 'LED-line profiles & end caps', body: 'Recessed profiles that put a crisp light line into the membrane, with matching end caps (16 / 31 mm).', image: '/images/materials/led-line-profiles.jpg' },
       { name: 'Tracklight 48V profile', body: 'The magnetic 48V track that integrates flush into a stretch ceiling — the backbone of the tracklight system.', image: '' },
     ],
   },
@@ -59,11 +68,32 @@ export const materialGroups: MaterialGroup[] = [
       'PVC stretch-ceiling foil (MSD, Bauf, Teqtum, Renolit) on the roll, cut to length, or welded made-to-measure with harpoon. Matte, glossy, translucent and colour finishes. Request a quote.',
     intro:
       'Membrane the way you need it: full rolls for your own confection, foil cut to length, or a finished made-to-measure ceiling welded with harpoon — in matte, satin, glossy, translucent and colour finishes from the major foil brands.',
+    cover: '/images/materials/fabric-cut-to-measure.jpg',
     items: [
-      { name: 'PVC foil on the roll', body: 'MSD, Bauf, Teqtum and Renolit foil by the roll — matte/satin, glossy, translucent, colour, metallic and Black & White ranges.', image: '' },
-      { name: 'Foil cut to length', body: 'The same foil ranges cut to the length you need — no full roll required.', image: '' },
-      { name: 'Made-to-measure ceilings', body: 'Your ceiling welded to size in our production, harpoon included — ready to hang in the profile.', image: '' },
-      { name: 'Translucent (backlit) foil', body: 'Light-transmitting membrane for illuminated ceilings and light boxes, up to 5 m seamless.', image: '' },
+      {
+        name: 'PVC foil produced to size',
+        body: 'Your ceiling welded and cut to the exact room dimensions in our production — harpoon edge included, folded, labelled and ready to hang in the profile.',
+        image: '/images/materials/foil-cut-to-size.jpg',
+        variants: ['standard', 'acoustic', 'translucent'],
+      },
+      {
+        name: 'Fabric stretch ceiling cut to measure',
+        body: 'Polyester fabric ceiling cut to your measurements from our own confection — the fabric ranges from the colour chart.',
+        image: '/images/materials/fabric-cut-to-measure.jpg',
+        variants: ['standard', 'acoustic', 'translucent'],
+      },
+      {
+        name: 'Polyester stretch ceiling on the roll',
+        body: 'Full rolls of polyester stretch-ceiling fabric for partners with their own confection.',
+        image: '',
+        variants: ['standard', 'acoustic', 'translucent'],
+      },
+      {
+        name: 'PVC stretch ceiling on the roll',
+        body: 'PVC membrane by the roll — matte, satin, glossy, translucent and colour ranges from the major foil brands.',
+        image: '/images/materials/pvc-roll.jpg',
+        variants: ['standard', 'acoustic', 'translucent'],
+      },
     ],
   },
   {
@@ -77,8 +107,8 @@ export const materialGroups: MaterialGroup[] = [
       'Everything that lights a STRETCH ceiling: the magnetic 48V tracklight family, LED field modules for backlit ceilings, and the rings that finish every spot cleanly.',
     items: [
       { name: 'Tracklight 48V system', body: 'Magnetic spots, grille lights and connectors for the flush 48V track — swap and reposition fixtures by hand.', image: '' },
-      { name: 'LED modules for backlit ceilings', body: 'Even, dimmable LED fields that turn a translucent membrane into a seamless light source.', image: '' },
-      { name: 'Spotrings & protective rings', body: 'Rings in every diameter (4.5–300 mm) that reinforce cut-outs for spots, sensors and ventilation.', image: '' },
+      { name: 'LED modules for backlit ceilings', body: 'Even, dimmable LED fields that turn a translucent membrane into a seamless light source.', image: '/images/materials/led-modules.jpg' },
+      { name: 'Spotrings & protective rings', body: 'Rings in every diameter (4.5–300 mm) that reinforce cut-outs for spots, sensors and ventilation.', image: '/images/materials/spot-rings.jpg' },
     ],
   },
   {
@@ -91,9 +121,9 @@ export const materialGroups: MaterialGroup[] = [
     intro:
       'The small parts that make a clean job: harpoon for welding, protective rings, glue and fixings — the consumables every installer runs through.',
     items: [
-      { name: 'Harpoon', body: 'The welded edge that locks the membrane into the profile — sold by the roll.', image: '' },
-      { name: 'Protective rings', body: 'Self-adhesive rings from 4.5 to 300 mm for spots, hooks, pipes and sensors.', image: '' },
-      { name: 'Glue & fixings', body: 'AKFIX glue, screws and the mounting consumables used on every site.', image: '' },
+      { name: 'Harpoon', body: 'The welded edge that locks the membrane into the profile — sold by the roll.', image: '/images/materials/harpoon.jpg' },
+      { name: 'Protective rings', body: 'Self-adhesive rings from 4.5 to 300 mm for spots, hooks, pipes and sensors.', image: '/images/materials/protective-rings.jpg' },
+      { name: 'Glue & fixings', body: 'Instant adhesive (cyanoacrylate), screws and the mounting consumables used on every site.', image: '/images/materials/glue-fixings.jpg' },
     ],
   },
   {
@@ -105,10 +135,11 @@ export const materialGroups: MaterialGroup[] = [
       'Installation hand tools for stretch ceilings and the STRETCH Cleaner that keeps membranes spotless (1 L and 5 L). Request a quote.',
     intro:
       'Installer hand tools and the cleaner made for stretch membranes — the same products from our training room and our own vans.',
+    cover: '/images/materials/group-tools.jpg',
     items: [
-      { name: 'Installation hand tools', body: 'Spatulas and hand tools shaped for tucking membrane without damage.', image: '' },
-      { name: 'STRETCH Cleaner 1 L', body: 'The membrane-safe cleaner for fingerprints, dust and building-site film.', image: '' },
-      { name: 'STRETCH Cleaner 5 L', body: 'The same cleaner in the workshop size for dealers and heavy users.', image: '' },
+      { name: 'Installation hand tools', body: 'Spatulas and hand tools shaped for tucking membrane without damage.', image: '/images/materials/hand-tools.jpg' },
+      { name: 'STRETCH Cleaner 1 L', body: 'The membrane-safe cleaner for fingerprints, dust and building-site film.', image: '/images/materials/cleaner-1l.jpg' },
+      { name: 'STRETCH Cleaner 5 L', body: 'The same cleaner in the workshop size for dealers and heavy users.', image: '/images/materials/cleaner-5l.jpg' },
     ],
   },
 ];

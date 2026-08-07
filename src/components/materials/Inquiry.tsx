@@ -10,7 +10,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { ArrowRight, Check, ClipboardList, Plus, X } from 'lucide-react';
 
-type InquiryItem = { group: string; name: string };
+type InquiryItem = { group: string; name: string; variants?: string[] };
 
 type InquiryCtx = {
   items: InquiryItem[];
@@ -57,7 +57,7 @@ export function InquiryProvider({ children }: { children: ReactNode }) {
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
 
-function useInquiry(): InquiryCtx {
+export function useInquiry(): InquiryCtx {
   const ctx = useContext(Ctx);
   if (!ctx) throw new Error('useInquiry outside InquiryProvider');
   return ctx;
@@ -123,7 +123,11 @@ export function InquiryBar() {
           email: String(fd.get('email') ?? ''),
           phone: String(fd.get('phone') ?? ''),
           message: String(fd.get('message') ?? ''),
-          items: items.map((i) => `${i.name} (${i.group})`).join(' | '),
+          colour: String(fd.get('colour') ?? ''),
+          colourCode: String(fd.get('colourCode') ?? ''),
+          items: items
+            .map((i) => `${i.name}${i.variants?.length ? ` [${i.variants.join(', ')}]` : ''} (${i.group})`)
+            .join(' | '),
           _gotcha: String(fd.get('_gotcha') ?? ''),
         }),
       });
@@ -181,7 +185,7 @@ export function InquiryBar() {
                     <li key={i.name}>
                       <span>
                         <strong>{i.name}</strong>
-                        <em>{i.group}</em>
+                        <em>{i.group}{i.variants?.length ? ` · ${i.variants.join(', ')}` : ''}</em>
                       </span>
                       <button type="button" onClick={() => remove(i.name)} aria-label={`${t('removeLabel')}: ${i.name}`}>
                         <X size={14} />
@@ -192,6 +196,22 @@ export function InquiryBar() {
 
                 <form onSubmit={submit}>
                   <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }} />
+                  {/* Colour chart choice — travels with the lead as `colour` / `colourCode`. */}
+                  <div className="inq-row2">
+                    <label className="inq-field">
+                      <span>{t('colourLabel')}</span>
+                      <select name="colour" defaultValue="">
+                        <option value="">{t('colourNone')}</option>
+                        <option value={t('colourWhite')}>{t('colourWhite')}</option>
+                        <option value={t('colourMatteColour')}>{t('colourMatteColour')}</option>
+                        <option value={t('colourSatin')}>{t('colourSatin')}</option>
+                        <option value={t('colourGloss')}>{t('colourGloss')}</option>
+                        <option value={t('colourTranslucent')}>{t('colourTranslucent')}</option>
+                        <option value={t('colourPrinted')}>{t('colourPrinted')}</option>
+                      </select>
+                    </label>
+                    <label className="inq-field"><span>{t('colourCodeLabel')}</span><input name="colourCode" placeholder={t('colourCodePlaceholder')} /></label>
+                  </div>
                   <div className="inq-row2">
                     <label className="inq-field"><span>{t('formName')} *</span><input name="name" required autoComplete="name" /></label>
                     <label className="inq-field"><span>{t('formCompany')}</span><input name="company" autoComplete="organization" /></label>
@@ -327,6 +347,7 @@ export function InquiryBar() {
           margin-bottom: 6px;
         }
         .inq-field input,
+        .inq-field select,
         .inq-field textarea {
           width: 100%;
           padding: 11px 12px;
@@ -336,7 +357,9 @@ export function InquiryBar() {
           font-size: 14px;
           border-radius: var(--radius);
         }
+        .inq-field select { appearance: auto; cursor: pointer; }
         .inq-field input:focus,
+        .inq-field select:focus,
         .inq-field textarea:focus { outline: 2px solid var(--black); outline-offset: -1px; }
         @media (max-width: 560px) {
           .inq-row2 { grid-template-columns: 1fr; }
