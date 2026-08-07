@@ -159,7 +159,8 @@
       "about": "About",
       "faq": "FAQ",
       "clientPortal": "Client portal"
-    }
+    },
+    "dealers": "Dealer network"
   },
   "portal": {
     "login": {
@@ -4271,5 +4272,43 @@
         }
       ]
     }
+  },
+  "dealersPage": {
+    "crumbDealers": "Dealers",
+    "eyebrow": "Dealer network",
+    "h1": "Stretch ceilings in {place}",
+    "introDealer": "A STRETCH ceiling in {place} starts with our certified dealer below: measured locally, welded to size in our own Belgian production, and installed in a day.",
+    "introRecruit": "There is no certified STRETCH dealer in {place} yet — so for now we serve {place} directly from our Belgian production, and we are looking for the right local partner.",
+    "dealerBadge": "Certified STRETCH dealer",
+    "dealerBadgeShort": "Dealer",
+    "visitSite": "Visit website",
+    "quoteCta": "Request a free quote",
+    "whyTitle": "Why choose STRETCH here",
+    "why1": "Made in Belgium — every ceiling is welded to size in our own production and arrives ready to install.",
+    "why2": "Certified installation — our dealers follow the STRETCH installer training and work with our profiles, membranes and lighting.",
+    "why3": "One point of guarantee — material and installation under one roof, with STRETCH behind both.",
+    "recruitChip": "Dealer wanted",
+    "recruitTitle": "Become our STRETCH dealer in {place}",
+    "recruitBody": "We are actively looking for an installation partner in {place}: dealer pricing in the client zone, product and installation training, marketing support — and the enquiries from this page go to you.",
+    "recruitCta": "Become a dealer",
+    "projectsHeading": "Our work in and around {place}",
+    "nearbyHeading": "Also in {province}",
+    "nearbyHeadingProvince": "Places in {place}",
+    "backToAll": "All regions",
+    "metaTitleDealer": "Stretch ceiling in {place} — certified STRETCH dealer",
+    "metaTitleRecruit": "Stretch ceiling in {place} — installed from our Belgian production",
+    "metaDescDealer": "Looking for a stretch ceiling in {place}? Our certified STRETCH dealer measures locally and installs ceilings welded to size in our Belgian production. Request a free quote.",
+    "metaDescRecruit": "A stretch ceiling in {place}? We install directly from our Belgian production — and we are looking for a local dealer. Request a quote or become our partner in {place}.",
+    "ovMetaTitle": "STRETCH dealers — Belgium & the Netherlands | STRETCH",
+    "ovMetaDescription": "Find your certified STRETCH dealer in Flanders, Brussels, Wallonia or the Netherlands — or join the network. Every ceiling comes from our own Belgian production.",
+    "ovEyebrow": "Network",
+    "ovTitle": "Dealers",
+    "ovIntro": "STRETCH ceilings are measured and installed by certified local partners, backed by our own production near Lokeren. Find your region — or claim the open spots.",
+    "regionFlanders": "Flanders & Brussels",
+    "regionWallonia": "Wallonia",
+    "regionNetherlands": "Netherlands",
+    "lookingLabel": "Dealer wanted",
+    "ovRecruitTitle": "No dealer in your area yet?",
+    "ovRecruitBody": "We deliver and install directly from our production while the network grows — and installers who claim an open region get its enquiries, dealer pricing and training."
   }
 }

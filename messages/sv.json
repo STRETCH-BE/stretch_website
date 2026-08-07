@@ -159,7 +159,8 @@
       "about": "Om oss",
       "faq": "FAQ",
       "clientPortal": "Kundportal"
-    }
+    },
+    "dealers": "Återförsäljarnätverk"
   },
   "portal": {
     "login": {
@@ -4271,5 +4272,43 @@
         }
       ]
     }
+  },
+  "dealersPage": {
+    "crumbDealers": "Återförsäljare",
+    "eyebrow": "Återförsäljarnätverk",
+    "h1": "Spänntak i {place}",
+    "introDealer": "Ett spänntak från STRETCH i {place} börjar hos vår certifierade återförsäljare nedan: uppmätt på plats, svetsat efter mått i vår egen belgiska produktion och monterat på en dag.",
+    "introRecruit": "Det finns ännu ingen certifierad STRETCH-återförsäljare i {place} — så tills vidare betjänar vi {place} direkt från vår belgiska produktion, och vi söker rätt lokal partner.",
+    "dealerBadge": "Certifierad STRETCH-återförsäljare",
+    "dealerBadgeShort": "Återförsäljare",
+    "visitSite": "Besök webbplatsen",
+    "quoteCta": "Begär en kostnadsfri offert",
+    "whyTitle": "Därför väljer du STRETCH här",
+    "why1": "Tillverkat i Belgien — varje tak svetsas efter mått i vår egen produktion och levereras klart att montera.",
+    "why2": "Certifierad montering — våra återförsäljare har gått STRETCH-montörsutbildningen och arbetar med våra profiler, dukar och belysning.",
+    "why3": "En samlad garanti — material och montering under samma tak, med STRETCH bakom båda.",
+    "recruitChip": "Återförsäljare sökes",
+    "recruitTitle": "Bli vår STRETCH-återförsäljare i {place}",
+    "recruitBody": "Vi söker aktivt en monteringspartner i {place}: återförsäljarpriser i kundportalen, produkt- och monteringsutbildning, marknadsföringsstöd — och förfrågningarna från den här sidan går till dig.",
+    "recruitCta": "Bli återförsäljare",
+    "projectsHeading": "Våra projekt i och kring {place}",
+    "nearbyHeading": "Även i {province}",
+    "nearbyHeadingProvince": "Orter i {place}",
+    "backToAll": "Alla regioner",
+    "metaTitleDealer": "Spänntak {place} — certifierad STRETCH-återförsäljare",
+    "metaTitleRecruit": "Spänntak {place} — monterat direkt från vår belgiska produktion",
+    "metaDescDealer": "Letar du efter ett spänntak i {place}? Vår certifierade STRETCH-återförsäljare mäter på plats och monterar tak svetsade efter mått i vår belgiska produktion. Begär en kostnadsfri offert.",
+    "metaDescRecruit": "Ett spänntak i {place}? Vi monterar direkt från vår belgiska produktion — och vi söker en lokal återförsäljare. Begär en offert eller bli vår partner i {place}.",
+    "ovMetaTitle": "STRETCH-återförsäljare — Belgien & Nederländerna | STRETCH",
+    "ovMetaDescription": "Hitta din certifierade STRETCH-återförsäljare i Flandern, Bryssel, Vallonien eller Nederländerna — eller gå med i nätverket. Varje tak kommer från vår egen belgiska produktion.",
+    "ovEyebrow": "Nätverk",
+    "ovTitle": "Återförsäljare",
+    "ovIntro": "Spänntak från STRETCH mäts upp och monteras av certifierade lokala partner, med vår egen produktion nära Lokeren i ryggen. Hitta din region — eller ta en av de lediga platserna.",
+    "regionFlanders": "Flandern & Bryssel",
+    "regionWallonia": "Vallonien",
+    "regionNetherlands": "Nederländerna",
+    "lookingLabel": "Återförsäljare sökes",
+    "ovRecruitTitle": "Ingen återförsäljare i ditt område ännu?",
+    "ovRecruitBody": "Vi levererar och monterar direkt från vår produktion medan nätverket växer — och montörer som tar en ledig region får dess förfrågningar, återförsäljarpriser och utbildning."
   }
 }

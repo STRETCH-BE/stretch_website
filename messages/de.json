@@ -159,7 +159,8 @@
       "about": "Über uns",
       "faq": "FAQ",
       "clientPortal": "Kundenportal"
-    }
+    },
+    "dealers": "Händlernetz"
   },
   "portal": {
     "login": {
@@ -4271,5 +4272,43 @@
         }
       ]
     }
+  },
+  "dealersPage": {
+    "crumbDealers": "Händler",
+    "eyebrow": "Händlernetz",
+    "h1": "Spanndecken in {place}",
+    "introDealer": "Eine STRETCH-Spanndecke in {place} beginnt bei unserem unten aufgeführten zertifizierten Händler: vor Ort aufgemessen, in unserer eigenen belgischen Produktion maßgenau verschweißt und an einem Tag montiert.",
+    "introRecruit": "In {place} gibt es noch keinen zertifizierten STRETCH-Händler — deshalb bedienen wir {place} vorerst direkt aus unserer belgischen Produktion und suchen den passenden Partner vor Ort.",
+    "dealerBadge": "Zertifizierter STRETCH-Händler",
+    "dealerBadgeShort": "Händler",
+    "visitSite": "Website besuchen",
+    "quoteCta": "Kostenloses Angebot anfordern",
+    "whyTitle": "Warum STRETCH hier die richtige Wahl ist",
+    "why1": "Made in Belgium — jede Decke wird in unserer eigenen Produktion maßgenau verschweißt und kommt montagefertig an.",
+    "why2": "Zertifizierte Montage — unsere Händler durchlaufen die STRETCH-Monteurschulung und arbeiten mit unseren Profilen, Folien und Beleuchtungen.",
+    "why3": "Garantie aus einer Hand — Material und Montage unter einem Dach, mit STRETCH hinter beidem.",
+    "recruitChip": "Händler gesucht",
+    "recruitTitle": "Werden Sie unser STRETCH-Händler in {place}",
+    "recruitBody": "Wir suchen aktiv einen Montagepartner in {place}: Händlerpreise in der Kundenzone, Produkt- und Montageschulung, Marketingunterstützung — und die Anfragen dieser Seite gehen an Sie.",
+    "recruitCta": "Händler werden",
+    "projectsHeading": "Unsere Projekte in und um {place}",
+    "nearbyHeading": "Auch in {province}",
+    "nearbyHeadingProvince": "Orte in {place}",
+    "backToAll": "Alle Regionen",
+    "metaTitleDealer": "Spanndecke {place} — zertifizierter STRETCH-Händler",
+    "metaTitleRecruit": "Spanndecke {place} — Montage direkt aus unserer belgischen Produktion",
+    "metaDescDealer": "Sie suchen eine Spanndecke in {place}? Unser zertifizierter STRETCH-Händler misst vor Ort auf und montiert Decken, die in unserer belgischen Produktion maßgenau verschweißt werden. Fordern Sie ein kostenloses Angebot an.",
+    "metaDescRecruit": "Eine Spanndecke in {place}? Wir montieren direkt aus unserer belgischen Produktion — und suchen einen Händler vor Ort. Fordern Sie ein Angebot an oder werden Sie unser Partner in {place}.",
+    "ovMetaTitle": "STRETCH-Händler — Belgien & Niederlande | STRETCH",
+    "ovMetaDescription": "Finden Sie Ihren zertifizierten STRETCH-Händler in Flandern, Brüssel, Wallonien oder den Niederlanden — oder werden Sie Teil des Netzwerks. Jede Decke stammt aus unserer eigenen belgischen Produktion.",
+    "ovEyebrow": "Netzwerk",
+    "ovTitle": "Händler",
+    "ovIntro": "STRETCH-Spanndecken werden von zertifizierten Fachpartnern vor Ort aufgemessen und montiert — mit unserer eigenen Produktion bei Lokeren im Rücken. Finden Sie Ihre Region — oder sichern Sie sich eine der freien Regionen.",
+    "regionFlanders": "Flandern & Brüssel",
+    "regionWallonia": "Wallonien",
+    "regionNetherlands": "Niederlande",
+    "lookingLabel": "Händler gesucht",
+    "ovRecruitTitle": "Noch kein Händler in Ihrer Nähe?",
+    "ovRecruitBody": "Solange das Netzwerk wächst, liefern und montieren wir direkt aus unserer Produktion — und Monteure, die sich eine freie Region sichern, erhalten deren Anfragen, Händlerpreise und Schulungen."
   }
 }

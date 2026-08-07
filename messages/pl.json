@@ -159,7 +159,8 @@
       "about": "O nas",
       "faq": "FAQ",
       "clientPortal": "Panel klienta"
-    }
+    },
+    "dealers": "Sieć dealerów"
   },
   "portal": {
     "login": {
@@ -4271,5 +4272,43 @@
         }
       ]
     }
+  },
+  "dealersPage": {
+    "crumbDealers": "Dealerzy",
+    "eyebrow": "Sieć dealerów",
+    "h1": "Sufity napinane w {place}",
+    "introDealer": "Sufit napinany STRETCH w {place} zaczyna się od certyfikowanego dealera, którego znajdziesz poniżej: pomiar na miejscu, zgrzewanie na wymiar w naszym własnym zakładzie w Belgii i montaż w jeden dzień.",
+    "introRecruit": "W {place} nie ma jeszcze certyfikowanego dealera STRETCH — dlatego na razie obsługujemy {place} bezpośrednio z naszego zakładu w Belgii i szukamy odpowiedniego lokalnego partnera.",
+    "dealerBadge": "Certyfikowany dealer STRETCH",
+    "dealerBadgeShort": "Dealer",
+    "visitSite": "Odwiedź stronę",
+    "quoteCta": "Poproś o bezpłatną wycenę",
+    "whyTitle": "Dlaczego warto wybrać STRETCH właśnie tutaj",
+    "why1": "Wyprodukowano w Belgii — każdy sufit zgrzewamy na wymiar we własnym zakładzie i dostarczamy gotowy do montażu.",
+    "why2": "Certyfikowany montaż — nasi dealerzy przechodzą szkolenie montażystów STRETCH i pracują z naszymi profilami, membranami i oświetleniem.",
+    "why3": "Jedna gwarancja — materiał i montaż pod jednym dachem, a za wszystkim stoi STRETCH.",
+    "recruitChip": "Szukamy dealera",
+    "recruitTitle": "Zostań naszym dealerem STRETCH w {place}",
+    "recruitBody": "Aktywnie szukamy partnera montażowego w {place}: ceny dealerskie w strefie klienta, szkolenia produktowe i montażowe, wsparcie marketingowe — a zapytania z tej strony trafiają prosto do Ciebie.",
+    "recruitCta": "Zostań dealerem",
+    "projectsHeading": "Nasze realizacje w {place} i okolicach",
+    "nearbyHeading": "Również w {province}",
+    "nearbyHeadingProvince": "Miejscowości w {place}",
+    "backToAll": "Wszystkie regiony",
+    "metaTitleDealer": "Sufity napinane {place} — certyfikowany dealer STRETCH",
+    "metaTitleRecruit": "Sufity napinane {place} — montaż prosto z naszego belgijskiego zakładu",
+    "metaDescDealer": "Szukasz sufitu napinanego w {place}? Nasz certyfikowany dealer STRETCH wykonuje pomiar na miejscu i montuje sufity zgrzewane na wymiar w naszym belgijskim zakładzie. Poproś o bezpłatną wycenę.",
+    "metaDescRecruit": "Sufit napinany w {place}? Montujemy bezpośrednio z naszego zakładu w Belgii — i szukamy lokalnego dealera. Poproś o wycenę albo zostań naszym partnerem w {place}.",
+    "ovMetaTitle": "Dealerzy STRETCH — Belgia i Holandia | STRETCH",
+    "ovMetaDescription": "Znajdź certyfikowanego dealera STRETCH we Flandrii, Brukseli, Walonii lub Holandii — albo dołącz do sieci. Każdy sufit powstaje w naszym własnym zakładzie w Belgii.",
+    "ovEyebrow": "Sieć",
+    "ovTitle": "Dealerzy",
+    "ovIntro": "Sufity napinane STRETCH mierzą i montują certyfikowani lokalni partnerzy, wspierani przez nasz własny zakład produkcyjny koło Lokeren. Znajdź swój region — albo zajmij wolne miejsca.",
+    "regionFlanders": "Flandria i Bruksela",
+    "regionWallonia": "Walonia",
+    "regionNetherlands": "Holandia",
+    "lookingLabel": "Szukamy dealera",
+    "ovRecruitTitle": "Nie ma jeszcze dealera w Twojej okolicy?",
+    "ovRecruitBody": "Dopóki sieć się rozbudowuje, dostarczamy i montujemy bezpośrednio z naszego zakładu — a montażyści, którzy przejmą wolny region, zyskują zapytania z tego regionu, ceny dealerskie i szkolenia."
   }
 }

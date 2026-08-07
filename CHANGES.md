@@ -1,3 +1,34 @@
+## 2026-08-07 (4) — DEALER DIRECTORY phase 1 live: 55 places, 11 dealers (build 1736 pages)
+
+- **New /dealers section** (control panel `src/lib/dealers.ts`): overview page
+  (3 regions: Flanders & Brussels / Wallonia / Netherlands, province cards +
+  city chips, "Dealer" vs "Dealer wanted" tags, recruitment band) + 55 place
+  pages `/dealers/<place>` — 12 Flemish cities + 5 Flemish provinces, 7 Walloon
+  cities + 5 provinces (all recruitment variant), 14 Dutch cities + 12
+  provinces. Slug collisions solved: provincie-antwerpen, provincie-utrecht,
+  nederlands-limburg, province-de-liege/-namur/-luxembourg.
+- **Two page variants:** certified-dealer card(s) (badge, quote CTA source
+  `dealers_<place>`, external "Visit website") or **recruitment variant**
+  ("Become our STRETCH dealer in {place}" black band → /partners + quote CTA).
+  Plus why-STRETCH 3-up, local project cards (mapped: Antwerpen→Polette/City
+  Penthouse, Gent→Home Cinema, Brugge→Wellness Spa, Brussel→BNP, Lokeren→Vier
+  Emmershof, Sint-Niklaas→VAP/VDB-222, Dendermonde→Veta, provinces likewise),
+  nearby-places chips, breadcrumb JSON-LD.
+- **11 dealers wired** (Michael's list): Strak Spanplafonds (Antwerpen),
+  Plafondlux (Gent/Lokeren), Pla-fon (Roeselare/Brugge/W-Vl), Parket Valentin
+  (Ninove/Aalst), Formdesign (Dendermonde), Corpus Interieur (Sint-Niklaas),
+  Flex Spanplafonds (Leuven/Hasselt/VB/Limburg), Q82 Acoustics (ZH/Gelderland/
+  Overijssel cities), De Spanplafond Concurrent (Amsterdam/NH), Spannende
+  Plafonds (NB/Utrecht/NL-Limburg cities), Maas Afbouw (Zeeland). Brussel +
+  all Wallonia + Flevoland/Friesland/Groningen/Drenthe = dealer wanted.
+- **Copy = 36 template keys** (`dealersPage` ns, {place}/{province} ICU slots
+  — adding a place needs NO new translations) ×12 languages; keyword-first
+  metaTitles (nl "Spanplafond {place} — …", fr "Plafond tendu {place} — …").
+  Footer: new "Dealer network" link (footer.dealers ×12). Sitemap + staticRoutes.
+- Verified: typecheck, build **1736/1736** (was 1064; +660 place pages + 12
+  overview), 0 MISSING_MESSAGE; spot-checks be/antwerpen (dealer card),
+  be/brussel (recruitment), fr/liege, nl/zeeland (Maas Afbouw), nl/rotterdam.
+
 ## 2026-08-07 (3) — P2 part 1: price guide + 3 materials additions (build 1064 pages)
 
 - **Price guide** as blog post `spanplafond-prijs` (slug = old URL, 19.3K impr/yr;

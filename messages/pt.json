@@ -159,7 +159,8 @@
       "about": "Sobre nós",
       "faq": "FAQ",
       "clientPortal": "Portal do cliente"
-    }
+    },
+    "dealers": "Rede de revendedores"
   },
   "portal": {
     "login": {
@@ -4271,5 +4272,43 @@
         }
       ]
     }
+  },
+  "dealersPage": {
+    "crumbDealers": "Revendedores",
+    "eyebrow": "Rede de revendedores",
+    "h1": "Tetos tensionados em {place}",
+    "introDealer": "Um teto tensionado STRETCH em {place} começa no revendedor certificado que encontra abaixo: medição no local, soldadura à medida na nossa própria fábrica na Bélgica e instalação num só dia.",
+    "introRecruit": "Ainda não há um revendedor STRETCH certificado em {place} — por isso, para já, servimos {place} diretamente a partir da nossa fábrica na Bélgica, enquanto procuramos o parceiro local certo.",
+    "dealerBadge": "Revendedor STRETCH certificado",
+    "dealerBadgeShort": "Revendedor",
+    "visitSite": "Visitar o site",
+    "quoteCta": "Peça um orçamento gratuito",
+    "whyTitle": "Porquê escolher a STRETCH aqui",
+    "why1": "Fabricado na Bélgica — cada teto é soldado à medida na nossa própria fábrica e chega pronto a instalar.",
+    "why2": "Instalação certificada — os nossos revendedores seguem a formação de instaladores STRETCH e trabalham com os nossos perfis, telas e iluminação.",
+    "why3": "Uma única garantia — material e instalação sob o mesmo teto, com a STRETCH por trás de ambos.",
+    "recruitChip": "Procura-se revendedor",
+    "recruitTitle": "Torne-se o nosso revendedor STRETCH em {place}",
+    "recruitBody": "Procuramos ativamente um parceiro de instalação em {place}: preços de revendedor na área de cliente, formação em produto e instalação, apoio de marketing — e os pedidos desta página vão diretamente para si.",
+    "recruitCta": "Tornar-se revendedor",
+    "projectsHeading": "Os nossos projetos em {place} e arredores",
+    "nearbyHeading": "Também em {province}",
+    "nearbyHeadingProvince": "Localidades em {place}",
+    "backToAll": "Todas as regiões",
+    "metaTitleDealer": "Teto tensionado {place} — revendedor STRETCH certificado",
+    "metaTitleRecruit": "Teto tensionado {place} — instalado da nossa fábrica belga",
+    "metaDescDealer": "Procura um teto tensionado em {place}? O nosso revendedor STRETCH certificado faz a medição no local e instala tetos soldados à medida na nossa fábrica belga. Peça um orçamento gratuito.",
+    "metaDescRecruit": "Um teto tensionado em {place}? Instalamos diretamente a partir da nossa fábrica belga — e procuramos um revendedor local. Peça um orçamento ou torne-se o nosso parceiro em {place}.",
+    "ovMetaTitle": "Revendedores STRETCH — Bélgica e Países Baixos | STRETCH",
+    "ovMetaDescription": "Encontre o seu revendedor STRETCH certificado na Flandres, em Bruxelas, na Valónia ou nos Países Baixos — ou junte-se à rede. Cada teto sai da nossa própria fábrica belga.",
+    "ovEyebrow": "Rede",
+    "ovTitle": "Revendedores",
+    "ovIntro": "Os tetos tensionados STRETCH são medidos e instalados por parceiros locais certificados, com o apoio da nossa própria fábrica perto de Lokeren. Encontre a sua região — ou garanta as zonas em aberto.",
+    "regionFlanders": "Flandres e Bruxelas",
+    "regionWallonia": "Valónia",
+    "regionNetherlands": "Países Baixos",
+    "lookingLabel": "Procura-se revendedor",
+    "ovRecruitTitle": "Ainda sem revendedor na sua zona?",
+    "ovRecruitBody": "Enquanto a rede cresce, entregamos e instalamos diretamente a partir da nossa fábrica — e os instaladores que assumam uma região em aberto recebem os pedidos dessa região, preços de revendedor e formação."
   }
 }

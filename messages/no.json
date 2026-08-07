@@ -159,7 +159,8 @@
       "about": "Om oss",
       "faq": "FAQ",
       "clientPortal": "Kundeportal"
-    }
+    },
+    "dealers": "Forhandlernettverk"
   },
   "portal": {
     "login": {
@@ -4271,5 +4272,43 @@
         }
       ]
     }
+  },
+  "dealersPage": {
+    "crumbDealers": "Forhandlere",
+    "eyebrow": "Forhandlernettverk",
+    "h1": "Strekktak i {place}",
+    "introDealer": "Et strekktak fra STRETCH i {place} starter hos vår sertifiserte forhandler nedenfor: målt opp lokalt, sveiset på mål i vår egen belgiske produksjon og montert på én dag.",
+    "introRecruit": "Det finnes ennå ingen sertifisert STRETCH-forhandler i {place} — så inntil videre betjener vi {place} direkte fra vår belgiske produksjon, og vi ser etter den rette lokale partneren.",
+    "dealerBadge": "Sertifisert STRETCH-forhandler",
+    "dealerBadgeShort": "Forhandler",
+    "visitSite": "Besøk nettsiden",
+    "quoteCta": "Be om et gratis tilbud",
+    "whyTitle": "Derfor velger du STRETCH her",
+    "why1": "Produsert i Belgia — hvert tak sveises på mål i vår egen produksjon og leveres klart til montering.",
+    "why2": "Sertifisert montering — forhandlerne våre har gjennomført STRETCH-montøropplæringen og jobber med våre profiler, duker og belysning.",
+    "why3": "Én samlet garanti — materiale og montering under samme tak, med STRETCH bak begge deler.",
+    "recruitChip": "Forhandler søkes",
+    "recruitTitle": "Bli vår STRETCH-forhandler i {place}",
+    "recruitBody": "Vi ser aktivt etter en monteringspartner i {place}: forhandlerpriser i kundeportalen, produkt- og monteringsopplæring, markedsføringsstøtte — og henvendelsene fra denne siden går til deg.",
+    "recruitCta": "Bli forhandler",
+    "projectsHeading": "Våre prosjekter i og rundt {place}",
+    "nearbyHeading": "Også i {province}",
+    "nearbyHeadingProvince": "Steder i {place}",
+    "backToAll": "Alle regioner",
+    "metaTitleDealer": "Strekktak {place} — sertifisert STRETCH-forhandler",
+    "metaTitleRecruit": "Strekktak {place} — montert direkte fra vår belgiske produksjon",
+    "metaDescDealer": "Ser du etter strekktak i {place}? Vår sertifiserte STRETCH-forhandler måler opp lokalt og monterer tak sveiset på mål i vår belgiske produksjon. Be om et gratis tilbud.",
+    "metaDescRecruit": "Strekktak i {place}? Vi monterer direkte fra vår belgiske produksjon — og vi ser etter en lokal forhandler. Be om et tilbud, eller bli vår partner i {place}.",
+    "ovMetaTitle": "STRETCH-forhandlere — Belgia & Nederland | STRETCH",
+    "ovMetaDescription": "Finn din sertifiserte STRETCH-forhandler i Flandern, Brussel, Vallonia eller Nederland — eller bli med i nettverket. Hvert tak kommer fra vår egen belgiske produksjon.",
+    "ovEyebrow": "Nettverk",
+    "ovTitle": "Forhandlere",
+    "ovIntro": "Strekktak fra STRETCH måles opp og monteres av sertifiserte lokale partnere, med vår egen produksjon nær Lokeren i ryggen. Finn din region — eller sikre deg en av de ledige plassene.",
+    "regionFlanders": "Flandern & Brussel",
+    "regionWallonia": "Vallonia",
+    "regionNetherlands": "Nederland",
+    "lookingLabel": "Forhandler søkes",
+    "ovRecruitTitle": "Ingen forhandler i ditt område ennå?",
+    "ovRecruitBody": "Vi leverer og monterer direkte fra vår produksjon mens nettverket vokser — og montører som sikrer seg en ledig region, får regionens henvendelser, forhandlerpriser og opplæring."
   }
 }

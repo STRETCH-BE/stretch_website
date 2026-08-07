@@ -159,7 +159,8 @@
       "about": "À propos",
       "faq": "FAQ",
       "clientPortal": "Espace client"
-    }
+    },
+    "dealers": "Réseau de revendeurs"
   },
   "portal": {
     "login": {
@@ -4271,5 +4272,43 @@
         }
       ]
     }
+  },
+  "dealersPage": {
+    "crumbDealers": "Revendeurs",
+    "eyebrow": "Réseau de revendeurs",
+    "h1": "Plafonds tendus à {place}",
+    "introDealer": "Un plafond tendu STRETCH à {place} commence chez notre revendeur certifié ci-dessous : prise de mesures sur place, toile soudée sur mesure dans notre propre production belge et pose en une journée.",
+    "introRecruit": "Il n’y a pas encore de revendeur STRETCH certifié à {place} — en attendant, nous servons {place} directement depuis notre production belge, et nous cherchons le bon partenaire local.",
+    "dealerBadge": "Revendeur STRETCH certifié",
+    "dealerBadgeShort": "Revendeur",
+    "visitSite": "Visiter le site",
+    "quoteCta": "Demander un devis gratuit",
+    "whyTitle": "Pourquoi choisir STRETCH ici",
+    "why1": "Fabriqué en Belgique — chaque plafond est soudé sur mesure dans notre propre production et arrive prêt à poser.",
+    "why2": "Pose certifiée — nos revendeurs suivent la formation d’installateur STRETCH et travaillent avec nos profilés, toiles et éclairages.",
+    "why3": "Un seul point de garantie — matériau et pose sous un même toit, avec STRETCH derrière les deux.",
+    "recruitChip": "Revendeur recherché",
+    "recruitTitle": "Devenez notre revendeur STRETCH à {place}",
+    "recruitBody": "Nous cherchons activement un partenaire poseur à {place} : tarifs revendeur dans l’espace client, formation produit et pose, soutien marketing — et les demandes de cette page vous reviennent.",
+    "recruitCta": "Devenir revendeur",
+    "projectsHeading": "Nos réalisations à {place} et dans les environs",
+    "nearbyHeading": "Aussi dans la province : {province}",
+    "nearbyHeadingProvince": "Localités dans la province : {place}",
+    "backToAll": "Toutes les régions",
+    "metaTitleDealer": "Plafond tendu {place} — revendeur STRETCH certifié",
+    "metaTitleRecruit": "Plafond tendu {place} — posé depuis notre production belge",
+    "metaDescDealer": "Vous cherchez un plafond tendu à {place} ? Notre revendeur STRETCH certifié prend les mesures sur place et pose des plafonds soudés sur mesure dans notre production belge. Demandez un devis gratuit.",
+    "metaDescRecruit": "Un plafond tendu à {place} ? Nous posons directement depuis notre production belge — et nous cherchons un revendeur local. Demandez un devis ou devenez notre partenaire à {place}.",
+    "ovMetaTitle": "Revendeurs STRETCH — Belgique & Pays-Bas | STRETCH",
+    "ovMetaDescription": "Trouvez votre revendeur STRETCH certifié en Flandre, à Bruxelles, en Wallonie ou aux Pays-Bas — ou rejoignez le réseau. Chaque plafond sort de notre propre production belge.",
+    "ovEyebrow": "Réseau",
+    "ovTitle": "Revendeurs",
+    "ovIntro": "Les plafonds tendus STRETCH sont mesurés et posés par des partenaires locaux certifiés, soutenus par notre propre production près de Lokeren. Trouvez votre région — ou réservez une zone encore libre.",
+    "regionFlanders": "Flandre & Bruxelles",
+    "regionWallonia": "Wallonie",
+    "regionNetherlands": "Pays-Bas",
+    "lookingLabel": "Revendeur recherché",
+    "ovRecruitTitle": "Pas encore de revendeur près de chez vous ?",
+    "ovRecruitBody": "Pendant que le réseau grandit, nous livrons et posons directement depuis notre production — et les poseurs qui réservent une région libre en reçoivent les demandes, les tarifs revendeur et la formation."
   }
 }

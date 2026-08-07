@@ -159,7 +159,8 @@
       "about": "Om os",
       "faq": "FAQ",
       "clientPortal": "Kundeportal"
-    }
+    },
+    "dealers": "Forhandlernetværk"
   },
   "portal": {
     "login": {
@@ -4271,5 +4272,43 @@
         }
       ]
     }
+  },
+  "dealersPage": {
+    "crumbDealers": "Forhandlere",
+    "eyebrow": "Forhandlernetværk",
+    "h1": "Stretchlofter i {place}",
+    "introDealer": "Et STRETCH-loft i {place} begynder hos vores certificerede forhandler herunder: opmålt lokalt, svejset på mål i vores egen belgiske produktion og monteret på én dag.",
+    "introRecruit": "Der er endnu ingen certificeret STRETCH-forhandler i {place} — så indtil videre betjener vi {place} direkte fra vores belgiske produktion, og vi leder efter den rette lokale partner.",
+    "dealerBadge": "Certificeret STRETCH-forhandler",
+    "dealerBadgeShort": "Forhandler",
+    "visitSite": "Besøg hjemmesiden",
+    "quoteCta": "Få et gratis tilbud",
+    "whyTitle": "Derfor vælger du STRETCH her",
+    "why1": "Produceret i Belgien — hvert loft svejses på mål i vores egen produktion og leveres klar til montering.",
+    "why2": "Certificeret montering — vores forhandlere har gennemført STRETCH-montøruddannelsen og arbejder med vores profiler, duge og belysning.",
+    "why3": "Én samlet garanti — materiale og montering under ét tag, med STRETCH bag begge dele.",
+    "recruitChip": "Forhandler søges",
+    "recruitTitle": "Bliv vores STRETCH-forhandler i {place}",
+    "recruitBody": "Vi leder aktivt efter en monteringspartner i {place}: forhandlerpriser i kundeportalen, produkt- og monteringstræning, markedsføringsstøtte — og henvendelserne fra denne side går til dig.",
+    "recruitCta": "Bliv forhandler",
+    "projectsHeading": "Vores projekter i og omkring {place}",
+    "nearbyHeading": "Også i {province}",
+    "nearbyHeadingProvince": "Byer i {place}",
+    "backToAll": "Alle regioner",
+    "metaTitleDealer": "Stretchloft {place} — certificeret STRETCH-forhandler",
+    "metaTitleRecruit": "Stretchloft {place} — monteret direkte fra vores belgiske produktion",
+    "metaDescDealer": "Leder du efter et stretchloft i {place}? Vores certificerede STRETCH-forhandler måler op lokalt og monterer lofter svejset på mål i vores belgiske produktion. Få et gratis tilbud.",
+    "metaDescRecruit": "Et stretchloft i {place}? Vi monterer direkte fra vores belgiske produktion — og vi leder efter en lokal forhandler. Få et tilbud, eller bliv vores partner i {place}.",
+    "ovMetaTitle": "STRETCH-forhandlere — Belgien & Holland | STRETCH",
+    "ovMetaDescription": "Find din certificerede STRETCH-forhandler i Flandern, Bruxelles, Vallonien eller Holland — eller bliv en del af netværket. Hvert loft kommer fra vores egen belgiske produktion.",
+    "ovEyebrow": "Netværk",
+    "ovTitle": "Forhandlere",
+    "ovIntro": "STRETCH-lofter opmåles og monteres af certificerede lokale partnere med vores egen produktion nær Lokeren i ryggen. Find din region — eller grib de ledige pladser.",
+    "regionFlanders": "Flandern & Bruxelles",
+    "regionWallonia": "Vallonien",
+    "regionNetherlands": "Holland",
+    "lookingLabel": "Forhandler søges",
+    "ovRecruitTitle": "Endnu ingen forhandler i dit område?",
+    "ovRecruitBody": "Vi leverer og monterer direkte fra vores produktion, mens netværket vokser — og montører, der overtager en ledig region, får regionens henvendelser, forhandlerpriser og træning."
   }
 }

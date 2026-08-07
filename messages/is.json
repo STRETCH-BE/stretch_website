@@ -159,7 +159,8 @@
       "about": "Um okkur",
       "faq": "Algengar spurningar",
       "clientPortal": "Viðskiptavinagátt"
-    }
+    },
+    "dealers": "Söluaðilanet"
   },
   "portal": {
     "login": {
@@ -4271,5 +4272,43 @@
         }
       ]
     }
+  },
+  "dealersPage": {
+    "crumbDealers": "Söluaðilar",
+    "eyebrow": "Söluaðilanet",
+    "h1": "Strekkloft í {place}",
+    "introDealer": "Strekkloft frá STRETCH í {place} byrjar hjá vottaða söluaðilanum okkar hér að neðan: mælt á staðnum, soðið eftir máli í okkar eigin framleiðslu í Belgíu og sett upp á einum degi.",
+    "introRecruit": "Enn er enginn vottaður STRETCH-söluaðili í {place} — svo í bili þjónum við {place} beint frá framleiðslu okkar í Belgíu og leitum að rétta samstarfsaðilanum á staðnum.",
+    "dealerBadge": "Vottaður STRETCH-söluaðili",
+    "dealerBadgeShort": "Söluaðili",
+    "visitSite": "Heimsækja vefsíðu",
+    "quoteCta": "Fáðu ókeypis tilboð",
+    "whyTitle": "Af hverju að velja STRETCH hér",
+    "why1": "Framleitt í Belgíu — hvert loft er soðið eftir máli í okkar eigin framleiðslu og kemur tilbúið til uppsetningar.",
+    "why2": "Vottuð uppsetning — söluaðilar okkar hafa lokið uppsetningarþjálfun STRETCH og vinna með prófílum, dúkum og lýsingu frá okkur.",
+    "why3": "Ein ábyrgð á einum stað — efni og uppsetning undir sama þaki, með STRETCH á bak við hvort tveggja.",
+    "recruitChip": "Söluaðili óskast",
+    "recruitTitle": "Vertu STRETCH-söluaðilinn okkar í {place}",
+    "recruitBody": "Við leitum nú markvisst að uppsetningaraðila í {place}: söluaðilaverð á viðskiptavinasvæðinu, þjálfun í vörum og uppsetningu, markaðsstuðningur — og fyrirspurnirnar af þessari síðu fara til þín.",
+    "recruitCta": "Gerast söluaðili",
+    "projectsHeading": "Verkefni okkar í {place} og nágrenni",
+    "nearbyHeading": "Einnig í {province}",
+    "nearbyHeadingProvince": "Staðir í {place}",
+    "backToAll": "Öll svæði",
+    "metaTitleDealer": "Strekkloft {place} — vottaður STRETCH-söluaðili",
+    "metaTitleRecruit": "Strekkloft {place} — uppsetning beint frá framleiðslu okkar í Belgíu",
+    "metaDescDealer": "Ertu að leita að strekklofti í {place}? Vottaði STRETCH-söluaðilinn okkar mælir á staðnum og setur upp loft sem eru soðin eftir máli í framleiðslu okkar í Belgíu. Fáðu ókeypis tilboð.",
+    "metaDescRecruit": "Strekkloft í {place}? Við setjum upp beint frá framleiðslu okkar í Belgíu — og leitum að söluaðila á staðnum. Fáðu tilboð eða gerstu samstarfsaðili okkar í {place}.",
+    "ovMetaTitle": "STRETCH-söluaðilar — Belgía & Holland | STRETCH",
+    "ovMetaDescription": "Finndu vottaðan STRETCH-söluaðila í Flæmingjalandi, Brussel, Vallóníu eða Hollandi — eða taktu þátt í netinu. Hvert loft kemur úr okkar eigin framleiðslu í Belgíu.",
+    "ovEyebrow": "Sölunet",
+    "ovTitle": "Söluaðilar",
+    "ovIntro": "Strekkloft frá STRETCH eru mæld og sett upp af vottuðum samstarfsaðilum á hverjum stað, studd af okkar eigin framleiðslu nálægt Lokeren. Finndu þitt svæði — eða gríptu þau sem enn eru laus.",
+    "regionFlanders": "Flæmingjaland & Brussel",
+    "regionWallonia": "Vallónía",
+    "regionNetherlands": "Holland",
+    "lookingLabel": "Söluaðili óskast",
+    "ovRecruitTitle": "Enginn söluaðili á þínu svæði enn?",
+    "ovRecruitBody": "Við afhendum og setjum upp beint frá framleiðslunni á meðan netið stækkar — og uppsetningaraðilar sem tryggja sér laust svæði fá fyrirspurnir þess, söluaðilaverð og þjálfun."
   }
 }

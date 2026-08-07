@@ -159,7 +159,8 @@
       "about": "Over ons",
       "faq": "FAQ",
       "clientPortal": "Klantenportaal"
-    }
+    },
+    "dealers": "Dealernetwerk"
   },
   "portal": {
     "login": {
@@ -4271,5 +4272,43 @@
         }
       ]
     }
+  },
+  "dealersPage": {
+    "crumbDealers": "Dealers",
+    "eyebrow": "Dealernetwerk",
+    "h1": "Spanplafonds in {place}",
+    "introDealer": "Een STRETCH-spanplafond in {place} begint bij onze gecertificeerde dealer hieronder: lokaal opgemeten, op maat gelast in onze eigen Belgische productie en op één dag geplaatst.",
+    "introRecruit": "Er is nog geen gecertificeerde STRETCH-dealer in {place} — daarom bedienen wij {place} voorlopig rechtstreeks vanuit onze Belgische productie, en zoeken wij de juiste lokale partner.",
+    "dealerBadge": "Gecertificeerde STRETCH-dealer",
+    "dealerBadgeShort": "Dealer",
+    "visitSite": "Bezoek de website",
+    "quoteCta": "Vraag een gratis offerte aan",
+    "whyTitle": "Waarom hier kiezen voor STRETCH",
+    "why1": "Made in Belgium — elk plafond wordt op maat gelast in onze eigen productie en komt installatieklaar aan.",
+    "why2": "Gecertificeerde plaatsing — onze dealers volgen de STRETCH-installateursopleiding en werken met onze profielen, doeken en verlichting.",
+    "why3": "Eén aanspreekpunt voor garantie — materiaal en plaatsing onder één dak, met STRETCH achter beide.",
+    "recruitChip": "Dealer gezocht",
+    "recruitTitle": "Word onze STRETCH-dealer in {place}",
+    "recruitBody": "Wij zoeken actief een installatiepartner in {place}: dealerprijzen in de klantenzone, product- en installatieopleiding, marketingondersteuning — en de aanvragen via deze pagina gaan naar u.",
+    "recruitCta": "Word dealer",
+    "projectsHeading": "Ons werk in en rond {place}",
+    "nearbyHeading": "Ook in {province}",
+    "nearbyHeadingProvince": "Plaatsen in {place}",
+    "backToAll": "Alle regio’s",
+    "metaTitleDealer": "Spanplafond {place} — gecertificeerde STRETCH-dealer",
+    "metaTitleRecruit": "Spanplafond {place} — geplaatst vanuit onze Belgische productie",
+    "metaDescDealer": "Op zoek naar een spanplafond in {place}? Onze gecertificeerde STRETCH-dealer meet lokaal op en plaatst plafonds die op maat gelast zijn in onze Belgische productie. Vraag een gratis offerte aan.",
+    "metaDescRecruit": "Een spanplafond in {place}? Wij plaatsen rechtstreeks vanuit onze Belgische productie — en zoeken een lokale dealer. Vraag een offerte aan of word onze partner in {place}.",
+    "ovMetaTitle": "STRETCH-dealers — België & Nederland | STRETCH",
+    "ovMetaDescription": "Vind uw gecertificeerde STRETCH-dealer in Vlaanderen, Brussel, Wallonië of Nederland — of sluit u aan bij het netwerk. Elk plafond komt uit onze eigen Belgische productie.",
+    "ovEyebrow": "Netwerk",
+    "ovTitle": "Dealers",
+    "ovIntro": "STRETCH-spanplafonds worden opgemeten en geplaatst door gecertificeerde lokale partners, ondersteund door onze eigen productie bij Lokeren. Vind uw regio — of claim een van de vrije plekken.",
+    "regionFlanders": "Vlaanderen & Brussel",
+    "regionWallonia": "Wallonië",
+    "regionNetherlands": "Nederland",
+    "lookingLabel": "Dealer gezocht",
+    "ovRecruitTitle": "Nog geen dealer in uw buurt?",
+    "ovRecruitBody": "Terwijl het netwerk groeit, leveren en plaatsen wij rechtstreeks vanuit onze eigen productie — en installateurs die een vrije regio claimen, krijgen de aanvragen uit die regio, dealerprijzen en opleiding."
   }
 }

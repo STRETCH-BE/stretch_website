@@ -159,7 +159,8 @@
       "about": "Sobre nosotros",
       "faq": "FAQ",
       "clientPortal": "Portal de clientes"
-    }
+    },
+    "dealers": "Red de distribuidores"
   },
   "portal": {
     "login": {
@@ -4271,5 +4272,43 @@
         }
       ]
     }
+  },
+  "dealersPage": {
+    "crumbDealers": "Distribuidores",
+    "eyebrow": "Red de distribuidores",
+    "h1": "Techos tensados en {place}",
+    "introDealer": "Un techo tensado STRETCH en {place} empieza con el distribuidor certificado que encontrará más abajo: medición in situ, soldadura a medida en nuestra propia fábrica en Bélgica e instalación en un solo día.",
+    "introRecruit": "Todavía no hay un distribuidor STRETCH certificado en {place}: de momento atendemos {place} directamente desde nuestra fábrica en Bélgica, mientras buscamos al socio local adecuado.",
+    "dealerBadge": "Distribuidor STRETCH certificado",
+    "dealerBadgeShort": "Distribuidor",
+    "visitSite": "Visitar sitio web",
+    "quoteCta": "Solicite un presupuesto gratuito",
+    "whyTitle": "Por qué elegir STRETCH aquí",
+    "why1": "Fabricado en Bélgica — cada techo se suelda a medida en nuestra propia fábrica y llega listo para instalar.",
+    "why2": "Instalación certificada — nuestros distribuidores siguen la formación de instaladores STRETCH y trabajan con nuestros perfiles, membranas e iluminación.",
+    "why3": "Una única garantía — material e instalación bajo un mismo techo, con STRETCH detrás de ambos.",
+    "recruitChip": "Se busca distribuidor",
+    "recruitTitle": "Conviértase en nuestro distribuidor STRETCH en {place}",
+    "recruitBody": "Buscamos activamente un socio instalador en {place}: precios de distribuidor en la zona de clientes, formación en producto e instalación, apoyo de marketing — y las solicitudes de esta página van directamente a usted.",
+    "recruitCta": "Hágase distribuidor",
+    "projectsHeading": "Nuestros proyectos en {place} y alrededores",
+    "nearbyHeading": "También en {province}",
+    "nearbyHeadingProvince": "Localidades en {place}",
+    "backToAll": "Todas las regiones",
+    "metaTitleDealer": "Techo tensado {place} — distribuidor STRETCH certificado",
+    "metaTitleRecruit": "Techo tensado {place} — instalado desde nuestra fábrica belga",
+    "metaDescDealer": "¿Busca un techo tensado en {place}? Nuestro distribuidor STRETCH certificado mide in situ e instala techos soldados a medida en nuestra fábrica belga. Solicite un presupuesto gratuito.",
+    "metaDescRecruit": "¿Un techo tensado en {place}? Instalamos directamente desde nuestra fábrica belga — y buscamos un distribuidor local. Pida un presupuesto o hágase nuestro socio en {place}.",
+    "ovMetaTitle": "Distribuidores STRETCH — Bélgica y Países Bajos | STRETCH",
+    "ovMetaDescription": "Encuentre su distribuidor STRETCH certificado en Flandes, Bruselas, Valonia o los Países Bajos — o únase a la red. Cada techo sale de nuestra propia fábrica belga.",
+    "ovEyebrow": "Red",
+    "ovTitle": "Distribuidores",
+    "ovIntro": "Los techos tensados STRETCH son medidos e instalados por socios locales certificados, con el respaldo de nuestra propia fábrica cerca de Lokeren. Encuentre su región — o hágase con las zonas libres.",
+    "regionFlanders": "Flandes y Bruselas",
+    "regionWallonia": "Valonia",
+    "regionNetherlands": "Países Bajos",
+    "lookingLabel": "Se busca distribuidor",
+    "ovRecruitTitle": "¿Todavía no hay distribuidor en su zona?",
+    "ovRecruitBody": "Mientras la red crece, entregamos e instalamos directamente desde nuestra fábrica — y los instaladores que asuman una región libre reciben sus solicitudes, precios de distribuidor y formación."
   }
 }
