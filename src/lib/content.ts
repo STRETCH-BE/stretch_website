@@ -651,6 +651,438 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  // ============================================================
+  // P1 KNOWLEDGE-BASE ARTICLES — recreated from the old site's top
+  // organic pages (see gsc-site-analysis workbook). Slugs kept
+  // identical to the old Dutch URLs so the 301s are near-exact.
+  // ============================================================
+  {
+    slug: 'houten-planchetten-plafond-renoveren-of-vernieuwen',
+    title: 'Renovating a wooden slat ceiling: paint it or cover it?',
+    excerpt:
+      'Wooden planchette ceilings make a room feel dark and dated. You have two realistic options: sand and paint the slats, or mount a new ceiling below them. Here is an honest comparison — including when a stretch ceiling is the smarter route.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 6,
+    body: [
+      {
+        heading: 'Why slat ceilings feel dated',
+        paragraphs: [
+          'Wooden planchettes were everywhere in Belgian homes from the seventies through the nineties. The wood itself is usually still fine — the problem is optical. Dark lacquered slats absorb light, press the room down visually and clash with the bright, calm interiors most renovations aim for.',
+          'The good news: you almost never have to tear the ceiling down. Both realistic fixes work on top of, or just below, the existing slats.',
+        ],
+      },
+      {
+        heading: 'Option 1 — sand and paint the slats',
+        paragraphs: [
+          'Painting is the budget route, and done properly it can look good. Degrease the slats first with a non-foaming cleaner, so the sanding paper does not clog. If the old varnish is flaking, sand it back with P60 and work up to P100 for a surface the primer can grip.',
+          'Prime with a felt roller, respect the drying times — count 24 to 48 hours depending on the condition of the wood — and finish with two coats of quality ceiling paint. The gaps between the slats stay visible, which some people like; if you want them gone, they need filling and sanding, and at that point the labour starts to outweigh the savings.',
+        ],
+      },
+      {
+        heading: 'Option 2 — a new ceiling below the slats',
+        paragraphs: [
+          'The alternative is to leave the planchettes where they are and mount a new, perfectly flat ceiling a few centimetres below them. Classically that means a plasterboard ceiling: framing, boards, joints, sanding and painting — solid, but a week of work and a house full of dust.',
+          'A stretch ceiling reaches the same flat result a different way. A slim profile is fixed around the perimeter, and a membrane is tensioned into it — over the existing slats, in a single day, without sanding dust and usually without even moving the furniture out. Spots, ventilation and sensors are integrated during the same visit.',
+        ],
+      },
+      {
+        heading: 'Which one should you choose?',
+        paragraphs: [
+          'Paint if the budget is tight, the slats are in good condition and you do not mind the grooved look staying. Choose a new ceiling below if you want a seamless modern surface, need to hide cables, pipes or bad repairs, or want built-in lighting.',
+          'Between plasterboard and stretch: plasterboard wins on DIY familiarity, stretch wins on speed, cleanliness and maintenance — the membrane never cracks, never needs repainting, and a matte white finish is indistinguishable from a freshly plastered ceiling.',
+        ],
+      },
+      {
+        heading: 'What it looks like in practice',
+        paragraphs: [
+          'A typical living room takes our installers one working day: profile up, membrane tensioned, lighting connected, done. The old planchettes stay hidden above the new ceiling — no demolition container, no debris.',
+          'Curious what that would cost for your room? Request a free quote with your dimensions and we will come back with a concrete price, usually the same working day.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'scheuren-in-plafond-herstellen',
+    title: 'Repairing ceiling cracks — and stopping them from coming back',
+    excerpt:
+      'Most ceiling cracks are harmless, some are warnings. This guide covers what causes them, how to repair small and large cracks properly — and why a stretch ceiling is the only fix that guarantees they never show again.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 6,
+    body: [
+      {
+        heading: 'Where ceiling cracks come from',
+        paragraphs: [
+          'Buildings move. Temperature and humidity swings make timber and plaster expand and contract, and hairline cracks along joints or corners are the visible result. Other common causes are poorly finished plasterboard seams, old water damage and — more rarely — real structural settlement.',
+          'A fine, stable hairline crack is cosmetic. A crack that keeps growing, runs diagonally from a corner, or appears together with sticking doors deserves a professional look before you reach for filler.',
+        ],
+      },
+      {
+        heading: 'Repairing small cracks',
+        paragraphs: [
+          'Open the crack slightly with a scraper so the filler has something to hold, brush out the dust, and fill with a flexible joint compound. Let it dry fully, sand it flush, and repaint the area — ideally the whole ceiling, because a repainted patch is always visible in raking light.',
+          'Count on a day of work including drying times for an average repair. Materials are cheap; the invisible part — sanding and repainting to an even finish — is where the hours go.',
+        ],
+      },
+      {
+        heading: 'Repairing large or recurring cracks',
+        paragraphs: [
+          'Wide cracks, sagging sections or crumbling plaster call for more than filler: damaged zones need cutting out and replacing, or a full skim coat. At that point you are close to the cost of a new ceiling surface — and the honest truth is that even a professional repair cannot promise the crack stays away. The building keeps moving, and rigid plaster keeps registering that movement.',
+        ],
+      },
+      {
+        heading: 'The fix that cannot crack',
+        paragraphs: [
+          'This is where a stretch ceiling changes the logic. Instead of repairing the rigid surface again, you tension a flexible membrane a few centimetres below it. The old ceiling — cracks and all — disappears from view, and because the membrane is elastic, building movement simply cannot mark it.',
+          'Installation takes one day in a normal room, produces no dust, and the existing ceiling does not need to be repaired first. The result is a perfectly flat matte, satin or gloss surface that never needs repainting.',
+        ],
+      },
+      {
+        heading: 'Repair or cover: a quick decision guide',
+        paragraphs: [
+          'One stable hairline crack in an otherwise good ceiling: repair it and repaint. A ceiling with multiple cracks, old repairs that keep returning, or a poor surface overall: covering it with a stretch ceiling is usually faster, cleaner and permanent.',
+          'Send us a photo of your ceiling with the room dimensions and we will tell you honestly which route we would take — and what it would cost.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'de-ideale-plafondhoogte',
+    title: 'What is the ideal ceiling height?',
+    excerpt:
+      'From 2.20 m bedrooms in older homes to 3 m townhouse salons: what counts as a comfortable ceiling height, what the norms say for new construction and offices, and how to finish a ceiling when every centimetre counts.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 5,
+    body: [
+      {
+        heading: 'The short answer',
+        paragraphs: [
+          'For most Belgian homes the comfortable zone sits between 2.50 and 2.60 m. Lower starts to feel pressed as soon as the room is large; higher feels generous but costs more to heat. The "ideal" height is really a balance between room size, function, light and budget.',
+        ],
+      },
+      {
+        heading: 'Existing homes and renovations',
+        paragraphs: [
+          'In houses built in the last fifty years, expect around 2.50 m in living rooms and kitchens and about 2.20 m in bedrooms — bedrooms were deliberately built lower to save heated volume. Older stock swings both ways: post-war workers\u2019 housing can dip below 2.40 m, while pre-war townhouses often reach 2.80 to 3.00 m on the bel-etage.',
+          'In a renovation you rarely change the structural height — what you control is how much of it the finishing layer eats. That makes the choice of ceiling system surprisingly important.',
+        ],
+      },
+      {
+        heading: 'New construction and offices',
+        paragraphs: [
+          'New-build practice in Belgium and the Netherlands works with a minimum of 2.40 m for habitable rooms, and most projects design at around 2.60 m. Offices follow workplace standards — the Dutch NEN 1824 guideline, widely used as a reference, sets 2.50 m as the minimum for office space — and open-plan floors usually go higher for air volume and acoustics.',
+        ],
+      },
+      {
+        heading: 'When every centimetre counts',
+        paragraphs: [
+          'The lower the room, the more the finishing system matters. A classic suspended plasterboard ceiling with framing typically costs 7 to 15 cm; add recessed spots and you lose more. A stretch ceiling needs only a few centimetres — the profile height — and integrates flat LED lighting without extra depth.',
+          'That difference decides whether a 2.50 m room stays at a comfortable 2.46 m or drops to a noticeably low 2.38 m. In basements, bathrooms and renovated attics it is often the argument that settles the system choice.',
+        ],
+      },
+      {
+        heading: 'Height is also perception',
+        paragraphs: [
+          'A ceiling reads higher when it is bright and even. A matte white seamless surface reflects soft light and visually lifts the room; a high-gloss lacquer membrane goes further and mirrors the space, which can make low rooms feel dramatically taller. Combined with indirect LED lines along the perimeter, the effect is stronger than a few real centimetres.',
+          'Planning a renovation where height is tight? Ask us for a quote — we will tell you exactly how many centimetres the build-up needs in your situation.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'geluidsoverlast-van-uw-bovenburen',
+    title: 'Noise from the upstairs neighbours: what actually works',
+    excerpt:
+      'Footsteps, scraping chairs, a washing machine through the slab — contact noise is the hardest noise to fight. Why the ceiling is the right surface to treat, and how an acoustic mass-spring-mass ceiling brings real, measurable relief.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 5,
+    body: [
+      {
+        heading: 'Two kinds of noise, two problems',
+        paragraphs: [
+          'Airborne noise — voices, music, a television — travels through the air and is blocked reasonably well by mass alone. Contact noise is different: footsteps, moving furniture and appliances vibrate the building itself, and the structure carries that vibration straight into your rooms. That is why you hear heels on the floor above so much louder than a conversation.',
+          'Contact noise is best tackled at the source — a soft floor covering upstairs works wonders — but you cannot oblige your neighbours to renovate. What you control is your own side of the slab.',
+        ],
+      },
+      {
+        heading: 'Why the ceiling comes first',
+        paragraphs: [
+          'In an apartment, the ceiling is the largest surface radiating the neighbours\u2019 noise into your space. Treating it first gives the biggest gain; in older buildings with continuous masonry, flanking walls can be a second step.',
+          'What does not work: gluing thin foam or "acoustic" panels directly to the slab. Direct contact passes the vibration straight through — decoration, not isolation.',
+        ],
+      },
+      {
+        heading: 'Mass-spring-mass: the principle that works',
+        paragraphs: [
+          'Real contact-noise isolation decouples a new, heavy layer from the structure: mass (the slab), spring (an air cavity with absorption and resilient mounting), mass (the new ceiling). The vibration loses its energy in the spring instead of reaching the surface you hear.',
+          'Our acoustic ceiling build-up applies exactly that principle in about 5 cm of construction depth, with a rated insulation improvement around 55 dB for the system — enough to turn stamping into a faint background and normal living noise into silence. A deeper cavity or added mass pushes the performance further.',
+        ],
+      },
+      {
+        heading: 'Invisible when finished',
+        paragraphs: [
+          'The acoustic layer disappears behind a tensioned STRETCH membrane, so the finished result looks like any seamless designer ceiling — matte, satin or printed, with integrated lighting if you wish. No visible panels, no studio look in your living room.',
+          'Installation is a matter of days, not weeks, and the room stays usable: no wet plaster, minimal dust.',
+        ],
+      },
+      {
+        heading: 'A realistic expectation',
+        paragraphs: [
+          'No ceiling system makes a badly built slab disappear completely, and very low-frequency thuds are physics\u2019 hardest case. But a properly executed mass-spring-mass ceiling is the difference between hearing every step and genuinely forgetting you have neighbours most of the day.',
+          'Describe your situation in a quote request — building type, room size, what you hear — and we will advise whether the ceiling alone will get you there.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'spanplafond-buiten',
+    title: 'Stretch ceilings outdoors: covered terraces, overhangs and pool houses',
+    excerpt:
+      'A stretch ceiling is not only an indoor product. Under roof overhangs, carports, verandas and pool houses, an outdoor-grade membrane gives a seamless, washable finish that plasterwork outside can never match.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 4,
+    body: [
+      {
+        heading: 'Where an outdoor stretch ceiling makes sense',
+        paragraphs: [
+          'Think of every covered outdoor space where you look up at raw concrete, timber or cables: the overhang along a modern facade, the carport, the veranda or pergola, the pool house, a shop or hotel entrance. A tensioned membrane turns those into finished architecture in a day.',
+          'The condition is that the ceiling is sheltered — under a roof, not exposed to standing water or direct driving rain. Within normal Belgian outdoor conditions, the membrane holds its tension and colour season after season.',
+        ],
+      },
+      {
+        heading: 'Built for outside',
+        paragraphs: [
+          'For exterior use we work with membranes with a No-Stain finish: dirt and insects do not bond with the surface, and a soft sponge with water brings the ceiling back to new. There is no paint film to flake, no plaster to crack in frost — the classic failure modes of finished outdoor ceilings simply do not apply.',
+          'The look is a choice, not a compromise: more than thirty colours across matte, satin and gloss finishes. Deep black overhangs have become a signature detail on modern villas — the ceiling reads as a shadow line and makes the facade float.',
+        ],
+      },
+      {
+        heading: 'Light and print, also outside',
+        paragraphs: [
+          'Everything we integrate indoors travels outside: waterproof spots, LED lines along the perimeter, even a full backlit ceiling that turns a terrace into an evening room. Printed membranes open the playful end — a sky over the pool house, a brand statement over a commercial entrance.',
+        ],
+      },
+      {
+        heading: 'From bare overhang to finished ceiling',
+        paragraphs: [
+          'The build-up mirrors an interior installation: perimeter profile on the existing structure, membrane tensioned in, fixtures integrated. Most residential overhangs and pool houses are finished within a day.',
+          'Send us a photo of your outdoor space with rough dimensions and we will confirm whether the situation is suitable and what it would cost.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'klimaat-plafond',
+    title: 'The climate ceiling: heating and cooling you never see or hear',
+    excerpt:
+      'A climate ceiling regulates room temperature through the ceiling surface itself — silently, evenly and invisibly behind a stretch membrane. How the system works, and why it pairs so well with a tensioned ceiling.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 5,
+    body: [
+      {
+        heading: 'What a climate ceiling is',
+        paragraphs: [
+          'A climate ceiling uses the ceiling plane to heat and cool the room. Instead of radiators on the wall or a split unit blowing air at your neck, the conditioning happens above you, spread across the largest free surface of the room — which is exactly why the result feels so even.',
+          'Combined with a stretch ceiling, the technology disappears completely: the membrane forms the visible surface, and the climate components live in the plenum behind it.',
+        ],
+      },
+      {
+        heading: 'How it works behind the membrane',
+        paragraphs: [
+          'Warm air rises; the ceiling is where the room\u2019s heat naturally collects. The system exploits that: air circulates quietly through the plenum between the structural slab and the membrane, entering and leaving through profiles with integrated openings. The membrane surface itself tempers the room by convection and radiation — inductive heating and cooling without visible grilles.',
+          'Because the exchange surface is enormous compared to a radiator, the system runs at gentle temperatures and low air speeds. In practice that means a uniform room temperature, no draughts, and operation you can barely hear.',
+        ],
+      },
+      {
+        heading: 'What it means for energy use',
+        paragraphs: [
+          'Large-surface, low-temperature systems work efficiently with modern heat pumps, and the even distribution lets you set the thermostat lower for the same comfort. Depending on the building, that translates into roughly five to ten percent less energy use compared to conventional convection heating.',
+        ],
+      },
+      {
+        heading: 'Climate, acoustics and light in one plane',
+        paragraphs: [
+          'The same ceiling build-up carries the rest of the room\u2019s comfort: acoustic absorption behind a micro-perforated membrane, integrated LED lines or a fully backlit surface, spots and sensors — all in the identical seamless finish. One plane, four functions, zero visible technology.',
+        ],
+      },
+      {
+        heading: 'Is it right for your project?',
+        paragraphs: [
+          'Climate ceilings shine in renovations where wall space is precious, in offices that need silent cooling, and in high-end homes where design comes first. The investment depends heavily on room size and the climate installation itself, so an honest answer always starts from your plans.',
+          'Request a quote with your project details and we will tell you what a climate ceiling would involve in your situation — construction depth, planning and budget.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'kan-je-een-spanplafond-afwassen',
+    title: 'Can you wash a stretch ceiling?',
+    excerpt:
+      'Yes — and that is one of its quiet superpowers. What you can safely use on a PVC or polyester membrane, what to avoid, and how to keep a stretch ceiling looking new for decades.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 4,
+    body: [
+      {
+        heading: 'The short answer',
+        paragraphs: [
+          'A PVC or polyester stretch ceiling is washable. The membrane is a closed surface that does not absorb dirt the way paint or plaster does, so everyday marks stay on top — where you can remove them.',
+          'That makes stretch ceilings the practical choice for kitchens, bathrooms and commercial spaces, where a painted ceiling would need repainting every few years.',
+        ],
+      },
+      {
+        heading: 'How to clean it safely',
+        paragraphs: [
+          'Use warm water, a soft sponge or microfibre cloth, and light pressure. Wipe in straight passes rather than circles on gloss finishes to avoid shine differences. For grease film or stubborn marks, use a mild non-abrasive cleaner — our STRETCH Cleaner is formulated exactly for membrane surfaces and leaves no residue.',
+          'Act quickly when something splashes: a fresh mark wipes away in seconds, a dried one takes patience. Never lean on the membrane while cleaning — let the cloth do the work.',
+        ],
+      },
+      {
+        heading: 'What to avoid',
+        paragraphs: [
+          'Skip scouring pads, abrasive powders, solvents and aggressive degreasers — they can dull or damage the surface permanently. High-pressure or steam cleaners have no place near a tensioned membrane either.',
+          'One caveat: this guidance covers PVC and polyester membranes. Speciality textiles such as cotton-based or coated acoustic fabrics have their own care instructions — when in doubt, ask your supplier before wetting anything.',
+        ],
+      },
+      {
+        heading: 'Prevention beats cleaning',
+        paragraphs: [
+          'Good extraction in the kitchen, ventilation in the bathroom and a No-Stain finish in demanding spaces keep the ceiling clean by themselves for years. Where insects or dust are the enemy — think outdoor overhangs — the No-Stain surface makes the annual wipe-down almost symbolic.',
+          'Need the right cleaner or advice for a specific stain? Our materials page lists the STRETCH Cleaner in 1 L and 5 L, and we are happy to advise on anything the sponge cannot fix.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'spanplafond-zelf-plaatsen',
+    title: 'Installing a stretch ceiling yourself: honest advice',
+    excerpt:
+      'Can a handy DIYer install a stretch ceiling? Sometimes — with the right system. What the job really involves, where it goes wrong, and when calling a certified installer (or becoming one) is the better plan.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 5,
+    body: [
+      {
+        heading: 'What the job involves',
+        paragraphs: [
+          'Every stretch ceiling follows the same sequence. First the preparation: measure the room precisely, choose the membrane type, and clear the substrate of loose fixtures. Then the perimeter profile goes up, fixed level around the room — this rail carries all the tension, so straightness and solid anchoring are everything. Finally the membrane is tensioned into the profile and the finishing follows: trims, spots, ventilation.',
+          'On paper that is a day of work for a normal room. In practice, the difference between a taut, seamless result and a wavy disappointment sits in the details of each step.',
+        ],
+      },
+      {
+        heading: 'Cold or warm: two very different systems',
+        paragraphs: [
+          'Polyester fabric systems install cold: the fabric clicks into the profile and is tensioned by hand. With patience, decent tools and a helper, this is the DIY-friendly end of the spectrum — and the route our stretch kits are designed for.',
+          'PVC membranes are different. They are welded to size with a harpoon edge and installed warm: the room is heated so the membrane relaxes, then it is hooked into the profile and shrinks taut as it cools. That takes a heater, experience in reading the tension, and confidence around corners and obstacles. It is teachable — it is literally what we teach — but it is not a first-weekend project.',
+        ],
+      },
+      {
+        heading: 'Where DIY installations go wrong',
+        paragraphs: [
+          'The classic failures are a profile that is not level or tears out of soft plaster, measurement errors that leave the membrane slack or impossibly tight, and improvised cut-outs for spots that end in a ruined sheet. Electrical connections for integrated lighting are a job for a professional in any case.',
+          'The honest math: a membrane welded to the wrong size is a loss, not a lesson. If your room has many corners, pipes or built-ins, the risk grows quickly.',
+        ],
+      },
+      {
+        heading: 'Three good routes to a stretch ceiling',
+        paragraphs: [
+          'Route one: have it installed. A certified installer finishes a normal room in a day, guarantees the result, and the price difference with DIY is smaller than most people expect once materials and tools are counted.',
+          'Route two: the cold polyester kit for the confident DIYer — we supply the fabric, profiles and instructions through our materials catalogue. Route three: if ceilings are your trade, follow our installer training and do it properly with heat, harpoon and all — that is how most of our partner installers started.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'schuin-dak',
+    title: 'Finishing a sloped roof interior — layer by layer',
+    excerpt:
+      'Converting an attic stands or falls with the build-up behind the finish: insulation, vapour barrier, airtightness. How a pitched roof is layered from tiles to interior surface, and how a stretch ceiling finishes the slope seamlessly.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 5,
+    body: [
+      {
+        heading: 'Know your roof structure',
+        paragraphs: [
+          'Belgian pitched roofs come in two families. A purlin roof (gordingendak) carries the load on horizontal beams, leaving recognisable horizontal lines through the attic. A truss or rafter roof (spantendak) works with diagonal members from ridge to eaves and generally leaves a more open volume. Which one you have determines where fixing points sit and how the interior finish can be mounted.',
+        ],
+      },
+      {
+        heading: 'The six layers of a healthy roof',
+        paragraphs: [
+          'From outside in, a correctly built pitched roof stacks six functions: the roofing itself (tiles, slate or metal), a breathable underlay that keeps wind and stray water out, thermal insulation sized for today\u2019s energy standards, a vapour barrier on the warm side, an airtight seal at every joint and penetration, and finally the interior finish you actually see.',
+          'The vapour barrier deserves the most respect. Warm indoor air carries moisture; let it reach the cold side of the insulation and it condenses — and hidden condensation is how mould and rotten roof timber start. Every tear taped, every cable passage sealed.',
+        ],
+      },
+      {
+        heading: 'Finishing the slope: the visible layer',
+        paragraphs: [
+          'The classic finish is plasterboard on battens: familiar, but on a slope it means overhead jointing and sanding, and every future movement of the roof timber can telegraph a crack through the paint.',
+          'A stretch ceiling takes the slope differently: profiles along the edges of each plane, membrane tensioned in between — seamless, crack-free and light. Slopes, knee walls and even the transition to a flat ceiling section can be finished in the same material, which makes small attic rooms read as one calm volume.',
+        ],
+      },
+      {
+        heading: 'Attic rooms, bathrooms and light',
+        paragraphs: [
+          'Attic conversions usually become bedrooms, offices or bathrooms — and under a roof, each has its wish. For bathrooms, the membrane is moisture-resistant by nature and shrugs off condensation that would stain plasterwork. For bedrooms and offices, an acoustic membrane build-up softens rain noise and echo. And where roof windows are scarce, backlit membrane panels between the rafters bring daylight-like brightness to the darkest corner of the house.',
+          'Planning an attic conversion? Ask us for a quote for the finishing layer — standard, acoustic or moisture-resistant — and we will think along from the profile up.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'sterrenhemel',
+    title: 'A starry-sky ceiling: how it works',
+    excerpt:
+      'By day a sleek seamless ceiling, by night a sky full of stars. How fibre optics turn a stretch ceiling into a starry sky, which effects are possible, and what an installation involves.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 4,
+    body: [
+      {
+        heading: 'The idea',
+        paragraphs: [
+          'A starry-sky ceiling hides hundreds of fibre-optic light points in a tensioned membrane. With the light source off, you see nothing but a perfectly flat designer ceiling — no visible holes, no hardware. Switch it on and the surface becomes a night sky, as subtle or as dense as you designed it.',
+          'The fibres themselves carry no electricity and no heat; they only transport light from a hidden projector above the membrane. That is what makes the effect safe, silent and maintenance-friendly.',
+        ],
+      },
+      {
+        heading: 'Effects and options',
+        paragraphs: [
+          'The projector decides the mood: static stars, gentle twinkling, or the occasional falling star tracing across the ceiling. Light colour is a choice too — warm or cool white for realism, RGB if you want the sky to shift colour with the evening.',
+          'Density and pattern are designed per project: an even scatter for a natural sky, concentrations and constellations if you want them, or star fields combined with a printed design — a night-blue gradient, clouds, a galaxy.',
+        ],
+      },
+      {
+        heading: 'Where it works best',
+        paragraphs: [
+          'Bedrooms and home cinemas are the classics — spaces where you lie or sit back and the ceiling becomes the view. Hotels, wellness suites and restaurants use the same technique as a signature detail. Because the base is a normal stretch ceiling, the starry section can be one zone of a larger seamless surface.',
+        ],
+      },
+      {
+        heading: 'What an installation involves',
+        paragraphs: [
+          'We handle the whole picture: design of the star field, preparation of the membrane with the fibres, placement of the projector where you can reach it, and the tensioned installation itself. Count two to three working days for a typical room, depending on size and the number of light points.',
+          'Pricing follows the design — size, star density and effects — so every quote is custom. Tell us the room and the atmosphere you are after, and we will design a sky for it.',
+        ],
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
