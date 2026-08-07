@@ -3704,7 +3704,20 @@
     "sentTitle": "Forespørgsel sendt",
     "sentBody": "Tak — vi vender tilbage med priser, tilgængelighed og leveringstid, som regel samme hverdag.",
     "sendError": "Noget gik galt — prøv igen, eller skriv direkte til os.",
-    "closeLabel": "Luk"
+    "closeLabel": "Luk",
+    "variantStandard": "Standard",
+    "variantAcoustic": "Akustisk",
+    "variantTranslucent": "Translucent",
+    "colourLabel": "Farve / finish",
+    "colourNone": "Ingen præference — rådgiv mig",
+    "colourWhite": "Mat hvid (standard)",
+    "colourMatteColour": "Mat — farve",
+    "colourSatin": "Satin",
+    "colourGloss": "Blank (lak)",
+    "colourTranslucent": "Translucent",
+    "colourPrinted": "Med print",
+    "colourCodeLabel": "Farvekode",
+    "colourCodePlaceholder": "f.eks. RAL 9016 eller kortnr."
   },
   "materialsData": {
     "profiles": {
@@ -3740,20 +3753,20 @@
       "intro": "Membran, som du har brug for den: hele ruller til din egen konfektion, folie skåret i længde eller et færdigt loft svejset efter mål med harpun — i mat, satin, blank, translucent og farvede udgaver fra de store foliemærker.",
       "items": [
         {
-          "name": "PVC-folie på rulle",
-          "body": "Folie fra MSD, Bauf, Teqtum og Renolit på rulle — mat/satin, blank, translucent, farver, metallic samt Black & White-serier."
+          "name": "PVC-folie produceret efter mål",
+          "body": "Dit loft svejses og skæres til rummets præcise mål i vores produktion — med harpun, foldet, mærket og klar til montering i profilen."
         },
         {
-          "name": "Folie skåret i længde",
-          "body": "De samme folieserier skåret i præcis den længde, du skal bruge — uden at købe en hel rulle."
+          "name": "Stof-stretchloft skåret efter mål",
+          "body": "Loft i polyesterstof skåret efter dine mål i vores egen konfektion — stofserierne fra farvekortet."
         },
         {
-          "name": "Lofter efter mål",
-          "body": "Dit loft svejset efter mål i vores produktion, inklusive harpun — klar til at hænge i profilen."
+          "name": "Polyester-stretchloft på rulle",
+          "body": "Hele ruller polyesterstof til stretchlofter for partnere med egen konfektion."
         },
         {
-          "name": "Translucent folie (backlit)",
-          "body": "Lysgennemtrængelig membran til lysende lofter og lyskasser, op til 5 m uden samlinger."
+          "name": "PVC-stretchloft på rulle",
+          "body": "PVC-membran på rulle — mat, satin, blank, translucent og farveserier fra de store foliemærker."
         }
       ]
     },
@@ -3795,7 +3808,7 @@
         },
         {
           "name": "Lim & befæstigelse",
-          "body": "AKFIX-lim, skruer og de monteringsartikler, der bruges på enhver byggeplads."
+          "body": "Sekundlim (cyanoacrylat), skruer og de monteringsartikler der bruges på hver opgave."
         }
       ]
     },

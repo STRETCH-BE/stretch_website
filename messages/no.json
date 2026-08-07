@@ -3704,7 +3704,20 @@
     "sentTitle": "Forespørsel sendt",
     "sentBody": "Takk — vi kommer tilbake med priser, tilgjengelighet og leveringstid, som regel samme virkedag.",
     "sendError": "Noe gikk galt — prøv igjen eller send oss en e-post direkte.",
-    "closeLabel": "Lukk"
+    "closeLabel": "Lukk",
+    "variantStandard": "Standard",
+    "variantAcoustic": "Akustisk",
+    "variantTranslucent": "Translusent",
+    "colourLabel": "Farge / finish",
+    "colourNone": "Ingen preferanse — gi meg råd",
+    "colourWhite": "Matt hvit (standard)",
+    "colourMatteColour": "Matt — farge",
+    "colourSatin": "Satin",
+    "colourGloss": "Blank (lakk)",
+    "colourTranslucent": "Translusent",
+    "colourPrinted": "Med trykk",
+    "colourCodeLabel": "Fargekode",
+    "colourCodePlaceholder": "f.eks. RAL 9016 eller kartnr."
   },
   "materialsData": {
     "profiles": {
@@ -3740,20 +3753,20 @@
       "intro": "Duk slik du trenger den: hele ruller til egen konfeksjon, folie kappet i lengde eller et ferdig tak sveiset etter mål med harpun — i matte, sateng, blanke, translusente og fargede utførelser fra de store foliemerkene.",
       "items": [
         {
-          "name": "PVC-folie på rull",
-          "body": "Folie fra MSD, Bauf, Teqtum og Renolit på rull — matt/sateng, blank, translusent, farge, metallic og Black & White-serier."
+          "name": "PVC-folie produsert etter mål",
+          "body": "Taket ditt sveises og skjæres til rommets nøyaktige mål i vår produksjon — harpun inkludert, brettet, merket og klart til å henges i profilen."
         },
         {
-          "name": "Folie kappet i lengde",
-          "body": "De samme folieseriene kappet i akkurat den lengden du trenger — uten å kjøpe en hel rull."
+          "name": "Strekktak i duk skåret etter mål",
+          "body": "Tak i polyesterduk skåret etter dine mål i vår egen konfeksjon — dukseriene fra fargekartet."
         },
         {
-          "name": "Tak etter mål",
-          "body": "Taket ditt sveiset etter mål i vår produksjon, med harpun inkludert — klart til å henges i profilen."
+          "name": "Strekktak i polyester på rull",
+          "body": "Hele ruller polyesterduk for partnere med egen konfeksjon."
         },
         {
-          "name": "Translusent (baklyst) folie",
-          "body": "Duk som slipper lyset gjennom, til opplyste tak og lysbokser, opptil 5 m uten skjøt."
+          "name": "Strekktak i PVC på rull",
+          "body": "PVC-membran på rull — matt, satin, blank, translusent og fargeserier fra de store foliemerkene."
         }
       ]
     },
@@ -3795,7 +3808,7 @@
         },
         {
           "name": "Lim & festemidler",
-          "body": "AKFIX-lim, skruer og monteringsartiklene som brukes på hver byggeplass."
+          "body": "Superlim (cyanoakrylat), skruer og monteringsmateriellet som brukes på hvert prosjekt."
         }
       ]
     },

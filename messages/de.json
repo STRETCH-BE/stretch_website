@@ -3704,7 +3704,20 @@
     "sentTitle": "Anfrage gesendet",
     "sentBody": "Danke — wir melden uns mit Preisen, Verfügbarkeit und Lieferzeit, meist am selben Werktag.",
     "sendError": "Etwas ist schiefgelaufen — bitte erneut versuchen oder direkt mailen.",
-    "closeLabel": "Schließen"
+    "closeLabel": "Schließen",
+    "variantStandard": "Standard",
+    "variantAcoustic": "Akustik",
+    "variantTranslucent": "Transluzent",
+    "colourLabel": "Farbe / Oberfläche",
+    "colourNone": "Keine Präferenz — beraten Sie mich",
+    "colourWhite": "Mattweiß (Standard)",
+    "colourMatteColour": "Matt — Farbe",
+    "colourSatin": "Satin",
+    "colourGloss": "Lack (glänzend)",
+    "colourTranslucent": "Transluzent",
+    "colourPrinted": "Druckdesign",
+    "colourCodeLabel": "Farbcode",
+    "colourCodePlaceholder": "z. B. RAL 9016 oder Kartennr."
   },
   "materialsData": {
     "profiles": {
@@ -3740,20 +3753,20 @@
       "intro": "Membran, wie Sie sie brauchen: ganze Rollen für die eigene Konfektion, Folie als Zuschnitt oder eine fertige, nach Maß mit Harpune verschweißte Decke — matt, satiniert, glänzend, transluzent und farbig, von den großen Folienmarken.",
       "items": [
         {
-          "name": "PVC-Folie auf der Rolle",
-          "body": "Folie von MSD, Bauf, Teqtum und Renolit rollenweise — Matt/Satin, Glanz, transluzent, Farbe, Metallic und die Black & White-Serien."
+          "name": "PVC-Folie nach Maß produziert",
+          "body": "Ihre Decke wird in unserer Produktion auf die exakten Raummaße geschweißt und zugeschnitten — Harpune inklusive, gefaltet, etikettiert und bereit zum Einhängen ins Profil."
         },
         {
-          "name": "Folie als Zuschnitt",
-          "body": "Dieselben Folienserien, zugeschnitten auf die Länge, die Sie brauchen — ganz ohne volle Rolle."
+          "name": "Gewebe-Spanndecke auf Maß zugeschnitten",
+          "body": "Polyestergewebedecke nach Ihren Maßen aus unserer eigenen Konfektion — die Gewebeserien aus der Farbkarte."
         },
         {
-          "name": "Decken nach Maß",
-          "body": "Ihre Decke, in unserer Produktion auf Maß verschweißt, Harpune inklusive — fertig zum Einhängen ins Profil."
+          "name": "Polyester-Spanndecke auf der Rolle",
+          "body": "Ganze Rollen Polyester-Spanndeckengewebe für Partner mit eigener Konfektion."
         },
         {
-          "name": "Transluzente (hinterleuchtbare) Folie",
-          "body": "Lichtdurchlässige Membran für beleuchtete Decken und Lichtkästen, bis 5 m nahtlos."
+          "name": "PVC-Spanndecke auf der Rolle",
+          "body": "PVC-Folie auf der Rolle — Matt-, Satin-, Glanz-, transluzente und Farbserien der großen Folienmarken."
         }
       ]
     },
@@ -3795,7 +3808,7 @@
         },
         {
           "name": "Kleber & Befestigung",
-          "body": "AKFIX-Kleber, Schrauben und das Montage-Verbrauchsmaterial, das auf jeder Baustelle zum Einsatz kommt."
+          "body": "Sekundenkleber (Cyanacrylat), Schrauben und das Montagematerial, das auf jeder Baustelle gebraucht wird."
         }
       ]
     },

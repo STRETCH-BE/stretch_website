@@ -3704,7 +3704,20 @@
     "sentTitle": "Aanvraag verstuurd",
     "sentBody": "Bedankt — we komen bij u terug met prijzen, beschikbaarheid en levertermijn, meestal dezelfde werkdag.",
     "sendError": "Er ging iets mis — probeer het opnieuw of mail ons rechtstreeks.",
-    "closeLabel": "Sluiten"
+    "closeLabel": "Sluiten",
+    "variantStandard": "Standaard",
+    "variantAcoustic": "Akoestisch",
+    "variantTranslucent": "Lichtdoorlatend",
+    "colourLabel": "Kleur / afwerking",
+    "colourNone": "Geen voorkeur — adviseer mij",
+    "colourWhite": "Mat wit (standaard)",
+    "colourMatteColour": "Mat — kleur",
+    "colourSatin": "Satijn",
+    "colourGloss": "Glans (lak)",
+    "colourTranslucent": "Lichtdoorlatend",
+    "colourPrinted": "Print",
+    "colourCodeLabel": "Kleurcode",
+    "colourCodePlaceholder": "bv. RAL 9016 of kaartnummer"
   },
   "materialsData": {
     "profiles": {
@@ -3740,20 +3753,20 @@
       "intro": "Doek zoals u het nodig hebt: volle rollen voor uw eigen confectie, folie op lengte gesneden, of een afgewerkt plafond op maat gelast met harpoen — in mat, satijn, glanzend, lichtdoorlatend en kleur, van de grote foliemerken.",
       "items": [
         {
-          "name": "PVC-folie op rol",
-          "body": "Folie van MSD, Bauf, Teqtum en Renolit per rol — in mat/satijn, glanzend, lichtdoorlatend, kleur, metallic en de Black & White-reeksen."
+          "name": "PVC-folie op maat geproduceerd",
+          "body": "Uw plafond gelast en gesneden op de exacte maten van de ruimte in onze productie — harpoen inbegrepen, gevouwen, gelabeld en klaar om in het profiel te hangen."
         },
         {
-          "name": "Folie op lengte gesneden",
-          "body": "Dezelfde foliereeksen, gesneden op de lengte die u nodig hebt — geen volle rol vereist."
+          "name": "Spanplafonddoek op maat gesneden",
+          "body": "Polyester doekplafond gesneden op uw maten in onze eigen confectie — de doekgamma's uit de kleurenkaart."
         },
         {
-          "name": "Plafonds op maat",
-          "body": "Uw plafond op maat gelast in onze productie, inclusief harpoen — klaar om in het profiel te hangen."
+          "name": "Polyester spanplafond op rol",
+          "body": "Volledige rollen polyester spanplafonddoek voor partners met eigen confectie."
         },
         {
-          "name": "Lichtdoorlatende (backlit) folie",
-          "body": "Lichtdoorlatend doek voor verlichte plafonds en lichtbakken, tot 5 m naadloos."
+          "name": "PVC-spanplafond op rol",
+          "body": "PVC-folie per rol — mat, satijn, glans, lichtdoorlatend en kleurgamma's van de grote foliemerken."
         }
       ]
     },
@@ -3795,7 +3808,7 @@
         },
         {
           "name": "Lijm & bevestigingsmateriaal",
-          "body": "AKFIX-lijm, schroeven en het montagemateriaal dat op elke bouwplaats wordt gebruikt."
+          "body": "Secondelijm (cyanoacrylaat), schroeven en het montagemateriaal dat op elke werf wordt gebruikt."
         }
       ]
     },

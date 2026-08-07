@@ -3704,7 +3704,20 @@
     "sentTitle": "Demande envoyée",
     "sentBody": "Merci — nous revenons vers vous avec prix, disponibilité et délai, généralement le jour même.",
     "sendError": "Une erreur s’est produite — réessayez ou écrivez-nous directement.",
-    "closeLabel": "Fermer"
+    "closeLabel": "Fermer",
+    "variantStandard": "Standard",
+    "variantAcoustic": "Acoustique",
+    "variantTranslucent": "Translucide",
+    "colourLabel": "Couleur / finition",
+    "colourNone": "Pas de préférence — conseillez-moi",
+    "colourWhite": "Blanc mat (standard)",
+    "colourMatteColour": "Mat — couleur",
+    "colourSatin": "Satiné",
+    "colourGloss": "Laqué (brillant)",
+    "colourTranslucent": "Translucide",
+    "colourPrinted": "Imprimé",
+    "colourCodeLabel": "Code couleur",
+    "colourCodePlaceholder": "p. ex. RAL 9016 ou n° du nuancier"
   },
   "materialsData": {
     "profiles": {
@@ -3740,20 +3753,20 @@
       "intro": "La toile comme il vous la faut : des rouleaux complets pour votre propre confection, du film coupé à longueur, ou un plafond fini sur mesure soudé avec harpon — en finitions mate, satinée, laquée, translucide et couleur des grandes marques de film.",
       "items": [
         {
-          "name": "Film PVC en rouleau",
-          "body": "Film MSD, Bauf, Teqtum et Renolit au rouleau — gammes mat/satiné, laqué, translucide, couleur, métallisé et Black & White."
+          "name": "Toile PVC produite sur mesure",
+          "body": "Votre plafond soudé et découpé aux dimensions exactes de la pièce dans notre production — harpon inclus, plié, étiqueté et prêt à poser dans le profilé."
         },
         {
-          "name": "Film coupé à longueur",
-          "body": "Les mêmes gammes de film, coupées à la longueur qu’il vous faut — sans acheter un rouleau complet."
+          "name": "Plafond tendu en toile découpé sur mesure",
+          "body": "Plafond en toile polyester découpé à vos mesures dans notre propre confection — les gammes textiles du nuancier."
         },
         {
-          "name": "Plafonds sur mesure",
-          "body": "Votre plafond soudé aux dimensions dans notre production, harpon compris — prêt à accrocher dans le profilé."
+          "name": "Plafond tendu polyester en rouleau",
+          "body": "Rouleaux complets de toile polyester pour les partenaires disposant de leur propre confection."
         },
         {
-          "name": "Film translucide (rétroéclairé)",
-          "body": "Toile translucide pour plafonds lumineux et caissons lumineux, jusqu’à 5 m sans soudure."
+          "name": "Plafond tendu PVC en rouleau",
+          "body": "Membrane PVC au rouleau — gammes mate, satinée, laquée, translucide et couleur des grandes marques de toile."
         }
       ]
     },
@@ -3795,7 +3808,7 @@
         },
         {
           "name": "Colle & fixations",
-          "body": "Colle AKFIX, vis et les consommables de pose utilisés sur chaque chantier."
+          "body": "Colle instantanée (cyanoacrylate), vis et les consommables de montage utilisés sur chaque chantier."
         }
       ]
     },

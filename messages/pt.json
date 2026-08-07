@@ -3704,7 +3704,20 @@
     "sentTitle": "Pedido enviado",
     "sentBody": "Obrigado — voltaremos ao seu contacto com preços, disponibilidade e prazo, normalmente no próprio dia útil.",
     "sendError": "Algo correu mal — tente novamente ou escreva-nos diretamente.",
-    "closeLabel": "Fechar"
+    "closeLabel": "Fechar",
+    "variantStandard": "Padrão",
+    "variantAcoustic": "Acústico",
+    "variantTranslucent": "Translúcido",
+    "colourLabel": "Cor / acabamento",
+    "colourNone": "Sem preferência — aconselhem-me",
+    "colourWhite": "Branco mate (padrão)",
+    "colourMatteColour": "Mate — cor",
+    "colourSatin": "Acetinado",
+    "colourGloss": "Brilho (lacado)",
+    "colourTranslucent": "Translúcido",
+    "colourPrinted": "Com impressão",
+    "colourCodeLabel": "Código de cor",
+    "colourCodePlaceholder": "p. ex. RAL 9016 ou n.º da carta"
   },
   "materialsData": {
     "profiles": {
@@ -3740,20 +3753,20 @@
       "intro": "A membrana tal como precisa dela: rolos completos para a sua própria confeção, película cortada ao comprimento ou um teto acabado, soldado à medida com arpão — em acabamentos mate, acetinado, brilhante, translúcido e de cor das principais marcas de película.",
       "items": [
         {
-          "name": "Película PVC em rolo",
-          "body": "Película MSD, Bauf, Teqtum e Renolit ao rolo — gamas mate/acetinado, brilhante, translúcido, cor, metalizado e Black & White."
+          "name": "Película de PVC produzida à medida",
+          "body": "O seu teto soldado e cortado às medidas exatas da divisão na nossa produção — arpão incluído, dobrado, etiquetado e pronto a colocar no perfil."
         },
         {
-          "name": "Película cortada ao comprimento",
-          "body": "As mesmas gamas de película, cortadas ao comprimento de que precisa — sem ter de comprar o rolo inteiro."
+          "name": "Teto tensionado em tecido cortado à medida",
+          "body": "Teto em tecido de poliéster cortado às suas medidas na nossa própria confeção — as gamas de tecido da carta de cores."
         },
         {
-          "name": "Tetos feitos à medida",
-          "body": "O seu teto soldado à medida na nossa produção, com arpão incluído — pronto a montar no perfil."
+          "name": "Teto tensionado de poliéster em rolo",
+          "body": "Rolos completos de tecido de poliéster para parceiros com confeção própria."
         },
         {
-          "name": "Película translúcida (retroiluminada)",
-          "body": "Membrana que deixa passar a luz, para tetos iluminados e caixas de luz, sem juntas até 5 m."
+          "name": "Teto tensionado de PVC em rolo",
+          "body": "Membrana de PVC em rolo — gamas mate, acetinada, brilho, translúcida e de cor das grandes marcas de películas."
         }
       ]
     },
@@ -3795,7 +3808,7 @@
         },
         {
           "name": "Cola e fixações",
-          "body": "Cola AKFIX, parafusos e os consumíveis de montagem usados em todas as obras."
+          "body": "Cola instantânea (cianoacrilato), parafusos e os consumíveis de montagem usados em cada obra."
         }
       ]
     },

@@ -3704,7 +3704,20 @@
     "sentTitle": "Zapytanie wysłane",
     "sentBody": "Dziękujemy — odpowiemy z cenami, dostępnością i terminem, zwykle tego samego dnia roboczego.",
     "sendError": "Coś poszło nie tak — spróbuj ponownie lub napisz do nas bezpośrednio.",
-    "closeLabel": "Zamknij"
+    "closeLabel": "Zamknij",
+    "variantStandard": "Standard",
+    "variantAcoustic": "Akustyczny",
+    "variantTranslucent": "Transłucentny",
+    "colourLabel": "Kolor / wykończenie",
+    "colourNone": "Brak preferencji — proszę o doradztwo",
+    "colourWhite": "Biały mat (standard)",
+    "colourMatteColour": "Mat — kolor",
+    "colourSatin": "Satyna",
+    "colourGloss": "Połysk (lakier)",
+    "colourTranslucent": "Transłucentny",
+    "colourPrinted": "Z nadrukiem",
+    "colourCodeLabel": "Kod koloru",
+    "colourCodePlaceholder": "np. RAL 9016 lub nr z wzornika"
   },
   "materialsData": {
     "profiles": {
@@ -3740,20 +3753,20 @@
       "intro": "Membrana w formie dopasowanej do potrzeb: całe rolki do własnego konfekcjonowania, folia cięta na długość albo gotowy sufit zgrzewany na wymiar z harpunem — w wykończeniu matowym, satynowym, błyszczącym, transłucentnym i w kolorach, od wiodących marek folii.",
       "items": [
         {
-          "name": "Folia PVC w rolce",
-          "body": "Folie MSD, Bauf, Teqtum i Renolit w rolkach — linie mat/satyna, połysk, transłucentne, kolorowe, metaliczne oraz Black & White."
+          "name": "Folia PVC produkowana na wymiar",
+          "body": "Twój sufit zgrzany i przycięty do dokładnych wymiarów pomieszczenia w naszej produkcji — z harpunem, złożony, oznaczony i gotowy do montażu w profilu."
         },
         {
-          "name": "Folia cięta na długość",
-          "body": "Te same linie folii cięte na potrzebną długość — bez konieczności kupowania całej rolki."
+          "name": "Sufit napinany z tkaniny cięty na wymiar",
+          "body": "Sufit z tkaniny poliestrowej cięty na Twoje wymiary w naszej własnej konfekcji — gamy tkanin z wzornika kolorów."
         },
         {
-          "name": "Sufity na wymiar",
-          "body": "Sufit zgrzewany na wymiar w naszej produkcji, z harpunem w komplecie — gotowy do zawieszenia w profilu."
+          "name": "Poliestrowy sufit napinany w rolce",
+          "body": "Pełne rolki tkaniny poliestrowej do sufitów napinanych dla partnerów z własną konfekcją."
         },
         {
-          "name": "Folia transłucentna (do podświetleń)",
-          "body": "Membrana przepuszczająca światło do sufitów podświetlanych i kasetonów świetlnych, bezszwowo do 5 m."
+          "name": "Sufit napinany PVC w rolce",
+          "body": "Membrana PVC w rolce — gamy matowe, satynowe, połysk, transłucentne i kolorowe od czołowych producentów folii."
         }
       ]
     },
@@ -3795,7 +3808,7 @@
         },
         {
           "name": "Klej i mocowania",
-          "body": "Klej AKFIX, wkręty i montażowe materiały eksploatacyjne używane na każdej budowie."
+          "body": "Klej błyskawiczny (cyjanoakrylowy), wkręty i materiały montażowe używane na każdej budowie."
         }
       ]
     },

@@ -3704,7 +3704,20 @@
     "sentTitle": "Solicitud enviada",
     "sentBody": "Gracias — le responderemos con precios, disponibilidad y plazo, normalmente el mismo día laborable.",
     "sendError": "Algo salió mal — inténtelo de nuevo o escríbanos directamente.",
-    "closeLabel": "Cerrar"
+    "closeLabel": "Cerrar",
+    "variantStandard": "Estándar",
+    "variantAcoustic": "Acústico",
+    "variantTranslucent": "Translúcido",
+    "colourLabel": "Color / acabado",
+    "colourNone": "Sin preferencia — aconséjenme",
+    "colourWhite": "Blanco mate (estándar)",
+    "colourMatteColour": "Mate — color",
+    "colourSatin": "Satinado",
+    "colourGloss": "Brillo (lacado)",
+    "colourTranslucent": "Translúcido",
+    "colourPrinted": "Con impresión",
+    "colourCodeLabel": "Código de color",
+    "colourCodePlaceholder": "p. ej. RAL 9016 o n.º de carta"
   },
   "materialsData": {
     "profiles": {
@@ -3740,20 +3753,20 @@
       "intro": "La membrana tal como la necesita: rollos completos para su propia confección, lámina cortada al largo o un techo terminado, soldado a medida con arpón — en acabados mate, satinado, brillo, translúcido y color de las principales marcas de lámina.",
       "items": [
         {
-          "name": "Lámina de PVC en rollo",
-          "body": "Lámina MSD, Bauf, Teqtum y Renolit por rollos: gamas mate/satinado, brillo, translúcido, color, metalizado y Black & White."
+          "name": "Lámina de PVC producida a medida",
+          "body": "Su techo soldado y cortado a las medidas exactas de la estancia en nuestra producción — arpón incluido, plegado, etiquetado y listo para colocar en el perfil."
         },
         {
-          "name": "Lámina cortada al largo",
-          "body": "Las mismas gamas de lámina, cortadas al largo que necesite — sin tener que comprar el rollo completo."
+          "name": "Techo tensado de tejido cortado a medida",
+          "body": "Techo de tejido de poliéster cortado a sus medidas en nuestra propia confección — las gamas de tejido de la carta de colores."
         },
         {
-          "name": "Techos confeccionados a medida",
-          "body": "Su techo soldado a medida en nuestra producción, con arpón incluido: listo para colgar en el perfil."
+          "name": "Techo tensado de poliéster en rollo",
+          "body": "Rollos completos de tejido de poliéster para socios con confección propia."
         },
         {
-          "name": "Lámina translúcida (retroiluminable)",
-          "body": "Membrana que deja pasar la luz, para techos iluminados y cajas de luz, sin juntas hasta 5 m."
+          "name": "Techo tensado de PVC en rollo",
+          "body": "Membrana de PVC en rollo — gamas mate, satinada, brillo, translúcida y de color de las grandes marcas de láminas."
         }
       ]
     },
@@ -3795,7 +3808,7 @@
         },
         {
           "name": "Adhesivo y fijaciones",
-          "body": "Adhesivo AKFIX, tornillos y los consumibles de montaje que se usan en cada obra."
+          "body": "Adhesivo instantáneo (cianoacrilato), tornillos y los consumibles de montaje que se usan en cada obra."
         }
       ]
     },

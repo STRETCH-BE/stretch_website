@@ -1,3 +1,28 @@
+## 2026-08-07 — Fabrics rework: 4 sellable products, version checkmarks, colour choice + 16 photos
+
+- **Fabrics & foils group rebuilt** (Michael's list): PVC foil produced to size,
+  Fabric stretch ceiling cut to measure, Polyester stretch ceiling on the roll,
+  PVC stretch ceiling on the roll — each with **Standard / Acoustic /
+  Translucent checkmarks** (`variants` on MaterialItem; new client component
+  `materials/ItemActions.tsx` replaces the button pair on group pages). Checked
+  versions travel into the quote modal (`product: "… — Standard, Acoustic"`)
+  and the inquiry list (`items: "… [Standaard, Akoestisch] (…)"`).
+- **Colour chart choice in the inquiry form**: "Colour / finish" select (matte
+  white / matte colour / satin / gloss / translucent / printed / no preference)
+  + free "Colour code" field (RAL / chart no.) — posted as `colour` /
+  `colourCode`, passed through /api/lead generically.
+- **16 material photos wired** (`public/images/materials/`): group covers
+  (profiles rail, fabric swatch fan, toolbox — new `cover` field on
+  MaterialGroup) + item photos for alu/PVC/LED-line profiles, foil cut to size,
+  fabric swatches, PVC roll, LED modules, spot rings, harpoon, protective
+  rings, glue, hand tools, Cleaner 1 L + 5 L. Tracklight items + polyester roll
+  still placeholders. NOTE: the Cleaner 1 L photo shows CLIPSO branding.
+- Glue body generalised (photo shows COSMO CA-500.200, copy said AKFIX →
+  now "instant adhesive (cyanoacrylate)").
+- Translations ×12 updated in the same pass: new fabrics items, glue body,
+  13 new UI keys (variant labels + colour menu). Verified: typecheck, build
+  920/920, 0 MISSING_MESSAGE, be/nl screenshots of the full flow.
+
 ## 2026-08-06 (4) — Inquiry list + full translation pass (materials data & 8 migrated projects)
 
 - **Inquiry list (materials step 2)** — `src/components/materials/Inquiry.tsx`:

@@ -3704,7 +3704,20 @@
     "sentTitle": "Fyrirspurn send",
     "sentBody": "Takk — við svörum með verði, framboði og afhendingartíma, yfirleitt samdægurs.",
     "sendError": "Eitthvað fór úrskeiðis — reyndu aftur eða sendu okkur tölvupóst beint.",
-    "closeLabel": "Loka"
+    "closeLabel": "Loka",
+    "variantStandard": "Staðlað",
+    "variantAcoustic": "Hljóðdempandi",
+    "variantTranslucent": "Hálfgegnsætt",
+    "colourLabel": "Litur / áferð",
+    "colourNone": "Engin sérstök ósk — ráðleggið mér",
+    "colourWhite": "Matt hvítt (staðlað)",
+    "colourMatteColour": "Matt — litur",
+    "colourSatin": "Satín",
+    "colourGloss": "Gljái (lakk)",
+    "colourTranslucent": "Hálfgegnsætt",
+    "colourPrinted": "Með prenti",
+    "colourCodeLabel": "Litakóði",
+    "colourCodePlaceholder": "t.d. RAL 9016 eða númer af litakorti"
   },
   "materialsData": {
     "profiles": {
@@ -3740,20 +3753,20 @@
       "intro": "Dúkur eins og þú þarft hann: heilar rúllur fyrir eigin framleiðslu, filma skorin í lengd eða fullbúið loft soðið eftir máli með harpún — í mattri, satín, glansandi, hálfgegnsærri og litaðri áferð frá stóru filmumerkjunum.",
       "items": [
         {
-          "name": "PVC-filma á rúllu",
-          "body": "Filma frá MSD, Bauf, Teqtum og Renolit á rúllu — matt/satín, glans, hálfgegnsæ, litir, metallic og Black & White línur."
+          "name": "PVC-filma framleidd eftir máli",
+          "body": "Loftið þitt soðið og skorið eftir nákvæmum málum rýmisins í framleiðslu okkar — með harpún, brotið saman, merkt og tilbúið til að hengja í prófílinn."
         },
         {
-          "name": "Filma skorin í lengd",
-          "body": "Sömu filmulínur skornar í nákvæmlega þá lengd sem þú þarft — engin heil rúlla nauðsynleg."
+          "name": "Dúkastrekkloft skorið eftir máli",
+          "body": "Loft úr pólýesterdúk skorið eftir þínum málum í eigin framleiðslu — dúkalínurnar úr litakortinu."
         },
         {
-          "name": "Loft eftir máli",
-          "body": "Loftið þitt soðið eftir máli í framleiðslunni okkar, með harpún — tilbúið til að hengja í prófílinn."
+          "name": "Pólýester-strekkloft á rúllu",
+          "body": "Heilar rúllur af pólýesterdúk fyrir samstarfsaðila með eigin framleiðslu."
         },
         {
-          "name": "Hálfgegnsæ (baklýst) filma",
-          "body": "Dúkur sem hleypir ljósi í gegn, fyrir upplýst loft og ljóskassa, allt að 5 m án samskeyta."
+          "name": "PVC-strekkloft á rúllu",
+          "body": "PVC-filma á rúllu — matt, satín, glans, hálfgegnsæjar og litaðar línur frá stóru filmumerkjunum."
         }
       ]
     },
@@ -3795,7 +3808,7 @@
         },
         {
           "name": "Lím & festingar",
-          "body": "AKFIX-lím, skrúfur og uppsetningarvörurnar sem notaðar eru á hverjum verkstað."
+          "body": "Skyndilím (sýanóakrýlat), skrúfur og festingaefni sem notað er í hverju verki."
         }
       ]
     },

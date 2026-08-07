@@ -3704,7 +3704,20 @@
     "sentTitle": "Förfrågan skickad",
     "sentBody": "Tack — vi återkommer med priser, tillgänglighet och leveranstid, oftast samma arbetsdag.",
     "sendError": "Något gick fel — försök igen eller mejla oss direkt.",
-    "closeLabel": "Stäng"
+    "closeLabel": "Stäng",
+    "variantStandard": "Standard",
+    "variantAcoustic": "Akustisk",
+    "variantTranslucent": "Translucent",
+    "colourLabel": "Färg / finish",
+    "colourNone": "Ingen preferens — ge mig råd",
+    "colourWhite": "Matt vit (standard)",
+    "colourMatteColour": "Matt — färg",
+    "colourSatin": "Satin",
+    "colourGloss": "Blank (lack)",
+    "colourTranslucent": "Translucent",
+    "colourPrinted": "Med tryck",
+    "colourCodeLabel": "Färgkod",
+    "colourCodePlaceholder": "t.ex. RAL 9016 eller kartnr"
   },
   "materialsData": {
     "profiles": {
@@ -3740,20 +3753,20 @@
       "intro": "Duk precis som du behöver den: hela rullar för egen konfektion, folie kapad i längd eller ett färdigt tak måttsvetsat med harpun — i matta, satin, blanka, translucenta och kulörta utföranden från de stora foliemärkena.",
       "items": [
         {
-          "name": "PVC-folie på rulle",
-          "body": "Folie från MSD, Bauf, Teqtum och Renolit på rulle — matt/satin, blank, translucent, kulör, metallic och Black & White-serier."
+          "name": "PVC-folie producerad efter mått",
+          "body": "Ditt tak svetsas och skärs till rummets exakta mått i vår produktion — harpun ingår, vikt, märkt och klart att hänga i profilen."
         },
         {
-          "name": "Folie kapad i längd",
-          "body": "Samma foliesortiment kapat i precis den längd du behöver — ingen hel rulle krävs."
+          "name": "Spänntak i duk skuret efter mått",
+          "body": "Tak i polyesterduk skuret efter dina mått i vår egen konfektion — dukserierna från färgkartan."
         },
         {
-          "name": "Måttanpassade tak",
-          "body": "Ditt tak svetsat efter mått i vår produktion, harpun ingår — klart att hänga i profilen."
+          "name": "Spänntak i polyester på rulle",
+          "body": "Hela rullar polyesterduk för partner med egen konfektion."
         },
         {
-          "name": "Translucent (bakbelyst) folie",
-          "body": "Ljusgenomsläpplig duk för belysta tak och ljuslådor, upp till 5 m utan skarv."
+          "name": "Spänntak i PVC på rulle",
+          "body": "PVC-membran på rulle — matta, satin, blanka, translucenta och färgade serier från de stora foliemärkena."
         }
       ]
     },
@@ -3795,7 +3808,7 @@
         },
         {
           "name": "Lim & infästning",
-          "body": "AKFIX-lim, skruv och det monteringsmaterial som används på varje arbetsplats."
+          "body": "Snabblim (cyanoakrylat), skruvar och det monteringsmaterial som används på varje projekt."
         }
       ]
     },
