@@ -137,6 +137,7 @@ export const mainNav: NavLink[] = [
 
 export const utilityNav: NavLink[] = [
   { key: 'reseller', href: '/partners' },
+    { key: 'dealers', href: '/dealers' },
   { key: 'training', href: '/installer-training' },
 ];
 
@@ -174,6 +175,7 @@ export const staticRoutes = [
   '/installer-training',
   '/inspiration',
   '/materials',
+  '/dealers',
   '/samples',
   '/datasheets',
   '/products/prefab-lighting-elements',
