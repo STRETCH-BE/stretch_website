@@ -139,7 +139,7 @@
     }
   },
   "footer": {
-    "tagline": "Handgerð strekkiloft & strekkiveggir, þróuð í Belgíu og sett upp á einum degi um alla Evrópu og í Bandaríkjunum.",
+    "tagline": "Handunnin strekkloft og strekkveggir úr okkar eigin belgísku framleiðslu — framleiðandi, ekki innflytjandi — sett upp um alla Evrópu og í Bandaríkjunum á einum degi.",
     "solutionsHeading": "Lausnir",
     "companyHeading": "Fyrirtæki",
     "hqHeading": "Höfuðstöðvar — Belgía",
@@ -2063,6 +2063,48 @@
           "body": "Köld uppsetning þýðir ekkert ryk og ekkert drasl, og flest rými klárast á einum degi — tilvalið fyrir húsnæði í notkun."
         }
       ]
+    },
+    "pool-wellness": {
+      "name": "Sundlaugar & heilsulindir",
+      "shortName": "Sundlaug & heilsulind",
+      "eyebrow": "Sundlaug & heilsulind",
+      "metaDescription": "Strekkloft fyrir sundlaugar, spa og heilsulindir — raka- og klórþolnar himnur með No-Stain-áferð, innbyggðri lýsingu og hljóðdempun, sett upp án lokunar.",
+      "intro": "Sundlaugasalir og heilsulindir eyðileggja máluð loft: þétting, klórgufa og hiti láta málningu flagna á fáum árum. Strekkt himna er ónæm fyrir öllu þrennu — og færir ljós og hljóðvist inn í blautustu rými hússins.",
+      "benefits": [
+        {
+          "title": "Byggð fyrir raka og klór",
+          "body": "Himnan drekkur ekki í sig vatn, getur hvorki flagnað né losnað og kippir sér ekki upp við þéttingu og laugarefni — með No-Stain-áferð sem má strjúka hreina."
+        },
+        {
+          "title": "Ljós án nokkurs sem tærist",
+          "body": "Baklýst loft og lokaðar LED-línur varpa jöfnu, glýjulausu ljósi yfir vatnið — án sýnilegra lampa sem ryðga í röku loftinu."
+        },
+        {
+          "title": "Hljóðvist fyrir hörð og blaut rými",
+          "body": "Flísar og gler gera sundlaugar háværar. Hljóðdempandi himnuuppbygging tekur broddinn úr bergmálinu án þess að bæta við einu einasta sýnilegu spjaldi."
+        }
+      ]
+    },
+    "walls": {
+      "name": "Strekkveggir & hljóðvist veggja",
+      "shortName": "Veggir",
+      "eyebrow": "Veggir",
+      "metaDescription": "Textíl- og flauelsveggklæðningar, prentaðir strekkveggir og hljóðdempandi vegguppbyggingar — strekktir veggir án samskeyta með ísogið falið á bak við yfirborðið.",
+      "intro": "Allt sem strekkloft getur, getur veggur líka. Strekktir textíl- og flauelsveggir gefa slétt, djúpmatt yfirborð án samskeyta; prentaðar himnur breyta vegg í listaverk; og hljóðdempandi uppbyggingar fela alvöru hljóðísog á bak við dúkinn — engin sýnileg spjöld.",
+      "benefits": [
+        {
+          "title": "Textílfletir án samskeyta",
+          "body": "Flauels- og textílveggir strekktir út í hvert horn — hlý og bólstruð áferð án samskeyta, hefta eða slaka með tímanum."
+        },
+        {
+          "title": "Hljóðvist á bak við yfirborðið",
+          "body": "Ísogsefni hverfur á bak við örgataðan textílvegg og vinnur með hljóðdempandi lofti að því að ná ómtímanum niður á þægilegt stig."
+        },
+        {
+          "title": "Hvaða mynd sem er, í veggstærð",
+          "body": "Prentaðir strekkveggir bera ljósmynd, listaverk eða vörumerki út í hvert horn — baklýstir ef þú vilt að myndin ljómi."
+        }
+      ]
     }
   },
   "appPage": {
@@ -2108,7 +2150,9 @@
       "vap-sint-pauwels": "Sint-Pauwels · Hvít villa",
       "goesten-opdam": "Belgía · Skrifstofuinnrétting",
       "dhl-zaventem": "Zaventem · Boeing 737 fundarherbergi",
-      "veta-interieur-showroom": "Dendermonde · Baðherbergjasýningarsalur"
+      "veta-interieur-showroom": "Dendermonde · Baðherbergjasýningarsalur",
+      "creneau-afas-lounge": "Antwerpen · VIP-setustofa, AFAS Dome",
+      "candor-sint-martens-latem": "Sint-Martens-Latem · Skrifstofur fasteignaþróunarfélags"
     },
     "comingSoon": "Myndir væntanlegar"
   },
@@ -3157,6 +3201,82 @@
           "value": "Veta Interieur"
         }
       ]
+    },
+    "creneau-afas-lounge": {
+      "title": "AFAS Lounge — BE•AT",
+      "summary": "Svart háglansloft með hljóðdempun sem breytir einni setustofu í fjögur rými.",
+      "hook": "Eitt loft, tvenn áhrif: spegill á við næturklúbb að ofan — hljóðísog á við tónleikasal þar fyrir aftan.",
+      "description": [
+        "Fyrir VIP-setustofuna í AFAS Dome í Antwerpen sá hönnunarstofan Creneau International (Hasselt) fyrir sér rými sem leikur fjögur hlutverk á einu og sama kvöldi: veitingastað, dansgólf, ráðstefnusal og setustofu. Loftið þurfti að bera þá umbreytingu.",
+        "Við framleiddum svarta háglans-PVC-himnu með um 90% endurskini — spegil sem tvöfaldar rýmið og birtuna — með götuðu hljóðdempandi lagi með ísogsefni fyrir aftan, svo að hljóðkerfið frá BE•AT hljómar skýrt en ekki hart.",
+        "Op fyrir LED-ljóspunkta og hátalara voru skorin strax í framleiðslunni, himnan var soðin saman án sýnilegra samskeyta í allt að 6.50 m breidd og 250 m² loft setustofunnar var sett upp á þremur dögum á staðnum."
+      ],
+      "highlights": [
+        "Einn flötur, tvö hlutverk: spegilgljái + hljóðísog",
+        "Op fyrir LED og hátalara skorin í verksmiðju — engar sýnilegar festingar",
+        "250 m² sett upp á þremur dögum"
+      ],
+      "materials": [
+        "Svört háglans-PVC-himna (±90% endurskin)",
+        "Gatað hljóðdempandi baklag með ísogsefni",
+        "Op fyrir LED og hljóðkerfi skorin í verksmiðju"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "AFAS Dome, Antwerpen"
+        },
+        {
+          "label": "Hönnun",
+          "value": "Creneau International (Hasselt)"
+        },
+        {
+          "label": "Flatarmál",
+          "value": "250 m² · sett upp á 3 dögum"
+        },
+        {
+          "label": "Ár",
+          "value": "2025"
+        }
+      ]
+    },
+    "candor-sint-martens-latem": {
+      "title": "Candor",
+      "summary": "Ósýnileg hljóðvist fyrir skrifstofur fasteignaþróunarfélags — engin sýnileg spjöld.",
+      "hook": "Fundarherbergi undir RT60 0.6 sekúndum — og ekki eitt einasta hljóðdempandi spjald sjáanlegt.",
+      "description": [
+        "Fasteignaþróunarfélagið Candor endurnýjaði skrifstofur sínar við Kortrijksesteenweg í Sint-Martens-Latem: opið vinnurými, fundarherbergi, eldhús og slökunarsvæði, innréttað af Goedele Perdu með hljóðvistarráðgjöf frá Form Design (Dendermonde) — söluaðila okkar á svæðinu.",
+        "Hljóðvistin hverfur inn í arkitektúrinn. Örgataðar pólýesterhimnur spanna hvert loft sem einn sléttan flöt, með ísogslagið falið í holrýminu fyrir ofan og LED-lýsingu fellda slétt inn í yfirborðið.",
+        "Útkoman mælist þar sem það skiptir máli: ómtími undir 0.8 sekúndum í opna rýminu og undir 0.6 sekúndum í fundarherbergjunum — hljóðvist fyrir fulla einbeitingu án nokkurra sýnilegra spjalda, og hvert loft má taka niður vegna viðhalds."
+      ],
+      "highlights": [
+        "RT60 undir 0.8 s (opið rými) og 0.6 s (fundarherbergi)",
+        "Örgötuð himna — ísogið falið í holrýminu fyrir ofan",
+        "Hægt að taka niður — fullur aðgangur að holrýminu fyrir ofan loftið"
+      ],
+      "materials": [
+        "Hljóðdempandi örgötuð pólýesterhimna",
+        "Ísogslag í holrýminu fyrir ofan loftið",
+        "Innfelld LED-lýsing, slétt við yfirborðið"
+      ],
+      "facts": [
+        {
+          "label": "Staðsetning",
+          "value": "Sint-Martens-Latem"
+        },
+        {
+          "label": "Innanhússhönnun",
+          "value": "Goedele Perdu"
+        },
+        {
+          "label": "Hljóðvist",
+          "value": "Form Design (Dendermonde)"
+        },
+        {
+          "label": "Ár",
+          "value": "2025"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3637,6 +3757,45 @@
             ]
           }
         ]
+      },
+      "clipso-spanplafonds": {
+        "title": "Clipso-strekkloft: hvað þau eru og hvar þú færð þau",
+        "excerpt": "Clipso er þekktasta vörumerkið í pólýesterdúk fyrir strekkloft og strekkveggi — hljóðdempandi dúkaloftið sem margir arkitektar tilgreina með nafni. Hér er hvað dúkur af Clipso-gerð er, hvað hann gerir vel og hvernig við útvegum hann, prentum á hann, sníðum og setjum upp.",
+        "body": [
+          {
+            "heading": "Hvað „Clipso“ þýðir í raun",
+            "paragraphs": [
+              "Clipso er franskframleiddur prjónaður pólýesterdúkur fyrir strekkt loft og veggi — svo þekktur að vörumerkið er orðið samheiti yfir allan flokk dúkastrekklofta (rétt eins og fólk segir Gyproc um gifsplötur). Frá 2022 hefur merkið tilheyrt Ecophon, hluta af Saint-Gobain-samstæðunni.",
+              "Dúkurinn er settur upp kaldur: engin upphitun á rýminu, engin suða á staðnum. Prjónaefnið er breiðara en PVC — samskeytalaust upp í um fimm metra — andar og fæst í staðalútgáfu, hljóðdempandi útgáfu og hálfgegnsærri útgáfu."
+            ]
+          },
+          {
+            "heading": "Þar sem dúkur skarar fram úr — og þar sem PVC vinnur",
+            "paragraphs": [
+              "Veldu loft úr pólýesterdúk þegar þú vilt djúpmatta textíláferð, kalda uppsetningu (íbúðir í notkun, friðaðar byggingar), miklar breiddir án samskeyta eða örgataða hljóðdempun. Hljóðdempandi útgáfan — „akoestisch spandoek“ eða „toile tendue acoustique“ sem arkitektar biðja um — sameinar glæsilegt yfirborð og alvöru hljóðísog.",
+              "PVC-himna vinnur þegar kemur að gljáa og lakkáferð, prentaðri hönnun með baklýsingu, baðherbergjum og þvottþoli. Í reynd sameina mörg verkefna okkar hvort tveggja — dúk í íbúðar- og skrifstofurýmum, PVC þar sem ljós, prentun eða raki ræður för."
+            ]
+          },
+          {
+            "heading": "Svona vinnum við með dúka af Clipso-gerð",
+            "paragraphs": [
+              "Sem framleiðandi höldum við allri keðjunni innanhúss: við eigum pólýesterloftadúk á rúllum á lager, skerum og sníðum hann eftir máli í belgísku framleiðslunni okkar, prentum á hann og sameinum hann okkar eigin prófílum, LED-lýsingu og hljóðdempandi uppbyggingum.",
+              "Uppsetningaraðilar og endursöluaðilar kaupa dúkinn í heilum rúllum eða skorinn eftir máli í gegnum efnislistann okkar — hljóðdempandi útgáfan er til á lager — og endanlegir viðskiptavinir fá fullbúið, uppsett loft í gegnum söluaðilanet okkar."
+            ]
+          },
+          {
+            "heading": "Þrif og umhirða",
+            "paragraphs": [
+              "Dúkaloft þurfa lítið: þurrkaðu af þeim rykið eins og af vegg og náðu blettum snemma með örlítið rökum klút. Fyrir PVC-himnur og húðaða dúka sér STRETCH Cleaner okkar um verkið — ítarlegar leiðbeiningar finnur þú í umhirðugreininni annars staðar á þessu bloggi."
+            ]
+          },
+          {
+            "heading": "Svona færðu loft af Clipso-gerð",
+            "paragraphs": [
+              "Segðu okkur frá rýminu og markmiðinu — hljóðvist, mattri hönnunaráferð, prentuðum vegg — og við gerum tilboð í dúk eftir máli, efnin eða heildaruppsetningu í gegnum söluaðilann á þínu svæði, oftast samdægurs."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -3805,6 +3964,10 @@
       "titleB": "minna vesen",
       "lead": "Hvort líkanið sem þú velur sjáum við um vöruna og aðfangakeðjuna — þú afhendir hágæðaloft sem viðskiptavinir þínir elska.",
       "cards": [
+        {
+          "title": "Beint frá framleiðanda",
+          "body": "Þú kaupir af verksmiðjunni, ekki innflytjanda: okkar eigin belgíska framleiðsla þýðir betri framlegð, hraðari sérsmíði og eina ábyrgð á bæði efni og uppsetningu."
+        },
         {
           "title": "Sterk framlegð",
           "body": "Fagverð á himnum og prófílum eftir máli, með heilbrigðri framlegð á eftirsóttri hágæðavöru."
@@ -4177,6 +4340,10 @@
         {
           "name": "PVC-strekkloft á rúllu",
           "body": "PVC-filma á rúllu — matt, satín, glans, hálfgegnsæjar og litaðar línur frá stóru filmumerkjunum."
+        },
+        {
+          "name": "Strekkloftasett úr pólýester (DIY)",
+          "body": "Heildarsettið fyrir kalda uppsetningu: pólýesterdúkur sniðinn að rýminu þínu, prófílar, hornstykki og leiðbeiningar — leiðin til að setja upp samskeytalaust dúkaloft á eigin spýtur."
         }
       ]
     },

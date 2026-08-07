@@ -139,7 +139,7 @@
     }
   },
   "footer": {
-    "tagline": "Ręcznie wykonane sufity i ściany napinane, projektowane w Belgii i montowane w jeden dzień w całej Europie i USA.",
+    "tagline": "Ręcznie wykonywane sufity napinane i ściany z naszej własnej belgijskiej produkcji — producent, nie importer — montowane w całej Europie i USA w jeden dzień.",
     "solutionsHeading": "Rozwiązania",
     "companyHeading": "Firma",
     "hqHeading": "Siedziba główna — Belgia",
@@ -2063,6 +2063,48 @@
           "body": "Montaż na zimno oznacza brak kurzu i bałaganu, a większość pomieszczeń jest gotowa w jeden dzień — idealnie dla obiektów w użytkowaniu."
         }
       ]
+    },
+    "pool-wellness": {
+      "name": "Baseny i wellness",
+      "shortName": "Baseny i wellness",
+      "eyebrow": "Baseny i wellness",
+      "metaDescription": "Sufity napinane do basenów, spa i stref wellness — membrany odporne na wilgoć i chlor z wykończeniem No-Stain, zintegrowane światło i akustyka, montaż bez przestojów.",
+      "intro": "Hale basenowe i strefy wellness niszczą malowane sufity: kondensacja, opary chloru i ciepło sprawiają, że powłoki łuszczą się w kilka lat. Membrana napinana jest odporna na całą trójkę — a do najbardziej mokrych pomieszczeń budynku wnosi światło i akustykę.",
+      "benefits": [
+        {
+          "title": "Stworzona do wilgoci i chloru",
+          "body": "Membrana nie chłonie wody, nie może się łuszczyć ani odpadać i nie robi sobie nic z kondensacji ani basenowej chemii — a wykończenia No-Stain wystarczy przetrzeć do czysta."
+        },
+        {
+          "title": "Światło bez niczego, co mogłoby korodować",
+          "body": "Podświetlane sufity i szczelne linie LED dają równe, nieoślepiające światło nad wodą — bez odsłoniętych opraw, które rdzewiałyby w wilgotnym powietrzu."
+        },
+        {
+          "title": "Akustyka do twardych, mokrych sal",
+          "body": "Płytki i szkło sprawiają, że na basenie jest głośno. Akustyczny układ membranowy odbiera echu ostrość, nie dodając ani jednego widocznego panelu."
+        }
+      ]
+    },
+    "walls": {
+      "name": "Ściany napinane i akustyka ścienna",
+      "shortName": "Ściany",
+      "eyebrow": "Ściany",
+      "metaDescription": "Tekstylne i welurowe okładziny ścienne, zadrukowane napinane ściany i akustyczne układy ścienne — bezszwowe ściany napinane z absorpcją ukrytą za powierzchnią.",
+      "intro": "Wszystko, co potrafi sufit napinany, potrafi też ściana. Napinane ściany tekstylne i welurowe dają bezszwową, głęboko matową powierzchnię; zadrukowane membrany zamieniają ścianę w dzieło sztuki; a układy akustyczne chowają za tkaniną poważną absorpcję — bez widocznych paneli.",
+      "benefits": [
+        {
+          "title": "Bezszwowe powierzchnie tekstylne",
+          "body": "Ściany z weluru i tekstyliów napięte od krawędzi do krawędzi — ciepły, tapicerowany wygląd bez szwów, zszywek i obwisania z czasem."
+        },
+        {
+          "title": "Akustyka za powierzchnią",
+          "body": "Materiał pochłaniający znika za mikroperforowaną ścianą z tkaniny i w parze z sufitem akustycznym sprowadza pogłos do komfortowego poziomu."
+        },
+        {
+          "title": "Dowolny obraz w rozmiarze ściany",
+          "body": "Zadrukowane ściany napinane niosą fotografię, grafikę lub branding od krawędzi do krawędzi — z podświetleniem, jeśli obraz ma świecić."
+        }
+      ]
     }
   },
   "appPage": {
@@ -2108,7 +2150,9 @@
       "vap-sint-pauwels": "Sint-Pauwels · Biała willa",
       "goesten-opdam": "Belgia · Aranżacja biura",
       "dhl-zaventem": "Zaventem · Sala konferencyjna Boeing 737",
-      "veta-interieur-showroom": "Dendermonde · Salon łazienek"
+      "veta-interieur-showroom": "Dendermonde · Salon łazienek",
+      "creneau-afas-lounge": "Antwerpen · Loża VIP, AFAS Dome",
+      "candor-sint-martens-latem": "Sint-Martens-Latem · Biura dewelopera"
     },
     "comingSoon": "Zdjęcia wkrótce"
   },
@@ -3157,6 +3201,82 @@
           "value": "Veta Interieur"
         }
       ]
+    },
+    "creneau-afas-lounge": {
+      "title": "AFAS Lounge — BE•AT",
+      "summary": "Czarny, błyszczący sufit akustyczny, który zamienia jeden lounge w cztery sale.",
+      "hook": "Jeden sufit, dwa efekty: klubowe lustro na górze i koncertowa absorpcja tuż za nim.",
+      "description": [
+        "Dla loży VIP w AFAS Dome w Antwerpii studio projektowe Creneau International (Hasselt) wymyśliło przestrzeń, która jednego wieczoru gra cztery role: restauracji, parkietu tanecznego, sali konferencyjnej i strefy lounge. Sufit musiał udźwignąć tę przemianę.",
+        "Wyprodukowaliśmy czarną membranę PVC o wysokim połysku i refleksyjności około 90% — lustro, które podwaja salę i jej światło — podpartą perforowaną warstwą akustyczną z materiałem pochłaniającym, dzięki czemu system nagłośnienia BE•AT brzmi czysto, a nie ostro.",
+        "Punkty oświetlenia LED i otwory na głośniki wycięto już na etapie produkcji, membranę zgrzano bezszwowo do szerokości 6.50 m, a liczący 250 m² sufit strefy lounge zamontowano na miejscu w trzy dni."
+      ],
+      "highlights": [
+        "Jedna powierzchnia, dwie funkcje: lustrzany połysk + absorpcja akustyczna",
+        "Otwory na LED i głośniki wycięte fabrycznie, bez widocznych mocowań",
+        "250 m² zamontowane w trzy dni"
+      ],
+      "materials": [
+        "Czarna membrana PVC o wysokim połysku (±90% refleksyjności)",
+        "Perforowana warstwa akustyczna z materiałem pochłaniającym",
+        "Fabrycznie wycięte integracje LED i audio"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "AFAS Dome, Antwerpen"
+        },
+        {
+          "label": "Projekt",
+          "value": "Creneau International (Hasselt)"
+        },
+        {
+          "label": "Powierzchnia",
+          "value": "250 m² · montaż w 3 dni"
+        },
+        {
+          "label": "Rok",
+          "value": "2025"
+        }
+      ]
+    },
+    "candor-sint-martens-latem": {
+      "title": "Candor",
+      "summary": "Niewidzialna akustyka w biurach dewelopera — zero widocznych paneli.",
+      "hook": "Sale konferencyjne poniżej RT60 0.6 sekundy — i ani jednego panelu akustycznego w zasięgu wzroku.",
+      "description": [
+        "Deweloper Candor wyremontował swoje biura przy Kortrijksesteenweg w Sint-Martens-Latem: open space, sale konferencyjne, kuchnia i strefa relaksu, według projektu Goedele Perdu, z doradztwem akustycznym Form Design (Dendermonde) — naszego dealera na ten region.",
+        "Akustyka znika w architekturze. Mikroperforowane membrany poliestrowe pokrywają każdy sufit jedną gładką płaszczyzną, z warstwą pochłaniającą ukrytą w przestrzeni nad sufitem i oświetleniem LED zlicowanym z powierzchnią.",
+        "Rezultat mierzy się tam, gdzie trzeba: pogłos poniżej 0.8 sekundy w open space i poniżej 0.6 sekundy w salach konferencyjnych — akustyka sprzyjająca koncentracji, zero widocznych paneli, a każdy sufit jest demontowalny na potrzeby konserwacji."
+      ],
+      "highlights": [
+        "RT60 poniżej 0.8 s (open space) i 0.6 s (sale konferencyjne)",
+        "Mikroperforowana membrana, absorpcja ukryta nad sufitem",
+        "Demontowalny — pełny dostęp do przestrzeni nad sufitem"
+      ],
+      "materials": [
+        "Akustyczna mikroperforowana membrana poliestrowa",
+        "Warstwa pochłaniająca w przestrzeni międzystropowej",
+        "Zlicowane, zintegrowane oświetlenie LED"
+      ],
+      "facts": [
+        {
+          "label": "Lokalizacja",
+          "value": "Sint-Martens-Latem"
+        },
+        {
+          "label": "Projekt wnętrz",
+          "value": "Goedele Perdu"
+        },
+        {
+          "label": "Akustyka",
+          "value": "Form Design (Dendermonde)"
+        },
+        {
+          "label": "Rok",
+          "value": "2025"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3637,6 +3757,45 @@
             ]
           }
         ]
+      },
+      "clipso-spanplafonds": {
+        "title": "Sufity napinane Clipso: czym są i skąd je wziąć",
+        "excerpt": "Clipso to najbardziej znana marka tkaniny poliestrowej do sufitów napinanych i ścian — ten akustyczny sufit tekstylny, który wielu architektów wpisuje w projekt z nazwy. Czym jest tkanina typu Clipso, w czym jest dobra i jak ją dostarczamy, zadrukowujemy, konfekcjonujemy i montujemy.",
+        "body": [
+          {
+            "heading": "Co właściwie znaczy „Clipso”",
+            "paragraphs": [
+              "Clipso to produkowana we Francji poliestrowa dzianina do sufitów napinanych i ścian — tak znana, że nazwa marki stała się potocznym określeniem całej kategorii tekstylnych sufitów napinanych (tak jak na płyty gipsowo-kartonowe mówi się Gyproc). Od 2022 roku marka należy do Ecophon, części grupy Saint-Gobain.",
+              "Tkaninę montuje się na zimno: bez nagrzewania pomieszczenia i bez zgrzewania na miejscu. Dzianina jest szersza niż PVC — bezszwowa do około pięciu metrów — oddycha i jest dostępna w wersji standardowej, akustycznej i przepuszczającej światło."
+            ]
+          },
+          {
+            "heading": "Gdzie tkanina błyszczy — a gdzie wygrywa PVC",
+            "paragraphs": [
+              "Sufit z tkaniny poliestrowej wybierz wtedy, gdy zależy Ci na głębokim macie i tekstylnym wyglądzie, montażu na zimno (zamieszkane domy, budynki zabytkowe), dużych szerokościach bez łączeń lub mikroperforowanej akustyce. Wersja akustyczna — ten „akoestisch spandoek” czy „toile tendue acoustique”, o które pytają architekci — łączy elegancką powierzchnię z poważną absorpcją.",
+              "Membrana PVC wygrywa w połyskach i wykończeniach lakierowanych, zadrukowanych wzorach z podświetleniem, łazienkach i łatwości zmywania. W praktyce wiele naszych realizacji łączy oba materiały — tkanina w przestrzeniach mieszkalnych i biurowych, PVC tam, gdzie rządzi światło, nadruk lub wilgoć."
+            ]
+          },
+          {
+            "heading": "Jak pracujemy z tkaninami typu Clipso",
+            "paragraphs": [
+              "Jako producent trzymamy cały łańcuch u siebie: poliestrowe tkaniny sufitowe mamy na rolkach w magazynie, docinamy je i konfekcjonujemy na wymiar w naszej belgijskiej produkcji, zadrukowujemy i łączymy z własnymi profilami, oświetleniem LED i układami akustycznymi.",
+              "Monterzy i odsprzedawcy kupują tkaninę na rolki lub przyciętą na wymiar przez nasz katalog materiałów — wersja akustyczna jest dostępna od ręki — a klienci końcowi otrzymują gotowy, zamontowany sufit przez naszą sieć dealerów."
+            ]
+          },
+          {
+            "heading": "Czyszczenie i pielęgnacja",
+            "paragraphs": [
+              "Sufity z tkaniny wymagają niewiele: odkurzaj je jak ścianę, a plamy usuwaj od razu lekko wilgotną ściereczką. Przy membranach PVC i tkaninach powlekanych robotę wykonuje nasz STRETCH Cleaner — pełną instrukcję znajdziesz w przewodniku pielęgnacyjnym w innym wpisie na tym blogu."
+            ]
+          },
+          {
+            "heading": "Jak zamówić sufit typu Clipso",
+            "paragraphs": [
+              "Opowiedz nam o pomieszczeniu i celu — komfort akustyczny, matowa designerska powierzchnia, zadrukowana ściana — a my wycenimy tkaninę na wymiar, materiały lub kompletny montaż przez dealera w Twoim regionie, zwykle jeszcze tego samego dnia roboczego."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -3805,6 +3964,10 @@
       "titleB": "mniej kłopotów",
       "lead": "Niezależnie od modelu, my zajmujemy się produktem i łańcuchem dostaw — Ty dostarczasz sufit klasy premium, który pokochają Twoi klienci.",
       "cards": [
+        {
+          "title": "Prosto od producenta",
+          "body": "Kupujesz w fabryce, a nie u importera: własna belgijska produkcja to lepsze marże, szybsze realizacje na wymiar i jedna gwarancja na materiał i montaż."
+        },
         {
           "title": "Mocne marże",
           "body": "Ceny dla profesjonalistów na membrany i profile na wymiar, ze zdrową marżą na produkcie premium, na który jest popyt."
@@ -4177,6 +4340,10 @@
         {
           "name": "Sufit napinany PVC w rolce",
           "body": "Membrana PVC w rolce — gamy matowe, satynowe, połysk, transłucentne i kolorowe od czołowych producentów folii."
+        },
+        {
+          "name": "Zestaw poliestrowego sufitu napinanego (DIY)",
+          "body": "Kompletny zestaw do montażu na zimno: tkanina poliestrowa docięta do Twojego pomieszczenia, profile, narożniki i instrukcja — droga DIY do bezszwowego sufitu z tkaniny."
         }
       ]
     },

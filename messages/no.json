@@ -139,7 +139,7 @@
     }
   },
   "footer": {
-    "tagline": "Håndlagde strekktak & strekkvegger, utviklet i Belgia og montert på én dag over hele Europa og USA.",
+    "tagline": "Håndlagde strekktak og strekkvegger fra vår egen belgiske produksjon — produsent, ikke importør — montert i hele Europa og USA på én dag.",
     "solutionsHeading": "Løsninger",
     "companyHeading": "Selskap",
     "hqHeading": "Hovedkontor — Belgia",
@@ -2063,6 +2063,48 @@
           "body": "Kald montering betyr null støv og null rot, og de fleste rom er ferdige på én enkelt dag — ideelt for lokaler i bruk."
         }
       ]
+    },
+    "pool-wellness": {
+      "name": "Svømmebasseng & wellness",
+      "shortName": "Basseng & wellness",
+      "eyebrow": "Basseng & wellness",
+      "metaDescription": "Strekktak for svømmebasseng, spa og wellnessrom — fukt- og klorbestandige membraner med No-Stain-finish, integrert lys og akustikk, montert uten driftsstans.",
+      "intro": "Svømmehaller og wellnessrom ødelegger malte tak: kondens, klordamp og varme får malingen til å flasse i løpet av få år. En spent membran er immun mot alle tre — og bringer lys og akustikk inn i de våteste rommene i bygget.",
+      "benefits": [
+        {
+          "title": "Bygget for fukt og klor",
+          "body": "Membranen trekker ikke til seg vann, kan verken flasse eller skalle av, og bryr seg ikke om kondens og bassengkjemi — med No-Stain-overflater som tørkes rene."
+        },
+        {
+          "title": "Lys uten noe som kan ruste",
+          "body": "Baklyste tak og forseglede LED-linjer legger et jevnt, blendfritt lys over vannet — uten synlige armaturer som ruster i den fuktige luften."
+        },
+        {
+          "title": "Akustikk for harde, våte rom",
+          "body": "Fliser og glass gjør bassengrom høylytte. En akustisk membranoppbygging tar brodden av ekkoet uten å tilføre et eneste synlig panel."
+        }
+      ]
+    },
+    "walls": {
+      "name": "Strekkvegger & veggakustikk",
+      "shortName": "Vegger",
+      "eyebrow": "Vegger",
+      "metaDescription": "Tekstil- og fløyelskledninger for vegg, trykte strekkvegger og akustiske veggoppbygginger — sømløse spente vegger med absorpsjonen skjult bak overflaten.",
+      "intro": "Alt et strekktak kan, kan en vegg også. Spente tekstil- og fløyelsvegger gir en sømløs, dypt matt overflate; trykte membraner gjør en vegg til kunstverk; og akustiske oppbygginger skjuler seriøs absorpsjon bak duken — ingen synlige paneler.",
+      "benefits": [
+        {
+          "title": "Sømløse tekstiloverflater",
+          "body": "Fløyels- og tekstilvegger strukket fra kant til kant — et varmt, polstret uttrykk uten skjøter, stifter eller siging over tid."
+        },
+        {
+          "title": "Akustikk bak overflaten",
+          "body": "Absorbentmateriale forsvinner bak en mikroperforert tekstilvegg og spiller sammen med et akustisk tak for å få etterklangen ned på et behagelig nivå."
+        },
+        {
+          "title": "Hvilket som helst motiv i veggformat",
+          "body": "Trykte strekkvegger bærer foto, kunst eller merkevaregrafikk fra kant til kant — baklyst hvis du vil at bildet skal gløde."
+        }
+      ]
     }
   },
   "appPage": {
@@ -2108,7 +2150,9 @@
       "vap-sint-pauwels": "Sint-Pauwels · Hvit villa",
       "goesten-opdam": "Belgia · Kontorinnredning",
       "dhl-zaventem": "Zaventem · Boeing 737-møterom",
-      "veta-interieur-showroom": "Dendermonde · Baderomsshowroom"
+      "veta-interieur-showroom": "Dendermonde · Baderomsshowroom",
+      "creneau-afas-lounge": "Antwerpen · VIP-lounge, AFAS Dome",
+      "candor-sint-martens-latem": "Sint-Martens-Latem · Kontorer for eiendomsutvikler"
     },
     "comingSoon": "Bilder kommer snart"
   },
@@ -3157,6 +3201,82 @@
           "value": "Veta Interieur"
         }
       ]
+    },
+    "creneau-afas-lounge": {
+      "title": "AFAS Lounge — BE•AT",
+      "summary": "Et akustisk tak i svart høyglans som forvandler én lounge til fire rom.",
+      "hook": "Ett tak, to effekter: et speil i klubbklasse over — lydabsorpsjon i konsertklasse bak.",
+      "description": [
+        "Til VIP-loungen i AFAS Dome i Antwerpen så designstudioet Creneau International (Hasselt) for seg et rom som spiller fire roller i løpet av én og samme kveld: restaurant, dansegulv, konferanserom og lounge. Taket måtte bære den forvandlingen.",
+        "Vi produserte en svart høyglans-PVC-membran med rundt 90% refleksjon — et speil som dobler rommet og lyset — med et perforert akustisk sjikt med absorbentmateriale bak, slik at lyden fra BE•AT-anlegget lander presist i stedet for hardt.",
+        "LED-lyspunkter og høyttaleråpninger ble skåret allerede i produksjonen, membranen ble sveiset sømløst i inntil 6.50 m bredde, og loungens 250 m² store tak ble montert på tre dager på stedet."
+      ],
+      "highlights": [
+        "Én flate, to funksjoner: speilglans + akustisk absorpsjon",
+        "LED- og høyttaleråpninger skåret på fabrikk — ingen synlige beslag",
+        "250 m² montert på tre dager"
+      ],
+      "materials": [
+        "Svart høyglans-PVC-membran (±90% refleksjon)",
+        "Perforert akustisk baksjikt med absorbent",
+        "Fabrikkskårne LED- og lydintegrasjoner"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "AFAS Dome, Antwerpen"
+        },
+        {
+          "label": "Design",
+          "value": "Creneau International (Hasselt)"
+        },
+        {
+          "label": "Areal",
+          "value": "250 m² · montert på 3 dager"
+        },
+        {
+          "label": "År",
+          "value": "2025"
+        }
+      ]
+    },
+    "candor-sint-martens-latem": {
+      "title": "Candor",
+      "summary": "Usynlig akustikk for kontorene til en eiendomsutvikler — null synlige paneler.",
+      "hook": "Møterom under RT60 0.6 sekunder — og ikke ett eneste akustikkpanel å se.",
+      "description": [
+        "Eiendomsutvikleren Candor renoverte kontorene sine i Kortrijksesteenweg i Sint-Martens-Latem: åpent landskap, møterom, kjøkken og en avslapningssone, innredet av Goedele Perdu med akustisk rådgivning fra Form Design (Dendermonde) — forhandleren vår i regionen.",
+        "Akustikken forsvinner inn i arkitekturen. Mikroperforerte polyestermembraner spenner over hvert tak som én glatt flate, med absorpsjonssjiktet skjult i hulrommet over og LED-belysning integrert i flukt med overflaten.",
+        "Resultatet måles der det teller: etterklang under 0.8 sekunder i det åpne landskapet og under 0.6 sekunder i møterommene — akustikk for konsentrert arbeid uten ett eneste synlig panel, og hvert tak kan demonteres for vedlikehold."
+      ],
+      "highlights": [
+        "RT60 under 0.8 s (åpent landskap) og 0.6 s (møterom)",
+        "Mikroperforert membran — absorpsjonen skjult i hulrommet",
+        "Demonterbart — full tilgang til hulrommet over taket"
+      ],
+      "materials": [
+        "Akustisk mikroperforert polyestermembran",
+        "Absorpsjonssjikt i hulrommet over taket",
+        "Integrert LED-belysning i flukt med overflaten"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Sint-Martens-Latem"
+        },
+        {
+          "label": "Interiørdesign",
+          "value": "Goedele Perdu"
+        },
+        {
+          "label": "Akustikk",
+          "value": "Form Design (Dendermonde)"
+        },
+        {
+          "label": "År",
+          "value": "2025"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3637,6 +3757,45 @@
             ]
           }
         ]
+      },
+      "clipso-spanplafonds": {
+        "title": "Clipso-strekktak: hva de er og hvor du får tak i dem",
+        "excerpt": "Clipso er det mest kjente merket innen polyesterduk for strekktak og strekkvegger — det akustiske tekstiltaket mange arkitekter spesifiserer ved navn. Hva duk av Clipso-typen er, hva den er god på, og hvordan vi leverer, trykker, konfeksjonerer og monterer den.",
+        "body": [
+          {
+            "heading": "Hva «Clipso» egentlig betyr",
+            "paragraphs": [
+              "Clipso er en franskprodusert strikket polyesterduk for spente tak og vegger — så kjent at merkenavnet har blitt en fellesbetegnelse for hele kategorien tekstilstrekktak (omtrent som folk sier Gyproc om gipsplater). Siden 2022 tilhører merket Ecophon, en del av Saint-Gobain-konsernet.",
+              "Duken monteres kaldt: ingen oppvarming av rommet, ingen sveising på stedet. Strikkevaren er bredere enn PVC — sømløs opp til rundt fem meter — puster, og fås i standard-, akustikk- og translusent utgave."
+            ]
+          },
+          {
+            "heading": "Der duk briljerer — og der PVC vinner",
+            "paragraphs": [
+              "Velg et tak i polyesterduk når du vil ha et dypt matt tekstiluttrykk, kald montering (bebodde hjem, verneverdige bygg), store sømløse bredder eller mikroperforert akustikk. Den akustiske versjonen — det «akoestisch spandoek» eller «toile tendue acoustique» arkitekter spør etter — kombinerer en elegant overflate med seriøs absorpsjon.",
+              "PVC-membran vinner på glans- og lakkfinish, trykte motiver med baklys, bad og vaskbarhet. I praksis kombinerer mange av prosjektene våre begge deler — duk i bo- og kontorarealer, PVC der lys, trykk eller fukt avgjør."
+            ]
+          },
+          {
+            "heading": "Slik jobber vi med duker av Clipso-typen",
+            "paragraphs": [
+              "Som produsent holder vi hele kjeden i eget hus: vi lagerfører polyestertakduk på rull, skjærer og konfeksjonerer den etter mål i vår belgiske produksjon, trykker på den og kombinerer den med våre egne profiler, LED-belysning og akustiske oppbygginger.",
+              "Montører og forhandlere kjøper duken på rull eller skåret etter mål gjennom materialkatalogen vår — med den akustiske versjonen på lager — og sluttkunder får det ferdige, monterte taket gjennom forhandlernettverket vårt."
+            ]
+          },
+          {
+            "heading": "Rengjøring og pleie",
+            "paragraphs": [
+              "Tekstiltak krever lite: tørk støv av dem som av en vegg, og ta flekker tidlig med en lett fuktig klut. For PVC-membraner og belagte duker gjør vår STRETCH Cleaner jobben — se pleieguiden et annet sted her på bloggen for fullstendige instruksjoner."
+            ]
+          },
+          {
+            "heading": "Slik får du et tak av Clipso-typen",
+            "paragraphs": [
+              "Fortell oss om rommet og målet — akustisk komfort, en matt designoverflate, en trykt vegg — så gir vi deg tilbud på duk etter mål, materialene eller den komplette monteringen gjennom forhandleren i din region, som regel samme arbeidsdag."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -3805,6 +3964,10 @@
       "titleB": "mindre styr",
       "lead": "Uansett hvilken modell du velger, tar vi oss av produktet og leveransekjeden — du leverer en premiumhimling kundene dine elsker.",
       "cards": [
+        {
+          "title": "Rett fra produsenten",
+          "body": "Du kjøper av fabrikken, ikke av en importør: vår egen belgiske produksjon betyr bedre marginer, raskere spesialarbeid og én garanti bak både materiale og montering."
+        },
         {
           "title": "Sterke marginer",
           "body": "Fagpriser på membraner og profiler etter mål, med sunne marginer på et etterspurt premiumprodukt."
@@ -4177,6 +4340,10 @@
         {
           "name": "Strekktak i PVC på rull",
           "body": "PVC-membran på rull — matt, satin, blank, translusent og fargeserier fra de store foliemerkene."
+        },
+        {
+          "name": "Strekktakssett i polyester (gjør det selv)",
+          "body": "Det komplette settet for kald montering: polyesterduk skåret til rommet ditt, profiler, hjørnestykker og veiledning — gjør-det-selv-veien til et sømløst tekstiltak."
         }
       ]
     },

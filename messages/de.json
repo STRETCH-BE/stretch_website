@@ -139,7 +139,7 @@
     }
   },
   "footer": {
-    "tagline": "Handgefertigte Spanndecken & Spannwände, entwickelt in Belgien und an einem Tag montiert in ganz Europa und den USA.",
+    "tagline": "Handgefertigte Spanndecken & Spannwände aus eigener belgischer Produktion — Hersteller, kein Importeur — montiert an einem Tag, in ganz Europa und den USA.",
     "solutionsHeading": "Lösungen",
     "companyHeading": "Unternehmen",
     "hqHeading": "Hauptsitz — Belgien",
@@ -2063,6 +2063,48 @@
           "body": "Kaltmontage bedeutet kein Staub und kein Schmutz; die meisten Räume sind an einem Tag fertig — ideal für genutzte Objekte."
         }
       ]
+    },
+    "pool-wellness": {
+      "name": "Schwimmbäder & Wellness",
+      "shortName": "Pool & Wellness",
+      "eyebrow": "Pool & Wellness",
+      "metaDescription": "Spanndecken für Schwimmbäder, Spas und Wellnessbereiche — feuchtigkeits- und chlorbeständige Membranen mit No-Stain-Finish, integriertem Licht und integrierter Akustik, montiert ohne Betriebsunterbrechung.",
+      "intro": "Schwimmhallen und Wellnessbereiche zerstören gestrichene Decken: Kondenswasser, Chlordampf und Wärme lassen Anstriche innerhalb weniger Jahre abblättern. Eine gespannte Membran ist gegen alle drei immun — und bringt Licht und Akustik in die feuchtesten Räume des Gebäudes.",
+      "benefits": [
+        {
+          "title": "Gebaut für Feuchtigkeit und Chlor",
+          "body": "Die Membran nimmt kein Wasser auf, kann weder abblättern noch abplatzen und steckt Kondenswasser wie Schwimmbadchemie einfach weg — mit No-Stain-Oberflächen, die sich sauber abwischen lassen."
+        },
+        {
+          "title": "Licht, an dem nichts korrodiert",
+          "body": "Hinterleuchtete Decken und dicht verschlossene LED-Linien legen gleichmäßiges, blendfreies Licht über das Wasser — ohne offene Leuchten, die in der feuchten Luft rosten."
+        },
+        {
+          "title": "Akustik für harte, nasse Räume",
+          "body": "Fliesen und Glas machen Schwimmbäder laut. Ein akustischer Membranaufbau nimmt dem Hall die Schärfe, ohne ein einziges sichtbares Paneel hinzuzufügen."
+        }
+      ]
+    },
+    "walls": {
+      "name": "Spannwände & Wandakustik",
+      "shortName": "Wände",
+      "eyebrow": "Wände",
+      "metaDescription": "Textile Wandbespannungen und Samtwände, bedruckte Spannwände und akustische Wandaufbauten — nahtlos gespannte Wände mit verborgener Absorption hinter der Oberfläche.",
+      "intro": "Alles, was eine Spanndecke kann, kann auch eine Wand. Gespannte Textil- und Samtwände schaffen eine nahtlose, tiefmatte Oberfläche; bedruckte Membranen machen aus einer Wand ein Kunstwerk; und akustische Aufbauten verbergen ernsthafte Absorption hinter dem Gewebe — ohne sichtbare Paneele.",
+      "benefits": [
+        {
+          "title": "Nahtlose Textiloberflächen",
+          "body": "Samt- und Textilwände, von Kante zu Kante gespannt — eine warme, gepolsterte Anmutung ohne Nähte, Klammern oder Durchhängen im Lauf der Zeit."
+        },
+        {
+          "title": "Akustik hinter der Oberfläche",
+          "body": "Absorbermaterial verschwindet hinter einer mikroperforierten Gewebewand und senkt zusammen mit einer Akustikdecke den Nachhall auf ein angenehmes Maß."
+        },
+        {
+          "title": "Jedes Bild in Wandgröße",
+          "body": "Bedruckte Spannwände tragen Fotografie, Kunst oder Branding von Kante zu Kante — auf Wunsch hinterleuchtet, damit das Bild von innen leuchtet."
+        }
+      ]
     }
   },
   "appPage": {
@@ -2108,7 +2150,9 @@
       "vap-sint-pauwels": "Sint-Pauwels · Weiße Villa",
       "goesten-opdam": "Belgien · Büroausbau",
       "dhl-zaventem": "Zaventem · Boeing-737-Besprechungsraum",
-      "veta-interieur-showroom": "Dendermonde · Badezimmer-Showroom"
+      "veta-interieur-showroom": "Dendermonde · Badezimmer-Showroom",
+      "creneau-afas-lounge": "Antwerpen · VIP-Lounge, AFAS Dome",
+      "candor-sint-martens-latem": "Sint-Martens-Latem · Büros eines Projektentwicklers"
     },
     "comingSoon": "Fotos folgen in Kürze"
   },
@@ -3157,6 +3201,82 @@
           "value": "Veta Interieur"
         }
       ]
+    },
+    "creneau-afas-lounge": {
+      "title": "AFAS Lounge — BE•AT",
+      "summary": "Eine schwarze Hochglanz-Akustikdecke, die aus einer Lounge vier Räume macht.",
+      "hook": "Eine Decke, zwei Effekte: oben ein Spiegel auf Club-Niveau, dahinter Absorption auf Konzertniveau.",
+      "description": [
+        "Für die VIP-Lounge des AFAS Dome in Antwerpen entwarf das Designstudio Creneau International (Hasselt) einen Raum, der an einem einzigen Abend vier Rollen spielt: Restaurant, Tanzfläche, Konferenzraum und Lounge. Die Decke musste diese Verwandlung tragen.",
+        "Wir fertigten eine schwarze Hochglanz-PVC-Membran mit rund 90% Reflexion — ein Spiegel, der den Raum und sein Licht verdoppelt — hinterlegt mit einer perforierten Akustikschicht samt Absorbermaterial, damit das BE•AT-Soundsystem präzise klingt statt hart.",
+        "LED-Lichtpunkte und Lautsprecheröffnungen wurden schon in der Produktion zugeschnitten, die Membran wurde bis 6,50 m Breite nahtlos verschweißt, und die 250 m² große Loungedecke wurde in drei Tagen vor Ort montiert."
+      ],
+      "highlights": [
+        "Eine Fläche, zwei Funktionen: Spiegelglanz + akustische Absorption",
+        "LED- und Lautsprecheröffnungen ab Werk zugeschnitten, keine sichtbare Technik",
+        "250 m² montiert in drei Tagen"
+      ],
+      "materials": [
+        "Schwarze Hochglanz-PVC-Membran (±90% Reflexion)",
+        "Perforierte Akustikschicht mit Absorbermaterial",
+        "Ab Werk zugeschnittene LED- und Audio-Integrationen"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "AFAS Dome, Antwerpen"
+        },
+        {
+          "label": "Design",
+          "value": "Creneau International (Hasselt)"
+        },
+        {
+          "label": "Fläche",
+          "value": "250 m² · montiert in 3 Tagen"
+        },
+        {
+          "label": "Jahr",
+          "value": "2025"
+        }
+      ]
+    },
+    "candor-sint-martens-latem": {
+      "title": "Candor",
+      "summary": "Unsichtbare Akustik für die Büros eines Projektentwicklers — kein einziges sichtbares Paneel.",
+      "hook": "Besprechungsräume unter RT60 0,6 Sekunden — und nirgends ein Akustikpaneel zu sehen.",
+      "description": [
+        "Der Immobilienentwickler Candor renovierte seine Büros am Kortrijksesteenweg in Sint-Martens-Latem: Open Space, Besprechungsräume, Küche und eine Entspannungszone, gestaltet von Goedele Perdu, mit akustischer Beratung durch Form Design (Dendermonde) — unseren Händler für die Region.",
+        "Die Akustik verschwindet in der Architektur. Mikroperforierte Polyestermembranen spannen jede Decke zu einer einzigen glatten Fläche, die Absorptionsschicht liegt verborgen im Plenum darüber, und die LED-Beleuchtung ist flächenbündig in die Oberfläche integriert.",
+        "Das Ergebnis misst sich dort, wo es zählt: Nachhall unter 0,8 Sekunden im Open Space und unter 0,6 Sekunden in den Besprechungsräumen — Akustik für konzentriertes Arbeiten, ganz ohne sichtbare Paneele, und jede Decke bleibt für die Wartung demontierbar."
+      ],
+      "highlights": [
+        "RT60 unter 0,8 s (Open Space) und 0,6 s (Besprechungsräume)",
+        "Mikroperforierte Membran, Absorption verborgen im Plenum",
+        "Demontierbar — voller Zugang zum Deckenhohlraum"
+      ],
+      "materials": [
+        "Akustische mikroperforierte Polyestermembran",
+        "Absorptionsschicht im Plenum",
+        "Flächenbündig integrierte LED-Beleuchtung"
+      ],
+      "facts": [
+        {
+          "label": "Standort",
+          "value": "Sint-Martens-Latem"
+        },
+        {
+          "label": "Innenarchitektur",
+          "value": "Goedele Perdu"
+        },
+        {
+          "label": "Akustik",
+          "value": "Form Design (Dendermonde)"
+        },
+        {
+          "label": "Jahr",
+          "value": "2025"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3637,6 +3757,45 @@
             ]
           }
         ]
+      },
+      "clipso-spanplafonds": {
+        "title": "Clipso-Spanndecken: Was sie sind und wo Sie sie bekommen",
+        "excerpt": "Clipso ist die bekannteste Polyestergewebe-Marke für Spanndecken und Spannwände — das Akustikgewebe, das viele Architekten namentlich ausschreiben. Was Gewebe vom Typ Clipso ist, was es gut kann und wie wir es liefern, bedrucken, konfektionieren und montieren.",
+        "body": [
+          {
+            "heading": "Was „Clipso“ eigentlich bedeutet",
+            "paragraphs": [
+              "Clipso ist ein in Frankreich gefertigtes Polyestergewirke für gespannte Decken und Wände — so bekannt, dass der Markenname zum Kürzel für die ganze Kategorie der Gewebespanndecken geworden ist (so wie man Gyproc für Gipskartonplatten sagt). Seit 2022 gehört die Marke zu Ecophon, einem Teil der Saint-Gobain-Gruppe.",
+              "Das Gewebe wird kalt montiert: kein Aufheizen des Raums, kein Schweißen auf der Baustelle. Das Gewirke ist breiter als PVC — nahtlos bis rund fünf Meter — atmungsaktiv und in Standard-, Akustik- und transluzenter Version erhältlich."
+            ]
+          },
+          {
+            "heading": "Wo Gewebe glänzt — und wo PVC gewinnt",
+            "paragraphs": [
+              "Wählen Sie eine Polyester-Gewebedecke, wenn Sie eine tiefmatte, textile Optik wollen, kalte Montage (bewohnte Häuser, denkmalgeschützte Gebäude), große nahtlose Breiten oder mikroperforierte Akustik. Die Akustikversion — das akustische Spanngewebe, nach dem Architekten fragen — verbindet eine elegante Oberfläche mit ernsthafter Absorption.",
+              "Die PVC-Membran gewinnt bei Glanz- und Lackoberflächen, bedruckten Motiven mit Hinterleuchtung, Badezimmern und Abwaschbarkeit. In der Praxis kombinieren viele unserer Projekte beides — Gewebe in Wohn- und Büroräumen, PVC dort, wo Licht, Druck oder Feuchtigkeit den Ton angeben."
+            ]
+          },
+          {
+            "heading": "Wie wir mit Geweben vom Typ Clipso arbeiten",
+            "paragraphs": [
+              "Als Hersteller halten wir die gesamte Kette im eigenen Haus: Wir lagern Polyester-Deckengewebe auf der Rolle, schneiden und konfektionieren sie nach Maß in unserer belgischen Produktion, bedrucken sie und kombinieren sie mit unseren eigenen Profilen, LED-Beleuchtungen und Akustikaufbauten.",
+              "Monteure und Wiederverkäufer beziehen das Gewebe als ganze Rolle oder zugeschnitten über unseren Materialkatalog — die Akustikversion ist ab Lager verfügbar — und Endkunden erhalten die fertige, montierte Decke über unser Händlernetz."
+            ]
+          },
+          {
+            "heading": "Reinigung und Pflege",
+            "paragraphs": [
+              "Gewebedecken verlangen wenig: Entstauben Sie sie wie eine Wand und behandeln Sie Flecken früh mit einem leicht feuchten Tuch. Bei PVC-Membranen und beschichteten Geweben übernimmt unser STRETCH Cleaner die Arbeit — die vollständige Anleitung finden Sie im Pflegeguide an anderer Stelle in diesem Blog."
+            ]
+          },
+          {
+            "heading": "So kommen Sie zu einer Decke vom Typ Clipso",
+            "paragraphs": [
+              "Nennen Sie uns den Raum und das Ziel — akustischer Komfort, eine matte Designoberfläche, eine bedruckte Wand — und wir kalkulieren das maßgefertigte Gewebe, die Materialien oder die komplette Montage über den Händler in Ihrer Region, meist noch am selben Werktag."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -3805,6 +3964,10 @@
       "titleB": "weniger Aufwand",
       "lead": "Für welches Modell Sie sich auch entscheiden: Wir kümmern uns um Produkt und Lieferkette — Sie liefern eine Premium-Decke, die Ihre Kunden begeistert.",
       "cards": [
+        {
+          "title": "Direkt vom Hersteller",
+          "body": "Sie kaufen ab Werk, nicht beim Importeur: Unsere eigene belgische Produktion bedeutet bessere Margen, schnellere Maßanfertigung und eine Garantie für Material und Montage."
+        },
         {
           "title": "Starke Margen",
           "body": "Händlerkonditionen auf Membranen und Profile nach Maß — mit gesunden Margen auf ein gefragtes Premium-Produkt."
@@ -4177,6 +4340,10 @@
         {
           "name": "PVC-Spanndecke auf der Rolle",
           "body": "PVC-Folie auf der Rolle — Matt-, Satin-, Glanz-, transluzente und Farbserien der großen Folienmarken."
+        },
+        {
+          "name": "Polyester-Spanndecken-Set (zur Selbstmontage)",
+          "body": "Das komplette Set für die Kaltmontage: Polyestergewebe zugeschnitten auf Ihren Raum, Profile, Eckstücke und Anleitung — der Do-it-yourself-Weg zur nahtlosen Gewebedecke."
         }
       ]
     },

@@ -1,3 +1,40 @@
+## 2026-08-07 (6) — Photo batch, 2 project pages, competitor B-batch (build 1796 pages)
+
+- **19 photos wired** (Michael's Website.zip, checklist names): VAP Sint-Pauwels
+  + DHL Zaventem hero+gallery (coming-soon chips GONE), 6 blog heroes
+  (planchetten, scheuren, plafondhoogte, buiten, afwassen, schuin-dak),
+  5 materials (tracklight-profile/-system, polyester-wool-panels,
+  acoustic-islands, acoustic-wall-panels). 2 extra ZEBRA photos staged
+  (project awaits details).
+- **2 new project pages ×12** (details from altodesign.pl): creneau-afas-lounge
+  (AFAS Dome Antwerpen, Creneau International; black gloss ±90% + acoustic
+  backing, 250 m² in 3 days, factory-cut LED/audio) + candor-sint-martens-latem
+  (Goedele Perdu + Form Design = our dealer; RT60 <0.8/<0.6 s, micro-perforated,
+  demountable). Portfolio now 24 projects. Photos curated from projzips.
+- **Competitor B-batch:**
+  · Blog post `clipso-spanplafonds` ×12 (slug = old URL, 33 clicks/yr; nl title
+    "Clipso spanplafonds…", "akoestisch spandoek"; fr "plafond tendu Clipso",
+    "toile tendue acoustique") — intercepts PolyGroup/Phonotech brand traffic.
+  · 2 new APPLICATIONS ×12 (+ has() guards in ApplicationRoute): pool-wellness
+    ("Zwembaden & wellness") + walls ("Spanwanden & wandakoestiek").
+  · Acoustic product RENAMED fr "Plafond tendu acoustique" (1.8K impr) /
+    nl+be "Akoestisch spanplafond" (2.9K impr) — title/H1/nav = the keyword.
+  · fabrics metaDescription fr/nl now names "toile acoustique en rouleau" /
+    "akoestisch doek op rol" (45 clicks/yr proof).
+  · Fabrics 5th item: "Polyester stretch ceiling kit (DIY)" ×12 (UK: 66% of
+    .uk clicks) — appended index-safe.
+  · Manufacturer USP: footer tagline reworded ×12 ("manufacturer, not
+    importer, Belgian production") + new first "Straight from the manufacturer"
+    card on /partners (Factory icon; WHY_ICONS got a fallback so extra cards
+    cannot crash prerender again).
+- Fixed: mojibake from unicode_escape insertion (em dashes/bullets); partners
+  prerender crash (icon array shorter than cards).
+- Verified: typecheck, build 1796/1796 (was 1736; +24 project, +12 blog,
+  +24 application pages), 0 MISSING_MESSAGE. content.ts slugs now **38**.
+- Still placeholder: 6 blog heroes (geluidsoverlast, klimaat, zelf-plaatsen,
+  sterrenhemel, prijs, what-is), speaker, air-tools, polyester-roll, kit photo,
+  installer.jpg, about/contact/cta-band, prefab pairs, Bert Demasure print.
+
 ## 2026-08-07 (5) — leads stored in Supabase (in addition to e-mail)
 
 - **New table `public.leads`** (supabase/schema.sql, safe to re-run): every

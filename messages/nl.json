@@ -139,7 +139,7 @@
     }
   },
   "footer": {
-    "tagline": "Handgemaakte spanplafonds & spanwanden, ontwikkeld in België en in één dag geplaatst in heel Europa en de VS.",
+    "tagline": "Handgemaakte spanplafonds & spanwanden uit eigen Belgische productie — fabrikant, geen invoerder — in één dag geplaatst, in heel Europa en de VS.",
     "solutionsHeading": "Oplossingen",
     "companyHeading": "Bedrijf",
     "hqHeading": "Hoofdkantoor — België",
@@ -720,7 +720,7 @@
       "colourChartNote": "Beschikbaar in matte, satijnen, glanzende, doorschijnende en metallic afwerkingen."
     },
     "acoustic": {
-      "name": "Akoestisch spansysteem",
+      "name": "Akoestisch spanplafond",
       "short": "Akoestisch",
       "category": "Geluidsabsorberend doek",
       "mount": "Koud / warm",
@@ -2063,6 +2063,48 @@
           "body": "Koude montage betekent geen stof en geen rommel; de meeste ruimtes zijn op één dag klaar — ideaal voor panden in gebruik."
         }
       ]
+    },
+    "pool-wellness": {
+      "name": "Zwembaden & wellness",
+      "shortName": "Zwembad & wellness",
+      "eyebrow": "Zwembad & wellness",
+      "metaDescription": "Spanplafonds voor zwembaden, spa’s en wellnessruimtes — vocht- en chloorbestendige membranen met No-Stain-afwerking, geïntegreerd licht en akoestiek, geplaatst zonder sluitingsdagen.",
+      "intro": "Zwembadhallen en wellnessruimtes maken geschilderde plafonds kapot: condens, chloordamp en warmte doen coatings binnen enkele jaren afbladderen. Een gespannen membraan is immuun voor alle drie — en brengt licht en akoestiek in de natste ruimtes van het gebouw.",
+      "benefits": [
+        {
+          "title": "Gebouwd voor vocht en chloor",
+          "body": "Het membraan neemt geen water op, kan niet afbladderen of schilferen, en trekt zich niets aan van condens of zwembadchemie — met No-Stain-afwerkingen die u gewoon schoonveegt."
+        },
+        {
+          "title": "Licht zonder iets dat kan roesten",
+          "body": "Verlichte plafonds en afgedichte LED-lijnen leggen egaal, verblindingsvrij licht over het water, zonder zichtbare armaturen die wegroesten in de vochtige lucht."
+        },
+        {
+          "title": "Akoestiek voor harde, natte ruimtes",
+          "body": "Tegels en glas maken zwembaden luid. Een akoestische membraanopbouw haalt de scherpte uit de galm zonder ook maar één zichtbaar paneel toe te voegen."
+        }
+      ]
+    },
+    "walls": {
+      "name": "Spanwanden & wandakoestiek",
+      "shortName": "Wanden",
+      "eyebrow": "Wanden",
+      "metaDescription": "Wandbekleding in textiel en velours, bedrukte spanwanden en akoestische wandopbouwen — naadloze gespannen wanden met de absorptie verborgen achter het oppervlak.",
+      "intro": "Alles wat een spanplafond kan, kan een wand ook. Gespannen wanden in textiel en velours geven een naadloos, diepmat oppervlak; bedrukte membranen maken van een wand een kunstwerk; en akoestische opbouwen verbergen serieuze absorptie achter het doek — zonder zichtbare panelen.",
+      "benefits": [
+        {
+          "title": "Naadloze textieloppervlakken",
+          "body": "Wanden in velours en textiel, gespannen van rand tot rand — een warme, gestoffeerde look zonder naden, nieten of doorhangen na verloop van tijd."
+        },
+        {
+          "title": "Akoestiek achter het oppervlak",
+          "body": "Absorptiemateriaal verdwijnt achter een microgeperforeerde textielwand en brengt samen met een akoestisch plafond de nagalm naar een comfortabel niveau."
+        },
+        {
+          "title": "Elk beeld, op wandformaat",
+          "body": "Bedrukte spanwanden dragen fotografie, kunst of branding van rand tot rand — van achteren verlicht als u het beeld wilt laten gloeien."
+        }
+      ]
     }
   },
   "appPage": {
@@ -2108,7 +2150,9 @@
       "vap-sint-pauwels": "Sint-Pauwels · Witte villa",
       "goesten-opdam": "België · Kantoorinrichting",
       "dhl-zaventem": "Zaventem · Boeing 737-vergaderruimte",
-      "veta-interieur-showroom": "Dendermonde · Badkamershowroom"
+      "veta-interieur-showroom": "Dendermonde · Badkamershowroom",
+      "creneau-afas-lounge": "Antwerpen · VIP-lounge, AFAS Dome",
+      "candor-sint-martens-latem": "Sint-Martens-Latem · Kantoren projectontwikkelaar"
     },
     "comingSoon": "Foto's volgen binnenkort"
   },
@@ -3157,6 +3201,82 @@
           "value": "Veta Interieur"
         }
       ]
+    },
+    "creneau-afas-lounge": {
+      "title": "AFAS Lounge — BE•AT",
+      "summary": "Een zwart hoogglanzend akoestisch plafond dat van één lounge vier zalen maakt.",
+      "hook": "Eén plafond, twee effecten: bovenaan een spiegel van clubniveau, daarachter absorptie van concertniveau.",
+      "description": [
+        "Voor de VIP-lounge van de AFAS Dome in Antwerpen bedacht designstudio Creneau International (Hasselt) een ruimte die op één avond vier rollen speelt: restaurant, dansvloer, conferentiezaal en lounge. Het plafond moest die transformatie dragen.",
+        "Wij produceerden een zwart hoogglanzend PVC-membraan met ongeveer 90% reflectie — een spiegel die de zaal en haar licht verdubbelt — met daarachter een geperforeerde akoestische laag met absorptiemateriaal, zodat het BE•AT-geluidssysteem strak klinkt in plaats van hard.",
+        "LED-lichtpunten en luidsprekeropeningen werden al in productie uitgesneden, het membraan werd naadloos gelast tot 6,50 m breed, en het 250 m² grote loungeplafond werd in drie dagen ter plaatse gemonteerd."
+      ],
+      "highlights": [
+        "Eén vlak, twee functies: spiegelglans + akoestische absorptie",
+        "LED- en luidsprekeropeningen in de fabriek uitgesneden, geen zichtbare techniek",
+        "250 m² geplaatst in drie dagen"
+      ],
+      "materials": [
+        "Zwart hoogglanzend PVC-membraan (±90% reflectie)",
+        "Geperforeerde akoestische laag met absorptiemateriaal",
+        "In de fabriek uitgesneden LED- en audio-integraties"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "AFAS Dome, Antwerpen"
+        },
+        {
+          "label": "Design",
+          "value": "Creneau International (Hasselt)"
+        },
+        {
+          "label": "Oppervlakte",
+          "value": "250 m² · geplaatst in 3 dagen"
+        },
+        {
+          "label": "Jaar",
+          "value": "2025"
+        }
+      ]
+    },
+    "candor-sint-martens-latem": {
+      "title": "Candor",
+      "summary": "Onzichtbare akoestiek voor de kantoren van een projectontwikkelaar — nul zichtbare panelen.",
+      "hook": "Vergaderzalen onder RT60 0,6 seconden, en nergens een akoestisch paneel te zien.",
+      "description": [
+        "Projectontwikkelaar Candor renoveerde zijn kantoren aan de Kortrijksesteenweg in Sint-Martens-Latem: open space, vergaderzalen, keuken en een ontspanningszone, ontworpen door Goedele Perdu met akoestisch advies van Form Design (Dendermonde) — onze dealer voor de regio.",
+        "De akoestiek verdwijnt in de architectuur. Microgeperforeerde polyestermembranen overspannen elk plafond als één strak vlak, met de absorptielaag verborgen in het plenum erboven en LED-verlichting vlak in het oppervlak geïntegreerd.",
+        "Het resultaat meet waar het telt: een nagalm onder 0,8 seconden in de open space en onder 0,6 seconden in de vergaderzalen — akoestiek om geconcentreerd te werken, zonder één zichtbaar paneel, en elk plafond demonteerbaar voor onderhoud."
+      ],
+      "highlights": [
+        "RT60 onder 0,8 s (open space) en 0,6 s (vergaderzalen)",
+        "Microgeperforeerd membraan, absorptie verborgen in het plenum",
+        "Demonteerbaar — volledige toegang tot de ruimte boven het plafond"
+      ],
+      "materials": [
+        "Akoestisch microgeperforeerd polyestermembraan",
+        "Absorptielaag in het plenum",
+        "Vlak geïntegreerde LED-verlichting"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Sint-Martens-Latem"
+        },
+        {
+          "label": "Interieurontwerp",
+          "value": "Goedele Perdu"
+        },
+        {
+          "label": "Akoestiek",
+          "value": "Form Design (Dendermonde)"
+        },
+        {
+          "label": "Jaar",
+          "value": "2025"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3637,6 +3757,45 @@
             ]
           }
         ]
+      },
+      "clipso-spanplafonds": {
+        "title": "Clipso spanplafonds: wat ze zijn en waar u ze vindt",
+        "excerpt": "Clipso is het bekendste merk polyesterdoek voor spanplafonds en spanwanden — het akoestische spandoek dat veel architecten bij naam voorschrijven. Wat doek van het Clipso-type is, waar het in uitblinkt, en hoe wij het leveren, bedrukken, confectioneren en plaatsen.",
+        "body": [
+          {
+            "heading": "Wat “Clipso” eigenlijk betekent",
+            "paragraphs": [
+              "Clipso is een in Frankrijk geproduceerd gebreid polyesterdoek voor gespannen plafonds en wanden — zo bekend dat de merknaam synoniem werd voor de hele categorie textielspanplafonds (zoals mensen Gyproc zeggen tegen gipsplaat). Sinds 2022 behoort het merk tot Ecophon, onderdeel van de Saint-Gobain-groep.",
+              "Het doek wordt koud geplaatst: geen opwarming van de ruimte, geen lassen ter plaatse. Het gebreide doek is breder dan PVC — naadloos tot ongeveer vijf meter — ademend, en verkrijgbaar in standaard, akoestische en translucente versies."
+            ]
+          },
+          {
+            "heading": "Waar doek schittert — en waar PVC wint",
+            "paragraphs": [
+              "Kies een polyester doekplafond wanneer u een diepmatte, textiele look wilt, koude plaatsing (bewoonde woningen, erfgoedpanden), grote naadloze breedtes of microgeperforeerde akoestiek. De akoestische versie — het “akoestisch spandoek” waar architecten om vragen — koppelt een elegant oppervlak aan serieuze absorptie.",
+              "PVC-membraan wint op glans- en lakafwerkingen, bedrukte ontwerpen met backlight, badkamers en afwasbaarheid. In de praktijk combineren veel van onze projecten beide — doek in woon- en kantoorruimtes, PVC waar licht, print of vocht de hoofdrol speelt."
+            ]
+          },
+          {
+            "heading": "Hoe wij met doeken van het Clipso-type werken",
+            "paragraphs": [
+              "Als fabrikant houden we de hele keten in eigen huis: we hebben polyester plafonddoeken op rol op voorraad, snijden en confectioneren ze op maat in onze Belgische productie, bedrukken ze, en combineren ze met onze eigen profielen, LED-verlichting en akoestische opbouwen.",
+              "Plaatsers en verdelers kopen het doek per rol of op maat gesneden via onze materialencatalogus — met de akoestische versie uit voorraad leverbaar — en eindklanten krijgen het afgewerkte, geplaatste plafond via ons dealernetwerk."
+            ]
+          },
+          {
+            "heading": "Reiniging en onderhoud",
+            "paragraphs": [
+              "Doekplafonds vragen weinig: stof ze af zoals een wand, en behandel vlekken vroeg met een licht vochtige doek. Voor PVC-membranen en gecoate doeken doet onze STRETCH Cleaner het werk — zie de onderhoudsgids elders op deze blog voor de volledige instructies."
+            ]
+          },
+          {
+            "heading": "Een plafond van het Clipso-type laten plaatsen",
+            "paragraphs": [
+              "Vertel ons de ruimte en het doel — akoestisch comfort, een mat designoppervlak, een bedrukte wand — en wij bezorgen u een offerte voor het doek op maat, de materialen of de volledige plaatsing via de dealer in uw regio, meestal nog dezelfde werkdag."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -3805,6 +3964,10 @@
       "titleB": "minder zorgen",
       "lead": "Welk model u ook kiest, wij zorgen voor het product en de toeleveringsketen — u levert een premium plafond waar uw klanten van houden.",
       "cards": [
+        {
+          "title": "Rechtstreeks van de fabrikant",
+          "body": "U koopt bij de fabriek, niet bij een invoerder: onze eigen Belgische productie betekent betere marges, sneller maatwerk en één garantie achter materiaal en plaatsing."
+        },
         {
           "title": "Sterke marges",
           "body": "Professionele voorwaarden op doeken en profielen op maat, met gezonde marges op een premium product waar vraag naar is."
@@ -4159,7 +4322,7 @@
       "name": "Doeken & folies",
       "eyebrow": "Doeken",
       "metaTitle": "Spanplafonddoek & PVC-folie — op rol, op lengte gesneden, op maat | STRETCH",
-      "metaDescription": "PVC-spanplafondfolie (MSD, Bauf, Teqtum, Renolit) op rol, op lengte gesneden of op maat gelast met harpoen. In mat, glanzend, lichtdoorlatend en kleur. Vraag een offerte aan.",
+      "metaDescription": "PVC-spanplafondfolie (MSD, Bauf, Teqtum, Renolit) op rol, op lengte gesneden of op maat gelast met harpoen. In mat, glanzend, lichtdoorlatend en kleur. Vraag een offerte aan. Akoestisch doek op rol uit voorraad leverbaar.",
       "intro": "Doek zoals u het nodig hebt: volle rollen voor uw eigen confectie, folie op lengte gesneden, of een afgewerkt plafond op maat gelast met harpoen — in mat, satijn, glanzend, lichtdoorlatend en kleur, van de grote foliemerken.",
       "items": [
         {
@@ -4177,6 +4340,10 @@
         {
           "name": "PVC-spanplafond op rol",
           "body": "PVC-folie per rol — mat, satijn, glans, lichtdoorlatend en kleurgamma's van de grote foliemerken."
+        },
+        {
+          "name": "Polyester spanplafondkit (doe-het-zelf)",
+          "body": "De complete kit voor koude plaatsing: polyesterdoek gesneden op maat van uw ruimte, profielen, hoekstukken en instructies — de doe-het-zelfroute naar een naadloos doekplafond."
         }
       ]
     },

@@ -139,7 +139,7 @@
     }
   },
   "footer": {
-    "tagline": "Techos y paredes tensados hechos a mano, diseñados en Bélgica e instalados en un día en toda Europa y EE. UU.",
+    "tagline": "Techos y paredes tensados hechos a mano en nuestra propia producción belga — fabricante, no importador — instalados en toda Europa y EE. UU. en un solo día.",
     "solutionsHeading": "Soluciones",
     "companyHeading": "Empresa",
     "hqHeading": "Sede central — Bélgica",
@@ -2063,6 +2063,48 @@
           "body": "El montaje en frío no genera polvo ni suciedad, y la mayoría de las salas quedan listas en un día — ideal para locales en uso."
         }
       ]
+    },
+    "pool-wellness": {
+      "name": "Piscinas y wellness",
+      "shortName": "Piscinas y wellness",
+      "eyebrow": "Piscinas y wellness",
+      "metaDescription": "Techos tensados para piscinas, spas y espacios wellness — membranas resistentes a la humedad y al cloro con acabado No-Stain, luz y acústica integradas, instalados sin interrumpir la actividad.",
+      "intro": "Las piscinas cubiertas y los espacios wellness destrozan los techos pintados: la condensación, el vapor de cloro y el calor hacen que los recubrimientos se descascarillen en pocos años. Una membrana tensada es inmune a los tres — y lleva luz y acústica a las salas más húmedas del edificio.",
+      "benefits": [
+        {
+          "title": "Hecha para la humedad y el cloro",
+          "body": "La membrana no absorbe agua, no puede pelarse ni descascarillarse y resiste sin inmutarse la condensación y la química de la piscina — con acabados No-Stain que se limpian con un paño."
+        },
+        {
+          "title": "Luz sin nada que se corroa",
+          "body": "Techos retroiluminados y líneas LED selladas ponen una luz uniforme y sin deslumbramientos sobre el agua, sin luminarias expuestas que se oxiden en el aire húmedo."
+        },
+        {
+          "title": "Acústica para salas duras y húmedas",
+          "body": "El azulejo y el vidrio hacen ruidosas las piscinas. Un sistema de membrana acústica le quita la dureza al eco sin añadir un solo panel visible."
+        }
+      ]
+    },
+    "walls": {
+      "name": "Paredes tensadas y acústica de pared",
+      "shortName": "Paredes",
+      "eyebrow": "Paredes",
+      "metaDescription": "Revestimientos murales textiles y de terciopelo, paredes tensadas impresas y sistemas acústicos de pared — paredes tensadas sin juntas con la absorción oculta tras la superficie.",
+      "intro": "Todo lo que hace un techo tensado, también lo puede hacer una pared. Las paredes tensadas de textil y terciopelo ofrecen una superficie sin juntas de mate profundo; las membranas impresas convierten una pared en una obra de arte; y los sistemas acústicos esconden una absorción seria tras la tela — sin paneles visibles.",
+      "benefits": [
+        {
+          "title": "Superficies textiles sin juntas",
+          "body": "Paredes de terciopelo y textil tensadas de borde a borde — un aspecto cálido y tapizado sin costuras, grapas ni descuelgues con el tiempo."
+        },
+        {
+          "title": "Acústica tras la superficie",
+          "body": "El material absorbente desaparece tras una pared de tela microperforada y, combinado con un techo acústico, reduce la reverberación a un nivel confortable."
+        },
+        {
+          "title": "Cualquier imagen, a tamaño de pared",
+          "body": "Las paredes tensadas impresas llevan fotografía, arte o branding de borde a borde — retroiluminadas si quiere que la imagen brille."
+        }
+      ]
     }
   },
   "appPage": {
@@ -2108,7 +2150,9 @@
       "vap-sint-pauwels": "Sint-Pauwels · Villa blanca",
       "goesten-opdam": "Bélgica · Acondicionamiento de oficinas",
       "dhl-zaventem": "Zaventem · Sala de reuniones Boeing 737",
-      "veta-interieur-showroom": "Dendermonde · Showroom de baños"
+      "veta-interieur-showroom": "Dendermonde · Showroom de baños",
+      "creneau-afas-lounge": "Antwerpen · Lounge VIP, AFAS Dome",
+      "candor-sint-martens-latem": "Sint-Martens-Latem · Oficinas de promotor inmobiliario"
     },
     "comingSoon": "Fotos próximamente"
   },
@@ -3157,6 +3201,82 @@
           "value": "Veta Interieur"
         }
       ]
+    },
+    "creneau-afas-lounge": {
+      "title": "AFAS Lounge — BE•AT",
+      "summary": "Un techo acústico negro brillante que convierte un solo lounge en cuatro salas.",
+      "hook": "Un techo, dos efectos: arriba, un espejo digno de un club; detrás, absorción de nivel de concierto.",
+      "description": [
+        "Para el lounge VIP del AFAS Dome en Amberes, el estudio de diseño Creneau International (Hasselt) imaginó un espacio que desempeña cuatro papeles en una misma velada: restaurante, pista de baile, sala de conferencias y lounge. El techo tenía que sostener esa transformación.",
+        "Fabricamos una membrana de PVC negro de alto brillo con cerca de un 90% de reflectividad — un espejo que duplica la sala y su luz — respaldada por una capa acústica perforada con material absorbente, para que el sistema de sonido BE•AT suene nítido en vez de áspero.",
+        "Los puntos de iluminación LED y las aberturas para altavoces se cortaron en producción, la membrana se soldó sin juntas hasta 6.50 m de ancho y el techo del lounge, de 250 m², se instaló en obra en tres días."
+      ],
+      "highlights": [
+        "Una sola superficie, dos funciones: brillo espejo + absorción acústica",
+        "Aberturas para LED y altavoces cortadas en fábrica, sin herrajes visibles",
+        "250 m² instalados en tres días"
+      ],
+      "materials": [
+        "Membrana de PVC negro de alto brillo (±90% de reflectividad)",
+        "Respaldo acústico perforado con material absorbente",
+        "Integraciones de LED y audio cortadas en fábrica"
+      ],
+      "facts": [
+        {
+          "label": "Ubicación",
+          "value": "AFAS Dome, Antwerpen"
+        },
+        {
+          "label": "Diseño",
+          "value": "Creneau International (Hasselt)"
+        },
+        {
+          "label": "Superficie",
+          "value": "250 m² · instalados en 3 días"
+        },
+        {
+          "label": "Año",
+          "value": "2025"
+        }
+      ]
+    },
+    "candor-sint-martens-latem": {
+      "title": "Candor",
+      "summary": "Acústica invisible para las oficinas de un promotor inmobiliario — cero paneles a la vista.",
+      "hook": "Salas de reuniones por debajo de RT60 0.6 segundos, y ni un solo panel acústico a la vista.",
+      "description": [
+        "El promotor inmobiliario Candor renovó sus oficinas en la Kortrijksesteenweg de Sint-Martens-Latem: espacio abierto, salas de reuniones, cocina y una zona de descanso, con diseño de Goedele Perdu y consultoría acústica de Form Design (Dendermonde), nuestro distribuidor para la región.",
+        "La acústica desaparece en la arquitectura. Membranas de poliéster microperforadas cubren cada techo como un único plano liso, con la capa de absorción oculta en el plénum superior y la iluminación LED integrada a ras de la superficie.",
+        "El resultado se mide donde importa: reverberación por debajo de 0.8 segundos en el espacio abierto y de 0.6 segundos en las salas de reuniones — una acústica pensada para la concentración, con cero paneles visibles y todos los techos desmontables para el mantenimiento."
+      ],
+      "highlights": [
+        "RT60 por debajo de 0.8 s (espacio abierto) y 0.6 s (salas de reuniones)",
+        "Membrana microperforada, absorción oculta en el plénum",
+        "Desmontable — acceso completo a la cámara del techo"
+      ],
+      "materials": [
+        "Membrana acústica de poliéster microperforada",
+        "Capa de absorción en el plénum",
+        "Iluminación LED integrada a ras"
+      ],
+      "facts": [
+        {
+          "label": "Ubicación",
+          "value": "Sint-Martens-Latem"
+        },
+        {
+          "label": "Interiorismo",
+          "value": "Goedele Perdu"
+        },
+        {
+          "label": "Acústica",
+          "value": "Form Design (Dendermonde)"
+        },
+        {
+          "label": "Año",
+          "value": "2025"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3637,6 +3757,45 @@
             ]
           }
         ]
+      },
+      "clipso-spanplafonds": {
+        "title": "Techos tensados Clipso: qué son y dónde conseguirlos",
+        "excerpt": "Clipso es la marca más conocida de tela de poliéster para techos y paredes tensados — el techo textil acústico que muchos arquitectos prescriben por su nombre. Qué es la tela tipo Clipso, en qué destaca y cómo la suministramos, imprimimos, confeccionamos e instalamos.",
+        "body": [
+          {
+            "heading": "Qué significa realmente «Clipso»",
+            "paragraphs": [
+              "Clipso es un tejido de punto de poliéster fabricado en Francia para techos y paredes tensados — tan conocido que el nombre de la marca se ha convertido en sinónimo de toda la categoría de techos tensados textiles (igual que se dice Gyproc para las placas de yeso). Desde 2022 la marca pertenece a Ecophon, parte del grupo Saint-Gobain.",
+              "La tela se instala en frío: sin calentar la sala y sin soldaduras en obra. El tejido es más ancho que el PVC — sin juntas hasta unos cinco metros —, transpirable y disponible en versiones estándar, acústica y translúcida."
+            ]
+          },
+          {
+            "heading": "Dónde brilla la tela — y dónde gana el PVC",
+            "paragraphs": [
+              "Elija un techo de tela de poliéster cuando busque un acabado mate profundo de aspecto textil, una instalación en frío (viviendas habitadas, edificios protegidos), grandes anchos sin juntas o una acústica microperforada. La versión acústica — el «akoestisch spandoek» o la «toile tendue acoustique» que piden los arquitectos — combina una superficie elegante con una absorción seria.",
+              "La membrana de PVC gana en acabados brillantes y lacados, diseños impresos con retroiluminación, baños y facilidad de lavado. En la práctica, muchos de nuestros proyectos combinan ambos: tela en las zonas de estar y oficinas, PVC donde mandan la luz, la impresión o la humedad."
+            ]
+          },
+          {
+            "heading": "Cómo trabajamos con telas tipo Clipso",
+            "paragraphs": [
+              "Como fabricante mantenemos toda la cadena en casa: tenemos en stock telas de poliéster para techos en rollo, las cortamos y confeccionamos a medida en nuestra producción belga, las imprimimos y las combinamos con nuestros propios perfiles, iluminación LED y sistemas acústicos.",
+              "Los instaladores y revendedores compran la tela por rollo o cortada a medida a través de nuestro catálogo de materiales — con la versión acústica disponible en stock —, y los clientes finales reciben el techo terminado e instalado a través de nuestra red de distribuidores."
+            ]
+          },
+          {
+            "heading": "Limpieza y mantenimiento",
+            "paragraphs": [
+              "Los techos de tela piden poco: quíteles el polvo como a una pared y trate las manchas a tiempo con un paño ligeramente húmedo. Para las membranas de PVC y las telas con recubrimiento, nuestro STRETCH Cleaner hace el trabajo — consulte la guía de mantenimiento en este mismo blog para las instrucciones completas."
+            ]
+          },
+          {
+            "heading": "Cómo conseguir un techo tipo Clipso",
+            "paragraphs": [
+              "Cuéntenos la sala y el objetivo — confort acústico, una superficie mate de diseño, una pared impresa — y le presupuestamos la tela confeccionada a medida, los materiales o la instalación completa a través del distribuidor de su región, normalmente el mismo día laborable."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -3805,6 +3964,10 @@
       "titleB": "menos complicaciones",
       "lead": "Elijas el modelo que elijas, nosotros nos ocupamos del producto y de la cadena de suministro: tú entregas un techo premium que tus clientes adoran.",
       "cards": [
+        {
+          "title": "Directo del fabricante",
+          "body": "Compra directamente a la fábrica, no a un importador: nuestra propia producción belga significa mejores márgenes, trabajo a medida más rápido y una sola garantía que respalda material e instalación."
+        },
         {
           "title": "Márgenes sólidos",
           "body": "Precios para profesionales en membranas y perfiles a medida, con márgenes sanos en un producto premium y con demanda."
@@ -4177,6 +4340,10 @@
         {
           "name": "Techo tensado de PVC en rollo",
           "body": "Membrana de PVC en rollo — gamas mate, satinada, brillo, translúcida y de color de las grandes marcas de láminas."
+        },
+        {
+          "name": "Kit de techo tensado de poliéster (DIY)",
+          "body": "El kit completo de instalación en frío: tela de poliéster cortada a la medida de su habitación, perfiles, piezas de esquina e instrucciones — la vía del bricolaje hacia un techo textil sin juntas."
         }
       ]
     },

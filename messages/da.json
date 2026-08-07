@@ -139,7 +139,7 @@
     }
   },
   "footer": {
-    "tagline": "Håndlavede spændlofter & spændvægge, udviklet i Belgien og monteret på én dag i hele Europa og USA.",
+    "tagline": "Håndlavede stretchlofter og stretchvægge fra vores egen belgiske produktion — producent, ikke importør — monteret i hele Europa og USA på én dag.",
     "solutionsHeading": "Løsninger",
     "companyHeading": "Virksomhed",
     "hqHeading": "Hovedkontor — Belgien",
@@ -2063,6 +2063,48 @@
           "body": "Kold montering betyder intet støv og intet rod, og de fleste rum er færdige på en enkelt dag — ideelt til lokaler i brug."
         }
       ]
+    },
+    "pool-wellness": {
+      "name": "Svømmebade & wellness",
+      "shortName": "Pool & wellness",
+      "eyebrow": "Pool & wellness",
+      "metaDescription": "Stretchlofter til svømmebade, spa og wellnessrum — fugt- og klorbestandige membraner med No-Stain-finish, integreret lys og akustik, monteret uden driftsstop.",
+      "intro": "Svømmehaller og wellnessrum ødelægger malede lofter: kondens, klordampe og varme får malingen til at skalle af på få år. En spændt membran er immun over for alle tre — og bringer lys og akustik ind i bygningens vådeste rum.",
+      "benefits": [
+        {
+          "title": "Bygget til fugt og klor",
+          "body": "Membranen optager ikke vand, kan hverken skalle eller flage af og tager sig ikke af kondens og poolkemi — med No-Stain-overflader, der kan tørres rene."
+        },
+        {
+          "title": "Lys uden noget, der kan ruste",
+          "body": "Bagbelyste lofter og forseglede LED-linjer lægger et jævnt, blændfrit lys over vandet — uden synlige armaturer, der ruster i den fugtige luft."
+        },
+        {
+          "title": "Akustik til hårde, våde rum",
+          "body": "Fliser og glas gør svømmehaller støjende. En akustisk membranopbygning tager brodden af ekkoet uden at tilføje et eneste synligt panel."
+        }
+      ]
+    },
+    "walls": {
+      "name": "Stretchvægge & vægakustik",
+      "shortName": "Vægge",
+      "eyebrow": "Vægge",
+      "metaDescription": "Tekstil- og velourvægbeklædninger, printede stretchvægge og akustiske vægopbygninger — sømløse spændte vægge med absorptionen skjult bag overfladen.",
+      "intro": "Alt, hvad et stretchloft kan, kan en væg også. Spændte tekstil- og velourvægge giver en sømløs, dybt mat overflade; printede membraner forvandler en væg til kunst; og akustiske opbygninger gemmer seriøs absorption bag stoffet — ingen synlige paneler.",
+      "benefits": [
+        {
+          "title": "Sømløse tekstiloverflader",
+          "body": "Velour- og tekstilvægge spændt fra kant til kant — et varmt, polstret look uden samlinger, klammer eller nedhæng over tid."
+        },
+        {
+          "title": "Akustik bag overfladen",
+          "body": "Absorberende materiale forsvinder bag en mikroperforeret tekstilvæg og spiller sammen med et akustisk loft om at bringe efterklangen ned på et behageligt niveau."
+        },
+        {
+          "title": "Ethvert motiv i vægstørrelse",
+          "body": "Printede stretchvægge bærer foto, kunst eller branding fra kant til kant — bagbelyst, hvis motivet skal lyse."
+        }
+      ]
     }
   },
   "appPage": {
@@ -2108,7 +2150,9 @@
       "vap-sint-pauwels": "Sint-Pauwels · Hvid villa",
       "goesten-opdam": "Belgien · Kontorindretning",
       "dhl-zaventem": "Zaventem · Boeing 737-mødelokale",
-      "veta-interieur-showroom": "Dendermonde · Badeværelsesshowroom"
+      "veta-interieur-showroom": "Dendermonde · Badeværelsesshowroom",
+      "creneau-afas-lounge": "Antwerpen · VIP-lounge, AFAS Dome",
+      "candor-sint-martens-latem": "Sint-Martens-Latem · Kontorer for ejendomsudvikler"
     },
     "comingSoon": "Fotos på vej"
   },
@@ -3157,6 +3201,82 @@
           "value": "Veta Interieur"
         }
       ]
+    },
+    "creneau-afas-lounge": {
+      "title": "AFAS Lounge — BE•AT",
+      "summary": "Et akustisk loft i sort højglans, der forvandler én lounge til fire rum.",
+      "hook": "Ét loft, to effekter: et spejl i klubklasse ovenover — lydabsorption i koncertklasse bagved.",
+      "description": [
+        "Til VIP-loungen i AFAS Dome i Antwerpen forestillede designstudiet Creneau International (Hasselt) sig et rum, der spiller fire roller på én og samme aften: restaurant, dansegulv, konferencerum og lounge. Loftet skulle bære den forvandling.",
+        "Vi producerede en sort højglans-PVC-membran med cirka 90% refleksion — et spejl, der fordobler rummet og dets lys — med et perforeret akustisk lag med absorberende materiale bagved, så lyden fra BE•AT-anlægget rammer skarpt i stedet for hårdt.",
+        "LED-lyspunkter og højttaleråbninger blev skåret allerede i produktionen, membranen blev svejset sømløst i op til 6.50 m bredde, og loungens 250 m² loft blev monteret på tre dage på stedet."
+      ],
+      "highlights": [
+        "Én flade, to funktioner: spejlglans + akustisk absorption",
+        "LED- og højttaleråbninger skåret fra fabrikken — ingen synlige beslag",
+        "250 m² monteret på tre dage"
+      ],
+      "materials": [
+        "Sort højglans-PVC-membran (±90% refleksion)",
+        "Perforeret akustisk baglag med absorberende materiale",
+        "Fabriksskårne LED- og lydintegrationer"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "AFAS Dome, Antwerpen"
+        },
+        {
+          "label": "Design",
+          "value": "Creneau International (Hasselt)"
+        },
+        {
+          "label": "Areal",
+          "value": "250 m² · monteret på 3 dage"
+        },
+        {
+          "label": "År",
+          "value": "2025"
+        }
+      ]
+    },
+    "candor-sint-martens-latem": {
+      "title": "Candor",
+      "summary": "Usynlig akustik til en ejendomsudviklers kontorer — nul synlige paneler.",
+      "hook": "Mødelokaler under RT60 0.6 sekunder — og ikke ét akustikpanel i syne.",
+      "description": [
+        "Ejendomsudvikleren Candor renoverede sine kontorer på Kortrijksesteenweg i Sint-Martens-Latem: åbent kontormiljø, mødelokaler, køkken og en afslapningszone, indrettet af Goedele Perdu med akustisk rådgivning fra Form Design (Dendermonde) — vores forhandler i regionen.",
+        "Akustikken forsvinder ind i arkitekturen. Mikroperforerede polyestermembraner spænder over hvert loft som ét glat plan, med absorptionslaget skjult i hulrummet ovenover og LED-belysning integreret i plan med overfladen.",
+        "Resultatet kan måles dér, hvor det tæller: efterklang under 0.8 sekunder i det åbne miljø og under 0.6 sekunder i mødelokalerne — akustik til koncentreret arbejde uden ét eneste synligt panel, og hvert loft kan demonteres ved vedligehold."
+      ],
+      "highlights": [
+        "RT60 under 0.8 s (åbent miljø) og 0.6 s (mødelokaler)",
+        "Mikroperforeret membran — absorptionen skjult i hulrummet",
+        "Demonterbart — fuld adgang til hulrummet over loftet"
+      ],
+      "materials": [
+        "Akustisk mikroperforeret polyestermembran",
+        "Absorptionslag i hulrummet over loftet",
+        "Integreret LED-belysning i plan med overfladen"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Sint-Martens-Latem"
+        },
+        {
+          "label": "Indretning",
+          "value": "Goedele Perdu"
+        },
+        {
+          "label": "Akustik",
+          "value": "Form Design (Dendermonde)"
+        },
+        {
+          "label": "År",
+          "value": "2025"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3637,6 +3757,45 @@
             ]
           }
         ]
+      },
+      "clipso-spanplafonds": {
+        "title": "Clipso-stretchlofter: hvad de er, og hvor du kan få dem",
+        "excerpt": "Clipso er det mest kendte mærke af polyesterdug til stretchlofter og stretchvægge — det akustiske tekstilloft, mange arkitekter foreskriver ved navn. Hvad dug af Clipso-typen er, hvad den er god til, og hvordan vi leverer, printer, konfektionerer og monterer den.",
+        "body": [
+          {
+            "heading": "Hvad ”Clipso” egentlig betyder",
+            "paragraphs": [
+              "Clipso er en franskproduceret strikket polyesterdug til spændte lofter og vægge — så kendt, at mærkenavnet er blevet en fællesbetegnelse for hele kategorien af tekstil-stretchlofter (ligesom man siger Gyproc om gipsplader). Siden 2022 hører mærket under Ecophon, en del af Saint-Gobain-koncernen.",
+              "Dugen monteres koldt: ingen opvarmning af rummet, ingen svejsning på stedet. Strikvaren er bredere end PVC — sømløs op til omkring fem meter — åndbar og fås i standard-, akustik- og translucent-udgave."
+            ]
+          },
+          {
+            "heading": "Hvor tekstil brillerer — og hvor PVC vinder",
+            "paragraphs": [
+              "Vælg et loft i polyesterdug, når du vil have et dybt mat tekstillook, kold montering (beboede hjem, fredede bygninger), store sømløse bredder eller mikroperforeret akustik. Den akustiske version — det ”akoestisch spandoek” eller ”toile tendue acoustique”, arkitekter efterspørger — kombinerer en elegant overflade med seriøs absorption.",
+              "PVC-membranen vinder på glans- og lakfinish, printede motiver med bagbelysning, badeværelser og vaskbarhed. I praksis kombinerer mange af vores projekter begge dele — tekstil i bolig- og kontorrum, PVC hvor lys, print eller fugt vejer tungest."
+            ]
+          },
+          {
+            "heading": "Sådan arbejder vi med dug af Clipso-typen",
+            "paragraphs": [
+              "Som producent holder vi hele kæden i eget hus: vi lagerfører polyesterloftsdug på rulle, skærer og konfektionerer den på mål i vores belgiske produktion, printer på den og kombinerer den med vores egne profiler, LED-belysning og akustiske opbygninger.",
+              "Montører og forhandlere køber dugen på rulle eller skåret på mål via vores materialekatalog — med den akustiske version på lager — og slutkunder får det færdige, monterede loft gennem vores forhandlernetværk."
+            ]
+          },
+          {
+            "heading": "Rengøring og pleje",
+            "paragraphs": [
+              "Tekstillofter kræver ikke meget: støv dem af som en væg, og tag pletter i opløbet med en let fugtig klud. Til PVC-membraner og coatede duge klarer vores STRETCH Cleaner arbejdet — se plejeguiden et andet sted her på bloggen for den fulde vejledning."
+            ]
+          },
+          {
+            "heading": "Sådan får du et loft af Clipso-typen",
+            "paragraphs": [
+              "Fortæl os om rummet og målet — akustisk komfort, en mat designoverflade, en printet væg — og vi giver tilbud på dug på mål, materialerne eller den komplette montering gennem forhandleren i din region, som regel samme arbejdsdag."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -3805,6 +3964,10 @@
       "titleB": "mindre besvær",
       "lead": "Uanset hvilken model du vælger, tager vi os af produktet og forsyningskæden — du leverer et premiumloft, dine kunder elsker.",
       "cards": [
+        {
+          "title": "Direkte fra producenten",
+          "body": "Du køber hos fabrikken, ikke hos en importør: vores egen belgiske produktion betyder bedre marginer, hurtigere specialarbejde og én garanti bag både materiale og montering."
+        },
         {
           "title": "Stærke avancer",
           "body": "Fagpriser på membraner og profiler efter mål med sunde avancer på et efterspurgt premiumprodukt."
@@ -4177,6 +4340,10 @@
         {
           "name": "PVC-stretchloft på rulle",
           "body": "PVC-membran på rulle — mat, satin, blank, translucent og farveserier fra de store foliemærker."
+        },
+        {
+          "name": "Stretchloft-kit i polyester (gør det selv)",
+          "body": "Det komplette kit til kold montering: polyesterdug skåret til dit rum, profiler, hjørnestykker og vejledning — gør-det-selv-vejen til et sømløst tekstilloft."
         }
       ]
     },

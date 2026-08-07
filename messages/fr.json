@@ -139,7 +139,7 @@
     }
   },
   "footer": {
-    "tagline": "Plafonds & murs tendus faits main, conçus en Belgique et posés en une journée à travers l'Europe et les États-Unis.",
+    "tagline": "Plafonds et murs tendus faits main dans notre propre production belge — fabricant, pas importateur — posés en une seule journée, partout en Europe et aux États-Unis.",
     "solutionsHeading": "Solutions",
     "companyHeading": "Société",
     "hqHeading": "Siège — Belgique",
@@ -720,7 +720,7 @@
       "colourChartNote": "Disponible en finitions mate, satinée, laquée, translucide et métallisée."
     },
     "acoustic": {
-      "name": "Système tendu acoustique",
+      "name": "Plafond tendu acoustique",
       "short": "Acoustique",
       "category": "Membrane absorbant le son",
       "mount": "À froid / à chaud",
@@ -2063,6 +2063,48 @@
           "body": "La pose à froid signifie ni poussière ni désordre, la plupart des pièces étant terminées en une journée — idéal pour des locaux occupés."
         }
       ]
+    },
+    "pool-wellness": {
+      "name": "Piscines & wellness",
+      "shortName": "Piscine & wellness",
+      "eyebrow": "Piscine & wellness",
+      "metaDescription": "Plafonds tendus pour piscines, spas et espaces wellness — membranes résistantes à l’humidité et au chlore avec finition No-Stain, lumière et acoustique intégrées, posés sans fermeture.",
+      "intro": "Les halls de piscine et les espaces wellness détruisent les plafonds peints : condensation, vapeurs de chlore et chaleur font s’écailler les peintures en quelques années. Une membrane tendue est immunisée contre les trois — et apporte lumière et acoustique dans les pièces les plus humides du bâtiment.",
+      "benefits": [
+        {
+          "title": "Conçue pour l’humidité et le chlore",
+          "body": "La membrane n’absorbe pas l’eau, ne peut ni peler ni s’écailler, et ignore la condensation comme la chimie de piscine — avec des finitions No-Stain qui se nettoient d’un coup de chiffon."
+        },
+        {
+          "title": "De la lumière, sans rien qui rouille",
+          "body": "Plafonds rétroéclairés et lignes LED étanches posent une lumière uniforme, sans éblouissement, au-dessus de l’eau — sans luminaires apparents qui rouillent dans l’air humide."
+        },
+        {
+          "title": "Une acoustique pour pièces dures et humides",
+          "body": "Le carrelage et le verre rendent les piscines bruyantes. Un complexe de membrane acoustique ôte à l’écho son agressivité sans ajouter le moindre panneau visible."
+        }
+      ]
+    },
+    "walls": {
+      "name": "Murs tendus & acoustique murale",
+      "shortName": "Murs",
+      "eyebrow": "Murs",
+      "metaDescription": "Revêtements muraux en textile et velours, murs tendus imprimés et complexes acoustiques muraux — des murs tendus sans couture, avec l’absorption cachée derrière la surface.",
+      "intro": "Tout ce qu’un plafond tendu sait faire, un mur le fait aussi. Les murs tendus en textile et en velours offrent une surface sans couture, d’un mat profond ; les membranes imprimées transforment un mur en œuvre d’art ; et les complexes acoustiques cachent une absorption sérieuse derrière la toile — sans panneaux visibles.",
+      "benefits": [
+        {
+          "title": "Surfaces textiles sans couture",
+          "body": "Des murs en velours et en textile tendus bord à bord — un rendu chaleureux, comme tapissé, sans coutures, sans agrafes, sans affaissement avec le temps."
+        },
+        {
+          "title": "L’acoustique derrière la surface",
+          "body": "Le matériau absorbant disparaît derrière un mur en toile micro-perforée et s’associe à un plafond acoustique pour ramener la réverbération à un niveau confortable."
+        },
+        {
+          "title": "N’importe quelle image, à l’échelle du mur",
+          "body": "Les murs tendus imprimés portent photo, œuvre d’art ou identité de marque bord à bord — rétroéclairés si vous voulez que l’image rayonne."
+        }
+      ]
     }
   },
   "appPage": {
@@ -2108,7 +2150,9 @@
       "vap-sint-pauwels": "Sint-Pauwels · Villa blanche",
       "goesten-opdam": "Belgique · Aménagement de bureaux",
       "dhl-zaventem": "Zaventem · Salle de réunion Boeing 737",
-      "veta-interieur-showroom": "Dendermonde · Showroom salle de bains"
+      "veta-interieur-showroom": "Dendermonde · Showroom salle de bains",
+      "creneau-afas-lounge": "Antwerpen · Lounge VIP, AFAS Dome",
+      "candor-sint-martens-latem": "Sint-Martens-Latem · Bureaux d’un promoteur"
     },
     "comingSoon": "Photos à venir"
   },
@@ -3157,6 +3201,82 @@
           "value": "Veta Interieur"
         }
       ]
+    },
+    "creneau-afas-lounge": {
+      "title": "AFAS Lounge — BE•AT",
+      "summary": "Un plafond acoustique noir brillant qui transforme un seul lounge en quatre salles.",
+      "hook": "Un plafond, deux effets : un miroir digne d’un club au-dessus, une absorption digne d’une salle de concert derrière.",
+      "description": [
+        "Pour le lounge VIP de l’AFAS Dome à Antwerpen, le studio de design Creneau International (Hasselt) a imaginé un espace qui joue quatre rôles en une seule soirée : restaurant, piste de danse, salle de conférence et lounge. Le plafond devait porter cette transformation.",
+        "Nous avons produit une membrane PVC noir brillant à environ 90% de réflectivité — un miroir qui double la salle et sa lumière — doublée d’une couche acoustique perforée avec matériau absorbant, pour que le son du système BE•AT arrive net au lieu d’agressif.",
+        "Les points lumineux LED et les ouvertures pour haut-parleurs ont été découpés dès la production, la membrane a été soudée sans couture jusqu’à 6,50 m de large, et les 250 m² de plafond du lounge ont été posés en trois jours sur place."
+      ],
+      "highlights": [
+        "Une seule surface, deux fonctions : brillance miroir + absorption acoustique",
+        "Découpes LED et haut-parleurs réalisées en usine, aucun élément technique visible",
+        "250 m² posés en trois jours"
+      ],
+      "materials": [
+        "Membrane PVC noir brillant (±90% de réflectivité)",
+        "Doublure acoustique perforée avec matériau absorbant",
+        "Intégrations LED et audio découpées en usine"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "AFAS Dome, Antwerpen"
+        },
+        {
+          "label": "Design",
+          "value": "Creneau International (Hasselt)"
+        },
+        {
+          "label": "Surface",
+          "value": "250 m² · posés en 3 jours"
+        },
+        {
+          "label": "Année",
+          "value": "2025"
+        }
+      ]
+    },
+    "candor-sint-martens-latem": {
+      "title": "Candor",
+      "summary": "Une acoustique invisible pour les bureaux d’un promoteur — zéro panneau visible.",
+      "hook": "Des salles de réunion sous RT60 0,6 seconde, sans le moindre panneau acoustique en vue.",
+      "description": [
+        "Le promoteur immobilier Candor a rénové ses bureaux sur la Kortrijksesteenweg à Sint-Martens-Latem : open space, salles de réunion, cuisine et zone de détente, un aménagement signé Goedele Perdu avec le conseil acoustique de Form Design (Dendermonde) — notre revendeur pour la région.",
+        "L’acoustique disparaît dans l’architecture. Des membranes polyester micro-perforées tendent chaque plafond en un seul plan lisse, la couche absorbante cachée dans le plénum au-dessus et l’éclairage LED intégré à fleur de surface.",
+        "Le résultat se mesure là où ça compte : une réverbération sous 0,8 seconde dans l’open space et sous 0,6 seconde dans les salles de réunion — une acoustique propice à la concentration, zéro panneau visible, et chaque plafond démontable pour l’entretien."
+      ],
+      "highlights": [
+        "RT60 sous 0,8 s (open space) et 0,6 s (salles de réunion)",
+        "Membrane micro-perforée, absorption cachée dans le plénum",
+        "Démontable — accès complet au plénum"
+      ],
+      "materials": [
+        "Membrane polyester acoustique micro-perforée",
+        "Couche d’absorption dans le plénum",
+        "Éclairage LED intégré à fleur de surface"
+      ],
+      "facts": [
+        {
+          "label": "Lieu",
+          "value": "Sint-Martens-Latem"
+        },
+        {
+          "label": "Architecture d’intérieur",
+          "value": "Goedele Perdu"
+        },
+        {
+          "label": "Acoustique",
+          "value": "Form Design (Dendermonde)"
+        },
+        {
+          "label": "Année",
+          "value": "2025"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3637,6 +3757,45 @@
             ]
           }
         ]
+      },
+      "clipso-spanplafonds": {
+        "title": "Le plafond tendu Clipso : ce que c’est et où le trouver",
+        "excerpt": "Clipso est la marque la plus connue de toile polyester pour plafonds et murs tendus — la toile acoustique que beaucoup d’architectes prescrivent par son nom. Ce qu’est une toile de type Clipso, ce qu’elle fait bien, et comment nous la fournissons, l’imprimons, la confectionnons et la posons.",
+        "body": [
+          {
+            "heading": "Ce que « Clipso » veut vraiment dire",
+            "paragraphs": [
+              "Clipso est une toile polyester tricotée, fabriquée en France, pour plafonds et murs tendus — si connue que la marque est devenue le raccourci pour toute la catégorie des plafonds tendus en toile (comme on dit Gyproc pour les plaques de plâtre). Depuis 2022, la marque appartient à Ecophon, du groupe Saint-Gobain.",
+              "La toile se pose à froid : pas de chauffage de la pièce, pas de soudure sur chantier. Le tricot est plus large que le PVC — sans couture jusqu’à environ cinq mètres — respirant, et disponible en versions standard, acoustique et translucide."
+            ]
+          },
+          {
+            "heading": "Là où la toile brille — et là où le PVC gagne",
+            "paragraphs": [
+              "Choisissez un plafond en toile polyester pour un mat profond au rendu textile, une pose à froid (habitations occupées, bâtiments classés), de grandes largeurs sans couture ou une acoustique micro-perforée. La version acoustique — la toile tendue acoustique que demandent les architectes — associe une surface élégante à une absorption sérieuse.",
+              "La membrane PVC gagne sur les finitions brillantes et laquées, les visuels imprimés rétroéclairés, les salles de bains et la lavabilité. En pratique, beaucoup de nos projets combinent les deux — la toile dans les espaces de vie et de bureau, le PVC là où la lumière, l’impression ou l’humidité décident."
+            ]
+          },
+          {
+            "heading": "Comment nous travaillons les toiles de type Clipso",
+            "paragraphs": [
+              "En tant que fabricant, nous gardons toute la chaîne en interne : nous stockons les toiles polyester pour plafonds au rouleau, nous les découpons et les confectionnons sur mesure dans notre production belge, nous les imprimons, et nous les combinons avec nos propres profilés, éclairages LED et complexes acoustiques.",
+              "Poseurs et revendeurs achètent la toile au rouleau ou coupée à dimension via notre catalogue de matériaux — la version acoustique est disponible de stock — et les clients finaux reçoivent le plafond fini et posé via notre réseau de revendeurs."
+            ]
+          },
+          {
+            "heading": "Nettoyage et entretien",
+            "paragraphs": [
+              "Les plafonds en toile demandent peu : dépoussiérez-les comme un mur et traitez les taches sans attendre avec un chiffon légèrement humide. Pour les membranes PVC et les toiles enduites, notre STRETCH Cleaner fait le travail — voyez le guide d’entretien ailleurs sur ce blog pour les instructions complètes."
+            ]
+          },
+          {
+            "heading": "Obtenir un plafond de type Clipso",
+            "paragraphs": [
+              "Décrivez-nous la pièce et l’objectif — confort acoustique, surface design mate, mur imprimé — et nous chiffrons la toile sur mesure, les matériaux ou la pose complète via le revendeur de votre région, généralement le jour ouvrable même."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -3805,6 +3964,10 @@
       "titleB": "moins de tracas",
       "lead": "Quel que soit le modèle choisi, nous gérons le produit et la chaîne d'approvisionnement — vous livrez un plafond haut de gamme que vos clients adorent.",
       "cards": [
+        {
+          "title": "En direct du fabricant",
+          "body": "Vous achetez à l’usine, pas chez un importateur : notre propre production belge signifie de meilleures marges, un travail sur mesure plus rapide et une seule garantie derrière le matériau et la pose."
+        },
         {
           "title": "Marges solides",
           "body": "Tarifs professionnels sur les membranes et profilés sur mesure, avec de belles marges sur un produit haut de gamme et recherché."
@@ -4177,6 +4340,10 @@
         {
           "name": "Plafond tendu PVC en rouleau",
           "body": "Membrane PVC au rouleau — gammes mate, satinée, laquée, translucide et couleur des grandes marques de toile."
+        },
+        {
+          "name": "Kit plafond tendu polyester (à poser soi-même)",
+          "body": "Le kit complet à pose froide : toile polyester découpée aux dimensions de votre pièce, profilés, pièces d’angle et mode d’emploi — pour réaliser vous-même un plafond en toile sans couture."
         }
       ]
     },

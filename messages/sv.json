@@ -139,7 +139,7 @@
     }
   },
   "footer": {
-    "tagline": "Handgjorda spänntak & spännväggar, utvecklade i Belgien och monterade på en dag i hela Europa och USA.",
+    "tagline": "Handgjorda spänntak och spännväggar från vår egen belgiska produktion — tillverkare, inte importör — monterade i hela Europa och USA på en enda dag.",
     "solutionsHeading": "Lösningar",
     "companyHeading": "Företag",
     "hqHeading": "Huvudkontor — Belgien",
@@ -2063,6 +2063,48 @@
           "body": "Kall montering betyder inget damm och inget stök, och de flesta rum är klara på en enda dag — perfekt för lokaler i drift."
         }
       ]
+    },
+    "pool-wellness": {
+      "name": "Pooler & wellness",
+      "shortName": "Pool & wellness",
+      "eyebrow": "Pool & wellness",
+      "metaDescription": "Spänntak för simhallar, pooler, spa och wellnessutrymmen — fukt- och klorbeständiga membran med No-Stain-finish, integrerat ljus och akustik, monterade utan driftstopp.",
+      "intro": "Simhallar och wellnessutrymmen förstör målade tak: kondens, klorångor och värme får färgen att flagna inom några år. Ett spänt membran är immunt mot alla tre — och tar med sig ljus och akustik in i byggnadens våtaste rum.",
+      "benefits": [
+        {
+          "title": "Byggt för fukt och klor",
+          "body": "Membranet suger inte åt sig vatten, kan varken flagna eller släppa och rycker på axlarna åt kondens och poolkemi — med No-Stain-ytor som torkas rena."
+        },
+        {
+          "title": "Ljus utan något som kan rosta",
+          "body": "Bakbelysta tak och förseglade LED-linjer ger ett jämnt, bländfritt ljus över vattnet — utan synliga armaturer som rostar i den fuktiga luften."
+        },
+        {
+          "title": "Akustik för hårda, våta rum",
+          "body": "Kakel och glas gör simhallar högljudda. En akustisk membranuppbyggnad tar udden av ekot utan att lägga till en enda synlig panel."
+        }
+      ]
+    },
+    "walls": {
+      "name": "Spännväggar & väggakustik",
+      "shortName": "Väggar",
+      "eyebrow": "Väggar",
+      "metaDescription": "Textil- och sammetsbeklädnader för väggar, tryckta spännväggar och akustiska vägguppbyggnader — sömlösa spända väggar med absorptionen dold bakom ytan.",
+      "intro": "Allt ett spänntak kan, kan en vägg också. Spända textil- och sammetsväggar ger en sömlös, djupt matt yta; tryckta membran förvandlar en vägg till konstverk; och akustiska uppbyggnader döljer seriös absorption bakom väven — inga synliga paneler.",
+      "benefits": [
+        {
+          "title": "Sömlösa textilytor",
+          "body": "Sammets- och textilväggar spända från kant till kant — ett varmt, vadderat uttryck utan skarvar, klamrar eller svackor med tiden."
+        },
+        {
+          "title": "Akustik bakom ytan",
+          "body": "Absorbentmaterial försvinner bakom en mikroperforerad textilvägg och samspelar med ett akustiskt tak för att få ner efterklangen till en behaglig nivå."
+        },
+        {
+          "title": "Vilken bild som helst i väggformat",
+          "body": "Tryckta spännväggar bär fotografi, konst eller varumärkesgrafik från kant till kant — bakbelysta om du vill att bilden ska glöda."
+        }
+      ]
     }
   },
   "appPage": {
@@ -2108,7 +2150,9 @@
       "vap-sint-pauwels": "Sint-Pauwels · Vit villa",
       "goesten-opdam": "Belgien · Kontorsinredning",
       "dhl-zaventem": "Zaventem · Boeing 737-mötesrum",
-      "veta-interieur-showroom": "Dendermonde · Badrumsshowroom"
+      "veta-interieur-showroom": "Dendermonde · Badrumsshowroom",
+      "creneau-afas-lounge": "Antwerpen · VIP-lounge, AFAS Dome",
+      "candor-sint-martens-latem": "Sint-Martens-Latem · Kontor för fastighetsutvecklare"
     },
     "comingSoon": "Foton kommer snart"
   },
@@ -3157,6 +3201,82 @@
           "value": "Veta Interieur"
         }
       ]
+    },
+    "creneau-afas-lounge": {
+      "title": "AFAS Lounge — BE•AT",
+      "summary": "Ett akustiskt tak i svart högglans som förvandlar en lounge till fyra rum.",
+      "hook": "Ett tak, två effekter: en spegel i klubbklass ovanför — ljudabsorption i konsertklass bakom.",
+      "description": [
+        "För VIP-loungen i AFAS Dome i Antwerpen föreställde sig designstudion Creneau International (Hasselt) ett rum som spelar fyra roller under en och samma kväll: restaurang, dansgolv, konferensrum och lounge. Taket skulle bära den förvandlingen.",
+        "Vi tillverkade ett svart PVC-membran i högglans med cirka 90% reflektion — en spegel som fördubblar rummet och dess ljus — med ett perforerat akustiskt skikt med absorbentmaterial bakom, så att ljudet från BE•AT-systemet landar knivskarpt i stället för hårt.",
+        "LED-ljuspunkter och högtalaröppningar skars ut redan i produktionen, membranet svetsades sömlöst i upp till 6.50 m bredd och loungens 250 m² stora tak monterades på tre dagar på plats."
+      ],
+      "highlights": [
+        "En yta, två funktioner: spegelglans + akustisk absorption",
+        "LED- och högtalaröppningar skurna på fabrik — inga synliga beslag",
+        "250 m² monterat på tre dagar"
+      ],
+      "materials": [
+        "Svart PVC-membran i högglans (±90% reflektion)",
+        "Perforerat akustiskt baksideskikt med absorbent",
+        "Fabriksskurna LED- och ljudintegrationer"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "AFAS Dome, Antwerpen"
+        },
+        {
+          "label": "Design",
+          "value": "Creneau International (Hasselt)"
+        },
+        {
+          "label": "Yta",
+          "value": "250 m² · monterat på 3 dagar"
+        },
+        {
+          "label": "År",
+          "value": "2025"
+        }
+      ]
+    },
+    "candor-sint-martens-latem": {
+      "title": "Candor",
+      "summary": "Osynlig akustik för en fastighetsutvecklares kontor — noll synliga paneler.",
+      "hook": "Mötesrum under RT60 0.6 sekunder — och inte en enda akustikpanel i sikte.",
+      "description": [
+        "Fastighetsutvecklaren Candor renoverade sina kontor på Kortrijksesteenweg i Sint-Martens-Latem: öppen planlösning, mötesrum, kök och en avkopplingszon, inredda av Goedele Perdu med akustikrådgivning av Form Design (Dendermonde) — vår återförsäljare i regionen.",
+        "Akustiken försvinner in i arkitekturen. Mikroperforerade polyestermembran spänner över varje tak som ett enda slätt plan, med absorptionsskiktet dolt i utrymmet ovanför och LED-belysning integrerad i liv med ytan.",
+        "Resultatet syns i mätningarna där det räknas: efterklang under 0.8 sekunder i den öppna ytan och under 0.6 sekunder i mötesrummen — akustik för koncentrerat arbete utan en enda synlig panel, och varje tak kan demonteras för underhåll."
+      ],
+      "highlights": [
+        "RT60 under 0.8 s (öppen yta) och 0.6 s (mötesrum)",
+        "Mikroperforerat membran — absorptionen dold i utrymmet ovanför",
+        "Demonterbart — full åtkomst till utrymmet ovanför taket"
+      ],
+      "materials": [
+        "Akustiskt mikroperforerat polyestermembran",
+        "Absorptionsskikt i utrymmet ovanför taket",
+        "Integrerad LED-belysning i liv med ytan"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "Sint-Martens-Latem"
+        },
+        {
+          "label": "Inredning",
+          "value": "Goedele Perdu"
+        },
+        {
+          "label": "Akustik",
+          "value": "Form Design (Dendermonde)"
+        },
+        {
+          "label": "År",
+          "value": "2025"
+        }
+      ]
     }
   },
   "blogPosts": {
@@ -3637,6 +3757,45 @@
             ]
           }
         ]
+      },
+      "clipso-spanplafonds": {
+        "title": "Clipso-spänntak: vad de är och var du får tag i dem",
+        "excerpt": "Clipso är det mest kända varumärket inom polyesterväv för spänntak och spännväggar — det akustiska textiltak många arkitekter föreskriver vid namn. Vad väv av Clipso-typ är, vad den är bra på och hur vi levererar, trycker, konfektionerar och monterar den.",
+        "body": [
+          {
+            "heading": "Vad ”Clipso” egentligen betyder",
+            "paragraphs": [
+              "Clipso är en fransktillverkad stickad polyesterväv för spända tak och väggar — så känd att varumärket har blivit ett samlingsnamn för hela kategorin textilspänntak (ungefär som man säger Gyproc om gipsskivor). Sedan 2022 tillhör varumärket Ecophon, en del av Saint-Gobain-koncernen.",
+              "Väven monteras kallt: ingen uppvärmning av rummet, ingen svetsning på plats. Trikån är bredare än PVC — sömlös upp till omkring fem meter — andas och finns i standard-, akustik- och translucent utförande."
+            ]
+          },
+          {
+            "heading": "Där väv briljerar — och där PVC vinner",
+            "paragraphs": [
+              "Välj ett tak i polyesterväv när du vill ha ett djupt matt textilutseende, kall montering (bebodda hem, kulturmärkta byggnader), stora sömlösa bredder eller mikroperforerad akustik. Den akustiska versionen — det ”akoestisch spandoek” eller ”toile tendue acoustique” arkitekter frågar efter — kombinerar en elegant yta med seriös absorption.",
+              "PVC-membran vinner på glans- och lackfinish, tryckta motiv med bakgrundsbelysning, badrum och tvättbarhet. I praktiken kombinerar många av våra projekt båda delarna — väv i bostads- och kontorsytor, PVC där ljus, tryck eller fukt avgör."
+            ]
+          },
+          {
+            "heading": "Så arbetar vi med vävar av Clipso-typ",
+            "paragraphs": [
+              "Som tillverkare håller vi hela kedjan i eget hus: vi lagerför polyestertakväv på rulle, skär och konfektionerar den efter mått i vår belgiska produktion, trycker på den och kombinerar den med våra egna profiler, LED-belysning och akustiska uppbyggnader.",
+              "Montörer och återförsäljare köper väven på rulle eller skuren efter mått via vår materialkatalog — med den akustiska versionen på lager — och slutkunder får det färdiga, monterade taket via vårt återförsäljarnätverk."
+            ]
+          },
+          {
+            "heading": "Rengöring och skötsel",
+            "paragraphs": [
+              "Textiltak kräver lite: damma av dem som en vägg och ta fläckar tidigt med en lätt fuktad trasa. För PVC-membran och belagda vävar gör vår STRETCH Cleaner jobbet — se skötselguiden på annan plats här på bloggen för fullständiga instruktioner."
+            ]
+          },
+          {
+            "heading": "Så skaffar du ett tak av Clipso-typ",
+            "paragraphs": [
+              "Berätta om rummet och målet — akustisk komfort, en matt designyta, en tryckt vägg — så offererar vi måttillverkad väv, materialen eller den kompletta monteringen via återförsäljaren i din region, oftast samma arbetsdag."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -3805,6 +3964,10 @@
       "titleB": "mindre krångel",
       "lead": "Vilken modell du än väljer tar vi hand om produkten och leveranskedjan — du levererar ett premiumtak som dina kunder älskar.",
       "cards": [
+        {
+          "title": "Direkt från tillverkaren",
+          "body": "Du köper av fabriken, inte av en importör: vår egen belgiska produktion betyder bättre marginaler, snabbare specialarbeten och en enda garanti bakom både material och montering."
+        },
         {
           "title": "Starka marginaler",
           "body": "Proffspriser på måttanpassade membran och profiler, med sunda marginaler på en efterfrågad premiumprodukt."
@@ -4177,6 +4340,10 @@
         {
           "name": "Spänntak i PVC på rulle",
           "body": "PVC-membran på rulle — matta, satin, blanka, translucenta och färgade serier från de stora foliemärkena."
+        },
+        {
+          "name": "Spänntakskit i polyester (gör det själv)",
+          "body": "Det kompletta kitet för kall montering: polyesterväv skuren efter ditt rum, profiler, hörndelar och instruktioner — gör-det-själv-vägen till ett sömlöst textiltak."
         }
       ]
     },
