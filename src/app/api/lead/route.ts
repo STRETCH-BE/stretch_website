@@ -3,6 +3,7 @@
 // resist abuse, and returns a minimal { ok }. Never logs submitted PII.
 import { NextResponse } from 'next/server';
 import { deliverLead } from '@/lib/deliver';
+import { storeLead } from '@/lib/lead-store';
 import type { LeadPayload } from '@/lib/email';
 
 export const runtime = 'nodejs';
@@ -51,11 +52,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: 'missing_contact' }, { status: 422 });
   }
 
+  // Page the visitor submitted from (referer) — stored with the lead.
+  const page = request.headers.get('referer');
+
   try {
-    await deliverLead(payload);
+    const result = await deliverLead(payload);
+    await storeLead(payload, { delivered: result.method !== 'log', method: result.method }, page);
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error(`[lead] unexpected delivery error: ${err instanceof Error ? err.message : 'unknown'}`);
+    // Store the lead anyway — a delivery failure must not lose the enquiry.
+    await storeLead(payload, { delivered: false, method: 'failed' }, page);
     return NextResponse.json({ ok: false, error: 'delivery_failed' }, { status: 502 });
   }
 }
