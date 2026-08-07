@@ -78,7 +78,7 @@ export default async function MaterialsPage({ params }: { params: { locale: stri
           {groups.map((g) => (
             <Link key={g.slug} href={`/materials/${g.slug}`} className="mt-card zoom-wrap">
               <div style={{ overflow: 'hidden' }}>
-                <Placeholder label={g.name} src={g.items.find((i) => i.image)?.image ?? ''} alt={g.name} sizes="(max-width: 860px) 100vw, 33vw" light ratio="16/10" className="zoom-img" />
+                <Placeholder label={g.name} src={g.cover ?? g.items.find((i) => i.image)?.image ?? ''} alt={g.name} sizes="(max-width: 860px) 100vw, 33vw" light ratio="16/10" className="zoom-img" />
               </div>
               <div style={{ padding: '20px 22px' }}>
                 <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 20, letterSpacing: '-.01em', margin: '0 0 7px', textTransform: 'uppercase' }}>{g.name}</h2>

@@ -14,8 +14,7 @@ import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
-import { ModalButton } from '@/components/ui/ModalButton';
-import { AddToInquiryButton } from '@/components/materials/Inquiry';
+import { ItemActions } from '@/components/materials/ItemActions';
 import { getMaterialGroup, materialGroupSlugs } from '@/lib/materials';
 import { localizeMaterialGroup, type MaterialGroupMessages } from '@/lib/localize-content';
 
@@ -94,12 +93,7 @@ export default async function MaterialGroupPage({ params }: { params: { locale: 
               <div style={{ padding: '18px 0 0' }}>
                 <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 18, letterSpacing: '-.01em', margin: '0 0 7px' }}>{item.name}</h2>
                 <p style={{ fontSize: 13.5, lineHeight: 1.6, color: 'var(--text-muted)', margin: '0 0 14px' }}>{item.body}</p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                  <ModalButton type="quote" source={`materials_${g.slug}`} product={item.name} trackQuote className="btn btn--primary btn--sm">
-                    {t('requestQuote')} <ArrowRight size={14} />
-                  </ModalButton>
-                  <AddToInquiryButton group={g.name} name={item.name} />
-                </div>
+                <ItemActions group={g.name} name={item.name} source={`materials_${g.slug}`} variants={item.variants} />
               </div>
             </article>
           ))}
