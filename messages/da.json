@@ -1420,6 +1420,14 @@
               "sub": "Akustisk komfort"
             },
             {
+              "title": "Pool & wellness",
+              "sub": "Bygget til fugt og klor"
+            },
+            {
+              "title": "Vægge",
+              "sub": "Sømløse tekstiloverflader"
+            },
+            {
               "title": "Se alle projekter",
               "sub": "Hele porteføljen"
             }
@@ -4476,6 +4484,8 @@
     "regionNetherlands": "Holland",
     "lookingLabel": "Forhandler søges",
     "ovRecruitTitle": "Endnu ingen forhandler i dit område?",
-    "ovRecruitBody": "Vi leverer og monterer direkte fra vores produktion, mens netværket vokser — og montører, der overtager en ledig region, får regionens henvendelser, forhandlerpriser og træning."
+    "ovRecruitBody": "Vi leverer og monterer direkte fra vores produktion, mens netværket vokser — og montører, der overtager en ledig region, får regionens henvendelser, forhandlerpriser og træning.",
+    "regionLuxembourg": "Luxembourg (Storhertugdømmet)",
+    "regionAustria": "Østrig"
   }
 }

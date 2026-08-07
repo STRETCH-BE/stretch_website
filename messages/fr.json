@@ -1420,6 +1420,14 @@
               "sub": "Confort acoustique"
             },
             {
+              "title": "Piscine & wellness",
+              "sub": "Conçue pour l’humidité et le chlore"
+            },
+            {
+              "title": "Murs",
+              "sub": "Surfaces textiles sans couture"
+            },
+            {
               "title": "Voir tous les projets",
               "sub": "Le portfolio complet"
             }
@@ -4476,6 +4484,8 @@
     "regionNetherlands": "Pays-Bas",
     "lookingLabel": "Revendeur recherché",
     "ovRecruitTitle": "Pas encore de revendeur près de chez vous ?",
-    "ovRecruitBody": "Pendant que le réseau grandit, nous livrons et posons directement depuis notre production — et les poseurs qui réservent une région libre en reçoivent les demandes, les tarifs revendeur et la formation."
+    "ovRecruitBody": "Pendant que le réseau grandit, nous livrons et posons directement depuis notre production — et les poseurs qui réservent une région libre en reçoivent les demandes, les tarifs revendeur et la formation.",
+    "regionLuxembourg": "Luxembourg (Grand-Duché)",
+    "regionAustria": "Autriche"
   }
 }

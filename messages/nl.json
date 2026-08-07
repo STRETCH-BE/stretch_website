@@ -1420,6 +1420,14 @@
               "sub": "Akoestisch comfort"
             },
             {
+              "title": "Zwembad & wellness",
+              "sub": "Gebouwd voor vocht en chloor"
+            },
+            {
+              "title": "Wanden",
+              "sub": "Naadloze textieloppervlakken"
+            },
+            {
               "title": "Bekijk alle projecten",
               "sub": "Het volledige portfolio"
             }
@@ -4476,6 +4484,8 @@
     "regionNetherlands": "Nederland",
     "lookingLabel": "Dealer gezocht",
     "ovRecruitTitle": "Nog geen dealer in uw buurt?",
-    "ovRecruitBody": "Terwijl het netwerk groeit, leveren en plaatsen wij rechtstreeks vanuit onze eigen productie — en installateurs die een vrije regio claimen, krijgen de aanvragen uit die regio, dealerprijzen en opleiding."
+    "ovRecruitBody": "Terwijl het netwerk groeit, leveren en plaatsen wij rechtstreeks vanuit onze eigen productie — en installateurs die een vrije regio claimen, krijgen de aanvragen uit die regio, dealerprijzen en opleiding.",
+    "regionLuxembourg": "Luxemburg (Groothertogdom)",
+    "regionAustria": "Oostenrijk"
   }
 }

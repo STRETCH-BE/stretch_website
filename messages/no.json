@@ -1420,6 +1420,14 @@
               "sub": "Akustisk komfort"
             },
             {
+              "title": "Basseng & wellness",
+              "sub": "Bygget for fukt og klor"
+            },
+            {
+              "title": "Vegger",
+              "sub": "Sømløse tekstiloverflater"
+            },
+            {
               "title": "Se alle prosjekter",
               "sub": "Hele porteføljen"
             }
@@ -4476,6 +4484,8 @@
     "regionNetherlands": "Nederland",
     "lookingLabel": "Forhandler søkes",
     "ovRecruitTitle": "Ingen forhandler i ditt område ennå?",
-    "ovRecruitBody": "Vi leverer og monterer direkte fra vår produksjon mens nettverket vokser — og montører som sikrer seg en ledig region, får regionens henvendelser, forhandlerpriser og opplæring."
+    "ovRecruitBody": "Vi leverer og monterer direkte fra vår produksjon mens nettverket vokser — og montører som sikrer seg en ledig region, får regionens henvendelser, forhandlerpriser og opplæring.",
+    "regionLuxembourg": "Luxembourg (Storhertugdømmet)",
+    "regionAustria": "Østerrike"
   }
 }

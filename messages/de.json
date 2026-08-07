@@ -1420,6 +1420,14 @@
               "sub": "Akustischer Komfort"
             },
             {
+              "title": "Pool & Wellness",
+              "sub": "Gebaut für Feuchtigkeit und Chlor"
+            },
+            {
+              "title": "Wände",
+              "sub": "Nahtlose Textiloberflächen"
+            },
+            {
               "title": "Alle Projekte ansehen",
               "sub": "Das komplette Portfolio"
             }
@@ -4476,6 +4484,8 @@
     "regionNetherlands": "Niederlande",
     "lookingLabel": "Händler gesucht",
     "ovRecruitTitle": "Noch kein Händler in Ihrer Nähe?",
-    "ovRecruitBody": "Solange das Netzwerk wächst, liefern und montieren wir direkt aus unserer Produktion — und Monteure, die sich eine freie Region sichern, erhalten deren Anfragen, Händlerpreise und Schulungen."
+    "ovRecruitBody": "Solange das Netzwerk wächst, liefern und montieren wir direkt aus unserer Produktion — und Monteure, die sich eine freie Region sichern, erhalten deren Anfragen, Händlerpreise und Schulungen.",
+    "regionLuxembourg": "Luxemburg (Großherzogtum)",
+    "regionAustria": "Österreich"
   }
 }

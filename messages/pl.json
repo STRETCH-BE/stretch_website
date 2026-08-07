@@ -1420,6 +1420,14 @@
               "sub": "Komfort akustyczny"
             },
             {
+              "title": "Baseny i wellness",
+              "sub": "Stworzona do wilgoci i chloru"
+            },
+            {
+              "title": "Ściany",
+              "sub": "Bezszwowe powierzchnie tekstylne"
+            },
+            {
               "title": "Zobacz wszystkie realizacje",
               "sub": "Pełne portfolio"
             }
@@ -4476,6 +4484,8 @@
     "regionNetherlands": "Holandia",
     "lookingLabel": "Szukamy dealera",
     "ovRecruitTitle": "Nie ma jeszcze dealera w Twojej okolicy?",
-    "ovRecruitBody": "Dopóki sieć się rozbudowuje, dostarczamy i montujemy bezpośrednio z naszego zakładu — a montażyści, którzy przejmą wolny region, zyskują zapytania z tego regionu, ceny dealerskie i szkolenia."
+    "ovRecruitBody": "Dopóki sieć się rozbudowuje, dostarczamy i montujemy bezpośrednio z naszego zakładu — a montażyści, którzy przejmą wolny region, zyskują zapytania z tego regionu, ceny dealerskie i szkolenia.",
+    "regionLuxembourg": "Luksemburg (Wielkie Księstwo)",
+    "regionAustria": "Austria"
   }
 }

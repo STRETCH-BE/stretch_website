@@ -1420,6 +1420,14 @@
               "sub": "Confort acústico"
             },
             {
+              "title": "Piscinas y wellness",
+              "sub": "Hecha para la humedad y el cloro"
+            },
+            {
+              "title": "Paredes",
+              "sub": "Superficies textiles sin juntas"
+            },
+            {
               "title": "Ver todos los proyectos",
               "sub": "El portafolio completo"
             }
@@ -4476,6 +4484,8 @@
     "regionNetherlands": "Países Bajos",
     "lookingLabel": "Se busca distribuidor",
     "ovRecruitTitle": "¿Todavía no hay distribuidor en su zona?",
-    "ovRecruitBody": "Mientras la red crece, entregamos e instalamos directamente desde nuestra fábrica — y los instaladores que asuman una región libre reciben sus solicitudes, precios de distribuidor y formación."
+    "ovRecruitBody": "Mientras la red crece, entregamos e instalamos directamente desde nuestra fábrica — y los instaladores que asuman una región libre reciben sus solicitudes, precios de distribuidor y formación.",
+    "regionLuxembourg": "Luxemburgo (Gran Ducado)",
+    "regionAustria": "Austria"
   }
 }

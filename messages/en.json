@@ -1420,6 +1420,14 @@
               "sub": "Acoustic comfort"
             },
             {
+              "title": "Pool & wellness",
+              "sub": "Built for moisture and chlorine"
+            },
+            {
+              "title": "Walls",
+              "sub": "Seamless textile surfaces"
+            },
+            {
               "title": "See all projects",
               "sub": "The full portfolio"
             }
@@ -4476,6 +4484,8 @@
     "regionNetherlands": "Netherlands",
     "lookingLabel": "Dealer wanted",
     "ovRecruitTitle": "No dealer in your area yet?",
-    "ovRecruitBody": "We deliver and install directly from our production while the network grows — and installers who claim an open region get its enquiries, dealer pricing and training."
+    "ovRecruitBody": "We deliver and install directly from our production while the network grows — and installers who claim an open region get its enquiries, dealer pricing and training.",
+    "regionLuxembourg": "Luxembourg (Grand Duchy)",
+    "regionAustria": "Austria"
   }
 }

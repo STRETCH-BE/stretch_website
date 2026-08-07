@@ -1420,6 +1420,14 @@
               "sub": "Hljóðvistarþægindi"
             },
             {
+              "title": "Sundlaug & heilsulind",
+              "sub": "Byggð fyrir raka og klór"
+            },
+            {
+              "title": "Veggir",
+              "sub": "Textílfletir án samskeyta"
+            },
+            {
               "title": "Sjá öll verkefni",
               "sub": "Allt safnið"
             }
@@ -4476,6 +4484,8 @@
     "regionNetherlands": "Holland",
     "lookingLabel": "Söluaðili óskast",
     "ovRecruitTitle": "Enginn söluaðili á þínu svæði enn?",
-    "ovRecruitBody": "Við afhendum og setjum upp beint frá framleiðslunni á meðan netið stækkar — og uppsetningaraðilar sem tryggja sér laust svæði fá fyrirspurnir þess, söluaðilaverð og þjálfun."
+    "ovRecruitBody": "Við afhendum og setjum upp beint frá framleiðslunni á meðan netið stækkar — og uppsetningaraðilar sem tryggja sér laust svæði fá fyrirspurnir þess, söluaðilaverð og þjálfun.",
+    "regionLuxembourg": "Lúxemborg (Stórhertogadæmið)",
+    "regionAustria": "Austurríki"
   }
 }

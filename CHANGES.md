@@ -1,3 +1,23 @@
+## 2026-08-07 (8) — LU + Wien dealer pages, mega-menu applications, SEO audit (build 1844)
+
+- **Dealer directory phase 2:** new regions in dealers.ts (DealerRegion +
+  'luxembourg' | 'austria'; primaryLocale + 'de'): /dealers/luxembourg
+  (Grand-Duché overview), /dealers/luxembourg-ville, /dealers/esch-sur-alzette
+  (fr; "Plafond tendu Luxembourg-Ville — …") + /dealers/wien (de; "Spanndecke
+  Wien — …", 755 impr/yr on the old .at). All recruitment variant. Overview
+  page shows 5 region sections (regionLuxembourg/regionAustria labels ×12).
+  59 places total.
+- **Mega menu:** pool-wellness + walls inserted in the Applications category
+  (skeleton + megaMenu.solutions.cats[4].items ×12 — titles/subs reuse the
+  already-translated applications strings; "All inspiration" stays last).
+  Verified in-browser: 5 application links render localized.
+- **SEO audit (dev-verified):** per-domain sitemap contains every route family
+  (dealers incl. the 4 new, applications 5, blog 14 incl. clipso + prijs,
+  materials 6, projects 24) + hreflang alternates; host-aware robots.txt OK
+  (per-domain sitemap URL, AI crawlers welcomed, only /api/ disallowed);
+  0 MISSING_MESSAGE.
+- Build 1796 → **1844** (+4 dealer places ×12). content.ts slugs 38.
+
 ## 2026-08-07 (7) — fix: blog index now shows the hero photos
 
 - The /blog overview card rendered Placeholder WITHOUT the src prop, so every
