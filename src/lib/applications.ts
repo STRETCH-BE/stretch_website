@@ -75,6 +75,42 @@ export const applications: Application[] = [
     solutionSlugs: ['acoustic-stretch-system', 'custom-print', 'light-print-stretch-ceiling'],
     projectKeys: ['office', 'commercial', 'acoustic'],
   },
+  {
+    slug: 'pool-wellness',
+    name: 'Swimming pools & wellness',
+    shortName: 'Pool & wellness',
+    eyebrow: 'Pool & wellness',
+    metaDescription:
+      'Stretch ceilings for swimming pools, spas and wellness spaces — moisture- and chlorine-resistant membranes with No-Stain finish, integrated light and acoustics, installed without downtime.',
+    intro:
+      'Pool halls and wellness spaces destroy painted ceilings: condensation, chlorine vapour and heat make coatings flake within years. A tensioned membrane is immune to all three — and brings light and acoustics into the wettest rooms of the building.',
+    hero: '/images/products/illuminated-printed-stretch-ceiling.jpg',
+    benefits: [
+      { title: 'Built for moisture and chlorine', body: 'The membrane does not absorb water, cannot peel or flake, and shrugs off condensation and pool chemistry — with No-Stain finishes that wipe clean.' },
+      { title: 'Light with nothing to corrode', body: 'Backlit ceilings and sealed LED lines put even, glare-free light over the water without exposed fixtures rusting in the humid air.' },
+      { title: 'Acoustics for hard, wet rooms', body: 'Tile and glass make pools loud. An acoustic membrane build-up takes the sting out of the echo without adding a single visible panel.' },
+    ],
+    solutionSlugs: ['pvc-stretch-ceiling', 'light-print-stretch-ceiling', 'acoustic-stretch-system'],
+    projectKeys: ['bathroom', 'light'],
+  },
+  {
+    slug: 'walls',
+    name: 'Stretch walls & wall acoustics',
+    shortName: 'Walls',
+    eyebrow: 'Walls',
+    metaDescription:
+      'Textile and velvet wall coverings, printed stretch walls and acoustic wall build-ups — seamless tensioned walls with the absorption hidden behind the surface.',
+    intro:
+      'Everything a stretch ceiling does, a wall can do too. Tensioned textile and velvet walls give a seamless, deep-matte surface; printed membranes turn a wall into artwork; and acoustic build-ups hide serious absorption behind the fabric — no visible panels.',
+    hero: '/images/materials/acoustic-wall-panels.jpg',
+    benefits: [
+      { title: 'Seamless textile surfaces', body: 'Velvet and textile walls tensioned edge to edge — a warm, upholstered look without seams, staples or sagging over time.' },
+      { title: 'Acoustics behind the surface', body: 'Absorber material disappears behind a micro-perforated fabric wall, pairing with an acoustic ceiling to bring reverberation down to a comfortable level.' },
+      { title: 'Any image, wall-sized', body: 'Printed stretch walls carry photography, artwork or branding edge to edge — backlit if you want the image to glow.' },
+    ],
+    solutionSlugs: ['acoustic-stretch-system', 'custom-print', 'polyester-stretch-ceiling'],
+    projectKeys: ['acoustic', 'commercial'],
+  },
 ];
 
 export function getApplication(slug: string): Application | undefined {

@@ -465,6 +465,7 @@ export const projects: Project[] = [
   {
     key: 'living', slug: 'vap-sint-pauwels', cat: 'Living room', title: 'VAP — Sint-Pauwels',
     meta: 'Sint-Pauwels · White villa',
+    image: '/images/projects/vap-sint-pauwels-hero.jpg',
     summary: 'Acoustic ceilings for a bright white villa inspired by water.',
     hook: 'A white villa for a family drawn to water — ceilings that catch the light like a calm sea.',
     description: [
@@ -480,7 +481,7 @@ export const projects: Project[] = [
       { label: 'STRETCH dealer', value: 'Plafondlux BV' },
     ],
     solutions: ['acoustic-stretch-system'],
-    gallery: ['', '', ''], // photos to come (old site: STRETCH-Van-Akeleyn set)
+    gallery: ['/images/projects/vap-sint-pauwels-1.jpg', '/images/projects/vap-sint-pauwels-2.jpg', '/images/projects/vap-sint-pauwels-3.jpg'], // photos to come (old site: STRETCH-Van-Akeleyn set)
   },
   {
     key: 'office', slug: 'goesten-opdam', cat: 'Office', title: 'Goesten & Opdam',
@@ -504,6 +505,7 @@ export const projects: Project[] = [
   {
     key: 'office', slug: 'dhl-zaventem', cat: 'Office', title: 'DHL Zaventem',
     meta: 'Zaventem · Boeing 737 meeting room',
+    image: '/images/projects/dhl-zaventem-hero.jpg',
     summary: 'A Camira-clad acoustic ceiling inside a full-scale Boeing 737 meeting room.',
     hook: 'A conference room built as a Boeing 737 fuselage — with acoustics to match the idea.',
     description: [
@@ -519,7 +521,7 @@ export const projects: Project[] = [
       { label: 'Client', value: 'DHL' },
     ],
     solutions: ['acoustic-stretch-system'],
-    gallery: ['', '', ''], // photos to come (old site: Ideal Acoustics set)
+    gallery: ['/images/projects/dhl-zaventem-1.jpg', '/images/projects/dhl-zaventem-2.jpg', '/images/projects/dhl-zaventem-3.jpg'], // photos to come (old site: Ideal Acoustics set)
   },
   {
     key: 'commercial', slug: 'veta-interieur-showroom', cat: 'Retail', title: 'Veta Interieur',
@@ -540,6 +542,48 @@ export const projects: Project[] = [
     ],
     solutions: ['custom-print', 'light-print-stretch-ceiling'],
     gallery: ['', '', ''],
+  },
+  {
+    key: 'commercial', slug: 'creneau-afas-lounge', cat: 'Commercial', title: 'AFAS Lounge — BE•AT',
+    meta: 'Antwerpen · VIP lounge, AFAS Dome',
+    image: '/images/projects/creneau-afas-lounge-hero.jpg',
+    summary: 'A black gloss acoustic ceiling that turns one lounge into four rooms.',
+    hook: 'One ceiling, two effects: a club-grade mirror above, concert-grade absorption behind it.',
+    description: [
+      'For the VIP lounge of the AFAS Dome in Antwerp, design studio Creneau International (Hasselt) imagined a space that plays four roles in a single evening: restaurant, dance floor, conference room and lounge. The ceiling had to carry that transformation.',
+      'We produced a black high-gloss PVC membrane with roughly 90% reflectivity — a mirror that doubles the room and its light — backed by a perforated acoustic layer with absorber material, so the BE•AT sound system lands crisp instead of harsh.',
+      'LED lighting points and speaker openings were cut in production, the membrane was welded seamlessly up to 6.50 m wide, and the 250 m² lounge ceiling was installed in three days on site.',
+    ],
+    highlights: ['One surface, two functions: mirror gloss + acoustic absorption', 'LED and speaker openings factory-cut, no visible hardware', '250 m² installed in three days'],
+    materials: ['Black high-gloss PVC membrane (±90% reflectivity)', 'Perforated acoustic backing with absorber', 'Factory-cut LED and audio integrations'],
+    facts: [
+      { label: 'Location', value: 'AFAS Dome, Antwerpen' },
+      { label: 'Design', value: 'Creneau International (Hasselt)' },
+      { label: 'Surface', value: '250 m² · installed in 3 days' },
+      { label: 'Year', value: '2025' },
+    ],
+    gallery: ['/images/projects/creneau-afas-lounge-1.jpg', '/images/projects/creneau-afas-lounge-2.jpg', '/images/projects/creneau-afas-lounge-3.jpg'],
+  },
+  {
+    key: 'office', slug: 'candor-sint-martens-latem', cat: 'Office', title: 'Candor',
+    meta: 'Sint-Martens-Latem · Developer offices',
+    image: '/images/projects/candor-sint-martens-latem-hero.jpg',
+    summary: 'Invisible acoustics for a developer’s offices — zero visible panels.',
+    hook: 'Meeting rooms below RT60 0.6 seconds, and not a single acoustic panel in sight.',
+    description: [
+      'Real-estate developer Candor renovated its offices on the Kortrijksesteenweg in Sint-Martens-Latem: open space, meeting rooms, kitchen and a relaxation zone, designed by Goedele Perdu with acoustic consulting by Form Design (Dendermonde) — our dealer for the region.',
+      'The acoustics disappear into the architecture. Micro-perforated polyester membranes span every ceiling as one smooth plane, with the absorption layer hidden in the plenum above and LED lighting integrated flush into the surface.',
+      'The result measures where it matters: reverberation below 0.8 seconds in the open space and below 0.6 seconds in meeting rooms — concentration-grade acoustics with zero visible panels, and every ceiling demountable for maintenance.',
+    ],
+    highlights: ['RT60 below 0.8 s (open space) and 0.6 s (meeting rooms)', 'Micro-perforated membrane, absorption hidden in the plenum', 'Demountable — full access to the ceiling void'],
+    materials: ['Acoustic micro-perforated polyester membrane', 'Plenum absorption layer', 'Integrated flush LED lighting'],
+    facts: [
+      { label: 'Location', value: 'Sint-Martens-Latem' },
+      { label: 'Interior design', value: 'Goedele Perdu' },
+      { label: 'Acoustics', value: 'Form Design (Dendermonde)' },
+      { label: 'Year', value: '2025' },
+    ],
+    gallery: ['/images/projects/candor-sint-martens-latem-1.jpg', '/images/projects/candor-sint-martens-latem-2.jpg', '/images/projects/candor-sint-martens-latem-3.jpg'],
   },
 ];
 
@@ -665,6 +709,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-07',
     author: 'STRETCH',
     readMinutes: 6,
+    image: '/images/blog/houten-planchetten-plafond-renoveren-of-vernieuwen.jpg',
     body: [
       {
         heading: 'Why slat ceilings feel dated',
@@ -712,6 +757,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-07',
     author: 'STRETCH',
     readMinutes: 6,
+    image: '/images/blog/scheuren-in-plafond-herstellen.jpg',
     body: [
       {
         heading: 'Where ceiling cracks come from',
@@ -758,6 +804,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-07',
     author: 'STRETCH',
     readMinutes: 5,
+    image: '/images/blog/de-ideale-plafondhoogte.jpg',
     body: [
       {
         heading: 'The short answer',
@@ -850,6 +897,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-07',
     author: 'STRETCH',
     readMinutes: 4,
+    image: '/images/blog/spanplafond-buiten.jpg',
     body: [
       {
         heading: 'Where an outdoor stretch ceiling makes sense',
@@ -934,6 +982,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-07',
     author: 'STRETCH',
     readMinutes: 4,
+    image: '/images/blog/kan-je-een-spanplafond-afwassen.jpg',
     body: [
       {
         heading: 'The short answer',
@@ -1014,6 +1063,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-07',
     author: 'STRETCH',
     readMinutes: 5,
+    image: '/images/blog/schuin-dak.jpg',
     body: [
       {
         heading: 'Know your roof structure',
@@ -1127,6 +1177,51 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'Send us the room dimensions, a photo and what you have in mind — through the quote button on this page — and you get a concrete, free quote, usually the same working day. No calculator gymnastics needed: measuring and pricing precisely is our job, not yours.',
           'Are you an installer or reseller buying materials rather than a finished ceiling? Trade pricing lives in the client zone — request a partner account and you see your prices directly.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'clipso-spanplafonds',
+    title: 'Clipso stretch ceilings: what they are and where to get them',
+    excerpt:
+      'Clipso is the best-known brand of polyester fabric for stretch ceilings and walls — the acoustic fabric ceiling many architects specify by name. What Clipso-type fabric is, what it does well, and how we supply, print, confection and install it.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 5,
+    body: [
+      {
+        heading: 'What "Clipso" actually means',
+        paragraphs: [
+          'Clipso is a French-made polyester knit fabric for tensioned ceilings and walls — so well known that the brand name has become shorthand for the whole category of fabric stretch ceilings (the way people say Gyproc for plasterboard). Since 2022 the brand belongs to Ecophon, part of the Saint-Gobain group.',
+          'The fabric installs cold: no heating of the room, no welding on site. The knit is wider than PVC — seamless up to around five metres — breathable, and available in standard, acoustic and translucent versions.',
+        ],
+      },
+      {
+        heading: 'Where fabric shines — and where PVC wins',
+        paragraphs: [
+          'Choose a polyester fabric ceiling when you want a deep matte, textile look, cold installation (occupied homes, heritage buildings), large seamless widths or micro-perforated acoustics. The acoustic version — the "akoestisch spandoek" or "toile tendue acoustique" architects ask for — pairs an elegant surface with serious absorption.',
+          'PVC membrane wins on gloss and lacquer finishes, printed designs with backlighting, bathrooms and washability. In practice many of our projects combine both — fabric in living and office spaces, PVC where light, print or moisture leads.',
+        ],
+      },
+      {
+        heading: 'How we work with Clipso-type fabrics',
+        paragraphs: [
+          'As a manufacturer we keep the whole chain in-house: we stock polyester ceiling fabrics on the roll, cut and confection them to measure in our Belgian production, print on them, and combine them with our own profiles, LED lighting and acoustic build-ups.',
+          'Installers and resellers buy the fabric by the roll or cut to size through our materials catalogue — with the acoustic version available off the shelf — and end customers get the finished, installed ceiling through our dealer network.',
+        ],
+      },
+      {
+        heading: 'Cleaning and care',
+        paragraphs: [
+          'Fabric ceilings ask little: dust them like a wall, and treat stains early with a slightly damp cloth. For PVC membranes and coated fabrics our STRETCH Cleaner does the work — see the care guide elsewhere on this blog for the full instructions.',
+        ],
+      },
+      {
+        heading: 'Getting a Clipso-type ceiling',
+        paragraphs: [
+          'Tell us the room and the goal — acoustic comfort, a matte designer surface, a printed wall — and we quote the made-to-measure fabric, the materials, or the full installation through the dealer in your region, usually the same working day.',
         ],
       },
     ],

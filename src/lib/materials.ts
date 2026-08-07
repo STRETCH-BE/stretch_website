@@ -56,7 +56,7 @@ export const materialGroups: MaterialGroup[] = [
       { name: 'Aluminium stretch-ceiling profiles', body: 'Rigid aluminium perimeter and separation profiles for cold and heat mounting — straight lengths, ready to fit.', image: '/images/materials/alu-profiles.jpg' },
       { name: 'PVC stretch-ceiling profiles', body: 'Flexible PVC harpoon profiles for curved walls and simple perimeters.', image: '/images/materials/pvc-profiles.jpg' },
       { name: 'LED-line profiles & end caps', body: 'Recessed profiles that put a crisp light line into the membrane, with matching end caps (16 / 31 mm).', image: '/images/materials/led-line-profiles.jpg' },
-      { name: 'Tracklight 48V profile', body: 'The magnetic 48V track that integrates flush into a stretch ceiling — the backbone of the tracklight system.', image: '' },
+      { name: 'Tracklight 48V profile', body: 'The magnetic 48V track that integrates flush into a stretch ceiling — the backbone of the tracklight system.', image: '/images/materials/tracklight-profile.jpg' },
     ],
   },
   {
@@ -94,6 +94,13 @@ export const materialGroups: MaterialGroup[] = [
         image: '/images/materials/pvc-roll.jpg',
         variants: ['standard', 'acoustic', 'translucent'],
       },
+      // Appended 7 Aug (kit — UK data: 66% of .uk clicks) — keep at END (index merge).
+      {
+        name: 'Polyester stretch ceiling kit (DIY)',
+        body: 'The complete cold-install kit: polyester fabric cut to your room, profiles, corner pieces and instructions — the DIY route to a seamless fabric ceiling.',
+        image: '',
+        variants: ['standard', 'acoustic', 'translucent'],
+      },
     ],
   },
   {
@@ -106,7 +113,7 @@ export const materialGroups: MaterialGroup[] = [
     intro:
       'Everything that lights a STRETCH ceiling: the magnetic 48V tracklight family, LED field modules for backlit ceilings, and the rings that finish every spot cleanly.',
     items: [
-      { name: 'Tracklight 48V system', body: 'Magnetic spots, grille lights and connectors for the flush 48V track — swap and reposition fixtures by hand.', image: '' },
+      { name: 'Tracklight 48V system', body: 'Magnetic spots, grille lights and connectors for the flush 48V track — swap and reposition fixtures by hand.', image: '/images/materials/tracklight-system.jpg' },
       { name: 'LED modules for backlit ceilings', body: 'Even, dimmable LED fields that turn a translucent membrane into a seamless light source.', image: '/images/materials/led-modules.jpg' },
       { name: 'Spotrings & protective rings', body: 'Rings in every diameter (4.5–300 mm) that reinforce cut-outs for spots, sensors and ventilation.', image: '/images/materials/spot-rings.jpg' },
     ],
@@ -138,9 +145,9 @@ export const materialGroups: MaterialGroup[] = [
     intro:
       'Absorption for rooms that sound as good as they look: polyester wool panels for ceilings and walls, free-hanging islands and baffles — cut to size and delivered from our own production.',
     items: [
-      { name: 'Polyester wool panels', body: 'Self-supporting acoustic panels in polyester wool — colour-fast, safe to handle and cut to size for ceilings and walls.', image: '' },
-      { name: 'Acoustic ceiling islands & baffles', body: 'Free-hanging absorbers for spaces where a full acoustic ceiling is not an option — offices, restaurants, halls.', image: '' },
-      { name: 'Acoustic wall panels', body: 'Wall-mounted absorption that pairs with an acoustic ceiling to bring reverberation down to a comfortable level.', image: '' },
+      { name: 'Polyester wool panels', body: 'Self-supporting acoustic panels in polyester wool — colour-fast, safe to handle and cut to size for ceilings and walls.', image: '/images/materials/polyester-wool-panels.jpg' },
+      { name: 'Acoustic ceiling islands & baffles', body: 'Free-hanging absorbers for spaces where a full acoustic ceiling is not an option — offices, restaurants, halls.', image: '/images/materials/acoustic-islands.jpg' },
+      { name: 'Acoustic wall panels', body: 'Wall-mounted absorption that pairs with an acoustic ceiling to bring reverberation down to a comfortable level.', image: '/images/materials/acoustic-wall-panels.jpg' },
     ],
   },
   {

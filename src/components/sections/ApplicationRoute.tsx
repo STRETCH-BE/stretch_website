@@ -18,7 +18,7 @@ export async function applicationMetadata(slug: string, locale: string): Promise
   const base = getApplication(slug);
   if (!base) return {};
   const ta = await getTranslations({ locale, namespace: 'applications' });
-  const app = localizeApplication(base, ta.raw(slug) as ApplicationMessages);
+  const app = localizeApplication(base, ta.has(`${slug}.name`) ? (ta.raw(slug) as ApplicationMessages) : undefined);
   const title = `${app.name} | ${brand.name}`;
   const url = `${localeBase(locale)}/applications/${slug}`;
   const ogImg = `${localeBase(locale as Locale)}/api/og`;
@@ -50,7 +50,7 @@ function ApplicationBody({ slug, locale }: { slug: string; locale: Locale }) {
   const ta = useTranslations('applications');
   const tp = useTranslations('productPage');
   const tap = useTranslations('appPage');
-  const app = localizeApplication(getApplication(slug)!, ta.raw(slug) as ApplicationMessages);
+  const app = localizeApplication(getApplication(slug)!, ta.has(`${slug}.name`) ? (ta.raw(slug) as ApplicationMessages) : undefined);
 
   const crumbs = breadcrumbSchema([
     { name: tp('home'), url: `${localeBase(locale)}` },
