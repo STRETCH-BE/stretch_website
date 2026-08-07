@@ -1,3 +1,28 @@
+## 2026-08-07 (2) — P1: the 10 knowledge-base articles, recreated ×12 languages
+
+- **10 blog articles added** (content.ts blogPosts; now 12 posts, content.ts
+  slug count 24 → 34; build 920 → **1040 pages**). Recreated from the old
+  site's top organic pages — together 62% of stretchplafond.be's clicks:
+  houten-planchetten-plafond-renoveren-of-vernieuwen (734/yr), scheuren-in-
+  plafond-herstellen (265), de-ideale-plafondhoogte (128), geluidsoverlast-
+  van-uw-bovenburen (102), spanplafond-buiten (67+47, both old outdoor URLs →
+  one article), klimaat-plafond (63), kan-je-een-spanplafond-afwassen (47),
+  spanplafond-zelf-plaatsen (44), schuin-dak (28), sterrenhemel (48).
+- **Slugs = the old Dutch URLs** so the 301s are near-exact
+  (old /<slug>/ → /be/blog/<slug>).
+- EN source rewritten (not copied) in house tone; facts preserved from the
+  old articles (P60–P100 sanding, 24–48 h drying, 2.50/2.20/2.40/2.60/3.00 m
+  heights, NEN 1824, mass-spring-mass ±55 dB at 5 cm, No-Stain outdoors,
+  5–10% energy, fibre-optic starry sky 2–3 days). The old €/m² price range in
+  the klimaat article was intentionally dropped (quote-based pricing on the
+  new site). Old "zelf plaatsen" article rewritten as honest DIY guidance
+  funnelling to kits (/materials), installer training and quotes.
+- **Translated ×12** (blogPosts.posts.<slug> in every messages file; be = nl;
+  NL titles/headings target the original queries). Verified: typecheck,
+  1040/1040 pages, 0 MISSING_MESSAGE, NL/PL/DE spot-checks.
+- Hero images = branded placeholders for now (BlogPost.image per slug when
+  photos come).
+
 ## 2026-08-07 — Fabrics rework: 4 sellable products, version checkmarks, colour choice + 16 photos
 
 - **Fabrics & foils group rebuilt** (Michael's list): PVC foil produced to size,
