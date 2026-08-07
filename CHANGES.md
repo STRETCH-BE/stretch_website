@@ -1,3 +1,10 @@
+## 2026-08-07 (7) — fix: blog index now shows the hero photos
+
+- The /blog overview card rendered Placeholder WITHOUT the src prop, so every
+  card showed the branded placeholder even when the post has a hero image.
+  Fixed: src={p.image} + alt + sizes on the index card (article pages were
+  already correct). Posts without a photo still fall back to the placeholder.
+
 ## 2026-08-07 (6) — Photo batch, 2 project pages, competitor B-batch (build 1796 pages)
 
 - **19 photos wired** (Michael's Website.zip, checklist names): VAP Sint-Pauwels
