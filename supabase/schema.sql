@@ -115,3 +115,34 @@ create policy pricebook_meta_read
 
 -- No write policies on purpose: only the service role (which bypasses RLS)
 -- may write, and it is used exclusively by the admin API routes/CLI scripts.
+
+-- ============================================================================
+-- LEADS — every website enquiry (contact, quote modals, materials inquiry,
+-- dealer pages) is stored here IN ADDITION to the e-mail delivery.
+-- Added 7 Aug 2026. Safe to re-run (create if not exists).
+-- ============================================================================
+create table if not exists public.leads (
+  id uuid primary key default gen_random_uuid(),
+  created_at timestamptz not null default now(),
+  source text not null,
+  name text,
+  email text,
+  phone text,
+  company text,
+  message text,
+  product text,
+  colour text,
+  colour_code text,
+  items text,
+  page text,
+  delivered boolean not null default false,
+  delivery_method text,
+  payload jsonb not null default '{}'::jsonb
+);
+
+create index if not exists leads_created_at_idx on public.leads (created_at desc);
+create index if not exists leads_source_idx on public.leads (source);
+
+alter table public.leads enable row level security;
+-- No policies on purpose: only the service role (server API route) can write,
+-- and reading happens via the Supabase dashboard / future admin panel.

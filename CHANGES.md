@@ -1,3 +1,20 @@
+## 2026-08-07 (5) — leads stored in Supabase (in addition to e-mail)
+
+- **New table `public.leads`** (supabase/schema.sql, safe to re-run): every
+  enquiry from /api/lead — contact, quote modals, materials inquiry, dealer
+  pages — is inserted with source, contact fields, product/colour/items,
+  the page it was sent from (referer), delivered flag + delivery method, and
+  the full raw payload as jsonb. Indexes on created_at + source. RLS enabled
+  with NO policies: only the service role writes; read via Supabase dashboard.
+- **`src/lib/lead-store.ts`** (best-effort): uses createServiceClient();
+  without env vars or on any error it logs one line (no PII) and never blocks
+  the lead — e-mail stays the notification path, the table is the history.
+  On delivery failure the lead is stored anyway (delivered=false).
+- Michael: run the new schema block once in the Supabase SQL editor
+  (leads-table.sql delivered separately). Env vars already set (portal live).
+- Confirmed by Michael today: price-guide ranges correct; copy review done;
+  LEAD_WEBHOOK_URL live (e-mails arrive).
+
 ## 2026-08-07 (4) — DEALER DIRECTORY phase 1 live: 55 places, 11 dealers (build 1736 pages)
 
 - **New /dealers section** (control panel `src/lib/dealers.ts`): overview page
