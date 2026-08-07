@@ -18,6 +18,7 @@ import { staticRoutes } from '@/lib/site-config';
 import { productSlugs } from '@/lib/products';
 import { applicationSlugs } from '@/lib/applications';
 import { blogSlugs, blogPosts, projectSlugs } from '@/lib/content';
+import { dealerPlaceSlugs } from '@/lib/dealers';
 import { techMembranes, techTopicKeys } from '@/lib/technical';
 import { materialGroupSlugs } from '@/lib/materials';
 
@@ -31,6 +32,7 @@ function collectRoutes(): string[] {
   const productRoutes = productSlugs.map((s) => `/products/${s}`);
   const applicationRoutes = applicationSlugs.map((s) => `/applications/${s}`);
   const blogRoutes = blogSlugs.map((s) => `/blog/${s}`);
+  const dealerRoutes = dealerPlaceSlugs.map((s) => `/dealers/${s}`);
   const technicalRoutes = Object.keys(techMembranes).flatMap((m) =>
     techTopicKeys.map((t) => `/technical/${m}/${t}`),
   );
@@ -44,6 +46,7 @@ function collectRoutes(): string[] {
     ...projectRoutes,
     ...materialRoutes,
     ...blogRoutes,
+    ...dealerRoutes,
   ];
 }
 
