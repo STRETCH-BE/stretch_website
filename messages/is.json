@@ -3594,6 +3594,48 @@
             ]
           }
         ]
+      },
+      "spanplafond-prijs": {
+        "title": "Hvað kostar strekkloft? Heiðarlegur verðleiðarvísir",
+        "excerpt": "Verð á strekklofti liggur að jafnaði á bilinu €70 til €200 per m² með uppsetningu, eftir gerð lofts og rými. Hér færðu skýringuna á verðbilinu, viðmiðunarverð fyrir hverja gerð lofts – og hvernig þú færð fast verð fyrir þitt verkefni.",
+        "body": [
+          {
+            "heading": "Stutta svarið",
+            "paragraphs": [
+              "Fyrir strekkloft sem fagfólk setur upp máttu gera ráð fyrir um það bil €70 til €200 á fermetra án vsk, með uppsetningu innifalinni. Bilið er raunverulegt: einfalt, matt hvítt loft í rétthyrndri stofu er neðst á bilinu, en baklýst baðherbergisloft með innbyggðri lýsingu er efst.",
+              "Allar tölur í þessum leiðarvísi eru viðmiðunarbil – ekki tilboð. Dúkurinn er framleiddur eftir máli fyrir þitt rými, svo heiðarlega lokatalan kemur alltaf úr ókeypis og óskuldbindandi tilboði."
+            ]
+          },
+          {
+            "heading": "Viðmiðunarverð eftir gerð lofts",
+            "paragraphs": [
+              "Einfalt, einlitt loft úr PVC eða pólýester er upphafspunkturinn á um €70 til €90 per m² – hröð og samskeytalaus uppfærsla fyrir stofur, svefnherbergi og skrifstofur. Prentuð hönnun bætir við myndefni og undirbúningi og endar í kringum €90 til €100 per m².",
+              "Hljóðdempandi loft – örgataður dúkur með hljóðísogi fyrir ofan – kostar um €100 til €150 per m² eftir uppbyggingu. Hálfgegnsætt, baklýst loft með LED-flötum bak við dúkinn liggur í kringum €130 til €160 per m² að meðtöldum ljósfletinum. Baðherbergisverkefni sem sameina rakaþolinn dúk og innbyggða lýsingu ná yfirleitt €150 til €200 per m².",
+              "Sérverkefni – stjörnuhiminn, prentuð baklýst hönnun, forsmíðaðar einingar – eru hönnuð fyrir hvert verkefni og verðlögð eftir hönnun."
+            ]
+          },
+          {
+            "heading": "Hvað hefur áhrif á verðið",
+            "paragraphs": [
+              "Stærð rýmisins vinnur með þér: því stærri sem flöturinn er, því lægra er verðið á fermetra, þar sem uppsetning og frágangur dreifast á fleiri metra. Lítil rými bera hlutfallslega meira af þessum föstu liðum.",
+              "Flækjustigið er hinn þátturinn. Hvert horn, hver sveigja, súla eða gegnumtak fyrir rör kallar á aukavinnu við prófíla og suðu – einfaldur rétthyrningur er ódýrari á metrann en L-laga stigapallur með fimm kösturum. Að lokum ráða frágangurinn og innfellingarnar afganginum: ljóslínur, kastarar, loftræsting og skynjarar falla fallega inn, en hvert atriði kostar vinnu og efni."
+            ]
+          },
+          {
+            "heading": "Hvað er innifalið í verðinu – og hvað það sparar síðar",
+            "paragraphs": [
+              "Tölurnar okkar innihalda dúkinn sem er soðinn eftir máli í belgísku framleiðslunni okkar, kantprófílana og faglega uppsetningu – fyrir venjulegt rými á einum degi, án niðurrifs og ryks.",
+              "Það sem samanburður per m² nær ekki: strekkloft þarf aldrei að mála upp á nýtt. Múrhúðað loft kallar á nýja málningu á nokkurra ára fresti og springur með húsinu; dúkurinn helst strekktur, auðþrifinn og óbreyttur áratugum saman. Yfir tíu ár er \"dýra\" loftið yfirleitt það ódýra."
+            ]
+          },
+          {
+            "heading": "Frá áætlun að föstu verði",
+            "paragraphs": [
+              "Sendu okkur mál rýmisins, mynd og hvað þú hefur í huga – í gegnum tilboðshnappinn á þessari síðu – og þú færð skýrt, ókeypis tilboð, oftast samdægurs. Engin þörf á reiknivélafimleikum: að mæla og verðleggja nákvæmlega er okkar starf, ekki þitt.",
+              "Ertu uppsetningaraðili eða endursöluaðili sem kaupir efni frekar en fullbúið loft? Heildsöluverðin eru á þjónustusvæðinu – óskaðu eftir samstarfsaðgangi og þú sérð þín verð beint."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -4176,6 +4218,31 @@
         {
           "name": "Lím & festingar",
           "body": "Skyndilím (sýanóakrýlat), skrúfur og festingaefni sem notað er í hverju verki."
+        },
+        {
+          "name": "Ósýnilegur lofthátalari",
+          "body": "Flatur hljóðörvi (exciter) festur ofan við dúkinn sem breytir loftfletinum sjálfum í hátalara með fullu tíðnisviði – tónlist án nokkurs sýnilegs búnaðar."
+        }
+      ]
+    },
+    "acoustic-panels": {
+      "name": "Hljóðdempandi plötur",
+      "eyebrow": "Hljóðvist",
+      "metaTitle": "Hljóðdempandi plötur – pólýesterull, lofteyjar & veggplötur | STRETCH",
+      "metaDescription": "Hljóðdempandi plötur úr pólýesterull, lausthangandi lofteyjar og veggplötur sem taka bergmálið úr rýminu – skornar eftir máli í okkar framleiðslu. Óskaðu eftir tilboði.",
+      "intro": "Hljóðísog fyrir rými sem hljóma jafn vel og þau líta út: pólýesterullarplötur fyrir loft og veggi, lausthangandi eyjar og bafflar – skornar eftir máli og afhentar úr okkar eigin framleiðslu.",
+      "items": [
+        {
+          "name": "Pólýesterullarplötur",
+          "body": "Sjálfberandi hljóðdempandi plötur úr pólýesterull – litekta, öruggar í meðhöndlun og skornar eftir máli fyrir loft og veggi."
+        },
+        {
+          "name": "Hljóðdempandi lofteyjar & bafflar",
+          "body": "Lausthangandi hljóðísogseiningar fyrir rými þar sem heilt hljóðdempandi loft er ekki í boði – skrifstofur, veitingastaðir, salir."
+        },
+        {
+          "name": "Hljóðdempandi veggplötur",
+          "body": "Veggfest hljóðísog sem vinnur með hljóðdempandi lofti og færir eftirómun niður á þægilegt stig."
         }
       ]
     },
@@ -4197,6 +4264,10 @@
         {
           "name": "STRETCH Cleaner 5 L",
           "body": "Sama hreinsiefni í verkstæðisstærð fyrir söluaðila og stórnotendur."
+        },
+        {
+          "name": "Loftverkfæri & heftibyssur",
+          "body": "Loftknúnar heftibyssur og loftverkfæri fyrir hraða og trausta uppsetningu prófíla – sömu BEA-gerðir og okkar eigin uppsetningarmenn nota."
         }
       ]
     }

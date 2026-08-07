@@ -3594,6 +3594,48 @@
             ]
           }
         ]
+      },
+      "spanplafond-prijs": {
+        "title": "Combien coûte un plafond tendu ? Un guide de prix honnête",
+        "excerpt": "Le prix d'un plafond tendu posé se situe entre environ €70 et €200 par m², selon le type de plafond et la pièce. Voici ce qui explique cet écart, des fourchettes indicatives par type de plafond et la façon d'obtenir un chiffre ferme pour votre projet.",
+        "body": [
+          {
+            "heading": "La réponse courte",
+            "paragraphs": [
+              "Pour un plafond tendu posé par un professionnel, comptez environ €70 à €200 par mètre carré hors TVA, pose comprise. L'écart est réel : un plafond blanc mat uni dans un séjour rectangulaire se situe en bas de la fourchette, tandis qu'un plafond de salle de bains rétroéclairé avec éclairage intégré se situe tout en haut.",
+              "Chaque chiffre de ce guide est une fourchette indicative, pas un devis. La toile est fabriquée sur mesure pour votre pièce exacte : le vrai chiffre final sort donc toujours d'un devis gratuit et sans engagement."
+            ]
+          },
+          {
+            "heading": "Fourchettes indicatives par type de plafond",
+            "paragraphs": [
+              "Un plafond uni de base, en PVC ou en polyester, constitue l'entrée de gamme autour de €70 à €90 par m² — la rénovation rapide et sans raccord pour séjours, chambres et bureaux. Un design imprimé ajoute le visuel et la préparation et se situe autour de €90 à €100 par m².",
+              "Un plafond acoustique — toile microperforée avec absorption à l'arrière — revient à environ €100 à €150 par m² selon la composition. Un plafond translucide rétroéclairé, avec des champs LED derrière la toile, se situe autour de €130 à €160 par m², plan lumineux compris. Les projets de salle de bains qui combinent toile résistante à l'humidité et éclairage intégré atteignent généralement €150 à €200 par m².",
+              "Les réalisations spéciales — ciel étoilé, designs imprimés rétroéclairés, éléments préfabriqués — sont conçues par projet et chiffrées par design."
+            ]
+          },
+          {
+            "heading": "Ce qui fait varier le prix",
+            "paragraphs": [
+              "La taille de la pièce joue en votre faveur : plus la surface est grande, plus le prix au mètre carré baisse, car la mise en place et les finitions se répartissent sur davantage de mètres. Les petites pièces portent proportionnellement plus de ces étapes fixes.",
+              "La complexité est le deuxième levier. Chaque angle, courbe, pilier ou passage de tuyau demande du travail de profilé et de soudure en plus — un simple rectangle coûte moins cher au mètre qu'un palier en L avec cinq spots. Enfin, la finition et les intégrations décident du reste : lignes lumineuses, spots, ventilation et capteurs s'intègrent avec élégance, mais chacun représente du travail et du matériel."
+            ]
+          },
+          {
+            "heading": "Ce que le prix comprend — et ce qu'il vous épargne ensuite",
+            "paragraphs": [
+              "Nos chiffres comprennent la toile sur mesure soudée dans notre production belge, les profilés périphériques et la pose professionnelle — pour une pièce normale, en une seule journée, sans démolition ni poussière.",
+              "Ce qu'une comparaison au m² ne voit pas : un plafond tendu ne se repeint jamais. Un plafond plâtré réclame une couche de peinture fraîche tous les quelques ans et se fissure avec le bâtiment ; la toile reste tendue, lavable et identique pendant des décennies. Sur dix ans, le plafond « cher » est généralement le moins cher."
+            ]
+          },
+          {
+            "heading": "De l'estimation au chiffre ferme",
+            "paragraphs": [
+              "Envoyez-nous les dimensions de la pièce, une photo et ce que vous avez en tête — via le bouton devis de cette page — et vous recevez un devis concret et gratuit, généralement le jour même. Inutile de jongler avec un calculateur : mesurer et chiffrer avec précision, c'est notre métier, pas le vôtre.",
+              "Vous êtes installateur ou revendeur et vous achetez des matériaux plutôt qu'un plafond fini ? Vos prix professionnels se trouvent dans l'espace client — demandez un compte partenaire et vous voyez directement vos prix."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -4176,6 +4218,31 @@
         {
           "name": "Colle & fixations",
           "body": "Colle instantanée (cyanoacrylate), vis et les consommables de montage utilisés sur chaque chantier."
+        },
+        {
+          "name": "Haut-parleur de plafond invisible",
+          "body": "Un exciteur audio plat monté au-dessus de la toile transforme la surface même du plafond en haut-parleur large bande — de la musique sans le moindre matériel visible."
+        }
+      ]
+    },
+    "acoustic-panels": {
+      "name": "Panneaux acoustiques",
+      "eyebrow": "Acoustique",
+      "metaTitle": "Panneaux acoustiques — laine de polyester, îlots & panneaux muraux | STRETCH",
+      "metaDescription": "Panneaux acoustiques en laine de polyester, îlots de plafond suspendus et panneaux muraux qui suppriment l'écho d'une pièce — découpés sur mesure dans notre production. Demandez un devis.",
+      "intro": "De l'absorption pour des pièces aussi agréables à l'oreille qu'à l'œil : panneaux en laine de polyester pour plafonds et murs, îlots suspendus et baffles — découpés sur mesure et livrés depuis notre propre production.",
+      "items": [
+        {
+          "name": "Panneaux en laine de polyester",
+          "body": "Panneaux acoustiques autoportants en laine de polyester — couleurs stables, manipulation sûre et découpe sur mesure pour plafonds et murs."
+        },
+        {
+          "name": "Îlots de plafond acoustiques & baffles",
+          "body": "Des absorbeurs suspendus pour les espaces où un plafond acoustique complet n'est pas envisageable — bureaux, restaurants, salles."
+        },
+        {
+          "name": "Panneaux acoustiques muraux",
+          "body": "Une absorption murale qui complète le plafond acoustique et ramène la réverbération à un niveau confortable."
         }
       ]
     },
@@ -4197,6 +4264,10 @@
         {
           "name": "STRETCH Cleaner 5 L",
           "body": "Le même nettoyant en format atelier, pour les revendeurs et les gros utilisateurs."
+        },
+        {
+          "name": "Outils pneumatiques & agrafeuses",
+          "body": "Agrafeuses pneumatiques et outillage à air comprimé pour un montage rapide et solide des profilés — les mêmes modèles BEA qu'utilisent nos propres poseurs."
         }
       ]
     }

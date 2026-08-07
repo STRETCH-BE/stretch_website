@@ -3594,6 +3594,48 @@
             ]
           }
         ]
+      },
+      "spanplafond-prijs": {
+        "title": "Was kostet eine Spanndecke? Ein ehrlicher Preisleitfaden",
+        "excerpt": "Die Preise für eine Spanndecke liegen montiert bei etwa €70 bis €200 pro m², je nach Deckentyp und Raum. Hier lesen Sie, was hinter dieser Spanne steckt, welche Richtwerte pro Deckentyp gelten und wie Sie eine verbindliche Zahl für Ihr Projekt erhalten.",
+        "body": [
+          {
+            "heading": "Die kurze Antwort",
+            "paragraphs": [
+              "Für eine professionell montierte Spanndecke rechnen Sie mit etwa €70 bis €200 pro Quadratmeter zzgl. MwSt., Montage inklusive. Die Spanne ist real: Eine schlichte mattweiße Decke in einem rechteckigen Wohnzimmer liegt am unteren Ende, eine hinterleuchtete Baddecke mit integrierter Beleuchtung am oberen.",
+              "Jede Zahl in diesem Leitfaden ist ein Richtwert, kein Angebot. Die Folie wird passgenau für Ihren Raum maßgefertigt — die ehrliche Endsumme kommt deshalb immer aus einem kostenlosen, unverbindlichen Angebot."
+            ]
+          },
+          {
+            "heading": "Richtwerte pro Deckentyp",
+            "paragraphs": [
+              "Eine einfarbige Basisdecke aus PVC oder Polyester ist der Einstieg bei rund €70 bis €90 pro m² — das schnelle, fugenlose Upgrade für Wohnzimmer, Schlafzimmer und Büros. Ein bedrucktes Design bringt Motiv und Vorbereitung mit und landet bei rund €90 bis €100 pro m².",
+              "Eine Akustikdecke — mikroperforierte Folie mit dahinterliegender Absorption — liegt je nach Aufbau bei etwa €100 bis €150 pro m². Eine transluzente, hinterleuchtete Decke mit LED-Feldern hinter der Folie kostet rund €130 bis €160 pro m² inklusive Lichtfläche. Badprojekte, die feuchtraumtaugliche Folie mit integrierter Beleuchtung kombinieren, erreichen typischerweise €150 bis €200 pro m².",
+              "Sonderanfertigungen — ein Sternenhimmel, bedruckte hinterleuchtete Designs, vorgefertigte Elemente — werden pro Projekt entworfen und pro Design kalkuliert."
+            ]
+          },
+          {
+            "heading": "Was den Preis bewegt",
+            "paragraphs": [
+              "Die Raumgröße arbeitet für Sie: Je größer die Fläche, desto niedriger der Quadratmeterpreis, weil sich Vorbereitung und Abschlussarbeiten über mehr Meter verteilen. Kleine Räume tragen anteilig mehr dieser festen Schritte.",
+              "Die Komplexität ist der zweite Hebel. Jede Ecke, Rundung, Säule und Rohrdurchführung bedeutet zusätzliche Profil- und Schweißarbeit — ein einfaches Rechteck ist pro Meter günstiger als ein L-förmiger Flur mit fünf Spots. Den Rest entscheiden Finish und Integrationen: Lichtlinien, Spots, Lüftung und Sensoren lassen sich elegant einbauen, doch jedes Element bedeutet Arbeit und Material."
+            ]
+          },
+          {
+            "heading": "Was im Preis enthalten ist — und was er später spart",
+            "paragraphs": [
+              "Unsere Zahlen umfassen die maßgefertigte, in unserer belgischen Produktion geschweißte Folie, die umlaufenden Profile und die professionelle Montage — in einem normalen Raum an einem einzigen Tag, ohne Abriss und ohne Staub.",
+              "Was ein reiner m²-Vergleich übersieht: Eine Spanndecke muss nie neu gestrichen werden. Eine verputzte Decke verlangt alle paar Jahre frische Farbe und reißt mit dem Gebäude; die Folie bleibt über Jahrzehnte gespannt, abwaschbar und wie am ersten Tag. Auf zehn Jahre gerechnet ist die „teure“ Decke meist die günstige."
+            ]
+          },
+          {
+            "heading": "Vom Richtwert zur verbindlichen Zahl",
+            "paragraphs": [
+              "Schicken Sie uns die Raummaße, ein Foto und Ihre Vorstellung — über den Angebotsbutton auf dieser Seite — und Sie erhalten ein konkretes, kostenloses Angebot, meist noch am selben Werktag. Rechenakrobatik ist nicht nötig: Präzise messen und kalkulieren ist unsere Aufgabe, nicht Ihre.",
+              "Sie sind Monteur oder Wiederverkäufer und kaufen Material statt einer fertigen Decke? Ihre Händlerpreise finden Sie im Kundenportal — beantragen Sie ein Partnerkonto und Sie sehen Ihre Preise direkt."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -4176,6 +4218,31 @@
         {
           "name": "Kleber & Befestigung",
           "body": "Sekundenkleber (Cyanacrylat), Schrauben und das Montagematerial, das auf jeder Baustelle gebraucht wird."
+        },
+        {
+          "name": "Unsichtbarer Deckenlautsprecher",
+          "body": "Ein flacher Audio-Exciter über der Folie macht die Deckenfläche selbst zum Full-Range-Lautsprecher — Musik ganz ohne sichtbare Technik."
+        }
+      ]
+    },
+    "acoustic-panels": {
+      "name": "Akustikpaneele",
+      "eyebrow": "Akustik",
+      "metaTitle": "Akustikpaneele — Polyesterwolle, Deckensegel & Wandpaneele | STRETCH",
+      "metaDescription": "Akustikpaneele aus Polyesterwolle, frei hängende Deckensegel und Wandpaneele, die den Hall aus dem Raum nehmen — auf Maß geschnitten aus eigener Produktion. Jetzt Angebot anfragen.",
+      "intro": "Absorption für Räume, die so gut klingen, wie sie aussehen: Paneele aus Polyesterwolle für Decke und Wand, frei hängende Deckensegel und Baffles — auf Maß geschnitten und aus eigener Produktion geliefert.",
+      "items": [
+        {
+          "name": "Paneele aus Polyesterwolle",
+          "body": "Selbsttragende Akustikpaneele aus Polyesterwolle — farbecht, sicher in der Handhabung und auf Maß geschnitten für Decke und Wand."
+        },
+        {
+          "name": "Akustik-Deckensegel & Baffles",
+          "body": "Frei hängende Absorber für Räume, in denen eine vollflächige Akustikdecke keine Option ist — Büros, Restaurants, Säle."
+        },
+        {
+          "name": "Akustik-Wandpaneele",
+          "body": "Wandmontierte Absorption, die eine Akustikdecke ergänzt und den Nachhall auf ein angenehmes Niveau senkt."
         }
       ]
     },
@@ -4197,6 +4264,10 @@
         {
           "name": "STRETCH Cleaner 5 L",
           "body": "Derselbe Reiniger in der Werkstattgröße — für Händler und Vielnutzer."
+        },
+        {
+          "name": "Druckluftwerkzeuge & Tacker",
+          "body": "Drucklufttacker und Druckluftwerkzeuge für schnelle, solide Profilmontage — dieselben BEA-Modelle, mit denen unsere eigenen Monteure arbeiten."
         }
       ]
     }

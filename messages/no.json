@@ -3594,6 +3594,48 @@
             ]
           }
         ]
+      },
+      "spanplafond-prijs": {
+        "title": "Hva koster et strekktak? En ærlig prisguide",
+        "excerpt": "Prisen på et strekktak ligger som regel mellom €70 og €200 per m² ferdig montert, avhengig av taktype og rom. Her får du forklaringen bak prisspennet, veiledende intervaller per taktype – og veien til et konkret tall for prosjektet ditt.",
+        "body": [
+          {
+            "heading": "Det korte svaret",
+            "paragraphs": [
+              "For et profesjonelt montert strekktak bør du regne med omtrent €70 til €200 per kvadratmeter ekskl. mva, montering inkludert. Spennet er reelt: et enkelt, matt hvitt tak i en rektangulær stue ligger nederst i intervallet, mens et baklyst baderomstak med integrert belysning ligger øverst.",
+              "Alle tall i denne guiden er veiledende intervaller – ikke et tilbud. Duken produseres på mål til akkurat ditt rom, så det ærlige, endelige tallet kommer alltid fra et gratis og uforpliktende tilbud."
+            ]
+          },
+          {
+            "heading": "Veiledende priser per taktype",
+            "paragraphs": [
+              "Et enkelt, ensfarget tak i PVC eller polyester er inngangsnivået på rundt €70 til €90 per m² – den raske, sømløse oppgraderingen for stuer, soverom og kontorer. Et trykket design legger til motiv og forberedelse og lander på rundt €90 til €100 per m².",
+              "Et akustisk tak – mikroperforert duk med absorpsjon bak – ligger rundt €100 til €150 per m² avhengig av oppbygningen. Et translusent, baklyst tak med LED-felter bak duken ligger rundt €130 til €160 per m² inkludert lysflaten. Baderomsprosjekter som kombinerer fuktbestandig duk med integrert belysning, ender typisk på €150 til €200 per m².",
+              "Spesialarbeid – stjernehimmel, trykte baklyste design, prefabrikkerte elementer – utformes per prosjekt og prises per design."
+            ]
+          },
+          {
+            "heading": "Hva som påvirker prisen",
+            "paragraphs": [
+              "Størrelsen på rommet jobber for deg: jo større flate, desto lavere pris per kvadratmeter, fordi rigging og finish fordeles over flere meter. Små rom bærer forholdsmessig mer av de faste stegene.",
+              "Kompleksiteten er den andre faktoren. Hvert hjørne, hver kurve, søyle eller rørgjennomføring betyr ekstra profilarbeid og sveisetid – et enkelt rektangel er billigere per meter enn en L-formet repos med fem spotter. Til slutt avgjør finishen og integrasjonene resten: lyslinjer, spotter, ventilasjon og sensorer integreres pent, men alt koster arbeid og materialer."
+            ]
+          },
+          {
+            "heading": "Hva prisen inkluderer – og hva den sparer deg for senere",
+            "paragraphs": [
+              "Tallene våre inkluderer duken sveiset på mål i vår belgiske produksjon, kantprofilene og profesjonell montering – i et normalt rom på én dag, uten riving og støv.",
+              "Det en sammenligning per m² overser: et strekktak trenger aldri å males på nytt. Et pusset tak vil ha fersk maling med få års mellomrom og sprekker med bygget; duken forblir stram, vaskbar og identisk i tiår. Sett over ti år er det \"dyre\" taket som regel det billige."
+            ]
+          },
+          {
+            "heading": "Fra overslag til konkret tall",
+            "paragraphs": [
+              "Send oss målene på rommet, et bilde og hva du ser for deg – via tilbudsknappen på denne siden – så får du et konkret, gratis tilbud, som regel samme arbeidsdag. Du trenger ingen kalkulatorgymnastikk: å måle opp og prise presist er jobben vår, ikke din.",
+              "Er du montør eller forhandler som kjøper materialer i stedet for et ferdig tak? Forhandlerprisene ligger i kundesonen – be om en partnerkonto, så ser du prisene dine direkte."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -4176,6 +4218,31 @@
         {
           "name": "Lim & festemidler",
           "body": "Superlim (cyanoakrylat), skruer og monteringsmateriellet som brukes på hvert prosjekt."
+        },
+        {
+          "name": "Usynlig takhøyttaler",
+          "body": "Flat lydexciter montert over duken som gjør selve takflaten om til en fulltonehøyttaler – musikk helt uten synlig utstyr."
+        }
+      ]
+    },
+    "acoustic-panels": {
+      "name": "Akustikkpaneler",
+      "eyebrow": "Akustikk",
+      "metaTitle": "Akustikkpaneler – polyesterull, takøyer & veggpaneler | STRETCH",
+      "metaDescription": "Akustikkpaneler i polyesterull, fritthengende takøyer og veggpaneler som fjerner ekkoet fra rommet – skåret på mål fra vår produksjon. Be om et tilbud.",
+      "intro": "Absorpsjon for rom som låter like bra som de ser ut: polyesterullpaneler for tak og vegger, fritthengende øyer og bafler – skåret på mål og levert fra vår egen produksjon.",
+      "items": [
+        {
+          "name": "Polyesterullpaneler",
+          "body": "Selvbærende akustikkpaneler i polyesterull – fargeekte, trygge å håndtere og skåret på mål for tak og vegger."
+        },
+        {
+          "name": "Akustiske takøyer & bafler",
+          "body": "Fritthengende absorbenter for rom der et fullt akustisk tak ikke er et alternativ – kontorer, restauranter, haller."
+        },
+        {
+          "name": "Akustiske veggpaneler",
+          "body": "Veggmontert absorpsjon som utfyller et akustisk tak og bringer etterklangen ned på et behagelig nivå."
         }
       ]
     },
@@ -4197,6 +4264,10 @@
         {
           "name": "STRETCH Cleaner 5 L",
           "body": "Samme rengjøringsmiddel i verkstedstørrelse for forhandlere og storforbrukere."
+        },
+        {
+          "name": "Trykkluftverktøy & stiftepistoler",
+          "body": "Trykkluftdrevne stiftepistoler og trykkluftverktøy for rask og solid profilmontering – de samme BEA-modellene som våre egne montører bruker."
         }
       ]
     }

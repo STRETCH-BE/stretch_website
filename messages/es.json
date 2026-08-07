@@ -3594,6 +3594,48 @@
             ]
           }
         ]
+      },
+      "spanplafond-prijs": {
+        "title": "¿Cuánto cuesta un techo tensado? Una guía de precios honesta",
+        "excerpt": "El precio de un techo tensado instalado va, aproximadamente, de €70 a €200 por m², según el tipo de techo y la estancia. Le contamos qué hay detrás de esa horquilla, los rangos orientativos por tipo de techo y cómo obtener una cifra en firme para su proyecto.",
+        "body": [
+          {
+            "heading": "La respuesta corta",
+            "paragraphs": [
+              "Para un techo tensado instalado por profesionales, calcule entre €70 y €200 por metro cuadrado, IVA no incluido, con la instalación incluida. La horquilla es real: un techo liso blanco mate en un salón rectangular se sitúa en la parte baja de ese rango, mientras que un techo de baño retroiluminado con iluminación integrada se sitúa en la parte alta.",
+              "Todas las cifras de esta guía son rangos orientativos, no un presupuesto. La lámina se fabrica a medida para su estancia exacta, así que la cifra final honesta sale siempre de un presupuesto gratuito y sin compromiso."
+            ]
+          },
+          {
+            "heading": "Rangos orientativos por tipo de techo",
+            "paragraphs": [
+              "Un techo básico de PVC o poliéster en un solo color es el punto de entrada, en torno a €70 a €90 por m²: la renovación rápida y sin juntas para salones, dormitorios y oficinas. Un diseño impreso añade la obra gráfica y la preparación, y se sitúa alrededor de €90 a €100 por m².",
+              "Un techo acústico —lámina microperforada con absorción por detrás— se mueve entre €100 y €150 por m² según la composición del conjunto. Un techo translúcido retroiluminado con campos LED tras la lámina ronda los €130 a €160 por m², plano de luz incluido. Los proyectos de baño que combinan lámina resistente a la humedad con iluminación integrada alcanzan normalmente los €150 a €200 por m².",
+              "Los trabajos especiales —un cielo estrellado, diseños impresos retroiluminados, elementos prefabricados— se diseñan por proyecto y se presupuestan por diseño."
+            ]
+          },
+          {
+            "heading": "Qué mueve el precio",
+            "paragraphs": [
+              "El tamaño de la estancia juega a su favor: cuanto mayor es la superficie, menor es el precio por metro cuadrado, porque la puesta a punto y los remates se reparten entre más metros. Las estancias pequeñas cargan proporcionalmente con más de esos pasos fijos.",
+              "La complejidad es la segunda palanca. Cada esquina, curva, pilar o paso de tubería supone más trabajo de perfil y tiempo de soldadura: un rectángulo sencillo sale más barato por metro que un rellano en L con cinco focos. Por último, el acabado y las integraciones deciden el resto: líneas de luz, focos, ventilación y sensores se integran con un resultado impecable, pero cada uno suma trabajo y material."
+            ]
+          },
+          {
+            "heading": "Qué incluye el precio — y qué le ahorra después",
+            "paragraphs": [
+              "Nuestras cifras incluyen la lámina a medida soldada en nuestra producción belga, los perfiles perimetrales y la instalación profesional: en una estancia normal, en un solo día, sin demolición y sin polvo.",
+              "Lo que una comparación por m² no recoge: un techo tensado no necesita repintarse. Un techo enlucido pide pintura nueva cada pocos años y se agrieta con el edificio; la lámina permanece tensa, lavable e idéntica durante décadas. A diez años vista, el techo «caro» suele ser el barato."
+            ]
+          },
+          {
+            "heading": "De la estimación a la cifra en firme",
+            "paragraphs": [
+              "Envíenos las dimensiones de la estancia, una foto y lo que tiene en mente —a través del botón de presupuesto de esta página— y recibirá un presupuesto concreto y gratuito, normalmente el mismo día laborable. Sin gimnasia con la calculadora: medir y calcular el precio con precisión es nuestro trabajo, no el suyo.",
+              "¿Es usted instalador o distribuidor y compra materiales en lugar de un techo terminado? Las tarifas profesionales están en la zona de clientes: solicite una cuenta de partner y verá sus precios directamente."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -4176,6 +4218,31 @@
         {
           "name": "Adhesivo y fijaciones",
           "body": "Adhesivo instantáneo (cianoacrilato), tornillos y los consumibles de montaje que se usan en cada obra."
+        },
+        {
+          "name": "Altavoz de techo invisible",
+          "body": "Excitador de audio plano montado sobre la lámina que convierte la propia superficie del techo en un altavoz de rango completo: música sin ningún equipo a la vista."
+        }
+      ]
+    },
+    "acoustic-panels": {
+      "name": "Paneles acústicos",
+      "eyebrow": "Acústica",
+      "metaTitle": "Paneles acústicos — lana de poliéster, islas y paneles de pared | STRETCH",
+      "metaDescription": "Paneles acústicos de lana de poliéster, islas de techo suspendidas y paneles de pared que eliminan el eco de la estancia, cortados a medida en nuestra producción. Solicite presupuesto.",
+      "intro": "Absorción para estancias que suenan tan bien como se ven: paneles de lana de poliéster para techos y paredes, islas suspendidas y baffles, cortados a medida y entregados desde nuestra propia producción.",
+      "items": [
+        {
+          "name": "Paneles de lana de poliéster",
+          "body": "Paneles acústicos autoportantes de lana de poliéster: color estable, manipulación segura y corte a medida para techos y paredes."
+        },
+        {
+          "name": "Islas acústicas de techo y baffles",
+          "body": "Absorbentes suspendidos para espacios donde un techo acústico completo no es una opción: oficinas, restaurantes, salas."
+        },
+        {
+          "name": "Paneles acústicos de pared",
+          "body": "Absorción de pared que se combina con un techo acústico para reducir la reverberación hasta un nivel confortable."
         }
       ]
     },
@@ -4197,6 +4264,10 @@
         {
           "name": "STRETCH Cleaner 5 L",
           "body": "El mismo limpiador en formato de taller para distribuidores y usuarios intensivos."
+        },
+        {
+          "name": "Herramientas neumáticas y grapadoras",
+          "body": "Grapadoras neumáticas y herramientas de aire comprimido para un montaje de perfiles rápido y sólido: los mismos modelos BEA que usan nuestros propios instaladores."
         }
       ]
     }

@@ -3594,6 +3594,48 @@
             ]
           }
         ]
+      },
+      "spanplafond-prijs": {
+        "title": "Wat kost een spanplafond? Een eerlijke prijsgids",
+        "excerpt": "De prijs van een spanplafond ligt tussen ongeveer €70 en €200 per m², geplaatst, afhankelijk van het type plafond en de ruimte. U leest hier wat achter die vork zit, welke indicatieve prijzen per plafondtype gelden en hoe u een vast bedrag krijgt voor uw project.",
+        "body": [
+          {
+            "heading": "Het korte antwoord",
+            "paragraphs": [
+              "Voor een professioneel geplaatst spanplafond rekent u op ongeveer €70 tot €200 per vierkante meter excl. btw, plaatsing inbegrepen. Die vork is reëel: een effen mat wit plafond in een rechthoekige woonkamer zit onderaan, terwijl een lichtdoorlatend badkamerplafond met geïntegreerde verlichting bovenaan zit.",
+              "Elk bedrag in deze gids is een indicatieve prijsvork, geen offerte. Het doek wordt op maat gemaakt voor uw exacte ruimte, dus het eerlijke eindbedrag komt altijd uit een gratis en vrijblijvende offerte."
+            ]
+          },
+          {
+            "heading": "Indicatieve prijzen per plafondtype",
+            "paragraphs": [
+              "Een basisplafond in één kleur, in pvc of polyester, is de instap rond €70 tot €90 per m² — de snelle, naadloze upgrade voor woonkamers, slaapkamers en kantoren. Bij een geprint ontwerp komen het beeld en de voorbereiding erbij; dat landt rond €90 tot €100 per m².",
+              "Een akoestisch plafond — microgeperforeerd doek met absorptie erachter — zit rond €100 tot €150 per m², afhankelijk van de opbouw. Een lichtdoorlatend, verlicht plafond met ledvelden achter het doek komt rond €130 tot €160 per m², inclusief het lichtvlak. Badkamerprojecten die vochtbestendig doek combineren met geïntegreerde verlichting komen doorgaans uit op €150 tot €200 per m².",
+              "Speciale uitvoeringen — een sterrenhemel, geprinte verlichte ontwerpen, prefab elementen — worden per project ontworpen en per ontwerp geoffreerd."
+            ]
+          },
+          {
+            "heading": "Wat de prijs bepaalt",
+            "paragraphs": [
+              "De grootte van de ruimte werkt in uw voordeel: hoe groter het oppervlak, hoe lager de prijs per vierkante meter, omdat de opstart en de afwerking zich over meer meters spreiden. Kleine ruimtes dragen verhoudingsgewijs meer van die vaste stappen.",
+              "Complexiteit is de tweede hefboom. Elke hoek, ronding, kolom of leidingdoorvoer betekent extra profiel- en laswerk — een eenvoudige rechthoek is per meter goedkoper dan een L-vormige overloop met vijf spots. Tot slot bepalen de afwerking en de integraties de rest: lichtlijnen, spots, ventilatie en sensoren worden mooi mee geïntegreerd, maar elk ervan vraagt werk en materiaal."
+            ]
+          },
+          {
+            "heading": "Wat in de prijs zit — en wat het u later bespaart",
+            "paragraphs": [
+              "In onze bedragen zitten het op maat gelaste doek uit onze Belgische productie, de randprofielen en de professionele plaatsing — voor een normale ruimte op één dag, zonder breekwerk of stof.",
+              "Wat een vergelijking per m² niet ziet: een spanplafond hoeft u nooit te herschilderen. Een gepleisterd plafond vraagt om de paar jaar verse verf en barst mee met het gebouw; het doek blijft decennialang strak, afwasbaar en identiek. Over tien jaar gerekend is het \"dure\" plafond meestal het goedkope."
+            ]
+          },
+          {
+            "heading": "Van raming tot vast bedrag",
+            "paragraphs": [
+              "Stuur ons de afmetingen van de ruimte, een foto en wat u in gedachten hebt — via de offerteknop op deze pagina — en u ontvangt een concrete, gratis offerte, meestal nog dezelfde werkdag. Rekenacrobatie is niet nodig: precies opmeten en prijzen is ons werk, niet het uwe.",
+              "Bent u installateur of verdeler en koopt u materialen in plaats van een afgewerkt plafond? Uw handelsprijzen vindt u in het klantenportaal — vraag een partneraccount aan en u ziet meteen uw prijzen."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -4176,6 +4218,31 @@
         {
           "name": "Lijm & bevestigingsmateriaal",
           "body": "Secondelijm (cyanoacrylaat), schroeven en het montagemateriaal dat op elke werf wordt gebruikt."
+        },
+        {
+          "name": "Onzichtbare plafondluidspreker",
+          "body": "Vlakke audio-exciter boven het doek die het plafondoppervlak zelf omvormt tot een full-range luidspreker — muziek zonder één zichtbaar toestel."
+        }
+      ]
+    },
+    "acoustic-panels": {
+      "name": "Akoestische panelen",
+      "eyebrow": "Akoestiek",
+      "metaTitle": "Akoestische panelen — polyesterwol, eilanden & wandpanelen | STRETCH",
+      "metaDescription": "Akoestische panelen in polyesterwol, vrijhangende plafondeilanden en wandpanelen die de galm uit een ruimte halen — op maat gesneden uit eigen productie. Vraag een offerte aan.",
+      "intro": "Absorptie voor ruimtes die even goed klinken als ze eruitzien: polyesterwolpanelen voor plafond en wand, vrijhangende eilanden en baffles — op maat gesneden en geleverd uit eigen productie.",
+      "items": [
+        {
+          "name": "Polyesterwolpanelen",
+          "body": "Zelfdragende akoestische panelen in polyesterwol — kleurvast, veilig om mee te werken en op maat gesneden voor plafond en wand."
+        },
+        {
+          "name": "Akoestische plafondeilanden & baffles",
+          "body": "Vrijhangende absorbers voor ruimtes waar een volledig akoestisch plafond geen optie is — kantoren, restaurants, zalen."
+        },
+        {
+          "name": "Akoestische wandpanelen",
+          "body": "Wandabsorptie die samenspeelt met een akoestisch plafond en de nagalm terugbrengt tot een comfortabel niveau."
         }
       ]
     },
@@ -4197,6 +4264,10 @@
         {
           "name": "STRETCH Cleaner 5 L",
           "body": "Dezelfde reiniger in werkplaatsformaat, voor verdelers en grootverbruikers."
+        },
+        {
+          "name": "Persluchtgereedschap & tackers",
+          "body": "Pneumatische tackers en persluchtgereedschap voor snelle, stevige montage van profielen — dezelfde BEA-modellen waarmee onze eigen plaatsers werken."
         }
       ]
     }

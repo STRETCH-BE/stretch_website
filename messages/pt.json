@@ -3594,6 +3594,48 @@
             ]
           }
         ]
+      },
+      "spanplafond-prijs": {
+        "title": "Quanto custa um teto tensionado? Um guia de preços honesto",
+        "excerpt": "O preço de um teto tensionado instalado situa-se, aproximadamente, entre €70 e €200 por m², consoante o tipo de teto e a divisão. Explicamos o que está por trás desse intervalo, apresentamos valores indicativos por tipo de teto e mostramos como obter um número firme para o seu projeto.",
+        "body": [
+          {
+            "heading": "A resposta curta",
+            "paragraphs": [
+              "Para um teto tensionado instalado por profissionais, conte com cerca de €70 a €200 por metro quadrado, sem IVA, com instalação incluída. O intervalo é real: um teto simples branco mate numa sala retangular fica na parte inferior desse intervalo, enquanto um teto de casa de banho retroiluminado com iluminação integrada fica no topo.",
+              "Todos os valores deste guia são intervalos indicativos, não um orçamento. A película é feita à medida para a sua divisão exata, pelo que o número final honesto vem sempre de um orçamento gratuito e sem compromisso."
+            ]
+          },
+          {
+            "heading": "Valores indicativos por tipo de teto",
+            "paragraphs": [
+              "Um teto básico de PVC ou poliéster numa só cor é o ponto de entrada, a rondar €70 a €90 por m² — a renovação rápida e sem juntas para salas, quartos e escritórios. Um design impresso acrescenta a arte e a preparação, ficando por volta de €90 a €100 por m².",
+              "Um teto acústico — película microperfurada com absorção por trás — ronda os €100 a €150 por m², consoante a composição. Um teto translúcido retroiluminado com campos LED atrás da película fica por volta de €130 a €160 por m², plano de luz incluído. Os projetos de casa de banho que combinam película resistente à humidade com iluminação integrada atingem normalmente €150 a €200 por m².",
+              "Os trabalhos especiais — um céu estrelado, designs impressos retroiluminados, elementos pré-fabricados — são desenhados por projeto e orçamentados por design."
+            ]
+          },
+          {
+            "heading": "O que faz variar o preço",
+            "paragraphs": [
+              "O tamanho da divisão conta a seu favor: quanto maior a superfície, mais baixo o preço por metro quadrado, porque a preparação e os acabamentos se repartem por mais metros. As divisões pequenas carregam proporcionalmente mais desses passos fixos.",
+              "A complexidade é a segunda alavanca. Cada canto, curva, pilar ou passagem de tubagem significa mais trabalho de perfis e tempo de soldadura — um retângulo simples fica mais barato por metro do que um patamar em L com cinco focos. Por fim, o acabamento e as integrações decidem o resto: linhas de luz, focos, ventilação e sensores integram-se com toda a elegância, mas cada um representa trabalho e material."
+            ]
+          },
+          {
+            "heading": "O que o preço inclui — e o que poupa mais tarde",
+            "paragraphs": [
+              "Os nossos valores incluem a película feita à medida e soldada na nossa produção belga, os perfis perimetrais e a instalação profissional — numa divisão normal, num único dia, sem demolições nem pó.",
+              "A parte que uma comparação por m² não capta: um teto tensionado não precisa de ser repintado. Um teto estucado pede pintura nova de poucos em poucos anos e fissura com o edifício; a película mantém-se tensa, lavável e igual durante décadas. Ao fim de dez anos, o teto «caro» é normalmente o barato."
+            ]
+          },
+          {
+            "heading": "Da estimativa ao número firme",
+            "paragraphs": [
+              "Envie-nos as dimensões da divisão, uma fotografia e o que tem em mente — através do botão de orçamento nesta página — e recebe um orçamento concreto e gratuito, normalmente no próprio dia útil. Sem ginástica de calculadora: medir e calcular o preço com precisão é trabalho nosso, não seu.",
+              "É instalador ou revendedor e compra materiais em vez de um teto acabado? Os preços profissionais estão na área de cliente — peça uma conta de parceiro e verá os seus preços diretamente."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -4176,6 +4218,31 @@
         {
           "name": "Cola e fixações",
           "body": "Cola instantânea (cianoacrilato), parafusos e os consumíveis de montagem usados em cada obra."
+        },
+        {
+          "name": "Altifalante de teto invisível",
+          "body": "Excitador de áudio plano montado por cima da película, que transforma a própria superfície do teto num altifalante de gama completa — música sem qualquer equipamento à vista."
+        }
+      ]
+    },
+    "acoustic-panels": {
+      "name": "Painéis acústicos",
+      "eyebrow": "Acústica",
+      "metaTitle": "Painéis acústicos — lã de poliéster, ilhas e painéis de parede | STRETCH",
+      "metaDescription": "Painéis acústicos de lã de poliéster, ilhas de teto suspensas e painéis de parede que tiram o eco da divisão — cortados à medida na nossa produção. Peça um orçamento.",
+      "intro": "Absorção para divisões que soam tão bem como parecem: painéis de lã de poliéster para tetos e paredes, ilhas suspensas e baffles — cortados à medida e entregues a partir da nossa própria produção.",
+      "items": [
+        {
+          "name": "Painéis de lã de poliéster",
+          "body": "Painéis acústicos autoportantes em lã de poliéster — de cor estável, seguros de manusear e cortados à medida para tetos e paredes."
+        },
+        {
+          "name": "Ilhas de teto e baffles acústicos",
+          "body": "Absorsores suspensos para espaços onde um teto acústico completo não é opção — escritórios, restaurantes, salas."
+        },
+        {
+          "name": "Painéis acústicos de parede",
+          "body": "Absorção montada na parede que se combina com um teto acústico para baixar a reverberação até um nível confortável."
         }
       ]
     },
@@ -4197,6 +4264,10 @@
         {
           "name": "STRETCH Cleaner 5 L",
           "body": "O mesmo produto de limpeza no formato de oficina, para distribuidores e utilizadores intensivos."
+        },
+        {
+          "name": "Ferramentas pneumáticas e agrafadores",
+          "body": "Agrafadores pneumáticos e ferramentas de ar comprimido para uma montagem de perfis rápida e sólida — os mesmos modelos BEA que os nossos próprios instaladores utilizam."
         }
       ]
     }

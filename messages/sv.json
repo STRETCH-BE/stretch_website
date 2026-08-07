@@ -3594,6 +3594,48 @@
             ]
           }
         ]
+      },
+      "spanplafond-prijs": {
+        "title": "Vad kostar ett spänntak? En ärlig prisguide",
+        "excerpt": "Priset på ett spänntak ligger normalt mellan €70 och €200 per m² inklusive montering, beroende på taktyp och rum. Här får du förklaringen bakom prisspannet, vägledande intervall per taktyp – och hur du får en fast siffra för ditt projekt.",
+        "body": [
+          {
+            "heading": "Det korta svaret",
+            "paragraphs": [
+              "För ett professionellt monterat spänntak får du räkna med ungefär €70 till €200 per kvadratmeter exkl. moms, montering inräknad. Spannet är på riktigt: ett enkelt, matt vitt tak i ett rektangulärt vardagsrum ligger i botten av intervallet, medan ett bakbelyst badrumstak med integrerad belysning ligger i toppen.",
+              "Alla siffror i den här guiden är vägledande intervall – inte en offert. Duken tillverkas på mått efter just ditt rum, så den ärliga slutsiffran kommer alltid från en kostnadsfri offert utan förpliktelser."
+            ]
+          },
+          {
+            "heading": "Vägledande priser per taktyp",
+            "paragraphs": [
+              "Ett enkelt, enfärgat tak i PVC eller polyester är instegsnivån på ungefär €70 till €90 per m² – den snabba, skarvfria uppgraderingen för vardagsrum, sovrum och kontor. Ett tryckt motiv lägger till design och förberedelse och landar på ungefär €90 till €100 per m².",
+              "Ett akustiskt tak – mikroperforerad duk med absorption bakom – ligger runt €100 till €150 per m² beroende på uppbyggnaden. Ett translucent, bakbelyst tak med LED-fält bakom duken ligger runt €130 till €160 per m² inklusive ljusytan. Badrumsprojekt som kombinerar fukttålig duk med integrerad belysning landar normalt på €150 till €200 per m².",
+              "Specialarbeten – stjärnhimlar, tryckta bakbelysta motiv, prefabricerade element – designas per projekt och prissätts per design."
+            ]
+          },
+          {
+            "heading": "Vad som påverkar priset",
+            "paragraphs": [
+              "Rummets storlek arbetar för dig: ju större yta, desto lägre pris per kvadratmeter, eftersom etablering och finish slås ut på fler meter. Små rum bär proportionellt mer av de fasta momenten.",
+              "Komplexiteten är den andra faktorn. Varje hörn, kurva, pelare eller rörgenomföring innebär extra profilarbete och svetstid – en enkel rektangel är billigare per meter än en L-formad trappavsats med fem spotlights. Till sist avgör finishen och integrationerna resten: ljuslinjer, spotlights, ventilation och sensorer integreras snyggt, men allt kostar arbete och material."
+            ]
+          },
+          {
+            "heading": "Vad priset inkluderar – och vad det sparar längre fram",
+            "paragraphs": [
+              "Våra siffror inkluderar duken som svetsas på mått i vår belgiska produktion, kantprofilerna och professionell montering – i ett normalt rum på en enda dag, utan rivning och damm.",
+              "Det en jämförelse per m² missar: ett spänntak behöver aldrig målas om. Ett putsat tak vill ha ny färg med några års mellanrum och spricker med byggnaden; duken förblir spänd, tvättbar och likadan i årtionden. Räknat över tio år är det \"dyra\" taket oftast det billiga."
+            ]
+          },
+          {
+            "heading": "Från uppskattning till fast siffra",
+            "paragraphs": [
+              "Skicka rummets mått, ett foto och vad du har i tankarna – via offertknappen på den här sidan – så får du en konkret, kostnadsfri offert, oftast samma arbetsdag. Ingen miniräknargymnastik behövs: att mäta och prissätta exakt är vårt jobb, inte ditt.",
+              "Är du montör eller återförsäljare som köper material snarare än ett färdigt tak? Partnerpriserna finns i kundzonen – ansök om ett partnerkonto så ser du dina priser direkt."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -4176,6 +4218,31 @@
         {
           "name": "Lim & infästning",
           "body": "Snabblim (cyanoakrylat), skruvar och det monteringsmaterial som används på varje projekt."
+        },
+        {
+          "name": "Osynlig takhögtalare",
+          "body": "Platt ljudexciter monterad ovanför duken som förvandlar själva takytan till en fullregisterhögtalare – musik helt utan synlig hårdvara."
+        }
+      ]
+    },
+    "acoustic-panels": {
+      "name": "Akustikpaneler",
+      "eyebrow": "Akustik",
+      "metaTitle": "Akustikpaneler – polyesterull, taköar & väggpaneler | STRETCH",
+      "metaDescription": "Akustikpaneler i polyesterull, frihängande taköar och väggpaneler som tar bort ekot ur rummet – måttskurna från vår produktion. Begär en offert.",
+      "intro": "Absorption för rum som låter lika bra som de ser ut: paneler i polyesterull för tak och väggar, frihängande öar och bafflar – måttskurna och levererade från vår egen produktion.",
+      "items": [
+        {
+          "name": "Polyesterullspaneler",
+          "body": "Självbärande akustikpaneler i polyesterull – färgäkta, säkra att hantera och måttskurna för tak och väggar."
+        },
+        {
+          "name": "Akustiska taköar & bafflar",
+          "body": "Frihängande absorbenter för utrymmen där ett heltäckande akustiskt tak inte är ett alternativ – kontor, restauranger, hallar."
+        },
+        {
+          "name": "Akustiska väggpaneler",
+          "body": "Väggmonterad absorption som kompletterar ett akustiskt tak och tar ner efterklangen till en behaglig nivå."
         }
       ]
     },
@@ -4197,6 +4264,10 @@
         {
           "name": "STRETCH Cleaner 5 L",
           "body": "Samma rengöringsmedel i verkstadsstorlek för återförsäljare och storförbrukare."
+        },
+        {
+          "name": "Tryckluftsverktyg & häftpistoler",
+          "body": "Tryckluftsdrivna häftpistoler och tryckluftsverktyg för snabb och stabil profilmontering – samma BEA-modeller som våra egna montörer använder."
         }
       ]
     }

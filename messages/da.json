@@ -3594,6 +3594,48 @@
             ]
           }
         ]
+      },
+      "spanplafond-prijs": {
+        "title": "Hvad koster et stretchloft? En ærlig prisguide",
+        "excerpt": "Prisen på et stretchloft ligger typisk mellem €70 og €200 per m² inklusive montering, afhængigt af lofttype og rum. Her får du forklaringen bag prisspændet, vejledende intervaller per lofttype – og vejen til et konkret tal for dit projekt.",
+        "body": [
+          {
+            "heading": "Det korte svar",
+            "paragraphs": [
+              "For et professionelt monteret stretchloft skal du regne med cirka €70 til €200 per kvadratmeter ekskl. moms, inklusive montering. Spændet er reelt: et enkelt, mat hvidt loft i en rektangulær stue ligger i bunden af intervallet, mens et bagbelyst badeværelsesloft med integreret belysning ligger i toppen.",
+              "Alle tal i denne guide er vejledende intervaller – ikke et tilbud. Membranen fremstilles på mål til netop dit rum, så det ærlige, endelige tal kommer altid fra et gratis og uforpligtende tilbud."
+            ]
+          },
+          {
+            "heading": "Vejledende priser per lofttype",
+            "paragraphs": [
+              "Et enkelt, ensfarvet loft i PVC eller polyester er startpunktet med cirka €70 til €90 per m² – den hurtige, sømløse opgradering til stuer, soveværelser og kontorer. Et printet design lægger motiv og forberedelse oveni og lander omkring €90 til €100 per m².",
+              "Et akustisk loft – mikroperforeret membran med absorption bagved – ligger omkring €100 til €150 per m² afhængigt af opbygningen. Et translucent, bagbelyst loft med LED-felter bag membranen ligger omkring €130 til €160 per m² inklusive lysfladen. Badeværelsesprojekter, der kombinerer fugtbestandig membran med integreret belysning, ender typisk på €150 til €200 per m².",
+              "Specialopgaver – stjernehimmel, printede bagbelyste designs, præfabrikerede elementer – designes per projekt og prissættes per design."
+            ]
+          },
+          {
+            "heading": "Hvad der flytter prisen",
+            "paragraphs": [
+              "Rummets størrelse arbejder for dig: jo større flade, desto lavere pris per kvadratmeter, fordi opstart og finish fordeles over flere meter. Små rum bærer forholdsmæssigt mere af de faste trin.",
+              "Kompleksiteten er den anden faktor. Hvert hjørne, hver kurve, søjle eller rørgennemføring betyder ekstra profilarbejde og svejsetid – et simpelt rektangel er billigere per meter end en L-formet repos med fem spots. Til sidst afgør finish og integrationer resten: lyslinjer, spots, ventilation og sensorer integreres smukt, men hver del koster arbejde og materiale."
+            ]
+          },
+          {
+            "heading": "Hvad prisen inkluderer – og hvad den sparer dig for senere",
+            "paragraphs": [
+              "Vores tal inkluderer membranen, der svejses på mål i vores belgiske produktion, kantprofilerne og professionel montering – i et normalt rum på en enkelt dag, uden nedrivning og støv.",
+              "Det, en sammenligning per m² overser: et stretchloft skal aldrig males om. Et pudset loft kræver frisk maling med få års mellemrum og revner med bygningen; membranen forbliver spændt, vaskbar og identisk i årtier. Set over ti år er det \"dyre\" loft som regel det billige."
+            ]
+          },
+          {
+            "heading": "Fra overslag til konkret tal",
+            "paragraphs": [
+              "Send os rummets mål, et foto og hvad du har i tankerne – via tilbudsknappen på denne side – og du får et konkret, gratis tilbud, som regel samme arbejdsdag. Du behøver ingen lommeregnergymnastik: at måle op og prissætte præcist er vores job, ikke dit.",
+              "Er du montør eller forhandler, der køber materialer frem for et færdigt loft? Forhandlerpriserne ligger i kundezonen – anmod om en partnerkonto, og se dine priser direkte."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -4176,6 +4218,31 @@
         {
           "name": "Lim & befæstigelse",
           "body": "Sekundlim (cyanoacrylat), skruer og de monteringsartikler der bruges på hver opgave."
+        },
+        {
+          "name": "Usynlig lofthøjttaler",
+          "body": "Flad audio-exciter monteret over membranen, der forvandler selve loftfladen til en fuldtonehøjttaler – musik helt uden synligt udstyr."
+        }
+      ]
+    },
+    "acoustic-panels": {
+      "name": "Akustikpaneler",
+      "eyebrow": "Akustik",
+      "metaTitle": "Akustikpaneler – polyesteruld, loftøer & vægpaneler | STRETCH",
+      "metaDescription": "Akustikpaneler i polyesteruld, frithængende loftøer og vægpaneler, der fjerner ekkoet fra rummet – skåret på mål fra vores produktion. Anmod om et tilbud.",
+      "intro": "Absorption til rum, der lyder lige så godt, som de ser ud: polyesteruldspaneler til lofter og vægge, frithængende øer og bafler – skåret på mål og leveret fra vores egen produktion.",
+      "items": [
+        {
+          "name": "Polyesteruldspaneler",
+          "body": "Selvbærende akustikpaneler i polyesteruld – farveægte, sikre at håndtere og skåret på mål til lofter og vægge."
+        },
+        {
+          "name": "Akustiske loftøer & bafler",
+          "body": "Frithængende absorbenter til rum, hvor et fuldt akustisk loft ikke er en mulighed – kontorer, restauranter, haller."
+        },
+        {
+          "name": "Akustiske vægpaneler",
+          "body": "Vægmonteret absorption, der supplerer et akustisk loft og bringer efterklangen ned på et behageligt niveau."
         }
       ]
     },
@@ -4197,6 +4264,10 @@
         {
           "name": "STRETCH Cleaner 5 L",
           "body": "Samme rengøringsmiddel i værkstedsstørrelse til forhandlere og storforbrugere."
+        },
+        {
+          "name": "Trykluftværktøj & hæftepistoler",
+          "body": "Trykluftdrevne hæftepistoler og trykluftværktøj til hurtig og solid profilmontage – de samme BEA-modeller, som vores egne montører bruger."
         }
       ]
     }

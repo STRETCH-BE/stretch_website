@@ -1,3 +1,25 @@
+## 2026-08-07 (3) — P2 part 1: price guide + 3 materials additions (build 1064 pages)
+
+- **Price guide** as blog post `spanplafond-prijs` (slug = old URL, 19.3K impr/yr;
+  "spanplafond prijs" query 6.4K impr) ×12 languages. Ranges = Michael's own
+  published old-page figures (excl. VAT, incl. installation): basic €70–90/m²,
+  printed €90–100, acoustic €100–150, translucent/backlit €130–160, bathroom
+  €150–200; speciality = per design. Framed as indicative; funnels to free
+  quote + partner account for trade pricing. ⚠ ranges date from the 2023 page —
+  Michael to confirm they still hold.
+- **Materials: 3 additions with proven search demand** (all appended at END of
+  item arrays — index-safe for the materialsData overlay):
+  · accessories + "Invisible ceiling speaker" (old shop 32 clicks/yr)
+  · tools-cleaning + "Air tools & tackers" (BEA; 33 clicks/yr)
+  · NEW 6th group **acoustic-panels** (old category 42 clicks/yr): polyester
+    wool panels, ceiling islands & baffles, wall panels. Group page ×12 locales
+    (+12 pages), overview now 6 cards. Photos = placeholders.
+- Translations ×12 (blogPosts.posts + materialsData) — nl "Wat kost een
+  spanplafond? Een eerlijke prijsgids" / "Akoestische panelen".
+- Verified: typecheck, build 1064/1064 (was 1040; +12 price post, +12 group),
+  0 MISSING_MESSAGE, content.ts slug count 35. Dealer directory = P2 part 2,
+  still open.
+
 ## 2026-08-07 (2) — P1: the 10 knowledge-base articles, recreated ×12 languages
 
 - **10 blog articles added** (content.ts blogPosts; now 12 posts, content.ts

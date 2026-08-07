@@ -3594,6 +3594,48 @@
             ]
           }
         ]
+      },
+      "spanplafond-prijs": {
+        "title": "Ile kosztuje sufit napinany? Uczciwy przewodnik po cenach",
+        "excerpt": "Ceny sufitów napinanych z montażem wahają się od około €70 do €200 za m², w zależności od rodzaju sufitu i pomieszczenia. Wyjaśniamy, skąd bierze się ta rozpiętość, podajemy orientacyjne widełki dla poszczególnych typów sufitów i podpowiadamy, jak uzyskać konkretną kwotę dla Państwa projektu.",
+        "body": [
+          {
+            "heading": "Krótka odpowiedź",
+            "paragraphs": [
+              "W przypadku profesjonalnie zamontowanego sufitu napinanego należy liczyć się z kwotą od około €70 do €200 za metr kwadratowy netto, wraz z montażem. Rozpiętość jest realna: gładki biały sufit matowy w prostokątnym salonie plasuje się na dole tych widełek, a podświetlany sufit łazienkowy ze zintegrowanym oświetleniem — na samej górze.",
+              "Każda kwota w tym przewodniku to orientacyjne widełki, a nie wycena. Folia jest wykonywana na wymiar, dokładnie pod Państwa pomieszczenie, więc uczciwa ostateczna kwota zawsze pochodzi z bezpłatnej, niezobowiązującej wyceny."
+            ]
+          },
+          {
+            "heading": "Orientacyjne widełki dla poszczególnych typów sufitów",
+            "paragraphs": [
+              "Podstawowy jednokolorowy sufit z PVC lub poliestru to punkt wyjścia, od około €70 do €90 za m² — szybka metamorfoza bez łączeń dla salonów, sypialni i biur. Sufit z nadrukiem obejmuje dodatkowo grafikę i przygotowanie projektu, co daje około €90 do €100 za m².",
+              "Sufit akustyczny — mikroperforowana folia z warstwą pochłaniającą za nią — to około €100 do €150 za m², w zależności od układu warstw. Transłucentny, podświetlany sufit z polami LED za folią kosztuje około €130 do €160 za m² wraz z płaszczyzną świetlną. Projekty łazienkowe łączące folię odporną na wilgoć ze zintegrowanym oświetleniem sięgają zwykle €150 do €200 za m².",
+              "Realizacje specjalne — gwieździste niebo, podświetlane nadruki, elementy prefabrykowane — projektujemy indywidualnie i wyceniamy osobno dla każdego projektu."
+            ]
+          },
+          {
+            "heading": "Co wpływa na cenę",
+            "paragraphs": [
+              "Wielkość pomieszczenia działa na Państwa korzyść: im większa powierzchnia, tym niższa cena za metr kwadratowy, ponieważ przygotowanie stanowiska i wykończenie rozkładają się na więcej metrów. W małych pomieszczeniach te stałe etapy ważą proporcjonalnie więcej.",
+              "Drugą dźwignią jest stopień skomplikowania. Każdy narożnik, łuk, słup czy przejście rury oznacza dodatkową pracę przy profilach i czas zgrzewania — prosty prostokąt wychodzi taniej w przeliczeniu na metr niż podest w kształcie litery L z pięcioma spotami. Resztę rozstrzygają wykończenie i integracje: linie świetlne, oprawy punktowe, wentylacja i czujniki dają się pięknie wkomponować, ale każde z nich to praca i materiał."
+            ]
+          },
+          {
+            "heading": "Co obejmuje cena — i jakie oszczędności daje później",
+            "paragraphs": [
+              "Nasze kwoty obejmują folię wykonaną na wymiar i zgrzewaną w naszej belgijskiej produkcji, profile obwodowe oraz profesjonalny montaż — w typowym pomieszczeniu w jeden dzień, bez kucia i bez kurzu.",
+              "To, czego porównanie cen za m² nie uwzględnia: sufit napinany nie wymaga odmalowywania. Sufit tynkowany co kilka lat prosi się o świeżą farbę i pęka razem z budynkiem; folia pozostaje napięta, zmywalna i niezmieniona przez dziesięciolecia. W perspektywie dziesięciu lat „drogi” sufit okazuje się zwykle tym tanim."
+            ]
+          },
+          {
+            "heading": "Od szacunku do konkretnej kwoty",
+            "paragraphs": [
+              "Wystarczy przesłać nam wymiary pomieszczenia, zdjęcie i krótki opis planów — przez przycisk wyceny na tej stronie — a konkretną, bezpłatną wycenę otrzymają Państwo zwykle jeszcze tego samego dnia roboczego. Bez gimnastyki z kalkulatorem: dokładny pomiar i wycena to nasza praca, nie Państwa.",
+              "Są Państwo monterem lub dystrybutorem i kupują Państwo materiały, a nie gotowy sufit? Ceny handlowe znajdują się w strefie klienta — wystarczy poprosić o konto partnerskie, aby od razu widzieć swoje ceny."
+            ]
+          }
+        ]
       }
     },
     "chrome": {
@@ -4176,6 +4218,31 @@
         {
           "name": "Klej i mocowania",
           "body": "Klej błyskawiczny (cyjanoakrylowy), wkręty i materiały montażowe używane na każdej budowie."
+        },
+        {
+          "name": "Niewidzialny głośnik sufitowy",
+          "body": "Płaski wzbudnik audio montowany nad folią, który zamienia samą powierzchnię sufitu w pełnozakresowy głośnik — muzyka bez żadnego widocznego sprzętu."
+        }
+      ]
+    },
+    "acoustic-panels": {
+      "name": "Panele akustyczne",
+      "eyebrow": "Akustyka",
+      "metaTitle": "Panele akustyczne — wełna poliestrowa, wyspy i panele ścienne | STRETCH",
+      "metaDescription": "Panele akustyczne z wełny poliestrowej, podwieszane wyspy sufitowe i panele ścienne, które usuwają echo z pomieszczenia — docinane na wymiar w naszej produkcji. Zamów wycenę.",
+      "intro": "Absorpcja dla pomieszczeń, które brzmią równie dobrze, jak wyglądają: panele z wełny poliestrowej na sufity i ściany, podwieszane wyspy i baffle — docinane na wymiar i dostarczane prosto z naszej własnej produkcji.",
+      "items": [
+        {
+          "name": "Panele z wełny poliestrowej",
+          "body": "Samonośne panele akustyczne z wełny poliestrowej — odporne na blaknięcie, bezpieczne w montażu i docinane na wymiar na sufity i ściany."
+        },
+        {
+          "name": "Akustyczne wyspy sufitowe i baffle",
+          "body": "Podwieszane absorbery do przestrzeni, w których pełny sufit akustyczny nie wchodzi w grę — biura, restauracje, sale."
+        },
+        {
+          "name": "Akustyczne panele ścienne",
+          "body": "Montowana na ścianie absorpcja, która w połączeniu z sufitem akustycznym sprowadza pogłos do komfortowego poziomu."
         }
       ]
     },
@@ -4197,6 +4264,10 @@
         {
           "name": "STRETCH Cleaner 5 L",
           "body": "Ten sam środek w warsztatowym rozmiarze dla dystrybutorów i intensywnych użytkowników."
+        },
+        {
+          "name": "Narzędzia pneumatyczne i zszywacze",
+          "body": "Zszywacze pneumatyczne i narzędzia na sprężone powietrze do szybkiego, pewnego montażu profili — te same modele BEA, których używają nasi monterzy."
         }
       ]
     }
