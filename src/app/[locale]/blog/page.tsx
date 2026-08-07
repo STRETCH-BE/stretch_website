@@ -51,7 +51,7 @@ export default async function BlogIndex({ params }: { params: { locale: string }
             return (
             <article key={p.slug} style={{ border: '1px solid var(--border)', background: '#fff', display: 'flex', flexDirection: 'column' }}>
               <Link href={`/blog/${p.slug}`} className="zoom-wrap" style={{ display: 'block', overflow: 'hidden' }}>
-                <Placeholder label={p.title} light ratio="16/9" className="zoom-img" decorative />
+                <Placeholder label={p.title} src={p.image} alt={p.title} sizes="(max-width: 860px) 100vw, 50vw" light ratio="16/9" className="zoom-img" decorative />
               </Link>
               <div style={{ padding: 'clamp(24px,2.6vw,34px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <div style={{ fontSize: 12, fontWeight: 600, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--text-faint)', marginBottom: 14 }}>
