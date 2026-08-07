@@ -1083,6 +1083,54 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'spanplafond-prijs',
+    title: 'What does a stretch ceiling cost? An honest price guide',
+    excerpt:
+      'Stretch ceiling prices range from roughly €70 to €200 per m² installed, depending on the type and the room. Here is what sits behind that spread, indicative ranges per ceiling type, and how to get a firm number for your project.',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    author: 'STRETCH',
+    readMinutes: 5,
+    body: [
+      {
+        heading: 'The short answer',
+        paragraphs: [
+          'For a professionally installed stretch ceiling, count on roughly €70 to €200 per square metre excluding VAT, installation included. The spread is real: a plain matte white ceiling in a rectangular living room sits at the bottom of that range, while a backlit bathroom ceiling with integrated lighting sits at the top.',
+          'Every figure in this guide is an indicative range, not a quote. The membrane is made to measure for your exact room, so the honest final number always comes from a free, no-obligation quote.',
+        ],
+      },
+      {
+        heading: 'Indicative ranges per ceiling type',
+        paragraphs: [
+          'A basic single-colour PVC or polyester ceiling is the entry point at around €70 to €90 per m² — the fast, seamless upgrade for living rooms, bedrooms and offices. A printed design adds the artwork and preparation, landing around €90 to €100 per m².',
+          'An acoustic ceiling — micro-perforated membrane with absorption behind it — runs around €100 to €150 per m² depending on the build-up. A translucent, backlit ceiling with LED fields behind the membrane sits around €130 to €160 per m² including the light plane. Bathroom projects combining moisture-proof membrane with integrated lighting typically reach €150 to €200 per m².',
+          'Speciality work — a starry sky, printed backlit designs, prefab elements — is designed per project and quoted per design.',
+        ],
+      },
+      {
+        heading: 'What moves the price',
+        paragraphs: [
+          'Room size works in your favour: the larger the surface, the lower the price per square metre, because set-up and finishing spread over more metres. Small rooms carry proportionally more of those fixed steps.',
+          'Complexity is the second lever. Every corner, curve, pillar or pipe passage means extra profile work and welding time — a simple rectangle is cheaper per metre than an L-shaped landing with five spots. Finally, the finish and the integrations decide the rest: lighting lines, spots, ventilation and sensors are integrated beautifully, but each is work and material.',
+        ],
+      },
+      {
+        heading: 'What the price includes — and what it saves later',
+        paragraphs: [
+          'Our figures include the made-to-measure membrane welded in our Belgian production, the perimeter profiles, and professional installation — for a normal room, in a single day, without demolition or dust.',
+          'The part a per-m² comparison misses: a stretch ceiling does not need repainting. A plastered ceiling wants fresh paint every few years and cracks with the building; the membrane stays taut, washable and identical for decades. Over ten years, the "expensive" ceiling is usually the cheap one.',
+        ],
+      },
+      {
+        heading: 'From estimate to firm number',
+        paragraphs: [
+          'Send us the room dimensions, a photo and what you have in mind — through the quote button on this page — and you get a concrete, free quote, usually the same working day. No calculator gymnastics needed: measuring and pricing precisely is our job, not yours.',
+          'Are you an installer or reseller buying materials rather than a finished ceiling? Trade pricing lives in the client zone — request a partner account and you see your prices directly.',
+        ],
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

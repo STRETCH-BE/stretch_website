@@ -124,6 +124,23 @@ export const materialGroups: MaterialGroup[] = [
       { name: 'Harpoon', body: 'The welded edge that locks the membrane into the profile — sold by the roll.', image: '/images/materials/harpoon.jpg' },
       { name: 'Protective rings', body: 'Self-adhesive rings from 4.5 to 300 mm for spots, hooks, pipes and sensors.', image: '/images/materials/protective-rings.jpg' },
       { name: 'Glue & fixings', body: 'Instant adhesive (cyanoacrylate), screws and the mounting consumables used on every site.', image: '/images/materials/glue-fixings.jpg' },
+      // Appended 7 Aug (P2) — keep at the END: materialsData items merge by index.
+      { name: 'Invisible ceiling speaker', body: 'Flat audio exciter mounted above the membrane that turns the ceiling surface itself into a full-range speaker — music with zero visible hardware.', image: '' },
+    ],
+  },
+  {
+    slug: 'acoustic-panels',
+    name: 'Acoustic panels',
+    eyebrow: 'Acoustics',
+    metaTitle: 'Acoustic panels — polyester wool, islands & wall panels | STRETCH',
+    metaDescription:
+      'Acoustic polyester wool panels, free-hanging ceiling islands and wall panels that take the echo out of a room — cut to size from our production. Request a quote.',
+    intro:
+      'Absorption for rooms that sound as good as they look: polyester wool panels for ceilings and walls, free-hanging islands and baffles — cut to size and delivered from our own production.',
+    items: [
+      { name: 'Polyester wool panels', body: 'Self-supporting acoustic panels in polyester wool — colour-fast, safe to handle and cut to size for ceilings and walls.', image: '' },
+      { name: 'Acoustic ceiling islands & baffles', body: 'Free-hanging absorbers for spaces where a full acoustic ceiling is not an option — offices, restaurants, halls.', image: '' },
+      { name: 'Acoustic wall panels', body: 'Wall-mounted absorption that pairs with an acoustic ceiling to bring reverberation down to a comfortable level.', image: '' },
     ],
   },
   {
@@ -140,6 +157,8 @@ export const materialGroups: MaterialGroup[] = [
       { name: 'Installation hand tools', body: 'Spatulas and hand tools shaped for tucking membrane without damage.', image: '/images/materials/hand-tools.jpg' },
       { name: 'STRETCH Cleaner 1 L', body: 'The membrane-safe cleaner for fingerprints, dust and building-site film.', image: '/images/materials/cleaner-1l.jpg' },
       { name: 'STRETCH Cleaner 5 L', body: 'The same cleaner in the workshop size for dealers and heavy users.', image: '/images/materials/cleaner-5l.jpg' },
+      // Appended 7 Aug (P2) — keep at the END: materialsData items merge by index.
+      { name: 'Air tools & tackers', body: 'Pneumatic tackers and air tools for fast, solid profile mounting — the same BEA models our own installers run.', image: '' },
     ],
   },
 ];
