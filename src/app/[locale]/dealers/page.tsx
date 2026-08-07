@@ -37,6 +37,8 @@ const REGIONS: { key: DealerRegion; labelKey: string }[] = [
   { key: 'flanders', labelKey: 'regionFlanders' },
   { key: 'wallonia', labelKey: 'regionWallonia' },
   { key: 'netherlands', labelKey: 'regionNetherlands' },
+  { key: 'luxembourg', labelKey: 'regionLuxembourg' },
+  { key: 'austria', labelKey: 'regionAustria' },
 ];
 
 export default async function DealersOverviewPage({ params }: { params: { locale: string } }) {
