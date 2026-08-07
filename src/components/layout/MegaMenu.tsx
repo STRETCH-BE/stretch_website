@@ -83,6 +83,8 @@ const SOLUTIONS_SKELETON: Skeleton = [
       { href: '/applications/living-cinema' },
       { href: '/applications/bathroom-kitchen' },
       { href: '/applications/office-retail' },
+      { href: '/applications/pool-wellness' },
+      { href: '/applications/walls' },
       { href: '/inspiration' },
     ],
   },

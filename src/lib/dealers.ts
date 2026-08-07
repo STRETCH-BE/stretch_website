@@ -21,7 +21,7 @@ export type Dealer = {
 };
 
 export type PlaceKind = 'city' | 'province';
-export type DealerRegion = 'flanders' | 'wallonia' | 'netherlands';
+export type DealerRegion = 'flanders' | 'wallonia' | 'netherlands' | 'luxembourg' | 'austria';
 
 export type DealerPlace = {
   slug: string;
@@ -30,7 +30,7 @@ export type DealerPlace = {
   kind: PlaceKind;
   region: DealerRegion;
   /** Locale whose search market this page primarily targets. */
-  primaryLocale: 'be' | 'fr' | 'nl';
+  primaryLocale: 'be' | 'fr' | 'nl' | 'de';
   /** Parent province slug (cities only). */
   province?: string;
   dealerIds: string[];
@@ -119,6 +119,12 @@ export const dealerPlaces: DealerPlace[] = [
   { slug: 'deventer', name: 'Deventer', kind: 'city', region: 'netherlands', primaryLocale: 'nl', province: 'overijssel', dealerIds: ['q82'] },
   { slug: 'maastricht', name: 'Maastricht', kind: 'city', region: 'netherlands', primaryLocale: 'nl', province: 'nederlands-limburg', dealerIds: ['spannende'] },
   { slug: 'venlo', name: 'Venlo', kind: 'city', region: 'netherlands', primaryLocale: 'nl', province: 'nederlands-limburg', dealerIds: ['spannende'] },
+  // ------------------------------------------------- Luxembourg (Grand Duchy)
+  { slug: 'luxembourg', name: 'Luxembourg (Grand-Duché)', kind: 'province', region: 'luxembourg', primaryLocale: 'fr', dealerIds: [] },
+  { slug: 'luxembourg-ville', name: 'Luxembourg-Ville', kind: 'city', region: 'luxembourg', primaryLocale: 'fr', province: 'luxembourg', dealerIds: [] },
+  { slug: 'esch-sur-alzette', name: 'Esch-sur-Alzette', kind: 'city', region: 'luxembourg', primaryLocale: 'fr', province: 'luxembourg', dealerIds: [] },
+  // ---------------------------------------------------------------- Austria
+  { slug: 'wien', name: 'Wien', kind: 'city', region: 'austria', primaryLocale: 'de', dealerIds: [] },
 ];
 
 export const dealerPlaceSlugs = dealerPlaces.map((p) => p.slug);
