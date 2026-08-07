@@ -4,7 +4,7 @@
 // per-path how-it-works, and a tagged application form. BreadcrumbList JSON-LD.
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { ArrowRight, TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone, Store, Wrench, Check } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone, Store, Wrench, Check, Factory } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { Link } from '@/i18n/navigation';
 import { siteUrl } from '@/lib/site-config';
@@ -22,7 +22,7 @@ export function generateMetadata({ params }: { params: { locale: string } }): Pr
   return pageMetadata({ locale: params.locale, route: '/partners', titleKey: 'partnersTitle', descKey: 'partnersDescription' });
 }
 
-const WHY_ICONS = [TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone];
+const WHY_ICONS = [Factory, TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone];
 
 export default async function PartnersPage({ params }: { params: { locale: string } }) {
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
@@ -184,7 +184,7 @@ export default async function PartnersPage({ params }: { params: { locale: strin
           </div>
           <div className="pt-why grid-lines grid-lines--dark" style={{ gridTemplateColumns: 'repeat(3,1fr)' }}>
             {whyCards.map((c, i) => {
-              const Icon = WHY_ICONS[i];
+              const Icon = WHY_ICONS[i] ?? WHY_ICONS[0];
               return (
                 <div key={c.title} style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)' }}>
                   <span style={{ color: 'var(--red)', display: 'inline-flex', marginBottom: 18 }}><Icon size={26} /></span>
