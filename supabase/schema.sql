@@ -20,9 +20,11 @@ create table if not exists public.portal_users (
   email       text not null unique,
   company     text,
   role        text not null default 'client' check (role in ('client', 'admin')),
-  -- b2c = self-registered account (own area, NO trade pricing / designer);
-  -- b2b = dealer/trade account. Default b2b keeps pre-existing accounts valid.
-  account_type text not null default 'b2b' check (account_type in ('b2c', 'b2b')),
+  -- Account tier: 'producer' = producer/reseller partner; 'installer' =
+  -- trade account that buys & installs; 'b2c' = self-registered consumer
+  -- (own area, NO trade pricing / designer).
+  account_type text not null default 'installer'
+    check (account_type in ('producer', 'installer', 'b2c')),
   -- Price groups this account may see (values match pricebook.market).
   markets     text[] not null default '{}',
   all_markets boolean not null default false,
@@ -30,10 +32,10 @@ create table if not exists public.portal_users (
   created_at  timestamptz not null default now()
 );
 
--- Existing databases (created before the b2c/b2b split): run this once.
+-- Existing databases (created before account tiers): run this once.
 alter table public.portal_users
-  add column if not exists account_type text not null default 'b2b'
-  check (account_type in ('b2c', 'b2b'));
+  add column if not exists account_type text not null default 'installer'
+  check (account_type in ('producer', 'installer', 'b2c'));
 
 -- ---------------------------------------------------------------------------
 -- 2. Pricebook — flat product × market pricelist (mirrors the Excel PriceBook)
@@ -216,3 +218,23 @@ on conflict (id) do nothing;
 -- Order document index (filenames + storage paths) on each order row.
 alter table public.designer_orders
   add column if not exists files jsonb not null default '[]'::jsonb;
+
+-- ---------------------------------------------------------------------------
+-- ACCOUNT TIERS (2026-08): the b2b/b2c split became three tiers —
+-- 'producer' (producer/reseller), 'installer' and 'b2c'. Run once on
+-- existing databases; maps display labels and legacy 'b2b' to canonical
+-- values. Safe to re-run.
+-- ---------------------------------------------------------------------------
+alter table public.portal_users
+  drop constraint if exists portal_users_account_type_check;
+update public.portal_users set account_type = case
+  when account_type ilike '%producer%' or account_type ilike '%reseller%' then 'producer'
+  when lower(account_type) = 'b2c' then 'b2c'
+  else 'installer'
+end
+where account_type not in ('producer', 'installer', 'b2c');
+alter table public.portal_users
+  add constraint portal_users_account_type_check
+  check (account_type in ('producer', 'installer', 'b2c'));
+alter table public.portal_users
+  alter column account_type set default 'installer';

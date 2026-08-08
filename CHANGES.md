@@ -1,3 +1,29 @@
+## 2026-08-08 (14) — Three account tiers: Producer/Reseller · Installer · B2C
+
+- Client adjusted the account model: the b2b/b2c split becomes THREE tiers.
+  AccountType = 'producer' | 'installer' | 'b2c'; trade access (pricelist,
+  designer, orders) = admin OR any non-b2c tier — hasTradeAccess() is the
+  single gate everywhere, so producer and installer behave identically for
+  now (pricing differences stay market-driven via the markets[] grants).
+- normalizeAccountType() maps whatever is stored to a canonical tier —
+  tolerant of display labels typed straight into Supabase ("Producer/
+  Reseller", "Installer", "B2C") and of legacy 'b2b' rows (→ installer).
+  Used at every read (auth.ts session, users API list) and write (users API
+  create/update).
+- AdminPanel: the B2B/B2C pill + "Upgrade/Set" toggle link replaced by a
+  3-option tier dropdown per user row; create form gains an account-type
+  select (markets section hidden for B2C). Labels translated ×12
+  (typeProducer/typeInstaller/typeB2c + colType; makeB2b/makeB2c/typeB2b
+  keys dropped).
+- schema.sql: account_type default 'installer', check
+  ('producer','installer','b2c') + run-once ACCOUNT TIERS migration block at
+  the bottom (drops old check, maps existing values incl. hand-edited
+  labels, re-adds canonical check). Client must run it in the Supabase SQL
+  editor — until then the app still works because reads are tolerant; only
+  admin-panel tier WRITES could be rejected by a hand-made constraint that
+  doesn't allow canonical lowercase values.
+- Demo users: west client = installer, east client = producer.
+
 ## 2026-08-08 (13) — Resend removed entirely (zero clutter)
 
 - Graph mail verified live: test order STR-20260808-1613 delivered via graph

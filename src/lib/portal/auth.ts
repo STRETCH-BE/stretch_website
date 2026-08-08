@@ -3,7 +3,7 @@
 // ============================================================================
 import { cache } from 'react';
 import { cookies } from 'next/headers';
-import type { PortalSession } from './types';
+import { normalizeAccountType, type PortalSession } from './types';
 import { createRscClient, isSupabaseConfigured } from './supabase';
 import { DEMO_USERS } from './demo-users';
 
@@ -56,8 +56,7 @@ export const getPortalSession = cache(async (): Promise<PortalSession | null> =>
       email: profile.email,
       company: profile.company,
       role: profile.role === 'admin' ? 'admin' : 'client',
-      // Legacy rows (pre-b2c migration) default to the dealer experience.
-      accountType: profile.account_type === 'b2c' ? 'b2c' : 'b2b',
+      accountType: normalizeAccountType(profile.account_type),
       markets: profile.markets ?? [],
       allMarkets: Boolean(profile.all_markets),
       active: true,

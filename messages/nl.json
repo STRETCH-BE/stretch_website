@@ -291,6 +291,7 @@
       "colEmail": "E-mail",
       "colCompany": "Bedrijf",
       "colRole": "Rol",
+      "colType": "Accounttype",
       "colMarkets": "Markten",
       "colStatus": "Status",
       "roleClient": "Klant",
@@ -305,9 +306,8 @@
       "creating": "Aanmaken…",
       "createFailed": "Account kon niet aangemaakt worden.",
       "createdOk": "Account aangemaakt voor {email}.",
-      "makeB2b": "Upgrade naar B2B",
-      "makeB2c": "Zet op B2C",
-      "typeB2b": "B2B",
+      "typeProducer": "Producent/wederverkoper",
+      "typeInstaller": "Installateur",
       "typeB2c": "B2C"
     },
     "designer": {

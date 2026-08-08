@@ -291,6 +291,7 @@
       "colEmail": "E-post",
       "colCompany": "Företag",
       "colRole": "Roll",
+      "colType": "Kontotyp",
       "colMarkets": "Marknader",
       "colStatus": "Status",
       "roleClient": "Kund",
@@ -305,9 +306,8 @@
       "creating": "Skapar…",
       "createFailed": "Kontot kunde inte skapas.",
       "createdOk": "Konto skapat för {email}.",
-      "makeB2b": "Uppgradera till B2B",
-      "makeB2c": "Sätt till B2C",
-      "typeB2b": "B2B",
+      "typeProducer": "Producent/återförsäljare",
+      "typeInstaller": "Montör",
       "typeB2c": "B2C"
     },
     "designer": {

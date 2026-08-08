@@ -291,6 +291,7 @@
       "colEmail": "E-mail",
       "colCompany": "Firma",
       "colRole": "Rola",
+      "colType": "Typ konta",
       "colMarkets": "Rynki",
       "colStatus": "Status",
       "roleClient": "Klient",
@@ -305,9 +306,8 @@
       "creating": "Tworzenie…",
       "createFailed": "Nie udało się utworzyć konta.",
       "createdOk": "Utworzono konto dla {email}.",
-      "makeB2b": "Zmień na B2B",
-      "makeB2c": "Zmień na B2C",
-      "typeB2b": "B2B",
+      "typeProducer": "Producent/dystrybutor",
+      "typeInstaller": "Monter",
       "typeB2c": "B2C"
     },
     "designer": {

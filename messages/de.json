@@ -291,6 +291,7 @@
       "colEmail": "E-Mail",
       "colCompany": "Firma",
       "colRole": "Rolle",
+      "colType": "Kontotyp",
       "colMarkets": "Märkte",
       "colStatus": "Status",
       "roleClient": "Kunde",
@@ -305,9 +306,8 @@
       "creating": "Erstellen…",
       "createFailed": "Konto konnte nicht erstellt werden.",
       "createdOk": "Konto für {email} erstellt.",
-      "makeB2b": "Auf B2B hochstufen",
-      "makeB2c": "Auf B2C setzen",
-      "typeB2b": "B2B",
+      "typeProducer": "Hersteller/Wiederverkäufer",
+      "typeInstaller": "Monteur",
       "typeB2c": "B2C"
     },
     "designer": {

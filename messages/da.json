@@ -291,6 +291,7 @@
       "colEmail": "E-mail",
       "colCompany": "Virksomhed",
       "colRole": "Rolle",
+      "colType": "Kontotype",
       "colMarkets": "Markeder",
       "colStatus": "Status",
       "roleClient": "Kunde",
@@ -305,9 +306,8 @@
       "creating": "Opretter…",
       "createFailed": "Kontoen kunne ikke oprettes.",
       "createdOk": "Konto oprettet til {email}.",
-      "makeB2b": "Opgrader til B2B",
-      "makeB2c": "Sæt til B2C",
-      "typeB2b": "B2B",
+      "typeProducer": "Producent/forhandler",
+      "typeInstaller": "Montør",
       "typeB2c": "B2C"
     },
     "designer": {

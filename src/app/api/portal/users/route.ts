@@ -6,7 +6,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { DEMO_USERS, getAdminSession } from '@/lib/portal/auth';
 import { createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
-import { PRICE_MARKETS } from '@/lib/portal/types';
+import { normalizeAccountType, PRICE_MARKETS } from '@/lib/portal/types';
 
 export const runtime = 'nodejs';
 
@@ -45,7 +45,7 @@ export async function GET() {
     email: u.email,
     company: u.company,
     role: u.role,
-    accountType: u.account_type === 'b2c' ? 'b2c' : 'b2b',
+    accountType: normalizeAccountType(u.account_type),
     markets: u.markets ?? [],
     allMarkets: Boolean(u.all_markets),
     active: Boolean(u.active),
@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
   const password = String(body?.password ?? '');
   const company = String(body?.company ?? '').trim() || null;
   const role = body?.role === 'admin' ? 'admin' : 'client';
-  const accountType = body?.accountType === 'b2c' ? 'b2c' : 'b2b';
+  const accountType = normalizeAccountType(body?.accountType);
   const allMarkets = Boolean(body?.allMarkets) || role === 'admin';
   const markets = sanitizeMarkets(body?.markets);
 
@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
       { status: 400 },
     );
   }
-  if (accountType === 'b2b' && role !== 'admin' && !allMarkets && markets.length === 0) {
+  if (accountType !== 'b2c' && role !== 'admin' && !allMarkets && markets.length === 0) {
     return NextResponse.json(
       { ok: false, error: 'Select at least one market (or grant all markets).' },
       { status: 400 },
@@ -144,9 +144,9 @@ export async function PATCH(req: NextRequest) {
   if (typeof body.active === 'boolean') update.active = body.active;
   if (typeof body.company === 'string') update.company = body.company.trim() || null;
   if (body.role === 'admin' || body.role === 'client') update.role = body.role;
-  // Upgrade a self-registered B2C account to B2B (or back) — markets are
-  // assigned separately; a b2b account without markets simply sees no rows yet.
-  if (body.accountType === 'b2c' || body.accountType === 'b2b') update.account_type = body.accountType;
+  // Move an account between tiers — markets are assigned separately; a trade
+  // account without markets simply sees no rows yet.
+  if (typeof body.accountType === 'string') update.account_type = normalizeAccountType(body.accountType);
   if (Array.isArray(body.markets)) update.markets = sanitizeMarkets(body.markets);
   if (typeof body.allMarkets === 'boolean') update.all_markets = body.allMarkets;
 

@@ -291,6 +291,7 @@
       "colEmail": "Netfang",
       "colCompany": "Fyrirtæki",
       "colRole": "Hlutverk",
+      "colType": "Tegund reiknings",
       "colMarkets": "Markaðir",
       "colStatus": "Staða",
       "roleClient": "Viðskiptavinur",
@@ -305,9 +306,8 @@
       "creating": "Stofna…",
       "createFailed": "Ekki tókst að stofna aðganginn.",
       "createdOk": "Aðgangur stofnaður fyrir {email}.",
-      "makeB2b": "Uppfæra í B2B",
-      "makeB2c": "Setja í B2C",
-      "typeB2b": "B2B",
+      "typeProducer": "Framleiðandi/endursali",
+      "typeInstaller": "Uppsetningaraðili",
       "typeB2c": "B2C"
     },
     "designer": {

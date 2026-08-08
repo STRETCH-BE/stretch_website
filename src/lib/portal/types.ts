@@ -41,11 +41,26 @@ export type PortalRole = 'client' | 'admin';
 
 /**
  * Account tier. `b2c` = self-registered consumer account: own account area,
- * but NO trade pricing and NO designer. `b2b` = dealer/trade account (created
- * by an admin, or a b2c account upgraded by an admin) with market-based
- * pricing visibility. Admins are implicitly b2b.
+ * but NO trade pricing and NO designer. The two trade tiers (created by an
+ * admin, or a b2c account upgraded by an admin) get market-based pricing
+ * visibility: `installer` buys and installs; `producer` is a
+ * producer/reseller partner. Admins are implicitly trade.
  */
-export type AccountType = 'b2c' | 'b2b';
+export type AccountType = 'producer' | 'installer' | 'b2c';
+
+export const ACCOUNT_TYPES = ['producer', 'installer', 'b2c'] as const;
+
+/**
+ * Canonical tier from a stored account_type value. Tolerant of display labels
+ * written straight into the database ("Producer/Reseller", "Installer",
+ * "B2C") and of pre-tier rows ('b2b' → installer).
+ */
+export function normalizeAccountType(raw: unknown): AccountType {
+  const v = typeof raw === 'string' ? raw.toLowerCase() : '';
+  if (v.includes('producer') || v.includes('reseller')) return 'producer';
+  if (v === 'b2c') return 'b2c';
+  return 'installer';
+}
 
 export type PortalProfile = {
   id: string;
@@ -59,9 +74,9 @@ export type PortalProfile = {
   active: boolean;
 };
 
-/** Trade areas (pricelist, designer) are for b2b accounts and admins only. */
+/** Trade areas (pricelist, designer) are for trade tiers and admins only. */
 export function hasTradeAccess(profile: PortalProfile): boolean {
-  return profile.role === 'admin' || profile.accountType === 'b2b';
+  return profile.role === 'admin' || profile.accountType !== 'b2c';
 }
 
 export type PortalSession = {
