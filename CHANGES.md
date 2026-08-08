@@ -1,3 +1,26 @@
+## 2026-08-08 (11) — Order e-mail fixes from live test + automatic design saving
+
+Live test findings (client): both e-mails arrived at leads@ and neither had
+attachments → delivery runs through the generic LEAD_WEBHOOK_URL relay, which
+mails a FIXED inbox and forwards only subject/body. Plus designer_designs
+stayed empty (cloud save was manual-only). Fixes:
+
+- **Documents now survive any relay**: order PDFs/DXF/JSON are uploaded to a
+  private Supabase Storage bucket (designer-orders, schema.sql) and both
+  e-mails carry 30-day signed DOWNLOAD LINKS next to the native attachments.
+  File index stored on the order row (designer_orders.files jsonb, with
+  un-migrated-schema retry).
+- **No more duplicate at leads@**: the dealer confirmation is recipient-
+  critical — it now only sends via Resend/SMTP (transports that honour the
+  recipient); via webhook-only setups it is skipped (confirmed:false) instead
+  of landing in the lead inbox.
+- **Designs save automatically**: the first autosave tick with real
+  measurements silently CREATES the design row (updates in place afterwards);
+  the ☁ Save button remains for naming/explicit saves. Example room excluded.
+- ACTION for client: re-run schema.sql bottom blocks (storage bucket + files
+  column). RECOMMENDED: add RESEND_API_KEY (or SMTP_*) in Vercel env so real
+  attachments + the dealer confirmation work end-to-end.
+
 ## 2026-08-08 (10) — Designer order e-mails: branded layout, attachments, confirmation
 
 - **Branded HTML order e-mail** (was: monospace text dump): black STRETCH®

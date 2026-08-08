@@ -203,3 +203,16 @@ alter table public.designer_designs enable row level security;
 alter table public.designer_orders  enable row level security;
 alter table public.designer_events  enable row level security;
 -- No policies on purpose: service-role only, via the authenticated API routes.
+
+-- ---------------------------------------------------------------------------
+-- Storage bucket for designer order documents (PDF/DXF). Private; the portal
+-- API uploads via the service role and hands out 30-day signed URLs in the
+-- order e-mails. Safe to re-run.
+-- ---------------------------------------------------------------------------
+insert into storage.buckets (id, name, public)
+values ('designer-orders', 'designer-orders', false)
+on conflict (id) do nothing;
+
+-- Order document index (filenames + storage paths) on each order row.
+alter table public.designer_orders
+  add column if not exists files jsonb not null default '[]'::jsonb;

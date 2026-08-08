@@ -131,6 +131,7 @@ export async function storeOrder(
     specification: unknown;
     quote: unknown;
     drawing: unknown;
+    files?: { filename: string; path: string }[];
   },
   delivery: { delivered: boolean; method: string | null },
 ): Promise<string | null> {
@@ -149,6 +150,7 @@ export async function storeOrder(
         specification: order.specification ?? {},
         quote: order.quote ?? {},
         drawing: order.drawing ?? {},
+        files: order.files ?? [],
         delivered: delivery.delivered,
         delivery_method: delivery.method,
       })
@@ -157,8 +159,32 @@ export async function storeOrder(
     if (error) throw error;
     return data.id as string;
   } catch (err) {
-    log('storeOrder', err);
-    return null;
+    // Databases created before the `files` column existed: retry without it,
+    // so an un-migrated schema never loses the order itself.
+    try {
+      const { data, error } = await db
+        .from('designer_orders')
+        .insert({
+          ref: order.ref,
+          user_id: profile.id || null,
+          user_email: profile.email,
+          company: profile.company,
+          client: order.client ?? {},
+          product: order.product ?? {},
+          specification: order.specification ?? {},
+          quote: order.quote ?? {},
+          drawing: order.drawing ?? {},
+          delivered: delivery.delivered,
+          delivery_method: delivery.method,
+        })
+        .select('id')
+        .single();
+      if (error) throw error;
+      return data.id as string;
+    } catch (err2) {
+      log('storeOrder', err2);
+      return null;
+    }
   }
 }
 
@@ -195,6 +221,49 @@ export async function updateOrderStatus(id: string, status: OrderStatus): Promis
     log('updateOrderStatus', err);
     return false;
   }
+}
+
+// ---- Order documents (Supabase Storage) ------------------------------------
+
+const ORDER_BUCKET = 'designer-orders';
+const SIGNED_URL_TTL = 60 * 60 * 24 * 30; // 30 days
+
+export type OrderFileLink = { filename: string; url: string };
+
+/**
+ * Upload the order documents to private storage and return signed download
+ * links. Best-effort: returns [] when storage is unavailable, so the e-mails
+ * simply fall back to native attachments only.
+ */
+export async function uploadOrderFiles(
+  ref: string,
+  files: { filename: string; content: Buffer }[],
+): Promise<OrderFileLink[]> {
+  const db = createServiceClient();
+  if (!db || files.length === 0) return [];
+  const links: OrderFileLink[] = [];
+  for (const f of files) {
+    try {
+      const path = `${ref}/${f.filename}`;
+      const mime = f.filename.endsWith('.pdf')
+        ? 'application/pdf'
+        : f.filename.endsWith('.json')
+          ? 'application/json'
+          : 'application/octet-stream';
+      const { error: upErr } = await db.storage
+        .from(ORDER_BUCKET)
+        .upload(path, f.content, { contentType: mime, upsert: true });
+      if (upErr) throw upErr;
+      const { data, error: signErr } = await db.storage
+        .from(ORDER_BUCKET)
+        .createSignedUrl(path, SIGNED_URL_TTL);
+      if (signErr || !data?.signedUrl) throw signErr ?? new Error('no signed url');
+      links.push({ filename: f.filename, url: data.signedUrl });
+    } catch (err) {
+      log(`uploadOrderFiles(${f.filename})`, err);
+    }
+  }
+  return links;
 }
 
 // ---- Usage events ----------------------------------------------------------

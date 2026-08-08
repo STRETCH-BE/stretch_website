@@ -13,6 +13,7 @@ import { escapeHtml } from '@/lib/email';
 import { brand, contact } from '@/lib/site-config';
 
 export type OrderAttachment = { filename: string; content: Buffer };
+export type OrderFileLink = { filename: string; url: string };
 
 export type OrderEmailInput = {
   ref: string;
@@ -22,6 +23,8 @@ export type OrderEmailInput = {
   /** Plain-text summary from the designer (text fallback). */
   summaryText: string;
   attachments: OrderAttachment[];
+  /** Signed download links (Supabase Storage) — survive relays that strip attachments. */
+  fileLinks?: OrderFileLink[];
 };
 
 export type OrderDelivery = { delivered: boolean; method: 'resend' | 'webhook' | 'smtp' | 'log' };
@@ -120,9 +123,20 @@ export function buildOrderEmailHtml(
     )
     .join('');
 
+  const links = input.fileLinks ?? [];
+  const linkFor = (filename: string) => links.find((l) => l.filename === filename);
   const attachmentList = input.attachments
-    .map((a) => `<li style="font:400 13px ${F};color:${INK};margin:2px 0;">${esc(a.filename)}</li>`)
+    .map((a) => {
+      const link = linkFor(a.filename);
+      const label = link
+        ? `<a href="${esc(link.url)}" style="color:${INK};">${esc(a.filename)}</a> — <a href="${esc(link.url)}" style="color:${RED};font-weight:700;text-decoration:none;">download</a>`
+        : esc(a.filename);
+      return `<li style="font:400 13px ${F};color:${INK};margin:3px 0;">${label}</li>`;
+    })
     .join('');
+  const linksNote = links.length
+    ? `<p style="font:400 12px ${F};color:${MUTED};margin:8px 0 0;">Download links stay valid for 30 days. The same files are attached to this e-mail where supported.</p>`
+    : '';
 
   const clientRows: [string, string][] = [
     ['Name', String(client.name || '—')],
@@ -169,8 +183,9 @@ export function buildOrderEmailHtml(
         </tr>
       </table>
 
-      ${sectionTitle('Attached documents')}
+      ${sectionTitle('Documents')}
       <ul style="margin:0;padding-left:18px;">${attachmentList || `<li style="font:400 13px ${F};color:${MUTED};">See the dealer's order ZIP</li>`}</ul>
+      ${linksNote}
 
       <p style="font:400 12px ${F};color:#9A968F;margin:26px 0 0;">${
         audience === 'internal'
@@ -205,6 +220,14 @@ async function send(msg: {
   text: string;
   attachments: OrderAttachment[];
   webhookExtra?: Record<string, unknown>;
+  /**
+   * The generic lead webhook typically relays to a FIXED inbox and ignores
+   * `to` — fine for the internal order e-mail, wrong for the dealer
+   * confirmation (it would land at the lead inbox as a duplicate). When set,
+   * the webhook step is skipped and only recipient-faithful transports
+   * (Resend / SMTP) are used.
+   */
+  recipientCritical?: boolean;
 }): Promise<OrderDelivery> {
   const from =
     process.env.LEAD_FROM_EMAIL ||
@@ -229,7 +252,7 @@ async function send(msg: {
     }
   }
 
-  if (process.env.LEAD_WEBHOOK_URL) {
+  if (process.env.LEAD_WEBHOOK_URL && !msg.recipientCritical) {
     try {
       const res = await fetch(process.env.LEAD_WEBHOOK_URL, {
         method: 'POST',
@@ -308,6 +331,7 @@ export async function deliverOrderEmails(
       html: confirmMsg.html,
       text: confirmMsg.text,
       attachments: input.attachments,
+      recipientCritical: true,
     });
   }
   return { internal, confirmation };

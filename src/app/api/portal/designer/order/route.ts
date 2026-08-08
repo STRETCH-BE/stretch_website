@@ -6,7 +6,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getPortalSession } from '@/lib/portal/auth';
 import { hasTradeAccess } from '@/lib/portal/types';
-import { storeOrder, logDesignerEvent } from '@/lib/portal/designer-store';
+import { storeOrder, uploadOrderFiles, logDesignerEvent } from '@/lib/portal/designer-store';
 import { deliverOrderEmails, type OrderAttachment } from '@/lib/portal/order-email';
 
 export const dynamic = 'force-dynamic';
@@ -103,12 +103,18 @@ export async function POST(request: NextRequest) {
     content: Buffer.from(JSON.stringify(orderObject, null, 1)),
   });
 
+  // Park the documents in private storage and hand out 30-day signed links —
+  // these survive relays (e.g. the generic lead webhook) that strip real
+  // attachments, and give the order a durable file archive.
+  const fileLinks = await uploadOrderFiles(ref, attachments);
+
   const { internal, confirmation } = await deliverOrderEmails({
     ref,
     dealer: { email: session.profile.email, company: session.profile.company },
     order: orderObject as Record<string, any>,
     summaryText,
     attachments,
+    fileLinks,
   });
 
   const storedId = await storeOrder(
@@ -120,6 +126,7 @@ export async function POST(request: NextRequest) {
       specification: body.specification ?? {},
       quote: body.quote ?? {},
       drawing: body.drawing ?? {},
+      files: attachments.map((a) => ({ filename: a.filename, path: `${ref}/${a.filename}` })),
     },
     { delivered: internal.delivered, method: internal.method },
   );
