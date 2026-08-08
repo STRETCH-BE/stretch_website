@@ -85,7 +85,7 @@ export const materialGroups: MaterialGroup[] = [
       {
         name: 'Polyester stretch ceiling on the roll',
         body: 'Full rolls of polyester stretch-ceiling fabric for partners with their own confection.',
-        image: '',
+        image: '/images/materials/polyester-roll.jpg',
         variants: ['standard', 'acoustic', 'translucent'],
       },
       {
@@ -98,7 +98,7 @@ export const materialGroups: MaterialGroup[] = [
       {
         name: 'Polyester stretch ceiling kit (DIY)',
         body: 'The complete cold-install kit: polyester fabric cut to your room, profiles, corner pieces and instructions — the DIY route to a seamless fabric ceiling.',
-        image: '',
+        image: '/images/materials/polyester-diy-kit.jpg',
         variants: ['standard', 'acoustic', 'translucent'],
       },
     ],
@@ -132,7 +132,7 @@ export const materialGroups: MaterialGroup[] = [
       { name: 'Protective rings', body: 'Self-adhesive rings from 4.5 to 300 mm for spots, hooks, pipes and sensors.', image: '/images/materials/protective-rings.jpg' },
       { name: 'Glue & fixings', body: 'Instant adhesive (cyanoacrylate), screws and the mounting consumables used on every site.', image: '/images/materials/glue-fixings.jpg' },
       // Appended 7 Aug (P2) — keep at the END: materialsData items merge by index.
-      { name: 'Invisible ceiling speaker', body: 'Flat audio exciter mounted above the membrane that turns the ceiling surface itself into a full-range speaker — music with zero visible hardware.', image: '' },
+      { name: 'Invisible ceiling speaker', body: 'Flat audio exciter mounted above the membrane that turns the ceiling surface itself into a full-range speaker — music with zero visible hardware.', image: '/images/materials/invisible-ceiling-speaker.jpg' },
     ],
   },
   {

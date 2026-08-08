@@ -1,3 +1,15 @@
+## 2026-08-08 (4) — Materials page images
+
+- **Fabrics:** "Polyester stretch ceiling on the roll" now uses a copy of the
+  pvc-roll photo (polyester-roll.jpg, client request); "Polyester stretch
+  ceiling kit (DIY)" gets the DIY-kit product photo from the client's photo
+  zip (fabric + absorber pads + profile).
+- **Accessories:** "Invisible ceiling speaker" gets the install render
+  extracted at full resolution from the invisible-speaker datasheet PDF
+  (the client's pasted image matched it 1:1).
+- "Air tools & tackers" (BeA tacker photo) still without image — the pasted
+  image couldn't be saved from chat; client asked to re-send as a file.
+
 ## 2026-08-08 (3) — 4 placeholder projects deleted, 4 real projects get photos
 
 - **Deleted (client request):** city-penthouse-antwerp, wellness-spa-bruges,
