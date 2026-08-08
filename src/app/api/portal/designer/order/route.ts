@@ -8,6 +8,7 @@ import { getPortalSession } from '@/lib/portal/auth';
 import { hasTradeAccess } from '@/lib/portal/types';
 import { storeOrder, uploadOrderFiles, logDesignerEvent } from '@/lib/portal/designer-store';
 import { deliverOrderEmails, type OrderAttachment } from '@/lib/portal/order-email';
+import { contact } from '@/lib/site-config';
 
 export const dynamic = 'force-dynamic';
 
@@ -129,6 +130,15 @@ export async function POST(request: NextRequest) {
       files: attachments.map((a) => ({ filename: a.filename, path: `${ref}/${a.filename}` })),
     },
     { delivered: internal.delivered, method: internal.method },
+  );
+
+  // One always-on delivery summary line — makes "where did the e-mail go"
+  // diagnosable from the Vercel logs without guessing (no message content).
+  console.info(
+    `[designer-order] ${ref}: internal → ${contact.leadDestination} via ${internal.method}` +
+      `${internal.delivered ? '' : ' (NOT delivered)'}; confirmation → ${session.profile.email} via ${confirmation.method}` +
+      `${confirmation.delivered ? '' : ' (NOT delivered)'}; graphSender=${process.env.MS_GRAPH_SENDER || '-'}; ` +
+      `stored=${Boolean(storedId)}; attachments=${attachments.length}; links=${fileLinks.length}`,
   );
 
   void logDesignerEvent('order_placed', session.profile.email, false, {
