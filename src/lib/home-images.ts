@@ -47,7 +47,8 @@ export const homeImages = {
     commercial: '/images/home/app-retail.jpg', // retail / hotel tile
   },
 
-  // SELECTED WORK — five portrait project photos, shown in this order.
+  // SELECTED WORK — fallback photos only: each tile now uses its project's
+  // own hero image from content.ts; these show only for projects without one.
   gallery: [
     '/images/home/gallery-1.jpg',
     '/images/home/gallery-2.jpg',

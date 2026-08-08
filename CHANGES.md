@@ -1,3 +1,12 @@
+## 2026-08-08 (9) — Homepage "Selected work" photos match their titles
+
+- The five-tile strip took its TITLES from the first five projects in
+  content.ts but its PHOTOS from five static /images/home/gallery-*.jpg
+  slots — after the portfolio reshuffle every tile showed the wrong photo.
+  Gallery.tsx now uses each project's own hero (p.image) with the static
+  slot only as fallback, so the strip stays correct as the portfolio
+  changes. Verified: all five tiles render their own hero.
+
 ## 2026-08-08 (8) — Ceiling designer: server orders, cloud designs, order history
 
 - **Orders now reach STRETCH reliably** (was: mailto-only, nothing server-side):
