@@ -20,7 +20,8 @@
       "about": "Om oss",
       "faq": "FAQ",
       "clientLogin": "Kundeinnlogging",
-      "materials": "Materialer"
+      "materials": "Materialer",
+      "architects": "Arkitekter"
     },
     "cta": {
       "freeQuote": "Gratis tilbud",
@@ -73,7 +74,9 @@
     "portalTitle": "Kundeportal | STRETCH",
     "portalDescription": "Logg inn for å se STRETCH-prislisten og kontodataene dine.",
     "materialsTitle": "Materialer og tilbehør til strekktak | STRETCH",
-    "materialsDescription": "Profiler, duker og folier, belysning, tilbehør, verktøy og STRETCH Cleaner — be om tilbud per vare, og vi svarer med pris og leveringstid. Uten nettbutikk."
+    "materialsDescription": "Profiler, duker og folier, belysning, tilbehør, verktøy og STRETCH Cleaner — be om tilbud per vare, og vi svarer med pris og leveringstid. Uten nettbutikk.",
+    "architectsTitle": "For arkitekter — foreskriv strekktak | STRETCH",
+    "architectsDescription": "Gratis arkitektområde: datablad, beskrivelsestekster, CAD/BIM, målte casestudier, veiledende €/m²-budsjettbånd, arrangementer og prosjektstøtte."
   },
   "cookies": {
     "title": "Vi verner om personvernet ditt",
@@ -158,7 +161,8 @@
       "inspiration": "Inspirasjon",
       "about": "Om oss",
       "faq": "FAQ",
-      "clientPortal": "Kundeportal"
+      "clientPortal": "Kundeportal",
+      "architects": "For arkitekter"
     },
     "dealers": "Forhandlernettverk"
   },
@@ -180,8 +184,15 @@
       "demoBody": "Ingen database tilkoblet ennå — prøv portalen med disse kontoene:",
       "tabSignIn": "Logg inn",
       "tabSignup": "Opprett konto",
-      "signupSub": "Gratis konto — umiddelbar tilgang",
-      "company": "Firma (valgfritt)",
+      "signupSub": "For fagfolk — tilgang etter godkjenning",
+      "company": "Bedrift",
+      "contactName": "Kontaktperson",
+      "vat": "MVA-nummer",
+      "phone": "Telefon",
+      "country": "Land",
+      "countryOther": "Annet land",
+      "businessType": "Bedriftstype",
+      "chooseOption": "Velg…",
       "passwordHint": "Minst 8 tegn.",
       "signupSubmit": "Opprett konto",
       "signupSubmitting": "Oppretter…",
@@ -189,17 +200,25 @@
       "signupDoneBody": "Vi har sendt deg en bekreftelseslenke. Klikk på den, og logg deretter inn med e-post og passord.",
       "signupExists": "Det finnes allerede en konto med denne e-posten — logg inn.",
       "unavailableTitle": "Portalen åpner snart",
-      "unavailableBody": "Kundeportalen aktiveres nå. Kontakt oss, så setter vi opp tilgangen din."
+      "unavailableBody": "Kundeportalen aktiveres nå. Kontakt oss, så setter vi opp tilgangen din.",
+      "audienceLabel": "Jeg er",
+      "audienceClient": "Kunde",
+      "audienceArchitect": "Arkitekt",
+      "officeName": "Kontorets navn",
+      "city": "By"
     },
     "nav": {
       "label": "Kundeportal",
       "overview": "Oversikt",
+      "documents": "Dokumenter",
+      "orders": "Ordrer",
       "pricelist": "Prisliste",
       "admin": "Administrasjon",
       "signOut": "Logg ut",
       "demoBadge": "Demo",
       "allMarkets": "Alle markeder",
-      "designer": "Takdesigner"
+      "designer": "Takdesigner",
+      "budgetGuide": "Budsjettguide"
     },
     "dash": {
       "eyebrow": "Kundeportal",
@@ -226,18 +245,62 @@
       "tileTradeBody": "Montør eller forhandler? Få forhandlerpriser og takdesigneren med en forhandlerkonto.",
       "tradeCta": "Bli partner"
     },
+    "docs": {
+      "title": "Dokumenter",
+      "intro": "Tekniske datablader og montasjetegninger for STRETCH-sortimentet — direkte nedlasting, uten skjemaer.",
+      "download": "Last ned"
+    },
+    "orders": {
+      "title": "Ordrer",
+      "intro": "Himlingsordrer lagt inn fra designeren — med gjeldende status.",
+      "empty": "Ingen ordrer ennå. Tegn en himling og legg inn din første ordre fra designeren.",
+      "demoNote": "Demomodus — ordrer lagres ikke.",
+      "unavailable": "Ordrehistorikken er ikke tilgjengelig akkurat nå.",
+      "thDate": "Dato",
+      "thDealer": "Forhandler",
+      "thClient": "Kunde",
+      "thTotal": "Totalt",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Mottatt",
+        "confirmed": "Bekreftet",
+        "in_production": "I produksjon",
+        "delivered": "Levert",
+        "cancelled": "Kansellert"
+      }
+    },
     "pricelist": {
       "title": "Prisliste",
       "search": "Søk produkt eller kode…",
       "count": "{count} varer",
       "market": "Marked",
+      "type": "Type",
+      "allTypesOpt": "Alle typer",
       "allMarketsOpt": "Alle markeder",
       "currency": "Valuta",
       "print": "Skriv ut",
       "exportCsv": "CSV",
       "version": "Versjon",
       "updated": "Oppdatert",
-      "empty": "Ingen produkter samsvarer med søket."
+      "empty": "Ingen produkter samsvarer med søket.",
+      "addLabel": "Legg til i bestilling",
+      "basketLabel": "Handlekurv",
+      "cartTitle": "Bestill fra prislisten",
+      "cartEmpty": "Ingenting lagt til ennå — bruk + ved siden av en pris.",
+      "qty": "Antall",
+      "noteLabel": "Merknad (valgfritt)",
+      "notePlaceholder": "Leveringsønsker, prosjektreferanse...",
+      "totalLabel": "Totalt (ekskl. mva.)",
+      "submitOrder": "Send bestilling",
+      "submitQuote": "Be om tilbud",
+      "sendingLabel": "Sender…",
+      "closeLabel": "Lukk",
+      "sentOrderTitle": "Bestilling sendt",
+      "sentOrderMsg": "Vi har sendt deg en bekreftelse på e-post. Referanse {ref} — følg den under Bestillinger.",
+      "sentQuoteTitle": "Tilbud forespurt",
+      "sentQuoteMsg": "Vi har mottatt forespørselen din. Referanse {ref} — en spesialist svarer innen én arbeidsdag.",
+      "demoNote": "Demomodus — ingenting ble sendt eller lagret.",
+      "errorMsg": "Noe gikk galt — prøv igjen."
     },
     "admin": {
       "title": "Administrasjon",
@@ -265,7 +328,8 @@
       "colEmail": "E-post",
       "colCompany": "Firma",
       "colRole": "Rolle",
-      "colMarkets": "Markeder",
+      "colType": "Kontotype",
+      "colMarkets": "Prisgrupper",
       "colStatus": "Status",
       "roleClient": "Kunde",
       "roleAdmin": "Admin",
@@ -273,20 +337,75 @@
       "statusInactive": "Inaktiv",
       "deactivate": "Deaktiver",
       "activate": "Aktiver",
-      "allMarketsLabel": "Alle markeder",
+      "allMarketsLabel": "Alle prisgrupper",
       "tempPassword": "Midlertidig passord",
       "create": "Opprett konto",
       "creating": "Oppretter…",
       "createFailed": "Kunne ikke opprette kontoen.",
       "createdOk": "Konto opprettet for {email}.",
-      "makeB2b": "Oppgrader til B2B",
-      "makeB2c": "Sett til B2C",
-      "typeB2b": "B2B",
-      "typeB2c": "B2C"
+      "typeProducer": "Produsent/forhandler",
+      "typeInstaller": "Montør",
+      "typeB2c": "B2C",
+      "typeArchitect": "Arkitekt",
+      "filterAllTypes": "Alle typer"
     },
     "designer": {
       "eyebrow": "Takdesigner",
       "hint": "Tegn taket fra vegg- og diagonalmål, plasser skjøter og utsparinger, sjekk prisen og legg inn bestillingen. Bruk Save for å lagre en måling som fil."
+    },
+    "businessTypes": {
+      "installer": "Montør",
+      "distributor": "Distributør / forhandler",
+      "architect": "Arkitekt / designer",
+      "contractor": "Entreprenør",
+      "other": "Annet"
+    },
+    "architect": {
+      "eyebrow": "Arkitektområde",
+      "welcome": "Alt for å foreskrive",
+      "intro": "Velkommen, {office} — dokumenter, beskrivelsestekster, CAD/BIM, målte casestudier, budsjettbånd og prosjektstøtte på ett sted.",
+      "demoNote": "Demovisning — nedlastinger er slått av og ingenting logges.",
+      "toolsTitle": "Prosjektverktøy",
+      "budgetTileTitle": "Budsjettguide",
+      "budgetTileBody": "Veiledende €/m²-bånd for tidlig budsjettering — tallene ingen publiserer.",
+      "budgetTileCta": "Åpne guiden",
+      "projectTileTitle": "Registrer et prosjekt",
+      "projectTileBody": "Et aktivt prosjekt får en fast rådgiver, beskrivelsesstøtte og prioriterte prøver.",
+      "projectTileCta": "Registrer et prosjekt",
+      "samplesTileTitle": "Prøveboks",
+      "samplesTileBody": "Fysiske membran- og fargeprøver til materialbiblioteket ditt — gratis for arkitekter.",
+      "samplesTileCta": "Bestill prøveboks",
+      "libraryTitle": "Bibliotek",
+      "libraryBody": "Alle dokumenter ett klikk unna. Nedlastinger logges på kontoen din slik at vi kan støtte prosjektet proaktivt.",
+      "docsTitle": "Datablad",
+      "docsBody": "Det komplette tekniske databladbiblioteket — ingen skjemaer, ett klikk.",
+      "specTitle": "Beskrivelsestekster",
+      "specBody": "Ferdige beskrivelsestekster per system — NL, FR og EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "DWG-profildetaljer, Revit-familier og SketchUp-komponenter per system.",
+      "photosTitle": "Prosjektfoto",
+      "photosBody": "Høyoppløselige fotosett fra referanseprosjekter til kundepresentasjoner.",
+      "casesTitle": "Tekniske casestudier",
+      "casesBody": "Virkelige prosjekter med målte før/etter-verdier — tall til prosjektrapporten din.",
+      "eventsTitle": "Arrangementer",
+      "eventsBody": "Kurs, lunch & learns og showroomdager — påmelding med ett klikk.",
+      "register": "Meld deg på",
+      "advisorTitle": "Din rådgiver",
+      "advisorBody": "Én spesialist for beskrivelse, akustikkmål, budsjetter og prøver — svar innen én arbeidsdag.",
+      "advisorCta": "Book en samtale",
+      "download": "Last ned",
+      "comingSoon": "Kommer snart"
+    },
+    "budget": {
+      "eyebrow": "Arkitektområde",
+      "title": "Budsjettguide",
+      "intro": "Veiledende monterte prisbånd per system — bevisst grove, for tidlig budsjettering og mulighetsstudier.",
+      "disclaimer": "Veiledende monterte prisbånd, ekskl. mva., kun for tidlig budsjettering. Hvert prosjekt prises individuelt — registrer prosjektet ditt for et ekte tall.",
+      "includes": "Hva som er inkludert",
+      "perM2": "per m² montert, ekskl. mva.",
+      "perUnit": "per enhet montert, ekskl. mva.",
+      "ctaBody": "Trenger du et ekte tall for et aktivt prosjekt? Registrer det, så priser en fast rådgiver det riktig innen én arbeidsdag.",
+      "ctaButton": "Registrer prosjektet ditt"
     }
   },
   "home": {
@@ -1501,6 +1620,28 @@
               "sub": "Vanlige spørsmål"
             }
           ]
+        },
+        {
+          "title": "Arkitekter",
+          "desc": "Foreskriv med trygghet — dokumenter, budsjetter og støtte.",
+          "items": [
+            {
+              "title": "Arkitektområde",
+              "sub": "Alt for å foreskrive, på ett sted"
+            },
+            {
+              "title": "Datablad",
+              "sub": "Det tekniske dokumentbiblioteket"
+            },
+            {
+              "title": "Opprett konto",
+              "sub": "Gratis — tilgang rett etter e-postbekreftelse"
+            },
+            {
+              "title": "Logg inn",
+              "sub": "Rett til dashbordet ditt"
+            }
+          ]
         }
       ]
     },
@@ -1799,25 +1940,50 @@
       }
     },
     "datasheet": {
-      "title": "Last ned databladet",
-      "subtitle": "Fyll inn opplysningene dine, så starter nedlastingen med en gang. Vi bruker dem kun til å følge opp henvendelsen din.",
-      "submitLabel": "Få databladet",
-      "sentTitle": "Her er databladet ditt",
-      "sentMsg": "Nedlastingen skal starte automatisk — hvis ikke, bruk knappen nedenfor.",
+      "title": "Få databladet på e-post",
+      "subtitle": "Legg igjen opplysningene dine, så sender vi databladet rett til innboksen din. Vi bruker dem kun til å følge opp henvendelsen.",
+      "submitLabel": "Send meg databladet",
+      "sentTitle": "Sjekk innboksen",
+      "sentMsg": "Databladet er på vei til {email}. Ser du det ikke innen få minutter? Sjekk søppelposten.",
       "fields": {
         "name": {
           "label": "Navn",
           "placeholder": "For- og etternavn"
         },
+        "role": {
+          "label": "Jeg er",
+          "options": [
+            "Arkitekt",
+            "Montør",
+            "Privatkunde",
+            "Annen bedrift"
+          ]
+        },
         "email": {
           "label": "E-post",
-          "placeholder": "you@email.com"
+          "placeholder": "deg@email.com"
         },
         "phone": {
           "label": "Telefon",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "By",
+          "placeholder": "Din by"
         }
-      }
+      },
+      "confirm": {
+        "title": "Sende {title} til innboksen din?",
+        "msg": "Vi sender databladet til {email} — ett klikk, så er det på vei.",
+        "sendLabel": "Ja, send det til meg",
+        "editLabel": "Ikke deg? Endre opplysninger"
+      },
+      "fallback": {
+        "sentTitle": "Her er databladet ditt",
+        "sentMsg": "Nedlastingen bør starte automatisk — hvis ikke, bruk knappen nedenfor."
+      },
+      "rateLimited": "For mange forespørsler fra tilkoblingen din — prøv igjen om en time.",
+      "architectInvite": "Arkitekt? Vårt gratis arkitektområde har veiledende budsjettbånd, målte casestudier og alle dokumenter med ett klikk."
     },
     "trainingDates": [
       "15.–16. sep. 2026",
@@ -1832,7 +1998,72 @@
     ],
     "close": "Lukk",
     "downloadDatasheet": "Last ned datablad",
-    "select": "Velg…"
+    "select": "Velg…",
+    "project": {
+      "title": "Registrer et prosjekt",
+      "subtitle": "Fortell oss om det aktive prosjektet ditt — en fast rådgiver følger opp innen én arbeidsdag med beskrivelsesstøtte, budsjettinput og prioriterte prøver.",
+      "submitLabel": "Registrer prosjektet",
+      "sentTitle": "Prosjekt registrert",
+      "sentMsg": "Takk — en fast rådgiver kontakter deg innen én arbeidsdag.",
+      "fields": {
+        "projectName": {
+          "label": "Prosjektnavn",
+          "placeholder": "Prosjekt- eller arbeidstittel"
+        },
+        "location": {
+          "label": "Sted",
+          "placeholder": "By"
+        },
+        "buildingType": {
+          "label": "Bygningstype",
+          "options": [
+            "Kontor",
+            "Hotell & servering",
+            "Helse",
+            "Handel",
+            "Bolig",
+            "Utdanning",
+            "Annet"
+          ]
+        },
+        "system": {
+          "label": "System",
+          "options": [
+            "Polyester",
+            "PVC",
+            "Akustikk",
+            "Lys & print",
+            "Prefab",
+            "Vet ikke ennå"
+          ]
+        },
+        "stage": {
+          "label": "Fase",
+          "options": [
+            "Konsept",
+            "Prosjektering",
+            "Anbud",
+            "På byggeplass"
+          ]
+        },
+        "area": {
+          "label": "Areal",
+          "placeholder": "ca. m²"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "deg@kontor.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Notater",
+          "placeholder": "Takhøyder, akustikkmål, frister..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -2141,15 +2372,12 @@
       "mark-with-a-k": "Belgia · Lydstudio",
       "notary-ampe-anthony": "Kruibeke · Akustisk kontor",
       "bnp-paribas-fortis": "Brussel · Bankhovedkontor",
+      "van-der-valk-boost-wellness": "Beveren · Van der Valk-hotellets velvære og spa",
       "van-der-valk-beveren": "Beveren · Hotellets eventsal",
       "johnson-and-johnson": "Limerick, IE · FoU-anlegg for farmasi",
       "polette-eyewear": "Antwerpen · Konseptbutikk",
       "citizenm-hotel": "USA & Europa · Prefabrikkerte baderomsmoduler",
-      "london-chapel": "London, UK · Baklyst himling",
-      "private-villa-knokke": "Knokke · Åpen stue",
-      "home-cinema-ghent": "Gent · Stjernehimmel + akustikk",
-      "city-penthouse-antwerp": "Antwerpen · Stue",
-      "wellness-spa-bruges": "Brugge · Spabad",
+      "london-chapel": "London, UK · Kapellombygging",
       "rue-perree-paris": "Paris · Baklyst gallerihimling",
       "vier-emmershof-lokeren": "Lokeren · Skogsbolig",
       "vp-193": "Øst-Flandern · Privatbolig",
@@ -2313,6 +2541,8 @@
     "viewProduct": "Se produktet",
     "eyebrowTech": "Teknisk",
     "datasheetCta": "Be om det fullstendige databladet",
+    "downloadsTitle": "Last ned datablader",
+    "allDatasheets": "Alle datablader",
     "samplesCta": "Be om fysiske prøver",
     "copyHint": "Marker teksten over for å kopiere den inn i beskrivelsesdokumentet ditt.",
     "ctaTitle": "Trenger du hjelp med beskrivelsesteksten?",
@@ -2617,6 +2847,82 @@
         }
       ]
     },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "Totalrenoveringen av velværeavdelingen på Van der Valk Beveren — 700 m² akustiske, printede og opplyste strekkhimlinger i et design av Maison Max.",
+      "hook": "Tjue år etter at den første membranen kom opp, ba Van der Valk Beveren oss tilbake — denne gangen for å krone en helt ny velværeavdeling.",
+      "description": [
+        "Da Van der Valk Hotel Beveren bestemte seg for å renovere hele velvære- og bassengområdet — gjenåpnet som Boost Wellness — var valget av himlingspartner raskt tatt. STRETCH-himlinger henger allerede i andre deler av hotellet, og samarbeidet strekker seg flere år tilbake. Prosjektet sluttet til og med en sirkel i familien: Den første jobben var å demontere strekkhimlingen som Benjamin Nicasens fra Plafondlux BV — far til Michael Nicasens i STRETCH — hadde montert der tjue år tidligere.",
+        "Da byggherren hadde strippet velvære- og bassengområdet ned til råbygget, jobbet vi hånd i hånd med interiørstudioet Maison Max fra Temse, som formet hele designet og helhetsuttrykket. Hotelleier Tim og kona Paulina var involvert fra start til slutt — Paulina kom selv med sterke designideer, som Maison Max vevde inn i planene, og sammen valgte de materialene til hver eneste del av prosjektet. For himlingene betydde det et varmt, glatt, akustisk design med flere nivåer over hodet, slik at ingen rom oppleves som flate eller kjedelige.",
+        "Hver sone fikk membranen som passer den. I de helvåte områdene — basseng, dusjer og spa — spente vi opp strekkhimlinger i PVC, det sterkeste valget der fuktigheten er konstant. Garderobene, massasjerommene og neglstudioet fikk strekkhimlinger i polyester (tekstil), der den varme tekstilstrukturen gir en ultramatt finish.",
+        "Spaet er selve prakteksemplaret. Paulina ønsket seg en naturlig, organisk buet vegg — og himlingen måtte følge den komplekse, flytende formen. I den printede, bruntonede himlingen ba hun også om et sirkulært overlys, ikke med en rett kant, men med en myk, buet en. Prefabrikkerte konstruksjonselementer i aluminium danner lysboksen og høydeforskjellene, og resultatet er en av de mest komplekse — og vakreste — installasjonene vi har levert.",
+        "Over 700 m² lå fokuset på holdbarhet, akustikk og komplekst design: akustiske membraner med PET-absorbenter bak, integrerte LED-spotter, inspeksjonsluker, høyttalere og hulkiler i aluminium — hver tekniske detalj oppløst i én varm, sømløs flate. Hele renoveringen tok seks måneder fra riving til gjenåpning."
+      ],
+      "highlights": [
+        "700 m² strekkhimlinger gjennom hele velværeavdelingen",
+        "Printet himling som følger en organisk buet vegg",
+        "Sirkulært overlys med en flytende buet kant",
+        "Varmt, akustisk himlingsdesign i flere nivåer",
+        "PVC i våtsonene, ultramatt polyester i de tørre",
+        "Andregenerasjonsprosjekt — forrige himling kom opp for 20 år siden"
+      ],
+      "materials": [
+        "Akustisk STRETCH-himling med PET-absorbent bak",
+        "Printet STRETCH-himling (spa, skreddersydd print i bruntoner)",
+        "Opplyst STRETCH-himling (lysboks for overlys)",
+        "PVC-membraner i alle våtsoner",
+        "Ultramatte polyestermembraner (garderober, massasjerom og neglstudio)",
+        "Prefabrikkerte konstruksjonselementer i aluminium — lysboks og nivåforskjeller",
+        "Integrerte LED-spotter",
+        "Inspeksjonsluker",
+        "Integrerte høyttalere",
+        "Hulkiler i aluminium"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Velvære",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Interiørdesign",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Areal",
+          "value": "700 m²"
+        },
+        {
+          "label": "År",
+          "value": "2026"
+        },
+        {
+          "label": "Totalrenovering",
+          "value": "6 måneder"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hvorfor PVC i noen rom og polyester i andre?",
+          "a": "Membranen følger forholdene i rommet. I de permanent våte sonene — basseng, dusjer og spa — er PVC det sterkeste valget: Den er helt upåvirket av fuktighet og tørkes enkelt ren. I garderobene, massasjerommene og neglstudioet spente vi i stedet opp polyester: en tekstilmembran der den vevde strukturen gir en varmere, ultramatt finish."
+        },
+        {
+          "q": "Hvordan følger en strekkhimling en buet, organisk vegg?",
+          "a": "Den buede veggen ble oversatt til prefabrikkerte konstruksjonselementer i aluminium som bærer profilene, lysboksen og høydeforskjellene. Membranen spennes deretter opp i denne rammen, slik at den følger den organiske formen presist — inkludert det sirkulære overlyset med sin myke, buede kant."
+        },
+        {
+          "q": "Hvordan hjelper himlingene på akustikken?",
+          "a": "Velværeavdelingen kombinerer akustiske strekkmembraner med PET-absorbentplater bak: Lyden passerer gjennom overflaten og fanges opp i stedet for å reflekteres. Sammen med himlingsdesignet i flere nivåer holder dette store rom med harde flater rolige og dempede — akkurat det et spa trenger."
+        },
+        {
+          "q": "Hvor lenge varer en strekkhimling?",
+          "a": "Dette prosjektet er sitt eget svar: Den forrige strekkhimlingen her kom opp for tjue år siden og måtte bare vike fordi hotellet ønsket en helt ny velværeavdeling. Regn med flere tiår med drift — og når designet endres, byttes bare membranen, ikke konstruksjonen."
+        }
+      ]
+    },
     "van-der-valk-beveren": {
       "title": "Van der Valk",
       "summary": "Maksimal lydabsorpsjon for et hotells eventsal — med nesten ingen høyde å gå på.",
@@ -2800,20 +3106,24 @@
       ]
     },
     "london-chapel": {
-      "title": "Kapell i London",
-      "summary": "En baklyst strekkhimling over et restaurert kapellrom.",
-      "hook": "Et restaurert kapell badet i mykt, jevnt lys fra én eneste lysende himling.",
+      "title": "London Chapel",
+      "summary": "Akustiske tekstilvegger og et tekstilkledd hvelvet tak for et kapell omgjort til et London-hjem.",
+      "hook": "Et kapell som ble familiehjem — kledd rom for rom i oppspent akustisk tekstil.",
       "description": [
-        "En gjennomskinnelig STRETCH-himling gjør hele takflaten om til én myk, jevn lyskilde: det restaurerte interiøret bades i blendfritt lys, mens LED-feltet holdes helt skjult."
+        "Ved denne kapellombyggingen i London fullførte vår forhandler Upholster London interiørene med oppspent STRETCH-tekstil: akustiske tekstilvegger løper gjennom haller, reposer og trappeoppganger, og selv det hvelvede taket er kledd med tekstil mellom de originale ribbene.",
+        "Tekstiloverflatene demper akustikken i de høye, harde rommene og gir hvert rom en varm, polstret dybde som maling aldri kan nå — mens originale detaljer som de blyinnfattede vinduene står urørt, innrammet av presise tekstilpaneler. En hjemmekino med tekstilvegger fullfører hjemmet."
       ],
       "highlights": [
-        "Hele himlingen som lyskilde",
-        "Blendfri, jevn belysning",
-        "LED-felt helt skjult"
+        "Tekstilkledd hvelvet kapelltak",
+        "Akustiske tekstilvegger i hele hjemmet",
+        "Hjemmekino med tekstilvegger",
+        "Originale blyinnfattede vinduer, presist innrammet"
       ],
       "materials": [
-        "Gjennomskinnelig STRETCH-himling",
-        "LED-baklysfelt"
+        "Akustiske STRETCH-tekstilvegger",
+        "Tekstilkledd hvelvet tak",
+        "Hjemmekino med tekstilvegger",
+        "Spesialprofiler rundt buer og vinduer"
       ],
       "facts": [
         {
@@ -2822,116 +3132,11 @@
         },
         {
           "label": "Rom",
-          "value": "Restaurert kapell"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Privat villa",
-      "summary": "En sømløs, matt himling for en kystvilla med åpen planløsning.",
-      "hook": "En sømløs himling, glatt som perfekt puss, for et kysthjem med åpen planløsning.",
-      "description": [
-        "I villaens åpne oppholdsrom fremstår en svært matt STRETCH-himling i polyester fra vegg til vegg som feilfri puss – ren og moderne, uten sprekkene og skyggelinjene til en tradisjonell himling."
-      ],
-      "highlights": [
-        "Sømløs finish fra vegg til vegg",
-        "Ingen sprekker eller skyggelinjer",
-        "Svært matt, pusslignende uttrykk"
-      ],
-      "materials": [
-        "STRETCH-himling i polyester (svært matt)",
-        "Kantprofiler for oppspenning"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Knokke, Belgia"
+          "value": "Kapell omgjort til privat bolig"
         },
         {
-          "label": "Rom",
-          "value": "Åpen planløsning"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Hjemmekino",
-      "summary": "En himling med stjernehimmel og akustisk bakside for en hjemmekino.",
-      "hook": "En privat kino under en glitrende nattehimmel, stemt for filmlyd.",
-      "description": [
-        "Hundrevis av fiberoptiske punkter skaper en glitrende nattehimmel over setene, mens en akustisk bakside holder rommet under kontroll for filmlyden – stemning og ytelse forent i én himling."
-      ],
-      "highlights": [
-        "Fiberoptisk stjernehimmel",
-        "Akustisk bakside for filmlyd",
-        "Stemning og ytelse i én himling"
-      ],
-      "materials": [
-        "STRETCH-himling med stjernehimmel",
-        "Fiberoptisk stjernefelt",
-        "Akustisk absorberende bakside"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Gent, Belgia"
-        },
-        {
-          "label": "Rom",
-          "value": "Hjemmekino"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Toppleilighet i byen",
-      "summary": "En feilfri designhimling for en toppleilighet i byen.",
-      "hook": "En minimalistisk, helt plan designhimling for en toppleilighet i byen.",
-      "description": [
-        "Oppholdsrommet i toppleiligheten bruker en sømløs STRETCH-himling med integrert belysning, slik at uttrykket forblir minimalistisk og flaten perfekt gjennom hele den åpne planløsningen."
-      ],
-      "highlights": [
-        "Sømløs designhimling",
-        "Integrert belysning",
-        "Minimalistisk, feilfri finish"
-      ],
-      "materials": [
-        "STRETCH-himling i polyester",
-        "Integrert belysning"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Antwerpen, Belgia"
-        },
-        {
-          "label": "Rom",
-          "value": "Stue i toppleilighet"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Velværespa",
-      "summary": "En fukttålig, baklyst himling for et spa.",
-      "hook": "En fukttålig himling med mykt lysskjær for et velværerom.",
-      "description": [
-        "Spaet trengte en himling som tåler fuktighet og skaper en rolig stemning. En gjennomskinnelig, baklyst STRETCH-himling lyser mykt over velværeområdet og tørkes enkelt ren – upåvirket av damp og fukt."
-      ],
-      "highlights": [
-        "Tåler fuktighet og damp",
-        "Mykt, jevnt baklys",
-        "Tørkes enkelt ren"
-      ],
-      "materials": [
-        "Gjennomskinnelig STRETCH-himling i PVC",
-        "LED-baklysfelt"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Brugge, Belgia"
-        },
-        {
-          "label": "Rom",
-          "value": "Spa / velvære"
+          "label": "STRETCH-forhandler",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3726,20 +3931,20 @@
       },
       "spanplafond-prijs": {
         "title": "Hva koster et strekktak? En ærlig prisguide",
-        "excerpt": "Prisen på et strekktak ligger som regel mellom €70 og €200 per m² ferdig montert, avhengig av taktype og rom. Her får du forklaringen bak prisspennet, veiledende intervaller per taktype – og veien til et konkret tall for prosjektet ditt.",
+        "excerpt": "Prisen på et strekktak ligger som regel mellom 800 kr og 2 300 kr per m² ferdig montert, avhengig av taktype og rom. Her får du forklaringen bak prisspennet, veiledende intervaller per taktype – og veien til et konkret tall for prosjektet ditt.",
         "body": [
           {
             "heading": "Det korte svaret",
             "paragraphs": [
-              "For et profesjonelt montert strekktak bør du regne med omtrent €70 til €200 per kvadratmeter ekskl. mva, montering inkludert. Spennet er reelt: et enkelt, matt hvitt tak i en rektangulær stue ligger nederst i intervallet, mens et baklyst baderomstak med integrert belysning ligger øverst.",
+              "For et profesjonelt montert strekktak bør du regne med omtrent 800 kr til 2 300 kr per kvadratmeter ekskl. mva, montering inkludert. Spennet er reelt: et enkelt, matt hvitt tak i en rektangulær stue ligger nederst i intervallet, mens et baklyst baderomstak med integrert belysning ligger øverst.",
               "Alle tall i denne guiden er veiledende intervaller – ikke et tilbud. Duken produseres på mål til akkurat ditt rom, så det ærlige, endelige tallet kommer alltid fra et gratis og uforpliktende tilbud."
             ]
           },
           {
             "heading": "Veiledende priser per taktype",
             "paragraphs": [
-              "Et enkelt, ensfarget tak i PVC eller polyester er inngangsnivået på rundt €70 til €90 per m² – den raske, sømløse oppgraderingen for stuer, soverom og kontorer. Et trykket design legger til motiv og forberedelse og lander på rundt €90 til €100 per m².",
-              "Et akustisk tak – mikroperforert duk med absorpsjon bak – ligger rundt €100 til €150 per m² avhengig av oppbygningen. Et translusent, baklyst tak med LED-felter bak duken ligger rundt €130 til €160 per m² inkludert lysflaten. Baderomsprosjekter som kombinerer fuktbestandig duk med integrert belysning, ender typisk på €150 til €200 per m².",
+              "Et enkelt, ensfarget tak i PVC eller polyester er inngangsnivået på rundt 800 kr til 1 050 kr per m² – den raske, sømløse oppgraderingen for stuer, soverom og kontorer. Et trykket design legger til motiv og forberedelse og lander på rundt 1 050 kr til 1 200 kr per m².",
+              "Et akustisk tak – mikroperforert duk med absorpsjon bak – ligger rundt 1 200 kr til 1 750 kr per m² avhengig av oppbygningen. Et translusent, baklyst tak med LED-felter bak duken ligger rundt 1 500 kr til 1 850 kr per m² inkludert lysflaten. Baderomsprosjekter som kombinerer fuktbestandig duk med integrert belysning, ender typisk på 1 750 kr til 2 300 kr per m².",
               "Spesialarbeid – stjernehimmel, trykte baklyste design, prefabrikkerte elementer – utformes per prosjekt og prises per design."
             ]
           },
@@ -3837,7 +4042,6 @@
       "Bad",
       "Kontor",
       "Næring",
-      "Hjemmekino",
       "Lys & print"
     ],
     "browse": [
@@ -4220,9 +4424,9 @@
     "crumb": "Datablader",
     "titleA": "Spesifikasjoner &",
     "titleB": "datablader",
-    "lead": "Last ned teknisk dokumentasjon for hvert STRETCH-system — spesifikasjoner, brannklasser, akustiske klasseverdier og garantidetaljer. Fyll inn opplysningene dine én gang per nedlasting, så starter filen med en gang.",
+    "lead": "Last ned teknisk dokumentasjon for hvert STRETCH-system — spesifikasjoner, brannklasser, akustikkverdier og garanti. Legg igjen opplysningene én gang, så lander databladet i innboksen som nedlastingslenke.",
     "updated": "Oppdatert {date}",
-    "privacyNote": "Vi ber om navn, e-post og telefonnummer slik at en spesialist kan svare på eventuelle tekniske spørsmål. Opplysningene dine behandles i henhold til vår",
+    "privacyNote": "Vi ber om navn, rolle, e-post, telefon og by slik at en spesialist kan svare på tekniske spørsmål. Opplysningene behandles i henhold til vår",
     "privacyLink": "personvernerklæring"
   },
   "samplesPage": {
@@ -4487,5 +4691,116 @@
     "ovRecruitBody": "Vi leverer og monterer direkte fra vår produksjon mens nettverket vokser — og montører som sikrer seg en ledig region, får regionens henvendelser, forhandlerpriser og opplæring.",
     "regionLuxembourg": "Luxembourg (Storhertugdømmet)",
     "regionAustria": "Østerrike"
+  },
+  "datasheetEmail": {
+    "subject": "Ditt STRETCH-datablad — {title}",
+    "greeting": "Hei {name},",
+    "intro": "Her er databladet du ba om — {title}.",
+    "button": "Last ned databladet",
+    "linkFallback": "Eller kopier denne lenken inn i nettleseren:",
+    "validity": "Lenken virker i {days} dager.",
+    "footerCta": "Jobber du med et prosjekt? Bare svar på denne e-posten eller book en samtale.",
+    "signoff": "STRETCH-teamet",
+    "architectInvite": "Jobber du som arkitekt? Vårt gratis arkitektområde gir deg veiledende €/m²-budsjettbånd, målte casestudier og alle datablad, beskrivelsestekster og CAD-filer med ett klikk:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Denne nedlastingslenken er utløpt",
+    "expiredBody": "Nedlastingslenker er gyldige i 14 dager. Be om en ny på få sekunder — vi sender den med en gang.",
+    "requestNew": "Be om ny lenke"
+  },
+  "architectsPage": {
+    "crumb": "Arkitekter",
+    "eyebrow": "For arkitekter",
+    "titleA": "Foreskriv strekktak",
+    "titleB": "med trygghet",
+    "lead": "Én gratis konto med alt du trenger for å foreskrive: dokumenter, beskrivelsestekster, CAD/BIM, målte casestudier, veiledende budsjettbånd, arrangementer og en fast rådgiver.",
+    "ctaCreate": "Opprett din gratis konto",
+    "ctaSignIn": "Logg inn",
+    "values": [
+      {
+        "title": "Dokumenter med ett klikk",
+        "body": "Alle datablad uten skjemaer — nedlastinger knyttet til kontoen din."
+      },
+      {
+        "title": "Beskrivelsestekster",
+        "body": "Ferdige tekster per system — NL, FR og EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "DWG-profildetaljer, Revit-familier og SketchUp-komponenter."
+      },
+      {
+        "title": "Prosjektfoto",
+        "body": "Høyoppløselige referansefoto til kundepresentasjoner."
+      },
+      {
+        "title": "Målte casestudier",
+        "body": "Virkelige prosjekter med målte før/etter-verdier."
+      },
+      {
+        "title": "Budsjettbånd",
+        "body": "Veiledende €/m²-intervaller for tidlig budsjettering."
+      },
+      {
+        "title": "Arrangementer & lunch & learns",
+        "body": "Kurs og økter hos oss eller på kontoret ditt."
+      },
+      {
+        "title": "Prosjektstøtte",
+        "body": "Registrer et prosjekt: fast rådgiver + prioritert prøveboks."
+      }
+    ],
+    "howTitle": "Slik fungerer det",
+    "steps": [
+      {
+        "title": "Opprett kontoen din",
+        "body": "Kontorets navn, by og dine opplysninger — to minutter."
+      },
+      {
+        "title": "Bekreft e-posten din",
+        "body": "Ett klikk på bekreftelseslenken."
+      },
+      {
+        "title": "Alt låst opp",
+        "body": "Dokumenter, budsjetter, casestudier og støtte — umiddelbart."
+      }
+    ],
+    "casesTitle": "Målt, ikke påstått",
+    "casesNote": "Full studie inne i arkitektområdet.",
+    "cases": [
+      {
+        "title": "Akustisk renovering av restaurant",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 før → etter"
+      },
+      {
+        "title": "Lystak på kontor",
+        "metric": "540 lux",
+        "metricLabel": "snitt i arbeidsplan, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Kommende arrangementer",
+    "eventsNote": "Alle datoer og påmelding med ett klikk inne i arkitektområdet.",
+    "faqTitle": "Ofte stilte spørsmål",
+    "faqs": [
+      {
+        "q": "Er arkitektområdet virkelig gratis?",
+        "a": "Ja — det finnes for å gjøre det så enkelt som mulig å foreskrive et STRETCH-system. Ingen gebyrer, ingen forpliktelser."
+      },
+      {
+        "q": "Publiserer dere priser?",
+        "a": "Veiledende €/m²-budsjettbånd ligger inne i området for tidlig budsjettering. Prosjekter prises alltid individuelt — registrer et prosjekt for et ekte tall."
+      },
+      {
+        "q": "Støtter dere et pågående anbud?",
+        "a": "Ja. Registrer prosjektet, så hjelper en fast rådgiver med tekster, detaljer og akustikkmål — vanligvis innen én arbeidsdag."
+      },
+      {
+        "q": "Leverer dere utenfor Benelux?",
+        "a": "Ja — vi produserer i Belgia og monterer med sertifiserte partnere i hele Europa."
+      }
+    ],
+    "ctaTitle": "Alt for å foreskrive, på ett sted",
+    "ctaBody": "Opprett din gratis konto — hvert dokument, budsjettbånd og casestudie er ett klikk unna, pluss en fast rådgiver for prosjektene dine."
   }
 }

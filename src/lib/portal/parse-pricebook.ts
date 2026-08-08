@@ -1,8 +1,8 @@
 // ============================================================================
 // CLIENT PORTAL — Alto Pricing System workbook parser
 //
-// Reads ONLY the client-safe columns of the "PriceBook" sheet (Category, Code,
-// Product, Unit, Market, Price EUR, Price PLN) plus the EUR→PLN rate from
+// Reads ONLY the client-safe columns of the "PriceBook" sheet (Type, Category,
+// Code, Product, Unit, Market, Price EUR, Price PLN) plus the EUR→PLN rate from
 // "Settings". Internal columns (Margin %, Cost EUR, …) are deliberately never
 // read: they exist in the Excel only and must never reach the database.
 //
@@ -85,6 +85,7 @@ export function parsePricebookWorkbook(buffer: ArrayBuffer | Buffer): ParsedPric
   }
   const header = grid[headerIdx].map((c) => asText(c)?.toLowerCase() ?? '');
   const col = (name: string) => header.indexOf(name.toLowerCase());
+  const cType = col('Type');
   const cCat = col('Category');
   const cCode = col('Code');
   const cProd = col('Product');
@@ -125,6 +126,7 @@ export function parsePricebookWorkbook(buffer: ArrayBuffer | Buffer): ParsedPric
     sort += 1;
 
     rows.push({
+      type: cType === -1 ? null : asText(r[cType]),
       category,
       code: cCode === -1 ? null : asText(r[cCode]),
       product,

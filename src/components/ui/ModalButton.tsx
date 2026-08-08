@@ -13,6 +13,8 @@ type ModalButtonProps = {
   type: ModalType;
   source: string;
   product?: string;
+  /** Pre-filled default values for matching form fields (still editable). */
+  prefill?: Record<string, string>;
   children: ReactNode;
   className?: string;
   style?: React.CSSProperties;
@@ -24,6 +26,7 @@ export function ModalButton({
   type,
   source,
   product,
+  prefill,
   children,
   className = 'btn btn--primary',
   style,
@@ -37,7 +40,7 @@ export function ModalButton({
       style={style}
       onClick={() => {
         if (trackQuote) analytics.quoteClick(product, source);
-        open(type, { source, product });
+        open(type, { source, product, prefill });
       }}
     >
       {children}

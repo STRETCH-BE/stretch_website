@@ -6,7 +6,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { DEMO_USERS, getAdminSession } from '@/lib/portal/auth';
 import { createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
-import { PRICE_MARKETS } from '@/lib/portal/types';
+import { normalizeAccountType, PRICE_MARKETS } from '@/lib/portal/types';
 
 export const runtime = 'nodejs';
 
@@ -34,21 +34,32 @@ export async function GET() {
       { status: 500 },
     );
   }
-  const { data, error } = await service
-    .from('portal_users')
-    .select('id, email, company, role, account_type, markets, all_markets, active, created_at')
-    .order('created_at', { ascending: true });
+  const FULL: string =
+    'id, email, company, role, account_type, markets, all_markets, active, created_at, contact_name, vat, phone, country, business_type, office, city';
+  const CORE: string = 'id, email, company, role, account_type, markets, all_markets, active, created_at';
+  // B2B columns are a later addition — un-migrated databases fall back.
+  let { data, error } = await service.from('portal_users').select(FULL).order('created_at', { ascending: true });
+  if (error) {
+    ({ data, error } = await service.from('portal_users').select(CORE).order('created_at', { ascending: true }));
+  }
   if (error) return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
 
-  const users = (data ?? []).map((u) => ({
+  const users = ((data ?? []) as unknown as Record<string, unknown>[]).map((u) => ({
     id: u.id,
     email: u.email,
     company: u.company,
     role: u.role,
-    accountType: u.account_type === 'b2c' ? 'b2c' : 'b2b',
-    markets: u.markets ?? [],
+    accountType: normalizeAccountType(u.account_type),
+    markets: (u.markets as string[] | null) ?? [],
     allMarkets: Boolean(u.all_markets),
     active: Boolean(u.active),
+    contactName: (u.contact_name as string | null) ?? null,
+    vat: (u.vat as string | null) ?? null,
+    phone: (u.phone as string | null) ?? null,
+    country: (u.country as string | null) ?? null,
+    businessType: (u.business_type as string | null) ?? null,
+    office: (u.office as string | null) ?? null,
+    city: (u.city as string | null) ?? null,
   }));
   return NextResponse.json({ ok: true, users, persisted: true });
 }
@@ -62,7 +73,7 @@ export async function POST(req: NextRequest) {
   const password = String(body?.password ?? '');
   const company = String(body?.company ?? '').trim() || null;
   const role = body?.role === 'admin' ? 'admin' : 'client';
-  const accountType = body?.accountType === 'b2c' ? 'b2c' : 'b2b';
+  const accountType = normalizeAccountType(body?.accountType);
   const allMarkets = Boolean(body?.allMarkets) || role === 'admin';
   const markets = sanitizeMarkets(body?.markets);
 
@@ -72,13 +83,6 @@ export async function POST(req: NextRequest) {
       { status: 400 },
     );
   }
-  if (accountType === 'b2b' && role !== 'admin' && !allMarkets && markets.length === 0) {
-    return NextResponse.json(
-      { ok: false, error: 'Select at least one market (or grant all markets).' },
-      { status: 400 },
-    );
-  }
-
   if (!isSupabaseConfigured() || session.demo) {
     return NextResponse.json({ ok: true, persisted: false });
   }
@@ -144,11 +148,18 @@ export async function PATCH(req: NextRequest) {
   if (typeof body.active === 'boolean') update.active = body.active;
   if (typeof body.company === 'string') update.company = body.company.trim() || null;
   if (body.role === 'admin' || body.role === 'client') update.role = body.role;
-  // Upgrade a self-registered B2C account to B2B (or back) — markets are
-  // assigned separately; a b2b account without markets simply sees no rows yet.
-  if (body.accountType === 'b2c' || body.accountType === 'b2b') update.account_type = body.accountType;
+  // Move an account between tiers — markets are assigned separately; a trade
+  // account without markets simply sees no rows yet.
+  if (typeof body.accountType === 'string') update.account_type = normalizeAccountType(body.accountType);
   if (Array.isArray(body.markets)) update.markets = sanitizeMarkets(body.markets);
   if (typeof body.allMarkets === 'boolean') update.all_markets = body.allMarkets;
+  if (typeof body.contactName === 'string') update.contact_name = body.contactName.trim().slice(0, 120) || null;
+  if (typeof body.vat === 'string') update.vat = body.vat.trim().slice(0, 32) || null;
+  if (typeof body.phone === 'string') update.phone = body.phone.trim().slice(0, 32) || null;
+  if (typeof body.country === 'string') update.country = body.country.trim().toUpperCase().slice(0, 8) || null;
+  if (typeof body.businessType === 'string') update.business_type = body.businessType.trim().toLowerCase().slice(0, 20) || null;
+  if (typeof body.office === 'string') update.office = body.office.trim().slice(0, 120) || null;
+  if (typeof body.city === 'string') update.city = body.city.trim().slice(0, 80) || null;
 
   if (Object.keys(update).length > 0) {
     const { error } = await service.from('portal_users').update(update).eq('id', id);

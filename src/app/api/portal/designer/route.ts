@@ -18,7 +18,16 @@ export async function GET(request: NextRequest) {
   if (!hasTradeAccess(session.profile)) {
     return NextResponse.redirect(new URL('/portal', request.url));
   }
-  const html = Buffer.from(DESIGNER_HTML_B64, 'base64').toString('utf8');
+  // Inject the signed-in profile so the PortalBridge can label the order UI
+  // ("Ordering as …") without an extra round-trip. Never include role/markets.
+  const portalUser = JSON.stringify({
+    email: session.profile.email,
+    company: session.profile.company,
+    demo: session.demo,
+  }).replace(/</g, '\\u003c');
+  const html = Buffer.from(DESIGNER_HTML_B64, 'base64')
+    .toString('utf8')
+    .replace('</head>', `<script>window.PORTAL_USER=${portalUser};</script></head>`);
   return new NextResponse(html, {
     headers: {
       'Content-Type': 'text/html; charset=utf-8',

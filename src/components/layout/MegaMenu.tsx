@@ -13,6 +13,7 @@ import {
   Home,
   Circle,
   Square,
+  DraftingCompass,
   type LucideIcon,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -113,6 +114,17 @@ const TECHNICAL_SKELETON: Skeleton = [
       { href: '/technical/pvc/installation' },
       { href: '/technical/pvc/specification' },
       { href: '/technical/pvc/faq' },
+    ],
+  },
+  // Architects — append-only (i18n keys are index-based: this is cats.2).
+  {
+    icon: DraftingCompass,
+    href: '/architects',
+    items: [
+      { href: '/architects' },
+      { href: '/datasheets' },
+      { href: '/portal/login?signup=architect' },
+      { href: '/portal' },
     ],
   },
 ];

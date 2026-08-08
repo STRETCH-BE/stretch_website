@@ -20,7 +20,8 @@
       "about": "Sobre nosotros",
       "faq": "FAQ",
       "clientLogin": "Acceso clientes",
-      "materials": "Materiales"
+      "materials": "Materiales",
+      "architects": "Arquitectos"
     },
     "cta": {
       "freeQuote": "Presupuesto gratis",
@@ -73,7 +74,9 @@
     "portalTitle": "Portal de clientes | STRETCH",
     "portalDescription": "Inicie sesión para consultar su tarifa profesional STRETCH y los datos de su cuenta.",
     "materialsTitle": "Materiales y suministros para techo tensado | STRETCH",
-    "materialsDescription": "Perfiles, telas y láminas, iluminación, accesorios, herramientas y STRETCH Cleaner — pida presupuesto por artículo y respondemos con precio y plazo. Sin tienda online."
+    "materialsDescription": "Perfiles, telas y láminas, iluminación, accesorios, herramientas y STRETCH Cleaner — pida presupuesto por artículo y respondemos con precio y plazo. Sin tienda online.",
+    "architectsTitle": "Para arquitectos — especificar techos tensados | STRETCH",
+    "architectsDescription": "Área de arquitectos gratuita: fichas técnicas, textos de especificación, CAD/BIM, casos medidos, rangos €/m² indicativos, eventos y apoyo de proyecto."
   },
   "cookies": {
     "title": "Valoramos tu privacidad",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiración",
       "about": "Sobre nosotros",
       "faq": "FAQ",
-      "clientPortal": "Portal de clientes"
+      "clientPortal": "Portal de clientes",
+      "architects": "Para arquitectos"
     },
     "dealers": "Red de distribuidores"
   },
@@ -180,8 +184,15 @@
       "demoBody": "Aún sin base de datos conectada — pruebe el portal con estas cuentas:",
       "tabSignIn": "Iniciar sesión",
       "tabSignup": "Crear cuenta",
-      "signupSub": "Cuenta gratuita — acceso inmediato",
-      "company": "Empresa (opcional)",
+      "signupSub": "Para profesionales — acceso tras revisión",
+      "company": "Empresa",
+      "contactName": "Persona de contacto",
+      "vat": "Número de IVA",
+      "phone": "Teléfono",
+      "country": "País",
+      "countryOther": "Otro país",
+      "businessType": "Tipo de empresa",
+      "chooseOption": "Seleccionar…",
       "passwordHint": "Mínimo 8 caracteres.",
       "signupSubmit": "Crear cuenta",
       "signupSubmitting": "Creando…",
@@ -189,17 +200,25 @@
       "signupDoneBody": "Le hemos enviado un enlace de confirmación. Haga clic y luego inicie sesión con su correo y contraseña.",
       "signupExists": "Ya existe una cuenta con este correo: inicie sesión.",
       "unavailableTitle": "Portal disponible pronto",
-      "unavailableBody": "El portal de clientes se está activando. Contáctenos y configuraremos su acceso."
+      "unavailableBody": "El portal de clientes se está activando. Contáctenos y configuraremos su acceso.",
+      "audienceLabel": "Soy",
+      "audienceClient": "Cliente",
+      "audienceArchitect": "Arquitecto",
+      "officeName": "Nombre del estudio",
+      "city": "Ciudad"
     },
     "nav": {
       "label": "Portal de clientes",
       "overview": "Resumen",
+      "documents": "Documentos",
+      "orders": "Pedidos",
       "pricelist": "Tarifa",
       "admin": "Administración",
       "signOut": "Salir",
       "demoBadge": "Demo",
       "allMarkets": "Todos los mercados",
-      "designer": "Diseñador de techos"
+      "designer": "Diseñador de techos",
+      "budgetGuide": "Guía de presupuesto"
     },
     "dash": {
       "eyebrow": "Portal de clientes",
@@ -226,18 +245,62 @@
       "tileTradeBody": "¿Instalador o distribuidor? Obtenga precios de distribuidor y el diseñador de techos con una cuenta profesional.",
       "tradeCta": "Hágase partner"
     },
+    "docs": {
+      "title": "Documentos",
+      "intro": "Fichas técnicas y planos de instalación de la gama STRETCH — descarga directa, sin formularios.",
+      "download": "Descargar"
+    },
+    "orders": {
+      "title": "Pedidos",
+      "intro": "Pedidos de techos realizados desde el diseñador — con su estado actual.",
+      "empty": "Aún no hay pedidos. Diseña un techo y realiza tu primer pedido desde el diseñador.",
+      "demoNote": "Modo demo — los pedidos no se guardan.",
+      "unavailable": "El historial de pedidos no está disponible en este momento.",
+      "thDate": "Fecha",
+      "thDealer": "Distribuidor",
+      "thClient": "Cliente",
+      "thTotal": "Total",
+      "thStatus": "Estado",
+      "statuses": {
+        "received": "Recibido",
+        "confirmed": "Confirmado",
+        "in_production": "En producción",
+        "delivered": "Entregado",
+        "cancelled": "Cancelado"
+      }
+    },
     "pricelist": {
       "title": "Tarifa",
       "search": "Buscar producto o código…",
       "count": "{count} artículos",
       "market": "Mercado",
+      "type": "Tipo",
+      "allTypesOpt": "Todos los tipos",
       "allMarketsOpt": "Todos los mercados",
       "currency": "Moneda",
       "print": "Imprimir",
       "exportCsv": "CSV",
       "version": "Versión",
       "updated": "Actualizado",
-      "empty": "Ningún producto coincide con su búsqueda."
+      "empty": "Ningún producto coincide con su búsqueda.",
+      "addLabel": "Añadir al pedido",
+      "basketLabel": "Cesta",
+      "cartTitle": "Pedir desde la lista de precios",
+      "cartEmpty": "Nada añadido — use el + junto a un precio.",
+      "qty": "Cant.",
+      "noteLabel": "Nota (opcional)",
+      "notePlaceholder": "Preferencias de entrega, referencia de proyecto...",
+      "totalLabel": "Total (sin IVA)",
+      "submitOrder": "Realizar pedido",
+      "submitQuote": "Solicitar presupuesto",
+      "sendingLabel": "Enviando…",
+      "closeLabel": "Cerrar",
+      "sentOrderTitle": "Pedido enviado",
+      "sentOrderMsg": "Le enviamos una confirmación por correo. Referencia {ref} — sígalo en Pedidos.",
+      "sentQuoteTitle": "Presupuesto solicitado",
+      "sentQuoteMsg": "Recibimos su solicitud. Referencia {ref} — un especialista responde en un día laborable.",
+      "demoNote": "Modo demo — no se envió ni guardó nada.",
+      "errorMsg": "Algo salió mal — inténtelo de nuevo."
     },
     "admin": {
       "title": "Administración",
@@ -265,7 +328,8 @@
       "colEmail": "Correo",
       "colCompany": "Empresa",
       "colRole": "Rol",
-      "colMarkets": "Mercados",
+      "colType": "Tipo de cuenta",
+      "colMarkets": "Grupos de precios",
       "colStatus": "Estado",
       "roleClient": "Cliente",
       "roleAdmin": "Admin",
@@ -273,20 +337,75 @@
       "statusInactive": "Inactiva",
       "deactivate": "Desactivar",
       "activate": "Activar",
-      "allMarketsLabel": "Todos los mercados",
+      "allMarketsLabel": "Todos los grupos de precios",
       "tempPassword": "Contraseña temporal",
       "create": "Crear cuenta",
       "creating": "Creando…",
       "createFailed": "No se pudo crear la cuenta.",
       "createdOk": "Cuenta creada para {email}.",
-      "makeB2b": "Subir a B2B",
-      "makeB2c": "Poner en B2C",
-      "typeB2b": "B2B",
-      "typeB2c": "B2C"
+      "typeProducer": "Productor/revendedor",
+      "typeInstaller": "Instalador",
+      "typeB2c": "B2C",
+      "typeArchitect": "Arquitecto",
+      "filterAllTypes": "Todos los tipos"
     },
     "designer": {
       "eyebrow": "Diseñador de techos",
       "hint": "Dibuje el techo a partir de paredes y diagonales, coloque costuras y recortes, compruebe el precio y realice el pedido. Use Save para guardar una medición como archivo."
+    },
+    "businessTypes": {
+      "installer": "Instalador",
+      "distributor": "Distribuidor / revendedor",
+      "architect": "Arquitecto / diseñador",
+      "contractor": "Contratista",
+      "other": "Otro"
+    },
+    "architect": {
+      "eyebrow": "Área de arquitectos",
+      "welcome": "Todo para especificar",
+      "intro": "Bienvenido, {office} — documentos, textos de especificación, CAD/BIM, casos medidos, rangos de presupuesto y apoyo de proyecto en un solo lugar.",
+      "demoNote": "Vista demo — descargas desactivadas, no se registra nada.",
+      "toolsTitle": "Herramientas de proyecto",
+      "budgetTileTitle": "Guía de presupuesto",
+      "budgetTileBody": "Rangos €/m² indicativos para fases tempranas — los números que nadie publica.",
+      "budgetTileCta": "Abrir la guía",
+      "projectTileTitle": "Registrar un proyecto",
+      "projectTileBody": "Un proyecto activo recibe un asesor dedicado, apoyo de especificación y muestras prioritarias.",
+      "projectTileCta": "Registrar un proyecto",
+      "samplesTileTitle": "Caja de muestras",
+      "samplesTileBody": "Muestras físicas de membranas y colores para su biblioteca de materiales — gratis para arquitectos.",
+      "samplesTileCta": "Pedir caja de muestras",
+      "libraryTitle": "Biblioteca",
+      "libraryBody": "Cada documento a un clic. Las descargas se registran en su cuenta para apoyar su proyecto de forma proactiva.",
+      "docsTitle": "Fichas técnicas",
+      "docsBody": "La biblioteca técnica completa — sin formularios, un clic.",
+      "specTitle": "Textos de especificación",
+      "specBody": "Textos de licitación listos para pegar por sistema — NL, FR y EN.",
+      "cadTitle": "CAD y BIM",
+      "cadBody": "Detalles de perfiles DWG, familias Revit y componentes SketchUp por sistema.",
+      "photosTitle": "Fotos de proyectos",
+      "photosBody": "Sets de fotos en alta resolución de proyectos de referencia para presentaciones.",
+      "casesTitle": "Casos de estudio técnicos",
+      "casesBody": "Proyectos reales con valores medidos antes/después — números para su memoria de diseño.",
+      "eventsTitle": "Eventos",
+      "eventsBody": "Formaciones, lunch & learns y días de showroom — inscripción en un clic.",
+      "register": "Inscribirse",
+      "advisorTitle": "Su asesor",
+      "advisorBody": "Un especialista para especificación, acústica, presupuestos y muestras — respuesta en un día laborable.",
+      "advisorCta": "Reservar una llamada",
+      "download": "Descargar",
+      "comingSoon": "Próximamente"
+    },
+    "budget": {
+      "eyebrow": "Área de arquitectos",
+      "title": "Guía de presupuesto",
+      "intro": "Rangos de precio instalado indicativos por sistema — deliberadamente amplios, para presupuestos tempranos y estudios de viabilidad.",
+      "disclaimer": "Rangos de precio instalado indicativos, sin IVA, solo para presupuestos tempranos. Cada proyecto se valora individualmente — registre su proyecto para un número real.",
+      "includes": "Qué incluye",
+      "perM2": "por m² instalado, sin IVA",
+      "perUnit": "por unidad instalada, sin IVA",
+      "ctaBody": "¿Necesita un número real para un proyecto activo? Regístrelo y un asesor dedicado lo valora correctamente en un día laborable.",
+      "ctaButton": "Registrar su proyecto"
     }
   },
   "home": {
@@ -1501,6 +1620,28 @@
               "sub": "Preguntas habituales"
             }
           ]
+        },
+        {
+          "title": "Arquitectos",
+          "desc": "Especifique con confianza — documentos, presupuestos y apoyo.",
+          "items": [
+            {
+              "title": "Área de arquitectos",
+              "sub": "Todo para especificar, en un solo lugar"
+            },
+            {
+              "title": "Fichas técnicas",
+              "sub": "La biblioteca de documentos técnicos"
+            },
+            {
+              "title": "Crear cuenta",
+              "sub": "Gratis — acceso inmediato tras confirmar el correo"
+            },
+            {
+              "title": "Iniciar sesión",
+              "sub": "Directo a su panel"
+            }
+          ]
         }
       ]
     },
@@ -1799,25 +1940,50 @@
       }
     },
     "datasheet": {
-      "title": "Descarga la ficha técnica",
-      "subtitle": "Introduce tus datos y la descarga empezará al momento. Solo los usaremos para hacer seguimiento de tu consulta.",
-      "submitLabel": "Obtener la ficha técnica",
-      "sentTitle": "Aquí tienes tu ficha técnica",
-      "sentMsg": "La descarga debería empezar automáticamente — si no, usa el botón de abajo.",
+      "title": "Reciba la ficha técnica por correo",
+      "subtitle": "Deje sus datos y le enviaremos la ficha técnica directamente a su bandeja de entrada. Solo los usamos para dar seguimiento a su consulta.",
+      "submitLabel": "Envíenme la ficha técnica",
+      "sentTitle": "Revise su bandeja de entrada",
+      "sentMsg": "La ficha técnica va de camino a {email}. ¿No la ve en unos minutos? Revise la carpeta de spam.",
       "fields": {
         "name": {
           "label": "Nombre",
           "placeholder": "Nombre y apellidos"
         },
+        "role": {
+          "label": "Soy",
+          "options": [
+            "Arquitecto",
+            "Instalador",
+            "Cliente particular",
+            "Otra empresa"
+          ]
+        },
         "email": {
-          "label": "Email",
-          "placeholder": "you@email.com"
+          "label": "Correo",
+          "placeholder": "usted@email.com"
         },
         "phone": {
           "label": "Teléfono",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "Ciudad",
+          "placeholder": "Su ciudad"
         }
-      }
+      },
+      "confirm": {
+        "title": "¿Enviar {title} a su bandeja?",
+        "msg": "Enviaremos la ficha técnica a {email} — un clic y estará en camino.",
+        "sendLabel": "Sí, envíenmela",
+        "editLabel": "¿No es usted? Editar datos"
+      },
+      "fallback": {
+        "sentTitle": "Aquí tiene su ficha técnica",
+        "sentMsg": "La descarga debería iniciarse automáticamente — si no, use el botón de abajo."
+      },
+      "rateLimited": "Demasiadas solicitudes desde su conexión — inténtelo de nuevo en una hora.",
+      "architectInvite": "¿Arquitecto? Nuestra área de arquitectos gratuita ofrece rangos de presupuesto indicativos, casos de estudio medidos y cada documento a un clic."
     },
     "trainingDates": [
       "15–16 sep 2026",
@@ -1832,7 +1998,72 @@
     ],
     "close": "Cerrar",
     "downloadDatasheet": "Descargar ficha técnica",
-    "select": "Seleccionar…"
+    "select": "Seleccionar…",
+    "project": {
+      "title": "Registrar un proyecto",
+      "subtitle": "Cuéntenos su proyecto activo — un asesor dedicado le responde en un día laborable con apoyo de especificación, presupuesto y muestras prioritarias.",
+      "submitLabel": "Registrar el proyecto",
+      "sentTitle": "Proyecto registrado",
+      "sentMsg": "Gracias — un asesor dedicado le contactará en un día laborable.",
+      "fields": {
+        "projectName": {
+          "label": "Nombre del proyecto",
+          "placeholder": "Título del proyecto"
+        },
+        "location": {
+          "label": "Ubicación",
+          "placeholder": "Ciudad"
+        },
+        "buildingType": {
+          "label": "Tipo de edificio",
+          "options": [
+            "Oficinas",
+            "Hostelería",
+            "Sanidad",
+            "Retail",
+            "Residencial",
+            "Educación",
+            "Otro"
+          ]
+        },
+        "system": {
+          "label": "Sistema",
+          "options": [
+            "Poliéster",
+            "PVC",
+            "Acústico",
+            "Luz e impresión",
+            "Prefabricado",
+            "Aún no lo sé"
+          ]
+        },
+        "stage": {
+          "label": "Fase",
+          "options": [
+            "Concepto",
+            "Diseño",
+            "Licitación",
+            "En obra"
+          ]
+        },
+        "area": {
+          "label": "Superficie",
+          "placeholder": "aprox. m²"
+        },
+        "email": {
+          "label": "Correo",
+          "placeholder": "usted@estudio.com"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Notas",
+          "placeholder": "Alturas de techo, objetivos acústicos, plazos..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -2141,15 +2372,12 @@
       "mark-with-a-k": "Bélgica · Estudio de sonido",
       "notary-ampe-anthony": "Kruibeke · Oficina acústica",
       "bnp-paribas-fortis": "Bruselas · Sede bancaria",
+      "van-der-valk-boost-wellness": "Beveren · Wellness y spa del hotel Van der Valk",
       "van-der-valk-beveren": "Beveren · Sala de eventos de hotel",
       "johnson-and-johnson": "Limerick, IE · Centro de I+D farmacéutico",
       "polette-eyewear": "Amberes · Concept store de retail",
       "citizenm-hotel": "EE. UU. y Europa · Baños prefabricados",
-      "london-chapel": "Londres, UK · Techo retroiluminado",
-      "private-villa-knokke": "Knokke · Salón abierto",
-      "home-cinema-ghent": "Gante · Cielo estrellado + acústica",
-      "city-penthouse-antwerp": "Amberes · Salón",
-      "wellness-spa-bruges": "Brujas · Baño de spa",
+      "london-chapel": "Londres, UK · Reconversión de capilla",
       "rue-perree-paris": "París · Techo de galería retroiluminado",
       "vier-emmershof-lokeren": "Lokeren · Casa en el bosque",
       "vp-193": "Flandes Oriental · Residencia privada",
@@ -2313,6 +2541,8 @@
     "viewProduct": "Ver el producto",
     "eyebrowTech": "Técnica",
     "datasheetCta": "Solicita la ficha técnica completa",
+    "downloadsTitle": "Descargar fichas técnicas",
+    "allDatasheets": "Todas las fichas técnicas",
     "samplesCta": "Solicita muestras físicas",
     "copyHint": "Selecciona el texto de arriba para copiarlo en tu documento de especificación.",
     "ctaTitle": "¿Necesitas ayuda con la especificación?",
@@ -2617,6 +2847,82 @@
         }
       ]
     },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "La renovación completa del wellness del Van der Valk Beveren — 700 m² de techos tensados acústicos, impresos e iluminados en un diseño de Maison Max.",
+      "hook": "Veinte años después de que se instalara la primera membrana, Van der Valk Beveren volvió a llamarnos — esta vez para coronar un wellness completamente nuevo.",
+      "description": [
+        "Cuando el Van der Valk Hotel Beveren decidió renovar por completo su zona de wellness y piscina — reabierta como Boost Wellness — la elección del socio para los techos estuvo clara enseguida. En otras zonas del hotel ya cuelgan techos STRETCH y la colaboración viene de años atrás. El proyecto incluso cerró un círculo familiar: el primer trabajo consistió en desmontar el techo tensado que Benjamin Nicasens, de Plafondlux BV — padre de Michael Nicasens, de STRETCH — había instalado allí veinte años antes.",
+        "Una vez que el cliente dejó la zona de wellness y piscina reducida a la obra bruta, trabajamos mano a mano con el estudio de interiorismo Maison Max, de Temse, que dio forma a todo el diseño y al look & feel. El propietario del hotel, Tim, y su mujer, Paulina, participaron de principio a fin — Paulina aportó sus propias ideas de diseño, que Maison Max incorporó a los planos, y juntos eligieron los materiales de cada una de las partes del proyecto. Para los techos, eso se tradujo en un diseño cálido, liso y acústico con varios niveles sobre la cabeza, de modo que ninguna sala resulte plana ni aburrida.",
+        "Cada zona recibió la membrana que le corresponde. En las zonas totalmente húmedas — piscina, duchas y spa — tensamos techos de PVC, la opción más resistente allí donde la humedad es constante. Los vestuarios, las salas de masaje y el estudio de uñas recibieron techos tensados de poliéster (textil), cuya cálida estructura textil crea un acabado ultramate.",
+        "El spa es la pieza estrella. Paulina quería una pared natural, de curvas orgánicas — y el techo tenía que seguir esa forma compleja y fluida. En el techo impreso en tonos marrones pidió además un lucernario circular, no con un borde recto sino con una suave curva. Elementos estructurales prefabricados de aluminio forman la caja de luz y las diferencias de altura, y el resultado es una de las instalaciones más complejas — y más bellas — que hemos entregado.",
+        "En los 700 m², el foco estuvo en la durabilidad, la acústica y el diseño complejo: membranas acústicas con absorbentes de PET por detrás, focos LED integrados, trampillas de inspección, altavoces y molduras de aluminio — cada detalle técnico se funde en una única superficie cálida y sin juntas. La renovación completa duró seis meses, desde el vaciado hasta la reapertura."
+      ],
+      "highlights": [
+        "700 m² de techos tensados en todo el wellness",
+        "Techo impreso que sigue una pared de curvas orgánicas",
+        "Lucernario circular con un borde curvo y fluido",
+        "Diseño de techo acústico y cálido en varios niveles",
+        "PVC en las zonas húmedas, poliéster ultramate en las secas",
+        "Proyecto de segunda generación — el techo anterior se instaló hace 20 años"
+      ],
+      "materials": [
+        "Techo STRETCH acústico con respaldo absorbente de PET",
+        "Techo STRETCH impreso (spa, impresión personalizada en marrón)",
+        "Techo STRETCH iluminado (caja de luz del lucernario)",
+        "Membranas de PVC en todas las zonas húmedas",
+        "Membranas de poliéster ultramate (vestuarios, salas de masaje y de uñas)",
+        "Elementos estructurales prefabricados de aluminio — caja de luz y cambios de nivel",
+        "Focos LED integrados",
+        "Trampillas de inspección",
+        "Altavoces integrados",
+        "Molduras de aluminio"
+      ],
+      "facts": [
+        {
+          "label": "Recinto",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Wellness",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Interiorismo",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Superficie",
+          "value": "700 m²"
+        },
+        {
+          "label": "Año",
+          "value": "2026"
+        },
+        {
+          "label": "Renovación completa",
+          "value": "6 meses"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Por qué PVC en unas salas y poliéster en otras?",
+          "a": "La membrana se adapta a las condiciones de la sala. En las zonas permanentemente húmedas — piscina, duchas y spa — el PVC es la opción más resistente: la humedad no le afecta en absoluto y se limpia con un paño. En los vestuarios, las salas de masaje y el estudio de uñas tensamos en cambio poliéster: una membrana textil cuya estructura tejida ofrece un acabado más cálido y ultramate."
+        },
+        {
+          "q": "¿Cómo sigue un techo tensado una pared curva y orgánica?",
+          "a": "La pared curva se tradujo en elementos estructurales prefabricados de aluminio que sostienen los perfiles, la caja de luz y las diferencias de altura. La membrana se tensa después dentro de esa estructura, de modo que sigue con precisión la forma orgánica — incluido el lucernario circular con su suave borde curvo."
+        },
+        {
+          "q": "¿Cómo ayudan los techos a la acústica?",
+          "a": "El wellness combina membranas tensadas acústicas con paneles absorbentes de PET detrás: el sonido atraviesa la superficie y queda capturado en lugar de reflejarse. Junto con el diseño de techo en varios niveles, esto mantiene tranquilas y silenciosas unas salas grandes y de superficies duras — exactamente lo que necesita un spa."
+        },
+        {
+          "q": "¿Cuánto dura un techo tensado?",
+          "a": "Este proyecto es su propia respuesta: el techo tensado anterior se instaló aquí hace veinte años y solo se retiró porque el hotel quería un wellness completamente nuevo. Cuente con décadas de servicio — y cuando el diseño cambie, solo se sustituye la membrana, no la estructura."
+        }
+      ]
+    },
     "van-der-valk-beveren": {
       "title": "Van der Valk",
       "summary": "Máxima absorción acústica para la sala de eventos de un hotel — casi sin altura que sacrificar.",
@@ -2800,20 +3106,24 @@
       ]
     },
     "london-chapel": {
-      "title": "Capilla de Londres",
-      "summary": "Un techo tensado retroiluminado sobre una capilla restaurada.",
-      "hook": "Una capilla restaurada bañada en una luz suave y uniforme desde un único techo luminoso.",
+      "title": "London Chapel",
+      "summary": "Paredes de tejido acústico y una bóveda revestida de tela para una capilla convertida en vivienda londinense.",
+      "hook": "Una capilla convertida en hogar familiar — revestida sala a sala con tejido acústico tensado.",
       "description": [
-        "Un techo STRETCH translúcido convierte todo el plano del techo en una fuente de luz suave y uniforme: el interior restaurado queda bañado en una iluminación sin deslumbramientos, mientras el campo de LED permanece completamente oculto."
+        "En esta reconversión de una capilla en Londres, nuestro distribuidor Upholster London acabó los interiores con tejido STRETCH tensado: las paredes de tejido acústico recorren los vestíbulos, rellanos y escaleras, e incluso la bóveda está revestida de tela entre sus nervaduras originales.",
+        "Las superficies textiles calman la acústica de estos espacios altos y duros y dan a cada estancia una profundidad cálida y tapizada que la pintura nunca puede alcanzar — mientras los detalles originales, como las vidrieras, permanecen intactos, enmarcados por paneles de tejido impecables. Un cine en casa con paredes de tejido completa la vivienda."
       ],
       "highlights": [
-        "Todo el techo como fuente de luz",
-        "Iluminación uniforme y sin deslumbramientos",
-        "Campo de LED completamente oculto"
+        "Bóveda de la capilla revestida de tela",
+        "Paredes de tejido acústico en toda la vivienda",
+        "Cine en casa con paredes de tejido",
+        "Vidrieras originales, enmarcadas con precisión"
       ],
       "materials": [
-        "Techo STRETCH translúcido",
-        "Campo de retroiluminación LED"
+        "Paredes de tejido acústico STRETCH",
+        "Bóveda revestida de tela",
+        "Cine en casa con paredes de tejido",
+        "Perfiles a medida en arcos y vidrieras"
       ],
       "facts": [
         {
@@ -2822,116 +3132,11 @@
         },
         {
           "label": "Espacio",
-          "value": "Capilla restaurada"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Villa privada",
-      "summary": "Un techo mate sin juntas para una villa costera de planta abierta.",
-      "hook": "Un techo sin juntas, liso como el yeso, para una casa costera de planta abierta.",
-      "description": [
-        "En el espacio de vida abierto de la villa, un techo STRETCH de poliéster muy mate se percibe de pared a pared como un enlucido impecable — nítido y moderno, sin las grietas ni las líneas de sombra de un techo convencional."
-      ],
-      "highlights": [
-        "Acabado sin juntas de pared a pared",
-        "Sin grietas ni líneas de sombra",
-        "Aspecto muy mate, como el yeso"
-      ],
-      "materials": [
-        "Techo STRETCH de poliéster (muy mate)",
-        "Perfiles perimetrales de tensado"
-      ],
-      "facts": [
-        {
-          "label": "Ubicación",
-          "value": "Knokke, Bélgica"
+          "value": "Capilla convertida en vivienda privada"
         },
         {
-          "label": "Espacio",
-          "value": "Salón de planta abierta"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Cine en casa",
-      "summary": "Un techo de cielo estrellado con respaldo acústico para un cine en casa.",
-      "hook": "Un cine privado bajo un cielo nocturno centelleante, afinado para el sonido de cine.",
-      "description": [
-        "Cientos de puntos de fibra óptica crean un cielo nocturno centelleante sobre las butacas, mientras un respaldo acústico mantiene la sala controlada para el sonido de cine — ambiente y prestaciones combinados en un solo techo."
-      ],
-      "highlights": [
-        "Cielo estrellado de fibra óptica",
-        "Respaldo acústico para el sonido de cine",
-        "Ambiente y prestaciones en un solo techo"
-      ],
-      "materials": [
-        "Techo STRETCH de cielo estrellado",
-        "Campo de estrellas de fibra óptica",
-        "Respaldo acústico absorbente"
-      ],
-      "facts": [
-        {
-          "label": "Ubicación",
-          "value": "Gante, Bélgica"
-        },
-        {
-          "label": "Espacio",
-          "value": "Cine en casa"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Ático urbano",
-      "summary": "Un techo decorativo impecable para un ático urbano.",
-      "hook": "Un techo decorativo minimalista y perfectamente plano para un ático urbano.",
-      "description": [
-        "El espacio de vida del ático recurre a un techo STRETCH sin juntas con iluminación integrada: el estilo se mantiene minimalista y la superficie perfecta en toda la planta abierta."
-      ],
-      "highlights": [
-        "Techo decorativo sin juntas",
-        "Iluminación integrada",
-        "Acabado minimalista e impecable"
-      ],
-      "materials": [
-        "Techo STRETCH de poliéster",
-        "Iluminación integrada"
-      ],
-      "facts": [
-        {
-          "label": "Ubicación",
-          "value": "Amberes, Bélgica"
-        },
-        {
-          "label": "Espacio",
-          "value": "Salón del ático"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Spa wellness",
-      "summary": "Un techo retroiluminado y resistente a la humedad para un spa.",
-      "hook": "Un techo resistente a la humedad, de brillo suave, para un espacio wellness.",
-      "description": [
-        "El spa necesitaba un techo que soportara la humedad y creara un ambiente sereno. Un techo STRETCH translúcido y retroiluminado brilla suavemente sobre la zona wellness y se limpia con un paño, sin que el vapor ni la humedad le afecten."
-      ],
-      "highlights": [
-        "Soporta la humedad y el vapor",
-        "Retroiluminación suave y uniforme",
-        "Se limpia con un paño"
-      ],
-      "materials": [
-        "Techo STRETCH translúcido de PVC",
-        "Campo de retroiluminación LED"
-      ],
-      "facts": [
-        {
-          "label": "Ubicación",
-          "value": "Brujas, Bélgica"
-        },
-        {
-          "label": "Espacio",
-          "value": "Spa / wellness"
+          "label": "Distribuidor STRETCH",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3837,7 +4042,6 @@
       "Baño",
       "Oficina",
       "Comercial",
-      "Cine en casa",
       "Luz e impresión"
     ],
     "browse": [
@@ -4220,9 +4424,9 @@
     "crumb": "Fichas técnicas",
     "titleA": "Especificaciones y",
     "titleB": "fichas técnicas",
-    "lead": "Descarga la documentación técnica de cada sistema STRETCH — especificaciones, clasificaciones al fuego, clases acústicas y detalles de garantía. Introduce tus datos una vez por descarga y el archivo se inicia de inmediato.",
+    "lead": "Descargue la documentación técnica de cada sistema STRETCH — especificaciones, clases de fuego, valores acústicos y garantía. Deje sus datos una vez y la ficha llegará a su bandeja como enlace de descarga.",
     "updated": "Actualizado el {date}",
-    "privacyNote": "Te pedimos tu nombre, correo electrónico y teléfono para que un especialista pueda responder cualquier duda técnica. Tus datos se tratan según nuestra",
+    "privacyNote": "Pedimos su nombre, rol, correo, teléfono y ciudad para que un especialista pueda responder sus dudas técnicas. Sus datos se tratan según nuestra",
     "privacyLink": "política de privacidad"
   },
   "samplesPage": {
@@ -4487,5 +4691,116 @@
     "ovRecruitBody": "Mientras la red crece, entregamos e instalamos directamente desde nuestra fábrica — y los instaladores que asuman una región libre reciben sus solicitudes, precios de distribuidor y formación.",
     "regionLuxembourg": "Luxemburgo (Gran Ducado)",
     "regionAustria": "Austria"
+  },
+  "datasheetEmail": {
+    "subject": "Su ficha técnica STRETCH — {title}",
+    "greeting": "Hola, {name}:",
+    "intro": "Aquí tiene la ficha técnica que solicitó — {title}.",
+    "button": "Descargar la ficha técnica",
+    "linkFallback": "O copie este enlace en su navegador:",
+    "validity": "El enlace funciona durante {days} días.",
+    "footerCta": "¿Trabaja en un proyecto? Responda a este correo o reserve una llamada.",
+    "signoff": "El equipo STRETCH",
+    "architectInvite": "¿Trabaja como arquitecto? Nuestra área de arquitectos gratuita le da rangos de presupuesto indicativos en €/m², casos de estudio medidos y cada ficha técnica, texto de especificación y archivo CAD a un clic:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Este enlace de descarga ha caducado",
+    "expiredBody": "Los enlaces de descarga son válidos 14 días. Solicite uno nuevo en segundos — se lo enviamos al instante.",
+    "requestNew": "Solicitar un enlace nuevo"
+  },
+  "architectsPage": {
+    "crumb": "Arquitectos",
+    "eyebrow": "Para arquitectos",
+    "titleA": "Especifique techos tensados",
+    "titleB": "con confianza",
+    "lead": "Una cuenta gratuita con todo lo necesario para especificar: documentos, textos de especificación, CAD/BIM, casos medidos, rangos de presupuesto indicativos, eventos y un asesor dedicado.",
+    "ctaCreate": "Cree su cuenta gratuita",
+    "ctaSignIn": "Iniciar sesión",
+    "values": [
+      {
+        "title": "Documentos a un clic",
+        "body": "Cada ficha técnica sin formularios — descargas ligadas a su cuenta."
+      },
+      {
+        "title": "Textos de especificación",
+        "body": "Textos de licitación listos por sistema — NL, FR y EN."
+      },
+      {
+        "title": "CAD y BIM",
+        "body": "Detalles de perfiles DWG, familias Revit y componentes SketchUp."
+      },
+      {
+        "title": "Fotos de proyectos",
+        "body": "Sets de fotos de referencia en alta resolución para presentaciones."
+      },
+      {
+        "title": "Casos medidos",
+        "body": "Proyectos reales con valores medidos antes/después."
+      },
+      {
+        "title": "Rangos de presupuesto",
+        "body": "Rangos €/m² indicativos para fases tempranas."
+      },
+      {
+        "title": "Eventos y lunch & learns",
+        "body": "Formaciones y sesiones en nuestra sede o en su estudio."
+      },
+      {
+        "title": "Apoyo de proyecto",
+        "body": "Registre un proyecto: asesor dedicado + muestras prioritarias."
+      }
+    ],
+    "howTitle": "Cómo funciona",
+    "steps": [
+      {
+        "title": "Cree su cuenta",
+        "body": "Nombre del estudio, ciudad y sus datos — dos minutos."
+      },
+      {
+        "title": "Confirme su correo",
+        "body": "Un clic en el enlace de confirmación."
+      },
+      {
+        "title": "Todo desbloqueado",
+        "body": "Documentos, presupuestos, casos y apoyo — al instante."
+      }
+    ],
+    "casesTitle": "Medido, no afirmado",
+    "casesNote": "Estudio completo dentro del área de arquitectos.",
+    "cases": [
+      {
+        "title": "Renovación acústica de restaurante",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 antes → después"
+      },
+      {
+        "title": "Techo luminoso de oficina",
+        "metric": "540 lux",
+        "metricLabel": "media en plano de trabajo, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Próximos eventos",
+    "eventsNote": "Todas las fechas e inscripción en un clic dentro del área.",
+    "faqTitle": "Preguntas frecuentes",
+    "faqs": [
+      {
+        "q": "¿El área de arquitectos es realmente gratuita?",
+        "a": "Sí — existe para que especificar un sistema STRETCH sea lo más fácil posible. Sin costes ni compromisos."
+      },
+      {
+        "q": "¿Publican precios?",
+        "a": "Los rangos €/m² indicativos viven dentro del área para presupuestos tempranos. Cada proyecto se valora individualmente — registre un proyecto para un número real."
+      },
+      {
+        "q": "¿Apoyan una licitación en curso?",
+        "a": "Sí. Registre el proyecto y un asesor dedicado ayuda con textos, detalles y objetivos acústicos — normalmente en un día laborable."
+      },
+      {
+        "q": "¿Entregan fuera del Benelux?",
+        "a": "Sí — producimos en Bélgica e instalamos con socios certificados en toda Europa."
+      }
+    ],
+    "ctaTitle": "Todo para especificar, en un solo lugar",
+    "ctaBody": "Cree su cuenta gratuita: cada documento, rango de presupuesto y caso de estudio queda a un clic — más un asesor dedicado para sus proyectos."
   }
 }

@@ -1,0 +1,8 @@
+# Dependencies & build output (local only — Vercel builds from source)
+node_modules/
+.next/
+*.tsbuildinfo
+
+# Env files
+.env
+.env*.local

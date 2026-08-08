@@ -20,7 +20,8 @@
       "about": "Om oss",
       "faq": "FAQ",
       "clientLogin": "Kundinloggning",
-      "materials": "Material"
+      "materials": "Material",
+      "architects": "Arkitekter"
     },
     "cta": {
       "freeQuote": "Gratis offert",
@@ -73,7 +74,9 @@
     "portalTitle": "Kundportal | STRETCH",
     "portalDescription": "Logga in för att se din STRETCH-prislista och dina kontouppgifter.",
     "materialsTitle": "Material och tillbehör för spänntak | STRETCH",
-    "materialsDescription": "Profiler, dukar och folier, belysning, tillbehör, verktyg och STRETCH Cleaner — begär offert per artikel så svarar vi med pris och leveranstid. Utan webbshop."
+    "materialsDescription": "Profiler, dukar och folier, belysning, tillbehör, verktyg och STRETCH Cleaner — begär offert per artikel så svarar vi med pris och leveranstid. Utan webbshop.",
+    "architectsTitle": "För arkitekter — föreskriv spänntak | STRETCH",
+    "architectsDescription": "Gratis arkitektområde: datablad, föreskrivningstexter, CAD/BIM, uppmätta fallstudier, vägledande €/m²-budgetband, evenemang och projektstöd."
   },
   "cookies": {
     "title": "Vi värnar om din integritet",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiration",
       "about": "Om oss",
       "faq": "FAQ",
-      "clientPortal": "Kundportal"
+      "clientPortal": "Kundportal",
+      "architects": "För arkitekter"
     },
     "dealers": "Återförsäljarnätverk"
   },
@@ -180,8 +184,15 @@
       "demoBody": "Ingen databas ansluten ännu — prova portalen med dessa konton:",
       "tabSignIn": "Logga in",
       "tabSignup": "Skapa konto",
-      "signupSub": "Gratis konto — direkt åtkomst",
-      "company": "Företag (valfritt)",
+      "signupSub": "För proffs — åtkomst efter granskning",
+      "company": "Företag",
+      "contactName": "Kontaktperson",
+      "vat": "Momsnummer",
+      "phone": "Telefon",
+      "country": "Land",
+      "countryOther": "Annat land",
+      "businessType": "Företagstyp",
+      "chooseOption": "Välj…",
       "passwordHint": "Minst 8 tecken.",
       "signupSubmit": "Skapa konto",
       "signupSubmitting": "Skapar…",
@@ -189,17 +200,25 @@
       "signupDoneBody": "Vi har skickat en bekräftelselänk. Klicka på den och logga sedan in med din e-post och ditt lösenord.",
       "signupExists": "Det finns redan ett konto med denna e-post — logga in.",
       "unavailableTitle": "Portalen öppnar snart",
-      "unavailableBody": "Kundportalen håller på att aktiveras. Kontakta oss så ordnar vi din åtkomst."
+      "unavailableBody": "Kundportalen håller på att aktiveras. Kontakta oss så ordnar vi din åtkomst.",
+      "audienceLabel": "Jag är",
+      "audienceClient": "Kund",
+      "audienceArchitect": "Arkitekt",
+      "officeName": "Kontorets namn",
+      "city": "Stad"
     },
     "nav": {
       "label": "Kundportal",
       "overview": "Översikt",
+      "documents": "Dokument",
+      "orders": "Ordrar",
       "pricelist": "Prislista",
       "admin": "Administration",
       "signOut": "Logga ut",
       "demoBadge": "Demo",
       "allMarkets": "Alla marknader",
-      "designer": "Takdesigner"
+      "designer": "Takdesigner",
+      "budgetGuide": "Budgetguide"
     },
     "dash": {
       "eyebrow": "Kundportal",
@@ -226,18 +245,62 @@
       "tileTradeBody": "Montör eller återförsäljare? Få återförsäljarpriser och takdesignern med ett företagskonto.",
       "tradeCta": "Bli partner"
     },
+    "docs": {
+      "title": "Dokument",
+      "intro": "Tekniska datablad och monteringsritningar för STRETCH-sortimentet — direkt nedladdning, utan formulär.",
+      "download": "Ladda ner"
+    },
+    "orders": {
+      "title": "Ordrar",
+      "intro": "Takordrar lagda från designern — med deras aktuella status.",
+      "empty": "Inga ordrar ännu. Rita ett tak och lägg din första order från designern.",
+      "demoNote": "Demoläge — ordrar sparas inte.",
+      "unavailable": "Orderhistoriken är inte tillgänglig just nu.",
+      "thDate": "Datum",
+      "thDealer": "Återförsäljare",
+      "thClient": "Kund",
+      "thTotal": "Totalt",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Mottagen",
+        "confirmed": "Bekräftad",
+        "in_production": "I produktion",
+        "delivered": "Levererad",
+        "cancelled": "Avbruten"
+      }
+    },
     "pricelist": {
       "title": "Prislista",
       "search": "Sök produkt eller kod…",
       "count": "{count} artiklar",
       "market": "Marknad",
+      "type": "Typ",
+      "allTypesOpt": "Alla typer",
       "allMarketsOpt": "Alla marknader",
       "currency": "Valuta",
       "print": "Skriv ut",
       "exportCsv": "CSV",
       "version": "Version",
       "updated": "Uppdaterad",
-      "empty": "Inga produkter matchar din sökning."
+      "empty": "Inga produkter matchar din sökning.",
+      "addLabel": "Lägg till i beställning",
+      "basketLabel": "Varukorg",
+      "cartTitle": "Beställ från prislistan",
+      "cartEmpty": "Inget tillagt ännu — använd + bredvid ett pris.",
+      "qty": "Antal",
+      "noteLabel": "Anteckning (valfritt)",
+      "notePlaceholder": "Leveransönskemål, projektreferens...",
+      "totalLabel": "Totalt (exkl. moms)",
+      "submitOrder": "Lägg beställning",
+      "submitQuote": "Begär offert",
+      "sendingLabel": "Skickar…",
+      "closeLabel": "Stäng",
+      "sentOrderTitle": "Beställning skickad",
+      "sentOrderMsg": "Vi har mejlat dig en bekräftelse. Referens {ref} — följ den under Beställningar.",
+      "sentQuoteTitle": "Offert begärd",
+      "sentQuoteMsg": "Vi har tagit emot din förfrågan. Referens {ref} — en specialist svarar inom en arbetsdag.",
+      "demoNote": "Demoläge — inget skickades eller sparades.",
+      "errorMsg": "Något gick fel — försök igen."
     },
     "admin": {
       "title": "Administration",
@@ -265,7 +328,8 @@
       "colEmail": "E-post",
       "colCompany": "Företag",
       "colRole": "Roll",
-      "colMarkets": "Marknader",
+      "colType": "Kontotyp",
+      "colMarkets": "Prisgrupper",
       "colStatus": "Status",
       "roleClient": "Kund",
       "roleAdmin": "Admin",
@@ -273,20 +337,75 @@
       "statusInactive": "Inaktivt",
       "deactivate": "Avaktivera",
       "activate": "Aktivera",
-      "allMarketsLabel": "Alla marknader",
+      "allMarketsLabel": "Alla prisgrupper",
       "tempPassword": "Tillfälligt lösenord",
       "create": "Skapa konto",
       "creating": "Skapar…",
       "createFailed": "Kontot kunde inte skapas.",
       "createdOk": "Konto skapat för {email}.",
-      "makeB2b": "Uppgradera till B2B",
-      "makeB2c": "Sätt till B2C",
-      "typeB2b": "B2B",
-      "typeB2c": "B2C"
+      "typeProducer": "Producent/återförsäljare",
+      "typeInstaller": "Montör",
+      "typeB2c": "B2C",
+      "typeArchitect": "Arkitekt",
+      "filterAllTypes": "Alla typer"
     },
     "designer": {
       "eyebrow": "Takdesigner",
       "hint": "Rita taket från vägg- och diagonalmått, placera skarvar och urtag, kontrollera priset och lägg ordern. Använd Save för att spara en mätning som fil."
+    },
+    "businessTypes": {
+      "installer": "Montör",
+      "distributor": "Distributör / återförsäljare",
+      "architect": "Arkitekt / designer",
+      "contractor": "Entreprenör",
+      "other": "Annat"
+    },
+    "architect": {
+      "eyebrow": "Arkitektområde",
+      "welcome": "Allt för att föreskriva",
+      "intro": "Välkommen, {office} — dokument, föreskrivningstexter, CAD/BIM, uppmätta fallstudier, budgetband och projektstöd på ett ställe.",
+      "demoNote": "Demoförhandsvisning — nedladdningar är avstängda och inget loggas.",
+      "toolsTitle": "Projektverktyg",
+      "budgetTileTitle": "Budgetguide",
+      "budgetTileBody": "Vägledande €/m²-band för tidig budgetering — siffrorna ingen publicerar.",
+      "budgetTileCta": "Öppna guiden",
+      "projectTileTitle": "Registrera ett projekt",
+      "projectTileBody": "Ett aktivt projekt får en dedikerad rådgivare, föreskrivningsstöd och prioriterade prover.",
+      "projectTileCta": "Registrera ett projekt",
+      "samplesTileTitle": "Provlåda",
+      "samplesTileBody": "Fysiska membran- och färgprover till ditt materialbibliotek — gratis för arkitekter.",
+      "samplesTileCta": "Beställ provlåda",
+      "libraryTitle": "Bibliotek",
+      "libraryBody": "Alla dokument ett klick bort. Nedladdningar loggas på ditt konto så att vi kan stötta projektet proaktivt.",
+      "docsTitle": "Datablad",
+      "docsBody": "Det kompletta tekniska databladbiblioteket — inga formulär, ett klick.",
+      "specTitle": "Föreskrivningstexter",
+      "specBody": "Färdiga texter för förfrågningsunderlag per system — NL, FR och EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "DWG-profildetaljer, Revit-familjer och SketchUp-komponenter per system.",
+      "photosTitle": "Projektfoton",
+      "photosBody": "Högupplösta fotoset från referensprojekt för kundpresentationer.",
+      "casesTitle": "Tekniska fallstudier",
+      "casesBody": "Verkliga projekt med uppmätta före/efter-värden — siffror till din projektrapport.",
+      "eventsTitle": "Evenemang",
+      "eventsBody": "Utbildningar, lunch & learns och showroomdagar — anmälan med ett klick.",
+      "register": "Anmäl dig",
+      "advisorTitle": "Din rådgivare",
+      "advisorBody": "En specialist för föreskrivning, akustikmål, budgetar och prover — svar inom en arbetsdag.",
+      "advisorCta": "Boka ett samtal",
+      "download": "Ladda ner",
+      "comingSoon": "Kommer snart"
+    },
+    "budget": {
+      "eyebrow": "Arkitektområde",
+      "title": "Budgetguide",
+      "intro": "Vägledande monterade prisband per system — medvetet grova, för tidig budgetering och genomförbarhetsstudier.",
+      "disclaimer": "Vägledande monterade prisband, exkl. moms, endast för tidig budgetering. Varje projekt prissätts individuellt — registrera ditt projekt för en riktig siffra.",
+      "includes": "Vad som ingår",
+      "perM2": "per m² monterat, exkl. moms",
+      "perUnit": "per enhet monterad, exkl. moms",
+      "ctaBody": "Behöver du en riktig siffra för ett aktivt projekt? Registrera det så prissätter en dedikerad rådgivare det korrekt inom en arbetsdag.",
+      "ctaButton": "Registrera ditt projekt"
     }
   },
   "home": {
@@ -1501,6 +1620,28 @@
               "sub": "Vanliga frågor"
             }
           ]
+        },
+        {
+          "title": "Arkitekter",
+          "desc": "Föreskriv med trygghet — dokument, budgetar och stöd.",
+          "items": [
+            {
+              "title": "Arkitektområde",
+              "sub": "Allt för att föreskriva, på ett ställe"
+            },
+            {
+              "title": "Datablad",
+              "sub": "Det tekniska dokumentbiblioteket"
+            },
+            {
+              "title": "Skapa konto",
+              "sub": "Gratis — åtkomst direkt efter e-postbekräftelse"
+            },
+            {
+              "title": "Logga in",
+              "sub": "Direkt till din översikt"
+            }
+          ]
         }
       ]
     },
@@ -1799,25 +1940,50 @@
       }
     },
     "datasheet": {
-      "title": "Ladda ner databladet",
-      "subtitle": "Fyll i dina uppgifter så startar nedladdningen direkt. Vi använder dem bara för att följa upp din förfrågan.",
-      "submitLabel": "Hämta databladet",
-      "sentTitle": "Här är ditt datablad",
-      "sentMsg": "Nedladdningen bör starta automatiskt — om inte, använd knappen nedan.",
+      "title": "Få databladet via e-post",
+      "subtitle": "Lämna dina uppgifter så mejlar vi databladet direkt till din inkorg. Vi använder dem bara för att följa upp din förfrågan.",
+      "submitLabel": "Mejla mig databladet",
+      "sentTitle": "Kolla din inkorg",
+      "sentMsg": "Databladet är på väg till {email}. Ser du det inte inom några minuter? Kolla skräpposten.",
       "fields": {
         "name": {
           "label": "Namn",
           "placeholder": "För- och efternamn"
         },
+        "role": {
+          "label": "Jag är",
+          "options": [
+            "Arkitekt",
+            "Montör",
+            "Privatkund",
+            "Annat företag"
+          ]
+        },
         "email": {
           "label": "E-post",
-          "placeholder": "you@email.com"
+          "placeholder": "du@email.com"
         },
         "phone": {
           "label": "Telefon",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "Stad",
+          "placeholder": "Din stad"
         }
-      }
+      },
+      "confirm": {
+        "title": "Skicka {title} till din inkorg?",
+        "msg": "Vi mejlar databladet till {email} — ett klick så är det på väg.",
+        "sendLabel": "Ja, mejla det till mig",
+        "editLabel": "Inte du? Ändra uppgifter"
+      },
+      "fallback": {
+        "sentTitle": "Här är ditt datablad",
+        "sentMsg": "Nedladdningen bör starta automatiskt — om inte, använd knappen nedan."
+      },
+      "rateLimited": "För många förfrågningar från din anslutning — försök igen om en timme.",
+      "architectInvite": "Arkitekt? Vårt kostnadsfria arkitektområde har vägledande budgetband, uppmätta fallstudier och alla dokument med ett klick."
     },
     "trainingDates": [
       "15–16 sep 2026",
@@ -1832,7 +1998,72 @@
     ],
     "close": "Stäng",
     "downloadDatasheet": "Ladda ner datablad",
-    "select": "Välj…"
+    "select": "Välj…",
+    "project": {
+      "title": "Registrera ett projekt",
+      "subtitle": "Berätta om ditt aktiva projekt — en dedikerad rådgivare återkommer inom en arbetsdag med föreskrivningsstöd, budgetinput och prioriterade prover.",
+      "submitLabel": "Registrera projektet",
+      "sentTitle": "Projekt registrerat",
+      "sentMsg": "Tack — en dedikerad rådgivare kontaktar dig inom en arbetsdag.",
+      "fields": {
+        "projectName": {
+          "label": "Projektnamn",
+          "placeholder": "Projekt- eller arbetstitel"
+        },
+        "location": {
+          "label": "Plats",
+          "placeholder": "Stad"
+        },
+        "buildingType": {
+          "label": "Byggnadstyp",
+          "options": [
+            "Kontor",
+            "Hotell & restaurang",
+            "Vård",
+            "Handel",
+            "Bostäder",
+            "Utbildning",
+            "Annat"
+          ]
+        },
+        "system": {
+          "label": "System",
+          "options": [
+            "Polyester",
+            "PVC",
+            "Akustik",
+            "Ljus & print",
+            "Prefab",
+            "Vet inte än"
+          ]
+        },
+        "stage": {
+          "label": "Fas",
+          "options": [
+            "Koncept",
+            "Projektering",
+            "Upphandling",
+            "På plats"
+          ]
+        },
+        "area": {
+          "label": "Yta",
+          "placeholder": "ca m²"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "du@kontor.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Anteckningar",
+          "placeholder": "Takhöjder, akustikmål, deadlines..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -2141,15 +2372,12 @@
       "mark-with-a-k": "Belgien · Ljudstudio",
       "notary-ampe-anthony": "Kruibeke · Akustiskt kontor",
       "bnp-paribas-fortis": "Bryssel · Bankhuvudkontor",
+      "van-der-valk-boost-wellness": "Beveren · Van der Valk-hotellets wellness & spa",
       "van-der-valk-beveren": "Beveren · Hotellets eventsal",
       "johnson-and-johnson": "Limerick, IE · FoU-anläggning för läkemedel",
       "polette-eyewear": "Antwerpen · Konceptbutik",
       "citizenm-hotel": "USA & Europa · Prefabricerade badrumsmoduler",
-      "london-chapel": "London, UK · Bakbelyst tak",
-      "private-villa-knokke": "Knokke · Öppen sällskapsyta",
-      "home-cinema-ghent": "Gent · Stjärnhimmel + akustik",
-      "city-penthouse-antwerp": "Antwerpen · Vardagsrum",
-      "wellness-spa-bruges": "Brygge · Spabadrum",
+      "london-chapel": "London, UK · Kapellomvandling",
       "rue-perree-paris": "Paris · Bakbelyst galleritak",
       "vier-emmershof-lokeren": "Lokeren · Skogsbostad",
       "vp-193": "Östflandern · Privatbostad",
@@ -2313,6 +2541,8 @@
     "viewProduct": "Se produkten",
     "eyebrowTech": "Teknik",
     "datasheetCta": "Beställ det fullständiga databladet",
+    "downloadsTitle": "Ladda ner datablad",
+    "allDatasheets": "Alla datablad",
     "samplesCta": "Beställ fysiska prover",
     "copyHint": "Markera texten ovan för att kopiera in den i ditt föreskrivningsdokument.",
     "ctaTitle": "Behöver du hjälp med föreskrivningstexten?",
@@ -2617,6 +2847,82 @@
         }
       ]
     },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "Den kompletta renoveringen av wellnessanläggningen på Van der Valk Beveren — 700 m² akustiska, printade och belysta spänntak i en design av Maison Max.",
+      "hook": "Tjugo år efter att det första membranet kom upp bad Van der Valk Beveren oss komma tillbaka — den här gången för att kröna en helt ny wellnessanläggning.",
+      "description": [
+        "När Van der Valk Hotel Beveren beslutade att renovera hela sin wellness- och poolavdelning — återöppnad som Boost Wellness — var valet av takpartner snabbt gjort. STRETCH-tak hänger redan i andra delar av hotellet, och samarbetet går många år tillbaka. Projektet slöt till och med en familjecirkel: det första jobbet var att demontera det spänntak som Benjamin Nicasens från Plafondlux BV — far till Michael Nicasens på STRETCH — hade monterat där tjugo år tidigare.",
+        "När beställaren hade rivit ut wellness- och poolavdelningen ned till stommen arbetade vi hand i hand med inredningsstudion Maison Max från Temse, som formade hela designen och dess look & feel. Hotellägaren Tim och hans fru Paulina var med från början till slut — Paulina bidrog med starka egna designidéer, som Maison Max vävde in i planerna, och tillsammans valde de materialen till varje enskild del av projektet. För taken innebar det en varm, mjuk, akustisk design med flera nivåer ovanför huvudet, så att inget rum någonsin känns platt eller tråkigt.",
+        "Varje zon fick det membran som passar den. I de helt våta utrymmena — pool, duschar och spa — spände vi spänntak i PVC, det starkaste valet där fukten är konstant. Omklädningsrummen, massagerummen och nagelstudion fick spänntak i polyester (väv), vars varma textilstruktur ger en ultramatt finish.",
+        "Spa-avdelningen är paradnumret. Paulina ville ha en naturlig, organiskt svängd vägg — och taket måste följa den komplexa, flödande formen. I det printade taket i bruna toner önskade hon sig dessutom ett cirkulärt takfönster, inte med rak kant utan med en mjukt rundad. Prefabricerade konstruktionselement i aluminium bildar ljuslådan och nivåskillnaderna, och resultatet är en av de mest komplexa — och vackraste — installationer vi har levererat.",
+        "Över 700 m² låg fokus på hållbarhet, akustik och komplex design: akustiska membran med bakomliggande PET-absorbenter, integrerade LED-spottar, inspektionsluckor, högtalare och hålkäl i aluminium — varje teknisk detalj smälter in i en enda varm, skarvfri yta. Hela renoveringen tog sex månader, från utrivning till återöppning."
+      ],
+      "highlights": [
+        "700 m² spänntak i hela wellnessanläggningen",
+        "Printat tak som följer en organiskt svängd vägg",
+        "Cirkulärt takfönster med mjukt rundad kant",
+        "Varm akustisk takdesign i flera nivåer",
+        "PVC i våtzonerna, ultramatt polyester i de torra",
+        "Ett andra generationens projekt — det förra taket monterades för 20 år sedan"
+      ],
+      "materials": [
+        "Akustiskt STRETCH-tak med bakomliggande PET-absorbenter",
+        "Printat STRETCH-tak (spa, brunt specialtryck)",
+        "Belyst STRETCH-tak (ljuslåda för takfönstret)",
+        "PVC-membran i alla våtutrymmen",
+        "Ultramatta polyestermembran (omklädnings-, massage- & nagelrum)",
+        "Prefabricerade konstruktionselement i aluminium — ljuslåda & nivåskillnader",
+        "Integrerade LED-spottar",
+        "Inspektionsluckor",
+        "Integrerade högtalare",
+        "Hålkäl i aluminium"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Wellness",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Inredning",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Yta",
+          "value": "700 m²"
+        },
+        {
+          "label": "År",
+          "value": "2026"
+        },
+        {
+          "label": "Totalrenovering",
+          "value": "6 månader"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Varför PVC i vissa rum och polyester i andra?",
+          "a": "Membranet följer rummets förhållanden. I de permanent våta zonerna — pool, duschar och spa — är PVC det starkaste valet: det påverkas inte alls av fukt och torkas enkelt rent. I omklädningsrummen, massagerummen och nagelstudion spände vi i stället polyester: ett textilmembran vars vävda struktur ger en varmare, ultramatt finish."
+        },
+        {
+          "q": "Hur följer ett spänntak en svängd, organisk vägg?",
+          "a": "Den svängda väggen översattes till prefabricerade konstruktionselement i aluminium som bär profilerna, ljuslådan och nivåskillnaderna. Membranet spänns sedan in i den ramen, så att det följer den organiska formen exakt — inklusive det cirkulära takfönstret med sin mjukt rundade kant."
+        },
+        {
+          "q": "Hur hjälper taken akustiken?",
+          "a": "Wellnessanläggningen kombinerar akustiska spännmembran med PET-absorbentpaneler bakom: ljudet passerar genom ytan och fångas upp i stället för att reflekteras. Tillsammans med takdesignen i flera nivåer håller det stora rum med hårda ytor lugna och dämpade — precis vad ett spa behöver."
+        },
+        {
+          "q": "Hur länge håller ett spänntak?",
+          "a": "Det här projektet är sitt eget svar: det förra spänntaket här monterades för tjugo år sedan och fick bara ge vika för att hotellet ville ha en helt ny wellnessanläggning. Räkna med årtionden av drift — och när designen ändras byts bara membranet ut, inte konstruktionen."
+        }
+      ]
+    },
     "van-der-valk-beveren": {
       "title": "Van der Valk",
       "summary": "Maximal ljudabsorption för ett hotells eventsal — med nästan ingen höjd att avvara.",
@@ -2800,20 +3106,24 @@
       ]
     },
     "london-chapel": {
-      "title": "Kapell i London",
-      "summary": "Ett bakbelyst spänntak över ett restaurerat kapellrum.",
-      "hook": "Ett restaurerat kapell badande i mjukt, jämnt ljus från ett enda lysande tak.",
+      "title": "London Chapel",
+      "summary": "Akustiska tygväggar och ett tygklätt valv för ett kapell som byggts om till ett London-hem.",
+      "hook": "Ett kapell som blev familjehem — klätt rum för rum i spänd akustisk textil.",
       "description": [
-        "Ett genomskinligt STRETCH-tak förvandlar hela takytan till en mjuk, jämn ljuskälla: den restaurerade interiören badar i bländfritt ljus medan LED-fältet förblir helt dolt."
+        "Vid denna kapellomvandling i London färdigställde vår återförsäljare Upholster London interiörerna med spänd STRETCH-textil: akustiska tygväggar löper genom hallar, vilplan och trapphus, och till och med det välvda taket är klätt med tyg mellan de ursprungliga ribborna.",
+        "Textilytorna dämpar akustiken i de höga, hårda rummen och ger varje rum ett varmt, stoppat djup som färg aldrig kan nå — medan ursprungliga detaljer som de blyinfattade fönstren står orörda, inramade av knivskarpa tygpaneler. En hemmabio med tygväggar fullbordar hemmet."
       ],
       "highlights": [
-        "Hela taket som ljuskälla",
-        "Bländfri, jämn belysning",
-        "LED-fältet helt dolt"
+        "Tygklätt valv i kapellet",
+        "Akustiska tygväggar i hela hemmet",
+        "Hemmabio med tygväggar",
+        "Ursprungliga blyinfattade fönster, precist inramade"
       ],
       "materials": [
-        "Genomskinligt STRETCH-tak",
-        "LED-bakbelysningsfält"
+        "Akustiska STRETCH-tygväggar",
+        "Tygklätt välvt tak",
+        "Hemmabio med tygväggar",
+        "Måttanpassade profiler kring valv och fönster"
       ],
       "facts": [
         {
@@ -2822,116 +3132,11 @@
         },
         {
           "label": "Utrymme",
-          "value": "Restaurerat kapell"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Privat villa",
-      "summary": "Ett skarvfritt, matt tak för en kustvilla med öppen planlösning.",
-      "hook": "Ett skarvfritt tak, slätt som perfekt puts, för ett kusthem med öppen planlösning.",
-      "description": [
-        "I villans öppna vardagsrum upplevs ett mycket matt STRETCH-tak i polyester från vägg till vägg som felfri puts – stramt och modernt, utan de sprickor och skugglinjer som följer med ett traditionellt tak."
-      ],
-      "highlights": [
-        "Skarvfri finish från vägg till vägg",
-        "Inga sprickor eller skugglinjer",
-        "Mycket matt, putsliknande utseende"
-      ],
-      "materials": [
-        "STRETCH-tak i polyester (mycket matt)",
-        "Kantprofiler för uppspänning"
-      ],
-      "facts": [
-        {
-          "label": "Plats",
-          "value": "Knokke, Belgien"
+          "value": "Kapell ombyggt till privatbostad"
         },
         {
-          "label": "Utrymme",
-          "value": "Öppen planlösning"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Hemmabio",
-      "summary": "Ett stjärnhimmelstak med akustisk baksida för en hemmabio.",
-      "hook": "En privat biosalong under en gnistrande natthimmel, trimmad för filmljud.",
-      "description": [
-        "Hundratals fiberoptiska punkter skapar en gnistrande natthimmel ovanför fåtöljerna, medan en akustisk baksida håller rummet under kontroll för filmljudet – stämning och prestanda förenade i ett enda tak."
-      ],
-      "highlights": [
-        "Fiberoptisk stjärnhimmel",
-        "Akustisk baksida för filmljud",
-        "Stämning och prestanda i ett och samma tak"
-      ],
-      "materials": [
-        "STRETCH-tak med stjärnhimmel",
-        "Fiberoptiskt stjärnfält",
-        "Akustiskt absorberande baksida"
-      ],
-      "facts": [
-        {
-          "label": "Plats",
-          "value": "Gent, Belgien"
-        },
-        {
-          "label": "Utrymme",
-          "value": "Hemmabio"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Takvåning i staden",
-      "summary": "Ett felfritt designtak för en takvåning i staden.",
-      "hook": "Ett minimalistiskt, perfekt plant designtak för en takvåning i staden.",
-      "description": [
-        "Takvåningens vardagsrum använder ett skarvfritt STRETCH-tak med integrerad belysning, så att uttrycket förblir minimalistiskt och ytan perfekt genom hela den öppna planlösningen."
-      ],
-      "highlights": [
-        "Skarvfritt designtak",
-        "Integrerad belysning",
-        "Minimalistisk, felfri finish"
-      ],
-      "materials": [
-        "STRETCH-tak i polyester",
-        "Integrerad belysning"
-      ],
-      "facts": [
-        {
-          "label": "Plats",
-          "value": "Antwerpen, Belgien"
-        },
-        {
-          "label": "Utrymme",
-          "value": "Vardagsrum i takvåning"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Wellness-spa",
-      "summary": "Ett fukttåligt, bakbelyst tak för ett spa.",
-      "hook": "Ett fukttåligt tak med mjukt sken för ett wellnessutrymme.",
-      "description": [
-        "Spa-anläggningen behövde ett tak som tål fukt och skapar en lugn stämning. Ett genomskinligt, bakbelyst STRETCH-tak lyser mjukt över wellnessavdelningen och torkas enkelt rent – opåverkat av ånga och fukt."
-      ],
-      "highlights": [
-        "Tål fukt och ånga",
-        "Mjukt, jämnt bakljus",
-        "Torkas enkelt rent"
-      ],
-      "materials": [
-        "Genomskinligt STRETCH-tak i PVC",
-        "LED-bakbelysningsfält"
-      ],
-      "facts": [
-        {
-          "label": "Plats",
-          "value": "Brygge, Belgien"
-        },
-        {
-          "label": "Utrymme",
-          "value": "Spa / wellness"
+          "label": "STRETCH-återförsäljare",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3726,20 +3931,20 @@
       },
       "spanplafond-prijs": {
         "title": "Vad kostar ett spänntak? En ärlig prisguide",
-        "excerpt": "Priset på ett spänntak ligger normalt mellan €70 och €200 per m² inklusive montering, beroende på taktyp och rum. Här får du förklaringen bakom prisspannet, vägledande intervall per taktyp – och hur du får en fast siffra för ditt projekt.",
+        "excerpt": "Priset på ett spänntak ligger normalt mellan 800 kr och 2 300 kr per m² inklusive montering, beroende på taktyp och rum. Här får du förklaringen bakom prisspannet, vägledande intervall per taktyp – och hur du får en fast siffra för ditt projekt.",
         "body": [
           {
             "heading": "Det korta svaret",
             "paragraphs": [
-              "För ett professionellt monterat spänntak får du räkna med ungefär €70 till €200 per kvadratmeter exkl. moms, montering inräknad. Spannet är på riktigt: ett enkelt, matt vitt tak i ett rektangulärt vardagsrum ligger i botten av intervallet, medan ett bakbelyst badrumstak med integrerad belysning ligger i toppen.",
+              "För ett professionellt monterat spänntak får du räkna med ungefär 800 kr till 2 300 kr per kvadratmeter exkl. moms, montering inräknad. Spannet är på riktigt: ett enkelt, matt vitt tak i ett rektangulärt vardagsrum ligger i botten av intervallet, medan ett bakbelyst badrumstak med integrerad belysning ligger i toppen.",
               "Alla siffror i den här guiden är vägledande intervall – inte en offert. Duken tillverkas på mått efter just ditt rum, så den ärliga slutsiffran kommer alltid från en kostnadsfri offert utan förpliktelser."
             ]
           },
           {
             "heading": "Vägledande priser per taktyp",
             "paragraphs": [
-              "Ett enkelt, enfärgat tak i PVC eller polyester är instegsnivån på ungefär €70 till €90 per m² – den snabba, skarvfria uppgraderingen för vardagsrum, sovrum och kontor. Ett tryckt motiv lägger till design och förberedelse och landar på ungefär €90 till €100 per m².",
-              "Ett akustiskt tak – mikroperforerad duk med absorption bakom – ligger runt €100 till €150 per m² beroende på uppbyggnaden. Ett translucent, bakbelyst tak med LED-fält bakom duken ligger runt €130 till €160 per m² inklusive ljusytan. Badrumsprojekt som kombinerar fukttålig duk med integrerad belysning landar normalt på €150 till €200 per m².",
+              "Ett enkelt, enfärgat tak i PVC eller polyester är instegsnivån på ungefär 800 kr till 1 000 kr per m² – den snabba, skarvfria uppgraderingen för vardagsrum, sovrum och kontor. Ett tryckt motiv lägger till design och förberedelse och landar på ungefär 1 000 kr till 1 150 kr per m².",
+              "Ett akustiskt tak – mikroperforerad duk med absorption bakom – ligger runt 1 150 kr till 1 700 kr per m² beroende på uppbyggnaden. Ett translucent, bakbelyst tak med LED-fält bakom duken ligger runt 1 500 kr till 1 800 kr per m² inklusive ljusytan. Badrumsprojekt som kombinerar fukttålig duk med integrerad belysning landar normalt på 1 700 kr till 2 300 kr per m².",
               "Specialarbeten – stjärnhimlar, tryckta bakbelysta motiv, prefabricerade element – designas per projekt och prissätts per design."
             ]
           },
@@ -3837,7 +4042,6 @@
       "Badrum",
       "Kontor",
       "Kommersiellt",
-      "Hemmabio",
       "Ljus & print"
     ],
     "browse": [
@@ -4220,9 +4424,9 @@
     "crumb": "Datablad",
     "titleA": "Specifikationer &",
     "titleB": "datablad",
-    "lead": "Ladda ner teknisk dokumentation för varje STRETCH-system — specifikationer, brandklasser, akustiska klassvärden och garantivillkor. Fyll i dina uppgifter en gång per nedladdning så startar filen direkt.",
+    "lead": "Ladda ner teknisk dokumentation för varje STRETCH-system — specifikationer, brandklasser, akustikvärden och garanti. Lämna dina uppgifter en gång så landar databladet i din inkorg som nedladdningslänk.",
     "updated": "Uppdaterad {date}",
-    "privacyNote": "Vi ber om ditt namn, din e-post och ditt telefonnummer så att en specialist kan svara på eventuella tekniska frågor. Dina uppgifter hanteras enligt vår",
+    "privacyNote": "Vi ber om namn, roll, e-post, telefon och stad så att en specialist kan svara på dina tekniska frågor. Dina uppgifter hanteras enligt vår",
     "privacyLink": "integritetspolicy"
   },
   "samplesPage": {
@@ -4487,5 +4691,116 @@
     "ovRecruitBody": "Vi levererar och monterar direkt från vår produktion medan nätverket växer — och montörer som tar en ledig region får dess förfrågningar, återförsäljarpriser och utbildning.",
     "regionLuxembourg": "Luxemburg (Storhertigdömet)",
     "regionAustria": "Österrike"
+  },
+  "datasheetEmail": {
+    "subject": "Ditt STRETCH-datablad — {title}",
+    "greeting": "Hej {name},",
+    "intro": "Här är databladet du bad om — {title}.",
+    "button": "Ladda ner databladet",
+    "linkFallback": "Eller kopiera länken till din webbläsare:",
+    "validity": "Länken fungerar i {days} dagar.",
+    "footerCta": "Jobbar du med ett projekt? Svara bara på det här mejlet eller boka ett samtal.",
+    "signoff": "STRETCH-teamet",
+    "architectInvite": "Jobbar du som arkitekt? Vårt kostnadsfria arkitektområde ger dig vägledande €/m²-budgetband, uppmätta fallstudier och alla datablad, föreskrivningstexter och CAD-filer med ett klick:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Den här nedladdningslänken har gått ut",
+    "expiredBody": "Nedladdningslänkar gäller i 14 dagar. Begär en ny på några sekunder — vi mejlar den direkt.",
+    "requestNew": "Begär en ny länk"
+  },
+  "architectsPage": {
+    "crumb": "Arkitekter",
+    "eyebrow": "För arkitekter",
+    "titleA": "Föreskriv spänntak",
+    "titleB": "med trygghet",
+    "lead": "Ett gratis konto med allt du behöver för att föreskriva: dokument, föreskrivningstexter, CAD/BIM, uppmätta fallstudier, vägledande budgetband, evenemang och en dedikerad rådgivare.",
+    "ctaCreate": "Skapa ditt gratis konto",
+    "ctaSignIn": "Logga in",
+    "values": [
+      {
+        "title": "Dokument med ett klick",
+        "body": "Alla datablad utan formulär — nedladdningar knutna till ditt konto."
+      },
+      {
+        "title": "Föreskrivningstexter",
+        "body": "Färdiga texter per system — NL, FR och EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "DWG-profildetaljer, Revit-familjer och SketchUp-komponenter."
+      },
+      {
+        "title": "Projektfoton",
+        "body": "Högupplösta referensfoton för kundpresentationer."
+      },
+      {
+        "title": "Uppmätta fallstudier",
+        "body": "Verkliga projekt med uppmätta före/efter-värden."
+      },
+      {
+        "title": "Budgetband",
+        "body": "Vägledande €/m²-intervall för tidig budgetering."
+      },
+      {
+        "title": "Evenemang & lunch & learns",
+        "body": "Utbildningar och sessioner hos oss eller på ditt kontor."
+      },
+      {
+        "title": "Projektstöd",
+        "body": "Registrera ett projekt: dedikerad rådgivare + prioriterad provlåda."
+      }
+    ],
+    "howTitle": "Så fungerar det",
+    "steps": [
+      {
+        "title": "Skapa ditt konto",
+        "body": "Kontorets namn, stad och dina uppgifter — två minuter."
+      },
+      {
+        "title": "Bekräfta din e-post",
+        "body": "Ett klick på bekräftelselänken."
+      },
+      {
+        "title": "Allt upplåst",
+        "body": "Dokument, budgetar, fallstudier och stöd — direkt."
+      }
+    ],
+    "casesTitle": "Uppmätt, inte påstått",
+    "casesNote": "Fullständig studie inne i arkitektområdet.",
+    "cases": [
+      {
+        "title": "Akustisk renovering av restaurang",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 före → efter"
+      },
+      {
+        "title": "Ljustak på kontor",
+        "metric": "540 lux",
+        "metricLabel": "medel i arbetsplan, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Kommande evenemang",
+    "eventsNote": "Alla datum och anmälan med ett klick inne i arkitektområdet.",
+    "faqTitle": "Vanliga frågor",
+    "faqs": [
+      {
+        "q": "Är arkitektområdet verkligen gratis?",
+        "a": "Ja — det finns för att göra det så enkelt som möjligt att föreskriva ett STRETCH-system. Inga avgifter, inga förpliktelser."
+      },
+      {
+        "q": "Publicerar ni priser?",
+        "a": "Vägledande €/m²-budgetband finns inne i området för tidig budgetering. Projekt prissätts alltid individuellt — registrera ett projekt för en riktig siffra."
+      },
+      {
+        "q": "Stöttar ni en pågående upphandling?",
+        "a": "Ja. Registrera projektet så hjälper en dedikerad rådgivare med texter, detaljer och akustikmål — oftast inom en arbetsdag."
+      },
+      {
+        "q": "Levererar ni utanför Benelux?",
+        "a": "Ja — vi producerar i Belgien och monterar med certifierade partner i hela Europa."
+      }
+    ],
+    "ctaTitle": "Allt för att föreskriva, på ett ställe",
+    "ctaBody": "Skapa ditt gratis konto — varje dokument, budgetband och fallstudie är ett klick bort, plus en dedikerad rådgivare för dina projekt."
   }
 }

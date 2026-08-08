@@ -1,3 +1,511 @@
+## 2026-08-08 (21) — SEO audit: three shadowing bugs fixed
+
+Full-codebase SEO audit (metadata, hreflang, canonicals, sitemaps, robots,
+structured data, portal noindex), verified against the rendered production
+build per locale domain. Three real defects found and fixed — all cases of
+an old file shadowing the newer host-aware implementation:
+
+- **Deleted src/app/sitemap.ts** (old path-based sitemap): it was winning
+  over app/sitemap.xml/route.ts, so every domain served ONE identical
+  sitemap full of https://stretchplafond.com/<locale>/… URLs (which
+  redirect on the real domains) and missing dealer/material detail pages.
+  Now each domain serves its own host-aware sitemap: only its own URLs
+  (142 on .nl, zero off-domain), xhtml hreflang + x-default on every
+  entry, dealer/material routes included, portal excluded. Also fixes the
+  `next dev` route-conflict crash the duplicate caused.
+- **Deleted public/robots.txt** (stale static file): it shadowed
+  app/robots.txt/route.ts, hardcoding `Sitemap: stretchplafond.be/…` on
+  ALL 12 domains and missing the /portal disallows. Each domain now
+  advertises its own sitemap and blocks the portal.
+- **Deleted src/app/layout.tsx** (duplicate root layout): both it and
+  [locale]/layout.tsx rendered <html>/<body>, producing nested documents
+  where the FIRST <html> said lang="en" on every locale. Now a single
+  <html> with the correct per-locale BCP-47 lang.
+
+Verified healthy (no changes needed): per-domain canonicals; 13 hreflang
+link tags (12 locales + x-default) on every page; per-page meta ×12 with
+full key parity; portal noindex + robots disallow; /training 308 → the
+canonical /installer-training; JSON-LD Organization/WebSite/LocalBusiness
+(home), Product/BreadcrumbList/FAQPage (products), Article (blog); OG
+image endpoint; real 404 status; llms.txt; AI crawlers explicitly
+allowed; /architects present in sitemap, nav, footer and meta ×12.
+
+## 2026-08-08 (20) — Order & quote from the pricelist + compact architect dashboard
+
+- **Pricelist order basket** (client request): every price row gets a +
+  button; a floating basket opens a drawer with quantity steppers, an
+  optional note and a live total, submitted either as **Place order** or
+  **Request a quote**. New POST /api/portal/pricelist-order: trade session
+  required, every line RE-PRICED server-side from the RLS-scoped pricebook
+  (client prices never trusted; unknown items rejected), ref PO-/QT-
+  yyyymmdd-hhmm. Delivery reuses the designer-order pipeline: branded
+  internal e-mail to the lead inbox + confirmation to the client (Graph →
+  webhook → SMTP), order JSON attached, and the order stored in
+  designer_orders so it appears under /portal/orders with a status the
+  admin can advance. order-email.ts generalised for kind 'pricelist'
+  (order vs quote wording, products table instead of the ceiling spec,
+  optional note; designer e-mails unchanged). Demo mode acknowledges
+  without sending/storing. i18n portal.pricelist ×12 (17 keys).
+  E2E-verified: payload carries stable row keys + quantities, drawer
+  totals correct, quote submit returns ref and renders the success state.
+- **Architect dashboard decluttered** (client: advisor CTA too low, too
+  much scrolling): the advisor is now a black strip directly under the
+  heading (phone, e-mail, Book a call always in view); the datasheet and
+  case-study folds start CLOSED and Events became a fold too — the page
+  reads as a compact index (fold bars with counts) instead of a long
+  scroll. Full-page height roughly halved.
+
+## 2026-08-08 (19) — ARCHITECT AREA: second audience in the portal
+
+Architects are focus #2 after B2B installers: one free account with everything
+needed to SPECIFY a stretch ceiling. Iron pricing rule: architect accounts
+NEVER see trade pricing — no pricelist, no designer, no pricebook data.
+
+- **Account model**: AccountType gains 'architect' (4 tiers). The two leak
+  traps on THIS branch are fixed: normalizeAccountType() maps architect
+  BEFORE the installer fallback, hasTradeAccess() now enumerates
+  producer/installer instead of "not b2c", and the pricebook RLS policy's
+  tier case yields NULL for architect (matches no market — zero rows even if
+  app code had a bug). priceGroupForTier() returns null for architects. New
+  hasArchitectAccess() guards the architect surfaces. schema.sql: idempotent
+  ARCHITECT AREA block (DO $$ drop-and-recreate the account_type check with
+  the four-value set, add office/city columns, refreshed pricebook policy).
+- **Signup**: "I am" segmented choice Client / Architect. Architect mode:
+  office name (company field relabelled) + contact + phone + city; instant
+  access after e-mail confirmation, no admin approval. accountType/office/
+  city ride in the auth metadata so the login self-heal recreates an
+  architect profile, not b2c. /portal/login?signup=architect pre-selects
+  Architect (used by the landing CTA).
+- **Admin**: 4-option tier select + account-type filter; office/city shown in
+  the qualification line.
+- **Architect dashboard** ((app)/page.tsx branches to ArchitectDashboard):
+  Project tools (budget-guide tile, register-a-project + sample-box CTAs
+  pre-filled from the profile) · Library (29 one-click datasheets via
+  /api/architect/datasheet/[slug] — each download stored as a
+  portal_architect_download lead row; spec texts NL/FR/EN, CAD/BIM, photo
+  sets, 2 measured case-study cards with result rows) · Events (events.ts:
+  3 trainings + 2 lunch&learns, past events auto-hidden, one-click register
+  modals) · Advisor card. Resources from architect-resources.ts +
+  repo-root architect-private/ (README lists expected files); missing file
+  → "coming soon" badge + disabled button, route 404s. Demo architect
+  account architect@stretch.be / stretch2026 (downloads disabled).
+- **Budget guide** /portal/budget-guide (architect + admin only, b2b/b2c
+  redirect): indicative €/m² bands from hand-edited budget-bands.ts —
+  PLACEHOLDER ranges, Michael sets the real ones. Header comment forbids
+  ever importing pricebook data there; grep-verified the page and dashboard
+  import no portal/data or pricebook source. Prominent disclaimer +
+  register-your-project CTA.
+- **Modal plumbing**: OpenOptions.prefill (generic pre-fill used by the
+  datasheet edit step too), new 'project' modal type (9 fields, stable
+  optionValues for buildingType/system/stage) → /api/lead with source
+  architect_project; SOURCE_LABELS/FIELD_LABELS extended.
+- **/architects landing** ×12 (hero, 8 value blocks, how-it-works, next
+  events, 2 case teasers with one measured metric, 4 FAQs incl. the pricing
+  answer, signup CTA) + sitemap entry + footer link + mega-menu category 3
+  (append-only, cats 0/1 untouched) + mobile-menu entry + meta keys.
+- **Flywheel**: public datasheet requests with role=architect get an invite
+  paragraph in the e-mail (extraParagraph hook) and an invite line in the
+  modal success state, both linking /architects.
+- E2E-verified: architect demo sees the dashboard; /portal/pricelist and
+  /portal/designer redirect; budget guide renders 5 bands for architect,
+  redirects installer; installer still reaches the pricelist; signed-out
+  hits on /api/architect/* → 403; coercion audit 0 hits; all new keys = 12
+  files.
+
+## 2026-08-08 (18) — DATASHEET GATE v2: bigger form + e-mail-only delivery
+
+Datasheets are no longer instant downloads: the visitor leaves five details
+(name · role · e-mail · phone · city) and the PDF arrives by e-mail as a
+signed 14-day link. Lead capture unchanged (deliverLead + storeLead).
+
+- **Stable role values**: FormField.optionValues (parallel to options) —
+  selects submit stable keys (architect/installer/private/other), never a
+  localized label; localizeModalConfig localizes labels only. Verified in
+  the posted payload.
+- **PDFs moved out of public/**: all 29 live in repo-root datasheets-private/
+  (README lists exact filenames); Datasheet.file is now the bare filename;
+  no public /datasheets/*.pdf works (404, grep-verified no references).
+  next.config.mjs ships the folder via experimental.outputFileTracingIncludes.
+- **Signed links**: datasheet-links.ts — HMAC-SHA256 over slug+exp
+  (base64url, 14 days, DATASHEET_SIGNING_SECRET env, timingSafeEqual,
+  obviously-dev fallback + warn when unset; documented in the README env
+  table). GET /api/datasheet/[slug]?t=&l= streams the PDF; invalid/expired/
+  unknown → branded 410 page localized via the validated l param
+  (datasheetLink namespace ×12); file missing → 404 JSON.
+- **POST /api/datasheet-request**: clean() sanitisation + honeypot; role/
+  slug/locale validated; best-effort in-memory rate limit 8/h/IP (429
+  rate_limited); lead delivered + stored exactly as /api/lead (source
+  pdf_download, datasheetSlug, downloadedFile, role, city, referer page);
+  visitor e-mail via new transactional.ts (Graph → webhook → SMTP — the
+  branch's Resend-free chain; recipient never logged, domain only). No
+  provider configured (or all fail at runtime) → { mode:'download', url }
+  and the modal falls back to the old instant download.
+- **Visitor e-mail**: datasheet-email.ts — table layout, inline CSS, no
+  external images: black STRETCH® header, red download button, plain-URL
+  fallback, 14-day note, contact footer + soft CTA; text/plain alternative;
+  extraParagraph hook (used by the architect invite). datasheetEmail
+  namespace ×12.
+- **Modal**: datasheet flow posts the five fields + slug + locale; success
+  state = "check your inbox" with the address + spam note (fallback mode
+  keeps the manual download button); 429 shown inline; analytics identical.
+  Returning visitors (localStorage 'datasheet-contact', v1, 30 days, guarded
+  try/catch): compact confirm step "Send {title} to {email}?" + one-click
+  send (posts a FULL lead every time — verified: second sheet's one-click
+  posted its own slug) + "Not you? Edit details" pre-filling the form.
+- **Portal documents** page now mints fresh signed links per render (files
+  left public/); technical hub pages keep their gated per-sheet rows (this
+  branch already had them — richer than the spec's single-slug plan, so
+  TechMembrane.datasheetSlug was not needed).
+- **Copy** ×12: modals.datasheet (5 fields incl. localized role options,
+  confirm/fallback/rateLimited), datasheetsPage lead + privacy note now name
+  the five fields and e-mail delivery.
+- Verified with curl + Playwright on the production build: fresh link
+  downloads (200, application/pdf), tampered + expired + unknown slug → 410
+  in the link's locale, missing file → 404, localized role label → 422,
+  honeypot → silent ok, no-env → mode download with working fallback.
+
+## 2026-08-08 (17) — Type filter made primary + B2B signup
+
+- **Pricelist filter hierarchy flipped** (client: "type must be the main
+  filter"): the Type selector is now large display-font blocks (equal-width,
+  2px border, active = black fill + red bottom bar + red count badge)
+  directly under the title; the category tabs shrank to a compact quiet row.
+  Fixed a real state bug found via screenshot: :hover (specificity 0,2,0)
+  beat .plv__type--on (0,1,0), so the active block lost its black fill under
+  the cursor leaving white-on-white text — hover now scoped with
+  :not(.plv__type--on). demo-pricebook.json regenerated from the fabric
+  workbook (1,388 rows, both types, three tier markets) so demo mode shows
+  the full two-level filtering; verified with Playwright screenshots (all
+  types + fabric active, hovered and idle).
+- **B2B-grade signup** (client: "we are B2B focussed"): Create account now
+  requires Company, Contact person, Phone, VAT number, Country (localised
+  names via Intl.DisplayNames, 21 countries + Other) and Business type
+  (installer / distributor / architect / contractor / other). Stored on
+  portal_users (5 new nullable columns + add-column-if-not-exists migration
+  in schema.sql; retry-without-columns fallbacks in signup and login
+  self-heal keep un-migrated DBs working; details also mirrored into the
+  auth user metadata so self-heal can rebuild a full profile). Admin panel
+  shows the qualification line under the company (contact · phone · VAT ·
+  country · type) and the users API accepts admin edits of those fields.
+  i18n: portal.login keys + new portal.businessTypes namespace ×12; account
+  still starts as B2C until an admin upgrades the tier after review.
+- Client action: run the new portal_users migration block (5 alter lines)
+  in supabase/schema.sql.
+
+## 2026-08-08 (16) — Pricebook: Type column, 1000-row cap fix, Type→Category filter
+
+Client uploaded PriceBook v2.4 (1,504 rows incl. new fabric range + "Type"
+column) and saw only 1,000 items — Supabase/PostgREST caps EVERY response at
+1,000 rows regardless of .limit().
+
+- **All pricebook reads now paginate** (.range() in 1,000-row pages until a
+  short page): portal query (data.ts), admin sync diff read (sync/route.ts)
+  and the CLI seeder (seed-pricebook.mjs). The full pricelist reaches the
+  portal regardless of size.
+- **New `type` column** end-to-end: PriceRow (types.ts), schema.sql
+  (create table + `add column if not exists` migration for live DBs), the
+  workbook parser + seeder (optional "Type" header), the sync route and the
+  pricelist CSV export. Missing-column fallbacks everywhere: reads retry
+  without `type`, the sync upserts without it and warns in the report — an
+  un-migrated database keeps working, just without the filter.
+- **Pricelist UI: two-level filtering.** New Type strip (black/red segmented
+  buttons with counts, only rendered when the data has >1 type) above the
+  toolbar; category tabs recompute from the selected type — filter Type
+  first, then Category, as requested. i18n keys portal.pricelist.type /
+  allTypesOpt in all 12 locales.
+- Verified against the uploaded v2.4 workbook: 1,388 priced rows parse
+  (901 PVC / 487 fabric), 116 rows skipped because they carry no price in
+  the Excel at all (listed in the admin upload report).
+- Client actions: run the pricebook migration line in supabase/schema.sql,
+  then re-upload the workbook in /portal/admin so `type` gets populated.
+
+## 2026-08-08 (15) — PriceBook v2.4: price groups ARE the tiers
+
+- Client uploaded Alto PriceBook v2.4 (1017 rows): the ten old price groups
+  (West/East Europe, USA, Tier: … etc.) are GONE — every product now has one
+  price per account tier: 'Producer/Reseller' (339) / 'Installer' (339) /
+  'B2C' (339; 116 rows skipped for missing EUR price). This is what the
+  earlier 3-option screenshot was about, and why the client's installer test
+  account showed "0 items" (its granted markets no longer exist as groups).
+- Visibility now follows the tier automatically: priceGroupForTier() maps
+  producer→'Producer/Reseller', installer→'Installer', b2c→'B2C'.
+  PRICE_MARKETS = those three; markets[] demoted to OPTIONAL extra grants
+  (e.g. hand an installer the producer column). Enforced in the RLS policy
+  (tier clause tolerant of label spellings in account_type) + demo filter;
+  admin/all_markets unchanged. Create-account "select at least one market"
+  validation removed; admin labels renamed Markets→Price groups ×12; portal
+  nav shows the tier group. B2C accounts still have NO pricelist access
+  (gate unchanged) even though a B2C price column now exists — client to
+  decide whether consumer logins should see it.
+- demo-pricebook.json regenerated from v2.4 (901 rows, 3 groups); demo
+  users' stale market grants cleared; docs/PORTAL.md rewritten accordingly.
+- schema.sql: pricebook_read policy updated in place + migration note; run
+  the policy block + `update portal_users set markets='{}' where not
+  (markets <@ array[...])` on the live DB.
+
+## 2026-08-08 (14) — Three account tiers: Producer/Reseller · Installer · B2C
+
+- Client adjusted the account model: the b2b/b2c split becomes THREE tiers.
+  AccountType = 'producer' | 'installer' | 'b2c'; trade access (pricelist,
+  designer, orders) = admin OR any non-b2c tier — hasTradeAccess() is the
+  single gate everywhere, so producer and installer behave identically for
+  now (pricing differences stay market-driven via the markets[] grants).
+- normalizeAccountType() maps whatever is stored to a canonical tier —
+  tolerant of display labels typed straight into Supabase ("Producer/
+  Reseller", "Installer", "B2C") and of legacy 'b2b' rows (→ installer).
+  Used at every read (auth.ts session, users API list) and write (users API
+  create/update).
+- AdminPanel: the B2B/B2C pill + "Upgrade/Set" toggle link replaced by a
+  3-option tier dropdown per user row; create form gains an account-type
+  select (markets section hidden for B2C). Labels translated ×12
+  (typeProducer/typeInstaller/typeB2c + colType; makeB2b/makeB2c/typeB2b
+  keys dropped).
+- schema.sql: account_type default 'installer', check
+  ('producer','installer','b2c') + run-once ACCOUNT TIERS migration block at
+  the bottom (drops old check, maps existing values incl. hand-edited
+  labels, re-adds canonical check). Client must run it in the Supabase SQL
+  editor — until then the app still works because reads are tolerant; only
+  admin-panel tier WRITES could be rejected by a hand-made constraint that
+  doesn't allow canonical lowercase values.
+- Demo users: west client = installer, east client = producer.
+
+## 2026-08-08 (13) — Resend removed entirely (zero clutter)
+
+- Graph mail verified live: test order STR-20260808-1613 delivered via graph
+  for both e-mails (internal + dealer confirmation, all attachments) from
+  info@stretchgroup.be, using a dedicated app registration for this website
+  (the reused Sufit app was blocked by the tenant's ApplicationAccessPolicy —
+  per-app, so a fresh app bypasses it; client advised to add a RestrictAccess
+  policy for the new app scoped to info@).
+- Client deleted RESEND_API_KEY and asked for zero clutter → Resend stripped:
+  branches removed from deliver.ts + order-email.ts, method unions narrowed,
+  `resend` npm dependency uninstalled, README env table/priority/checklist
+  rewritten Graph-first. Chain is now graph → webhook → smtp → log (webhook
+  and SMTP stay: dependency-light, unconfigured, and Microsoft-compatible
+  escape hatches — e.g. Power Automate or smtp.office365.com).
+- NOTE: with only Graph configured, a Graph failure (realistic case: client
+  secret expiry, ~24 months) means orders are stored + visible in /portal/orders
+  but NOT e-mailed (summary log line shows "NOT delivered"). Client warned to
+  diary the secret expiry.
+
+## 2026-08-08 (12) — E-mail via Microsoft 365 (Graph) — client wants fewer tools
+
+- New src/lib/msgraph-mail.ts: sends through the company's own Exchange
+  Online mailbox via Microsoft Graph (client-credentials, plain fetch, zero
+  new npm deps; token cached across warm invocations; attachments + reply-to
+  + Sent Items). Wired as the FIRST transport in BOTH chains: designer order
+  e-mails (order-email.ts) and website leads (deliver.ts); chain now
+  graph → resend → webhook → smtp → log. Graph honours recipients, so the
+  dealer confirmation flows through it too.
+- Setup documented in msgraph-mail.ts header: Entra app registration with
+  APPLICATION permission Mail.Send + admin consent + client secret; env vars
+  MS_TENANT_ID, MS_CLIENT_ID, MS_CLIENT_SECRET, MS_GRAPH_SENDER (shared
+  mailbox works, no licence needed). Optional ApplicationAccessPolicy to
+  scope the app to that one mailbox. RESEND_API_KEY can be removed once
+  Graph is live.
+- Not live-testable from the sandbox (no tenant credentials/egress) —
+  request shapes follow the standard Graph sendMail contract; verify with
+  one test order after setting the env vars.
+
+## 2026-08-08 (11) — Order e-mail fixes from live test + automatic design saving
+
+Live test findings (client): both e-mails arrived at leads@ and neither had
+attachments → delivery runs through the generic LEAD_WEBHOOK_URL relay, which
+mails a FIXED inbox and forwards only subject/body. Plus designer_designs
+stayed empty (cloud save was manual-only). Fixes:
+
+- **Documents now survive any relay**: order PDFs/DXF/JSON are uploaded to a
+  private Supabase Storage bucket (designer-orders, schema.sql) and both
+  e-mails carry 30-day signed DOWNLOAD LINKS next to the native attachments.
+  File index stored on the order row (designer_orders.files jsonb, with
+  un-migrated-schema retry).
+- **No more duplicate at leads@**: the dealer confirmation is recipient-
+  critical — it now only sends via Resend/SMTP (transports that honour the
+  recipient); via webhook-only setups it is skipped (confirmed:false) instead
+  of landing in the lead inbox.
+- **Designs save automatically**: the first autosave tick with real
+  measurements silently CREATES the design row (updates in place afterwards);
+  the ☁ Save button remains for naming/explicit saves. Example room excluded.
+- ACTION for client: re-run schema.sql bottom blocks (storage bucket + files
+  column). RECOMMENDED: add RESEND_API_KEY (or SMTP_*) in Vercel env so real
+  attachments + the dealer confirmation work end-to-end.
+
+## 2026-08-08 (10) — Designer order e-mails: branded layout, attachments, confirmation
+
+- **Branded HTML order e-mail** (was: monospace text dump): black STRETCH®
+  header, red section labels, dealer/client blocks, ceiling-specification
+  table, itemised price table with total — built from the STRUCTURED order
+  object (order-email.ts buildOrderEmailHtml), text summary kept as fallback.
+- **Documents attached**: the designer now uploads the generated floorplan
+  PDF, production PDF and DXF with the order (base64, ≤3 MB total, 8-file cap,
+  sanitised names — Vercel's 4.5 MB body limit respected) and the server adds
+  the order JSON itself; all attached to BOTH e-mails.
+- **Dealer confirmation e-mail**: every order now sends a second branded
+  e-mail to the dealer ("Your STRETCH order … — received", reply-to =
+  leads inbox) with the same attachments; the designer's success message
+  says a confirmation is on its way (response field `confirmed`).
+- Verified: typecheck + build green; demo E2E confirms the order POST carries
+  the PDF+DXF payload and the single ZIP download still works; both e-mail
+  variants rendered and visually checked.
+
+## 2026-08-08 (9) — Homepage "Selected work" photos match their titles
+
+- The five-tile strip took its TITLES from the first five projects in
+  content.ts but its PHOTOS from five static /images/home/gallery-*.jpg
+  slots — after the portfolio reshuffle every tile showed the wrong photo.
+  Gallery.tsx now uses each project's own hero (p.image) with the static
+  slot only as fallback, so the strip stays correct as the portfolio
+  changes. Verified: all five tiles render their own hero.
+
+## 2026-08-08 (8) — Ceiling designer: server orders, cloud designs, order history
+
+- **Orders now reach STRETCH reliably** (was: mailto-only, nothing server-side):
+  new POST /api/portal/designer/order stores every order in designer_orders
+  (best-effort, service-role) AND e-mails it from the server (Resend→webhook→
+  SMTP→log chain, order JSON attached; reply-to = dealer). The designer's
+  "Place order" now bundles floorplan PDF (+production PDF) + DXF + order.json
+  into ONE ZIP (browser multi-download blocking solved), POSTs the order, and
+  only falls back to the old mailto flow when the server is unreachable.
+- **Designs are saved**: designer_designs table + /api/portal/designer/designs
+  (list/load/save/delete). New PORTAL BRIDGE inside the designer HTML adds a
+  "☁ Save" button + "My designs" picker in the toolbar, cloud autosave for
+  loaded designs, and a browser crash-net autosave (localStorage, restore
+  banner after reload). Serve-time PORTAL_USER injection shows "Ordering as
+  <company>" above the order button.
+- **NEW /portal/orders** (trade): dealers see their own order history with
+  status badges; admins see all orders and can change status
+  (received/confirmed/in_production/delivered/cancelled) via
+  /api/portal/designer/order/status. Orders nav item ×12 + overview tile
+  flipped live for trade accounts (stays "soon" for b2c). portal.orders
+  namespace translated ×12.
+- **Usage events**: designer_events table + /event route (open, cloud_save,
+  cloud_load, order_attempt, order_fallback, order_placed).
+- Zero-config degradation preserved: demo mode acknowledges but never stores/
+  sends; without the new tables the designer still works (file save + ZIP +
+  server e-mail; history shows "unavailable"). ACTION REQUIRED to activate
+  storage: run the new DESIGNER block at the bottom of supabase/schema.sql in
+  the Supabase SQL editor.
+- Deferred on purpose (client decision): live pricing from the pricebook DB
+  (designer still uses its embedded price matrix).
+- Verified: typecheck + build green; demo-mode E2E (Playwright): login → nav
+  shows Orders → APIs answer demo-safe → designer bridge boots, cloud UI
+  hidden in demo, example room → Place order downloads ONE valid ZIP (3 files)
+  + demo notice, zero JS errors.
+
+## 2026-08-08 (7) — Application hero titles no longer hidden behind the photo
+
+- On the 5 application pages the global .h1 (up to 8.5vw/142px) overflowed its
+  grid column on long words, painting UNDER the hero image (client screenshots:
+  BATHROOMS/KITCHEN/WELLNESS/ACOUSTICS all clipped). Scoped fix in
+  ApplicationPage.tsx: .ap-hero .h1 sized clamp(30px,3.6vw,48px) — calibrated
+  so the longest localized word (13 glyphs, nl "thuisbioscoop"/"wandakoestiek")
+  fits the column in all 12 locales — with break-word as last-resort guard.
+  Verified at 1728px on nl/en/de worst cases.
+
+## 2026-08-08 (6) — Pricing article localized per market currency
+
+- The "What does a stretch ceiling cost?" blog post (spanplafond-prijs) showed
+  EUR values on every domain. Now per market: PL in PLN at Polish market
+  levels (150–450 zł/m² netto: basic 150–200, print 200–250, acoustic
+  250–350, backlit 300–400, bathroom 350–450 — client's reference site
+  sufity-pawbud.pl unreachable from the sandbox, figures market-informed,
+  FLAGGED for client verification); DK/SE/NO/IS get the EUR ranges converted
+  and rounded (DKK 500–1.500 kr., SEK 800–2 300 kr, NOK 800–2 300 kr,
+  ISK 10.000–30.000 kr.). The 7 euro-market locales keep €70–200. Audit
+  confirmed no other namespace carries money values.
+
+## 2026-08-08 (5) — Johnson & Johnson photos
+
+- Client uploaded 3 photos via GitHub to main (14–17 MB each, "Johnson &
+  Johnson*.jpg"). Merged main into the PR branch, optimized to 1920px web
+  JPGs (~440 KB each) as johnson-and-johnson-{hero,canteen,canopy}.jpg,
+  wired hero + 2-photo gallery into the project entry, and deleted the raw
+  originals so main is clean after merge.
+- Still outstanding: BeA tacker photo for "Air tools & tackers" (materials) —
+  pasted images don't arrive as files; needs zip or GitHub upload.
+
+## 2026-08-08 (4) — Materials page images
+
+- **Fabrics:** "Polyester stretch ceiling on the roll" now uses a copy of the
+  pvc-roll photo (polyester-roll.jpg, client request); "Polyester stretch
+  ceiling kit (DIY)" gets the DIY-kit product photo from the client's photo
+  zip (fabric + absorber pads + profile).
+- **Accessories:** "Invisible ceiling speaker" gets the install render
+  extracted at full resolution from the invisible-speaker datasheet PDF
+  (the client's pasted image matched it 1:1).
+- "Air tools & tackers" (BeA tacker photo) still without image — the pasted
+  image couldn't be saved from chat; client asked to re-send as a file.
+
+## 2026-08-08 (3) — 4 placeholder projects deleted, 4 real projects get photos
+
+- **Deleted (client request):** city-penthouse-antwerp, wellness-spa-bruges,
+  home-cinema-ghent, private-villa-knokke — removed from content.ts, from the
+  projects + projectCards.metas namespaces ×12, and the now-empty "Home
+  cinema" portfolio filter dropped (content.ts + inspirationPage.filters ×12,
+  index 6). dealers.ts local-project links remapped: Antwerpen →
+  creneau-afas-lounge, Gent → candor-sint-martens-latem, West-Vlaanderen/
+  Brugge → none. Portfolio now 21 projects.
+- **Photos wired from client zips (photographer sets):** da-tweekaz-studio
+  (hero + control room), mark-with-a-k (hero + ceiling detail),
+  notary-ampe-anthony (hero + 3: reception, circular recess, lounge — note:
+  photos show the office's current "Ampe & Depuydt" branding).
+- **london-chapel corrected + photographed:** the old copy described a backlit
+  ceiling; the actual project (dealer Upholster London) is acoustic FABRIC
+  WALLING through a chapel-turned-home plus a fabric-lined vaulted ceiling and
+  a fabric-walled home cinema. Entry rewritten (cat Light & Print → Living
+  room, dealer fact added), re-translated ×12, hero + 9-photo gallery.
+- 3 loose photos in the request (printed forest-canopy ceiling + moss rings in
+  an industrial office) match no known project — parked, client asked.
+
+## 2026-08-08 (2) — Boost Wellness fixes, event-hall photos, datasheets surfaced
+
+- **Boost Wellness corrections (client feedback):** year fact 2025 → 2026
+  (content.ts + ×12 messages); Maison Max fact now links to
+  https://www.maisonmax.be/.
+- **Event-hall photos wired:** the old van-der-valk-beveren project (event hall)
+  gets a hero + 6-photo gallery from the "Foto website/Van der valk" install
+  set — dismantling the old dimpled black ceiling, membrane tensioning, cove
+  lighting/hatch details, seamless finish around the textile columns
+  (public/images/projects/van-der-valk-beveren-*.jpg). Both featured tiles on
+  /inspiration now carry real photos.
+- **Datasheets surfaced where people look for them** (client couldn't find
+  them): (1) /technical/{polyester|pvc}/datasheet now lists the membrane's
+  PDFs with gated download buttons + an "all datasheets" link
+  (membraneDatasheets map in datasheets.ts); (2) NEW /portal/documents —
+  the full library with DIRECT downloads (no lead gate) for signed-in
+  clients; portal overview "Documents" tile flipped from "Soon" to live and
+  a Documents item added to the portal nav. New strings ×12:
+  techPage.downloadsTitle/allDatasheets, portal.nav.documents, portal.docs.
+
+## 2026-08-08 — Van der Valk "Boost Wellness" project page + real datasheet library
+
+- **New featured project page ×12** (/inspiration/van-der-valk-boost-wellness):
+  the complete wellness renovation of Van der Valk Hotel Beveren, reopened as
+  Boost Wellness (boostwellness.be), interior design by Maison Max (Temse).
+  700 m² / 6-month renovation; story covers the 20-year Plafondlux full-circle
+  (Benjamin → Michael Nicasens), Tim & Paulina's collaboration, PVC in wet
+  zones vs ultra-matte polyester in changing/massage/nail rooms, and the
+  printed brown spa ceiling following the organically curved wall with its
+  curved-edge circular skylight (prefab aluminium lightbox elements). Facts,
+  6 highlights, 10 materials, 4 FAQs, 7 linked solutions. Photo set from the
+  client processed to web JPGs: hero + 11 gallery images
+  (public/images/projects/van-der-valk-boost-wellness-*.jpg). Placed first in
+  content.ts → leads the Featured pair and the portfolio grid. Translated into
+  all 12 locales (projects + projectCards.metas namespaces); be.json kept on
+  the site's "spanplafond" terminology. Portfolio now 25 projects.
+- **Datasheet library goes real:** 29 actual PDFs (client-supplied) added under
+  public/datasheets/ with clean kebab-case names, and datasheets.ts rebuilt —
+  7 categories (Ceiling systems, Acoustic, Light & backlit, Prefab &
+  accessories, Specials & outdoor, Profiles & installation details,
+  Maintenance) with spec-accurate one-line descriptions extracted from the
+  documents themselves, real file sizes. Replaces the 5 placeholder entries
+  whose files 404'd. Docs that are Dutch-only are marked "(NL)".
+- **Housekeeping:** added .gitignore (node_modules/.next/tsbuildinfo/env) — the
+  repo had none.
+- Verified: typecheck + `next build` green; page prerenders in all 12 locales;
+  smoke-tested en/be/fr/pl rendering (hero + gallery + no MISSING_MESSAGE),
+  inspiration listing shows the new featured card, datasheet PDFs serve 200.
+
 ## 2026-08-07 (8) — LU + Wien dealer pages, mega-menu applications, SEO audit (build 1844)
 
 - **Dealer directory phase 2:** new regions in dealers.ts (DealerRegion +

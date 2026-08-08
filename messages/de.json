@@ -20,7 +20,8 @@
       "about": "Über uns",
       "faq": "FAQ",
       "clientLogin": "Kundenlogin",
-      "materials": "Material"
+      "materials": "Material",
+      "architects": "Architekten"
     },
     "cta": {
       "freeQuote": "Kostenloses Angebot",
@@ -73,7 +74,9 @@
     "portalTitle": "Kundenportal | STRETCH",
     "portalDescription": "Melden Sie sich an, um Ihre STRETCH-Handelspreisliste und Kontodaten einzusehen.",
     "materialsTitle": "Spanndecken-Material & Zubehör | STRETCH",
-    "materialsDescription": "Profile, Folien & Tücher, Beleuchtung, Zubehör, Werkzeug und STRETCH Cleaner — pro Artikel Angebot anfragen, wir antworten mit Preis und Lieferzeit. Ohne Webshop."
+    "materialsDescription": "Profile, Folien & Tücher, Beleuchtung, Zubehör, Werkzeug und STRETCH Cleaner — pro Artikel Angebot anfragen, wir antworten mit Preis und Lieferzeit. Ohne Webshop.",
+    "architectsTitle": "Für Architekten — Spanndecken ausschreiben | STRETCH",
+    "architectsDescription": "Kostenloser Architektenbereich: Datenblätter, Ausschreibungstexte, CAD/BIM, gemessene Fallstudien, indikative €/m²-Budgetbänder, Events und Projektbegleitung."
   },
   "cookies": {
     "title": "Wir respektieren Ihre Privatsphäre",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiration",
       "about": "Über uns",
       "faq": "FAQ",
-      "clientPortal": "Kundenportal"
+      "clientPortal": "Kundenportal",
+      "architects": "Für Architekten"
     },
     "dealers": "Händlernetz"
   },
@@ -180,8 +184,15 @@
       "demoBody": "Noch keine Datenbank verbunden — testen Sie das Portal mit diesen Konten:",
       "tabSignIn": "Anmelden",
       "tabSignup": "Konto erstellen",
-      "signupSub": "Kostenloses Konto — sofortiger Zugang",
-      "company": "Firma (optional)",
+      "signupSub": "Für Fachbetriebe — Zugang nach Prüfung",
+      "company": "Firma",
+      "contactName": "Ansprechpartner",
+      "vat": "USt-IdNr.",
+      "phone": "Telefon",
+      "country": "Land",
+      "countryOther": "Anderes Land",
+      "businessType": "Unternehmenstyp",
+      "chooseOption": "Auswählen…",
       "passwordHint": "Mindestens 8 Zeichen.",
       "signupSubmit": "Konto erstellen",
       "signupSubmitting": "Wird erstellt…",
@@ -189,17 +200,25 @@
       "signupDoneBody": "Wir haben Ihnen einen Bestätigungslink gesendet. Klicken Sie darauf und melden Sie sich dann mit E-Mail und Passwort an.",
       "signupExists": "Mit dieser E-Mail existiert bereits ein Konto — bitte anmelden.",
       "unavailableTitle": "Portal startet bald",
-      "unavailableBody": "Das Kundenportal wird gerade aktiviert. Kontaktieren Sie uns und wir richten Ihren Zugang ein."
+      "unavailableBody": "Das Kundenportal wird gerade aktiviert. Kontaktieren Sie uns und wir richten Ihren Zugang ein.",
+      "audienceLabel": "Ich bin",
+      "audienceClient": "Kunde",
+      "audienceArchitect": "Architekt",
+      "officeName": "Büroname",
+      "city": "Stadt"
     },
     "nav": {
       "label": "Kundenportal",
       "overview": "Übersicht",
+      "documents": "Dokumente",
+      "orders": "Bestellungen",
       "pricelist": "Preisliste",
       "admin": "Verwaltung",
       "signOut": "Abmelden",
       "demoBadge": "Demo",
       "allMarkets": "Alle Märkte",
-      "designer": "Decken-Designer"
+      "designer": "Decken-Designer",
+      "budgetGuide": "Budget-Guide"
     },
     "dash": {
       "eyebrow": "Kundenportal",
@@ -226,18 +245,62 @@
       "tileTradeBody": "Monteur oder Händler? Mit einem Händlerkonto erhalten Sie Händlerpreise und den Deckendesigner.",
       "tradeCta": "Partner werden"
     },
+    "docs": {
+      "title": "Dokumente",
+      "intro": "Technische Datenblätter und Montagezeichnungen des STRETCH-Sortiments — direkter Download, ohne Formulare.",
+      "download": "Herunterladen"
+    },
+    "orders": {
+      "title": "Bestellungen",
+      "intro": "Deckenbestellungen aus dem Designer — mit ihrem aktuellen Status.",
+      "empty": "Noch keine Bestellungen. Zeichnen Sie eine Decke und geben Sie Ihre erste Bestellung im Designer auf.",
+      "demoNote": "Demomodus — Bestellungen werden nicht gespeichert.",
+      "unavailable": "Die Bestellhistorie ist derzeit nicht verfügbar.",
+      "thDate": "Datum",
+      "thDealer": "Händler",
+      "thClient": "Kunde",
+      "thTotal": "Gesamt",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Eingegangen",
+        "confirmed": "Bestätigt",
+        "in_production": "In Produktion",
+        "delivered": "Geliefert",
+        "cancelled": "Storniert"
+      }
+    },
     "pricelist": {
       "title": "Preisliste",
       "search": "Produkt oder Code suchen…",
       "count": "{count} Positionen",
       "market": "Markt",
+      "type": "Typ",
+      "allTypesOpt": "Alle Typen",
       "allMarketsOpt": "Alle Märkte",
       "currency": "Währung",
       "print": "Drucken",
       "exportCsv": "CSV",
       "version": "Version",
       "updated": "Aktualisiert",
-      "empty": "Keine Produkte gefunden."
+      "empty": "Keine Produkte gefunden.",
+      "addLabel": "Zur Bestellung hinzufügen",
+      "basketLabel": "Bestellkorb",
+      "cartTitle": "Aus der Preisliste bestellen",
+      "cartEmpty": "Noch nichts hinzugefügt — nutzen Sie das + neben einem Preis.",
+      "qty": "Menge",
+      "noteLabel": "Anmerkung (optional)",
+      "notePlaceholder": "Lieferwünsche, Projektreferenz...",
+      "totalLabel": "Summe (zzgl. MwSt.)",
+      "submitOrder": "Bestellung aufgeben",
+      "submitQuote": "Angebot anfragen",
+      "sendingLabel": "Senden…",
+      "closeLabel": "Schließen",
+      "sentOrderTitle": "Bestellung gesendet",
+      "sentOrderMsg": "Wir haben Ihnen eine Bestätigung gemailt. Referenz {ref} — verfolgen Sie sie unter Bestellungen.",
+      "sentQuoteTitle": "Angebot angefragt",
+      "sentQuoteMsg": "Wir haben Ihre Anfrage erhalten. Referenz {ref} — ein Spezialist antwortet innerhalb eines Werktags.",
+      "demoNote": "Demomodus — nichts wurde gesendet oder gespeichert.",
+      "errorMsg": "Etwas ist schiefgelaufen — bitte erneut versuchen."
     },
     "admin": {
       "title": "Verwaltung",
@@ -265,7 +328,8 @@
       "colEmail": "E-Mail",
       "colCompany": "Firma",
       "colRole": "Rolle",
-      "colMarkets": "Märkte",
+      "colType": "Kontotyp",
+      "colMarkets": "Preisgruppen",
       "colStatus": "Status",
       "roleClient": "Kunde",
       "roleAdmin": "Admin",
@@ -273,20 +337,75 @@
       "statusInactive": "Inaktiv",
       "deactivate": "Deaktivieren",
       "activate": "Aktivieren",
-      "allMarketsLabel": "Alle Märkte",
+      "allMarketsLabel": "Alle Preisgruppen",
       "tempPassword": "Temporäres Passwort",
       "create": "Konto erstellen",
       "creating": "Erstellen…",
       "createFailed": "Konto konnte nicht erstellt werden.",
       "createdOk": "Konto für {email} erstellt.",
-      "makeB2b": "Auf B2B hochstufen",
-      "makeB2c": "Auf B2C setzen",
-      "typeB2b": "B2B",
-      "typeB2c": "B2C"
+      "typeProducer": "Hersteller/Wiederverkäufer",
+      "typeInstaller": "Monteur",
+      "typeB2c": "B2C",
+      "typeArchitect": "Architekt",
+      "filterAllTypes": "Alle Typen"
     },
     "designer": {
       "eyebrow": "Decken-Designer",
       "hint": "Zeichnen Sie die Decke aus Wand- und Diagonalmaßen, platzieren Sie Nähte und Aussparungen, prüfen Sie den Preis und bestellen Sie. Mit Save speichern Sie ein Aufmaß als Datei."
+    },
+    "businessTypes": {
+      "installer": "Monteur",
+      "distributor": "Händler / Wiederverkäufer",
+      "architect": "Architekt / Designer",
+      "contractor": "Bauunternehmen",
+      "other": "Sonstiges"
+    },
+    "architect": {
+      "eyebrow": "Architektenbereich",
+      "welcome": "Alles zum Ausschreiben",
+      "intro": "Willkommen, {office} — Dokumente, Ausschreibungstexte, CAD/BIM, gemessene Fallstudien, Budgetbänder und Projektbegleitung an einem Ort.",
+      "demoNote": "Demo-Vorschau — Downloads sind deaktiviert, nichts wird protokolliert.",
+      "toolsTitle": "Projekt-Tools",
+      "budgetTileTitle": "Budget-Guide",
+      "budgetTileBody": "Indikative €/m²-Bänder für frühe Budgets — die Zahlen, die niemand veröffentlicht.",
+      "budgetTileCta": "Guide öffnen",
+      "projectTileTitle": "Projekt registrieren",
+      "projectTileBody": "Ein laufendes Projekt erhält einen festen Berater, Ausschreibungsunterstützung und Prioritätsmuster.",
+      "projectTileCta": "Projekt registrieren",
+      "samplesTileTitle": "Musterbox",
+      "samplesTileBody": "Physische Membran- und Farbmuster für Ihre Materialbibliothek — kostenlos für Architekten.",
+      "samplesTileCta": "Musterbox bestellen",
+      "libraryTitle": "Bibliothek",
+      "libraryBody": "Jedes Dokument mit einem Klick. Downloads werden Ihrem Konto zugeordnet, damit wir Ihr Projekt proaktiv begleiten können.",
+      "docsTitle": "Datenblätter",
+      "docsBody": "Die komplette technische Datenblatt-Bibliothek — ohne Formulare, ein Klick.",
+      "specTitle": "Ausschreibungstexte",
+      "specBody": "Fertige Ausschreibungstexte pro System — bestektekst NL, cahier des charges FR, specification EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "DWG-Profildetails, Revit-Familien und SketchUp-Komponenten pro System.",
+      "photosTitle": "Projektfotos",
+      "photosBody": "Hochauflösende Fotosets von Referenzprojekten für Kundenpräsentationen.",
+      "casesTitle": "Technische Fallstudien",
+      "casesBody": "Echte Projekte mit gemessenen Vorher/Nachher-Werten — Zahlen für Ihren Entwurfsbericht.",
+      "eventsTitle": "Events",
+      "eventsBody": "Schulungen, Lunch & Learns und Showroom-Tage — Anmeldung mit einem Klick.",
+      "register": "Anmelden",
+      "advisorTitle": "Ihr Berater",
+      "advisorBody": "Ein Spezialist für Ausschreibung, Akustikziele, Budgets und Muster — Antwort innerhalb eines Werktags.",
+      "advisorCta": "Gespräch buchen",
+      "download": "Download",
+      "comingSoon": "Bald verfügbar"
+    },
+    "budget": {
+      "eyebrow": "Architektenbereich",
+      "title": "Budget-Guide",
+      "intro": "Indikative Preisbänder (montiert) pro System — bewusst grob, für frühe Budgets und Machbarkeitsprüfungen.",
+      "disclaimer": "Indikative Preisbänder montiert, zzgl. MwSt., nur für frühe Budgetphasen. Jedes Projekt wird individuell kalkuliert — registrieren Sie Ihr Projekt für eine echte Zahl.",
+      "includes": "Enthalten",
+      "perM2": "pro m² montiert, zzgl. MwSt.",
+      "perUnit": "pro Einheit montiert, zzgl. MwSt.",
+      "ctaBody": "Sie brauchen eine echte Zahl für ein laufendes Projekt? Registrieren Sie es — ein fester Berater kalkuliert innerhalb eines Werktags.",
+      "ctaButton": "Projekt registrieren"
     }
   },
   "home": {
@@ -1501,6 +1620,28 @@
               "sub": "Häufige Fragen"
             }
           ]
+        },
+        {
+          "title": "Architekten",
+          "desc": "Sicher ausschreiben — Dokumente, Budgets und Begleitung.",
+          "items": [
+            {
+              "title": "Architektenbereich",
+              "sub": "Alles zum Ausschreiben an einem Ort"
+            },
+            {
+              "title": "Datenblätter",
+              "sub": "Die technische Dokumentbibliothek"
+            },
+            {
+              "title": "Konto erstellen",
+              "sub": "Kostenlos — Zugang direkt nach E-Mail-Bestätigung"
+            },
+            {
+              "title": "Anmelden",
+              "sub": "Direkt zu Ihrem Dashboard"
+            }
+          ]
         }
       ]
     },
@@ -1799,25 +1940,50 @@
       }
     },
     "datasheet": {
-      "title": "Datenblatt herunterladen",
-      "subtitle": "Geben Sie Ihre Daten ein und der Download startet sofort. Wir nutzen sie nur, um Ihre Anfrage zu bearbeiten.",
-      "submitLabel": "Datenblatt erhalten",
-      "sentTitle": "Hier ist Ihr Datenblatt",
-      "sentMsg": "Der Download sollte automatisch starten — falls nicht, nutzen Sie den Button unten.",
+      "title": "Datenblatt per E-Mail erhalten",
+      "subtitle": "Hinterlassen Sie Ihre Daten und wir senden das Datenblatt direkt in Ihr Postfach. Wir nutzen sie nur zur Bearbeitung Ihrer Anfrage.",
+      "submitLabel": "Datenblatt per E-Mail senden",
+      "sentTitle": "Prüfen Sie Ihr Postfach",
+      "sentMsg": "Das Datenblatt ist unterwegs an {email}. Nach ein paar Minuten nichts erhalten? Prüfen Sie den Spam-Ordner.",
       "fields": {
         "name": {
           "label": "Name",
           "placeholder": "Vor- und Nachname"
         },
+        "role": {
+          "label": "Ich bin",
+          "options": [
+            "Architekt",
+            "Monteur",
+            "Privatkunde",
+            "Anderes Unternehmen"
+          ]
+        },
         "email": {
           "label": "E-Mail",
-          "placeholder": "you@email.com"
+          "placeholder": "sie@email.com"
         },
         "phone": {
           "label": "Telefon",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "Stadt",
+          "placeholder": "Ihre Stadt"
         }
-      }
+      },
+      "confirm": {
+        "title": "{title} an Ihr Postfach senden?",
+        "msg": "Wir senden das Datenblatt an {email} — ein Klick und es ist unterwegs.",
+        "sendLabel": "Ja, bitte zusenden",
+        "editLabel": "Nicht Sie? Daten ändern"
+      },
+      "fallback": {
+        "sentTitle": "Hier ist Ihr Datenblatt",
+        "sentMsg": "Der Download sollte automatisch starten — falls nicht, nutzen Sie den Button unten."
+      },
+      "rateLimited": "Zu viele Anfragen von Ihrer Verbindung — bitte versuchen Sie es in einer Stunde erneut.",
+      "architectInvite": "Architekt? Unser kostenloser Architektenbereich bietet indikative Budgetbänder, gemessene Fallstudien und jedes Dokument mit einem Klick."
     },
     "trainingDates": [
       "15.–16. Sep. 2026",
@@ -1832,7 +1998,72 @@
     ],
     "close": "Schließen",
     "downloadDatasheet": "Datenblatt herunterladen",
-    "select": "Auswählen…"
+    "select": "Auswählen…",
+    "project": {
+      "title": "Projekt registrieren",
+      "subtitle": "Erzählen Sie uns von Ihrem laufenden Projekt — ein fester Berater meldet sich innerhalb eines Werktags mit Ausschreibungs-, Budget- und Musterunterstützung.",
+      "submitLabel": "Projekt registrieren",
+      "sentTitle": "Projekt registriert",
+      "sentMsg": "Danke — ein fester Berater kontaktiert Sie innerhalb eines Werktags.",
+      "fields": {
+        "projectName": {
+          "label": "Projektname",
+          "placeholder": "Projekt- oder Arbeitstitel"
+        },
+        "location": {
+          "label": "Standort",
+          "placeholder": "Stadt"
+        },
+        "buildingType": {
+          "label": "Gebäudetyp",
+          "options": [
+            "Büro",
+            "Hotellerie",
+            "Gesundheit",
+            "Handel",
+            "Wohnen",
+            "Bildung",
+            "Sonstiges"
+          ]
+        },
+        "system": {
+          "label": "System",
+          "options": [
+            "Polyester",
+            "PVC",
+            "Akustik",
+            "Licht & Druck",
+            "Prefab",
+            "Noch unklar"
+          ]
+        },
+        "stage": {
+          "label": "Phase",
+          "options": [
+            "Konzept",
+            "Entwurf",
+            "Ausschreibung",
+            "Bauphase"
+          ]
+        },
+        "area": {
+          "label": "Fläche",
+          "placeholder": "ca. m²"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "sie@buero.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Notizen",
+          "placeholder": "Deckenhöhen, Akustikziele, Termine..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -2141,15 +2372,12 @@
       "mark-with-a-k": "Belgien · Tonstudio",
       "notary-ampe-anthony": "Kruibeke · Akustikbüro",
       "bnp-paribas-fortis": "Brüssel · Bankzentrale",
+      "van-der-valk-boost-wellness": "Beveren · Wellness & Spa im Van der Valk Hotel",
       "van-der-valk-beveren": "Beveren · Hotel-Eventsaal",
       "johnson-and-johnson": "Limerick, IE · Pharma-F&E-Standort",
       "polette-eyewear": "Antwerpen · Retail-Konzeptstore",
       "citizenm-hotel": "USA & Europa · Vorgefertigte Badmodule",
-      "london-chapel": "London, UK · Hinterleuchtete Decke",
-      "private-villa-knokke": "Knokke · Offener Wohnbereich",
-      "home-cinema-ghent": "Gent · Sternenhimmel + Akustik",
-      "city-penthouse-antwerp": "Antwerpen · Wohnzimmer",
-      "wellness-spa-bruges": "Brügge · Spa-Badezimmer",
+      "london-chapel": "London, UK · Kapellenumbau",
       "rue-perree-paris": "Paris · Hinterleuchtete Galeriedecke",
       "vier-emmershof-lokeren": "Lokeren · Waldhaus",
       "vp-193": "Ostflandern · Privathaus",
@@ -2313,6 +2541,8 @@
     "viewProduct": "Zum Produkt",
     "eyebrowTech": "Technik",
     "datasheetCta": "Vollständiges Datenblatt anfordern",
+    "downloadsTitle": "Datenblätter herunterladen",
+    "allDatasheets": "Alle Datenblätter",
     "samplesCta": "Materialmuster anfordern",
     "copyHint": "Markieren Sie den Text oben, um ihn in Ihr Ausschreibungsdokument zu kopieren.",
     "ctaTitle": "Brauchen Sie Hilfe beim Ausschreibungstext?",
@@ -2617,6 +2847,82 @@
         }
       ]
     },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "Die Komplettrenovierung des Wellnessbereichs im Van der Valk Beveren — 700 m² akustische, bedruckte und hinterleuchtete Spanndecken in einem Design von Maison Max.",
+      "hook": "Zwanzig Jahre nachdem die erste Membran gespannt wurde, holte uns Van der Valk Beveren zurück — diesmal, um einen komplett neuen Wellnessbereich zu krönen.",
+      "description": [
+        "Als das Van der Valk Hotel Beveren beschloss, seinen gesamten Wellness- und Poolbereich zu renovieren — wiedereröffnet als Boost Wellness —, war die Wahl des Deckenpartners schnell getroffen. STRETCH-Decken hängen bereits in anderen Teilen des Hotels, und die Zusammenarbeit reicht Jahre zurück. Das Projekt schloss sogar einen Familienkreis: Die erste Aufgabe bestand darin, die Spanndecke zu demontieren, die Benjamin Nicasens von Plafondlux BV — Vater von Michael Nicasens von STRETCH — dort zwanzig Jahre zuvor montiert hatte.",
+        "Nachdem der Bauherr den Wellness- und Poolbereich bis auf den Rohbau entkernt hatte, arbeiteten wir Hand in Hand mit dem Interieurstudio Maison Max aus Temse, das das komplette Design und den Look & Feel gestaltete. Hotelinhaber Tim und seine Frau Paulina waren von Anfang bis Ende eingebunden — Paulina brachte ausgeprägte eigene Designideen ein, die Maison Max in die Pläne einfließen ließ, und gemeinsam wählten sie die Materialien für jeden einzelnen Teil des Projekts aus. Für die Decken bedeutete das ein warmes, glattes, akustisches Design mit mehreren Ebenen über Kopf, sodass kein Raum je flach oder langweilig wirkt.",
+        "Jede Zone erhielt die Membran, die zu ihr passt. In den vollständig nassen Bereichen — Pool, Duschen und Spa — spannten wir PVC-Spanndecken, die stärkste Wahl bei konstanter Feuchtigkeit. Die Umkleiden, Massageräume und das Nagelstudio erhielten Spanndecken aus Polyester (Gewebe), deren warme Textilstruktur ein ultramattes Finish erzeugt.",
+        "Das Spa ist das Schmuckstück. Paulina wünschte sich eine natürliche, organisch geschwungene Wand — und die Decke musste dieser komplexen, fließenden Form folgen. In die bedruckte Decke in Brauntönen wünschte sie sich außerdem ein rundes Oberlicht, nicht mit gerader, sondern mit sanft geschwungener Kante. Vorgefertigte Strukturelemente aus Aluminium bilden den Lichtkasten und die Höhenunterschiede, und das Ergebnis ist eine der komplexesten — und schönsten — Installationen, die wir je realisiert haben.",
+        "Auf 700 m² lag der Fokus auf Langlebigkeit, Akustik und komplexem Design: akustische Membranen mit dahinterliegenden PET-Absorbern, integrierte LED-Spots, Revisionsklappen, Lautsprecher und Hohlkehlen aus Aluminium — jedes technische Detail geht in einer einzigen warmen, nahtlosen Fläche auf. Die Komplettrenovierung dauerte vom Rückbau bis zur Wiedereröffnung sechs Monate."
+      ],
+      "highlights": [
+        "700 m² Spanndecken im gesamten Wellnessbereich",
+        "Bedruckte Decke, die einer organisch geschwungenen Wand folgt",
+        "Rundes Oberlicht mit fließend geschwungener Kante",
+        "Warmes Akustik-Deckendesign auf mehreren Ebenen",
+        "PVC in den Nasszonen, ultramattes Polyester in den trockenen",
+        "Projekt in zweiter Generation — die vorherige Decke wurde vor 20 Jahren montiert"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke mit dahinterliegenden PET-Absorbern",
+        "Bedruckte STRETCH-Decke (Spa, individueller Druck in Brauntönen)",
+        "Hinterleuchtete STRETCH-Decke (Oberlicht-Lichtkasten)",
+        "PVC-Membranen in allen Nassbereichen",
+        "Ultramatte Polyestermembranen (Umkleiden, Massage- & Nagelräume)",
+        "Vorgefertigte Aluminium-Strukturelemente — Lichtkasten & Höhensprünge",
+        "Integrierte LED-Spots",
+        "Revisionsklappen",
+        "Integrierte Lautsprecher",
+        "Aluminium-Hohlkehlen"
+      ],
+      "facts": [
+        {
+          "label": "Ort",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Wellness",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Innenarchitektur",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Fläche",
+          "value": "700 m²"
+        },
+        {
+          "label": "Jahr",
+          "value": "2026"
+        },
+        {
+          "label": "Komplettrenovierung",
+          "value": "6 Monate"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Warum PVC in manchen Räumen und Polyester in anderen?",
+          "a": "Die Membran richtet sich nach den Bedingungen des Raums. In den dauerhaft nassen Zonen — Pool, Duschen und Spa — ist PVC die stärkste Wahl: Es ist völlig unempfindlich gegen Feuchtigkeit und lässt sich einfach abwischen. In den Umkleiden, Massageräumen und im Nagelstudio spannten wir stattdessen Polyester: eine Gewebemembran, deren gewebte Struktur ein wärmeres, ultramattes Finish ergibt."
+        },
+        {
+          "q": "Wie folgt eine Spanndecke einer geschwungenen, organischen Wand?",
+          "a": "Die geschwungene Wand wurde in vorgefertigte Strukturelemente aus Aluminium übersetzt, die die Profile, den Lichtkasten und die Höhenunterschiede tragen. Die Membran wird anschließend in diesen Rahmen gespannt und folgt der organischen Form so präzise — einschließlich des runden Oberlichts mit seiner sanft geschwungenen Kante."
+        },
+        {
+          "q": "Wie unterstützen die Decken die Akustik?",
+          "a": "Der Wellnessbereich kombiniert akustische Spannmembranen mit dahinterliegenden PET-Absorberplatten: Der Schall dringt durch die Oberfläche und wird geschluckt statt reflektiert. Zusammen mit dem mehrstufigen Deckendesign bleiben große Räume mit harten Oberflächen so ruhig und gedämpft — genau das, was ein Spa braucht."
+        },
+        {
+          "q": "Wie lange hält eine Spanndecke?",
+          "a": "Dieses Projekt ist selbst die Antwort: Die vorherige Spanndecke hier wurde vor zwanzig Jahren montiert und wich nur, weil das Hotel einen komplett neuen Wellnessbereich wollte. Rechnen Sie mit Jahrzehnten — und wenn sich das Design ändert, wird nur die Membran ersetzt, nicht die Konstruktion."
+        }
+      ]
+    },
     "van-der-valk-beveren": {
       "title": "Van der Valk",
       "summary": "Maximale Schallabsorption für den Veranstaltungssaal eines Hotels — bei fast keinem Höhenspielraum.",
@@ -2800,138 +3106,37 @@
       ]
     },
     "london-chapel": {
-      "title": "Kapelle in London",
-      "summary": "Eine hinterleuchtete Spanndecke über einem restaurierten Kapellenraum.",
-      "hook": "Eine restaurierte Kapelle, getaucht in weiches, gleichmäßiges Licht aus einer einzigen leuchtenden Decke.",
+      "title": "London Chapel",
+      "summary": "Akustik-Stoffwände und eine stoffbespannte Gewölbedecke für eine zur Londoner Wohnung umgebaute Kapelle.",
+      "hook": "Eine Kapelle wird Familienhaus — Raum für Raum mit gespanntem Akustikstoff ausgekleidet.",
       "description": [
-        "Eine transluzente STRETCH-Decke verwandelt die gesamte Deckenfläche in eine weiche, gleichmäßige Lichtquelle: Das restaurierte Interieur liegt in blendfreiem Licht, während das LED-Feld vollständig verborgen bleibt."
+        "Bei diesem Kapellenumbau in London stattete unser Händler Upholster London die Innenräume mit gespanntem STRETCH-Stoff aus: Akustik-Stoffwände ziehen sich durch Flure, Podeste und Treppenhäuser, und selbst die Gewölbedecke ist zwischen ihren originalen Rippen mit Stoff bespannt.",
+        "Die textilen Oberflächen beruhigen die Akustik der hohen, harten Räume und geben jedem Zimmer eine warme, gepolsterte Tiefe, die Farbe nie erreichen kann — während originale Details wie die Buntglasfenster unangetastet bleiben, sauber von Stoffpaneelen gerahmt. Ein Heimkino mit Stoffwänden macht das Haus komplett."
       ],
       "highlights": [
-        "Die gesamte Decke als Lichtquelle",
-        "Blendfreie, gleichmäßige Beleuchtung",
-        "LED-Feld vollständig verborgen"
+        "Stoffbespannte Gewölbedecke der Kapelle",
+        "Akustik-Stoffwände im ganzen Haus",
+        "Heimkino mit Stoffwänden",
+        "Originale Buntglasfenster, präzise gerahmt"
       ],
       "materials": [
-        "Transluzente STRETCH-Decke",
-        "LED-Hinterleuchtungsfeld"
+        "Akustische STRETCH-Stoffwände",
+        "Stoffbespannte Gewölbedecke",
+        "Heimkino mit Stoffwänden",
+        "Maßprofile um Bögen und Buntglas"
       ],
       "facts": [
         {
-          "label": "Standort",
-          "value": "London, Vereinigtes Königreich"
+          "label": "Ort",
+          "value": "London, UK"
         },
         {
           "label": "Raum",
-          "value": "Restaurierte Kapelle"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Privatvilla",
-      "summary": "Eine nahtlose, matte Decke für eine offen geschnittene Küstenvilla.",
-      "hook": "Eine nahtlose Decke, glatt wie perfekter Putz, für ein offen geschnittenes Zuhause an der Küste.",
-      "description": [
-        "Im offenen Wohnbereich der Villa wirkt eine sehr matte STRETCH-Decke aus Polyester von Wand zu Wand wie makelloser Putz – klar und modern, ohne die Risse und Schattenlinien einer konventionellen Decke."
-      ],
-      "highlights": [
-        "Nahtlose Oberfläche von Wand zu Wand",
-        "Keine Risse, keine Schattenlinien",
-        "Sehr matte Optik wie Putz"
-      ],
-      "materials": [
-        "STRETCH-Decke aus Polyester (sehr matt)",
-        "Randprofile zur Verspannung"
-      ],
-      "facts": [
-        {
-          "label": "Standort",
-          "value": "Knokke, Belgien"
+          "value": "Zur Privatwohnung umgebaute Kapelle"
         },
         {
-          "label": "Raum",
-          "value": "Offener Wohnbereich"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Heimkino",
-      "summary": "Eine Sternenhimmel-Decke mit akustischer Hinterlegung für ein Heimkino.",
-      "hook": "Ein privates Kino unter einem funkelnden Nachthimmel, abgestimmt auf Filmton.",
-      "description": [
-        "Hunderte Glasfaserpunkte bilden einen funkelnden Nachthimmel über den Sitzplätzen, während eine akustische Hinterlegung den Raum für den Filmton unter Kontrolle hält – Atmosphäre und Leistung vereint in einer einzigen Decke."
-      ],
-      "highlights": [
-        "Sternenhimmel aus Glasfasern",
-        "Akustische Hinterlegung für den Filmton",
-        "Atmosphäre und Leistung in einer Decke"
-      ],
-      "materials": [
-        "STRETCH-Decke mit Sternenhimmel",
-        "Sternenfeld aus Glasfasern",
-        "Akustisch absorbierende Hinterlegung"
-      ],
-      "facts": [
-        {
-          "label": "Standort",
-          "value": "Gent, Belgien"
-        },
-        {
-          "label": "Raum",
-          "value": "Heimkino"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Urbanes Penthouse",
-      "summary": "Eine makellose Designdecke für ein Penthouse in der Stadt.",
-      "hook": "Eine minimalistische, perfekt ebene Designdecke für ein Penthouse in der Stadt.",
-      "description": [
-        "Der Wohnbereich des Penthouses setzt auf eine nahtlose STRETCH-Decke mit integrierter Beleuchtung: Der Look bleibt minimalistisch, die Fläche über den gesamten offenen Grundriss hinweg perfekt."
-      ],
-      "highlights": [
-        "Nahtlose Designdecke",
-        "Integrierte Beleuchtung",
-        "Minimalistische, makellose Oberfläche"
-      ],
-      "materials": [
-        "STRETCH-Decke aus Polyester",
-        "Integrierte Beleuchtung"
-      ],
-      "facts": [
-        {
-          "label": "Standort",
-          "value": "Antwerpen, Belgien"
-        },
-        {
-          "label": "Raum",
-          "value": "Penthouse-Wohnzimmer"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Wellness-Spa",
-      "summary": "Eine feuchtigkeitsbeständige, hinterleuchtete Decke für ein Spa.",
-      "hook": "Eine feuchtigkeitsbeständige, sanft leuchtende Decke für einen Wellnessbereich.",
-      "description": [
-        "Das Spa brauchte eine Decke, die Feuchtigkeit verträgt und für eine ruhige Stimmung sorgt. Eine transluzente, hinterleuchtete STRETCH-Decke leuchtet sanft über dem Wellnessbereich und lässt sich einfach abwischen – unbeeindruckt von Dampf und Feuchtigkeit."
-      ],
-      "highlights": [
-        "Verträgt Feuchtigkeit und Dampf",
-        "Sanfte, gleichmäßige Hinterleuchtung",
-        "Einfach abwischbar"
-      ],
-      "materials": [
-        "Transluzente STRETCH-Decke aus PVC",
-        "LED-Hinterleuchtungsfeld"
-      ],
-      "facts": [
-        {
-          "label": "Standort",
-          "value": "Brügge, Belgien"
-        },
-        {
-          "label": "Raum",
-          "value": "Spa / Wellness"
+          "label": "STRETCH-Händler",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3837,7 +4042,6 @@
       "Bad",
       "Büro",
       "Gewerbe",
-      "Heimkino",
       "Licht & Druck"
     ],
     "browse": [
@@ -4220,9 +4424,9 @@
     "crumb": "Datenblätter",
     "titleA": "Spezifikationen &",
     "titleB": "Datenblätter",
-    "lead": "Laden Sie die technische Dokumentation zu jedem STRETCH-System herunter — Spezifikationen, Brandklassen, akustische Klassenwerte und Garantiedetails. Geben Sie Ihre Daten einmal pro Download ein, und die Datei startet sofort.",
+    "lead": "Laden Sie technische Dokumentation zu jedem STRETCH-System herunter — Spezifikationen, Brandklassen, Akustikwerte und Garantie. Daten einmal hinterlassen, und das Datenblatt landet als Download-Link in Ihrem Postfach.",
     "updated": "Aktualisiert am {date}",
-    "privacyNote": "Wir fragen nach Name, E-Mail und Telefonnummer, damit ein Spezialist eventuelle technische Fragen beantworten kann. Ihre Daten behandeln wir gemäß unserer",
+    "privacyNote": "Wir fragen Name, Rolle, E-Mail, Telefon und Stadt ab, damit ein Spezialist Ihre technischen Fragen beantworten kann. Ihre Daten behandeln wir gemäß unserer",
     "privacyLink": "Datenschutzerklärung"
   },
   "samplesPage": {
@@ -4487,5 +4691,116 @@
     "ovRecruitBody": "Solange das Netzwerk wächst, liefern und montieren wir direkt aus unserer Produktion — und Monteure, die sich eine freie Region sichern, erhalten deren Anfragen, Händlerpreise und Schulungen.",
     "regionLuxembourg": "Luxemburg (Großherzogtum)",
     "regionAustria": "Österreich"
+  },
+  "datasheetEmail": {
+    "subject": "Ihr STRETCH-Datenblatt — {title}",
+    "greeting": "Guten Tag {name},",
+    "intro": "Hier ist das angeforderte technische Datenblatt — {title}.",
+    "button": "Datenblatt herunterladen",
+    "linkFallback": "Oder kopieren Sie diesen Link in Ihren Browser:",
+    "validity": "Der Link funktioniert {days} Tage.",
+    "footerCta": "Sie arbeiten an einem Projekt? Antworten Sie einfach auf diese E-Mail oder buchen Sie ein Gespräch.",
+    "signoff": "Ihr STRETCH-Team",
+    "architectInvite": "Sie arbeiten als Architekt? Unser kostenloser Architektenbereich bietet indikative €/m²-Budgetbänder, gemessene Fallstudien sowie jedes Datenblatt, jeden Ausschreibungstext und jede CAD-Datei mit einem Klick:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Dieser Download-Link ist abgelaufen",
+    "expiredBody": "Download-Links sind 14 Tage gültig. Fordern Sie in Sekunden einen neuen an — wir senden ihn sofort zu.",
+    "requestNew": "Neuen Link anfordern"
+  },
+  "architectsPage": {
+    "crumb": "Architekten",
+    "eyebrow": "Für Architekten",
+    "titleA": "Spanndecken ausschreiben",
+    "titleB": "mit Sicherheit",
+    "lead": "Ein kostenloses Konto mit allem fürs Ausschreiben: Dokumente, Ausschreibungstexte, CAD/BIM, gemessene Fallstudien, indikative Budgetbänder, Events und ein fester Berater.",
+    "ctaCreate": "Kostenloses Konto erstellen",
+    "ctaSignIn": "Anmelden",
+    "values": [
+      {
+        "title": "Dokumente mit einem Klick",
+        "body": "Jedes Datenblatt ohne Formulare — Downloads Ihrem Konto zugeordnet."
+      },
+      {
+        "title": "Ausschreibungstexte",
+        "body": "Fertige Texte pro System — NL, FR und EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "DWG-Profildetails, Revit-Familien und SketchUp-Komponenten."
+      },
+      {
+        "title": "Projektfotos",
+        "body": "Hochauflösende Referenzfotos für Kundenpräsentationen."
+      },
+      {
+        "title": "Gemessene Fallstudien",
+        "body": "Echte Projekte mit Vorher/Nachher-Messwerten."
+      },
+      {
+        "title": "Budgetbänder",
+        "body": "Indikative €/m²-Spannen für frühe Budgets."
+      },
+      {
+        "title": "Events & Lunch & Learns",
+        "body": "Schulungen und Sessions bei uns oder in Ihrem Büro."
+      },
+      {
+        "title": "Projektbegleitung",
+        "body": "Projekt registrieren: fester Berater + Prioritäts-Musterbox."
+      }
+    ],
+    "howTitle": "So funktioniert es",
+    "steps": [
+      {
+        "title": "Konto erstellen",
+        "body": "Büroname, Stadt und Ihre Daten — zwei Minuten."
+      },
+      {
+        "title": "E-Mail bestätigen",
+        "body": "Ein Klick auf den Bestätigungslink."
+      },
+      {
+        "title": "Alles freigeschaltet",
+        "body": "Dokumente, Budgets, Fallstudien und Begleitung — sofort."
+      }
+    ],
+    "casesTitle": "Gemessen, nicht behauptet",
+    "casesNote": "Vollständige Studie im Architektenbereich.",
+    "cases": [
+      {
+        "title": "Akustik-Sanierung Restaurant",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 vorher → nachher"
+      },
+      {
+        "title": "Lichtdecke Büro",
+        "metric": "540 Lux",
+        "metricLabel": "Mittelwert auf Arbeitsebene, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Nächste Events",
+    "eventsNote": "Alle Termine und Ein-Klick-Anmeldung im Architektenbereich.",
+    "faqTitle": "Häufige Fragen",
+    "faqs": [
+      {
+        "q": "Ist der Architektenbereich wirklich kostenlos?",
+        "a": "Ja — er existiert, damit das Ausschreiben eines STRETCH-Systems so einfach wie möglich ist. Ohne Kosten, ohne Verpflichtung."
+      },
+      {
+        "q": "Veröffentlichen Sie Preise?",
+        "a": "Indikative €/m²-Budgetbänder stehen im Bereich für frühe Budgetphasen. Projekte werden immer individuell kalkuliert — registrieren Sie ein Projekt für eine echte Zahl."
+      },
+      {
+        "q": "Begleiten Sie eine laufende Ausschreibung?",
+        "a": "Ja. Registrieren Sie das Projekt — ein fester Berater hilft bei Texten, Details und Akustikzielen, meist innerhalb eines Werktags."
+      },
+      {
+        "q": "Liefern Sie außerhalb der Benelux?",
+        "a": "Ja — wir produzieren in Belgien und montieren mit zertifizierten Partnern in ganz Europa."
+      }
+    ],
+    "ctaTitle": "Alles zum Ausschreiben an einem Ort",
+    "ctaBody": "Erstellen Sie Ihr kostenloses Konto — jedes Dokument, jedes Budgetband und jede Fallstudie ist einen Klick entfernt, plus ein fester Berater für Ihre Projekte."
   }
 }

@@ -7,7 +7,7 @@
 // JSON and are filtered in code. Both paths return the same shape.
 // ============================================================================
 import type { PortalSession, PricebookMeta, PriceRow } from './types';
-import { categoryRank } from './types';
+import { categoryRank, priceGroupForTier } from './types';
 import { createRscClient, isSupabaseConfigured } from './supabase';
 
 type Pricebook = { rows: PriceRow[]; meta: PricebookMeta };
@@ -19,8 +19,10 @@ function sortRows(rows: PriceRow[]): PriceRow[] {
 }
 
 function visibleToProfile(row: PriceRow, session: PortalSession): boolean {
-  if (session.profile.allMarkets) return true;
-  return session.profile.markets.includes(row.market);
+  const p = session.profile;
+  if (p.role === 'admin' || p.allMarkets) return true;
+  // The account's own tier group, plus any extra groups granted via markets[].
+  return row.market === priceGroupForTier(p.accountType) || p.markets.includes(row.market);
 }
 
 async function demoPricebook(session: PortalSession): Promise<Pricebook> {
@@ -36,23 +38,47 @@ async function demoPricebook(session: PortalSession): Promise<Pricebook> {
   };
 }
 
+// Supabase caps every PostgREST response at 1000 rows regardless of .limit(),
+// so the pricebook (1500+ rows) must be fetched page by page.
+const PAGE = 1000;
+
+async function fetchAllRows(
+  supabase: ReturnType<typeof createRscClient>,
+  columns: string,
+): Promise<PriceRow[]> {
+  const all: PriceRow[] = [];
+  for (let from = 0; ; from += PAGE) {
+    const { data, error } = await supabase
+      .from('pricebook')
+      .select(columns)
+      .order('sort', { ascending: true })
+      .order('id', { ascending: true })
+      .range(from, from + PAGE - 1);
+    if (error) throw new Error(`pricebook query failed: ${error.message}`);
+    const page = (data ?? []) as unknown as PriceRow[];
+    all.push(...page);
+    if (page.length < PAGE) return all;
+  }
+}
+
 /** All pricebook rows the signed-in account is allowed to see, plus metadata. */
 export async function getPricebook(session: PortalSession): Promise<Pricebook> {
   if (!isSupabaseConfigured() || session.demo) return demoPricebook(session);
 
   const supabase = createRscClient();
-  const [{ data: rows, error }, { data: meta }] = await Promise.all([
-    supabase
-      .from('pricebook')
-      .select('category, code, product, unit, market, price_eur, price_pln, product_group, seq, sort')
-      .order('sort', { ascending: true })
-      .limit(10000),
+  const BASE_COLUMNS =
+    'category, code, product, unit, market, price_eur, price_pln, product_group, seq, sort';
+  const [rows, { data: meta }] = await Promise.all([
+    // `type` is a later addition — fall back for databases still on the old
+    // schema (rows then simply carry no type and the type filter stays hidden).
+    fetchAllRows(supabase, `type, ${BASE_COLUMNS}`).catch(() =>
+      fetchAllRows(supabase, BASE_COLUMNS),
+    ),
     supabase.from('pricebook_meta').select('version, fx_eur_pln, source, updated_at').maybeSingle(),
   ]);
-  if (error) throw new Error(`pricebook query failed: ${error.message}`);
 
   return {
-    rows: sortRows((rows ?? []) as PriceRow[]),
+    rows: sortRows(rows),
     meta: {
       version: meta?.version ?? '—',
       fx_eur_pln: meta?.fx_eur_pln ?? null,

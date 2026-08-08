@@ -52,6 +52,15 @@ const FIELD_LABELS: Record<string, string> = {
   notes: 'Notes',
   product: 'Product',
   downloadedFile: 'Requested file',
+  role: 'Role',
+  city: 'City',
+  datasheetSlug: 'Datasheet',
+  projectName: 'Project name',
+  location: 'Location',
+  buildingType: 'Building type',
+  system: 'System',
+  stage: 'Stage',
+  area: 'Area',
 };
 
 const SOURCE_LABELS: Record<string, string> = {
@@ -64,6 +73,9 @@ const SOURCE_LABELS: Record<string, string> = {
   samples: 'Sample request',
   contact: 'Contact form',
   pdf_download: 'Spec-sheet download',
+  architect_project: 'Project registration',
+  architect_samples: 'Sample request',
+  portal_architect_download: 'Architect portal download',
 };
 
 function labelFor(key: string): string {

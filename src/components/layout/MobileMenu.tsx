@@ -103,6 +103,7 @@ export default function MobileMenu() {
               { href: '/inspiration', label: t('nav.inspiration') },
               { href: '/partners', label: t('nav.partners') },
               { href: '/installer-training', label: t('nav.training') },
+              { href: '/architects', label: t('nav.architects') },
               { href: '/faq', label: t('nav.faq') },
               { href: '/about', label: t('nav.about') },
               { href: '/contact', label: t('nav.contact') },

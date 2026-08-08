@@ -56,13 +56,13 @@ export const dealerPlaces: DealerPlace[] = [
   // ---------------------------------------------------------------- Flanders
   // Provinces
   { slug: 'oost-vlaanderen', name: 'Oost-Vlaanderen', kind: 'province', region: 'flanders', primaryLocale: 'be', dealerIds: ['plafondlux', 'parket-valentin', 'formdesign', 'corpus'], projects: ['vp-193', 'vier-emmershof-lokeren', 'van-der-valk-beveren'] },
-  { slug: 'provincie-antwerpen', name: 'Antwerpen (provincie)', kind: 'province', region: 'flanders', primaryLocale: 'be', dealerIds: ['strak'], projects: ['polette-eyewear', 'city-penthouse-antwerp'] },
-  { slug: 'west-vlaanderen', name: 'West-Vlaanderen', kind: 'province', region: 'flanders', primaryLocale: 'be', dealerIds: ['plafon'], projects: ['wellness-spa-bruges', 'private-villa-knokke'] },
+  { slug: 'provincie-antwerpen', name: 'Antwerpen (provincie)', kind: 'province', region: 'flanders', primaryLocale: 'be', dealerIds: ['strak'], projects: ['polette-eyewear', 'creneau-afas-lounge'] },
+  { slug: 'west-vlaanderen', name: 'West-Vlaanderen', kind: 'province', region: 'flanders', primaryLocale: 'be', dealerIds: ['plafon'], projects: [] },
   { slug: 'vlaams-brabant', name: 'Vlaams-Brabant & Brussel', kind: 'province', region: 'flanders', primaryLocale: 'be', dealerIds: ['flex'], projects: ['dhl-zaventem', 'bnp-paribas-fortis'] },
   { slug: 'limburg', name: 'Limburg', kind: 'province', region: 'flanders', primaryLocale: 'be', dealerIds: ['flex'] },
   // Cities
-  { slug: 'antwerpen', name: 'Antwerpen', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'provincie-antwerpen', dealerIds: ['strak'], projects: ['polette-eyewear', 'city-penthouse-antwerp'] },
-  { slug: 'gent', name: 'Gent', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'oost-vlaanderen', dealerIds: ['plafondlux'], projects: ['home-cinema-ghent'] },
+  { slug: 'antwerpen', name: 'Antwerpen', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'provincie-antwerpen', dealerIds: ['strak'], projects: ['polette-eyewear', 'creneau-afas-lounge'] },
+  { slug: 'gent', name: 'Gent', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'oost-vlaanderen', dealerIds: ['plafondlux'], projects: ['candor-sint-martens-latem'] },
   { slug: 'roeselare', name: 'Roeselare', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'west-vlaanderen', dealerIds: ['plafon'] },
   { slug: 'brussel', name: 'Brussel', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'vlaams-brabant', dealerIds: [], projects: ['bnp-paribas-fortis'] },
   { slug: 'ninove', name: 'Ninove', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'oost-vlaanderen', dealerIds: ['parket-valentin'] },
@@ -70,7 +70,7 @@ export const dealerPlaces: DealerPlace[] = [
   { slug: 'dendermonde', name: 'Dendermonde', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'oost-vlaanderen', dealerIds: ['formdesign'], projects: ['veta-interieur-showroom'] },
   { slug: 'aalst', name: 'Aalst', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'oost-vlaanderen', dealerIds: ['parket-valentin'] },
   { slug: 'sint-niklaas', name: 'Sint-Niklaas', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'oost-vlaanderen', dealerIds: ['corpus'], projects: ['vap-sint-pauwels', 'ben-home-vdb-222'] },
-  { slug: 'brugge', name: 'Brugge', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'west-vlaanderen', dealerIds: ['plafon'], projects: ['wellness-spa-bruges'] },
+  { slug: 'brugge', name: 'Brugge', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'west-vlaanderen', dealerIds: ['plafon'], projects: [] },
   { slug: 'leuven', name: 'Leuven', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'vlaams-brabant', dealerIds: ['flex'] },
   { slug: 'hasselt', name: 'Hasselt', kind: 'city', region: 'flanders', primaryLocale: 'be', province: 'limburg', dealerIds: ['flex'] },
 

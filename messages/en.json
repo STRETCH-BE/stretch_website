@@ -20,7 +20,8 @@
       "about": "About",
       "faq": "FAQ",
       "clientLogin": "Client login",
-      "materials": "Materials"
+      "materials": "Materials",
+      "architects": "Architects"
     },
     "cta": {
       "freeQuote": "Free quote",
@@ -73,7 +74,9 @@
     "portalTitle": "Client portal | STRETCH",
     "portalDescription": "Sign in to view your STRETCH trade pricelist and account data.",
     "materialsTitle": "Stretch ceiling materials & supplies | STRETCH",
-    "materialsDescription": "Profiles, fabrics & foils, lighting, accessories, tools and STRETCH Cleaner — request a quote per item and we reply with price and delivery. No webshop needed."
+    "materialsDescription": "Profiles, fabrics & foils, lighting, accessories, tools and STRETCH Cleaner — request a quote per item and we reply with price and delivery. No webshop needed.",
+    "architectsTitle": "For architects — specify stretch ceilings | STRETCH",
+    "architectsDescription": "Free architect area: datasheets, spec texts, CAD/BIM, measured case studies, indicative €/m² budget bands, events and project support."
   },
   "cookies": {
     "title": "We value your privacy",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiration",
       "about": "About",
       "faq": "FAQ",
-      "clientPortal": "Client portal"
+      "clientPortal": "Client portal",
+      "architects": "For architects"
     },
     "dealers": "Dealer network"
   },
@@ -180,8 +184,15 @@
       "demoBody": "No database connected yet — preview the portal with these accounts:",
       "tabSignIn": "Sign in",
       "tabSignup": "Create account",
-      "signupSub": "Free account — instant access",
-      "company": "Company (optional)",
+      "signupSub": "For trade professionals — access after review",
+      "company": "Company",
+      "contactName": "Contact person",
+      "vat": "VAT number",
+      "phone": "Phone",
+      "country": "Country",
+      "countryOther": "Other country",
+      "businessType": "Business type",
+      "chooseOption": "Select…",
       "passwordHint": "At least 8 characters.",
       "signupSubmit": "Create account",
       "signupSubmitting": "Creating…",
@@ -189,17 +200,25 @@
       "signupDoneBody": "We sent you a confirmation link. Click it, then sign in with your email and password.",
       "signupExists": "An account with this email already exists — sign in instead.",
       "unavailableTitle": "Portal launching soon",
-      "unavailableBody": "The client portal is being activated. Contact us and we will set up your access."
+      "unavailableBody": "The client portal is being activated. Contact us and we will set up your access.",
+      "audienceLabel": "I am",
+      "audienceClient": "Client",
+      "audienceArchitect": "Architect",
+      "officeName": "Office name",
+      "city": "City"
     },
     "nav": {
       "label": "Client portal",
       "overview": "Overview",
+      "documents": "Documents",
+      "orders": "Orders",
       "pricelist": "Pricelist",
       "admin": "Admin",
       "signOut": "Sign out",
       "demoBadge": "Demo",
       "allMarkets": "All markets",
-      "designer": "Ceiling designer"
+      "designer": "Ceiling designer",
+      "budgetGuide": "Budget guide"
     },
     "dash": {
       "eyebrow": "Client portal",
@@ -226,18 +245,62 @@
       "tileTradeBody": "Installer or reseller? Get dealer pricing and the ceiling designer with a trade account.",
       "tradeCta": "Become a partner"
     },
+    "docs": {
+      "title": "Documents",
+      "intro": "Technical datasheets and installation drawings for the STRETCH range — direct downloads, no forms.",
+      "download": "Download"
+    },
+    "orders": {
+      "title": "Orders",
+      "intro": "Ceiling orders placed from the designer — with their current status.",
+      "empty": "No orders yet. Design a ceiling and place your first order from the designer.",
+      "demoNote": "Demo mode — orders are not stored.",
+      "unavailable": "Order history is unavailable right now.",
+      "thDate": "Date",
+      "thDealer": "Dealer",
+      "thClient": "Client",
+      "thTotal": "Total",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Received",
+        "confirmed": "Confirmed",
+        "in_production": "In production",
+        "delivered": "Delivered",
+        "cancelled": "Cancelled"
+      }
+    },
     "pricelist": {
       "title": "Pricelist",
       "search": "Search product or code…",
       "count": "{count} items",
       "market": "Market",
+      "type": "Type",
+      "allTypesOpt": "All types",
       "allMarketsOpt": "All markets",
       "currency": "Currency",
       "print": "Print",
       "exportCsv": "CSV",
       "version": "Version",
       "updated": "Updated",
-      "empty": "No products match your search."
+      "empty": "No products match your search.",
+      "addLabel": "Add to order",
+      "basketLabel": "Order basket",
+      "cartTitle": "Order from the pricelist",
+      "cartEmpty": "Nothing added yet — use the + next to a price.",
+      "qty": "Qty",
+      "noteLabel": "Note (optional)",
+      "notePlaceholder": "Delivery wishes, project reference...",
+      "totalLabel": "Total (excl. VAT)",
+      "submitOrder": "Place order",
+      "submitQuote": "Request a quote",
+      "sendingLabel": "Sending…",
+      "closeLabel": "Close",
+      "sentOrderTitle": "Order sent",
+      "sentOrderMsg": "We emailed you a confirmation. Reference {ref} — follow it under Orders.",
+      "sentQuoteTitle": "Quote requested",
+      "sentQuoteMsg": "We received your request. Reference {ref} — a specialist replies within one working day.",
+      "demoNote": "Demo mode — nothing was sent or stored.",
+      "errorMsg": "Something went wrong — please try again."
     },
     "admin": {
       "title": "Administration",
@@ -265,7 +328,8 @@
       "colEmail": "E-mail",
       "colCompany": "Company",
       "colRole": "Role",
-      "colMarkets": "Markets",
+      "colType": "Account type",
+      "colMarkets": "Price groups",
       "colStatus": "Status",
       "roleClient": "Client",
       "roleAdmin": "Admin",
@@ -273,20 +337,75 @@
       "statusInactive": "Inactive",
       "deactivate": "Deactivate",
       "activate": "Activate",
-      "allMarketsLabel": "All markets",
+      "allMarketsLabel": "All price groups",
       "tempPassword": "Temporary password",
       "create": "Create account",
       "creating": "Creating…",
       "createFailed": "Could not create the account.",
       "createdOk": "Account created for {email}.",
-      "makeB2b": "Upgrade to B2B",
-      "makeB2c": "Set to B2C",
-      "typeB2b": "B2B",
-      "typeB2c": "B2C"
+      "typeProducer": "Producer/Reseller",
+      "typeInstaller": "Installer",
+      "typeB2c": "B2C",
+      "typeArchitect": "Architect",
+      "filterAllTypes": "All types"
     },
     "designer": {
       "eyebrow": "Ceiling designer",
       "hint": "Draw the ceiling from wall + diagonal measurements, position seams and cut-outs, check the price and place the order. Use Save to keep a measurement file for later."
+    },
+    "businessTypes": {
+      "installer": "Installer",
+      "distributor": "Distributor / reseller",
+      "architect": "Architect / designer",
+      "contractor": "Contractor",
+      "other": "Other"
+    },
+    "architect": {
+      "eyebrow": "Architect area",
+      "welcome": "Everything to specify",
+      "intro": "Welcome, {office} — documents, spec texts, CAD/BIM, measured case studies, budget bands and project support in one place.",
+      "demoNote": "Demo preview — downloads are disabled and nothing is logged.",
+      "toolsTitle": "Project tools",
+      "budgetTileTitle": "Budget guide",
+      "budgetTileBody": "Indicative €/m² bands for early-stage budgeting — the numbers nobody publishes.",
+      "budgetTileCta": "Open the guide",
+      "projectTileTitle": "Register a project",
+      "projectTileBody": "A live project gets a dedicated advisor, spec support and priority sampling.",
+      "projectTileCta": "Register a project",
+      "samplesTileTitle": "Sample box",
+      "samplesTileBody": "Physical membrane and colour samples for your material library — free for architects.",
+      "samplesTileCta": "Order a sample box",
+      "libraryTitle": "Library",
+      "libraryBody": "Every document one click away. Downloads are logged to your account so we can support your project proactively.",
+      "docsTitle": "Datasheets",
+      "docsBody": "The complete technical datasheet library — no forms, one click.",
+      "specTitle": "Specification texts",
+      "specBody": "Ready-to-paste tender texts per system — bestektekst NL, cahier des charges FR, specification EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "DWG profile details, Revit families and SketchUp components per system.",
+      "photosTitle": "Project photos",
+      "photosBody": "Hi-res photo sets of reference projects for client presentations.",
+      "casesTitle": "Technical case studies",
+      "casesBody": "Real projects with measured before/after values — numbers you can put in a design report.",
+      "eventsTitle": "Events",
+      "eventsBody": "Trainings, lunch & learns and showroom days — register in one click.",
+      "register": "Register",
+      "advisorTitle": "Your advisor",
+      "advisorBody": "One specialist for spec questions, acoustics targets, budgets and samples — reply within one working day.",
+      "advisorCta": "Book a call",
+      "download": "Download",
+      "comingSoon": "Coming soon"
+    },
+    "budget": {
+      "eyebrow": "Architect area",
+      "title": "Budget guide",
+      "intro": "Indicative installed price bands per system — deliberately coarse, for early-stage budgeting and feasibility checks.",
+      "disclaimer": "Indicative installed price bands, excl. VAT, for early-stage budgeting only. Every project is priced individually — register your project for a real number.",
+      "includes": "What’s included",
+      "perM2": "per m² installed, excl. VAT",
+      "perUnit": "per unit installed, excl. VAT",
+      "ctaBody": "Need a real number for a live project? Register it and a dedicated advisor prices it properly within one working day.",
+      "ctaButton": "Register your project"
     }
   },
   "home": {
@@ -1501,6 +1620,28 @@
               "sub": "Common questions"
             }
           ]
+        },
+        {
+          "title": "Architects",
+          "desc": "Specify with confidence — documents, budgets and support.",
+          "items": [
+            {
+              "title": "Architect area",
+              "sub": "Everything to specify, in one place"
+            },
+            {
+              "title": "Datasheets",
+              "sub": "The technical document library"
+            },
+            {
+              "title": "Create account",
+              "sub": "Free — instant access after email confirmation"
+            },
+            {
+              "title": "Sign in",
+              "sub": "Straight to your dashboard"
+            }
+          ]
         }
       ]
     },
@@ -1799,15 +1940,24 @@
       }
     },
     "datasheet": {
-      "title": "Download the datasheet",
-      "subtitle": "Enter your details and the download will start straight away. We only use them to follow up on your enquiry.",
-      "submitLabel": "Get the datasheet",
-      "sentTitle": "Here is your datasheet",
-      "sentMsg": "Your download should start automatically — if it does not, use the button below.",
+      "title": "Get the datasheet by email",
+      "subtitle": "Leave your details and we’ll email the datasheet straight to your inbox. We only use them to follow up on your enquiry.",
+      "submitLabel": "Email me the datasheet",
+      "sentTitle": "Check your inbox",
+      "sentMsg": "The datasheet is on its way to {email}. Don’t see it within a few minutes? Check your spam folder.",
       "fields": {
         "name": {
           "label": "Name",
           "placeholder": "First & last name"
+        },
+        "role": {
+          "label": "I am a(n)",
+          "options": [
+            "Architect",
+            "Installer",
+            "Private client",
+            "Other business"
+          ]
         },
         "email": {
           "label": "Email",
@@ -1816,8 +1966,24 @@
         "phone": {
           "label": "Phone",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "City",
+          "placeholder": "Your city"
         }
-      }
+      },
+      "confirm": {
+        "title": "Send {title} to your inbox?",
+        "msg": "We’ll email the datasheet to {email} — one click and it’s on its way.",
+        "sendLabel": "Yes, email it to me",
+        "editLabel": "Not you? Edit details"
+      },
+      "fallback": {
+        "sentTitle": "Here is your datasheet",
+        "sentMsg": "Your download should start automatically — if it does not, use the button below."
+      },
+      "rateLimited": "Too many requests from your connection — please try again in an hour.",
+      "architectInvite": "Architect? Our free architect area has indicative budget bands, measured case studies and every document one click away."
     },
     "trainingDates": [
       "15–16 Sep 2026",
@@ -1832,7 +1998,72 @@
     ],
     "close": "Close",
     "downloadDatasheet": "Download datasheet",
-    "select": "Select…"
+    "select": "Select…",
+    "project": {
+      "title": "Register a project",
+      "subtitle": "Tell us about your live project — a dedicated advisor follows up within one working day with spec support, budget input and priority sampling.",
+      "submitLabel": "Register the project",
+      "sentTitle": "Project registered",
+      "sentMsg": "Thanks — a dedicated advisor will contact you within one working day.",
+      "fields": {
+        "projectName": {
+          "label": "Project name",
+          "placeholder": "Project or working title"
+        },
+        "location": {
+          "label": "Location",
+          "placeholder": "City"
+        },
+        "buildingType": {
+          "label": "Building type",
+          "options": [
+            "Office",
+            "Hospitality",
+            "Healthcare",
+            "Retail",
+            "Residential",
+            "Education",
+            "Other"
+          ]
+        },
+        "system": {
+          "label": "System",
+          "options": [
+            "Polyester",
+            "PVC",
+            "Acoustic",
+            "Light & print",
+            "Prefab",
+            "Not sure yet"
+          ]
+        },
+        "stage": {
+          "label": "Stage",
+          "options": [
+            "Concept",
+            "Design",
+            "Tender",
+            "On site"
+          ]
+        },
+        "area": {
+          "label": "Area",
+          "placeholder": "approx. m²"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@office.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Notes",
+          "placeholder": "Ceiling heights, acoustics targets, deadlines..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -2141,15 +2372,12 @@
       "mark-with-a-k": "Belgium · Sound studio",
       "notary-ampe-anthony": "Kruibeke · Acoustic office",
       "bnp-paribas-fortis": "Brussels · Bank HQ",
+      "van-der-valk-boost-wellness": "Beveren · Van der Valk hotel wellness & spa",
       "van-der-valk-beveren": "Beveren · Hotel event hall",
       "johnson-and-johnson": "Limerick, IE · Pharma R&D facility",
       "polette-eyewear": "Antwerp · Retail concept store",
       "citizenm-hotel": "USA & Europe · Prefab bathroom units",
-      "london-chapel": "London, UK · Backlit ceiling",
-      "private-villa-knokke": "Knokke · Open living",
-      "home-cinema-ghent": "Ghent · Starry sky + acoustic",
-      "city-penthouse-antwerp": "Antwerp · Living room",
-      "wellness-spa-bruges": "Bruges · Spa bathroom",
+      "london-chapel": "London, UK · Chapel conversion",
       "rue-perree-paris": "Paris · Backlit gallery ceiling",
       "vier-emmershof-lokeren": "Lokeren · Forest residence",
       "vp-193": "East Flanders · Private residence",
@@ -2313,6 +2541,8 @@
     "viewProduct": "View the product",
     "eyebrowTech": "Technical",
     "datasheetCta": "Request the full datasheet",
+    "downloadsTitle": "Download datasheets",
+    "allDatasheets": "All datasheets",
     "samplesCta": "Request physical samples",
     "copyHint": "Select the text above to copy it into your specification document.",
     "ctaTitle": "Need a hand with the specification?",
@@ -2617,6 +2847,82 @@
         }
       ]
     },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "The complete renovation of the Van der Valk Beveren wellness — 700 m² of acoustic, printed and illuminated stretch ceilings in a design by Maison Max.",
+      "hook": "Twenty years after the first membrane went up, Van der Valk Beveren asked us back — this time to crown an entirely new wellness.",
+      "description": [
+        "When Van der Valk Hotel Beveren decided to renovate its entire wellness and pool area — reopened as Boost Wellness — the choice of ceiling partner was quickly made. STRETCH ceilings already hang in other parts of the hotel, and the collaboration goes back years. The project even closed a family circle: the first job was dismantling the stretch ceiling that Benjamin Nicasens of Plafondlux BV — father of STRETCH’s Michael Nicasens — had installed there twenty years earlier.",
+        "Once the client had stripped the wellness and pool area back to the shell, we worked hand in hand with interior studio Maison Max from Temse, who shaped the full design and look & feel. Hotel owner Tim and his wife Paulina were involved from start to finish — Paulina brought strong design ideas of her own, which Maison Max folded into the plans, and together they chose the materials for every single part of the project. For the ceilings, that translated into a warm, smooth, acoustic design with multiple levels overhead, so no room ever reads as flat or boring.",
+        "Every zone received the membrane that suits it. In the fully wet areas — pool, showers and spa — we tensioned PVC stretch ceilings, the strongest choice where humidity is constant. The changing rooms, massage rooms and nail studio received polyester (fabric) stretch ceilings, whose warm textile structure creates an ultra-matte finish.",
+        "The spa is the showpiece. Paulina wanted a natural, organically curved wall — and the ceiling had to follow that complex, flowing shape. Into the printed, brown-toned ceiling she also asked for a circular skylight, not with a straight edge but with a soft curved one. Prefabricated aluminium structural elements form the lightbox and the height differences, and the result is one of the most complex — and most beautiful — installations we have delivered.",
+        "Across 700 m², the focus was durability, acoustics and complex design: acoustic membranes backed with PET absorbers, integrated LED spots, inspection hatches, speakers and aluminium coving — every technical detail dissolved into one warm, seamless surface. The full renovation ran six months from strip-out to reopening."
+      ],
+      "highlights": [
+        "700 m² of stretch ceilings throughout the wellness",
+        "Printed ceiling following an organically curved wall",
+        "Circular skylight with a flowing curved edge",
+        "Multi-level, warm acoustic ceiling design",
+        "PVC in the wet zones, ultra-matte polyester in the dry",
+        "Second-generation project — the previous ceiling went up 20 years ago"
+      ],
+      "materials": [
+        "Acoustic STRETCH ceiling with PET absorber backing",
+        "Printed STRETCH ceiling (spa, custom brown print)",
+        "Illuminated STRETCH ceiling (skylight lightbox)",
+        "PVC membranes in all wet areas",
+        "Ultra-matte polyester membranes (changing, massage & nail rooms)",
+        "Prefabricated aluminium structural elements — lightbox & level changes",
+        "Integrated LED lighting spots",
+        "Inspection hatches",
+        "Integrated speakers",
+        "Aluminium coving"
+      ],
+      "facts": [
+        {
+          "label": "Venue",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Wellness",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Interior design",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Area",
+          "value": "700 m²"
+        },
+        {
+          "label": "Year",
+          "value": "2026"
+        },
+        {
+          "label": "Full renovation",
+          "value": "6 months"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Why PVC in some rooms and polyester in others?",
+          "a": "The membrane follows the conditions of the room. In the permanently wet zones — pool, showers and spa — PVC is the strongest choice: it is completely unaffected by humidity and wipes clean. In the changing rooms, massage rooms and nail studio we tensioned polyester instead: a fabric membrane whose woven structure gives a warmer, ultra-matte finish."
+        },
+        {
+          "q": "How does a stretch ceiling follow a curved, organic wall?",
+          "a": "The curved wall was translated into prefabricated aluminium structural elements that carry the profiles, the lightbox and the height differences. The membrane is then tensioned into that frame, so it follows the organic shape precisely — including the circular skylight with its soft curved edge."
+        },
+        {
+          "q": "How do the ceilings help the acoustics?",
+          "a": "The wellness combines acoustic stretch membranes with PET absorber panels behind them: sound passes through the surface and is captured instead of reflected. Together with the multi-level ceiling design, this keeps large, hard-surfaced rooms calm and hushed — exactly what a spa needs."
+        },
+        {
+          "q": "How long does a stretch ceiling last?",
+          "a": "This project is its own answer: the previous stretch ceiling here went up twenty years ago and only made way because the hotel wanted an entirely new wellness. Count on decades of service — and when the design changes, only the membrane is replaced, not the structure."
+        }
+      ]
+    },
     "van-der-valk-beveren": {
       "title": "Van der Valk",
       "summary": "Maximum acoustic absorption for a hotel event hall — with almost no height to give.",
@@ -2801,19 +3107,23 @@
     },
     "london-chapel": {
       "title": "London Chapel",
-      "summary": "A backlit stretch ceiling over a restored chapel space.",
-      "hook": "A restored chapel bathed in soft, even light from a single luminous ceiling.",
+      "summary": "Acoustic fabric walls and a fabric-lined vaulted ceiling for a chapel converted into a London home.",
+      "hook": "A chapel turned family home — wrapped room by room in tensioned acoustic fabric.",
       "description": [
-        "A translucent STRETCH ceiling turns the whole soffit into a soft, even light source, washing the restored interior in glare-free illumination while concealing the LED field completely."
+        "For this chapel conversion in London, our dealer Upholster London finished the interiors with tensioned STRETCH fabric: acoustic fabric walls run through the halls, landings and stairwells, and even the vaulted ceiling is lined with fabric between its original ribs.",
+        "The textile surfaces calm the acoustics of the tall, hard spaces and give every room a warm, upholstered depth that paint can never reach — while original details such as the stained-glass windows stay untouched, framed by crisp fabric panels. A fabric-walled home cinema completes the home."
       ],
       "highlights": [
-        "Whole-ceiling light source",
-        "Glare-free, even illumination",
-        "LED field fully concealed"
+        "Fabric-lined vaulted chapel ceiling",
+        "Acoustic fabric walls throughout the home",
+        "Fabric-walled home cinema",
+        "Original stained glass, crisply framed"
       ],
       "materials": [
-        "Translucent STRETCH ceiling",
-        "LED backlighting field"
+        "STRETCH acoustic fabric walling",
+        "Fabric-lined vaulted ceiling",
+        "Fabric-walled home cinema",
+        "Bespoke profiles around arches and stained glass"
       ],
       "facts": [
         {
@@ -2822,116 +3132,11 @@
         },
         {
           "label": "Space",
-          "value": "Restored chapel"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Private Villa",
-      "summary": "A seamless matte ceiling for an open-plan coastal villa.",
-      "hook": "A seamless, plaster-smooth ceiling for an open-plan coastal home.",
-      "description": [
-        "In the villa’s open living space, a very matte polyester STRETCH ceiling reads like flawless plaster from wall to wall — crisp and modern, free of the cracks and shadow lines of a conventional ceiling."
-      ],
-      "highlights": [
-        "Seamless wall-to-wall finish",
-        "No cracks or shadow lines",
-        "Very matte, plaster-like look"
-      ],
-      "materials": [
-        "Polyester STRETCH ceiling (very matte)",
-        "Perimeter tension profiles"
-      ],
-      "facts": [
-        {
-          "label": "Location",
-          "value": "Knokke, Belgium"
+          "value": "Chapel converted into a private home"
         },
         {
-          "label": "Space",
-          "value": "Open-plan living"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Home Cinema",
-      "summary": "A starry-sky ceiling with acoustic backing for a home cinema.",
-      "hook": "A private cinema under a twinkling night sky, tuned for film sound.",
-      "description": [
-        "Hundreds of fibre-optic points create a twinkling night sky above the seating, while an acoustic backing keeps the room controlled for film sound — atmosphere and performance combined in a single ceiling."
-      ],
-      "highlights": [
-        "Fibre-optic starry sky",
-        "Acoustic backing for film sound",
-        "Atmosphere and performance in one ceiling"
-      ],
-      "materials": [
-        "Starry-sky STRETCH ceiling",
-        "Fibre-optic star field",
-        "Acoustic absorber backing"
-      ],
-      "facts": [
-        {
-          "label": "Location",
-          "value": "Ghent, Belgium"
-        },
-        {
-          "label": "Space",
-          "value": "Home cinema"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "City Penthouse",
-      "summary": "A flawless feature ceiling for a city penthouse.",
-      "hook": "A minimal, perfectly flat feature ceiling for a city penthouse.",
-      "description": [
-        "The penthouse living space uses a seamless STRETCH ceiling with integrated lighting to keep the look minimal and the surface perfect across the open plan."
-      ],
-      "highlights": [
-        "Seamless feature ceiling",
-        "Integrated lighting",
-        "Minimal, flawless finish"
-      ],
-      "materials": [
-        "Polyester STRETCH ceiling",
-        "Integrated lighting"
-      ],
-      "facts": [
-        {
-          "label": "Location",
-          "value": "Antwerp, Belgium"
-        },
-        {
-          "label": "Space",
-          "value": "Penthouse living room"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Wellness Spa",
-      "summary": "A humidity-proof, backlit ceiling for a spa.",
-      "hook": "A humidity-proof, softly glowing ceiling for a wellness space.",
-      "description": [
-        "The spa needed a ceiling that handles humidity and sets a calm mood. A translucent, backlit STRETCH ceiling glows softly over the wellness area and wipes clean, unaffected by steam and moisture."
-      ],
-      "highlights": [
-        "Handles humidity and steam",
-        "Soft, even backlight",
-        "Wipes clean"
-      ],
-      "materials": [
-        "Translucent PVC STRETCH ceiling",
-        "LED backlighting field"
-      ],
-      "facts": [
-        {
-          "label": "Location",
-          "value": "Bruges, Belgium"
-        },
-        {
-          "label": "Space",
-          "value": "Spa / wellness"
+          "label": "STRETCH dealer",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3837,7 +4042,6 @@
       "Bathroom",
       "Office",
       "Commercial",
-      "Home cinema",
       "Light & Print"
     ],
     "browse": [
@@ -4220,9 +4424,9 @@
     "crumb": "Datasheets",
     "titleA": "Specs &",
     "titleB": "datasheets",
-    "lead": "Download technical documentation for every STRETCH system — specifications, fire ratings, acoustic class values and warranty details. Enter your details once per download and the file starts immediately.",
+    "lead": "Download technical documentation for every STRETCH system — specifications, fire ratings, acoustic class values and warranty details. Leave your details once and the datasheet lands in your inbox as a download link.",
     "updated": "Updated {date}",
-    "privacyNote": "We ask for your name, email and phone so a specialist can answer any technical questions. Your details are handled per our",
+    "privacyNote": "We ask for your name, role, email, phone and city so a specialist can answer any technical questions. Your details are handled per our",
     "privacyLink": "privacy policy"
   },
   "samplesPage": {
@@ -4487,5 +4691,116 @@
     "ovRecruitBody": "We deliver and install directly from our production while the network grows — and installers who claim an open region get its enquiries, dealer pricing and training.",
     "regionLuxembourg": "Luxembourg (Grand Duchy)",
     "regionAustria": "Austria"
+  },
+  "datasheetEmail": {
+    "subject": "Your STRETCH datasheet — {title}",
+    "greeting": "Hello {name},",
+    "intro": "Here’s the technical datasheet you requested — {title}.",
+    "button": "Download the datasheet",
+    "linkFallback": "Or copy this link into your browser:",
+    "validity": "The link works for {days} days.",
+    "footerCta": "Working on a project? Just reply to this email or book a call.",
+    "signoff": "The STRETCH team",
+    "architectInvite": "Working as an architect? Our free architect area gives you indicative €/m² budget bands, measured case studies, and every datasheet, spec text and CAD file one click away:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "This download link has expired",
+    "expiredBody": "Download links are valid for 14 days. Request a fresh one in a few seconds — we’ll email it straight to you.",
+    "requestNew": "Request a new link"
+  },
+  "architectsPage": {
+    "crumb": "Architects",
+    "eyebrow": "For architects",
+    "titleA": "Specify stretch ceilings",
+    "titleB": "with confidence",
+    "lead": "One free account with everything you need to specify: documents, spec texts, CAD/BIM, measured case studies, indicative budget bands, events and a dedicated advisor.",
+    "ctaCreate": "Create your free account",
+    "ctaSignIn": "Sign in",
+    "values": [
+      {
+        "title": "Documents, one click",
+        "body": "Every datasheet without forms — downloads tied to your account."
+      },
+      {
+        "title": "Specification texts",
+        "body": "Ready-to-paste tender texts per system — NL, FR and EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "DWG profile details, Revit families and SketchUp components."
+      },
+      {
+        "title": "Project photos",
+        "body": "Hi-res reference photo sets for client presentations."
+      },
+      {
+        "title": "Measured case studies",
+        "body": "Real projects with before/after measured values."
+      },
+      {
+        "title": "Budget bands",
+        "body": "Indicative €/m² ranges for early-stage budgeting."
+      },
+      {
+        "title": "Events & lunch & learns",
+        "body": "Trainings and sessions at our HQ or your office."
+      },
+      {
+        "title": "Project support",
+        "body": "Register a project: dedicated advisor + priority sample box."
+      }
+    ],
+    "howTitle": "How it works",
+    "steps": [
+      {
+        "title": "Create your account",
+        "body": "Office name, city and your details — two minutes."
+      },
+      {
+        "title": "Confirm your email",
+        "body": "One click on the confirmation link."
+      },
+      {
+        "title": "Everything unlocked",
+        "body": "Documents, budgets, cases and support — immediately."
+      }
+    ],
+    "casesTitle": "Measured, not claimed",
+    "casesNote": "Full study inside the architect area.",
+    "cases": [
+      {
+        "title": "Restaurant acoustics retrofit",
+        "metric": "2.4 s → 0.7 s",
+        "metricLabel": "RT60 before → after"
+      },
+      {
+        "title": "Backlit office ceiling",
+        "metric": "540 lux",
+        "metricLabel": "average at task height, U0 0.82"
+      }
+    ],
+    "eventsTitle": "Next events",
+    "eventsNote": "All dates and one-click registration inside the architect area.",
+    "faqTitle": "Frequently asked",
+    "faqs": [
+      {
+        "q": "Is the architect area really free?",
+        "a": "Yes — it exists so specifying a STRETCH system is as easy as possible. No fees, no obligations."
+      },
+      {
+        "q": "Do you publish prices?",
+        "a": "Indicative €/m² budget bands live inside the area for early-stage budgeting. Projects are always priced individually — register a project for a real number."
+      },
+      {
+        "q": "Can you support a live tender?",
+        "a": "Yes. Register the project and a dedicated advisor helps with spec texts, details and acoustic targets — usually within one working day."
+      },
+      {
+        "q": "Do you deliver outside the Benelux?",
+        "a": "Yes — we produce in Belgium and install with certified partners across Europe."
+      }
+    ],
+    "ctaTitle": "Everything to specify, in one place",
+    "ctaBody": "Create your free account and every document, budget band and case study is one click away — plus a dedicated advisor for your live projects."
   }
 }

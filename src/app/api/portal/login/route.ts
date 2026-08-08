@@ -62,17 +62,39 @@ export async function POST(req: NextRequest) {
     // Supabase dashboard) → self-heal with a B2C profile.
     const service = createServiceClient();
     if (service) {
-      const { error: insertError } = await service.from('portal_users').insert({
+      const meta = (data.user.user_metadata ?? {}) as Record<string, unknown>;
+      const metaText = (key: string) =>
+        typeof meta[key] === 'string' && (meta[key] as string).trim()
+          ? (meta[key] as string).trim().slice(0, 120)
+          : null;
+      // Self-service tiers only from metadata: an architect signup must
+      // self-heal as an architect, anything else stays b2c.
+      const metaTier = metaText('account_type') === 'architect' ? 'architect' : 'b2c';
+      const base = {
         id: data.user.id,
         email,
-        company: (data.user.user_metadata?.company as string | undefined) ?? null,
+        company: metaText('company'),
         role: 'client',
-        account_type: 'b2c',
+        account_type: metaTier,
         markets: [],
         all_markets: false,
         active: true,
+      };
+      const { error: insertError } = await service.from('portal_users').insert({
+        ...base,
+        // Signup details captured in the auth metadata — restored here.
+        contact_name: metaText('contact_name'),
+        vat: metaText('vat'),
+        phone: metaText('phone'),
+        country: metaText('country'),
+        business_type: metaText('business_type'),
+        office: metaText('office'),
+        city: metaText('city'),
       });
       if (!insertError) return NextResponse.json({ ok: true, demo: false });
+      // Un-migrated database (B2B columns missing) — core profile only.
+      const { error: retryError } = await service.from('portal_users').insert(base);
+      if (!retryError) return NextResponse.json({ ok: true, demo: false });
     }
     await supabase.auth.signOut();
     return NextResponse.json({ ok: false, error: 'inactive' }, { status: 403 });

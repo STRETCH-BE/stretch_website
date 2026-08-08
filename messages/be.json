@@ -20,7 +20,8 @@
       "about": "Over ons",
       "faq": "FAQ",
       "clientLogin": "Klantenzone",
-      "materials": "Materialen"
+      "materials": "Materialen",
+      "architects": "Architecten"
     },
     "cta": {
       "freeQuote": "Gratis offerte",
@@ -73,7 +74,9 @@
     "portalTitle": "Klantenportaal | STRETCH",
     "portalDescription": "Meld u aan om uw STRETCH-handelsprijslijst en accountgegevens te bekijken.",
     "materialsTitle": "Spanplafond materialen & benodigdheden | STRETCH",
-    "materialsDescription": "Profielen, doeken & folies, verlichting, accessoires, gereedschap en STRETCH Cleaner — vraag per item een offerte en wij antwoorden met prijs en levertermijn. Zonder webshop."
+    "materialsDescription": "Profielen, doeken & folies, verlichting, accessoires, gereedschap en STRETCH Cleaner — vraag per item een offerte en wij antwoorden met prijs en levertermijn. Zonder webshop.",
+    "architectsTitle": "Voor architecten — spanplafonds voorschrijven | STRETCH",
+    "architectsDescription": "Gratis architectenzone: datasheets, bestekteksten, CAD/BIM, gemeten casestudy’s, indicatieve €/m²-budgetbanden, events en projectondersteuning."
   },
   "cookies": {
     "title": "We hechten waarde aan je privacy",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiratie",
       "about": "Over ons",
       "faq": "FAQ",
-      "clientPortal": "Klantenportaal"
+      "clientPortal": "Klantenportaal",
+      "architects": "Voor architecten"
     },
     "dealers": "Dealernetwerk"
   },
@@ -180,8 +184,15 @@
       "demoBody": "Nog geen database gekoppeld — bekijk het portaal met deze accounts:",
       "tabSignIn": "Inloggen",
       "tabSignup": "Account aanmaken",
-      "signupSub": "Gratis account — meteen toegang",
-      "company": "Bedrijf (optioneel)",
+      "signupSub": "Voor professionals — toegang na verificatie",
+      "company": "Bedrijf",
+      "contactName": "Contactpersoon",
+      "vat": "BTW-nummer",
+      "phone": "Telefoon",
+      "country": "Land",
+      "countryOther": "Ander land",
+      "businessType": "Type bedrijf",
+      "chooseOption": "Selecteer…",
       "passwordHint": "Minstens 8 tekens.",
       "signupSubmit": "Account aanmaken",
       "signupSubmitting": "Bezig…",
@@ -189,17 +200,25 @@
       "signupDoneBody": "We stuurden u een bevestigingslink. Klik erop en log daarna in met uw e-mail en wachtwoord.",
       "signupExists": "Er bestaat al een account met dit e-mailadres — log in.",
       "unavailableTitle": "Portaal komt eraan",
-      "unavailableBody": "Het klantenportaal wordt geactiveerd. Neem contact op en we zetten uw toegang klaar."
+      "unavailableBody": "Het klantenportaal wordt geactiveerd. Neem contact op en we zetten uw toegang klaar.",
+      "audienceLabel": "Ik ben",
+      "audienceClient": "Klant",
+      "audienceArchitect": "Architect",
+      "officeName": "Naam bureau",
+      "city": "Stad"
     },
     "nav": {
       "label": "Klantenportaal",
       "overview": "Overzicht",
+      "documents": "Documenten",
+      "orders": "Bestellingen",
       "pricelist": "Prijslijst",
       "admin": "Beheer",
       "signOut": "Afmelden",
       "demoBadge": "Demo",
       "allMarkets": "Alle markten",
-      "designer": "Plafond-designer"
+      "designer": "Plafond-designer",
+      "budgetGuide": "Budgetgids"
     },
     "dash": {
       "eyebrow": "Klantenportaal",
@@ -226,18 +245,62 @@
       "tileTradeBody": "Plaatser of verdeler? Krijg dealerprijzen en de plafonddesigner met een handelsaccount.",
       "tradeCta": "Word partner"
     },
+    "docs": {
+      "title": "Documenten",
+      "intro": "Technische fiches en installatietekeningen van het STRETCH-gamma — direct te downloaden, zonder formulieren.",
+      "download": "Download"
+    },
+    "orders": {
+      "title": "Bestellingen",
+      "intro": "Plafondbestellingen geplaatst vanuit de designer — met hun huidige status.",
+      "empty": "Nog geen bestellingen. Teken een plafond en plaats uw eerste bestelling vanuit de designer.",
+      "demoNote": "Demomodus — bestellingen worden niet bewaard.",
+      "unavailable": "De bestelgeschiedenis is momenteel niet beschikbaar.",
+      "thDate": "Datum",
+      "thDealer": "Dealer",
+      "thClient": "Klant",
+      "thTotal": "Totaal",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Ontvangen",
+        "confirmed": "Bevestigd",
+        "in_production": "In productie",
+        "delivered": "Geleverd",
+        "cancelled": "Geannuleerd"
+      }
+    },
     "pricelist": {
       "title": "Prijslijst",
       "search": "Zoek product of code…",
       "count": "{count} artikelen",
       "market": "Markt",
+      "type": "Type",
+      "allTypesOpt": "Alle types",
       "allMarketsOpt": "Alle markten",
       "currency": "Valuta",
       "print": "Afdrukken",
       "exportCsv": "CSV",
       "version": "Versie",
       "updated": "Bijgewerkt",
-      "empty": "Geen producten gevonden voor uw zoekopdracht."
+      "empty": "Geen producten gevonden voor uw zoekopdracht.",
+      "addLabel": "Toevoegen aan bestelling",
+      "basketLabel": "Bestelmand",
+      "cartTitle": "Bestellen uit de prijslijst",
+      "cartEmpty": "Nog niets toegevoegd — gebruik de + naast een prijs.",
+      "qty": "Aantal",
+      "noteLabel": "Opmerking (optioneel)",
+      "notePlaceholder": "Leverwensen, projectreferentie...",
+      "totalLabel": "Totaal (excl. btw)",
+      "submitOrder": "Bestelling plaatsen",
+      "submitQuote": "Offerte aanvragen",
+      "sendingLabel": "Versturen…",
+      "closeLabel": "Sluiten",
+      "sentOrderTitle": "Bestelling verstuurd",
+      "sentOrderMsg": "We mailden u een bevestiging. Referentie {ref} — volg ze onder Bestellingen.",
+      "sentQuoteTitle": "Offerte aangevraagd",
+      "sentQuoteMsg": "We ontvingen uw aanvraag. Referentie {ref} — een specialist antwoordt binnen één werkdag.",
+      "demoNote": "Demomodus — er werd niets verstuurd of opgeslagen.",
+      "errorMsg": "Er ging iets mis — probeer het opnieuw."
     },
     "admin": {
       "title": "Beheer",
@@ -265,7 +328,8 @@
       "colEmail": "E-mail",
       "colCompany": "Bedrijf",
       "colRole": "Rol",
-      "colMarkets": "Markten",
+      "colType": "Accounttype",
+      "colMarkets": "Prijsgroepen",
       "colStatus": "Status",
       "roleClient": "Klant",
       "roleAdmin": "Beheerder",
@@ -273,20 +337,75 @@
       "statusInactive": "Inactief",
       "deactivate": "Deactiveren",
       "activate": "Activeren",
-      "allMarketsLabel": "Alle markten",
+      "allMarketsLabel": "Alle prijsgroepen",
       "tempPassword": "Tijdelijk wachtwoord",
       "create": "Account aanmaken",
       "creating": "Aanmaken…",
       "createFailed": "Account kon niet aangemaakt worden.",
       "createdOk": "Account aangemaakt voor {email}.",
-      "makeB2b": "Upgrade naar B2B",
-      "makeB2c": "Zet op B2C",
-      "typeB2b": "B2B",
-      "typeB2c": "B2C"
+      "typeProducer": "Producent/verdeler",
+      "typeInstaller": "Installateur",
+      "typeB2c": "B2C",
+      "typeArchitect": "Architect",
+      "filterAllTypes": "Alle types"
     },
     "designer": {
       "eyebrow": "Plafond-designer",
       "hint": "Teken het plafond uit muur- en diagonaalmaten, plaats lasnaden en uitsparingen, controleer de prijs en plaats de bestelling. Gebruik Save om een opmeting als bestand te bewaren."
+    },
+    "businessTypes": {
+      "installer": "Installateur",
+      "distributor": "Verdeler / wederverkoper",
+      "architect": "Architect / ontwerper",
+      "contractor": "Aannemer",
+      "other": "Andere"
+    },
+    "architect": {
+      "eyebrow": "Architectenzone",
+      "welcome": "Alles om voor te schrijven",
+      "intro": "Welkom, {office} — documenten, bestekteksten, CAD/BIM, gemeten casestudy’s, budgetbanden en projectondersteuning op één plek.",
+      "demoNote": "Demovoorbeeld — downloads zijn uitgeschakeld en er wordt niets gelogd.",
+      "toolsTitle": "Projecttools",
+      "budgetTileTitle": "Budgetgids",
+      "budgetTileBody": "Indicatieve €/m²-banden voor vroege budgettering — de cijfers die niemand publiceert.",
+      "budgetTileCta": "Open de gids",
+      "projectTileTitle": "Project registreren",
+      "projectTileBody": "Een lopend project krijgt een vaste adviseur, bestekondersteuning en priority sampling.",
+      "projectTileCta": "Project registreren",
+      "samplesTileTitle": "Staalbox",
+      "samplesTileBody": "Fysieke membraan- en kleurstalen voor uw materiaalbibliotheek — gratis voor architecten.",
+      "samplesTileCta": "Staalbox bestellen",
+      "libraryTitle": "Bibliotheek",
+      "libraryBody": "Elk document met één klik. Downloads worden gelogd op uw account, zodat we uw project proactief kunnen ondersteunen.",
+      "docsTitle": "Datasheets",
+      "docsBody": "De volledige technische datasheetbibliotheek — geen formulieren, één klik.",
+      "specTitle": "Bestekteksten",
+      "specBody": "Kant-en-klare bestekteksten per systeem — bestektekst NL, cahier des charges FR, specification EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "DWG-profieldetails, Revit-families en SketchUp-componenten per systeem.",
+      "photosTitle": "Projectfoto’s",
+      "photosBody": "Hi-res fotosets van referentieprojecten voor klantpresentaties.",
+      "casesTitle": "Technische casestudy’s",
+      "casesBody": "Echte projecten met gemeten voor/na-waarden — cijfers voor in uw ontwerpnota.",
+      "eventsTitle": "Events",
+      "eventsBody": "Trainingen, lunch & learns en showroomdagen — schrijf in met één klik.",
+      "register": "Inschrijven",
+      "advisorTitle": "Uw adviseur",
+      "advisorBody": "Eén specialist voor bestekvragen, akoestiekdoelen, budgetten en stalen — antwoord binnen één werkdag.",
+      "advisorCta": "Plan een gesprek",
+      "download": "Download",
+      "comingSoon": "Binnenkort"
+    },
+    "budget": {
+      "eyebrow": "Architectenzone",
+      "title": "Budgetgids",
+      "intro": "Indicatieve geïnstalleerde prijsbanden per systeem — bewust grof, voor vroege budgettering en haalbaarheid.",
+      "disclaimer": "Indicatieve geïnstalleerde prijsbanden, excl. btw, alleen voor vroege budgettering. Elk project wordt individueel geprijsd — registreer uw project voor een echt cijfer.",
+      "includes": "Inbegrepen",
+      "perM2": "per m² geplaatst, excl. btw",
+      "perUnit": "per stuk geplaatst, excl. btw",
+      "ctaBody": "Een echt cijfer nodig voor een lopend project? Registreer het en een vaste adviseur prijst het correct binnen één werkdag.",
+      "ctaButton": "Registreer uw project"
     }
   },
   "home": {
@@ -1501,6 +1620,28 @@
               "sub": "Veelgestelde vragen"
             }
           ]
+        },
+        {
+          "title": "Architecten",
+          "desc": "Voorschrijven met vertrouwen — documenten, budgetten en support.",
+          "items": [
+            {
+              "title": "Architectenzone",
+              "sub": "Alles om voor te schrijven, op één plek"
+            },
+            {
+              "title": "Datasheets",
+              "sub": "De technische documentbibliotheek"
+            },
+            {
+              "title": "Account aanmaken",
+              "sub": "Gratis — meteen toegang na e-mailbevestiging"
+            },
+            {
+              "title": "Inloggen",
+              "sub": "Rechtstreeks naar uw dashboard"
+            }
+          ]
         }
       ]
     },
@@ -1799,25 +1940,50 @@
       }
     },
     "datasheet": {
-      "title": "Download de technische fiche",
-      "subtitle": "Vul uw gegevens in en de download start meteen. We gebruiken ze enkel om uw aanvraag op te volgen.",
-      "submitLabel": "Ontvang de technische fiche",
-      "sentTitle": "Hier is uw technische fiche",
-      "sentMsg": "Uw download start normaal automatisch — zo niet, gebruik dan de knop hieronder.",
+      "title": "Ontvang de datasheet per e-mail",
+      "subtitle": "Laat uw gegevens achter en we mailen de datasheet rechtstreeks naar uw inbox. We gebruiken ze alleen om uw aanvraag op te volgen.",
+      "submitLabel": "Mail mij de datasheet",
+      "sentTitle": "Check uw inbox",
+      "sentMsg": "De datasheet is onderweg naar {email}. Niets ontvangen na enkele minuten? Kijk ook in uw spamfolder.",
       "fields": {
         "name": {
           "label": "Naam",
           "placeholder": "Voor- en achternaam"
         },
+        "role": {
+          "label": "Ik ben",
+          "options": [
+            "Architect",
+            "Installateur",
+            "Particulier",
+            "Ander bedrijf"
+          ]
+        },
         "email": {
           "label": "E-mail",
-          "placeholder": "you@email.com"
+          "placeholder": "u@email.com"
         },
         "phone": {
           "label": "Telefoon",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "Stad",
+          "placeholder": "Uw stad"
         }
-      }
+      },
+      "confirm": {
+        "title": "{title} naar uw inbox sturen?",
+        "msg": "We mailen de datasheet naar {email} — één klik en hij is onderweg.",
+        "sendLabel": "Ja, mail hem naar mij",
+        "editLabel": "Niet u? Gegevens aanpassen"
+      },
+      "fallback": {
+        "sentTitle": "Hier is uw datasheet",
+        "sentMsg": "De download start normaal automatisch — zo niet, gebruik de knop hieronder."
+      },
+      "rateLimited": "Te veel aanvragen vanaf uw verbinding — probeer het over een uur opnieuw.",
+      "architectInvite": "Architect? Onze gratis architectenzone biedt indicatieve budgetbanden, gemeten casestudy’s en elk document met één klik."
     },
     "trainingDates": [
       "15–16 sep 2026",
@@ -1832,7 +1998,72 @@
     ],
     "close": "Sluiten",
     "downloadDatasheet": "Download technische fiche",
-    "select": "Selecteer…"
+    "select": "Selecteer…",
+    "project": {
+      "title": "Project registreren",
+      "subtitle": "Vertel ons over uw lopende project — een vaste adviseur volgt binnen één werkdag op met bestekondersteuning, budgetinput en priority sampling.",
+      "submitLabel": "Project registreren",
+      "sentTitle": "Project geregistreerd",
+      "sentMsg": "Bedankt — een vaste adviseur neemt binnen één werkdag contact op.",
+      "fields": {
+        "projectName": {
+          "label": "Projectnaam",
+          "placeholder": "Project- of werktitel"
+        },
+        "location": {
+          "label": "Locatie",
+          "placeholder": "Stad"
+        },
+        "buildingType": {
+          "label": "Gebouwtype",
+          "options": [
+            "Kantoor",
+            "Hospitality",
+            "Zorg",
+            "Retail",
+            "Residentieel",
+            "Onderwijs",
+            "Andere"
+          ]
+        },
+        "system": {
+          "label": "Systeem",
+          "options": [
+            "Polyester",
+            "PVC",
+            "Akoestisch",
+            "Licht & print",
+            "Prefab",
+            "Nog niet zeker"
+          ]
+        },
+        "stage": {
+          "label": "Fase",
+          "options": [
+            "Concept",
+            "Ontwerp",
+            "Aanbesteding",
+            "In uitvoering"
+          ]
+        },
+        "area": {
+          "label": "Oppervlakte",
+          "placeholder": "ca. m²"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "u@bureau.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Notities",
+          "placeholder": "Plafondhoogtes, akoestiekdoelen, deadlines..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -2141,15 +2372,12 @@
       "mark-with-a-k": "België · Geluidsstudio",
       "notary-ampe-anthony": "Kruibeke · Akoestisch kantoor",
       "bnp-paribas-fortis": "Brussel · Hoofdkantoor bank",
+      "van-der-valk-boost-wellness": "Beveren · Wellness & spa Van der Valk-hotel",
       "van-der-valk-beveren": "Beveren · Evenementenzaal hotel",
       "johnson-and-johnson": "Limerick, IE · Farma R&D-site",
       "polette-eyewear": "Antwerpen · Retail conceptstore",
       "citizenm-hotel": "VS & Europa · Prefab badkamerunits",
-      "london-chapel": "Londen, VK · Plafond met backlight",
-      "private-villa-knokke": "Knokke · Open leefruimte",
-      "home-cinema-ghent": "Gent · Sterrenhemel + akoestiek",
-      "city-penthouse-antwerp": "Antwerpen · Woonkamer",
-      "wellness-spa-bruges": "Brugge · Spa-badkamer",
+      "london-chapel": "Londen, VK · Kapelconversie",
       "rue-perree-paris": "Parijs · Galerijplafond met backlight",
       "vier-emmershof-lokeren": "Lokeren · Boswoning",
       "vp-193": "Oost-Vlaanderen · Privéwoning",
@@ -2313,6 +2541,8 @@
     "viewProduct": "Bekijk het product",
     "eyebrowTech": "Technisch",
     "datasheetCta": "Vraag de volledige technische fiche aan",
+    "downloadsTitle": "Download de technische fiches",
+    "allDatasheets": "Alle technische fiches",
     "samplesCta": "Vraag fysieke stalen aan",
     "copyHint": "Selecteer de tekst hierboven om deze naar uw bestekdocument te kopiëren.",
     "ctaTitle": "Hulp nodig bij de bestektekst?",
@@ -2617,6 +2847,82 @@
         }
       ]
     },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "De volledige renovatie van de wellness van Van der Valk Beveren — 700 m² akoestische, bedrukte en verlichte spanplafonds in een ontwerp van Maison Max.",
+      "hook": "Twintig jaar nadat het eerste doek werd opgespannen, vroeg Van der Valk Beveren ons terug — deze keer om een volledig nieuwe wellness te bekronen.",
+      "description": [
+        "Toen Van der Valk Hotel Beveren besliste om zijn volledige wellness- en zwembadzone te renoveren — heropend als Boost Wellness — was de keuze van de plafondpartner snel gemaakt. Er hangen al STRETCH-plafonds in andere delen van het hotel, en de samenwerking gaat jaren terug. Het project sloot zelfs een familiecirkel: de eerste klus bestond erin het spanplafond te demonteren dat Benjamin Nicasens van Plafondlux BV — vader van Michael Nicasens van STRETCH — er twintig jaar eerder had geplaatst.",
+        "Zodra de klant de wellness- en zwembadzone tot op de ruwbouw had gestript, werkten we hand in hand met interieurbureau Maison Max uit Temse, dat het volledige ontwerp en de look & feel vormgaf. Hoteleigenaar Tim en zijn vrouw Paulina waren van begin tot einde betrokken — Paulina bracht zelf sterke designideeën aan, die Maison Max in de plannen verwerkte, en samen kozen ze de materialen voor elk onderdeel van het project. Voor de plafonds vertaalde zich dat in een warm, strak, akoestisch ontwerp met meerdere niveaus boven het hoofd, zodat geen enkele ruimte vlak of saai aanvoelt.",
+        "Elke zone kreeg het doek dat erbij past. In de volledig natte ruimtes — zwembad, douches en spa — spanden we PVC-spanplafonds op, de sterkste keuze waar de vochtigheid constant is. De kleedkamers, massageruimtes en nagelstudio kregen spanplafonds in polyester (textiel), waarvan de warme textielstructuur voor een ultramatte afwerking zorgt.",
+        "De spa is het pronkstuk. Paulina wilde een natuurlijke, organisch gebogen wand — en het plafond moest die complexe, vloeiende vorm volgen. In het bedrukte plafond in bruintinten vroeg ze bovendien een cirkelvormig daklicht — niet met een rechte rand, maar met een zacht gebogen rand. Geprefabriceerde aluminium constructie-elementen vormen de lichtbak en de hoogteverschillen, en het resultaat is een van de meest complexe — en mooiste — installaties die we tot nu toe hebben opgeleverd.",
+        "Over 700 m² lag de focus op duurzaamheid, akoestiek en complex design: akoestische doeken met PET-absorbers erachter, geïntegreerde LED-spots, inspectieluiken, luidsprekers en aluminium koven — elk technisch detail lost op in één warm, naadloos vlak. De volledige renovatie duurde zes maanden, van uitbraak tot heropening."
+      ],
+      "highlights": [
+        "700 m² spanplafonds doorheen de hele wellness",
+        "Bedrukt plafond dat een organisch gebogen wand volgt",
+        "Cirkelvormig daklicht met een vloeiend gebogen rand",
+        "Warm akoestisch plafondontwerp met meerdere niveaus",
+        "PVC in de natte zones, ultramat polyester in de droge",
+        "Project in tweede generatie — het vorige plafond werd 20 jaar geleden geplaatst"
+      ],
+      "materials": [
+        "Akoestisch STRETCH-plafond met PET-absorbers als achterlaag",
+        "Bedrukt STRETCH-plafond (spa, bruine print op maat)",
+        "Verlicht STRETCH-plafond (lichtbak als daklicht)",
+        "PVC-doeken in alle natte ruimtes",
+        "Ultramatte polyesterdoeken (kleedkamers, massageruimtes & nagelstudio)",
+        "Geprefabriceerde aluminium constructie-elementen — lichtbak & niveauverschillen",
+        "Geïntegreerde LED-spots",
+        "Inspectieluiken",
+        "Geïntegreerde luidsprekers",
+        "Aluminium koven"
+      ],
+      "facts": [
+        {
+          "label": "Locatie",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Wellness",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Interieurontwerp",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Oppervlakte",
+          "value": "700 m²"
+        },
+        {
+          "label": "Jaar",
+          "value": "2026"
+        },
+        {
+          "label": "Volledige renovatie",
+          "value": "6 maanden"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Waarom PVC in sommige ruimtes en polyester in andere?",
+          "a": "Het doek volgt de omstandigheden van de ruimte. In de permanent natte zones — zwembad, douches en spa — is PVC de sterkste keuze: het is volledig ongevoelig voor vocht en veegt u gewoon schoon. In de kleedkamers, massageruimtes en nagelstudio spanden we polyester op: een textieldoek waarvan de geweven structuur een warmere, ultramatte afwerking geeft."
+        },
+        {
+          "q": "Hoe volgt een spanplafond een gebogen, organische wand?",
+          "a": "De gebogen wand werd vertaald naar geprefabriceerde aluminium constructie-elementen die de profielen, de lichtbak en de hoogteverschillen dragen. Het doek wordt vervolgens in dat kader opgespannen, zodat het de organische vorm exact volgt — inclusief het cirkelvormige daklicht met zijn zacht gebogen rand."
+        },
+        {
+          "q": "Hoe helpen de plafonds de akoestiek?",
+          "a": "De wellness combineert akoestische stretchdoeken met PET-absorptiepanelen erachter: geluid gaat door het oppervlak en wordt opgevangen in plaats van weerkaatst. Samen met het plafondontwerp op meerdere niveaus blijven grote ruimtes met harde oppervlakken zo rustig en gedempt — precies wat een spa nodig heeft."
+        },
+        {
+          "q": "Hoe lang gaat een spanplafond mee?",
+          "a": "Dit project is zelf het antwoord: het vorige spanplafond werd hier twintig jaar geleden geplaatst en moest enkel wijken omdat het hotel een volledig nieuwe wellness wilde. Reken op decennia dienst — en wanneer het ontwerp verandert, wordt alleen het doek vervangen, niet de structuur."
+        }
+      ]
+    },
     "van-der-valk-beveren": {
       "title": "Van der Valk",
       "summary": "Maximale geluidsabsorptie voor de evenementenzaal van een hotel — met amper hoogte om op te offeren.",
@@ -2800,20 +3106,24 @@
       ]
     },
     "london-chapel": {
-      "title": "Kapel in Londen",
-      "summary": "Een spanplafond met backlight boven een gerestaureerde kapelruimte.",
-      "hook": "Een gerestaureerde kapel, badend in zacht en gelijkmatig licht van één lichtgevend plafond.",
+      "title": "London Chapel",
+      "summary": "Akoestische textielwanden en een met doek bespannen gewelfd plafond voor een kapel die werd omgebouwd tot Londense woning.",
+      "hook": "Een kapel die gezinswoning werd — kamer per kamer bekleed met gespannen akoestisch textiel.",
       "description": [
-        "Een doorschijnend STRETCH-plafond maakt van het volledige plafondvlak één zachte, gelijkmatige lichtbron: het gerestaureerde interieur baadt in verblindingsvrij licht, terwijl het LED-veld volledig uit het zicht blijft."
+        "Voor deze kapelconversie in Londen werkte onze dealer Upholster London het interieur af met gespannen STRETCH-textiel: akoestische textielwanden lopen door de hallen, overlopen en trappenhuizen, en zelfs het gewelfde plafond is tussen de originele ribben met doek bekleed.",
+        "De textieloppervlakken temperen de akoestiek van de hoge, harde ruimtes en geven elke kamer een warme, gestoffeerde diepte die verf nooit bereikt — terwijl originele details zoals de glas-in-loodramen onaangeroerd blijven, strak omkaderd door textielpanelen. Een thuisbioscoop met textielwanden maakt de woning compleet."
       ],
       "highlights": [
-        "Het volledige plafond als lichtbron",
-        "Verblindingsvrije, gelijkmatige verlichting",
-        "LED-veld volledig weggewerkt"
+        "Met doek bespannen gewelfd kapelplafond",
+        "Akoestische textielwanden in de hele woning",
+        "Thuisbioscoop met textielwanden",
+        "Origineel glas-in-lood, strak omkaderd"
       ],
       "materials": [
-        "Doorschijnend STRETCH-plafond",
-        "LED-backlightveld"
+        "Akoestische STRETCH-textielwanden",
+        "Met doek bespannen gewelfd plafond",
+        "Thuisbioscoop met textielwanden",
+        "Profielen op maat rond bogen en glas-in-lood"
       ],
       "facts": [
         {
@@ -2822,116 +3132,11 @@
         },
         {
           "label": "Ruimte",
-          "value": "Gerestaureerde kapel"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Privévilla",
-      "summary": "Een naadloos mat plafond voor een open kustvilla.",
-      "hook": "Een naadloos, pleisterglad plafond voor een open woning aan de kust.",
-      "description": [
-        "In de open leefruimte van de villa oogt een zeer mat polyester STRETCH-plafond van muur tot muur als vlekkeloos pleisterwerk – strak en modern, zonder de scheuren en schaduwlijnen van een klassiek plafond."
-      ],
-      "highlights": [
-        "Naadloze afwerking van muur tot muur",
-        "Geen scheuren of schaduwlijnen",
-        "Zeer matte look, als pleisterwerk"
-      ],
-      "materials": [
-        "Polyester STRETCH-plafond (zeer mat)",
-        "Randprofielen voor opspanning"
-      ],
-      "facts": [
-        {
-          "label": "Locatie",
-          "value": "Knokke, België"
+          "value": "Kapel omgebouwd tot privéwoning"
         },
         {
-          "label": "Ruimte",
-          "value": "Open leefruimte"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Thuisbioscoop",
-      "summary": "Een sterrenhemelplafond met akoestische achterlaag voor een thuisbioscoop.",
-      "hook": "Een privébioscoop onder een fonkelende sterrenhemel, afgestemd op filmgeluid.",
-      "description": [
-        "Honderden glasvezelpunten vormen een fonkelende nachthemel boven de zitplaatsen, terwijl een akoestische achterlaag de ruimte onder controle houdt voor filmgeluid – sfeer en prestaties verenigd in één plafond."
-      ],
-      "highlights": [
-        "Sterrenhemel in glasvezel",
-        "Akoestische achterlaag voor filmgeluid",
-        "Sfeer en prestaties in één plafond"
-      ],
-      "materials": [
-        "STRETCH-plafond met sterrenhemel",
-        "Sterrenveld in glasvezel",
-        "Akoestisch absorberende achterlaag"
-      ],
-      "facts": [
-        {
-          "label": "Locatie",
-          "value": "Gent, België"
-        },
-        {
-          "label": "Ruimte",
-          "value": "Thuisbioscoop"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Stadspenthouse",
-      "summary": "Een vlekkeloos designplafond voor een penthouse in de stad.",
-      "hook": "Een minimalistisch, perfect vlak designplafond voor een penthouse in de stad.",
-      "description": [
-        "De leefruimte van het penthouse kreeg een naadloos STRETCH-plafond met geïntegreerde verlichting: zo blijft de look minimalistisch en het oppervlak perfect over de hele open ruimte."
-      ],
-      "highlights": [
-        "Naadloos designplafond",
-        "Geïntegreerde verlichting",
-        "Minimalistische, vlekkeloze afwerking"
-      ],
-      "materials": [
-        "Polyester STRETCH-plafond",
-        "Geïntegreerde verlichting"
-      ],
-      "facts": [
-        {
-          "label": "Locatie",
-          "value": "Antwerpen, België"
-        },
-        {
-          "label": "Ruimte",
-          "value": "Woonkamer van het penthouse"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Wellness-spa",
-      "summary": "Een vochtbestendig plafond met backlight voor een spa.",
-      "hook": "Een vochtbestendig, zacht oplichtend plafond voor een wellnessruimte.",
-      "description": [
-        "De spa had een plafond nodig dat tegen vocht kan en voor een rustige sfeer zorgt. Een doorschijnend STRETCH-plafond met backlight licht zacht op boven de wellnesszone en is eenvoudig schoon te vegen – ongevoelig voor stoom en vocht."
-      ],
-      "highlights": [
-        "Bestand tegen vocht en stoom",
-        "Zachte, gelijkmatige backlight",
-        "Eenvoudig schoon te vegen"
-      ],
-      "materials": [
-        "Doorschijnend STRETCH-plafond in PVC",
-        "LED-backlightveld"
-      ],
-      "facts": [
-        {
-          "label": "Locatie",
-          "value": "Brugge, België"
-        },
-        {
-          "label": "Ruimte",
-          "value": "Spa / wellness"
+          "label": "STRETCH-dealer",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3837,7 +4042,6 @@
       "Badkamer",
       "Kantoor",
       "Commercieel",
-      "Thuisbioscoop",
       "Licht & print"
     ],
     "browse": [
@@ -4220,9 +4424,9 @@
     "crumb": "Fiches",
     "titleA": "Specificaties &",
     "titleB": "fiches",
-    "lead": "Download de technische documentatie van elk STRETCH-systeem — specificaties, brandklassen, akoestische klassewaarden en garantiedetails. Vul uw gegevens één keer per download in en het bestand start meteen.",
+    "lead": "Download technische documentatie voor elk STRETCH-systeem — specificaties, brandklassen, akoestische waarden en garantie. Laat één keer uw gegevens achter en de datasheet landt als downloadlink in uw inbox.",
     "updated": "Bijgewerkt op {date}",
-    "privacyNote": "We vragen uw naam, e-mailadres en telefoonnummer zodat een specialist eventuele technische vragen kan beantwoorden. Uw gegevens worden behandeld volgens ons",
+    "privacyNote": "We vragen uw naam, rol, e-mail, telefoon en stad zodat een specialist uw technische vragen kan beantwoorden. Uw gegevens worden behandeld volgens ons",
     "privacyLink": "privacybeleid"
   },
   "samplesPage": {
@@ -4487,5 +4691,116 @@
     "ovRecruitBody": "Terwijl het netwerk groeit, leveren en plaatsen wij rechtstreeks vanuit onze eigen productie — en installateurs die een vrije regio claimen, krijgen de aanvragen uit die regio, dealerprijzen en opleiding.",
     "regionLuxembourg": "Luxemburg (Groothertogdom)",
     "regionAustria": "Oostenrijk"
+  },
+  "datasheetEmail": {
+    "subject": "Uw STRETCH-datasheet — {title}",
+    "greeting": "Dag {name},",
+    "intro": "Hier is de technische datasheet die u aanvroeg — {title}.",
+    "button": "Download de datasheet",
+    "linkFallback": "Of kopieer deze link in uw browser:",
+    "validity": "De link werkt {days} dagen.",
+    "footerCta": "Werkt u aan een project? Antwoord gewoon op deze e-mail of plan een gesprek.",
+    "signoff": "Het STRETCH-team",
+    "architectInvite": "Werkt u als architect? Onze gratis architectenzone geeft u indicatieve €/m²-budgetbanden, gemeten casestudy’s en elke datasheet, bestektekst en CAD-file met één klik:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Deze downloadlink is verlopen",
+    "expiredBody": "Downloadlinks zijn 14 dagen geldig. Vraag in enkele seconden een nieuwe aan — we mailen hem meteen.",
+    "requestNew": "Nieuwe link aanvragen"
+  },
+  "architectsPage": {
+    "crumb": "Architecten",
+    "eyebrow": "Voor architecten",
+    "titleA": "Spanplafonds voorschrijven",
+    "titleB": "met vertrouwen",
+    "lead": "Eén gratis account met alles wat u nodig hebt om voor te schrijven: documenten, bestekteksten, CAD/BIM, gemeten casestudy’s, indicatieve budgetbanden, events en een vaste adviseur.",
+    "ctaCreate": "Maak uw gratis account",
+    "ctaSignIn": "Inloggen",
+    "values": [
+      {
+        "title": "Documenten, één klik",
+        "body": "Elke datasheet zonder formulieren — downloads gekoppeld aan uw account."
+      },
+      {
+        "title": "Bestekteksten",
+        "body": "Kant-en-klare bestekteksten per systeem — NL, FR en EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "DWG-profieldetails, Revit-families en SketchUp-componenten."
+      },
+      {
+        "title": "Projectfoto’s",
+        "body": "Hi-res fotosets van referentieprojecten voor klantpresentaties."
+      },
+      {
+        "title": "Gemeten casestudy’s",
+        "body": "Echte projecten met gemeten voor/na-waarden."
+      },
+      {
+        "title": "Budgetbanden",
+        "body": "Indicatieve €/m²-vorken voor vroege budgettering."
+      },
+      {
+        "title": "Events & lunch & learns",
+        "body": "Trainingen en sessies bij ons of op uw bureau."
+      },
+      {
+        "title": "Projectondersteuning",
+        "body": "Registreer een project: vaste adviseur + priority staalbox."
+      }
+    ],
+    "howTitle": "Zo werkt het",
+    "steps": [
+      {
+        "title": "Maak uw account",
+        "body": "Naam bureau, stad en uw gegevens — twee minuten."
+      },
+      {
+        "title": "Bevestig uw e-mail",
+        "body": "Eén klik op de bevestigingslink."
+      },
+      {
+        "title": "Alles ontgrendeld",
+        "body": "Documenten, budgetten, cases en support — meteen."
+      }
+    ],
+    "casesTitle": "Gemeten, niet beweerd",
+    "casesNote": "Volledige studie in de architectenzone.",
+    "cases": [
+      {
+        "title": "Akoestische renovatie restaurant",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 voor → na"
+      },
+      {
+        "title": "Lichtplafond kantoor",
+        "metric": "540 lux",
+        "metricLabel": "gemiddeld op werkhoogte, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Volgende events",
+    "eventsNote": "Alle data en inschrijving met één klik in de architectenzone.",
+    "faqTitle": "Veelgestelde vragen",
+    "faqs": [
+      {
+        "q": "Is de architectenzone echt gratis?",
+        "a": "Ja — ze bestaat om het voorschrijven van een STRETCH-systeem zo eenvoudig mogelijk te maken. Geen kosten, geen verplichtingen."
+      },
+      {
+        "q": "Publiceren jullie prijzen?",
+        "a": "Indicatieve €/m²-budgetbanden staan in de zone voor vroege budgettering. Projecten worden altijd individueel geprijsd — registreer een project voor een echt cijfer."
+      },
+      {
+        "q": "Ondersteunen jullie een lopende aanbesteding?",
+        "a": "Ja. Registreer het project en een vaste adviseur helpt met bestekteksten, details en akoestiekdoelen — meestal binnen één werkdag."
+      },
+      {
+        "q": "Leveren jullie buiten de Benelux?",
+        "a": "Ja — we produceren in België en plaatsen met gecertificeerde partners in heel Europa."
+      }
+    ],
+    "ctaTitle": "Alles om voor te schrijven, op één plek",
+    "ctaBody": "Maak uw gratis account en elk document, elke budgetband en elke casestudy staat één klik ver — plus een vaste adviseur voor uw lopende projecten."
   }
 }

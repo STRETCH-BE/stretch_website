@@ -20,7 +20,8 @@
       "about": "Um okkur",
       "faq": "Algengar spurningar",
       "clientLogin": "Innskráning viðskiptavina",
-      "materials": "Efni"
+      "materials": "Efni",
+      "architects": "Arkitektar"
     },
     "cta": {
       "freeQuote": "Ókeypis tilboð",
@@ -73,7 +74,9 @@
     "portalTitle": "Viðskiptavinagátt | STRETCH",
     "portalDescription": "Skráðu þig inn til að sjá STRETCH-verðskrána þína og aðgangsupplýsingar.",
     "materialsTitle": "Efni og fylgihlutir fyrir strekkloft | STRETCH",
-    "materialsDescription": "Prófílar, dúkar og filmur, lýsing, fylgihlutir, verkfæri og STRETCH Cleaner — biddu um tilboð fyrir hverja vöru og við svörum með verði og afhendingartíma. Án vefverslunar."
+    "materialsDescription": "Prófílar, dúkar og filmur, lýsing, fylgihlutir, verkfæri og STRETCH Cleaner — biddu um tilboð fyrir hverja vöru og við svörum með verði og afhendingartíma. Án vefverslunar.",
+    "architectsTitle": "Fyrir arkitekta — skilgreindu strekkloft | STRETCH",
+    "architectsDescription": "Ókeypis arkitektasvæði: tækniblöð, útboðstextar, CAD/BIM, mæld dæmi, leiðbeinandi €/m² kostnaðarbil, viðburðir og verkefnastuðningur."
   },
   "cookies": {
     "title": "Við virðum friðhelgi þína",
@@ -158,7 +161,8 @@
       "inspiration": "Innblástur",
       "about": "Um okkur",
       "faq": "Algengar spurningar",
-      "clientPortal": "Viðskiptavinagátt"
+      "clientPortal": "Viðskiptavinagátt",
+      "architects": "Fyrir arkitekta"
     },
     "dealers": "Söluaðilanet"
   },
@@ -180,8 +184,15 @@
       "demoBody": "Enginn gagnagrunnur tengdur enn — prófaðu gáttina með þessum aðgöngum:",
       "tabSignIn": "Innskráning",
       "tabSignup": "Stofna aðgang",
-      "signupSub": "Ókeypis aðgangur — strax",
-      "company": "Fyrirtæki (valfrjálst)",
+      "signupSub": "Fyrir fagaðila — aðgangur eftir yfirferð",
+      "company": "Fyrirtæki",
+      "contactName": "Tengiliður",
+      "vat": "VSK-númer",
+      "phone": "Sími",
+      "country": "Land",
+      "countryOther": "Annað land",
+      "businessType": "Tegund fyrirtækis",
+      "chooseOption": "Veldu…",
       "passwordHint": "Að minnsta kosti 8 stafir.",
       "signupSubmit": "Stofna aðgang",
       "signupSubmitting": "Stofna…",
@@ -189,17 +200,25 @@
       "signupDoneBody": "Við sendum þér staðfestingartengil. Smelltu á hann og skráðu þig svo inn með netfangi og lykilorði.",
       "signupExists": "Aðgangur með þessu netfangi er þegar til — skráðu þig inn.",
       "unavailableTitle": "Þjónustugáttin opnar fljótlega",
-      "unavailableBody": "Verið er að virkja þjónustugáttina. Hafðu samband og við setjum upp aðganginn þinn."
+      "unavailableBody": "Verið er að virkja þjónustugáttina. Hafðu samband og við setjum upp aðganginn þinn.",
+      "audienceLabel": "Ég er",
+      "audienceClient": "Viðskiptavinur",
+      "audienceArchitect": "Arkitekt",
+      "officeName": "Nafn stofu",
+      "city": "Borg"
     },
     "nav": {
       "label": "Viðskiptavinagátt",
       "overview": "Yfirlit",
+      "documents": "Skjöl",
+      "orders": "Pantanir",
       "pricelist": "Verðskrá",
       "admin": "Stjórnun",
       "signOut": "Skrá út",
       "demoBadge": "Prufa",
       "allMarkets": "Allir markaðir",
-      "designer": "Loftahönnuður"
+      "designer": "Loftahönnuður",
+      "budgetGuide": "Kostnaðarleiðarvísir"
     },
     "dash": {
       "eyebrow": "Viðskiptavinagátt",
@@ -226,18 +245,62 @@
       "tileTradeBody": "Uppsetningaraðili eða söluaðili? Fáðu söluaðilaverð og loftahönnuðinn með fyrirtækjaaðgangi.",
       "tradeCta": "Gerast samstarfsaðili"
     },
+    "docs": {
+      "title": "Skjöl",
+      "intro": "Tækniblöð og uppsetningarteikningar fyrir STRETCH-vörulínuna — beint niðurhal, engin eyðublöð.",
+      "download": "Sækja"
+    },
+    "orders": {
+      "title": "Pantanir",
+      "intro": "Loftapantanir gerðar úr hönnunartólinu — með núverandi stöðu.",
+      "empty": "Engar pantanir enn. Teiknaðu loft og gerðu fyrstu pöntunina úr hönnunartólinu.",
+      "demoNote": "Prufuhamur — pantanir eru ekki vistaðar.",
+      "unavailable": "Pöntunarsagan er ekki tiltæk eins og er.",
+      "thDate": "Dagsetning",
+      "thDealer": "Söluaðili",
+      "thClient": "Viðskiptavinur",
+      "thTotal": "Samtals",
+      "thStatus": "Staða",
+      "statuses": {
+        "received": "Móttekin",
+        "confirmed": "Staðfest",
+        "in_production": "Í framleiðslu",
+        "delivered": "Afhent",
+        "cancelled": "Afturkölluð"
+      }
+    },
     "pricelist": {
       "title": "Verðskrá",
       "search": "Leita að vöru eða kóða…",
       "count": "{count} vörur",
       "market": "Markaður",
+      "type": "Tegund",
+      "allTypesOpt": "Allar tegundir",
       "allMarketsOpt": "Allir markaðir",
       "currency": "Gjaldmiðill",
       "print": "Prenta",
       "exportCsv": "CSV",
       "version": "Útgáfa",
       "updated": "Uppfært",
-      "empty": "Engar vörur passa við leitina."
+      "empty": "Engar vörur passa við leitina.",
+      "addLabel": "Bæta í pöntun",
+      "basketLabel": "Karfa",
+      "cartTitle": "Panta úr verðlistanum",
+      "cartEmpty": "Engu bætt við enn — notaðu + við hlið verðs.",
+      "qty": "Magn",
+      "noteLabel": "Athugasemd (valfrjálst)",
+      "notePlaceholder": "Afhendingaróskir, verkefnisnúmer...",
+      "totalLabel": "Samtals (án VSK)",
+      "submitOrder": "Senda pöntun",
+      "submitQuote": "Biðja um tilboð",
+      "sendingLabel": "Sendi…",
+      "closeLabel": "Loka",
+      "sentOrderTitle": "Pöntun send",
+      "sentOrderMsg": "Við sendum þér staðfestingu í tölvupósti. Tilvísun {ref} — fylgstu með undir Pantanir.",
+      "sentQuoteTitle": "Tilboð umbeðið",
+      "sentQuoteMsg": "Við móttókum beiðnina þína. Tilvísun {ref} — sérfræðingur svarar innan eins virks dags.",
+      "demoNote": "Sýnishornastilling — ekkert var sent eða vistað.",
+      "errorMsg": "Eitthvað fór úrskeiðis — reyndu aftur."
     },
     "admin": {
       "title": "Stjórnun",
@@ -265,7 +328,8 @@
       "colEmail": "Netfang",
       "colCompany": "Fyrirtæki",
       "colRole": "Hlutverk",
-      "colMarkets": "Markaðir",
+      "colType": "Tegund reiknings",
+      "colMarkets": "Verðflokkar",
       "colStatus": "Staða",
       "roleClient": "Viðskiptavinur",
       "roleAdmin": "Stjórnandi",
@@ -273,20 +337,75 @@
       "statusInactive": "Óvirkur",
       "deactivate": "Gera óvirkan",
       "activate": "Virkja",
-      "allMarketsLabel": "Allir markaðir",
+      "allMarketsLabel": "Allir verðflokkar",
       "tempPassword": "Tímabundið lykilorð",
       "create": "Stofna aðgang",
       "creating": "Stofna…",
       "createFailed": "Ekki tókst að stofna aðganginn.",
       "createdOk": "Aðgangur stofnaður fyrir {email}.",
-      "makeB2b": "Uppfæra í B2B",
-      "makeB2c": "Setja í B2C",
-      "typeB2b": "B2B",
-      "typeB2c": "B2C"
+      "typeProducer": "Framleiðandi/endursali",
+      "typeInstaller": "Uppsetningaraðili",
+      "typeB2c": "B2C",
+      "typeArchitect": "Arkitekt",
+      "filterAllTypes": "Allar tegundir"
     },
     "designer": {
       "eyebrow": "Loftahönnuður",
       "hint": "Teiknaðu loftið út frá veggja- og hornalínumálum, staðsettu samskeyti og úrtök, athugaðu verðið og sendu pöntunina. Notaðu Save til að vista mælingu sem skrá."
+    },
+    "businessTypes": {
+      "installer": "Uppsetningaraðili",
+      "distributor": "Dreifingaraðili / endursali",
+      "architect": "Arkitekt / hönnuður",
+      "contractor": "Verktaki",
+      "other": "Annað"
+    },
+    "architect": {
+      "eyebrow": "Arkitektasvæði",
+      "welcome": "Allt til að skilgreina",
+      "intro": "Velkomin, {office} — skjöl, útboðstextar, CAD/BIM, mæld dæmi, kostnaðarbil og verkefnastuðningur á einum stað.",
+      "demoNote": "Sýnishorn — niðurhal er óvirkt og ekkert er skráð.",
+      "toolsTitle": "Verkfæri verkefna",
+      "budgetTileTitle": "Kostnaðarleiðarvísir",
+      "budgetTileBody": "Leiðbeinandi €/m² bil fyrir frumáætlanir — tölurnar sem enginn birtir.",
+      "budgetTileCta": "Opna leiðarvísinn",
+      "projectTileTitle": "Skrá verkefni",
+      "projectTileBody": "Virkt verkefni fær sérstakan ráðgjafa, stuðning við útboðstexta og forgangs­sýnishorn.",
+      "projectTileCta": "Skrá verkefni",
+      "samplesTileTitle": "Sýnishornakassi",
+      "samplesTileBody": "Áþreifanleg efnis- og litasýni fyrir efnissafnið þitt — ókeypis fyrir arkitekta.",
+      "samplesTileCta": "Panta sýnishornakassa",
+      "libraryTitle": "Safn",
+      "libraryBody": "Öll skjöl með einum smelli. Niðurhal er skráð á reikninginn þinn svo við getum stutt verkefnið fyrirbyggjandi.",
+      "docsTitle": "Tækniblöð",
+      "docsBody": "Allt tækniblaðasafnið — engin eyðublöð, einn smellur.",
+      "specTitle": "Útboðstextar",
+      "specBody": "Tilbúnir útboðstextar fyrir hvert kerfi — NL, FR og EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "DWG-prófílteikningar, Revit-fjölskyldur og SketchUp-einingar fyrir hvert kerfi.",
+      "photosTitle": "Verkefnamyndir",
+      "photosBody": "Háupplausnar myndasöfn úr viðmiðunarverkefnum fyrir kynningar.",
+      "casesTitle": "Tæknileg dæmi",
+      "casesBody": "Raunveruleg verkefni með mældum fyrir/eftir gildum — tölur í hönnunarskýrsluna.",
+      "eventsTitle": "Viðburðir",
+      "eventsBody": "Námskeið, lunch & learn og sýningardagar — skráning með einum smelli.",
+      "register": "Skrá sig",
+      "advisorTitle": "Ráðgjafinn þinn",
+      "advisorBody": "Einn sérfræðingur fyrir útboðstexta, hljóðvist, kostnað og sýnishorn — svar innan eins virks dags.",
+      "advisorCta": "Bóka símtal",
+      "download": "Sækja",
+      "comingSoon": "Væntanlegt"
+    },
+    "budget": {
+      "eyebrow": "Arkitektasvæði",
+      "title": "Kostnaðarleiðarvísir",
+      "intro": "Leiðbeinandi verðbil með uppsetningu fyrir hvert kerfi — vísvitandi gróf, fyrir frumáætlanir og hagkvæmnismat.",
+      "disclaimer": "Leiðbeinandi verðbil með uppsetningu, án VSK, aðeins fyrir frumáætlanir. Hvert verkefni er verðlagt sérstaklega — skráðu verkefnið þitt fyrir raunverulega tölu.",
+      "includes": "Innifalið",
+      "perM2": "á m² uppsett, án VSK",
+      "perUnit": "á einingu uppsetta, án VSK",
+      "ctaBody": "Vantar þig raunverulega tölu fyrir virkt verkefni? Skráðu það og sérstakur ráðgjafi verðleggur það rétt innan eins virks dags.",
+      "ctaButton": "Skráðu verkefnið þitt"
     }
   },
   "home": {
@@ -1501,6 +1620,28 @@
               "sub": "Algengar spurningar"
             }
           ]
+        },
+        {
+          "title": "Arkitektar",
+          "desc": "Skilgreindu af öryggi — skjöl, kostnaður og stuðningur.",
+          "items": [
+            {
+              "title": "Arkitektasvæði",
+              "sub": "Allt til að skilgreina, á einum stað"
+            },
+            {
+              "title": "Tækniblöð",
+              "sub": "Tækniskjalasafnið"
+            },
+            {
+              "title": "Stofna aðgang",
+              "sub": "Ókeypis — aðgangur strax eftir staðfestingu netfangs"
+            },
+            {
+              "title": "Innskráning",
+              "sub": "Beint á yfirlitið þitt"
+            }
+          ]
         }
       ]
     },
@@ -1799,25 +1940,50 @@
       }
     },
     "datasheet": {
-      "title": "Sækja tækniblaðið",
-      "subtitle": "Sláðu inn upplýsingarnar þínar og niðurhalið hefst strax. Við notum þær eingöngu til að fylgja eftir fyrirspurninni þinni.",
-      "submitLabel": "Fá tækniblaðið",
-      "sentTitle": "Hér er tækniblaðið þitt",
-      "sentMsg": "Niðurhalið ætti að hefjast sjálfkrafa — ef ekki, notaðu hnappinn hér fyrir neðan.",
+      "title": "Fáðu tækniblaðið í tölvupósti",
+      "subtitle": "Skildu eftir upplýsingarnar þínar og við sendum tækniblaðið beint í pósthólfið þitt. Við notum þær eingöngu til að fylgja fyrirspurninni eftir.",
+      "submitLabel": "Sendið mér tækniblaðið",
+      "sentTitle": "Athugaðu pósthólfið",
+      "sentMsg": "Tækniblaðið er á leiðinni á {email}. Sérðu það ekki innan nokkurra mínútna? Athugaðu ruslpóstinn.",
       "fields": {
         "name": {
           "label": "Nafn",
-          "placeholder": "Fornafn og eftirnafn"
+          "placeholder": "Fullt nafn"
+        },
+        "role": {
+          "label": "Ég er",
+          "options": [
+            "Arkitekt",
+            "Uppsetningaraðili",
+            "Einstaklingur",
+            "Annað fyrirtæki"
+          ]
         },
         "email": {
           "label": "Netfang",
-          "placeholder": "you@email.com"
+          "placeholder": "thu@email.com"
         },
         "phone": {
           "label": "Sími",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "Borg",
+          "placeholder": "Þín borg"
         }
-      }
+      },
+      "confirm": {
+        "title": "Senda {title} í pósthólfið þitt?",
+        "msg": "Við sendum tækniblaðið á {email} — einn smellur og það er á leiðinni.",
+        "sendLabel": "Já, sendið mér það",
+        "editLabel": "Ekki þú? Breyta upplýsingum"
+      },
+      "fallback": {
+        "sentTitle": "Hér er tækniblaðið þitt",
+        "sentMsg": "Niðurhalið ætti að hefjast sjálfkrafa — ef ekki, notaðu hnappinn hér fyrir neðan."
+      },
+      "rateLimited": "Of margar beiðnir frá tengingunni þinni — reyndu aftur eftir klukkustund.",
+      "architectInvite": "Arkitekt? Ókeypis arkitektasvæðið okkar býður leiðbeinandi kostnaðarbil, mæld dæmi og öll skjöl með einum smelli."
     },
     "trainingDates": [
       "15.–16. sep. 2026",
@@ -1832,7 +1998,72 @@
     ],
     "close": "Loka",
     "downloadDatasheet": "Sækja tækniblað",
-    "select": "Velja…"
+    "select": "Velja…",
+    "project": {
+      "title": "Skrá verkefni",
+      "subtitle": "Segðu okkur frá virka verkefninu þínu — sérstakur ráðgjafi fylgir eftir innan eins virks dags með stuðningi við útboðstexta, kostnað og forgangs­sýnishorn.",
+      "submitLabel": "Skrá verkefnið",
+      "sentTitle": "Verkefni skráð",
+      "sentMsg": "Takk — sérstakur ráðgjafi hefur samband innan eins virks dags.",
+      "fields": {
+        "projectName": {
+          "label": "Heiti verkefnis",
+          "placeholder": "Vinnuheiti verkefnis"
+        },
+        "location": {
+          "label": "Staðsetning",
+          "placeholder": "Borg"
+        },
+        "buildingType": {
+          "label": "Tegund byggingar",
+          "options": [
+            "Skrifstofa",
+            "Hótel & veitingar",
+            "Heilbrigði",
+            "Verslun",
+            "Íbúðir",
+            "Menntun",
+            "Annað"
+          ]
+        },
+        "system": {
+          "label": "Kerfi",
+          "options": [
+            "Pólýester",
+            "PVC",
+            "Hljóðvist",
+            "Ljós & prent",
+            "Forsmíðað",
+            "Ekki viss enn"
+          ]
+        },
+        "stage": {
+          "label": "Stig",
+          "options": [
+            "Hugmynd",
+            "Hönnun",
+            "Útboð",
+            "Á verkstað"
+          ]
+        },
+        "area": {
+          "label": "Flatarmál",
+          "placeholder": "u.þ.b. m²"
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "thu@stofa.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Athugasemdir",
+          "placeholder": "Lofthæðir, hljóðvistarmarkmið, tímafrestir..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -2141,15 +2372,12 @@
       "mark-with-a-k": "Belgía · Hljóðver",
       "notary-ampe-anthony": "Kruibeke · Skrifstofa með hljóðvist",
       "bnp-paribas-fortis": "Brussel · Höfuðstöðvar banka",
+      "van-der-valk-boost-wellness": "Beveren · Heilsulind og spa Van der Valk hótelsins",
       "van-der-valk-beveren": "Beveren · Viðburðasalur hótels",
       "johnson-and-johnson": "Limerick, IE · Rannsóknasetur lyfjafyrirtækis",
       "polette-eyewear": "Antwerpen · Hugmyndaverslun",
       "citizenm-hotel": "BNA & Evrópa · Forsmíðaðar baðeiningar",
-      "london-chapel": "London, UK · Baklýst loft",
-      "private-villa-knokke": "Knokke · Opið stofurými",
-      "home-cinema-ghent": "Gent · Stjörnuhiminn + hljóðvist",
-      "city-penthouse-antwerp": "Antwerpen · Stofa",
-      "wellness-spa-bruges": "Brugge · Baðherbergi í heilsulind",
+      "london-chapel": "London, UK · Kapellubreyting",
       "rue-perree-paris": "París · Baklýst gallerísloft",
       "vier-emmershof-lokeren": "Lokeren · Skógarhús",
       "vp-193": "Austur-Flæmingjaland · Einkaheimili",
@@ -2313,6 +2541,8 @@
     "viewProduct": "Skoða vöruna",
     "eyebrowTech": "Tæknilegt",
     "datasheetCta": "Fáðu tækniblaðið í heild",
+    "downloadsTitle": "Sækja tækniblöð",
+    "allDatasheets": "Öll tækniblöð",
     "samplesCta": "Fáðu efnissýnishorn send",
     "copyHint": "Veldu textann hér að ofan til að afrita hann í útboðsgögnin þín.",
     "ctaTitle": "Vantar þig aðstoð við útboðstextann?",
@@ -2617,6 +2847,82 @@
         }
       ]
     },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "Heildarendurnýjun heilsulindar Van der Valk Beveren — 700 m² af hljóðísogandi, prentuðum og upplýstum strekkiloftum í hönnun frá Maison Max.",
+      "hook": "Tuttugu árum eftir að fyrsta himnan var spennt upp leitaði Van der Valk Beveren aftur til okkar — í þetta sinn til að kóróna glænýja heilsulind.",
+      "description": [
+        "Þegar Van der Valk Hotel Beveren ákvað að endurnýja allt heilsulindar- og laugarsvæðið — sem opnaði aftur undir nafninu Boost Wellness — var fljótgert að velja samstarfsaðila fyrir loftin. STRETCH-loft hanga nú þegar víðar í hótelinu og samstarfið á sér margra ára sögu. Verkefnið lokaði meira að segja fjölskylduhring: fyrsta verkið var að taka niður strekkiloftið sem Benjamin Nicasens hjá Plafondlux BV — faðir Michael Nicasens hjá STRETCH — hafði sett þar upp tuttugu árum áður.",
+        "Þegar verkkaupinn hafði strípað heilsulindar- og laugarsvæðið inn að burðarvirkinu unnum við hönd í hönd með innanhússhönnunarstofunni Maison Max frá Temse, sem mótaði alla hönnunina og heildarásýndina. Tim, eigandi hótelsins, og Paulina, eiginkona hans, komu að verkefninu frá upphafi til enda — Paulina lagði sjálf fram sterkar hönnunarhugmyndir, sem Maison Max fléttaði inn í áætlanirnar, og saman völdu þau efnin í hvern einasta hluta verkefnisins. Fyrir loftin þýddi það hlýja, slétta hljóðvistarhönnun með mörgum hæðarþrepum yfir höfði, svo ekkert rými virkar nokkurn tíma flatt eða tilbreytingarlaust.",
+        "Hvert svæði fékk þá himnu sem hentar því. Í alblautu rýmunum — laug, sturtum og spa — spenntum við upp strekkiloft úr PVC, sterkasta kostinn þar sem raki er stöðugur. Búningsklefarnir, nuddherbergin og naglastofan fengu strekkiloft úr pólýester (vefnaðarefni), en hlý textílbygging þeirra skapar ofurmatta áferð.",
+        "Spaið er skrautfjöðrin. Paulina vildi náttúrulegan, lífrænt sveigðan vegg — og loftið varð að fylgja því flókna, flæðandi formi. Í prentaða, brúntóna loftið bað hún einnig um hringlaga þakglugga, ekki með beinni brún heldur mjúkt sveigðri. Forsmíðaðar burðareiningar úr áli mynda ljósakassann og hæðarmuninn, og útkoman er ein flóknasta — og fallegasta — uppsetning sem við höfum skilað.",
+        "Á 700 m² var áherslan á endingu, hljóðvist og flókna hönnun: hljóðísogandi himnur með PET-ísogsplötum að baki, innbyggðir LED-kastarar, aðgangslúgur, hátalarar og loftlistar úr áli — hvert einasta tæknilega smáatriði rennur saman í eitt hlýtt, saumlaust yfirborð. Heildarendurnýjunin tók sex mánuði frá niðurrifi til enduropnunar."
+      ],
+      "highlights": [
+        "700 m² af strekkiloftum um alla heilsulindina",
+        "Prentað loft sem fylgir lífrænt sveigðum vegg",
+        "Hringlaga þakgluggi með flæðandi sveigðri brún",
+        "Hlý hljóðvistarloft á mörgum hæðarþrepum",
+        "PVC í blautu rýmunum, ofurmatt pólýester í þeim þurru",
+        "Verkefni annarrar kynslóðar — fyrra loftið var sett upp fyrir 20 árum"
+      ],
+      "materials": [
+        "STRETCH hljóðvistarloft með PET-ísogsplötum að baki",
+        "Prentað STRETCH-loft (spa, sérgerð brún prentun)",
+        "Upplýst STRETCH-loft (ljósakassi þakglugga)",
+        "PVC-himnur í öllum blautum rýmum",
+        "Ofurmattar pólýester-himnur (búningsklefar, nudd- og naglastofur)",
+        "Forsmíðaðar burðareiningar úr áli — ljósakassi og hæðarþrep",
+        "Innbyggðir LED-ljóskastarar",
+        "Aðgangslúgur",
+        "Innbyggðir hátalarar",
+        "Loftlistar úr áli"
+      ],
+      "facts": [
+        {
+          "label": "Staður",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Heilsulind",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Innanhússhönnun",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Flatarmál",
+          "value": "700 m²"
+        },
+        {
+          "label": "Ár",
+          "value": "2026"
+        },
+        {
+          "label": "Heildarendurnýjun",
+          "value": "6 mánuðir"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hvers vegna PVC í sumum rýmum og pólýester í öðrum?",
+          "a": "Himnan fylgir aðstæðum rýmisins. Í rýmunum sem eru stöðugt blaut — laug, sturtum og spa — er PVC sterkasti kosturinn: það er algjörlega ósnortið af raka og auðvelt að strjúka hreint. Í búningsklefunum, nuddherbergjunum og naglastofunni spenntum við þess í stað upp pólýester: vefnaðarhimnu þar sem ofin byggingin gefur hlýrri, ofurmatta áferð."
+        },
+        {
+          "q": "Hvernig fylgir strekkiloft sveigðum, lífrænum vegg?",
+          "a": "Sveigði veggurinn var útfærður í forsmíðuðum burðareiningum úr áli sem bera prófílana, ljósakassann og hæðarmuninn. Himnan er síðan spennt í þá umgjörð og fylgir þannig lífræna forminu nákvæmlega — þar með talið hringlaga þakglugganum með mjúkri, sveigðri brún."
+        },
+        {
+          "q": "Hvernig bæta loftin hljóðvistina?",
+          "a": "Heilsulindin sameinar hljóðísogandi strekkihimnur og PET-ísogsplötur þar fyrir aftan: hljóðið fer í gegnum yfirborðið og er fangað í stað þess að endurkastast. Ásamt loftahönnuninni á mörgum hæðarþrepum heldur þetta stórum rýmum með hörðum flötum rólegum og hljóðlátum — nákvæmlega það sem heilsulind þarf."
+        },
+        {
+          "q": "Hversu lengi endist strekkiloft?",
+          "a": "Þetta verkefni er sjálft svarið: fyrra strekkiloftið hér var sett upp fyrir tuttugu árum og vék aðeins vegna þess að hótelið vildi glænýja heilsulind. Gerðu ráð fyrir áratuga endingu — og þegar hönnunin breytist er aðeins himnan endurnýjuð, ekki burðarvirkið."
+        }
+      ]
+    },
     "van-der-valk-beveren": {
       "title": "Van der Valk",
       "summary": "Hámarks hljóðísog fyrir viðburðasal hótels — með nánast enga hæð aflögu.",
@@ -2800,138 +3106,37 @@
       ]
     },
     "london-chapel": {
-      "title": "Kapella í London",
-      "summary": "Baklýst strekkiloft yfir endurgerðu kapellurými.",
-      "hook": "Endurgerð kapella böðuð í mjúkri, jafnri birtu frá einu lýsandi lofti.",
+      "title": "London Chapel",
+      "summary": "Hljóðdempandi textílveggir og hvelft loft klætt efni fyrir kapellu sem breytt var í heimili í London.",
+      "hook": "Kapella varð fjölskylduheimili — klædd herbergi fyrir herbergi með strekktum hljóðvistartextíl.",
       "description": [
-        "Hálfgegnsætt STRETCH-loft breytir öllum loftfletinum í mjúkan, jafnan ljósgjafa: endurgerða rýmið baðast í glýjulausri lýsingu á meðan LED-flöturinn er algjörlega falinn."
+        "Í þessari kapellubreytingu í London lauk söluaðili okkar, Upholster London, innréttingunum með strekktum STRETCH-textíl: hljóðdempandi textílveggir liggja um forstofur, palla og stigaganga, og jafnvel hvelfda loftið er klætt efni milli upprunalegu rifjanna.",
+        "Textílfletirnir róa hljóðvist háu, hörðu rýmanna og gefa hverju herbergi hlýja, bólstraða dýpt sem málning nær aldrei — á meðan upprunaleg smáatriði eins og steindu gluggarnir standa ósnortnir, rammaðir inn af nákvæmum textílþiljum. Heimabíó með textílveggjum fullkomnar heimilið."
       ],
       "highlights": [
-        "Allt loftið sem ljósgjafi",
-        "Glýjulaus, jöfn lýsing",
-        "LED-flötur algjörlega falinn"
+        "Hvelft kapelluloft klætt efni",
+        "Hljóðdempandi textílveggir um allt heimilið",
+        "Heimabíó með textílveggjum",
+        "Upprunalegir steindir gluggar, nákvæmlega rammaðir"
       ],
       "materials": [
-        "Hálfgegnsætt STRETCH-loft",
-        "LED-baklýsingarflötur"
+        "Hljóðdempandi STRETCH-textílveggir",
+        "Hvelft loft klætt efni",
+        "Heimabíó með textílveggjum",
+        "Sérsniðnir prófílar við boga og steinda glugga"
       ],
       "facts": [
         {
-          "label": "Staðsetning",
-          "value": "London, Bretland"
+          "label": "Staður",
+          "value": "London, Bretlandi"
         },
         {
           "label": "Rými",
-          "value": "Endurgerð kapella"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Einkavilla",
-      "summary": "Saumlaust, matt loft fyrir opna villu við ströndina.",
-      "hook": "Saumlaust loft, slétt eins og fullkomin múrhúð, fyrir opið heimili við ströndina.",
-      "description": [
-        "Í opnu alrými villunnar lítur mjög matt STRETCH-loft úr pólýester út eins og gallalaus múrhúð milli veggja – stílhreint og nútímalegt, án sprungna og skuggalína hefðbundins lofts."
-      ],
-      "highlights": [
-        "Saumlaus áferð milli veggja",
-        "Engar sprungur eða skuggalínur",
-        "Mjög matt áferð, lík múrhúð"
-      ],
-      "materials": [
-        "STRETCH-loft úr pólýester (mjög matt)",
-        "Jaðarprófílar til strekkingar"
-      ],
-      "facts": [
-        {
-          "label": "Staðsetning",
-          "value": "Knokke, Belgía"
+          "value": "Kapella breytt í einkaheimili"
         },
         {
-          "label": "Rými",
-          "value": "Opið alrými"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Heimabíó",
-      "summary": "Stjörnuhiminsloft með hljóðdempandi baklagi fyrir heimabíó.",
-      "hook": "Einkabíó undir tindrandi næturhimni, stillt fyrir kvikmyndahljóð.",
-      "description": [
-        "Hundruð ljósleiðarapunkta mynda tindrandi næturhiminn yfir sætunum, á meðan hljóðdempandi baklag heldur hljómburðinum í jafnvægi fyrir kvikmyndahljóðið – andrúmsloft og hljóðgæði sameinuð í einu lofti."
-      ],
-      "highlights": [
-        "Stjörnuhiminn úr ljósleiðurum",
-        "Hljóðdempandi baklag fyrir kvikmyndahljóð",
-        "Andrúmsloft og hljóðgæði í einu lofti"
-      ],
-      "materials": [
-        "STRETCH-loft með stjörnuhimni",
-        "Stjörnubreiða úr ljósleiðurum",
-        "Hljóðísogandi baklag"
-      ],
-      "facts": [
-        {
-          "label": "Staðsetning",
-          "value": "Gent, Belgía"
-        },
-        {
-          "label": "Rými",
-          "value": "Heimabíó"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Þakíbúð í borginni",
-      "summary": "Gallalaust hönnunarloft fyrir þakíbúð í borginni.",
-      "hook": "Mínimalískt, fullkomlega slétt hönnunarloft fyrir þakíbúð í borginni.",
-      "description": [
-        "Í alrými þakíbúðarinnar er saumlaust STRETCH-loft með innbyggðri lýsingu sem heldur útlitinu mínimalísku og fletinum fullkomnum í öllu opna rýminu."
-      ],
-      "highlights": [
-        "Saumlaust hönnunarloft",
-        "Innbyggð lýsing",
-        "Mínimalísk, gallalaus áferð"
-      ],
-      "materials": [
-        "STRETCH-loft úr pólýester",
-        "Innbyggð lýsing"
-      ],
-      "facts": [
-        {
-          "label": "Staðsetning",
-          "value": "Antwerpen, Belgía"
-        },
-        {
-          "label": "Rými",
-          "value": "Stofa í þakíbúð"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Heilsulind",
-      "summary": "Rakaþolið, baklýst loft fyrir heilsulind.",
-      "hook": "Rakaþolið loft með mjúkri birtu fyrir vellíðunarrými.",
-      "description": [
-        "Heilsulindin þurfti loft sem þolir raka og skapar rólegt andrúmsloft. Hálfgegnsætt, baklýst STRETCH-loft lýsir mjúklega yfir vellíðunarsvæðinu og auðvelt er að strjúka það hreint – ósnortið af gufu og raka."
-      ],
-      "highlights": [
-        "Þolir raka og gufu",
-        "Mjúk, jöfn baklýsing",
-        "Auðvelt að strjúka hreint"
-      ],
-      "materials": [
-        "Hálfgegnsætt STRETCH-loft úr PVC",
-        "LED-baklýsingarflötur"
-      ],
-      "facts": [
-        {
-          "label": "Staðsetning",
-          "value": "Brugge, Belgía"
-        },
-        {
-          "label": "Rými",
-          "value": "Heilsulind / vellíðan"
+          "label": "STRETCH-söluaðili",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3726,20 +3931,20 @@
       },
       "spanplafond-prijs": {
         "title": "Hvað kostar strekkloft? Heiðarlegur verðleiðarvísir",
-        "excerpt": "Verð á strekklofti liggur að jafnaði á bilinu €70 til €200 per m² með uppsetningu, eftir gerð lofts og rými. Hér færðu skýringuna á verðbilinu, viðmiðunarverð fyrir hverja gerð lofts – og hvernig þú færð fast verð fyrir þitt verkefni.",
+        "excerpt": "Verð á strekklofti liggur að jafnaði á bilinu 10.000 kr. til 30.000 kr. per m² með uppsetningu, eftir gerð lofts og rými. Hér færðu skýringuna á verðbilinu, viðmiðunarverð fyrir hverja gerð lofts – og hvernig þú færð fast verð fyrir þitt verkefni.",
         "body": [
           {
             "heading": "Stutta svarið",
             "paragraphs": [
-              "Fyrir strekkloft sem fagfólk setur upp máttu gera ráð fyrir um það bil €70 til €200 á fermetra án vsk, með uppsetningu innifalinni. Bilið er raunverulegt: einfalt, matt hvítt loft í rétthyrndri stofu er neðst á bilinu, en baklýst baðherbergisloft með innbyggðri lýsingu er efst.",
+              "Fyrir strekkloft sem fagfólk setur upp máttu gera ráð fyrir um það bil 10.000 kr. til 30.000 kr. á fermetra án vsk, með uppsetningu innifalinni. Bilið er raunverulegt: einfalt, matt hvítt loft í rétthyrndri stofu er neðst á bilinu, en baklýst baðherbergisloft með innbyggðri lýsingu er efst.",
               "Allar tölur í þessum leiðarvísi eru viðmiðunarbil – ekki tilboð. Dúkurinn er framleiddur eftir máli fyrir þitt rými, svo heiðarlega lokatalan kemur alltaf úr ókeypis og óskuldbindandi tilboði."
             ]
           },
           {
             "heading": "Viðmiðunarverð eftir gerð lofts",
             "paragraphs": [
-              "Einfalt, einlitt loft úr PVC eða pólýester er upphafspunkturinn á um €70 til €90 per m² – hröð og samskeytalaus uppfærsla fyrir stofur, svefnherbergi og skrifstofur. Prentuð hönnun bætir við myndefni og undirbúningi og endar í kringum €90 til €100 per m².",
-              "Hljóðdempandi loft – örgataður dúkur með hljóðísogi fyrir ofan – kostar um €100 til €150 per m² eftir uppbyggingu. Hálfgegnsætt, baklýst loft með LED-flötum bak við dúkinn liggur í kringum €130 til €160 per m² að meðtöldum ljósfletinum. Baðherbergisverkefni sem sameina rakaþolinn dúk og innbyggða lýsingu ná yfirleitt €150 til €200 per m².",
+              "Einfalt, einlitt loft úr PVC eða pólýester er upphafspunkturinn á um 10.000 kr. til 13.000 kr. per m² – hröð og samskeytalaus uppfærsla fyrir stofur, svefnherbergi og skrifstofur. Prentuð hönnun bætir við myndefni og undirbúningi og endar í kringum 13.000 kr. til 15.000 kr. per m².",
+              "Hljóðdempandi loft – örgataður dúkur með hljóðísogi fyrir ofan – kostar um 15.000 kr. til 22.000 kr. per m² eftir uppbyggingu. Hálfgegnsætt, baklýst loft með LED-flötum bak við dúkinn liggur í kringum 19.000 kr. til 24.000 kr. per m² að meðtöldum ljósfletinum. Baðherbergisverkefni sem sameina rakaþolinn dúk og innbyggða lýsingu ná yfirleitt 22.000 kr. til 30.000 kr. per m².",
               "Sérverkefni – stjörnuhiminn, prentuð baklýst hönnun, forsmíðaðar einingar – eru hönnuð fyrir hvert verkefni og verðlögð eftir hönnun."
             ]
           },
@@ -3837,7 +4042,6 @@
       "Baðherbergi",
       "Skrifstofa",
       "Atvinnuhúsnæði",
-      "Heimabíó",
       "Ljós & prent"
     ],
     "browse": [
@@ -4220,9 +4424,9 @@
     "crumb": "Tækniblöð",
     "titleA": "Tæknilýsingar og",
     "titleB": "tækniblöð",
-    "lead": "Sæktu tæknigögn fyrir hvert STRETCH-kerfi — tæknilýsingar, brunaflokka, hljóðvistarflokka og ábyrgðarupplýsingar. Sláðu inn upplýsingarnar þínar einu sinni fyrir hvert niðurhal og niðurhalið hefst strax.",
+    "lead": "Sæktu tæknigögn fyrir hvert STRETCH-kerfi — tækniforskriftir, brunaflokka, hljóðvistargildi og ábyrgð. Skildu eftir upplýsingar einu sinni og tækniblaðið berst í pósthólfið sem niðurhalstengill.",
     "updated": "Uppfært {date}",
-    "privacyNote": "Við biðjum um nafn, netfang og símanúmer svo að sérfræðingur geti svarað tæknilegum spurningum. Farið er með upplýsingarnar þínar samkvæmt",
+    "privacyNote": "Við biðjum um nafn, hlutverk, netfang, síma og borg svo að sérfræðingur geti svarað tæknilegum spurningum. Farið er með upplýsingarnar samkvæmt",
     "privacyLink": "persónuverndarstefnunni"
   },
   "samplesPage": {
@@ -4487,5 +4691,116 @@
     "ovRecruitBody": "Við afhendum og setjum upp beint frá framleiðslunni á meðan netið stækkar — og uppsetningaraðilar sem tryggja sér laust svæði fá fyrirspurnir þess, söluaðilaverð og þjálfun.",
     "regionLuxembourg": "Lúxemborg (Stórhertogadæmið)",
     "regionAustria": "Austurríki"
+  },
+  "datasheetEmail": {
+    "subject": "STRETCH-tækniblaðið þitt — {title}",
+    "greeting": "Halló {name},",
+    "intro": "Hér er tækniblaðið sem þú baðst um — {title}.",
+    "button": "Sækja tækniblaðið",
+    "linkFallback": "Eða afritaðu þennan tengil í vafrann þinn:",
+    "validity": "Tengillinn virkar í {days} daga.",
+    "footerCta": "Ertu að vinna að verkefni? Svaraðu bara þessum tölvupósti eða bókaðu símtal.",
+    "signoff": "STRETCH-teymið",
+    "architectInvite": "Vinnur þú sem arkitekt? Ókeypis arkitektasvæðið okkar veitir þér leiðbeinandi €/m² kostnaðarbil, mæld dæmi og öll tækniblöð, útboðstexta og CAD-skrár með einum smelli:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Þessi niðurhalstengill er útrunninn",
+    "expiredBody": "Niðurhalstenglar gilda í 14 daga. Biddu um nýjan á nokkrum sekúndum — við sendum hann strax.",
+    "requestNew": "Biðja um nýjan tengil"
+  },
+  "architectsPage": {
+    "crumb": "Arkitektar",
+    "eyebrow": "Fyrir arkitekta",
+    "titleA": "Skilgreindu strekkloft",
+    "titleB": "af öryggi",
+    "lead": "Einn ókeypis aðgangur með öllu sem þarf til að skilgreina: skjöl, útboðstextar, CAD/BIM, mæld dæmi, leiðbeinandi kostnaðarbil, viðburðir og sérstakur ráðgjafi.",
+    "ctaCreate": "Stofnaðu ókeypis aðgang",
+    "ctaSignIn": "Innskráning",
+    "values": [
+      {
+        "title": "Skjöl með einum smelli",
+        "body": "Öll tækniblöð án eyðublaða — niðurhal tengt aðganginum þínum."
+      },
+      {
+        "title": "Útboðstextar",
+        "body": "Tilbúnir textar fyrir hvert kerfi — NL, FR og EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "DWG-prófílteikningar, Revit-fjölskyldur og SketchUp-einingar."
+      },
+      {
+        "title": "Verkefnamyndir",
+        "body": "Háupplausnar viðmiðunarmyndir fyrir kynningar."
+      },
+      {
+        "title": "Mæld dæmi",
+        "body": "Raunveruleg verkefni með mældum fyrir/eftir gildum."
+      },
+      {
+        "title": "Kostnaðarbil",
+        "body": "Leiðbeinandi €/m² bil fyrir frumáætlanir."
+      },
+      {
+        "title": "Viðburðir og lunch & learn",
+        "body": "Námskeið og fundir hjá okkur eða á stofunni þinni."
+      },
+      {
+        "title": "Verkefnastuðningur",
+        "body": "Skráðu verkefni: sérstakur ráðgjafi + forgangs­sýnishornakassi."
+      }
+    ],
+    "howTitle": "Svona virkar það",
+    "steps": [
+      {
+        "title": "Stofnaðu aðgang",
+        "body": "Nafn stofu, borg og upplýsingarnar þínar — tvær mínútur."
+      },
+      {
+        "title": "Staðfestu netfangið",
+        "body": "Einn smellur á staðfestingartengilinn."
+      },
+      {
+        "title": "Allt opið",
+        "body": "Skjöl, kostnaður, dæmi og stuðningur — strax."
+      }
+    ],
+    "casesTitle": "Mælt, ekki fullyrt",
+    "casesNote": "Full rannsókn inni á arkitektasvæðinu.",
+    "cases": [
+      {
+        "title": "Hljóðvistarendurbætur veitingastaðar",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 fyrir → eftir"
+      },
+      {
+        "title": "Ljósloft á skrifstofu",
+        "metric": "540 lux",
+        "metricLabel": "meðaltal á vinnufleti, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Næstu viðburðir",
+    "eventsNote": "Allar dagsetningar og skráning með einum smelli inni á svæðinu.",
+    "faqTitle": "Algengar spurningar",
+    "faqs": [
+      {
+        "q": "Er arkitektasvæðið raunverulega ókeypis?",
+        "a": "Já — það er til svo að skilgreining STRETCH-kerfis sé eins einföld og hægt er. Engin gjöld, engar skuldbindingar."
+      },
+      {
+        "q": "Birtið þið verð?",
+        "a": "Leiðbeinandi €/m² kostnaðarbil eru inni á svæðinu fyrir frumáætlanir. Verkefni eru alltaf verðlögð sérstaklega — skráðu verkefni fyrir raunverulega tölu."
+      },
+      {
+        "q": "Styðjið þið útboð í gangi?",
+        "a": "Já. Skráðu verkefnið og sérstakur ráðgjafi aðstoðar með texta, deili og hljóðvistarmarkmið — yfirleitt innan eins virks dags."
+      },
+      {
+        "q": "Afhendið þið utan Benelux?",
+        "a": "Já — við framleiðum í Belgíu og setjum upp með vottuðum samstarfsaðilum um alla Evrópu."
+      }
+    ],
+    "ctaTitle": "Allt til að skilgreina, á einum stað",
+    "ctaBody": "Stofnaðu ókeypis aðgang — hvert skjal, kostnaðarbil og dæmi er einum smelli frá, auk sérstaks ráðgjafa fyrir verkefnin þín."
   }
 }

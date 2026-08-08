@@ -7,11 +7,25 @@
 // inactive ones are hidden on screen and ALL of them print.
 import { useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Download, Printer, Search } from 'lucide-react';
+import { Check, Download, Minus, Plus, Printer, Search, ShoppingCart, X } from 'lucide-react';
 import type { PricebookMeta, PriceRow } from '@/lib/portal/types';
 import { categoryRank } from '@/lib/portal/types';
 
 type Currency = 'EUR' | 'PLN';
+
+// Stable row identity — matches the pricebook unique key, used by the cart
+// and re-priced server-side in /api/portal/pricelist-order.
+const rowKeyOf = (r: PriceRow) => `${r.category}||${r.product}||${r.market}||${r.seq}`;
+
+type CartLine = {
+  key: string;
+  product: string;
+  code: string | null;
+  market: string;
+  unit: string | null;
+  price_eur: number;
+  qty: number;
+};
 
 type Props = {
   rows: PriceRow[];
@@ -29,17 +43,88 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
   );
   const hasPln = useMemo(() => rows.some((r) => r.price_pln !== null), [rows]);
 
+  // Top-level product families (Type column) in pricebook order. The filter
+  // only appears when the data actually distinguishes more than one type.
+  const types = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const r of rows) {
+      if (!r.type) continue;
+      counts.set(r.type, (counts.get(r.type) ?? 0) + 1);
+    }
+    return Array.from(counts.entries()).map(([name, count]) => ({ name, count }));
+  }, [rows]);
+
   const [query, setQuery] = useState('');
+  const [type, setType] = useState<string>('all');
   const [market, setMarket] = useState<string>('all');
   const [currency, setCurrency] = useState<Currency>(
     defaultCurrency === 'PLN' && hasPln ? 'PLN' : 'EUR',
   );
   const [active, setActive] = useState<string | null>(null);
 
+  // --- Order basket ----------------------------------------------------------
+  const [cart, setCart] = useState<Record<string, CartLine>>({});
+  const [cartOpen, setCartOpen] = useState(false);
+  const [cartNote, setCartNote] = useState('');
+  const [cartStatus, setCartStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [cartResult, setCartResult] = useState<{ ref: string; intent: 'order' | 'quote'; demo?: boolean } | null>(null);
+
+  const cartLines = useMemo(() => Object.values(cart), [cart]);
+  const cartCount = cartLines.reduce((s, l) => s + l.qty, 0);
+  const cartTotal = cartLines.reduce((s, l) => s + l.price_eur * l.qty, 0);
+
+  function addToCart(r: PriceRow) {
+    const key = rowKeyOf(r);
+    setCart((prev) => ({
+      ...prev,
+      [key]: prev[key]
+        ? { ...prev[key], qty: prev[key].qty + 1 }
+        : { key, product: r.product, code: r.code, market: r.market, unit: r.unit, price_eur: r.price_eur, qty: 1 },
+    }));
+    setCartStatus('idle');
+  }
+
+  function setQty(key: string, qty: number) {
+    setCart((prev) => {
+      if (!Number.isFinite(qty) || qty < 1) {
+        const { [key]: _gone, ...rest } = prev;
+        return rest;
+      }
+      return { ...prev, [key]: { ...prev[key], qty: Math.min(Math.floor(qty), 9999) } };
+    });
+  }
+
+  async function submitCart(intent: 'order' | 'quote') {
+    if (cartStatus === 'sending' || cartLines.length === 0) return;
+    setCartStatus('sending');
+    try {
+      const res = await fetch('/api/portal/pricelist-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          intent,
+          note: cartNote,
+          items: cartLines.map((l) => ({ key: l.key, qty: l.qty })),
+        }),
+      });
+      const json = (await res.json().catch(() => null)) as
+        | { ok: boolean; ref?: string; demo?: boolean }
+        | null;
+      if (!res.ok || !json?.ok || !json.ref) throw new Error('failed');
+      setCartResult({ ref: json.ref, intent, demo: json.demo });
+      setCart({});
+      setCartNote('');
+      setCartStatus('sent');
+    } catch {
+      setCartStatus('error');
+    }
+  }
+
   // --- Filtering -------------------------------------------------------------
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return rows.filter((r) => {
+      if (type !== 'all' && r.type !== type) return false;
       if (market !== 'all' && r.market !== market) return false;
       if (!q) return true;
       return (
@@ -48,7 +133,7 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
         (r.product_group ?? '').toLowerCase().includes(q)
       );
     });
-  }, [rows, query, market]);
+  }, [rows, query, type, market]);
 
   const categories = useMemo(() => {
     const counts = new Map<string, number>();
@@ -80,9 +165,10 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
     const esc = (v: string | number | null) =>
       v === null || v === undefined ? '' : `"${String(v).replace(/"/g, '""')}"`;
     const lines = [
-      ['Category', 'Code', 'Product', 'Unit', 'Market', 'Price EUR', 'Price PLN'].join(';'),
+      ['Type', 'Category', 'Code', 'Product', 'Unit', 'Market', 'Price EUR', 'Price PLN'].join(';'),
       ...filtered.map((r) =>
         [
+          esc(r.type),
           esc(r.category),
           esc(r.code),
           esc(r.product),
@@ -136,6 +222,43 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
           </div>
         </div>
       </div>
+
+      {/* Type filter — the first level: product family, then category below */}
+      {types.length > 1 && (
+        <div className="plv__types no-print">
+          <div className="container plv__types-in" role="tablist" aria-label={t('type')}>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={type === 'all'}
+              className={type === 'all' ? 'plv__type plv__type--on' : 'plv__type'}
+              onClick={() => {
+                setType('all');
+                setActive(null);
+              }}
+            >
+              {t('allTypesOpt')}
+              <small>{rows.length}</small>
+            </button>
+            {types.map((tp) => (
+              <button
+                key={tp.name}
+                type="button"
+                role="tab"
+                aria-selected={type === tp.name}
+                className={type === tp.name ? 'plv__type plv__type--on' : 'plv__type'}
+                onClick={() => {
+                  setType(tp.name);
+                  setActive(null);
+                }}
+              >
+                {tp.name}
+                <small>{tp.count}</small>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Toolbar */}
       <div className="plv__toolbar no-print">
@@ -229,23 +352,147 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
                   <small>{groupRows.length}</small>
                 </h3>
                 <div>
-                  {groupRows.map((r) => (
-                    <div key={`${r.product}|${r.market}|${r.sort}`} className="plv__row">
-                      <div className="plv__prod">
-                        <span className="plv__name">{r.product}</span>
-                        {r.code && <span className="plv__code">{r.code}</span>}
+                  {groupRows.map((r) => {
+                    const inCart = cart[rowKeyOf(r)]?.qty;
+                    return (
+                      <div key={`${r.product}|${r.market}|${r.sort}`} className="plv__row">
+                        <div className="plv__prod">
+                          <span className="plv__name">{r.product}</span>
+                          {r.code && <span className="plv__code">{r.code}</span>}
+                        </div>
+                        {showMarketChip && <span className="plv__chip plv__chip--mkt">{r.market}</span>}
+                        {r.unit && <span className="plv__chip">{r.unit}</span>}
+                        <span className="plv__price">{price(r)}</span>
+                        <button
+                          type="button"
+                          className={inCart ? 'plv__add plv__add--in no-print' : 'plv__add no-print'}
+                          onClick={() => addToCart(r)}
+                          title={t('addLabel')}
+                          aria-label={`${t('addLabel')} — ${r.product}`}
+                        >
+                          {inCart ? <span className="plv__add-qty">{inCart}</span> : <Plus size={14} />}
+                        </button>
                       </div>
-                      {showMarketChip && <span className="plv__chip plv__chip--mkt">{r.market}</span>}
-                      {r.unit && <span className="plv__chip">{r.unit}</span>}
-                      <span className="plv__price">{price(r)}</span>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </article>
             ))}
           </section>
         ))}
       </main>
+
+      {/* Floating basket button */}
+      {(cartLines.length > 0 || cartStatus === 'sent') && (
+        <button type="button" className="plv__cartbtn no-print" onClick={() => setCartOpen(true)}>
+          <ShoppingCart size={16} />
+          <span>{t('basketLabel')}</span>
+          {cartCount > 0 && <span className="plv__cartbtn-badge">{cartCount}</span>}
+        </button>
+      )}
+
+      {/* Basket drawer */}
+      {cartOpen && (
+        <div className="plv__cart-overlay no-print" onClick={() => setCartOpen(false)}>
+          <aside className="plv__cart" onClick={(e) => e.stopPropagation()} role="dialog" aria-label={t('cartTitle')}>
+            <header className="plv__cart-head">
+              <h2>{t('cartTitle')}</h2>
+              <button type="button" onClick={() => setCartOpen(false)} aria-label={t('closeLabel')} className="plv__cart-x">
+                <X size={18} />
+              </button>
+            </header>
+
+            {cartStatus === 'sent' && cartResult ? (
+              <div className="plv__cart-done">
+                <span className="plv__cart-check">
+                  <Check size={26} strokeWidth={2.5} />
+                </span>
+                <h3>{cartResult.intent === 'quote' ? t('sentQuoteTitle') : t('sentOrderTitle')}</h3>
+                <p>
+                  {cartResult.intent === 'quote'
+                    ? t('sentQuoteMsg', { ref: cartResult.ref })
+                    : t('sentOrderMsg', { ref: cartResult.ref })}
+                </p>
+                {cartResult.demo && <p className="plv__cart-demo">{t('demoNote')}</p>}
+                <button type="button" className="btn btn--dark btn--sm" onClick={() => setCartOpen(false)}>
+                  {t('closeLabel')}
+                </button>
+              </div>
+            ) : cartLines.length === 0 ? (
+              <p className="plv__cart-empty">{t('cartEmpty')}</p>
+            ) : (
+              <>
+                <div className="plv__cart-lines">
+                  {cartLines.map((l) => (
+                    <div key={l.key} className="plv__cart-line">
+                      <div className="plv__cart-line-name">
+                        <strong>{l.product}</strong>
+                        <span>
+                          {[l.code, l.market, l.unit].filter(Boolean).join(' · ')} · {fmtEur.format(l.price_eur)}
+                        </span>
+                      </div>
+                      <div className="plv__cart-qty">
+                        <button type="button" onClick={() => setQty(l.key, l.qty - 1)} aria-label="−">
+                          <Minus size={13} />
+                        </button>
+                        <input
+                          type="number"
+                          min={1}
+                          max={9999}
+                          value={l.qty}
+                          onChange={(e) => setQty(l.key, Number(e.target.value))}
+                          aria-label={t('qty')}
+                        />
+                        <button type="button" onClick={() => setQty(l.key, l.qty + 1)} aria-label="+">
+                          <Plus size={13} />
+                        </button>
+                      </div>
+                      <span className="plv__cart-line-total">{fmtEur.format(l.price_eur * l.qty)}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <label className="plv__cart-note">
+                  <span>{t('noteLabel')}</span>
+                  <textarea
+                    value={cartNote}
+                    onChange={(e) => setCartNote(e.target.value)}
+                    placeholder={t('notePlaceholder')}
+                    maxLength={2000}
+                    rows={2}
+                  />
+                </label>
+
+                <div className="plv__cart-total">
+                  <span>{t('totalLabel')}</span>
+                  <strong>{fmtEur.format(cartTotal)}</strong>
+                </div>
+
+                {cartStatus === 'error' && <p className="plv__cart-error">{t('errorMsg')}</p>}
+
+                <div className="plv__cart-actions">
+                  <button
+                    type="button"
+                    className="btn btn--primary"
+                    disabled={cartStatus === 'sending'}
+                    onClick={() => submitCart('order')}
+                  >
+                    {cartStatus === 'sending' ? t('sendingLabel') : t('submitOrder')}
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn--dark"
+                    disabled={cartStatus === 'sending'}
+                    onClick={() => submitCart('quote')}
+                  >
+                    {t('submitQuote')}
+                  </button>
+                </div>
+              </>
+            )}
+          </aside>
+        </div>
+      )}
 
       <style jsx>{`
         .plv {
@@ -281,6 +528,66 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
         }
         .plv__meta-facts strong {
           color: var(--text);
+        }
+
+        /* Type — the PRIMARY filter: big display-font blocks, full width. */
+        .plv__types {
+          background: #fff;
+          border-bottom: 1px solid var(--border);
+        }
+        .plv__types-in {
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+          padding-top: 18px;
+          padding-bottom: 18px;
+        }
+        .plv__type {
+          flex: 1 1 220px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          border: 2px solid var(--black);
+          border-bottom-width: 4px;
+          background: #fff;
+          font-family: var(--font-display);
+          font-weight: 900;
+          font-size: clamp(14px, 1.7vw, 19px);
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: var(--text);
+          padding: 16px 20px;
+          cursor: pointer;
+        }
+        .plv__type small {
+          font-size: 11.5px;
+          font-family: var(--font-body, inherit);
+          font-weight: 800;
+          color: var(--text-muted-2);
+          background: var(--surface);
+          border: 1px solid var(--border-2);
+          padding: 3px 8px;
+        }
+        .plv__type:hover:not(.plv__type--on) {
+          background: var(--surface);
+        }
+        .plv__type--on {
+          background: var(--black);
+          color: #fff;
+          border-color: var(--black);
+          border-bottom-color: var(--red);
+        }
+        .plv__type--on small {
+          background: var(--red);
+          border-color: var(--red);
+          color: #fff;
+        }
+        @media (max-width: 640px) {
+          .plv__type {
+            padding: 12px 14px;
+            font-size: 14px;
+          }
         }
 
         .plv__toolbar {
@@ -383,30 +690,31 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
           gap: 2px;
           overflow-x: auto;
         }
+        /* Category — the SECONDARY filter: compact, quiet tabs. */
         .plv__tab {
           border: 0;
           background: none;
           font: inherit;
-          font-size: 12px;
-          font-weight: 700;
-          letter-spacing: 0.06em;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 0.05em;
           text-transform: uppercase;
           color: var(--text-muted);
-          padding: 13px 14px 11px;
+          padding: 11px 11px 9px;
           cursor: pointer;
           white-space: nowrap;
-          border-bottom: 3px solid transparent;
+          border-bottom: 2px solid transparent;
           display: inline-flex;
           align-items: center;
-          gap: 8px;
+          gap: 7px;
         }
         .plv__tab small {
-          font-size: 10.5px;
+          font-size: 10px;
           font-weight: 700;
           color: var(--text-faint-2);
           background: var(--surface);
           border: 1px solid var(--border-2);
-          padding: 2px 6px;
+          padding: 1px 5px;
         }
         .plv__tab:hover {
           color: var(--text);
@@ -520,6 +828,265 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
           .plv__price {
             min-width: 0;
           }
+        }
+
+        /* --- Order basket --------------------------------------------------- */
+        .plv__add {
+          width: 30px;
+          height: 30px;
+          flex: 0 0 auto;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid var(--border-input);
+          background: #fff;
+          color: var(--text-muted);
+          cursor: pointer;
+        }
+        .plv__add:hover {
+          border-color: var(--black);
+          color: var(--black);
+        }
+        .plv__add--in {
+          background: var(--black);
+          border-color: var(--black);
+          color: #fff;
+        }
+        .plv__add-qty {
+          font-size: 11.5px;
+          font-weight: 800;
+        }
+        .plv__cartbtn {
+          position: fixed;
+          right: 22px;
+          bottom: 22px;
+          z-index: 60;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: var(--black);
+          color: #fff;
+          border: none;
+          font: inherit;
+          font-size: 12.5px;
+          font-weight: 800;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          padding: 14px 18px;
+          cursor: pointer;
+          box-shadow: var(--shadow-lg);
+        }
+        .plv__cartbtn:hover {
+          background: var(--red);
+        }
+        .plv__cartbtn-badge {
+          background: var(--red);
+          font-size: 11px;
+          padding: 2px 7px;
+        }
+        .plv__cartbtn:hover .plv__cartbtn-badge {
+          background: var(--black);
+        }
+        .plv__cart-overlay {
+          position: fixed;
+          inset: 0;
+          z-index: 70;
+          background: rgba(10, 10, 10, 0.45);
+          display: flex;
+          justify-content: flex-end;
+        }
+        .plv__cart {
+          width: min(440px, 100%);
+          height: 100%;
+          background: #fff;
+          display: flex;
+          flex-direction: column;
+          padding: 22px;
+          overflow-y: auto;
+        }
+        .plv__cart-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 16px;
+        }
+        .plv__cart-head h2 {
+          margin: 0;
+          font-size: 15px;
+          font-weight: 800;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+        }
+        .plv__cart-x {
+          border: none;
+          background: none;
+          cursor: pointer;
+          color: var(--black);
+          padding: 6px;
+        }
+        .plv__cart-x:hover {
+          color: var(--red);
+        }
+        .plv__cart-empty {
+          color: var(--text-muted);
+          font-size: 13.5px;
+          line-height: 1.6;
+        }
+        .plv__cart-lines {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 16px;
+        }
+        .plv__cart-line {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          border: 1px solid var(--border);
+          padding: 10px 12px;
+        }
+        .plv__cart-line-name {
+          flex: 1;
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+        .plv__cart-line-name strong {
+          font-size: 13px;
+          line-height: 1.35;
+        }
+        .plv__cart-line-name span {
+          font-size: 11px;
+          color: var(--text-faint);
+          letter-spacing: 0.03em;
+        }
+        .plv__cart-qty {
+          display: inline-flex;
+          align-items: center;
+          border: 1px solid var(--border-input);
+        }
+        .plv__cart-qty button {
+          width: 26px;
+          height: 30px;
+          border: none;
+          background: #fff;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--text-muted);
+        }
+        .plv__cart-qty button:hover {
+          color: var(--red);
+        }
+        .plv__cart-qty input {
+          width: 44px;
+          border: none;
+          border-left: 1px solid var(--border-input);
+          border-right: 1px solid var(--border-input);
+          text-align: center;
+          font: inherit;
+          font-size: 13px;
+          font-weight: 700;
+          padding: 6px 0;
+          -moz-appearance: textfield;
+        }
+        .plv__cart-qty input::-webkit-outer-spin-button,
+        .plv__cart-qty input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        .plv__cart-line-total {
+          font-size: 13px;
+          font-weight: 800;
+          white-space: nowrap;
+          font-variant-numeric: tabular-nums;
+          min-width: 72px;
+          text-align: right;
+        }
+        .plv__cart-note span {
+          display: block;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.09em;
+          text-transform: uppercase;
+          color: var(--text-muted);
+          margin-bottom: 6px;
+        }
+        .plv__cart-note textarea {
+          width: 100%;
+          border: 1px solid var(--border-input);
+          font: inherit;
+          font-size: 13.5px;
+          padding: 10px 12px;
+          resize: vertical;
+        }
+        .plv__cart-total {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          margin: 16px 0 4px;
+          padding-top: 14px;
+          border-top: 2px solid var(--black);
+        }
+        .plv__cart-total span {
+          font-size: 11.5px;
+          font-weight: 700;
+          letter-spacing: 0.09em;
+          text-transform: uppercase;
+          color: var(--text-muted);
+        }
+        .plv__cart-total strong {
+          font-size: 20px;
+          font-weight: 900;
+          font-variant-numeric: tabular-nums;
+        }
+        .plv__cart-error {
+          color: var(--red);
+          font-size: 13px;
+          font-weight: 600;
+          margin: 8px 0 0;
+        }
+        .plv__cart-actions {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 16px;
+        }
+        .plv__cart-actions :global(.btn) {
+          width: 100%;
+          justify-content: center;
+        }
+        .plv__cart-done {
+          text-align: center;
+          padding: 40px 8px;
+        }
+        .plv__cart-check {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background: var(--red);
+          color: #fff;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 18px;
+        }
+        .plv__cart-done h3 {
+          margin: 0 0 10px;
+          font-size: 20px;
+          font-weight: 800;
+        }
+        .plv__cart-done p {
+          margin: 0 0 18px;
+          font-size: 13.5px;
+          line-height: 1.6;
+          color: var(--text-muted);
+        }
+        .plv__cart-demo {
+          font-size: 12px !important;
+          color: var(--text-faint) !important;
         }
 
         @media print {

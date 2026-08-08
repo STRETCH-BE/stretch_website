@@ -58,17 +58,29 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Existing state → diff numbers + stale-row detection.
-  const { data: existing, error: readError } = await service
-    .from('pricebook')
-    .select('id, category, product, market, seq, price_eur')
-    .limit(20000);
-  if (readError) {
-    return NextResponse.json({ ok: false, error: readError.message }, { status: 500 });
+  // Existing state → diff numbers + stale-row detection. Paged, because
+  // Supabase caps every response at 1000 rows regardless of .limit().
+  const existing: { id: number; category: string; product: string; market: string; seq: number; price_eur: number }[] = [];
+  for (let from = 0; ; from += CHUNK) {
+    const { data, error: readError } = await service
+      .from('pricebook')
+      .select('id, category, product, market, seq, price_eur')
+      .order('id', { ascending: true })
+      .range(from, from + CHUNK - 1);
+    if (readError) {
+      return NextResponse.json({ ok: false, error: readError.message }, { status: 500 });
+    }
+    existing.push(...(data ?? []));
+    if ((data ?? []).length < CHUNK) break;
   }
 
+  // Databases created before the `type` column: upsert without it (and tell
+  // the admin in the report) instead of failing the whole sync.
+  const { error: typeProbe } = await service.from('pricebook').select('type').limit(1);
+  const hasTypeColumn = !typeProbe;
+
   const existingByKey = new Map<string, { id: number; price_eur: number }>();
-  for (const r of existing ?? []) {
+  for (const r of existing) {
     existingByKey.set(rowKey(r), { id: r.id, price_eur: Number(r.price_eur) });
   }
 
@@ -83,11 +95,14 @@ export async function POST(req: NextRequest) {
     else if (Math.abs(prev.price_eur - r.price_eur) >= 0.005) changed += 1;
     else unchanged += 1;
   }
-  const staleIds = (existing ?? []).filter((r) => !newKeys.has(rowKey(r))).map((r) => r.id);
+  const staleIds = existing.filter((r) => !newKeys.has(rowKey(r))).map((r) => r.id);
 
   // 1) Upsert all parsed rows (insert new, update existing incl. price/sort).
   for (let i = 0; i < parsed.rows.length; i += CHUNK) {
-    const chunk = parsed.rows.slice(i, i + CHUNK).map((r) => ({ ...r, updated_at: new Date().toISOString() }));
+    const chunk = parsed.rows.slice(i, i + CHUNK).map((r) => {
+      const { type, ...rest } = r;
+      return { ...(hasTypeColumn ? r : rest), updated_at: new Date().toISOString() };
+    });
     const { error } = await service
       .from('pricebook')
       .upsert(chunk, { onConflict: 'category,product,market,seq' });
@@ -118,7 +133,12 @@ export async function POST(req: NextRequest) {
     removed: staleIds.length,
     changed,
     unchanged,
-    skipped: parsed.skipped,
+    skipped: hasTypeColumn
+      ? parsed.skipped
+      : [
+          'Type column not stored — run the pricebook migration in supabase/schema.sql, then re-upload.',
+          ...parsed.skipped,
+        ],
     version: parsed.version,
     persisted: true,
   };

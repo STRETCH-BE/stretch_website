@@ -8,6 +8,7 @@ import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
 import { hasTradeAccess } from '@/lib/portal/types';
 import { getPricebook } from '@/lib/portal/data';
+import ArchitectDashboard from '@/components/portal/ArchitectDashboard';
 
 export default async function PortalOverviewPage({ params }: { params: { locale: string } }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
@@ -15,6 +16,13 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
 
   const session = await getPortalSession();
   if (!session) return null; // (app) layout already redirects
+
+  // Architects get their own dashboard — a completely separate surface with
+  // no pricing-shaped content beyond the budget-guide link.
+  if (session.profile.accountType === 'architect' && session.profile.role !== 'admin') {
+    return <ArchitectDashboard profile={session.profile} demo={session.demo} />;
+  }
+
   const t = await getTranslations('portal.dash');
 
   // B2C accounts never load pricing data — trade tiles are replaced by the
@@ -106,25 +114,42 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
           </>
         )}
 
-        {/* Documents — staged next data source */}
-        <div className="portal-tile portal-tile--soon" aria-disabled>
+        {/* Documents — the technical library, direct downloads */}
+        <Link href="/portal/documents" className="portal-tile portal-tile--live">
           <div className="portal-tile__head">
             <FolderOpen size={20} />
-            <span className="portal-tile__badge">{t('soon')}</span>
+            <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
           </div>
           <h2>{t('tileDocs')}</h2>
           <p>{t('tileDocsBody')}</p>
-        </div>
+          <span className="portal-tile__cta">
+            {t('open')} <ArrowRight size={14} />
+          </span>
+        </Link>
 
-        {/* Orders — staged next data source */}
-        <div className="portal-tile portal-tile--soon" aria-disabled>
-          <div className="portal-tile__head">
-            <PackageSearch size={20} />
-            <span className="portal-tile__badge">{t('soon')}</span>
+        {/* Orders — designer order history (trade); staged for b2c */}
+        {trade ? (
+          <Link href="/portal/orders" className="portal-tile portal-tile--live">
+            <div className="portal-tile__head">
+              <PackageSearch size={20} />
+              <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
+            </div>
+            <h2>{t('tileOrders')}</h2>
+            <p>{t('tileOrdersBody')}</p>
+            <span className="portal-tile__cta">
+              {t('open')} <ArrowRight size={14} />
+            </span>
+          </Link>
+        ) : (
+          <div className="portal-tile portal-tile--soon" aria-disabled>
+            <div className="portal-tile__head">
+              <PackageSearch size={20} />
+              <span className="portal-tile__badge">{t('soon')}</span>
+            </div>
+            <h2>{t('tileOrders')}</h2>
+            <p>{t('tileOrdersBody')}</p>
           </div>
-          <h2>{t('tileOrders')}</h2>
-          <p>{t('tileOrdersBody')}</p>
-        </div>
+        )}
 
         {/* Admin — only for admins */}
         {session.profile.role === 'admin' && (
