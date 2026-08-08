@@ -1,3 +1,24 @@
+## 2026-08-08 (3) — 4 placeholder projects deleted, 4 real projects get photos
+
+- **Deleted (client request):** city-penthouse-antwerp, wellness-spa-bruges,
+  home-cinema-ghent, private-villa-knokke — removed from content.ts, from the
+  projects + projectCards.metas namespaces ×12, and the now-empty "Home
+  cinema" portfolio filter dropped (content.ts + inspirationPage.filters ×12,
+  index 6). dealers.ts local-project links remapped: Antwerpen →
+  creneau-afas-lounge, Gent → candor-sint-martens-latem, West-Vlaanderen/
+  Brugge → none. Portfolio now 21 projects.
+- **Photos wired from client zips (photographer sets):** da-tweekaz-studio
+  (hero + control room), mark-with-a-k (hero + ceiling detail),
+  notary-ampe-anthony (hero + 3: reception, circular recess, lounge — note:
+  photos show the office's current "Ampe & Depuydt" branding).
+- **london-chapel corrected + photographed:** the old copy described a backlit
+  ceiling; the actual project (dealer Upholster London) is acoustic FABRIC
+  WALLING through a chapel-turned-home plus a fabric-lined vaulted ceiling and
+  a fabric-walled home cinema. Entry rewritten (cat Light & Print → Living
+  room, dealer fact added), re-translated ×12, hero + 9-photo gallery.
+- 3 loose photos in the request (printed forest-canopy ceiling + moss rings in
+  an industrial office) match no known project — parked, client asked.
+
 ## 2026-08-08 (2) — Boost Wellness fixes, event-hall photos, datasheets surfaced
 
 - **Boost Wellness corrections (client feedback):** year fact 2025 → 2026

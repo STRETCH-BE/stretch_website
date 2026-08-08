@@ -2152,11 +2152,7 @@
       "johnson-and-johnson": "Limerick, IE · Centro de I+D farmacéutico",
       "polette-eyewear": "Amberes · Concept store de retail",
       "citizenm-hotel": "EE. UU. y Europa · Baños prefabricados",
-      "london-chapel": "Londres, UK · Techo retroiluminado",
-      "private-villa-knokke": "Knokke · Salón abierto",
-      "home-cinema-ghent": "Gante · Cielo estrellado + acústica",
-      "city-penthouse-antwerp": "Amberes · Salón",
-      "wellness-spa-bruges": "Brujas · Baño de spa",
+      "london-chapel": "Londres, UK · Reconversión de capilla",
       "rue-perree-paris": "París · Techo de galería retroiluminado",
       "vier-emmershof-lokeren": "Lokeren · Casa en el bosque",
       "vp-193": "Flandes Oriental · Residencia privada",
@@ -2885,20 +2881,24 @@
       ]
     },
     "london-chapel": {
-      "title": "Capilla de Londres",
-      "summary": "Un techo tensado retroiluminado sobre una capilla restaurada.",
-      "hook": "Una capilla restaurada bañada en una luz suave y uniforme desde un único techo luminoso.",
+      "title": "London Chapel",
+      "summary": "Paredes de tejido acústico y una bóveda revestida de tela para una capilla convertida en vivienda londinense.",
+      "hook": "Una capilla convertida en hogar familiar — revestida sala a sala con tejido acústico tensado.",
       "description": [
-        "Un techo STRETCH translúcido convierte todo el plano del techo en una fuente de luz suave y uniforme: el interior restaurado queda bañado en una iluminación sin deslumbramientos, mientras el campo de LED permanece completamente oculto."
+        "En esta reconversión de una capilla en Londres, nuestro distribuidor Upholster London acabó los interiores con tejido STRETCH tensado: las paredes de tejido acústico recorren los vestíbulos, rellanos y escaleras, e incluso la bóveda está revestida de tela entre sus nervaduras originales.",
+        "Las superficies textiles calman la acústica de estos espacios altos y duros y dan a cada estancia una profundidad cálida y tapizada que la pintura nunca puede alcanzar — mientras los detalles originales, como las vidrieras, permanecen intactos, enmarcados por paneles de tejido impecables. Un cine en casa con paredes de tejido completa la vivienda."
       ],
       "highlights": [
-        "Todo el techo como fuente de luz",
-        "Iluminación uniforme y sin deslumbramientos",
-        "Campo de LED completamente oculto"
+        "Bóveda de la capilla revestida de tela",
+        "Paredes de tejido acústico en toda la vivienda",
+        "Cine en casa con paredes de tejido",
+        "Vidrieras originales, enmarcadas con precisión"
       ],
       "materials": [
-        "Techo STRETCH translúcido",
-        "Campo de retroiluminación LED"
+        "Paredes de tejido acústico STRETCH",
+        "Bóveda revestida de tela",
+        "Cine en casa con paredes de tejido",
+        "Perfiles a medida en arcos y vidrieras"
       ],
       "facts": [
         {
@@ -2907,116 +2907,11 @@
         },
         {
           "label": "Espacio",
-          "value": "Capilla restaurada"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Villa privada",
-      "summary": "Un techo mate sin juntas para una villa costera de planta abierta.",
-      "hook": "Un techo sin juntas, liso como el yeso, para una casa costera de planta abierta.",
-      "description": [
-        "En el espacio de vida abierto de la villa, un techo STRETCH de poliéster muy mate se percibe de pared a pared como un enlucido impecable — nítido y moderno, sin las grietas ni las líneas de sombra de un techo convencional."
-      ],
-      "highlights": [
-        "Acabado sin juntas de pared a pared",
-        "Sin grietas ni líneas de sombra",
-        "Aspecto muy mate, como el yeso"
-      ],
-      "materials": [
-        "Techo STRETCH de poliéster (muy mate)",
-        "Perfiles perimetrales de tensado"
-      ],
-      "facts": [
-        {
-          "label": "Ubicación",
-          "value": "Knokke, Bélgica"
+          "value": "Capilla convertida en vivienda privada"
         },
         {
-          "label": "Espacio",
-          "value": "Salón de planta abierta"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Cine en casa",
-      "summary": "Un techo de cielo estrellado con respaldo acústico para un cine en casa.",
-      "hook": "Un cine privado bajo un cielo nocturno centelleante, afinado para el sonido de cine.",
-      "description": [
-        "Cientos de puntos de fibra óptica crean un cielo nocturno centelleante sobre las butacas, mientras un respaldo acústico mantiene la sala controlada para el sonido de cine — ambiente y prestaciones combinados en un solo techo."
-      ],
-      "highlights": [
-        "Cielo estrellado de fibra óptica",
-        "Respaldo acústico para el sonido de cine",
-        "Ambiente y prestaciones en un solo techo"
-      ],
-      "materials": [
-        "Techo STRETCH de cielo estrellado",
-        "Campo de estrellas de fibra óptica",
-        "Respaldo acústico absorbente"
-      ],
-      "facts": [
-        {
-          "label": "Ubicación",
-          "value": "Gante, Bélgica"
-        },
-        {
-          "label": "Espacio",
-          "value": "Cine en casa"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Ático urbano",
-      "summary": "Un techo decorativo impecable para un ático urbano.",
-      "hook": "Un techo decorativo minimalista y perfectamente plano para un ático urbano.",
-      "description": [
-        "El espacio de vida del ático recurre a un techo STRETCH sin juntas con iluminación integrada: el estilo se mantiene minimalista y la superficie perfecta en toda la planta abierta."
-      ],
-      "highlights": [
-        "Techo decorativo sin juntas",
-        "Iluminación integrada",
-        "Acabado minimalista e impecable"
-      ],
-      "materials": [
-        "Techo STRETCH de poliéster",
-        "Iluminación integrada"
-      ],
-      "facts": [
-        {
-          "label": "Ubicación",
-          "value": "Amberes, Bélgica"
-        },
-        {
-          "label": "Espacio",
-          "value": "Salón del ático"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Spa wellness",
-      "summary": "Un techo retroiluminado y resistente a la humedad para un spa.",
-      "hook": "Un techo resistente a la humedad, de brillo suave, para un espacio wellness.",
-      "description": [
-        "El spa necesitaba un techo que soportara la humedad y creara un ambiente sereno. Un techo STRETCH translúcido y retroiluminado brilla suavemente sobre la zona wellness y se limpia con un paño, sin que el vapor ni la humedad le afecten."
-      ],
-      "highlights": [
-        "Soporta la humedad y el vapor",
-        "Retroiluminación suave y uniforme",
-        "Se limpia con un paño"
-      ],
-      "materials": [
-        "Techo STRETCH translúcido de PVC",
-        "Campo de retroiluminación LED"
-      ],
-      "facts": [
-        {
-          "label": "Ubicación",
-          "value": "Brujas, Bélgica"
-        },
-        {
-          "label": "Espacio",
-          "value": "Spa / wellness"
+          "label": "Distribuidor STRETCH",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3922,7 +3817,6 @@
       "Baño",
       "Oficina",
       "Comercial",
-      "Cine en casa",
       "Luz e impresión"
     ],
     "browse": [

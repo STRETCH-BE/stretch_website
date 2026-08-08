@@ -2152,11 +2152,7 @@
       "johnson-and-johnson": "Limerick, IE · Pharma-F&E-Standort",
       "polette-eyewear": "Antwerpen · Retail-Konzeptstore",
       "citizenm-hotel": "USA & Europa · Vorgefertigte Badmodule",
-      "london-chapel": "London, UK · Hinterleuchtete Decke",
-      "private-villa-knokke": "Knokke · Offener Wohnbereich",
-      "home-cinema-ghent": "Gent · Sternenhimmel + Akustik",
-      "city-penthouse-antwerp": "Antwerpen · Wohnzimmer",
-      "wellness-spa-bruges": "Brügge · Spa-Badezimmer",
+      "london-chapel": "London, UK · Kapellenumbau",
       "rue-perree-paris": "Paris · Hinterleuchtete Galeriedecke",
       "vier-emmershof-lokeren": "Lokeren · Waldhaus",
       "vp-193": "Ostflandern · Privathaus",
@@ -2885,138 +2881,37 @@
       ]
     },
     "london-chapel": {
-      "title": "Kapelle in London",
-      "summary": "Eine hinterleuchtete Spanndecke über einem restaurierten Kapellenraum.",
-      "hook": "Eine restaurierte Kapelle, getaucht in weiches, gleichmäßiges Licht aus einer einzigen leuchtenden Decke.",
+      "title": "London Chapel",
+      "summary": "Akustik-Stoffwände und eine stoffbespannte Gewölbedecke für eine zur Londoner Wohnung umgebaute Kapelle.",
+      "hook": "Eine Kapelle wird Familienhaus — Raum für Raum mit gespanntem Akustikstoff ausgekleidet.",
       "description": [
-        "Eine transluzente STRETCH-Decke verwandelt die gesamte Deckenfläche in eine weiche, gleichmäßige Lichtquelle: Das restaurierte Interieur liegt in blendfreiem Licht, während das LED-Feld vollständig verborgen bleibt."
+        "Bei diesem Kapellenumbau in London stattete unser Händler Upholster London die Innenräume mit gespanntem STRETCH-Stoff aus: Akustik-Stoffwände ziehen sich durch Flure, Podeste und Treppenhäuser, und selbst die Gewölbedecke ist zwischen ihren originalen Rippen mit Stoff bespannt.",
+        "Die textilen Oberflächen beruhigen die Akustik der hohen, harten Räume und geben jedem Zimmer eine warme, gepolsterte Tiefe, die Farbe nie erreichen kann — während originale Details wie die Buntglasfenster unangetastet bleiben, sauber von Stoffpaneelen gerahmt. Ein Heimkino mit Stoffwänden macht das Haus komplett."
       ],
       "highlights": [
-        "Die gesamte Decke als Lichtquelle",
-        "Blendfreie, gleichmäßige Beleuchtung",
-        "LED-Feld vollständig verborgen"
+        "Stoffbespannte Gewölbedecke der Kapelle",
+        "Akustik-Stoffwände im ganzen Haus",
+        "Heimkino mit Stoffwänden",
+        "Originale Buntglasfenster, präzise gerahmt"
       ],
       "materials": [
-        "Transluzente STRETCH-Decke",
-        "LED-Hinterleuchtungsfeld"
+        "Akustische STRETCH-Stoffwände",
+        "Stoffbespannte Gewölbedecke",
+        "Heimkino mit Stoffwänden",
+        "Maßprofile um Bögen und Buntglas"
       ],
       "facts": [
         {
-          "label": "Standort",
-          "value": "London, Vereinigtes Königreich"
+          "label": "Ort",
+          "value": "London, UK"
         },
         {
           "label": "Raum",
-          "value": "Restaurierte Kapelle"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Privatvilla",
-      "summary": "Eine nahtlose, matte Decke für eine offen geschnittene Küstenvilla.",
-      "hook": "Eine nahtlose Decke, glatt wie perfekter Putz, für ein offen geschnittenes Zuhause an der Küste.",
-      "description": [
-        "Im offenen Wohnbereich der Villa wirkt eine sehr matte STRETCH-Decke aus Polyester von Wand zu Wand wie makelloser Putz – klar und modern, ohne die Risse und Schattenlinien einer konventionellen Decke."
-      ],
-      "highlights": [
-        "Nahtlose Oberfläche von Wand zu Wand",
-        "Keine Risse, keine Schattenlinien",
-        "Sehr matte Optik wie Putz"
-      ],
-      "materials": [
-        "STRETCH-Decke aus Polyester (sehr matt)",
-        "Randprofile zur Verspannung"
-      ],
-      "facts": [
-        {
-          "label": "Standort",
-          "value": "Knokke, Belgien"
+          "value": "Zur Privatwohnung umgebaute Kapelle"
         },
         {
-          "label": "Raum",
-          "value": "Offener Wohnbereich"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Heimkino",
-      "summary": "Eine Sternenhimmel-Decke mit akustischer Hinterlegung für ein Heimkino.",
-      "hook": "Ein privates Kino unter einem funkelnden Nachthimmel, abgestimmt auf Filmton.",
-      "description": [
-        "Hunderte Glasfaserpunkte bilden einen funkelnden Nachthimmel über den Sitzplätzen, während eine akustische Hinterlegung den Raum für den Filmton unter Kontrolle hält – Atmosphäre und Leistung vereint in einer einzigen Decke."
-      ],
-      "highlights": [
-        "Sternenhimmel aus Glasfasern",
-        "Akustische Hinterlegung für den Filmton",
-        "Atmosphäre und Leistung in einer Decke"
-      ],
-      "materials": [
-        "STRETCH-Decke mit Sternenhimmel",
-        "Sternenfeld aus Glasfasern",
-        "Akustisch absorbierende Hinterlegung"
-      ],
-      "facts": [
-        {
-          "label": "Standort",
-          "value": "Gent, Belgien"
-        },
-        {
-          "label": "Raum",
-          "value": "Heimkino"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Urbanes Penthouse",
-      "summary": "Eine makellose Designdecke für ein Penthouse in der Stadt.",
-      "hook": "Eine minimalistische, perfekt ebene Designdecke für ein Penthouse in der Stadt.",
-      "description": [
-        "Der Wohnbereich des Penthouses setzt auf eine nahtlose STRETCH-Decke mit integrierter Beleuchtung: Der Look bleibt minimalistisch, die Fläche über den gesamten offenen Grundriss hinweg perfekt."
-      ],
-      "highlights": [
-        "Nahtlose Designdecke",
-        "Integrierte Beleuchtung",
-        "Minimalistische, makellose Oberfläche"
-      ],
-      "materials": [
-        "STRETCH-Decke aus Polyester",
-        "Integrierte Beleuchtung"
-      ],
-      "facts": [
-        {
-          "label": "Standort",
-          "value": "Antwerpen, Belgien"
-        },
-        {
-          "label": "Raum",
-          "value": "Penthouse-Wohnzimmer"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Wellness-Spa",
-      "summary": "Eine feuchtigkeitsbeständige, hinterleuchtete Decke für ein Spa.",
-      "hook": "Eine feuchtigkeitsbeständige, sanft leuchtende Decke für einen Wellnessbereich.",
-      "description": [
-        "Das Spa brauchte eine Decke, die Feuchtigkeit verträgt und für eine ruhige Stimmung sorgt. Eine transluzente, hinterleuchtete STRETCH-Decke leuchtet sanft über dem Wellnessbereich und lässt sich einfach abwischen – unbeeindruckt von Dampf und Feuchtigkeit."
-      ],
-      "highlights": [
-        "Verträgt Feuchtigkeit und Dampf",
-        "Sanfte, gleichmäßige Hinterleuchtung",
-        "Einfach abwischbar"
-      ],
-      "materials": [
-        "Transluzente STRETCH-Decke aus PVC",
-        "LED-Hinterleuchtungsfeld"
-      ],
-      "facts": [
-        {
-          "label": "Standort",
-          "value": "Brügge, Belgien"
-        },
-        {
-          "label": "Raum",
-          "value": "Spa / Wellness"
+          "label": "STRETCH-Händler",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3922,7 +3817,6 @@
       "Bad",
       "Büro",
       "Gewerbe",
-      "Heimkino",
       "Licht & Druck"
     ],
     "browse": [

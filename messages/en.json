@@ -2152,11 +2152,7 @@
       "johnson-and-johnson": "Limerick, IE · Pharma R&D facility",
       "polette-eyewear": "Antwerp · Retail concept store",
       "citizenm-hotel": "USA & Europe · Prefab bathroom units",
-      "london-chapel": "London, UK · Backlit ceiling",
-      "private-villa-knokke": "Knokke · Open living",
-      "home-cinema-ghent": "Ghent · Starry sky + acoustic",
-      "city-penthouse-antwerp": "Antwerp · Living room",
-      "wellness-spa-bruges": "Bruges · Spa bathroom",
+      "london-chapel": "London, UK · Chapel conversion",
       "rue-perree-paris": "Paris · Backlit gallery ceiling",
       "vier-emmershof-lokeren": "Lokeren · Forest residence",
       "vp-193": "East Flanders · Private residence",
@@ -2886,19 +2882,23 @@
     },
     "london-chapel": {
       "title": "London Chapel",
-      "summary": "A backlit stretch ceiling over a restored chapel space.",
-      "hook": "A restored chapel bathed in soft, even light from a single luminous ceiling.",
+      "summary": "Acoustic fabric walls and a fabric-lined vaulted ceiling for a chapel converted into a London home.",
+      "hook": "A chapel turned family home — wrapped room by room in tensioned acoustic fabric.",
       "description": [
-        "A translucent STRETCH ceiling turns the whole soffit into a soft, even light source, washing the restored interior in glare-free illumination while concealing the LED field completely."
+        "For this chapel conversion in London, our dealer Upholster London finished the interiors with tensioned STRETCH fabric: acoustic fabric walls run through the halls, landings and stairwells, and even the vaulted ceiling is lined with fabric between its original ribs.",
+        "The textile surfaces calm the acoustics of the tall, hard spaces and give every room a warm, upholstered depth that paint can never reach — while original details such as the stained-glass windows stay untouched, framed by crisp fabric panels. A fabric-walled home cinema completes the home."
       ],
       "highlights": [
-        "Whole-ceiling light source",
-        "Glare-free, even illumination",
-        "LED field fully concealed"
+        "Fabric-lined vaulted chapel ceiling",
+        "Acoustic fabric walls throughout the home",
+        "Fabric-walled home cinema",
+        "Original stained glass, crisply framed"
       ],
       "materials": [
-        "Translucent STRETCH ceiling",
-        "LED backlighting field"
+        "STRETCH acoustic fabric walling",
+        "Fabric-lined vaulted ceiling",
+        "Fabric-walled home cinema",
+        "Bespoke profiles around arches and stained glass"
       ],
       "facts": [
         {
@@ -2907,116 +2907,11 @@
         },
         {
           "label": "Space",
-          "value": "Restored chapel"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Private Villa",
-      "summary": "A seamless matte ceiling for an open-plan coastal villa.",
-      "hook": "A seamless, plaster-smooth ceiling for an open-plan coastal home.",
-      "description": [
-        "In the villa’s open living space, a very matte polyester STRETCH ceiling reads like flawless plaster from wall to wall — crisp and modern, free of the cracks and shadow lines of a conventional ceiling."
-      ],
-      "highlights": [
-        "Seamless wall-to-wall finish",
-        "No cracks or shadow lines",
-        "Very matte, plaster-like look"
-      ],
-      "materials": [
-        "Polyester STRETCH ceiling (very matte)",
-        "Perimeter tension profiles"
-      ],
-      "facts": [
-        {
-          "label": "Location",
-          "value": "Knokke, Belgium"
+          "value": "Chapel converted into a private home"
         },
         {
-          "label": "Space",
-          "value": "Open-plan living"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Home Cinema",
-      "summary": "A starry-sky ceiling with acoustic backing for a home cinema.",
-      "hook": "A private cinema under a twinkling night sky, tuned for film sound.",
-      "description": [
-        "Hundreds of fibre-optic points create a twinkling night sky above the seating, while an acoustic backing keeps the room controlled for film sound — atmosphere and performance combined in a single ceiling."
-      ],
-      "highlights": [
-        "Fibre-optic starry sky",
-        "Acoustic backing for film sound",
-        "Atmosphere and performance in one ceiling"
-      ],
-      "materials": [
-        "Starry-sky STRETCH ceiling",
-        "Fibre-optic star field",
-        "Acoustic absorber backing"
-      ],
-      "facts": [
-        {
-          "label": "Location",
-          "value": "Ghent, Belgium"
-        },
-        {
-          "label": "Space",
-          "value": "Home cinema"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "City Penthouse",
-      "summary": "A flawless feature ceiling for a city penthouse.",
-      "hook": "A minimal, perfectly flat feature ceiling for a city penthouse.",
-      "description": [
-        "The penthouse living space uses a seamless STRETCH ceiling with integrated lighting to keep the look minimal and the surface perfect across the open plan."
-      ],
-      "highlights": [
-        "Seamless feature ceiling",
-        "Integrated lighting",
-        "Minimal, flawless finish"
-      ],
-      "materials": [
-        "Polyester STRETCH ceiling",
-        "Integrated lighting"
-      ],
-      "facts": [
-        {
-          "label": "Location",
-          "value": "Antwerp, Belgium"
-        },
-        {
-          "label": "Space",
-          "value": "Penthouse living room"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Wellness Spa",
-      "summary": "A humidity-proof, backlit ceiling for a spa.",
-      "hook": "A humidity-proof, softly glowing ceiling for a wellness space.",
-      "description": [
-        "The spa needed a ceiling that handles humidity and sets a calm mood. A translucent, backlit STRETCH ceiling glows softly over the wellness area and wipes clean, unaffected by steam and moisture."
-      ],
-      "highlights": [
-        "Handles humidity and steam",
-        "Soft, even backlight",
-        "Wipes clean"
-      ],
-      "materials": [
-        "Translucent PVC STRETCH ceiling",
-        "LED backlighting field"
-      ],
-      "facts": [
-        {
-          "label": "Location",
-          "value": "Bruges, Belgium"
-        },
-        {
-          "label": "Space",
-          "value": "Spa / wellness"
+          "label": "STRETCH dealer",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3922,7 +3817,6 @@
       "Bathroom",
       "Office",
       "Commercial",
-      "Home cinema",
       "Light & Print"
     ],
     "browse": [

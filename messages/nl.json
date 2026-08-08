@@ -2152,11 +2152,7 @@
       "johnson-and-johnson": "Limerick, IE · Farma R&D-site",
       "polette-eyewear": "Antwerpen · Retail conceptstore",
       "citizenm-hotel": "VS & Europa · Prefab badkamerunits",
-      "london-chapel": "Londen, VK · Plafond met backlight",
-      "private-villa-knokke": "Knokke · Open leefruimte",
-      "home-cinema-ghent": "Gent · Sterrenhemel + akoestiek",
-      "city-penthouse-antwerp": "Antwerpen · Woonkamer",
-      "wellness-spa-bruges": "Brugge · Spa-badkamer",
+      "london-chapel": "Londen, VK · Kapelverbouwing",
       "rue-perree-paris": "Parijs · Galerijplafond met backlight",
       "vier-emmershof-lokeren": "Lokeren · Boswoning",
       "vp-193": "Oost-Vlaanderen · Privéwoning",
@@ -2885,20 +2881,24 @@
       ]
     },
     "london-chapel": {
-      "title": "Kapel in Londen",
-      "summary": "Een spanplafond met backlight boven een gerestaureerde kapelruimte.",
-      "hook": "Een gerestaureerde kapel, badend in zacht en gelijkmatig licht van één lichtgevend plafond.",
+      "title": "London Chapel",
+      "summary": "Akoestische textielwanden en een met doek bespannen gewelfd plafond voor een kapel die werd verbouwd tot Londense woning.",
+      "hook": "Een kapel die gezinswoning werd — kamer voor kamer bekleed met gespannen akoestisch textiel.",
       "description": [
-        "Een doorschijnend STRETCH-plafond maakt van het volledige plafondvlak één zachte, gelijkmatige lichtbron: het gerestaureerde interieur baadt in verblindingsvrij licht, terwijl het LED-veld volledig uit het zicht blijft."
+        "Voor deze kapelverbouwing in Londen werkte onze dealer Upholster London het interieur af met gespannen STRETCH-textiel: akoestische textielwanden lopen door de hallen, overlopen en trappenhuizen, en zelfs het gewelfde plafond is tussen de originele ribben met doek bekleed.",
+        "De textieloppervlakken temperen de akoestiek van de hoge, harde ruimtes en geven elke kamer een warme, gestoffeerde diepte die verf nooit bereikt — terwijl originele details zoals de glas-in-loodramen onaangetast blijven, strak omkaderd door textielpanelen. Een thuisbioscoop met textielwanden maakt het huis compleet."
       ],
       "highlights": [
-        "Het volledige plafond als lichtbron",
-        "Verblindingsvrije, gelijkmatige verlichting",
-        "LED-veld volledig weggewerkt"
+        "Met doek bespannen gewelfd kapelplafond",
+        "Akoestische textielwanden door het hele huis",
+        "Thuisbioscoop met textielwanden",
+        "Origineel glas-in-lood, strak omkaderd"
       ],
       "materials": [
-        "Doorschijnend STRETCH-plafond",
-        "LED-backlightveld"
+        "Akoestische STRETCH-textielwanden",
+        "Met doek bespannen gewelfd plafond",
+        "Thuisbioscoop met textielwanden",
+        "Maatwerkprofielen rond bogen en glas-in-lood"
       ],
       "facts": [
         {
@@ -2907,116 +2907,11 @@
         },
         {
           "label": "Ruimte",
-          "value": "Gerestaureerde kapel"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Privévilla",
-      "summary": "Een naadloos mat plafond voor een open kustvilla.",
-      "hook": "Een naadloos, pleisterglad plafond voor een open woning aan de kust.",
-      "description": [
-        "In de open leefruimte van de villa oogt een zeer mat polyester STRETCH-plafond van muur tot muur als vlekkeloos pleisterwerk – strak en modern, zonder de scheuren en schaduwlijnen van een klassiek plafond."
-      ],
-      "highlights": [
-        "Naadloze afwerking van muur tot muur",
-        "Geen scheuren of schaduwlijnen",
-        "Zeer matte look, als pleisterwerk"
-      ],
-      "materials": [
-        "Polyester STRETCH-plafond (zeer mat)",
-        "Randprofielen voor opspanning"
-      ],
-      "facts": [
-        {
-          "label": "Locatie",
-          "value": "Knokke, België"
+          "value": "Kapel verbouwd tot privéwoning"
         },
         {
-          "label": "Ruimte",
-          "value": "Open leefruimte"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Thuisbioscoop",
-      "summary": "Een sterrenhemelplafond met akoestische achterlaag voor een thuisbioscoop.",
-      "hook": "Een privébioscoop onder een fonkelende sterrenhemel, afgestemd op filmgeluid.",
-      "description": [
-        "Honderden glasvezelpunten vormen een fonkelende nachthemel boven de zitplaatsen, terwijl een akoestische achterlaag de ruimte onder controle houdt voor filmgeluid – sfeer en prestaties verenigd in één plafond."
-      ],
-      "highlights": [
-        "Sterrenhemel in glasvezel",
-        "Akoestische achterlaag voor filmgeluid",
-        "Sfeer en prestaties in één plafond"
-      ],
-      "materials": [
-        "STRETCH-plafond met sterrenhemel",
-        "Sterrenveld in glasvezel",
-        "Akoestisch absorberende achterlaag"
-      ],
-      "facts": [
-        {
-          "label": "Locatie",
-          "value": "Gent, België"
-        },
-        {
-          "label": "Ruimte",
-          "value": "Thuisbioscoop"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Stadspenthouse",
-      "summary": "Een vlekkeloos designplafond voor een penthouse in de stad.",
-      "hook": "Een minimalistisch, perfect vlak designplafond voor een penthouse in de stad.",
-      "description": [
-        "De leefruimte van het penthouse kreeg een naadloos STRETCH-plafond met geïntegreerde verlichting: zo blijft de look minimalistisch en het oppervlak perfect over de hele open ruimte."
-      ],
-      "highlights": [
-        "Naadloos designplafond",
-        "Geïntegreerde verlichting",
-        "Minimalistische, vlekkeloze afwerking"
-      ],
-      "materials": [
-        "Polyester STRETCH-plafond",
-        "Geïntegreerde verlichting"
-      ],
-      "facts": [
-        {
-          "label": "Locatie",
-          "value": "Antwerpen, België"
-        },
-        {
-          "label": "Ruimte",
-          "value": "Woonkamer van het penthouse"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Wellness-spa",
-      "summary": "Een vochtbestendig plafond met backlight voor een spa.",
-      "hook": "Een vochtbestendig, zacht oplichtend plafond voor een wellnessruimte.",
-      "description": [
-        "De spa had een plafond nodig dat tegen vocht kan en voor een rustige sfeer zorgt. Een doorschijnend STRETCH-plafond met backlight licht zacht op boven de wellnesszone en is eenvoudig schoon te vegen – ongevoelig voor stoom en vocht."
-      ],
-      "highlights": [
-        "Bestand tegen vocht en stoom",
-        "Zachte, gelijkmatige backlight",
-        "Eenvoudig schoon te vegen"
-      ],
-      "materials": [
-        "Doorschijnend STRETCH-plafond in PVC",
-        "LED-backlightveld"
-      ],
-      "facts": [
-        {
-          "label": "Locatie",
-          "value": "Brugge, België"
-        },
-        {
-          "label": "Ruimte",
-          "value": "Spa / wellness"
+          "label": "STRETCH-dealer",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3922,7 +3817,6 @@
       "Badkamer",
       "Kantoor",
       "Commercieel",
-      "Thuisbioscoop",
       "Licht & print"
     ],
     "browse": [

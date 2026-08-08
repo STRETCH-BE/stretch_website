@@ -2152,11 +2152,7 @@
       "johnson-and-johnson": "Limerick, IE · FoU-anlegg for farmasi",
       "polette-eyewear": "Antwerpen · Konseptbutikk",
       "citizenm-hotel": "USA & Europa · Prefabrikkerte baderomsmoduler",
-      "london-chapel": "London, UK · Baklyst himling",
-      "private-villa-knokke": "Knokke · Åpen stue",
-      "home-cinema-ghent": "Gent · Stjernehimmel + akustikk",
-      "city-penthouse-antwerp": "Antwerpen · Stue",
-      "wellness-spa-bruges": "Brugge · Spabad",
+      "london-chapel": "London, UK · Kapellombygging",
       "rue-perree-paris": "Paris · Baklyst gallerihimling",
       "vier-emmershof-lokeren": "Lokeren · Skogsbolig",
       "vp-193": "Øst-Flandern · Privatbolig",
@@ -2885,20 +2881,24 @@
       ]
     },
     "london-chapel": {
-      "title": "Kapell i London",
-      "summary": "En baklyst strekkhimling over et restaurert kapellrom.",
-      "hook": "Et restaurert kapell badet i mykt, jevnt lys fra én eneste lysende himling.",
+      "title": "London Chapel",
+      "summary": "Akustiske tekstilvegger og et tekstilkledd hvelvet tak for et kapell omgjort til et London-hjem.",
+      "hook": "Et kapell som ble familiehjem — kledd rom for rom i oppspent akustisk tekstil.",
       "description": [
-        "En gjennomskinnelig STRETCH-himling gjør hele takflaten om til én myk, jevn lyskilde: det restaurerte interiøret bades i blendfritt lys, mens LED-feltet holdes helt skjult."
+        "Ved denne kapellombyggingen i London fullførte vår forhandler Upholster London interiørene med oppspent STRETCH-tekstil: akustiske tekstilvegger løper gjennom haller, reposer og trappeoppganger, og selv det hvelvede taket er kledd med tekstil mellom de originale ribbene.",
+        "Tekstiloverflatene demper akustikken i de høye, harde rommene og gir hvert rom en varm, polstret dybde som maling aldri kan nå — mens originale detaljer som de blyinnfattede vinduene står urørt, innrammet av presise tekstilpaneler. En hjemmekino med tekstilvegger fullfører hjemmet."
       ],
       "highlights": [
-        "Hele himlingen som lyskilde",
-        "Blendfri, jevn belysning",
-        "LED-felt helt skjult"
+        "Tekstilkledd hvelvet kapelltak",
+        "Akustiske tekstilvegger i hele hjemmet",
+        "Hjemmekino med tekstilvegger",
+        "Originale blyinnfattede vinduer, presist innrammet"
       ],
       "materials": [
-        "Gjennomskinnelig STRETCH-himling",
-        "LED-baklysfelt"
+        "Akustiske STRETCH-tekstilvegger",
+        "Tekstilkledd hvelvet tak",
+        "Hjemmekino med tekstilvegger",
+        "Spesialprofiler rundt buer og vinduer"
       ],
       "facts": [
         {
@@ -2907,116 +2907,11 @@
         },
         {
           "label": "Rom",
-          "value": "Restaurert kapell"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Privat villa",
-      "summary": "En sømløs, matt himling for en kystvilla med åpen planløsning.",
-      "hook": "En sømløs himling, glatt som perfekt puss, for et kysthjem med åpen planløsning.",
-      "description": [
-        "I villaens åpne oppholdsrom fremstår en svært matt STRETCH-himling i polyester fra vegg til vegg som feilfri puss – ren og moderne, uten sprekkene og skyggelinjene til en tradisjonell himling."
-      ],
-      "highlights": [
-        "Sømløs finish fra vegg til vegg",
-        "Ingen sprekker eller skyggelinjer",
-        "Svært matt, pusslignende uttrykk"
-      ],
-      "materials": [
-        "STRETCH-himling i polyester (svært matt)",
-        "Kantprofiler for oppspenning"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Knokke, Belgia"
+          "value": "Kapell omgjort til privat bolig"
         },
         {
-          "label": "Rom",
-          "value": "Åpen planløsning"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Hjemmekino",
-      "summary": "En himling med stjernehimmel og akustisk bakside for en hjemmekino.",
-      "hook": "En privat kino under en glitrende nattehimmel, stemt for filmlyd.",
-      "description": [
-        "Hundrevis av fiberoptiske punkter skaper en glitrende nattehimmel over setene, mens en akustisk bakside holder rommet under kontroll for filmlyden – stemning og ytelse forent i én himling."
-      ],
-      "highlights": [
-        "Fiberoptisk stjernehimmel",
-        "Akustisk bakside for filmlyd",
-        "Stemning og ytelse i én himling"
-      ],
-      "materials": [
-        "STRETCH-himling med stjernehimmel",
-        "Fiberoptisk stjernefelt",
-        "Akustisk absorberende bakside"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Gent, Belgia"
-        },
-        {
-          "label": "Rom",
-          "value": "Hjemmekino"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Toppleilighet i byen",
-      "summary": "En feilfri designhimling for en toppleilighet i byen.",
-      "hook": "En minimalistisk, helt plan designhimling for en toppleilighet i byen.",
-      "description": [
-        "Oppholdsrommet i toppleiligheten bruker en sømløs STRETCH-himling med integrert belysning, slik at uttrykket forblir minimalistisk og flaten perfekt gjennom hele den åpne planløsningen."
-      ],
-      "highlights": [
-        "Sømløs designhimling",
-        "Integrert belysning",
-        "Minimalistisk, feilfri finish"
-      ],
-      "materials": [
-        "STRETCH-himling i polyester",
-        "Integrert belysning"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Antwerpen, Belgia"
-        },
-        {
-          "label": "Rom",
-          "value": "Stue i toppleilighet"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Velværespa",
-      "summary": "En fukttålig, baklyst himling for et spa.",
-      "hook": "En fukttålig himling med mykt lysskjær for et velværerom.",
-      "description": [
-        "Spaet trengte en himling som tåler fuktighet og skaper en rolig stemning. En gjennomskinnelig, baklyst STRETCH-himling lyser mykt over velværeområdet og tørkes enkelt ren – upåvirket av damp og fukt."
-      ],
-      "highlights": [
-        "Tåler fuktighet og damp",
-        "Mykt, jevnt baklys",
-        "Tørkes enkelt ren"
-      ],
-      "materials": [
-        "Gjennomskinnelig STRETCH-himling i PVC",
-        "LED-baklysfelt"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Brugge, Belgia"
-        },
-        {
-          "label": "Rom",
-          "value": "Spa / velvære"
+          "label": "STRETCH-forhandler",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3922,7 +3817,6 @@
       "Bad",
       "Kontor",
       "Næring",
-      "Hjemmekino",
       "Lys & print"
     ],
     "browse": [

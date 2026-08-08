@@ -2152,11 +2152,7 @@
       "johnson-and-johnson": "Limerick, IE · Rannsóknasetur lyfjafyrirtækis",
       "polette-eyewear": "Antwerpen · Hugmyndaverslun",
       "citizenm-hotel": "BNA & Evrópa · Forsmíðaðar baðeiningar",
-      "london-chapel": "London, UK · Baklýst loft",
-      "private-villa-knokke": "Knokke · Opið stofurými",
-      "home-cinema-ghent": "Gent · Stjörnuhiminn + hljóðvist",
-      "city-penthouse-antwerp": "Antwerpen · Stofa",
-      "wellness-spa-bruges": "Brugge · Baðherbergi í heilsulind",
+      "london-chapel": "London, UK · Kapellubreyting",
       "rue-perree-paris": "París · Baklýst gallerísloft",
       "vier-emmershof-lokeren": "Lokeren · Skógarhús",
       "vp-193": "Austur-Flæmingjaland · Einkaheimili",
@@ -2885,138 +2881,37 @@
       ]
     },
     "london-chapel": {
-      "title": "Kapella í London",
-      "summary": "Baklýst strekkiloft yfir endurgerðu kapellurými.",
-      "hook": "Endurgerð kapella böðuð í mjúkri, jafnri birtu frá einu lýsandi lofti.",
+      "title": "London Chapel",
+      "summary": "Hljóðdempandi textílveggir og hvelft loft klætt efni fyrir kapellu sem breytt var í heimili í London.",
+      "hook": "Kapella varð fjölskylduheimili — klædd herbergi fyrir herbergi með strekktum hljóðvistartextíl.",
       "description": [
-        "Hálfgegnsætt STRETCH-loft breytir öllum loftfletinum í mjúkan, jafnan ljósgjafa: endurgerða rýmið baðast í glýjulausri lýsingu á meðan LED-flöturinn er algjörlega falinn."
+        "Í þessari kapellubreytingu í London lauk söluaðili okkar, Upholster London, innréttingunum með strekktum STRETCH-textíl: hljóðdempandi textílveggir liggja um forstofur, palla og stigaganga, og jafnvel hvelfda loftið er klætt efni milli upprunalegu rifjanna.",
+        "Textílfletirnir róa hljóðvist háu, hörðu rýmanna og gefa hverju herbergi hlýja, bólstraða dýpt sem málning nær aldrei — á meðan upprunaleg smáatriði eins og steindu gluggarnir standa ósnortnir, rammaðir inn af nákvæmum textílþiljum. Heimabíó með textílveggjum fullkomnar heimilið."
       ],
       "highlights": [
-        "Allt loftið sem ljósgjafi",
-        "Glýjulaus, jöfn lýsing",
-        "LED-flötur algjörlega falinn"
+        "Hvelft kapelluloft klætt efni",
+        "Hljóðdempandi textílveggir um allt heimilið",
+        "Heimabíó með textílveggjum",
+        "Upprunalegir steindir gluggar, nákvæmlega rammaðir"
       ],
       "materials": [
-        "Hálfgegnsætt STRETCH-loft",
-        "LED-baklýsingarflötur"
+        "Hljóðdempandi STRETCH-textílveggir",
+        "Hvelft loft klætt efni",
+        "Heimabíó með textílveggjum",
+        "Sérsniðnir prófílar við boga og steinda glugga"
       ],
       "facts": [
         {
-          "label": "Staðsetning",
-          "value": "London, Bretland"
+          "label": "Staður",
+          "value": "London, Bretlandi"
         },
         {
           "label": "Rými",
-          "value": "Endurgerð kapella"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Einkavilla",
-      "summary": "Saumlaust, matt loft fyrir opna villu við ströndina.",
-      "hook": "Saumlaust loft, slétt eins og fullkomin múrhúð, fyrir opið heimili við ströndina.",
-      "description": [
-        "Í opnu alrými villunnar lítur mjög matt STRETCH-loft úr pólýester út eins og gallalaus múrhúð milli veggja – stílhreint og nútímalegt, án sprungna og skuggalína hefðbundins lofts."
-      ],
-      "highlights": [
-        "Saumlaus áferð milli veggja",
-        "Engar sprungur eða skuggalínur",
-        "Mjög matt áferð, lík múrhúð"
-      ],
-      "materials": [
-        "STRETCH-loft úr pólýester (mjög matt)",
-        "Jaðarprófílar til strekkingar"
-      ],
-      "facts": [
-        {
-          "label": "Staðsetning",
-          "value": "Knokke, Belgía"
+          "value": "Kapella breytt í einkaheimili"
         },
         {
-          "label": "Rými",
-          "value": "Opið alrými"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Heimabíó",
-      "summary": "Stjörnuhiminsloft með hljóðdempandi baklagi fyrir heimabíó.",
-      "hook": "Einkabíó undir tindrandi næturhimni, stillt fyrir kvikmyndahljóð.",
-      "description": [
-        "Hundruð ljósleiðarapunkta mynda tindrandi næturhiminn yfir sætunum, á meðan hljóðdempandi baklag heldur hljómburðinum í jafnvægi fyrir kvikmyndahljóðið – andrúmsloft og hljóðgæði sameinuð í einu lofti."
-      ],
-      "highlights": [
-        "Stjörnuhiminn úr ljósleiðurum",
-        "Hljóðdempandi baklag fyrir kvikmyndahljóð",
-        "Andrúmsloft og hljóðgæði í einu lofti"
-      ],
-      "materials": [
-        "STRETCH-loft með stjörnuhimni",
-        "Stjörnubreiða úr ljósleiðurum",
-        "Hljóðísogandi baklag"
-      ],
-      "facts": [
-        {
-          "label": "Staðsetning",
-          "value": "Gent, Belgía"
-        },
-        {
-          "label": "Rými",
-          "value": "Heimabíó"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Þakíbúð í borginni",
-      "summary": "Gallalaust hönnunarloft fyrir þakíbúð í borginni.",
-      "hook": "Mínimalískt, fullkomlega slétt hönnunarloft fyrir þakíbúð í borginni.",
-      "description": [
-        "Í alrými þakíbúðarinnar er saumlaust STRETCH-loft með innbyggðri lýsingu sem heldur útlitinu mínimalísku og fletinum fullkomnum í öllu opna rýminu."
-      ],
-      "highlights": [
-        "Saumlaust hönnunarloft",
-        "Innbyggð lýsing",
-        "Mínimalísk, gallalaus áferð"
-      ],
-      "materials": [
-        "STRETCH-loft úr pólýester",
-        "Innbyggð lýsing"
-      ],
-      "facts": [
-        {
-          "label": "Staðsetning",
-          "value": "Antwerpen, Belgía"
-        },
-        {
-          "label": "Rými",
-          "value": "Stofa í þakíbúð"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Heilsulind",
-      "summary": "Rakaþolið, baklýst loft fyrir heilsulind.",
-      "hook": "Rakaþolið loft með mjúkri birtu fyrir vellíðunarrými.",
-      "description": [
-        "Heilsulindin þurfti loft sem þolir raka og skapar rólegt andrúmsloft. Hálfgegnsætt, baklýst STRETCH-loft lýsir mjúklega yfir vellíðunarsvæðinu og auðvelt er að strjúka það hreint – ósnortið af gufu og raka."
-      ],
-      "highlights": [
-        "Þolir raka og gufu",
-        "Mjúk, jöfn baklýsing",
-        "Auðvelt að strjúka hreint"
-      ],
-      "materials": [
-        "Hálfgegnsætt STRETCH-loft úr PVC",
-        "LED-baklýsingarflötur"
-      ],
-      "facts": [
-        {
-          "label": "Staðsetning",
-          "value": "Brugge, Belgía"
-        },
-        {
-          "label": "Rými",
-          "value": "Heilsulind / vellíðan"
+          "label": "STRETCH-söluaðili",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3922,7 +3817,6 @@
       "Baðherbergi",
       "Skrifstofa",
       "Atvinnuhúsnæði",
-      "Heimabíó",
       "Ljós & prent"
     ],
     "browse": [

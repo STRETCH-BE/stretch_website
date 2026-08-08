@@ -2152,11 +2152,7 @@
       "johnson-and-johnson": "Limerick, IE · Farma R&D-anlæg",
       "polette-eyewear": "Antwerpen · Retail-konceptbutik",
       "citizenm-hotel": "USA & Europa · Præfabrikerede badmoduler",
-      "london-chapel": "London, UK · Bagbelyst loft",
-      "private-villa-knokke": "Knokke · Åbent opholdsrum",
-      "home-cinema-ghent": "Gent · Stjernehimmel + akustik",
-      "city-penthouse-antwerp": "Antwerpen · Stue",
-      "wellness-spa-bruges": "Brugge · Spa-badeværelse",
+      "london-chapel": "London, UK · Kapelombygning",
       "rue-perree-paris": "Paris · Bagbelyst galleriloft",
       "vier-emmershof-lokeren": "Lokeren · Skovbolig",
       "vp-193": "Østflandern · Privatbolig",
@@ -2885,138 +2881,37 @@
       ]
     },
     "london-chapel": {
-      "title": "Kapel i London",
-      "summary": "Et bagbelyst spændloft over et restaureret kapelrum.",
-      "hook": "Et restaureret kapel badet i blødt, jævnt lys fra ét lysende loft.",
+      "title": "London Chapel",
+      "summary": "Akustiske stofvægge og et stofbeklædt hvælvet loft til et kapel, der er omdannet til et londonsk hjem.",
+      "hook": "Et kapel blev familiehjem — beklædt rum for rum med opspændt akustisk stof.",
       "description": [
-        "Et translucent STRETCH-loft forvandler hele loftsfladen til én blød, jævn lyskilde: Det restaurerede interiør bades i blændfrit lys, mens LED-feltet forbliver helt skjult."
+        "Ved denne kapelombygning i London stod vores forhandler Upholster London for interiøret med opspændt STRETCH-stof: akustiske stofvægge løber gennem haller, reposer og trappeopgange, og selv det hvælvede loft er beklædt med stof mellem de originale ribber.",
+        "Tekstiloverfladerne dæmper akustikken i de høje, hårde rum og giver hvert værelse en varm, polstret dybde, som maling aldrig kan nå — mens originale detaljer som blyindfattede ruder står urørte, indrammet af knivskarpe stofpaneler. En hjemmebiograf med stofvægge fuldender hjemmet."
       ],
       "highlights": [
-        "Hele loftet som lyskilde",
-        "Blændfri, jævn belysning",
-        "LED-felt helt skjult"
+        "Stofbeklædt hvælvet kapelloft",
+        "Akustiske stofvægge i hele hjemmet",
+        "Hjemmebiograf med stofvægge",
+        "Originale blyindfattede ruder, præcist indrammet"
       ],
       "materials": [
-        "Translucent STRETCH-loft",
-        "LED-bagbelysningsfelt"
+        "Akustiske STRETCH-stofvægge",
+        "Stofbeklædt hvælvet loft",
+        "Hjemmebiograf med stofvægge",
+        "Specialprofiler omkring buer og ruder"
       ],
       "facts": [
         {
           "label": "Sted",
-          "value": "London, Storbritannien"
+          "value": "London, UK"
         },
         {
           "label": "Rum",
-          "value": "Restaureret kapel"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Privat villa",
-      "summary": "Et sømløst, mat loft til en kystvilla med åben planløsning.",
-      "hook": "Et sømløst loft, glat som perfekt puds, til et hjem ved kysten med åben planløsning.",
-      "description": [
-        "I villaens åbne opholdsrum fremstår et meget mat STRETCH-loft af polyester fra væg til væg som fejlfri puds – skarpt og moderne, uden de revner og skyggelinjer, der følger med et traditionelt loft."
-      ],
-      "highlights": [
-        "Sømløs finish fra væg til væg",
-        "Ingen revner eller skyggelinjer",
-        "Meget mat, pudslignende udtryk"
-      ],
-      "materials": [
-        "STRETCH-loft af polyester (meget mat)",
-        "Kantprofiler til opspænding"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Knokke, Belgien"
+          "value": "Kapel omdannet til privat hjem"
         },
         {
-          "label": "Rum",
-          "value": "Åbent opholdsrum"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Hjemmebiograf",
-      "summary": "Et stjernehimmelloft med akustisk bagbeklædning til en hjemmebiograf.",
-      "hook": "En privat biograf under en funklende nattehimmel, afstemt til filmlyd.",
-      "description": [
-        "Hundredvis af fiberoptiske punkter skaber en funklende nattehimmel over sæderne, mens en akustisk bagbeklædning holder rummet under kontrol til filmlyden – stemning og ydeevne forenet i ét loft."
-      ],
-      "highlights": [
-        "Fiberoptisk stjernehimmel",
-        "Akustisk bagbeklædning til filmlyd",
-        "Stemning og ydeevne i ét loft"
-      ],
-      "materials": [
-        "STRETCH-loft med stjernehimmel",
-        "Fiberoptisk stjernefelt",
-        "Akustisk absorberende bagbeklædning"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Gent, Belgien"
-        },
-        {
-          "label": "Rum",
-          "value": "Hjemmebiograf"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Penthouse i byen",
-      "summary": "Et fejlfrit designloft til en penthouse i byen.",
-      "hook": "Et minimalistisk, helt plant designloft til en penthouse i byen.",
-      "description": [
-        "Penthouselejlighedens opholdsrum bruger et sømløst STRETCH-loft med integreret belysning, så udtrykket forbliver minimalistisk og overfladen perfekt i hele den åbne planløsning."
-      ],
-      "highlights": [
-        "Sømløst designloft",
-        "Integreret belysning",
-        "Minimalistisk, fejlfri finish"
-      ],
-      "materials": [
-        "STRETCH-loft af polyester",
-        "Integreret belysning"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Antwerpen, Belgien"
-        },
-        {
-          "label": "Rum",
-          "value": "Penthouse-stue"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Wellness-spa",
-      "summary": "Et fugtbestandigt, bagbelyst loft til en spa.",
-      "hook": "Et fugtbestandigt loft med et blødt skær til et wellnessområde.",
-      "description": [
-        "Spaen havde brug for et loft, der tåler fugt og skaber en rolig stemning. Et translucent, bagbelyst STRETCH-loft lyser blødt over wellnessområdet og kan tørres rent – upåvirket af damp og fugt."
-      ],
-      "highlights": [
-        "Tåler fugt og damp",
-        "Blødt, jævnt baglys",
-        "Kan tørres rent"
-      ],
-      "materials": [
-        "Translucent STRETCH-loft i PVC",
-        "LED-bagbelysningsfelt"
-      ],
-      "facts": [
-        {
-          "label": "Sted",
-          "value": "Brugge, Belgien"
-        },
-        {
-          "label": "Rum",
-          "value": "Spa / wellness"
+          "label": "STRETCH-forhandler",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3922,7 +3817,6 @@
       "Badeværelse",
       "Kontor",
       "Erhverv",
-      "Hjemmebiograf",
       "Lys & print"
     ],
     "browse": [

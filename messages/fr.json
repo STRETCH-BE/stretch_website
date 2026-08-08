@@ -2152,11 +2152,7 @@
       "johnson-and-johnson": "Limerick, IE · Site R&D pharmaceutique",
       "polette-eyewear": "Anvers · Concept store retail",
       "citizenm-hotel": "USA & Europe · Salles de bains préfabriquées",
-      "london-chapel": "Londres, UK · Plafond rétroéclairé",
-      "private-villa-knokke": "Knokke · Séjour ouvert",
-      "home-cinema-ghent": "Gand · Ciel étoilé + acoustique",
-      "city-penthouse-antwerp": "Anvers · Salon",
-      "wellness-spa-bruges": "Bruges · Salle de bains spa",
+      "london-chapel": "Londres, UK · Reconversion de chapelle",
       "rue-perree-paris": "Paris · Plafond de galerie rétroéclairé",
       "vier-emmershof-lokeren": "Lokeren · Maison en forêt",
       "vp-193": "Flandre-Orientale · Résidence privée",
@@ -2885,20 +2881,24 @@
       ]
     },
     "london-chapel": {
-      "title": "Chapelle de Londres",
-      "summary": "Un plafond tendu rétroéclairé au-dessus d'une chapelle restaurée.",
-      "hook": "Une chapelle restaurée baignée d'une lumière douce et homogène, diffusée par un seul plafond lumineux.",
+      "title": "London Chapel",
+      "summary": "Murs en tissu acoustique et plafond voûté habillé de toile pour une chapelle transformée en maison londonienne.",
+      "hook": "Une chapelle devenue maison familiale — habillée pièce par pièce de tissu acoustique tendu.",
       "description": [
-        "Un plafond STRETCH translucide transforme toute la surface du plafond en une source de lumière douce et homogène : l'intérieur restauré baigne dans un éclairage sans éblouissement, tandis que le champ de LED reste entièrement dissimulé."
+        "Pour cette reconversion de chapelle à Londres, notre revendeur Upholster London a habillé les intérieurs de tissu STRETCH tendu : des murs en tissu acoustique parcourent les halls, paliers et cages d'escalier, et même le plafond voûté est habillé de toile entre ses nervures d'origine.",
+        "Les surfaces textiles apaisent l'acoustique de ces volumes hauts et durs et donnent à chaque pièce une profondeur chaleureuse, tapissée, que la peinture ne peut jamais atteindre — tandis que les détails d'origine, comme les vitraux, restent intacts, encadrés par des panneaux de tissu impeccables. Un home cinéma aux murs de tissu complète la maison."
       ],
       "highlights": [
-        "Tout le plafond comme source lumineuse",
-        "Éclairage homogène, sans éblouissement",
-        "Champ de LED entièrement dissimulé"
+        "Plafond voûté de la chapelle habillé de toile",
+        "Murs en tissu acoustique dans toute la maison",
+        "Home cinéma aux murs de tissu",
+        "Vitraux d'origine, encadrés avec précision"
       ],
       "materials": [
-        "Plafond STRETCH translucide",
-        "Champ de rétroéclairage LED"
+        "Murs en tissu acoustique STRETCH",
+        "Plafond voûté habillé de toile",
+        "Home cinéma aux murs de tissu",
+        "Profilés sur mesure autour des arcs et vitraux"
       ],
       "facts": [
         {
@@ -2907,116 +2907,11 @@
         },
         {
           "label": "Espace",
-          "value": "Chapelle restaurée"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Villa privée",
-      "summary": "Un plafond mat sans soudure pour une villa côtière au plan ouvert.",
-      "hook": "Un plafond sans soudure, lisse comme un plâtre parfait, pour une maison côtière au plan ouvert.",
-      "description": [
-        "Dans l'espace de vie ouvert de la villa, un plafond STRETCH en polyester très mat évoque d'un mur à l'autre un plâtre impeccable — net et moderne, sans les fissures ni les lignes d'ombre d'un plafond classique."
-      ],
-      "highlights": [
-        "Finition sans soudure d'un mur à l'autre",
-        "Ni fissures ni lignes d'ombre",
-        "Aspect très mat, façon plâtre"
-      ],
-      "materials": [
-        "Plafond STRETCH en polyester (très mat)",
-        "Profilés périphériques de tension"
-      ],
-      "facts": [
-        {
-          "label": "Lieu",
-          "value": "Knokke, Belgique"
+          "value": "Chapelle transformée en maison privée"
         },
         {
-          "label": "Espace",
-          "value": "Espace de vie ouvert"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Cinéma privé",
-      "summary": "Un plafond ciel étoilé avec fond acoustique pour un cinéma privé.",
-      "hook": "Un cinéma privé sous un ciel nocturne scintillant, accordé au son du film.",
-      "description": [
-        "Des centaines de points en fibre optique composent un ciel nocturne scintillant au-dessus des fauteuils, tandis qu'un fond acoustique garde la salle maîtrisée pour le son du film — ambiance et performance réunies dans un seul plafond."
-      ],
-      "highlights": [
-        "Ciel étoilé en fibre optique",
-        "Fond acoustique pour le son du film",
-        "Ambiance et performance dans un seul plafond"
-      ],
-      "materials": [
-        "Plafond STRETCH ciel étoilé",
-        "Champ d'étoiles en fibre optique",
-        "Fond acoustique absorbant"
-      ],
-      "facts": [
-        {
-          "label": "Lieu",
-          "value": "Gand, Belgique"
-        },
-        {
-          "label": "Espace",
-          "value": "Cinéma privé"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Penthouse urbain",
-      "summary": "Un plafond décoratif impeccable pour un penthouse en ville.",
-      "hook": "Un plafond décoratif minimaliste et parfaitement plan pour un penthouse en ville.",
-      "description": [
-        "L'espace de vie du penthouse mise sur un plafond STRETCH sans soudure à éclairage intégré : le style reste minimaliste et la surface parfaite sur tout le plan ouvert."
-      ],
-      "highlights": [
-        "Plafond décoratif sans soudure",
-        "Éclairage intégré",
-        "Finition minimaliste et impeccable"
-      ],
-      "materials": [
-        "Plafond STRETCH en polyester",
-        "Éclairage intégré"
-      ],
-      "facts": [
-        {
-          "label": "Lieu",
-          "value": "Anvers, Belgique"
-        },
-        {
-          "label": "Espace",
-          "value": "Séjour du penthouse"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Spa wellness",
-      "summary": "Un plafond rétroéclairé et résistant à l'humidité pour un spa.",
-      "hook": "Un plafond résistant à l'humidité, doucement lumineux, pour un espace bien-être.",
-      "description": [
-        "Le spa avait besoin d'un plafond qui supporte l'humidité et installe une ambiance apaisante. Un plafond STRETCH translucide et rétroéclairé diffuse une lueur douce au-dessus de l'espace bien-être et se nettoie d'un simple coup d'éponge, insensible à la vapeur et à l'humidité."
-      ],
-      "highlights": [
-        "Supporte l'humidité et la vapeur",
-        "Rétroéclairage doux et homogène",
-        "Se nettoie d'un coup d'éponge"
-      ],
-      "materials": [
-        "Plafond STRETCH translucide en PVC",
-        "Champ de rétroéclairage LED"
-      ],
-      "facts": [
-        {
-          "label": "Lieu",
-          "value": "Bruges, Belgique"
-        },
-        {
-          "label": "Espace",
-          "value": "Spa / bien-être"
+          "label": "Revendeur STRETCH",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3922,7 +3817,6 @@
       "Salle de bains",
       "Bureau",
       "Commercial",
-      "Home cinéma",
       "Lumière & impression"
     ],
     "browse": [

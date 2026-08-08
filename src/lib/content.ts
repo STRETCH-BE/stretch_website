@@ -42,7 +42,6 @@ export const projectFilters: { key: string; label: string }[] = [
   { key: 'bathroom', label: 'Bathroom' },
   { key: 'office', label: 'Office' },
   { key: 'commercial', label: 'Commercial' },
-  { key: 'cinema', label: 'Home cinema' },
   { key: 'light', label: 'Light & Print' },
 ];
 
@@ -133,6 +132,7 @@ export const projects: Project[] = [
   {
     key: 'acoustic', slug: 'da-tweekaz-studio', cat: 'Acoustic', title: 'Da Tweekaz Studio',
     meta: 'Netherlands · Recording studio', featured: true,
+    image: '/images/projects/da-tweekaz-hero.jpg',
     summary: 'Acoustic stretch ceiling and walls for a music production studio.',
     hook: 'A clean, acoustically controlled room for one of hardstyle’s best-known acts.',
     description: [
@@ -145,11 +145,12 @@ export const projects: Project[] = [
       { label: 'STRETCH dealer', value: 'Q82 Acoustics', href: 'https://q82acoustics.com/' },
     ],
     solutions: ['acoustic-stretch-system'],
-    gallery: ['', '', ''],
+    gallery: ['/images/projects/da-tweekaz-control-room.jpg'],
   },
   {
     key: 'acoustic', slug: 'mark-with-a-k', cat: 'Acoustic', title: 'Mark With a K',
     meta: 'Belgium · Sound studio',
+    image: '/images/projects/mark-with-a-k-hero.jpg',
     summary: 'Acoustic treatment for a DJ and producer’s sound room.',
     hook: 'A flawless, acoustically controlled room for a Belgian DJ and producer.',
     description: [
@@ -162,11 +163,12 @@ export const projects: Project[] = [
       { label: 'Space', value: 'Music production studio' },
     ],
     solutions: ['acoustic-stretch-system'],
-    gallery: ['', '', ''],
+    gallery: ['/images/projects/mark-with-a-k-ceiling.jpg'],
   },
   {
     key: 'office', slug: 'notary-ampe-anthony', cat: 'Office', title: 'Notary Ampe Anthony',
     meta: 'Kruibeke · Acoustic office',
+    image: '/images/projects/notary-ampe-anthony-hero.jpg',
     summary: '350 m² of acoustic stretch ceilings across a high-end notary office.',
     hook: 'A complete high-end office fit-out where hard, reflective materials needed taming — without losing the sharp, minimal look.',
     description: [
@@ -197,7 +199,11 @@ export const projects: Project[] = [
       { q: 'How long will the ceiling last?', a: 'Like any stretch ceiling, lifespan depends on cleaning, but it will comfortably last around 25 years. After that only the membrane might need replacing — the existing frame stays in place.' },
     ],
     solutions: ['acoustic-stretch-system'],
-    gallery: ['', '', ''],
+    gallery: [
+      '/images/projects/notary-ampe-anthony-reception.jpg',
+      '/images/projects/notary-ampe-anthony-circle.jpg',
+      '/images/projects/notary-ampe-anthony-lounge.jpg',
+    ],
   },
   {
     key: 'commercial', slug: 'bnp-paribas-fortis', cat: 'Commercial', title: 'BNP Paribas Fortis',
@@ -342,89 +348,34 @@ export const projects: Project[] = [
     ],
   },
   {
-    key: 'light', slug: 'london-chapel', cat: 'Light & Print', title: 'London Chapel',
-    meta: 'London, UK · Backlit ceiling',
-    summary: 'A backlit stretch ceiling over a restored chapel space.',
-    hook: 'A restored chapel bathed in soft, even light from a single luminous ceiling.',
+    key: 'living', slug: 'london-chapel', cat: 'Living room', title: 'London Chapel',
+    meta: 'London, UK · Chapel conversion',
+    image: '/images/projects/london-chapel-hero.jpg',
+    summary: 'Acoustic fabric walls and a fabric-lined vaulted ceiling for a chapel converted into a London home.',
+    hook: 'A chapel turned family home — wrapped room by room in tensioned acoustic fabric.',
     description: [
-      'A translucent STRETCH ceiling turns the whole soffit into a soft, even light source, washing the restored interior in glare-free illumination while concealing the LED field completely.',
+      'For this chapel conversion in London, our dealer Upholster London finished the interiors with tensioned STRETCH fabric: acoustic fabric walls run through the halls, landings and stairwells, and even the vaulted ceiling is lined with fabric between its original ribs.',
+      'The textile surfaces calm the acoustics of the tall, hard spaces and give every room a warm, upholstered depth that paint can never reach — while original details such as the stained-glass windows stay untouched, framed by crisp fabric panels. A fabric-walled home cinema completes the home.',
     ],
-    highlights: ['Whole-ceiling light source', 'Glare-free, even illumination', 'LED field fully concealed'],
-    materials: ['Translucent STRETCH ceiling', 'LED backlighting field'],
+    highlights: ['Fabric-lined vaulted chapel ceiling', 'Acoustic fabric walls throughout the home', 'Fabric-walled home cinema', 'Original stained glass, crisply framed'],
+    materials: ['STRETCH acoustic fabric walling', 'Fabric-lined vaulted ceiling', 'Fabric-walled home cinema', 'Bespoke profiles around arches and stained glass'],
     facts: [
       { label: 'Location', value: 'London, UK' },
-      { label: 'Space', value: 'Restored chapel' },
+      { label: 'Space', value: 'Chapel converted into a private home' },
+      { label: 'STRETCH dealer', value: 'Upholster London' },
     ],
-    solutions: ['light-print-stretch-ceiling'],
-    gallery: ['', '', ''],
-  },
-  {
-    key: 'living', slug: 'private-villa-knokke', cat: 'Living room', title: 'Private Villa',
-    meta: 'Knokke · Open living',
-    summary: 'A seamless matte ceiling for an open-plan coastal villa.',
-    hook: 'A seamless, plaster-smooth ceiling for an open-plan coastal home.',
-    description: [
-      'In the villa’s open living space, a very matte polyester STRETCH ceiling reads like flawless plaster from wall to wall — crisp and modern, free of the cracks and shadow lines of a conventional ceiling.',
+    solutions: ['acoustic-stretch-system'],
+    gallery: [
+      '/images/projects/london-chapel-vaulted-ceiling.jpg',
+      '/images/projects/london-chapel-home-cinema.jpg',
+      '/images/projects/london-chapel-staircase.jpg',
+      '/images/projects/london-chapel-stained-glass.jpg',
+      '/images/projects/london-chapel-landing.jpg',
+      '/images/projects/london-chapel-bathroom.jpg',
+      '/images/projects/london-chapel-stair-detail.jpg',
+      '/images/projects/london-chapel-navy-wall.jpg',
+      '/images/projects/london-chapel-keypad.jpg',
     ],
-    highlights: ['Seamless wall-to-wall finish', 'No cracks or shadow lines', 'Very matte, plaster-like look'],
-    materials: ['Polyester STRETCH ceiling (very matte)', 'Perimeter tension profiles'],
-    facts: [
-      { label: 'Location', value: 'Knokke, Belgium' },
-      { label: 'Space', value: 'Open-plan living' },
-    ],
-    solutions: ['polyester-stretch-ceiling'],
-    gallery: ['', '', ''],
-  },
-  {
-    key: 'cinema', slug: 'home-cinema-ghent', cat: 'Home cinema', title: 'Home Cinema',
-    meta: 'Ghent · Starry sky + acoustic',
-    summary: 'A starry-sky ceiling with acoustic backing for a home cinema.',
-    hook: 'A private cinema under a twinkling night sky, tuned for film sound.',
-    description: [
-      'Hundreds of fibre-optic points create a twinkling night sky above the seating, while an acoustic backing keeps the room controlled for film sound — atmosphere and performance combined in a single ceiling.',
-    ],
-    highlights: ['Fibre-optic starry sky', 'Acoustic backing for film sound', 'Atmosphere and performance in one ceiling'],
-    materials: ['Starry-sky STRETCH ceiling', 'Fibre-optic star field', 'Acoustic absorber backing'],
-    facts: [
-      { label: 'Location', value: 'Ghent, Belgium' },
-      { label: 'Space', value: 'Home cinema' },
-    ],
-    solutions: ['starry-sky', 'acoustic-stretch-system'],
-    gallery: ['', '', ''],
-  },
-  {
-    key: 'living', slug: 'city-penthouse-antwerp', cat: 'Living room', title: 'City Penthouse',
-    meta: 'Antwerp · Living room',
-    summary: 'A flawless feature ceiling for a city penthouse.',
-    hook: 'A minimal, perfectly flat feature ceiling for a city penthouse.',
-    description: [
-      'The penthouse living space uses a seamless STRETCH ceiling with integrated lighting to keep the look minimal and the surface perfect across the open plan.',
-    ],
-    highlights: ['Seamless feature ceiling', 'Integrated lighting', 'Minimal, flawless finish'],
-    materials: ['Polyester STRETCH ceiling', 'Integrated lighting'],
-    facts: [
-      { label: 'Location', value: 'Antwerp, Belgium' },
-      { label: 'Space', value: 'Penthouse living room' },
-    ],
-    solutions: ['polyester-stretch-ceiling', 'light-print-stretch-ceiling'],
-    gallery: ['', '', ''],
-  },
-  {
-    key: 'bathroom', slug: 'wellness-spa-bruges', cat: 'Bathroom', title: 'Wellness Spa',
-    meta: 'Bruges · Spa bathroom',
-    summary: 'A humidity-proof, backlit ceiling for a spa.',
-    hook: 'A humidity-proof, softly glowing ceiling for a wellness space.',
-    description: [
-      'The spa needed a ceiling that handles humidity and sets a calm mood. A translucent, backlit STRETCH ceiling glows softly over the wellness area and wipes clean, unaffected by steam and moisture.',
-    ],
-    highlights: ['Handles humidity and steam', 'Soft, even backlight', 'Wipes clean'],
-    materials: ['Translucent PVC STRETCH ceiling', 'LED backlighting field'],
-    facts: [
-      { label: 'Location', value: 'Bruges, Belgium' },
-      { label: 'Space', value: 'Spa / wellness' },
-    ],
-    solutions: ['pvc-stretch-ceiling', 'light-print-stretch-ceiling'],
-    gallery: ['', '', ''],
   },
   {
     key: 'light', slug: 'rue-perree-paris', cat: 'Light & Print', title: 'Rue Perrée',

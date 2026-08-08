@@ -2152,11 +2152,7 @@
       "johnson-and-johnson": "Limerick, IE · FoU-anläggning för läkemedel",
       "polette-eyewear": "Antwerpen · Konceptbutik",
       "citizenm-hotel": "USA & Europa · Prefabricerade badrumsmoduler",
-      "london-chapel": "London, UK · Bakbelyst tak",
-      "private-villa-knokke": "Knokke · Öppen sällskapsyta",
-      "home-cinema-ghent": "Gent · Stjärnhimmel + akustik",
-      "city-penthouse-antwerp": "Antwerpen · Vardagsrum",
-      "wellness-spa-bruges": "Brygge · Spabadrum",
+      "london-chapel": "London, UK · Kapellomvandling",
       "rue-perree-paris": "Paris · Bakbelyst galleritak",
       "vier-emmershof-lokeren": "Lokeren · Skogsbostad",
       "vp-193": "Östflandern · Privatbostad",
@@ -2885,20 +2881,24 @@
       ]
     },
     "london-chapel": {
-      "title": "Kapell i London",
-      "summary": "Ett bakbelyst spänntak över ett restaurerat kapellrum.",
-      "hook": "Ett restaurerat kapell badande i mjukt, jämnt ljus från ett enda lysande tak.",
+      "title": "London Chapel",
+      "summary": "Akustiska tygväggar och ett tygklätt valv för ett kapell som byggts om till ett London-hem.",
+      "hook": "Ett kapell som blev familjehem — klätt rum för rum i spänd akustisk textil.",
       "description": [
-        "Ett genomskinligt STRETCH-tak förvandlar hela takytan till en mjuk, jämn ljuskälla: den restaurerade interiören badar i bländfritt ljus medan LED-fältet förblir helt dolt."
+        "Vid denna kapellomvandling i London färdigställde vår återförsäljare Upholster London interiörerna med spänd STRETCH-textil: akustiska tygväggar löper genom hallar, vilplan och trapphus, och till och med det välvda taket är klätt med tyg mellan de ursprungliga ribborna.",
+        "Textilytorna dämpar akustiken i de höga, hårda rummen och ger varje rum ett varmt, stoppat djup som färg aldrig kan nå — medan ursprungliga detaljer som de blyinfattade fönstren står orörda, inramade av knivskarpa tygpaneler. En hemmabio med tygväggar fullbordar hemmet."
       ],
       "highlights": [
-        "Hela taket som ljuskälla",
-        "Bländfri, jämn belysning",
-        "LED-fältet helt dolt"
+        "Tygklätt valv i kapellet",
+        "Akustiska tygväggar i hela hemmet",
+        "Hemmabio med tygväggar",
+        "Ursprungliga blyinfattade fönster, precist inramade"
       ],
       "materials": [
-        "Genomskinligt STRETCH-tak",
-        "LED-bakbelysningsfält"
+        "Akustiska STRETCH-tygväggar",
+        "Tygklätt välvt tak",
+        "Hemmabio med tygväggar",
+        "Måttanpassade profiler kring valv och fönster"
       ],
       "facts": [
         {
@@ -2907,116 +2907,11 @@
         },
         {
           "label": "Utrymme",
-          "value": "Restaurerat kapell"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Privat villa",
-      "summary": "Ett skarvfritt, matt tak för en kustvilla med öppen planlösning.",
-      "hook": "Ett skarvfritt tak, slätt som perfekt puts, för ett kusthem med öppen planlösning.",
-      "description": [
-        "I villans öppna vardagsrum upplevs ett mycket matt STRETCH-tak i polyester från vägg till vägg som felfri puts – stramt och modernt, utan de sprickor och skugglinjer som följer med ett traditionellt tak."
-      ],
-      "highlights": [
-        "Skarvfri finish från vägg till vägg",
-        "Inga sprickor eller skugglinjer",
-        "Mycket matt, putsliknande utseende"
-      ],
-      "materials": [
-        "STRETCH-tak i polyester (mycket matt)",
-        "Kantprofiler för uppspänning"
-      ],
-      "facts": [
-        {
-          "label": "Plats",
-          "value": "Knokke, Belgien"
+          "value": "Kapell ombyggt till privatbostad"
         },
         {
-          "label": "Utrymme",
-          "value": "Öppen planlösning"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Hemmabio",
-      "summary": "Ett stjärnhimmelstak med akustisk baksida för en hemmabio.",
-      "hook": "En privat biosalong under en gnistrande natthimmel, trimmad för filmljud.",
-      "description": [
-        "Hundratals fiberoptiska punkter skapar en gnistrande natthimmel ovanför fåtöljerna, medan en akustisk baksida håller rummet under kontroll för filmljudet – stämning och prestanda förenade i ett enda tak."
-      ],
-      "highlights": [
-        "Fiberoptisk stjärnhimmel",
-        "Akustisk baksida för filmljud",
-        "Stämning och prestanda i ett och samma tak"
-      ],
-      "materials": [
-        "STRETCH-tak med stjärnhimmel",
-        "Fiberoptiskt stjärnfält",
-        "Akustiskt absorberande baksida"
-      ],
-      "facts": [
-        {
-          "label": "Plats",
-          "value": "Gent, Belgien"
-        },
-        {
-          "label": "Utrymme",
-          "value": "Hemmabio"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Takvåning i staden",
-      "summary": "Ett felfritt designtak för en takvåning i staden.",
-      "hook": "Ett minimalistiskt, perfekt plant designtak för en takvåning i staden.",
-      "description": [
-        "Takvåningens vardagsrum använder ett skarvfritt STRETCH-tak med integrerad belysning, så att uttrycket förblir minimalistiskt och ytan perfekt genom hela den öppna planlösningen."
-      ],
-      "highlights": [
-        "Skarvfritt designtak",
-        "Integrerad belysning",
-        "Minimalistisk, felfri finish"
-      ],
-      "materials": [
-        "STRETCH-tak i polyester",
-        "Integrerad belysning"
-      ],
-      "facts": [
-        {
-          "label": "Plats",
-          "value": "Antwerpen, Belgien"
-        },
-        {
-          "label": "Utrymme",
-          "value": "Vardagsrum i takvåning"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Wellness-spa",
-      "summary": "Ett fukttåligt, bakbelyst tak för ett spa.",
-      "hook": "Ett fukttåligt tak med mjukt sken för ett wellnessutrymme.",
-      "description": [
-        "Spa-anläggningen behövde ett tak som tål fukt och skapar en lugn stämning. Ett genomskinligt, bakbelyst STRETCH-tak lyser mjukt över wellnessavdelningen och torkas enkelt rent – opåverkat av ånga och fukt."
-      ],
-      "highlights": [
-        "Tål fukt och ånga",
-        "Mjukt, jämnt bakljus",
-        "Torkas enkelt rent"
-      ],
-      "materials": [
-        "Genomskinligt STRETCH-tak i PVC",
-        "LED-bakbelysningsfält"
-      ],
-      "facts": [
-        {
-          "label": "Plats",
-          "value": "Brygge, Belgien"
-        },
-        {
-          "label": "Utrymme",
-          "value": "Spa / wellness"
+          "label": "STRETCH-återförsäljare",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3922,7 +3817,6 @@
       "Badrum",
       "Kontor",
       "Kommersiellt",
-      "Hemmabio",
       "Ljus & print"
     ],
     "browse": [

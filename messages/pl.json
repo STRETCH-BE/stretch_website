@@ -2152,11 +2152,7 @@
       "johnson-and-johnson": "Limerick, IE · Ośrodek R&D farmacji",
       "polette-eyewear": "Antwerpia · Sklep koncepcyjny",
       "citizenm-hotel": "USA i Europa · Prefabrykowane moduły łazienkowe",
-      "london-chapel": "Londyn, UK · Sufit podświetlany",
-      "private-villa-knokke": "Knokke · Otwarta przestrzeń dzienna",
-      "home-cinema-ghent": "Gandawa · Gwiezdne niebo + akustyka",
-      "city-penthouse-antwerp": "Antwerpia · Salon",
-      "wellness-spa-bruges": "Brugia · Łazienka spa",
+      "london-chapel": "Londyn, UK · Przebudowa kaplicy",
       "rue-perree-paris": "Paryż · Podświetlany sufit galerii",
       "vier-emmershof-lokeren": "Lokeren · Dom w lesie",
       "vp-193": "Flandria Wschodnia · Rezydencja prywatna",
@@ -2885,20 +2881,24 @@
       ]
     },
     "london-chapel": {
-      "title": "Kaplica w Londynie",
-      "summary": "Podświetlany sufit napinany nad odrestaurowaną kaplicą.",
-      "hook": "Odrestaurowana kaplica skąpana w miękkim, równomiernym świetle jednego świecącego sufitu.",
+      "title": "London Chapel",
+      "summary": "Akustyczne ściany tkaninowe i obłożone tkaniną sklepienie dla kaplicy zamienionej w londyński dom.",
+      "hook": "Kaplica, która stała się domem rodzinnym — pokój po pokoju wyłożona napinaną tkaniną akustyczną.",
       "description": [
-        "Półprzezroczysty sufit STRETCH zamienia całą płaszczyznę sufitu w miękkie, równomierne źródło światła – odrestaurowane wnętrze wypełnia oświetlenie bez olśnienia, a pole LED pozostaje całkowicie ukryte."
+        "Przy tej przebudowie kaplicy w Londynie nasz dystrybutor Upholster London wykończył wnętrza napinaną tkaniną STRETCH: akustyczne ściany tkaninowe biegną przez hole, podesty i klatki schodowe, a nawet sklepienie zostało obłożone tkaniną między oryginalnymi żebrami.",
+        "Powierzchnie tekstylne wyciszają akustykę wysokich, twardych wnętrz i nadają każdemu pomieszczeniu ciepłą, tapicerowaną głębię, której farba nigdy nie osiągnie — a oryginalne detale, jak witraże, pozostają nietknięte, oprawione w precyzyjne panele tkaninowe. Dom dopełnia kino domowe ze ścianami z tkaniny."
       ],
       "highlights": [
-        "Cały sufit jako źródło światła",
-        "Równomierne oświetlenie bez olśnienia",
-        "Pole LED całkowicie ukryte"
+        "Sklepienie kaplicy obłożone tkaniną",
+        "Akustyczne ściany tkaninowe w całym domu",
+        "Kino domowe ze ścianami z tkaniny",
+        "Oryginalne witraże w precyzyjnych ramach"
       ],
       "materials": [
-        "Półprzezroczysty sufit STRETCH",
-        "Pole podświetlenia LED"
+        "Akustyczne ściany tkaninowe STRETCH",
+        "Sklepienie obłożone tkaniną",
+        "Kino domowe ze ścianami z tkaniny",
+        "Profile na wymiar wokół łuków i witraży"
       ],
       "facts": [
         {
@@ -2907,116 +2907,11 @@
         },
         {
           "label": "Przestrzeń",
-          "value": "Odrestaurowana kaplica"
-        }
-      ]
-    },
-    "private-villa-knokke": {
-      "title": "Prywatna willa",
-      "summary": "Matowy sufit bez łączeń dla nadmorskiej willi o otwartym planie.",
-      "hook": "Sufit bez łączeń, gładki jak idealny tynk, dla nadmorskiego domu o otwartym planie.",
-      "description": [
-        "W otwartej przestrzeni dziennej willi bardzo matowy poliestrowy sufit STRETCH wygląda od ściany do ściany jak nieskazitelny tynk – czysto i nowocześnie, bez pęknięć i linii cieni typowych dla tradycyjnego sufitu."
-      ],
-      "highlights": [
-        "Wykończenie bez łączeń od ściany do ściany",
-        "Bez pęknięć i linii cieni",
-        "Bardzo matowy wygląd jak tynk"
-      ],
-      "materials": [
-        "Poliestrowy sufit STRETCH (bardzo matowy)",
-        "Obwodowe profile napinające"
-      ],
-      "facts": [
-        {
-          "label": "Lokalizacja",
-          "value": "Knokke, Belgia"
+          "value": "Kaplica zamieniona w dom prywatny"
         },
         {
-          "label": "Przestrzeń",
-          "value": "Otwarta przestrzeń dzienna"
-        }
-      ]
-    },
-    "home-cinema-ghent": {
-      "title": "Kino domowe",
-      "summary": "Sufit z gwiezdnym niebem i warstwą akustyczną do kina domowego.",
-      "hook": "Prywatne kino pod migoczącym nocnym niebem, dostrojone do dźwięku filmowego.",
-      "description": [
-        "Setki punktów światłowodowych tworzą migoczące nocne niebo nad fotelami, a warstwa akustyczna zapewnia kontrolę nad brzmieniem filmu w pomieszczeniu – klimat i jakość dźwięku połączone w jednym suficie."
-      ],
-      "highlights": [
-        "Gwiezdne niebo ze światłowodów",
-        "Warstwa akustyczna dla dźwięku filmowego",
-        "Klimat i jakość dźwięku w jednym suficie"
-      ],
-      "materials": [
-        "Sufit STRETCH z gwiezdnym niebem",
-        "Pole gwiazd ze światłowodów",
-        "Akustyczna warstwa pochłaniająca"
-      ],
-      "facts": [
-        {
-          "label": "Lokalizacja",
-          "value": "Gandawa, Belgia"
-        },
-        {
-          "label": "Przestrzeń",
-          "value": "Kino domowe"
-        }
-      ]
-    },
-    "city-penthouse-antwerp": {
-      "title": "Miejski penthouse",
-      "summary": "Nieskazitelny sufit dekoracyjny do miejskiego penthouse'u.",
-      "hook": "Minimalistyczny, idealnie płaski sufit dekoracyjny do miejskiego penthouse'u.",
-      "description": [
-        "W przestrzeni dziennej penthouse'u zastosowano sufit STRETCH bez łączeń ze zintegrowanym oświetleniem – wygląd pozostaje minimalistyczny, a powierzchnia idealna w całym otwartym wnętrzu."
-      ],
-      "highlights": [
-        "Sufit dekoracyjny bez łączeń",
-        "Zintegrowane oświetlenie",
-        "Minimalistyczne, nieskazitelne wykończenie"
-      ],
-      "materials": [
-        "Poliestrowy sufit STRETCH",
-        "Zintegrowane oświetlenie"
-      ],
-      "facts": [
-        {
-          "label": "Lokalizacja",
-          "value": "Antwerpia, Belgia"
-        },
-        {
-          "label": "Przestrzeń",
-          "value": "Salon penthouse'u"
-        }
-      ]
-    },
-    "wellness-spa-bruges": {
-      "title": "Spa wellness",
-      "summary": "Odporny na wilgoć, podświetlany sufit do spa.",
-      "hook": "Odporny na wilgoć, delikatnie świecący sufit do strefy wellness.",
-      "description": [
-        "Spa potrzebowało sufitu, który poradzi sobie z wilgocią i zbuduje spokojny nastrój. Półprzezroczysty, podświetlany sufit STRETCH delikatnie świeci nad strefą wellness i łatwo przetrzeć go do czysta – para i wilgoć mu nie szkodzą."
-      ],
-      "highlights": [
-        "Radzi sobie z wilgocią i parą",
-        "Miękkie, równomierne podświetlenie",
-        "Łatwo przetrzeć do czysta"
-      ],
-      "materials": [
-        "Półprzezroczysty sufit STRETCH z PVC",
-        "Pole podświetlenia LED"
-      ],
-      "facts": [
-        {
-          "label": "Lokalizacja",
-          "value": "Brugia, Belgia"
-        },
-        {
-          "label": "Przestrzeń",
-          "value": "Spa / wellness"
+          "label": "Dystrybutor STRETCH",
+          "value": "Upholster London"
         }
       ]
     },
@@ -3922,7 +3817,6 @@
       "Łazienka",
       "Biuro",
       "Komercyjne",
-      "Kino domowe",
       "Światło i nadruk"
     ],
     "browse": [
