@@ -195,6 +195,7 @@
       "label": "Kundeportal",
       "overview": "Oversikt",
       "documents": "Dokumenter",
+      "orders": "Ordrer",
       "pricelist": "Prisliste",
       "admin": "Administrasjon",
       "signOut": "Logg ut",
@@ -231,6 +232,25 @@
       "title": "Dokumenter",
       "intro": "Tekniske datablader og montasjetegninger for STRETCH-sortimentet — direkte nedlasting, uten skjemaer.",
       "download": "Last ned"
+    },
+    "orders": {
+      "title": "Ordrer",
+      "intro": "Himlingsordrer lagt inn fra designeren — med gjeldende status.",
+      "empty": "Ingen ordrer ennå. Tegn en himling og legg inn din første ordre fra designeren.",
+      "demoNote": "Demomodus — ordrer lagres ikke.",
+      "unavailable": "Ordrehistorikken er ikke tilgjengelig akkurat nå.",
+      "thDate": "Dato",
+      "thDealer": "Forhandler",
+      "thClient": "Kunde",
+      "thTotal": "Totalt",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Mottatt",
+        "confirmed": "Bekreftet",
+        "in_production": "I produksjon",
+        "delivered": "Levert",
+        "cancelled": "Kansellert"
+      }
     },
     "pricelist": {
       "title": "Prisliste",

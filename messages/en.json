@@ -195,6 +195,7 @@
       "label": "Client portal",
       "overview": "Overview",
       "documents": "Documents",
+      "orders": "Orders",
       "pricelist": "Pricelist",
       "admin": "Admin",
       "signOut": "Sign out",
@@ -231,6 +232,25 @@
       "title": "Documents",
       "intro": "Technical datasheets and installation drawings for the STRETCH range — direct downloads, no forms.",
       "download": "Download"
+    },
+    "orders": {
+      "title": "Orders",
+      "intro": "Ceiling orders placed from the designer — with their current status.",
+      "empty": "No orders yet. Design a ceiling and place your first order from the designer.",
+      "demoNote": "Demo mode — orders are not stored.",
+      "unavailable": "Order history is unavailable right now.",
+      "thDate": "Date",
+      "thDealer": "Dealer",
+      "thClient": "Client",
+      "thTotal": "Total",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Received",
+        "confirmed": "Confirmed",
+        "in_production": "In production",
+        "delivered": "Delivered",
+        "cancelled": "Cancelled"
+      }
     },
     "pricelist": {
       "title": "Pricelist",

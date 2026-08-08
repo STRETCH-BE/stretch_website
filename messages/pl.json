@@ -195,6 +195,7 @@
       "label": "Panel klienta",
       "overview": "Przegląd",
       "documents": "Dokumenty",
+      "orders": "Zamówienia",
       "pricelist": "Cennik",
       "admin": "Administracja",
       "signOut": "Wyloguj",
@@ -231,6 +232,25 @@
       "title": "Dokumenty",
       "intro": "Karty techniczne i rysunki montażowe oferty STRETCH — do pobrania bezpośrednio, bez formularzy.",
       "download": "Pobierz"
+    },
+    "orders": {
+      "title": "Zamówienia",
+      "intro": "Zamówienia sufitów złożone z poziomu projektanta — wraz z ich aktualnym statusem.",
+      "empty": "Brak zamówień. Zaprojektuj sufit i złóż pierwsze zamówienie z poziomu projektanta.",
+      "demoNote": "Tryb demo — zamówienia nie są zapisywane.",
+      "unavailable": "Historia zamówień jest w tej chwili niedostępna.",
+      "thDate": "Data",
+      "thDealer": "Dystrybutor",
+      "thClient": "Klient",
+      "thTotal": "Suma",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Przyjęte",
+        "confirmed": "Potwierdzone",
+        "in_production": "W produkcji",
+        "delivered": "Dostarczone",
+        "cancelled": "Anulowane"
+      }
     },
     "pricelist": {
       "title": "Cennik",

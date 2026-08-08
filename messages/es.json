@@ -195,6 +195,7 @@
       "label": "Portal de clientes",
       "overview": "Resumen",
       "documents": "Documentos",
+      "orders": "Pedidos",
       "pricelist": "Tarifa",
       "admin": "Administración",
       "signOut": "Salir",
@@ -231,6 +232,25 @@
       "title": "Documentos",
       "intro": "Fichas técnicas y planos de instalación de la gama STRETCH — descarga directa, sin formularios.",
       "download": "Descargar"
+    },
+    "orders": {
+      "title": "Pedidos",
+      "intro": "Pedidos de techos realizados desde el diseñador — con su estado actual.",
+      "empty": "Aún no hay pedidos. Diseña un techo y realiza tu primer pedido desde el diseñador.",
+      "demoNote": "Modo demo — los pedidos no se guardan.",
+      "unavailable": "El historial de pedidos no está disponible en este momento.",
+      "thDate": "Fecha",
+      "thDealer": "Distribuidor",
+      "thClient": "Cliente",
+      "thTotal": "Total",
+      "thStatus": "Estado",
+      "statuses": {
+        "received": "Recibido",
+        "confirmed": "Confirmado",
+        "in_production": "En producción",
+        "delivered": "Entregado",
+        "cancelled": "Cancelado"
+      }
     },
     "pricelist": {
       "title": "Tarifa",

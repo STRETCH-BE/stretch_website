@@ -30,6 +30,7 @@ export default function PortalNav({ isAdmin, trade, demo, company, email, market
       ? [
           { href: '/portal/pricelist', label: t('pricelist'), exact: false },
           { href: '/portal/designer', label: t('designer'), exact: false },
+          { href: '/portal/orders', label: t('orders'), exact: false },
         ]
       : []),
     ...(isAdmin ? [{ href: '/portal/admin', label: t('admin'), exact: false }] : []),

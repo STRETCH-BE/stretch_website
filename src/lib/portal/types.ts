@@ -104,6 +104,10 @@ export function categoryRank(category: string): number {
   return i === -1 ? CATEGORY_ORDER.length : i;
 }
 
+/** Designer order lifecycle (designer_orders.status). Client-safe constants. */
+export const ORDER_STATUSES = ['received', 'confirmed', 'in_production', 'delivered', 'cancelled'] as const;
+export type OrderStatus = (typeof ORDER_STATUSES)[number];
+
 /** Result of syncing an uploaded PriceBook against the database. */
 export type SyncReport = {
   total: number;

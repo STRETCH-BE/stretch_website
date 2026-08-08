@@ -195,6 +195,7 @@
       "label": "Kundeportal",
       "overview": "Oversigt",
       "documents": "Dokumenter",
+      "orders": "Ordrer",
       "pricelist": "Prisliste",
       "admin": "Administration",
       "signOut": "Log ud",
@@ -231,6 +232,25 @@
       "title": "Dokumenter",
       "intro": "Tekniske datablade og montagetegninger for STRETCH-sortimentet — direkte download, uden formularer.",
       "download": "Download"
+    },
+    "orders": {
+      "title": "Ordrer",
+      "intro": "Loftordrer afgivet fra designeren — med deres aktuelle status.",
+      "empty": "Ingen ordrer endnu. Tegn et loft og afgiv din første ordre fra designeren.",
+      "demoNote": "Demotilstand — ordrer gemmes ikke.",
+      "unavailable": "Ordrehistorikken er ikke tilgængelig lige nu.",
+      "thDate": "Dato",
+      "thDealer": "Forhandler",
+      "thClient": "Kunde",
+      "thTotal": "I alt",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Modtaget",
+        "confirmed": "Bekræftet",
+        "in_production": "I produktion",
+        "delivered": "Leveret",
+        "cancelled": "Annulleret"
+      }
     },
     "pricelist": {
       "title": "Prisliste",

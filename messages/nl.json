@@ -195,6 +195,7 @@
       "label": "Klantenportaal",
       "overview": "Overzicht",
       "documents": "Documenten",
+      "orders": "Bestellingen",
       "pricelist": "Prijslijst",
       "admin": "Beheer",
       "signOut": "Afmelden",
@@ -231,6 +232,25 @@
       "title": "Documenten",
       "intro": "Technische fiches en installatietekeningen van het STRETCH-gamma — direct te downloaden, zonder formulieren.",
       "download": "Download"
+    },
+    "orders": {
+      "title": "Bestellingen",
+      "intro": "Plafondbestellingen geplaatst vanuit de designer — met hun huidige status.",
+      "empty": "Nog geen bestellingen. Teken een plafond en plaats uw eerste bestelling vanuit de designer.",
+      "demoNote": "Demomodus — bestellingen worden niet bewaard.",
+      "unavailable": "De bestelgeschiedenis is momenteel niet beschikbaar.",
+      "thDate": "Datum",
+      "thDealer": "Dealer",
+      "thClient": "Klant",
+      "thTotal": "Totaal",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Ontvangen",
+        "confirmed": "Bevestigd",
+        "in_production": "In productie",
+        "delivered": "Geleverd",
+        "cancelled": "Geannuleerd"
+      }
     },
     "pricelist": {
       "title": "Prijslijst",

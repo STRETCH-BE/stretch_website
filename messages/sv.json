@@ -195,6 +195,7 @@
       "label": "Kundportal",
       "overview": "Översikt",
       "documents": "Dokument",
+      "orders": "Ordrar",
       "pricelist": "Prislista",
       "admin": "Administration",
       "signOut": "Logga ut",
@@ -231,6 +232,25 @@
       "title": "Dokument",
       "intro": "Tekniska datablad och monteringsritningar för STRETCH-sortimentet — direkt nedladdning, utan formulär.",
       "download": "Ladda ner"
+    },
+    "orders": {
+      "title": "Ordrar",
+      "intro": "Takordrar lagda från designern — med deras aktuella status.",
+      "empty": "Inga ordrar ännu. Rita ett tak och lägg din första order från designern.",
+      "demoNote": "Demoläge — ordrar sparas inte.",
+      "unavailable": "Orderhistoriken är inte tillgänglig just nu.",
+      "thDate": "Datum",
+      "thDealer": "Återförsäljare",
+      "thClient": "Kund",
+      "thTotal": "Totalt",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Mottagen",
+        "confirmed": "Bekräftad",
+        "in_production": "I produktion",
+        "delivered": "Levererad",
+        "cancelled": "Avbruten"
+      }
     },
     "pricelist": {
       "title": "Prislista",

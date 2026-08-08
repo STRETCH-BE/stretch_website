@@ -195,6 +195,7 @@
       "label": "Viðskiptavinagátt",
       "overview": "Yfirlit",
       "documents": "Skjöl",
+      "orders": "Pantanir",
       "pricelist": "Verðskrá",
       "admin": "Stjórnun",
       "signOut": "Skrá út",
@@ -231,6 +232,25 @@
       "title": "Skjöl",
       "intro": "Tækniblöð og uppsetningarteikningar fyrir STRETCH-vörulínuna — beint niðurhal, engin eyðublöð.",
       "download": "Sækja"
+    },
+    "orders": {
+      "title": "Pantanir",
+      "intro": "Loftapantanir gerðar úr hönnunartólinu — með núverandi stöðu.",
+      "empty": "Engar pantanir enn. Teiknaðu loft og gerðu fyrstu pöntunina úr hönnunartólinu.",
+      "demoNote": "Prufuhamur — pantanir eru ekki vistaðar.",
+      "unavailable": "Pöntunarsagan er ekki tiltæk eins og er.",
+      "thDate": "Dagsetning",
+      "thDealer": "Söluaðili",
+      "thClient": "Viðskiptavinur",
+      "thTotal": "Samtals",
+      "thStatus": "Staða",
+      "statuses": {
+        "received": "Móttekin",
+        "confirmed": "Staðfest",
+        "in_production": "Í framleiðslu",
+        "delivered": "Afhent",
+        "cancelled": "Afturkölluð"
+      }
     },
     "pricelist": {
       "title": "Verðskrá",

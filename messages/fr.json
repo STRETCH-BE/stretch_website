@@ -195,6 +195,7 @@
       "label": "Espace client",
       "overview": "Aperçu",
       "documents": "Documents",
+      "orders": "Commandes",
       "pricelist": "Tarif",
       "admin": "Administration",
       "signOut": "Se déconnecter",
@@ -231,6 +232,25 @@
       "title": "Documents",
       "intro": "Fiches techniques et plans d'installation de la gamme STRETCH — téléchargement direct, sans formulaire.",
       "download": "Télécharger"
+    },
+    "orders": {
+      "title": "Commandes",
+      "intro": "Commandes de plafonds passées depuis le designer — avec leur statut actuel.",
+      "empty": "Pas encore de commandes. Dessinez un plafond et passez votre première commande depuis le designer.",
+      "demoNote": "Mode démo — les commandes ne sont pas enregistrées.",
+      "unavailable": "L'historique des commandes est indisponible pour le moment.",
+      "thDate": "Date",
+      "thDealer": "Revendeur",
+      "thClient": "Client",
+      "thTotal": "Total",
+      "thStatus": "Statut",
+      "statuses": {
+        "received": "Reçue",
+        "confirmed": "Confirmée",
+        "in_production": "En production",
+        "delivered": "Livrée",
+        "cancelled": "Annulée"
+      }
     },
     "pricelist": {
       "title": "Tarif",

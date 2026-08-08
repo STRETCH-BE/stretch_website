@@ -119,15 +119,29 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
           </span>
         </Link>
 
-        {/* Orders — staged next data source */}
-        <div className="portal-tile portal-tile--soon" aria-disabled>
-          <div className="portal-tile__head">
-            <PackageSearch size={20} />
-            <span className="portal-tile__badge">{t('soon')}</span>
+        {/* Orders — designer order history (trade); staged for b2c */}
+        {trade ? (
+          <Link href="/portal/orders" className="portal-tile portal-tile--live">
+            <div className="portal-tile__head">
+              <PackageSearch size={20} />
+              <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
+            </div>
+            <h2>{t('tileOrders')}</h2>
+            <p>{t('tileOrdersBody')}</p>
+            <span className="portal-tile__cta">
+              {t('open')} <ArrowRight size={14} />
+            </span>
+          </Link>
+        ) : (
+          <div className="portal-tile portal-tile--soon" aria-disabled>
+            <div className="portal-tile__head">
+              <PackageSearch size={20} />
+              <span className="portal-tile__badge">{t('soon')}</span>
+            </div>
+            <h2>{t('tileOrders')}</h2>
+            <p>{t('tileOrdersBody')}</p>
           </div>
-          <h2>{t('tileOrders')}</h2>
-          <p>{t('tileOrdersBody')}</p>
-        </div>
+        )}
 
         {/* Admin — only for admins */}
         {session.profile.role === 'admin' && (

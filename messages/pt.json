@@ -195,6 +195,7 @@
       "label": "Portal do cliente",
       "overview": "Resumo",
       "documents": "Documentos",
+      "orders": "Encomendas",
       "pricelist": "Tabela de preços",
       "admin": "Administração",
       "signOut": "Sair",
@@ -231,6 +232,25 @@
       "title": "Documentos",
       "intro": "Fichas técnicas e desenhos de instalação da gama STRETCH — transferência direta, sem formulários.",
       "download": "Transferir"
+    },
+    "orders": {
+      "title": "Encomendas",
+      "intro": "Encomendas de tetos feitas a partir do designer — com o seu estado atual.",
+      "empty": "Ainda não há encomendas. Desenhe um teto e faça a sua primeira encomenda a partir do designer.",
+      "demoNote": "Modo demo — as encomendas não são guardadas.",
+      "unavailable": "O histórico de encomendas não está disponível de momento.",
+      "thDate": "Data",
+      "thDealer": "Revendedor",
+      "thClient": "Cliente",
+      "thTotal": "Total",
+      "thStatus": "Estado",
+      "statuses": {
+        "received": "Recebida",
+        "confirmed": "Confirmada",
+        "in_production": "Em produção",
+        "delivered": "Entregue",
+        "cancelled": "Cancelada"
+      }
     },
     "pricelist": {
       "title": "Tabela de preços",

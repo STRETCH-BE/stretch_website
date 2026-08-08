@@ -146,3 +146,60 @@ create index if not exists leads_source_idx on public.leads (source);
 alter table public.leads enable row level security;
 -- No policies on purpose: only the service role (server API route) can write,
 -- and reading happens via the Supabase dashboard / future admin panel.
+
+-- ============================================================================
+-- CEILING DESIGNER — saved designs, orders and usage events.
+-- Added 8 Aug 2026. Safe to re-run (create if not exists).
+-- All access goes through the service-role key in the portal API routes,
+-- which verify the caller's session first — hence RLS with no policies.
+-- ============================================================================
+create table if not exists public.designer_designs (
+  id         uuid primary key default gen_random_uuid(),
+  user_id    uuid references public.portal_users (id) on delete cascade,
+  user_email text not null,
+  name       text not null default 'Untitled',
+  -- The designer's own measurement-file format (app:'abc-floorplan').
+  state      jsonb not null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+create index if not exists designer_designs_user_idx
+  on public.designer_designs (user_email, updated_at desc);
+
+create table if not exists public.designer_orders (
+  id              uuid primary key default gen_random_uuid(),
+  ref             text not null,
+  user_id         uuid references public.portal_users (id) on delete set null,
+  user_email      text not null,
+  company         text,
+  client          jsonb not null default '{}'::jsonb,
+  product         jsonb not null default '{}'::jsonb,
+  specification   jsonb not null default '{}'::jsonb,
+  quote           jsonb not null default '{}'::jsonb,
+  drawing         jsonb not null default '{}'::jsonb,
+  status          text not null default 'received'
+                  check (status in ('received','confirmed','in_production','delivered','cancelled')),
+  delivered       boolean not null default false,
+  delivery_method text,
+  created_at      timestamptz not null default now(),
+  updated_at      timestamptz not null default now()
+);
+create index if not exists designer_orders_user_idx
+  on public.designer_orders (user_email, created_at desc);
+create index if not exists designer_orders_ref_idx on public.designer_orders (ref);
+
+create table if not exists public.designer_events (
+  id         bigint generated always as identity primary key,
+  created_at timestamptz not null default now(),
+  event      text not null,
+  user_email text,
+  demo       boolean not null default false,
+  meta       jsonb not null default '{}'::jsonb
+);
+create index if not exists designer_events_created_idx
+  on public.designer_events (created_at desc);
+
+alter table public.designer_designs enable row level security;
+alter table public.designer_orders  enable row level security;
+alter table public.designer_events  enable row level security;
+-- No policies on purpose: service-role only, via the authenticated API routes.

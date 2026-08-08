@@ -195,6 +195,7 @@
       "label": "Kundenportal",
       "overview": "Übersicht",
       "documents": "Dokumente",
+      "orders": "Bestellungen",
       "pricelist": "Preisliste",
       "admin": "Verwaltung",
       "signOut": "Abmelden",
@@ -231,6 +232,25 @@
       "title": "Dokumente",
       "intro": "Technische Datenblätter und Montagezeichnungen des STRETCH-Sortiments — direkter Download, ohne Formulare.",
       "download": "Herunterladen"
+    },
+    "orders": {
+      "title": "Bestellungen",
+      "intro": "Deckenbestellungen aus dem Designer — mit ihrem aktuellen Status.",
+      "empty": "Noch keine Bestellungen. Zeichnen Sie eine Decke und geben Sie Ihre erste Bestellung im Designer auf.",
+      "demoNote": "Demomodus — Bestellungen werden nicht gespeichert.",
+      "unavailable": "Die Bestellhistorie ist derzeit nicht verfügbar.",
+      "thDate": "Datum",
+      "thDealer": "Händler",
+      "thClient": "Kunde",
+      "thTotal": "Gesamt",
+      "thStatus": "Status",
+      "statuses": {
+        "received": "Eingegangen",
+        "confirmed": "Bestätigt",
+        "in_production": "In Produktion",
+        "delivered": "Geliefert",
+        "cancelled": "Storniert"
+      }
     },
     "pricelist": {
       "title": "Preisliste",

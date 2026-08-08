@@ -1,3 +1,38 @@
+## 2026-08-08 (8) — Ceiling designer: server orders, cloud designs, order history
+
+- **Orders now reach STRETCH reliably** (was: mailto-only, nothing server-side):
+  new POST /api/portal/designer/order stores every order in designer_orders
+  (best-effort, service-role) AND e-mails it from the server (Resend→webhook→
+  SMTP→log chain, order JSON attached; reply-to = dealer). The designer's
+  "Place order" now bundles floorplan PDF (+production PDF) + DXF + order.json
+  into ONE ZIP (browser multi-download blocking solved), POSTs the order, and
+  only falls back to the old mailto flow when the server is unreachable.
+- **Designs are saved**: designer_designs table + /api/portal/designer/designs
+  (list/load/save/delete). New PORTAL BRIDGE inside the designer HTML adds a
+  "☁ Save" button + "My designs" picker in the toolbar, cloud autosave for
+  loaded designs, and a browser crash-net autosave (localStorage, restore
+  banner after reload). Serve-time PORTAL_USER injection shows "Ordering as
+  <company>" above the order button.
+- **NEW /portal/orders** (trade): dealers see their own order history with
+  status badges; admins see all orders and can change status
+  (received/confirmed/in_production/delivered/cancelled) via
+  /api/portal/designer/order/status. Orders nav item ×12 + overview tile
+  flipped live for trade accounts (stays "soon" for b2c). portal.orders
+  namespace translated ×12.
+- **Usage events**: designer_events table + /event route (open, cloud_save,
+  cloud_load, order_attempt, order_fallback, order_placed).
+- Zero-config degradation preserved: demo mode acknowledges but never stores/
+  sends; without the new tables the designer still works (file save + ZIP +
+  server e-mail; history shows "unavailable"). ACTION REQUIRED to activate
+  storage: run the new DESIGNER block at the bottom of supabase/schema.sql in
+  the Supabase SQL editor.
+- Deferred on purpose (client decision): live pricing from the pricebook DB
+  (designer still uses its embedded price matrix).
+- Verified: typecheck + build green; demo-mode E2E (Playwright): login → nav
+  shows Orders → APIs answer demo-safe → designer bridge boots, cloud UI
+  hidden in demo, example room → Place order downloads ONE valid ZIP (3 files)
+  + demo notice, zero JS errors.
+
 ## 2026-08-08 (7) — Application hero titles no longer hidden behind the photo
 
 - On the 5 application pages the global .h1 (up to 8.5vw/142px) overflowed its

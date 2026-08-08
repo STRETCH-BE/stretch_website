@@ -1,0 +1,25 @@
+// CLIENT PORTAL — update a designer order's status (admin only).
+import { NextRequest, NextResponse } from 'next/server';
+import { getAdminSession } from '@/lib/portal/auth';
+import { updateOrderStatus, ORDER_STATUSES, type OrderStatus } from '@/lib/portal/designer-store';
+
+export const dynamic = 'force-dynamic';
+
+export async function POST(request: NextRequest) {
+  const session = await getAdminSession();
+  if (!session) return NextResponse.json({ ok: false, error: 'forbidden' }, { status: 403 });
+  if (session.demo) return NextResponse.json({ ok: true, demo: true });
+
+  let body: { id?: unknown; status?: unknown };
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ ok: false, error: 'bad_json' }, { status: 400 });
+  }
+  const id = typeof body.id === 'string' ? body.id : null;
+  const status = ORDER_STATUSES.includes(body.status as OrderStatus) ? (body.status as OrderStatus) : null;
+  if (!id || !status) return NextResponse.json({ ok: false, error: 'bad_request' }, { status: 400 });
+
+  const ok = await updateOrderStatus(id, status);
+  return NextResponse.json({ ok });
+}
