@@ -1,3 +1,15 @@
+## 2026-08-08 (6) — Pricing article localized per market currency
+
+- The "What does a stretch ceiling cost?" blog post (spanplafond-prijs) showed
+  EUR values on every domain. Now per market: PL in PLN at Polish market
+  levels (150–450 zł/m² netto: basic 150–200, print 200–250, acoustic
+  250–350, backlit 300–400, bathroom 350–450 — client's reference site
+  sufity-pawbud.pl unreachable from the sandbox, figures market-informed,
+  FLAGGED for client verification); DK/SE/NO/IS get the EUR ranges converted
+  and rounded (DKK 500–1.500 kr., SEK 800–2 300 kr, NOK 800–2 300 kr,
+  ISK 10.000–30.000 kr.). The 7 euro-market locales keep €70–200. Audit
+  confirmed no other namespace carries money values.
+
 ## 2026-08-08 (5) — Johnson & Johnson photos
 
 - Client uploaded 3 photos via GitHub to main (14–17 MB each, "Johnson &
