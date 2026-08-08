@@ -152,6 +152,12 @@ export default function ApplicationPage({ app }: { app: Application }) {
 
       <style dangerouslySetInnerHTML={{ __html: `
         .ap-hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(28px,4vw,60px); align-items: center; }
+        /* The global .h1 (up to 8.5vw) overflows its grid column on long words,
+           painting under the hero image. Sized so the longest localized word
+           (13 glyphs, e.g. nl "thuisbioscoop") fits the column in every locale;
+           break-word stays as a last-resort guard only. */
+        .ap-hero .h1 { font-size: clamp(30px, 3.6vw, 48px); line-height: 1.02; overflow-wrap: break-word; }
+        @media (max-width: 900px) { .ap-hero .h1 { font-size: clamp(22px, 7vw, 60px); } }
         .ap-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
         .ap-benefit { border: 1px solid var(--border); background: #fff; padding: clamp(20px,2.4vw,28px); }
         .ap-sol-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }

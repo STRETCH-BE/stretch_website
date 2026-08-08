@@ -1,3 +1,13 @@
+## 2026-08-08 (7) — Application hero titles no longer hidden behind the photo
+
+- On the 5 application pages the global .h1 (up to 8.5vw/142px) overflowed its
+  grid column on long words, painting UNDER the hero image (client screenshots:
+  BATHROOMS/KITCHEN/WELLNESS/ACOUSTICS all clipped). Scoped fix in
+  ApplicationPage.tsx: .ap-hero .h1 sized clamp(30px,3.6vw,48px) — calibrated
+  so the longest localized word (13 glyphs, nl "thuisbioscoop"/"wandakoestiek")
+  fits the column in all 12 locales — with break-word as last-resort guard.
+  Verified at 1728px on nl/en/de worst cases.
+
 ## 2026-08-08 (6) — Pricing article localized per market currency
 
 - The "What does a stretch ceiling cost?" blog post (spanplafond-prijs) showed
