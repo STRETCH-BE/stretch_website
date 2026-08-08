@@ -269,6 +269,7 @@ export const projects: Project[] = [
   {
     key: 'office', slug: 'johnson-and-johnson', cat: 'Office', title: 'Johnson & Johnson',
     meta: 'Limerick, IE · Pharma R&D facility',
+    image: '/images/projects/johnson-and-johnson-hero.jpg',
     summary: 'A printed, illuminated ceiling for a pharmaceutical R&D facility.',
     hook: 'A reflective, innovative ceiling and lighting design echoing Johnson & Johnson’s research into improved eyesight.',
     description: [
@@ -285,7 +286,10 @@ export const projects: Project[] = [
       { label: 'STRETCH dealer', value: 'Glennwood', href: 'https://www.glennwood.ie/' },
     ],
     solutions: ['custom-print', 'light-print-stretch-ceiling'],
-    gallery: ['', '', ''],
+    gallery: [
+      '/images/projects/johnson-and-johnson-canteen.jpg',
+      '/images/projects/johnson-and-johnson-canopy.jpg',
+    ],
   },
   {
     key: 'commercial', slug: 'polette-eyewear', cat: 'Retail', title: 'Polette Eyewear',

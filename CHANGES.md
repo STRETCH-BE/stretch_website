@@ -1,3 +1,13 @@
+## 2026-08-08 (5) — Johnson & Johnson photos
+
+- Client uploaded 3 photos via GitHub to main (14–17 MB each, "Johnson &
+  Johnson*.jpg"). Merged main into the PR branch, optimized to 1920px web
+  JPGs (~440 KB each) as johnson-and-johnson-{hero,canteen,canopy}.jpg,
+  wired hero + 2-photo gallery into the project entry, and deleted the raw
+  originals so main is clean after merge.
+- Still outstanding: BeA tacker photo for "Air tools & tackers" (materials) —
+  pasted images don't arrive as files; needs zip or GitHub upload.
+
 ## 2026-08-08 (4) — Materials page images
 
 - **Fabrics:** "Polyester stretch ceiling on the roll" now uses a copy of the
