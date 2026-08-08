@@ -257,6 +257,8 @@
       "search": "Leita að vöru eða kóða…",
       "count": "{count} vörur",
       "market": "Markaður",
+      "type": "Tegund",
+      "allTypesOpt": "Allar tegundir",
       "allMarketsOpt": "Allir markaðir",
       "currency": "Gjaldmiðill",
       "print": "Prenta",

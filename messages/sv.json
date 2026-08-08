@@ -257,6 +257,8 @@
       "search": "Sök produkt eller kod…",
       "count": "{count} artiklar",
       "market": "Marknad",
+      "type": "Typ",
+      "allTypesOpt": "Alla typer",
       "allMarketsOpt": "Alla marknader",
       "currency": "Valuta",
       "print": "Skriv ut",

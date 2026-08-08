@@ -10,6 +10,9 @@
 
 /** One product × market price row — the only pricing data the portal knows. */
 export type PriceRow = {
+  /** Top-level product family (e.g. "PVC stretch ceilings"). Null on rows
+   *  imported before the Type column existed in the workbook. */
+  type: string | null;
   category: string;
   code: string | null;
   product: string;

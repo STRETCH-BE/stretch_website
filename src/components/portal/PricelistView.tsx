@@ -29,7 +29,19 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
   );
   const hasPln = useMemo(() => rows.some((r) => r.price_pln !== null), [rows]);
 
+  // Top-level product families (Type column) in pricebook order. The filter
+  // only appears when the data actually distinguishes more than one type.
+  const types = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const r of rows) {
+      if (!r.type) continue;
+      counts.set(r.type, (counts.get(r.type) ?? 0) + 1);
+    }
+    return Array.from(counts.entries()).map(([name, count]) => ({ name, count }));
+  }, [rows]);
+
   const [query, setQuery] = useState('');
+  const [type, setType] = useState<string>('all');
   const [market, setMarket] = useState<string>('all');
   const [currency, setCurrency] = useState<Currency>(
     defaultCurrency === 'PLN' && hasPln ? 'PLN' : 'EUR',
@@ -40,6 +52,7 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return rows.filter((r) => {
+      if (type !== 'all' && r.type !== type) return false;
       if (market !== 'all' && r.market !== market) return false;
       if (!q) return true;
       return (
@@ -48,7 +61,7 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
         (r.product_group ?? '').toLowerCase().includes(q)
       );
     });
-  }, [rows, query, market]);
+  }, [rows, query, type, market]);
 
   const categories = useMemo(() => {
     const counts = new Map<string, number>();
@@ -80,9 +93,10 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
     const esc = (v: string | number | null) =>
       v === null || v === undefined ? '' : `"${String(v).replace(/"/g, '""')}"`;
     const lines = [
-      ['Category', 'Code', 'Product', 'Unit', 'Market', 'Price EUR', 'Price PLN'].join(';'),
+      ['Type', 'Category', 'Code', 'Product', 'Unit', 'Market', 'Price EUR', 'Price PLN'].join(';'),
       ...filtered.map((r) =>
         [
+          esc(r.type),
           esc(r.category),
           esc(r.code),
           esc(r.product),
@@ -136,6 +150,43 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
           </div>
         </div>
       </div>
+
+      {/* Type filter — the first level: product family, then category below */}
+      {types.length > 1 && (
+        <div className="plv__types no-print">
+          <div className="container plv__types-in" role="tablist" aria-label={t('type')}>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={type === 'all'}
+              className={type === 'all' ? 'plv__type plv__type--on' : 'plv__type'}
+              onClick={() => {
+                setType('all');
+                setActive(null);
+              }}
+            >
+              {t('allTypesOpt')}
+              <small>{rows.length}</small>
+            </button>
+            {types.map((tp) => (
+              <button
+                key={tp.name}
+                type="button"
+                role="tab"
+                aria-selected={type === tp.name}
+                className={type === tp.name ? 'plv__type plv__type--on' : 'plv__type'}
+                onClick={() => {
+                  setType(tp.name);
+                  setActive(null);
+                }}
+              >
+                {tp.name}
+                <small>{tp.count}</small>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Toolbar */}
       <div className="plv__toolbar no-print">
@@ -281,6 +332,55 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
         }
         .plv__meta-facts strong {
           color: var(--text);
+        }
+
+        .plv__types {
+          background: #fff;
+          border-bottom: 1px solid var(--border);
+        }
+        .plv__types-in {
+          display: flex;
+          gap: 8px;
+          flex-wrap: wrap;
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
+        .plv__type {
+          display: inline-flex;
+          align-items: center;
+          gap: 9px;
+          border: 1px solid var(--border-input);
+          background: #fff;
+          font: inherit;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: var(--text-muted);
+          padding: 10px 16px;
+          cursor: pointer;
+        }
+        .plv__type small {
+          font-size: 10.5px;
+          font-weight: 700;
+          color: var(--text-faint-2);
+          background: var(--surface);
+          border: 1px solid var(--border-2);
+          padding: 2px 6px;
+        }
+        .plv__type:hover {
+          border-color: var(--black);
+          color: var(--text);
+        }
+        .plv__type--on {
+          background: var(--black);
+          border-color: var(--black);
+          color: #fff;
+        }
+        .plv__type--on small {
+          background: var(--red);
+          border-color: var(--red);
+          color: #fff;
         }
 
         .plv__toolbar {

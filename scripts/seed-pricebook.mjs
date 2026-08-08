@@ -70,8 +70,8 @@ if (headerIdx === -1) {
 }
 const header = grid[headerIdx].map((c) => (text(c) ?? '').toLowerCase());
 const col = (n) => header.indexOf(n.toLowerCase());
-const [cCat, cCode, cProd, cUnit, cMkt, cEur, cPln] = [
-  col('Category'), col('Code'), col('Product'), col('Unit'), col('Market'), col('Price EUR'), col('Price PLN'),
+const [cType, cCat, cCode, cProd, cUnit, cMkt, cEur, cPln] = [
+  col('Type'), col('Category'), col('Code'), col('Product'), col('Unit'), col('Market'), col('Price EUR'), col('Price PLN'),
 ];
 
 const rows = [];
@@ -98,6 +98,7 @@ for (let i = headerIdx + 1; i < grid.length; i++) {
   sort += 1;
   const token = product.split(/\s+/)[0];
   rows.push({
+    type: cType === -1 ? null : text(r[cType]),
     category,
     code: cCode === -1 ? null : text(r[cCode]),
     product,
@@ -129,14 +130,28 @@ const supabase = createClient(SUPABASE_URL, SERVICE_KEY, {
   auth: { autoRefreshToken: false, persistSession: false },
 });
 
-const { data: existing, error: readError } = await supabase
-  .from('pricebook')
-  .select('id, category, product, market, seq')
-  .limit(20000);
-if (readError) {
-  console.error('Read failed:', readError.message);
-  process.exit(1);
+// Paged read — Supabase caps every response at 1000 rows regardless of .limit().
+const existing = [];
+for (let from = 0; ; from += 1000) {
+  const { data, error: readError } = await supabase
+    .from('pricebook')
+    .select('id, category, product, market, seq')
+    .order('id', { ascending: true })
+    .range(from, from + 999);
+  if (readError) {
+    console.error('Read failed:', readError.message);
+    process.exit(1);
+  }
+  existing.push(...(data ?? []));
+  if ((data ?? []).length < 1000) break;
 }
+// Databases created before the `type` column: upsert without it.
+const { error: typeProbe } = await supabase.from('pricebook').select('type').limit(1);
+if (typeProbe) {
+  console.warn('NOTE: pricebook.type column missing — run the migration in supabase/schema.sql to store the Type column.');
+  for (const r of rows) delete r.type;
+}
+
 const newKeys = new Set(rows.map((r) => `${r.category}||${r.product}||${r.market}||${r.seq}`));
 const staleIds = (existing ?? [])
   .filter((r) => !newKeys.has(`${r.category}||${r.product}||${r.market}||${r.seq}`))

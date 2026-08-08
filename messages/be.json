@@ -257,6 +257,8 @@
       "search": "Zoek product of code…",
       "count": "{count} artikelen",
       "market": "Markt",
+      "type": "Type",
+      "allTypesOpt": "Alle types",
       "allMarketsOpt": "Alle markten",
       "currency": "Valuta",
       "print": "Afdrukken",

@@ -42,6 +42,9 @@ alter table public.portal_users
 -- ---------------------------------------------------------------------------
 create table if not exists public.pricebook (
   id            bigint generated always as identity primary key,
+  -- Top-level product family from the workbook's Type column
+  -- (e.g. 'PVC stretch ceilings', 'fabric stretch ceilings').
+  type          text,
   category      text not null,
   code          text,
   product       text not null,
@@ -61,6 +64,10 @@ create table if not exists public.pricebook (
 
 create index if not exists pricebook_market_idx on public.pricebook (market);
 create index if not exists pricebook_sort_idx on public.pricebook (sort);
+
+-- Existing databases (created before the Type column, Aug 2026): run this once,
+-- then re-upload the workbook so the column gets populated.
+alter table public.pricebook add column if not exists type text;
 
 -- ---------------------------------------------------------------------------
 -- 3. Pricelist metadata (single row: version, FX reference, source file)

@@ -257,6 +257,8 @@
       "search": "Pesquisar produto ou código…",
       "count": "{count} artigos",
       "market": "Mercado",
+      "type": "Tipo",
+      "allTypesOpt": "Todos os tipos",
       "allMarketsOpt": "Todos os mercados",
       "currency": "Moeda",
       "print": "Imprimir",

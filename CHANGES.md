@@ -1,3 +1,30 @@
+## 2026-08-08 (16) — Pricebook: Type column, 1000-row cap fix, Type→Category filter
+
+Client uploaded PriceBook v2.4 (1,504 rows incl. new fabric range + "Type"
+column) and saw only 1,000 items — Supabase/PostgREST caps EVERY response at
+1,000 rows regardless of .limit().
+
+- **All pricebook reads now paginate** (.range() in 1,000-row pages until a
+  short page): portal query (data.ts), admin sync diff read (sync/route.ts)
+  and the CLI seeder (seed-pricebook.mjs). The full pricelist reaches the
+  portal regardless of size.
+- **New `type` column** end-to-end: PriceRow (types.ts), schema.sql
+  (create table + `add column if not exists` migration for live DBs), the
+  workbook parser + seeder (optional "Type" header), the sync route and the
+  pricelist CSV export. Missing-column fallbacks everywhere: reads retry
+  without `type`, the sync upserts without it and warns in the report — an
+  un-migrated database keeps working, just without the filter.
+- **Pricelist UI: two-level filtering.** New Type strip (black/red segmented
+  buttons with counts, only rendered when the data has >1 type) above the
+  toolbar; category tabs recompute from the selected type — filter Type
+  first, then Category, as requested. i18n keys portal.pricelist.type /
+  allTypesOpt in all 12 locales.
+- Verified against the uploaded v2.4 workbook: 1,388 priced rows parse
+  (901 PVC / 487 fabric), 116 rows skipped because they carry no price in
+  the Excel at all (listed in the admin upload report).
+- Client actions: run the pricebook migration line in supabase/schema.sql,
+  then re-upload the workbook in /portal/admin so `type` gets populated.
+
 ## 2026-08-08 (15) — PriceBook v2.4: price groups ARE the tiers
 
 - Client uploaded Alto PriceBook v2.4 (1017 rows): the ten old price groups
