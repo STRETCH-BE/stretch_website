@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Un nouveau plafond en un jour | Plafonds & murs tendus",
     "homeDescription": "Plafonds et murs tendus, lisses et sans soudure, posés à froid en une seule journée — sans poussière, sans peinture. Options acoustiques, lumineuses et imprimées. Fabriqués à la main en Belgique.",
     "productsTitle": "Plafonds tendus & solutions acoustiques | STRETCH",
-    "productsDescription": "Découvrez la gamme STRETCH : plafonds tendus polyester et PVC, systèmes acoustiques, designs rétroéclairés & imprimés et unités préfabriquées — sans soudure jusqu'à 5,7 m, garantie 25 ans.",
+    "productsDescription": "Découvrez la gamme STRETCH : plafonds tendus polyester et PVC, systèmes acoustiques, designs rétroéclairés & imprimés et unités préfabriquées — sans soudure jusqu'à 6,4 m, garantie 25 ans.",
     "partnersTitle": "Devenez revendeur STRETCH — tarifs pro & leads | STRETCH",
     "partnersDescription": "Ajoutez les plafonds tendus à votre offre avec des tarifs professionnels, une fabrication sur mesure dans notre atelier belge, une formation pratique et des leads locaux référés.",
     "trainingTitle": "Formation installateur — certifié en quelques jours | STRETCH",
@@ -454,7 +454,7 @@
       "1": "Amélioration acoustique",
       "2": "25 ans de durée de vie",
       "3": "100 % recyclable",
-      "4": "Sans soudure jusqu'à 5,7 m",
+      "4": "Sans soudure jusqu'à 6,4 m",
       "5": "Sans poussière · Sans peinture",
       "6": "Fait main en Belgique"
     },
@@ -1305,7 +1305,7 @@
           "label": "Halo lumineux en option"
         },
         {
-          "value": "5.7m",
+          "value": "6.4m",
           "label": "Largeur sans soudure"
         }
       ],
@@ -1342,7 +1342,7 @@
         },
         {
           "k": "Largeur max sans soudure",
-          "v": "5.7 m"
+          "v": "6.4 m"
         },
         {
           "k": "Classement au feu",
@@ -2089,7 +2089,7 @@
       },
       {
         "q": "Quelle est la largeur maximale sans soudure ?",
-        "a": "Jusqu'à 5.7 m sans soudure avec un film PVC, et jusqu'à 5.15 m avec du polyester. Les portées supérieures sont couvertes par une soudure quasi invisible ou par une ligne de profilé assumée."
+        "a": "Jusqu'à 6.4 m sans soudure avec un film PVC, et jusqu'à 5.15 m avec du polyester. Les portées supérieures sont couvertes par une soudure quasi invisible ou par une ligne de profilé assumée."
       },
       {
         "q": "Puis-je avoir un éclairage, un rétroéclairage ou un design imprimé ?",
@@ -2235,7 +2235,7 @@
       },
       {
         "q": "Y a-t-il une soudure visible sur les grands formats ?",
-        "a": "Non. L'image est imprimée bord à bord sur une seule membrane sans soudure jusqu'à 5.7 m de large : aucune ligne de panneau ne traverse votre visuel."
+        "a": "Non. L'image est imprimée bord à bord sur une seule membrane sans soudure jusqu'à 6.4 m de large : aucune ligne de panneau ne traverse votre visuel."
       }
     ]
   },
@@ -3509,7 +3509,7 @@
             "heading": "Pose à froid ou pose à chaud",
             "paragraphs": [
               "Les membranes polyester sont tendues à froid : ni chaleur, ni émanations, ni temps de séchage. Elles offrent une finition profonde, très mate, et couvrent jusqu'à 5.15 m sans soudure.",
-              "Les films PVC sont chauffés pendant la pose pour se détendre, puis se retendent en refroidissant jusqu'à une surface impeccable. Le PVC est entièrement recyclable, démontable pour accéder aux techniques au-dessus, et couvre jusqu'à 5.7 m sans soudure — l'option la plus large."
+              "Les films PVC sont chauffés pendant la pose pour se détendre, puis se retendent en refroidissant jusqu'à une surface impeccable. Le PVC est entièrement recyclable, démontable pour accéder aux techniques au-dessus, et couvre jusqu'à 6.4 m sans soudure — l'option la plus large."
             ]
           },
           {

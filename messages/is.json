@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Nýtt loft á einum degi | Strekkiloft & strekkiveggir",
     "homeDescription": "Slétt, samskeytalaus strekkiloft og strekkiveggir, sett upp köld á einum degi — ekkert ryk, engin málningarvinna. Hljóðvistar-, lýsingar- og prentmöguleikar. Handgert í Belgíu.",
     "productsTitle": "Strekkiloft & hljóðvistarlausnir | STRETCH",
-    "productsDescription": "Skoðaðu STRETCH-úrvalið: strekkiloft úr pólýester og PVC, hljóðvistarkerfi, baklýst & prentuð hönnun og forsmíðaðar einingar — samskeytalaust upp í 5,7 m, 25 ára ábyrgð.",
+    "productsDescription": "Skoðaðu STRETCH-úrvalið: strekkiloft úr pólýester og PVC, hljóðvistarkerfi, baklýst & prentuð hönnun og forsmíðaðar einingar — samskeytalaust upp í 6,4 m, 25 ára ábyrgð.",
     "partnersTitle": "Gerstu STRETCH-endursöluaðili — heildsöluverð & fyrirspurnir | STRETCH",
     "partnersDescription": "Bættu strekkiloftum við þjónustuframboð þitt: heildsöluverð, sérsmíði úr belgíska verkstæðinu okkar, verkleg þjálfun og áframsendar staðbundnar fyrirspurnir.",
     "trainingTitle": "Uppsetningarnámskeið — vottun á fáeinum dögum | STRETCH",
@@ -454,7 +454,7 @@
       "1": "Bætt hljóðvist",
       "2": "25 ára ending",
       "3": "100% endurvinnanlegt",
-      "4": "Samskeytalaust að 5,7 m",
+      "4": "Samskeytalaust að 6,4 m",
       "5": "Ekkert ryk · Engin málning",
       "6": "Handgert í Belgíu"
     },
@@ -1305,7 +1305,7 @@
           "label": "Valkvæður bjarmi"
         },
         {
-          "value": "5.7m",
+          "value": "6.4m",
           "label": "Samskeytalaus breidd"
         }
       ],
@@ -1342,7 +1342,7 @@
         },
         {
           "k": "Hám. samskeytalaus breidd",
-          "v": "5.7 m"
+          "v": "6.4 m"
         },
         {
           "k": "Brunaflokkur",
@@ -2089,7 +2089,7 @@
       },
       {
         "q": "Hvað getur loftið verið breitt án samskeyta?",
-        "a": "Allt að 5.7 m saumlaust með PVC-filmu og allt að 5.15 m með pólýester. Stærri haf eru þakin með nánast ósýnilegum soðnum samskeytum eða meðvitaðri prófíllínu."
+        "a": "Allt að 6.4 m saumlaust með PVC-filmu og allt að 5.15 m með pólýester. Stærri haf eru þakin með nánast ósýnilegum soðnum samskeytum eða meðvitaðri prófíllínu."
       },
       {
         "q": "Get ég fengið lýsingu, baklýsingu eða prentaða hönnun?",
@@ -2235,7 +2235,7 @@
       },
       {
         "q": "Eru sýnileg samskeyti á stórum prentunum?",
-        "a": "Nei. Myndin er prentuð út í jaðra á eina saumlausa himnu allt að 5.7 m breiða, svo engar dúklínur liggja yfir myndefnið þitt."
+        "a": "Nei. Myndin er prentuð út í jaðra á eina saumlausa himnu allt að 6.4 m breiða, svo engar dúklínur liggja yfir myndefnið þitt."
       }
     ]
   },
@@ -3509,7 +3509,7 @@
             "heading": "Köld uppsetning eða heit",
             "paragraphs": [
               "Pólýesterhimnur eru strekktar kaldar: enginn hiti, engar gufur og enginn þurrkunartími. Þær gefa djúpa, mjög matta áferð og ná allt að 5.15 m án samskeyta.",
-              "PVC-filmur eru hitaðar við uppsetningu svo þær slakni og strekkjast síðan í gallalausan flöt þegar þær kólna. PVC er fullkomlega endurvinnanlegt, hægt að taka niður til að komast að lögnum fyrir ofan og nær allt að 5.7 m saumlaust — breiðasti kosturinn."
+              "PVC-filmur eru hitaðar við uppsetningu svo þær slakni og strekkjast síðan í gallalausan flöt þegar þær kólna. PVC er fullkomlega endurvinnanlegt, hægt að taka niður til að komast að lögnum fyrir ofan og nær allt að 6.4 m saumlaust — breiðasti kosturinn."
             ]
           },
           {

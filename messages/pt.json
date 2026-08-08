@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Um teto novo num dia | Tetos e paredes tensados",
     "homeDescription": "Tetos e paredes tensados, lisos e sem juntas, instalados a frio num único dia — sem pó e sem pintura. Opções acústicas, de iluminação e impressas. Feitos à mão na Bélgica.",
     "productsTitle": "Tetos tensados e soluções acústicas | STRETCH",
-    "productsDescription": "Explore a gama STRETCH: tetos tensados de poliéster e PVC, sistemas acústicos, designs retroiluminados e impressos e unidades pré-fabricadas — sem juntas até 5,7 m, 25 anos de garantia.",
+    "productsDescription": "Explore a gama STRETCH: tetos tensados de poliéster e PVC, sistemas acústicos, designs retroiluminados e impressos e unidades pré-fabricadas — sem juntas até 6,4 m, 25 anos de garantia.",
     "partnersTitle": "Torne-se revendedor STRETCH — preços profissionais e leads | STRETCH",
     "partnersDescription": "Adicione tetos tensados à sua oferta com preços profissionais, fabrico à medida na nossa oficina belga, formação prática e leads locais encaminhados.",
     "trainingTitle": "Formação de instaladores — certificado em dias | STRETCH",
@@ -454,7 +454,7 @@
       "1": "Melhoria acústica",
       "2": "25 anos de vida útil",
       "3": "100 % reciclável",
-      "4": "Sem juntas até 5,7 m",
+      "4": "Sem juntas até 6,4 m",
       "5": "Sem pó · Sem pintura",
       "6": "Feito à mão na Bélgica"
     },
@@ -1305,7 +1305,7 @@
           "label": "Brilho opcional"
         },
         {
-          "value": "5.7m",
+          "value": "6.4m",
           "label": "Largura sem juntas"
         }
       ],
@@ -1342,7 +1342,7 @@
         },
         {
           "k": "Largura máx. sem juntas",
-          "v": "5.7 m"
+          "v": "6.4 m"
         },
         {
           "k": "Classificação ao fogo",
@@ -2089,7 +2089,7 @@
       },
       {
         "q": "Qual é a largura máxima sem juntas?",
-        "a": "Até 5.7 m sem juntas com película de PVC e até 5.15 m com poliéster. Vãos maiores são cobertos com uma soldadura quase invisível ou com uma linha de perfil assumida."
+        "a": "Até 6.4 m sem juntas com película de PVC e até 5.15 m com poliéster. Vãos maiores são cobertos com uma soldadura quase invisível ou com uma linha de perfil assumida."
       },
       {
         "q": "Posso ter iluminação, retroiluminação ou um design impresso?",
@@ -2235,7 +2235,7 @@
       },
       {
         "q": "Há juntas visíveis em impressões grandes?",
-        "a": "Não. A imagem é impressa de borda a borda numa única membrana sem juntas até 5.7 m de largura, pelo que nenhuma linha de painel atravessa a sua imagem."
+        "a": "Não. A imagem é impressa de borda a borda numa única membrana sem juntas até 6.4 m de largura, pelo que nenhuma linha de painel atravessa a sua imagem."
       }
     ]
   },
@@ -3509,7 +3509,7 @@
             "heading": "Montagem a frio vs. montagem a quente",
             "paragraphs": [
               "As membranas de poliéster são tensionadas a frio: sem calor, sem vapores e sem tempo de secagem. Proporcionam um acabamento profundo, muito mate, e cobrem até 5.15 m sem juntas.",
-              "As películas de PVC são aquecidas durante a instalação para relaxarem e, ao arrefecer, esticam até uma superfície impecável. O PVC é totalmente reciclável, amovível para aceder às instalações técnicas por cima e cobre até 5.7 m sem juntas — a opção mais larga."
+              "As películas de PVC são aquecidas durante a instalação para relaxarem e, ao arrefecer, esticam até uma superfície impecável. O PVC é totalmente reciclável, amovível para aceder às instalações técnicas por cima e cobre até 6.4 m sem juntas — a opção mais larga."
             ]
           },
           {

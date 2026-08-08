@@ -530,7 +530,7 @@ export const products: Product[] = [
       { value: 'Any', label: 'Image or art' },
       { value: 'HD', label: 'Photo-grade print' },
       { value: 'Backlit', label: 'Optional glow' },
-      { value: '5.7m', label: 'Seamless width' },
+      { value: '6.4m', label: 'Seamless width' },
     ],
     features: [
       {
@@ -551,7 +551,7 @@ export const products: Product[] = [
       { k: 'Resolution', v: 'Photo-grade, colour-managed' },
       { k: 'Membrane', v: 'PVC film (opaque or translucent)' },
       { k: 'Backlight', v: 'Optional LED field' },
-      { k: 'Max seamless width', v: '5.7 m' },
+      { k: 'Max seamless width', v: '6.4 m' },
       { k: 'Fire rating', v: 'B-s2,d0' },
       { k: 'Cleaning', v: 'Washable' },
       { k: 'Warranty', v: '25 years' },
@@ -562,7 +562,7 @@ export const products: Product[] = [
     material: 'Printed PVC film',
     countryOfOrigin: 'BE',
     warrantyYears: 25,
-    maxSeamlessWidthM: 5.7,
+    maxSeamlessWidthM: 6.4,
     faqs: [
       {
         q: 'What image quality do I need for a printed ceiling?',
@@ -574,7 +574,7 @@ export const products: Product[] = [
       },
       {
         q: 'Is there a visible seam on large prints?',
-        a: 'No. The image is printed edge-to-edge across a single seamless membrane up to 5.7 m wide, so there are no panel lines across your artwork.',
+        a: 'No. The image is printed edge-to-edge across a single seamless membrane up to 6.4 m wide, so there are no panel lines across your artwork.',
       },
     ],
   },

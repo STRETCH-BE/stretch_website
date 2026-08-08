@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Et nyt loft på én dag | Spændlofter & spændvægge",
     "homeDescription": "Glatte, fugefri spændlofter og spændvægge, koldmonteret på en enkelt dag — uden støv og uden maling. Akustik-, lys- og printmuligheder. Håndlavet i Belgien.",
     "productsTitle": "Spændlofter & akustikløsninger | STRETCH",
-    "productsDescription": "Udforsk STRETCH-sortimentet: spændlofter i polyester og PVC, akustiksystemer, bagbelyste & printede designs og præfab-enheder — fugefrit op til 5,7 m, 25 års garanti.",
+    "productsDescription": "Udforsk STRETCH-sortimentet: spændlofter i polyester og PVC, akustiksystemer, bagbelyste & printede designs og præfab-enheder — fugefrit op til 6,4 m, 25 års garanti.",
     "partnersTitle": "Bliv STRETCH-forhandler — forhandlerpriser & leads | STRETCH",
     "partnersDescription": "Tilføj spændlofter til dit sortiment med forhandlerpriser, målsyet levering fra vores belgiske værksted, praktisk uddannelse og henviste lokale leads.",
     "trainingTitle": "Montøruddannelse — certificeret på få dage | STRETCH",
@@ -454,7 +454,7 @@
       "1": "Bedre akustik",
       "2": "25 års levetid",
       "3": "100 % genanvendeligt",
-      "4": "Fugefrit op til 5,7 m",
+      "4": "Fugefrit op til 6,4 m",
       "5": "Intet støv · Ingen maling",
       "6": "Håndlavet i Belgien"
     },
@@ -1305,7 +1305,7 @@
           "label": "Valgfri glød"
         },
         {
-          "value": "5.7m",
+          "value": "6.4m",
           "label": "Fugefri bredde"
         }
       ],
@@ -1342,7 +1342,7 @@
         },
         {
           "k": "Maks. fugefri bredde",
-          "v": "5.7 m"
+          "v": "6.4 m"
         },
         {
           "k": "Brandklasse",
@@ -2089,7 +2089,7 @@
       },
       {
         "q": "Hvor bredt et loft kan I montere uden samling?",
-        "a": "Op til 5.7 m sømløst med PVC-folie og op til 5.15 m med polyester. Større spænd dækkes med en næsten usynlig svejsesamling eller en bevidst placeret profillinje."
+        "a": "Op til 6.4 m sømløst med PVC-folie og op til 5.15 m med polyester. Større spænd dækkes med en næsten usynlig svejsesamling eller en bevidst placeret profillinje."
       },
       {
         "q": "Kan jeg få belysning, bagbelysning eller et printet design?",
@@ -2235,7 +2235,7 @@
       },
       {
         "q": "Er der en synlig samling på store print?",
-        "a": "Nej. Billedet printes fra kant til kant på én sømløs membran i op til 5.7 m bredde, så der løber ingen banelinjer hen over dit motiv."
+        "a": "Nej. Billedet printes fra kant til kant på én sømløs membran i op til 6.4 m bredde, så der løber ingen banelinjer hen over dit motiv."
       }
     ]
   },
@@ -3509,7 +3509,7 @@
             "heading": "Kold montering vs. varm montering",
             "paragraphs": [
               "Polyestermembraner spændes op koldt: ingen varme, ingen dampe og ingen tørretid. De giver en dyb, meget mat overflade og dækker op til 5.15 m uden samlinger.",
-              "PVC-folier opvarmes under monteringen, så de slapper af, og strammer derefter op til en fejlfri overflade, når de køler ned. PVC er fuldt genanvendeligt, kan tages ned igen for adgang til installationerne ovenover og dækker op til 5.7 m sømløst — den bredeste løsning."
+              "PVC-folier opvarmes under monteringen, så de slapper af, og strammer derefter op til en fejlfri overflade, når de køler ned. PVC er fuldt genanvendeligt, kan tages ned igen for adgang til installationerne ovenover og dækker op til 6.4 m sømløst — den bredeste løsning."
             ]
           },
           {

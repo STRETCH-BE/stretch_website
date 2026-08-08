@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Een nieuw plafond in één dag | Spanplafonds & spanwanden",
     "homeDescription": "Strakke, naadloze spanplafonds en spanwanden, koud geplaatst in één dag — zonder stof en zonder schilderwerk. Akoestische, verlichtings- en printopties. Handgemaakt in België.",
     "productsTitle": "Spanplafonds & akoestische oplossingen | STRETCH",
-    "productsDescription": "Ontdek het STRETCH-gamma: polyester en pvc spanplafonds, akoestische systemen, verlichte & bedrukte designs en prefab-units — naadloos tot 5,7 m, 25 jaar garantie.",
+    "productsDescription": "Ontdek het STRETCH-gamma: polyester en pvc spanplafonds, akoestische systemen, verlichte & bedrukte designs en prefab-units — naadloos tot 6,4 m, 25 jaar garantie.",
     "partnersTitle": "Word STRETCH-wederverkoper — handelsprijzen & leads | STRETCH",
     "partnersDescription": "Voeg spanplafonds toe aan je aanbod met handelsprijzen, op maat gemaakte levering uit ons Belgische atelier, praktijkgerichte opleiding en doorverwezen lokale leads.",
     "trainingTitle": "Installateursopleiding — gecertificeerd in enkele dagen | STRETCH",
@@ -454,7 +454,7 @@
       "1": "Akoestische verbetering",
       "2": "25 jaar levensduur",
       "3": "100% recycleerbaar",
-      "4": "Naadloos tot 5,7 m",
+      "4": "Naadloos tot 6,4 m",
       "5": "Geen stof · Geen verf",
       "6": "Handgemaakt in België"
     },
@@ -1305,7 +1305,7 @@
           "label": "Optionele gloed"
         },
         {
-          "value": "5.7m",
+          "value": "6.4m",
           "label": "Naadloze breedte"
         }
       ],
@@ -1342,7 +1342,7 @@
         },
         {
           "k": "Max. naadloze breedte",
-          "v": "5.7 m"
+          "v": "6.4 m"
         },
         {
           "k": "Brandklasse",
@@ -2089,7 +2089,7 @@
       },
       {
         "q": "Hoe breed kan een plafond zijn zonder naad?",
-        "a": "Tot 5.7 m naadloos met pvc-folie, en tot 5.15 m met polyester. Grotere overspanningen krijgen een vrijwel onzichtbare lasnaad of een bewust geplaatste profiellijn."
+        "a": "Tot 6.4 m naadloos met pvc-folie, en tot 5.15 m met polyester. Grotere overspanningen krijgen een vrijwel onzichtbare lasnaad of een bewust geplaatste profiellijn."
       },
       {
         "q": "Kan ik verlichting, backlight of een bedrukt ontwerp krijgen?",
@@ -2235,7 +2235,7 @@
       },
       {
         "q": "Is er een zichtbare naad op grote prints?",
-        "a": "Nee. Het beeld wordt van rand tot rand geprint op één naadloos doek tot 5.7 m breed, dus er lopen geen paneellijnen door uw ontwerp."
+        "a": "Nee. Het beeld wordt van rand tot rand geprint op één naadloos doek tot 6.4 m breed, dus er lopen geen paneellijnen door uw ontwerp."
       }
     ]
   },
@@ -3509,7 +3509,7 @@
             "heading": "Koude montage vs. warme montage",
             "paragraphs": [
               "Polyesterdoeken worden koud gespannen: geen warmte, geen dampen en geen droogtijd. Ze geven een diepe, zeer matte afwerking en overspannen tot 5.15 m zonder naad.",
-              "PVC-folies worden tijdens de plaatsing verwarmd zodat ze ontspannen, en trekken bij het afkoelen strak tot een vlekkeloos oppervlak. PVC is volledig recycleerbaar, wegneembaar voor toegang tot de technieken erboven, en overspant tot 5.7 m naadloos — de breedste optie."
+              "PVC-folies worden tijdens de plaatsing verwarmd zodat ze ontspannen, en trekken bij het afkoelen strak tot een vlekkeloos oppervlak. PVC is volledig recycleerbaar, wegneembaar voor toegang tot de technieken erboven, en overspant tot 6.4 m naadloos — de breedste optie."
             ]
           },
           {

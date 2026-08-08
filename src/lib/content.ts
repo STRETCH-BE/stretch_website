@@ -670,7 +670,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'Cold mount vs. heat mount',
         paragraphs: [
           'Polyester membranes are tensioned cold: no heat, no fumes and no drying time. They give a deep, very matte finish and can span up to 5.15 m without a seam.',
-          'PVC films are warmed during installation so they relax, then tighten as they cool to a flawless surface. PVC is fully recyclable, removable for access to the services above, and spans up to 5.7 m seamless — the widest option.',
+          'PVC films are warmed during installation so they relax, then tighten as they cool to a flawless surface. PVC is fully recyclable, removable for access to the services above, and spans up to 6.4 m seamless — the widest option.',
         ],
       },
       {
@@ -1301,7 +1301,7 @@ export const globalFaqs: Faq[] = [
   },
   {
     q: 'What is the widest ceiling you can install without a seam?',
-    a: 'Up to 5.7 m seamless with PVC film, and up to 5.15 m with polyester. Larger spans are covered with a near-invisible welded joint or a deliberate profile line.',
+    a: 'Up to 6.4 m seamless with PVC film, and up to 5.15 m with polyester. Larger spans are covered with a near-invisible welded joint or a deliberate profile line.',
   },
   {
     q: 'Can I have lighting, backlighting or a printed design?',

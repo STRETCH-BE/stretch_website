@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Eine neue Decke an einem Tag | Spanndecken & Spannwände",
     "homeDescription": "Glatte, fugenlose Spanndecken und Spannwände, kalt montiert an einem einzigen Tag — ohne Staub, ohne Malerarbeiten. Akustik-, Licht- und Druckoptionen. Handgefertigt in Belgien.",
     "productsTitle": "Spanndecken & Akustiklösungen | STRETCH",
-    "productsDescription": "Entdecken Sie das STRETCH-Sortiment: Polyester- und PVC-Spanndecken, Akustiksysteme, hinterleuchtete & bedruckte Designs und Fertigmodule — fugenlos bis 5,7 m, 25 Jahre Garantie.",
+    "productsDescription": "Entdecken Sie das STRETCH-Sortiment: Polyester- und PVC-Spanndecken, Akustiksysteme, hinterleuchtete & bedruckte Designs und Fertigmodule — fugenlos bis 6,4 m, 25 Jahre Garantie.",
     "partnersTitle": "STRETCH-Händler werden — Händlerpreise & Leads | STRETCH",
     "partnersDescription": "Erweitern Sie Ihr Angebot um Spanndecken: Händlerpreise, Maßanfertigung aus unserer belgischen Werkstatt, praxisnahe Schulung und vermittelte lokale Anfragen.",
     "trainingTitle": "Monteur-Schulung — zertifiziert in wenigen Tagen | STRETCH",
@@ -454,7 +454,7 @@
       "1": "Bessere Akustik",
       "2": "25 Jahre Lebensdauer",
       "3": "100 % recycelbar",
-      "4": "Fugenlos bis 5,7 m",
+      "4": "Fugenlos bis 6,4 m",
       "5": "Kein Staub · Keine Farbe",
       "6": "Handgemacht in Belgien"
     },
@@ -1305,7 +1305,7 @@
           "label": "Optionales Leuchten"
         },
         {
-          "value": "5.7m",
+          "value": "6.4m",
           "label": "Fugenlose Breite"
         }
       ],
@@ -1342,7 +1342,7 @@
         },
         {
           "k": "Max. fugenlose Breite",
-          "v": "5.7 m"
+          "v": "6.4 m"
         },
         {
           "k": "Brandklasse",
@@ -2089,7 +2089,7 @@
       },
       {
         "q": "Wie breit kann eine Decke ohne Naht sein?",
-        "a": "Bis zu 5.7 m nahtlos mit PVC-Folie und bis zu 5.15 m mit Polyester. Größere Spannweiten werden mit einer nahezu unsichtbaren Schweißnaht oder einer bewusst gesetzten Profillinie ausgeführt."
+        "a": "Bis zu 6.4 m nahtlos mit PVC-Folie und bis zu 5.15 m mit Polyester. Größere Spannweiten werden mit einer nahezu unsichtbaren Schweißnaht oder einer bewusst gesetzten Profillinie ausgeführt."
       },
       {
         "q": "Kann ich Beleuchtung, Hinterleuchtung oder ein bedrucktes Design haben?",
@@ -2235,7 +2235,7 @@
       },
       {
         "q": "Gibt es bei großen Drucken eine sichtbare Naht?",
-        "a": "Nein. Das Bild wird randlos auf eine einzige nahtlose Membran mit bis zu 5.7 m Breite gedruckt — keine Bahnenlinien quer durch Ihr Motiv."
+        "a": "Nein. Das Bild wird randlos auf eine einzige nahtlose Membran mit bis zu 6.4 m Breite gedruckt — keine Bahnenlinien quer durch Ihr Motiv."
       }
     ]
   },
@@ -3509,7 +3509,7 @@
             "heading": "Kaltmontage vs. Warmmontage",
             "paragraphs": [
               "Polyester-Membranen werden kalt gespannt: keine Hitze, keine Ausdünstungen, keine Trocknungszeit. Sie ergeben ein tiefes, sehr mattes Finish und überspannen bis zu 5.15 m ohne Naht.",
-              "PVC-Folien werden bei der Montage erwärmt, damit sie sich entspannen, und ziehen sich beim Abkühlen zu einer makellosen Fläche straff. PVC ist vollständig recycelbar, für den Zugang zur Technik darüber abnehmbar und überspannt bis zu 5.7 m nahtlos — die breiteste Option."
+              "PVC-Folien werden bei der Montage erwärmt, damit sie sich entspannen, und ziehen sich beim Abkühlen zu einer makellosen Fläche straff. PVC ist vollständig recycelbar, für den Zugang zur Technik darüber abnehmbar und überspannt bis zu 6.4 m nahtlos — die breiteste Option."
             ]
           },
           {

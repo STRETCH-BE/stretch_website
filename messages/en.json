@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — A new ceiling in one day | Stretch ceilings & walls",
     "homeDescription": "Sleek, seamless stretch ceilings and walls, installed cold in a single day — no dust, no painting. Acoustic, lighting and printed options. Hand-made in Belgium.",
     "productsTitle": "Stretch ceiling & acoustic solutions | STRETCH",
-    "productsDescription": "Explore the STRETCH range: polyester and PVC stretch ceilings, acoustic systems, backlit & printed designs and prefab units — seamless to 5.7 m, 25-year warranty.",
+    "productsDescription": "Explore the STRETCH range: polyester and PVC stretch ceilings, acoustic systems, backlit & printed designs and prefab units — seamless to 6.4 m, 25-year warranty.",
     "partnersTitle": "Become a STRETCH reseller — trade pricing & leads | STRETCH",
     "partnersDescription": "Add stretch ceilings to your offer with trade pricing, made-to-measure supply from our Belgian workshop, hands-on training and referred local leads.",
     "trainingTitle": "Installer training — certified in days | STRETCH",
@@ -454,7 +454,7 @@
       "1": "Acoustic improvement",
       "2": "25-year lifespan",
       "3": "100% recyclable",
-      "4": "Seamless to 5.7m",
+      "4": "Seamless to 6.4m",
       "5": "No dust · No paint",
       "6": "Hand made in Belgium"
     },
@@ -1305,7 +1305,7 @@
           "label": "Optional glow"
         },
         {
-          "value": "5.7m",
+          "value": "6.4m",
           "label": "Seamless width"
         }
       ],
@@ -1342,7 +1342,7 @@
         },
         {
           "k": "Max seamless width",
-          "v": "5.7 m"
+          "v": "6.4 m"
         },
         {
           "k": "Fire rating",
@@ -2089,7 +2089,7 @@
       },
       {
         "q": "What is the widest ceiling you can install without a seam?",
-        "a": "Up to 5.7 m seamless with PVC film, and up to 5.15 m with polyester. Larger spans are covered with a near-invisible welded joint or a deliberate profile line."
+        "a": "Up to 6.4 m seamless with PVC film, and up to 5.15 m with polyester. Larger spans are covered with a near-invisible welded joint or a deliberate profile line."
       },
       {
         "q": "Can I have lighting, backlighting or a printed design?",
@@ -2235,7 +2235,7 @@
       },
       {
         "q": "Is there a visible seam on large prints?",
-        "a": "No. The image is printed edge-to-edge across a single seamless membrane up to 5.7 m wide, so there are no panel lines across your artwork."
+        "a": "No. The image is printed edge-to-edge across a single seamless membrane up to 6.4 m wide, so there are no panel lines across your artwork."
       }
     ]
   },
@@ -3509,7 +3509,7 @@
             "heading": "Cold mount vs. heat mount",
             "paragraphs": [
               "Polyester membranes are tensioned cold: no heat, no fumes and no drying time. They give a deep, very matte finish and can span up to 5.15 m without a seam.",
-              "PVC films are warmed during installation so they relax, then tighten as they cool to a flawless surface. PVC is fully recyclable, removable for access to the services above, and spans up to 5.7 m seamless — the widest option."
+              "PVC films are warmed during installation so they relax, then tighten as they cool to a flawless surface. PVC is fully recyclable, removable for access to the services above, and spans up to 6.4 m seamless — the widest option."
             ]
           },
           {

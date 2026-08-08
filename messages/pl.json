@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Nowy sufit w jeden dzień | Sufity i ściany napinane",
     "homeDescription": "Gładkie, bezszwowe sufity i ściany napinane, montowane na zimno w jeden dzień — bez kurzu i bez malowania. Opcje akustyczne, świetlne i z nadrukiem. Ręcznie wykonane w Belgii.",
     "productsTitle": "Sufity napinane i rozwiązania akustyczne | STRETCH",
-    "productsDescription": "Poznaj ofertę STRETCH: poliestrowe i PCV sufity napinane, systemy akustyczne, podświetlane i drukowane wzory oraz moduły prefabrykowane — bez szwów do 5,7 m, 25 lat gwarancji.",
+    "productsDescription": "Poznaj ofertę STRETCH: poliestrowe i PCV sufity napinane, systemy akustyczne, podświetlane i drukowane wzory oraz moduły prefabrykowane — bez szwów do 6,4 m, 25 lat gwarancji.",
     "partnersTitle": "Zostań dystrybutorem STRETCH — ceny hurtowe i leady | STRETCH",
     "partnersDescription": "Dodaj sufity napinane do swojej oferty: ceny hurtowe, produkcja na wymiar w naszej belgijskiej pracowni, praktyczne szkolenia i przekazywane lokalne leady.",
     "trainingTitle": "Szkolenie dla montażystów — certyfikat w kilka dni | STRETCH",
@@ -454,7 +454,7 @@
       "1": "Poprawa akustyki",
       "2": "25 lat żywotności",
       "3": "100% do recyklingu",
-      "4": "Bez łączeń do 5,7 m",
+      "4": "Bez łączeń do 6,4 m",
       "5": "Bez kurzu · Bez malowania",
       "6": "Ręcznie robione w Belgii"
     },
@@ -1305,7 +1305,7 @@
           "label": "Opcjonalna poświata"
         },
         {
-          "value": "5.7m",
+          "value": "6.4m",
           "label": "Szerokość bez łączeń"
         }
       ],
@@ -1342,7 +1342,7 @@
         },
         {
           "k": "Maks. szerokość bez łączeń",
-          "v": "5.7 m"
+          "v": "6.4 m"
         },
         {
           "k": "Klasa ogniowa",
@@ -2089,7 +2089,7 @@
       },
       {
         "q": "Jak szeroki sufit można zamontować bez łączenia?",
-        "a": "Do 5.7 m bez łączeń przy folii PVC i do 5.15 m przy poliestrze. Większe rozpiętości pokrywamy niemal niewidoczną zgrzewaną spoiną lub celowo poprowadzoną linią profilu."
+        "a": "Do 6.4 m bez łączeń przy folii PVC i do 5.15 m przy poliestrze. Większe rozpiętości pokrywamy niemal niewidoczną zgrzewaną spoiną lub celowo poprowadzoną linią profilu."
       },
       {
         "q": "Czy mogę mieć oświetlenie, podświetlenie lub nadruk?",
@@ -2235,7 +2235,7 @@
       },
       {
         "q": "Czy na dużych wydrukach widać łączenie?",
-        "a": "Nie. Obraz drukowany jest od krawędzi do krawędzi na jednej membranie bez łączeń o szerokości do 5.7 m, więc przez Twoją grafikę nie biegną żadne linie paneli."
+        "a": "Nie. Obraz drukowany jest od krawędzi do krawędzi na jednej membranie bez łączeń o szerokości do 6.4 m, więc przez Twoją grafikę nie biegną żadne linie paneli."
       }
     ]
   },
@@ -3509,7 +3509,7 @@
             "heading": "Montaż na zimno czy na ciepło",
             "paragraphs": [
               "Membrany poliestrowe napina się na zimno: bez ciepła, bez oparów i bez czasu schnięcia. Dają głębokie, bardzo matowe wykończenie i pokrywają do 5.15 m bez łączenia.",
-              "Folie PVC podgrzewa się podczas montażu, aby się rozluźniły, a stygnąc naprężają się do nieskazitelnej powierzchni. PVC jest w pełni recyklingowalne, demontowalne, gdy trzeba dostać się do instalacji nad sufitem, i pokrywa do 5.7 m bez łączeń — to najszersza opcja."
+              "Folie PVC podgrzewa się podczas montażu, aby się rozluźniły, a stygnąc naprężają się do nieskazitelnej powierzchni. PVC jest w pełni recyklingowalne, demontowalne, gdy trzeba dostać się do instalacji nad sufitem, i pokrywa do 6.4 m bez łączeń — to najszersza opcja."
             ]
           },
           {

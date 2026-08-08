@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Un techo nuevo en un día | Techos y paredes tensados",
     "homeDescription": "Techos y paredes tensados, lisos y sin juntas, instalados en frío en un solo día — sin polvo y sin pintura. Opciones acústicas, de iluminación e impresas. Hechos a mano en Bélgica.",
     "productsTitle": "Techos tensados y soluciones acústicas | STRETCH",
-    "productsDescription": "Descubre la gama STRETCH: techos tensados de poliéster y PVC, sistemas acústicos, diseños retroiluminados e impresos y unidades prefabricadas — sin juntas hasta 5,7 m, 25 años de garantía.",
+    "productsDescription": "Descubre la gama STRETCH: techos tensados de poliéster y PVC, sistemas acústicos, diseños retroiluminados e impresos y unidades prefabricadas — sin juntas hasta 6,4 m, 25 años de garantía.",
     "partnersTitle": "Hazte distribuidor STRETCH — precios profesionales y leads | STRETCH",
     "partnersDescription": "Añade techos tensados a tu oferta con precios profesionales, fabricación a medida en nuestro taller belga, formación práctica y leads locales referidos.",
     "trainingTitle": "Formación de instaladores — certificado en días | STRETCH",
@@ -454,7 +454,7 @@
       "1": "Mejora acústica",
       "2": "25 años de vida útil",
       "3": "100 % reciclable",
-      "4": "Sin juntas hasta 5,7 m",
+      "4": "Sin juntas hasta 6,4 m",
       "5": "Sin polvo · Sin pintura",
       "6": "Hecho a mano en Bélgica"
     },
@@ -1305,7 +1305,7 @@
           "label": "Brillo opcional"
         },
         {
-          "value": "5.7m",
+          "value": "6.4m",
           "label": "Anchura sin juntas"
         }
       ],
@@ -1342,7 +1342,7 @@
         },
         {
           "k": "Anchura máx. sin juntas",
-          "v": "5.7 m"
+          "v": "6.4 m"
         },
         {
           "k": "Clasificación al fuego",
@@ -2089,7 +2089,7 @@
       },
       {
         "q": "¿Cuál es el ancho máximo sin juntas?",
-        "a": "Hasta 5.7 m sin juntas con lámina de PVC y hasta 5.15 m con poliéster. Las luces mayores se cubren con una soldadura casi invisible o con una línea de perfil colocada a propósito."
+        "a": "Hasta 6.4 m sin juntas con lámina de PVC y hasta 5.15 m con poliéster. Las luces mayores se cubren con una soldadura casi invisible o con una línea de perfil colocada a propósito."
       },
       {
         "q": "¿Puedo tener iluminación, retroiluminación o un diseño impreso?",
@@ -2235,7 +2235,7 @@
       },
       {
         "q": "¿Hay juntas visibles en las impresiones grandes?",
-        "a": "No. La imagen se imprime de borde a borde sobre una única membrana sin juntas de hasta 5.7 m de ancho, así que ninguna línea de paño cruza tu diseño."
+        "a": "No. La imagen se imprime de borde a borde sobre una única membrana sin juntas de hasta 6.4 m de ancho, así que ninguna línea de paño cruza tu diseño."
       }
     ]
   },
@@ -3509,7 +3509,7 @@
             "heading": "Montaje en frío vs. montaje en caliente",
             "paragraphs": [
               "Las membranas de poliéster se tensan en frío: sin calor, sin vapores y sin tiempo de secado. Ofrecen un acabado profundo, muy mate, y cubren hasta 5.15 m sin juntas.",
-              "Las láminas de PVC se calientan durante la instalación para que se relajen y, al enfriarse, se tensan hasta lograr una superficie impecable. El PVC es totalmente reciclable, desmontable para acceder a las instalaciones superiores y cubre hasta 5.7 m sin juntas — la opción más ancha."
+              "Las láminas de PVC se calientan durante la instalación para que se relajen y, al enfriarse, se tensan hasta lograr una superficie impecable. El PVC es totalmente reciclable, desmontable para acceder a las instalaciones superiores y cubre hasta 6.4 m sin juntas — la opción más ancha."
             ]
           },
           {

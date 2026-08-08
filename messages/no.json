@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Et nytt tak på én dag | Strekktak & strekkvegger",
     "homeDescription": "Glatte, skjøtefrie strekktak og strekkvegger, kaldmontert på én dag — uten støv og uten maling. Akustikk-, lys- og printmuligheter. Håndlaget i Belgia.",
     "productsTitle": "Strekktak & akustikkløsninger | STRETCH",
-    "productsDescription": "Utforsk STRETCH-sortimentet: strekktak i polyester og PVC, akustikksystemer, bakbelyste & trykte design og prefab-enheter — skjøtefritt opptil 5,7 m, 25 års garanti.",
+    "productsDescription": "Utforsk STRETCH-sortimentet: strekktak i polyester og PVC, akustikksystemer, bakbelyste & trykte design og prefab-enheter — skjøtefritt opptil 6,4 m, 25 års garanti.",
     "partnersTitle": "Bli STRETCH-forhandler — forhandlerpriser & leads | STRETCH",
     "partnersDescription": "Legg til strekktak i tilbudet ditt med forhandlerpriser, skreddersydd levering fra vårt belgiske verksted, praktisk opplæring og videresendte lokale leads.",
     "trainingTitle": "Montøropplæring — sertifisert på få dager | STRETCH",
@@ -454,7 +454,7 @@
       "1": "Bedre akustikk",
       "2": "25 års levetid",
       "3": "100 % resirkulerbart",
-      "4": "Skjøtefritt opptil 5,7 m",
+      "4": "Skjøtefritt opptil 6,4 m",
       "5": "Intet støv · Ingen maling",
       "6": "Håndlaget i Belgia"
     },
@@ -1305,7 +1305,7 @@
           "label": "Valgfri glød"
         },
         {
-          "value": "5.7m",
+          "value": "6.4m",
           "label": "Skjøtefri bredde"
         }
       ],
@@ -1342,7 +1342,7 @@
         },
         {
           "k": "Maks. skjøtefri bredde",
-          "v": "5.7 m"
+          "v": "6.4 m"
         },
         {
           "k": "Brannklasse",
@@ -2089,7 +2089,7 @@
       },
       {
         "q": "Hvor bred himling kan dere montere uten skjøt?",
-        "a": "Opptil 5.7 m sømløst med PVC-folie og opptil 5.15 m med polyester. Større spenn dekkes med en nesten usynlig sveiseskjøt eller en bevisst plassert profillinje."
+        "a": "Opptil 6.4 m sømløst med PVC-folie og opptil 5.15 m med polyester. Større spenn dekkes med en nesten usynlig sveiseskjøt eller en bevisst plassert profillinje."
       },
       {
         "q": "Kan jeg få belysning, baklys eller et trykket design?",
@@ -2235,7 +2235,7 @@
       },
       {
         "q": "Er det en synlig skjøt på store trykk?",
-        "a": "Nei. Bildet trykkes fra kant til kant på én sømløs membran i opptil 5.7 m bredde, så ingen banelinjer krysser motivet ditt."
+        "a": "Nei. Bildet trykkes fra kant til kant på én sømløs membran i opptil 6.4 m bredde, så ingen banelinjer krysser motivet ditt."
       }
     ]
   },
@@ -3509,7 +3509,7 @@
             "heading": "Kald montering vs. varm montering",
             "paragraphs": [
               "Polyestermembraner spennes opp kaldt: ingen varme, ingen damper og ingen tørketid. De gir en dyp, svært matt overflate og spenner over inntil 5.15 m uten skjøt.",
-              "PVC-folier varmes opp under monteringen slik at de slapper av, og strammer seg til en feilfri flate når de kjølner. PVC er fullt resirkulerbart, kan demonteres for tilgang til det tekniske over, og spenner inntil 5.7 m sømløst — det bredeste alternativet."
+              "PVC-folier varmes opp under monteringen slik at de slapper av, og strammer seg til en feilfri flate når de kjølner. PVC er fullt resirkulerbart, kan demonteres for tilgang til det tekniske over, og spenner inntil 6.4 m sømløst — det bredeste alternativet."
             ]
           },
           {
