@@ -9,7 +9,8 @@
 // only used for domain-stable identifiers (Organization @id, logo URL) so the
 // brand keeps ONE schema.org entity across all 12 domains.
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://stretchplafond.com'
+  // stretch.mt = the en / x-default domain — the group's schema.org identity.
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://stretch.mt'
 ).replace(/\/$/, '');
 
 export const brand = {

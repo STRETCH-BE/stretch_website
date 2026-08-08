@@ -25,18 +25,18 @@ const nextConfig = {
       // One locale per domain — allow next/image to load assets referenced by
       // absolute URL from any of the production domains. Keep in sync with
       // `localeDomains` in src/i18n/config.ts.
-      { protocol: 'https', hostname: 'stretchplafond.com' },
+      { protocol: 'https', hostname: 'stretch.mt' },
       { protocol: 'https', hostname: 'stretchplafond.be' },
       { protocol: 'https', hostname: 'stretchplafond.nl' },
       { protocol: 'https', hostname: 'stretchplafond.fr' },
-      { protocol: 'https', hostname: 'stretchplafond.pl' },
-      { protocol: 'https', hostname: 'stretchplafond.de' },
-      { protocol: 'https', hostname: 'stretchplafond.es' },
-      { protocol: 'https', hostname: 'stretchplafond.pt' },
-      { protocol: 'https', hostname: 'stretchplafond.dk' },
-      { protocol: 'https', hostname: 'stretchplafond.se' },
-      { protocol: 'https', hostname: 'stretchplafond.no' },
-      { protocol: 'https', hostname: 'stretchplafond.is' },
+      { protocol: 'https', hostname: 'stretch-sufit.pl' },
+      { protocol: 'https', hostname: 'stretchdecken.de' },
+      { protocol: 'https', hostname: 'stretchtecho.es' },
+      { protocol: 'https', hostname: 'stretchteto.pt' },
+      { protocol: 'https', hostname: 'straekloft.dk' },
+      { protocol: 'https', hostname: 'stretchceilings.se' },
+      { protocol: 'https', hostname: 'stretchtak.no' },
+      { protocol: 'https', hostname: 'stretch.is' },
     ],
   },
   async headers() {
