@@ -1,4 +1,5 @@
 import createNextIntlPlugin from 'next-intl/plugin';
+import { legacyRedirects } from './redirects.mjs';
 
 // Point the plugin at the i18n request config (getMessages, etc.)
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
@@ -39,6 +40,9 @@ const nextConfig = {
         ],
       },
     ];
+  },
+  async redirects() {
+    return legacyRedirects;
   },
 };
 

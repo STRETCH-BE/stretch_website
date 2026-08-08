@@ -47,18 +47,18 @@ export const defaultLocale: Locale = 'en';
 // Override any entry per-deploy with NEXT_PUBLIC_DOMAIN_<LOCALE> if needed.
 // ---------------------------------------------------------------------------
 export const localeDomains: Record<Locale, string> = {
-  en: process.env.NEXT_PUBLIC_DOMAIN_EN || 'stretchplafond.com',
+  en: process.env.NEXT_PUBLIC_DOMAIN_EN || 'stretch.mt', // en + x-default; .uk/.us 301 → here (reserved for future en-GB/en-US split)
   be: process.env.NEXT_PUBLIC_DOMAIN_BE || 'stretchplafond.be',
   nl: process.env.NEXT_PUBLIC_DOMAIN_NL || 'stretchplafond.nl',
   fr: process.env.NEXT_PUBLIC_DOMAIN_FR || 'stretchplafond.fr',
-  pl: process.env.NEXT_PUBLIC_DOMAIN_PL || 'stretchplafond.pl',
-  de: process.env.NEXT_PUBLIC_DOMAIN_DE || 'stretchplafond.de',
-  es: process.env.NEXT_PUBLIC_DOMAIN_ES || 'stretchplafond.es',
-  pt: process.env.NEXT_PUBLIC_DOMAIN_PT || 'stretchplafond.pt',
-  da: process.env.NEXT_PUBLIC_DOMAIN_DA || 'stretchplafond.dk',
-  sv: process.env.NEXT_PUBLIC_DOMAIN_SV || 'stretchplafond.se',
-  no: process.env.NEXT_PUBLIC_DOMAIN_NO || 'stretchplafond.no',
-  is: process.env.NEXT_PUBLIC_DOMAIN_IS || 'stretchplafond.is',
+  pl: process.env.NEXT_PUBLIC_DOMAIN_PL || 'stretch-sufit.pl',
+  de: process.env.NEXT_PUBLIC_DOMAIN_DE || 'stretchdecken.de',
+  es: process.env.NEXT_PUBLIC_DOMAIN_ES || 'stretchtecho.es',
+  pt: process.env.NEXT_PUBLIC_DOMAIN_PT || 'stretchteto.pt',
+  da: process.env.NEXT_PUBLIC_DOMAIN_DA || 'straekloft.dk', // strækloft.dk (xn--strkloft-l0a.dk) 308 → here
+  sv: process.env.NEXT_PUBLIC_DOMAIN_SV || 'stretchceilings.se', // spänntak.se (xn--spnntak-6wa.se) 308 → here
+  no: process.env.NEXT_PUBLIC_DOMAIN_NO || 'stretchtak.no', // strekktak.no held by competitor, registrar lapsed — backorder for the drop
+  is: process.env.NEXT_PUBLIC_DOMAIN_IS || 'stretch.is',
 };
 
 /** Absolute https origin for a locale, e.g. "https://stretchplafond.nl". */
