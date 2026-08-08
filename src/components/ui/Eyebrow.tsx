@@ -3,11 +3,18 @@
 type EyebrowProps = {
   num?: string;
   label: string;
-  /** Visual variant for dark sections. */
-  tone?: 'light' | 'dark';
+  /** Visual variant: 'dark' for black sections, 'red' for red sections. */
+  tone?: 'light' | 'dark' | 'red';
 };
 
 export default function Eyebrow({ num, label, tone = 'light' }: EyebrowProps) {
+  // WCAG AA per surface: 13px red text needs --red-bright on black, and
+  // everything must be white on the red sections (red-on-red is invisible).
+  const numColor =
+    tone === 'red' ? '#fff' : tone === 'dark' ? 'var(--red-bright)' : 'var(--red)';
+  const ruleColor = tone === 'red' ? '#fff' : 'var(--red)';
+  const labelColor =
+    tone === 'red' ? '#fff' : tone === 'dark' ? 'var(--on-dark-faint)' : 'var(--text-faint-2)';
   return (
     <div
       style={{
@@ -20,7 +27,7 @@ export default function Eyebrow({ num, label, tone = 'light' }: EyebrowProps) {
       {num ? (
         <span
           style={{
-            color: 'var(--red)',
+            color: numColor,
             fontWeight: 700,
             fontSize: 13,
             letterSpacing: '.16em',
@@ -30,7 +37,7 @@ export default function Eyebrow({ num, label, tone = 'light' }: EyebrowProps) {
         </span>
       ) : (
         <span
-          style={{ width: 34, height: 2, background: 'var(--red)', display: 'inline-block' }}
+          style={{ width: 34, height: 2, background: ruleColor, display: 'inline-block' }}
         />
       )}
       <span
@@ -39,7 +46,7 @@ export default function Eyebrow({ num, label, tone = 'light' }: EyebrowProps) {
           fontWeight: 700,
           letterSpacing: '.2em',
           textTransform: 'uppercase',
-          color: tone === 'dark' ? 'var(--on-dark-faint)' : 'var(--text-faint-2)',
+          color: labelColor,
         }}
       >
         {label}

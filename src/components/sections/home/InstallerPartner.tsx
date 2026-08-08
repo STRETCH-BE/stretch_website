@@ -21,11 +21,11 @@ export default function InstallerPartner() {
 
         <div className="ip-copy">
           <div className="ip-copy-inner">
-            <Eyebrow num="05" label={t('eyebrow')} tone="dark" />
+            <Eyebrow num="05" label={t('eyebrow')} tone="red" />
             <h2 className="h2" style={{ color: '#fff', maxWidth: '15ch', margin: '0 0 18px' }}>
               {t('title')}
             </h2>
-            <p style={{ fontSize: 15.5, lineHeight: 1.6, color: 'rgba(255,255,255,.9)', maxWidth: 460, margin: '0 0 clamp(26px,3vw,38px)' }}>
+            <p style={{ fontSize: 15.5, lineHeight: 1.6, color: '#fff', maxWidth: 460, margin: '0 0 clamp(26px,3vw,38px)' }}>
               {t('intro')}
             </p>
 
@@ -62,9 +62,9 @@ export default function InstallerPartner() {
         .ip-copy-inner { padding: clamp(40px,5vw,84px) clamp(28px,5vw,72px); width: 100%; max-width: 620px; }
         .ip-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; border-top: 1px solid rgba(255,255,255,.28); }
         .ip-step { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.28); }
-        .ip-step-n { font-family: var(--font-display); font-weight: 800; color: rgba(255,255,255,.7); font-size: 14px; letter-spacing: .05em; flex-shrink: 0; padding-top: 2px; }
+        .ip-step-n { font-family: var(--font-display); font-weight: 800; color: #fff; font-size: 14px; letter-spacing: .05em; flex-shrink: 0; padding-top: 2px; }
         .ip-step-title { font-family: var(--font-display); font-weight: 800; font-size: 18px; letter-spacing: -.01em; margin: 0 0 6px; color: #fff; }
-        .ip-step-body { font-size: 14px; line-height: 1.55; color: rgba(255,255,255,.9); margin: 0; }
+        .ip-step-body { font-size: 14px; line-height: 1.55; color: #fff; margin: 0; }
         @media (max-width: 920px) {
           .ip-split { grid-template-columns: 1fr; }
           .ip-photo { min-height: 320px; order: -1; }

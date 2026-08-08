@@ -50,7 +50,7 @@ export default function Footer() {
               style={{
                 fontSize: 14,
                 lineHeight: 1.6,
-                color: 'var(--text-faint)',
+                color: 'var(--on-dark-muted)',
                 maxWidth: 300,
                 margin: '0 0 22px',
               }}
@@ -83,18 +83,20 @@ export default function Footer() {
 
           {/* HQ */}
           <div>
-            <h4
+            {/* Not a document heading (fixes heading-order audit); brighter
+                red for AA contrast of 11.5px text on the black footer. */}
+            <p
               style={{
                 fontSize: 11.5,
                 fontWeight: 700,
                 letterSpacing: '.18em',
                 textTransform: 'uppercase',
-                color: 'var(--red)',
+                color: 'var(--red-bright)',
                 margin: '0 0 18px',
               }}
             >
               {t('hqHeading')}
-            </h4>
+            </p>
             <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--on-dark-soft)', margin: '0 0 16px' }}>
               Beverpark, Gentseweg 309 A3
               <br />
@@ -117,7 +119,7 @@ export default function Footer() {
             <a
               href={`mailto:${contact.email}`}
               className="lnk"
-              style={{ fontSize: 14, color: 'var(--red)' }}
+              style={{ fontSize: 14, color: 'var(--red-bright)' }}
               onClick={() => analytics.emailClick('footer')}
             >
               {contact.email}
@@ -131,7 +133,7 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '.1em',
                 textTransform: 'uppercase',
-                color: 'var(--text-faint)',
+                color: 'var(--on-dark-muted)',
                 flexWrap: 'wrap',
               }}
             >
@@ -153,10 +155,10 @@ export default function Footer() {
             paddingTop: 26,
           }}
         >
-          <p style={{ fontSize: 12.5, color: 'var(--text-muted-2)', margin: 0, letterSpacing: '.04em' }}>
+          <p style={{ fontSize: 12.5, color: 'var(--on-dark-muted)', margin: 0, letterSpacing: '.04em' }}>
             Copyright ©{year} {t('rights')}
           </p>
-          <div style={{ display: 'flex', gap: 22, fontSize: 12.5, color: 'var(--text-faint)', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 22, fontSize: 12.5, color: 'var(--on-dark-muted)', flexWrap: 'wrap' }}>
             {footerNav.legal.map((l) => (
               <Link key={l.href} href={l.href} className="lnk">
                 {l.key === 'privacy' ? t('privacy') : t('terms')}
@@ -171,7 +173,7 @@ export default function Footer() {
                 border: 'none',
                 cursor: 'pointer',
                 font: 'inherit',
-                color: 'var(--text-faint)',
+                color: 'var(--on-dark-muted)',
                 padding: 0,
               }}
             >
@@ -201,18 +203,20 @@ export default function Footer() {
 function FooterCol({ heading, children }: { heading: string; children: React.ReactNode }) {
   return (
     <div>
-      <h4
+      {/* Not a document heading (fixes heading-order audit); brighter red
+          for AA contrast of 11.5px text on the black footer. */}
+      <p
         style={{
           fontSize: 11.5,
           fontWeight: 700,
           letterSpacing: '.18em',
           textTransform: 'uppercase',
-          color: 'var(--red)',
+          color: 'var(--red-bright)',
           margin: '0 0 18px',
         }}
       >
         {heading}
-      </h4>
+      </p>
       <ul
         style={{
           listStyle: 'none',

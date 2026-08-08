@@ -8,7 +8,12 @@
 
 :root {
   /* --- Brand colours --- */
-  --red: #ff0000;
+  /* Signal red, tuned for WCAG AA: #e00000 keeps ≥4.5:1 with white text on
+     red AND as red text on white/surface. Pure #ff0000 sat at 4.0:1 — the
+     single biggest Lighthouse contrast offender. On dark surfaces small red
+     text needs the brighter variant below (red darkens against black). */
+  --red: #e00000;
+  --red-bright: #ff1a1a; /* small red text on black/dark sections (≥4.5:1) */
   --black: #0a0a0a;
   --pure-black: #000000;
   --white: #ffffff;
@@ -20,8 +25,10 @@
   --text-body: #3a3833;
   --text-muted: #54514b;
   --text-muted-2: #6e6b66;
-  --text-faint: #8c8980;
-  --text-faint-2: #9a968f;
+  /* Faint tones darkened to hold ≥4.5:1 on white AND on --surface
+     (WCAG AA, small text) — #6e6b66 is 4.64:1 on #f4f3f1. */
+  --text-faint: #6e6b66;
+  --text-faint-2: #6e6b66;
 
   /* --- On dark surfaces --- */
   --on-dark: #ffffff;
@@ -246,6 +253,17 @@ h4 {
 }
 .section--dark .eyebrow__label {
   color: var(--on-dark-faint);
+}
+/* AA per surface: brighter red for 13px text on black; all-white on red. */
+.section--dark .eyebrow__num {
+  color: var(--red-bright);
+}
+.section--red .eyebrow__num,
+.section--red .eyebrow__label {
+  color: #fff;
+}
+.section--red .eyebrow__rule {
+  background: #fff;
 }
 .eyebrow__rule {
   width: 34px;

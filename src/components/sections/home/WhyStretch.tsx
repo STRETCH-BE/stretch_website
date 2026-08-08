@@ -67,7 +67,7 @@ export default function WhyStretch() {
         .why-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.14); }
         .why-card { background: var(--black); padding: clamp(24px,2.6vw,38px); display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
         .why-card--red { background: var(--red); }
-        .why-card-n { font-family: var(--font-display); font-weight: 800; color: var(--red); font-size: 14px; letter-spacing: .05em; }
+        .why-card-n { font-family: var(--font-display); font-weight: 800; color: var(--red-bright); font-size: 14px; letter-spacing: .05em; }
         .why-card-n--light { color: #fff; }
         .why-card-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(18px,1.7vw,22px); letter-spacing: -.01em; margin: 0 0 12px; color: #fff; }
         .why-card-body { font-size: 14px; line-height: 1.6; color: var(--on-dark-muted); margin: 0; }
