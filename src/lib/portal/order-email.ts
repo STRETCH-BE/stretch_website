@@ -11,6 +11,7 @@
 // ============================================================================
 import { escapeHtml } from '@/lib/email';
 import { brand, contact } from '@/lib/site-config';
+import { isGraphMailConfigured, sendGraphMail } from '@/lib/msgraph-mail';
 
 export type OrderAttachment = { filename: string; content: Buffer };
 export type OrderFileLink = { filename: string; url: string };
@@ -27,7 +28,7 @@ export type OrderEmailInput = {
   fileLinks?: OrderFileLink[];
 };
 
-export type OrderDelivery = { delivered: boolean; method: 'resend' | 'webhook' | 'smtp' | 'log' };
+export type OrderDelivery = { delivered: boolean; method: 'graph' | 'resend' | 'webhook' | 'smtp' | 'log' };
 
 // ---------------------------------------------------------------------------
 // Layout
@@ -232,6 +233,22 @@ async function send(msg: {
   const from =
     process.env.LEAD_FROM_EMAIL ||
     `STRETCH Website <website@${contact.email.split('@')[1] || 'stretchplafonds.be'}>`;
+
+  // 0) Microsoft 365 (Graph) — the company's own mailbox, preferred ---------
+  if (isGraphMailConfigured()) {
+    try {
+      await sendGraphMail({
+        to: msg.to,
+        replyTo: msg.replyTo,
+        subject: msg.subject,
+        html: msg.html,
+        attachments: msg.attachments,
+      });
+      return { delivered: true, method: 'graph' };
+    } catch (err) {
+      logIssue('graph', err);
+    }
+  }
 
   if (process.env.RESEND_API_KEY) {
     try {

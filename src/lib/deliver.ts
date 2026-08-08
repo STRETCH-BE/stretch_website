@@ -7,8 +7,9 @@
 // ============================================================================
 import { buildLeadEmail, type LeadPayload } from '@/lib/email';
 import { contact } from '@/lib/site-config';
+import { isGraphMailConfigured, sendGraphMail } from '@/lib/msgraph-mail';
 
-export type DeliveryResult = { ok: true; method: 'resend' | 'webhook' | 'smtp' | 'log' };
+export type DeliveryResult = { ok: true; method: 'graph' | 'resend' | 'webhook' | 'smtp' | 'log' };
 
 function emailDomain(payload: LeadPayload): string {
   const e = typeof payload.email === 'string' ? payload.email : '';
@@ -28,6 +29,16 @@ export async function deliverLead(payload: LeadPayload): Promise<DeliveryResult>
     process.env.LEAD_FROM_EMAIL ||
     `STRETCH Website <website@${contact.email.split('@')[1] || 'stretchplafond.be'}>`;
   const replyTo = typeof payload.email === 'string' && payload.email ? payload.email : undefined;
+
+  // 0) Microsoft 365 (Graph) — the company's own mailbox, preferred ---------
+  if (isGraphMailConfigured()) {
+    try {
+      await sendGraphMail({ to, replyTo, subject: built.subject, html: built.html });
+      return { ok: true, method: 'graph' };
+    } catch (err) {
+      logIssue('graph', err);
+    }
+  }
 
   // 1) Resend ---------------------------------------------------------------
   if (process.env.RESEND_API_KEY) {

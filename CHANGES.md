@@ -1,3 +1,22 @@
+## 2026-08-08 (12) — E-mail via Microsoft 365 (Graph) — client wants fewer tools
+
+- New src/lib/msgraph-mail.ts: sends through the company's own Exchange
+  Online mailbox via Microsoft Graph (client-credentials, plain fetch, zero
+  new npm deps; token cached across warm invocations; attachments + reply-to
+  + Sent Items). Wired as the FIRST transport in BOTH chains: designer order
+  e-mails (order-email.ts) and website leads (deliver.ts); chain now
+  graph → resend → webhook → smtp → log. Graph honours recipients, so the
+  dealer confirmation flows through it too.
+- Setup documented in msgraph-mail.ts header: Entra app registration with
+  APPLICATION permission Mail.Send + admin consent + client secret; env vars
+  MS_TENANT_ID, MS_CLIENT_ID, MS_CLIENT_SECRET, MS_GRAPH_SENDER (shared
+  mailbox works, no licence needed). Optional ApplicationAccessPolicy to
+  scope the app to that one mailbox. RESEND_API_KEY can be removed once
+  Graph is live.
+- Not live-testable from the sandbox (no tenant credentials/egress) —
+  request shapes follow the standard Graph sendMail contract; verify with
+  one test order after setting the env vars.
+
 ## 2026-08-08 (11) — Order e-mail fixes from live test + automatic design saving
 
 Live test findings (client): both e-mails arrived at leads@ and neither had
