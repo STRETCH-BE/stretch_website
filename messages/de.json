@@ -2141,6 +2141,7 @@
       "mark-with-a-k": "Belgien · Tonstudio",
       "notary-ampe-anthony": "Kruibeke · Akustikbüro",
       "bnp-paribas-fortis": "Brüssel · Bankzentrale",
+      "van-der-valk-boost-wellness": "Beveren · Wellness & Spa im Van der Valk Hotel",
       "van-der-valk-beveren": "Beveren · Hotel-Eventsaal",
       "johnson-and-johnson": "Limerick, IE · Pharma-F&E-Standort",
       "polette-eyewear": "Antwerpen · Retail-Konzeptstore",
@@ -2614,6 +2615,82 @@
         {
           "label": "Partner",
           "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "Die Komplettrenovierung des Wellnessbereichs im Van der Valk Beveren — 700 m² akustische, bedruckte und hinterleuchtete Spanndecken in einem Design von Maison Max.",
+      "hook": "Zwanzig Jahre nachdem die erste Membran gespannt wurde, holte uns Van der Valk Beveren zurück — diesmal, um einen komplett neuen Wellnessbereich zu krönen.",
+      "description": [
+        "Als das Van der Valk Hotel Beveren beschloss, seinen gesamten Wellness- und Poolbereich zu renovieren — wiedereröffnet als Boost Wellness —, war die Wahl des Deckenpartners schnell getroffen. STRETCH-Decken hängen bereits in anderen Teilen des Hotels, und die Zusammenarbeit reicht Jahre zurück. Das Projekt schloss sogar einen Familienkreis: Die erste Aufgabe bestand darin, die Spanndecke zu demontieren, die Benjamin Nicasens von Plafondlux BV — Vater von Michael Nicasens von STRETCH — dort zwanzig Jahre zuvor montiert hatte.",
+        "Nachdem der Bauherr den Wellness- und Poolbereich bis auf den Rohbau entkernt hatte, arbeiteten wir Hand in Hand mit dem Interieurstudio Maison Max aus Temse, das das komplette Design und den Look & Feel gestaltete. Hotelinhaber Tim und seine Frau Paulina waren von Anfang bis Ende eingebunden — Paulina brachte ausgeprägte eigene Designideen ein, die Maison Max in die Pläne einfließen ließ, und gemeinsam wählten sie die Materialien für jeden einzelnen Teil des Projekts aus. Für die Decken bedeutete das ein warmes, glattes, akustisches Design mit mehreren Ebenen über Kopf, sodass kein Raum je flach oder langweilig wirkt.",
+        "Jede Zone erhielt die Membran, die zu ihr passt. In den vollständig nassen Bereichen — Pool, Duschen und Spa — spannten wir PVC-Spanndecken, die stärkste Wahl bei konstanter Feuchtigkeit. Die Umkleiden, Massageräume und das Nagelstudio erhielten Spanndecken aus Polyester (Gewebe), deren warme Textilstruktur ein ultramattes Finish erzeugt.",
+        "Das Spa ist das Schmuckstück. Paulina wünschte sich eine natürliche, organisch geschwungene Wand — und die Decke musste dieser komplexen, fließenden Form folgen. In die bedruckte Decke in Brauntönen wünschte sie sich außerdem ein rundes Oberlicht, nicht mit gerader, sondern mit sanft geschwungener Kante. Vorgefertigte Strukturelemente aus Aluminium bilden den Lichtkasten und die Höhenunterschiede, und das Ergebnis ist eine der komplexesten — und schönsten — Installationen, die wir je realisiert haben.",
+        "Auf 700 m² lag der Fokus auf Langlebigkeit, Akustik und komplexem Design: akustische Membranen mit dahinterliegenden PET-Absorbern, integrierte LED-Spots, Revisionsklappen, Lautsprecher und Hohlkehlen aus Aluminium — jedes technische Detail geht in einer einzigen warmen, nahtlosen Fläche auf. Die Komplettrenovierung dauerte vom Rückbau bis zur Wiedereröffnung sechs Monate."
+      ],
+      "highlights": [
+        "700 m² Spanndecken im gesamten Wellnessbereich",
+        "Bedruckte Decke, die einer organisch geschwungenen Wand folgt",
+        "Rundes Oberlicht mit fließend geschwungener Kante",
+        "Warmes Akustik-Deckendesign auf mehreren Ebenen",
+        "PVC in den Nasszonen, ultramattes Polyester in den trockenen",
+        "Projekt in zweiter Generation — die vorherige Decke wurde vor 20 Jahren montiert"
+      ],
+      "materials": [
+        "Akustische STRETCH-Decke mit dahinterliegenden PET-Absorbern",
+        "Bedruckte STRETCH-Decke (Spa, individueller Druck in Brauntönen)",
+        "Hinterleuchtete STRETCH-Decke (Oberlicht-Lichtkasten)",
+        "PVC-Membranen in allen Nassbereichen",
+        "Ultramatte Polyestermembranen (Umkleiden, Massage- & Nagelräume)",
+        "Vorgefertigte Aluminium-Strukturelemente — Lichtkasten & Höhensprünge",
+        "Integrierte LED-Spots",
+        "Revisionsklappen",
+        "Integrierte Lautsprecher",
+        "Aluminium-Hohlkehlen"
+      ],
+      "facts": [
+        {
+          "label": "Ort",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Wellness",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Innenarchitektur",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Fläche",
+          "value": "700 m²"
+        },
+        {
+          "label": "Jahr",
+          "value": "2025"
+        },
+        {
+          "label": "Komplettrenovierung",
+          "value": "6 Monate"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Warum PVC in manchen Räumen und Polyester in anderen?",
+          "a": "Die Membran richtet sich nach den Bedingungen des Raums. In den dauerhaft nassen Zonen — Pool, Duschen und Spa — ist PVC die stärkste Wahl: Es ist völlig unempfindlich gegen Feuchtigkeit und lässt sich einfach abwischen. In den Umkleiden, Massageräumen und im Nagelstudio spannten wir stattdessen Polyester: eine Gewebemembran, deren gewebte Struktur ein wärmeres, ultramattes Finish ergibt."
+        },
+        {
+          "q": "Wie folgt eine Spanndecke einer geschwungenen, organischen Wand?",
+          "a": "Die geschwungene Wand wurde in vorgefertigte Strukturelemente aus Aluminium übersetzt, die die Profile, den Lichtkasten und die Höhenunterschiede tragen. Die Membran wird anschließend in diesen Rahmen gespannt und folgt der organischen Form so präzise — einschließlich des runden Oberlichts mit seiner sanft geschwungenen Kante."
+        },
+        {
+          "q": "Wie unterstützen die Decken die Akustik?",
+          "a": "Der Wellnessbereich kombiniert akustische Spannmembranen mit dahinterliegenden PET-Absorberplatten: Der Schall dringt durch die Oberfläche und wird geschluckt statt reflektiert. Zusammen mit dem mehrstufigen Deckendesign bleiben große Räume mit harten Oberflächen so ruhig und gedämpft — genau das, was ein Spa braucht."
+        },
+        {
+          "q": "Wie lange hält eine Spanndecke?",
+          "a": "Dieses Projekt ist selbst die Antwort: Die vorherige Spanndecke hier wurde vor zwanzig Jahren montiert und wich nur, weil das Hotel einen komplett neuen Wellnessbereich wollte. Rechnen Sie mit Jahrzehnten — und wenn sich das Design ändert, wird nur die Membran ersetzt, nicht die Konstruktion."
         }
       ]
     },

@@ -2141,6 +2141,7 @@
       "mark-with-a-k": "Belgía · Hljóðver",
       "notary-ampe-anthony": "Kruibeke · Skrifstofa með hljóðvist",
       "bnp-paribas-fortis": "Brussel · Höfuðstöðvar banka",
+      "van-der-valk-boost-wellness": "Beveren · Heilsulind og spa Van der Valk hótelsins",
       "van-der-valk-beveren": "Beveren · Viðburðasalur hótels",
       "johnson-and-johnson": "Limerick, IE · Rannsóknasetur lyfjafyrirtækis",
       "polette-eyewear": "Antwerpen · Hugmyndaverslun",
@@ -2614,6 +2615,82 @@
         {
           "label": "Samstarfsaðili",
           "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "Heildarendurnýjun heilsulindar Van der Valk Beveren — 700 m² af hljóðísogandi, prentuðum og upplýstum strekkiloftum í hönnun frá Maison Max.",
+      "hook": "Tuttugu árum eftir að fyrsta himnan var spennt upp leitaði Van der Valk Beveren aftur til okkar — í þetta sinn til að kóróna glænýja heilsulind.",
+      "description": [
+        "Þegar Van der Valk Hotel Beveren ákvað að endurnýja allt heilsulindar- og laugarsvæðið — sem opnaði aftur undir nafninu Boost Wellness — var fljótgert að velja samstarfsaðila fyrir loftin. STRETCH-loft hanga nú þegar víðar í hótelinu og samstarfið á sér margra ára sögu. Verkefnið lokaði meira að segja fjölskylduhring: fyrsta verkið var að taka niður strekkiloftið sem Benjamin Nicasens hjá Plafondlux BV — faðir Michael Nicasens hjá STRETCH — hafði sett þar upp tuttugu árum áður.",
+        "Þegar verkkaupinn hafði strípað heilsulindar- og laugarsvæðið inn að burðarvirkinu unnum við hönd í hönd með innanhússhönnunarstofunni Maison Max frá Temse, sem mótaði alla hönnunina og heildarásýndina. Tim, eigandi hótelsins, og Paulina, eiginkona hans, komu að verkefninu frá upphafi til enda — Paulina lagði sjálf fram sterkar hönnunarhugmyndir, sem Maison Max fléttaði inn í áætlanirnar, og saman völdu þau efnin í hvern einasta hluta verkefnisins. Fyrir loftin þýddi það hlýja, slétta hljóðvistarhönnun með mörgum hæðarþrepum yfir höfði, svo ekkert rými virkar nokkurn tíma flatt eða tilbreytingarlaust.",
+        "Hvert svæði fékk þá himnu sem hentar því. Í alblautu rýmunum — laug, sturtum og spa — spenntum við upp strekkiloft úr PVC, sterkasta kostinn þar sem raki er stöðugur. Búningsklefarnir, nuddherbergin og naglastofan fengu strekkiloft úr pólýester (vefnaðarefni), en hlý textílbygging þeirra skapar ofurmatta áferð.",
+        "Spaið er skrautfjöðrin. Paulina vildi náttúrulegan, lífrænt sveigðan vegg — og loftið varð að fylgja því flókna, flæðandi formi. Í prentaða, brúntóna loftið bað hún einnig um hringlaga þakglugga, ekki með beinni brún heldur mjúkt sveigðri. Forsmíðaðar burðareiningar úr áli mynda ljósakassann og hæðarmuninn, og útkoman er ein flóknasta — og fallegasta — uppsetning sem við höfum skilað.",
+        "Á 700 m² var áherslan á endingu, hljóðvist og flókna hönnun: hljóðísogandi himnur með PET-ísogsplötum að baki, innbyggðir LED-kastarar, aðgangslúgur, hátalarar og loftlistar úr áli — hvert einasta tæknilega smáatriði rennur saman í eitt hlýtt, saumlaust yfirborð. Heildarendurnýjunin tók sex mánuði frá niðurrifi til enduropnunar."
+      ],
+      "highlights": [
+        "700 m² af strekkiloftum um alla heilsulindina",
+        "Prentað loft sem fylgir lífrænt sveigðum vegg",
+        "Hringlaga þakgluggi með flæðandi sveigðri brún",
+        "Hlý hljóðvistarloft á mörgum hæðarþrepum",
+        "PVC í blautu rýmunum, ofurmatt pólýester í þeim þurru",
+        "Verkefni annarrar kynslóðar — fyrra loftið var sett upp fyrir 20 árum"
+      ],
+      "materials": [
+        "STRETCH hljóðvistarloft með PET-ísogsplötum að baki",
+        "Prentað STRETCH-loft (spa, sérgerð brún prentun)",
+        "Upplýst STRETCH-loft (ljósakassi þakglugga)",
+        "PVC-himnur í öllum blautum rýmum",
+        "Ofurmattar pólýester-himnur (búningsklefar, nudd- og naglastofur)",
+        "Forsmíðaðar burðareiningar úr áli — ljósakassi og hæðarþrep",
+        "Innbyggðir LED-ljóskastarar",
+        "Aðgangslúgur",
+        "Innbyggðir hátalarar",
+        "Loftlistar úr áli"
+      ],
+      "facts": [
+        {
+          "label": "Staður",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Heilsulind",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Innanhússhönnun",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Flatarmál",
+          "value": "700 m²"
+        },
+        {
+          "label": "Ár",
+          "value": "2025"
+        },
+        {
+          "label": "Heildarendurnýjun",
+          "value": "6 mánuðir"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hvers vegna PVC í sumum rýmum og pólýester í öðrum?",
+          "a": "Himnan fylgir aðstæðum rýmisins. Í rýmunum sem eru stöðugt blaut — laug, sturtum og spa — er PVC sterkasti kosturinn: það er algjörlega ósnortið af raka og auðvelt að strjúka hreint. Í búningsklefunum, nuddherbergjunum og naglastofunni spenntum við þess í stað upp pólýester: vefnaðarhimnu þar sem ofin byggingin gefur hlýrri, ofurmatta áferð."
+        },
+        {
+          "q": "Hvernig fylgir strekkiloft sveigðum, lífrænum vegg?",
+          "a": "Sveigði veggurinn var útfærður í forsmíðuðum burðareiningum úr áli sem bera prófílana, ljósakassann og hæðarmuninn. Himnan er síðan spennt í þá umgjörð og fylgir þannig lífræna forminu nákvæmlega — þar með talið hringlaga þakglugganum með mjúkri, sveigðri brún."
+        },
+        {
+          "q": "Hvernig bæta loftin hljóðvistina?",
+          "a": "Heilsulindin sameinar hljóðísogandi strekkihimnur og PET-ísogsplötur þar fyrir aftan: hljóðið fer í gegnum yfirborðið og er fangað í stað þess að endurkastast. Ásamt loftahönnuninni á mörgum hæðarþrepum heldur þetta stórum rýmum með hörðum flötum rólegum og hljóðlátum — nákvæmlega það sem heilsulind þarf."
+        },
+        {
+          "q": "Hversu lengi endist strekkiloft?",
+          "a": "Þetta verkefni er sjálft svarið: fyrra strekkiloftið hér var sett upp fyrir tuttugu árum og vék aðeins vegna þess að hótelið vildi glænýja heilsulind. Gerðu ráð fyrir áratuga endingu — og þegar hönnunin breytist er aðeins himnan endurnýjuð, ekki burðarvirkið."
         }
       ]
     },

@@ -2141,6 +2141,7 @@
       "mark-with-a-k": "Bélgica · Estudio de sonido",
       "notary-ampe-anthony": "Kruibeke · Oficina acústica",
       "bnp-paribas-fortis": "Bruselas · Sede bancaria",
+      "van-der-valk-boost-wellness": "Beveren · Wellness y spa del hotel Van der Valk",
       "van-der-valk-beveren": "Beveren · Sala de eventos de hotel",
       "johnson-and-johnson": "Limerick, IE · Centro de I+D farmacéutico",
       "polette-eyewear": "Amberes · Concept store de retail",
@@ -2614,6 +2615,82 @@
         {
           "label": "Socio",
           "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "La renovación completa del wellness del Van der Valk Beveren — 700 m² de techos tensados acústicos, impresos e iluminados en un diseño de Maison Max.",
+      "hook": "Veinte años después de que se instalara la primera membrana, Van der Valk Beveren volvió a llamarnos — esta vez para coronar un wellness completamente nuevo.",
+      "description": [
+        "Cuando el Van der Valk Hotel Beveren decidió renovar por completo su zona de wellness y piscina — reabierta como Boost Wellness — la elección del socio para los techos estuvo clara enseguida. En otras zonas del hotel ya cuelgan techos STRETCH y la colaboración viene de años atrás. El proyecto incluso cerró un círculo familiar: el primer trabajo consistió en desmontar el techo tensado que Benjamin Nicasens, de Plafondlux BV — padre de Michael Nicasens, de STRETCH — había instalado allí veinte años antes.",
+        "Una vez que el cliente dejó la zona de wellness y piscina reducida a la obra bruta, trabajamos mano a mano con el estudio de interiorismo Maison Max, de Temse, que dio forma a todo el diseño y al look & feel. El propietario del hotel, Tim, y su mujer, Paulina, participaron de principio a fin — Paulina aportó sus propias ideas de diseño, que Maison Max incorporó a los planos, y juntos eligieron los materiales de cada una de las partes del proyecto. Para los techos, eso se tradujo en un diseño cálido, liso y acústico con varios niveles sobre la cabeza, de modo que ninguna sala resulte plana ni aburrida.",
+        "Cada zona recibió la membrana que le corresponde. En las zonas totalmente húmedas — piscina, duchas y spa — tensamos techos de PVC, la opción más resistente allí donde la humedad es constante. Los vestuarios, las salas de masaje y el estudio de uñas recibieron techos tensados de poliéster (textil), cuya cálida estructura textil crea un acabado ultramate.",
+        "El spa es la pieza estrella. Paulina quería una pared natural, de curvas orgánicas — y el techo tenía que seguir esa forma compleja y fluida. En el techo impreso en tonos marrones pidió además un lucernario circular, no con un borde recto sino con una suave curva. Elementos estructurales prefabricados de aluminio forman la caja de luz y las diferencias de altura, y el resultado es una de las instalaciones más complejas — y más bellas — que hemos entregado.",
+        "En los 700 m², el foco estuvo en la durabilidad, la acústica y el diseño complejo: membranas acústicas con absorbentes de PET por detrás, focos LED integrados, trampillas de inspección, altavoces y molduras de aluminio — cada detalle técnico se funde en una única superficie cálida y sin juntas. La renovación completa duró seis meses, desde el vaciado hasta la reapertura."
+      ],
+      "highlights": [
+        "700 m² de techos tensados en todo el wellness",
+        "Techo impreso que sigue una pared de curvas orgánicas",
+        "Lucernario circular con un borde curvo y fluido",
+        "Diseño de techo acústico y cálido en varios niveles",
+        "PVC en las zonas húmedas, poliéster ultramate en las secas",
+        "Proyecto de segunda generación — el techo anterior se instaló hace 20 años"
+      ],
+      "materials": [
+        "Techo STRETCH acústico con respaldo absorbente de PET",
+        "Techo STRETCH impreso (spa, impresión personalizada en marrón)",
+        "Techo STRETCH iluminado (caja de luz del lucernario)",
+        "Membranas de PVC en todas las zonas húmedas",
+        "Membranas de poliéster ultramate (vestuarios, salas de masaje y de uñas)",
+        "Elementos estructurales prefabricados de aluminio — caja de luz y cambios de nivel",
+        "Focos LED integrados",
+        "Trampillas de inspección",
+        "Altavoces integrados",
+        "Molduras de aluminio"
+      ],
+      "facts": [
+        {
+          "label": "Recinto",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Wellness",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Interiorismo",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Superficie",
+          "value": "700 m²"
+        },
+        {
+          "label": "Año",
+          "value": "2025"
+        },
+        {
+          "label": "Renovación completa",
+          "value": "6 meses"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Por qué PVC en unas salas y poliéster en otras?",
+          "a": "La membrana se adapta a las condiciones de la sala. En las zonas permanentemente húmedas — piscina, duchas y spa — el PVC es la opción más resistente: la humedad no le afecta en absoluto y se limpia con un paño. En los vestuarios, las salas de masaje y el estudio de uñas tensamos en cambio poliéster: una membrana textil cuya estructura tejida ofrece un acabado más cálido y ultramate."
+        },
+        {
+          "q": "¿Cómo sigue un techo tensado una pared curva y orgánica?",
+          "a": "La pared curva se tradujo en elementos estructurales prefabricados de aluminio que sostienen los perfiles, la caja de luz y las diferencias de altura. La membrana se tensa después dentro de esa estructura, de modo que sigue con precisión la forma orgánica — incluido el lucernario circular con su suave borde curvo."
+        },
+        {
+          "q": "¿Cómo ayudan los techos a la acústica?",
+          "a": "El wellness combina membranas tensadas acústicas con paneles absorbentes de PET detrás: el sonido atraviesa la superficie y queda capturado en lugar de reflejarse. Junto con el diseño de techo en varios niveles, esto mantiene tranquilas y silenciosas unas salas grandes y de superficies duras — exactamente lo que necesita un spa."
+        },
+        {
+          "q": "¿Cuánto dura un techo tensado?",
+          "a": "Este proyecto es su propia respuesta: el techo tensado anterior se instaló aquí hace veinte años y solo se retiró porque el hotel quería un wellness completamente nuevo. Cuente con décadas de servicio — y cuando el diseño cambie, solo se sustituye la membrana, no la estructura."
         }
       ]
     },

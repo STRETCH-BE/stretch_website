@@ -2141,6 +2141,7 @@
       "mark-with-a-k": "Belgien · Ljudstudio",
       "notary-ampe-anthony": "Kruibeke · Akustiskt kontor",
       "bnp-paribas-fortis": "Bryssel · Bankhuvudkontor",
+      "van-der-valk-boost-wellness": "Beveren · Van der Valk-hotellets wellness & spa",
       "van-der-valk-beveren": "Beveren · Hotellets eventsal",
       "johnson-and-johnson": "Limerick, IE · FoU-anläggning för läkemedel",
       "polette-eyewear": "Antwerpen · Konceptbutik",
@@ -2614,6 +2615,82 @@
         {
           "label": "Partner",
           "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "Den kompletta renoveringen av wellnessanläggningen på Van der Valk Beveren — 700 m² akustiska, printade och belysta spänntak i en design av Maison Max.",
+      "hook": "Tjugo år efter att det första membranet kom upp bad Van der Valk Beveren oss komma tillbaka — den här gången för att kröna en helt ny wellnessanläggning.",
+      "description": [
+        "När Van der Valk Hotel Beveren beslutade att renovera hela sin wellness- och poolavdelning — återöppnad som Boost Wellness — var valet av takpartner snabbt gjort. STRETCH-tak hänger redan i andra delar av hotellet, och samarbetet går många år tillbaka. Projektet slöt till och med en familjecirkel: det första jobbet var att demontera det spänntak som Benjamin Nicasens från Plafondlux BV — far till Michael Nicasens på STRETCH — hade monterat där tjugo år tidigare.",
+        "När beställaren hade rivit ut wellness- och poolavdelningen ned till stommen arbetade vi hand i hand med inredningsstudion Maison Max från Temse, som formade hela designen och dess look & feel. Hotellägaren Tim och hans fru Paulina var med från början till slut — Paulina bidrog med starka egna designidéer, som Maison Max vävde in i planerna, och tillsammans valde de materialen till varje enskild del av projektet. För taken innebar det en varm, mjuk, akustisk design med flera nivåer ovanför huvudet, så att inget rum någonsin känns platt eller tråkigt.",
+        "Varje zon fick det membran som passar den. I de helt våta utrymmena — pool, duschar och spa — spände vi spänntak i PVC, det starkaste valet där fukten är konstant. Omklädningsrummen, massagerummen och nagelstudion fick spänntak i polyester (väv), vars varma textilstruktur ger en ultramatt finish.",
+        "Spa-avdelningen är paradnumret. Paulina ville ha en naturlig, organiskt svängd vägg — och taket måste följa den komplexa, flödande formen. I det printade taket i bruna toner önskade hon sig dessutom ett cirkulärt takfönster, inte med rak kant utan med en mjukt rundad. Prefabricerade konstruktionselement i aluminium bildar ljuslådan och nivåskillnaderna, och resultatet är en av de mest komplexa — och vackraste — installationer vi har levererat.",
+        "Över 700 m² låg fokus på hållbarhet, akustik och komplex design: akustiska membran med bakomliggande PET-absorbenter, integrerade LED-spottar, inspektionsluckor, högtalare och hålkäl i aluminium — varje teknisk detalj smälter in i en enda varm, skarvfri yta. Hela renoveringen tog sex månader, från utrivning till återöppning."
+      ],
+      "highlights": [
+        "700 m² spänntak i hela wellnessanläggningen",
+        "Printat tak som följer en organiskt svängd vägg",
+        "Cirkulärt takfönster med mjukt rundad kant",
+        "Varm akustisk takdesign i flera nivåer",
+        "PVC i våtzonerna, ultramatt polyester i de torra",
+        "Ett andra generationens projekt — det förra taket monterades för 20 år sedan"
+      ],
+      "materials": [
+        "Akustiskt STRETCH-tak med bakomliggande PET-absorbenter",
+        "Printat STRETCH-tak (spa, brunt specialtryck)",
+        "Belyst STRETCH-tak (ljuslåda för takfönstret)",
+        "PVC-membran i alla våtutrymmen",
+        "Ultramatta polyestermembran (omklädnings-, massage- & nagelrum)",
+        "Prefabricerade konstruktionselement i aluminium — ljuslåda & nivåskillnader",
+        "Integrerade LED-spottar",
+        "Inspektionsluckor",
+        "Integrerade högtalare",
+        "Hålkäl i aluminium"
+      ],
+      "facts": [
+        {
+          "label": "Plats",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Wellness",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Inredning",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Yta",
+          "value": "700 m²"
+        },
+        {
+          "label": "År",
+          "value": "2025"
+        },
+        {
+          "label": "Totalrenovering",
+          "value": "6 månader"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Varför PVC i vissa rum och polyester i andra?",
+          "a": "Membranet följer rummets förhållanden. I de permanent våta zonerna — pool, duschar och spa — är PVC det starkaste valet: det påverkas inte alls av fukt och torkas enkelt rent. I omklädningsrummen, massagerummen och nagelstudion spände vi i stället polyester: ett textilmembran vars vävda struktur ger en varmare, ultramatt finish."
+        },
+        {
+          "q": "Hur följer ett spänntak en svängd, organisk vägg?",
+          "a": "Den svängda väggen översattes till prefabricerade konstruktionselement i aluminium som bär profilerna, ljuslådan och nivåskillnaderna. Membranet spänns sedan in i den ramen, så att det följer den organiska formen exakt — inklusive det cirkulära takfönstret med sin mjukt rundade kant."
+        },
+        {
+          "q": "Hur hjälper taken akustiken?",
+          "a": "Wellnessanläggningen kombinerar akustiska spännmembran med PET-absorbentpaneler bakom: ljudet passerar genom ytan och fångas upp i stället för att reflekteras. Tillsammans med takdesignen i flera nivåer håller det stora rum med hårda ytor lugna och dämpade — precis vad ett spa behöver."
+        },
+        {
+          "q": "Hur länge håller ett spänntak?",
+          "a": "Det här projektet är sitt eget svar: det förra spänntaket här monterades för tjugo år sedan och fick bara ge vika för att hotellet ville ha en helt ny wellnessanläggning. Räkna med årtionden av drift — och när designen ändras byts bara membranet ut, inte konstruktionen."
         }
       ]
     },

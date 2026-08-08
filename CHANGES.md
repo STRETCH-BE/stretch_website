@@ -1,3 +1,32 @@
+## 2026-08-08 — Van der Valk "Boost Wellness" project page + real datasheet library
+
+- **New featured project page ×12** (/inspiration/van-der-valk-boost-wellness):
+  the complete wellness renovation of Van der Valk Hotel Beveren, reopened as
+  Boost Wellness (boostwellness.be), interior design by Maison Max (Temse).
+  700 m² / 6-month renovation; story covers the 20-year Plafondlux full-circle
+  (Benjamin → Michael Nicasens), Tim & Paulina's collaboration, PVC in wet
+  zones vs ultra-matte polyester in changing/massage/nail rooms, and the
+  printed brown spa ceiling following the organically curved wall with its
+  curved-edge circular skylight (prefab aluminium lightbox elements). Facts,
+  6 highlights, 10 materials, 4 FAQs, 7 linked solutions. Photo set from the
+  client processed to web JPGs: hero + 11 gallery images
+  (public/images/projects/van-der-valk-boost-wellness-*.jpg). Placed first in
+  content.ts → leads the Featured pair and the portfolio grid. Translated into
+  all 12 locales (projects + projectCards.metas namespaces); be.json kept on
+  the site's "spanplafond" terminology. Portfolio now 25 projects.
+- **Datasheet library goes real:** 29 actual PDFs (client-supplied) added under
+  public/datasheets/ with clean kebab-case names, and datasheets.ts rebuilt —
+  7 categories (Ceiling systems, Acoustic, Light & backlit, Prefab &
+  accessories, Specials & outdoor, Profiles & installation details,
+  Maintenance) with spec-accurate one-line descriptions extracted from the
+  documents themselves, real file sizes. Replaces the 5 placeholder entries
+  whose files 404'd. Docs that are Dutch-only are marked "(NL)".
+- **Housekeeping:** added .gitignore (node_modules/.next/tsbuildinfo/env) — the
+  repo had none.
+- Verified: typecheck + `next build` green; page prerenders in all 12 locales;
+  smoke-tested en/be/fr/pl rendering (hero + gallery + no MISSING_MESSAGE),
+  inspiration listing shows the new featured card, datasheet PDFs serve 200.
+
 ## 2026-08-07 (8) — LU + Wien dealer pages, mega-menu applications, SEO audit (build 1844)
 
 - **Dealer directory phase 2:** new regions in dealers.ts (DealerRegion +

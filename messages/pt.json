@@ -2141,6 +2141,7 @@
       "mark-with-a-k": "Bélgica · Estúdio de som",
       "notary-ampe-anthony": "Kruibeke · Escritório acústico",
       "bnp-paribas-fortis": "Bruxelas · Sede de banco",
+      "van-der-valk-boost-wellness": "Beveren · Wellness e spa do hotel Van der Valk",
       "van-der-valk-beveren": "Beveren · Sala de eventos de hotel",
       "johnson-and-johnson": "Limerick, IE · Centro de I&D farmacêutico",
       "polette-eyewear": "Antuérpia · Concept store de retalho",
@@ -2614,6 +2615,82 @@
         {
           "label": "Parceiro",
           "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "A renovação completa do espaço de bem-estar do Van der Valk Beveren — 700 m² de tetos tensionados acústicos, impressos e iluminados, num design da Maison Max.",
+      "hook": "Vinte anos depois de a primeira membrana ter sido instalada, o Van der Valk Beveren voltou a chamar-nos — desta vez para coroar um espaço de bem-estar totalmente novo.",
+      "description": [
+        "Quando o Van der Valk Hotel Beveren decidiu renovar toda a sua zona de bem-estar e piscina — reaberta como Boost Wellness — a escolha do parceiro para os tetos foi rápida. Já há tetos STRETCH noutras partes do hotel e a colaboração vem de longa data. O projeto chegou até a fechar um círculo familiar: o primeiro trabalho foi desmontar o teto tensionado que Benjamin Nicasens, da Plafondlux BV — pai de Michael Nicasens, da STRETCH — tinha instalado ali vinte anos antes.",
+        "Depois de o cliente ter desmantelado a zona de bem-estar e piscina até à estrutura bruta, trabalhámos lado a lado com o estúdio de interiores Maison Max, de Temse, que concebeu todo o design e o look & feel. Tim, o proprietário do hotel, e a sua mulher Paulina acompanharam o projeto do princípio ao fim — a própria Paulina trouxe ideias de design bem vincadas, que a Maison Max integrou nos planos, e, juntos, escolheram os materiais para cada elemento do projeto. Nos tetos, isso traduziu-se num design acústico quente e suave, com vários níveis, para que nenhum espaço pareça plano ou monótono.",
+        "Cada zona recebeu a membrana que melhor lhe convém. Nas zonas totalmente húmidas — piscina, duches e spa — tensionámos tetos em PVC, a escolha mais forte onde a humidade é constante. Os vestiários, as salas de massagem e o estúdio de manicura receberam tetos tensionados em poliéster (tecido), cuja estrutura têxtil quente cria um acabamento ultramate.",
+        "O spa é a peça central. Paulina queria uma parede natural, de curvas orgânicas — e o teto tinha de acompanhar essa forma complexa e fluida. No teto impresso, em tons de castanho, pediu ainda uma claraboia circular, não com um rebordo reto, mas com uma curva suave. Elementos estruturais pré-fabricados em alumínio formam a caixa de luz e as diferenças de altura, e o resultado é uma das instalações mais complexas — e mais bonitas — que já entregámos.",
+        "Ao longo de 700 m², o foco esteve na durabilidade, na acústica e no design complexo: membranas acústicas com absorsores em PET por trás, spots LED integrados, alçapões de inspeção, altifalantes e sancas em alumínio — cada detalhe técnico dissolvido numa única superfície quente e sem juntas. A renovação completa demorou seis meses, da demolição à reabertura."
+      ],
+      "highlights": [
+        "700 m² de tetos tensionados em todo o espaço de bem-estar",
+        "Teto impresso que acompanha uma parede de curvas orgânicas",
+        "Claraboia circular com rebordo curvo e fluido",
+        "Design de teto acústico quente, em vários níveis",
+        "PVC nas zonas húmidas, poliéster ultramate nas secas",
+        "Projeto de segunda geração — o teto anterior foi instalado há 20 anos"
+      ],
+      "materials": [
+        "Teto STRETCH acústico com absorsores em PET",
+        "Teto STRETCH impresso (spa, impressão personalizada em tons de castanho)",
+        "Teto STRETCH iluminado (caixa de luz da claraboia)",
+        "Membranas de PVC em todas as zonas húmidas",
+        "Membranas de poliéster ultramate (vestiários, salas de massagem e manicura)",
+        "Elementos estruturais pré-fabricados em alumínio — caixa de luz e mudanças de nível",
+        "Spots LED integrados",
+        "Alçapões de inspeção",
+        "Altifalantes integrados",
+        "Sancas em alumínio"
+      ],
+      "facts": [
+        {
+          "label": "Local",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Espaço de bem-estar",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Design de interiores",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Área",
+          "value": "700 m²"
+        },
+        {
+          "label": "Ano",
+          "value": "2025"
+        },
+        {
+          "label": "Renovação completa",
+          "value": "6 meses"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Porquê PVC nalgumas salas e poliéster noutras?",
+          "a": "A membrana acompanha as condições de cada sala. Nas zonas permanentemente húmidas — piscina, duches e spa — o PVC é a escolha mais forte: é totalmente indiferente à humidade e limpa-se com um pano. Nos vestiários, nas salas de massagem e no estúdio de manicura tensionámos poliéster: uma membrana de tecido cuja estrutura tecida confere um acabamento mais quente e ultramate."
+        },
+        {
+          "q": "Como é que um teto tensionado acompanha uma parede curva e orgânica?",
+          "a": "A parede curva foi traduzida em elementos estruturais pré-fabricados em alumínio que suportam os perfis, a caixa de luz e as diferenças de altura. A membrana é depois tensionada nessa estrutura, acompanhando com precisão a forma orgânica — incluindo a claraboia circular com o seu rebordo suavemente curvo."
+        },
+        {
+          "q": "Como é que os tetos ajudam a acústica?",
+          "a": "O espaço de bem-estar combina membranas tensionadas acústicas com painéis absorsores em PET por trás: o som atravessa a superfície e é capturado em vez de refletido. Em conjunto com o design de teto em vários níveis, isto mantém salas grandes, de superfícies duras, calmas e silenciosas — exatamente aquilo de que um spa precisa."
+        },
+        {
+          "q": "Quanto tempo dura um teto tensionado?",
+          "a": "Este projeto é a própria resposta: o teto tensionado anterior foi instalado aqui há vinte anos e só cedeu o lugar porque o hotel quis um espaço de bem-estar totalmente novo. Conte com décadas de serviço — e, quando o design muda, substitui-se apenas a membrana, não a estrutura."
         }
       ]
     },

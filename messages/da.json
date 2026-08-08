@@ -2141,6 +2141,7 @@
       "mark-with-a-k": "Belgien · Lydstudie",
       "notary-ampe-anthony": "Kruibeke · Akustisk kontor",
       "bnp-paribas-fortis": "Bruxelles · Bankhovedsæde",
+      "van-der-valk-boost-wellness": "Beveren · Van der Valk-hotellets wellness & spa",
       "van-der-valk-beveren": "Beveren · Hotellets eventsal",
       "johnson-and-johnson": "Limerick, IE · Farma R&D-anlæg",
       "polette-eyewear": "Antwerpen · Retail-konceptbutik",
@@ -2614,6 +2615,82 @@
         {
           "label": "Partner",
           "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "Den komplette renovering af wellnessområdet på Van der Valk Beveren — 700 m² akustiske, printede og bagbelyste spændlofter i et design af Maison Max.",
+      "hook": "Tyve år efter, at den første membran blev spændt op, bad Van der Valk Beveren os komme tilbage — denne gang for at krone et helt nyt wellnessområde.",
+      "description": [
+        "Da Van der Valk Hotel Beveren besluttede at renovere hele sit wellness- og poolområde — genåbnet som Boost Wellness — var valget af loftspartner hurtigt truffet. Der hænger allerede STRETCH-lofter i andre dele af hotellet, og samarbejdet går år tilbage. Projektet sluttede endda ringen i familien: den første opgave var at demontere det spændloft, som Benjamin Nicasens fra Plafondlux BV — far til Michael Nicasens fra STRETCH — havde monteret dér tyve år tidligere.",
+        "Da bygherren havde strippet wellness- og poolområdet ned til råhuset, arbejdede vi hånd i hånd med interiørstudiet Maison Max fra Temse, som formede hele designet og det samlede look & feel. Hotelejer Tim og hans kone Paulina var med fra start til slut — Paulina kom selv med stærke designidéer, som Maison Max indarbejdede i planerne, og sammen valgte de materialerne til hver eneste del af projektet. For lofterne betød det et varmt, glat, akustisk design med flere niveauer over hovedet, så intet rum nogensinde virker fladt eller kedeligt.",
+        "Hver zone fik den membran, der passer til den. I de helt våde områder — pool, brusere og spa — spændte vi spændlofter i PVC op, det stærkeste valg, hvor fugten er konstant. Omklædningsrummene, massagerummene og neglestudiet fik spændlofter i polyester (tekstil), hvis varme tekstilstruktur skaber en ultramat finish.",
+        "Spaen er pragtstykket. Paulina ønskede en naturlig, organisk buet væg — og loftet skulle følge den komplekse, flydende form. I det printede loft i brune toner bad hun desuden om et cirkulært ovenlys, ikke med en lige, men med en blødt buet kant. Præfabrikerede konstruktionselementer i aluminium danner lysboksen og højdeforskellene, og resultatet er en af de mest komplekse — og smukkeste — installationer, vi har leveret.",
+        "Fordelt over 700 m² lå fokus på holdbarhed, akustik og komplekst design: akustiske membraner med PET-absorbenter bagved, integrerede LED-spots, inspektionslemme, højttalere og hulkehler i aluminium — hver teknisk detalje opløst i én varm, sømløs flade. Den samlede renovering tog seks måneder fra nedrivning til genåbning."
+      ],
+      "highlights": [
+        "700 m² spændlofter i hele wellnessområdet",
+        "Printet loft, der følger en organisk buet væg",
+        "Cirkulært ovenlys med en flydende, buet kant",
+        "Varmt, akustisk loftsdesign i flere niveauer",
+        "PVC i de våde zoner, ultramat polyester i de tørre",
+        "Projekt i anden generation — det forrige loft blev spændt op for 20 år siden"
+      ],
+      "materials": [
+        "Akustisk STRETCH-loft med PET-absorbenter bagved",
+        "Printet STRETCH-loft (spa, brunt specialprint)",
+        "Bagbelyst STRETCH-loft (lysboks til ovenlyset)",
+        "PVC-membraner i alle våde områder",
+        "Ultramatte polyestermembraner (omklædnings-, massage- & neglerum)",
+        "Præfabrikerede konstruktionselementer i aluminium — lysboks & niveauspring",
+        "Integrerede LED-spots",
+        "Inspektionslemme",
+        "Integrerede højttalere",
+        "Hulkehler i aluminium"
+      ],
+      "facts": [
+        {
+          "label": "Sted",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Wellness",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Interiørdesign",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Areal",
+          "value": "700 m²"
+        },
+        {
+          "label": "År",
+          "value": "2025"
+        },
+        {
+          "label": "Samlet renovering",
+          "value": "6 måneder"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Hvorfor PVC i nogle rum og polyester i andre?",
+          "a": "Membranen følger rummets forhold. I de permanent våde zoner — pool, brusere og spa — er PVC det stærkeste valg: det er fuldstændig upåvirket af fugt og kan tørres rent. I omklædningsrummene, massagerummene og neglestudiet spændte vi i stedet polyester op: en tekstilmembran, hvis vævede struktur giver en varmere, ultramat finish."
+        },
+        {
+          "q": "Hvordan følger et spændloft en buet, organisk væg?",
+          "a": "Den buede væg blev oversat til præfabrikerede konstruktionselementer i aluminium, som bærer profilerne, lysboksen og højdeforskellene. Membranen spændes derefter op i denne ramme, så den følger den organiske form præcist — inklusive det cirkulære ovenlys med sin bløde, buede kant."
+        },
+        {
+          "q": "Hvordan hjælper lofterne på akustikken?",
+          "a": "Wellnessområdet kombinerer akustiske spændmembraner med PET-absorbentpaneler bagved: lyden passerer gennem overfladen og fanges i stedet for at blive reflekteret. Sammen med loftsdesignet i flere niveauer holder det store rum med hårde overflader rolige og dæmpede — præcis hvad en spa har brug for."
+        },
+        {
+          "q": "Hvor længe holder et spændloft?",
+          "a": "Dette projekt er sit eget svar: det forrige spændloft her blev spændt op for tyve år siden og måtte kun vige, fordi hotellet ønskede et helt nyt wellnessområde. Regn med årtiers levetid — og når designet skifter, er det kun membranen, der udskiftes, ikke konstruktionen."
         }
       ]
     },

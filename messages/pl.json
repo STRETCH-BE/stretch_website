@@ -2141,6 +2141,7 @@
       "mark-with-a-k": "Belgia · Studio dźwiękowe",
       "notary-ampe-anthony": "Kruibeke · Biuro akustyczne",
       "bnp-paribas-fortis": "Bruksela · Siedziba banku",
+      "van-der-valk-boost-wellness": "Beveren · Wellness i spa hotelu Van der Valk",
       "van-der-valk-beveren": "Beveren · Hotelowa sala eventowa",
       "johnson-and-johnson": "Limerick, IE · Ośrodek R&D farmacji",
       "polette-eyewear": "Antwerpia · Sklep koncepcyjny",
@@ -2614,6 +2615,82 @@
         {
           "label": "Partner",
           "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "Kompletna renowacja strefy wellness Van der Valk Beveren — 700 m² akustycznych, drukowanych i podświetlanych sufitów napinanych według projektu Maison Max.",
+      "hook": "Dwadzieścia lat po tym, jak zawisła pierwsza membrana, Van der Valk Beveren ponownie się do nas zwrócił — tym razem, by zwieńczyć całkowicie nowe wellness.",
+      "description": [
+        "Kiedy Van der Valk Hotel Beveren postanowił wyremontować całą strefę wellness i basenową — otwartą ponownie jako Boost Wellness — wybór partnera od sufitów zapadł szybko. Sufity STRETCH wiszą już w innych częściach hotelu, a współpraca trwa od lat. Projekt domknął nawet rodzinną klamrę: pierwszym zadaniem był demontaż sufitu napinanego, który Benjamin Nicasens z Plafondlux BV — ojciec Michaela Nicasensa ze STRETCH — zamontował tam dwadzieścia lat wcześniej.",
+        "Gdy klient rozebrał strefę wellness i basenową do stanu surowego, pracowaliśmy ramię w ramię ze studiem wnętrz Maison Max z Temse, które opracowało cały projekt oraz look & feel. Właściciel hotelu Tim i jego żona Paulina byli zaangażowani od początku do końca — Paulina wniosła własne, wyraziste pomysły projektowe, które Maison Max wplotło w plany, i wspólnie dobrali materiały do każdej części projektu. W przypadku sufitów przełożyło się to na ciepły, gładki, akustyczny projekt z wieloma poziomami nad głową, dzięki czemu żadne pomieszczenie nie wydaje się płaskie ani nudne.",
+        "Każda strefa otrzymała membranę, która do niej pasuje. W strefach całkowicie mokrych — basenie, prysznicach i spa — napięliśmy sufity napinane z PVC, najmocniejszy wybór tam, gdzie wilgoć utrzymuje się stale. Szatnie, gabinety masażu i studio stylizacji paznokci otrzymały poliestrowe (tkaninowe) sufity napinane, których ciepła, tekstylna struktura tworzy ultramatowe wykończenie.",
+        "Spa jest wizytówką całego projektu. Paulina chciała naturalnej, organicznie wygiętej ściany — a sufit musiał podążyć za tym złożonym, płynnym kształtem. W drukowanym suficie utrzymanym w tonacji brązów zażyczyła sobie też okrągłego świetlika, nie z prostą, lecz z miękko wygiętą krawędzią. Prefabrykowane aluminiowe elementy konstrukcyjne tworzą kaseton świetlny i różnice poziomów, a rezultat to jedna z najbardziej złożonych — i najpiękniejszych — instalacji, jakie zrealizowaliśmy.",
+        "Na 700 m² najważniejsze były trwałość, akustyka i złożony projekt: akustyczne membrany z warstwą absorberów PET, zintegrowane spoty LED, klapy rewizyjne, głośniki i aluminiowe fasety — każdy techniczny detal rozpłynął się w jednej ciepłej powierzchni bez łączeń. Pełna renowacja, od rozbiórki po ponowne otwarcie, trwała sześć miesięcy."
+      ],
+      "highlights": [
+        "700 m² sufitów napinanych w całej strefie wellness",
+        "Drukowany sufit podążający za organicznie wygiętą ścianą",
+        "Okrągły świetlik z płynnie wygiętą krawędzią",
+        "Wielopoziomowy, ciepły projekt sufitu akustycznego",
+        "PVC w strefach mokrych, ultramatowy poliester w suchych",
+        "Realizacja drugiego pokolenia — poprzedni sufit zawisł 20 lat temu"
+      ],
+      "materials": [
+        "Akustyczny sufit STRETCH z warstwą absorberów PET",
+        "Drukowany sufit STRETCH (spa, indywidualny nadruk w tonacji brązów)",
+        "Podświetlany sufit STRETCH (kaseton świetlika)",
+        "Membrany PVC we wszystkich strefach mokrych",
+        "Ultramatowe membrany poliestrowe (szatnie, gabinety masażu i stylizacji paznokci)",
+        "Prefabrykowane aluminiowe elementy konstrukcyjne — kaseton świetlny i zmiany poziomów",
+        "Zintegrowane spoty oświetleniowe LED",
+        "Klapy rewizyjne",
+        "Zintegrowane głośniki",
+        "Fasety aluminiowe"
+      ],
+      "facts": [
+        {
+          "label": "Obiekt",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Wellness",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Projekt wnętrz",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Powierzchnia",
+          "value": "700 m²"
+        },
+        {
+          "label": "Rok",
+          "value": "2025"
+        },
+        {
+          "label": "Pełna renowacja",
+          "value": "6 miesięcy"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Dlaczego w jednych pomieszczeniach PVC, a w innych poliester?",
+          "a": "Membrana podąża za warunkami panującymi w pomieszczeniu. W strefach stale mokrych — basenie, prysznicach i spa — PVC to najmocniejszy wybór: wilgoć zupełnie mu nie szkodzi i łatwo przetrzeć go do czysta. W szatniach, gabinetach masażu i studiu stylizacji paznokci napięliśmy natomiast poliester: membranę tkaninową, której tkana struktura daje cieplejsze, ultramatowe wykończenie."
+        },
+        {
+          "q": "Jak sufit napinany podąża za wygiętą, organiczną ścianą?",
+          "a": "Wygiętą ścianę przełożyliśmy na prefabrykowane aluminiowe elementy konstrukcyjne, które niosą profile, kaseton świetlny i różnice poziomów. Membrana jest następnie napinana w tej ramie, dzięki czemu precyzyjnie podąża za organicznym kształtem — łącznie z okrągłym świetlikiem o miękko wygiętej krawędzi."
+        },
+        {
+          "q": "Jak sufity pomagają akustyce?",
+          "a": "Wellness łączy akustyczne membrany napinane z panelami absorberów PET za nimi: dźwięk przechodzi przez powierzchnię i zostaje wychwycony, zamiast się odbijać. Razem z wielopoziomowym projektem sufitów utrzymuje to spokój i wyciszenie w dużych pomieszczeniach o twardych powierzchniach — dokładnie tego potrzebuje spa."
+        },
+        {
+          "q": "Jak długo służy sufit napinany?",
+          "a": "Ten projekt sam jest odpowiedzią: poprzedni sufit napinany zamontowano tu dwadzieścia lat temu i ustąpił miejsca tylko dlatego, że hotel chciał całkowicie nowego wellness. Można liczyć na dekady użytkowania — a gdy zmienia się projekt, wymienia się jedynie membranę, nie konstrukcję."
         }
       ]
     },

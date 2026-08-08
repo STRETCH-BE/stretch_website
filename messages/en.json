@@ -2141,6 +2141,7 @@
       "mark-with-a-k": "Belgium · Sound studio",
       "notary-ampe-anthony": "Kruibeke · Acoustic office",
       "bnp-paribas-fortis": "Brussels · Bank HQ",
+      "van-der-valk-boost-wellness": "Beveren · Van der Valk hotel wellness & spa",
       "van-der-valk-beveren": "Beveren · Hotel event hall",
       "johnson-and-johnson": "Limerick, IE · Pharma R&D facility",
       "polette-eyewear": "Antwerp · Retail concept store",
@@ -2614,6 +2615,82 @@
         {
           "label": "Partner",
           "value": "Conceptexpo"
+        }
+      ]
+    },
+    "van-der-valk-boost-wellness": {
+      "title": "Boost Wellness",
+      "summary": "The complete renovation of the Van der Valk Beveren wellness — 700 m² of acoustic, printed and illuminated stretch ceilings in a design by Maison Max.",
+      "hook": "Twenty years after the first membrane went up, Van der Valk Beveren asked us back — this time to crown an entirely new wellness.",
+      "description": [
+        "When Van der Valk Hotel Beveren decided to renovate its entire wellness and pool area — reopened as Boost Wellness — the choice of ceiling partner was quickly made. STRETCH ceilings already hang in other parts of the hotel, and the collaboration goes back years. The project even closed a family circle: the first job was dismantling the stretch ceiling that Benjamin Nicasens of Plafondlux BV — father of STRETCH’s Michael Nicasens — had installed there twenty years earlier.",
+        "Once the client had stripped the wellness and pool area back to the shell, we worked hand in hand with interior studio Maison Max from Temse, who shaped the full design and look & feel. Hotel owner Tim and his wife Paulina were involved from start to finish — Paulina brought strong design ideas of her own, which Maison Max folded into the plans, and together they chose the materials for every single part of the project. For the ceilings, that translated into a warm, smooth, acoustic design with multiple levels overhead, so no room ever reads as flat or boring.",
+        "Every zone received the membrane that suits it. In the fully wet areas — pool, showers and spa — we tensioned PVC stretch ceilings, the strongest choice where humidity is constant. The changing rooms, massage rooms and nail studio received polyester (fabric) stretch ceilings, whose warm textile structure creates an ultra-matte finish.",
+        "The spa is the showpiece. Paulina wanted a natural, organically curved wall — and the ceiling had to follow that complex, flowing shape. Into the printed, brown-toned ceiling she also asked for a circular skylight, not with a straight edge but with a soft curved one. Prefabricated aluminium structural elements form the lightbox and the height differences, and the result is one of the most complex — and most beautiful — installations we have delivered.",
+        "Across 700 m², the focus was durability, acoustics and complex design: acoustic membranes backed with PET absorbers, integrated LED spots, inspection hatches, speakers and aluminium coving — every technical detail dissolved into one warm, seamless surface. The full renovation ran six months from strip-out to reopening."
+      ],
+      "highlights": [
+        "700 m² of stretch ceilings throughout the wellness",
+        "Printed ceiling following an organically curved wall",
+        "Circular skylight with a flowing curved edge",
+        "Multi-level, warm acoustic ceiling design",
+        "PVC in the wet zones, ultra-matte polyester in the dry",
+        "Second-generation project — the previous ceiling went up 20 years ago"
+      ],
+      "materials": [
+        "Acoustic STRETCH ceiling with PET absorber backing",
+        "Printed STRETCH ceiling (spa, custom brown print)",
+        "Illuminated STRETCH ceiling (skylight lightbox)",
+        "PVC membranes in all wet areas",
+        "Ultra-matte polyester membranes (changing, massage & nail rooms)",
+        "Prefabricated aluminium structural elements — lightbox & level changes",
+        "Integrated LED lighting spots",
+        "Inspection hatches",
+        "Integrated speakers",
+        "Aluminium coving"
+      ],
+      "facts": [
+        {
+          "label": "Venue",
+          "value": "Van der Valk Hotel Beveren"
+        },
+        {
+          "label": "Wellness",
+          "value": "Boost Wellness"
+        },
+        {
+          "label": "Interior design",
+          "value": "Maison Max (Temse)"
+        },
+        {
+          "label": "Area",
+          "value": "700 m²"
+        },
+        {
+          "label": "Year",
+          "value": "2025"
+        },
+        {
+          "label": "Full renovation",
+          "value": "6 months"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Why PVC in some rooms and polyester in others?",
+          "a": "The membrane follows the conditions of the room. In the permanently wet zones — pool, showers and spa — PVC is the strongest choice: it is completely unaffected by humidity and wipes clean. In the changing rooms, massage rooms and nail studio we tensioned polyester instead: a fabric membrane whose woven structure gives a warmer, ultra-matte finish."
+        },
+        {
+          "q": "How does a stretch ceiling follow a curved, organic wall?",
+          "a": "The curved wall was translated into prefabricated aluminium structural elements that carry the profiles, the lightbox and the height differences. The membrane is then tensioned into that frame, so it follows the organic shape precisely — including the circular skylight with its soft curved edge."
+        },
+        {
+          "q": "How do the ceilings help the acoustics?",
+          "a": "The wellness combines acoustic stretch membranes with PET absorber panels behind them: sound passes through the surface and is captured instead of reflected. Together with the multi-level ceiling design, this keeps large, hard-surfaced rooms calm and hushed — exactly what a spa needs."
+        },
+        {
+          "q": "How long does a stretch ceiling last?",
+          "a": "This project is its own answer: the previous stretch ceiling here went up twenty years ago and only made way because the hotel wanted an entirely new wellness. Count on decades of service — and when the design changes, only the membrane is replaced, not the structure."
         }
       ]
     },
