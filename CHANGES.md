@@ -1,3 +1,35 @@
+## 2026-08-08 (21) — SEO audit: three shadowing bugs fixed
+
+Full-codebase SEO audit (metadata, hreflang, canonicals, sitemaps, robots,
+structured data, portal noindex), verified against the rendered production
+build per locale domain. Three real defects found and fixed — all cases of
+an old file shadowing the newer host-aware implementation:
+
+- **Deleted src/app/sitemap.ts** (old path-based sitemap): it was winning
+  over app/sitemap.xml/route.ts, so every domain served ONE identical
+  sitemap full of https://stretchplafond.com/<locale>/… URLs (which
+  redirect on the real domains) and missing dealer/material detail pages.
+  Now each domain serves its own host-aware sitemap: only its own URLs
+  (142 on .nl, zero off-domain), xhtml hreflang + x-default on every
+  entry, dealer/material routes included, portal excluded. Also fixes the
+  `next dev` route-conflict crash the duplicate caused.
+- **Deleted public/robots.txt** (stale static file): it shadowed
+  app/robots.txt/route.ts, hardcoding `Sitemap: stretchplafond.be/…` on
+  ALL 12 domains and missing the /portal disallows. Each domain now
+  advertises its own sitemap and blocks the portal.
+- **Deleted src/app/layout.tsx** (duplicate root layout): both it and
+  [locale]/layout.tsx rendered <html>/<body>, producing nested documents
+  where the FIRST <html> said lang="en" on every locale. Now a single
+  <html> with the correct per-locale BCP-47 lang.
+
+Verified healthy (no changes needed): per-domain canonicals; 13 hreflang
+link tags (12 locales + x-default) on every page; per-page meta ×12 with
+full key parity; portal noindex + robots disallow; /training 308 → the
+canonical /installer-training; JSON-LD Organization/WebSite/LocalBusiness
+(home), Product/BreadcrumbList/FAQPage (products), Article (blog); OG
+image endpoint; real 404 status; llms.txt; AI crawlers explicitly
+allowed; /architects present in sitemap, nav, footer and meta ×12.
+
 ## 2026-08-08 (20) — Order & quote from the pricelist + compact architect dashboard
 
 - **Pricelist order basket** (client request): every price row gets a +
