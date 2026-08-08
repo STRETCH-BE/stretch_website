@@ -38,6 +38,19 @@ export const DEMO_USERS: Array<PortalProfile & { password: string }> = [
     allMarkets: false,
     active: true,
   },
+  {
+    id: 'demo-architect',
+    email: 'architect@stretch.be',
+    password: 'stretch2026',
+    company: 'Demo Architecten BV',
+    role: 'client',
+    accountType: 'architect',
+    markets: [],
+    allMarkets: false,
+    active: true,
+    office: 'Demo Architecten BV',
+    city: 'Antwerpen',
+  },
 ];
 
 export function findDemoUser(email: string, password: string) {

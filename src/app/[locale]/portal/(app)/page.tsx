@@ -8,6 +8,7 @@ import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
 import { hasTradeAccess } from '@/lib/portal/types';
 import { getPricebook } from '@/lib/portal/data';
+import ArchitectDashboard from '@/components/portal/ArchitectDashboard';
 
 export default async function PortalOverviewPage({ params }: { params: { locale: string } }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
@@ -15,6 +16,13 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
 
   const session = await getPortalSession();
   if (!session) return null; // (app) layout already redirects
+
+  // Architects get their own dashboard — a completely separate surface with
+  // no pricing-shaped content beyond the budget-guide link.
+  if (session.profile.accountType === 'architect' && session.profile.role !== 'admin') {
+    return <ArchitectDashboard profile={session.profile} demo={session.demo} />;
+  }
+
   const t = await getTranslations('portal.dash');
 
   // B2C accounts never load pricing data — trade tiles are replaced by the

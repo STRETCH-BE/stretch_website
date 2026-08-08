@@ -11,7 +11,13 @@ import { getPortalSession } from '@/lib/portal/auth';
 import { isSupabaseConfigured } from '@/lib/portal/supabase';
 import LoginForm from '@/components/portal/LoginForm';
 
-export default async function PortalLoginPage({ params }: { params: { locale: string } }) {
+export default async function PortalLoginPage({
+  params,
+  searchParams,
+}: {
+  params: { locale: string };
+  searchParams?: { signup?: string };
+}) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   setRequestLocale(locale);
 
@@ -57,7 +63,10 @@ export default async function PortalLoginPage({ params }: { params: { locale: st
       </section>
 
       <section className="portal-login__form">
-        <LoginForm mode={mode} />
+        <LoginForm
+          mode={mode}
+          initialAudience={searchParams?.signup === 'architect' ? 'architect' : undefined}
+        />
       </section>
 
       <style dangerouslySetInnerHTML={{ __html: `

@@ -48,6 +48,7 @@ Every variable is **optional**. See `.env.example` for the full annotated list. 
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` / `SMTP_SECURE` / `SMTP_FROM` | Or send via SMTP (Nodemailer). |
 | `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Client portal auth + database ([Supabase](https://supabase.com)). Without them `/portal` runs in demo mode. |
 | `SUPABASE_SERVICE_ROLE_KEY` | Server-only — powers the portal's admin API (pricelist sync, account management). |
+| `DATASHEET_SIGNING_SECRET` | Any long random string — signs the expiring datasheet download links (`src/lib/datasheet-links.ts`). Unset = insecure dev fallback with a console warning. |
 
 **Lead delivery** auto-selects a method at runtime, in priority order: Microsoft Graph → webhook → SMTP → log-only. The first one whose env vars are present wins. `nodemailer` is an *optional* dependency, imported dynamically only when configured.
 

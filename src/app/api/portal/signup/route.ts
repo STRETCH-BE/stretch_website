@@ -1,9 +1,11 @@
 // POST /api/portal/signup — open self-registration, B2B-oriented.
-// STRETCH is B2B-focused: registration asks for the company details our team
-// needs to qualify the account (company, VAT, contact, phone, country,
-// business type). The account itself is created as account_type='b2c' — own
-// account area immediately, NO trade pricing and NO designer — and an admin
-// upgrades it to a trade tier after reviewing the submitted details.
+// Two self-service audiences:
+//   • Client  → account_type 'b2c': the B2B qualification set (company, VAT,
+//     contact, phone, country, business type); an admin upgrades to a trade
+//     tier after review. No trade pricing until then.
+//   • Architect → account_type 'architect': office name + city instead of the
+//     VAT set; instant access to the architect area after email confirmation.
+//     NEVER any trade pricing — enforced by hasTradeAccess + pricebook RLS.
 // Only available in Supabase mode — demo mode has no real accounts.
 import { NextRequest, NextResponse } from 'next/server';
 import { createRouteClient, createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
@@ -34,6 +36,9 @@ export async function POST(req: NextRequest) {
   let phone = '';
   let country = '';
   let businessType = '';
+  let accountType = 'b2c';
+  let office = '';
+  let city = '';
   try {
     const body = await req.json();
     email = text(body.email, 200).toLowerCase();
@@ -44,19 +49,24 @@ export async function POST(req: NextRequest) {
     phone = text(body.phone, 32);
     country = text(body.country, 8).toUpperCase();
     businessType = text(body.businessType, 20).toLowerCase();
+    // Self-service tiers only: 'architect' or 'b2c' — b2b tiers are always
+    // granted by an admin, never self-selected.
+    accountType = text(body.accountType, 20).toLowerCase() === 'architect' ? 'architect' : 'b2c';
+    office = text(body.office, 120);
+    city = text(body.city, 80);
   } catch {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 400 });
   }
-  if (
-    !EMAIL_RE.test(email) ||
-    password.length < 8 ||
-    !company ||
-    !contactName ||
-    !VAT_RE.test(vat) ||
-    !PHONE_RE.test(phone) ||
-    !COUNTRY_RE.test(country) ||
-    !BUSINESS_TYPES.has(businessType)
-  ) {
+
+  const isArchitect = accountType === 'architect';
+  if (isArchitect && !office) office = company;
+  const baseValid =
+    EMAIL_RE.test(email) && password.length >= 8 && company && contactName && PHONE_RE.test(phone);
+  // Architects: office + city instead of the B2B qualification set.
+  const audienceValid = isArchitect
+    ? Boolean(office && city)
+    : VAT_RE.test(vat) && COUNTRY_RE.test(country) && BUSINESS_TYPES.has(businessType);
+  if (!baseValid || !audienceValid) {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 400 });
   }
 
@@ -65,10 +75,13 @@ export async function POST(req: NextRequest) {
   const details = {
     company,
     contact_name: contactName,
-    vat,
+    vat: vat || null,
     phone,
-    country,
-    business_type: businessType,
+    country: country || null,
+    business_type: isArchitect ? 'architect' : businessType,
+    account_type: accountType,
+    office: isArchitect ? office : null,
+    city: city || null,
   };
 
   const supabase = createRouteClient();
@@ -104,17 +117,17 @@ export async function POST(req: NextRequest) {
         id: data.user.id,
         email,
         role: 'client',
-        account_type: 'b2c',
+        account_type: accountType,
         markets: [],
         all_markets: false,
         active: true,
       };
       const { error: profileError } = await service
         .from('portal_users')
-        .upsert({ ...base, ...details }, { onConflict: 'id' });
+        .upsert({ ...base, ...details, account_type: accountType }, { onConflict: 'id' });
       if (profileError) {
-        // Un-migrated database (B2B columns missing) — store the core profile;
-        // the details survive in the auth metadata for later.
+        // Un-migrated database (newer columns missing) — store the core
+        // profile; the details survive in the auth metadata for later.
         await service.from('portal_users').upsert({ ...base, company }, { onConflict: 'id' });
       }
     }

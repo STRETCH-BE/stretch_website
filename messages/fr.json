@@ -20,7 +20,8 @@
       "about": "À propos",
       "faq": "FAQ",
       "clientLogin": "Espace client",
-      "materials": "Matériaux"
+      "materials": "Matériaux",
+      "architects": "Architectes"
     },
     "cta": {
       "freeQuote": "Devis gratuit",
@@ -73,7 +74,9 @@
     "portalTitle": "Espace client | STRETCH",
     "portalDescription": "Connectez-vous pour consulter votre tarif professionnel STRETCH et vos données de compte.",
     "materialsTitle": "Matériaux & fournitures plafond tendu | STRETCH",
-    "materialsDescription": "Profilés, toiles & films, éclairage, accessoires, outillage et STRETCH Cleaner — demandez un devis par article, nous répondons avec prix et délai. Sans boutique en ligne."
+    "materialsDescription": "Profilés, toiles & films, éclairage, accessoires, outillage et STRETCH Cleaner — demandez un devis par article, nous répondons avec prix et délai. Sans boutique en ligne.",
+    "architectsTitle": "Pour les architectes — prescrire des plafonds tendus | STRETCH",
+    "architectsDescription": "Espace architectes gratuit : fiches techniques, textes de prescription, CAD/BIM, études de cas mesurées, fourchettes €/m² indicatives, événements et accompagnement projet."
   },
   "cookies": {
     "title": "Nous respectons votre vie privée",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiration",
       "about": "À propos",
       "faq": "FAQ",
-      "clientPortal": "Espace client"
+      "clientPortal": "Espace client",
+      "architects": "Pour les architectes"
     },
     "dealers": "Réseau de revendeurs"
   },
@@ -196,7 +200,12 @@
       "signupDoneBody": "Nous vous avons envoyé un lien de confirmation. Cliquez dessus, puis connectez-vous avec votre e-mail et votre mot de passe.",
       "signupExists": "Un compte existe déjà avec cet e-mail — connectez-vous.",
       "unavailableTitle": "Portail bientôt disponible",
-      "unavailableBody": "Le portail client est en cours d’activation. Contactez-nous et nous configurerons votre accès."
+      "unavailableBody": "Le portail client est en cours d’activation. Contactez-nous et nous configurerons votre accès.",
+      "audienceLabel": "Je suis",
+      "audienceClient": "Client",
+      "audienceArchitect": "Architecte",
+      "officeName": "Nom de l’agence",
+      "city": "Ville"
     },
     "nav": {
       "label": "Espace client",
@@ -208,7 +217,8 @@
       "signOut": "Se déconnecter",
       "demoBadge": "Démo",
       "allMarkets": "Tous les marchés",
-      "designer": "Concepteur de plafond"
+      "designer": "Concepteur de plafond",
+      "budgetGuide": "Guide budgétaire"
     },
     "dash": {
       "eyebrow": "Espace client",
@@ -317,7 +327,9 @@
       "createdOk": "Compte créé pour {email}.",
       "typeProducer": "Producteur/revendeur",
       "typeInstaller": "Installateur",
-      "typeB2c": "B2C"
+      "typeB2c": "B2C",
+      "typeArchitect": "Architecte",
+      "filterAllTypes": "Tous les types"
     },
     "designer": {
       "eyebrow": "Concepteur de plafond",
@@ -329,6 +341,53 @@
       "architect": "Architecte / designer",
       "contractor": "Entrepreneur",
       "other": "Autre"
+    },
+    "architect": {
+      "eyebrow": "Espace architectes",
+      "welcome": "Tout pour prescrire",
+      "intro": "Bienvenue, {office} — documents, cahiers des charges, CAD/BIM, études de cas mesurées, budgets indicatifs et accompagnement projet au même endroit.",
+      "demoNote": "Aperçu démo — téléchargements désactivés, rien n’est enregistré.",
+      "toolsTitle": "Outils projet",
+      "budgetTileTitle": "Guide budgétaire",
+      "budgetTileBody": "Fourchettes €/m² indicatives pour les phases amont — les chiffres que personne ne publie.",
+      "budgetTileCta": "Ouvrir le guide",
+      "projectTileTitle": "Enregistrer un projet",
+      "projectTileBody": "Un projet en cours reçoit un conseiller dédié, un appui prescription et des échantillons prioritaires.",
+      "projectTileCta": "Enregistrer un projet",
+      "samplesTileTitle": "Boîte d’échantillons",
+      "samplesTileBody": "Échantillons physiques de membranes et de couleurs pour votre matériauthèque — gratuit pour les architectes.",
+      "samplesTileCta": "Commander la boîte",
+      "libraryTitle": "Bibliothèque",
+      "libraryBody": "Chaque document en un clic. Les téléchargements sont associés à votre compte pour un accompagnement proactif.",
+      "docsTitle": "Fiches techniques",
+      "docsBody": "La bibliothèque technique complète — sans formulaire, en un clic.",
+      "specTitle": "Textes de prescription",
+      "specBody": "Clauses prêtes à coller par système — bestektekst NL, cahier des charges FR, specification EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "Détails de profilés DWG, familles Revit et composants SketchUp par système.",
+      "photosTitle": "Photos de projets",
+      "photosBody": "Photos haute résolution de projets de référence pour vos présentations client.",
+      "casesTitle": "Études de cas techniques",
+      "casesBody": "Des projets réels avec valeurs mesurées avant/après — des chiffres pour vos notes de conception.",
+      "eventsTitle": "Événements",
+      "eventsBody": "Formations, lunch & learns et journées showroom — inscription en un clic.",
+      "register": "S’inscrire",
+      "advisorTitle": "Votre conseiller",
+      "advisorBody": "Un spécialiste pour la prescription, l’acoustique, les budgets et les échantillons — réponse sous un jour ouvré.",
+      "advisorCta": "Réserver un appel",
+      "download": "Télécharger",
+      "comingSoon": "Bientôt"
+    },
+    "budget": {
+      "eyebrow": "Espace architectes",
+      "title": "Guide budgétaire",
+      "intro": "Fourchettes de prix posé indicatives par système — volontairement larges, pour les budgets amont et les études de faisabilité.",
+      "disclaimer": "Fourchettes de prix posé indicatives, hors TVA, réservées aux budgets amont. Chaque projet est chiffré individuellement — enregistrez votre projet pour un chiffre réel.",
+      "includes": "Ce qui est inclus",
+      "perM2": "par m² posé, hors TVA",
+      "perUnit": "par unité posée, hors TVA",
+      "ctaBody": "Besoin d’un chiffre réel pour un projet en cours ? Enregistrez-le : un conseiller dédié le chiffre correctement sous un jour ouvré.",
+      "ctaButton": "Enregistrer votre projet"
     }
   },
   "home": {
@@ -1543,6 +1602,28 @@
               "sub": "Questions fréquentes"
             }
           ]
+        },
+        {
+          "title": "Architectes",
+          "desc": "Prescrire en confiance — documents, budgets et accompagnement.",
+          "items": [
+            {
+              "title": "Espace architectes",
+              "sub": "Tout pour prescrire, au même endroit"
+            },
+            {
+              "title": "Fiches techniques",
+              "sub": "La bibliothèque documentaire technique"
+            },
+            {
+              "title": "Créer un compte",
+              "sub": "Gratuit — accès immédiat après confirmation e-mail"
+            },
+            {
+              "title": "Se connecter",
+              "sub": "Directement vers votre tableau de bord"
+            }
+          ]
         }
       ]
     },
@@ -1841,25 +1922,50 @@
       }
     },
     "datasheet": {
-      "title": "Télécharger la fiche technique",
-      "subtitle": "Saisissez vos coordonnées et le téléchargement démarrera aussitôt. Nous les utilisons uniquement pour assurer le suivi de votre demande.",
-      "submitLabel": "Obtenir la fiche technique",
-      "sentTitle": "Voici votre fiche technique",
-      "sentMsg": "Le téléchargement devrait démarrer automatiquement — sinon, utilisez le bouton ci-dessous.",
+      "title": "Recevez la fiche technique par e-mail",
+      "subtitle": "Laissez vos coordonnées et nous vous envoyons la fiche technique directement dans votre boîte mail. Nous les utilisons uniquement pour le suivi de votre demande.",
+      "submitLabel": "Envoyez-moi la fiche technique",
+      "sentTitle": "Vérifiez votre boîte mail",
+      "sentMsg": "La fiche technique est en route vers {email}. Rien reçu après quelques minutes ? Vérifiez vos spams.",
       "fields": {
         "name": {
           "label": "Nom",
           "placeholder": "Prénom et nom"
         },
+        "role": {
+          "label": "Je suis",
+          "options": [
+            "Architecte",
+            "Installateur",
+            "Client particulier",
+            "Autre entreprise"
+          ]
+        },
         "email": {
           "label": "E-mail",
-          "placeholder": "you@email.com"
+          "placeholder": "vous@email.com"
         },
         "phone": {
           "label": "Téléphone",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "Ville",
+          "placeholder": "Votre ville"
         }
-      }
+      },
+      "confirm": {
+        "title": "Envoyer {title} dans votre boîte mail ?",
+        "msg": "Nous envoyons la fiche technique à {email} — un clic et c’est parti.",
+        "sendLabel": "Oui, envoyez-la-moi",
+        "editLabel": "Ce n’est pas vous ? Modifier les coordonnées"
+      },
+      "fallback": {
+        "sentTitle": "Voici votre fiche technique",
+        "sentMsg": "Le téléchargement devrait démarrer automatiquement — sinon, utilisez le bouton ci-dessous."
+      },
+      "rateLimited": "Trop de demandes depuis votre connexion — réessayez dans une heure.",
+      "architectInvite": "Architecte ? Notre espace architectes gratuit propose des budgets indicatifs, des études de cas mesurées et chaque document en un clic."
     },
     "trainingDates": [
       "15–16 sept. 2026",
@@ -1874,7 +1980,72 @@
     ],
     "close": "Fermer",
     "downloadDatasheet": "Télécharger la fiche technique",
-    "select": "Sélectionner…"
+    "select": "Sélectionner…",
+    "project": {
+      "title": "Enregistrer un projet",
+      "subtitle": "Parlez-nous de votre projet en cours — un conseiller dédié revient vers vous sous un jour ouvré avec appui prescription, budget et échantillons prioritaires.",
+      "submitLabel": "Enregistrer le projet",
+      "sentTitle": "Projet enregistré",
+      "sentMsg": "Merci — un conseiller dédié vous contacte sous un jour ouvré.",
+      "fields": {
+        "projectName": {
+          "label": "Nom du projet",
+          "placeholder": "Titre du projet"
+        },
+        "location": {
+          "label": "Lieu",
+          "placeholder": "Ville"
+        },
+        "buildingType": {
+          "label": "Type de bâtiment",
+          "options": [
+            "Bureaux",
+            "Hôtellerie",
+            "Santé",
+            "Commerce",
+            "Résidentiel",
+            "Enseignement",
+            "Autre"
+          ]
+        },
+        "system": {
+          "label": "Système",
+          "options": [
+            "Polyester",
+            "PVC",
+            "Acoustique",
+            "Lumière & impression",
+            "Préfabriqué",
+            "Pas encore sûr"
+          ]
+        },
+        "stage": {
+          "label": "Phase",
+          "options": [
+            "Concept",
+            "Conception",
+            "Appel d’offres",
+            "En chantier"
+          ]
+        },
+        "area": {
+          "label": "Surface",
+          "placeholder": "env. m²"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "vous@agence.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Notes",
+          "placeholder": "Hauteurs sous plafond, objectifs acoustiques, délais..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -4235,9 +4406,9 @@
     "crumb": "Fiches",
     "titleA": "Caractéristiques &",
     "titleB": "fiches techniques",
-    "lead": "Téléchargez la documentation technique de chaque système STRETCH — spécifications, classements au feu, classes acoustiques et détails de garantie. Saisissez vos coordonnées une fois par téléchargement et le fichier démarre immédiatement.",
+    "lead": "Téléchargez la documentation technique de chaque système STRETCH — spécifications, classements au feu, valeurs acoustiques et garantie. Laissez vos coordonnées une fois et la fiche technique arrive dans votre boîte mail sous forme de lien.",
     "updated": "Mis à jour le {date}",
-    "privacyNote": "Nous vous demandons votre nom, votre e-mail et votre téléphone afin qu’un spécialiste puisse répondre à vos questions techniques. Vos données sont traitées conformément à notre",
+    "privacyNote": "Nous demandons votre nom, rôle, e-mail, téléphone et ville pour qu’un spécialiste puisse répondre à vos questions techniques. Vos données sont traitées selon notre",
     "privacyLink": "politique de confidentialité"
   },
   "samplesPage": {
@@ -4502,5 +4673,116 @@
     "ovRecruitBody": "Pendant que le réseau grandit, nous livrons et posons directement depuis notre production — et les poseurs qui réservent une région libre en reçoivent les demandes, les tarifs revendeur et la formation.",
     "regionLuxembourg": "Luxembourg (Grand-Duché)",
     "regionAustria": "Autriche"
+  },
+  "datasheetEmail": {
+    "subject": "Votre fiche technique STRETCH — {title}",
+    "greeting": "Bonjour {name},",
+    "intro": "Voici la fiche technique que vous avez demandée — {title}.",
+    "button": "Télécharger la fiche technique",
+    "linkFallback": "Ou copiez ce lien dans votre navigateur :",
+    "validity": "Le lien fonctionne pendant {days} jours.",
+    "footerCta": "Vous travaillez sur un projet ? Répondez simplement à cet e-mail ou réservez un appel.",
+    "signoff": "L’équipe STRETCH",
+    "architectInvite": "Vous êtes architecte ? Notre espace architectes gratuit vous donne des budgets indicatifs en €/m², des études de cas mesurées et chaque fiche technique, texte de cahier des charges et fichier CAD en un clic :"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Ce lien de téléchargement a expiré",
+    "expiredBody": "Les liens de téléchargement sont valables 14 jours. Demandez-en un nouveau en quelques secondes — nous vous l’envoyons aussitôt.",
+    "requestNew": "Demander un nouveau lien"
+  },
+  "architectsPage": {
+    "crumb": "Architectes",
+    "eyebrow": "Pour les architectes",
+    "titleA": "Prescrire des plafonds tendus",
+    "titleB": "en confiance",
+    "lead": "Un compte gratuit avec tout ce qu’il faut pour prescrire : documents, cahiers des charges, CAD/BIM, études de cas mesurées, budgets indicatifs, événements et un conseiller dédié.",
+    "ctaCreate": "Créer votre compte gratuit",
+    "ctaSignIn": "Se connecter",
+    "values": [
+      {
+        "title": "Documents en un clic",
+        "body": "Chaque fiche technique sans formulaire — téléchargements liés à votre compte."
+      },
+      {
+        "title": "Textes de prescription",
+        "body": "Clauses prêtes à coller par système — NL, FR et EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "Détails de profilés DWG, familles Revit et composants SketchUp."
+      },
+      {
+        "title": "Photos de projets",
+        "body": "Photos haute résolution de références pour vos présentations."
+      },
+      {
+        "title": "Études de cas mesurées",
+        "body": "Des projets réels avec valeurs mesurées avant/après."
+      },
+      {
+        "title": "Budgets indicatifs",
+        "body": "Fourchettes €/m² pour les phases amont."
+      },
+      {
+        "title": "Événements & lunch & learns",
+        "body": "Formations et sessions chez nous ou dans votre agence."
+      },
+      {
+        "title": "Accompagnement projet",
+        "body": "Enregistrez un projet : conseiller dédié + échantillons prioritaires."
+      }
+    ],
+    "howTitle": "Comment ça marche",
+    "steps": [
+      {
+        "title": "Créez votre compte",
+        "body": "Nom de l’agence, ville et vos coordonnées — deux minutes."
+      },
+      {
+        "title": "Confirmez votre e-mail",
+        "body": "Un clic sur le lien de confirmation."
+      },
+      {
+        "title": "Tout est débloqué",
+        "body": "Documents, budgets, études et accompagnement — immédiatement."
+      }
+    ],
+    "casesTitle": "Mesuré, pas affirmé",
+    "casesNote": "Étude complète dans l’espace architectes.",
+    "cases": [
+      {
+        "title": "Rénovation acoustique d’un restaurant",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 avant → après"
+      },
+      {
+        "title": "Plafond lumineux de bureaux",
+        "metric": "540 lux",
+        "metricLabel": "moyenne au plan de travail, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Prochains événements",
+    "eventsNote": "Toutes les dates et l’inscription en un clic dans l’espace architectes.",
+    "faqTitle": "Questions fréquentes",
+    "faqs": [
+      {
+        "q": "L’espace architectes est-il vraiment gratuit ?",
+        "a": "Oui — il existe pour rendre la prescription d’un système STRETCH aussi simple que possible. Sans frais ni engagement."
+      },
+      {
+        "q": "Publiez-vous des prix ?",
+        "a": "Des fourchettes €/m² indicatives vivent dans l’espace pour les budgets amont. Chaque projet est chiffré individuellement — enregistrez un projet pour un chiffre réel."
+      },
+      {
+        "q": "Accompagnez-vous un appel d’offres en cours ?",
+        "a": "Oui. Enregistrez le projet : un conseiller dédié aide sur les clauses, les détails et les objectifs acoustiques — en général sous un jour ouvré."
+      },
+      {
+        "q": "Livrez-vous hors Benelux ?",
+        "a": "Oui — nous produisons en Belgique et posons avec des partenaires certifiés dans toute l’Europe."
+      }
+    ],
+    "ctaTitle": "Tout pour prescrire, au même endroit",
+    "ctaBody": "Créez votre compte gratuit : chaque document, fourchette budgétaire et étude de cas est à un clic — plus un conseiller dédié pour vos projets en cours."
   }
 }

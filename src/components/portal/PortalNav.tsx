@@ -9,15 +9,17 @@ import { LogOut } from 'lucide-react';
 
 type Props = {
   isAdmin: boolean;
-  /** Trade (b2b/admin) accounts see pricelist + designer; b2c accounts don't. */
+  /** Trade (producer/installer/admin) accounts see pricelist + designer. */
   trade: boolean;
+  /** Architect (or admin) accounts see the budget guide. */
+  architect: boolean;
   demo: boolean;
   company: string;
   email: string;
   marketsLabel: string;
 };
 
-export default function PortalNav({ isAdmin, trade, demo, company, email, marketsLabel }: Props) {
+export default function PortalNav({ isAdmin, trade, architect, demo, company, email, marketsLabel }: Props) {
   const t = useTranslations('portal.nav');
   const pathname = usePathname();
   const router = useRouter();
@@ -33,6 +35,7 @@ export default function PortalNav({ isAdmin, trade, demo, company, email, market
           { href: '/portal/orders', label: t('orders'), exact: false },
         ]
       : []),
+    ...(architect ? [{ href: '/portal/budget-guide', label: t('budgetGuide'), exact: false }] : []),
     ...(isAdmin ? [{ href: '/portal/admin', label: t('admin'), exact: false }] : []),
   ];
 

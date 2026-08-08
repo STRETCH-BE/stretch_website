@@ -20,7 +20,8 @@
       "about": "Um okkur",
       "faq": "Algengar spurningar",
       "clientLogin": "Innskráning viðskiptavina",
-      "materials": "Efni"
+      "materials": "Efni",
+      "architects": "Arkitektar"
     },
     "cta": {
       "freeQuote": "Ókeypis tilboð",
@@ -73,7 +74,9 @@
     "portalTitle": "Viðskiptavinagátt | STRETCH",
     "portalDescription": "Skráðu þig inn til að sjá STRETCH-verðskrána þína og aðgangsupplýsingar.",
     "materialsTitle": "Efni og fylgihlutir fyrir strekkloft | STRETCH",
-    "materialsDescription": "Prófílar, dúkar og filmur, lýsing, fylgihlutir, verkfæri og STRETCH Cleaner — biddu um tilboð fyrir hverja vöru og við svörum með verði og afhendingartíma. Án vefverslunar."
+    "materialsDescription": "Prófílar, dúkar og filmur, lýsing, fylgihlutir, verkfæri og STRETCH Cleaner — biddu um tilboð fyrir hverja vöru og við svörum með verði og afhendingartíma. Án vefverslunar.",
+    "architectsTitle": "Fyrir arkitekta — skilgreindu strekkloft | STRETCH",
+    "architectsDescription": "Ókeypis arkitektasvæði: tækniblöð, útboðstextar, CAD/BIM, mæld dæmi, leiðbeinandi €/m² kostnaðarbil, viðburðir og verkefnastuðningur."
   },
   "cookies": {
     "title": "Við virðum friðhelgi þína",
@@ -158,7 +161,8 @@
       "inspiration": "Innblástur",
       "about": "Um okkur",
       "faq": "Algengar spurningar",
-      "clientPortal": "Viðskiptavinagátt"
+      "clientPortal": "Viðskiptavinagátt",
+      "architects": "Fyrir arkitekta"
     },
     "dealers": "Söluaðilanet"
   },
@@ -196,7 +200,12 @@
       "signupDoneBody": "Við sendum þér staðfestingartengil. Smelltu á hann og skráðu þig svo inn með netfangi og lykilorði.",
       "signupExists": "Aðgangur með þessu netfangi er þegar til — skráðu þig inn.",
       "unavailableTitle": "Þjónustugáttin opnar fljótlega",
-      "unavailableBody": "Verið er að virkja þjónustugáttina. Hafðu samband og við setjum upp aðganginn þinn."
+      "unavailableBody": "Verið er að virkja þjónustugáttina. Hafðu samband og við setjum upp aðganginn þinn.",
+      "audienceLabel": "Ég er",
+      "audienceClient": "Viðskiptavinur",
+      "audienceArchitect": "Arkitekt",
+      "officeName": "Nafn stofu",
+      "city": "Borg"
     },
     "nav": {
       "label": "Viðskiptavinagátt",
@@ -208,7 +217,8 @@
       "signOut": "Skrá út",
       "demoBadge": "Prufa",
       "allMarkets": "Allir markaðir",
-      "designer": "Loftahönnuður"
+      "designer": "Loftahönnuður",
+      "budgetGuide": "Kostnaðarleiðarvísir"
     },
     "dash": {
       "eyebrow": "Viðskiptavinagátt",
@@ -317,7 +327,9 @@
       "createdOk": "Aðgangur stofnaður fyrir {email}.",
       "typeProducer": "Framleiðandi/endursali",
       "typeInstaller": "Uppsetningaraðili",
-      "typeB2c": "B2C"
+      "typeB2c": "B2C",
+      "typeArchitect": "Arkitekt",
+      "filterAllTypes": "Allar tegundir"
     },
     "designer": {
       "eyebrow": "Loftahönnuður",
@@ -329,6 +341,53 @@
       "architect": "Arkitekt / hönnuður",
       "contractor": "Verktaki",
       "other": "Annað"
+    },
+    "architect": {
+      "eyebrow": "Arkitektasvæði",
+      "welcome": "Allt til að skilgreina",
+      "intro": "Velkomin, {office} — skjöl, útboðstextar, CAD/BIM, mæld dæmi, kostnaðarbil og verkefnastuðningur á einum stað.",
+      "demoNote": "Sýnishorn — niðurhal er óvirkt og ekkert er skráð.",
+      "toolsTitle": "Verkfæri verkefna",
+      "budgetTileTitle": "Kostnaðarleiðarvísir",
+      "budgetTileBody": "Leiðbeinandi €/m² bil fyrir frumáætlanir — tölurnar sem enginn birtir.",
+      "budgetTileCta": "Opna leiðarvísinn",
+      "projectTileTitle": "Skrá verkefni",
+      "projectTileBody": "Virkt verkefni fær sérstakan ráðgjafa, stuðning við útboðstexta og forgangs­sýnishorn.",
+      "projectTileCta": "Skrá verkefni",
+      "samplesTileTitle": "Sýnishornakassi",
+      "samplesTileBody": "Áþreifanleg efnis- og litasýni fyrir efnissafnið þitt — ókeypis fyrir arkitekta.",
+      "samplesTileCta": "Panta sýnishornakassa",
+      "libraryTitle": "Safn",
+      "libraryBody": "Öll skjöl með einum smelli. Niðurhal er skráð á reikninginn þinn svo við getum stutt verkefnið fyrirbyggjandi.",
+      "docsTitle": "Tækniblöð",
+      "docsBody": "Allt tækniblaðasafnið — engin eyðublöð, einn smellur.",
+      "specTitle": "Útboðstextar",
+      "specBody": "Tilbúnir útboðstextar fyrir hvert kerfi — NL, FR og EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "DWG-prófílteikningar, Revit-fjölskyldur og SketchUp-einingar fyrir hvert kerfi.",
+      "photosTitle": "Verkefnamyndir",
+      "photosBody": "Háupplausnar myndasöfn úr viðmiðunarverkefnum fyrir kynningar.",
+      "casesTitle": "Tæknileg dæmi",
+      "casesBody": "Raunveruleg verkefni með mældum fyrir/eftir gildum — tölur í hönnunarskýrsluna.",
+      "eventsTitle": "Viðburðir",
+      "eventsBody": "Námskeið, lunch & learn og sýningardagar — skráning með einum smelli.",
+      "register": "Skrá sig",
+      "advisorTitle": "Ráðgjafinn þinn",
+      "advisorBody": "Einn sérfræðingur fyrir útboðstexta, hljóðvist, kostnað og sýnishorn — svar innan eins virks dags.",
+      "advisorCta": "Bóka símtal",
+      "download": "Sækja",
+      "comingSoon": "Væntanlegt"
+    },
+    "budget": {
+      "eyebrow": "Arkitektasvæði",
+      "title": "Kostnaðarleiðarvísir",
+      "intro": "Leiðbeinandi verðbil með uppsetningu fyrir hvert kerfi — vísvitandi gróf, fyrir frumáætlanir og hagkvæmnismat.",
+      "disclaimer": "Leiðbeinandi verðbil með uppsetningu, án VSK, aðeins fyrir frumáætlanir. Hvert verkefni er verðlagt sérstaklega — skráðu verkefnið þitt fyrir raunverulega tölu.",
+      "includes": "Innifalið",
+      "perM2": "á m² uppsett, án VSK",
+      "perUnit": "á einingu uppsetta, án VSK",
+      "ctaBody": "Vantar þig raunverulega tölu fyrir virkt verkefni? Skráðu það og sérstakur ráðgjafi verðleggur það rétt innan eins virks dags.",
+      "ctaButton": "Skráðu verkefnið þitt"
     }
   },
   "home": {
@@ -1543,6 +1602,28 @@
               "sub": "Algengar spurningar"
             }
           ]
+        },
+        {
+          "title": "Arkitektar",
+          "desc": "Skilgreindu af öryggi — skjöl, kostnaður og stuðningur.",
+          "items": [
+            {
+              "title": "Arkitektasvæði",
+              "sub": "Allt til að skilgreina, á einum stað"
+            },
+            {
+              "title": "Tækniblöð",
+              "sub": "Tækniskjalasafnið"
+            },
+            {
+              "title": "Stofna aðgang",
+              "sub": "Ókeypis — aðgangur strax eftir staðfestingu netfangs"
+            },
+            {
+              "title": "Innskráning",
+              "sub": "Beint á yfirlitið þitt"
+            }
+          ]
         }
       ]
     },
@@ -1841,25 +1922,50 @@
       }
     },
     "datasheet": {
-      "title": "Sækja tækniblaðið",
-      "subtitle": "Sláðu inn upplýsingarnar þínar og niðurhalið hefst strax. Við notum þær eingöngu til að fylgja eftir fyrirspurninni þinni.",
-      "submitLabel": "Fá tækniblaðið",
-      "sentTitle": "Hér er tækniblaðið þitt",
-      "sentMsg": "Niðurhalið ætti að hefjast sjálfkrafa — ef ekki, notaðu hnappinn hér fyrir neðan.",
+      "title": "Fáðu tækniblaðið í tölvupósti",
+      "subtitle": "Skildu eftir upplýsingarnar þínar og við sendum tækniblaðið beint í pósthólfið þitt. Við notum þær eingöngu til að fylgja fyrirspurninni eftir.",
+      "submitLabel": "Sendið mér tækniblaðið",
+      "sentTitle": "Athugaðu pósthólfið",
+      "sentMsg": "Tækniblaðið er á leiðinni á {email}. Sérðu það ekki innan nokkurra mínútna? Athugaðu ruslpóstinn.",
       "fields": {
         "name": {
           "label": "Nafn",
-          "placeholder": "Fornafn og eftirnafn"
+          "placeholder": "Fullt nafn"
+        },
+        "role": {
+          "label": "Ég er",
+          "options": [
+            "Arkitekt",
+            "Uppsetningaraðili",
+            "Einstaklingur",
+            "Annað fyrirtæki"
+          ]
         },
         "email": {
           "label": "Netfang",
-          "placeholder": "you@email.com"
+          "placeholder": "thu@email.com"
         },
         "phone": {
           "label": "Sími",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "Borg",
+          "placeholder": "Þín borg"
         }
-      }
+      },
+      "confirm": {
+        "title": "Senda {title} í pósthólfið þitt?",
+        "msg": "Við sendum tækniblaðið á {email} — einn smellur og það er á leiðinni.",
+        "sendLabel": "Já, sendið mér það",
+        "editLabel": "Ekki þú? Breyta upplýsingum"
+      },
+      "fallback": {
+        "sentTitle": "Hér er tækniblaðið þitt",
+        "sentMsg": "Niðurhalið ætti að hefjast sjálfkrafa — ef ekki, notaðu hnappinn hér fyrir neðan."
+      },
+      "rateLimited": "Of margar beiðnir frá tengingunni þinni — reyndu aftur eftir klukkustund.",
+      "architectInvite": "Arkitekt? Ókeypis arkitektasvæðið okkar býður leiðbeinandi kostnaðarbil, mæld dæmi og öll skjöl með einum smelli."
     },
     "trainingDates": [
       "15.–16. sep. 2026",
@@ -1874,7 +1980,72 @@
     ],
     "close": "Loka",
     "downloadDatasheet": "Sækja tækniblað",
-    "select": "Velja…"
+    "select": "Velja…",
+    "project": {
+      "title": "Skrá verkefni",
+      "subtitle": "Segðu okkur frá virka verkefninu þínu — sérstakur ráðgjafi fylgir eftir innan eins virks dags með stuðningi við útboðstexta, kostnað og forgangs­sýnishorn.",
+      "submitLabel": "Skrá verkefnið",
+      "sentTitle": "Verkefni skráð",
+      "sentMsg": "Takk — sérstakur ráðgjafi hefur samband innan eins virks dags.",
+      "fields": {
+        "projectName": {
+          "label": "Heiti verkefnis",
+          "placeholder": "Vinnuheiti verkefnis"
+        },
+        "location": {
+          "label": "Staðsetning",
+          "placeholder": "Borg"
+        },
+        "buildingType": {
+          "label": "Tegund byggingar",
+          "options": [
+            "Skrifstofa",
+            "Hótel & veitingar",
+            "Heilbrigði",
+            "Verslun",
+            "Íbúðir",
+            "Menntun",
+            "Annað"
+          ]
+        },
+        "system": {
+          "label": "Kerfi",
+          "options": [
+            "Pólýester",
+            "PVC",
+            "Hljóðvist",
+            "Ljós & prent",
+            "Forsmíðað",
+            "Ekki viss enn"
+          ]
+        },
+        "stage": {
+          "label": "Stig",
+          "options": [
+            "Hugmynd",
+            "Hönnun",
+            "Útboð",
+            "Á verkstað"
+          ]
+        },
+        "area": {
+          "label": "Flatarmál",
+          "placeholder": "u.þ.b. m²"
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "thu@stofa.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Athugasemdir",
+          "placeholder": "Lofthæðir, hljóðvistarmarkmið, tímafrestir..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -4235,9 +4406,9 @@
     "crumb": "Tækniblöð",
     "titleA": "Tæknilýsingar og",
     "titleB": "tækniblöð",
-    "lead": "Sæktu tæknigögn fyrir hvert STRETCH-kerfi — tæknilýsingar, brunaflokka, hljóðvistarflokka og ábyrgðarupplýsingar. Sláðu inn upplýsingarnar þínar einu sinni fyrir hvert niðurhal og niðurhalið hefst strax.",
+    "lead": "Sæktu tæknigögn fyrir hvert STRETCH-kerfi — tækniforskriftir, brunaflokka, hljóðvistargildi og ábyrgð. Skildu eftir upplýsingar einu sinni og tækniblaðið berst í pósthólfið sem niðurhalstengill.",
     "updated": "Uppfært {date}",
-    "privacyNote": "Við biðjum um nafn, netfang og símanúmer svo að sérfræðingur geti svarað tæknilegum spurningum. Farið er með upplýsingarnar þínar samkvæmt",
+    "privacyNote": "Við biðjum um nafn, hlutverk, netfang, síma og borg svo að sérfræðingur geti svarað tæknilegum spurningum. Farið er með upplýsingarnar samkvæmt",
     "privacyLink": "persónuverndarstefnunni"
   },
   "samplesPage": {
@@ -4502,5 +4673,116 @@
     "ovRecruitBody": "Við afhendum og setjum upp beint frá framleiðslunni á meðan netið stækkar — og uppsetningaraðilar sem tryggja sér laust svæði fá fyrirspurnir þess, söluaðilaverð og þjálfun.",
     "regionLuxembourg": "Lúxemborg (Stórhertogadæmið)",
     "regionAustria": "Austurríki"
+  },
+  "datasheetEmail": {
+    "subject": "STRETCH-tækniblaðið þitt — {title}",
+    "greeting": "Halló {name},",
+    "intro": "Hér er tækniblaðið sem þú baðst um — {title}.",
+    "button": "Sækja tækniblaðið",
+    "linkFallback": "Eða afritaðu þennan tengil í vafrann þinn:",
+    "validity": "Tengillinn virkar í {days} daga.",
+    "footerCta": "Ertu að vinna að verkefni? Svaraðu bara þessum tölvupósti eða bókaðu símtal.",
+    "signoff": "STRETCH-teymið",
+    "architectInvite": "Vinnur þú sem arkitekt? Ókeypis arkitektasvæðið okkar veitir þér leiðbeinandi €/m² kostnaðarbil, mæld dæmi og öll tækniblöð, útboðstexta og CAD-skrár með einum smelli:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Þessi niðurhalstengill er útrunninn",
+    "expiredBody": "Niðurhalstenglar gilda í 14 daga. Biddu um nýjan á nokkrum sekúndum — við sendum hann strax.",
+    "requestNew": "Biðja um nýjan tengil"
+  },
+  "architectsPage": {
+    "crumb": "Arkitektar",
+    "eyebrow": "Fyrir arkitekta",
+    "titleA": "Skilgreindu strekkloft",
+    "titleB": "af öryggi",
+    "lead": "Einn ókeypis aðgangur með öllu sem þarf til að skilgreina: skjöl, útboðstextar, CAD/BIM, mæld dæmi, leiðbeinandi kostnaðarbil, viðburðir og sérstakur ráðgjafi.",
+    "ctaCreate": "Stofnaðu ókeypis aðgang",
+    "ctaSignIn": "Innskráning",
+    "values": [
+      {
+        "title": "Skjöl með einum smelli",
+        "body": "Öll tækniblöð án eyðublaða — niðurhal tengt aðganginum þínum."
+      },
+      {
+        "title": "Útboðstextar",
+        "body": "Tilbúnir textar fyrir hvert kerfi — NL, FR og EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "DWG-prófílteikningar, Revit-fjölskyldur og SketchUp-einingar."
+      },
+      {
+        "title": "Verkefnamyndir",
+        "body": "Háupplausnar viðmiðunarmyndir fyrir kynningar."
+      },
+      {
+        "title": "Mæld dæmi",
+        "body": "Raunveruleg verkefni með mældum fyrir/eftir gildum."
+      },
+      {
+        "title": "Kostnaðarbil",
+        "body": "Leiðbeinandi €/m² bil fyrir frumáætlanir."
+      },
+      {
+        "title": "Viðburðir og lunch & learn",
+        "body": "Námskeið og fundir hjá okkur eða á stofunni þinni."
+      },
+      {
+        "title": "Verkefnastuðningur",
+        "body": "Skráðu verkefni: sérstakur ráðgjafi + forgangs­sýnishornakassi."
+      }
+    ],
+    "howTitle": "Svona virkar það",
+    "steps": [
+      {
+        "title": "Stofnaðu aðgang",
+        "body": "Nafn stofu, borg og upplýsingarnar þínar — tvær mínútur."
+      },
+      {
+        "title": "Staðfestu netfangið",
+        "body": "Einn smellur á staðfestingartengilinn."
+      },
+      {
+        "title": "Allt opið",
+        "body": "Skjöl, kostnaður, dæmi og stuðningur — strax."
+      }
+    ],
+    "casesTitle": "Mælt, ekki fullyrt",
+    "casesNote": "Full rannsókn inni á arkitektasvæðinu.",
+    "cases": [
+      {
+        "title": "Hljóðvistarendurbætur veitingastaðar",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 fyrir → eftir"
+      },
+      {
+        "title": "Ljósloft á skrifstofu",
+        "metric": "540 lux",
+        "metricLabel": "meðaltal á vinnufleti, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Næstu viðburðir",
+    "eventsNote": "Allar dagsetningar og skráning með einum smelli inni á svæðinu.",
+    "faqTitle": "Algengar spurningar",
+    "faqs": [
+      {
+        "q": "Er arkitektasvæðið raunverulega ókeypis?",
+        "a": "Já — það er til svo að skilgreining STRETCH-kerfis sé eins einföld og hægt er. Engin gjöld, engar skuldbindingar."
+      },
+      {
+        "q": "Birtið þið verð?",
+        "a": "Leiðbeinandi €/m² kostnaðarbil eru inni á svæðinu fyrir frumáætlanir. Verkefni eru alltaf verðlögð sérstaklega — skráðu verkefni fyrir raunverulega tölu."
+      },
+      {
+        "q": "Styðjið þið útboð í gangi?",
+        "a": "Já. Skráðu verkefnið og sérstakur ráðgjafi aðstoðar með texta, deili og hljóðvistarmarkmið — yfirleitt innan eins virks dags."
+      },
+      {
+        "q": "Afhendið þið utan Benelux?",
+        "a": "Já — við framleiðum í Belgíu og setjum upp með vottuðum samstarfsaðilum um alla Evrópu."
+      }
+    ],
+    "ctaTitle": "Allt til að skilgreina, á einum stað",
+    "ctaBody": "Stofnaðu ókeypis aðgang — hvert skjal, kostnaðarbil og dæmi er einum smelli frá, auk sérstaks ráðgjafa fyrir verkefnin þín."
   }
 }

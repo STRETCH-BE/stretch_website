@@ -12,17 +12,19 @@ type PortalUserRow = {
   email: string;
   company: string | null;
   role: 'client' | 'admin';
-  /** b2c = self-registered (no trade areas); b2b = dealer/trade account. */
-  accountType?: 'producer' | 'installer' | 'b2c';
+  /** Tiers: producer/installer = trade; b2c = consumer; architect = specifier. */
+  accountType?: 'producer' | 'installer' | 'b2c' | 'architect';
   markets: string[];
   allMarkets: boolean;
   active: boolean;
-  // B2B qualification data from self-registration (may be absent on old rows).
+  // Qualification data from self-registration (may be absent on old rows).
   contactName?: string | null;
   vat?: string | null;
   phone?: string | null;
   country?: string | null;
   businessType?: string | null;
+  office?: string | null;
+  city?: string | null;
 };
 
 const BUSINESS_TYPE_KEYS = ['installer', 'distributor', 'architect', 'contractor', 'other'] as const;
@@ -316,6 +318,7 @@ function UsersCard({ demo }: { demo: boolean }) {
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [showForm, setShowForm] = useState(false);
+  const [typeFilter, setTypeFilter] = useState<'all' | 'producer' | 'installer' | 'b2c' | 'architect'>('all');
 
   const load = useCallback(async () => {
     try {
@@ -349,7 +352,7 @@ function UsersCard({ demo }: { demo: boolean }) {
   // Move an account between tiers (Producer/Reseller · Installer · B2C).
   // Markets are assigned via the existing account tools — a fresh trade
   // account without markets sees an empty pricelist until markets are granted.
-  async function setType(u: PortalUserRow, next: 'producer' | 'installer' | 'b2c') {
+  async function setType(u: PortalUserRow, next: 'producer' | 'installer' | 'b2c' | 'architect') {
     setNotice(null);
     const res = await fetch('/api/portal/users', {
       method: 'PATCH',
@@ -369,9 +372,23 @@ function UsersCard({ demo }: { demo: boolean }) {
         <h2>
           <UserRound size={16} /> {t('usersTitle')}
         </h2>
-        <button type="button" className="btn btn--ghost btn--sm" onClick={() => setShowForm((v) => !v)}>
-          <Plus size={13} /> {t('createTitle')}
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <select
+            className="typesel"
+            value={typeFilter}
+            onChange={(e) => setTypeFilter(e.target.value as typeof typeFilter)}
+            aria-label={t('colType')}
+          >
+            <option value="all">{t('filterAllTypes')}</option>
+            <option value="producer">{t('typeProducer')}</option>
+            <option value="installer">{t('typeInstaller')}</option>
+            <option value="b2c">{t('typeB2c')}</option>
+            <option value="architect">{t('typeArchitect')}</option>
+          </select>
+          <button type="button" className="btn btn--ghost btn--sm" onClick={() => setShowForm((v) => !v)}>
+            <Plus size={13} /> {t('createTitle')}
+          </button>
+        </div>
       </div>
       <p className="card__body">{t('usersBody')}</p>
 
@@ -409,14 +426,16 @@ function UsersCard({ demo }: { demo: boolean }) {
               </tr>
             </thead>
             <tbody>
-              {users.map((u) => (
+              {users.filter((u) => typeFilter === 'all' || (u.accountType ?? 'installer') === typeFilter).map((u) => (
                 <tr key={u.id} className={u.active ? '' : 'off'}>
                   <td>{u.email}</td>
                   <td>
                     <div>{u.company ?? '—'}</div>
-                    {(u.contactName || u.phone || u.vat || u.country || u.businessType) && (
+                    {(u.contactName || u.phone || u.vat || u.country || u.businessType || u.office || u.city) && (
                       <div className="b2b">
                         {[
+                          u.office,
+                          u.city,
                           u.contactName,
                           u.phone,
                           u.vat,
@@ -438,11 +457,14 @@ function UsersCard({ demo }: { demo: boolean }) {
                       <select
                         className="typesel"
                         value={u.accountType ?? 'installer'}
-                        onChange={(e) => setType(u, e.target.value as 'producer' | 'installer' | 'b2c')}
+                        onChange={(e) =>
+                          setType(u, e.target.value as 'producer' | 'installer' | 'b2c' | 'architect')
+                        }
                       >
                         <option value="producer">{t('typeProducer')}</option>
                         <option value="installer">{t('typeInstaller')}</option>
                         <option value="b2c">{t('typeB2c')}</option>
+                        <option value="architect">{t('typeArchitect')}</option>
                       </select>
                     )}
                   </td>
@@ -585,7 +607,7 @@ function CreateForm({ demo, onCreated }: { demo: boolean; onCreated: (msg: strin
   const [password, setPassword] = useState('');
   const [company, setCompany] = useState('');
   const [role, setRole] = useState<'client' | 'admin'>('client');
-  const [accountType, setAccountType] = useState<'producer' | 'installer' | 'b2c'>('installer');
+  const [accountType, setAccountType] = useState<'producer' | 'installer' | 'b2c' | 'architect'>('installer');
   const [allMarkets, setAllMarkets] = useState(false);
   const [markets, setMarkets] = useState<string[]>([]);
   const [busy, setBusy] = useState(false);
@@ -644,17 +666,18 @@ function CreateForm({ demo, onCreated }: { demo: boolean; onCreated: (msg: strin
           <span>{t('colType')}</span>
           <select
             value={accountType}
-            onChange={(e) => setAccountType(e.target.value as 'producer' | 'installer' | 'b2c')}
+            onChange={(e) => setAccountType(e.target.value as 'producer' | 'installer' | 'b2c' | 'architect')}
             disabled={role === 'admin'}
           >
             <option value="producer">{t('typeProducer')}</option>
             <option value="installer">{t('typeInstaller')}</option>
             <option value="b2c">{t('typeB2c')}</option>
+            <option value="architect">{t('typeArchitect')}</option>
           </select>
         </label>
       </div>
 
-      {(role === 'admin' || accountType !== 'b2c') && (
+      {(role === 'admin' || (accountType !== 'b2c' && accountType !== 'architect')) && (
         <div className="markets">
           <span className="lbl">{t('colMarkets')}</span>
           <label className="chk chk--all">

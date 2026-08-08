@@ -20,7 +20,8 @@
       "about": "Over ons",
       "faq": "FAQ",
       "clientLogin": "Klantenzone",
-      "materials": "Materialen"
+      "materials": "Materialen",
+      "architects": "Architecten"
     },
     "cta": {
       "freeQuote": "Gratis offerte",
@@ -73,7 +74,9 @@
     "portalTitle": "Klantenportaal | STRETCH",
     "portalDescription": "Meld u aan om uw STRETCH-handelsprijslijst en accountgegevens te bekijken.",
     "materialsTitle": "Spanplafond materialen & benodigdheden | STRETCH",
-    "materialsDescription": "Profielen, doeken & folies, verlichting, accessoires, gereedschap en STRETCH Cleaner — vraag per item een offerte en wij antwoorden met prijs en levertermijn. Zonder webshop."
+    "materialsDescription": "Profielen, doeken & folies, verlichting, accessoires, gereedschap en STRETCH Cleaner — vraag per item een offerte en wij antwoorden met prijs en levertermijn. Zonder webshop.",
+    "architectsTitle": "Voor architecten — spanplafonds voorschrijven | STRETCH",
+    "architectsDescription": "Gratis architectenzone: datasheets, bestekteksten, CAD/BIM, gemeten casestudy’s, indicatieve €/m²-budgetbanden, events en projectondersteuning."
   },
   "cookies": {
     "title": "We hechten waarde aan je privacy",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiratie",
       "about": "Over ons",
       "faq": "FAQ",
-      "clientPortal": "Klantenportaal"
+      "clientPortal": "Klantenportaal",
+      "architects": "Voor architecten"
     },
     "dealers": "Dealernetwerk"
   },
@@ -196,7 +200,12 @@
       "signupDoneBody": "We stuurden u een bevestigingslink. Klik erop en log daarna in met uw e-mail en wachtwoord.",
       "signupExists": "Er bestaat al een account met dit e-mailadres — log in.",
       "unavailableTitle": "Portaal komt eraan",
-      "unavailableBody": "Het klantenportaal wordt geactiveerd. Neem contact op en we zetten uw toegang klaar."
+      "unavailableBody": "Het klantenportaal wordt geactiveerd. Neem contact op en we zetten uw toegang klaar.",
+      "audienceLabel": "Ik ben",
+      "audienceClient": "Klant",
+      "audienceArchitect": "Architect",
+      "officeName": "Naam bureau",
+      "city": "Stad"
     },
     "nav": {
       "label": "Klantenportaal",
@@ -208,7 +217,8 @@
       "signOut": "Afmelden",
       "demoBadge": "Demo",
       "allMarkets": "Alle markten",
-      "designer": "Plafond-designer"
+      "designer": "Plafond-designer",
+      "budgetGuide": "Budgetgids"
     },
     "dash": {
       "eyebrow": "Klantenportaal",
@@ -317,7 +327,9 @@
       "createdOk": "Account aangemaakt voor {email}.",
       "typeProducer": "Producent/verdeler",
       "typeInstaller": "Installateur",
-      "typeB2c": "B2C"
+      "typeB2c": "B2C",
+      "typeArchitect": "Architect",
+      "filterAllTypes": "Alle types"
     },
     "designer": {
       "eyebrow": "Plafond-designer",
@@ -329,6 +341,53 @@
       "architect": "Architect / ontwerper",
       "contractor": "Aannemer",
       "other": "Andere"
+    },
+    "architect": {
+      "eyebrow": "Architectenzone",
+      "welcome": "Alles om voor te schrijven",
+      "intro": "Welkom, {office} — documenten, bestekteksten, CAD/BIM, gemeten casestudy’s, budgetbanden en projectondersteuning op één plek.",
+      "demoNote": "Demovoorbeeld — downloads zijn uitgeschakeld en er wordt niets gelogd.",
+      "toolsTitle": "Projecttools",
+      "budgetTileTitle": "Budgetgids",
+      "budgetTileBody": "Indicatieve €/m²-banden voor vroege budgettering — de cijfers die niemand publiceert.",
+      "budgetTileCta": "Open de gids",
+      "projectTileTitle": "Project registreren",
+      "projectTileBody": "Een lopend project krijgt een vaste adviseur, bestekondersteuning en priority sampling.",
+      "projectTileCta": "Project registreren",
+      "samplesTileTitle": "Staalbox",
+      "samplesTileBody": "Fysieke membraan- en kleurstalen voor uw materiaalbibliotheek — gratis voor architecten.",
+      "samplesTileCta": "Staalbox bestellen",
+      "libraryTitle": "Bibliotheek",
+      "libraryBody": "Elk document met één klik. Downloads worden gelogd op uw account, zodat we uw project proactief kunnen ondersteunen.",
+      "docsTitle": "Datasheets",
+      "docsBody": "De volledige technische datasheetbibliotheek — geen formulieren, één klik.",
+      "specTitle": "Bestekteksten",
+      "specBody": "Kant-en-klare bestekteksten per systeem — bestektekst NL, cahier des charges FR, specification EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "DWG-profieldetails, Revit-families en SketchUp-componenten per systeem.",
+      "photosTitle": "Projectfoto’s",
+      "photosBody": "Hi-res fotosets van referentieprojecten voor klantpresentaties.",
+      "casesTitle": "Technische casestudy’s",
+      "casesBody": "Echte projecten met gemeten voor/na-waarden — cijfers voor in uw ontwerpnota.",
+      "eventsTitle": "Events",
+      "eventsBody": "Trainingen, lunch & learns en showroomdagen — schrijf in met één klik.",
+      "register": "Inschrijven",
+      "advisorTitle": "Uw adviseur",
+      "advisorBody": "Eén specialist voor bestekvragen, akoestiekdoelen, budgetten en stalen — antwoord binnen één werkdag.",
+      "advisorCta": "Plan een gesprek",
+      "download": "Download",
+      "comingSoon": "Binnenkort"
+    },
+    "budget": {
+      "eyebrow": "Architectenzone",
+      "title": "Budgetgids",
+      "intro": "Indicatieve geïnstalleerde prijsbanden per systeem — bewust grof, voor vroege budgettering en haalbaarheid.",
+      "disclaimer": "Indicatieve geïnstalleerde prijsbanden, excl. btw, alleen voor vroege budgettering. Elk project wordt individueel geprijsd — registreer uw project voor een echt cijfer.",
+      "includes": "Inbegrepen",
+      "perM2": "per m² geplaatst, excl. btw",
+      "perUnit": "per stuk geplaatst, excl. btw",
+      "ctaBody": "Een echt cijfer nodig voor een lopend project? Registreer het en een vaste adviseur prijst het correct binnen één werkdag.",
+      "ctaButton": "Registreer uw project"
     }
   },
   "home": {
@@ -1543,6 +1602,28 @@
               "sub": "Veelgestelde vragen"
             }
           ]
+        },
+        {
+          "title": "Architecten",
+          "desc": "Voorschrijven met vertrouwen — documenten, budgetten en support.",
+          "items": [
+            {
+              "title": "Architectenzone",
+              "sub": "Alles om voor te schrijven, op één plek"
+            },
+            {
+              "title": "Datasheets",
+              "sub": "De technische documentbibliotheek"
+            },
+            {
+              "title": "Account aanmaken",
+              "sub": "Gratis — meteen toegang na e-mailbevestiging"
+            },
+            {
+              "title": "Inloggen",
+              "sub": "Rechtstreeks naar uw dashboard"
+            }
+          ]
         }
       ]
     },
@@ -1841,25 +1922,50 @@
       }
     },
     "datasheet": {
-      "title": "Download de technische fiche",
-      "subtitle": "Vul uw gegevens in en de download start meteen. We gebruiken ze enkel om uw aanvraag op te volgen.",
-      "submitLabel": "Ontvang de technische fiche",
-      "sentTitle": "Hier is uw technische fiche",
-      "sentMsg": "Uw download start normaal automatisch — zo niet, gebruik dan de knop hieronder.",
+      "title": "Ontvang de datasheet per e-mail",
+      "subtitle": "Laat uw gegevens achter en we mailen de datasheet rechtstreeks naar uw inbox. We gebruiken ze alleen om uw aanvraag op te volgen.",
+      "submitLabel": "Mail mij de datasheet",
+      "sentTitle": "Check uw inbox",
+      "sentMsg": "De datasheet is onderweg naar {email}. Niets ontvangen na enkele minuten? Kijk ook in uw spamfolder.",
       "fields": {
         "name": {
           "label": "Naam",
           "placeholder": "Voor- en achternaam"
         },
+        "role": {
+          "label": "Ik ben",
+          "options": [
+            "Architect",
+            "Installateur",
+            "Particulier",
+            "Ander bedrijf"
+          ]
+        },
         "email": {
           "label": "E-mail",
-          "placeholder": "you@email.com"
+          "placeholder": "u@email.com"
         },
         "phone": {
           "label": "Telefoon",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "Stad",
+          "placeholder": "Uw stad"
         }
-      }
+      },
+      "confirm": {
+        "title": "{title} naar uw inbox sturen?",
+        "msg": "We mailen de datasheet naar {email} — één klik en hij is onderweg.",
+        "sendLabel": "Ja, mail hem naar mij",
+        "editLabel": "Niet u? Gegevens aanpassen"
+      },
+      "fallback": {
+        "sentTitle": "Hier is uw datasheet",
+        "sentMsg": "De download start normaal automatisch — zo niet, gebruik de knop hieronder."
+      },
+      "rateLimited": "Te veel aanvragen vanaf uw verbinding — probeer het over een uur opnieuw.",
+      "architectInvite": "Architect? Onze gratis architectenzone biedt indicatieve budgetbanden, gemeten casestudy’s en elk document met één klik."
     },
     "trainingDates": [
       "15–16 sep 2026",
@@ -1874,7 +1980,72 @@
     ],
     "close": "Sluiten",
     "downloadDatasheet": "Download technische fiche",
-    "select": "Selecteer…"
+    "select": "Selecteer…",
+    "project": {
+      "title": "Project registreren",
+      "subtitle": "Vertel ons over uw lopende project — een vaste adviseur volgt binnen één werkdag op met bestekondersteuning, budgetinput en priority sampling.",
+      "submitLabel": "Project registreren",
+      "sentTitle": "Project geregistreerd",
+      "sentMsg": "Bedankt — een vaste adviseur neemt binnen één werkdag contact op.",
+      "fields": {
+        "projectName": {
+          "label": "Projectnaam",
+          "placeholder": "Project- of werktitel"
+        },
+        "location": {
+          "label": "Locatie",
+          "placeholder": "Stad"
+        },
+        "buildingType": {
+          "label": "Gebouwtype",
+          "options": [
+            "Kantoor",
+            "Hospitality",
+            "Zorg",
+            "Retail",
+            "Residentieel",
+            "Onderwijs",
+            "Andere"
+          ]
+        },
+        "system": {
+          "label": "Systeem",
+          "options": [
+            "Polyester",
+            "PVC",
+            "Akoestisch",
+            "Licht & print",
+            "Prefab",
+            "Nog niet zeker"
+          ]
+        },
+        "stage": {
+          "label": "Fase",
+          "options": [
+            "Concept",
+            "Ontwerp",
+            "Aanbesteding",
+            "In uitvoering"
+          ]
+        },
+        "area": {
+          "label": "Oppervlakte",
+          "placeholder": "ca. m²"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "u@bureau.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Notities",
+          "placeholder": "Plafondhoogtes, akoestiekdoelen, deadlines..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -4235,9 +4406,9 @@
     "crumb": "Fiches",
     "titleA": "Specificaties &",
     "titleB": "fiches",
-    "lead": "Download de technische documentatie van elk STRETCH-systeem — specificaties, brandklassen, akoestische klassewaarden en garantiedetails. Vul uw gegevens één keer per download in en het bestand start meteen.",
+    "lead": "Download technische documentatie voor elk STRETCH-systeem — specificaties, brandklassen, akoestische waarden en garantie. Laat één keer uw gegevens achter en de datasheet landt als downloadlink in uw inbox.",
     "updated": "Bijgewerkt op {date}",
-    "privacyNote": "We vragen uw naam, e-mailadres en telefoonnummer zodat een specialist eventuele technische vragen kan beantwoorden. Uw gegevens worden behandeld volgens ons",
+    "privacyNote": "We vragen uw naam, rol, e-mail, telefoon en stad zodat een specialist uw technische vragen kan beantwoorden. Uw gegevens worden behandeld volgens ons",
     "privacyLink": "privacybeleid"
   },
   "samplesPage": {
@@ -4502,5 +4673,116 @@
     "ovRecruitBody": "Terwijl het netwerk groeit, leveren en plaatsen wij rechtstreeks vanuit onze eigen productie — en installateurs die een vrije regio claimen, krijgen de aanvragen uit die regio, dealerprijzen en opleiding.",
     "regionLuxembourg": "Luxemburg (Groothertogdom)",
     "regionAustria": "Oostenrijk"
+  },
+  "datasheetEmail": {
+    "subject": "Uw STRETCH-datasheet — {title}",
+    "greeting": "Dag {name},",
+    "intro": "Hier is de technische datasheet die u aanvroeg — {title}.",
+    "button": "Download de datasheet",
+    "linkFallback": "Of kopieer deze link in uw browser:",
+    "validity": "De link werkt {days} dagen.",
+    "footerCta": "Werkt u aan een project? Antwoord gewoon op deze e-mail of plan een gesprek.",
+    "signoff": "Het STRETCH-team",
+    "architectInvite": "Werkt u als architect? Onze gratis architectenzone geeft u indicatieve €/m²-budgetbanden, gemeten casestudy’s en elke datasheet, bestektekst en CAD-file met één klik:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Deze downloadlink is verlopen",
+    "expiredBody": "Downloadlinks zijn 14 dagen geldig. Vraag in enkele seconden een nieuwe aan — we mailen hem meteen.",
+    "requestNew": "Nieuwe link aanvragen"
+  },
+  "architectsPage": {
+    "crumb": "Architecten",
+    "eyebrow": "Voor architecten",
+    "titleA": "Spanplafonds voorschrijven",
+    "titleB": "met vertrouwen",
+    "lead": "Eén gratis account met alles wat u nodig hebt om voor te schrijven: documenten, bestekteksten, CAD/BIM, gemeten casestudy’s, indicatieve budgetbanden, events en een vaste adviseur.",
+    "ctaCreate": "Maak uw gratis account",
+    "ctaSignIn": "Inloggen",
+    "values": [
+      {
+        "title": "Documenten, één klik",
+        "body": "Elke datasheet zonder formulieren — downloads gekoppeld aan uw account."
+      },
+      {
+        "title": "Bestekteksten",
+        "body": "Kant-en-klare bestekteksten per systeem — NL, FR en EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "DWG-profieldetails, Revit-families en SketchUp-componenten."
+      },
+      {
+        "title": "Projectfoto’s",
+        "body": "Hi-res fotosets van referentieprojecten voor klantpresentaties."
+      },
+      {
+        "title": "Gemeten casestudy’s",
+        "body": "Echte projecten met gemeten voor/na-waarden."
+      },
+      {
+        "title": "Budgetbanden",
+        "body": "Indicatieve €/m²-vorken voor vroege budgettering."
+      },
+      {
+        "title": "Events & lunch & learns",
+        "body": "Trainingen en sessies bij ons of op uw bureau."
+      },
+      {
+        "title": "Projectondersteuning",
+        "body": "Registreer een project: vaste adviseur + priority staalbox."
+      }
+    ],
+    "howTitle": "Zo werkt het",
+    "steps": [
+      {
+        "title": "Maak uw account",
+        "body": "Naam bureau, stad en uw gegevens — twee minuten."
+      },
+      {
+        "title": "Bevestig uw e-mail",
+        "body": "Eén klik op de bevestigingslink."
+      },
+      {
+        "title": "Alles ontgrendeld",
+        "body": "Documenten, budgetten, cases en support — meteen."
+      }
+    ],
+    "casesTitle": "Gemeten, niet beweerd",
+    "casesNote": "Volledige studie in de architectenzone.",
+    "cases": [
+      {
+        "title": "Akoestische renovatie restaurant",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 voor → na"
+      },
+      {
+        "title": "Lichtplafond kantoor",
+        "metric": "540 lux",
+        "metricLabel": "gemiddeld op werkhoogte, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Volgende events",
+    "eventsNote": "Alle data en inschrijving met één klik in de architectenzone.",
+    "faqTitle": "Veelgestelde vragen",
+    "faqs": [
+      {
+        "q": "Is de architectenzone echt gratis?",
+        "a": "Ja — ze bestaat om het voorschrijven van een STRETCH-systeem zo eenvoudig mogelijk te maken. Geen kosten, geen verplichtingen."
+      },
+      {
+        "q": "Publiceren jullie prijzen?",
+        "a": "Indicatieve €/m²-budgetbanden staan in de zone voor vroege budgettering. Projecten worden altijd individueel geprijsd — registreer een project voor een echt cijfer."
+      },
+      {
+        "q": "Ondersteunen jullie een lopende aanbesteding?",
+        "a": "Ja. Registreer het project en een vaste adviseur helpt met bestekteksten, details en akoestiekdoelen — meestal binnen één werkdag."
+      },
+      {
+        "q": "Leveren jullie buiten de Benelux?",
+        "a": "Ja — we produceren in België en plaatsen met gecertificeerde partners in heel Europa."
+      }
+    ],
+    "ctaTitle": "Alles om voor te schrijven, op één plek",
+    "ctaBody": "Maak uw gratis account en elk document, elke budgetband en elke casestudy staat één klik ver — plus een vaste adviseur voor uw lopende projecten."
   }
 }

@@ -1,10 +1,15 @@
 // CLIENT PORTAL — documents (/portal/documents). The technical library with
 // direct downloads for signed-in clients — no lead gate, unlike /datasheets.
+// The PDFs live outside public/, so each render mints fresh signed links
+// (14 days — plenty for a page that regenerates them on every visit).
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Download } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
 import { datasheetsByCategory } from '@/lib/datasheets';
+import { createDatasheetLink } from '@/lib/datasheet-links';
+
+export const dynamic = 'force-dynamic';
 
 export default async function PortalDocumentsPage({ params }: { params: { locale: string } }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
@@ -54,7 +59,12 @@ export default async function PortalDocumentsPage({ params }: { params: { locale
                     {[sheet.format, sheet.sizeLabel, sheet.updated].filter(Boolean).join(' · ')}
                   </div>
                 </div>
-                <a href={sheet.file} download className="btn btn--primary btn--sm" style={{ flexShrink: 0 }}>
+                <a
+                  href={createDatasheetLink(sheet.slug, locale)}
+                  download
+                  className="btn btn--primary btn--sm"
+                  style={{ flexShrink: 0 }}
+                >
                   {t('download')} <Download size={14} />
                 </a>
               </div>

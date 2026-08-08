@@ -47,19 +47,24 @@ export type PortalRole = 'client' | 'admin';
  * but NO trade pricing and NO designer. The two trade tiers (created by an
  * admin, or a b2c account upgraded by an admin) get market-based pricing
  * visibility: `installer` buys and installs; `producer` is a
- * producer/reseller partner. Admins are implicitly trade.
+ * producer/reseller partner. `architect` = self-registered specifier account:
+ * the architect area (documents, spec texts, budget guide) and NEVER any
+ * trade pricing, pricelist or designer. Admins are implicitly trade.
  */
-export type AccountType = 'producer' | 'installer' | 'b2c';
+export type AccountType = 'producer' | 'installer' | 'b2c' | 'architect';
 
-export const ACCOUNT_TYPES = ['producer', 'installer', 'b2c'] as const;
+export const ACCOUNT_TYPES = ['producer', 'installer', 'b2c', 'architect'] as const;
 
 /**
  * Canonical tier from a stored account_type value. Tolerant of display labels
  * written straight into the database ("Producer/Reseller", "Installer",
- * "B2C") and of pre-tier rows ('b2b' → installer).
+ * "B2C", "Architect") and of pre-tier rows ('b2b' → installer). The architect
+ * branch MUST come before the installer fallback — an unrecognised architect
+ * value falling through to installer would leak trade pricing.
  */
 export function normalizeAccountType(raw: unknown): AccountType {
   const v = typeof raw === 'string' ? raw.toLowerCase() : '';
+  if (v.includes('architect')) return 'architect';
   if (v.includes('producer') || v.includes('reseller')) return 'producer';
   if (v === 'b2c') return 'b2c';
   return 'installer';
@@ -75,11 +80,28 @@ export type PortalProfile = {
   markets: string[];
   allMarkets: boolean;
   active: boolean;
+  /** Architect accounts: office name + city from signup. */
+  office?: string | null;
+  city?: string | null;
+  phone?: string | null;
 };
 
-/** Trade areas (pricelist, designer) are for trade tiers and admins only. */
+/**
+ * Trade areas (pricelist, designer, orders) are for the trade tiers and
+ * admins ONLY — enumerated on purpose: b2c AND architect are excluded, and a
+ * future tier stays locked out until explicitly added here.
+ */
 export function hasTradeAccess(profile: PortalProfile): boolean {
-  return profile.role === 'admin' || profile.accountType !== 'b2c';
+  return (
+    profile.role === 'admin' ||
+    profile.accountType === 'producer' ||
+    profile.accountType === 'installer'
+  );
+}
+
+/** The architect area (dashboard, budget guide) — architects and admins. */
+export function hasArchitectAccess(profile: PortalProfile): boolean {
+  return profile.role === 'admin' || profile.accountType === 'architect';
 }
 
 export type PortalSession = {
@@ -97,8 +119,12 @@ export type PortalSession = {
  */
 export const PRICE_MARKETS = ['Producer/Reseller', 'Installer', 'B2C'] as const;
 
-/** The PriceBook group an account tier sees automatically. */
-export function priceGroupForTier(tier: AccountType): (typeof PRICE_MARKETS)[number] {
+/**
+ * The PriceBook group an account tier sees automatically. Architects get
+ * NONE — null never matches a row's market, so no pricing is ever visible.
+ */
+export function priceGroupForTier(tier: AccountType): (typeof PRICE_MARKETS)[number] | null {
+  if (tier === 'architect') return null;
   if (tier === 'producer') return 'Producer/Reseller';
   if (tier === 'b2c') return 'B2C';
   return 'Installer';

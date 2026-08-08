@@ -13,7 +13,8 @@ export type ModalType =
   | 'partner'
   | 'call'
   | 'samples'
-  | 'datasheet';
+  | 'datasheet'
+  | 'project';
 
 export type FieldKind = 'text' | 'select' | 'area';
 
@@ -25,6 +26,13 @@ export type FormField = {
   inputType?: 'text' | 'email' | 'tel';
   placeholder?: string;
   options?: string[];
+  /**
+   * Stable submitted values parallel to `options`. When set, the select posts
+   * optionValues[i] while showing the (localized) options[i] label — server
+   * logic must never depend on a localized label. Localization overlays
+   * replace `options` only; `optionValues` always comes from this file.
+   */
+  optionValues?: string[];
   /** Span both grid columns. */
   full?: boolean;
   required?: boolean;
@@ -161,15 +169,60 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
     ],
   },
   datasheet: {
-    title: 'Download the datasheet',
-    subtitle: 'Enter your details and the download will start straight away. We only use them to follow up on your enquiry.',
-    submitLabel: 'Get the datasheet',
-    sentTitle: 'Here is your datasheet',
-    sentMsg: 'Your download should start automatically — if it does not, use the button below.',
+    title: 'Get the datasheet by email',
+    subtitle: 'Leave your details and we’ll email the datasheet straight to your inbox. We only use them to follow up on your enquiry.',
+    submitLabel: 'Email me the datasheet',
+    sentTitle: 'Check your inbox',
+    sentMsg: 'The datasheet is on its way to {email}. Don’t see it within a few minutes? Check your spam folder.',
     fields: [
       { name: 'name', kind: 'text', inputType: 'text', label: 'Name', placeholder: 'First & last name', required: true, full: true },
+      {
+        name: 'role',
+        kind: 'select',
+        label: 'I am a(n)',
+        options: ['Architect', 'Installer', 'Private client', 'Other business'],
+        optionValues: ['architect', 'installer', 'private', 'other'],
+        required: true,
+      },
       { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@email.com', required: true },
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
+      { name: 'city', kind: 'text', inputType: 'text', label: 'City', placeholder: 'Your city', required: true },
+    ],
+  },
+  project: {
+    title: 'Register a project',
+    subtitle: 'Tell us about your live project — a dedicated advisor follows up within one working day with spec support, budget input and priority sampling.',
+    submitLabel: 'Register the project',
+    sentTitle: 'Project registered',
+    sentMsg: 'Thanks — a dedicated advisor will contact you within one working day.',
+    fields: [
+      { name: 'projectName', kind: 'text', inputType: 'text', label: 'Project name', placeholder: 'Project or working title', required: true },
+      { name: 'location', kind: 'text', inputType: 'text', label: 'Location', placeholder: 'City', required: true },
+      {
+        name: 'buildingType',
+        kind: 'select',
+        label: 'Building type',
+        options: ['Office', 'Hospitality', 'Healthcare', 'Retail', 'Residential', 'Education', 'Other'],
+        optionValues: ['office', 'hospitality', 'healthcare', 'retail', 'residential', 'education', 'other'],
+      },
+      {
+        name: 'system',
+        kind: 'select',
+        label: 'System',
+        options: ['Polyester', 'PVC', 'Acoustic', 'Light & print', 'Prefab', 'Not sure yet'],
+        optionValues: ['polyester', 'pvc', 'acoustic', 'light-print', 'prefab', 'unsure'],
+      },
+      {
+        name: 'stage',
+        kind: 'select',
+        label: 'Stage',
+        options: ['Concept', 'Design', 'Tender', 'On site'],
+        optionValues: ['concept', 'design', 'tender', 'on-site'],
+      },
+      { name: 'area', kind: 'text', inputType: 'text', label: 'Area', placeholder: 'approx. m²' },
+      { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@office.com', required: true },
+      { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
+      { name: 'notes', kind: 'area', label: 'Notes', placeholder: 'Ceiling heights, acoustics targets, deadlines...', full: true },
     ],
   },
 };

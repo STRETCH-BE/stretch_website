@@ -18,7 +18,7 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { X, ArrowRight, Check } from 'lucide-react';
 import {
@@ -36,11 +36,14 @@ type OpenOptions = {
   source?: string;
   /** Product slug for analytics, when opened from a product context. */
   product?: string;
-  /** For gated downloads: the file to deliver once the lead is submitted. */
-  download?: { url: string; filename: string; label: string };
+  /** Gated datasheet: delivered by email via /api/datasheet-request. */
+  datasheet?: { slug: string; title: string };
+  /** Pre-filled default values for matching field names (e.g. from a signed-in
+   *  portal profile). The visitor can still edit everything. */
+  prefill?: Record<string, string>;
 };
 
-/** Programmatically download a same-origin file (used after a gated submit). */
+/** Programmatically download a same-origin file (dev fallback delivery). */
 function triggerDownload(url: string, filename: string) {
   const a = document.createElement('a');
   a.href = url;
@@ -49,6 +52,44 @@ function triggerDownload(url: string, filename: string) {
   document.body.appendChild(a);
   a.click();
   a.remove();
+}
+
+// --- Returning-visitor memory (datasheet requests only, 30 days) ------------
+type SavedContact = {
+  v: 1;
+  savedAt: number;
+  name: string;
+  role: string;
+  email: string;
+  phone: string;
+  city: string;
+};
+
+const CONTACT_KEY = 'datasheet-contact';
+const CONTACT_MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000;
+
+function loadSavedContact(): SavedContact | null {
+  try {
+    if (typeof window === 'undefined') return null;
+    const raw = window.localStorage.getItem(CONTACT_KEY);
+    if (!raw) return null;
+    const d = JSON.parse(raw) as Partial<SavedContact>;
+    if (d?.v !== 1) return null;
+    if (!Number.isFinite(d.savedAt) || Date.now() - Number(d.savedAt) > CONTACT_MAX_AGE_MS) return null;
+    if (!d.name || !d.role || !d.email || !d.phone || !d.city) return null;
+    return d as SavedContact;
+  } catch {
+    return null;
+  }
+}
+
+function saveContact(c: Omit<SavedContact, 'v' | 'savedAt'>) {
+  try {
+    if (typeof window === 'undefined') return;
+    window.localStorage.setItem(CONTACT_KEY, JSON.stringify({ v: 1, savedAt: Date.now(), ...c }));
+  } catch {
+    /* storage unavailable — no-op */
+  }
 }
 
 type LeadModalContextValue = {
@@ -64,7 +105,7 @@ export function useLeadModal(): LeadModalContextValue {
   return ctx;
 }
 
-type Status = 'form' | 'sending' | 'sent' | 'error';
+type Status = 'form' | 'confirm' | 'sending' | 'sent' | 'error';
 
 export function LeadModalProvider({ children }: { children: ReactNode }) {
   const [type, setType] = useState<ModalType | null>(null);
@@ -99,14 +140,28 @@ function LeadGenModal({
 }) {
   const t = useTranslations('forms');
   const tm = useTranslations('modals');
+  const locale = useLocale();
   const cfg = localizeModalConfig(MODAL_CONFIGS[type], tm.raw(type) as ModalMessages);
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const titleId = useId();
   const descId = useId();
 
-  const [status, setStatus] = useState<Status>('form');
+  const isDatasheet = type === 'datasheet' && Boolean(options.datasheet);
+  // Returning visitor (datasheet only): a valid saved record skips the form.
+  const [savedContact, setSavedContact] = useState<SavedContact | null>(() =>
+    isDatasheet ? loadSavedContact() : null,
+  );
+  const [status, setStatus] = useState<Status>(savedContact ? 'confirm' : 'form');
   const [consentChecked, setConsentChecked] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [prefill, setPrefill] = useState<Record<string, string> | null>(options.prefill ?? null);
+  const [sentRole, setSentRole] = useState('');
+  const [confirmBusy, setConfirmBusy] = useState(false);
+  const [sentEmail, setSentEmail] = useState('');
+  // 'download' = dev/runtime fallback: the API returned a signed URL instead
+  // of emailing (no transactional provider) — old-style instant download.
+  const [sentMode, setSentMode] = useState<'email' | 'download'>('email');
+  const [fallbackUrl, setFallbackUrl] = useState<string | null>(null);
 
   // ESC to close + body scroll lock + focus into the dialog.
   useEffect(() => {
@@ -159,6 +214,86 @@ function LeadGenModal({
     return Object.keys(next).length === 0;
   }
 
+  // ---- Conversion events (best-effort, never block the UI) — identical for
+  // the /api/lead and /api/datasheet-request branches.
+  async function fireAnalytics(data: Record<string, string>, source: string) {
+    const consent = getConsent();
+    const email = data.email;
+    try {
+      if (consent?.marketing && window.gtag && email) {
+        await window.gtag('set', 'user_data', {
+          sha256_email_address: await sha256(normalizeEmail(email)),
+          sha256_phone_number: data.phone ? await sha256(normalizePhone(data.phone)) : undefined,
+        });
+      }
+    } catch {
+      /* no-op */
+    }
+    analytics.generateLead({ product: options.product, source });
+    if (type === 'samples') {
+      analytics.sampleRequest(data.colours || '', data.productLine || '');
+    }
+    try {
+      window.clarity?.('set', 'lead_status', 'submitted');
+      if (options.product) window.clarity?.('set', 'lead_product', options.product);
+      if (data.company || data.companyName) {
+        window.clarity?.('set', 'company', data.company || data.companyName);
+      }
+      if (email) window.clarity?.('identify', email);
+      window.clarity?.('upgrade', 'submitted_lead');
+    } catch {
+      /* no-op */
+    }
+  }
+
+  // Datasheet flow: post the five fields; the PDF arrives by email (or, when
+  // no mail provider is configured, as an instant-download fallback).
+  // Returns true on success. Used by BOTH the form and the one-click confirm —
+  // every send posts a full lead so each requested document is captured.
+  async function postDatasheetRequest(
+    data: { name: string; role: string; email: string; phone: string; city: string },
+    gotcha: string,
+  ): Promise<boolean> {
+    const source = options.source || type;
+    const sheet = options.datasheet!;
+    try {
+      const res = await fetch('/api/datasheet-request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...data, slug: sheet.slug, locale, source, _gotcha: gotcha }),
+      });
+      if (res.status === 429) {
+        setErrors({ __rate: tm('datasheet.rateLimited') });
+        setSavedContact(null);
+        setPrefill(data);
+        setStatus('form');
+        return false;
+      }
+      const json = (await res.json().catch(() => null)) as
+        | { ok: boolean; mode?: 'email' | 'download'; url?: string }
+        | null;
+      if (!res.ok || !json?.ok) throw new Error('Request failed');
+
+      saveContact(data);
+      await fireAnalytics(data, source);
+      setSentEmail(data.email);
+      setSentRole(data.role);
+      if (json.mode === 'download' && json.url) {
+        triggerDownload(json.url, `${sheet.slug}.pdf`);
+        setFallbackUrl(json.url);
+        setSentMode('download');
+      } else {
+        setSentMode('email');
+      }
+      setStatus('sent');
+      return true;
+    } catch {
+      setPrefill(data);
+      setStatus('error');
+      return false;
+    }
+  }
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
@@ -170,6 +305,16 @@ function LeadGenModal({
     if (!validate(data)) return;
 
     setStatus('sending');
+    const gotcha = String(fd.get('_gotcha') ?? '');
+
+    if (isDatasheet) {
+      await postDatasheetRequest(
+        { name: data.name, role: data.role, email: data.email, phone: data.phone, city: data.city },
+        gotcha,
+      );
+      return;
+    }
+
     const source = options.source || type;
     try {
       const res = await fetch('/api/lead', {
@@ -179,51 +324,27 @@ function LeadGenModal({
           ...data,
           source,
           product: options.product,
-          downloadedFile: options.download?.label,
           // Honeypot — /api/lead silently drops submissions where this is set.
-          _gotcha: String(fd.get('_gotcha') ?? ''),
+          _gotcha: gotcha,
         }),
       });
       if (!res.ok) throw new Error('Request failed');
 
-      // Gated download: deliver the file now that the lead is captured.
-      if (options.download) {
-        triggerDownload(options.download.url, options.download.filename);
-      }
-
-      // ---- Conversion events (best-effort, never block the UI) ----
-      const consent = getConsent();
-      const email = data.email;
-      try {
-        if (consent?.marketing && window.gtag && email) {
-          await window.gtag('set', 'user_data', {
-            sha256_email_address: await sha256(normalizeEmail(email)),
-            sha256_phone_number: data.phone ? await sha256(normalizePhone(data.phone)) : undefined,
-          });
-        }
-      } catch {
-        /* no-op */
-      }
-      analytics.generateLead({ product: options.product, source });
-      if (type === 'samples') {
-        analytics.sampleRequest(data.colours || '', data.productLine || '');
-      }
-      try {
-        window.clarity?.('set', 'lead_status', 'submitted');
-        if (options.product) window.clarity?.('set', 'lead_product', options.product);
-        if (data.company || data.companyName) {
-          window.clarity?.('set', 'company', data.company || data.companyName);
-        }
-        if (email) window.clarity?.('identify', email);
-        window.clarity?.('upgrade', 'submitted_lead');
-      } catch {
-        /* no-op */
-      }
+      await fireAnalytics(data, source);
 
       setStatus('sent');
     } catch {
       setStatus('error');
     }
+  }
+
+  // One-click resend for a remembered visitor.
+  async function handleConfirmSend() {
+    if (!savedContact || confirmBusy) return;
+    setConfirmBusy(true);
+    const { name, role, email, phone, city } = savedContact;
+    await postDatasheetRequest({ name, role, email, phone, city }, '');
+    setConfirmBusy(false);
   }
 
   return (
@@ -307,7 +428,7 @@ function LeadGenModal({
                 className="h2 h2--sm"
                 style={{ fontSize: 26, marginBottom: 12 }}
               >
-                {cfg.sentTitle}
+                {isDatasheet && sentMode === 'download' ? tm('datasheet.fallback.sentTitle') : cfg.sentTitle}
               </h3>
               <p
                 style={{
@@ -318,13 +439,26 @@ function LeadGenModal({
                   margin: '0 auto 24px',
                 }}
               >
-                {cfg.sentMsg}
+                {isDatasheet
+                  ? sentMode === 'email'
+                    ? tm('datasheet.sentMsg', { email: sentEmail })
+                    : tm('datasheet.fallback.sentMsg')
+                  : cfg.sentMsg}
               </p>
+              {/* Architects: one-line invite into the architect area. */}
+              {isDatasheet && sentMode === 'email' && sentRole === 'architect' && (
+                <p style={{ fontSize: 13, lineHeight: 1.55, background: 'var(--surface)', padding: '12px 16px', maxWidth: 380, margin: '0 auto 22px' }}>
+                  <Link href="/architects" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    {tm('datasheet.architectInvite')}{' '}
+                    <span style={{ color: 'var(--red)', fontWeight: 700, textDecoration: 'underline' }}>→</span>
+                  </Link>
+                </p>
+              )}
               <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-                {options.download && (
+                {isDatasheet && sentMode === 'download' && fallbackUrl && (
                   <a
-                    href={options.download.url}
-                    download={options.download.filename}
+                    href={fallbackUrl}
+                    download={`${options.datasheet!.slug}.pdf`}
                     className="btn btn--primary btn--sm"
                     style={{ textDecoration: 'none' }}
                   >
@@ -336,6 +470,68 @@ function LeadGenModal({
                 </button>
               </div>
             </div>
+          ) : status === 'confirm' && savedContact && options.datasheet ? (
+            /* Returning visitor: one-click send to the remembered address. */
+            <>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 11, marginBottom: 12 }}>
+                <span style={{ width: 26, height: 2, background: 'var(--red)' }} />
+                <span
+                  style={{
+                    fontSize: 11,
+                    fontWeight: 700,
+                    letterSpacing: '.18em',
+                    textTransform: 'uppercase',
+                    color: 'var(--text-faint-2)',
+                  }}
+                >
+                  STRETCH&reg;
+                </span>
+              </div>
+              <h2
+                id={titleId}
+                className="h2 h2--sm"
+                style={{ fontSize: 'clamp(23px,3vw,30px)', lineHeight: 1.02, marginBottom: 10 }}
+              >
+                {tm('datasheet.confirm.title', { title: options.datasheet.title })}
+              </h2>
+              <p
+                id={descId}
+                style={{ fontSize: 14.5, lineHeight: 1.55, color: 'var(--text-muted)', margin: '0 0 24px' }}
+              >
+                {tm('datasheet.confirm.msg', { email: savedContact.email })}
+              </p>
+              <button
+                type="button"
+                onClick={handleConfirmSend}
+                className="btn btn--primary"
+                disabled={confirmBusy}
+                style={{ width: '100%', justifyContent: 'center', opacity: confirmBusy ? 0.7 : 1 }}
+              >
+                {confirmBusy ? t('sending') : tm('datasheet.confirm.sendLabel')}
+                {!confirmBusy && <ArrowRight size={16} />}
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  const { name, role, email, phone, city } = savedContact;
+                  setPrefill({ name, role, email, phone, city });
+                  setStatus('form');
+                }}
+                style={{
+                  display: 'block',
+                  margin: '14px auto 0',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  font: 'inherit',
+                  fontSize: 12.5,
+                  color: 'var(--text-muted)',
+                  textDecoration: 'underline',
+                }}
+              >
+                {tm('datasheet.confirm.editLabel')}
+              </button>
+            </>
           ) : (
             <>
               <div style={{ display: 'flex', alignItems: 'center', gap: 11, marginBottom: 12 }}>
@@ -371,10 +567,11 @@ function LeadGenModal({
                 {cfg.subtitle}
               </p>
 
-              {/* The item this request is about (materials catalogue / product CTAs) */}
-              {options.product && (
+              {/* The item this request is about (materials / product CTAs / datasheet) */}
+              {(options.product || options.datasheet) && (
                 <p style={{ display: 'inline-block', background: 'var(--surface)', border: '1px solid var(--border)', padding: '8px 12px', fontSize: 12.5, fontWeight: 700, letterSpacing: '.04em', margin: '-10px 0 22px' }}>
-                  <span style={{ color: 'var(--red)', marginRight: 8 }}>●</span>{options.product}
+                  <span style={{ color: 'var(--red)', marginRight: 8 }}>●</span>
+                  {options.product || options.datasheet?.title}
                 </p>
               )}
 
@@ -425,7 +622,7 @@ function LeadGenModal({
                   }}
                 >
                   {cfg.fields.map((f) => (
-                    <Field key={f.name} field={f} error={errors[f.name]} />
+                    <Field key={f.name} field={f} error={errors[f.name]} defaultValue={prefill?.[f.name]} />
                   ))}
                 </div>
 
@@ -436,6 +633,12 @@ function LeadGenModal({
                   privacyLabel={t('consentPrivacy')}
                   consentPrefix={t('consentPrefix')}
                 />
+
+                {errors.__rate && (
+                  <p className="field-error" role="alert" style={{ marginBottom: 12 }}>
+                    {errors.__rate}
+                  </p>
+                )}
 
                 {status === 'error' && (
                   <p className="field-error" role="alert" style={{ marginBottom: 12 }}>
@@ -495,7 +698,15 @@ function LeadGenModal({
   );
 }
 
-function Field({ field, error }: { field: FormField; error?: string }) {
+function Field({
+  field,
+  error,
+  defaultValue,
+}: {
+  field: FormField;
+  error?: string;
+  defaultValue?: string;
+}) {
   const tm = useTranslations('modals');
   const id = `f-${field.name}`;
   const invalid = Boolean(error);
@@ -513,6 +724,7 @@ function Field({ field, error }: { field: FormField; error?: string }) {
           className="field"
           type={field.inputType || 'text'}
           placeholder={field.placeholder}
+          defaultValue={defaultValue}
           aria-invalid={invalid}
           aria-describedby={describedBy}
           required={field.required}
@@ -523,15 +735,17 @@ function Field({ field, error }: { field: FormField; error?: string }) {
           id={id}
           name={field.name}
           className="field"
-          defaultValue=""
+          defaultValue={defaultValue ?? ''}
           aria-invalid={invalid}
           aria-describedby={describedBy}
         >
           <option value="" disabled>
             {tm('select')}
           </option>
-          {field.options?.map((o) => (
-            <option key={o} value={o}>
+          {/* Submit the stable optionValues[i] (server logic) while showing
+              the localized options[i] label. */}
+          {field.options?.map((o, i) => (
+            <option key={o} value={field.optionValues?.[i] ?? o}>
               {o}
             </option>
           ))}
@@ -543,6 +757,7 @@ function Field({ field, error }: { field: FormField; error?: string }) {
           name={field.name}
           className="field"
           placeholder={field.placeholder}
+          defaultValue={defaultValue}
           aria-invalid={invalid}
           aria-describedby={describedBy}
           style={{ minHeight: 92, resize: 'vertical' }}

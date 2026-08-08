@@ -20,7 +20,8 @@
       "about": "Sobre nós",
       "faq": "FAQ",
       "clientLogin": "Área de cliente",
-      "materials": "Materiais"
+      "materials": "Materiais",
+      "architects": "Arquitetos"
     },
     "cta": {
       "freeQuote": "Orçamento grátis",
@@ -73,7 +74,9 @@
     "portalTitle": "Portal do cliente | STRETCH",
     "portalDescription": "Inicie sessão para consultar a sua tabela de preços profissional STRETCH e os dados da conta.",
     "materialsTitle": "Materiais e consumíveis para teto tensionado | STRETCH",
-    "materialsDescription": "Perfis, telas e películas, iluminação, acessórios, ferramentas e STRETCH Cleaner — peça orçamento por artigo e respondemos com preço e prazo. Sem loja online."
+    "materialsDescription": "Perfis, telas e películas, iluminação, acessórios, ferramentas e STRETCH Cleaner — peça orçamento por artigo e respondemos com preço e prazo. Sem loja online.",
+    "architectsTitle": "Para arquitetos — especificar tetos tensados | STRETCH",
+    "architectsDescription": "Área de arquitetos gratuita: fichas técnicas, textos de especificação, CAD/BIM, casos medidos, faixas €/m² indicativas, eventos e apoio de projeto."
   },
   "cookies": {
     "title": "Valorizamos a sua privacidade",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiração",
       "about": "Sobre nós",
       "faq": "FAQ",
-      "clientPortal": "Portal do cliente"
+      "clientPortal": "Portal do cliente",
+      "architects": "Para arquitetos"
     },
     "dealers": "Rede de revendedores"
   },
@@ -196,7 +200,12 @@
       "signupDoneBody": "Enviámos-lhe um link de confirmação. Clique nele e depois inicie sessão com o seu e-mail e palavra-passe.",
       "signupExists": "Já existe uma conta com este e-mail — inicie sessão.",
       "unavailableTitle": "Portal em breve",
-      "unavailableBody": "O portal de clientes está a ser ativado. Contacte-nos e configuraremos o seu acesso."
+      "unavailableBody": "O portal de clientes está a ser ativado. Contacte-nos e configuraremos o seu acesso.",
+      "audienceLabel": "Sou",
+      "audienceClient": "Cliente",
+      "audienceArchitect": "Arquiteto",
+      "officeName": "Nome do gabinete",
+      "city": "Cidade"
     },
     "nav": {
       "label": "Portal do cliente",
@@ -208,7 +217,8 @@
       "signOut": "Sair",
       "demoBadge": "Demo",
       "allMarkets": "Todos os mercados",
-      "designer": "Designer de tetos"
+      "designer": "Designer de tetos",
+      "budgetGuide": "Guia de orçamento"
     },
     "dash": {
       "eyebrow": "Portal do cliente",
@@ -317,7 +327,9 @@
       "createdOk": "Conta criada para {email}.",
       "typeProducer": "Produtor/revendedor",
       "typeInstaller": "Instalador",
-      "typeB2c": "B2C"
+      "typeB2c": "B2C",
+      "typeArchitect": "Arquiteto",
+      "filterAllTypes": "Todos os tipos"
     },
     "designer": {
       "eyebrow": "Designer de tetos",
@@ -329,6 +341,53 @@
       "architect": "Arquiteto / designer",
       "contractor": "Empreiteiro",
       "other": "Outro"
+    },
+    "architect": {
+      "eyebrow": "Área de arquitetos",
+      "welcome": "Tudo para especificar",
+      "intro": "Bem-vindo, {office} — documentos, textos de especificação, CAD/BIM, casos medidos, faixas de orçamento e apoio de projeto num só lugar.",
+      "demoNote": "Pré-visualização demo — downloads desativados, nada é registado.",
+      "toolsTitle": "Ferramentas de projeto",
+      "budgetTileTitle": "Guia de orçamento",
+      "budgetTileBody": "Faixas €/m² indicativas para fases iniciais — os números que ninguém publica.",
+      "budgetTileCta": "Abrir o guia",
+      "projectTileTitle": "Registar um projeto",
+      "projectTileBody": "Um projeto ativo recebe um consultor dedicado, apoio à especificação e amostras prioritárias.",
+      "projectTileCta": "Registar um projeto",
+      "samplesTileTitle": "Caixa de amostras",
+      "samplesTileBody": "Amostras físicas de membranas e cores para a sua biblioteca de materiais — grátis para arquitetos.",
+      "samplesTileCta": "Pedir caixa de amostras",
+      "libraryTitle": "Biblioteca",
+      "libraryBody": "Cada documento a um clique. Os downloads ficam associados à sua conta para apoiarmos o projeto de forma proativa.",
+      "docsTitle": "Fichas técnicas",
+      "docsBody": "A biblioteca técnica completa — sem formulários, um clique.",
+      "specTitle": "Textos de especificação",
+      "specBody": "Textos de caderno de encargos prontos a colar por sistema — NL, FR e EN.",
+      "cadTitle": "CAD e BIM",
+      "cadBody": "Detalhes de perfis DWG, famílias Revit e componentes SketchUp por sistema.",
+      "photosTitle": "Fotos de projetos",
+      "photosBody": "Conjuntos de fotos em alta resolução de projetos de referência para apresentações.",
+      "casesTitle": "Casos de estudo técnicos",
+      "casesBody": "Projetos reais com valores medidos antes/depois — números para a sua memória descritiva.",
+      "eventsTitle": "Eventos",
+      "eventsBody": "Formações, lunch & learns e dias de showroom — inscrição num clique.",
+      "register": "Inscrever-se",
+      "advisorTitle": "O seu consultor",
+      "advisorBody": "Um especialista para especificação, acústica, orçamentos e amostras — resposta num dia útil.",
+      "advisorCta": "Marcar uma chamada",
+      "download": "Transferir",
+      "comingSoon": "Em breve"
+    },
+    "budget": {
+      "eyebrow": "Área de arquitetos",
+      "title": "Guia de orçamento",
+      "intro": "Faixas de preço instalado indicativas por sistema — deliberadamente largas, para orçamentos iniciais e estudos de viabilidade.",
+      "disclaimer": "Faixas de preço instalado indicativas, sem IVA, apenas para orçamentos iniciais. Cada projeto é orçamentado individualmente — registe o seu projeto para um número real.",
+      "includes": "O que inclui",
+      "perM2": "por m² instalado, sem IVA",
+      "perUnit": "por unidade instalada, sem IVA",
+      "ctaBody": "Precisa de um número real para um projeto ativo? Registe-o e um consultor dedicado orçamenta-o corretamente num dia útil.",
+      "ctaButton": "Registar o seu projeto"
     }
   },
   "home": {
@@ -1543,6 +1602,28 @@
               "sub": "Questões comuns"
             }
           ]
+        },
+        {
+          "title": "Arquitetos",
+          "desc": "Especifique com confiança — documentos, orçamentos e apoio.",
+          "items": [
+            {
+              "title": "Área de arquitetos",
+              "sub": "Tudo para especificar, num só lugar"
+            },
+            {
+              "title": "Fichas técnicas",
+              "sub": "A biblioteca de documentos técnicos"
+            },
+            {
+              "title": "Criar conta",
+              "sub": "Grátis — acesso imediato após confirmação do e-mail"
+            },
+            {
+              "title": "Iniciar sessão",
+              "sub": "Direto ao seu painel"
+            }
+          ]
         }
       ]
     },
@@ -1841,25 +1922,50 @@
       }
     },
     "datasheet": {
-      "title": "Descarregar a ficha técnica",
-      "subtitle": "Introduza os seus dados e a transferência começa de imediato. Usamo-los apenas para dar seguimento ao seu pedido.",
-      "submitLabel": "Obter a ficha técnica",
-      "sentTitle": "Aqui está a sua ficha técnica",
-      "sentMsg": "A transferência deverá começar automaticamente — se não começar, use o botão abaixo.",
+      "title": "Receba a ficha técnica por e-mail",
+      "subtitle": "Deixe os seus dados e enviamos a ficha técnica diretamente para a sua caixa de entrada. Usamo-los apenas para dar seguimento ao seu pedido.",
+      "submitLabel": "Enviem-me a ficha técnica",
+      "sentTitle": "Verifique a sua caixa de entrada",
+      "sentMsg": "A ficha técnica vai a caminho de {email}. Não a vê em alguns minutos? Verifique a pasta de spam.",
       "fields": {
         "name": {
           "label": "Nome",
           "placeholder": "Nome e apelido"
         },
+        "role": {
+          "label": "Sou",
+          "options": [
+            "Arquiteto",
+            "Instalador",
+            "Cliente particular",
+            "Outra empresa"
+          ]
+        },
         "email": {
-          "label": "Email",
-          "placeholder": "you@email.com"
+          "label": "E-mail",
+          "placeholder": "voce@email.com"
         },
         "phone": {
           "label": "Telefone",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "Cidade",
+          "placeholder": "A sua cidade"
         }
-      }
+      },
+      "confirm": {
+        "title": "Enviar {title} para a sua caixa?",
+        "msg": "Enviamos a ficha técnica para {email} — um clique e segue caminho.",
+        "sendLabel": "Sim, enviem-ma",
+        "editLabel": "Não é você? Editar dados"
+      },
+      "fallback": {
+        "sentTitle": "Aqui está a sua ficha técnica",
+        "sentMsg": "O download deve começar automaticamente — se não, use o botão abaixo."
+      },
+      "rateLimited": "Demasiados pedidos da sua ligação — tente novamente dentro de uma hora.",
+      "architectInvite": "Arquiteto? A nossa área de arquitetos gratuita oferece faixas de orçamento indicativas, casos de estudo medidos e cada documento a um clique."
     },
     "trainingDates": [
       "15–16 set 2026",
@@ -1874,7 +1980,72 @@
     ],
     "close": "Fechar",
     "downloadDatasheet": "Descarregar ficha técnica",
-    "select": "Selecionar…"
+    "select": "Selecionar…",
+    "project": {
+      "title": "Registar um projeto",
+      "subtitle": "Fale-nos do seu projeto ativo — um consultor dedicado responde num dia útil com apoio à especificação, orçamento e amostras prioritárias.",
+      "submitLabel": "Registar o projeto",
+      "sentTitle": "Projeto registado",
+      "sentMsg": "Obrigado — um consultor dedicado contactá-lo-á num dia útil.",
+      "fields": {
+        "projectName": {
+          "label": "Nome do projeto",
+          "placeholder": "Título do projeto"
+        },
+        "location": {
+          "label": "Localização",
+          "placeholder": "Cidade"
+        },
+        "buildingType": {
+          "label": "Tipo de edifício",
+          "options": [
+            "Escritórios",
+            "Hotelaria",
+            "Saúde",
+            "Retalho",
+            "Residencial",
+            "Educação",
+            "Outro"
+          ]
+        },
+        "system": {
+          "label": "Sistema",
+          "options": [
+            "Poliéster",
+            "PVC",
+            "Acústico",
+            "Luz e impressão",
+            "Pré-fabricado",
+            "Ainda não sei"
+          ]
+        },
+        "stage": {
+          "label": "Fase",
+          "options": [
+            "Conceito",
+            "Projeto",
+            "Concurso",
+            "Em obra"
+          ]
+        },
+        "area": {
+          "label": "Área",
+          "placeholder": "aprox. m²"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "voce@gabinete.com"
+        },
+        "phone": {
+          "label": "Telefone",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Notas",
+          "placeholder": "Pés-direitos, objetivos acústicos, prazos..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -4235,9 +4406,9 @@
     "crumb": "Fichas técnicas",
     "titleA": "Especificações e",
     "titleB": "fichas técnicas",
-    "lead": "Descarregue a documentação técnica de cada sistema STRETCH — especificações, classificações de reação ao fogo, classes acústicas e detalhes de garantia. Introduza os seus dados uma vez por transferência e o ficheiro começa de imediato.",
+    "lead": "Descarregue a documentação técnica de cada sistema STRETCH — especificações, classes de fogo, valores acústicos e garantia. Deixe os dados uma vez e a ficha chega à sua caixa como ligação de download.",
     "updated": "Atualizado a {date}",
-    "privacyNote": "Pedimos o seu nome, e-mail e telefone para que um especialista possa responder a eventuais questões técnicas. Os seus dados são tratados de acordo com a nossa",
+    "privacyNote": "Pedimos o seu nome, função, e-mail, telefone e cidade para que um especialista responda às suas questões técnicas. Os seus dados são tratados segundo a nossa",
     "privacyLink": "política de privacidade"
   },
   "samplesPage": {
@@ -4502,5 +4673,116 @@
     "ovRecruitBody": "Enquanto a rede cresce, entregamos e instalamos diretamente a partir da nossa fábrica — e os instaladores que assumam uma região em aberto recebem os pedidos dessa região, preços de revendedor e formação.",
     "regionLuxembourg": "Luxemburgo (Grão-Ducado)",
     "regionAustria": "Áustria"
+  },
+  "datasheetEmail": {
+    "subject": "A sua ficha técnica STRETCH — {title}",
+    "greeting": "Olá, {name},",
+    "intro": "Aqui está a ficha técnica que pediu — {title}.",
+    "button": "Transferir a ficha técnica",
+    "linkFallback": "Ou copie esta ligação para o seu navegador:",
+    "validity": "A ligação funciona durante {days} dias.",
+    "footerCta": "Está a trabalhar num projeto? Responda a este e-mail ou marque uma chamada.",
+    "signoff": "A equipa STRETCH",
+    "architectInvite": "Trabalha como arquiteto? A nossa área de arquitetos gratuita dá-lhe faixas de orçamento indicativas em €/m², casos de estudo medidos e cada ficha técnica, texto de caderno de encargos e ficheiro CAD a um clique:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Esta ligação de download expirou",
+    "expiredBody": "As ligações de download são válidas por 14 dias. Peça uma nova em segundos — enviamos de imediato.",
+    "requestNew": "Pedir nova ligação"
+  },
+  "architectsPage": {
+    "crumb": "Arquitetos",
+    "eyebrow": "Para arquitetos",
+    "titleA": "Especifique tetos tensados",
+    "titleB": "com confiança",
+    "lead": "Uma conta gratuita com tudo o que precisa para especificar: documentos, textos de especificação, CAD/BIM, casos medidos, faixas de orçamento indicativas, eventos e um consultor dedicado.",
+    "ctaCreate": "Crie a sua conta gratuita",
+    "ctaSignIn": "Iniciar sessão",
+    "values": [
+      {
+        "title": "Documentos a um clique",
+        "body": "Cada ficha técnica sem formulários — downloads ligados à sua conta."
+      },
+      {
+        "title": "Textos de especificação",
+        "body": "Textos de caderno de encargos prontos por sistema — NL, FR e EN."
+      },
+      {
+        "title": "CAD e BIM",
+        "body": "Detalhes de perfis DWG, famílias Revit e componentes SketchUp."
+      },
+      {
+        "title": "Fotos de projetos",
+        "body": "Conjuntos de fotos de referência em alta resolução para apresentações."
+      },
+      {
+        "title": "Casos medidos",
+        "body": "Projetos reais com valores medidos antes/depois."
+      },
+      {
+        "title": "Faixas de orçamento",
+        "body": "Faixas €/m² indicativas para fases iniciais."
+      },
+      {
+        "title": "Eventos e lunch & learns",
+        "body": "Formações e sessões na nossa sede ou no seu gabinete."
+      },
+      {
+        "title": "Apoio de projeto",
+        "body": "Registe um projeto: consultor dedicado + amostras prioritárias."
+      }
+    ],
+    "howTitle": "Como funciona",
+    "steps": [
+      {
+        "title": "Crie a sua conta",
+        "body": "Nome do gabinete, cidade e os seus dados — dois minutos."
+      },
+      {
+        "title": "Confirme o e-mail",
+        "body": "Um clique na ligação de confirmação."
+      },
+      {
+        "title": "Tudo desbloqueado",
+        "body": "Documentos, orçamentos, casos e apoio — de imediato."
+      }
+    ],
+    "casesTitle": "Medido, não afirmado",
+    "casesNote": "Estudo completo dentro da área de arquitetos.",
+    "cases": [
+      {
+        "title": "Renovação acústica de restaurante",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 antes → depois"
+      },
+      {
+        "title": "Teto luminoso de escritório",
+        "metric": "540 lux",
+        "metricLabel": "média no plano de trabalho, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Próximos eventos",
+    "eventsNote": "Todas as datas e inscrição num clique dentro da área.",
+    "faqTitle": "Perguntas frequentes",
+    "faqs": [
+      {
+        "q": "A área de arquitetos é mesmo gratuita?",
+        "a": "Sim — existe para tornar a especificação de um sistema STRETCH o mais simples possível. Sem custos nem compromissos."
+      },
+      {
+        "q": "Publicam preços?",
+        "a": "As faixas €/m² indicativas vivem dentro da área para orçamentos iniciais. Cada projeto é orçamentado individualmente — registe um projeto para um número real."
+      },
+      {
+        "q": "Apoiam um concurso em curso?",
+        "a": "Sim. Registe o projeto e um consultor dedicado ajuda com textos, detalhes e objetivos acústicos — normalmente num dia útil."
+      },
+      {
+        "q": "Entregam fora do Benelux?",
+        "a": "Sim — produzimos na Bélgica e instalamos com parceiros certificados em toda a Europa."
+      }
+    ],
+    "ctaTitle": "Tudo para especificar, num só lugar",
+    "ctaBody": "Crie a sua conta gratuita: cada documento, faixa de orçamento e caso de estudo fica a um clique — mais um consultor dedicado para os seus projetos."
   }
 }

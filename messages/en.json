@@ -20,7 +20,8 @@
       "about": "About",
       "faq": "FAQ",
       "clientLogin": "Client login",
-      "materials": "Materials"
+      "materials": "Materials",
+      "architects": "Architects"
     },
     "cta": {
       "freeQuote": "Free quote",
@@ -73,7 +74,9 @@
     "portalTitle": "Client portal | STRETCH",
     "portalDescription": "Sign in to view your STRETCH trade pricelist and account data.",
     "materialsTitle": "Stretch ceiling materials & supplies | STRETCH",
-    "materialsDescription": "Profiles, fabrics & foils, lighting, accessories, tools and STRETCH Cleaner — request a quote per item and we reply with price and delivery. No webshop needed."
+    "materialsDescription": "Profiles, fabrics & foils, lighting, accessories, tools and STRETCH Cleaner — request a quote per item and we reply with price and delivery. No webshop needed.",
+    "architectsTitle": "For architects — specify stretch ceilings | STRETCH",
+    "architectsDescription": "Free architect area: datasheets, spec texts, CAD/BIM, measured case studies, indicative €/m² budget bands, events and project support."
   },
   "cookies": {
     "title": "We value your privacy",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiration",
       "about": "About",
       "faq": "FAQ",
-      "clientPortal": "Client portal"
+      "clientPortal": "Client portal",
+      "architects": "For architects"
     },
     "dealers": "Dealer network"
   },
@@ -196,7 +200,12 @@
       "signupDoneBody": "We sent you a confirmation link. Click it, then sign in with your email and password.",
       "signupExists": "An account with this email already exists — sign in instead.",
       "unavailableTitle": "Portal launching soon",
-      "unavailableBody": "The client portal is being activated. Contact us and we will set up your access."
+      "unavailableBody": "The client portal is being activated. Contact us and we will set up your access.",
+      "audienceLabel": "I am",
+      "audienceClient": "Client",
+      "audienceArchitect": "Architect",
+      "officeName": "Office name",
+      "city": "City"
     },
     "nav": {
       "label": "Client portal",
@@ -208,7 +217,8 @@
       "signOut": "Sign out",
       "demoBadge": "Demo",
       "allMarkets": "All markets",
-      "designer": "Ceiling designer"
+      "designer": "Ceiling designer",
+      "budgetGuide": "Budget guide"
     },
     "dash": {
       "eyebrow": "Client portal",
@@ -317,7 +327,9 @@
       "createdOk": "Account created for {email}.",
       "typeProducer": "Producer/Reseller",
       "typeInstaller": "Installer",
-      "typeB2c": "B2C"
+      "typeB2c": "B2C",
+      "typeArchitect": "Architect",
+      "filterAllTypes": "All types"
     },
     "designer": {
       "eyebrow": "Ceiling designer",
@@ -329,6 +341,53 @@
       "architect": "Architect / designer",
       "contractor": "Contractor",
       "other": "Other"
+    },
+    "architect": {
+      "eyebrow": "Architect area",
+      "welcome": "Everything to specify",
+      "intro": "Welcome, {office} — documents, spec texts, CAD/BIM, measured case studies, budget bands and project support in one place.",
+      "demoNote": "Demo preview — downloads are disabled and nothing is logged.",
+      "toolsTitle": "Project tools",
+      "budgetTileTitle": "Budget guide",
+      "budgetTileBody": "Indicative €/m² bands for early-stage budgeting — the numbers nobody publishes.",
+      "budgetTileCta": "Open the guide",
+      "projectTileTitle": "Register a project",
+      "projectTileBody": "A live project gets a dedicated advisor, spec support and priority sampling.",
+      "projectTileCta": "Register a project",
+      "samplesTileTitle": "Sample box",
+      "samplesTileBody": "Physical membrane and colour samples for your material library — free for architects.",
+      "samplesTileCta": "Order a sample box",
+      "libraryTitle": "Library",
+      "libraryBody": "Every document one click away. Downloads are logged to your account so we can support your project proactively.",
+      "docsTitle": "Datasheets",
+      "docsBody": "The complete technical datasheet library — no forms, one click.",
+      "specTitle": "Specification texts",
+      "specBody": "Ready-to-paste tender texts per system — bestektekst NL, cahier des charges FR, specification EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "DWG profile details, Revit families and SketchUp components per system.",
+      "photosTitle": "Project photos",
+      "photosBody": "Hi-res photo sets of reference projects for client presentations.",
+      "casesTitle": "Technical case studies",
+      "casesBody": "Real projects with measured before/after values — numbers you can put in a design report.",
+      "eventsTitle": "Events",
+      "eventsBody": "Trainings, lunch & learns and showroom days — register in one click.",
+      "register": "Register",
+      "advisorTitle": "Your advisor",
+      "advisorBody": "One specialist for spec questions, acoustics targets, budgets and samples — reply within one working day.",
+      "advisorCta": "Book a call",
+      "download": "Download",
+      "comingSoon": "Coming soon"
+    },
+    "budget": {
+      "eyebrow": "Architect area",
+      "title": "Budget guide",
+      "intro": "Indicative installed price bands per system — deliberately coarse, for early-stage budgeting and feasibility checks.",
+      "disclaimer": "Indicative installed price bands, excl. VAT, for early-stage budgeting only. Every project is priced individually — register your project for a real number.",
+      "includes": "What’s included",
+      "perM2": "per m² installed, excl. VAT",
+      "perUnit": "per unit installed, excl. VAT",
+      "ctaBody": "Need a real number for a live project? Register it and a dedicated advisor prices it properly within one working day.",
+      "ctaButton": "Register your project"
     }
   },
   "home": {
@@ -1543,6 +1602,28 @@
               "sub": "Common questions"
             }
           ]
+        },
+        {
+          "title": "Architects",
+          "desc": "Specify with confidence — documents, budgets and support.",
+          "items": [
+            {
+              "title": "Architect area",
+              "sub": "Everything to specify, in one place"
+            },
+            {
+              "title": "Datasheets",
+              "sub": "The technical document library"
+            },
+            {
+              "title": "Create account",
+              "sub": "Free — instant access after email confirmation"
+            },
+            {
+              "title": "Sign in",
+              "sub": "Straight to your dashboard"
+            }
+          ]
         }
       ]
     },
@@ -1841,15 +1922,24 @@
       }
     },
     "datasheet": {
-      "title": "Download the datasheet",
-      "subtitle": "Enter your details and the download will start straight away. We only use them to follow up on your enquiry.",
-      "submitLabel": "Get the datasheet",
-      "sentTitle": "Here is your datasheet",
-      "sentMsg": "Your download should start automatically — if it does not, use the button below.",
+      "title": "Get the datasheet by email",
+      "subtitle": "Leave your details and we’ll email the datasheet straight to your inbox. We only use them to follow up on your enquiry.",
+      "submitLabel": "Email me the datasheet",
+      "sentTitle": "Check your inbox",
+      "sentMsg": "The datasheet is on its way to {email}. Don’t see it within a few minutes? Check your spam folder.",
       "fields": {
         "name": {
           "label": "Name",
           "placeholder": "First & last name"
+        },
+        "role": {
+          "label": "I am a(n)",
+          "options": [
+            "Architect",
+            "Installer",
+            "Private client",
+            "Other business"
+          ]
         },
         "email": {
           "label": "Email",
@@ -1858,8 +1948,24 @@
         "phone": {
           "label": "Phone",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "City",
+          "placeholder": "Your city"
         }
-      }
+      },
+      "confirm": {
+        "title": "Send {title} to your inbox?",
+        "msg": "We’ll email the datasheet to {email} — one click and it’s on its way.",
+        "sendLabel": "Yes, email it to me",
+        "editLabel": "Not you? Edit details"
+      },
+      "fallback": {
+        "sentTitle": "Here is your datasheet",
+        "sentMsg": "Your download should start automatically — if it does not, use the button below."
+      },
+      "rateLimited": "Too many requests from your connection — please try again in an hour.",
+      "architectInvite": "Architect? Our free architect area has indicative budget bands, measured case studies and every document one click away."
     },
     "trainingDates": [
       "15–16 Sep 2026",
@@ -1874,7 +1980,72 @@
     ],
     "close": "Close",
     "downloadDatasheet": "Download datasheet",
-    "select": "Select…"
+    "select": "Select…",
+    "project": {
+      "title": "Register a project",
+      "subtitle": "Tell us about your live project — a dedicated advisor follows up within one working day with spec support, budget input and priority sampling.",
+      "submitLabel": "Register the project",
+      "sentTitle": "Project registered",
+      "sentMsg": "Thanks — a dedicated advisor will contact you within one working day.",
+      "fields": {
+        "projectName": {
+          "label": "Project name",
+          "placeholder": "Project or working title"
+        },
+        "location": {
+          "label": "Location",
+          "placeholder": "City"
+        },
+        "buildingType": {
+          "label": "Building type",
+          "options": [
+            "Office",
+            "Hospitality",
+            "Healthcare",
+            "Retail",
+            "Residential",
+            "Education",
+            "Other"
+          ]
+        },
+        "system": {
+          "label": "System",
+          "options": [
+            "Polyester",
+            "PVC",
+            "Acoustic",
+            "Light & print",
+            "Prefab",
+            "Not sure yet"
+          ]
+        },
+        "stage": {
+          "label": "Stage",
+          "options": [
+            "Concept",
+            "Design",
+            "Tender",
+            "On site"
+          ]
+        },
+        "area": {
+          "label": "Area",
+          "placeholder": "approx. m²"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@office.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Notes",
+          "placeholder": "Ceiling heights, acoustics targets, deadlines..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -4235,9 +4406,9 @@
     "crumb": "Datasheets",
     "titleA": "Specs &",
     "titleB": "datasheets",
-    "lead": "Download technical documentation for every STRETCH system — specifications, fire ratings, acoustic class values and warranty details. Enter your details once per download and the file starts immediately.",
+    "lead": "Download technical documentation for every STRETCH system — specifications, fire ratings, acoustic class values and warranty details. Leave your details once and the datasheet lands in your inbox as a download link.",
     "updated": "Updated {date}",
-    "privacyNote": "We ask for your name, email and phone so a specialist can answer any technical questions. Your details are handled per our",
+    "privacyNote": "We ask for your name, role, email, phone and city so a specialist can answer any technical questions. Your details are handled per our",
     "privacyLink": "privacy policy"
   },
   "samplesPage": {
@@ -4502,5 +4673,116 @@
     "ovRecruitBody": "We deliver and install directly from our production while the network grows — and installers who claim an open region get its enquiries, dealer pricing and training.",
     "regionLuxembourg": "Luxembourg (Grand Duchy)",
     "regionAustria": "Austria"
+  },
+  "datasheetEmail": {
+    "subject": "Your STRETCH datasheet — {title}",
+    "greeting": "Hello {name},",
+    "intro": "Here’s the technical datasheet you requested — {title}.",
+    "button": "Download the datasheet",
+    "linkFallback": "Or copy this link into your browser:",
+    "validity": "The link works for {days} days.",
+    "footerCta": "Working on a project? Just reply to this email or book a call.",
+    "signoff": "The STRETCH team",
+    "architectInvite": "Working as an architect? Our free architect area gives you indicative €/m² budget bands, measured case studies, and every datasheet, spec text and CAD file one click away:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "This download link has expired",
+    "expiredBody": "Download links are valid for 14 days. Request a fresh one in a few seconds — we’ll email it straight to you.",
+    "requestNew": "Request a new link"
+  },
+  "architectsPage": {
+    "crumb": "Architects",
+    "eyebrow": "For architects",
+    "titleA": "Specify stretch ceilings",
+    "titleB": "with confidence",
+    "lead": "One free account with everything you need to specify: documents, spec texts, CAD/BIM, measured case studies, indicative budget bands, events and a dedicated advisor.",
+    "ctaCreate": "Create your free account",
+    "ctaSignIn": "Sign in",
+    "values": [
+      {
+        "title": "Documents, one click",
+        "body": "Every datasheet without forms — downloads tied to your account."
+      },
+      {
+        "title": "Specification texts",
+        "body": "Ready-to-paste tender texts per system — NL, FR and EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "DWG profile details, Revit families and SketchUp components."
+      },
+      {
+        "title": "Project photos",
+        "body": "Hi-res reference photo sets for client presentations."
+      },
+      {
+        "title": "Measured case studies",
+        "body": "Real projects with before/after measured values."
+      },
+      {
+        "title": "Budget bands",
+        "body": "Indicative €/m² ranges for early-stage budgeting."
+      },
+      {
+        "title": "Events & lunch & learns",
+        "body": "Trainings and sessions at our HQ or your office."
+      },
+      {
+        "title": "Project support",
+        "body": "Register a project: dedicated advisor + priority sample box."
+      }
+    ],
+    "howTitle": "How it works",
+    "steps": [
+      {
+        "title": "Create your account",
+        "body": "Office name, city and your details — two minutes."
+      },
+      {
+        "title": "Confirm your email",
+        "body": "One click on the confirmation link."
+      },
+      {
+        "title": "Everything unlocked",
+        "body": "Documents, budgets, cases and support — immediately."
+      }
+    ],
+    "casesTitle": "Measured, not claimed",
+    "casesNote": "Full study inside the architect area.",
+    "cases": [
+      {
+        "title": "Restaurant acoustics retrofit",
+        "metric": "2.4 s → 0.7 s",
+        "metricLabel": "RT60 before → after"
+      },
+      {
+        "title": "Backlit office ceiling",
+        "metric": "540 lux",
+        "metricLabel": "average at task height, U0 0.82"
+      }
+    ],
+    "eventsTitle": "Next events",
+    "eventsNote": "All dates and one-click registration inside the architect area.",
+    "faqTitle": "Frequently asked",
+    "faqs": [
+      {
+        "q": "Is the architect area really free?",
+        "a": "Yes — it exists so specifying a STRETCH system is as easy as possible. No fees, no obligations."
+      },
+      {
+        "q": "Do you publish prices?",
+        "a": "Indicative €/m² budget bands live inside the area for early-stage budgeting. Projects are always priced individually — register a project for a real number."
+      },
+      {
+        "q": "Can you support a live tender?",
+        "a": "Yes. Register the project and a dedicated advisor helps with spec texts, details and acoustic targets — usually within one working day."
+      },
+      {
+        "q": "Do you deliver outside the Benelux?",
+        "a": "Yes — we produce in Belgium and install with certified partners across Europe."
+      }
+    ],
+    "ctaTitle": "Everything to specify, in one place",
+    "ctaBody": "Create your free account and every document, budget band and case study is one click away — plus a dedicated advisor for your live projects."
   }
 }

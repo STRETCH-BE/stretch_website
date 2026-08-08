@@ -7,6 +7,15 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  experimental: {
+    // Ship the private datasheet PDFs inside the download route's serverless
+    // bundle — they live outside public/ on purpose (gated, signed links only).
+    outputFileTracingIncludes: {
+      '/api/datasheet/[slug]': ['./datasheets-private/**/*'],
+      '/api/architect/datasheet/[slug]': ['./datasheets-private/**/*'],
+      '/api/architect/file/[slug]': ['./architect-private/**/*'],
+    },
+  },
   // styled-jsx is bundled with Next.js — no extra config needed.
   images: {
     // Serve modern formats first; Next falls back automatically.

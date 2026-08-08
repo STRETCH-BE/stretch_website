@@ -1,7 +1,8 @@
 'use client';
 
-// Opens the lead modal in 'datasheet' mode. Once the visitor submits name +
-// email + phone, the modal posts the lead to /api/lead and downloads the file.
+// Opens the lead modal in 'datasheet' mode. The visitor leaves name, role,
+// email, phone and city (captured as a lead via /api/datasheet-request) and
+// the datasheet arrives by email as a signed 14-day download link.
 import { Download } from 'lucide-react';
 import { useLeadModal } from '@/components/LeadGenModal';
 import type { Datasheet } from '@/lib/datasheets';
@@ -14,7 +15,6 @@ export default function DatasheetDownloadButton({
   className?: string;
 }) {
   const { open } = useLeadModal();
-  const filename = sheet.file.split('/').pop() || `${sheet.slug}.pdf`;
   return (
     <button
       type="button"
@@ -22,7 +22,7 @@ export default function DatasheetDownloadButton({
       onClick={() =>
         open('datasheet', {
           source: 'pdf_download',
-          download: { url: sheet.file, filename, label: sheet.title },
+          datasheet: { slug: sheet.slug, title: sheet.title },
         })
       }
     >

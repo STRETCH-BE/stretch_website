@@ -152,6 +152,7 @@ export const footerNav = {
   company: [
     { key: 'reseller', href: '/partners' },
     { key: 'training', href: '/installer-training' },
+    { key: 'architects', href: '/architects' },
     { key: 'inspiration', href: '/inspiration' },
     { key: 'about', href: '/about' },
     { key: 'faq', href: '/faq' },
@@ -178,6 +179,7 @@ export const staticRoutes = [
   '/dealers',
   '/samples',
   '/datasheets',
+  '/architects',
   '/products/prefab-lighting-elements',
   '/faq',
   '/blog',

@@ -22,12 +22,20 @@ const SIGNUP_COUNTRIES = [
 
 const BUSINESS_TYPES = ['installer', 'distributor', 'architect', 'contractor', 'other'] as const;
 
-export default function LoginForm({ mode }: { mode: Mode }) {
+export default function LoginForm({
+  mode,
+  initialAudience,
+}: {
+  mode: Mode;
+  /** 'architect' opens the signup tab with Architect pre-selected (?signup=architect). */
+  initialAudience?: 'client' | 'architect';
+}) {
   const t = useTranslations('portal.login');
   const bt = useTranslations('portal.businessTypes');
   const locale = useLocale();
   const router = useRouter();
-  const [tab, setTab] = useState<'signin' | 'signup'>('signin');
+  const [tab, setTab] = useState<'signin' | 'signup'>(initialAudience ? 'signup' : 'signin');
+  const [audience, setAudience] = useState<'client' | 'architect'>(initialAudience ?? 'client');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [company, setCompany] = useState('');
@@ -36,9 +44,11 @@ export default function LoginForm({ mode }: { mode: Mode }) {
   const [phone, setPhone] = useState('');
   const [country, setCountry] = useState('');
   const [businessType, setBusinessType] = useState('');
+  const [city, setCity] = useState('');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [signupDone, setSignupDone] = useState(false);
+  const architect = audience === 'architect';
 
   // Localised country names, alphabetical in the visitor's language.
   const countries = useMemo(() => {
@@ -89,7 +99,20 @@ export default function LoginForm({ mode }: { mode: Mode }) {
       const res = await fetch('/api/portal/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, company, contactName, vat, phone, country, businessType }),
+        body: JSON.stringify({
+          email,
+          password,
+          company,
+          contactName,
+          vat,
+          phone,
+          country,
+          businessType,
+          // Architect audience: the company field doubles as the office name.
+          accountType: architect ? 'architect' : 'b2c',
+          office: architect ? company : undefined,
+          city: architect ? city : undefined,
+        }),
       });
       const data = await res.json().catch(() => null);
       if (res.ok && data?.ok) {
@@ -217,8 +240,27 @@ export default function LoginForm({ mode }: { mode: Mode }) {
 
         {signup && (
           <>
+            {/* Audience: Client (B2B qualification) vs Architect (office + city). */}
+            <div className="portal-field" role="radiogroup" aria-label={t('audienceLabel')}>
+              <span className="portal-field-caption">{t('audienceLabel')}</span>
+              <div className="portal-audience">
+                {(['client', 'architect'] as const).map((a) => (
+                  <button
+                    key={a}
+                    type="button"
+                    role="radio"
+                    aria-checked={audience === a}
+                    className={audience === a ? 'on' : ''}
+                    onClick={() => setAudience(a)}
+                  >
+                    {a === 'client' ? t('audienceClient') : t('audienceArchitect')}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <label className="portal-field">
-              <span>{t('company')}</span>
+              <span>{architect ? t('officeName') : t('company')}</span>
               <input
                 type="text"
                 value={company}
@@ -226,7 +268,7 @@ export default function LoginForm({ mode }: { mode: Mode }) {
                 autoComplete="organization"
                 required
                 maxLength={120}
-                placeholder="Company BV"
+                placeholder={architect ? 'Studio A' : 'Company BV'}
               />
             </label>
             <div className="portal-pair">
@@ -255,47 +297,63 @@ export default function LoginForm({ mode }: { mode: Mode }) {
                 />
               </label>
             </div>
-            <div className="portal-pair">
+            {architect ? (
               <label className="portal-field">
-                <span>{t('vat')}</span>
+                <span>{t('city')}</span>
                 <input
                   type="text"
-                  value={vat}
-                  onChange={(e) => setVat(e.target.value)}
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
+                  autoComplete="address-level2"
                   required
-                  minLength={6}
-                  maxLength={20}
-                  placeholder="BE 0123.456.789"
+                  maxLength={80}
                 />
               </label>
-              <label className="portal-field">
-                <span>{t('country')}</span>
-                <select value={country} onChange={(e) => setCountry(e.target.value)} required>
-                  <option value="" disabled>
-                    {t('chooseOption')}
-                  </option>
-                  {countries.map((c) => (
-                    <option key={c.code} value={c.code}>
-                      {c.label}
+            ) : (
+              <>
+                <div className="portal-pair">
+                  <label className="portal-field">
+                    <span>{t('vat')}</span>
+                    <input
+                      type="text"
+                      value={vat}
+                      onChange={(e) => setVat(e.target.value)}
+                      required
+                      minLength={6}
+                      maxLength={20}
+                      placeholder="BE 0123.456.789"
+                    />
+                  </label>
+                  <label className="portal-field">
+                    <span>{t('country')}</span>
+                    <select value={country} onChange={(e) => setCountry(e.target.value)} required>
+                      <option value="" disabled>
+                        {t('chooseOption')}
+                      </option>
+                      {countries.map((c) => (
+                        <option key={c.code} value={c.code}>
+                          {c.label}
+                        </option>
+                      ))}
+                      <option value="OTHER">{t('countryOther')}</option>
+                    </select>
+                  </label>
+                </div>
+                <label className="portal-field">
+                  <span>{t('businessType')}</span>
+                  <select value={businessType} onChange={(e) => setBusinessType(e.target.value)} required>
+                    <option value="" disabled>
+                      {t('chooseOption')}
                     </option>
-                  ))}
-                  <option value="OTHER">{t('countryOther')}</option>
-                </select>
-              </label>
-            </div>
-            <label className="portal-field">
-              <span>{t('businessType')}</span>
-              <select value={businessType} onChange={(e) => setBusinessType(e.target.value)} required>
-                <option value="" disabled>
-                  {t('chooseOption')}
-                </option>
-                {BUSINESS_TYPES.map((k) => (
-                  <option key={k} value={k}>
-                    {bt(k)}
-                  </option>
-                ))}
-              </select>
-            </label>
+                    {BUSINESS_TYPES.map((k) => (
+                      <option key={k} value={k}>
+                        {bt(k)}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </>
+            )}
           </>
         )}
 
@@ -387,6 +445,36 @@ export default function LoginForm({ mode }: { mode: Mode }) {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 0 12px;
+        }
+        .portal-field-caption {
+          display: block;
+          font-size: 11.5px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--text-muted);
+          margin-bottom: 7px;
+        }
+        .portal-audience {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        .portal-audience button {
+          font: inherit;
+          font-size: 12.5px;
+          font-weight: 800;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          padding: 12px 10px;
+          cursor: pointer;
+          background: #fff;
+          color: var(--text-muted-2);
+          border: 1px solid var(--border-input);
+        }
+        .portal-audience button.on {
+          background: var(--black);
+          border-color: var(--black);
+          color: #fff;
         }
         @media (max-width: 420px) {
           .portal-pair {

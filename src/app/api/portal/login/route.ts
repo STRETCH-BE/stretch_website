@@ -67,24 +67,29 @@ export async function POST(req: NextRequest) {
         typeof meta[key] === 'string' && (meta[key] as string).trim()
           ? (meta[key] as string).trim().slice(0, 120)
           : null;
+      // Self-service tiers only from metadata: an architect signup must
+      // self-heal as an architect, anything else stays b2c.
+      const metaTier = metaText('account_type') === 'architect' ? 'architect' : 'b2c';
       const base = {
         id: data.user.id,
         email,
         company: metaText('company'),
         role: 'client',
-        account_type: 'b2c',
+        account_type: metaTier,
         markets: [],
         all_markets: false,
         active: true,
       };
       const { error: insertError } = await service.from('portal_users').insert({
         ...base,
-        // B2B details captured at signup (see signup route) — restored here.
+        // Signup details captured in the auth metadata — restored here.
         contact_name: metaText('contact_name'),
         vat: metaText('vat'),
         phone: metaText('phone'),
         country: metaText('country'),
         business_type: metaText('business_type'),
+        office: metaText('office'),
+        city: metaText('city'),
       });
       if (!insertError) return NextResponse.json({ ok: true, demo: false });
       // Un-migrated database (B2B columns missing) — core profile only.

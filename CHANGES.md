@@ -1,3 +1,112 @@
+## 2026-08-08 (19) — ARCHITECT AREA: second audience in the portal
+
+Architects are focus #2 after B2B installers: one free account with everything
+needed to SPECIFY a stretch ceiling. Iron pricing rule: architect accounts
+NEVER see trade pricing — no pricelist, no designer, no pricebook data.
+
+- **Account model**: AccountType gains 'architect' (4 tiers). The two leak
+  traps on THIS branch are fixed: normalizeAccountType() maps architect
+  BEFORE the installer fallback, hasTradeAccess() now enumerates
+  producer/installer instead of "not b2c", and the pricebook RLS policy's
+  tier case yields NULL for architect (matches no market — zero rows even if
+  app code had a bug). priceGroupForTier() returns null for architects. New
+  hasArchitectAccess() guards the architect surfaces. schema.sql: idempotent
+  ARCHITECT AREA block (DO $$ drop-and-recreate the account_type check with
+  the four-value set, add office/city columns, refreshed pricebook policy).
+- **Signup**: "I am" segmented choice Client / Architect. Architect mode:
+  office name (company field relabelled) + contact + phone + city; instant
+  access after e-mail confirmation, no admin approval. accountType/office/
+  city ride in the auth metadata so the login self-heal recreates an
+  architect profile, not b2c. /portal/login?signup=architect pre-selects
+  Architect (used by the landing CTA).
+- **Admin**: 4-option tier select + account-type filter; office/city shown in
+  the qualification line.
+- **Architect dashboard** ((app)/page.tsx branches to ArchitectDashboard):
+  Project tools (budget-guide tile, register-a-project + sample-box CTAs
+  pre-filled from the profile) · Library (29 one-click datasheets via
+  /api/architect/datasheet/[slug] — each download stored as a
+  portal_architect_download lead row; spec texts NL/FR/EN, CAD/BIM, photo
+  sets, 2 measured case-study cards with result rows) · Events (events.ts:
+  3 trainings + 2 lunch&learns, past events auto-hidden, one-click register
+  modals) · Advisor card. Resources from architect-resources.ts +
+  repo-root architect-private/ (README lists expected files); missing file
+  → "coming soon" badge + disabled button, route 404s. Demo architect
+  account architect@stretch.be / stretch2026 (downloads disabled).
+- **Budget guide** /portal/budget-guide (architect + admin only, b2b/b2c
+  redirect): indicative €/m² bands from hand-edited budget-bands.ts —
+  PLACEHOLDER ranges, Michael sets the real ones. Header comment forbids
+  ever importing pricebook data there; grep-verified the page and dashboard
+  import no portal/data or pricebook source. Prominent disclaimer +
+  register-your-project CTA.
+- **Modal plumbing**: OpenOptions.prefill (generic pre-fill used by the
+  datasheet edit step too), new 'project' modal type (9 fields, stable
+  optionValues for buildingType/system/stage) → /api/lead with source
+  architect_project; SOURCE_LABELS/FIELD_LABELS extended.
+- **/architects landing** ×12 (hero, 8 value blocks, how-it-works, next
+  events, 2 case teasers with one measured metric, 4 FAQs incl. the pricing
+  answer, signup CTA) + sitemap entry + footer link + mega-menu category 3
+  (append-only, cats 0/1 untouched) + mobile-menu entry + meta keys.
+- **Flywheel**: public datasheet requests with role=architect get an invite
+  paragraph in the e-mail (extraParagraph hook) and an invite line in the
+  modal success state, both linking /architects.
+- E2E-verified: architect demo sees the dashboard; /portal/pricelist and
+  /portal/designer redirect; budget guide renders 5 bands for architect,
+  redirects installer; installer still reaches the pricelist; signed-out
+  hits on /api/architect/* → 403; coercion audit 0 hits; all new keys = 12
+  files.
+
+## 2026-08-08 (18) — DATASHEET GATE v2: bigger form + e-mail-only delivery
+
+Datasheets are no longer instant downloads: the visitor leaves five details
+(name · role · e-mail · phone · city) and the PDF arrives by e-mail as a
+signed 14-day link. Lead capture unchanged (deliverLead + storeLead).
+
+- **Stable role values**: FormField.optionValues (parallel to options) —
+  selects submit stable keys (architect/installer/private/other), never a
+  localized label; localizeModalConfig localizes labels only. Verified in
+  the posted payload.
+- **PDFs moved out of public/**: all 29 live in repo-root datasheets-private/
+  (README lists exact filenames); Datasheet.file is now the bare filename;
+  no public /datasheets/*.pdf works (404, grep-verified no references).
+  next.config.mjs ships the folder via experimental.outputFileTracingIncludes.
+- **Signed links**: datasheet-links.ts — HMAC-SHA256 over slug+exp
+  (base64url, 14 days, DATASHEET_SIGNING_SECRET env, timingSafeEqual,
+  obviously-dev fallback + warn when unset; documented in the README env
+  table). GET /api/datasheet/[slug]?t=&l= streams the PDF; invalid/expired/
+  unknown → branded 410 page localized via the validated l param
+  (datasheetLink namespace ×12); file missing → 404 JSON.
+- **POST /api/datasheet-request**: clean() sanitisation + honeypot; role/
+  slug/locale validated; best-effort in-memory rate limit 8/h/IP (429
+  rate_limited); lead delivered + stored exactly as /api/lead (source
+  pdf_download, datasheetSlug, downloadedFile, role, city, referer page);
+  visitor e-mail via new transactional.ts (Graph → webhook → SMTP — the
+  branch's Resend-free chain; recipient never logged, domain only). No
+  provider configured (or all fail at runtime) → { mode:'download', url }
+  and the modal falls back to the old instant download.
+- **Visitor e-mail**: datasheet-email.ts — table layout, inline CSS, no
+  external images: black STRETCH® header, red download button, plain-URL
+  fallback, 14-day note, contact footer + soft CTA; text/plain alternative;
+  extraParagraph hook (used by the architect invite). datasheetEmail
+  namespace ×12.
+- **Modal**: datasheet flow posts the five fields + slug + locale; success
+  state = "check your inbox" with the address + spam note (fallback mode
+  keeps the manual download button); 429 shown inline; analytics identical.
+  Returning visitors (localStorage 'datasheet-contact', v1, 30 days, guarded
+  try/catch): compact confirm step "Send {title} to {email}?" + one-click
+  send (posts a FULL lead every time — verified: second sheet's one-click
+  posted its own slug) + "Not you? Edit details" pre-filling the form.
+- **Portal documents** page now mints fresh signed links per render (files
+  left public/); technical hub pages keep their gated per-sheet rows (this
+  branch already had them — richer than the spec's single-slug plan, so
+  TechMembrane.datasheetSlug was not needed).
+- **Copy** ×12: modals.datasheet (5 fields incl. localized role options,
+  confirm/fallback/rateLimited), datasheetsPage lead + privacy note now name
+  the five fields and e-mail delivery.
+- Verified with curl + Playwright on the production build: fresh link
+  downloads (200, application/pdf), tampered + expired + unknown slug → 410
+  in the link's locale, missing file → 404, localized role label → 422,
+  honeypot → silent ok, no-env → mode download with working fallback.
+
 ## 2026-08-08 (17) — Type filter made primary + B2B signup
 
 - **Pricelist filter hierarchy flipped** (client: "type must be the main

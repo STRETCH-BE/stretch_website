@@ -20,7 +20,8 @@
       "about": "Über uns",
       "faq": "FAQ",
       "clientLogin": "Kundenlogin",
-      "materials": "Material"
+      "materials": "Material",
+      "architects": "Architekten"
     },
     "cta": {
       "freeQuote": "Kostenloses Angebot",
@@ -73,7 +74,9 @@
     "portalTitle": "Kundenportal | STRETCH",
     "portalDescription": "Melden Sie sich an, um Ihre STRETCH-Handelspreisliste und Kontodaten einzusehen.",
     "materialsTitle": "Spanndecken-Material & Zubehör | STRETCH",
-    "materialsDescription": "Profile, Folien & Tücher, Beleuchtung, Zubehör, Werkzeug und STRETCH Cleaner — pro Artikel Angebot anfragen, wir antworten mit Preis und Lieferzeit. Ohne Webshop."
+    "materialsDescription": "Profile, Folien & Tücher, Beleuchtung, Zubehör, Werkzeug und STRETCH Cleaner — pro Artikel Angebot anfragen, wir antworten mit Preis und Lieferzeit. Ohne Webshop.",
+    "architectsTitle": "Für Architekten — Spanndecken ausschreiben | STRETCH",
+    "architectsDescription": "Kostenloser Architektenbereich: Datenblätter, Ausschreibungstexte, CAD/BIM, gemessene Fallstudien, indikative €/m²-Budgetbänder, Events und Projektbegleitung."
   },
   "cookies": {
     "title": "Wir respektieren Ihre Privatsphäre",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiration",
       "about": "Über uns",
       "faq": "FAQ",
-      "clientPortal": "Kundenportal"
+      "clientPortal": "Kundenportal",
+      "architects": "Für Architekten"
     },
     "dealers": "Händlernetz"
   },
@@ -196,7 +200,12 @@
       "signupDoneBody": "Wir haben Ihnen einen Bestätigungslink gesendet. Klicken Sie darauf und melden Sie sich dann mit E-Mail und Passwort an.",
       "signupExists": "Mit dieser E-Mail existiert bereits ein Konto — bitte anmelden.",
       "unavailableTitle": "Portal startet bald",
-      "unavailableBody": "Das Kundenportal wird gerade aktiviert. Kontaktieren Sie uns und wir richten Ihren Zugang ein."
+      "unavailableBody": "Das Kundenportal wird gerade aktiviert. Kontaktieren Sie uns und wir richten Ihren Zugang ein.",
+      "audienceLabel": "Ich bin",
+      "audienceClient": "Kunde",
+      "audienceArchitect": "Architekt",
+      "officeName": "Büroname",
+      "city": "Stadt"
     },
     "nav": {
       "label": "Kundenportal",
@@ -208,7 +217,8 @@
       "signOut": "Abmelden",
       "demoBadge": "Demo",
       "allMarkets": "Alle Märkte",
-      "designer": "Decken-Designer"
+      "designer": "Decken-Designer",
+      "budgetGuide": "Budget-Guide"
     },
     "dash": {
       "eyebrow": "Kundenportal",
@@ -317,7 +327,9 @@
       "createdOk": "Konto für {email} erstellt.",
       "typeProducer": "Hersteller/Wiederverkäufer",
       "typeInstaller": "Monteur",
-      "typeB2c": "B2C"
+      "typeB2c": "B2C",
+      "typeArchitect": "Architekt",
+      "filterAllTypes": "Alle Typen"
     },
     "designer": {
       "eyebrow": "Decken-Designer",
@@ -329,6 +341,53 @@
       "architect": "Architekt / Designer",
       "contractor": "Bauunternehmen",
       "other": "Sonstiges"
+    },
+    "architect": {
+      "eyebrow": "Architektenbereich",
+      "welcome": "Alles zum Ausschreiben",
+      "intro": "Willkommen, {office} — Dokumente, Ausschreibungstexte, CAD/BIM, gemessene Fallstudien, Budgetbänder und Projektbegleitung an einem Ort.",
+      "demoNote": "Demo-Vorschau — Downloads sind deaktiviert, nichts wird protokolliert.",
+      "toolsTitle": "Projekt-Tools",
+      "budgetTileTitle": "Budget-Guide",
+      "budgetTileBody": "Indikative €/m²-Bänder für frühe Budgets — die Zahlen, die niemand veröffentlicht.",
+      "budgetTileCta": "Guide öffnen",
+      "projectTileTitle": "Projekt registrieren",
+      "projectTileBody": "Ein laufendes Projekt erhält einen festen Berater, Ausschreibungsunterstützung und Prioritätsmuster.",
+      "projectTileCta": "Projekt registrieren",
+      "samplesTileTitle": "Musterbox",
+      "samplesTileBody": "Physische Membran- und Farbmuster für Ihre Materialbibliothek — kostenlos für Architekten.",
+      "samplesTileCta": "Musterbox bestellen",
+      "libraryTitle": "Bibliothek",
+      "libraryBody": "Jedes Dokument mit einem Klick. Downloads werden Ihrem Konto zugeordnet, damit wir Ihr Projekt proaktiv begleiten können.",
+      "docsTitle": "Datenblätter",
+      "docsBody": "Die komplette technische Datenblatt-Bibliothek — ohne Formulare, ein Klick.",
+      "specTitle": "Ausschreibungstexte",
+      "specBody": "Fertige Ausschreibungstexte pro System — bestektekst NL, cahier des charges FR, specification EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "DWG-Profildetails, Revit-Familien und SketchUp-Komponenten pro System.",
+      "photosTitle": "Projektfotos",
+      "photosBody": "Hochauflösende Fotosets von Referenzprojekten für Kundenpräsentationen.",
+      "casesTitle": "Technische Fallstudien",
+      "casesBody": "Echte Projekte mit gemessenen Vorher/Nachher-Werten — Zahlen für Ihren Entwurfsbericht.",
+      "eventsTitle": "Events",
+      "eventsBody": "Schulungen, Lunch & Learns und Showroom-Tage — Anmeldung mit einem Klick.",
+      "register": "Anmelden",
+      "advisorTitle": "Ihr Berater",
+      "advisorBody": "Ein Spezialist für Ausschreibung, Akustikziele, Budgets und Muster — Antwort innerhalb eines Werktags.",
+      "advisorCta": "Gespräch buchen",
+      "download": "Download",
+      "comingSoon": "Bald verfügbar"
+    },
+    "budget": {
+      "eyebrow": "Architektenbereich",
+      "title": "Budget-Guide",
+      "intro": "Indikative Preisbänder (montiert) pro System — bewusst grob, für frühe Budgets und Machbarkeitsprüfungen.",
+      "disclaimer": "Indikative Preisbänder montiert, zzgl. MwSt., nur für frühe Budgetphasen. Jedes Projekt wird individuell kalkuliert — registrieren Sie Ihr Projekt für eine echte Zahl.",
+      "includes": "Enthalten",
+      "perM2": "pro m² montiert, zzgl. MwSt.",
+      "perUnit": "pro Einheit montiert, zzgl. MwSt.",
+      "ctaBody": "Sie brauchen eine echte Zahl für ein laufendes Projekt? Registrieren Sie es — ein fester Berater kalkuliert innerhalb eines Werktags.",
+      "ctaButton": "Projekt registrieren"
     }
   },
   "home": {
@@ -1543,6 +1602,28 @@
               "sub": "Häufige Fragen"
             }
           ]
+        },
+        {
+          "title": "Architekten",
+          "desc": "Sicher ausschreiben — Dokumente, Budgets und Begleitung.",
+          "items": [
+            {
+              "title": "Architektenbereich",
+              "sub": "Alles zum Ausschreiben an einem Ort"
+            },
+            {
+              "title": "Datenblätter",
+              "sub": "Die technische Dokumentbibliothek"
+            },
+            {
+              "title": "Konto erstellen",
+              "sub": "Kostenlos — Zugang direkt nach E-Mail-Bestätigung"
+            },
+            {
+              "title": "Anmelden",
+              "sub": "Direkt zu Ihrem Dashboard"
+            }
+          ]
         }
       ]
     },
@@ -1841,25 +1922,50 @@
       }
     },
     "datasheet": {
-      "title": "Datenblatt herunterladen",
-      "subtitle": "Geben Sie Ihre Daten ein und der Download startet sofort. Wir nutzen sie nur, um Ihre Anfrage zu bearbeiten.",
-      "submitLabel": "Datenblatt erhalten",
-      "sentTitle": "Hier ist Ihr Datenblatt",
-      "sentMsg": "Der Download sollte automatisch starten — falls nicht, nutzen Sie den Button unten.",
+      "title": "Datenblatt per E-Mail erhalten",
+      "subtitle": "Hinterlassen Sie Ihre Daten und wir senden das Datenblatt direkt in Ihr Postfach. Wir nutzen sie nur zur Bearbeitung Ihrer Anfrage.",
+      "submitLabel": "Datenblatt per E-Mail senden",
+      "sentTitle": "Prüfen Sie Ihr Postfach",
+      "sentMsg": "Das Datenblatt ist unterwegs an {email}. Nach ein paar Minuten nichts erhalten? Prüfen Sie den Spam-Ordner.",
       "fields": {
         "name": {
           "label": "Name",
           "placeholder": "Vor- und Nachname"
         },
+        "role": {
+          "label": "Ich bin",
+          "options": [
+            "Architekt",
+            "Monteur",
+            "Privatkunde",
+            "Anderes Unternehmen"
+          ]
+        },
         "email": {
           "label": "E-Mail",
-          "placeholder": "you@email.com"
+          "placeholder": "sie@email.com"
         },
         "phone": {
           "label": "Telefon",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "Stadt",
+          "placeholder": "Ihre Stadt"
         }
-      }
+      },
+      "confirm": {
+        "title": "{title} an Ihr Postfach senden?",
+        "msg": "Wir senden das Datenblatt an {email} — ein Klick und es ist unterwegs.",
+        "sendLabel": "Ja, bitte zusenden",
+        "editLabel": "Nicht Sie? Daten ändern"
+      },
+      "fallback": {
+        "sentTitle": "Hier ist Ihr Datenblatt",
+        "sentMsg": "Der Download sollte automatisch starten — falls nicht, nutzen Sie den Button unten."
+      },
+      "rateLimited": "Zu viele Anfragen von Ihrer Verbindung — bitte versuchen Sie es in einer Stunde erneut.",
+      "architectInvite": "Architekt? Unser kostenloser Architektenbereich bietet indikative Budgetbänder, gemessene Fallstudien und jedes Dokument mit einem Klick."
     },
     "trainingDates": [
       "15.–16. Sep. 2026",
@@ -1874,7 +1980,72 @@
     ],
     "close": "Schließen",
     "downloadDatasheet": "Datenblatt herunterladen",
-    "select": "Auswählen…"
+    "select": "Auswählen…",
+    "project": {
+      "title": "Projekt registrieren",
+      "subtitle": "Erzählen Sie uns von Ihrem laufenden Projekt — ein fester Berater meldet sich innerhalb eines Werktags mit Ausschreibungs-, Budget- und Musterunterstützung.",
+      "submitLabel": "Projekt registrieren",
+      "sentTitle": "Projekt registriert",
+      "sentMsg": "Danke — ein fester Berater kontaktiert Sie innerhalb eines Werktags.",
+      "fields": {
+        "projectName": {
+          "label": "Projektname",
+          "placeholder": "Projekt- oder Arbeitstitel"
+        },
+        "location": {
+          "label": "Standort",
+          "placeholder": "Stadt"
+        },
+        "buildingType": {
+          "label": "Gebäudetyp",
+          "options": [
+            "Büro",
+            "Hotellerie",
+            "Gesundheit",
+            "Handel",
+            "Wohnen",
+            "Bildung",
+            "Sonstiges"
+          ]
+        },
+        "system": {
+          "label": "System",
+          "options": [
+            "Polyester",
+            "PVC",
+            "Akustik",
+            "Licht & Druck",
+            "Prefab",
+            "Noch unklar"
+          ]
+        },
+        "stage": {
+          "label": "Phase",
+          "options": [
+            "Konzept",
+            "Entwurf",
+            "Ausschreibung",
+            "Bauphase"
+          ]
+        },
+        "area": {
+          "label": "Fläche",
+          "placeholder": "ca. m²"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "sie@buero.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Notizen",
+          "placeholder": "Deckenhöhen, Akustikziele, Termine..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -4235,9 +4406,9 @@
     "crumb": "Datenblätter",
     "titleA": "Spezifikationen &",
     "titleB": "Datenblätter",
-    "lead": "Laden Sie die technische Dokumentation zu jedem STRETCH-System herunter — Spezifikationen, Brandklassen, akustische Klassenwerte und Garantiedetails. Geben Sie Ihre Daten einmal pro Download ein, und die Datei startet sofort.",
+    "lead": "Laden Sie technische Dokumentation zu jedem STRETCH-System herunter — Spezifikationen, Brandklassen, Akustikwerte und Garantie. Daten einmal hinterlassen, und das Datenblatt landet als Download-Link in Ihrem Postfach.",
     "updated": "Aktualisiert am {date}",
-    "privacyNote": "Wir fragen nach Name, E-Mail und Telefonnummer, damit ein Spezialist eventuelle technische Fragen beantworten kann. Ihre Daten behandeln wir gemäß unserer",
+    "privacyNote": "Wir fragen Name, Rolle, E-Mail, Telefon und Stadt ab, damit ein Spezialist Ihre technischen Fragen beantworten kann. Ihre Daten behandeln wir gemäß unserer",
     "privacyLink": "Datenschutzerklärung"
   },
   "samplesPage": {
@@ -4502,5 +4673,116 @@
     "ovRecruitBody": "Solange das Netzwerk wächst, liefern und montieren wir direkt aus unserer Produktion — und Monteure, die sich eine freie Region sichern, erhalten deren Anfragen, Händlerpreise und Schulungen.",
     "regionLuxembourg": "Luxemburg (Großherzogtum)",
     "regionAustria": "Österreich"
+  },
+  "datasheetEmail": {
+    "subject": "Ihr STRETCH-Datenblatt — {title}",
+    "greeting": "Guten Tag {name},",
+    "intro": "Hier ist das angeforderte technische Datenblatt — {title}.",
+    "button": "Datenblatt herunterladen",
+    "linkFallback": "Oder kopieren Sie diesen Link in Ihren Browser:",
+    "validity": "Der Link funktioniert {days} Tage.",
+    "footerCta": "Sie arbeiten an einem Projekt? Antworten Sie einfach auf diese E-Mail oder buchen Sie ein Gespräch.",
+    "signoff": "Ihr STRETCH-Team",
+    "architectInvite": "Sie arbeiten als Architekt? Unser kostenloser Architektenbereich bietet indikative €/m²-Budgetbänder, gemessene Fallstudien sowie jedes Datenblatt, jeden Ausschreibungstext und jede CAD-Datei mit einem Klick:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Dieser Download-Link ist abgelaufen",
+    "expiredBody": "Download-Links sind 14 Tage gültig. Fordern Sie in Sekunden einen neuen an — wir senden ihn sofort zu.",
+    "requestNew": "Neuen Link anfordern"
+  },
+  "architectsPage": {
+    "crumb": "Architekten",
+    "eyebrow": "Für Architekten",
+    "titleA": "Spanndecken ausschreiben",
+    "titleB": "mit Sicherheit",
+    "lead": "Ein kostenloses Konto mit allem fürs Ausschreiben: Dokumente, Ausschreibungstexte, CAD/BIM, gemessene Fallstudien, indikative Budgetbänder, Events und ein fester Berater.",
+    "ctaCreate": "Kostenloses Konto erstellen",
+    "ctaSignIn": "Anmelden",
+    "values": [
+      {
+        "title": "Dokumente mit einem Klick",
+        "body": "Jedes Datenblatt ohne Formulare — Downloads Ihrem Konto zugeordnet."
+      },
+      {
+        "title": "Ausschreibungstexte",
+        "body": "Fertige Texte pro System — NL, FR und EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "DWG-Profildetails, Revit-Familien und SketchUp-Komponenten."
+      },
+      {
+        "title": "Projektfotos",
+        "body": "Hochauflösende Referenzfotos für Kundenpräsentationen."
+      },
+      {
+        "title": "Gemessene Fallstudien",
+        "body": "Echte Projekte mit Vorher/Nachher-Messwerten."
+      },
+      {
+        "title": "Budgetbänder",
+        "body": "Indikative €/m²-Spannen für frühe Budgets."
+      },
+      {
+        "title": "Events & Lunch & Learns",
+        "body": "Schulungen und Sessions bei uns oder in Ihrem Büro."
+      },
+      {
+        "title": "Projektbegleitung",
+        "body": "Projekt registrieren: fester Berater + Prioritäts-Musterbox."
+      }
+    ],
+    "howTitle": "So funktioniert es",
+    "steps": [
+      {
+        "title": "Konto erstellen",
+        "body": "Büroname, Stadt und Ihre Daten — zwei Minuten."
+      },
+      {
+        "title": "E-Mail bestätigen",
+        "body": "Ein Klick auf den Bestätigungslink."
+      },
+      {
+        "title": "Alles freigeschaltet",
+        "body": "Dokumente, Budgets, Fallstudien und Begleitung — sofort."
+      }
+    ],
+    "casesTitle": "Gemessen, nicht behauptet",
+    "casesNote": "Vollständige Studie im Architektenbereich.",
+    "cases": [
+      {
+        "title": "Akustik-Sanierung Restaurant",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 vorher → nachher"
+      },
+      {
+        "title": "Lichtdecke Büro",
+        "metric": "540 Lux",
+        "metricLabel": "Mittelwert auf Arbeitsebene, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Nächste Events",
+    "eventsNote": "Alle Termine und Ein-Klick-Anmeldung im Architektenbereich.",
+    "faqTitle": "Häufige Fragen",
+    "faqs": [
+      {
+        "q": "Ist der Architektenbereich wirklich kostenlos?",
+        "a": "Ja — er existiert, damit das Ausschreiben eines STRETCH-Systems so einfach wie möglich ist. Ohne Kosten, ohne Verpflichtung."
+      },
+      {
+        "q": "Veröffentlichen Sie Preise?",
+        "a": "Indikative €/m²-Budgetbänder stehen im Bereich für frühe Budgetphasen. Projekte werden immer individuell kalkuliert — registrieren Sie ein Projekt für eine echte Zahl."
+      },
+      {
+        "q": "Begleiten Sie eine laufende Ausschreibung?",
+        "a": "Ja. Registrieren Sie das Projekt — ein fester Berater hilft bei Texten, Details und Akustikzielen, meist innerhalb eines Werktags."
+      },
+      {
+        "q": "Liefern Sie außerhalb der Benelux?",
+        "a": "Ja — wir produzieren in Belgien und montieren mit zertifizierten Partnern in ganz Europa."
+      }
+    ],
+    "ctaTitle": "Alles zum Ausschreiben an einem Ort",
+    "ctaBody": "Erstellen Sie Ihr kostenloses Konto — jedes Dokument, jedes Budgetband und jede Fallstudie ist einen Klick entfernt, plus ein fester Berater für Ihre Projekte."
   }
 }

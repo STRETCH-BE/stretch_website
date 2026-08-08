@@ -35,7 +35,7 @@ export async function GET() {
     );
   }
   const FULL: string =
-    'id, email, company, role, account_type, markets, all_markets, active, created_at, contact_name, vat, phone, country, business_type';
+    'id, email, company, role, account_type, markets, all_markets, active, created_at, contact_name, vat, phone, country, business_type, office, city';
   const CORE: string = 'id, email, company, role, account_type, markets, all_markets, active, created_at';
   // B2B columns are a later addition — un-migrated databases fall back.
   let { data, error } = await service.from('portal_users').select(FULL).order('created_at', { ascending: true });
@@ -58,6 +58,8 @@ export async function GET() {
     phone: (u.phone as string | null) ?? null,
     country: (u.country as string | null) ?? null,
     businessType: (u.business_type as string | null) ?? null,
+    office: (u.office as string | null) ?? null,
+    city: (u.city as string | null) ?? null,
   }));
   return NextResponse.json({ ok: true, users, persisted: true });
 }
@@ -156,6 +158,8 @@ export async function PATCH(req: NextRequest) {
   if (typeof body.phone === 'string') update.phone = body.phone.trim().slice(0, 32) || null;
   if (typeof body.country === 'string') update.country = body.country.trim().toUpperCase().slice(0, 8) || null;
   if (typeof body.businessType === 'string') update.business_type = body.businessType.trim().toLowerCase().slice(0, 20) || null;
+  if (typeof body.office === 'string') update.office = body.office.trim().slice(0, 120) || null;
+  if (typeof body.city === 'string') update.city = body.city.trim().slice(0, 80) || null;
 
   if (Object.keys(update).length > 0) {
     const { error } = await service.from('portal_users').update(update).eq('id', id);

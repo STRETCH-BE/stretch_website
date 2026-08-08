@@ -20,7 +20,8 @@
       "about": "O nas",
       "faq": "FAQ",
       "clientLogin": "Strefa klienta",
-      "materials": "Materiały"
+      "materials": "Materiały",
+      "architects": "Architekci"
     },
     "cta": {
       "freeQuote": "Darmowa wycena",
@@ -73,7 +74,9 @@
     "portalTitle": "Panel klienta | STRETCH",
     "portalDescription": "Zaloguj się, aby zobaczyć swój cennik handlowy STRETCH i dane konta.",
     "materialsTitle": "Materiały i akcesoria do sufitów napinanych | STRETCH",
-    "materialsDescription": "Profile, tkaniny i folie, oświetlenie, akcesoria, narzędzia i STRETCH Cleaner — zapytaj o wycenę przy każdym produkcie, odpowiemy z ceną i terminem. Bez sklepu internetowego."
+    "materialsDescription": "Profile, tkaniny i folie, oświetlenie, akcesoria, narzędzia i STRETCH Cleaner — zapytaj o wycenę przy każdym produkcie, odpowiemy z ceną i terminem. Bez sklepu internetowego.",
+    "architectsTitle": "Dla architektów — specyfikacja sufitów napinanych | STRETCH",
+    "architectsDescription": "Bezpłatna strefa architekta: karty techniczne, teksty specyfikacji, CAD/BIM, zmierzone studia przypadków, orientacyjne widełki €/m², wydarzenia i wsparcie projektowe."
   },
   "cookies": {
     "title": "Szanujemy Twoją prywatność",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiracje",
       "about": "O nas",
       "faq": "FAQ",
-      "clientPortal": "Panel klienta"
+      "clientPortal": "Panel klienta",
+      "architects": "Dla architektów"
     },
     "dealers": "Sieć dealerów"
   },
@@ -196,7 +200,12 @@
       "signupDoneBody": "Wysłaliśmy link potwierdzający. Kliknij go, a następnie zaloguj się e-mailem i hasłem.",
       "signupExists": "Konto z tym adresem e-mail już istnieje — zaloguj się.",
       "unavailableTitle": "Portal wkrótce",
-      "unavailableBody": "Portal klienta jest właśnie aktywowany. Skontaktuj się z nami, a skonfigurujemy Twój dostęp."
+      "unavailableBody": "Portal klienta jest właśnie aktywowany. Skontaktuj się z nami, a skonfigurujemy Twój dostęp.",
+      "audienceLabel": "Jestem",
+      "audienceClient": "Klient",
+      "audienceArchitect": "Architekt",
+      "officeName": "Nazwa pracowni",
+      "city": "Miasto"
     },
     "nav": {
       "label": "Panel klienta",
@@ -208,7 +217,8 @@
       "signOut": "Wyloguj",
       "demoBadge": "Demo",
       "allMarkets": "Wszystkie rynki",
-      "designer": "Projektant sufitu"
+      "designer": "Projektant sufitu",
+      "budgetGuide": "Przewodnik budżetowy"
     },
     "dash": {
       "eyebrow": "Panel klienta",
@@ -317,7 +327,9 @@
       "createdOk": "Utworzono konto dla {email}.",
       "typeProducer": "Producent/dystrybutor",
       "typeInstaller": "Monter",
-      "typeB2c": "B2C"
+      "typeB2c": "B2C",
+      "typeArchitect": "Architekt",
+      "filterAllTypes": "Wszystkie typy"
     },
     "designer": {
       "eyebrow": "Projektant sufitu",
@@ -329,6 +341,53 @@
       "architect": "Architekt / projektant",
       "contractor": "Wykonawca",
       "other": "Inny"
+    },
+    "architect": {
+      "eyebrow": "Strefa architekta",
+      "welcome": "Wszystko do specyfikacji",
+      "intro": "Witamy, {office} — dokumenty, teksty specyfikacji, CAD/BIM, zmierzone studia przypadków, widełki budżetowe i wsparcie projektowe w jednym miejscu.",
+      "demoNote": "Podgląd demo — pobieranie wyłączone, nic nie jest rejestrowane.",
+      "toolsTitle": "Narzędzia projektowe",
+      "budgetTileTitle": "Przewodnik budżetowy",
+      "budgetTileBody": "Orientacyjne widełki €/m² na wczesnym etapie — liczby, których nikt nie publikuje.",
+      "budgetTileCta": "Otwórz przewodnik",
+      "projectTileTitle": "Zarejestruj projekt",
+      "projectTileBody": "Aktywny projekt dostaje dedykowanego doradcę, wsparcie specyfikacji i priorytetowe próbki.",
+      "projectTileCta": "Zarejestruj projekt",
+      "samplesTileTitle": "Box z próbkami",
+      "samplesTileBody": "Fizyczne próbki membran i kolorów do Twojej biblioteki materiałów — bezpłatnie dla architektów.",
+      "samplesTileCta": "Zamów box z próbkami",
+      "libraryTitle": "Biblioteka",
+      "libraryBody": "Każdy dokument jednym kliknięciem. Pobrania są zapisywane na koncie, byśmy mogli proaktywnie wspierać projekt.",
+      "docsTitle": "Karty techniczne",
+      "docsBody": "Pełna biblioteka kart technicznych — bez formularzy, jedno kliknięcie.",
+      "specTitle": "Teksty specyfikacji",
+      "specBody": "Gotowe do wklejenia teksty przetargowe dla każdego systemu — NL, FR i EN.",
+      "cadTitle": "CAD i BIM",
+      "cadBody": "Detale profili DWG, rodziny Revit i komponenty SketchUp dla każdego systemu.",
+      "photosTitle": "Zdjęcia projektów",
+      "photosBody": "Zestawy zdjęć hi-res projektów referencyjnych do prezentacji dla klientów.",
+      "casesTitle": "Techniczne studia przypadków",
+      "casesBody": "Prawdziwe projekty ze zmierzonymi wartościami przed/po — liczby do raportu projektowego.",
+      "eventsTitle": "Wydarzenia",
+      "eventsBody": "Szkolenia, lunch & learn i dni showroomowe — rejestracja jednym kliknięciem.",
+      "register": "Zapisz się",
+      "advisorTitle": "Twój doradca",
+      "advisorBody": "Jeden specjalista od specyfikacji, akustyki, budżetów i próbek — odpowiedź w jeden dzień roboczy.",
+      "advisorCta": "Umów rozmowę",
+      "download": "Pobierz",
+      "comingSoon": "Wkrótce"
+    },
+    "budget": {
+      "eyebrow": "Strefa architekta",
+      "title": "Przewodnik budżetowy",
+      "intro": "Orientacyjne widełki cen z montażem dla każdego systemu — celowo szerokie, do wczesnego budżetowania i analiz wykonalności.",
+      "disclaimer": "Orientacyjne widełki cen z montażem, netto, wyłącznie do wczesnego budżetowania. Każdy projekt wyceniamy indywidualnie — zarejestruj projekt, aby otrzymać realną wycenę.",
+      "includes": "Co obejmuje",
+      "perM2": "za m² z montażem, netto",
+      "perUnit": "za sztukę z montażem, netto",
+      "ctaBody": "Potrzebujesz realnej wyceny aktywnego projektu? Zarejestruj go, a dedykowany doradca wyceni go rzetelnie w jeden dzień roboczy.",
+      "ctaButton": "Zarejestruj projekt"
     }
   },
   "home": {
@@ -1543,6 +1602,28 @@
               "sub": "Częste pytania"
             }
           ]
+        },
+        {
+          "title": "Architekci",
+          "desc": "Specyfikuj pewnie — dokumenty, budżety i wsparcie.",
+          "items": [
+            {
+              "title": "Strefa architekta",
+              "sub": "Wszystko do specyfikacji w jednym miejscu"
+            },
+            {
+              "title": "Karty techniczne",
+              "sub": "Biblioteka dokumentów technicznych"
+            },
+            {
+              "title": "Załóż konto",
+              "sub": "Bezpłatnie — dostęp zaraz po potwierdzeniu e-maila"
+            },
+            {
+              "title": "Zaloguj się",
+              "sub": "Prosto do Twojego panelu"
+            }
+          ]
         }
       ]
     },
@@ -1841,25 +1922,50 @@
       }
     },
     "datasheet": {
-      "title": "Pobierz kartę techniczną",
-      "subtitle": "Podaj swoje dane, a pobieranie rozpocznie się od razu. Wykorzystamy je wyłącznie do obsługi Twojego zapytania.",
-      "submitLabel": "Pobierz kartę",
-      "sentTitle": "Oto Twoja karta techniczna",
-      "sentMsg": "Pobieranie powinno rozpocząć się automatycznie — jeśli nie, użyj przycisku poniżej.",
+      "title": "Otrzymaj kartę techniczną e-mailem",
+      "subtitle": "Zostaw swoje dane, a wyślemy kartę techniczną prosto na Twoją skrzynkę. Używamy ich wyłącznie do obsługi Twojego zapytania.",
+      "submitLabel": "Wyślij mi kartę techniczną",
+      "sentTitle": "Sprawdź skrzynkę",
+      "sentMsg": "Karta techniczna jest w drodze na {email}. Nie widzisz jej po kilku minutach? Sprawdź folder spam.",
       "fields": {
         "name": {
           "label": "Imię i nazwisko",
           "placeholder": "Imię i nazwisko"
         },
+        "role": {
+          "label": "Jestem",
+          "options": [
+            "Architekt",
+            "Monter",
+            "Klient prywatny",
+            "Inna firma"
+          ]
+        },
         "email": {
           "label": "E-mail",
-          "placeholder": "you@email.com"
+          "placeholder": "ty@email.com"
         },
         "phone": {
           "label": "Telefon",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "Miasto",
+          "placeholder": "Twoje miasto"
         }
-      }
+      },
+      "confirm": {
+        "title": "Wysłać {title} na Twoją skrzynkę?",
+        "msg": "Wyślemy kartę techniczną na {email} — jedno kliknięcie i gotowe.",
+        "sendLabel": "Tak, wyślij mi ją",
+        "editLabel": "To nie Ty? Edytuj dane"
+      },
+      "fallback": {
+        "sentTitle": "Oto Twoja karta techniczna",
+        "sentMsg": "Pobieranie powinno rozpocząć się automatycznie — jeśli nie, użyj przycisku poniżej."
+      },
+      "rateLimited": "Zbyt wiele zapytań z Twojego łącza — spróbuj ponownie za godzinę.",
+      "architectInvite": "Architekt? Nasza bezpłatna strefa architekta oferuje orientacyjne widełki budżetowe, zmierzone studia przypadków i każdy dokument jednym kliknięciem."
     },
     "trainingDates": [
       "15–16 wrz 2026",
@@ -1874,7 +1980,72 @@
     ],
     "close": "Zamknij",
     "downloadDatasheet": "Pobierz kartę techniczną",
-    "select": "Wybierz…"
+    "select": "Wybierz…",
+    "project": {
+      "title": "Zarejestruj projekt",
+      "subtitle": "Opowiedz o swoim projekcie — dedykowany doradca odezwie się w ciągu jednego dnia roboczego ze wsparciem specyfikacji, budżetu i priorytetowymi próbkami.",
+      "submitLabel": "Zarejestruj projekt",
+      "sentTitle": "Projekt zarejestrowany",
+      "sentMsg": "Dziękujemy — dedykowany doradca skontaktuje się w ciągu jednego dnia roboczego.",
+      "fields": {
+        "projectName": {
+          "label": "Nazwa projektu",
+          "placeholder": "Tytuł roboczy projektu"
+        },
+        "location": {
+          "label": "Lokalizacja",
+          "placeholder": "Miasto"
+        },
+        "buildingType": {
+          "label": "Typ budynku",
+          "options": [
+            "Biuro",
+            "Hotelarstwo",
+            "Ochrona zdrowia",
+            "Handel",
+            "Mieszkaniowy",
+            "Edukacja",
+            "Inny"
+          ]
+        },
+        "system": {
+          "label": "System",
+          "options": [
+            "Poliester",
+            "PVC",
+            "Akustyczny",
+            "Światło i druk",
+            "Prefabrykaty",
+            "Jeszcze nie wiem"
+          ]
+        },
+        "stage": {
+          "label": "Etap",
+          "options": [
+            "Koncepcja",
+            "Projekt",
+            "Przetarg",
+            "Budowa"
+          ]
+        },
+        "area": {
+          "label": "Powierzchnia",
+          "placeholder": "ok. m²"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "ty@pracownia.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Uwagi",
+          "placeholder": "Wysokości sufitów, cele akustyczne, terminy..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -4235,9 +4406,9 @@
     "crumb": "Karty techniczne",
     "titleA": "Specyfikacje i",
     "titleB": "karty techniczne",
-    "lead": "Pobierz dokumentację techniczną każdego systemu STRETCH — specyfikacje, klasy reakcji na ogień, wartości klas akustycznych i szczegóły gwarancji. Podaj swoje dane raz przy każdym pobraniu, a plik zacznie się pobierać od razu.",
+    "lead": "Pobierz dokumentację techniczną każdego systemu STRETCH — specyfikacje, klasy ogniowe, parametry akustyczne i gwarancję. Zostaw dane raz, a karta techniczna trafi na Twoją skrzynkę jako link do pobrania.",
     "updated": "Zaktualizowano {date}",
-    "privacyNote": "Prosimy o imię i nazwisko, e-mail oraz telefon, aby specjalista mógł odpowiedzieć na ewentualne pytania techniczne. Twoje dane są przetwarzane zgodnie z naszą",
+    "privacyNote": "Prosimy o imię i nazwisko, rolę, e-mail, telefon i miasto, aby specjalista mógł odpowiedzieć na pytania techniczne. Twoje dane przetwarzamy zgodnie z naszą",
     "privacyLink": "polityką prywatności"
   },
   "samplesPage": {
@@ -4502,5 +4673,116 @@
     "ovRecruitBody": "Dopóki sieć się rozbudowuje, dostarczamy i montujemy bezpośrednio z naszego zakładu — a montażyści, którzy przejmą wolny region, zyskują zapytania z tego regionu, ceny dealerskie i szkolenia.",
     "regionLuxembourg": "Luksemburg (Wielkie Księstwo)",
     "regionAustria": "Austria"
+  },
+  "datasheetEmail": {
+    "subject": "Twoja karta techniczna STRETCH — {title}",
+    "greeting": "Dzień dobry, {name},",
+    "intro": "Oto zamówiona karta techniczna — {title}.",
+    "button": "Pobierz kartę techniczną",
+    "linkFallback": "Możesz też skopiować ten link do przeglądarki:",
+    "validity": "Link działa przez {days} dni.",
+    "footerCta": "Pracujesz nad projektem? Po prostu odpowiedz na tego e-maila lub umów rozmowę.",
+    "signoff": "Zespół STRETCH",
+    "architectInvite": "Pracujesz jako architekt? Nasza bezpłatna strefa architekta daje Ci orientacyjne widełki €/m², zmierzone studia przypadków oraz każdą kartę techniczną, tekst specyfikacji i plik CAD jednym kliknięciem:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Ten link do pobrania wygasł",
+    "expiredBody": "Linki do pobrania są ważne 14 dni. Poproś o nowy w kilka sekund — od razu go wyślemy.",
+    "requestNew": "Poproś o nowy link"
+  },
+  "architectsPage": {
+    "crumb": "Architekci",
+    "eyebrow": "Dla architektów",
+    "titleA": "Specyfikuj sufity napinane",
+    "titleB": "z pewnością",
+    "lead": "Jedno bezpłatne konto ze wszystkim, czego potrzebujesz do specyfikacji: dokumenty, teksty specyfikacji, CAD/BIM, zmierzone studia przypadków, orientacyjne widełki budżetowe, wydarzenia i dedykowany doradca.",
+    "ctaCreate": "Załóż bezpłatne konto",
+    "ctaSignIn": "Zaloguj się",
+    "values": [
+      {
+        "title": "Dokumenty jednym kliknięciem",
+        "body": "Każda karta techniczna bez formularzy — pobrania powiązane z kontem."
+      },
+      {
+        "title": "Teksty specyfikacji",
+        "body": "Gotowe teksty przetargowe dla każdego systemu — NL, FR i EN."
+      },
+      {
+        "title": "CAD i BIM",
+        "body": "Detale profili DWG, rodziny Revit i komponenty SketchUp."
+      },
+      {
+        "title": "Zdjęcia projektów",
+        "body": "Zestawy zdjęć hi-res z referencji do prezentacji."
+      },
+      {
+        "title": "Zmierzone studia przypadków",
+        "body": "Prawdziwe projekty z wartościami przed/po."
+      },
+      {
+        "title": "Widełki budżetowe",
+        "body": "Orientacyjne zakresy €/m² na wczesnym etapie."
+      },
+      {
+        "title": "Wydarzenia i lunch & learn",
+        "body": "Szkolenia i sesje u nas lub w Twojej pracowni."
+      },
+      {
+        "title": "Wsparcie projektowe",
+        "body": "Zarejestruj projekt: dedykowany doradca + priorytetowy box z próbkami."
+      }
+    ],
+    "howTitle": "Jak to działa",
+    "steps": [
+      {
+        "title": "Załóż konto",
+        "body": "Nazwa pracowni, miasto i Twoje dane — dwie minuty."
+      },
+      {
+        "title": "Potwierdź e-mail",
+        "body": "Jedno kliknięcie w link potwierdzający."
+      },
+      {
+        "title": "Wszystko odblokowane",
+        "body": "Dokumenty, budżety, studia przypadków i wsparcie — od razu."
+      }
+    ],
+    "casesTitle": "Zmierzone, nie deklarowane",
+    "casesNote": "Pełne studium w strefie architekta.",
+    "cases": [
+      {
+        "title": "Akustyczna renowacja restauracji",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 przed → po"
+      },
+      {
+        "title": "Świetlny sufit biurowy",
+        "metric": "540 lx",
+        "metricLabel": "średnio na płaszczyźnie pracy, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Najbliższe wydarzenia",
+    "eventsNote": "Wszystkie terminy i rejestracja jednym kliknięciem w strefie architekta.",
+    "faqTitle": "Częste pytania",
+    "faqs": [
+      {
+        "q": "Czy strefa architekta jest naprawdę bezpłatna?",
+        "a": "Tak — istnieje po to, by specyfikacja systemu STRETCH była jak najprostsza. Bez opłat i zobowiązań."
+      },
+      {
+        "q": "Czy publikujecie ceny?",
+        "a": "Orientacyjne widełki €/m² znajdują się w strefie do wczesnego budżetowania. Projekty zawsze wyceniamy indywidualnie — zarejestruj projekt, aby otrzymać realną wycenę."
+      },
+      {
+        "q": "Czy wspieracie trwający przetarg?",
+        "a": "Tak. Zarejestruj projekt, a dedykowany doradca pomoże z tekstami specyfikacji, detalami i celami akustycznymi — zwykle w jeden dzień roboczy."
+      },
+      {
+        "q": "Czy realizujecie poza Beneluksem?",
+        "a": "Tak — produkujemy w Belgii i montujemy z certyfikowanymi partnerami w całej Europie."
+      }
+    ],
+    "ctaTitle": "Wszystko do specyfikacji w jednym miejscu",
+    "ctaBody": "Załóż bezpłatne konto — każdy dokument, widełki budżetowe i studium przypadku będą jedno kliknięcie od Ciebie, plus dedykowany doradca dla Twoich projektów."
   }
 }

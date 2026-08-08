@@ -35,6 +35,8 @@ export function localizeModalConfig(cfg: ModalConfig, raw: ModalMessages | undef
         ...f,
         label: m.label,
         placeholder: m.placeholder ?? f.placeholder,
+        // Only the display labels localize; `optionValues` (stable submitted
+        // values) always survives from the structural config via the spread.
         options: m.options ?? f.options,
       };
     }),

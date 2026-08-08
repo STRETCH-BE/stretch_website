@@ -22,9 +22,10 @@ create table if not exists public.portal_users (
   role        text not null default 'client' check (role in ('client', 'admin')),
   -- Account tier: 'producer' = producer/reseller partner; 'installer' =
   -- trade account that buys & installs; 'b2c' = self-registered consumer
-  -- (own area, NO trade pricing / designer).
+  -- (own area, NO trade pricing / designer); 'architect' = self-registered
+  -- specifier (architect area, NEVER any trade pricing).
   account_type text not null default 'installer'
-    check (account_type in ('producer', 'installer', 'b2c')),
+    check (account_type in ('producer', 'installer', 'b2c', 'architect')),
   -- Price groups this account may see (values match pricebook.market).
   markets     text[] not null default '{}',
   all_markets boolean not null default false,
@@ -40,9 +41,11 @@ create table if not exists public.portal_users (
 );
 
 -- Existing databases (created before account tiers): run this once.
+-- (NOTE: add column if not exists does NOT update an existing check — the
+-- ARCHITECT AREA block at the bottom swaps the constraint for live DBs.)
 alter table public.portal_users
   add column if not exists account_type text not null default 'installer'
-  check (account_type in ('producer', 'installer', 'b2c'));
+  check (account_type in ('producer', 'installer', 'b2c', 'architect'));
 
 -- Existing databases (created before the B2B signup fields, Aug 2026): run once.
 alter table public.portal_users add column if not exists contact_name  text;
@@ -125,8 +128,11 @@ create policy pricebook_read_by_market
           or u.role = 'admin'
           -- extra per-account grants
           or pricebook.market = any (u.markets)
-          -- the account tier's own price group (tolerant of label spellings)
+          -- the account tier's own price group (tolerant of label spellings).
+          -- Architects get NULL — never equal to any market, so an architect
+          -- account can never read a single pricebook row.
           or pricebook.market = (case
+               when u.account_type ilike '%architect%' then null
                when u.account_type ilike '%producer%' or u.account_type ilike '%reseller%' then 'Producer/Reseller'
                when lower(u.account_type) = 'b2c' then 'B2C'
                else 'Installer'
@@ -279,3 +285,63 @@ alter table public.portal_users
 update public.portal_users
   set markets = '{}'
   where not (markets <@ array['Producer/Reseller', 'Installer', 'B2C']);
+
+-- ============================================================================
+-- ARCHITECT AREA — the architect account tier + its profile fields.
+-- Added 8 Aug 2026. Run manually in the Supabase SQL editor; safe to re-run.
+-- ============================================================================
+
+-- 1) Allow 'architect' in account_type. `add column if not exists` never
+--    updates an existing check, so drop whatever check constrains the column
+--    and recreate it with the four-value set.
+do $$
+declare c record;
+begin
+  for c in
+    select con.conname
+    from pg_constraint con
+    join pg_class rel on rel.oid = con.conrelid
+    join pg_namespace nsp on nsp.oid = rel.relnamespace
+    where nsp.nspname = 'public'
+      and rel.relname = 'portal_users'
+      and con.contype = 'c'
+      and pg_get_constraintdef(con.oid) like '%account_type%'
+  loop
+    execute format('alter table public.portal_users drop constraint %I', c.conname);
+  end loop;
+end $$;
+
+alter table public.portal_users
+  add constraint portal_users_account_type_check
+  check (account_type in ('producer', 'installer', 'b2c', 'architect'));
+
+-- 2) Architect profile fields (office name + city from signup).
+alter table public.portal_users add column if not exists office text;
+alter table public.portal_users add column if not exists city   text;
+
+-- 3) Refresh the pricebook read policy so architect accounts resolve to NO
+--    price group (same text as section 4 above — repeated here so this block
+--    is self-contained).
+drop policy if exists pricebook_read_by_market on public.pricebook;
+create policy pricebook_read_by_market
+  on public.pricebook for select
+  to authenticated
+  using (
+    exists (
+      select 1
+      from public.portal_users u
+      where u.id = auth.uid()
+        and u.active
+        and (
+          u.all_markets
+          or u.role = 'admin'
+          or pricebook.market = any (u.markets)
+          or pricebook.market = (case
+               when u.account_type ilike '%architect%' then null
+               when u.account_type ilike '%producer%' or u.account_type ilike '%reseller%' then 'Producer/Reseller'
+               when lower(u.account_type) = 'b2c' then 'B2C'
+               else 'Installer'
+             end)
+        )
+    )
+  );

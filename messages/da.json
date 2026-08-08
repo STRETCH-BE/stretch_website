@@ -20,7 +20,8 @@
       "about": "Om os",
       "faq": "FAQ",
       "clientLogin": "Kundelogin",
-      "materials": "Materialer"
+      "materials": "Materialer",
+      "architects": "Arkitekter"
     },
     "cta": {
       "freeQuote": "Gratis tilbud",
@@ -73,7 +74,9 @@
     "portalTitle": "Kundeportal | STRETCH",
     "portalDescription": "Log ind for at se din STRETCH-forhandlerprisliste og dine kontodata.",
     "materialsTitle": "Materialer og tilbehør til stretchloft | STRETCH",
-    "materialsDescription": "Profiler, duge og folier, belysning, tilbehør, værktøj og STRETCH Cleaner — bed om tilbud pr. vare, og vi svarer med pris og leveringstid. Uden webshop."
+    "materialsDescription": "Profiler, duge og folier, belysning, tilbehør, værktøj og STRETCH Cleaner — bed om tilbud pr. vare, og vi svarer med pris og leveringstid. Uden webshop.",
+    "architectsTitle": "For arkitekter — foreskriv spændlofter | STRETCH",
+    "architectsDescription": "Gratis arkitektområde: datablade, udbudstekster, CAD/BIM, målte casestudier, vejledende €/m²-budgetbånd, arrangementer og projektstøtte."
   },
   "cookies": {
     "title": "Vi værner om dit privatliv",
@@ -158,7 +161,8 @@
       "inspiration": "Inspiration",
       "about": "Om os",
       "faq": "FAQ",
-      "clientPortal": "Kundeportal"
+      "clientPortal": "Kundeportal",
+      "architects": "For arkitekter"
     },
     "dealers": "Forhandlernetværk"
   },
@@ -196,7 +200,12 @@
       "signupDoneBody": "Vi har sendt dig et bekræftelseslink. Klik på det, og log derefter ind med din e-mail og adgangskode.",
       "signupExists": "Der findes allerede en konto med denne e-mail — log ind.",
       "unavailableTitle": "Portalen åbner snart",
-      "unavailableBody": "Kundeportalen er ved at blive aktiveret. Kontakt os, så opsætter vi din adgang."
+      "unavailableBody": "Kundeportalen er ved at blive aktiveret. Kontakt os, så opsætter vi din adgang.",
+      "audienceLabel": "Jeg er",
+      "audienceClient": "Kunde",
+      "audienceArchitect": "Arkitekt",
+      "officeName": "Tegnestuens navn",
+      "city": "By"
     },
     "nav": {
       "label": "Kundeportal",
@@ -208,7 +217,8 @@
       "signOut": "Log ud",
       "demoBadge": "Demo",
       "allMarkets": "Alle markeder",
-      "designer": "Loftsdesigner"
+      "designer": "Loftsdesigner",
+      "budgetGuide": "Budgetguide"
     },
     "dash": {
       "eyebrow": "Kundeportal",
@@ -317,7 +327,9 @@
       "createdOk": "Konto oprettet til {email}.",
       "typeProducer": "Producent/forhandler",
       "typeInstaller": "Montør",
-      "typeB2c": "B2C"
+      "typeB2c": "B2C",
+      "typeArchitect": "Arkitekt",
+      "filterAllTypes": "Alle typer"
     },
     "designer": {
       "eyebrow": "Loftsdesigner",
@@ -329,6 +341,53 @@
       "architect": "Arkitekt / designer",
       "contractor": "Entreprenør",
       "other": "Andet"
+    },
+    "architect": {
+      "eyebrow": "Arkitektområde",
+      "welcome": "Alt til at foreskrive",
+      "intro": "Velkommen, {office} — dokumenter, udbudstekster, CAD/BIM, målte casestudier, budgetbånd og projektstøtte samlet ét sted.",
+      "demoNote": "Demovisning — downloads er slået fra, og intet logges.",
+      "toolsTitle": "Projektværktøjer",
+      "budgetTileTitle": "Budgetguide",
+      "budgetTileBody": "Vejledende €/m²-bånd til tidlig budgettering — tallene ingen offentliggør.",
+      "budgetTileCta": "Åbn guiden",
+      "projectTileTitle": "Registrér et projekt",
+      "projectTileBody": "Et aktivt projekt får en fast rådgiver, udbudsstøtte og prioriterede prøver.",
+      "projectTileCta": "Registrér et projekt",
+      "samplesTileTitle": "Prøveboks",
+      "samplesTileBody": "Fysiske membran- og farveprøver til dit materialebibliotek — gratis for arkitekter.",
+      "samplesTileCta": "Bestil prøveboks",
+      "libraryTitle": "Bibliotek",
+      "libraryBody": "Alle dokumenter ét klik væk. Downloads logges på din konto, så vi kan støtte projektet proaktivt.",
+      "docsTitle": "Datablade",
+      "docsBody": "Det komplette tekniske databladsbibliotek — ingen formularer, ét klik.",
+      "specTitle": "Udbudstekster",
+      "specBody": "Klar-til-brug udbudstekster pr. system — NL, FR og EN.",
+      "cadTitle": "CAD & BIM",
+      "cadBody": "DWG-profildetaljer, Revit-familier og SketchUp-komponenter pr. system.",
+      "photosTitle": "Projektfotos",
+      "photosBody": "Højopløselige fotosæt fra referenceprojekter til kundepræsentationer.",
+      "casesTitle": "Tekniske casestudier",
+      "casesBody": "Virkelige projekter med målte før/efter-værdier — tal til din projektrapport.",
+      "eventsTitle": "Arrangementer",
+      "eventsBody": "Kurser, lunch & learns og showroomdage — tilmelding med ét klik.",
+      "register": "Tilmeld",
+      "advisorTitle": "Din rådgiver",
+      "advisorBody": "Én specialist til udbud, akustikmål, budgetter og prøver — svar inden for én arbejdsdag.",
+      "advisorCta": "Book et opkald",
+      "download": "Download",
+      "comingSoon": "Kommer snart"
+    },
+    "budget": {
+      "eyebrow": "Arkitektområde",
+      "title": "Budgetguide",
+      "intro": "Vejledende monterede prisbånd pr. system — bevidst grove, til tidlig budgettering og mulighedsstudier.",
+      "disclaimer": "Vejledende monterede prisbånd, ekskl. moms, kun til tidlig budgettering. Hvert projekt prissættes individuelt — registrér dit projekt for et rigtigt tal.",
+      "includes": "Hvad er inkluderet",
+      "perM2": "pr. m² monteret, ekskl. moms",
+      "perUnit": "pr. enhed monteret, ekskl. moms",
+      "ctaBody": "Brug for et rigtigt tal til et aktivt projekt? Registrér det, så prissætter en fast rådgiver det korrekt inden for én arbejdsdag.",
+      "ctaButton": "Registrér dit projekt"
     }
   },
   "home": {
@@ -1543,6 +1602,28 @@
               "sub": "Almindelige spørgsmål"
             }
           ]
+        },
+        {
+          "title": "Arkitekter",
+          "desc": "Foreskriv med sikkerhed — dokumenter, budgetter og støtte.",
+          "items": [
+            {
+              "title": "Arkitektområde",
+              "sub": "Alt til at foreskrive, samlet ét sted"
+            },
+            {
+              "title": "Datablade",
+              "sub": "Det tekniske dokumentbibliotek"
+            },
+            {
+              "title": "Opret konto",
+              "sub": "Gratis — adgang straks efter e-mailbekræftelse"
+            },
+            {
+              "title": "Log ind",
+              "sub": "Direkte til dit dashboard"
+            }
+          ]
         }
       ]
     },
@@ -1841,25 +1922,50 @@
       }
     },
     "datasheet": {
-      "title": "Download databladet",
-      "subtitle": "Indtast dine oplysninger, så starter downloaden med det samme. Vi bruger dem kun til at følge op på din henvendelse.",
-      "submitLabel": "Hent databladet",
-      "sentTitle": "Her er dit datablad",
-      "sentMsg": "Downloaden burde starte automatisk — hvis ikke, så brug knappen nedenfor.",
+      "title": "Få databladet på e-mail",
+      "subtitle": "Efterlad dine oplysninger, så sender vi databladet direkte til din indbakke. Vi bruger dem kun til at følge op på din henvendelse.",
+      "submitLabel": "Send mig databladet",
+      "sentTitle": "Tjek din indbakke",
+      "sentMsg": "Databladet er på vej til {email}. Ser du det ikke inden for få minutter? Tjek din spammappe.",
       "fields": {
         "name": {
           "label": "Navn",
           "placeholder": "For- og efternavn"
         },
+        "role": {
+          "label": "Jeg er",
+          "options": [
+            "Arkitekt",
+            "Montør",
+            "Privatkunde",
+            "Anden virksomhed"
+          ]
+        },
         "email": {
           "label": "E-mail",
-          "placeholder": "you@email.com"
+          "placeholder": "dig@email.com"
         },
         "phone": {
           "label": "Telefon",
           "placeholder": "+32 ..."
+        },
+        "city": {
+          "label": "By",
+          "placeholder": "Din by"
         }
-      }
+      },
+      "confirm": {
+        "title": "Send {title} til din indbakke?",
+        "msg": "Vi sender databladet til {email} — ét klik, så er det på vej.",
+        "sendLabel": "Ja, send det til mig",
+        "editLabel": "Ikke dig? Ret oplysninger"
+      },
+      "fallback": {
+        "sentTitle": "Her er dit datablad",
+        "sentMsg": "Downloaden bør starte automatisk — hvis ikke, så brug knappen nedenfor."
+      },
+      "rateLimited": "For mange anmodninger fra din forbindelse — prøv igen om en time.",
+      "architectInvite": "Arkitekt? Vores gratis arkitektområde har vejledende budgetbånd, målte casestudier og alle dokumenter med ét klik."
     },
     "trainingDates": [
       "15.–16. sep. 2026",
@@ -1874,7 +1980,72 @@
     ],
     "close": "Luk",
     "downloadDatasheet": "Download datablad",
-    "select": "Vælg…"
+    "select": "Vælg…",
+    "project": {
+      "title": "Registrér et projekt",
+      "subtitle": "Fortæl os om dit aktive projekt — en fast rådgiver følger op inden for én arbejdsdag med udbudsstøtte, budgetinput og prioriterede prøver.",
+      "submitLabel": "Registrér projektet",
+      "sentTitle": "Projekt registreret",
+      "sentMsg": "Tak — en fast rådgiver kontakter dig inden for én arbejdsdag.",
+      "fields": {
+        "projectName": {
+          "label": "Projektnavn",
+          "placeholder": "Projekt- eller arbejdstitel"
+        },
+        "location": {
+          "label": "Sted",
+          "placeholder": "By"
+        },
+        "buildingType": {
+          "label": "Bygningstype",
+          "options": [
+            "Kontor",
+            "Hotel & restauration",
+            "Sundhed",
+            "Detail",
+            "Bolig",
+            "Uddannelse",
+            "Andet"
+          ]
+        },
+        "system": {
+          "label": "System",
+          "options": [
+            "Polyester",
+            "PVC",
+            "Akustik",
+            "Lys & print",
+            "Præfab",
+            "Ved ikke endnu"
+          ]
+        },
+        "stage": {
+          "label": "Fase",
+          "options": [
+            "Koncept",
+            "Design",
+            "Udbud",
+            "På byggepladsen"
+          ]
+        },
+        "area": {
+          "label": "Areal",
+          "placeholder": "ca. m²"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "dig@tegnestue.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+32 ..."
+        },
+        "notes": {
+          "label": "Noter",
+          "placeholder": "Lofthøjder, akustikmål, deadlines..."
+        }
+      }
+    }
   },
   "faqPage": {
     "items": [
@@ -4235,9 +4406,9 @@
     "crumb": "Datablade",
     "titleA": "Specifikationer &",
     "titleB": "datablade",
-    "lead": "Download teknisk dokumentation for hvert STRETCH-system — specifikationer, brandklasser, akustiske klasseværdier og garantidetaljer. Indtast dine oplysninger én gang pr. download, og filen starter med det samme.",
+    "lead": "Download teknisk dokumentation for hvert STRETCH-system — specifikationer, brandklasser, akustiske værdier og garanti. Efterlad dine oplysninger én gang, og databladet lander i din indbakke som downloadlink.",
     "updated": "Opdateret {date}",
-    "privacyNote": "Vi beder om dit navn, din e-mail og dit telefonnummer, så en specialist kan besvare eventuelle tekniske spørgsmål. Dine oplysninger behandles i henhold til vores",
+    "privacyNote": "Vi beder om navn, rolle, e-mail, telefon og by, så en specialist kan besvare dine tekniske spørgsmål. Dine oplysninger behandles efter vores",
     "privacyLink": "privatlivspolitik"
   },
   "samplesPage": {
@@ -4502,5 +4673,116 @@
     "ovRecruitBody": "Vi leverer og monterer direkte fra vores produktion, mens netværket vokser — og montører, der overtager en ledig region, får regionens henvendelser, forhandlerpriser og træning.",
     "regionLuxembourg": "Luxembourg (Storhertugdømmet)",
     "regionAustria": "Østrig"
+  },
+  "datasheetEmail": {
+    "subject": "Dit STRETCH-datablad — {title}",
+    "greeting": "Hej {name},",
+    "intro": "Her er det datablad, du bad om — {title}.",
+    "button": "Download databladet",
+    "linkFallback": "Eller kopiér dette link ind i din browser:",
+    "validity": "Linket virker i {days} dage.",
+    "footerCta": "Arbejder du på et projekt? Svar bare på denne e-mail, eller book et opkald.",
+    "signoff": "STRETCH-teamet",
+    "architectInvite": "Arbejder du som arkitekt? Vores gratis arkitektområde giver dig vejledende €/m²-budgetbånd, målte casestudier og alle datablade, udbudstekster og CAD-filer med ét klik:"
+  },
+  "datasheetLink": {
+    "expiredTitle": "Dette downloadlink er udløbet",
+    "expiredBody": "Downloadlinks er gyldige i 14 dage. Bed om et nyt på få sekunder — vi sender det med det samme.",
+    "requestNew": "Bed om et nyt link"
+  },
+  "architectsPage": {
+    "crumb": "Arkitekter",
+    "eyebrow": "For arkitekter",
+    "titleA": "Foreskriv spændlofter",
+    "titleB": "med sikkerhed",
+    "lead": "Én gratis konto med alt, du behøver for at foreskrive: dokumenter, udbudstekster, CAD/BIM, målte casestudier, vejledende budgetbånd, arrangementer og en fast rådgiver.",
+    "ctaCreate": "Opret din gratis konto",
+    "ctaSignIn": "Log ind",
+    "values": [
+      {
+        "title": "Dokumenter med ét klik",
+        "body": "Alle datablade uden formularer — downloads knyttet til din konto."
+      },
+      {
+        "title": "Udbudstekster",
+        "body": "Klar-til-brug tekster pr. system — NL, FR og EN."
+      },
+      {
+        "title": "CAD & BIM",
+        "body": "DWG-profildetaljer, Revit-familier og SketchUp-komponenter."
+      },
+      {
+        "title": "Projektfotos",
+        "body": "Højopløselige referencefotos til kundepræsentationer."
+      },
+      {
+        "title": "Målte casestudier",
+        "body": "Virkelige projekter med målte før/efter-værdier."
+      },
+      {
+        "title": "Budgetbånd",
+        "body": "Vejledende €/m²-intervaller til tidlig budgettering."
+      },
+      {
+        "title": "Arrangementer & lunch & learns",
+        "body": "Kurser og sessioner hos os eller på din tegnestue."
+      },
+      {
+        "title": "Projektstøtte",
+        "body": "Registrér et projekt: fast rådgiver + prioriteret prøveboks."
+      }
+    ],
+    "howTitle": "Sådan fungerer det",
+    "steps": [
+      {
+        "title": "Opret din konto",
+        "body": "Tegnestuens navn, by og dine oplysninger — to minutter."
+      },
+      {
+        "title": "Bekræft din e-mail",
+        "body": "Ét klik på bekræftelseslinket."
+      },
+      {
+        "title": "Alt låst op",
+        "body": "Dokumenter, budgetter, cases og støtte — med det samme."
+      }
+    ],
+    "casesTitle": "Målt, ikke påstået",
+    "casesNote": "Fuldt studie inde i arkitektområdet.",
+    "cases": [
+      {
+        "title": "Akustisk renovering af restaurant",
+        "metric": "2,4 s → 0,7 s",
+        "metricLabel": "RT60 før → efter"
+      },
+      {
+        "title": "Lysloft på kontor",
+        "metric": "540 lux",
+        "metricLabel": "gennemsnit i arbejdsplan, U0 0,82"
+      }
+    ],
+    "eventsTitle": "Kommende arrangementer",
+    "eventsNote": "Alle datoer og ét-kliks-tilmelding inde i arkitektområdet.",
+    "faqTitle": "Ofte stillede spørgsmål",
+    "faqs": [
+      {
+        "q": "Er arkitektområdet virkelig gratis?",
+        "a": "Ja — det findes for at gøre det så let som muligt at foreskrive et STRETCH-system. Ingen gebyrer, ingen forpligtelser."
+      },
+      {
+        "q": "Offentliggør I priser?",
+        "a": "Vejledende €/m²-budgetbånd ligger inde i området til tidlig budgettering. Projekter prissættes altid individuelt — registrér et projekt for et rigtigt tal."
+      },
+      {
+        "q": "Støtter I et igangværende udbud?",
+        "a": "Ja. Registrér projektet, og en fast rådgiver hjælper med tekster, detaljer og akustikmål — som regel inden for én arbejdsdag."
+      },
+      {
+        "q": "Leverer I uden for Benelux?",
+        "a": "Ja — vi producerer i Belgien og monterer med certificerede partnere i hele Europa."
+      }
+    ],
+    "ctaTitle": "Alt til at foreskrive, samlet ét sted",
+    "ctaBody": "Opret din gratis konto — alle dokumenter, budgetbånd og casestudier er ét klik væk, plus en fast rådgiver til dine projekter."
   }
 }
