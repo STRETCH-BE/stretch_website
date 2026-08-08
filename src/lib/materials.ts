@@ -165,7 +165,7 @@ export const materialGroups: MaterialGroup[] = [
       { name: 'STRETCH Cleaner 1 L', body: 'The membrane-safe cleaner for fingerprints, dust and building-site film.', image: '/images/materials/cleaner-1l.jpg' },
       { name: 'STRETCH Cleaner 5 L', body: 'The same cleaner in the workshop size for dealers and heavy users.', image: '/images/materials/cleaner-5l.jpg' },
       // Appended 7 Aug (P2) — keep at the END: materialsData items merge by index.
-      { name: 'Air tools & tackers', body: 'Pneumatic tackers and air tools for fast, solid profile mounting — the same BEA models our own installers run.', image: '' },
+      { name: 'Air tools & tackers', body: 'Pneumatic tackers and air tools for fast, solid profile mounting — the same BEA models our own installers run.', image: '/images/materials/air-tools-tackers.jpg' },
     ],
   },
 ];
