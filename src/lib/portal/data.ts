@@ -7,7 +7,7 @@
 // JSON and are filtered in code. Both paths return the same shape.
 // ============================================================================
 import type { PortalSession, PricebookMeta, PriceRow } from './types';
-import { categoryRank } from './types';
+import { categoryRank, priceGroupForTier } from './types';
 import { createRscClient, isSupabaseConfigured } from './supabase';
 
 type Pricebook = { rows: PriceRow[]; meta: PricebookMeta };
@@ -19,8 +19,10 @@ function sortRows(rows: PriceRow[]): PriceRow[] {
 }
 
 function visibleToProfile(row: PriceRow, session: PortalSession): boolean {
-  if (session.profile.allMarkets) return true;
-  return session.profile.markets.includes(row.market);
+  const p = session.profile;
+  if (p.role === 'admin' || p.allMarkets) return true;
+  // The account's own tier group, plus any extra groups granted via markets[].
+  return row.market === priceGroupForTier(p.accountType) || p.markets.includes(row.market);
 }
 
 async function demoPricebook(session: PortalSession): Promise<Pricebook> {

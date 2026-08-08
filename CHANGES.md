@@ -1,3 +1,27 @@
+## 2026-08-08 (15) — PriceBook v2.4: price groups ARE the tiers
+
+- Client uploaded Alto PriceBook v2.4 (1017 rows): the ten old price groups
+  (West/East Europe, USA, Tier: … etc.) are GONE — every product now has one
+  price per account tier: 'Producer/Reseller' (339) / 'Installer' (339) /
+  'B2C' (339; 116 rows skipped for missing EUR price). This is what the
+  earlier 3-option screenshot was about, and why the client's installer test
+  account showed "0 items" (its granted markets no longer exist as groups).
+- Visibility now follows the tier automatically: priceGroupForTier() maps
+  producer→'Producer/Reseller', installer→'Installer', b2c→'B2C'.
+  PRICE_MARKETS = those three; markets[] demoted to OPTIONAL extra grants
+  (e.g. hand an installer the producer column). Enforced in the RLS policy
+  (tier clause tolerant of label spellings in account_type) + demo filter;
+  admin/all_markets unchanged. Create-account "select at least one market"
+  validation removed; admin labels renamed Markets→Price groups ×12; portal
+  nav shows the tier group. B2C accounts still have NO pricelist access
+  (gate unchanged) even though a B2C price column now exists — client to
+  decide whether consumer logins should see it.
+- demo-pricebook.json regenerated from v2.4 (901 rows, 3 groups); demo
+  users' stale market grants cleared; docs/PORTAL.md rewritten accordingly.
+- schema.sql: pricebook_read policy updated in place + migration note; run
+  the policy block + `update portal_users set markets='{}' where not
+  (markets <@ array[...])` on the live DB.
+
 ## 2026-08-08 (14) — Three account tiers: Producer/Reseller · Installer · B2C
 
 - Client adjusted the account model: the b2b/b2c split becomes THREE tiers.

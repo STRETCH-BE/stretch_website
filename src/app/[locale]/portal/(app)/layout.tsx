@@ -6,7 +6,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { redirect } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
-import { hasTradeAccess } from '@/lib/portal/types';
+import { hasTradeAccess, priceGroupForTier } from '@/lib/portal/types';
 import PortalNav from '@/components/portal/PortalNav';
 
 export default async function PortalAppLayout({
@@ -36,9 +36,9 @@ export default async function PortalAppLayout({
         marketsLabel={
           profile.role !== 'admin' && profile.accountType === 'b2c'
             ? '—'
-            : profile.allMarkets
+            : profile.role === 'admin' || profile.allMarkets
               ? t('allMarkets')
-              : profile.markets.join(' · ') || '—'
+              : Array.from(new Set([priceGroupForTier(profile.accountType), ...profile.markets])).join(' · ')
         }
       />
       {children}

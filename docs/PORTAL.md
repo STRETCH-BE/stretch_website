@@ -22,11 +22,15 @@ Alto Pricing System.xlsx ──(admin upload / CLI)──▶ Supabase Postgres �
 - **Excel stays the master.** Update prices in the workbook, upload it on
   `/portal/admin` (or run the CLI script) — every client instantly sees the
   new prices. The sync reports added/changed/removed rows.
-- **Per-client market visibility** (an explicit business decision): a client
-  granted `West Europe` can never query `USA` or `Key account` rows — this is
-  enforced by Postgres row-level security, not just UI code.
-- **Two roles.** `client` (sees pricelist for assigned markets) and `admin`
-  (sees everything + admin page: pricelist sync, account management).
+- **Tier-based visibility** (an explicit business decision): since PriceBook
+  v2.4 the price groups are the account tiers — `Producer/Reseller`,
+  `Installer`, `B2C`. An account automatically sees the group matching its
+  tier (extra groups can be granted per account); an Installer can never
+  query Producer/Reseller rows — enforced by Postgres row-level security,
+  not just UI code.
+- **Two roles.** `client` (sees the pricelist for its tier) and `admin`
+  (sees everything + admin page: pricelist sync, account management). The
+  tier lives in `account_type`: `producer` / `installer` / `b2c`.
 - **Zero-config demo mode.** Without Supabase env vars the whole portal runs
   on bundled sample data with demo logins (listed on the login page). Demo
   mode is a preview feature — do **not** treat it as private.
@@ -85,14 +89,14 @@ From then on, updating prices = save the Excel → upload it on
 | Field | Meaning |
 | --- | --- |
 | `role` | `client` or `admin` |
-| `markets` | Price groups this account sees, e.g. `{"West Europe","Standard","Tier: Export"}` |
+| `account_type` | Tier: `producer` (Producer/Reseller), `installer` or `b2c` — decides the price group seen automatically |
+| `markets` | EXTRA price groups granted on top of the tier's own, e.g. `{"Producer/Reseller"}` |
 | `all_markets` | `true` → sees every price group (admins are always all-markets) |
 | `active` | `false` → account keeps existing but cannot use the portal |
 
-Price groups present in the PriceBook: `East Europe`, `West Europe`, `USA`,
-`UAE`, `Key account`, `Producers`, `Standard` (foil cut-to-length + profile
-accessories), `Tier: Budget` / `Tier: Mid` / `Tier: Export` (PVC rolls).
-A typical client gets their region **plus** `Standard` and one rolls tier.
+Price groups present in the PriceBook (one price per product per tier):
+`Producer/Reseller`, `Installer`, `B2C`. A typical account needs no manual
+grants at all — its tier decides what it sees.
 
 ## Security notes
 

@@ -72,13 +72,6 @@ export async function POST(req: NextRequest) {
       { status: 400 },
     );
   }
-  if (accountType !== 'b2c' && role !== 'admin' && !allMarkets && markets.length === 0) {
-    return NextResponse.json(
-      { ok: false, error: 'Select at least one market (or grant all markets).' },
-      { status: 400 },
-    );
-  }
-
   if (!isSupabaseConfigured() || session.demo) {
     return NextResponse.json({ ok: true, persisted: false });
   }

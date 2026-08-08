@@ -86,22 +86,20 @@ export type PortalSession = {
 };
 
 /**
- * Every price group that exists in the PriceBook. A client account is granted
- * a subset of these (per-market pricing was an explicit business decision —
- * margins differ per market and clients must never see other markets).
+ * Every price group in the PriceBook. Since Alto Pricing System v2.4 the
+ * groups ARE the account tiers: each product carries one price per tier, and
+ * an account automatically sees the group matching its tier (see
+ * priceGroupForTier). Extra groups can still be granted per-account via
+ * markets[] — e.g. show an installer the producer pricing too.
  */
-export const PRICE_MARKETS = [
-  'East Europe',
-  'West Europe',
-  'USA',
-  'UAE',
-  'Key account',
-  'Producers',
-  'Standard',
-  'Tier: Budget',
-  'Tier: Mid',
-  'Tier: Export',
-] as const;
+export const PRICE_MARKETS = ['Producer/Reseller', 'Installer', 'B2C'] as const;
+
+/** The PriceBook group an account tier sees automatically. */
+export function priceGroupForTier(tier: AccountType): (typeof PRICE_MARKETS)[number] {
+  if (tier === 'producer') return 'Producer/Reseller';
+  if (tier === 'b2c') return 'B2C';
+  return 'Installer';
+}
 
 /** Category display order (matches the PriceBook / mockup ordering). */
 export const CATEGORY_ORDER = [

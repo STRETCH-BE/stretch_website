@@ -99,7 +99,18 @@ create policy pricebook_read_by_market
       from public.portal_users u
       where u.id = auth.uid()
         and u.active
-        and (u.all_markets or u.role = 'admin' or pricebook.market = any (u.markets))
+        and (
+          u.all_markets
+          or u.role = 'admin'
+          -- extra per-account grants
+          or pricebook.market = any (u.markets)
+          -- the account tier's own price group (tolerant of label spellings)
+          or pricebook.market = (case
+               when u.account_type ilike '%producer%' or u.account_type ilike '%reseller%' then 'Producer/Reseller'
+               when lower(u.account_type) = 'b2c' then 'B2C'
+               else 'Installer'
+             end)
+        )
     )
   );
 
@@ -238,3 +249,12 @@ alter table public.portal_users
   check (account_type in ('producer', 'installer', 'b2c'));
 alter table public.portal_users
   alter column account_type set default 'installer';
+
+-- PriceBook v2.4 renamed the price groups to the three account tiers
+-- (Producer/Reseller · Installer · B2C); visibility now follows the tier
+-- automatically. Re-create the read policy (same statement as above — run
+-- this when upgrading an existing database), then clear stale per-account
+-- grants that referenced the old group names:
+update public.portal_users
+  set markets = '{}'
+  where not (markets <@ array['Producer/Reseller', 'Installer', 'B2C']);
