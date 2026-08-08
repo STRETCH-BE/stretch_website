@@ -103,15 +103,26 @@ export function buildOrderEmailHtml(
   const total = order?.quote?.total;
   const date = new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
 
+  // Two order kinds share this template: 'designer' (full ceiling spec) and
+  // 'pricelist' (product quantities from the trade pricelist, either a firm
+  // order or a quote request — order.order.type = 'order' | 'quote').
+  const isPricelist = order.kind === 'pricelist';
+  const isQuote = isPricelist && order?.order?.type === 'quote';
+  const noun = isPricelist ? (isQuote ? 'quote request' : 'product order') : 'ceiling order';
+
   const subject =
     audience === 'internal'
-      ? `Ceiling order ${ref}${clientName ? ` — ${clientName}` : ''} (${dealer.company || dealer.email})`
-      : `Your STRETCH order ${ref} — received`;
+      ? `${isQuote ? 'Quote request' : isPricelist ? 'Product order' : 'Ceiling order'} ${ref}${clientName ? ` — ${clientName}` : ''} (${dealer.company || dealer.email})`
+      : `Your STRETCH ${isQuote ? 'quote request' : 'order'} ${ref} — received`;
 
   const intro =
     audience === 'internal'
-      ? `A new ceiling order was placed in the client portal by <b>${esc(dealer.company || dealer.email)}</b>.`
-      : `Thank you — we received your ceiling order and it is now with our production team. You will hear from us shortly to confirm production and delivery. Your order also appears under <b>Orders</b> in the client portal.`;
+      ? `A new ${noun} was placed in the client portal by <b>${esc(dealer.company || dealer.email)}</b>.${isQuote ? ' They are asking for a quote — no firm order yet.' : ''}`
+      : isPricelist
+        ? isQuote
+          ? `Thank you — we received your quote request. A specialist checks availability and pricing and comes back to you within one working day. The request also appears under <b>Orders</b> in the client portal.`
+          : `Thank you — we received your order. We will confirm availability and delivery shortly. Your order also appears under <b>Orders</b> in the client portal.`
+        : `Thank you — we received your ceiling order and it is now with our production team. You will hear from us shortly to confirm production and delivery. Your order also appears under <b>Orders</b> in the client portal.`;
 
   const priceRows = quoteLines(order)
     .map(
@@ -156,7 +167,15 @@ export function buildOrderEmailHtml(
     <tr><td style="background:${INK};padding:22px 26px;">
       <span style="font:900 22px ${F};letter-spacing:-.02em;color:#fff;">${esc(brand.name)}</span><span style="color:${RED};font:900 14px ${F};">&reg;</span>
       <div style="font:600 11px ${F};letter-spacing:.18em;text-transform:uppercase;color:${RED};margin-top:6px;">${
-        audience === 'internal' ? 'New ceiling order' : 'Order confirmation'
+        audience === 'internal'
+          ? isQuote
+            ? 'New quote request'
+            : isPricelist
+              ? 'New product order'
+              : 'New ceiling order'
+          : isQuote
+            ? 'Quote request received'
+            : 'Order confirmation'
       }</div>
     </td></tr>
     <tr><td style="padding:26px;">
@@ -169,13 +188,17 @@ export function buildOrderEmailHtml(
       ${sectionTitle(audience === 'internal' ? 'Dealer' : 'Your account')}
       ${kvTable(dealerRows)}
 
-      ${sectionTitle('Client')}
-      ${kvTable(clientRows)}
+      ${isPricelist ? '' : `${sectionTitle('Client')}${kvTable(clientRows)}`}
 
-      ${sectionTitle('Ceiling specification')}
-      ${kvTable(specRows(order))}
+      ${isPricelist ? '' : `${sectionTitle('Ceiling specification')}${kvTable(specRows(order))}`}
 
-      ${sectionTitle('Price')}
+      ${
+        isPricelist && typeof order.note === 'string' && order.note
+          ? `${sectionTitle('Note')}<p style="font:400 14px ${F};line-height:1.6;color:${INK};margin:0;border:1px solid ${BORDER};padding:12px 14px;">${esc(order.note)}</p>`
+          : ''
+      }
+
+      ${sectionTitle(isQuote ? 'Requested products (indicative prices)' : isPricelist ? 'Products' : 'Price')}
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid ${BORDER};border-collapse:collapse;">
         ${priceRows}
         <tr>

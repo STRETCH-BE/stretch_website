@@ -164,6 +164,24 @@ export default async function ArchitectDashboard({
         </p>
       )}
 
+      {/* ---- Your advisor — always visible, right under the heading ----------- */}
+      <div className="arch-advisor">
+        <div className="arch-advisor__who">
+          <PhoneCall size={18} />
+          <div>
+            <strong>{t('advisorTitle')}</strong>
+            <span>{t('advisorBody')}</span>
+          </div>
+        </div>
+        <div className="arch-advisor__contact">
+          <a href={contact.phoneHref}>{contact.phoneDisplay}</a>
+          <a href={`mailto:${contact.email}`} className="arch-advisor__mail">{contact.email}</a>
+        </div>
+        <ModalButton type="call" source="architect_advisor" prefill={prefill} className="btn btn--primary btn--sm">
+          {t('advisorCta')} <ArrowRight size={14} />
+        </ModalButton>
+      </div>
+
       {/* ---- Project tools ---------------------------------------------------- */}
       <section style={{ margin: '26px 0 40px' }}>
         {sectionHead(<Ruler size={17} />, t('toolsTitle'))}
@@ -209,8 +227,9 @@ export default async function ArchitectDashboard({
       <section style={{ margin: '0 0 40px' }}>
         {sectionHead(<FolderOpen size={17} />, t('libraryTitle'), t('libraryBody'))}
 
-        {/* a) Datasheets — one-click, logged per download */}
-        <details className="arch-fold" open>
+        {/* a) Datasheets — one-click, logged per download (closed by default:
+            the fold bars act as a compact index, keeping the page short) */}
+        <details className="arch-fold">
           <summary>
             <FileText size={15} /> {t('docsTitle')} <span className="arch-count">{sheetGroups.reduce((n, g) => n + g.items.length, 0)}</span>
           </summary>
@@ -266,7 +285,7 @@ export default async function ArchitectDashboard({
         </details>
 
         {/* e) Technical case studies — measured results */}
-        <details className="arch-fold" open>
+        <details className="arch-fold">
           <summary><LineChart size={15} /> {t('casesTitle')} <span className="arch-count">{cases.length}</span></summary>
           <p className="arch-fold__body">{t('casesBody')}</p>
           <div className="arch-cases">
@@ -303,54 +322,48 @@ export default async function ArchitectDashboard({
         </details>
       </section>
 
-      {/* ---- Events ----------------------------------------------------------- */}
-      <section style={{ margin: '0 0 40px' }}>
-        {sectionHead(<CalendarDays size={17} />, t('eventsTitle'), t('eventsBody'))}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, maxWidth: 760 }}>
-          {events.map((e) => (
-            <div key={e.slug} style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '13px 16px', border: '1px solid var(--border)', background: '#fff', flexWrap: 'wrap' }}>
-              <div style={{ minWidth: 0, flex: 1 }}>
-                <div style={{ fontSize: 14, fontWeight: 700 }}>{e.title}</div>
-                <div style={{ fontSize: 12, color: 'var(--text-faint-2)', marginTop: 3, letterSpacing: '.03em' }}>
-                  {e.dateLabel} · {e.location}
+      {/* ---- Events — a fold like the library, keeps the page short ----------- */}
+      <section style={{ margin: '0 0 12px' }}>
+        <details className="arch-fold">
+          <summary><CalendarDays size={15} /> {t('eventsTitle')} <span className="arch-count">{events.length}</span></summary>
+          <p className="arch-fold__body">{t('eventsBody')}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {events.map((e) => (
+              <div key={e.slug} style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '13px 16px', border: '1px solid var(--border)', background: '#fff', flexWrap: 'wrap' }}>
+                <div style={{ minWidth: 0, flex: 1 }}>
+                  <div style={{ fontSize: 14, fontWeight: 700 }}>{e.title}</div>
+                  <div style={{ fontSize: 12, color: 'var(--text-faint-2)', marginTop: 3, letterSpacing: '.03em' }}>
+                    {e.dateLabel} · {e.location}
+                  </div>
+                  <div style={{ fontSize: 12.5, color: 'var(--text-muted)', marginTop: 4, lineHeight: 1.5 }}>{e.blurb}</div>
                 </div>
-                <div style={{ fontSize: 12.5, color: 'var(--text-muted)', marginTop: 4, lineHeight: 1.5 }}>{e.blurb}</div>
+                {e.open && (
+                  <ModalButton
+                    type={e.kind === 'training' ? 'training' : 'call'}
+                    source={`architect_event_${e.slug}`}
+                    product={e.kind === 'training' ? e.title : undefined}
+                    prefill={prefill}
+                    className="btn btn--ghost btn--sm"
+                  >
+                    {t('register')} <ArrowRight size={13} />
+                  </ModalButton>
+                )}
               </div>
-              {e.open && (
-                <ModalButton
-                  type={e.kind === 'training' ? 'training' : 'call'}
-                  source={`architect_event_${e.slug}`}
-                  product={e.kind === 'training' ? e.title : undefined}
-                  prefill={prefill}
-                  className="btn btn--ghost btn--sm"
-                >
-                  {t('register')} <ArrowRight size={13} />
-                </ModalButton>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ---- Your advisor ------------------------------------------------------ */}
-      <section style={{ maxWidth: 560 }}>
-        {sectionHead(<PhoneCall size={17} />, t('advisorTitle'))}
-        <div style={{ border: '1px solid var(--border)', background: '#fff', padding: 'clamp(18px,2.4vw,26px)' }}>
-          <p style={{ margin: '0 0 14px', fontSize: 13.5, color: 'var(--text-muted)', lineHeight: 1.6 }}>{t('advisorBody')}</p>
-          <p style={{ margin: '0 0 16px', fontSize: 14.5, fontWeight: 700, lineHeight: 1.7 }}>
-            <a href={contact.phoneHref} style={{ color: 'inherit', textDecoration: 'none' }}>{contact.phoneDisplay}</a>
-            <br />
-            <a href={`mailto:${contact.email}`} style={{ color: 'var(--red)', textDecoration: 'none' }}>{contact.email}</a>
-          </p>
-          <ModalButton type="call" source="architect_advisor" prefill={prefill} className="btn btn--primary btn--sm">
-            {t('advisorCta')} <ArrowRight size={14} />
-          </ModalButton>
-        </div>
+            ))}
+          </div>
+        </details>
       </section>
 
       <style
         dangerouslySetInnerHTML={{
           __html: `
+        .arch-advisor { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; background: var(--black); color: #fff; padding: 16px 20px; margin: 0 0 30px; }
+        .arch-advisor__who { display: flex; align-items: center; gap: 12px; flex: 1 1 320px; min-width: 0; }
+        .arch-advisor__who strong { display: block; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+        .arch-advisor__who span { display: block; font-size: 12px; color: var(--on-dark-muted); line-height: 1.45; margin-top: 2px; }
+        .arch-advisor__contact { display: flex; flex-direction: column; line-height: 1.5; }
+        .arch-advisor__contact a { color: #fff; text-decoration: none; font-size: 13.5px; font-weight: 700; white-space: nowrap; }
+        .arch-advisor__mail { color: var(--red) !important; }
         .arch-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
         .arch-tile { background: #fff; border: 1px solid var(--border); padding: clamp(18px,2vw,24px); display: flex; flex-direction: column; gap: 9px; color: var(--text); text-decoration: none; }
         .arch-tile--link:hover { border-color: var(--black); }

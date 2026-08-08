@@ -1,3 +1,28 @@
+## 2026-08-08 (20) — Order & quote from the pricelist + compact architect dashboard
+
+- **Pricelist order basket** (client request): every price row gets a +
+  button; a floating basket opens a drawer with quantity steppers, an
+  optional note and a live total, submitted either as **Place order** or
+  **Request a quote**. New POST /api/portal/pricelist-order: trade session
+  required, every line RE-PRICED server-side from the RLS-scoped pricebook
+  (client prices never trusted; unknown items rejected), ref PO-/QT-
+  yyyymmdd-hhmm. Delivery reuses the designer-order pipeline: branded
+  internal e-mail to the lead inbox + confirmation to the client (Graph →
+  webhook → SMTP), order JSON attached, and the order stored in
+  designer_orders so it appears under /portal/orders with a status the
+  admin can advance. order-email.ts generalised for kind 'pricelist'
+  (order vs quote wording, products table instead of the ceiling spec,
+  optional note; designer e-mails unchanged). Demo mode acknowledges
+  without sending/storing. i18n portal.pricelist ×12 (17 keys).
+  E2E-verified: payload carries stable row keys + quantities, drawer
+  totals correct, quote submit returns ref and renders the success state.
+- **Architect dashboard decluttered** (client: advisor CTA too low, too
+  much scrolling): the advisor is now a black strip directly under the
+  heading (phone, e-mail, Book a call always in view); the datasheet and
+  case-study folds start CLOSED and Events became a fold too — the page
+  reads as a compact index (fold bars with counts) instead of a long
+  scroll. Full-page height roughly halved.
+
 ## 2026-08-08 (19) — ARCHITECT AREA: second audience in the portal
 
 Architects are focus #2 after B2B installers: one free account with everything
