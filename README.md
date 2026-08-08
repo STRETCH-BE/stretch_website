@@ -43,13 +43,13 @@ Every variable is **optional**. See `.env.example` for the full annotated list. 
 | `NEXT_PUBLIC_META_PIXEL_ID` | Meta Pixel ID. Off by default per brief. |
 | `NEXT_PUBLIC_BING_UET_ID` | Bing UET tag ID. Off by default per brief. |
 | `LEAD_DESTINATION` | Address all form submissions are delivered to. |
-| `RESEND_API_KEY` + `LEAD_FROM_EMAIL` | Deliver leads via [Resend](https://resend.com). |
+| `MS_TENANT_ID` / `MS_CLIENT_ID` / `MS_CLIENT_SECRET` / `MS_GRAPH_SENDER` | Deliver mail via Microsoft 365 (Graph, app-only Mail.Send) from the company's own mailbox. Setup notes in `src/lib/msgraph-mail.ts`. |
 | `LEAD_WEBHOOK_URL` | Or POST each lead as JSON to a webhook. |
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` / `SMTP_SECURE` / `SMTP_FROM` | Or send via SMTP (Nodemailer). |
 | `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Client portal auth + database ([Supabase](https://supabase.com)). Without them `/portal` runs in demo mode. |
 | `SUPABASE_SERVICE_ROLE_KEY` | Server-only — powers the portal's admin API (pricelist sync, account management). |
 
-**Lead delivery** auto-selects a method at runtime, in priority order: Resend → webhook → SMTP → log-only. The first one whose env vars are present wins. `resend` and `nodemailer` are *optional* dependencies, imported dynamically only when configured.
+**Lead delivery** auto-selects a method at runtime, in priority order: Microsoft Graph → webhook → SMTP → log-only. The first one whose env vars are present wins. `nodemailer` is an *optional* dependency, imported dynamically only when configured.
 
 ---
 
@@ -76,7 +76,7 @@ data + demo logins, listed on the login page). Full setup & data model:
 ### Post-deploy checklist
 
 - [ ] Set `NEXT_PUBLIC_SITE_URL` to the live domain (no trailing slash).
-- [ ] Configure a lead-delivery method (`RESEND_API_KEY` + `LEAD_FROM_EMAIL` recommended) and verify the sender domain.
+- [ ] Configure a lead-delivery method (Microsoft Graph — the four `MS_*` variables — recommended).
 - [ ] Submit each form once and confirm the email arrives at `LEAD_DESTINATION`.
 - [ ] Add `NEXT_PUBLIC_GA_ID` and `NEXT_PUBLIC_CLARITY_ID`; accept cookies and confirm tags fire.
 - [ ] Verify `/sitemap.xml` and `/robots.txt` resolve on the live domain.

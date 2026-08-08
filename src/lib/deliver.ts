@@ -1,15 +1,16 @@
 // ============================================================================
 // LEAD DELIVERY — graceful, zero-config multi-method send.
-// Tries, in order: Resend (RESEND_API_KEY) → generic webhook (LEAD_WEBHOOK_URL)
-// → SMTP/Nodemailer (SMTP_HOST) → log-only. The site works with no env vars at
-// all (log-only), so it never hard-fails. PII is never logged — only the lead
-// source, the destination and the submitter's email domain.
+// Tries, in order: Microsoft 365 Graph (MS_* vars) → generic webhook
+// (LEAD_WEBHOOK_URL) → SMTP/Nodemailer (SMTP_HOST) → log-only. The site works
+// with no env vars at all (log-only), so it never hard-fails. PII is never
+// logged — only the lead source, the destination and the submitter's email
+// domain.
 // ============================================================================
 import { buildLeadEmail, type LeadPayload } from '@/lib/email';
 import { contact } from '@/lib/site-config';
 import { isGraphMailConfigured, sendGraphMail } from '@/lib/msgraph-mail';
 
-export type DeliveryResult = { ok: true; method: 'graph' | 'resend' | 'webhook' | 'smtp' | 'log' };
+export type DeliveryResult = { ok: true; method: 'graph' | 'webhook' | 'smtp' | 'log' };
 
 function emailDomain(payload: LeadPayload): string {
   const e = typeof payload.email === 'string' ? payload.email : '';
@@ -40,26 +41,7 @@ export async function deliverLead(payload: LeadPayload): Promise<DeliveryResult>
     }
   }
 
-  // 1) Resend ---------------------------------------------------------------
-  if (process.env.RESEND_API_KEY) {
-    try {
-      const { Resend } = await import('resend');
-      const resend = new Resend(process.env.RESEND_API_KEY);
-      await resend.emails.send({
-        from,
-        to,
-        reply_to: replyTo,
-        subject: built.subject,
-        html: built.html,
-        text: built.text,
-      });
-      return { ok: true, method: 'resend' };
-    } catch (err) {
-      logIssue('resend', err);
-    }
-  }
-
-  // 2) Generic webhook ------------------------------------------------------
+  // 1) Generic webhook ------------------------------------------------------
   if (process.env.LEAD_WEBHOOK_URL) {
     try {
       const res = await fetch(process.env.LEAD_WEBHOOK_URL, {
@@ -81,7 +63,7 @@ export async function deliverLead(payload: LeadPayload): Promise<DeliveryResult>
     }
   }
 
-  // 3) SMTP via Nodemailer --------------------------------------------------
+  // 2) SMTP via Nodemailer --------------------------------------------------
   if (process.env.SMTP_HOST) {
     try {
       const nodemailer = await import('nodemailer');
@@ -109,7 +91,7 @@ export async function deliverLead(payload: LeadPayload): Promise<DeliveryResult>
     }
   }
 
-  // 4) Log-only -------------------------------------------------------------
+  // 3) Log-only -------------------------------------------------------------
   console.info(
     `[lead] received "${String(payload.source)}" → ${to} (no delivery method configured; submitter domain: ${emailDomain(payload)})`,
   );

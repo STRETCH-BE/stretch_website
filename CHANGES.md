@@ -1,3 +1,22 @@
+## 2026-08-08 (13) — Resend removed entirely (zero clutter)
+
+- Graph mail verified live: test order STR-20260808-1613 delivered via graph
+  for both e-mails (internal + dealer confirmation, all attachments) from
+  info@stretchgroup.be, using a dedicated app registration for this website
+  (the reused Sufit app was blocked by the tenant's ApplicationAccessPolicy —
+  per-app, so a fresh app bypasses it; client advised to add a RestrictAccess
+  policy for the new app scoped to info@).
+- Client deleted RESEND_API_KEY and asked for zero clutter → Resend stripped:
+  branches removed from deliver.ts + order-email.ts, method unions narrowed,
+  `resend` npm dependency uninstalled, README env table/priority/checklist
+  rewritten Graph-first. Chain is now graph → webhook → smtp → log (webhook
+  and SMTP stay: dependency-light, unconfigured, and Microsoft-compatible
+  escape hatches — e.g. Power Automate or smtp.office365.com).
+- NOTE: with only Graph configured, a Graph failure (realistic case: client
+  secret expiry, ~24 months) means orders are stored + visible in /portal/orders
+  but NOT e-mailed (summary log line shows "NOT delivered"). Client warned to
+  diary the secret expiry.
+
 ## 2026-08-08 (12) — E-mail via Microsoft 365 (Graph) — client wants fewer tools
 
 - New src/lib/msgraph-mail.ts: sends through the company's own Exchange

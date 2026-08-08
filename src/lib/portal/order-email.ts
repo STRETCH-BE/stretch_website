@@ -5,9 +5,9 @@
 // (not the text blob): one to the STRETCH lead inbox, one confirmation to the
 // dealer who placed it. Both carry the production documents (PDF/DXF, uploaded
 // by the designer) and the machine-readable order JSON as attachments.
-// Delivery uses the same graceful chain as leads: Resend → webhook → SMTP →
-// log-only. Layout matches buildLeadEmail (email.ts): 600 px table, black
-// header, STRETCH red.
+// Delivery uses the same graceful chain as leads: Microsoft Graph → webhook →
+// SMTP → log-only. Layout matches buildLeadEmail (email.ts): 600 px table,
+// black header, STRETCH red.
 // ============================================================================
 import { escapeHtml } from '@/lib/email';
 import { brand, contact } from '@/lib/site-config';
@@ -28,7 +28,7 @@ export type OrderEmailInput = {
   fileLinks?: OrderFileLink[];
 };
 
-export type OrderDelivery = { delivered: boolean; method: 'graph' | 'resend' | 'webhook' | 'smtp' | 'log' };
+export type OrderDelivery = { delivered: boolean; method: 'graph' | 'webhook' | 'smtp' | 'log' };
 
 // ---------------------------------------------------------------------------
 // Layout
@@ -226,7 +226,7 @@ async function send(msg: {
    * `to` — fine for the internal order e-mail, wrong for the dealer
    * confirmation (it would land at the lead inbox as a duplicate). When set,
    * the webhook step is skipped and only recipient-faithful transports
-   * (Resend / SMTP) are used.
+   * (Graph / SMTP) are used.
    */
   recipientCritical?: boolean;
 }): Promise<OrderDelivery> {
@@ -247,25 +247,6 @@ async function send(msg: {
       return { delivered: true, method: 'graph' };
     } catch (err) {
       logIssue('graph', err);
-    }
-  }
-
-  if (process.env.RESEND_API_KEY) {
-    try {
-      const { Resend } = await import('resend');
-      const resend = new Resend(process.env.RESEND_API_KEY);
-      await resend.emails.send({
-        from,
-        to: msg.to,
-        reply_to: msg.replyTo,
-        subject: msg.subject,
-        html: msg.html,
-        text: msg.text,
-        attachments: msg.attachments.map((a) => ({ filename: a.filename, content: a.content.toString('base64') })),
-      });
-      return { delivered: true, method: 'resend' };
-    } catch (err) {
-      logIssue('resend', err);
     }
   }
 
