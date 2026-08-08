@@ -62,17 +62,34 @@ export async function POST(req: NextRequest) {
     // Supabase dashboard) → self-heal with a B2C profile.
     const service = createServiceClient();
     if (service) {
-      const { error: insertError } = await service.from('portal_users').insert({
+      const meta = (data.user.user_metadata ?? {}) as Record<string, unknown>;
+      const metaText = (key: string) =>
+        typeof meta[key] === 'string' && (meta[key] as string).trim()
+          ? (meta[key] as string).trim().slice(0, 120)
+          : null;
+      const base = {
         id: data.user.id,
         email,
-        company: (data.user.user_metadata?.company as string | undefined) ?? null,
+        company: metaText('company'),
         role: 'client',
         account_type: 'b2c',
         markets: [],
         all_markets: false,
         active: true,
+      };
+      const { error: insertError } = await service.from('portal_users').insert({
+        ...base,
+        // B2B details captured at signup (see signup route) — restored here.
+        contact_name: metaText('contact_name'),
+        vat: metaText('vat'),
+        phone: metaText('phone'),
+        country: metaText('country'),
+        business_type: metaText('business_type'),
       });
       if (!insertError) return NextResponse.json({ ok: true, demo: false });
+      // Un-migrated database (B2B columns missing) — core profile only.
+      const { error: retryError } = await service.from('portal_users').insert(base);
+      if (!retryError) return NextResponse.json({ ok: true, demo: false });
     }
     await supabase.auth.signOut();
     return NextResponse.json({ ok: false, error: 'inactive' }, { status: 403 });

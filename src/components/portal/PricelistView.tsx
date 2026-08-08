@@ -334,53 +334,64 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
           color: var(--text);
         }
 
+        /* Type — the PRIMARY filter: big display-font blocks, full width. */
         .plv__types {
           background: #fff;
           border-bottom: 1px solid var(--border);
         }
         .plv__types-in {
           display: flex;
-          gap: 8px;
+          gap: 12px;
           flex-wrap: wrap;
-          padding-top: 14px;
-          padding-bottom: 14px;
+          padding-top: 18px;
+          padding-bottom: 18px;
         }
         .plv__type {
-          display: inline-flex;
+          flex: 1 1 220px;
+          display: flex;
           align-items: center;
-          gap: 9px;
-          border: 1px solid var(--border-input);
+          justify-content: center;
+          gap: 12px;
+          border: 2px solid var(--black);
+          border-bottom-width: 4px;
           background: #fff;
-          font: inherit;
-          font-size: 12px;
-          font-weight: 800;
-          letter-spacing: 0.06em;
+          font-family: var(--font-display);
+          font-weight: 900;
+          font-size: clamp(14px, 1.7vw, 19px);
+          letter-spacing: 0.03em;
           text-transform: uppercase;
-          color: var(--text-muted);
-          padding: 10px 16px;
+          color: var(--text);
+          padding: 16px 20px;
           cursor: pointer;
         }
         .plv__type small {
-          font-size: 10.5px;
-          font-weight: 700;
-          color: var(--text-faint-2);
+          font-size: 11.5px;
+          font-family: var(--font-body, inherit);
+          font-weight: 800;
+          color: var(--text-muted-2);
           background: var(--surface);
           border: 1px solid var(--border-2);
-          padding: 2px 6px;
+          padding: 3px 8px;
         }
-        .plv__type:hover {
-          border-color: var(--black);
-          color: var(--text);
+        .plv__type:hover:not(.plv__type--on) {
+          background: var(--surface);
         }
         .plv__type--on {
           background: var(--black);
-          border-color: var(--black);
           color: #fff;
+          border-color: var(--black);
+          border-bottom-color: var(--red);
         }
         .plv__type--on small {
           background: var(--red);
           border-color: var(--red);
           color: #fff;
+        }
+        @media (max-width: 640px) {
+          .plv__type {
+            padding: 12px 14px;
+            font-size: 14px;
+          }
         }
 
         .plv__toolbar {
@@ -483,30 +494,31 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
           gap: 2px;
           overflow-x: auto;
         }
+        /* Category — the SECONDARY filter: compact, quiet tabs. */
         .plv__tab {
           border: 0;
           background: none;
           font: inherit;
-          font-size: 12px;
-          font-weight: 700;
-          letter-spacing: 0.06em;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 0.05em;
           text-transform: uppercase;
           color: var(--text-muted);
-          padding: 13px 14px 11px;
+          padding: 11px 11px 9px;
           cursor: pointer;
           white-space: nowrap;
-          border-bottom: 3px solid transparent;
+          border-bottom: 2px solid transparent;
           display: inline-flex;
           align-items: center;
-          gap: 8px;
+          gap: 7px;
         }
         .plv__tab small {
-          font-size: 10.5px;
+          font-size: 10px;
           font-weight: 700;
           color: var(--text-faint-2);
           background: var(--surface);
           border: 1px solid var(--border-2);
-          padding: 2px 6px;
+          padding: 1px 5px;
         }
         .plv__tab:hover {
           color: var(--text);

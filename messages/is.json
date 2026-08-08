@@ -180,8 +180,15 @@
       "demoBody": "Enginn gagnagrunnur tengdur enn — prófaðu gáttina með þessum aðgöngum:",
       "tabSignIn": "Innskráning",
       "tabSignup": "Stofna aðgang",
-      "signupSub": "Ókeypis aðgangur — strax",
-      "company": "Fyrirtæki (valfrjálst)",
+      "signupSub": "Fyrir fagaðila — aðgangur eftir yfirferð",
+      "company": "Fyrirtæki",
+      "contactName": "Tengiliður",
+      "vat": "VSK-númer",
+      "phone": "Sími",
+      "country": "Land",
+      "countryOther": "Annað land",
+      "businessType": "Tegund fyrirtækis",
+      "chooseOption": "Veldu…",
       "passwordHint": "Að minnsta kosti 8 stafir.",
       "signupSubmit": "Stofna aðgang",
       "signupSubmitting": "Stofna…",
@@ -315,6 +322,13 @@
     "designer": {
       "eyebrow": "Loftahönnuður",
       "hint": "Teiknaðu loftið út frá veggja- og hornalínumálum, staðsettu samskeyti og úrtök, athugaðu verðið og sendu pöntunina. Notaðu Save til að vista mælingu sem skrá."
+    },
+    "businessTypes": {
+      "installer": "Uppsetningaraðili",
+      "distributor": "Dreifingaraðili / endursali",
+      "architect": "Arkitekt / hönnuður",
+      "contractor": "Verktaki",
+      "other": "Annað"
     }
   },
   "home": {

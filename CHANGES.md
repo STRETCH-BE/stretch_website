@@ -1,3 +1,31 @@
+## 2026-08-08 (17) — Type filter made primary + B2B signup
+
+- **Pricelist filter hierarchy flipped** (client: "type must be the main
+  filter"): the Type selector is now large display-font blocks (equal-width,
+  2px border, active = black fill + red bottom bar + red count badge)
+  directly under the title; the category tabs shrank to a compact quiet row.
+  Fixed a real state bug found via screenshot: :hover (specificity 0,2,0)
+  beat .plv__type--on (0,1,0), so the active block lost its black fill under
+  the cursor leaving white-on-white text — hover now scoped with
+  :not(.plv__type--on). demo-pricebook.json regenerated from the fabric
+  workbook (1,388 rows, both types, three tier markets) so demo mode shows
+  the full two-level filtering; verified with Playwright screenshots (all
+  types + fabric active, hovered and idle).
+- **B2B-grade signup** (client: "we are B2B focussed"): Create account now
+  requires Company, Contact person, Phone, VAT number, Country (localised
+  names via Intl.DisplayNames, 21 countries + Other) and Business type
+  (installer / distributor / architect / contractor / other). Stored on
+  portal_users (5 new nullable columns + add-column-if-not-exists migration
+  in schema.sql; retry-without-columns fallbacks in signup and login
+  self-heal keep un-migrated DBs working; details also mirrored into the
+  auth user metadata so self-heal can rebuild a full profile). Admin panel
+  shows the qualification line under the company (contact · phone · VAT ·
+  country · type) and the users API accepts admin edits of those fields.
+  i18n: portal.login keys + new portal.businessTypes namespace ×12; account
+  still starts as B2C until an admin upgrades the tier after review.
+- Client action: run the new portal_users migration block (5 alter lines)
+  in supabase/schema.sql.
+
 ## 2026-08-08 (16) — Pricebook: Type column, 1000-row cap fix, Type→Category filter
 
 Client uploaded PriceBook v2.4 (1,504 rows incl. new fabric range + "Type"

@@ -180,8 +180,15 @@
       "demoBody": "Ingen database tilsluttet endnu — prøv portalen med disse konti:",
       "tabSignIn": "Log ind",
       "tabSignup": "Opret konto",
-      "signupSub": "Gratis konto — adgang med det samme",
-      "company": "Firma (valgfrit)",
+      "signupSub": "For fagfolk — adgang efter godkendelse",
+      "company": "Virksomhed",
+      "contactName": "Kontaktperson",
+      "vat": "Momsnummer (CVR)",
+      "phone": "Telefon",
+      "country": "Land",
+      "countryOther": "Andet land",
+      "businessType": "Virksomhedstype",
+      "chooseOption": "Vælg…",
       "passwordHint": "Mindst 8 tegn.",
       "signupSubmit": "Opret konto",
       "signupSubmitting": "Opretter…",
@@ -315,6 +322,13 @@
     "designer": {
       "eyebrow": "Loftsdesigner",
       "hint": "Tegn loftet ud fra væg- og diagonalmål, placer samlinger og udskæringer, tjek prisen og afgiv ordren. Brug Save til at gemme en opmåling som fil."
+    },
+    "businessTypes": {
+      "installer": "Montør",
+      "distributor": "Distributør / forhandler",
+      "architect": "Arkitekt / designer",
+      "contractor": "Entreprenør",
+      "other": "Andet"
     }
   },
   "home": {

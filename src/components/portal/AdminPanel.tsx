@@ -17,7 +17,15 @@ type PortalUserRow = {
   markets: string[];
   allMarkets: boolean;
   active: boolean;
+  // B2B qualification data from self-registration (may be absent on old rows).
+  contactName?: string | null;
+  vat?: string | null;
+  phone?: string | null;
+  country?: string | null;
+  businessType?: string | null;
 };
+
+const BUSINESS_TYPE_KEYS = ['installer', 'distributor', 'architect', 'contractor', 'other'] as const;
 
 export default function AdminPanel({ demo }: { demo: boolean }) {
   const t = useTranslations('portal.admin');
@@ -303,6 +311,7 @@ function SyncCard({ demo }: { demo: boolean }) {
  * ------------------------------------------------------------------------ */
 function UsersCard({ demo }: { demo: boolean }) {
   const t = useTranslations('portal.admin');
+  const bt = useTranslations('portal.businessTypes');
   const [users, setUsers] = useState<PortalUserRow[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
@@ -403,7 +412,25 @@ function UsersCard({ demo }: { demo: boolean }) {
               {users.map((u) => (
                 <tr key={u.id} className={u.active ? '' : 'off'}>
                   <td>{u.email}</td>
-                  <td>{u.company ?? '—'}</td>
+                  <td>
+                    <div>{u.company ?? '—'}</div>
+                    {(u.contactName || u.phone || u.vat || u.country || u.businessType) && (
+                      <div className="b2b">
+                        {[
+                          u.contactName,
+                          u.phone,
+                          u.vat,
+                          u.country,
+                          u.businessType &&
+                            ((BUSINESS_TYPE_KEYS as readonly string[]).includes(u.businessType)
+                              ? bt(u.businessType as (typeof BUSINESS_TYPE_KEYS)[number])
+                              : u.businessType),
+                        ]
+                          .filter(Boolean)
+                          .join(' · ')}
+                      </div>
+                    )}
+                  </td>
                   <td>
                     {u.role === 'admin' ? (
                       t('roleAdmin')
@@ -500,6 +527,12 @@ function UsersCard({ demo }: { demo: boolean }) {
         }
         .mkts {
           max-width: 220px;
+        }
+        .b2b {
+          margin-top: 3px;
+          font-size: 11px;
+          color: var(--text-faint);
+          max-width: 260px;
         }
         .pill {
           font-size: 10px;

@@ -29,6 +29,13 @@ create table if not exists public.portal_users (
   markets     text[] not null default '{}',
   all_markets boolean not null default false,
   active      boolean not null default true,
+  -- B2B qualification data collected at self-registration (admin reviews
+  -- these before upgrading the account to a trade tier).
+  contact_name  text,
+  vat           text,
+  phone         text,
+  country       text,   -- ISO 3166-1 alpha-2, or 'OTHER'
+  business_type text,   -- installer | distributor | architect | contractor | other
   created_at  timestamptz not null default now()
 );
 
@@ -36,6 +43,13 @@ create table if not exists public.portal_users (
 alter table public.portal_users
   add column if not exists account_type text not null default 'installer'
   check (account_type in ('producer', 'installer', 'b2c'));
+
+-- Existing databases (created before the B2B signup fields, Aug 2026): run once.
+alter table public.portal_users add column if not exists contact_name  text;
+alter table public.portal_users add column if not exists vat           text;
+alter table public.portal_users add column if not exists phone         text;
+alter table public.portal_users add column if not exists country       text;
+alter table public.portal_users add column if not exists business_type text;
 
 -- ---------------------------------------------------------------------------
 -- 2. Pricebook — flat product × market pricelist (mirrors the Excel PriceBook)

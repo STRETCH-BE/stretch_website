@@ -34,21 +34,30 @@ export async function GET() {
       { status: 500 },
     );
   }
-  const { data, error } = await service
-    .from('portal_users')
-    .select('id, email, company, role, account_type, markets, all_markets, active, created_at')
-    .order('created_at', { ascending: true });
+  const FULL: string =
+    'id, email, company, role, account_type, markets, all_markets, active, created_at, contact_name, vat, phone, country, business_type';
+  const CORE: string = 'id, email, company, role, account_type, markets, all_markets, active, created_at';
+  // B2B columns are a later addition — un-migrated databases fall back.
+  let { data, error } = await service.from('portal_users').select(FULL).order('created_at', { ascending: true });
+  if (error) {
+    ({ data, error } = await service.from('portal_users').select(CORE).order('created_at', { ascending: true }));
+  }
   if (error) return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
 
-  const users = (data ?? []).map((u) => ({
+  const users = ((data ?? []) as unknown as Record<string, unknown>[]).map((u) => ({
     id: u.id,
     email: u.email,
     company: u.company,
     role: u.role,
     accountType: normalizeAccountType(u.account_type),
-    markets: u.markets ?? [],
+    markets: (u.markets as string[] | null) ?? [],
     allMarkets: Boolean(u.all_markets),
     active: Boolean(u.active),
+    contactName: (u.contact_name as string | null) ?? null,
+    vat: (u.vat as string | null) ?? null,
+    phone: (u.phone as string | null) ?? null,
+    country: (u.country as string | null) ?? null,
+    businessType: (u.business_type as string | null) ?? null,
   }));
   return NextResponse.json({ ok: true, users, persisted: true });
 }
@@ -142,6 +151,11 @@ export async function PATCH(req: NextRequest) {
   if (typeof body.accountType === 'string') update.account_type = normalizeAccountType(body.accountType);
   if (Array.isArray(body.markets)) update.markets = sanitizeMarkets(body.markets);
   if (typeof body.allMarkets === 'boolean') update.all_markets = body.allMarkets;
+  if (typeof body.contactName === 'string') update.contact_name = body.contactName.trim().slice(0, 120) || null;
+  if (typeof body.vat === 'string') update.vat = body.vat.trim().slice(0, 32) || null;
+  if (typeof body.phone === 'string') update.phone = body.phone.trim().slice(0, 32) || null;
+  if (typeof body.country === 'string') update.country = body.country.trim().toUpperCase().slice(0, 8) || null;
+  if (typeof body.businessType === 'string') update.business_type = body.businessType.trim().toLowerCase().slice(0, 20) || null;
 
   if (Object.keys(update).length > 0) {
     const { error } = await service.from('portal_users').update(update).eq('id', id);

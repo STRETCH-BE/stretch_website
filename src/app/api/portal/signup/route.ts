@@ -1,8 +1,9 @@
-// POST /api/portal/signup — open self-registration (B2C accounts).
-// Creates a Supabase auth user + a `portal_users` profile with
-// account_type='b2c': the user gets their own account area immediately, but
-// NO trade pricing and NO designer. An admin can later upgrade the account to
-// B2B (and assign markets) in the portal admin panel.
+// POST /api/portal/signup — open self-registration, B2B-oriented.
+// STRETCH is B2B-focused: registration asks for the company details our team
+// needs to qualify the account (company, VAT, contact, phone, country,
+// business type). The account itself is created as account_type='b2c' — own
+// account area immediately, NO trade pricing and NO designer — and an admin
+// upgrades it to a trade tier after reviewing the submitted details.
 // Only available in Supabase mode — demo mode has no real accounts.
 import { NextRequest, NextResponse } from 'next/server';
 import { createRouteClient, createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
@@ -10,6 +11,15 @@ import { createRouteClient, createServiceClient, isSupabaseConfigured } from '@/
 export const runtime = 'nodejs';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+// Loose formats — real verification happens when our team reviews the account.
+const VAT_RE = /^[A-Za-z0-9 .\-]{6,20}$/;
+const PHONE_RE = /^[0-9+()/. \-]{6,25}$/;
+const COUNTRY_RE = /^([A-Z]{2}|OTHER)$/;
+const BUSINESS_TYPES = new Set(['installer', 'distributor', 'architect', 'contractor', 'other']);
+
+function text(v: unknown, max: number): string {
+  return String(v ?? '').trim().slice(0, max);
+}
 
 export async function POST(req: NextRequest) {
   if (!isSupabaseConfigured()) {
@@ -19,24 +29,54 @@ export async function POST(req: NextRequest) {
   let email = '';
   let password = '';
   let company = '';
+  let contactName = '';
+  let vat = '';
+  let phone = '';
+  let country = '';
+  let businessType = '';
   try {
     const body = await req.json();
-    email = String(body.email ?? '').trim().toLowerCase();
+    email = text(body.email, 200).toLowerCase();
     password = String(body.password ?? '');
-    company = String(body.company ?? '').trim().slice(0, 120);
+    company = text(body.company, 120);
+    contactName = text(body.contactName, 120);
+    vat = text(body.vat, 32);
+    phone = text(body.phone, 32);
+    country = text(body.country, 8).toUpperCase();
+    businessType = text(body.businessType, 20).toLowerCase();
   } catch {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 400 });
   }
-  if (!EMAIL_RE.test(email) || password.length < 8) {
+  if (
+    !EMAIL_RE.test(email) ||
+    password.length < 8 ||
+    !company ||
+    !contactName ||
+    !VAT_RE.test(vat) ||
+    !PHONE_RE.test(phone) ||
+    !COUNTRY_RE.test(country) ||
+    !BUSINESS_TYPES.has(businessType)
+  ) {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 400 });
   }
+
+  // The company details also go into the auth user's metadata, so the login
+  // route's self-heal can rebuild a full profile if the insert below fails.
+  const details = {
+    company,
+    contact_name: contactName,
+    vat,
+    phone,
+    country,
+    business_type: businessType,
+  };
 
   const supabase = createRouteClient();
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
     options: {
-      data: company ? { company } : undefined,
+      data: details,
       // After the confirmation link, land the user on the portal login.
       emailRedirectTo: `${req.nextUrl.origin}/portal/login`,
     },
@@ -55,24 +95,28 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: 'exists' }, { status: 409 });
   }
 
-  // Create the B2C portal profile right away (service role — RLS has no insert
+  // Create the portal profile right away (service role — RLS has no insert
   // policies by design). If this fails, the login route self-heals it later.
   if (data.user) {
     const service = createServiceClient();
     if (service) {
-      await service.from('portal_users').upsert(
-        {
-          id: data.user.id,
-          email,
-          company: company || null,
-          role: 'client',
-          account_type: 'b2c',
-          markets: [],
-          all_markets: false,
-          active: true,
-        },
-        { onConflict: 'id' },
-      );
+      const base = {
+        id: data.user.id,
+        email,
+        role: 'client',
+        account_type: 'b2c',
+        markets: [],
+        all_markets: false,
+        active: true,
+      };
+      const { error: profileError } = await service
+        .from('portal_users')
+        .upsert({ ...base, ...details }, { onConflict: 'id' });
+      if (profileError) {
+        // Un-migrated database (B2B columns missing) — store the core profile;
+        // the details survive in the auth metadata for later.
+        await service.from('portal_users').upsert({ ...base, company }, { onConflict: 'id' });
+      }
     }
   }
 

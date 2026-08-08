@@ -180,8 +180,15 @@
       "demoBody": "Baza danych nie jest jeszcze podłączona — wypróbuj portal na tych kontach:",
       "tabSignIn": "Zaloguj się",
       "tabSignup": "Utwórz konto",
-      "signupSub": "Bezpłatne konto — natychmiastowy dostęp",
-      "company": "Firma (opcjonalnie)",
+      "signupSub": "Dla profesjonalistów — dostęp po weryfikacji",
+      "company": "Firma",
+      "contactName": "Osoba kontaktowa",
+      "vat": "Numer VAT (NIP)",
+      "phone": "Telefon",
+      "country": "Kraj",
+      "countryOther": "Inny kraj",
+      "businessType": "Typ firmy",
+      "chooseOption": "Wybierz…",
       "passwordHint": "Co najmniej 8 znaków.",
       "signupSubmit": "Utwórz konto",
       "signupSubmitting": "Tworzenie…",
@@ -315,6 +322,13 @@
     "designer": {
       "eyebrow": "Projektant sufitu",
       "hint": "Narysuj sufit z wymiarów ścian i przekątnych, rozmieść zgrzewy i wycięcia, sprawdź cenę i złóż zamówienie. Użyj Save, aby zapisać pomiar jako plik."
+    },
+    "businessTypes": {
+      "installer": "Monter",
+      "distributor": "Dystrybutor / reseller",
+      "architect": "Architekt / projektant",
+      "contractor": "Wykonawca",
+      "other": "Inny"
     }
   },
   "home": {

@@ -180,8 +180,15 @@
       "demoBody": "Aún sin base de datos conectada — pruebe el portal con estas cuentas:",
       "tabSignIn": "Iniciar sesión",
       "tabSignup": "Crear cuenta",
-      "signupSub": "Cuenta gratuita — acceso inmediato",
-      "company": "Empresa (opcional)",
+      "signupSub": "Para profesionales — acceso tras revisión",
+      "company": "Empresa",
+      "contactName": "Persona de contacto",
+      "vat": "Número de IVA",
+      "phone": "Teléfono",
+      "country": "País",
+      "countryOther": "Otro país",
+      "businessType": "Tipo de empresa",
+      "chooseOption": "Seleccionar…",
       "passwordHint": "Mínimo 8 caracteres.",
       "signupSubmit": "Crear cuenta",
       "signupSubmitting": "Creando…",
@@ -315,6 +322,13 @@
     "designer": {
       "eyebrow": "Diseñador de techos",
       "hint": "Dibuje el techo a partir de paredes y diagonales, coloque costuras y recortes, compruebe el precio y realice el pedido. Use Save para guardar una medición como archivo."
+    },
+    "businessTypes": {
+      "installer": "Instalador",
+      "distributor": "Distribuidor / revendedor",
+      "architect": "Arquitecto / diseñador",
+      "contractor": "Contratista",
+      "other": "Otro"
     }
   },
   "home": {

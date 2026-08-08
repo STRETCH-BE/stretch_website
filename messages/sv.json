@@ -180,8 +180,15 @@
       "demoBody": "Ingen databas ansluten ännu — prova portalen med dessa konton:",
       "tabSignIn": "Logga in",
       "tabSignup": "Skapa konto",
-      "signupSub": "Gratis konto — direkt åtkomst",
-      "company": "Företag (valfritt)",
+      "signupSub": "För proffs — åtkomst efter granskning",
+      "company": "Företag",
+      "contactName": "Kontaktperson",
+      "vat": "Momsnummer",
+      "phone": "Telefon",
+      "country": "Land",
+      "countryOther": "Annat land",
+      "businessType": "Företagstyp",
+      "chooseOption": "Välj…",
       "passwordHint": "Minst 8 tecken.",
       "signupSubmit": "Skapa konto",
       "signupSubmitting": "Skapar…",
@@ -315,6 +322,13 @@
     "designer": {
       "eyebrow": "Takdesigner",
       "hint": "Rita taket från vägg- och diagonalmått, placera skarvar och urtag, kontrollera priset och lägg ordern. Använd Save för att spara en mätning som fil."
+    },
+    "businessTypes": {
+      "installer": "Montör",
+      "distributor": "Distributör / återförsäljare",
+      "architect": "Arkitekt / designer",
+      "contractor": "Entreprenör",
+      "other": "Annat"
     }
   },
   "home": {

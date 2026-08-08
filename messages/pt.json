@@ -180,8 +180,15 @@
       "demoBody": "Ainda sem base de dados ligada — experimente o portal com estas contas:",
       "tabSignIn": "Iniciar sessão",
       "tabSignup": "Criar conta",
-      "signupSub": "Conta gratuita — acesso imediato",
-      "company": "Empresa (opcional)",
+      "signupSub": "Para profissionais — acesso após verificação",
+      "company": "Empresa",
+      "contactName": "Pessoa de contacto",
+      "vat": "Número de IVA",
+      "phone": "Telefone",
+      "country": "País",
+      "countryOther": "Outro país",
+      "businessType": "Tipo de empresa",
+      "chooseOption": "Selecionar…",
       "passwordHint": "Pelo menos 8 caracteres.",
       "signupSubmit": "Criar conta",
       "signupSubmitting": "A criar…",
@@ -315,6 +322,13 @@
     "designer": {
       "eyebrow": "Designer de tetos",
       "hint": "Desenhe o teto a partir de paredes e diagonais, posicione emendas e recortes, verifique o preço e faça a encomenda. Use Save para guardar uma medição como ficheiro."
+    },
+    "businessTypes": {
+      "installer": "Instalador",
+      "distributor": "Distribuidor / revendedor",
+      "architect": "Arquiteto / designer",
+      "contractor": "Empreiteiro",
+      "other": "Outro"
     }
   },
   "home": {

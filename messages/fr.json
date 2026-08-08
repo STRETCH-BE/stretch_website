@@ -180,8 +180,15 @@
       "demoBody": "Aucune base de données connectée — découvrez le portail avec ces comptes :",
       "tabSignIn": "Se connecter",
       "tabSignup": "Créer un compte",
-      "signupSub": "Compte gratuit — accès immédiat",
-      "company": "Société (facultatif)",
+      "signupSub": "Pour les professionnels — accès après vérification",
+      "company": "Société",
+      "contactName": "Personne de contact",
+      "vat": "Numéro de TVA",
+      "phone": "Téléphone",
+      "country": "Pays",
+      "countryOther": "Autre pays",
+      "businessType": "Type d'entreprise",
+      "chooseOption": "Sélectionner…",
       "passwordHint": "Au moins 8 caractères.",
       "signupSubmit": "Créer le compte",
       "signupSubmitting": "Création…",
@@ -315,6 +322,13 @@
     "designer": {
       "eyebrow": "Concepteur de plafond",
       "hint": "Dessinez le plafond à partir des murs et des diagonales, placez soudures et découpes, vérifiez le prix et passez la commande. Utilisez Save pour conserver un fichier de mesures."
+    },
+    "businessTypes": {
+      "installer": "Installateur",
+      "distributor": "Distributeur / revendeur",
+      "architect": "Architecte / designer",
+      "contractor": "Entrepreneur",
+      "other": "Autre"
     }
   },
   "home": {

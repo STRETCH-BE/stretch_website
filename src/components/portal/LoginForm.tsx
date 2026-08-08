@@ -5,24 +5,53 @@
 // mode='demo'   → demo login; the preview accounts are listed on the card
 //                 (only when NEXT_PUBLIC_PORTAL_DEMO=1 — never by default).
 // mode='closed' → portal not configured: a "being activated" notice, no form.
-import { useState, type FormEvent } from 'react';
+import { useMemo, useState, type FormEvent } from 'react';
 import { useRouter } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ArrowUpRight, Lock, MailCheck, UserRoundPlus } from 'lucide-react';
 import { DEMO_USERS } from '@/lib/portal/demo-users';
 
 type Mode = 'live' | 'demo' | 'closed';
 
+// Countries offered in the B2B signup form (ISO 3166-1 alpha-2); labels come
+// from the browser's own Intl region names in the visitor's language.
+const SIGNUP_COUNTRIES = [
+  'BE', 'NL', 'LU', 'FR', 'DE', 'AT', 'CH', 'ES', 'PT', 'IT', 'PL', 'CZ',
+  'DK', 'SE', 'NO', 'IS', 'FI', 'GB', 'IE', 'US', 'AE',
+] as const;
+
+const BUSINESS_TYPES = ['installer', 'distributor', 'architect', 'contractor', 'other'] as const;
+
 export default function LoginForm({ mode }: { mode: Mode }) {
   const t = useTranslations('portal.login');
+  const bt = useTranslations('portal.businessTypes');
+  const locale = useLocale();
   const router = useRouter();
   const [tab, setTab] = useState<'signin' | 'signup'>('signin');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [company, setCompany] = useState('');
+  const [contactName, setContactName] = useState('');
+  const [vat, setVat] = useState('');
+  const [phone, setPhone] = useState('');
+  const [country, setCountry] = useState('');
+  const [businessType, setBusinessType] = useState('');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [signupDone, setSignupDone] = useState(false);
+
+  // Localised country names, alphabetical in the visitor's language.
+  const countries = useMemo(() => {
+    let names: Intl.DisplayNames | null = null;
+    try {
+      names = new Intl.DisplayNames([locale], { type: 'region' });
+    } catch {
+      names = null;
+    }
+    return SIGNUP_COUNTRIES.map((code) => ({ code, label: names?.of(code) ?? code })).sort((a, b) =>
+      a.label.localeCompare(b.label, locale),
+    );
+  }, [locale]);
 
   async function submitSignin(e: FormEvent) {
     e.preventDefault();
@@ -60,7 +89,7 @@ export default function LoginForm({ mode }: { mode: Mode }) {
       const res = await fetch('/api/portal/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, company }),
+        body: JSON.stringify({ email, password, company, contactName, vat, phone, country, businessType }),
       });
       const data = await res.json().catch(() => null);
       if (res.ok && data?.ok) {
@@ -187,16 +216,87 @@ export default function LoginForm({ mode }: { mode: Mode }) {
         </div>
 
         {signup && (
-          <label className="portal-field">
-            <span>{t('company')}</span>
-            <input
-              type="text"
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
-              autoComplete="organization"
-              placeholder="Company BV (optional)"
-            />
-          </label>
+          <>
+            <label className="portal-field">
+              <span>{t('company')}</span>
+              <input
+                type="text"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+                autoComplete="organization"
+                required
+                maxLength={120}
+                placeholder="Company BV"
+              />
+            </label>
+            <div className="portal-pair">
+              <label className="portal-field">
+                <span>{t('contactName')}</span>
+                <input
+                  type="text"
+                  value={contactName}
+                  onChange={(e) => setContactName(e.target.value)}
+                  autoComplete="name"
+                  required
+                  maxLength={120}
+                />
+              </label>
+              <label className="portal-field">
+                <span>{t('phone')}</span>
+                <input
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  autoComplete="tel"
+                  required
+                  minLength={6}
+                  maxLength={25}
+                  placeholder="+32 …"
+                />
+              </label>
+            </div>
+            <div className="portal-pair">
+              <label className="portal-field">
+                <span>{t('vat')}</span>
+                <input
+                  type="text"
+                  value={vat}
+                  onChange={(e) => setVat(e.target.value)}
+                  required
+                  minLength={6}
+                  maxLength={20}
+                  placeholder="BE 0123.456.789"
+                />
+              </label>
+              <label className="portal-field">
+                <span>{t('country')}</span>
+                <select value={country} onChange={(e) => setCountry(e.target.value)} required>
+                  <option value="" disabled>
+                    {t('chooseOption')}
+                  </option>
+                  {countries.map((c) => (
+                    <option key={c.code} value={c.code}>
+                      {c.label}
+                    </option>
+                  ))}
+                  <option value="OTHER">{t('countryOther')}</option>
+                </select>
+              </label>
+            </div>
+            <label className="portal-field">
+              <span>{t('businessType')}</span>
+              <select value={businessType} onChange={(e) => setBusinessType(e.target.value)} required>
+                <option value="" disabled>
+                  {t('chooseOption')}
+                </option>
+                {BUSINESS_TYPES.map((k) => (
+                  <option key={k} value={k}>
+                    {bt(k)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </>
         )}
 
         <label className="portal-field">
@@ -268,7 +368,8 @@ export default function LoginForm({ mode }: { mode: Mode }) {
           color: var(--text-muted);
           margin-bottom: 7px;
         }
-        .portal-field input {
+        .portal-field input,
+        .portal-field select {
           width: 100%;
           padding: 13px 14px;
           border: 1px solid var(--border-input);
@@ -277,9 +378,20 @@ export default function LoginForm({ mode }: { mode: Mode }) {
           font-size: 14.5px;
           border-radius: var(--radius);
         }
-        .portal-field input:focus {
+        .portal-field input:focus,
+        .portal-field select:focus {
           outline: 2px solid var(--black);
           outline-offset: -1px;
+        }
+        .portal-pair {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0 12px;
+        }
+        @media (max-width: 420px) {
+          .portal-pair {
+            grid-template-columns: 1fr;
+          }
         }
       `}</style>
     </div>

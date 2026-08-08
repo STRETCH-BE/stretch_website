@@ -180,8 +180,15 @@
       "demoBody": "Nog geen database gekoppeld — bekijk het portaal met deze accounts:",
       "tabSignIn": "Inloggen",
       "tabSignup": "Account aanmaken",
-      "signupSub": "Gratis account — meteen toegang",
-      "company": "Bedrijf (optioneel)",
+      "signupSub": "Voor professionals — toegang na verificatie",
+      "company": "Bedrijf",
+      "contactName": "Contactpersoon",
+      "vat": "BTW-nummer",
+      "phone": "Telefoon",
+      "country": "Land",
+      "countryOther": "Ander land",
+      "businessType": "Type bedrijf",
+      "chooseOption": "Selecteer…",
       "passwordHint": "Minstens 8 tekens.",
       "signupSubmit": "Account aanmaken",
       "signupSubmitting": "Bezig…",
@@ -315,6 +322,13 @@
     "designer": {
       "eyebrow": "Plafond-designer",
       "hint": "Teken het plafond uit muur- en diagonaalmaten, plaats lasnaden en uitsparingen, controleer de prijs en plaats de bestelling. Gebruik Save om een opmeting als bestand te bewaren."
+    },
+    "businessTypes": {
+      "installer": "Installateur",
+      "distributor": "Verdeler / wederverkoper",
+      "architect": "Architect / ontwerper",
+      "contractor": "Aannemer",
+      "other": "Andere"
     }
   },
   "home": {

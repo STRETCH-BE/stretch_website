@@ -180,8 +180,15 @@
       "demoBody": "Ingen database tilkoblet ennå — prøv portalen med disse kontoene:",
       "tabSignIn": "Logg inn",
       "tabSignup": "Opprett konto",
-      "signupSub": "Gratis konto — umiddelbar tilgang",
-      "company": "Firma (valgfritt)",
+      "signupSub": "For fagfolk — tilgang etter godkjenning",
+      "company": "Bedrift",
+      "contactName": "Kontaktperson",
+      "vat": "MVA-nummer",
+      "phone": "Telefon",
+      "country": "Land",
+      "countryOther": "Annet land",
+      "businessType": "Bedriftstype",
+      "chooseOption": "Velg…",
       "passwordHint": "Minst 8 tegn.",
       "signupSubmit": "Opprett konto",
       "signupSubmitting": "Oppretter…",
@@ -315,6 +322,13 @@
     "designer": {
       "eyebrow": "Takdesigner",
       "hint": "Tegn taket fra vegg- og diagonalmål, plasser skjøter og utsparinger, sjekk prisen og legg inn bestillingen. Bruk Save for å lagre en måling som fil."
+    },
+    "businessTypes": {
+      "installer": "Montør",
+      "distributor": "Distributør / forhandler",
+      "architect": "Arkitekt / designer",
+      "contractor": "Entreprenør",
+      "other": "Annet"
     }
   },
   "home": {

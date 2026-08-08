@@ -180,8 +180,15 @@
       "demoBody": "Noch keine Datenbank verbunden — testen Sie das Portal mit diesen Konten:",
       "tabSignIn": "Anmelden",
       "tabSignup": "Konto erstellen",
-      "signupSub": "Kostenloses Konto — sofortiger Zugang",
-      "company": "Firma (optional)",
+      "signupSub": "Für Fachbetriebe — Zugang nach Prüfung",
+      "company": "Firma",
+      "contactName": "Ansprechpartner",
+      "vat": "USt-IdNr.",
+      "phone": "Telefon",
+      "country": "Land",
+      "countryOther": "Anderes Land",
+      "businessType": "Unternehmenstyp",
+      "chooseOption": "Auswählen…",
       "passwordHint": "Mindestens 8 Zeichen.",
       "signupSubmit": "Konto erstellen",
       "signupSubmitting": "Wird erstellt…",
@@ -315,6 +322,13 @@
     "designer": {
       "eyebrow": "Decken-Designer",
       "hint": "Zeichnen Sie die Decke aus Wand- und Diagonalmaßen, platzieren Sie Nähte und Aussparungen, prüfen Sie den Preis und bestellen Sie. Mit Save speichern Sie ein Aufmaß als Datei."
+    },
+    "businessTypes": {
+      "installer": "Monteur",
+      "distributor": "Händler / Wiederverkäufer",
+      "architect": "Architekt / Designer",
+      "contractor": "Bauunternehmen",
+      "other": "Sonstiges"
     }
   },
   "home": {

@@ -180,8 +180,15 @@
       "demoBody": "No database connected yet — preview the portal with these accounts:",
       "tabSignIn": "Sign in",
       "tabSignup": "Create account",
-      "signupSub": "Free account — instant access",
-      "company": "Company (optional)",
+      "signupSub": "For trade professionals — access after review",
+      "company": "Company",
+      "contactName": "Contact person",
+      "vat": "VAT number",
+      "phone": "Phone",
+      "country": "Country",
+      "countryOther": "Other country",
+      "businessType": "Business type",
+      "chooseOption": "Select…",
       "passwordHint": "At least 8 characters.",
       "signupSubmit": "Create account",
       "signupSubmitting": "Creating…",
@@ -315,6 +322,13 @@
     "designer": {
       "eyebrow": "Ceiling designer",
       "hint": "Draw the ceiling from wall + diagonal measurements, position seams and cut-outs, check the price and place the order. Use Save to keep a measurement file for later."
+    },
+    "businessTypes": {
+      "installer": "Installer",
+      "distributor": "Distributor / reseller",
+      "architect": "Architect / designer",
+      "contractor": "Contractor",
+      "other": "Other"
     }
   },
   "home": {
