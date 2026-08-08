@@ -194,6 +194,7 @@
     "nav": {
       "label": "Portal do cliente",
       "overview": "Resumo",
+      "documents": "Documentos",
       "pricelist": "Tabela de preços",
       "admin": "Administração",
       "signOut": "Sair",
@@ -225,6 +226,11 @@
       "tileTrade": "Acesso profissional",
       "tileTradeBody": "Instalador ou revendedor? Obtenha preços de revenda e o designer de tetos com uma conta profissional.",
       "tradeCta": "Torne-se parceiro"
+    },
+    "docs": {
+      "title": "Documentos",
+      "intro": "Fichas técnicas e desenhos de instalação da gama STRETCH — transferência direta, sem formulários.",
+      "download": "Transferir"
     },
     "pricelist": {
       "title": "Tabela de preços",
@@ -2314,6 +2320,8 @@
     "viewProduct": "Ver o produto",
     "eyebrowTech": "Técnica",
     "datasheetCta": "Pedir a ficha técnica completa",
+    "downloadsTitle": "Transferir fichas técnicas",
+    "allDatasheets": "Todas as fichas técnicas",
     "samplesCta": "Pedir amostras físicas",
     "copyHint": "Selecione o texto acima para o copiar para o seu documento de especificação.",
     "ctaTitle": "Precisa de ajuda com a especificação?",
@@ -2668,7 +2676,7 @@
         },
         {
           "label": "Ano",
-          "value": "2025"
+          "value": "2026"
         },
         {
           "label": "Renovação completa",

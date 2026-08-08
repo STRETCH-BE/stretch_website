@@ -194,6 +194,7 @@
     "nav": {
       "label": "Espace client",
       "overview": "Aperçu",
+      "documents": "Documents",
       "pricelist": "Tarif",
       "admin": "Administration",
       "signOut": "Se déconnecter",
@@ -225,6 +226,11 @@
       "tileTrade": "Accès pro",
       "tileTradeBody": "Installateur ou revendeur ? Obtenez les prix pro et le designer de plafonds avec un compte professionnel.",
       "tradeCta": "Devenir partenaire"
+    },
+    "docs": {
+      "title": "Documents",
+      "intro": "Fiches techniques et plans d'installation de la gamme STRETCH — téléchargement direct, sans formulaire.",
+      "download": "Télécharger"
     },
     "pricelist": {
       "title": "Tarif",
@@ -2314,6 +2320,8 @@
     "viewProduct": "Voir le produit",
     "eyebrowTech": "Technique",
     "datasheetCta": "Demander la fiche technique complète",
+    "downloadsTitle": "Télécharger les fiches techniques",
+    "allDatasheets": "Toutes les fiches techniques",
     "samplesCta": "Demander des échantillons physiques",
     "copyHint": "Sélectionnez le texte ci-dessus pour le copier dans votre document de prescription.",
     "ctaTitle": "Besoin d'aide pour la prescription ?",
@@ -2668,7 +2676,7 @@
         },
         {
           "label": "Année",
-          "value": "2025"
+          "value": "2026"
         },
         {
           "label": "Rénovation complète",

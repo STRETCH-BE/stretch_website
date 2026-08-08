@@ -1,3 +1,23 @@
+## 2026-08-08 (2) — Boost Wellness fixes, event-hall photos, datasheets surfaced
+
+- **Boost Wellness corrections (client feedback):** year fact 2025 → 2026
+  (content.ts + ×12 messages); Maison Max fact now links to
+  https://www.maisonmax.be/.
+- **Event-hall photos wired:** the old van-der-valk-beveren project (event hall)
+  gets a hero + 6-photo gallery from the "Foto website/Van der valk" install
+  set — dismantling the old dimpled black ceiling, membrane tensioning, cove
+  lighting/hatch details, seamless finish around the textile columns
+  (public/images/projects/van-der-valk-beveren-*.jpg). Both featured tiles on
+  /inspiration now carry real photos.
+- **Datasheets surfaced where people look for them** (client couldn't find
+  them): (1) /technical/{polyester|pvc}/datasheet now lists the membrane's
+  PDFs with gated download buttons + an "all datasheets" link
+  (membraneDatasheets map in datasheets.ts); (2) NEW /portal/documents —
+  the full library with DIRECT downloads (no lead gate) for signed-in
+  clients; portal overview "Documents" tile flipped from "Soon" to live and
+  a Documents item added to the portal nav. New strings ×12:
+  techPage.downloadsTitle/allDatasheets, portal.nav.documents, portal.docs.
+
 ## 2026-08-08 — Van der Valk "Boost Wellness" project page + real datasheet library
 
 - **New featured project page ×12** (/inspiration/van-der-valk-boost-wellness):

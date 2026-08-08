@@ -92,9 +92,9 @@ export const projects: Project[] = [
     facts: [
       { label: 'Venue', value: 'Van der Valk Hotel Beveren', href: 'https://www.hotelbeveren.be/' },
       { label: 'Wellness', value: 'Boost Wellness', href: 'https://www.boostwellness.be/' },
-      { label: 'Interior design', value: 'Maison Max (Temse)' },
+      { label: 'Interior design', value: 'Maison Max (Temse)', href: 'https://www.maisonmax.be/' },
       { label: 'Area', value: '700 m²' },
-      { label: 'Year', value: '2025' },
+      { label: 'Year', value: '2026' },
       { label: 'Full renovation', value: '6 months' },
     ],
     faqs: [
@@ -227,6 +227,7 @@ export const projects: Project[] = [
   {
     key: 'commercial', slug: 'van-der-valk-beveren', cat: 'Commercial', title: 'Van der Valk',
     meta: 'Beveren · Hotel event hall', featured: true,
+    image: '/images/projects/van-der-valk-beveren-hero.jpg',
     summary: 'Maximum acoustic absorption for a hotel event hall — with almost no height to give.',
     hook: 'An acoustic problem that had dogged the hotel’s event hall for years, solved through the ceiling.',
     description: [
@@ -250,7 +251,14 @@ export const projects: Project[] = [
       { label: 'Acoustic rating', value: 'αw 0.95' },
     ],
     solutions: ['acoustic-stretch-system', 'starry-sky'],
-    gallery: ['', '', ''],
+    gallery: [
+      '/images/projects/van-der-valk-beveren-before.jpg',
+      '/images/projects/van-der-valk-beveren-renovation.jpg',
+      '/images/projects/van-der-valk-beveren-tensioning.jpg',
+      '/images/projects/van-der-valk-beveren-lobby-install.jpg',
+      '/images/projects/van-der-valk-beveren-hatch-detail.jpg',
+      '/images/projects/van-der-valk-beveren-columns.jpg',
+    ],
   },
   {
     key: 'office', slug: 'johnson-and-johnson', cat: 'Office', title: 'Johnson & Johnson',

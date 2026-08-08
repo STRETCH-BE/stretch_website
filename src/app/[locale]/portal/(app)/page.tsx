@@ -106,15 +106,18 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
           </>
         )}
 
-        {/* Documents — staged next data source */}
-        <div className="portal-tile portal-tile--soon" aria-disabled>
+        {/* Documents — the technical library, direct downloads */}
+        <Link href="/portal/documents" className="portal-tile portal-tile--live">
           <div className="portal-tile__head">
             <FolderOpen size={20} />
-            <span className="portal-tile__badge">{t('soon')}</span>
+            <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
           </div>
           <h2>{t('tileDocs')}</h2>
           <p>{t('tileDocsBody')}</p>
-        </div>
+          <span className="portal-tile__cta">
+            {t('open')} <ArrowRight size={14} />
+          </span>
+        </Link>
 
         {/* Orders — staged next data source */}
         <div className="portal-tile portal-tile--soon" aria-disabled>

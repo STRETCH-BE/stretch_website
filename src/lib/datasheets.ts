@@ -330,6 +330,30 @@ export const datasheets: Datasheet[] = [
   },
 ];
 
+/** Look up a datasheet by slug. */
+export const getDatasheet = (slug: string): Datasheet | undefined =>
+  datasheets.find((d) => d.slug === slug);
+
+/** Datasheets offered for download on /technical/{membrane}/datasheet. */
+export const membraneDatasheets: Record<'polyester' | 'pvc', string[]> = {
+  polyester: [
+    'polyester-stretch-ceiling',
+    'polyester-705s',
+    'polyester-non-flammable',
+    'acoustic-stretch-system',
+    'stretch-translucent-307-308-309t',
+    'stretch-backlit-lux',
+    's-bs-f-02-installation',
+    's-bs-f-02-track-support',
+  ],
+  pvc: [
+    'pvc-stretch-ceiling',
+    'stretch-pvc-r',
+    'stretch-micro-perf',
+    's-bs-pvc-01-installation',
+  ],
+};
+
 /** Datasheets grouped by category, preserving array order. */
 export function datasheetsByCategory(): { category: string; items: Datasheet[] }[] {
   const groups: { category: string; items: Datasheet[] }[] = [];

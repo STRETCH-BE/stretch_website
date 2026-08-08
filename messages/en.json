@@ -194,6 +194,7 @@
     "nav": {
       "label": "Client portal",
       "overview": "Overview",
+      "documents": "Documents",
       "pricelist": "Pricelist",
       "admin": "Admin",
       "signOut": "Sign out",
@@ -225,6 +226,11 @@
       "tileTrade": "Trade access",
       "tileTradeBody": "Installer or reseller? Get dealer pricing and the ceiling designer with a trade account.",
       "tradeCta": "Become a partner"
+    },
+    "docs": {
+      "title": "Documents",
+      "intro": "Technical datasheets and installation drawings for the STRETCH range — direct downloads, no forms.",
+      "download": "Download"
     },
     "pricelist": {
       "title": "Pricelist",
@@ -2314,6 +2320,8 @@
     "viewProduct": "View the product",
     "eyebrowTech": "Technical",
     "datasheetCta": "Request the full datasheet",
+    "downloadsTitle": "Download datasheets",
+    "allDatasheets": "All datasheets",
     "samplesCta": "Request physical samples",
     "copyHint": "Select the text above to copy it into your specification document.",
     "ctaTitle": "Need a hand with the specification?",
@@ -2668,7 +2676,7 @@
         },
         {
           "label": "Year",
-          "value": "2025"
+          "value": "2026"
         },
         {
           "label": "Full renovation",

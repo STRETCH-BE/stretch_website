@@ -5,7 +5,9 @@ import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import { ModalButton } from '@/components/ui/ModalButton';
+import DatasheetDownloadButton from '@/components/ui/DatasheetDownloadButton';
 import ColourChart from '@/components/sections/ColourChart';
+import { membraneDatasheets, getDatasheet, type Datasheet } from '@/lib/datasheets';
 import { getProduct } from '@/lib/products';
 import { localizeProduct, type CatalogEntry } from '@/lib/localize-product';
 import { localizeTechMembrane, type TechMembraneMessages } from '@/lib/localize-content';
@@ -108,6 +110,37 @@ export default function TechnicalPage({
               <ModalButton type="quote" source={`technical_${m.key}_datasheet`} product={product.name} className="btn btn--primary" >
                 {t('datasheetCta')} <ArrowDown size={15} />
               </ModalButton>
+
+              {/* Downloadable PDFs for this membrane (gated via the lead modal). */}
+              {(() => {
+                const sheets = membraneDatasheets[m.key as 'polyester' | 'pvc']
+                  .map(getDatasheet)
+                  .filter((s): s is Datasheet => Boolean(s));
+                if (sheets.length === 0) return null;
+                return (
+                  <div style={{ marginTop: 'clamp(34px,3.8vw,50px)' }}>
+                    <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(18px,2vw,24px)', letterSpacing: '-.01em', margin: '0 0 16px' }}>
+                      {t('downloadsTitle')}<span className="accent">.</span>
+                    </h2>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                      {sheets.map((sheet) => (
+                        <div key={sheet.slug} style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '14px 16px', border: '1px solid var(--border)', background: 'var(--surface)' }}>
+                          <div style={{ minWidth: 0, flex: 1 }}>
+                            <div style={{ fontSize: 14.5, fontWeight: 700 }}>{sheet.title}</div>
+                            <div style={{ fontSize: 12, color: 'var(--text-faint-2)', marginTop: 3 }}>
+                              {[sheet.format, sheet.sizeLabel].filter(Boolean).join(' · ')}
+                            </div>
+                          </div>
+                          <DatasheetDownloadButton sheet={sheet} className="btn btn--ghost btn--sm" />
+                        </div>
+                      ))}
+                    </div>
+                    <Link href="/datasheets" className="btn btn--ghost btn--sm" style={{ marginTop: 18 }}>
+                      {t('allDatasheets')} <ArrowRight size={14} />
+                    </Link>
+                  </div>
+                );
+              })()}
             </>
           )}
 

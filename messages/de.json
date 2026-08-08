@@ -194,6 +194,7 @@
     "nav": {
       "label": "Kundenportal",
       "overview": "Übersicht",
+      "documents": "Dokumente",
       "pricelist": "Preisliste",
       "admin": "Verwaltung",
       "signOut": "Abmelden",
@@ -225,6 +226,11 @@
       "tileTrade": "Händlerzugang",
       "tileTradeBody": "Monteur oder Händler? Mit einem Händlerkonto erhalten Sie Händlerpreise und den Deckendesigner.",
       "tradeCta": "Partner werden"
+    },
+    "docs": {
+      "title": "Dokumente",
+      "intro": "Technische Datenblätter und Montagezeichnungen des STRETCH-Sortiments — direkter Download, ohne Formulare.",
+      "download": "Herunterladen"
     },
     "pricelist": {
       "title": "Preisliste",
@@ -2314,6 +2320,8 @@
     "viewProduct": "Zum Produkt",
     "eyebrowTech": "Technik",
     "datasheetCta": "Vollständiges Datenblatt anfordern",
+    "downloadsTitle": "Datenblätter herunterladen",
+    "allDatasheets": "Alle Datenblätter",
     "samplesCta": "Materialmuster anfordern",
     "copyHint": "Markieren Sie den Text oben, um ihn in Ihr Ausschreibungsdokument zu kopieren.",
     "ctaTitle": "Brauchen Sie Hilfe beim Ausschreibungstext?",
@@ -2668,7 +2676,7 @@
         },
         {
           "label": "Jahr",
-          "value": "2025"
+          "value": "2026"
         },
         {
           "label": "Komplettrenovierung",

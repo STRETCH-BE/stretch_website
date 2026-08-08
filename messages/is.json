@@ -194,6 +194,7 @@
     "nav": {
       "label": "Viðskiptavinagátt",
       "overview": "Yfirlit",
+      "documents": "Skjöl",
       "pricelist": "Verðskrá",
       "admin": "Stjórnun",
       "signOut": "Skrá út",
@@ -225,6 +226,11 @@
       "tileTrade": "Söluaðilaaðgangur",
       "tileTradeBody": "Uppsetningaraðili eða söluaðili? Fáðu söluaðilaverð og loftahönnuðinn með fyrirtækjaaðgangi.",
       "tradeCta": "Gerast samstarfsaðili"
+    },
+    "docs": {
+      "title": "Skjöl",
+      "intro": "Tækniblöð og uppsetningarteikningar fyrir STRETCH-vörulínuna — beint niðurhal, engin eyðublöð.",
+      "download": "Sækja"
     },
     "pricelist": {
       "title": "Verðskrá",
@@ -2314,6 +2320,8 @@
     "viewProduct": "Skoða vöruna",
     "eyebrowTech": "Tæknilegt",
     "datasheetCta": "Fáðu tækniblaðið í heild",
+    "downloadsTitle": "Sækja tækniblöð",
+    "allDatasheets": "Öll tækniblöð",
     "samplesCta": "Fáðu efnissýnishorn send",
     "copyHint": "Veldu textann hér að ofan til að afrita hann í útboðsgögnin þín.",
     "ctaTitle": "Vantar þig aðstoð við útboðstextann?",
@@ -2668,7 +2676,7 @@
         },
         {
           "label": "Ár",
-          "value": "2025"
+          "value": "2026"
         },
         {
           "label": "Heildarendurnýjun",

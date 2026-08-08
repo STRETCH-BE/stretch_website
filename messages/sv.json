@@ -194,6 +194,7 @@
     "nav": {
       "label": "Kundportal",
       "overview": "Översikt",
+      "documents": "Dokument",
       "pricelist": "Prislista",
       "admin": "Administration",
       "signOut": "Logga ut",
@@ -225,6 +226,11 @@
       "tileTrade": "Återförsäljaråtkomst",
       "tileTradeBody": "Montör eller återförsäljare? Få återförsäljarpriser och takdesignern med ett företagskonto.",
       "tradeCta": "Bli partner"
+    },
+    "docs": {
+      "title": "Dokument",
+      "intro": "Tekniska datablad och monteringsritningar för STRETCH-sortimentet — direkt nedladdning, utan formulär.",
+      "download": "Ladda ner"
     },
     "pricelist": {
       "title": "Prislista",
@@ -2314,6 +2320,8 @@
     "viewProduct": "Se produkten",
     "eyebrowTech": "Teknik",
     "datasheetCta": "Beställ det fullständiga databladet",
+    "downloadsTitle": "Ladda ner datablad",
+    "allDatasheets": "Alla datablad",
     "samplesCta": "Beställ fysiska prover",
     "copyHint": "Markera texten ovan för att kopiera in den i ditt föreskrivningsdokument.",
     "ctaTitle": "Behöver du hjälp med föreskrivningstexten?",
@@ -2668,7 +2676,7 @@
         },
         {
           "label": "År",
-          "value": "2025"
+          "value": "2026"
         },
         {
           "label": "Totalrenovering",

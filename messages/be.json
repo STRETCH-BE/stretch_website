@@ -194,6 +194,7 @@
     "nav": {
       "label": "Klantenportaal",
       "overview": "Overzicht",
+      "documents": "Documenten",
       "pricelist": "Prijslijst",
       "admin": "Beheer",
       "signOut": "Afmelden",
@@ -225,6 +226,11 @@
       "tileTrade": "Handelstoegang",
       "tileTradeBody": "Plaatser of verdeler? Krijg dealerprijzen en de plafonddesigner met een handelsaccount.",
       "tradeCta": "Word partner"
+    },
+    "docs": {
+      "title": "Documenten",
+      "intro": "Technische fiches en installatietekeningen van het STRETCH-gamma — direct te downloaden, zonder formulieren.",
+      "download": "Download"
     },
     "pricelist": {
       "title": "Prijslijst",
@@ -2314,6 +2320,8 @@
     "viewProduct": "Bekijk het product",
     "eyebrowTech": "Technisch",
     "datasheetCta": "Vraag de volledige technische fiche aan",
+    "downloadsTitle": "Download de technische fiches",
+    "allDatasheets": "Alle technische fiches",
     "samplesCta": "Vraag fysieke stalen aan",
     "copyHint": "Selecteer de tekst hierboven om deze naar uw bestekdocument te kopiëren.",
     "ctaTitle": "Hulp nodig bij de bestektekst?",
@@ -2668,7 +2676,7 @@
         },
         {
           "label": "Jaar",
-          "value": "2025"
+          "value": "2026"
         },
         {
           "label": "Volledige renovatie",
