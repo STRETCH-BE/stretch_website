@@ -1,3 +1,21 @@
+## 2026-08-08 (10) — Designer order e-mails: branded layout, attachments, confirmation
+
+- **Branded HTML order e-mail** (was: monospace text dump): black STRETCH®
+  header, red section labels, dealer/client blocks, ceiling-specification
+  table, itemised price table with total — built from the STRUCTURED order
+  object (order-email.ts buildOrderEmailHtml), text summary kept as fallback.
+- **Documents attached**: the designer now uploads the generated floorplan
+  PDF, production PDF and DXF with the order (base64, ≤3 MB total, 8-file cap,
+  sanitised names — Vercel's 4.5 MB body limit respected) and the server adds
+  the order JSON itself; all attached to BOTH e-mails.
+- **Dealer confirmation e-mail**: every order now sends a second branded
+  e-mail to the dealer ("Your STRETCH order … — received", reply-to =
+  leads inbox) with the same attachments; the designer's success message
+  says a confirmation is on its way (response field `confirmed`).
+- Verified: typecheck + build green; demo E2E confirms the order POST carries
+  the PDF+DXF payload and the single ZIP download still works; both e-mail
+  variants rendered and visually checked.
+
 ## 2026-08-08 (9) — Homepage "Selected work" photos match their titles
 
 - The five-tile strip took its TITLES from the first five projects in
