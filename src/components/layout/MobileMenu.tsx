@@ -1,23 +1,56 @@
 'use client';
 
 // Mobile navigation drawer (shown below 860px via the .only-mobile helper).
-// Full-screen overlay with the nav links, product list, and a quote CTA.
+// Full-screen overlay with the nav links, product list, a quote CTA and the
+// country/language grid (the desktop switcher lives in the .only-desktop
+// utility bar, so this is the ONLY way to change language on a phone).
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Link, usePathname } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { useLocale, useTranslations } from 'next-intl';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { products } from '@/lib/products';
 import { contact } from '@/lib/site-config';
+import {
+  locales,
+  localeNames,
+  localeFlags,
+  localeForHost,
+  originForLocale,
+  type Locale,
+} from '@/i18n/config';
 import { useLeadModal } from '@/components/LeadGenModal';
 import { analytics } from '@/lib/analytics';
 
 export default function MobileMenu() {
   const t = useTranslations('common');
   const tc = useTranslations('catalog');
+  const tb = useTranslations('blogPage');
+  const locale = useLocale() as Locale;
   const pathname = usePathname();
+  const router = useRouter();
   const { open: openModal } = useLeadModal();
   const [open, setOpen] = useState(false);
+
+  // Cross-domain language switch — same logic as the desktop LanguageSwitcher:
+  // on a known locale domain, jump to the target locale's domain preserving
+  // the path; on localhost/previews, fall back to the in-app locale switch.
+  function switchTo(next: Locale) {
+    if (next === locale) {
+      setOpen(false);
+      return;
+    }
+    analytics.languageSwitch(locale, next, pathname);
+    const onKnownDomain =
+      typeof window !== 'undefined' && localeForHost(window.location.host) !== null;
+    if (onKnownDomain) {
+      const search = window.location.search || '';
+      window.location.assign(`${originForLocale(next)}${pathname === '/' ? '' : pathname}${search}`);
+      return;
+    }
+    setOpen(false);
+    router.replace(pathname, { locale: next });
+  }
 
   useEffect(() => {
     setOpen(false);
@@ -168,8 +201,8 @@ export default function MobileMenu() {
               {t('nav.technical')}
             </div>
             {[
-              { href: '/samples', label: 'Request samples' },
-              { href: '/blog', label: 'Guides & specs' },
+              { href: '/samples', label: t('cta.requestSamples') },
+              { href: '/blog', label: tb('eyebrow') },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -206,6 +239,53 @@ export default function MobileMenu() {
             >
               {contact.phoneDisplay}
             </a>
+
+            <div
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                letterSpacing: '.18em',
+                textTransform: 'uppercase',
+                color: 'var(--text-faint-2)',
+                margin: '34px 0 12px',
+              }}
+            >
+              {t('languageLabel')}
+            </div>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                gap: 1,
+                background: 'var(--border)',
+                border: '1px solid var(--border)',
+              }}
+            >
+              {locales.map((l) => (
+                <button
+                  key={l}
+                  type="button"
+                  onClick={() => switchTo(l)}
+                  aria-current={l === locale ? 'true' : undefined}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 8,
+                    background: l === locale ? 'var(--surface)' : '#fff',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: '12px 12px',
+                    fontSize: 14,
+                    fontWeight: l === locale ? 700 : 500,
+                    color: l === locale ? 'var(--red)' : 'var(--text)',
+                    textAlign: 'left',
+                  }}
+                >
+                  <span aria-hidden>{localeFlags[l]}</span>
+                  {localeNames[l] ?? l}
+                </button>
+              ))}
+            </div>
           </nav>
         </div>,
         document.body,
