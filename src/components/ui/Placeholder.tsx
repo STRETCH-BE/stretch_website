@@ -14,6 +14,8 @@ type PlaceholderProps = {
   priority?: boolean;
   /** Responsive sizes hint for next/image (avoids oversized downloads). */
   sizes?: string;
+  /** JPEG/WebP quality override for next/image (default 75). */
+  quality?: number;
   /** object-fit for real photos. 'cover' fills+crops (photos); 'contain' shows
    *  the whole image without cropping (diagrams / infographics). */
   fit?: 'cover' | 'contain';
@@ -36,6 +38,7 @@ export default function Placeholder({
   alt,
   priority,
   sizes,
+  quality,
   fit = 'cover',
   bg,
   light = false,
@@ -64,6 +67,7 @@ export default function Placeholder({
           alt={decorative ? '' : alt ?? label}
           fill
           sizes={sizes ?? '100vw'}
+          quality={quality}
           priority={priority}
           style={{ objectFit: fit }}
         />

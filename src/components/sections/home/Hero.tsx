@@ -26,6 +26,13 @@ export default function Hero() {
   const t = useTranslations('home.hero');
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  // Mount the three hidden crossfade layers only after hydration: on a slow
+  // connection all four hero images otherwise download together and compete
+  // with the visible (LCP) image for bandwidth.
+  const [layersReady, setLayersReady] = useState(false);
+  useEffect(() => {
+    setLayersReady(true);
+  }, []);
 
   useEffect(() => {
     if (paused) return;
@@ -47,7 +54,9 @@ export default function Hero() {
       <div className="hero-bg" aria-hidden="true">
         {SLIDE_IMAGES.map((image, i) => (
           <div key={image} className="hero-layer" style={{ opacity: i === active ? 1 : 0 }}>
-            <Placeholder label={`Hero — ${t(`slides.${i}.tabName`)}`} src={image} alt="" priority={i === 0} sizes="100vw" decorative />
+            {(i === 0 || layersReady) && (
+              <Placeholder label={`Hero — ${t(`slides.${i}.tabName`)}`} src={image} alt="" priority={i === 0} sizes="100vw" quality={65} decorative />
+            )}
           </div>
         ))}
         <div className="hero-ov hero-ov--x" />
