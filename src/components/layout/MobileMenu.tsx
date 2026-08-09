@@ -3,6 +3,7 @@
 // Mobile navigation drawer (shown below 860px via the .only-mobile helper).
 // Full-screen overlay with the nav links, product list, and a quote CTA.
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, usePathname } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
@@ -30,7 +31,9 @@ export default function MobileMenu() {
   }, [open]);
 
   return (
-    <div className="only-mobile" style={{ display: 'none' }}>
+    // No inline display here: it would override the .only-mobile media query
+    // (inline styles beat class rules), hiding the burger on phones too.
+    <div className="only-mobile">
       <button
         type="button"
         aria-label={t('openMenu')}
@@ -48,7 +51,11 @@ export default function MobileMenu() {
         <Menu size={26} />
       </button>
 
-      {open && (
+      {/* Portal: the header's backdrop-filter makes it the containing block
+          for fixed descendants, which would clip this "full-screen" drawer to
+          the header's 120px box. Rendering on <body> escapes that. Client-only
+          by construction (open is only ever set after a click). */}
+      {open && createPortal(
         <div
           style={{
             position: 'fixed',
@@ -200,7 +207,8 @@ export default function MobileMenu() {
               {contact.phoneDisplay}
             </a>
           </nav>
-        </div>
+        </div>,
+        document.body,
       )}
     </div>
   );
