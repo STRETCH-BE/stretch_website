@@ -4,7 +4,7 @@
 // cross-reference instead of duplicating. Never fabricates ratings or prices.
 // ============================================================================
 import { siteUrl, brand, contact, offices, salesTerritory, social } from '@/lib/site-config';
-import { locales, localeFullCodes, type Locale } from '@/i18n/config';
+import { locales, localeFullCodes, originForLocale, type Locale } from '@/i18n/config';
 import type { Product, Faq } from '@/lib/products';
 import type { BlogPost } from '@/lib/content';
 import { localeBase } from '@/lib/seo';
@@ -52,21 +52,29 @@ export function organizationSchema() {
   };
 }
 
-export function websiteSchema(opts: { hasSearch?: boolean } = {}) {
+/**
+ * Per-origin WebSite node: each of the 12 domains declares ITS OWN website
+ * (own @id/url, its single language, its translated description) — Bing was
+ * seeing every domain claim stretch.mt as its website. The publisher still
+ * points at the ONE global Organization @id, so the company entity stays
+ * anchored to the siteUrl.
+ */
+export function websiteSchema(opts: { locale: Locale; description?: string; hasSearch?: boolean }) {
+  const origin = originForLocale(opts.locale);
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': WEBSITE_ID,
-    url: siteUrl,
+    '@id': `${origin}/#website`,
+    url: origin,
     name: brand.name,
-    description: brand.description,
-    inLanguage: availableLanguages,
+    description: opts.description ?? brand.description,
+    inLanguage: localeFullCodes[opts.locale] ?? opts.locale,
     publisher: { '@id': ORG_ID },
   };
   if (opts.hasSearch) {
     schema.potentialAction = {
       '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${siteUrl}/search?q={search_term_string}` },
+      target: { '@type': 'EntryPoint', urlTemplate: `${origin}/search?q={search_term_string}` },
       'query-input': 'required name=search_term_string',
     };
   }

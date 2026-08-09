@@ -44,15 +44,15 @@
   },
   "meta": {
     "homeTitle": "STRETCH — Ett nytt tak på en dag | Spänntak & spännväggar",
-    "homeDescription": "Släta, skarvfria spänntak och spännväggar, kallmonterade på en enda dag — utan damm och utan målning. Akustik-, ljus- och printalternativ. Handgjorda i Belgien.",
+    "homeDescription": "Spänntak och spännväggar, skarvfria och kallmonterade på en dag — utan damm och målning. Akustik, ljus och print. Handgjorda i Belgien.",
     "productsTitle": "Spänntak & akustiklösningar | STRETCH",
-    "productsDescription": "Utforska STRETCH-sortimentet: spänntak i polyester och PVC, akustiksystem, bakgrundsbelysta & tryckta designer och prefab-enheter — skarvfritt upp till 6,4 m, 25 års garanti.",
+    "productsDescription": "Spänntak i polyester och PVC, akustiksystem, bakbelysta och tryckta designer och prefab-enheter — skarvfritt upp till 6,4 m, 25 års garanti.",
     "partnersTitle": "Bli STRETCH-återförsäljare — grossistpriser & leads | STRETCH",
     "partnersDescription": "Lägg till spänntak i ditt utbud med grossistpriser, måttillverkad leverans från vår belgiska verkstad, praktisk utbildning och förmedlade lokala leads.",
     "trainingTitle": "Montörsutbildning — certifierad på några dagar | STRETCH",
-    "trainingDescription": "Praktisk certifiering till spänntaksmontör vid vårt belgiska huvudkontor. Lär dig konfektion, profiler, kall- & varmmontering, ljus och akustik — ingen erfarenhet krävs.",
+    "trainingDescription": "Bli certifierad spänntaksmontör vid vårt belgiska huvudkontor. Lär dig konfektion, profiler och kall- & varmmontering — ingen erfarenhet krävs.",
     "inspirationTitle": "Inspiration — riktiga spänntaksprojekt | STRETCH",
-    "inspirationDescription": "Studior, kontor, bostäder och hotell utförda med STRETCH. Bläddra bland riktiga projekt per lösning — akustik, ljus & print, boende, badrum, kontor och kommersiellt.",
+    "inspirationDescription": "Riktiga STRETCH-projekt i studior, kontor, bostäder och hotell — per lösning: akustik, ljus & print, boende, badrum, kontor och kommersiellt.",
     "samplesTitle": "Beställ färg- & RAL-prover | STRETCH",
     "samplesDescription": "Beställ fysiska färg- och RAL-prover av STRETCH polyester-, PVC- och akustikmembran — gratis för handelspartner. Levererade till din dörr.",
     "faqTitle": "Spänntak FAQ — montering, akustik & pris | STRETCH",
@@ -62,7 +62,7 @@
     "aboutTitle": "Om STRETCH — handgjorda tak från Belgien | STRETCH",
     "aboutDescription": "STRETCH designar och handtillverkar skarvfria spänntak och spännväggar i Belgien, monterade på en dag i hela Europa och USA. En del av STRETCH Group.",
     "contactTitle": "Kontakta STRETCH — offerter, återförsäljare & partnerskap | STRETCH",
-    "contactDescription": "Nå STRETCH-specialisterna för en offert, din närmaste återförsäljare eller ett partnerskap. Belgiskt huvudkontor i Beveren-Waas, med kontor i USA, Polen och Österrike.",
+    "contactDescription": "Nå STRETCH-specialisterna för en offert, din närmaste återförsäljare eller ett partnerskap. Belgiskt huvudkontor i Beveren-Waas.",
     "privacyTitle": "Integritetspolicy | STRETCH",
     "privacyDescription": "Hur STRETCH (Stretch Productions BV) samlar in, använder och skyddar personuppgifter som skickas via denna webbplats, enligt EU:s GDPR.",
     "termsTitle": "Användarvillkor | STRETCH",
@@ -2286,7 +2286,7 @@
       "name": "Kontor & butik",
       "shortName": "Kontor & butik",
       "eyebrow": "Kontor & butik",
-      "metaDescription": "Spänntak för kontor, butik och besöksnäring — akustik upp till klass A, printade tak med ditt varumärke och integrerad belysning, snabbt monterat utan störningar.",
+      "metaDescription": "Spänntak för kontor, butik och besöksnäring — akustik upp till klass A, printade tak och integrerad belysning, snabbt monterat utan störningar.",
       "intro": "Kommersiella miljöer måste se skarpa ut och låta rätt. STRETCH levererar akustisk komfort upp till klass A, printade tak med ditt varumärke och integrerad belysning — kallmonterat och snabbt, med minimala störningar i en verksamhet i drift.",
       "benefits": [
         {
@@ -2307,7 +2307,7 @@
       "name": "Pooler & wellness",
       "shortName": "Pool & wellness",
       "eyebrow": "Pool & wellness",
-      "metaDescription": "Spänntak för simhallar, pooler, spa och wellnessutrymmen — fukt- och klorbeständiga membran med No-Stain-finish, integrerat ljus och akustik, monterade utan driftstopp.",
+      "metaDescription": "Spänntak för simhallar, pooler och spa — fukt- och klorbeständiga membran med No-Stain-finish, integrerat ljus och akustik, monterade utan driftstopp.",
       "intro": "Simhallar och wellnessutrymmen förstör målade tak: kondens, klorångor och värme får färgen att flagna inom några år. Ett spänt membran är immunt mot alla tre — och tar med sig ljus och akustik in i byggnadens våtaste rum.",
       "benefits": [
         {
@@ -2561,7 +2561,7 @@
     "prefab-ceiling-unit": {
       "name": "Prefabstrukturer",
       "eyebrow": "Prefabstrukturer",
-      "metaDescription": "Måttanpassade prefabricerade bärstrukturer för spänntak — balkar i aluminium, stål och trä, lister och nivåskillnadsdetaljer, kapade, svetsade och pulverlackerade i egen regi och skickade världen över.",
+      "metaDescription": "Måttanpassade prefab-bärstrukturer för spänntak — balkar i aluminium, stål och trä, kapade, svetsade och pulverlackerade i egen regi.",
       "intro": "Prefabricerade bärstrukturer för spänntaksprojekt — balkar för raster- och rutnätstak, lister för svävande tak och rena nivåskillnadsdetaljer. Varje struktur tillverkas måttanpassad efter dina ritningar, helt i egen regi i vår egen polska produktion, och skickas världen över till våra återförsäljare.",
       "makeHeading": "Vad vi bygger",
       "make": [
@@ -2631,7 +2631,7 @@
     "prefab-lighting-elements": {
       "name": "Prefabricerade ljuselement",
       "eyebrow": "Prefabricerade ljuselement",
-      "metaDescription": "Prefabricerade ljuselement byggda på en aluminiumstruktur och klädda med ett STRETCH-membran — ljusvalv, ljuslinjer och bakbelysta element, konstruerade efter dina ritningar, byggda i egen regi och skickade världen över.",
+      "metaDescription": "Prefabricerade ljuselement på aluminiumstruktur med STRETCH-membran — ljusvalv, ljuslinjer och bakbelysta element, byggda efter dina ritningar.",
       "intro": "Förmonterade ljuselement byggda på en aluminiumstruktur och klädda med vårt spännmembran — ljusvalv, ljuslinjer och bakbelysta element. Konstruerade efter dina ritningar, byggda i egen regi i vår polska produktion och skickade världen över till våra återförsäljare.",
       "makeHeading": "Vad vi bygger",
       "make": [
@@ -4534,7 +4534,7 @@
       "name": "Dukar & folier",
       "eyebrow": "Dukar",
       "metaTitle": "Spänntaksduk & PVC-folie — på rulle, kapad i längd, måttanpassad | STRETCH",
-      "metaDescription": "PVC-folie för spänntak (MSD, Bauf, Teqtum, Renolit) på rulle, kapad i längd eller måttsvetsad med harpun. Matta, blanka, translucenta och kulörta utföranden. Begär offert.",
+      "metaDescription": "PVC-folie för spänntak (MSD, Bauf, Teqtum, Renolit) på rulle, kapad i längd eller måttsvetsad — matt, blank, translucent och kulört.",
       "intro": "Duk precis som du behöver den: hela rullar för egen konfektion, folie kapad i längd eller ett färdigt tak måttsvetsat med harpun — i matta, satin, blanka, translucenta och kulörta utföranden från de stora foliemärkena.",
       "items": [
         {
@@ -4563,7 +4563,7 @@
       "name": "Belysning",
       "eyebrow": "Belysning",
       "metaTitle": "Spänntaksbelysning — 48V tracklight, LED-moduler, spotringar | STRETCH",
-      "metaDescription": "Belysning för spänntak: magnetiska 48V-tracklights, spotlights och grille-armaturer, LED-moduler för bakbelysta tak samt spotringar/skyddsringar. Begär offert.",
+      "metaDescription": "Belysning för spänntak: magnetiska 48V-tracklights, spotlights, LED-moduler för bakbelysta tak samt spotringar och skyddsringar. Begär offert.",
       "intro": "Allt som lyser upp ett STRETCH-tak: den magnetiska 48V tracklight-familjen, LED-fältmoduler för bakbelysta tak och ringarna som ger varje spotlight en ren avslutning.",
       "items": [
         {
@@ -4679,7 +4679,7 @@
     "metaDescDealer": "Letar du efter ett spänntak i {place}? Vår certifierade STRETCH-återförsäljare mäter på plats och monterar tak svetsade efter mått i vår belgiska produktion. Begär en kostnadsfri offert.",
     "metaDescRecruit": "Ett spänntak i {place}? Vi monterar direkt från vår belgiska produktion — och vi söker en lokal återförsäljare. Begär en offert eller bli vår partner i {place}.",
     "ovMetaTitle": "STRETCH-återförsäljare — Belgien & Nederländerna | STRETCH",
-    "ovMetaDescription": "Hitta din certifierade STRETCH-återförsäljare i Flandern, Bryssel, Vallonien eller Nederländerna — eller gå med i nätverket. Varje tak kommer från vår egen belgiska produktion.",
+    "ovMetaDescription": "Hitta din certifierade STRETCH-återförsäljare i Flandern, Bryssel, Vallonien eller Nederländerna. Varje tak kommer från vår egen belgiska produktion.",
     "ovEyebrow": "Nätverk",
     "ovTitle": "Återförsäljare",
     "ovIntro": "Spänntak från STRETCH mäts upp och monteras av certifierade lokala partner, med vår egen produktion nära Lokeren i ryggen. Hitta din region — eller ta en av de lediga platserna.",
@@ -4802,5 +4802,22 @@
     ],
     "ctaTitle": "Allt för att föreskriva, på ett ställe",
     "ctaBody": "Skapa ditt gratis konto — varje dokument, budgetband och fallstudie är ett klick bort, plus en dedikerad rådgivare för dina projekt."
+  },
+  "alt": {
+    "heroCeilings": "Skarvfritt matt spänntak i ett modernt vardagsrum",
+    "heroAcoustic": "Akustiskt spänntak i ett ljust, öppet vardagsrum",
+    "heroWalls": "Spänd textilvägg i en modern interiör",
+    "heroLight": "Bakbelyst spänntak med jämnt ljus i rummet",
+    "why": "Felfritt vitt spänntak i en färdig interiör",
+    "solutionsPolyester": "Matt spänntak i polyester i ett ljust vardagsrum",
+    "solutionsPvc": "Blankt PVC-spänntak som speglar ett modernt kök",
+    "acoustics": "Akustiskt spänntak i en inspelningsstudio",
+    "appLiving": "Spänntak med integrerad belysning i ett vardagsrum",
+    "appBathroom": "Fukttåligt spänntak i ett modernt badrum",
+    "appOffice": "Akustiskt spänntak i ett öppet kontor",
+    "appCinema": "Mörkt spänntak med spotlights i en hemmabio",
+    "appLight": "Stjärnhimmel-spänntak med fiberoptiskt ljus",
+    "appCommercial": "Printat spänntak i en butiksinteriör",
+    "installer": "Certifierad STRETCH-montör monterar ett spänntak"
   }
 }

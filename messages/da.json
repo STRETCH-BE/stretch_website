@@ -46,13 +46,13 @@
     "homeTitle": "STRETCH — Et nyt loft på én dag | Spændlofter & spændvægge",
     "homeDescription": "Glatte, fugefri spændlofter og spændvægge, koldmonteret på en enkelt dag — uden støv og uden maling. Akustik-, lys- og printmuligheder. Håndlavet i Belgien.",
     "productsTitle": "Spændlofter & akustikløsninger | STRETCH",
-    "productsDescription": "Udforsk STRETCH-sortimentet: spændlofter i polyester og PVC, akustiksystemer, bagbelyste & printede designs og præfab-enheder — fugefrit op til 6,4 m, 25 års garanti.",
+    "productsDescription": "Spændlofter i polyester og PVC, akustiksystemer, bagbelyste og printede designs og præfab-enheder — fugefrit op til 6,4 m, 25 års garanti.",
     "partnersTitle": "Bliv STRETCH-forhandler — forhandlerpriser & leads | STRETCH",
     "partnersDescription": "Tilføj spændlofter til dit sortiment med forhandlerpriser, målsyet levering fra vores belgiske værksted, praktisk uddannelse og henviste lokale leads.",
     "trainingTitle": "Montøruddannelse — certificeret på få dage | STRETCH",
-    "trainingDescription": "Praktisk certificering som spændloftsmontør på vores belgiske hovedkontor. Lær konfektion, profiler, kold- & varmmontering, lys og akustik — ingen erfaring nødvendig.",
+    "trainingDescription": "Bliv certificeret spændloftsmontør på vores belgiske hovedkontor. Lær konfektion, profiler og kold- & varmmontering — ingen erfaring nødvendig.",
     "inspirationTitle": "Inspiration — rigtige spændloftsprojekter | STRETCH",
-    "inspirationDescription": "Studier, kontorer, boliger og hoteller udført med STRETCH. Gennemse rigtige projekter efter løsning — akustik, lys & print, bolig, badeværelse, kontor og erhverv.",
+    "inspirationDescription": "Rigtige STRETCH-projekter i studier, kontorer, boliger og hoteller — efter løsning: akustik, lys & print, bolig, badeværelse og erhverv.",
     "samplesTitle": "Bestil farve- & RAL-prøver | STRETCH",
     "samplesDescription": "Bestil fysiske farve- og RAL-prøver af STRETCH polyester-, PVC- og akustikmembraner — gratis for handelspartnere. Leveret til din dør.",
     "faqTitle": "Spændloft FAQ — montering, akustik & pris | STRETCH",
@@ -62,7 +62,7 @@
     "aboutTitle": "Om STRETCH — håndlavede lofter fra Belgien | STRETCH",
     "aboutDescription": "STRETCH designer og håndlaver fugefri spændlofter og spændvægge i Belgien, monteret på én dag i hele Europa og USA. En del af STRETCH Group.",
     "contactTitle": "Kontakt STRETCH — tilbud, forhandlere & partnerskaber | STRETCH",
-    "contactDescription": "Kontakt STRETCH-specialisterne for et tilbud, din nærmeste forhandler eller et partnerskab. Belgisk hovedkontor i Beveren-Waas, med kontorer i USA, Polen og Østrig.",
+    "contactDescription": "Kontakt STRETCH-specialisterne for et tilbud, din nærmeste forhandler eller et partnerskab. Belgisk hovedkontor i Beveren-Waas.",
     "privacyTitle": "Privatlivspolitik | STRETCH",
     "privacyDescription": "Hvordan STRETCH (Stretch Productions BV) indsamler, bruger og beskytter persondata indsendt via denne hjemmeside, i henhold til EU's GDPR.",
     "termsTitle": "Brugsbetingelser | STRETCH",
@@ -2286,7 +2286,7 @@
       "name": "Kontorer & detailhandel",
       "shortName": "Kontor & retail",
       "eyebrow": "Kontor & retail",
-      "metaDescription": "Spændlofter til kontorer, detail og hoteller/restauranter — akustik op til klasse A, printede lofter med dit brand og integreret belysning, hurtigt monteret uden gener.",
+      "metaDescription": "Spændlofter til kontorer, detail og horeca — akustik op til klasse A, printede lofter og integreret belysning, hurtigt monteret uden gener.",
       "intro": "Erhvervslokaler skal se skarpe ud og lyde rigtigt. STRETCH leverer akustisk komfort op til klasse A, printede lofter med dit brand og integreret belysning — koldmonteret og hurtigt, med minimal gene for et lokale i drift.",
       "benefits": [
         {
@@ -2561,7 +2561,7 @@
     "prefab-ceiling-unit": {
       "name": "Prefab-strukturer",
       "eyebrow": "Prefab-strukturer",
-      "metaDescription": "Prefab-bærestrukturer efter mål til spændlofter — bjælker i aluminium, stål og træ, gesimser og niveauspring-detaljer, skåret, svejset og pulverlakeret i eget hus og sendt til hele verden.",
+      "metaDescription": "Prefab-bærestrukturer efter mål til spændlofter — bjælker i aluminium, stål og træ, skåret, svejset og pulverlakeret i eget hus.",
       "intro": "Prefab-bærestrukturer til spændloftsprojekter — bjælker til raster- og gitterlofter, gesimser til svævende lofter og rene niveauspring-detaljer. Hver struktur laves efter mål ud fra dine tegninger, helt i eget hus i vores egen polske produktion, og sendes til vores forhandlere i hele verden.",
       "makeHeading": "Hvad vi bygger",
       "make": [
@@ -2631,7 +2631,7 @@
     "prefab-lighting-elements": {
       "name": "Prefab-lyselementer",
       "eyebrow": "Prefab-lyselementer",
-      "metaDescription": "Prefab-lyselementer bygget på en aluminiumsstruktur og finishet med en STRETCH-membran — lysgesimser, lyslinjer og bagbelyste elementer, konstrueret efter dine tegninger, bygget i eget hus og sendt til hele verden.",
+      "metaDescription": "Prefab-lyselementer på aluminiumsstruktur med STRETCH-membran — lysgesimser, lyslinjer og bagbelyste elementer, bygget efter dine tegninger.",
       "intro": "Færdigmonterede lyselementer bygget på en aluminiumsstruktur og finishet med vores spændte membran — lysgesimser, lyslinjer og bagbelyste elementer. Konstrueret efter dine tegninger, bygget i eget hus i vores polske produktion og sendt til vores forhandlere i hele verden.",
       "makeHeading": "Hvad vi bygger",
       "make": [
@@ -4509,7 +4509,7 @@
       "name": "Profiler & skinner",
       "eyebrow": "Profiler",
       "metaTitle": "Profiler til stretchlofter — aluminium & PVC | STRETCH",
-      "metaDescription": "Stretchloft-profiler i aluminium og PVC, LED-linjeprofiler og endestykker — direkte fra vores egen produktion. Bed om et tilbud — vi svarer med pris og leveringstid.",
+      "metaDescription": "Spændloft-profiler i aluminium og PVC, LED-linjeprofiler og endestykker fra egen produktion — bed om et tilbud, vi svarer med pris og leveringstid.",
       "intro": "Skinnerne, der holder hvert STRETCH-loft: kantprofiler i aluminium og PVC, LED-linjeprofiler og afslutningsstykker — de samme profiler, vores egne montører bruger, skåret til og afsendt fra vores produktion.",
       "items": [
         {
@@ -4534,7 +4534,7 @@
       "name": "Duge & folier",
       "eyebrow": "Duge",
       "metaTitle": "Stretchloft-dug & PVC-folie — på rulle, i længde, efter mål | STRETCH",
-      "metaDescription": "PVC-folie til stretchlofter (MSD, Bauf, Teqtum, Renolit) på rulle, skåret i længde eller svejset efter mål med harpun. Mat, blank, translucent og i farver. Bed om et tilbud.",
+      "metaDescription": "PVC-folie til spændlofter (MSD, Bauf, Teqtum, Renolit) på rulle, skåret i længde eller svejset efter mål — mat, blank, translucent og i farver.",
       "intro": "Membran, som du har brug for den: hele ruller til din egen konfektion, folie skåret i længde eller et færdigt loft svejset efter mål med harpun — i mat, satin, blank, translucent og farvede udgaver fra de store foliemærker.",
       "items": [
         {
@@ -4563,7 +4563,7 @@
       "name": "Belysning",
       "eyebrow": "Belysning",
       "metaTitle": "Belysning til stretchlofter — 48V tracklight, LED-moduler, spotringe | STRETCH",
-      "metaDescription": "Belysning til stretchlofter: magnetiske 48V-tracklights, spots og grille-armaturer, LED-moduler til gennemlyste lofter samt spotringe/beskyttelsesringe. Bed om et tilbud.",
+      "metaDescription": "Belysning til spændlofter: magnetiske 48V-tracklights, spots, LED-moduler til gennemlyste lofter samt spotringe. Bed om et tilbud i dag.",
       "intro": "Alt det, der lyser et STRETCH-loft op: den magnetiske 48V tracklight-familie, LED-feltmoduler til gennemlyste lofter og ringene, der giver hver spot en ren afslutning.",
       "items": [
         {
@@ -4679,7 +4679,7 @@
     "metaDescDealer": "Leder du efter et stretchloft i {place}? Vores certificerede STRETCH-forhandler måler op lokalt og monterer lofter svejset på mål i vores belgiske produktion. Få et gratis tilbud.",
     "metaDescRecruit": "Et stretchloft i {place}? Vi monterer direkte fra vores belgiske produktion — og vi leder efter en lokal forhandler. Få et tilbud, eller bliv vores partner i {place}.",
     "ovMetaTitle": "STRETCH-forhandlere — Belgien & Holland | STRETCH",
-    "ovMetaDescription": "Find din certificerede STRETCH-forhandler i Flandern, Bruxelles, Vallonien eller Holland — eller bliv en del af netværket. Hvert loft kommer fra vores egen belgiske produktion.",
+    "ovMetaDescription": "Find din certificerede STRETCH-forhandler i Flandern, Bruxelles, Vallonien eller Holland. Hvert loft kommer fra vores egen belgiske produktion.",
     "ovEyebrow": "Netværk",
     "ovTitle": "Forhandlere",
     "ovIntro": "STRETCH-lofter opmåles og monteres af certificerede lokale partnere med vores egen produktion nær Lokeren i ryggen. Find din region — eller grib de ledige pladser.",
@@ -4802,5 +4802,22 @@
     ],
     "ctaTitle": "Alt til at foreskrive, samlet ét sted",
     "ctaBody": "Opret din gratis konto — alle dokumenter, budgetbånd og casestudier er ét klik væk, plus en fast rådgiver til dine projekter."
+  },
+  "alt": {
+    "heroCeilings": "Fugefrit mat spændloft i en moderne stue",
+    "heroAcoustic": "Akustisk spændloft i et lyst, åbent opholdsrum",
+    "heroWalls": "Opspændt tekstilvæg i et moderne interiør",
+    "heroLight": "Bagbelyst spændloft med jævnt lys i rummet",
+    "why": "Fejlfrit hvidt spændloft i et færdigt interiør",
+    "solutionsPolyester": "Mat spændloft i polyester i en lys stue",
+    "solutionsPvc": "Blankt PVC-spændloft, der spejler et moderne køkken",
+    "acoustics": "Akustisk spændloft i et lydstudie",
+    "appLiving": "Spændloft med integreret belysning i en stue",
+    "appBathroom": "Fugtbestandigt spændloft i et moderne badeværelse",
+    "appOffice": "Akustisk spændloft i et åbent kontor",
+    "appCinema": "Mørkt spændloft med spots i en hjemmebiograf",
+    "appLight": "Stjernehimmel-spændloft med fiberoptisk lys",
+    "appCommercial": "Printet spændloft i et butiksinteriør",
+    "installer": "Certificeret STRETCH-montør monterer et spændloft"
   }
 }

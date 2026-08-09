@@ -13,6 +13,9 @@ import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
 
+// alt-namespace keys, index-aligned with SLIDE_IMAGES below.
+const SLIDE_ALT_KEYS = ['heroCeilings', 'heroAcoustic', 'heroWalls', 'heroLight'] as const;
+
 const SLIDE_IMAGES = [
   homeImages.heroSlides.ceilings,
   homeImages.heroSlides.acoustic,
@@ -24,6 +27,7 @@ const ADVANCE_MS = 3000;
 
 export default function Hero() {
   const t = useTranslations('home.hero');
+  const ta = useTranslations('alt');
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   // Mount the three hidden crossfade layers only after hydration: on a slow
@@ -55,7 +59,7 @@ export default function Hero() {
         {SLIDE_IMAGES.map((image, i) => (
           <div key={image} className="hero-layer" style={{ opacity: i === active ? 1 : 0 }}>
             {(i === 0 || layersReady) && (
-              <Placeholder label={`Hero — ${t(`slides.${i}.tabName`)}`} src={image} alt="" priority={i === 0} sizes="100vw" quality={65} decorative />
+              <Placeholder label={`Hero — ${t(`slides.${i}.tabName`)}`} src={image} alt={ta(SLIDE_ALT_KEYS[i])} priority={i === 0} sizes="100vw" quality={65} />
             )}
           </div>
         ))}

@@ -36,7 +36,6 @@ export default function Gallery() {
               alt={`${p.title} — ${p.cat}`}
               sizes="(max-width: 980px) 50vw, 20vw"
               className="zoom-img"
-              decorative
             />
             <div className="gal-overlay">
               <span className="gal-cat">{p.cat}</span>

@@ -44,25 +44,25 @@
   },
   "meta": {
     "homeTitle": "STRETCH — Um teto novo num dia | Tetos e paredes tensados",
-    "homeDescription": "Tetos e paredes tensados, lisos e sem juntas, instalados a frio num único dia — sem pó e sem pintura. Opções acústicas, de iluminação e impressas. Feitos à mão na Bélgica.",
+    "homeDescription": "Tetos tensados e paredes sem juntas, instalados a frio num dia — sem pó nem pintura. Acústica, iluminação e impressão. Feitos à mão na Bélgica.",
     "productsTitle": "Tetos tensados e soluções acústicas | STRETCH",
-    "productsDescription": "Explore a gama STRETCH: tetos tensados de poliéster e PVC, sistemas acústicos, designs retroiluminados e impressos e unidades pré-fabricadas — sem juntas até 6,4 m, 25 anos de garantia.",
+    "productsDescription": "Tetos tensados de poliéster e PVC, sistemas acústicos, designs retroiluminados e impressos e unidades prefab — sem juntas até 6,4 m, 25 anos de garantia.",
     "partnersTitle": "Torne-se revendedor STRETCH — preços profissionais e leads | STRETCH",
     "partnersDescription": "Adicione tetos tensados à sua oferta com preços profissionais, fabrico à medida na nossa oficina belga, formação prática e leads locais encaminhados.",
     "trainingTitle": "Formação de instaladores — certificado em dias | STRETCH",
-    "trainingDescription": "Certificação prática de instalador de tetos tensados na nossa sede belga. Aprenda confeção, perfis, montagem a frio e a quente, iluminação e acústica — sem experiência prévia.",
+    "trainingDescription": "Certifique-se como instalador de tetos tensados na nossa sede belga. Aprenda confeção, perfis e montagem a frio e a quente — sem experiência prévia.",
     "inspirationTitle": "Inspiração — projetos reais de tetos tensados | STRETCH",
-    "inspirationDescription": "Estúdios, escritórios, habitações e hotéis acabados com STRETCH. Explore projetos reais por solução — acústica, luz e impressão, habitação, casa de banho, escritório e comercial.",
+    "inspirationDescription": "Projetos reais com STRETCH em estúdios, escritórios, habitações e hotéis — por solução: acústica, luz e impressão, habitação, escritório e comercial.",
     "samplesTitle": "Pedir amostras de cor e RAL | STRETCH",
     "samplesDescription": "Encomende amostras físicas de cor e RAL das membranas STRETCH de poliéster, PVC e acústicas — grátis para parceiros profissionais. Entregues à sua porta.",
     "faqTitle": "FAQ de tetos tensados — instalação, acústica e preço | STRETCH",
-    "faqDescription": "Respostas às perguntas frequentes sobre tetos tensados: como se instalam, quanto duram, acústica, vãos sem juntas, iluminação, preço e o programa de parceiros.",
+    "faqDescription": "Perguntas frequentes sobre tetos tensados: instalação, durabilidade, acústica, vãos sem juntas, iluminação, preço e programa de parceiros.",
     "blogTitle": "Guias e conhecimento sobre tetos tensados | STRETCH",
     "blogDescription": "Guias claros sobre tetos tensados — como funcionam, a acústica explicada, acabamentos e aplicações — da equipa STRETCH na Bélgica.",
     "aboutTitle": "Sobre a STRETCH — tetos feitos à mão na Bélgica | STRETCH",
     "aboutDescription": "A STRETCH desenha e fabrica à mão na Bélgica tetos e paredes tensados sem juntas, instalados num dia por toda a Europa e EUA. Parte do STRETCH Group.",
     "contactTitle": "Contactar a STRETCH — orçamentos, revendedores e parcerias | STRETCH",
-    "contactDescription": "Contacte os especialistas STRETCH para um orçamento, o revendedor mais próximo ou uma parceria. Sede belga em Beveren-Waas, com escritórios nos EUA, Polónia e Áustria.",
+    "contactDescription": "Contacte os especialistas STRETCH para um orçamento, o revendedor mais próximo ou uma parceria. Sede belga em Beveren-Waas.",
     "privacyTitle": "Política de privacidade | STRETCH",
     "privacyDescription": "Como a STRETCH (Stretch Productions BV) recolhe, utiliza e protege os dados pessoais enviados através deste site, ao abrigo do RGPD da UE.",
     "termsTitle": "Termos de utilização | STRETCH",
@@ -70,7 +70,7 @@
     "notFoundTitle": "Página não encontrada | STRETCH",
     "notFoundDescription": "A página que procura não foi encontrada.",
     "datasheetsTitle": "Fichas técnicas | STRETCH",
-    "datasheetsDescription": "Descarregue as fichas técnicas dos sistemas de tetos tensados STRETCH — especificações, classes de fogo, valores acústicos αw / classes e detalhes de garantia.",
+    "datasheetsDescription": "Fichas técnicas dos tetos tensados STRETCH para descarregar — especificações, classes de fogo, valores acústicos αw e detalhes de garantia.",
     "portalTitle": "Portal do cliente | STRETCH",
     "portalDescription": "Inicie sessão para consultar a sua tabela de preços profissional STRETCH e os dados da conta.",
     "materialsTitle": "Materiais e consumíveis para teto tensionado | STRETCH",
@@ -2244,7 +2244,7 @@
       "name": "Salas de estar e cinema em casa",
       "shortName": "Sala e cinema",
       "eyebrow": "Sala e cinema",
-      "metaDescription": "Tetos tensionados para salas e cinemas em casa — acabamento sem juntas, iluminação integrada, céu estrelado em fibra ótica e melhor acústica, instalados num dia.",
+      "metaDescription": "Tetos tensionados para salas e cinemas em casa — sem juntas, com iluminação integrada, céu estrelado e melhor acústica, instalados num dia.",
       "intro": "Um teto impecável define o tom de um espaço de estar. A STRETCH oferece-lhe um acabamento perfeitamente liso e sem juntas — com iluminação oculta, um céu estrelado em fibra ótica para o cinema e conforto acústico, tudo com montagem a frio num único dia.",
       "benefits": [
         {
@@ -2265,7 +2265,7 @@
       "name": "Casas de banho e cozinhas",
       "shortName": "Casa de banho e cozinha",
       "eyebrow": "Casa de banho e cozinha",
-      "metaDescription": "Tetos tensionados resistentes à humidade para casas de banho e cozinhas — impermeáveis, antibolor e laváveis, com iluminação integrada, instalados num único dia.",
+      "metaDescription": "Tetos tensionados para casas de banho e cozinhas — impermeáveis, antibolor e laváveis, com iluminação integrada, instalados num único dia.",
       "intro": "Casas de banho e cozinhas são exigentes para os tetos. Uma membrana STRETCH é impermeável, antibolor e lavável — esconde tubagens e condutas atrás de uma superfície impecável, com focos e extração integrados de forma cuidada.",
       "benefits": [
         {
@@ -2286,7 +2286,7 @@
       "name": "Escritórios e retalho",
       "shortName": "Escritório e retalho",
       "eyebrow": "Escritório e retalho",
-      "metaDescription": "Tetos tensionados para escritórios, retalho e hotelaria — acústica de classe A, tetos impressos com a sua marca e iluminação integrada, instalação rápida e limpa.",
+      "metaDescription": "Tetos tensionados para escritórios, retalho e hotelaria — acústica classe A, tetos impressos e iluminação integrada, instalação rápida e limpa.",
       "intro": "Os espaços comerciais têm de ter boa imagem e boa acústica. A STRETCH proporciona conforto acústico de classe A, tetos impressos com a sua marca e iluminação integrada — com montagem a frio e rápida, e o mínimo de transtorno para um espaço em funcionamento.",
       "benefits": [
         {
@@ -2307,7 +2307,7 @@
       "name": "Piscinas e wellness",
       "shortName": "Piscinas e wellness",
       "eyebrow": "Piscinas e wellness",
-      "metaDescription": "Tetos tensionados para piscinas, spas e espaços de wellness — membranas resistentes à humidade e ao cloro com acabamento No-Stain, luz e acústica integradas, instalados sem interromper a atividade.",
+      "metaDescription": "Tetos tensionados para piscinas, spas e wellness — membranas resistentes à humidade e ao cloro com acabamento No-Stain, instalados sem parar a atividade.",
       "intro": "Os pavilhões de piscinas e os espaços de wellness destroem os tetos pintados: a condensação, o vapor de cloro e o calor fazem os revestimentos descascar em poucos anos. Uma membrana tensionada é imune aos três — e leva luz e acústica às salas mais húmidas do edifício.",
       "benefits": [
         {
@@ -2328,7 +2328,7 @@
       "name": "Paredes tensionadas e acústica de parede",
       "shortName": "Paredes",
       "eyebrow": "Paredes",
-      "metaDescription": "Revestimentos de parede em têxtil e veludo, paredes tensionadas impressas e sistemas acústicos de parede — paredes tensionadas sem emendas com a absorção escondida atrás da superfície.",
+      "metaDescription": "Paredes tensionadas e revestimentos em têxtil e veludo, impressos ou acústicos — paredes sem emendas com a absorção escondida atrás da superfície.",
       "intro": "Tudo o que um teto tensionado faz, uma parede também pode fazer. As paredes tensionadas em têxtil e veludo dão uma superfície sem emendas de mate profundo; as membranas impressas transformam uma parede numa obra de arte; e os sistemas acústicos escondem uma absorção a sério atrás da tela — sem painéis à vista.",
       "benefits": [
         {
@@ -2561,7 +2561,7 @@
     "prefab-ceiling-unit": {
       "name": "Estruturas pré-fabricadas",
       "eyebrow": "Estruturas pré-fabricadas",
-      "metaDescription": "Estruturas portantes pré-fabricadas à medida para tetos tensionados — vigas de alumínio, aço e madeira, sancas e detalhes de desnível; cortadas, soldadas e lacadas a pó na nossa casa e enviadas para todo o mundo.",
+      "metaDescription": "Estruturas pré-fabricadas à medida para tetos tensionados — vigas de alumínio, aço e madeira, cortadas, soldadas e lacadas na nossa fábrica.",
       "intro": "Estruturas portantes pré-fabricadas para projetos de tetos tensionados — vigas para tetos em grelha e retícula, sancas para tetos flutuantes e detalhes de desnível bem resolvidos. Cada estrutura é feita à medida segundo os seus desenhos, inteiramente na nossa própria produção na Polónia, e enviada para todo o mundo aos nossos revendedores.",
       "makeHeading": "O que construímos",
       "make": [
@@ -2631,7 +2631,7 @@
     "prefab-lighting-elements": {
       "name": "Elementos de iluminação pré-fabricados",
       "eyebrow": "Elementos de iluminação pré-fabricados",
-      "metaDescription": "Elementos de iluminação pré-fabricados sobre estrutura de alumínio e acabados com membrana STRETCH — sancas luminosas, linhas de luz e elementos retroiluminados, projetados segundo os seus desenhos, construídos na nossa casa e enviados para todo o mundo.",
+      "metaDescription": "Elementos de iluminação pré-fabricados sobre estrutura de alumínio com membrana STRETCH — sancas, linhas de luz e retroiluminados, segundo os seus planos.",
       "intro": "Elementos de iluminação pré-montados, construídos sobre uma estrutura de alumínio e acabados com a nossa membrana tensionada — sancas luminosas, linhas de luz e elementos retroiluminados. Projetados segundo os seus desenhos, construídos na nossa produção na Polónia e enviados para todo o mundo aos nossos revendedores.",
       "makeHeading": "O que construímos",
       "make": [
@@ -4509,7 +4509,7 @@
       "name": "Perfis e calhas",
       "eyebrow": "Perfis",
       "metaTitle": "Perfis para tetos tensionados — alumínio e PVC | STRETCH",
-      "metaDescription": "Perfis de alumínio e PVC para tetos tensionados, perfis para linhas LED e tampas de remate, diretamente da nossa própria produção. Peça um orçamento — respondemos com preço e prazo de entrega.",
+      "metaDescription": "Perfis de alumínio e PVC para tetos tensionados, perfis LED e tampas de remate de produção própria — peça orçamento e respondemos com preço e prazo.",
       "intro": "As calhas que sustentam cada teto STRETCH: perfis perimetrais de alumínio e PVC, perfis para linhas LED e peças de remate — os mesmos perfis que os nossos próprios instaladores usam, cortados e expedidos a partir da nossa produção.",
       "items": [
         {
@@ -4534,7 +4534,7 @@
       "name": "Telas e películas",
       "eyebrow": "Telas",
       "metaTitle": "Tela e película PVC para tetos tensionados — em rolo, ao corte, à medida | STRETCH",
-      "metaDescription": "Película PVC para tetos tensionados (MSD, Bauf, Teqtum, Renolit) em rolo, cortada ao comprimento ou soldada à medida com arpão. Acabamentos mate, brilhante, translúcido e de cor. Peça um orçamento.",
+      "metaDescription": "Película PVC para tetos tensionados (MSD, Bauf, Teqtum, Renolit) em rolo, cortada ao comprimento ou soldada à medida — mate, brilho, translúcida e cor.",
       "intro": "A membrana tal como precisa dela: rolos completos para a sua própria confeção, película cortada ao comprimento ou um teto acabado, soldado à medida com arpão — em acabamentos mate, acetinado, brilhante, translúcido e de cor das principais marcas de película.",
       "items": [
         {
@@ -4563,7 +4563,7 @@
       "name": "Iluminação",
       "eyebrow": "Iluminação",
       "metaTitle": "Iluminação para tetos tensionados — tracklight 48V, módulos LED, anéis para focos | STRETCH",
-      "metaDescription": "Iluminação para tetos tensionados: calhas magnéticas de 48V, focos e luminárias de grelha, módulos LED para tetos retroiluminados e anéis para focos/anéis de proteção. Peça um orçamento.",
+      "metaDescription": "Iluminação para tetos tensionados: calhas magnéticas 48V, focos, módulos LED para tetos retroiluminados e anéis de proteção. Peça orçamento.",
       "intro": "Tudo o que ilumina um teto STRETCH: a família de calhas magnéticas tracklight de 48V, módulos LED para campos de luz em tetos retroiluminados e os anéis que rematam cada foco com limpeza.",
       "items": [
         {
@@ -4609,7 +4609,7 @@
       "name": "Painéis acústicos",
       "eyebrow": "Acústica",
       "metaTitle": "Painéis acústicos — lã de poliéster, ilhas e painéis de parede | STRETCH",
-      "metaDescription": "Painéis acústicos de lã de poliéster, ilhas de teto suspensas e painéis de parede que tiram o eco da divisão — cortados à medida na nossa produção. Peça um orçamento.",
+      "metaDescription": "Painéis acústicos de lã de poliéster, ilhas de teto e painéis de parede que tiram o eco — cortados à medida na nossa produção. Peça um orçamento.",
       "intro": "Absorção para divisões que soam tão bem como parecem: painéis de lã de poliéster para tetos e paredes, ilhas suspensas e baffles — cortados à medida e entregues a partir da nossa própria produção.",
       "items": [
         {
@@ -4679,7 +4679,7 @@
     "metaDescDealer": "Procura um teto tensionado em {place}? O nosso revendedor STRETCH certificado faz a medição no local e instala tetos soldados à medida na nossa fábrica belga. Peça um orçamento gratuito.",
     "metaDescRecruit": "Um teto tensionado em {place}? Instalamos diretamente a partir da nossa fábrica belga — e procuramos um revendedor local. Peça um orçamento ou torne-se o nosso parceiro em {place}.",
     "ovMetaTitle": "Revendedores STRETCH — Bélgica e Países Baixos | STRETCH",
-    "ovMetaDescription": "Encontre o seu revendedor STRETCH certificado na Flandres, em Bruxelas, na Valónia ou nos Países Baixos — ou junte-se à rede. Cada teto sai da nossa própria fábrica belga.",
+    "ovMetaDescription": "Encontre o seu revendedor STRETCH certificado na Flandres, em Bruxelas, na Valónia ou nos Países Baixos. Cada teto sai da nossa fábrica belga.",
     "ovEyebrow": "Rede",
     "ovTitle": "Revendedores",
     "ovIntro": "Os tetos tensionados STRETCH são medidos e instalados por parceiros locais certificados, com o apoio da nossa própria fábrica perto de Lokeren. Encontre a sua região — ou garanta as zonas em aberto.",
@@ -4802,5 +4802,22 @@
     ],
     "ctaTitle": "Tudo para especificar, num só lugar",
     "ctaBody": "Crie a sua conta gratuita: cada documento, faixa de orçamento e caso de estudo fica a um clique — mais um consultor dedicado para os seus projetos."
+  },
+  "alt": {
+    "heroCeilings": "Teto tensionado mate e sem juntas numa sala moderna",
+    "heroAcoustic": "Teto tensionado acústico num espaço claro e aberto",
+    "heroWalls": "Parede tensionada em têxtil num interior contemporâneo",
+    "heroLight": "Teto tensionado retroiluminado com luz uniforme na sala",
+    "why": "Teto tensionado branco impecável num interior acabado",
+    "solutionsPolyester": "Teto tensionado de poliéster mate numa sala luminosa",
+    "solutionsPvc": "Teto tensionado de PVC brilhante a refletir uma cozinha moderna",
+    "acoustics": "Teto tensionado acústico num estúdio de gravação",
+    "appLiving": "Teto tensionado com iluminação integrada numa sala de estar",
+    "appBathroom": "Teto tensionado resistente à humidade numa casa de banho moderna",
+    "appOffice": "Teto tensionado acústico num escritório em open space",
+    "appCinema": "Teto tensionado escuro com focos num cinema em casa",
+    "appLight": "Teto tensionado céu estrelado com fibra ótica",
+    "appCommercial": "Teto tensionado impresso num interior comercial",
+    "installer": "Instalador STRETCH certificado a montar um teto tensionado"
   }
 }

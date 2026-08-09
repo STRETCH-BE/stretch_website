@@ -46,11 +46,11 @@
     "homeTitle": "STRETCH — Et nytt tak på én dag | Strekktak & strekkvegger",
     "homeDescription": "Glatte, skjøtefrie strekktak og strekkvegger, kaldmontert på én dag — uten støv og uten maling. Akustikk-, lys- og printmuligheter. Håndlaget i Belgia.",
     "productsTitle": "Strekktak & akustikkløsninger | STRETCH",
-    "productsDescription": "Utforsk STRETCH-sortimentet: strekktak i polyester og PVC, akustikksystemer, bakbelyste & trykte design og prefab-enheter — skjøtefritt opptil 6,4 m, 25 års garanti.",
+    "productsDescription": "Strekktak i polyester og PVC, akustikksystemer, bakbelyste og trykte design og prefab-enheter — skjøtefritt opptil 6,4 m, 25 års garanti.",
     "partnersTitle": "Bli STRETCH-forhandler — forhandlerpriser & leads | STRETCH",
     "partnersDescription": "Legg til strekktak i tilbudet ditt med forhandlerpriser, skreddersydd levering fra vårt belgiske verksted, praktisk opplæring og videresendte lokale leads.",
     "trainingTitle": "Montøropplæring — sertifisert på få dager | STRETCH",
-    "trainingDescription": "Praktisk sertifisering som strekktakmontør ved vårt belgiske hovedkontor. Lær konfeksjon, profiler, kald- & varmmontering, lys og akustikk — ingen erfaring nødvendig.",
+    "trainingDescription": "Bli sertifisert strekktakmontør ved vårt belgiske hovedkontor. Lær konfeksjon, profiler og kald- & varmmontering — ingen erfaring nødvendig.",
     "inspirationTitle": "Inspirasjon — ekte strekktakprosjekter | STRETCH",
     "inspirationDescription": "Studioer, kontorer, boliger og hoteller utført med STRETCH. Bla gjennom ekte prosjekter etter løsning — akustikk, lys & print, bolig, bad, kontor og næring.",
     "samplesTitle": "Bestill farge- & RAL-prøver | STRETCH",
@@ -62,7 +62,7 @@
     "aboutTitle": "Om STRETCH — håndlagde tak fra Belgia | STRETCH",
     "aboutDescription": "STRETCH designer og håndlager skjøtefrie strekktak og strekkvegger i Belgia, montert på én dag over hele Europa og USA. En del av STRETCH Group.",
     "contactTitle": "Kontakt STRETCH — tilbud, forhandlere & partnerskap | STRETCH",
-    "contactDescription": "Nå STRETCH-spesialistene for et tilbud, din nærmeste forhandler eller et partnerskap. Belgisk hovedkontor i Beveren-Waas, med kontorer i USA, Polen og Østerrike.",
+    "contactDescription": "Nå STRETCH-spesialistene for et tilbud, din nærmeste forhandler eller et partnerskap. Belgisk hovedkontor i Beveren-Waas.",
     "privacyTitle": "Personvernerklæring | STRETCH",
     "privacyDescription": "Hvordan STRETCH (Stretch Productions BV) samler inn, bruker og beskytter personopplysninger sendt via dette nettstedet, i henhold til EUs GDPR.",
     "termsTitle": "Bruksvilkår | STRETCH",
@@ -2286,7 +2286,7 @@
       "name": "Kontor & butikk",
       "shortName": "Kontor & butikk",
       "eyebrow": "Kontor & butikk",
-      "metaDescription": "Strekkhimlinger for kontor, butikk og servering — akustikk opptil klasse A, printede himlinger med din merkevare og integrert belysning, raskt montert uten avbrudd.",
+      "metaDescription": "Strekktak for kontor, butikk og servering — akustikk opptil klasse A, printede himlinger og integrert belysning, raskt montert uten avbrudd.",
       "intro": "Næringslokaler må se skarpe ut og låte riktig. STRETCH leverer akustisk komfort opptil klasse A, printede himlinger med din merkevare og integrert belysning — kaldmontert og raskt, med minimale forstyrrelser for et lokale i drift.",
       "benefits": [
         {
@@ -2561,7 +2561,7 @@
     "prefab-ceiling-unit": {
       "name": "Prefab-strukturer",
       "eyebrow": "Prefab-strukturer",
-      "metaDescription": "Prefabrikkerte bærestrukturer etter mål for strekkhimlinger — bjelker i aluminium, stål og tre, gesimser og nivåforskjell-detaljer, kappet, sveiset og pulverlakkert hos oss og sendt verden over.",
+      "metaDescription": "Prefabrikkerte bærestrukturer etter mål for strekktak — bjelker i aluminium, stål og tre, kappet, sveiset og pulverlakkert i eget hus.",
       "intro": "Prefabrikkerte bærestrukturer for strekkhimlingsprosjekter — bjelker til raster- og gitterhimlinger, gesimser til svevende himlinger og rene nivåforskjell-detaljer. Hver struktur lages etter mål ut fra tegningene dine, helt i eget hus i vår egen polske produksjon, og sendes verden over til våre forhandlere.",
       "makeHeading": "Hva vi bygger",
       "make": [
@@ -2631,7 +2631,7 @@
     "prefab-lighting-elements": {
       "name": "Prefab-lyselementer",
       "eyebrow": "Prefab-lyselementer",
-      "metaDescription": "Prefab-lyselementer bygget på en aluminiumsstruktur og kledd med en STRETCH-membran — lysgesimser, lyslinjer og baklyste elementer, konstruert etter tegningene dine, bygget i eget hus og sendt verden over.",
+      "metaDescription": "Prefab-lyselementer på aluminiumsstruktur med STRETCH-membran — lysgesimser, lyslinjer og baklyste elementer, bygget etter tegningene dine.",
       "intro": "Ferdigmonterte lyselementer bygget på en aluminiumsstruktur og kledd med vår strekkmembran — lysgesimser, lyslinjer og baklyste elementer. Konstruert etter tegningene dine, bygget i eget hus i vår polske produksjon og sendt verden over til våre forhandlere.",
       "makeHeading": "Hva vi bygger",
       "make": [
@@ -4534,7 +4534,7 @@
       "name": "Duker & folier",
       "eyebrow": "Duker",
       "metaTitle": "Strekktakduk & PVC-folie — på rull, kappet i lengde, etter mål | STRETCH",
-      "metaDescription": "PVC-folie til strekktak (MSD, Bauf, Teqtum, Renolit) på rull, kappet i lengde eller sveiset etter mål med harpun. Matte, blanke, translusente og fargede utførelser. Be om tilbud.",
+      "metaDescription": "PVC-folie til strekktak (MSD, Bauf, Teqtum, Renolit) på rull, kappet i lengde eller sveiset etter mål — matt, blank, translusent og farget.",
       "intro": "Duk slik du trenger den: hele ruller til egen konfeksjon, folie kappet i lengde eller et ferdig tak sveiset etter mål med harpun — i matte, sateng, blanke, translusente og fargede utførelser fra de store foliemerkene.",
       "items": [
         {
@@ -4679,7 +4679,7 @@
     "metaDescDealer": "Ser du etter strekktak i {place}? Vår sertifiserte STRETCH-forhandler måler opp lokalt og monterer tak sveiset på mål i vår belgiske produksjon. Be om et gratis tilbud.",
     "metaDescRecruit": "Strekktak i {place}? Vi monterer direkte fra vår belgiske produksjon — og vi ser etter en lokal forhandler. Be om et tilbud, eller bli vår partner i {place}.",
     "ovMetaTitle": "STRETCH-forhandlere — Belgia & Nederland | STRETCH",
-    "ovMetaDescription": "Finn din sertifiserte STRETCH-forhandler i Flandern, Brussel, Vallonia eller Nederland — eller bli med i nettverket. Hvert tak kommer fra vår egen belgiske produksjon.",
+    "ovMetaDescription": "Finn din sertifiserte STRETCH-forhandler i Flandern, Brussel, Vallonia eller Nederland. Hvert tak kommer fra vår egen belgiske produksjon.",
     "ovEyebrow": "Nettverk",
     "ovTitle": "Forhandlere",
     "ovIntro": "Strekktak fra STRETCH måles opp og monteres av sertifiserte lokale partnere, med vår egen produksjon nær Lokeren i ryggen. Finn din region — eller sikre deg en av de ledige plassene.",
@@ -4802,5 +4802,22 @@
     ],
     "ctaTitle": "Alt for å foreskrive, på ett sted",
     "ctaBody": "Opprett din gratis konto — hvert dokument, budsjettbånd og casestudie er ett klikk unna, pluss en fast rådgiver for prosjektene dine."
+  },
+  "alt": {
+    "heroCeilings": "Skjøtefritt matt strekktak i en moderne stue",
+    "heroAcoustic": "Akustisk strekktak i et lyst, åpent oppholdsrom",
+    "heroWalls": "Oppspent tekstilvegg i et moderne interiør",
+    "heroLight": "Baklyst strekktak med jevnt lys i rommet",
+    "why": "Feilfritt hvitt strekktak i et ferdig interiør",
+    "solutionsPolyester": "Matt strekktak i polyester i en lys stue",
+    "solutionsPvc": "Blankt PVC-strekktak som speiler et moderne kjøkken",
+    "acoustics": "Akustisk strekktak i et lydstudio",
+    "appLiving": "Strekktak med integrert belysning i en stue",
+    "appBathroom": "Fuktbestandig strekktak på et moderne bad",
+    "appOffice": "Akustisk strekktak i et åpent kontor",
+    "appCinema": "Mørkt strekktak med spotter i en hjemmekino",
+    "appLight": "Stjernehimmel-strekktak med fiberoptisk lys",
+    "appCommercial": "Trykket strekktak i et butikkinteriør",
+    "installer": "Sertifisert STRETCH-montør monterer et strekktak"
   }
 }

@@ -44,13 +44,13 @@
   },
   "meta": {
     "homeTitle": "STRETCH — A new ceiling in one day | Stretch ceilings & walls",
-    "homeDescription": "Sleek, seamless stretch ceilings and walls, installed cold in a single day — no dust, no painting. Acoustic, lighting and printed options. Hand-made in Belgium.",
+    "homeDescription": "Stretch ceilings and walls, seamless and installed cold in one day — no dust, no painting. Acoustic, lighting and print options. Hand-made in Belgium.",
     "productsTitle": "Stretch ceiling & acoustic solutions | STRETCH",
-    "productsDescription": "Explore the STRETCH range: polyester and PVC stretch ceilings, acoustic systems, backlit & printed designs and prefab units — seamless to 6.4 m, 25-year warranty.",
+    "productsDescription": "Stretch ceilings in polyester and PVC, acoustic systems, backlit and printed designs and prefab units — seamless to 6.4 m, 25-year warranty.",
     "partnersTitle": "Become a STRETCH reseller — trade pricing & leads | STRETCH",
     "partnersDescription": "Add stretch ceilings to your offer with trade pricing, made-to-measure supply from our Belgian workshop, hands-on training and referred local leads.",
     "trainingTitle": "Installer training — certified in days | STRETCH",
-    "trainingDescription": "Hands-on stretch-ceiling installer certification at our Belgian HQ. Learn confection, profiles, cold & heat mounting, light and acoustics — no prior experience needed.",
+    "trainingDescription": "Get certified as a stretch-ceiling installer at our Belgian HQ. Learn confection, profiles and cold & heat mounting — no prior experience needed.",
     "inspirationTitle": "Inspiration — real stretch ceiling projects | STRETCH",
     "inspirationDescription": "Studios, offices, homes and hotels finished with STRETCH. Browse real projects by solution — acoustic, light & print, living, bathroom, office and commercial.",
     "samplesTitle": "Request colour & RAL samples | STRETCH",
@@ -74,7 +74,7 @@
     "portalTitle": "Client portal | STRETCH",
     "portalDescription": "Sign in to view your STRETCH trade pricelist and account data.",
     "materialsTitle": "Stretch ceiling materials & supplies | STRETCH",
-    "materialsDescription": "Profiles, fabrics & foils, lighting, accessories, tools and STRETCH Cleaner — request a quote per item and we reply with price and delivery. No webshop needed.",
+    "materialsDescription": "Stretch-ceiling materials: profiles, fabrics & foils, lighting, accessories and tools — request a quote per item and we reply with price and delivery.",
     "architectsTitle": "For architects — specify stretch ceilings | STRETCH",
     "architectsDescription": "Free architect area: datasheets, spec texts, CAD/BIM, measured case studies, indicative €/m² budget bands, events and project support."
   },
@@ -2286,7 +2286,7 @@
       "name": "Offices & retail",
       "shortName": "Office & retail",
       "eyebrow": "Office & retail",
-      "metaDescription": "Stretch ceilings for offices, retail and hospitality — Class A acoustics, branded printed ceilings and integrated lighting, installed fast with minimal disruption.",
+      "metaDescription": "Stretch ceilings for offices, retail and hospitality — Class A acoustics, printed ceilings and integrated lighting, installed with minimal disruption.",
       "intro": "Commercial spaces need to look sharp and sound right. STRETCH delivers Class A acoustic comfort, branded printed ceilings and integrated lighting — installed cold and fast, with minimal disruption to a working space.",
       "benefits": [
         {
@@ -2307,7 +2307,7 @@
       "name": "Swimming pools & wellness",
       "shortName": "Pool & wellness",
       "eyebrow": "Pool & wellness",
-      "metaDescription": "Stretch ceilings for swimming pools, spas and wellness spaces — moisture- and chlorine-resistant membranes with No-Stain finish, integrated light and acoustics, installed without downtime.",
+      "metaDescription": "Stretch ceilings for pools, spas and wellness spaces — moisture- and chlorine-resistant membranes with No-Stain finish, installed without downtime.",
       "intro": "Pool halls and wellness spaces destroy painted ceilings: condensation, chlorine vapour and heat make coatings flake within years. A tensioned membrane is immune to all three — and brings light and acoustics into the wettest rooms of the building.",
       "benefits": [
         {
@@ -2561,7 +2561,7 @@
     "prefab-ceiling-unit": {
       "name": "Prefab Structures",
       "eyebrow": "Prefab structures",
-      "metaDescription": "Made-to-measure prefab carrier structures for stretch ceilings — aluminium, steel and wood beams, coving and height-difference details, cut, welded and powder-coated in-house and shipped worldwide.",
+      "metaDescription": "Made-to-measure prefab carrier structures for stretch ceilings — aluminium, steel and wood beams, cut, welded and powder-coated in-house.",
       "intro": "Prefab carrier structures for stretch-ceiling projects — beams for raster and grid ceilings, coving for floating ceilings, and clean height-difference details. Every structure is made to measure to your drawings, entirely in-house in our own Polish production, and shipped worldwide to our dealers.",
       "makeHeading": "What we build",
       "make": [
@@ -2631,7 +2631,7 @@
     "prefab-lighting-elements": {
       "name": "Prefab Lighting Elements",
       "eyebrow": "Prefab lighting elements",
-      "metaDescription": "Prefab lighting elements built from an aluminium structure and finished with a STRETCH membrane — luminous coves, light lines and backlit features, engineered to your drawings, built in-house and shipped worldwide.",
+      "metaDescription": "Prefab lighting elements on an aluminium structure with a STRETCH membrane — luminous coves, light lines and backlit features, built to your drawings.",
       "intro": "Pre-assembled lighting elements built from an aluminium structure and finished with our stretch membrane — luminous coves, light lines and backlit features. Engineered to your drawings, built in-house in our Polish production, and shipped worldwide to our dealers.",
       "makeHeading": "What we build",
       "make": [
@@ -4509,7 +4509,7 @@
       "name": "Profiles & tracks",
       "eyebrow": "Profiles",
       "metaTitle": "Stretch ceiling profiles — aluminium & PVC | STRETCH",
-      "metaDescription": "Aluminium and PVC stretch-ceiling profiles, LED-line profiles and end caps, straight from our own production. Request a quote — we reply with price and delivery.",
+      "metaDescription": "Aluminium and PVC stretch-ceiling profiles, LED-line profiles and end caps from our own production — request a quote, we reply with price and delivery.",
       "intro": "The rails that hold every STRETCH ceiling: aluminium and PVC perimeter profiles, LED-line profiles and finishing pieces — the same profiles our own installers use, cut and shipped from our production.",
       "items": [
         {
@@ -4534,7 +4534,7 @@
       "name": "Fabrics & foils",
       "eyebrow": "Fabrics",
       "metaTitle": "Stretch ceiling fabric & PVC foil — rolls, cut to length, made to measure | STRETCH",
-      "metaDescription": "PVC stretch-ceiling foil (MSD, Bauf, Teqtum, Renolit) on the roll, cut to length, or welded made-to-measure with harpoon. Matte, glossy, translucent and colour finishes. Request a quote.",
+      "metaDescription": "PVC stretch-ceiling foil (MSD, Bauf, Teqtum, Renolit) on the roll, cut to length or welded to measure — matte, glossy, translucent and colours.",
       "intro": "Membrane the way you need it: full rolls for your own confection, foil cut to length, or a finished made-to-measure ceiling welded with harpoon — in matte, satin, glossy, translucent and colour finishes from the major foil brands.",
       "items": [
         {
@@ -4563,7 +4563,7 @@
       "name": "Lighting",
       "eyebrow": "Lighting",
       "metaTitle": "Stretch ceiling lighting — 48V tracklight, LED modules, spotrings | STRETCH",
-      "metaDescription": "Lighting for stretch ceilings: magnetic 48V tracklights, spot and grille lights, LED modules for backlit ceilings and spotrings/protective rings. Request a quote.",
+      "metaDescription": "Lighting for stretch ceilings: magnetic 48V tracklights, spot and grille lights, LED modules for backlit ceilings and spotrings. Request a quote.",
       "intro": "Everything that lights a STRETCH ceiling: the magnetic 48V tracklight family, LED field modules for backlit ceilings, and the rings that finish every spot cleanly.",
       "items": [
         {
@@ -4609,7 +4609,7 @@
       "name": "Acoustic panels",
       "eyebrow": "Acoustics",
       "metaTitle": "Acoustic panels — polyester wool, islands & wall panels | STRETCH",
-      "metaDescription": "Acoustic polyester wool panels, free-hanging ceiling islands and wall panels that take the echo out of a room — cut to size from our production. Request a quote.",
+      "metaDescription": "Acoustic polyester wool panels, ceiling islands and wall panels that take the echo out of a room — cut to size from our own production.",
       "intro": "Absorption for rooms that sound as good as they look: polyester wool panels for ceilings and walls, free-hanging islands and baffles — cut to size and delivered from our own production.",
       "items": [
         {
@@ -4679,7 +4679,7 @@
     "metaDescDealer": "Looking for a stretch ceiling in {place}? Our certified STRETCH dealer measures locally and installs ceilings welded to size in our Belgian production. Request a free quote.",
     "metaDescRecruit": "A stretch ceiling in {place}? We install directly from our Belgian production — and we are looking for a local dealer. Request a quote or become our partner in {place}.",
     "ovMetaTitle": "STRETCH dealers — Belgium & the Netherlands | STRETCH",
-    "ovMetaDescription": "Find your certified STRETCH dealer in Flanders, Brussels, Wallonia or the Netherlands — or join the network. Every ceiling comes from our own Belgian production.",
+    "ovMetaDescription": "Find your certified STRETCH dealer in Flanders, Brussels, Wallonia or the Netherlands. Every stretch ceiling comes from our own Belgian production.",
     "ovEyebrow": "Network",
     "ovTitle": "Dealers",
     "ovIntro": "STRETCH ceilings are measured and installed by certified local partners, backed by our own production near Lokeren. Find your region — or claim the open spots.",
@@ -4802,5 +4802,22 @@
     ],
     "ctaTitle": "Everything to specify, in one place",
     "ctaBody": "Create your free account and every document, budget band and case study is one click away — plus a dedicated advisor for your live projects."
+  },
+  "alt": {
+    "heroCeilings": "Seamless matte stretch ceiling in a modern living room",
+    "heroAcoustic": "Acoustic stretch ceiling in a bright open living space",
+    "heroWalls": "Tensioned fabric wall in a contemporary interior",
+    "heroLight": "Backlit stretch ceiling spreading even light through the room",
+    "why": "Flawless white stretch ceiling in a finished interior",
+    "solutionsPolyester": "Matte polyester stretch ceiling in a bright living room",
+    "solutionsPvc": "Glossy PVC stretch ceiling reflecting a modern kitchen",
+    "acoustics": "Acoustic stretch ceiling in a recording studio",
+    "appLiving": "Stretch ceiling with integrated lighting in a living room",
+    "appBathroom": "Moisture-resistant stretch ceiling in a modern bathroom",
+    "appOffice": "Acoustic stretch ceiling in an open-plan office",
+    "appCinema": "Dark stretch ceiling with spotlights in a home cinema",
+    "appLight": "Starry-sky stretch ceiling with fibre-optic lights",
+    "appCommercial": "Printed stretch ceiling in a retail interior",
+    "installer": "Certified STRETCH installer fitting a stretch ceiling"
   }
 }

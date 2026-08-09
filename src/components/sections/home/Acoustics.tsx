@@ -43,6 +43,7 @@ const CELLS = [
 
 export default function Acoustics() {
   const t = useTranslations('home.acoustics');
+  const ta = useTranslations('alt');
   return (
     <section className="section--dark" id="acoustics">
       <div className="container section">
@@ -65,7 +66,7 @@ export default function Acoustics() {
             <Placeholder
               label="Acoustic install / studio"
               src={homeImages.acoustics}
-              alt="Acoustic stretch ceiling in a studio"
+              alt={ta('acoustics')}
               sizes="(max-width: 860px) 100vw, 50vw"
             />
             <span style={{ position: 'absolute', left: 0, top: 0, background: 'var(--red)', color: '#fff', padding: '11px 16px', fontSize: 11, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase' }}>

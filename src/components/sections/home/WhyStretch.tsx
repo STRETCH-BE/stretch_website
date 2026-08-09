@@ -10,6 +10,7 @@ const CELL_NUMBERS = ['01', '02', '03'];
 
 export default function WhyStretch() {
   const t = useTranslations('home.why');
+  const ta = useTranslations('alt');
   return (
     <section className="section--dark" id="why">
       <div className="container section">
@@ -28,7 +29,7 @@ export default function WhyStretch() {
         <div className="why-split">
           <div className="why-photo">
             <div className="why-photo-img">
-              <Placeholder label="Why STRETCH — finished room" src={homeImages.whyStretch} alt="A flawless STRETCH ceiling in a finished interior" sizes="(max-width: 900px) 100vw, 48vw" decorative />
+              <Placeholder label="Why STRETCH — finished room" src={homeImages.whyStretch} alt={ta('why')} sizes="(max-width: 900px) 100vw, 48vw" />
             </div>
           </div>
 

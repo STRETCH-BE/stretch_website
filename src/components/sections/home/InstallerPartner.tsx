@@ -12,11 +12,12 @@ const STEP_NUMBERS = ['01', '02', '03'];
 
 export default function InstallerPartner() {
   const t = useTranslations('home.installer');
+  const ta = useTranslations('alt');
   return (
     <section className="ip" id="installer">
       <div className="ip-split">
         <div className="ip-photo">
-          <Placeholder label="STRETCH installer at work" src={homeImages.installer} alt="A certified STRETCH installer fitting a stretch ceiling" sizes="(max-width: 920px) 100vw, 50vw" decorative />
+          <Placeholder label="STRETCH installer at work" src={homeImages.installer} alt={ta('installer')} sizes="(max-width: 920px) 100vw, 50vw" />
         </div>
 
         <div className="ip-copy">

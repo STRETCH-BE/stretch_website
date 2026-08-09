@@ -7,12 +7,13 @@ import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
 
 const SOLUTION_CARDS = [
-  { href: '/products/polyester-stretch-ceiling', img: homeImages.solutionsPolyester, light: true },
-  { href: '/products/pvc-stretch-ceiling', img: homeImages.solutionsPvc, light: false },
+  { href: '/products/polyester-stretch-ceiling', img: homeImages.solutionsPolyester, light: true, altKey: 'solutionsPolyester' },
+  { href: '/products/pvc-stretch-ceiling', img: homeImages.solutionsPvc, light: false, altKey: 'solutionsPvc' },
 ];
 
 export default function Solutions() {
   const t = useTranslations('home.solutions');
+  const ta = useTranslations('alt');
   return (
     <section className="container section" id="solutions">
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20, marginBottom: 'clamp(36px,4vw,56px)' }}>
@@ -33,7 +34,7 @@ export default function Solutions() {
         {SOLUTION_CARDS.map((s, ci) => (
           <Link key={s.href} href={s.href} className="sol-card zoom-wrap">
             <div className="sol-img">
-              <Placeholder label={`${t(`cards.${ci}.name`)} ceiling photo`} src={s.img} alt={t(`cards.${ci}.alt`)} sizes="(max-width: 760px) 100vw, 45vw" light={s.light} className="zoom-img" decorative />
+              <Placeholder label={`${t(`cards.${ci}.name`)} ceiling photo`} src={s.img} alt={ta(s.altKey)} sizes="(max-width: 760px) 100vw, 45vw" light={s.light} className="zoom-img" />
             </div>
             <div className="sol-overlay">
               <div className="sol-tags">

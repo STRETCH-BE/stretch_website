@@ -7,6 +7,16 @@ import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
 
+// alt-namespace key per bento tile.
+const BENTO_ALT_KEYS: Record<string, string> = {
+  living: 'appLiving',
+  bathroom: 'appBathroom',
+  office: 'appOffice',
+  cinema: 'appCinema',
+  light: 'appLight',
+  commercial: 'appCommercial',
+};
+
 const AREAS = [
   { key: 'living', area: 'living', badge: true },
   { key: 'bathroom', area: 'bath' },
@@ -18,6 +28,7 @@ const AREAS = [
 
 export default function ApplicationAreas() {
   const t = useTranslations('home.apps');
+  const ta = useTranslations('alt');
   return (
     <section className="container section" id="applications">
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20, marginBottom: 'clamp(36px,4vw,56px)' }}>
@@ -45,11 +56,10 @@ export default function ApplicationAreas() {
             <Placeholder
               label={`${t(`areas.${i}.title`)} example`}
               src={homeImages.app[a.key as keyof typeof homeImages.app]}
-              alt={`STRETCH — ${t(`areas.${i}.title`)}`}
+              alt={ta(BENTO_ALT_KEYS[a.key])}
               sizes="(max-width: 860px) 100vw, 33vw"
               light={!a.dark}
               className="zoom-img"
-              decorative
             />
             <div className="bento-overlay">
               {a.badge && <span className="bento-badge">{t('badge')}</span>}
