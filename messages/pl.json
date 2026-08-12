@@ -248,7 +248,10 @@
     "docs": {
       "title": "Dokumenty",
       "intro": "Karty techniczne i rysunki montażowe oferty STRETCH — do pobrania bezpośrednio, bez formularzy.",
-      "download": "Pobierz"
+      "download": "Pobierz",
+      "installerTitle": "Dokumenty montażysty",
+      "restrictedBadge": "Certyfikowani montażyści",
+      "restrictedNote": "Materiał szkoleniowy dla certyfikowanych montażystów STRETCH — prosimy nie udostępniać go poza swoją firmą."
     },
     "orders": {
       "title": "Zamówienia",

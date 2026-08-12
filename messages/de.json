@@ -248,7 +248,10 @@
     "docs": {
       "title": "Dokumente",
       "intro": "Technische Datenblätter und Montagezeichnungen des STRETCH-Sortiments — direkter Download, ohne Formulare.",
-      "download": "Herunterladen"
+      "download": "Herunterladen",
+      "installerTitle": "Monteur-Dokumente",
+      "restrictedBadge": "Zertifizierte Monteure",
+      "restrictedNote": "Schulungsunterlagen für zertifizierte STRETCH-Monteure — bitte nicht außerhalb Ihres Unternehmens weitergeben."
     },
     "orders": {
       "title": "Bestellungen",

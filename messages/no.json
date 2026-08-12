@@ -248,7 +248,10 @@
     "docs": {
       "title": "Dokumenter",
       "intro": "Tekniske datablader og montasjetegninger for STRETCH-sortimentet — direkte nedlasting, uten skjemaer.",
-      "download": "Last ned"
+      "download": "Last ned",
+      "installerTitle": "Montørdokumenter",
+      "restrictedBadge": "Sertifiserte montører",
+      "restrictedNote": "Opplæringsmateriell for sertifiserte STRETCH-montører — vennligst ikke del det utenfor bedriften din."
     },
     "orders": {
       "title": "Ordrer",

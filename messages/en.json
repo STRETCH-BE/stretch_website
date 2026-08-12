@@ -248,7 +248,10 @@
     "docs": {
       "title": "Documents",
       "intro": "Technical datasheets and installation drawings for the STRETCH range — direct downloads, no forms.",
-      "download": "Download"
+      "download": "Download",
+      "installerTitle": "Installer documents",
+      "restrictedBadge": "Certified fitters",
+      "restrictedNote": "Training material for certified STRETCH fitters — please do not pass it on outside your company."
     },
     "orders": {
       "title": "Orders",

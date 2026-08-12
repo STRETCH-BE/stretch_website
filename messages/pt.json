@@ -248,7 +248,10 @@
     "docs": {
       "title": "Documentos",
       "intro": "Fichas técnicas e desenhos de instalação da gama STRETCH — transferência direta, sem formulários.",
-      "download": "Transferir"
+      "download": "Transferir",
+      "installerTitle": "Documentos de instalador",
+      "restrictedBadge": "Instaladores certificados",
+      "restrictedNote": "Material de formação para instaladores STRETCH certificados — não o partilhe fora da sua empresa."
     },
     "orders": {
       "title": "Encomendas",

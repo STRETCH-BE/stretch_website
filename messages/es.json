@@ -248,7 +248,10 @@
     "docs": {
       "title": "Documentos",
       "intro": "Fichas técnicas y planos de instalación de la gama STRETCH — descarga directa, sin formularios.",
-      "download": "Descargar"
+      "download": "Descargar",
+      "installerTitle": "Documentos de instalador",
+      "restrictedBadge": "Instaladores certificados",
+      "restrictedNote": "Material de formación para instaladores STRETCH certificados — no lo comparta fuera de su empresa."
     },
     "orders": {
       "title": "Pedidos",

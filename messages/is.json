@@ -248,7 +248,10 @@
     "docs": {
       "title": "Skjöl",
       "intro": "Tækniblöð og uppsetningarteikningar fyrir STRETCH-vörulínuna — beint niðurhal, engin eyðublöð.",
-      "download": "Sækja"
+      "download": "Sækja",
+      "installerTitle": "Skjöl uppsetningaraðila",
+      "restrictedBadge": "Vottaðir uppsetningaraðilar",
+      "restrictedNote": "Þjálfunarefni fyrir vottaða STRETCH-uppsetningaraðila — vinsamlegast ekki deila því utan fyrirtækisins."
     },
     "orders": {
       "title": "Pantanir",

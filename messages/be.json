@@ -248,7 +248,10 @@
     "docs": {
       "title": "Documenten",
       "intro": "Technische fiches en installatietekeningen van het STRETCH-gamma — direct te downloaden, zonder formulieren.",
-      "download": "Download"
+      "download": "Download",
+      "installerTitle": "Plaatsersdocumenten",
+      "restrictedBadge": "Gecertificeerde plaatsers",
+      "restrictedNote": "Opleidingsmateriaal voor gecertificeerde STRETCH-plaatsers — gelieve het niet buiten uw bedrijf te delen."
     },
     "orders": {
       "title": "Bestellingen",

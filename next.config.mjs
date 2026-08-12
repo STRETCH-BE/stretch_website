@@ -15,6 +15,10 @@ const nextConfig = {
       '/api/datasheet/[slug]': ['./datasheets-private/**/*'],
       '/api/architect/datasheet/[slug]': ['./datasheets-private/**/*'],
       '/api/architect/file/[slug]': ['./architect-private/**/*'],
+      // Restricted trade documents get their OWN folder so the ~20 MB
+      // installation guide is bundled into this route only — not into the
+      // three public/architect datasheet routes above.
+      '/api/portal/document/[slug]': ['./installer-private/**/*'],
     },
   },
   // styled-jsx is bundled with Next.js — no extra config needed.
