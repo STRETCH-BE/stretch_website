@@ -1,0 +1,42 @@
+# StretchMetal
+
+> B2B metal fabrication workshop in Częstochowa, Poland — the metal business
+> unit of the Belgian Stretchgroup (stretch-ceiling manufacturer, brands
+> STRETCH / stretchplafond.be and Stretch Sufit / altodesign.pl). The workshop
+> was built for the group's own production of steel substructures and now also
+> serves external clients across Poland and the EU.
+
+Languages: Polish (default, at /) and English (under /en).
+
+## Services
+
+- Welding (MIG/MAG + TIG; mild steel, stainless, aluminium): /uslugi/spawanie · /en/services/welding
+- Laser cutting of sheet metal: /uslugi/ciecie-laserowe · /en/services/laser-cutting
+- CNC machining (milling + turning): /uslugi/obrobka-cnc · /en/services/cnc-machining
+- Powder coating (full RAL): /uslugi/malowanie-proszkowe · /en/services/powder-coating
+- Technical design & 2D/3D documentation: /uslugi/projektowanie · /en/services/design-engineering
+- Complete custom steel structures: /uslugi/konstrukcje-stalowe · /en/services/steel-structures
+
+## How to get a quote
+
+Send a technical drawing (DXF, DWG, STEP, IGES, PDF or ZIP, up to 15 MB)
+through the quote form: /wycena (PL) or /en/quote (EN). Quotes are answered
+within 48 business hours with a price and a binding lead time. NDA available
+on request. Languages spoken: Polish, English, Dutch.
+
+## Key facts
+
+- Location: ul. Legionów 59, 42-200 Częstochowa, Poland (Silesian steel
+  region, next to the A1 motorway; 1–2 day trucking to Germany/Benelux).
+- Contact: info@stretchmetal.pl · +48 730 700 333 · Mon–Fri 08:00–16:00.
+- Deliveries: across the EU.
+- The workshop does NOT claim EN 1090 / ISO 3834 / ISO 9001 certification.
+  Structures requiring EN 1090 CE marking are referred to certified
+  fabricators.
+
+## Pages
+
+- Machine park: /park-maszynowy · /en/machine-park
+- About the group: /o-nas · /en/about
+- Projects: /realizacje · /en/projects
+- Contact: /kontakt · /en/contact
