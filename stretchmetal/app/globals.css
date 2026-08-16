@@ -1,0 +1,477 @@
+/* ==========================================================================
+   STRETCHMETAL — Design system (Tailwind CSS v4)
+   Tokens inherited from the STRETCH group identity (stretch_website repo,
+   src/app/globals.css) and exposed to Tailwind via @theme so utilities like
+   bg-red / text-on-dark-muted / border-line-dark exist everywhere.
+   Locked palette: red / black / white. Hard edges (radius 0, no exceptions).
+   No gradients except photo scrims and the diagonal-hatch placeholder tiles.
+   One variable font: Archivo — the display look is the wdth axis at 125.
+   No component hardcodes a hex value; everything reads these tokens.
+   ========================================================================== */
+@import 'tailwindcss';
+
+@theme {
+  /* --- Brand colours --- */
+  /* Signal red tuned for WCAG AA: #e00000 keeps ≥4.5:1 with white text on red
+     AND as red text on white/surface. On dark surfaces small red text needs
+     the brighter variant (red darkens against black). */
+  --color-red: #e00000;
+  --color-red-bright: #ff1a1a; /* small red text on black/dark sections */
+  --color-black: #0a0a0a; /* near-black brand black */
+  --color-white: #ffffff;
+  --color-surface: #f4f3f1; /* off-white section tone */
+
+  /* --- Text --- */
+  --color-text-body: #3a3833;
+  --color-text-muted: #54514b;
+  --color-text-faint: #6e6b66; /* ≥4.5:1 on white AND on --surface */
+
+  /* --- On dark surfaces --- */
+  --color-on-dark-muted: #a8a49d;
+  --color-on-dark-soft: #c9c6c0;
+
+  /* --- Borders / hairlines --- */
+  --color-border: #eceae6;
+  --color-border-2: #e6e3de;
+  --color-border-input: #dad7d2;
+  --color-line-dark: #262626; /* hairlines on dark sections */
+
+  /* --- Type families (resolved by next/font on <html>) --- */
+  --font-display: var(--font-archivo), system-ui, sans-serif;
+  --font-body: var(--font-archivo), system-ui, sans-serif;
+}
+
+/* Layout + type-ramp custom properties. Kept as plain CSS vars (not @theme):
+   components consume them via arbitrary values / the classes below. */
+:root {
+  --container: 1320px;
+  --gutter: clamp(20px, 5vw, 64px);
+  --section-y: clamp(60px, 8vw, 120px);
+  --section-y-sm: clamp(48px, 6vw, 90px);
+  --header-h: 72px;
+
+  /* Floors sized so the longest single Polish word in any heading
+     (PROJEKTOWANIE, MALOWANA.) still fits a 375px viewport — measured, not
+     guessed. Larger screens ride the vw term up to the donor's max sizes. */
+  --fs-display: clamp(36px, 10.5vw, 164px);
+  --fs-h1: clamp(30px, 8.5vw, 142px);
+  --fs-h2: clamp(36px, 5.5vw, 76px);
+  --fs-h2-sm: clamp(30px, 4.4vw, 58px);
+  --fs-h3: clamp(22px, 2.6vw, 26px);
+  --fs-lead: clamp(16px, 1.3vw, 19px);
+  --fs-body: 15px;
+  --fs-eyebrow: 12.5px;
+}
+
+/* --- Display "expanded" width ---------------------------------------------
+   Archivo is a single variable font; the industrial display look is the width
+   (wdth) axis pushed to 125. Applied to every display context globally, the
+   same rule the STRETCH group site uses. */
+h1,
+h2,
+h3,
+.eyebrow,
+.h-display,
+.wdth-125 {
+  font-variation-settings: 'wdth' 125;
+}
+
+/* --- Base ------------------------------------------------------------------ */
+body {
+  font-family: var(--font-body);
+  color: var(--color-black);
+  background: var(--color-white);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+/* --- Accessibility helpers ------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -64px;
+  z-index: 200;
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+/* --- Layout primitives ------------------------------------------------------ */
+.container-sm {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  width: 100%;
+}
+
+.section {
+  padding-top: var(--section-y);
+  padding-bottom: var(--section-y);
+}
+.section--sm {
+  padding-top: var(--section-y-sm);
+  padding-bottom: var(--section-y-sm);
+}
+.section--dark {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+.section--surface {
+  background: var(--color-surface);
+}
+
+/* --- Headings --------------------------------------------------------------- */
+.h-display {
+  font-weight: 900;
+  font-size: var(--fs-display);
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  /* Safety net for sub-375px devices: break rather than overflow the page. */
+  overflow-wrap: break-word;
+}
+.h1 {
+  font-weight: 900;
+  font-size: var(--fs-h1);
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+.h2 {
+  font-weight: 900;
+  font-size: var(--fs-h2);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.h2--sm {
+  font-size: var(--fs-h2-sm);
+  line-height: 0.94;
+}
+.h3 {
+  font-weight: 800;
+  font-size: var(--fs-h3);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+.lead {
+  font-size: var(--fs-lead);
+  line-height: 1.55;
+}
+
+/* --- Underline-slide link ---------------------------------------------------- */
+.lnk {
+  position: relative;
+  text-decoration: none;
+}
+.lnk::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--color-red);
+  transition: width 0.25s ease;
+}
+.lnk:hover::after,
+.lnk:focus-visible::after {
+  width: 100%;
+}
+
+/* --- Buttons -----------------------------------------------------------------
+   Uppercase, 700, hard edges, 2px border, red arrow glyph that flips with the
+   text colour on hover. Variants: primary (red → black), ghost (black outline
+   → black fill), ghost-light (white outline on dark → white fill). */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+  text-decoration: none;
+  line-height: 1;
+  min-height: 44px;
+}
+.btn--lg {
+  font-size: 14px;
+  padding: 17px 32px;
+}
+.btn--sm {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  gap: 8px;
+  padding: 11px 18px;
+  min-height: 40px;
+}
+.btn--primary {
+  background: var(--color-red);
+  color: var(--color-white);
+  border-color: var(--color-red);
+}
+.btn--primary:hover {
+  background: var(--color-black);
+  border-color: var(--color-black);
+}
+.btn--primary .btn__arrow {
+  color: var(--color-white);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--color-black);
+  border-color: var(--color-black);
+}
+.btn--ghost:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+.btn--ghost:hover .btn__arrow {
+  color: var(--color-white);
+}
+.btn--ghost-light {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+.btn--ghost-light:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+.btn--ghost-light:hover .btn__arrow {
+  color: var(--color-black);
+}
+.btn__arrow {
+  color: var(--color-red);
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+/* --- Hairline grids (1px gaps reveal the border colour) ----------------------
+   The signature texture: cells sit on a 1px-gap grid whose background is the
+   hairline colour. Use grid-lines on light sections, grid-lines--dark on black. */
+.grid-lines {
+  display: grid;
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+}
+.grid-lines--dark {
+  background: var(--color-line-dark);
+  border-color: var(--color-line-dark);
+}
+
+/* --- Red square bullet -------------------------------------------------------- */
+.tick {
+  width: 9px;
+  height: 9px;
+  background: var(--color-red);
+  flex: 0 0 auto;
+}
+
+/* --- Ticker marquee ------------------------------------------------------------
+   Red band, duplicated content translated -50% in a loop. The reduced-motion
+   media query below freezes it (animation-duration → 0.001ms). */
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- Form fields ---------------------------------------------------------------- */
+.field-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+.field {
+  width: 100%;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--color-black);
+  padding: 13px 15px;
+  border: 1.5px solid var(--color-border-input);
+  background: var(--color-white);
+  transition: border-color 0.15s ease;
+  border-radius: 0;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--color-red);
+}
+.field::placeholder {
+  color: var(--color-text-faint);
+}
+.field[aria-invalid='true'] {
+  border-color: var(--color-red);
+}
+.field-error {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-red);
+  margin-top: 6px;
+}
+
+/* Checkbox chips (RFQ services): square, hard-edged toggles. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--color-border-input);
+  background: var(--color-white);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease;
+}
+.chip--on {
+  border-color: var(--color-red);
+  background: var(--color-red);
+  color: var(--color-white);
+}
+.chip:focus-within {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+/* --- Placeholder image tile (until real photography is supplied) --------------
+   Diagonal-hatch pattern — the one sanctioned "gradient" besides photo scrims,
+   matching the STRETCH group placeholder tile. */
+.img-ph {
+  background: repeating-linear-gradient(
+    135deg,
+    #1a1a1a,
+    #1a1a1a 12px,
+    #131313 12px,
+    #131313 24px
+  );
+  color: #8a867f;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  text-align: left;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 16px;
+}
+.img-ph--light {
+  background: repeating-linear-gradient(
+    135deg,
+    #ededeb,
+    #ededeb 12px,
+    #e7e7e4 12px,
+    #e7e7e4 24px
+  );
+  color: #6e6b66;
+}
+
+/* --- Prose (legal pages) --------------------------------------------------------- */
+.prose-legal {
+  max-width: 760px;
+}
+.prose-legal h2 {
+  font-size: clamp(22px, 2.6vw, 30px);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 40px 0 14px;
+}
+.prose-legal h3 {
+  font-size: 19px;
+  margin: 28px 0 10px;
+}
+.prose-legal p,
+.prose-legal li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+.prose-legal p {
+  margin: 0 0 16px;
+}
+.prose-legal ul {
+  padding-left: 20px;
+  margin: 0 0 16px;
+  list-style: square;
+}
+.prose-legal li {
+  margin-bottom: 8px;
+}
+.prose-legal a {
+  color: var(--color-red);
+  text-decoration: underline;
+}
+.prose-legal strong {
+  color: var(--color-black);
+}
