@@ -5,6 +5,7 @@
 // ============================================================================
 import { siteUrl, brand, contact, offices, salesTerritory, social } from '@/lib/site-config';
 import { locales, localeFullCodes, originForLocale, type Locale } from '@/i18n/config';
+import { indicativePriceRange } from '@/lib/indicative-prices';
 import type { Product, Faq } from '@/lib/products';
 import type { BlogPost } from '@/lib/content';
 import { localeBase } from '@/lib/seo';
@@ -81,7 +82,20 @@ export function websiteSchema(opts: { locale: Locale; description?: string; hasS
   return schema;
 }
 
-export function productSchema(product: Product, locale: Locale) {
+/**
+ * Product node with a Google-valid AggregateOffer. Google REQUIRES `lowPrice`
+ * on an AggregateOffer — the earlier price-less offer flagged every product
+ * page invalid in Search Console. The low/high figures come from
+ * src/lib/indicative-prices.ts, which mirrors the site's own published price
+ * guide (€/m² installed), so the markup never claims a price the pages don't.
+ * A product with no published range returns null: the page then simply emits
+ * no Product markup (no rich result beats an invented price — and a Product
+ * without offers/review/aggregateRating is itself a Search Console error).
+ */
+export function productSchema(product: Product, locale: Locale): Record<string, unknown> | null {
+  const range = indicativePriceRange(product.slug);
+  if (!range) return null;
+
   const url = `${localeBase(locale)}/products/${product.slug}`;
   const image = `${siteUrl}/api/og/${product.slug}`;
 
@@ -99,18 +113,32 @@ export function productSchema(product: Product, locale: Locale) {
     description: product.summary,
     category: product.category,
     url,
-    brand: { '@id': ORG_ID },
-    manufacturer: { '@id': ORG_ID },
+    // Name inlined alongside the @id: the Organization node lives on the
+    // homepage, not here, and a bare @id reads as "Missing field brand" in
+    // the Rich Results Test (dangling reference).
+    brand: { '@type': 'Brand', name: brand.name },
+    manufacturer: { '@type': 'Organization', '@id': ORG_ID, name: brand.name },
     material: product.material,
     countryOfOrigin: product.countryOfOrigin,
     image: { '@type': 'ImageObject', url: image, width: 1200, height: 630 },
     additionalProperty,
-    // No price published — ship valid sparse Offer (price is project-based).
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'EUR',
+      lowPrice: range.low,
+      highPrice: range.high,
+      // Documents that the figures are €/m² installed (MTK = square metre),
+      // matching the published guide. unitCode only — a unitText string would
+      // be untranslated English on 11 of the 12 locales.
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        priceCurrency: 'EUR',
+        minPrice: range.low,
+        maxPrice: range.high,
+        unitCode: 'MTK',
+      },
       availability: 'https://schema.org/InStock',
-      seller: { '@id': ORG_ID },
+      seller: { '@type': 'Organization', '@id': ORG_ID, name: brand.name },
       eligibleRegion: salesTerritory,
     },
   };

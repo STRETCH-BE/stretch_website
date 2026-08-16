@@ -102,8 +102,9 @@ export const offices: Office[] = [
   },
 ];
 
-// Group reach (for copy + LocalBusiness areaServed). Sales territory at launch
-// is Belgium; the group operates across these markets.
+// Group reach (schema.org areaServed / eligibleRegion — ISO 3166-1 alpha-2,
+// so the United Kingdom is 'GB', not 'UK'). Sales territory at launch is
+// Belgium; the group operates across these markets.
 export const salesTerritory = [
   'BE',
   'NL',
@@ -111,7 +112,7 @@ export const salesTerritory = [
   'DE',
   'AT',
   'PL',
-  'UK',
+  'GB',
   'US',
   'IS',
   'MT',

@@ -80,9 +80,13 @@ function ProductBody({ slug, locale }: { slug: string; locale: Locale }) {
     { name: product.short, url: `${localeBase(locale)}/products/${slug}` },
   ]);
 
+  // Null when the product has no published price range — the page then emits
+  // no Product markup at all (see productSchema).
+  const productLd = productSchema(product, locale);
+
   return (
     <>
-      <JsonLd data={productSchema(product, locale)} />
+      {productLd && <JsonLd data={productLd} />}
       <JsonLd data={crumbs} />
       <JsonLd data={faqPageSchema(faqs)} />
       <SolutionPage product={base} />
