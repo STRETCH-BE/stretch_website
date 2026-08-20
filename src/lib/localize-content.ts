@@ -19,25 +19,60 @@ export type ModalMessages = {
   fields: Record<string, { label: string; placeholder?: string; options?: string[] }>;
 };
 
-export function localizeModalConfig(cfg: ModalConfig, raw: ModalMessages | undefined): ModalConfig {
-  if (!raw) return cfg;
+/**
+ * Translations for the fields shared by every lead form (modals.shared in
+ * messages): the city/country labels and the ONE country-name list, so 9 forms
+ * x 12 locales don't repeat 17 country names per form.
+ */
+export type SharedFieldMessages = {
+  city?: { label: string; placeholder?: string };
+  country?: { label: string };
+  countries?: string[];
+};
+
+export function localizeModalConfig(
+  cfg: ModalConfig,
+  raw: ModalMessages | undefined,
+  shared?: SharedFieldMessages,
+): ModalConfig {
+  if (!raw && !shared) return cfg;
   return {
     ...cfg,
-    title: raw.title,
-    subtitle: raw.subtitle,
-    submitLabel: raw.submitLabel,
-    sentTitle: raw.sentTitle,
-    sentMsg: raw.sentMsg,
+    ...(raw
+      ? {
+          title: raw.title,
+          subtitle: raw.subtitle,
+          submitLabel: raw.submitLabel,
+          sentTitle: raw.sentTitle,
+          sentMsg: raw.sentMsg,
+        }
+      : {}),
     fields: cfg.fields.map((f): FormField => {
-      const m = raw.fields[f.name];
-      if (!m) return f;
+      // Per-form translation wins; the shared city/country strings fill the
+      // gap so new shared fields don't need 9 copies per locale.
+      const m = raw?.fields[f.name];
+      if (!m) {
+        if (f.name === 'city' && shared?.city) {
+          return { ...f, label: shared.city.label, placeholder: shared.city.placeholder ?? f.placeholder };
+        }
+        if (f.name === 'country' && (shared?.country || shared?.countries)) {
+          return {
+            ...f,
+            label: shared.country?.label ?? f.label,
+            options: shared.countries ?? f.options,
+          };
+        }
+        return f;
+      }
+      const options =
+        f.name === 'country' ? (shared?.countries ?? m.options ?? f.options) : (m.options ?? f.options);
       return {
         ...f,
         label: m.label,
         placeholder: m.placeholder ?? f.placeholder,
         // Only the display labels localize; `optionValues` (stable submitted
         // values) always survives from the structural config via the spread.
-        options: m.options ?? f.options,
+        options,
       };
     }),
   };

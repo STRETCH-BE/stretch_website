@@ -2066,6 +2066,34 @@
           "placeholder": "Wysokości sufitów, cele akustyczne, terminy..."
         }
       }
+    },
+    "shared": {
+      "city": {
+        "label": "Miasto",
+        "placeholder": "Twoje miasto"
+      },
+      "country": {
+        "label": "Kraj"
+      },
+      "countries": [
+        "Belgia",
+        "Holandia",
+        "Francja",
+        "Niemcy",
+        "Austria",
+        "Szwajcaria",
+        "Luksemburg",
+        "Polska",
+        "Hiszpania",
+        "Portugalia",
+        "Dania",
+        "Szwecja",
+        "Norwegia",
+        "Islandia",
+        "Wielka Brytania",
+        "Stany Zjednoczone",
+        "Inny kraj"
+      ]
     }
   },
   "faqPage": {

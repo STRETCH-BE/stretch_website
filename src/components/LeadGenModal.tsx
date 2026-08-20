@@ -23,11 +23,12 @@ import { Link } from '@/i18n/navigation';
 import { X, ArrowRight, Check } from 'lucide-react';
 import {
   MODAL_CONFIGS,
+  defaultCountryForLocale,
   TRAINING_DATE_DETAIL,
   type ModalType,
   type FormField,
 } from '@/lib/forms-config';
-import { localizeModalConfig, type ModalMessages } from '@/lib/localize-content';
+import { localizeModalConfig, type ModalMessages, type SharedFieldMessages } from '@/lib/localize-content';
 import { analytics, sha256, normalizeEmail, normalizePhone } from '@/lib/analytics';
 import { getConsent } from '@/lib/consent';
 
@@ -63,6 +64,8 @@ type SavedContact = {
   email: string;
   phone: string;
   city: string;
+  /** ISO country code — optional: records saved before the field existed. */
+  country?: string;
 };
 
 const CONTACT_KEY = 'datasheet-contact';
@@ -141,7 +144,11 @@ function LeadGenModal({
   const t = useTranslations('forms');
   const tm = useTranslations('modals');
   const locale = useLocale();
-  const cfg = localizeModalConfig(MODAL_CONFIGS[type], tm.raw(type) as ModalMessages);
+  const cfg = localizeModalConfig(
+    MODAL_CONFIGS[type],
+    tm.raw(type) as ModalMessages,
+    tm.raw('shared') as SharedFieldMessages,
+  );
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const titleId = useId();
   const descId = useId();
@@ -251,7 +258,7 @@ function LeadGenModal({
   // Returns true on success. Used by BOTH the form and the one-click confirm —
   // every send posts a full lead so each requested document is captured.
   async function postDatasheetRequest(
-    data: { name: string; role: string; email: string; phone: string; city: string },
+    data: { name: string; role: string; email: string; phone: string; city: string; country?: string },
     gotcha: string,
   ): Promise<boolean> {
     const source = options.source || type;
@@ -309,7 +316,7 @@ function LeadGenModal({
 
     if (isDatasheet) {
       await postDatasheetRequest(
-        { name: data.name, role: data.role, email: data.email, phone: data.phone, city: data.city },
+        { name: data.name, role: data.role, email: data.email, phone: data.phone, city: data.city, country: data.country },
         gotcha,
       );
       return;
@@ -342,8 +349,11 @@ function LeadGenModal({
   async function handleConfirmSend() {
     if (!savedContact || confirmBusy) return;
     setConfirmBusy(true);
-    const { name, role, email, phone, city } = savedContact;
-    await postDatasheetRequest({ name, role, email, phone, city }, '');
+    const { name, role, email, phone, city, country } = savedContact;
+    await postDatasheetRequest(
+      { name, role, email, phone, city, country: country ?? defaultCountryForLocale(locale) },
+      '',
+    );
     setConfirmBusy(false);
   }
 
@@ -622,7 +632,15 @@ function LeadGenModal({
                   }}
                 >
                   {cfg.fields.map((f) => (
-                    <Field key={f.name} field={f} error={errors[f.name]} defaultValue={prefill?.[f.name]} />
+                    <Field
+                      key={f.name}
+                      field={f}
+                      error={errors[f.name]}
+                      defaultValue={
+                        prefill?.[f.name] ??
+                        (f.name === 'country' ? defaultCountryForLocale(locale) : undefined)
+                      }
+                    />
                   ))}
                 </div>
 

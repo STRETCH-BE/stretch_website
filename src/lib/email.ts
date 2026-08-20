@@ -64,6 +64,7 @@ const FIELD_LABELS: Record<string, string> = {
 };
 
 const SOURCE_LABELS: Record<string, string> = {
+  materials_inquiry: 'Materials inquiry',
   quote: 'Quote request',
   survey: 'Site survey request',
   training: 'Training booking',
@@ -77,6 +78,31 @@ const SOURCE_LABELS: Record<string, string> = {
   architect_samples: 'Sample request',
   portal_architect_download: 'Architect portal download',
 };
+
+/**
+ * Materials-origin leads (per-item quote buttons post source
+ * 'materials_<group>', the basket posts 'materials_inquiry'). These visitors
+ * want SUPPLY of materials — flagged loudly in the email so the team never
+ * follows up as if it were an installation project.
+ */
+export function isMaterialsLead(source: unknown): boolean {
+  return String(source ?? '').startsWith('materials');
+}
+
+// ISO code (the country select posts stable codes) -> readable name for the
+// internal email. Unknown values pass through unchanged.
+const COUNTRY_NAMES: Record<string, string> = {
+  BE: 'Belgium', NL: 'Netherlands', FR: 'France', DE: 'Germany', AT: 'Austria',
+  CH: 'Switzerland', LU: 'Luxembourg', PL: 'Poland', ES: 'Spain', PT: 'Portugal',
+  DK: 'Denmark', SE: 'Sweden', NO: 'Norway', IS: 'Iceland', GB: 'United Kingdom',
+  US: 'United States', OTHER: 'Other country',
+};
+
+function displayValue(key: string, value: unknown): string {
+  const v = String(value);
+  if (key === 'country') return COUNTRY_NAMES[v.toUpperCase()] ?? v;
+  return v;
+}
 
 function labelFor(key: string): string {
   if (FIELD_LABELS[key]) return FIELD_LABELS[key];
@@ -109,10 +135,25 @@ function orderedEntries(payload: LeadPayload): [string, unknown][] {
 export type BuiltEmail = { subject: string; html: string; text: string };
 
 export function buildLeadEmail(payload: LeadPayload): BuiltEmail {
-  const sourceLabel = SOURCE_LABELS[payload.source as string] || 'Website lead';
+  const materials = isMaterialsLead(payload.source);
+  const sourceLabel =
+    SOURCE_LABELS[payload.source as string] || (materials ? 'Materials quote request' : 'Website lead');
   const entries = orderedEntries(payload);
 
-  const subject = `New ${sourceLabel} — ${brand.name} website`;
+  const subject = materials
+    ? `New MATERIALS quote (supply only — no installation) — ${brand.name} website`
+    : `New ${sourceLabel} — ${brand.name} website`;
+
+  // Loud routing banner: materials customers must not be called about an
+  // installation project.
+  const materialsBannerHtml = materials
+    ? `<tr><td style="padding:0 24px;">
+      <div style="background:#FFF3F3;border:1px solid #E00000;border-left:6px solid #E00000;padding:14px 16px;margin:20px 0 0;">
+        <div style="font:800 13px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#B00000;">Materials request — supply only</div>
+        <div style="font:400 13.5px Arial,sans-serif;color:#54514B;margin-top:6px;">This customer is asking for <b>materials / supply</b>, NOT an installation. Follow up with product availability, pricing and delivery.</div>
+      </div>
+    </td></tr>`
+    : '';
 
   const rows = entries
     .map(
@@ -122,7 +163,7 @@ export function buildLeadEmail(payload: LeadPayload): BuiltEmail {
             labelFor(k),
           )}</td>
           <td style="padding:10px 14px;border-bottom:1px solid #ECEAE6;font:400 15px Arial,sans-serif;color:#0A0A0A;">${escapeHtml(
-            v,
+            displayValue(k, v),
           ).replace(/\n/g, '<br>')}</td>
         </tr>`,
     )
@@ -137,6 +178,7 @@ export function buildLeadEmail(payload: LeadPayload): BuiltEmail {
         sourceLabel,
       )}</div>
     </td></tr>
+    ${materialsBannerHtml}
     <tr><td style="padding:24px;">
       <p style="font:400 15px Arial,sans-serif;color:#54514B;margin:0 0 18px;">A new lead was submitted from the ${brand.name} website.</p>
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #ECEAE6;border-collapse:collapse;">${rows}</table>
@@ -148,8 +190,11 @@ export function buildLeadEmail(payload: LeadPayload): BuiltEmail {
 </body></html>`;
 
   const text =
-    `New ${sourceLabel} — ${brand.name} website\n\n` +
-    entries.map(([k, v]) => `${labelFor(k)}: ${String(v)}`).join('\n') +
+    `${subject}\n\n` +
+    (materials
+      ? 'MATERIALS REQUEST — SUPPLY ONLY. This customer is asking for materials, NOT an installation.\n\n'
+      : '') +
+    entries.map(([k, v]) => `${labelFor(k)}: ${displayValue(k, v)}`).join('\n') +
     `\n\nSource: ${String(payload.source ?? 'unknown')}`;
 
   return { subject, html, text };

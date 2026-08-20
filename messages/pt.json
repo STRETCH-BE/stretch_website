@@ -2066,6 +2066,34 @@
           "placeholder": "Pés-direitos, objetivos acústicos, prazos..."
         }
       }
+    },
+    "shared": {
+      "city": {
+        "label": "Cidade",
+        "placeholder": "A sua cidade"
+      },
+      "country": {
+        "label": "País"
+      },
+      "countries": [
+        "Bélgica",
+        "Países Baixos",
+        "França",
+        "Alemanha",
+        "Áustria",
+        "Suíça",
+        "Luxemburgo",
+        "Polónia",
+        "Espanha",
+        "Portugal",
+        "Dinamarca",
+        "Suécia",
+        "Noruega",
+        "Islândia",
+        "Reino Unido",
+        "Estados Unidos",
+        "Outro país"
+      ]
     }
   },
   "faqPage": {

@@ -2066,6 +2066,34 @@
           "placeholder": "Ceiling heights, acoustics targets, deadlines..."
         }
       }
+    },
+    "shared": {
+      "city": {
+        "label": "City",
+        "placeholder": "Your city"
+      },
+      "country": {
+        "label": "Country"
+      },
+      "countries": [
+        "Belgium",
+        "Netherlands",
+        "France",
+        "Germany",
+        "Austria",
+        "Switzerland",
+        "Luxembourg",
+        "Poland",
+        "Spain",
+        "Portugal",
+        "Denmark",
+        "Sweden",
+        "Norway",
+        "Iceland",
+        "United Kingdom",
+        "United States",
+        "Other country"
+      ]
     }
   },
   "faqPage": {

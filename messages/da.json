@@ -2066,6 +2066,34 @@
           "placeholder": "Lofthøjder, akustikmål, deadlines..."
         }
       }
+    },
+    "shared": {
+      "city": {
+        "label": "By",
+        "placeholder": "Din by"
+      },
+      "country": {
+        "label": "Land"
+      },
+      "countries": [
+        "Belgien",
+        "Holland",
+        "Frankrig",
+        "Tyskland",
+        "Østrig",
+        "Schweiz",
+        "Luxembourg",
+        "Polen",
+        "Spanien",
+        "Portugal",
+        "Danmark",
+        "Sverige",
+        "Norge",
+        "Island",
+        "Storbritannien",
+        "USA",
+        "Andet land"
+      ]
     }
   },
   "faqPage": {

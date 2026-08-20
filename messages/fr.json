@@ -2066,6 +2066,34 @@
           "placeholder": "Hauteurs sous plafond, objectifs acoustiques, délais..."
         }
       }
+    },
+    "shared": {
+      "city": {
+        "label": "Ville",
+        "placeholder": "Votre ville"
+      },
+      "country": {
+        "label": "Pays"
+      },
+      "countries": [
+        "Belgique",
+        "Pays-Bas",
+        "France",
+        "Allemagne",
+        "Autriche",
+        "Suisse",
+        "Luxembourg",
+        "Pologne",
+        "Espagne",
+        "Portugal",
+        "Danemark",
+        "Suède",
+        "Norvège",
+        "Islande",
+        "Royaume-Uni",
+        "États-Unis",
+        "Autre pays"
+      ]
     }
   },
   "faqPage": {

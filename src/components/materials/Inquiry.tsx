@@ -6,7 +6,9 @@
 // in React context + sessionStorage (survives reloads within the tab; nothing
 // server-side). No prices, no payments — the reply comes by email.
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type FormEvent, type ReactNode } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { COUNTRY_VALUES, defaultCountryForLocale } from '@/lib/forms-config';
+import type { SharedFieldMessages } from '@/lib/localize-content';
 import { Link } from '@/i18n/navigation';
 import { ArrowRight, Check, ClipboardList, Plus, X } from 'lucide-react';
 
@@ -92,6 +94,9 @@ export function AddToInquiryButton({ group, name }: { group: string; name: strin
 /** Floating bar + slide-over panel with the combined send form. */
 export function InquiryBar() {
   const t = useTranslations('materials');
+  const tm = useTranslations('modals');
+  const locale = useLocale();
+  const shared = tm.raw('shared') as SharedFieldMessages;
   const { items, remove, clear } = useInquiry();
   const [open, setOpen] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -122,6 +127,8 @@ export function InquiryBar() {
           company: String(fd.get('company') ?? ''),
           email: String(fd.get('email') ?? ''),
           phone: String(fd.get('phone') ?? ''),
+          city: String(fd.get('city') ?? ''),
+          country: String(fd.get('country') ?? ''),
           message: String(fd.get('message') ?? ''),
           colour: String(fd.get('colour') ?? ''),
           colourCode: String(fd.get('colourCode') ?? ''),
@@ -219,6 +226,15 @@ export function InquiryBar() {
                   <div className="inq-row2">
                     <label className="inq-field"><span>{t('formEmail')} *</span><input type="email" name="email" required autoComplete="email" /></label>
                     <label className="inq-field"><span>{t('formPhone')}</span><input type="tel" name="phone" autoComplete="tel" /></label>
+                    <label className="inq-field"><span>{shared?.city?.label ?? 'City'}</span><input name="city" autoComplete="address-level2" placeholder={shared?.city?.placeholder} /></label>
+                    <label className="inq-field"><span>{shared?.country?.label ?? 'Country'} *</span>
+                      <select name="country" required defaultValue={defaultCountryForLocale(locale) ?? ''}>
+                        <option value="" disabled>{tm('select')}</option>
+                        {COUNTRY_VALUES.map((code, i) => (
+                          <option key={code} value={code}>{shared?.countries?.[i] ?? code}</option>
+                        ))}
+                      </select>
+                    </label>
                   </div>
                   <label className="inq-field"><span>{t('formMessage')}</span><textarea name="message" rows={3} /></label>
 

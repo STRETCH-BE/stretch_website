@@ -2066,6 +2066,34 @@
           "placeholder": "Plafondhoogtes, akoestiekdoelen, deadlines..."
         }
       }
+    },
+    "shared": {
+      "city": {
+        "label": "Stad",
+        "placeholder": "Uw stad"
+      },
+      "country": {
+        "label": "Land"
+      },
+      "countries": [
+        "België",
+        "Nederland",
+        "Frankrijk",
+        "Duitsland",
+        "Oostenrijk",
+        "Zwitserland",
+        "Luxemburg",
+        "Polen",
+        "Spanje",
+        "Portugal",
+        "Denemarken",
+        "Zweden",
+        "Noorwegen",
+        "IJsland",
+        "Verenigd Koninkrijk",
+        "Verenigde Staten",
+        "Ander land"
+      ]
     }
   },
   "faqPage": {

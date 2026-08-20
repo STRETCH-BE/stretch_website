@@ -2066,6 +2066,34 @@
           "placeholder": "Deckenhöhen, Akustikziele, Termine..."
         }
       }
+    },
+    "shared": {
+      "city": {
+        "label": "Stadt",
+        "placeholder": "Ihre Stadt"
+      },
+      "country": {
+        "label": "Land"
+      },
+      "countries": [
+        "Belgien",
+        "Niederlande",
+        "Frankreich",
+        "Deutschland",
+        "Österreich",
+        "Schweiz",
+        "Luxemburg",
+        "Polen",
+        "Spanien",
+        "Portugal",
+        "Dänemark",
+        "Schweden",
+        "Norwegen",
+        "Island",
+        "Vereinigtes Königreich",
+        "Vereinigte Staaten",
+        "Anderes Land"
+      ]
     }
   },
   "faqPage": {

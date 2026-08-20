@@ -2066,6 +2066,34 @@
           "placeholder": "Alturas de techo, objetivos acústicos, plazos..."
         }
       }
+    },
+    "shared": {
+      "city": {
+        "label": "Ciudad",
+        "placeholder": "Su ciudad"
+      },
+      "country": {
+        "label": "País"
+      },
+      "countries": [
+        "Bélgica",
+        "Países Bajos",
+        "Francia",
+        "Alemania",
+        "Austria",
+        "Suiza",
+        "Luxemburgo",
+        "Polonia",
+        "España",
+        "Portugal",
+        "Dinamarca",
+        "Suecia",
+        "Noruega",
+        "Islandia",
+        "Reino Unido",
+        "Estados Unidos",
+        "Otro país"
+      ]
     }
   },
   "faqPage": {

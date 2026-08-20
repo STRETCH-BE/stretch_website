@@ -2066,6 +2066,34 @@
           "placeholder": "Lofthæðir, hljóðvistarmarkmið, tímafrestir..."
         }
       }
+    },
+    "shared": {
+      "city": {
+        "label": "Borg",
+        "placeholder": "Þín borg"
+      },
+      "country": {
+        "label": "Land"
+      },
+      "countries": [
+        "Belgía",
+        "Holland",
+        "Frakkland",
+        "Þýskaland",
+        "Austurríki",
+        "Sviss",
+        "Lúxemborg",
+        "Pólland",
+        "Spánn",
+        "Portúgal",
+        "Danmörk",
+        "Svíþjóð",
+        "Noregur",
+        "Ísland",
+        "Bretland",
+        "Bandaríkin",
+        "Annað land"
+      ]
     }
   },
   "faqPage": {

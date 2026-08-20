@@ -2066,6 +2066,34 @@
           "placeholder": "Takhöjder, akustikmål, deadlines..."
         }
       }
+    },
+    "shared": {
+      "city": {
+        "label": "Stad",
+        "placeholder": "Din stad"
+      },
+      "country": {
+        "label": "Land"
+      },
+      "countries": [
+        "Belgien",
+        "Nederländerna",
+        "Frankrike",
+        "Tyskland",
+        "Österrike",
+        "Schweiz",
+        "Luxemburg",
+        "Polen",
+        "Spanien",
+        "Portugal",
+        "Danmark",
+        "Sverige",
+        "Norge",
+        "Island",
+        "Storbritannien",
+        "USA",
+        "Annat land"
+      ]
     }
   },
   "faqPage": {

@@ -75,6 +75,9 @@ export async function POST(request: Request) {
   const email = clean(body.email);
   const phone = clean(body.phone);
   const city = clean(body.city);
+  // Optional ISO country code from the shared country select (max 8 chars —
+  // codes are 2, 'OTHER' is 5; anything longer is garbage).
+  const country = clean(body.country).slice(0, 8).toUpperCase();
   const slug = clean(body.slug);
   const locale = (locales as readonly string[]).includes(clean(body.locale)) ? clean(body.locale) : 'en';
   const source = clean(body.source) || 'pdf_download';
@@ -104,6 +107,7 @@ export async function POST(request: Request) {
     email,
     phone,
     city,
+    ...(country ? { country } : {}),
     downloadedFile: sheet.title,
     datasheetSlug: sheet.slug,
   };

@@ -2066,6 +2066,34 @@
           "placeholder": "Takhøyder, akustikkmål, frister..."
         }
       }
+    },
+    "shared": {
+      "city": {
+        "label": "By",
+        "placeholder": "Din by"
+      },
+      "country": {
+        "label": "Land"
+      },
+      "countries": [
+        "Belgia",
+        "Nederland",
+        "Frankrike",
+        "Tyskland",
+        "Østerrike",
+        "Sveits",
+        "Luxembourg",
+        "Polen",
+        "Spania",
+        "Portugal",
+        "Danmark",
+        "Sverige",
+        "Norge",
+        "Island",
+        "Storbritannia",
+        "USA",
+        "Annet land"
+      ]
     }
   },
   "faqPage": {

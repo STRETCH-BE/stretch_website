@@ -6,10 +6,10 @@
 // fires generateLead, and supports an optional date-picker (training).
 import { useState } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { MODAL_CONFIGS, TRAINING_DATE_DETAIL, type ModalType } from '@/lib/forms-config';
-import { localizeModalConfig, type ModalMessages } from '@/lib/localize-content';
+import { MODAL_CONFIGS, TRAINING_DATE_DETAIL, defaultCountryForLocale, type ModalType } from '@/lib/forms-config';
+import { localizeModalConfig, type ModalMessages, type SharedFieldMessages } from '@/lib/localize-content';
 import { analytics } from '@/lib/analytics';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
@@ -31,7 +31,12 @@ export default function InlineLeadForm({
   const tf = useTranslations('forms');
   const ti = useTranslations('inlineLead');
   const tm = useTranslations('modals');
-  const cfg = localizeModalConfig(MODAL_CONFIGS[type], tm.raw(type) as ModalMessages);
+  const locale = useLocale();
+  const cfg = localizeModalConfig(
+    MODAL_CONFIGS[type],
+    tm.raw(type) as ModalMessages,
+    tm.raw('shared') as SharedFieldMessages,
+  );
   const [status, setStatus] = useState<Status>('idle');
   const [consent, setConsent] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -113,8 +118,27 @@ export default function InlineLeadForm({
               {f.label}{f.required ? ' *' : ''}
             </label>
             {f.kind === 'select' ? (
-              <select id={`ilf-${f.name}`} name={f.name} className={fieldClass} defaultValue={f.options?.[0]}>
-                {f.options?.map((o) => <option key={o}>{o}</option>)}
+              <select
+                id={`ilf-${f.name}`}
+                name={f.name}
+                className={fieldClass}
+                defaultValue={
+                  f.name === 'country'
+                    ? (defaultCountryForLocale(locale) ?? '')
+                    : (f.optionValues?.[0] ?? f.options?.[0])
+                }
+              >
+                {f.name === 'country' && (
+                  <option value="" disabled>
+                    {tm('select')}
+                  </option>
+                )}
+                {/* Submit the stable optionValues[i]; show the localized label. */}
+                {f.options?.map((o, i) => (
+                  <option key={o} value={f.optionValues?.[i] ?? o}>
+                    {o}
+                  </option>
+                ))}
               </select>
             ) : f.kind === 'area' ? (
               <textarea id={`ilf-${f.name}`} name={f.name} className={fieldClass} rows={4} placeholder={f.placeholder} aria-invalid={!!errors[f.name]} style={{ resize: 'vertical' }} />

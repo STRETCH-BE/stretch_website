@@ -61,6 +61,50 @@ export const TRAINING_DATE_DETAIL: { date: string; note: string }[] = [
   { date: '17–18 Nov 2026', note: 'Beveren-Waas · 8 seats' },
 ];
 
+// ---------------------------------------------------------------------------
+// COUNTRY + CITY — shared across every lead form so the team can route each
+// enquiry to the right market. The select submits stable ISO 3166-1 codes
+// (never localized labels); display names come from modals.shared.countries.
+// ---------------------------------------------------------------------------
+export const COUNTRY_VALUES = [
+  'BE', 'NL', 'FR', 'DE', 'AT', 'CH', 'LU', 'PL', 'ES', 'PT',
+  'DK', 'SE', 'NO', 'IS', 'GB', 'US', 'OTHER',
+] as const;
+
+export const COUNTRY_OPTIONS_EN = [
+  'Belgium', 'Netherlands', 'France', 'Germany', 'Austria', 'Switzerland',
+  'Luxembourg', 'Poland', 'Spain', 'Portugal', 'Denmark', 'Sweden', 'Norway',
+  'Iceland', 'United Kingdom', 'United States', 'Other country',
+] as const;
+
+/** The pre-selected country per locale domain (en = international, no default). */
+const LOCALE_DEFAULT_COUNTRY: Record<string, string> = {
+  be: 'BE', nl: 'NL', fr: 'FR', de: 'DE', pl: 'PL', es: 'ES',
+  pt: 'PT', da: 'DK', sv: 'SE', no: 'NO', is: 'IS',
+};
+
+export function defaultCountryForLocale(locale: string): string | undefined {
+  return LOCALE_DEFAULT_COUNTRY[locale];
+}
+
+const countryField = (required = true): FormField => ({
+  name: 'country',
+  kind: 'select',
+  label: 'Country',
+  options: [...COUNTRY_OPTIONS_EN],
+  optionValues: [...COUNTRY_VALUES],
+  required,
+});
+
+const cityField = (required = false): FormField => ({
+  name: 'city',
+  kind: 'text',
+  inputType: 'text',
+  label: 'City',
+  placeholder: 'Your city',
+  required,
+});
+
 export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
   quote: {
     title: 'Request a free quote',
@@ -72,6 +116,8 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'name', kind: 'text', inputType: 'text', label: 'Name', placeholder: 'First & last name', required: true },
       { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@email.com', required: true },
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
+      cityField(true),
+      countryField(),
       { name: 'rooms', kind: 'select', label: 'Rooms', options: ['1 room', '2 rooms', '3 rooms', '4 rooms', 'More than 4'] },
       { name: 'timeline', kind: 'select', label: 'Timeline', options: ['As soon as possible', 'Within 1–3 months', 'Within 4–12 months', 'Just exploring'] },
       { name: 'message', kind: 'area', label: 'Your project', placeholder: 'Surface, location, anything useful...', full: true },
@@ -88,6 +134,7 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@email.com', required: true },
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
       { name: 'address', kind: 'text', inputType: 'text', label: 'Address', placeholder: 'Street, city', full: true },
+      countryField(),
       { name: 'preferredTime', kind: 'select', label: 'Preferred time', options: ['Morning', 'Afternoon', 'Flexible'] },
       { name: 'rooms', kind: 'select', label: 'Rooms', options: ['1 room', '2 rooms', '3 rooms', '4+ rooms'] },
     ],
@@ -103,6 +150,8 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'company', kind: 'text', inputType: 'text', label: 'Company', placeholder: 'Your company' },
       { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@company.com', required: true },
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
+      cityField(),
+      countryField(),
       { name: 'preferredDate', kind: 'select', label: 'Preferred date', options: TRAINING_DATES },
       { name: 'attendees', kind: 'select', label: 'Attendees', options: ['1 person', '2 people', '3 people', '4+ people'] },
     ],
@@ -118,6 +167,7 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'fullName', kind: 'text', inputType: 'text', label: 'Full name', placeholder: 'First & last name', required: true },
       { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@company.com', required: true },
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
+      countryField(),
       { name: 'preferredDate', kind: 'select', label: 'Preferred date', options: TRAINING_DATES },
     ],
   },
@@ -133,7 +183,8 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'partnerType', kind: 'select', label: 'I want to become a', options: ['Reseller — I sell, you install', 'Dealer — I sell & install myself', 'Not sure yet'] },
       { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@company.com', required: true },
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
-      { name: 'country', kind: 'text', inputType: 'text', label: 'Country', placeholder: 'Belgium' },
+      cityField(),
+      countryField(),
       { name: 'activity', kind: 'select', label: 'Activity', options: ['Building & renovation', 'Interior fit-out', 'Dry-lining / plastering', 'Electrical / lighting', 'Other'] },
       { name: 'notes', kind: 'area', label: 'About your business', placeholder: 'Team size, regions you cover, current activity...', full: true },
     ],
@@ -147,6 +198,8 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
     fields: [
       { name: 'name', kind: 'text', inputType: 'text', label: 'Name', placeholder: 'First & last name', required: true },
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
+      cityField(),
+      countryField(),
       { name: 'bestTime', kind: 'select', label: 'Best time', options: ['Morning', 'Afternoon', 'Early evening'] },
       { name: 'topic', kind: 'select', label: 'Topic', options: ['A quote', 'Partnership', 'Training', 'Technical question', 'Other'] },
     ],
@@ -163,6 +216,7 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@company.com', required: true },
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
       { name: 'shippingAddress', kind: 'text', inputType: 'text', label: 'Shipping address', placeholder: 'Street, postcode, city', full: true },
+      countryField(),
       { name: 'productLine', kind: 'select', label: 'Product line', options: ['Polyester', 'PVC film', 'Acoustic', 'Not sure yet'] },
       { name: 'colours', kind: 'text', inputType: 'text', label: 'Colours of interest', placeholder: 'e.g. White, Anthracite, Custom RAL' },
       { name: 'notes', kind: 'area', label: 'Notes', placeholder: 'Project, quantities, anything useful...', full: true },
@@ -187,6 +241,7 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@email.com', required: true },
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
       { name: 'city', kind: 'text', inputType: 'text', label: 'City', placeholder: 'Your city', required: true },
+      countryField(false),
     ],
   },
   project: {
@@ -198,6 +253,7 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
     fields: [
       { name: 'projectName', kind: 'text', inputType: 'text', label: 'Project name', placeholder: 'Project or working title', required: true },
       { name: 'location', kind: 'text', inputType: 'text', label: 'Location', placeholder: 'City', required: true },
+      countryField(),
       {
         name: 'buildingType',
         kind: 'select',
