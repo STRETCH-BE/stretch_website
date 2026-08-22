@@ -20,16 +20,27 @@ redirects. Every layer switches on independently via its own env var.
 | Portal on one host | middleware + `/api/portal/*` + portal links | `NEXT_PUBLIC_PORTAL_HOST` (production: `stretch.mt`) |
 | Signup gating (pending review) | portal signup + login self-heal | always on once the `pending_reason` column exists |
 
-## The two Turnstile token flows — never mix them
+## One Turnstile token flow — WE verify everything
 
-1. **Lead endpoints** (`/api/lead`, `/api/contact`, `/api/datasheet-request`):
-   the browser widget's token is POSTed as `turnstileToken` and verified
-   server-side against Cloudflare **siteverify** in `src/lib/turnstile.ts`.
-2. **Auth endpoints** (`/api/portal/signup`, `/api/portal/login`): the token is
-   forwarded to Supabase as `options.captchaToken` and **Supabase verifies it**
-   (once CAPTCHA protection is enabled in the Supabase dashboard). These routes
-   **never call siteverify** — Turnstile tokens are single-use, so verifying
-   one ourselves would make Supabase's own verification fail.
+Every route that accepts a token — the lead endpoints (`/api/lead`,
+`/api/contact`, `/api/datasheet-request`) AND the auth endpoints
+(`/api/portal/signup`, `/api/portal/login`) — verifies it server-side
+against Cloudflare **siteverify** in `src/lib/turnstile.ts`. Tokens are
+single-use: verified once, by us, and **never also forwarded to Supabase**.
+
+**The Supabase dashboard CAPTCHA toggle stays OFF — permanently.** The
+original design forwarded auth tokens for Supabase (GoTrue) to verify, but
+GoTrue's verification of server-forwarded tokens failed consistently with
+`timeout-or-duplicate` (observed 22 Aug 2026, even on execute-mode tokens
+minted seconds earlier), so verification moved fully to our routes. A bot
+calling the Supabase auth API directly (bypassing our routes) still gets
+nowhere: no portal profile is created, the login self-heal lands it in the
+pending gate, confirmation mails are rate-capped, and the nightly purge
+deletes unconfirmed accounts after 48 h.
+
+The widget renders in `execution: 'execute'` mode — the challenge runs when
+the visitor presses submit, not at page load, so a token can never expire
+while a long form is being filled.
 
 `src/lib/spam/guard.ts` (`runLeadGuards`) is the shared chain for the lead
 endpoints: honeypot → rate limits → Turnstile → form token → scoring.
@@ -108,9 +119,9 @@ email confirmation.
 4. Test the public forms and a signup on the live site.
 5. Supabase dashboard → Authentication → URL configuration: site URL
    `https://stretch.mt`, redirect URLs for `/portal/login`.
-6. **Only after the deploy is live**: Supabase → Authentication → Attack
-   protection → enable CAPTCHA (Turnstile) with `TURNSTILE_SECRET_A`.
-   Turning the toggle OFF restores login instantly if anything goes wrong.
+6. Supabase → Authentication → Attack protection: **leave CAPTCHA protection
+   OFF** — our routes verify every token themselves (see the flow section
+   above for why the GoTrue-side verification was abandoned).
 
 ## Testing
 

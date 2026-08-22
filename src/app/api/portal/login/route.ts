@@ -12,7 +12,7 @@ import { DEMO_COOKIE, findDemoUser } from '@/lib/portal/auth';
 import { isPortalAllowedHost } from '@/lib/portal/host';
 import { rateLimit, getClientIp } from '@/lib/rate-limit';
 import { canonicalEmail, emailDomain, isFreemail } from '@/lib/spam/email';
-import { isTurnstileEnabled } from '@/lib/turnstile';
+import { isTurnstileEnabled, verifyTurnstile } from '@/lib/turnstile';
 
 export const runtime = 'nodejs';
 
@@ -46,11 +46,26 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 });
   }
 
-  // Turnstile on and no token → loud 400 so the failure is visible once the
-  // Supabase CAPTCHA toggle is enabled (Supabase verifies the token itself).
-  if (isTurnstileEnabled() && isSupabaseConfigured() && !captchaToken) {
-    console.warn('[login] captcha rejected: no token from the client widget');
-    return NextResponse.json({ ok: false, error: 'captcha' }, { status: 400 });
+  // WE verify the Turnstile token — same proven siteverify path as the lead
+  // routes. (GoTrue's own verification of server-forwarded tokens failed
+  // consistently with timeout-or-duplicate, Aug 2026 — the Supabase CAPTCHA
+  // toggle therefore stays OFF.) 'unavailable' fails open: the per-IP and
+  // per-email rate limits above still stand, and locking every real client
+  // out during a Cloudflare outage is the worse failure.
+  if (isTurnstileEnabled() && isSupabaseConfigured()) {
+    if (!captchaToken) {
+      console.warn('[login] captcha rejected: no token from the client widget');
+      return NextResponse.json({ ok: false, error: 'captcha' }, { status: 400 });
+    }
+    const verdict = await verifyTurnstile({
+      token: captchaToken,
+      host: req.headers.get('host') ?? '',
+      ip,
+    });
+    if (verdict === 'fail') {
+      console.warn('[login] captcha rejected by siteverify');
+      return NextResponse.json({ ok: false, error: 'captcha' }, { status: 400 });
+    }
   }
 
   // --- Demo mode (opt-in via NEXT_PUBLIC_PORTAL_DEMO=1) --------------------
@@ -75,9 +90,8 @@ export async function POST(req: NextRequest) {
   const { data, error } = await supabase.auth.signInWithPassword({
     email,
     password,
-    // Supabase verifies the Turnstile token itself once CAPTCHA protection
-    // is enabled in the dashboard (single-use — never siteverify'd here).
-    ...(captchaToken ? { options: { captchaToken } } : {}),
+    // The Turnstile token was verified ABOVE by our own siteverify call —
+    // single-use, so never also forwarded to Supabase.
   });
   if (error || !data.user) {
     const captcha = error && /captcha/i.test(error.message);

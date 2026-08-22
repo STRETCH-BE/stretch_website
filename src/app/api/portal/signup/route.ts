@@ -22,7 +22,7 @@ import { canonicalEmail, emailDomain, isDisposable, isFreemail } from '@/lib/spa
 import { isBlockedSender } from '@/lib/spam/blocklist';
 import { scoreSubmission, FLAG_THRESHOLD, HARD_THRESHOLD } from '@/lib/spam/score';
 import { checkFormToken } from '@/lib/form-token';
-import { isTurnstileEnabled } from '@/lib/turnstile';
+import { isTurnstileEnabled, verifyTurnstile } from '@/lib/turnstile';
 import { sendTransactionalEmail, isTransactionalConfigured } from '@/lib/transactional';
 import { buildAdminReviewEmail } from '@/lib/portal/emails';
 import { mintReviewToken, isReviewTokenEnabled } from '@/lib/portal/review-token';
@@ -131,12 +131,28 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 400 });
   }
 
-  // When Turnstile is on, a missing token must fail LOUDLY here — once the
-  // Supabase CAPTCHA toggle is enabled, signUp would reject it anyway with a
-  // less useful error.
-  if (isTurnstileEnabled() && !captchaToken) {
-    console.warn('[signup] captcha rejected: no token from the client widget');
-    return NextResponse.json({ ok: false, error: 'captcha' }, { status: 400 });
+  // WE verify the Turnstile token here — same proven siteverify path as the
+  // lead routes. (GoTrue's own captcha verification of server-forwarded
+  // tokens failed consistently with timeout-or-duplicate, Aug 2026 — the
+  // Supabase CAPTCHA toggle therefore stays OFF and this is the gate.)
+  let turnstileUnavailable = false;
+  if (isTurnstileEnabled()) {
+    if (!captchaToken) {
+      console.warn('[signup] captcha rejected: no token from the client widget');
+      return NextResponse.json({ ok: false, error: 'captcha' }, { status: 400 });
+    }
+    const verdict = await verifyTurnstile({
+      token: captchaToken,
+      host: req.headers.get('host') ?? '',
+      ip,
+    });
+    if (verdict === 'fail') {
+      console.warn('[signup] captcha rejected by siteverify');
+      return NextResponse.json({ ok: false, error: 'captcha' }, { status: 400 });
+    }
+    // 'unavailable' fails OPEN (scored below) — an outage at Cloudflare must
+    // never close signups; the pending gate still stands behind it.
+    turnstileUnavailable = verdict === 'unavailable';
   }
 
   // --- Canonical email: disposable → reject; duplicate → 409 ---------------
@@ -174,6 +190,7 @@ export async function POST(req: NextRequest) {
     fields: { email, name: contactName, company, city, office, phone },
     meta: {
       formToken: tokenState === 'missing' ? 'missing' : tokenState === 'fast' ? 'fast' : 'ok',
+      turnstileUnavailable,
     },
   });
   if (score >= HARD_THRESHOLD) {
@@ -218,10 +235,9 @@ export async function POST(req: NextRequest) {
     password,
     options: {
       data: details,
-      // Turnstile: Supabase verifies this itself once CAPTCHA protection is
-      // enabled in the dashboard (tokens are single-use — never siteverify'd
-      // here as well).
-      ...(captchaToken ? { captchaToken } : {}),
+      // The Turnstile token was verified ABOVE by our own siteverify call —
+      // it is single-use, so it must NOT also be forwarded to Supabase (and
+      // the dashboard CAPTCHA toggle stays off).
       // After the confirmation link, land the user on the portal login on
       // the canonical portal host.
       emailRedirectTo: `${portalOrigin(req.nextUrl.origin)}/portal/login`,
