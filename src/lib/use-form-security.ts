@@ -6,16 +6,19 @@
 //     mounts; exposes refreshFormToken() for the 'stale_token' retry;
 //   • holds the current Turnstile token (fed by <TurnstileWidget
 //     ref={sec.widgetRef} onToken={sec.setTurnstileToken} />);
-//   • waitForTurnstile() lets a submit handler wait a few seconds for the
-//     invisible challenge — never indefinitely: after the timeout the submit
-//     proceeds and the server answers with the clear 'captcha' message.
+//   • waitForTurnstile() starts a FRESH challenge run (execute mode) and
+//     waits for its token — minted seconds before the server verifies it, so
+//     a token can never expire while a visitor fills a long form. Never waits
+//     indefinitely: after the timeout the submit proceeds and the server
+//     answers with the clear 'captcha' message.
 // With none of the env vars set, everything here no-ops (zero-config rule).
 // ============================================================================
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { isTurnstileEnabled } from '@/lib/turnstile';
 import type { TurnstileHandle } from '@/components/ui/TurnstileWidget';
 
-const WAIT_MS = 6000;
+// Generous: Cloudflare may decide THIS run needs a visible interaction.
+const WAIT_MS = 30000;
 
 export function useFormSecurity() {
   const [formToken, setFormToken] = useState<string | null>(null);
@@ -46,11 +49,16 @@ export function useFormSecurity() {
     }
   }, []);
 
-  /** Resolve with a token as soon as one exists, or null after the wait —
-   *  the caller submits either way (server-side message handles the rest). */
+  /** Start a fresh challenge run and resolve with its token (or null after
+   *  the wait / when the widget is unavailable) — the caller submits either
+   *  way; the server-side message handles the rest. Tokens are single-use
+   *  and short-lived, so every call mints a new one. */
   const waitForTurnstile = useCallback(async (): Promise<string | null> => {
     if (!isTurnstileEnabled()) return null;
-    if (turnstileToken.current) return turnstileToken.current;
+    turnstileToken.current = null;
+    const started = widgetRef.current?.execute() ?? false;
+    if (!started) return null; // script blocked / widget not ready
+    if (turnstileToken.current) return turnstileToken.current; // instant solve
     return new Promise((resolve) => {
       const timer = setTimeout(() => {
         waiters.current = waiters.current.filter((w) => w !== wrapped);

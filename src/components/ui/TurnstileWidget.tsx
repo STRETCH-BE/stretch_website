@@ -6,6 +6,13 @@
 // Cloudflare decides to challenge). Renders nothing when Turnstile is
 // disabled (no NEXT_PUBLIC_TURNSTILE_SITEKEY_A → zero-config rule).
 //
+// EXECUTE-ON-SUBMIT: the widget renders with execution 'execute' — the
+// challenge does NOT run at page load. The submit handler calls execute()
+// (via useFormSecurity.waitForTurnstile) and a token is minted RIGHT THEN,
+// seconds before the server verifies it. Tokens are only valid for 300 s and
+// are single-use, so a token minted at page load dies while a visitor fills
+// a long form ("timeout-or-duplicate") — this mode makes that impossible.
+//
 // onToken(token) fires with a fresh token; onToken(null) on expiry/error so
 // the parent knows to wait again. If the script cannot load (content
 // blocker), a small inline notice appears — the submit is never blocked
@@ -27,6 +34,7 @@ declare global {
       render: (el: HTMLElement, opts: Record<string, unknown>) => string;
       reset: (id?: string) => void;
       remove: (id: string) => void;
+      execute: (id?: string, opts?: Record<string, unknown>) => void;
     };
   }
 }
@@ -59,7 +67,12 @@ const TURNSTILE_LANG: Record<string, string> = {
   es: 'es', pt: 'pt', da: 'da', sv: 'sv', no: 'nb',
 };
 
-export type TurnstileHandle = { reset: () => void };
+export type TurnstileHandle = {
+  reset: () => void;
+  /** Start a FRESH challenge run (execute mode). Returns false when the
+   *  widget is not ready (script blocked / not rendered yet). */
+  execute: () => boolean;
+};
 
 const TurnstileWidget = forwardRef<TurnstileHandle, { onToken: (token: string | null) => void }>(
   function TurnstileWidget({ onToken }, ref) {
@@ -76,6 +89,17 @@ const TurnstileWidget = forwardRef<TurnstileHandle, { onToken: (token: string | 
         if (widgetId.current !== null) window.turnstile?.reset(widgetId.current);
         onTokenRef.current(null);
       },
+      execute() {
+        if (widgetId.current === null || !window.turnstile?.execute) return false;
+        onTokenRef.current(null); // never reuse a previous run's token
+        try {
+          window.turnstile.reset(widgetId.current);
+          window.turnstile.execute(widgetId.current);
+          return true;
+        } catch {
+          return false;
+        }
+      },
     }));
 
     useEffect(() => {
@@ -87,6 +111,7 @@ const TurnstileWidget = forwardRef<TurnstileHandle, { onToken: (token: string | 
           widgetId.current = window.turnstile.render(holder.current, {
             sitekey: turnstileSiteKeyFor(window.location.hostname),
             appearance: 'interaction-only',
+            execution: 'execute', // challenge runs on submit, not at page load
             'refresh-expired': 'auto',
             theme: 'light',
             language: TURNSTILE_LANG[locale] ?? 'auto',
