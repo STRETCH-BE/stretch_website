@@ -49,8 +49,8 @@
     "productsDescription": "Tetos tensados de poliéster e PVC, sistemas acústicos, designs retroiluminados e impressos e unidades prefab — sem juntas até 6,4 m, 25 anos de garantia.",
     "partnersTitle": "Torne-se revendedor STRETCH — preços profissionais e leads | STRETCH",
     "partnersDescription": "Adicione tetos tensados à sua oferta com preços profissionais, fabrico à medida na nossa oficina belga, formação prática e leads locais encaminhados.",
-    "trainingTitle": "Formação de instaladores — certificado em dias | STRETCH",
-    "trainingDescription": "Certifique-se como instalador de tetos tensados na nossa sede belga. Aprenda confeção, perfis e montagem a frio e a quente — sem experiência prévia.",
+    "trainingTitle": "Formação em instalação de tetos tensionados — certificado em 2–3 dias | STRETCH",
+    "trainingDescription": "Formação prática de instalação de tetos tensionados: montagem a frio (poliéster) e a quente (PVC) numa só certificação, grupos pequenos e datas fixas.",
     "inspirationTitle": "Inspiração — projetos reais de tetos tensados | STRETCH",
     "inspirationDescription": "Projetos reais com STRETCH em estúdios, escritórios, habitações e hotéis — por solução: acústica, luz e impressão, habitação, escritório e comercial.",
     "samplesTitle": "Pedir amostras de cor e RAL | STRETCH",
@@ -84,7 +84,9 @@
     "supplyCzSkTitle": "Materiais de teto tensionado para a Chéquia e a Eslováquia | STRETCH",
     "supplyCzSkDescription": "Materiais premium de teto tensionado e confeção à medida para profissionais checos e eslovacos — produzidos na Polónia, a um ou dois dias. EUR ou PLN.",
     "projectsExportTitle": "Tetos tensionados para projetos internacionais | STRETCH",
-    "projectsExportDescription": "Tetos tensionados translúcidos, impressos e acústicos para fit-out em todo o mundo — soldados na fábrica na UE, frete aéreo, classes de fogo documentadas."
+    "projectsExportDescription": "Tetos tensionados translúcidos, impressos e acústicos para fit-out em todo o mundo — soldados na fábrica na UE, frete aéreo, classes de fogo documentadas.",
+    "priceCalculatorTitle": "Calculadora de preço de teto tensionado — custo por m² | STRETCH",
+    "priceCalculatorDescription": "Preço indicativo imediato para o seu teto tensionado: m² × tipo, com intervalos de 70–200 €/m². Orçamento firme gratuito, muitas vezes no próprio dia."
   },
   "cookies": {
     "title": "Valorizamos a sua privacidade",
@@ -173,7 +175,8 @@
       "architects": "Para arquitetos",
       "kit": "Kit DIY",
       "supply": "Fornecimento a instaladores",
-      "projectsExport": "Exportação de projetos"
+      "projectsExport": "Exportação de projetos",
+      "priceCalculator": "Calcular preço"
     },
     "dealers": "Rede de revendedores"
   },
@@ -637,7 +640,8 @@
     "sub": "Fale-nos do seu projeto e voltaremos ao contacto com um preço à medida — grátis e sem compromisso, em dois dias úteis.",
     "quote": "Peça um orçamento gratuito",
     "dealer": "Encontre o revendedor mais próximo",
-    "preferTalk": "Prefere falar?"
+    "preferTalk": "Prefere falar?",
+    "hours": "seg–sex · 08:30–17:00"
   },
   "productPage": {
     "home": "Início",
@@ -1782,6 +1786,7 @@
             "17–18 nov 2026",
             "Sessão em inglês — novas datas em breve",
             "Sessão em alemão — novas datas em breve",
+            "Sessão em polaco — novas datas em breve",
             "Sessão à medida no local"
           ]
         },
@@ -1823,6 +1828,7 @@
             "17–18 nov 2026",
             "Sessão em inglês — novas datas em breve",
             "Sessão em alemão — novas datas em breve",
+            "Sessão em polaco — novas datas em breve",
             "Sessão à medida no local"
           ]
         }
@@ -2011,14 +2017,16 @@
       "06–08 out 2026",
       "17–18 nov 2026",
       "Sessão em inglês — novas datas em breve",
-      "Sessão em alemão — novas datas em breve"
+      "Sessão em alemão — novas datas em breve",
+      "Sessão em polaco — novas datas em breve"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 lugares",
       "Beveren-Waas · 6 lugares",
       "Beveren-Waas · 8 lugares",
       "Beveren-Waas · grupo internacional",
-      "Beveren-Waas · grupo internacional"
+      "Beveren-Waas · grupo internacional",
+      "Częstochowa (PL) · grupo em polaco"
     ],
     "close": "Fechar",
     "downloadDatasheet": "Descarregar ficha técnica",
@@ -4470,13 +4478,14 @@
     "courseDescription": "Certificação prática de instalador de tetos tensionados na sede da STRETCH, na Bélgica: confeção da membrana, perfis, montagem a frio e a quente, luz, acústica, acabamentos e orçamentação.",
     "hero": {
       "eyebrow": "Formação de instaladores",
-      "titleA": "Instale como um profissional",
-      "titleB": "em",
-      "titleC": "dias",
+      "titleA": "Formação em tetos tensionados",
+      "titleB": "instalador certificado",
+      "titleC": "em 2–3 dias",
       "lead": "Certificação prática na nossa sede belga. Aprenda confeção da membrana, perfis, montagem a frio e a quente, luz e acústica — sem experiência prévia.",
       "ctaBook": "Reserve a sua formação",
       "ctaDates": "Ver datas",
-      "imageLabel": "Foto de formação / oficina"
+      "imageLabel": "Foto de formação / oficina",
+      "travel": "Beveren-Waas, Bélgica — a 1 h do aeroporto de Bruxelas"
     },
     "format": [
       {
@@ -4543,9 +4552,9 @@
     },
     "international": {
       "eyebrow": "Internacional",
-      "title": "Formação em inglês ou alemão",
+      "title": "Formação em inglês, alemão ou polaco",
       "lead": "Instaladores de toda a Europa certificam-se na nossa sede belga — uma viagem curta, dias práticos em estruturas reais e os materiais enviados depois para o seu país.",
-      "body": "Mesmo programa, grupo internacional: a certificação prática completa, dada em inglês ou alemão. Deixe os seus dados e confirmamos o seu lugar assim que as próximas datas forem definidas.",
+      "body": "Mesmo programa, grupo internacional: a certificação prática completa, dada em inglês, alemão ou polaco — e uma só formação cobre ambos os sistemas, poliéster montado a frio e PVC montado a quente. Deixe os seus dados e confirmamos o seu lugar assim que as próximas datas forem definidas.",
       "cta": "Registar interesse"
     }
   },
@@ -4636,7 +4645,8 @@
       "consentPrefix": "Aceito que a STRETCH trate os meus dados para responder ao meu pedido, conforme descrito na",
       "consentPrivacy": "política de privacidade",
       "submit": "Enviar mensagem"
-    }
+    },
+    "hours": "seg–sex · 08:30–17:00"
   },
   "datasheetsPage": {
     "eyebrow": "Fichas técnicas",
@@ -5279,5 +5289,25 @@
     },
     "serviceName": "Fornecimento internacional de tetos tensionados para projetos",
     "serviceDescription": "Tetos tensionados translúcidos, impressos e acústicos à medida para empresas de fit-out em todo o mundo — projetados na UE e enviados por avião."
+  },
+  "priceCalculatorPage": {
+    "crumb": "Calcular preço",
+    "eyebrow": "Calculadora de preços",
+    "titleA": "Calcule o preço do seu teto tensionado",
+    "titleB": "em 30 segundos.",
+    "lead": "Metros quadrados × tipo de teto dão-lhe de imediato o intervalo indicativo publicado — o valor firme chega com um orçamento gratuito, normalmente no mesmo dia útil.",
+    "areaLabel": "Área do teto (m²)",
+    "typeLabel": "Tipo de teto",
+    "types": {
+      "basic": "Cor lisa (PVC ou poliéster)",
+      "printed": "Design impresso",
+      "acoustic": "Acústico",
+      "backlit": "Translúcido / retroiluminado",
+      "bathroom": "Casa de banho / iluminação integrada"
+    },
+    "estimateLabel": "Indicativo para {area} m²",
+    "disclaimer": "Intervalo indicativo do guia de preços publicado: instalado, sem IVA. A membrana é feita à medida — cantos, curvas e integrações movem o valor; encare isto como um intervalo, nunca como um orçamento.",
+    "cta": "Pedir o meu orçamento gratuito",
+    "guideLink": "Ler o guia de preços completo"
   }
 }

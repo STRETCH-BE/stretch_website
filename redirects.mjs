@@ -366,11 +366,11 @@ const polishRules = [
   // old FAQ page (carried the PLN price answer)
   R('stretch-sufit.pl', '/rozwiazania-sufitow-napinanych', '/faq'),
   R('stretch-sufit.pl', '/sufity', '/products'),
-  // calculator → the honest price guide (a public estimate page can retarget this later)
-  R('stretch-sufit.pl', '/kalkulator-sufitow-napinanych', '/blog/spanplafond-prijs'),
+  // calculator → the public estimate page
+  R('stretch-sufit.pl', '/kalkulator-sufitow-napinanych', '/price-calculator'),
   // public PLN pricelist pages → portal (trade pricing is login-gated now)
-  R('stretch-sufit.pl', '/cennik-sufitow-napinanych-2', '/portal'),
-  R('stretch-sufit.pl', '/cennik-sufitow-napinanych', '/portal'),
+  R('stretch-sufit.pl', '/cennik-sufitow-napinanych-2', '/portal/login'),
+  R('stretch-sufit.pl', '/cennik-sufitow-napinanych', '/portal/login'),
   R('stretch-sufit.pl', '/plan-treningowy-z-sufitem-napinanym', '/installer-training'),
   // e-learning playlist page → training
   R('stretch-sufit.pl', '/sufity-napinane-youtube', '/installer-training'),

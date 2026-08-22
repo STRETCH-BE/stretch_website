@@ -49,8 +49,8 @@
     "productsDescription": "Strekkiloft úr pólýester og PVC, hljóðvistarkerfi, baklýst og prentuð hönnun og forsmíðaðar einingar — samskeytalaust upp í 6,4 m, 25 ára ábyrgð.",
     "partnersTitle": "Gerstu STRETCH-endursöluaðili — heildsöluverð & fyrirspurnir | STRETCH",
     "partnersDescription": "Bættu strekkiloftum við þjónustuframboð þitt: heildsöluverð, sérsmíði úr belgíska verkstæðinu okkar, verkleg þjálfun og áframsendar staðbundnar fyrirspurnir.",
-    "trainingTitle": "Uppsetningarnámskeið — vottun á fáeinum dögum | STRETCH",
-    "trainingDescription": "Fáðu vottun sem uppsetningaraðili strekkilofta í höfuðstöðvum okkar í Belgíu. Lærðu saumaskap, prófíla og uppsetningu — engin reynsla nauðsynleg.",
+    "trainingTitle": "Þjálfun í uppsetningu strekkilofta — vottun á 2–3 dögum | STRETCH",
+    "trainingDescription": "Verkleg þjálfun í uppsetningu strekkilofta: köld pólýester- og heit PVC-uppsetning í einni vottun, litlir hópar, fastar dagsetningar og byrjendasett.",
     "inspirationTitle": "Innblástur — raunveruleg strekkiloftaverkefni | STRETCH",
     "inspirationDescription": "Raunveruleg STRETCH-verkefni í stúdíóum, skrifstofum, heimilum og hótelum — eftir lausnum: hljóðvist, ljós & prent, heimili og atvinnuhúsnæði.",
     "samplesTitle": "Panta lita- & RAL-sýnishorn | STRETCH",
@@ -84,7 +84,9 @@
     "supplyCzSkTitle": "Strekkiloftaefni fyrir Tékkland & Slóvakíu | STRETCH",
     "supplyCzSkDescription": "Hágæðaefni fyrir strekkiloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila — framleitt í Póllandi, dags eða tveggja leið. EUR eða PLN.",
     "projectsExportTitle": "Strekkiloft fyrir alþjóðleg verkefni | STRETCH",
-    "projectsExportDescription": "Hálfgagnsæ, prentuð og hljóðvistarstrekkiloft fyrir innréttingafyrirtæki um allan heim — soðin í ESB-verksmiðju, flugfrakt, skjalfestir brunaflokkar."
+    "projectsExportDescription": "Hálfgagnsæ, prentuð og hljóðvistarstrekkiloft fyrir innréttingafyrirtæki um allan heim — soðin í ESB-verksmiðju, flugfrakt, skjalfestir brunaflokkar.",
+    "priceCalculatorTitle": "Verðreiknivél strekkilofta — verð á m² | STRETCH",
+    "priceCalculatorDescription": "Strax viðmiðunarverð fyrir strekkiloftið þitt: m² × loftgerð samkvæmt útgefnum bilum €70–200/m². Ókeypis fast tilboð, yfirleitt samdægurs."
   },
   "cookies": {
     "title": "Við virðum friðhelgi þína",
@@ -173,7 +175,8 @@
       "architects": "Fyrir arkitekta",
       "kit": "DIY-sett",
       "supply": "Aðföng uppsetningaraðila",
-      "projectsExport": "Verkefnaútflutningur"
+      "projectsExport": "Verkefnaútflutningur",
+      "priceCalculator": "Reikna verð"
     },
     "dealers": "Söluaðilanet"
   },
@@ -637,7 +640,8 @@
     "sub": "Segðu okkur frá verkefninu þínu og við svörum með sérsniðnu verði — ókeypis og án skuldbindinga, innan tveggja virkra daga.",
     "quote": "Fáðu ókeypis tilboð",
     "dealer": "Finndu næsta söluaðila",
-    "preferTalk": "Viltu frekar tala við okkur?"
+    "preferTalk": "Viltu frekar tala við okkur?",
+    "hours": "mán–fös · 08:30–17:00"
   },
   "productPage": {
     "home": "Heim",
@@ -1782,6 +1786,7 @@
             "17.–18. nóv. 2026",
             "Námskeið á ensku — nýjar dagsetningar væntanlegar",
             "Námskeið á þýsku — nýjar dagsetningar væntanlegar",
+            "Námskeið á pólsku — nýjar dagsetningar væntanlegar",
             "Sérsniðin þjálfun á staðnum"
           ]
         },
@@ -1823,6 +1828,7 @@
             "17.–18. nóv. 2026",
             "Námskeið á ensku — nýjar dagsetningar væntanlegar",
             "Námskeið á þýsku — nýjar dagsetningar væntanlegar",
+            "Námskeið á pólsku — nýjar dagsetningar væntanlegar",
             "Sérsniðin þjálfun á staðnum"
           ]
         }
@@ -2011,14 +2017,16 @@
       "06.–08. okt. 2026",
       "17.–18. nóv. 2026",
       "Námskeið á ensku — nýjar dagsetningar væntanlegar",
-      "Námskeið á þýsku — nýjar dagsetningar væntanlegar"
+      "Námskeið á þýsku — nýjar dagsetningar væntanlegar",
+      "Námskeið á pólsku — nýjar dagsetningar væntanlegar"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 sæti",
       "Beveren-Waas · 6 sæti",
       "Beveren-Waas · 8 sæti",
       "Beveren-Waas · alþjóðlegur hópur",
-      "Beveren-Waas · alþjóðlegur hópur"
+      "Beveren-Waas · alþjóðlegur hópur",
+      "Częstochowa (PL) · pólskumælandi hópur"
     ],
     "close": "Loka",
     "downloadDatasheet": "Sækja tækniblað",
@@ -4470,13 +4478,14 @@
     "courseDescription": "Verkleg vottun uppsetningaraðila strekkilofta í höfuðstöðvum STRETCH í Belgíu: sérsníðing himnunnar, prófílar, köld og heit uppsetning, ljós, hljóðvist, frágangur og tilboðsgerð.",
     "hero": {
       "eyebrow": "Þjálfun uppsetningaraðila",
-      "titleA": "Settu upp eins og fagmaður",
-      "titleB": "á",
-      "titleC": "dögum",
+      "titleA": "Þjálfun í uppsetningu strekkilofta",
+      "titleB": "vottun",
+      "titleC": "á 2–3 dögum",
       "lead": "Verkleg vottun í belgísku höfuðstöðvunum okkar. Lærðu sérsníðingu himnunnar, prófíla, kalda og heita uppsetningu, ljós og hljóðvist — engin fyrri reynsla nauðsynleg.",
       "ctaBook": "Bókaðu þjálfunina",
       "ctaDates": "Sjá dagsetningar",
-      "imageLabel": "Mynd úr þjálfun / verkstæði"
+      "imageLabel": "Mynd úr þjálfun / verkstæði",
+      "travel": "Beveren-Waas, Belgíu — 1 klst. frá Brussel-flugvelli"
     },
     "format": [
       {
@@ -4543,9 +4552,9 @@
     },
     "international": {
       "eyebrow": "Alþjóðlegt",
-      "title": "Þjálfun á ensku eða þýsku",
+      "title": "Þjálfun á ensku, þýsku eða pólsku",
       "lead": "Uppsetningaraðilar víðs vegar að úr Evrópu fá vottun í belgísku höfuðstöðvunum okkar — stutt ferðalag, verklegir dagar á alvöru römmum og efnin síðan send til þíns lands.",
-      "body": "Sama dagskrá, alþjóðlegur hópur: full verkleg vottun kennd á ensku eða þýsku. Skildu eftir upplýsingarnar þínar og við staðfestum sætið þitt um leið og næstu dagsetningar liggja fyrir.",
+      "body": "Sama dagskrá, alþjóðlegur hópur: full verkleg vottun kennd á ensku, þýsku eða pólsku — og eitt námskeið nær yfir bæði kerfin, kalt uppsett pólýester og heitt uppsett PVC. Skildu eftir upplýsingarnar þínar og við staðfestum sætið þitt um leið og næstu dagsetningar liggja fyrir.",
       "cta": "Skrá áhuga"
     }
   },
@@ -4636,7 +4645,8 @@
       "consentPrefix": "Ég samþykki að STRETCH vinni úr upplýsingum mínum til að svara fyrirspurn minni, eins og lýst er í",
       "consentPrivacy": "persónuverndarstefnunni",
       "submit": "Senda skilaboð"
-    }
+    },
+    "hours": "mán–fös · 08:30–17:00"
   },
   "datasheetsPage": {
     "eyebrow": "Tækniblöð",
@@ -5279,5 +5289,25 @@
     },
     "serviceName": "Alþjóðleg verkefnaafhending strekkilofta",
     "serviceDescription": "Sérsniðin hálfgagnsæ, prentuð og hljóðvistarstrekkiloft fyrir innréttingafyrirtæki um allan heim — hönnuð í ESB og send með flugi."
+  },
+  "priceCalculatorPage": {
+    "crumb": "Reikna verð",
+    "eyebrow": "Verðreiknivél",
+    "titleA": "Reiknaðu verð strekkiloftsins",
+    "titleB": "á 30 sekúndum.",
+    "lead": "Fermetrar × loftgerð gefa þér strax útgefið viðmiðunarbil — endanleg tala kemur með ókeypis tilboði, yfirleitt samdægurs á virkum degi.",
+    "areaLabel": "Loftflötur (m²)",
+    "typeLabel": "Loftgerð",
+    "types": {
+      "basic": "Einlitt (PVC eða pólýester)",
+      "printed": "Prentuð hönnun",
+      "acoustic": "Hljóðvist",
+      "backlit": "Hálfgagnsætt / baklýst",
+      "bathroom": "Baðherbergi / innbyggð lýsing"
+    },
+    "estimateLabel": "Viðmiðun fyrir {area} m²",
+    "disclaimer": "Viðmiðunarbil úr útgefna verðleiðaranum: uppsett, án VSK. Dúkurinn er sérsniðinn — horn, bogar og innfellingar hreyfa töluna; líttu á þetta sem bil, aldrei sem tilboð.",
+    "cta": "Fá ókeypis tilboð",
+    "guideLink": "Lesa allan verðleiðarann"
   }
 }

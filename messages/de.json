@@ -49,8 +49,8 @@
     "productsDescription": "Spanndecken aus Polyester und PVC, Akustiksysteme, hinterleuchtete und bedruckte Designs und Fertigmodule — fugenlos bis 6,4 m, 25 Jahre Garantie.",
     "partnersTitle": "STRETCH-Händler werden — Händlerpreise & Leads | STRETCH",
     "partnersDescription": "Erweitern Sie Ihr Angebot um Spanndecken: Händlerpreise, Maßanfertigung aus unserer belgischen Werkstatt, praxisnahe Schulung und vermittelte lokale Anfragen.",
-    "trainingTitle": "Monteur-Schulung — zertifiziert in wenigen Tagen | STRETCH",
-    "trainingDescription": "Werden Sie zertifizierter Spanndecken-Monteur an unserem belgischen Hauptsitz. Lernen Sie Konfektion, Profile und Montage — ohne Vorkenntnisse.",
+    "trainingTitle": "Spanndecken Schulung & Fachverleger-Seminar — mit Zertifikat | STRETCH",
+    "trainingDescription": "Praxisschulung für Spanndecken-Monteure: Polyester- und PVC-Montage in einer Zertifizierung, kleine Gruppen, feste Termine — 2 Std. von Düsseldorf.",
     "inspirationTitle": "Inspiration — echte Spanndecken-Projekte | STRETCH",
     "inspirationDescription": "Echte STRETCH-Projekte in Studios, Büros, Wohnungen und Hotels — nach Lösung: Akustik, Licht & Druck, Wohnen, Bad, Büro und Gewerbe.",
     "samplesTitle": "Farb- & RAL-Muster anfordern | STRETCH",
@@ -79,12 +79,14 @@
     "architectsDescription": "Kostenloser Architektenbereich: Datenblätter, Ausschreibungstexte, CAD/BIM, gemessene Fallstudien, indikative €/m²-Budgetbänder, Events und Projektbegleitung.",
     "kitTitle": "DIY-Spanndecken-Kit — nach Maß | STRETCH",
     "kitDescription": "Spanndecken-Kit nach Ihren Maßen: Polyestertuch, Profile und Anleitung in einem Paket. Kaltmontage, Lieferung in EU und UK.",
-    "supplyTitle": "Spanndecken-Material & Konfektion für Verarbeiter | STRETCH",
+    "supplyTitle": "Spanndecken Großhandel — Material & Konfektion für Verarbeiter | STRETCH",
     "supplyDescription": "Werksbelieferung für Montageprofis: Membranen & Folien, Profile, Licht und Maßkonfektion, versandt durch ganz Europa. Rechnungsstellung in EUR.",
     "supplyCzSkTitle": "Spanndecken-Material für Tschechien & Slowakei | STRETCH",
     "supplyCzSkDescription": "Premium-Spanndeckenmaterialien und Maßkonfektion für tschechische und slowakische Profis — produziert in Polen, ein bis zwei Tage entfernt. EUR oder PLN.",
     "projectsExportTitle": "Spanndecken für internationale Projekte | STRETCH",
-    "projectsExportDescription": "Transluzente, bedruckte und akustische Spanndecken für Fit-out-Unternehmen weltweit — geschweißt im EU-Werk, per Luftfracht, dokumentierte Brandklassen."
+    "projectsExportDescription": "Transluzente, bedruckte und akustische Spanndecken für Fit-out-Unternehmen weltweit — geschweißt im EU-Werk, per Luftfracht, dokumentierte Brandklassen.",
+    "priceCalculatorTitle": "Spanndecken Kosten berechnen — Preis pro m² | STRETCH",
+    "priceCalculatorDescription": "Sofortiger Richtpreis für Ihre Spanndecke: m² × Deckentyp nach den Spannen von €70–200/m². Kostenloses verbindliches Angebot, meist am selben Tag."
   },
   "cookies": {
     "title": "Wir respektieren Ihre Privatsphäre",
@@ -173,7 +175,8 @@
       "architects": "Für Architekten",
       "kit": "DIY-Kit",
       "supply": "Belieferung für Verarbeiter",
-      "projectsExport": "Projektexport"
+      "projectsExport": "Projektexport",
+      "priceCalculator": "Kosten berechnen"
     },
     "dealers": "Händlernetz"
   },
@@ -637,7 +640,8 @@
     "sub": "Erzählen Sie uns von Ihrem Projekt — wir melden uns innerhalb von zwei Werktagen mit einem maßgeschneiderten Preis. Kostenlos und unverbindlich.",
     "quote": "Kostenloses Angebot anfordern",
     "dealer": "Händler in Ihrer Nähe finden",
-    "preferTalk": "Lieber sprechen?"
+    "preferTalk": "Lieber sprechen?",
+    "hours": "Mo–Fr · 08:30–17:00"
   },
   "productPage": {
     "home": "Startseite",
@@ -1782,6 +1786,7 @@
             "17.–18. Nov. 2026",
             "Session auf Englisch — neue Termine in Kürze",
             "Session auf Deutsch — neue Termine in Kürze",
+            "Session auf Polnisch — neue Termine in Kürze",
             "Individuelle Vor-Ort-Schulung"
           ]
         },
@@ -1823,6 +1828,7 @@
             "17.–18. Nov. 2026",
             "Session auf Englisch — neue Termine in Kürze",
             "Session auf Deutsch — neue Termine in Kürze",
+            "Session auf Polnisch — neue Termine in Kürze",
             "Individuelle Vor-Ort-Schulung"
           ]
         }
@@ -2011,14 +2017,16 @@
       "06.–08. Okt. 2026",
       "17.–18. Nov. 2026",
       "Session auf Englisch — neue Termine in Kürze",
-      "Session auf Deutsch — neue Termine in Kürze"
+      "Session auf Deutsch — neue Termine in Kürze",
+      "Session auf Polnisch — neue Termine in Kürze"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 Plätze",
       "Beveren-Waas · 6 Plätze",
       "Beveren-Waas · 8 Plätze",
       "Beveren-Waas · internationale Gruppe",
-      "Beveren-Waas · internationale Gruppe"
+      "Beveren-Waas · internationale Gruppe",
+      "Częstochowa (PL) · polnischsprachige Gruppe"
     ],
     "close": "Schließen",
     "downloadDatasheet": "Datenblatt herunterladen",
@@ -4470,13 +4478,14 @@
     "courseDescription": "Praxisnahe Spanndecken-Monteurzertifizierung in der STRETCH-Zentrale in Belgien: Membrankonfektion, Profile, Kalt- & Warmmontage, Licht, Akustik, Finish und Kalkulation.",
     "hero": {
       "eyebrow": "Monteurschulung",
-      "titleA": "Montieren wie ein Profi",
-      "titleB": "in",
-      "titleC": "Tagen",
+      "titleA": "Spanndecken Schulung",
+      "titleB": "zum Fachverleger",
+      "titleC": "in 2–3 Tagen",
       "lead": "Praxiszertifizierung in unserer belgischen Zentrale. Lernen Sie Membrankonfektion, Profile, Kalt- & Warmmontage, Licht und Akustik — keine Vorkenntnisse nötig.",
       "ctaBook": "Schulung buchen",
       "ctaDates": "Termine ansehen",
-      "imageLabel": "Foto Schulung / Werkstatt"
+      "imageLabel": "Foto Schulung / Werkstatt",
+      "travel": "Beveren-Waas, Belgien — rund 2 Stunden von Düsseldorf"
     },
     "format": [
       {
@@ -4543,9 +4552,9 @@
     },
     "international": {
       "eyebrow": "International",
-      "title": "Schulung auf Englisch oder Deutsch",
+      "title": "Schulung auf Englisch, Deutsch oder Polnisch",
       "lead": "Verarbeiter aus ganz Europa zertifizieren sich an unserem belgischen Hauptsitz — eine kurze Anreise, Praxistage an echten Rahmen, danach werden die Materialien in Ihr Land geliefert.",
-      "body": "Gleiches Programm, internationale Gruppe: die komplette Praxis-Zertifizierung auf Englisch oder Deutsch. Hinterlassen Sie Ihre Daten und wir bestätigen Ihren Platz, sobald die nächsten Termine feststehen.",
+      "body": "Gleiches Programm, internationale Gruppe: die komplette Praxis-Zertifizierung auf Englisch, Deutsch oder Polnisch — und ein Kurs deckt beide Systeme ab, kalt montiertes Polyester und warm montiertes PVC. Hinterlassen Sie Ihre Daten und wir bestätigen Ihren Platz, sobald die nächsten Termine feststehen.",
       "cta": "Interesse anmelden"
     }
   },
@@ -4636,7 +4645,8 @@
       "consentPrefix": "Ich bin damit einverstanden, dass STRETCH meine Daten zur Beantwortung meiner Anfrage verarbeitet, wie beschrieben in der",
       "consentPrivacy": "Datenschutzerklärung",
       "submit": "Nachricht senden"
-    }
+    },
+    "hours": "Mo–Fr · 08:30–17:00"
   },
   "datasheetsPage": {
     "eyebrow": "Technische Datenblätter",
@@ -5279,5 +5289,25 @@
     },
     "serviceName": "Internationale Projektbelieferung mit Spanndecken",
     "serviceDescription": "Maßgefertigte transluzente, bedruckte und akustische Spanndecken für Fit-out-Unternehmen weltweit — konstruiert in der EU, versandt per Luftfracht."
+  },
+  "priceCalculatorPage": {
+    "crumb": "Kosten berechnen",
+    "eyebrow": "Kostenrechner",
+    "titleA": "Spanndecken Kosten berechnen",
+    "titleB": "in 30 Sekunden.",
+    "lead": "Quadratmeter × Deckentyp ergibt sofort die veröffentlichte Richtspanne — die verbindliche Zahl kommt aus einem kostenlosen Angebot, meist am selben Werktag.",
+    "areaLabel": "Deckenfläche (m²)",
+    "typeLabel": "Deckentyp",
+    "types": {
+      "basic": "Unifarben (PVC oder Polyester)",
+      "printed": "Bedrucktes Design",
+      "acoustic": "Akustik",
+      "backlit": "Transluzent / hinterleuchtet",
+      "bathroom": "Bad / integrierte Beleuchtung"
+    },
+    "estimateLabel": "Richtwert für {area} m²",
+    "disclaimer": "Richtspanne aus dem veröffentlichten Preisleitfaden: montiert, zzgl. MwSt. Die Membran wird nach Maß gefertigt — Ecken, Rundungen und Integrationen verschieben die Zahl; verstehen Sie dies als Spanne, nie als Angebot.",
+    "cta": "Kostenloses Angebot anfordern",
+    "guideLink": "Den vollständigen Preisleitfaden lesen"
   }
 }

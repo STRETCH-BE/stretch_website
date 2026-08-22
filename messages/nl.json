@@ -49,8 +49,8 @@
     "productsDescription": "Spanplafonds in polyester en pvc, akoestische systemen, verlichte en bedrukte designs en prefab-units — naadloos tot 6,4 m, 25 jaar garantie.",
     "partnersTitle": "Word STRETCH-wederverkoper — handelsprijzen & leads | STRETCH",
     "partnersDescription": "Voeg spanplafonds toe aan uw aanbod: handelsprijzen, levering op maat uit ons Belgisch atelier, praktijkopleiding en doorverwezen lokale leads.",
-    "trainingTitle": "Installateursopleiding — gecertificeerd in enkele dagen | STRETCH",
-    "trainingDescription": "Word gecertificeerd spanplafond-installateur op ons Belgisch hoofdkantoor. Leer confectie, profielen en koud & warm plaatsen — geen ervaring vereist.",
+    "trainingTitle": "Opleiding spanplafond plaatsen — word gecertificeerd installateur | STRETCH",
+    "trainingDescription": "Praktijkopleiding spanplafonds plaatsen: koud polyester én warm pvc in één certificering, kleine groepen, vaste data en starterskit — bij de fabrikant.",
     "inspirationTitle": "Inspiratie — echte spanplafondprojecten | STRETCH",
     "inspirationDescription": "Echte STRETCH-projecten in studio’s, kantoren, woningen en hotels — per oplossing: akoestiek, licht & print, wonen, badkamer en commercieel.",
     "samplesTitle": "Vraag kleur- & RAL-stalen aan | STRETCH",
@@ -84,7 +84,9 @@
     "supplyCzSkTitle": "Spanplafondmaterialen voor Tsjechië & Slowakije | STRETCH",
     "supplyCzSkDescription": "Premium spanplafondmaterialen en confectie op maat voor Tsjechische en Slowaakse professionals — geproduceerd in Polen, één à twee dagen ver. EUR of PLN.",
     "projectsExportTitle": "Spanplafonds voor internationale projecten | STRETCH",
-    "projectsExportDescription": "Translucente, bedrukte en akoestische spanplafonds voor fit-out-aannemers wereldwijd — gelast in onze EU-fabriek, per luchtvracht, met brandklassen."
+    "projectsExportDescription": "Translucente, bedrukte en akoestische spanplafonds voor fit-out-aannemers wereldwijd — gelast in onze EU-fabriek, per luchtvracht, met brandklassen.",
+    "priceCalculatorTitle": "Spanplafond prijs berekenen — prijs per m² | STRETCH",
+    "priceCalculatorDescription": "Meteen een richtprijs voor uw spanplafond: m² × plafondtype met de gepubliceerde vorken van €70–200/m². Gratis vaste offerte, meestal dezelfde werkdag."
   },
   "cookies": {
     "title": "We hechten waarde aan je privacy",
@@ -173,7 +175,8 @@
       "architects": "Voor architecten",
       "kit": "Doe-het-zelfkit",
       "supply": "Levering voor installateurs",
-      "projectsExport": "Projectexport"
+      "projectsExport": "Projectexport",
+      "priceCalculator": "Prijs berekenen"
     },
     "dealers": "Dealernetwerk"
   },
@@ -637,7 +640,8 @@
     "sub": "Vertel ons over uw project en wij bezorgen u binnen twee werkdagen een prijs op maat — gratis en vrijblijvend.",
     "quote": "Vraag een gratis offerte",
     "dealer": "Vind uw dichtstbijzijnde dealer",
-    "preferTalk": "Liever even bellen?"
+    "preferTalk": "Liever even bellen?",
+    "hours": "ma–vr · 08:30–17:00"
   },
   "productPage": {
     "home": "Home",
@@ -1782,6 +1786,7 @@
             "17–18 nov 2026",
             "Engelstalige sessie — nieuwe data binnenkort",
             "Duitstalige sessie — nieuwe data binnenkort",
+            "Poolstalige sessie — nieuwe data binnenkort",
             "Sessie op maat op locatie"
           ]
         },
@@ -1823,6 +1828,7 @@
             "17–18 nov 2026",
             "Engelstalige sessie — nieuwe data binnenkort",
             "Duitstalige sessie — nieuwe data binnenkort",
+            "Poolstalige sessie — nieuwe data binnenkort",
             "Sessie op maat op locatie"
           ]
         }
@@ -2011,14 +2017,16 @@
       "06–08 okt 2026",
       "17–18 nov 2026",
       "Engelstalige sessie — nieuwe data binnenkort",
-      "Duitstalige sessie — nieuwe data binnenkort"
+      "Duitstalige sessie — nieuwe data binnenkort",
+      "Poolstalige sessie — nieuwe data binnenkort"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 plaatsen",
       "Beveren-Waas · 6 plaatsen",
       "Beveren-Waas · 8 plaatsen",
       "Beveren-Waas · internationale groep",
-      "Beveren-Waas · internationale groep"
+      "Beveren-Waas · internationale groep",
+      "Częstochowa (PL) · Poolstalige groep"
     ],
     "close": "Sluiten",
     "downloadDatasheet": "Download technische fiche",
@@ -4470,13 +4478,14 @@
     "courseDescription": "Praktijkgerichte certificering tot spanplafondinstallateur op de STRETCH-hoofdzetel in België: confectie van het doek, profielen, koude & warme montage, licht, akoestiek, afwerking en calculatie.",
     "hero": {
       "eyebrow": "Installateursopleiding",
-      "titleA": "Plaats als een pro",
-      "titleB": "in",
-      "titleC": "dagen",
+      "titleA": "Opleiding spanplafond plaatsen",
+      "titleB": "gecertificeerd",
+      "titleC": "in enkele dagen",
       "lead": "Praktijkgerichte certificering op onze Belgische hoofdzetel. Leer confectie van het doek, profielen, koude & warme montage, licht en akoestiek — geen voorkennis nodig.",
       "ctaBook": "Boek uw opleiding",
       "ctaDates": "Bekijk de data",
-      "imageLabel": "Foto opleiding / atelier"
+      "imageLabel": "Foto opleiding / atelier",
+      "travel": "Beveren-Waas, België — 45 min van Breda, vlak over de grens"
     },
     "format": [
       {
@@ -4543,9 +4552,9 @@
     },
     "international": {
       "eyebrow": "Internationaal",
-      "title": "Training in het Engels of Duits",
+      "title": "Training in het Engels, Duits of Pools",
       "lead": "Installateurs uit heel Europa certificeren zich op ons Belgische hoofdkantoor — één korte reis, hands-on dagen op echte frames, en daarna materialen verzonden naar uw land.",
-      "body": "Zelfde programma, internationale groep: de volledige hands-on certificering in het Engels of Duits. Laat uw gegevens achter en we bevestigen uw plaats zodra de volgende data vastliggen.",
+      "body": "Zelfde programma, internationale groep: de volledige hands-on certificering in het Engels, Duits of Pools — en één opleiding dekt beide systemen, koud gemonteerd polyester en warm gemonteerd pvc. Laat uw gegevens achter en we bevestigen uw plaats zodra de volgende data vastliggen.",
       "cta": "Interesse melden"
     }
   },
@@ -4636,7 +4645,8 @@
       "consentPrefix": "Ik ga ermee akkoord dat STRETCH mijn gegevens verwerkt om mijn aanvraag te beantwoorden, zoals beschreven in het",
       "consentPrivacy": "privacybeleid",
       "submit": "Verstuur bericht"
-    }
+    },
+    "hours": "ma–vr · 08:30–17:00"
   },
   "datasheetsPage": {
     "eyebrow": "Technische fiches",
@@ -4828,7 +4838,7 @@
     "acoustic-panels": {
       "name": "Akoestische panelen",
       "eyebrow": "Akoestiek",
-      "metaTitle": "Akoestische panelen — polyesterwol, eilanden & wandpanelen | STRETCH",
+      "metaTitle": "Akoestische plafondeilanden & panelen — polyesterwol | STRETCH",
       "metaDescription": "Akoestische panelen in polyesterwol, plafondeilanden en wandpanelen die galm uit de ruimte halen — op maat gesneden uit eigen productie.",
       "intro": "Absorptie voor ruimtes die even goed klinken als ze eruitzien: polyesterwolpanelen voor plafond en wand, vrijhangende eilanden en baffles — op maat gesneden en geleverd uit eigen productie.",
       "items": [
@@ -5279,5 +5289,25 @@
     },
     "serviceName": "Internationale projectlevering van spanplafonds",
     "serviceDescription": "Translucente, bedrukte en akoestische spanplafonds op maat voor fit-out-aannemers wereldwijd — ontworpen in de EU en per luchtvracht verzonden."
+  },
+  "priceCalculatorPage": {
+    "crumb": "Prijs berekenen",
+    "eyebrow": "Prijscalculator",
+    "titleA": "Spanplafond prijs berekenen",
+    "titleB": "in 30 seconden.",
+    "lead": "Vierkante meters × plafondtype geeft u meteen de gepubliceerde richtprijsvork — het vaste bedrag komt uit een gratis offerte, meestal dezelfde werkdag.",
+    "areaLabel": "Plafondoppervlak (m²)",
+    "typeLabel": "Plafondtype",
+    "types": {
+      "basic": "Effen kleur (pvc of polyester)",
+      "printed": "Bedrukt ontwerp",
+      "acoustic": "Akoestisch",
+      "backlit": "Translucent / backlit",
+      "bathroom": "Badkamer / geïntegreerde verlichting"
+    },
+    "estimateLabel": "Richtprijs voor {area} m²",
+    "disclaimer": "Richtprijsvork uit de gepubliceerde prijsgids: geplaatst, exclusief btw. Het membraan wordt op maat gemaakt — hoeken, rondingen en integraties verschuiven het bedrag; zie dit als een vork, nooit als een offerte.",
+    "cta": "Vraag mijn gratis offerte",
+    "guideLink": "Lees de volledige prijsgids"
   }
 }

@@ -68,6 +68,7 @@ const FIELD_LABELS: Record<string, string> = {
 const SOURCE_LABELS: Record<string, string> = {
   materials_inquiry: 'Materials inquiry',
   quote: 'Quote request',
+  price_calculator: 'Quote request (price calculator)',
   survey: 'Site survey request',
   training: 'Training booking',
   dates: 'Training booking',

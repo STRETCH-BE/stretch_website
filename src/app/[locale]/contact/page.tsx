@@ -7,7 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, contact, offices } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
-import { breadcrumbSchema, localBusinessSchema } from '@/lib/structured-data';
+import { breadcrumbSchema, localBusinessSchema, branchLocalBusinessSchemas } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
@@ -27,7 +27,7 @@ export default async function ContactPage({ params }: { params: { locale: string
   const tp = await getTranslations('productPage');
 
   const cards = [
-    { icon: Phone, label: t('cards.call.label'), value: contact.phoneDisplay, sub: contact.hoursDisplay, href: contact.phoneHref },
+    { icon: Phone, label: t('cards.call.label'), value: contact.phoneDisplay, sub: t('hours'), href: contact.phoneHref },
     { icon: Mail, label: t('cards.email.label'), value: contact.email, sub: t('cards.email.sub'), href: `mailto:${contact.email}` },
     { icon: MessageCircle, label: t('cards.chat.label'), value: t('cards.chat.value'), sub: t('cards.chat.sub'), href: contact.whatsappHref },
   ];
@@ -41,6 +41,9 @@ export default async function ContactPage({ params }: { params: { locale: string
     <>
       <JsonLd data={crumbs} />
       <JsonLd data={localBusinessSchema()} />
+      {branchLocalBusinessSchemas().map((b) => (
+        <JsonLd key={b['@id']} data={b} />
+      ))}
 
       {/* Hero + quick-contact cards */}
       <section className="container" style={{ padding: 'clamp(36px,5vw,72px) 0 clamp(32px,4vw,56px)' }}>

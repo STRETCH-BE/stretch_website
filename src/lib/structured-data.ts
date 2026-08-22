@@ -147,6 +147,35 @@ export function productSchema(product: Product, locale: Locale): Record<string, 
 export type BreadcrumbItem = { name: string; url: string };
 
 /**
+ * LocalBusiness nodes for the group's BRANCHES with a physical presence
+ * (Częstochowa PL, Vienna AT — offices[] entries carrying geo). Rendered on
+ * the contact page so the markets where we actually sit get a local signal
+ * (ranking audit §1.5: only the Belgian NAP existed on every domain). Each
+ * branch is its own entity with parentOrganization → the global @id. NAP
+ * data comes straight from site-config offices — nothing invented; branches
+ * without a published local phone simply carry address + email.
+ */
+export function branchLocalBusinessSchemas() {
+  return offices
+    .filter((o) => o.geo && o.role !== 'Headquarters')
+    .map((o) => ({
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      '@id': `${siteUrl}/#branch-${o.country.toLowerCase()}`,
+      name: o.name,
+      parentOrganization: { '@id': ORG_ID },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: o.addressLines[0],
+        addressLocality: o.addressLines[1] ?? '',
+        addressCountry: o.country,
+      },
+      ...(o.email ? { email: o.email } : {}),
+      geo: { '@type': 'GeoCoordinates', latitude: o.geo!.lat, longitude: o.geo!.lng },
+    }));
+}
+
+/**
  * Service node for B2B service landings (/supply): the service is offered by
  * the ONE global Organization entity (same @id anchoring the technical
  * pages), with the group's sales territory as area served.

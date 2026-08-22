@@ -43,14 +43,14 @@
     }
   },
   "meta": {
-    "homeTitle": "STRETCH — Nowy sufit w jeden dzień | Sufity i ściany napinane",
+    "homeTitle": "Sufity napinane od producenta — nowy sufit w jeden dzień | STRETCH",
     "homeDescription": "Sufity napinane i ściany bez szwów, montowane na zimno w jeden dzień — bez kurzu i malowania. Akustyka, światło i nadruk. Ręcznie robione w Belgii.",
     "productsTitle": "Sufity napinane i rozwiązania akustyczne | STRETCH",
     "productsDescription": "Sufity napinane z poliestru i PCV, systemy akustyczne, wzory podświetlane i drukowane oraz moduły prefab — bez szwów do 6,4 m, 25 lat gwarancji.",
     "partnersTitle": "Zostań dystrybutorem STRETCH — ceny hurtowe i leady | STRETCH",
     "partnersDescription": "Dodaj sufity napinane do swojej oferty: ceny hurtowe, produkcja na wymiar w naszej belgijskiej pracowni, praktyczne szkolenia i przekazywane lokalne leady.",
-    "trainingTitle": "Szkolenie dla montażystów — certyfikat w kilka dni | STRETCH",
-    "trainingDescription": "Zostań certyfikowanym montażystą sufitów napinanych w naszej belgijskiej siedzibie. Poznaj konfekcję, profile i montaż — bez doświadczenia.",
+    "trainingTitle": "Szkolenie z montażu sufitów napinanych — certyfikat w 2–3 dni | STRETCH",
+    "trainingDescription": "Praktyczne szkolenie z montażu sufitów napinanych: montaż na zimno (poliester) i na ciepło (PVC). Sesje po polsku w Częstochowie — wkrótce.",
     "inspirationTitle": "Inspiracje — prawdziwe realizacje sufitów napinanych | STRETCH",
     "inspirationDescription": "Prawdziwe realizacje STRETCH w studiach, biurach, domach i hotelach — według rozwiązania: akustyka, światło i nadruk, mieszkania, łazienki i biura.",
     "samplesTitle": "Zamów próbki kolorów i RAL | STRETCH",
@@ -79,12 +79,14 @@
     "architectsDescription": "Bezpłatna strefa architekta: karty techniczne, teksty specyfikacji, CAD/BIM, zmierzone studia przypadków, orientacyjne budżety i wsparcie projektowe.",
     "kitTitle": "Zestaw DIY sufitu napinanego — na wymiar | STRETCH",
     "kitDescription": "Zestaw sufitu napinanego na Twój wymiar: tkanina poliestrowa, profile i instrukcja w jednej paczce. Montaż na zimno, dostawa w UE i UK.",
-    "supplyTitle": "Materiały i konfekcja sufitów napinanych dla monterów | STRETCH",
+    "supplyTitle": "Hurtownia i konfekcja sufitów napinanych dla monterów | STRETCH",
     "supplyDescription": "Fabryczne zaopatrzenie dla monterów: tkaniny i folie, profile, oświetlenie oraz konfekcja na wymiar, z wysyłką po całej Europie. Fakturowanie w EUR i PLN.",
     "supplyCzSkTitle": "Materiały do sufitów napinanych dla Czech i Słowacji | STRETCH",
     "supplyCzSkDescription": "Materiały premium do sufitów napinanych i konfekcja na wymiar dla czeskich i słowackich profesjonalistów — produkcja w Polsce, dzień–dwa drogi. EUR lub PLN.",
     "projectsExportTitle": "Sufity napinane do projektów międzynarodowych | STRETCH",
-    "projectsExportDescription": "Transparentne, drukowane i akustyczne sufity napinane dla firm fit-out na świecie — zgrzewane w fabryce w UE, fracht lotniczy, udokumentowane klasy ogniowe."
+    "projectsExportDescription": "Transparentne, drukowane i akustyczne sufity napinane dla firm fit-out na świecie — zgrzewane w fabryce w UE, fracht lotniczy, udokumentowane klasy ogniowe.",
+    "priceCalculatorTitle": "Kalkulator sufitów napinanych — cena za m² | STRETCH",
+    "priceCalculatorDescription": "Cena orientacyjna sufitu napinanego od ręki: m² × typ sufitu według widełek €70–200/m². Bezpłatna wiążąca wycena, zwykle tego samego dnia roboczego."
   },
   "cookies": {
     "title": "Szanujemy Twoją prywatność",
@@ -173,7 +175,8 @@
       "architects": "Dla architektów",
       "kit": "Zestaw DIY",
       "supply": "Zaopatrzenie monterów",
-      "projectsExport": "Eksport projektów"
+      "projectsExport": "Eksport projektów",
+      "priceCalculator": "Kalkulator cen"
     },
     "dealers": "Sieć dealerów"
   },
@@ -637,7 +640,8 @@
     "sub": "Opowiedz nam o swoim projekcie, a w ciągu dwóch dni roboczych wrócimy z wyceną szytą na miarę — bezpłatnie i bez zobowiązań.",
     "quote": "Poproś o darmową wycenę",
     "dealer": "Znajdź najbliższego dystrybutora",
-    "preferTalk": "Wolisz porozmawiać?"
+    "preferTalk": "Wolisz porozmawiać?",
+    "hours": "pn–pt · 08:30–17:00"
   },
   "productPage": {
     "home": "Strona główna",
@@ -1782,6 +1786,7 @@
             "17–18 lis 2026",
             "Sesja po angielsku — nowe terminy wkrótce",
             "Sesja po niemiecku — nowe terminy wkrótce",
+            "Sesja po polsku — nowe terminy wkrótce",
             "Indywidualna sesja wyjazdowa"
           ]
         },
@@ -1823,6 +1828,7 @@
             "17–18 lis 2026",
             "Sesja po angielsku — nowe terminy wkrótce",
             "Sesja po niemiecku — nowe terminy wkrótce",
+            "Sesja po polsku — nowe terminy wkrótce",
             "Indywidualna sesja wyjazdowa"
           ]
         }
@@ -2011,14 +2017,16 @@
       "06–08 paź 2026",
       "17–18 lis 2026",
       "Sesja po angielsku — nowe terminy wkrótce",
-      "Sesja po niemiecku — nowe terminy wkrótce"
+      "Sesja po niemiecku — nowe terminy wkrótce",
+      "Sesja po polsku — nowe terminy wkrótce"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 miejsca",
       "Beveren-Waas · 6 miejsc",
       "Beveren-Waas · 8 miejsc",
       "Beveren-Waas · grupa międzynarodowa",
-      "Beveren-Waas · grupa międzynarodowa"
+      "Beveren-Waas · grupa międzynarodowa",
+      "Częstochowa (Alto Design) · grupa polskojęzyczna"
     ],
     "close": "Zamknij",
     "downloadDatasheet": "Pobierz kartę techniczną",
@@ -4470,13 +4478,14 @@
     "courseDescription": "Praktyczna certyfikacja montera sufitów napinanych w centrali STRETCH w Belgii: konfekcjonowanie membrany, profile, montaż na zimno i na ciepło, światło, akustyka, wykończenie i wycena.",
     "hero": {
       "eyebrow": "Szkolenie dla monterów",
-      "titleA": "Montuj jak profesjonalista",
-      "titleB": "w",
-      "titleC": "dni",
+      "titleA": "Szkolenie z montażu sufitów napinanych",
+      "titleB": "certyfikat",
+      "titleC": "w 2–3 dni",
       "lead": "Praktyczna certyfikacja w naszej belgijskiej centrali. Naucz się konfekcjonowania membrany, profili, montażu na zimno i na ciepło, światła i akustyki — bez wcześniejszego doświadczenia.",
       "ctaBook": "Zarezerwuj szkolenie",
       "ctaDates": "Zobacz terminy",
-      "imageLabel": "Zdjęcie ze szkolenia / warsztatu"
+      "imageLabel": "Zdjęcie ze szkolenia / warsztatu",
+      "travel": "Beveren-Waas (Belgia) · sesje po polsku: Częstochowa — nowe terminy wkrótce"
     },
     "format": [
       {
@@ -4543,9 +4552,9 @@
     },
     "international": {
       "eyebrow": "Międzynarodowe",
-      "title": "Szkolenie po angielsku lub niemiecku",
+      "title": "Sesje po polsku — w Częstochowie",
       "lead": "Instalatorzy z całej Europy certyfikują się w naszej belgijskiej centrali — krótka podróż, praktyczne dni na prawdziwych ramach, a potem materiały wysyłane do Twojego kraju.",
-      "body": "Ten sam program, grupa międzynarodowa: pełna praktyczna certyfikacja prowadzona po angielsku lub niemiecku. Zostaw swoje dane, a potwierdzimy miejsce, gdy tylko ustalimy kolejne terminy.",
+      "body": "Ten sam program, pełna praktyczna certyfikacja: sesje polskojęzyczne odbędą się w zakładzie Alto Design w Częstochowie, a jedno szkolenie obejmuje oba systemy — montaż na zimno (poliester) i na ciepło (PVC). Zostaw swoje dane, a potwierdzimy miejsce, gdy tylko ustalimy terminy.",
       "cta": "Zgłoś zainteresowanie"
     }
   },
@@ -4636,7 +4645,8 @@
       "consentPrefix": "Wyrażam zgodę na przetwarzanie moich danych przez STRETCH w celu odpowiedzi na moje zapytanie, zgodnie z",
       "consentPrivacy": "polityką prywatności",
       "submit": "Wyślij wiadomość"
-    }
+    },
+    "hours": "pn–pt · 08:30–17:00"
   },
   "datasheetsPage": {
     "eyebrow": "Karty techniczne",
@@ -5279,5 +5289,25 @@
     },
     "serviceName": "Międzynarodowe dostawy projektowe sufitów napinanych",
     "serviceDescription": "Transparentne, drukowane i akustyczne sufity napinane na wymiar dla firm fit-out na całym świecie — projektowane w UE, wysyłane frachtem lotniczym."
+  },
+  "priceCalculatorPage": {
+    "crumb": "Kalkulator cen",
+    "eyebrow": "Kalkulator cen",
+    "titleA": "Kalkulator sufitów napinanych",
+    "titleB": "wycena w 30 sekund.",
+    "lead": "Metry kwadratowe × typ sufitu dają od razu opublikowany przedział orientacyjny — wiążącą kwotę otrzymasz z bezpłatnej wyceny, zwykle tego samego dnia roboczego.",
+    "areaLabel": "Powierzchnia sufitu (m²)",
+    "typeLabel": "Typ sufitu",
+    "types": {
+      "basic": "Jednolity kolor (PVC lub poliester)",
+      "printed": "Wzór drukowany",
+      "acoustic": "Akustyczny",
+      "backlit": "Transparentny / podświetlany",
+      "bathroom": "Łazienka / zintegrowane oświetlenie"
+    },
+    "estimateLabel": "Orientacyjnie dla {area} m²",
+    "disclaimer": "Przedział orientacyjny z opublikowanego przewodnika cenowego: z montażem, bez VAT. Membrana powstaje na wymiar — narożniki, łuki i integracje zmieniają kwotę; traktuj to jako widełki, nigdy jako wycenę.",
+    "cta": "Poproś o bezpłatną wycenę",
+    "guideLink": "Przeczytaj pełny przewodnik cenowy"
   }
 }

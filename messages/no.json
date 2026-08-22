@@ -49,8 +49,8 @@
     "productsDescription": "Strekktak i polyester og PVC, akustikksystemer, bakbelyste og trykte design og prefab-enheter — skjøtefritt opptil 6,4 m, 25 års garanti.",
     "partnersTitle": "Bli STRETCH-forhandler — forhandlerpriser & leads | STRETCH",
     "partnersDescription": "Legg til strekktak i tilbudet ditt med forhandlerpriser, skreddersydd levering fra vårt belgiske verksted, praktisk opplæring og videresendte lokale leads.",
-    "trainingTitle": "Montøropplæring — sertifisert på få dager | STRETCH",
-    "trainingDescription": "Bli sertifisert strekktakmontør ved vårt belgiske hovedkontor. Lær konfeksjon, profiler og kald- & varmmontering — ingen erfaring nødvendig.",
+    "trainingTitle": "Kurs i montering av strekkhimling — sertifisert på 2–3 dager | STRETCH",
+    "trainingDescription": "Praktisk kurs i montering av strekkhimlinger: kald polyester- og varm PVC-montering i én sertifisering, små grupper, faste datoer og startpakke.",
     "inspirationTitle": "Inspirasjon — ekte strekktakprosjekter | STRETCH",
     "inspirationDescription": "Studioer, kontorer, boliger og hoteller utført med STRETCH. Bla gjennom ekte prosjekter etter løsning — akustikk, lys & print, bolig, bad, kontor og næring.",
     "samplesTitle": "Bestill farge- & RAL-prøver | STRETCH",
@@ -84,7 +84,9 @@
     "supplyCzSkTitle": "Strekkhimlingsmaterialer for Tsjekkia & Slovakia | STRETCH",
     "supplyCzSkDescription": "Premiummaterialer for strekkhimlinger og konfeksjon etter mål for tsjekkiske og slovakiske fagfolk — produsert i Polen, en til to dager unna. EUR eller PLN.",
     "projectsExportTitle": "Strekkhimlinger for internasjonale prosjekter | STRETCH",
-    "projectsExportDescription": "Translusente, trykte og akustiske strekkhimlinger for fit-out over hele verden — sveiset i vår EU-fabrikk, luftfrakt, dokumenterte brannklasser."
+    "projectsExportDescription": "Translusente, trykte og akustiske strekkhimlinger for fit-out over hele verden — sveiset i vår EU-fabrikk, luftfrakt, dokumenterte brannklasser.",
+    "priceCalculatorTitle": "Beregn strekkhimling pris — pris per m² | STRETCH",
+    "priceCalculatorDescription": "Umiddelbar veiledende pris på din strekkhimling: m² × himlingstype etter de publiserte intervallene €70–200/m². Gratis fast tilbud, vanligvis samme virkedag."
   },
   "cookies": {
     "title": "Vi verner om personvernet ditt",
@@ -173,7 +175,8 @@
       "architects": "For arkitekter",
       "kit": "Gjør-det-selv-kit",
       "supply": "Levering til montører",
-      "projectsExport": "Prosjekteksport"
+      "projectsExport": "Prosjekteksport",
+      "priceCalculator": "Beregn pris"
     },
     "dealers": "Forhandlernettverk"
   },
@@ -637,7 +640,8 @@
     "sub": "Fortell oss om prosjektet ditt, så kommer vi tilbake med en skreddersydd pris — gratis og uforpliktende, innen to virkedager.",
     "quote": "Be om et gratis tilbud",
     "dealer": "Finn din nærmeste forhandler",
-    "preferTalk": "Vil du heller snakke med oss?"
+    "preferTalk": "Vil du heller snakke med oss?",
+    "hours": "man–fre · 08:30–17:00"
   },
   "productPage": {
     "home": "Hjem",
@@ -1782,6 +1786,7 @@
             "17.–18. nov. 2026",
             "Økt på engelsk — nye datoer snart",
             "Økt på tysk — nye datoer snart",
+            "Økt på polsk — nye datoer snart",
             "Skreddersydd økt hos dere"
           ]
         },
@@ -1823,6 +1828,7 @@
             "17.–18. nov. 2026",
             "Økt på engelsk — nye datoer snart",
             "Økt på tysk — nye datoer snart",
+            "Økt på polsk — nye datoer snart",
             "Skreddersydd økt hos dere"
           ]
         }
@@ -2011,14 +2017,16 @@
       "06.–08. okt. 2026",
       "17.–18. nov. 2026",
       "Økt på engelsk — nye datoer snart",
-      "Økt på tysk — nye datoer snart"
+      "Økt på tysk — nye datoer snart",
+      "Økt på polsk — nye datoer snart"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 plasser",
       "Beveren-Waas · 6 plasser",
       "Beveren-Waas · 8 plasser",
       "Beveren-Waas · internasjonal gruppe",
-      "Beveren-Waas · internasjonal gruppe"
+      "Beveren-Waas · internasjonal gruppe",
+      "Częstochowa (PL) · polskspråklig gruppe"
     ],
     "close": "Lukk",
     "downloadDatasheet": "Last ned datablad",
@@ -4470,13 +4478,14 @@
     "courseDescription": "Praktisk sertifisering som strekkhimlingsmontør ved STRETCHs hovedkontor i Belgia: konfeksjonering av membranen, profiler, kald og varm montering, lys, akustikk, finish og kalkulasjon.",
     "hero": {
       "eyebrow": "Montørkurs",
-      "titleA": "Monter som en proff",
-      "titleB": "på",
-      "titleC": "dager",
+      "titleA": "Kurs i montering av strekkhimling",
+      "titleB": "sertifisert",
+      "titleC": "på 2–3 dager",
       "lead": "Praktisk sertifisering ved det belgiske hovedkontoret vårt. Lær konfeksjonering av membranen, profiler, kald og varm montering, lys og akustikk — ingen forkunnskaper nødvendig.",
       "ctaBook": "Book kurset ditt",
       "ctaDates": "Se datoer",
-      "imageLabel": "Foto fra kurs / verksted"
+      "imageLabel": "Foto fra kurs / verksted",
+      "travel": "Beveren-Waas, Belgia — 1 time fra Brussel lufthavn"
     },
     "format": [
       {
@@ -4543,9 +4552,9 @@
     },
     "international": {
       "eyebrow": "Internasjonalt",
-      "title": "Kurs på engelsk eller tysk",
+      "title": "Kurs på engelsk, tysk eller polsk",
       "lead": "Montører fra hele Europa sertifiserer seg ved vårt belgiske hovedkontor — en kort reise, praktiske dager på ekte rammer, og etterpå sendes materialene til ditt land.",
-      "body": "Samme program, internasjonal gruppe: hele den praktiske sertifiseringen på engelsk eller tysk. Legg igjen opplysningene dine, så bekrefter vi plassen din så snart de neste datoene er satt.",
+      "body": "Samme program, internasjonal gruppe: hele den praktiske sertifiseringen på engelsk, tysk eller polsk — og ett kurs dekker begge systemene, kaldmontert polyester og varmmontert PVC. Legg igjen opplysningene dine, så bekrefter vi plassen din så snart de neste datoene er satt.",
       "cta": "Meld interesse"
     }
   },
@@ -4636,7 +4645,8 @@
       "consentPrefix": "Jeg samtykker i at STRETCH behandler opplysningene mine for å besvare henvendelsen min, som beskrevet i",
       "consentPrivacy": "personvernerklæringen",
       "submit": "Send melding"
-    }
+    },
+    "hours": "man–fre · 08:30–17:00"
   },
   "datasheetsPage": {
     "eyebrow": "Tekniske datablader",
@@ -5279,5 +5289,25 @@
     },
     "serviceName": "Internasjonal prosjektlevering av strekkhimlinger",
     "serviceDescription": "Translusente, trykte og akustiske strekkhimlinger etter mål for fit-out-selskaper over hele verden — konstruert i EU og sendt med fly."
+  },
+  "priceCalculatorPage": {
+    "crumb": "Beregn pris",
+    "eyebrow": "Prisberegner",
+    "titleA": "Beregn prisen på din strekkhimling",
+    "titleB": "på 30 sekunder.",
+    "lead": "Kvadratmeter × himlingstype gir deg straks det publiserte veiledende intervallet — det faste tallet kommer fra et gratis tilbud, vanligvis samme virkedag.",
+    "areaLabel": "Himlingsareal (m²)",
+    "typeLabel": "Himlingstype",
+    "types": {
+      "basic": "Ensfarget (PVC eller polyester)",
+      "printed": "Trykket design",
+      "acoustic": "Akustisk",
+      "backlit": "Translusent / bakbelyst",
+      "bathroom": "Bad / integrert belysning"
+    },
+    "estimateLabel": "Veiledende for {area} m²",
+    "disclaimer": "Veiledende intervall fra den publiserte prisguiden: montert, ekskl. mva. Membranen lages etter mål — hjørner, kurver og integrasjoner flytter tallet; se dette som et intervall, aldri som et tilbud.",
+    "cta": "Få mitt gratis tilbud",
+    "guideLink": "Les hele prisguiden"
   }
 }

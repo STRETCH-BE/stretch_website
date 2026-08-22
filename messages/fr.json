@@ -49,8 +49,8 @@
     "productsDescription": "Plafonds tendus polyester et PVC, systèmes acoustiques, designs rétroéclairés et imprimés et unités préfab — sans soudure jusqu’à 6,4 m, garantie 25 ans.",
     "partnersTitle": "Devenez revendeur STRETCH — tarifs pro & leads | STRETCH",
     "partnersDescription": "Ajoutez les plafonds tendus à votre offre : tarifs pro, fabrication sur mesure dans notre atelier belge, formation pratique et leads locaux référés.",
-    "trainingTitle": "Formation installateur — certifié en quelques jours | STRETCH",
-    "trainingDescription": "Devenez installateur certifié de plafonds tendus à notre siège belge. Apprenez la confection, les profilés et la pose à froid & à chaud — sans expérience.",
+    "trainingTitle": "Formation pose de plafond tendu — devenez installateur agréé | STRETCH",
+    "trainingDescription": "Formation pratique à la pose de plafonds tendus : pose à froid (polyester) et à chaud (PVC) en une certification, petits groupes, dates fixes, kit de départ.",
     "inspirationTitle": "Inspiration — de vrais projets de plafonds tendus | STRETCH",
     "inspirationDescription": "De vrais projets STRETCH en studios, bureaux, maisons et hôtels — par solution : acoustique, lumière & impression, habitat, salle de bain et commercial.",
     "samplesTitle": "Demander des échantillons couleurs & RAL | STRETCH",
@@ -79,12 +79,14 @@
     "architectsDescription": "Espace architectes gratuit : fiches techniques, textes de prescription, CAD/BIM, études de cas mesurées, budgets indicatifs et accompagnement projet.",
     "kitTitle": "Kit plafond tendu à poser soi-même — sur mesure | STRETCH",
     "kitDescription": "Kit plafond tendu à vos mesures : toile polyester, profilés et instructions en un colis. Pose à froid, livraison UE et Royaume-Uni.",
-    "supplyTitle": "Matériaux & confection de plafond tendu pour poseurs | STRETCH",
+    "supplyTitle": "Fournisseur plafond tendu — toiles, profilés & confection | STRETCH",
     "supplyDescription": "Fourniture usine pour les professionnels : toiles & films, profilés, éclairage et confection sur mesure, expédiés dans toute l’Europe. Facturation en EUR.",
     "supplyCzSkTitle": "Matériaux de plafond tendu pour la Tchéquie & la Slovaquie | STRETCH",
     "supplyCzSkDescription": "Matériaux de plafond tendu premium et confection sur mesure pour les pros tchèques et slovaques — produits en Pologne, à un ou deux jours. EUR ou PLN.",
     "projectsExportTitle": "Plafonds tendus pour projets internationaux | STRETCH",
-    "projectsExportDescription": "Plafonds tendus translucides, imprimés et acoustiques pour le fit-out dans le monde — soudés dans notre usine UE, expédiés par avion, classes feu documentées."
+    "projectsExportDescription": "Plafonds tendus translucides, imprimés et acoustiques pour le fit-out dans le monde — soudés dans notre usine UE, expédiés par avion, classes feu documentées.",
+    "priceCalculatorTitle": "Calculer le prix d’un plafond tendu — coût au m² | STRETCH",
+    "priceCalculatorDescription": "Prix indicatif immédiat pour votre plafond tendu : m² × type, selon les fourchettes publiées de 70 à 200 €/m². Devis ferme gratuit, souvent le jour même."
   },
   "cookies": {
     "title": "Nous respectons votre vie privée",
@@ -173,7 +175,8 @@
       "architects": "Pour les architectes",
       "kit": "Kit à poser soi-même",
       "supply": "Fourniture poseurs",
-      "projectsExport": "Export projets"
+      "projectsExport": "Export projets",
+      "priceCalculator": "Calculer le prix"
     },
     "dealers": "Réseau de revendeurs"
   },
@@ -637,7 +640,8 @@
     "sub": "Parlez-nous de votre projet et nous revenons vers vous avec un prix sur mesure — gratuit et sans engagement, sous deux jours ouvrés.",
     "quote": "Demander un devis gratuit",
     "dealer": "Trouver votre revendeur le plus proche",
-    "preferTalk": "Vous préférez en parler ?"
+    "preferTalk": "Vous préférez en parler ?",
+    "hours": "lun–ven · 08h30–17h00"
   },
   "productPage": {
     "home": "Accueil",
@@ -1782,6 +1786,7 @@
             "17–18 nov. 2026",
             "Session en anglais — nouvelles dates bientôt",
             "Session en allemand — nouvelles dates bientôt",
+            "Session en polonais — nouvelles dates bientôt",
             "Session sur mesure sur site"
           ]
         },
@@ -1823,6 +1828,7 @@
             "17–18 nov. 2026",
             "Session en anglais — nouvelles dates bientôt",
             "Session en allemand — nouvelles dates bientôt",
+            "Session en polonais — nouvelles dates bientôt",
             "Session sur mesure sur site"
           ]
         }
@@ -2011,14 +2017,16 @@
       "06–08 oct. 2026",
       "17–18 nov. 2026",
       "Session en anglais — nouvelles dates bientôt",
-      "Session en allemand — nouvelles dates bientôt"
+      "Session en allemand — nouvelles dates bientôt",
+      "Session en polonais — nouvelles dates bientôt"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 places",
       "Beveren-Waas · 6 places",
       "Beveren-Waas · 8 places",
       "Beveren-Waas · groupe international",
-      "Beveren-Waas · groupe international"
+      "Beveren-Waas · groupe international",
+      "Częstochowa (PL) · groupe polonophone"
     ],
     "close": "Fermer",
     "downloadDatasheet": "Télécharger la fiche technique",
@@ -4470,13 +4478,14 @@
     "courseDescription": "Certification pratique d'installateur de plafonds tendus au siège de STRETCH en Belgique : confection de la membrane, profilés, pose à froid & à chaud, lumière, acoustique, finitions et chiffrage.",
     "hero": {
       "eyebrow": "Formation installateur",
-      "titleA": "Posez comme un pro",
-      "titleB": "en",
-      "titleC": "jours",
+      "titleA": "Formation pose de plafond tendu",
+      "titleB": "installateur agréé",
+      "titleC": "en quelques jours",
       "lead": "Certification pratique à notre siège belge. Apprenez la confection de la membrane, les profilés, la pose à froid & à chaud, la lumière et l'acoustique — aucune expérience préalable requise.",
       "ctaBook": "Réserver votre formation",
       "ctaDates": "Voir les dates",
-      "imageLabel": "Photo formation / atelier"
+      "imageLabel": "Photo formation / atelier",
+      "travel": "Beveren-Waas, Belgique — à 1 h 30 de Lille, 2 h de Paris en train"
     },
     "format": [
       {
@@ -4543,9 +4552,9 @@
     },
     "international": {
       "eyebrow": "International",
-      "title": "Formation en anglais ou en allemand",
+      "title": "Formation en anglais, allemand ou polonais",
       "lead": "Des installateurs de toute l’Europe se certifient à notre siège belge — un court déplacement, des journées pratiques sur de vrais cadres, puis les matériaux expédiés dans votre pays.",
-      "body": "Même programme, groupe international : la certification pratique complète, dispensée en anglais ou en allemand. Laissez vos coordonnées et nous confirmons votre place dès que les prochaines dates sont fixées.",
+      "body": "Même programme, groupe international : la certification pratique complète, dispensée en anglais, en allemand ou en polonais — et une seule formation couvre les deux systèmes, polyester posé à froid et PVC posé à chaud. Laissez vos coordonnées et nous confirmons votre place dès que les prochaines dates sont fixées.",
       "cta": "Signaler mon intérêt"
     }
   },
@@ -4636,7 +4645,8 @@
       "consentPrefix": "J’accepte que STRETCH traite mes données pour répondre à ma demande, comme décrit dans la",
       "consentPrivacy": "politique de confidentialité",
       "submit": "Envoyer le message"
-    }
+    },
+    "hours": "lun–ven · 08h30–17h00"
   },
   "datasheetsPage": {
     "eyebrow": "Fiches techniques",
@@ -5279,5 +5289,25 @@
     },
     "serviceName": "Fourniture internationale de plafonds tendus pour projets",
     "serviceDescription": "Plafonds tendus translucides, imprimés et acoustiques sur mesure pour les entreprises de fit-out dans le monde — conçus dans l’UE et expédiés par avion."
+  },
+  "priceCalculatorPage": {
+    "crumb": "Calculer le prix",
+    "eyebrow": "Calculateur de prix",
+    "titleA": "Calculez le prix de votre plafond tendu",
+    "titleB": "en 30 secondes.",
+    "lead": "Mètres carrés × type de plafond : vous obtenez immédiatement la fourchette indicative publiée — le chiffre ferme vient d’un devis gratuit, généralement le jour ouvré même.",
+    "areaLabel": "Surface de plafond (m²)",
+    "typeLabel": "Type de plafond",
+    "types": {
+      "basic": "Couleur unie (PVC ou polyester)",
+      "printed": "Design imprimé",
+      "acoustic": "Acoustique",
+      "backlit": "Translucide / rétroéclairé",
+      "bathroom": "Salle de bains / éclairage intégré"
+    },
+    "estimateLabel": "Fourchette indicative pour {area} m²",
+    "disclaimer": "Fourchette indicative du guide des prix publié : posé, hors TVA. La membrane est confectionnée sur mesure — angles, courbes et intégrations font bouger le chiffre ; voyez ceci comme une fourchette, jamais comme un devis.",
+    "cta": "Obtenir mon devis gratuit",
+    "guideLink": "Lire le guide des prix complet"
   }
 }

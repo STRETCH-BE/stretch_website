@@ -49,8 +49,8 @@
     "productsDescription": "Stretch ceilings in polyester and PVC, acoustic systems, backlit and printed designs and prefab units — seamless to 6.4 m, 25-year warranty.",
     "partnersTitle": "Become a STRETCH reseller — trade pricing & leads | STRETCH",
     "partnersDescription": "Add stretch ceilings to your offer with trade pricing, made-to-measure supply from our Belgian workshop, hands-on training and referred local leads.",
-    "trainingTitle": "Installer training — certified in days | STRETCH",
-    "trainingDescription": "Get certified as a stretch-ceiling installer at our Belgian HQ. Learn confection, profiles and cold & heat mounting — no prior experience needed.",
+    "trainingTitle": "Stretch ceiling installer training — certified in 2–3 days | STRETCH",
+    "trainingDescription": "Hands-on stretch ceiling installer training at our Belgian HQ: cold polyester and heated PVC in one certification, small groups, dated sessions, starter kit.",
     "inspirationTitle": "Inspiration — real stretch ceiling projects | STRETCH",
     "inspirationDescription": "Studios, offices, homes and hotels finished with STRETCH. Browse real projects by solution — acoustic, light & print, living, bathroom, office and commercial.",
     "samplesTitle": "Request colour & RAL samples | STRETCH",
@@ -84,7 +84,9 @@
     "supplyCzSkTitle": "Stretch ceiling materials for Czechia & Slovakia | STRETCH",
     "supplyCzSkDescription": "Premium stretch-ceiling materials and made-to-measure confection for Czech and Slovak professionals — produced in Poland, one to two days away. EUR or PLN.",
     "projectsExportTitle": "Stretch ceilings for international projects | STRETCH",
-    "projectsExportDescription": "Translucent, printed and acoustic stretch ceilings for fit-out contractors worldwide — welded in our EU factory, shipped by air, documented fire classes."
+    "projectsExportDescription": "Translucent, printed and acoustic stretch ceilings for fit-out contractors worldwide — welded in our EU factory, shipped by air, documented fire classes.",
+    "priceCalculatorTitle": "Stretch ceiling price calculator — cost per m² | STRETCH",
+    "priceCalculatorDescription": "Instant indicative price for your stretch ceiling: m² × ceiling type using the published €70–200/m² ranges. Free firm quote, usually the same working day."
   },
   "cookies": {
     "title": "We value your privacy",
@@ -173,7 +175,8 @@
       "architects": "For architects",
       "kit": "DIY kit",
       "supply": "Installer supply",
-      "projectsExport": "Project export"
+      "projectsExport": "Project export",
+      "priceCalculator": "Price calculator"
     },
     "dealers": "Dealer network"
   },
@@ -637,7 +640,8 @@
     "sub": "Tell us about your project and we will get back to you with a tailored price — free and without obligation, within two working days.",
     "quote": "Request a free quote",
     "dealer": "Find your nearest dealer",
-    "preferTalk": "Prefer to talk?"
+    "preferTalk": "Prefer to talk?",
+    "hours": "Mon–Fri · 08:30–17:00"
   },
   "productPage": {
     "home": "Home",
@@ -1782,6 +1786,7 @@
             "17–18 Nov 2026",
             "English session — new dates soon",
             "German session — new dates soon",
+            "Polish session — new dates soon",
             "Custom on-site session"
           ]
         },
@@ -1823,6 +1828,7 @@
             "17–18 Nov 2026",
             "English session — new dates soon",
             "German session — new dates soon",
+            "Polish session — new dates soon",
             "Custom on-site session"
           ]
         }
@@ -2011,14 +2017,16 @@
       "06–08 Oct 2026",
       "17–18 Nov 2026",
       "English session — new dates soon",
-      "German session — new dates soon"
+      "German session — new dates soon",
+      "Polish session — new dates soon"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 seats",
       "Beveren-Waas · 6 seats",
       "Beveren-Waas · 8 seats",
       "Beveren-Waas · international group",
-      "Beveren-Waas · international group"
+      "Beveren-Waas · international group",
+      "Częstochowa (PL) · Polish-language group"
     ],
     "close": "Close",
     "downloadDatasheet": "Download datasheet",
@@ -4470,13 +4478,14 @@
     "courseDescription": "Hands-on stretch-ceiling installer certification at the STRETCH HQ in Belgium: membrane confection, profiles, cold & heat mounting, light, acoustics, finishing and estimating.",
     "hero": {
       "eyebrow": "Installer training",
-      "titleA": "Fit like a pro",
-      "titleB": "in",
-      "titleC": "days",
+      "titleA": "Stretch ceiling installer training",
+      "titleB": "certified",
+      "titleC": "in days",
       "lead": "Hands-on certification at our Belgian HQ. Learn membrane confection, profiles, cold & heat mounting, light and acoustics — no prior experience needed.",
       "ctaBook": "Book your training",
       "ctaDates": "See dates",
-      "imageLabel": "Training / workshop photo"
+      "imageLabel": "Training / workshop photo",
+      "travel": "Beveren-Waas, Belgium — 30 min from Antwerp, 1 h from Brussels Airport"
     },
     "format": [
       {
@@ -4543,9 +4552,9 @@
     },
     "international": {
       "eyebrow": "International",
-      "title": "Train in English or German",
+      "title": "Train in English, German or Polish",
       "lead": "Installers from all over Europe certify at our Belgian HQ — one short trip, hands-on days on real frames, and materials shipped to your country afterwards.",
-      "body": "Same programme, international group: the full hands-on certification taught in English or German. Leave your details and we confirm your seat the moment the next dates are set.",
+      "body": "Same programme, international group: the full hands-on certification taught in English, German or Polish — and one course covers both systems, cold-mounted polyester and heat-mounted PVC. Leave your details and we confirm your seat the moment the next dates are set.",
       "cta": "Register interest"
     }
   },
@@ -4636,7 +4645,8 @@
       "consentPrefix": "I agree to STRETCH processing my details to respond to my request, as described in the",
       "consentPrivacy": "privacy policy",
       "submit": "Send message"
-    }
+    },
+    "hours": "Mon–Fri · 08:30–17:00"
   },
   "datasheetsPage": {
     "eyebrow": "Technical datasheets",
@@ -5279,5 +5289,25 @@
     },
     "serviceName": "International project supply of stretch ceilings",
     "serviceDescription": "Made-to-measure translucent, printed and acoustic stretch ceilings for fit-out contractors worldwide — engineered in the EU and shipped by air."
+  },
+  "priceCalculatorPage": {
+    "crumb": "Price calculator",
+    "eyebrow": "Price calculator",
+    "titleA": "Calculate your stretch ceiling price",
+    "titleB": "in 30 seconds.",
+    "lead": "Square metres × ceiling type gives you the published indicative range straight away — the firm number comes from a free quote, usually the same working day.",
+    "areaLabel": "Ceiling area (m²)",
+    "typeLabel": "Ceiling type",
+    "types": {
+      "basic": "Single colour (PVC or polyester)",
+      "printed": "Printed design",
+      "acoustic": "Acoustic",
+      "backlit": "Translucent / backlit",
+      "bathroom": "Bathroom / integrated lighting"
+    },
+    "estimateLabel": "Indicative for {area} m²",
+    "disclaimer": "Indicative range from the published price guide: installed, excluding VAT. The membrane is made to measure — corners, curves and integrations move the number, so treat this as a bracket, never a quote.",
+    "cta": "Get my free firm quote",
+    "guideLink": "Read the full price guide"
   }
 }

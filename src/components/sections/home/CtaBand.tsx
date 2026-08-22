@@ -47,7 +47,7 @@ export default function CtaBand() {
           <a href={contact.phoneHref} style={{ color: '#fff', fontWeight: 600 }}>
             {contact.phoneDisplay}
           </a>{' '}
-          · {contact.hoursDisplay}
+          · {t('hours')}
         </p>
       </div>
 

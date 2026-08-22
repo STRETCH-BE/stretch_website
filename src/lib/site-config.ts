@@ -151,6 +151,7 @@ export const footerNav = {
     { key: 'light', href: '/products/light-print-stretch-ceiling' },
     { key: 'prefab', href: '/products/prefab-ceiling-unit' },
     { key: 'kit', href: '/kit' },
+    { key: 'priceCalculator', href: '/price-calculator' },
   ] as NavLink[],
   company: [
     { key: 'reseller', href: '/partners' },
@@ -189,6 +190,7 @@ export const staticRoutes = [
   '/supply',
   '/supply/czechia-slovakia',
   '/projects-export',
+  '/price-calculator',
   '/products/prefab-lighting-elements',
   '/faq',
   '/blog',

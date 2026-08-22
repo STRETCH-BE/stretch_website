@@ -49,8 +49,8 @@
     "productsDescription": "Techos tensados de poliéster y PVC, sistemas acústicos, diseños retroiluminados e impresos y unidades prefab — sin juntas hasta 6,4 m, 25 años de garantía.",
     "partnersTitle": "Hazte distribuidor STRETCH — precios profesionales y leads | STRETCH",
     "partnersDescription": "Añade techos tensados a tu oferta con precios profesionales, fabricación a medida en nuestro taller belga, formación práctica y leads locales referidos.",
-    "trainingTitle": "Formación de instaladores — certificado en días | STRETCH",
-    "trainingDescription": "Certifícate como instalador de techos tensados en nuestra sede belga. Aprende confección, perfiles y montaje en frío y caliente — sin experiencia previa.",
+    "trainingTitle": "Formación en instalación de techos tensados — certificado en 2–3 días | STRETCH",
+    "trainingDescription": "Formación práctica de instalación de techos tensados: montaje en frío (poliéster) y en caliente (PVC) en una certificación, grupos pequeños y fechas fijas.",
     "inspirationTitle": "Inspiración — proyectos reales de techos tensados | STRETCH",
     "inspirationDescription": "Proyectos reales con STRETCH en estudios, oficinas, viviendas y hoteles — por solución: acústica, luz e impresión, vivienda, baño y comercial.",
     "samplesTitle": "Solicita muestras de color y RAL | STRETCH",
@@ -84,7 +84,9 @@
     "supplyCzSkTitle": "Materiales de techo tensado para Chequia y Eslovaquia | STRETCH",
     "supplyCzSkDescription": "Materiales premium de techo tensado y confección a medida para profesionales checos y eslovacos — producidos en Polonia, a uno o dos días. EUR o PLN.",
     "projectsExportTitle": "Techos tensados para proyectos internacionales | STRETCH",
-    "projectsExportDescription": "Techos tensados translúcidos, impresos y acústicos para fit-out en todo el mundo — soldados en nuestra fábrica de la UE, envío aéreo, clases de fuego."
+    "projectsExportDescription": "Techos tensados translúcidos, impresos y acústicos para fit-out en todo el mundo — soldados en nuestra fábrica de la UE, envío aéreo, clases de fuego.",
+    "priceCalculatorTitle": "Calculadora de precio de techo tensado — coste por m² | STRETCH",
+    "priceCalculatorDescription": "Precio indicativo al instante para su techo tensado: m² × tipo según horquillas de 70–200 €/m². Presupuesto firme gratuito, normalmente el mismo día."
   },
   "cookies": {
     "title": "Valoramos tu privacidad",
@@ -173,7 +175,8 @@
       "architects": "Para arquitectos",
       "kit": "Kit DIY",
       "supply": "Suministro a instaladores",
-      "projectsExport": "Exportación de proyectos"
+      "projectsExport": "Exportación de proyectos",
+      "priceCalculator": "Calcular precio"
     },
     "dealers": "Red de distribuidores"
   },
@@ -637,7 +640,8 @@
     "sub": "Cuéntanos tu proyecto y te responderemos con un precio a medida — gratis y sin compromiso, en dos días laborables.",
     "quote": "Solicita un presupuesto gratis",
     "dealer": "Encuentra tu distribuidor más cercano",
-    "preferTalk": "¿Prefieres hablar?"
+    "preferTalk": "¿Prefieres hablar?",
+    "hours": "lun–vie · 08:30–17:00"
   },
   "productPage": {
     "home": "Inicio",
@@ -1782,6 +1786,7 @@
             "17–18 nov 2026",
             "Sesión en inglés — nuevas fechas próximamente",
             "Sesión en alemán — nuevas fechas próximamente",
+            "Sesión en polaco — nuevas fechas próximamente",
             "Sesión a medida in situ"
           ]
         },
@@ -1823,6 +1828,7 @@
             "17–18 nov 2026",
             "Sesión en inglés — nuevas fechas próximamente",
             "Sesión en alemán — nuevas fechas próximamente",
+            "Sesión en polaco — nuevas fechas próximamente",
             "Sesión a medida in situ"
           ]
         }
@@ -2011,14 +2017,16 @@
       "06–08 oct 2026",
       "17–18 nov 2026",
       "Sesión en inglés — nuevas fechas próximamente",
-      "Sesión en alemán — nuevas fechas próximamente"
+      "Sesión en alemán — nuevas fechas próximamente",
+      "Sesión en polaco — nuevas fechas próximamente"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 plazas",
       "Beveren-Waas · 6 plazas",
       "Beveren-Waas · 8 plazas",
       "Beveren-Waas · grupo internacional",
-      "Beveren-Waas · grupo internacional"
+      "Beveren-Waas · grupo internacional",
+      "Częstochowa (PL) · grupo en polaco"
     ],
     "close": "Cerrar",
     "downloadDatasheet": "Descargar ficha técnica",
@@ -4470,13 +4478,14 @@
     "courseDescription": "Certificación práctica de instalador de techos tensados en la sede de STRETCH en Bélgica: confección de la membrana, perfiles, montaje en frío y en caliente, luz, acústica, acabados y presupuestos.",
     "hero": {
       "eyebrow": "Formación de instaladores",
-      "titleA": "Instala como un profesional",
-      "titleB": "en",
-      "titleC": "días",
+      "titleA": "Formación en techos tensados",
+      "titleB": "instalador certificado",
+      "titleC": "en 2–3 días",
       "lead": "Certificación práctica en nuestra sede belga. Aprende confección de la membrana, perfiles, montaje en frío y en caliente, luz y acústica, sin experiencia previa.",
       "ctaBook": "Reserva tu formación",
       "ctaDates": "Ver fechas",
-      "imageLabel": "Foto de formación / taller"
+      "imageLabel": "Foto de formación / taller",
+      "travel": "Beveren-Waas, Bélgica — a 1 h del aeropuerto de Bruselas"
     },
     "format": [
       {
@@ -4543,9 +4552,9 @@
     },
     "international": {
       "eyebrow": "Internacional",
-      "title": "Formación en inglés o alemán",
+      "title": "Formación en inglés, alemán o polaco",
       "lead": "Instaladores de toda Europa se certifican en nuestra sede belga: un viaje corto, jornadas prácticas sobre marcos reales y los materiales enviados después a su país.",
-      "body": "Mismo programa, grupo internacional: la certificación práctica completa impartida en inglés o alemán. Déjenos sus datos y confirmaremos su plaza en cuanto se fijen las próximas fechas.",
+      "body": "Mismo programa, grupo internacional: la certificación práctica completa impartida en inglés, alemán o polaco — y un solo curso cubre ambos sistemas, poliéster montado en frío y PVC montado en caliente. Déjenos sus datos y confirmaremos su plaza en cuanto se fijen las próximas fechas.",
       "cta": "Registrar interés"
     }
   },
@@ -4636,7 +4645,8 @@
       "consentPrefix": "Acepto que STRETCH trate mis datos para responder a mi solicitud, tal como se describe en la",
       "consentPrivacy": "política de privacidad",
       "submit": "Enviar mensaje"
-    }
+    },
+    "hours": "lun–vie · 08:30–17:00"
   },
   "datasheetsPage": {
     "eyebrow": "Fichas técnicas",
@@ -5279,5 +5289,25 @@
     },
     "serviceName": "Suministro internacional de techos tensados para proyectos",
     "serviceDescription": "Techos tensados translúcidos, impresos y acústicos a medida para empresas de fit-out en todo el mundo — diseñados en la UE y enviados por avión."
+  },
+  "priceCalculatorPage": {
+    "crumb": "Calcular precio",
+    "eyebrow": "Calculadora de precios",
+    "titleA": "Calcule el precio de su techo tensado",
+    "titleB": "en 30 segundos.",
+    "lead": "Metros cuadrados × tipo de techo le dan al instante la horquilla indicativa publicada — la cifra firme llega con un presupuesto gratuito, normalmente el mismo día laborable.",
+    "areaLabel": "Superficie del techo (m²)",
+    "typeLabel": "Tipo de techo",
+    "types": {
+      "basic": "Color liso (PVC o poliéster)",
+      "printed": "Diseño impreso",
+      "acoustic": "Acústico",
+      "backlit": "Translúcido / retroiluminado",
+      "bathroom": "Baño / iluminación integrada"
+    },
+    "estimateLabel": "Indicativo para {area} m²",
+    "disclaimer": "Horquilla indicativa de la guía de precios publicada: instalado, sin IVA. La membrana se confecciona a medida — esquinas, curvas e integraciones mueven la cifra; tómelo como una horquilla, nunca como un presupuesto.",
+    "cta": "Pedir mi presupuesto gratuito",
+    "guideLink": "Leer la guía de precios completa"
   }
 }

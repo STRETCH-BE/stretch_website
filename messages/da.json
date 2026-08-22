@@ -49,8 +49,8 @@
     "productsDescription": "Spændlofter i polyester og PVC, akustiksystemer, bagbelyste og printede designs og præfab-enheder — fugefrit op til 6,4 m, 25 års garanti.",
     "partnersTitle": "Bliv STRETCH-forhandler — forhandlerpriser & leads | STRETCH",
     "partnersDescription": "Tilføj spændlofter til dit sortiment med forhandlerpriser, målsyet levering fra vores belgiske værksted, praktisk uddannelse og henviste lokale leads.",
-    "trainingTitle": "Montøruddannelse — certificeret på få dage | STRETCH",
-    "trainingDescription": "Bliv certificeret spændloftsmontør på vores belgiske hovedkontor. Lær konfektion, profiler og kold- & varmmontering — ingen erfaring nødvendig.",
+    "trainingTitle": "Kursus i montering af spændlofter — certificeret på 2–3 dage | STRETCH",
+    "trainingDescription": "Praktisk kursus i montering af spændlofter: kold polyester- og varm PVC-montering i én certificering, små hold, faste datoer og startkit.",
     "inspirationTitle": "Inspiration — rigtige spændloftsprojekter | STRETCH",
     "inspirationDescription": "Rigtige STRETCH-projekter i studier, kontorer, boliger og hoteller — efter løsning: akustik, lys & print, bolig, badeværelse og erhverv.",
     "samplesTitle": "Bestil farve- & RAL-prøver | STRETCH",
@@ -84,7 +84,9 @@
     "supplyCzSkTitle": "Spændloftsmaterialer til Tjekkiet & Slovakiet | STRETCH",
     "supplyCzSkDescription": "Premium-spændloftsmaterialer og konfektion efter mål til tjekkiske og slovakiske fagfolk — produceret i Polen, en til to dage væk. EUR eller PLN.",
     "projectsExportTitle": "Spændlofter til internationale projekter | STRETCH",
-    "projectsExportDescription": "Translucente, printede og akustiske spændlofter til fit-out i hele verden — svejset på vores EU-fabrik, luftfragt, dokumenterede brandklasser."
+    "projectsExportDescription": "Translucente, printede og akustiske spændlofter til fit-out i hele verden — svejset på vores EU-fabrik, luftfragt, dokumenterede brandklasser.",
+    "priceCalculatorTitle": "Beregn spændloft pris — pris pr. m² | STRETCH",
+    "priceCalculatorDescription": "Øjeblikkelig vejledende pris på dit spændloft: m² × loftstype efter intervallerne €70–200/m². Gratis fast tilbud, normalt samme arbejdsdag."
   },
   "cookies": {
     "title": "Vi værner om dit privatliv",
@@ -173,7 +175,8 @@
       "architects": "For arkitekter",
       "kit": "Gør-det-selv-kit",
       "supply": "Levering til montører",
-      "projectsExport": "Projekteksport"
+      "projectsExport": "Projekteksport",
+      "priceCalculator": "Beregn pris"
     },
     "dealers": "Forhandlernetværk"
   },
@@ -637,7 +640,8 @@
     "sub": "Fortæl os om dit projekt, så vender vi tilbage med en skræddersyet pris — gratis og uforpligtende, inden for to hverdage.",
     "quote": "Få et gratis tilbud",
     "dealer": "Find din nærmeste forhandler",
-    "preferTalk": "Vil du hellere tale med os?"
+    "preferTalk": "Vil du hellere tale med os?",
+    "hours": "man–fre · 08:30–17:00"
   },
   "productPage": {
     "home": "Forside",
@@ -1782,6 +1786,7 @@
             "17.–18. nov. 2026",
             "Session på engelsk — nye datoer snart",
             "Session på tysk — nye datoer snart",
+            "Session på polsk — nye datoer snart",
             "Skræddersyet session hos jer"
           ]
         },
@@ -1823,6 +1828,7 @@
             "17.–18. nov. 2026",
             "Session på engelsk — nye datoer snart",
             "Session på tysk — nye datoer snart",
+            "Session på polsk — nye datoer snart",
             "Skræddersyet session hos jer"
           ]
         }
@@ -2011,14 +2017,16 @@
       "06.–08. okt. 2026",
       "17.–18. nov. 2026",
       "Session på engelsk — nye datoer snart",
-      "Session på tysk — nye datoer snart"
+      "Session på tysk — nye datoer snart",
+      "Session på polsk — nye datoer snart"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 pladser",
       "Beveren-Waas · 6 pladser",
       "Beveren-Waas · 8 pladser",
       "Beveren-Waas · international gruppe",
-      "Beveren-Waas · international gruppe"
+      "Beveren-Waas · international gruppe",
+      "Częstochowa (PL) · polsksproget gruppe"
     ],
     "close": "Luk",
     "downloadDatasheet": "Download datablad",
@@ -4470,13 +4478,14 @@
     "courseDescription": "Praktisk certificering som spændloftsmontør på STRETCHs hovedkontor i Belgien: konfektionering af membranen, profiler, kold og varm montering, lys, akustik, finish og kalkulation.",
     "hero": {
       "eyebrow": "Montørkursus",
-      "titleA": "Montér som en prof",
-      "titleB": "på",
-      "titleC": "dage",
+      "titleA": "Kursus i spændloftsmontering",
+      "titleB": "certificeret",
+      "titleC": "på 2–3 dage",
       "lead": "Praktisk certificering på vores belgiske hovedkontor. Lær konfektionering af membranen, profiler, kold og varm montering, lys og akustik — ingen forudgående erfaring nødvendig.",
       "ctaBook": "Book dit kursus",
       "ctaDates": "Se datoer",
-      "imageLabel": "Foto fra kursus / værksted"
+      "imageLabel": "Foto fra kursus / værksted",
+      "travel": "Beveren-Waas, Belgien — 1 time fra Bruxelles lufthavn"
     },
     "format": [
       {
@@ -4543,9 +4552,9 @@
     },
     "international": {
       "eyebrow": "Internationalt",
-      "title": "Kursus på engelsk eller tysk",
+      "title": "Kursus på engelsk, tysk eller polsk",
       "lead": "Montører fra hele Europa certificeres på vores belgiske hovedkontor — en kort rejse, praktiske dage på rigtige rammer, og bagefter sendes materialerne til dit land.",
-      "body": "Samme program, international gruppe: den fulde praktiske certificering undervist på engelsk eller tysk. Efterlad dine oplysninger, så bekræfter vi din plads, så snart de næste datoer ligger fast.",
+      "body": "Samme program, international gruppe: den fulde praktiske certificering undervist på engelsk, tysk eller polsk — og ét kursus dækker begge systemer, koldmonteret polyester og varmmonteret PVC. Efterlad dine oplysninger, så bekræfter vi din plads, så snart de næste datoer ligger fast.",
       "cta": "Meld interesse"
     }
   },
@@ -4636,7 +4645,8 @@
       "consentPrefix": "Jeg accepterer, at STRETCH behandler mine oplysninger for at besvare min henvendelse, som beskrevet i",
       "consentPrivacy": "privatlivspolitikken",
       "submit": "Send besked"
-    }
+    },
+    "hours": "man–fre · 08:30–17:00"
   },
   "datasheetsPage": {
     "eyebrow": "Tekniske datablade",
@@ -5279,5 +5289,25 @@
     },
     "serviceName": "International projektlevering af spændlofter",
     "serviceDescription": "Translucente, printede og akustiske spændlofter efter mål til fit-out-virksomheder i hele verden — konstrueret i EU og sendt med fly."
+  },
+  "priceCalculatorPage": {
+    "crumb": "Beregn pris",
+    "eyebrow": "Prisberegner",
+    "titleA": "Beregn prisen på dit spændloft",
+    "titleB": "på 30 sekunder.",
+    "lead": "Kvadratmeter × loftstype giver dig straks det offentliggjorte vejledende interval — det faste tal kommer fra et gratis tilbud, normalt samme arbejdsdag.",
+    "areaLabel": "Loftsareal (m²)",
+    "typeLabel": "Loftstype",
+    "types": {
+      "basic": "Ensfarvet (PVC eller polyester)",
+      "printed": "Printet design",
+      "acoustic": "Akustisk",
+      "backlit": "Translucent / bagbelyst",
+      "bathroom": "Badeværelse / integreret lys"
+    },
+    "estimateLabel": "Vejledende for {area} m²",
+    "disclaimer": "Vejledende interval fra den offentliggjorte prisguide: monteret, ekskl. moms. Membranen laves efter mål — hjørner, kurver og integrationer flytter tallet; se dette som et interval, aldrig som et tilbud.",
+    "cta": "Få mit gratis tilbud",
+    "guideLink": "Læs hele prisguiden"
   }
 }
