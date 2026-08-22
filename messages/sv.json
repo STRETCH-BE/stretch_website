@@ -1772,6 +1772,8 @@
             "15–16 sep 2026",
             "06–08 okt 2026",
             "17–18 nov 2026",
+            "Session på engelska — nya datum inom kort",
+            "Session på tyska — nya datum inom kort",
             "Skräddarsydd session på plats"
           ]
         },
@@ -1811,6 +1813,8 @@
             "15–16 sep 2026",
             "06–08 okt 2026",
             "17–18 nov 2026",
+            "Session på engelska — nya datum inom kort",
+            "Session på tyska — nya datum inom kort",
             "Skräddarsydd session på plats"
           ]
         }
@@ -1998,12 +2002,15 @@
       "15–16 sep 2026",
       "06–08 okt 2026",
       "17–18 nov 2026",
-      "Skräddarsydd session på plats"
+      "Session på engelska — nya datum inom kort",
+      "Session på tyska — nya datum inom kort"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 platser",
       "Beveren-Waas · 6 platser",
-      "Beveren-Waas · 8 platser"
+      "Beveren-Waas · 8 platser",
+      "Beveren-Waas · internationell grupp",
+      "Beveren-Waas · internationell grupp"
     ],
     "close": "Stäng",
     "downloadDatasheet": "Ladda ner datablad",
@@ -4402,6 +4409,13 @@
         "Startkit för montörer",
         "Lunch & material på plats"
       ]
+    },
+    "international": {
+      "eyebrow": "Internationellt",
+      "title": "Utbildning på engelska eller tyska",
+      "lead": "Montörer från hela Europa certifierar sig på vårt belgiska huvudkontor — en kort resa, praktiska dagar på riktiga ramar, och därefter skickas materialen till ditt land.",
+      "body": "Samma program, internationell grupp: hela den praktiska certifieringen på engelska eller tyska. Lämna dina uppgifter så bekräftar vi din plats så snart nästa datum är satta.",
+      "cta": "Anmäl intresse"
     }
   },
   "aboutPage": {
@@ -4946,6 +4960,7 @@
         "q": "Kan jag utbildas innan jag köper?",
         "a": "Absolut — vår endagsutbildning för montörer på det belgiska huvudkontoret täcker duk, profiler och kall montering. Många kit-kunder monterar fint med bara guiden, men utbildningen gör det till rutin."
       }
-    ]
+    ],
+    "faqTrainingLink": "Vill du hellre öva praktiskt först? Delta i en internationell utbildningsdag"
   }
 }

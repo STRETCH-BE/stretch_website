@@ -1772,6 +1772,8 @@
             "15–16 wrz 2026",
             "06–08 paź 2026",
             "17–18 lis 2026",
+            "Sesja po angielsku — nowe terminy wkrótce",
+            "Sesja po niemiecku — nowe terminy wkrótce",
             "Indywidualna sesja wyjazdowa"
           ]
         },
@@ -1811,6 +1813,8 @@
             "15–16 wrz 2026",
             "06–08 paź 2026",
             "17–18 lis 2026",
+            "Sesja po angielsku — nowe terminy wkrótce",
+            "Sesja po niemiecku — nowe terminy wkrótce",
             "Indywidualna sesja wyjazdowa"
           ]
         }
@@ -1998,12 +2002,15 @@
       "15–16 wrz 2026",
       "06–08 paź 2026",
       "17–18 lis 2026",
-      "Indywidualna sesja wyjazdowa"
+      "Sesja po angielsku — nowe terminy wkrótce",
+      "Sesja po niemiecku — nowe terminy wkrótce"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 miejsca",
       "Beveren-Waas · 6 miejsc",
-      "Beveren-Waas · 8 miejsc"
+      "Beveren-Waas · 8 miejsc",
+      "Beveren-Waas · grupa międzynarodowa",
+      "Beveren-Waas · grupa międzynarodowa"
     ],
     "close": "Zamknij",
     "downloadDatasheet": "Pobierz kartę techniczną",
@@ -4402,6 +4409,13 @@
         "Zestaw startowy montera",
         "Lunch i materiały na miejscu"
       ]
+    },
+    "international": {
+      "eyebrow": "Międzynarodowe",
+      "title": "Szkolenie po angielsku lub niemiecku",
+      "lead": "Instalatorzy z całej Europy certyfikują się w naszej belgijskiej centrali — krótka podróż, praktyczne dni na prawdziwych ramach, a potem materiały wysyłane do Twojego kraju.",
+      "body": "Ten sam program, grupa międzynarodowa: pełna praktyczna certyfikacja prowadzona po angielsku lub niemiecku. Zostaw swoje dane, a potwierdzimy miejsce, gdy tylko ustalimy kolejne terminy.",
+      "cta": "Zgłoś zainteresowanie"
     }
   },
   "aboutPage": {
@@ -4946,6 +4960,7 @@
         "q": "Czy mogę najpierw przejść szkolenie?",
         "a": "Oczywiście — jednodniowe szkolenie montażysty w belgijskiej siedzibie obejmuje tkaninę, profile i montaż na zimno. Wielu klientów montuje zestaw z samą instrukcją, ale szkolenie czyni to rutyną."
       }
-    ]
+    ],
+    "faqTrainingLink": "Wolisz najpierw poćwiczyć w praktyce? Dołącz do międzynarodowego dnia szkoleniowego"
   }
 }

@@ -32,6 +32,27 @@ export default async function TrainingPage({ params }: { params: { locale: strin
   const curriculum = t.raw('curriculum.items') as { title: string; body: string }[];
   const included = t.raw('book.included') as string[];
 
+  // Localize by GLOBAL index into modals.trainingDates/Notes, then split:
+  // scheduled sessions fill the dates grid, EN/DE international sessions get
+  // their own funnel section (booked via source 'training_international').
+  const localizedSessions = TRAINING_DATE_DETAIL.map((d, di) => ({
+    ...d,
+    date: (tm.raw('trainingDates') as string[])[di] ?? d.date,
+    note: (tm.raw('trainingDateNotes') as string[])[di] ?? d.note,
+  }));
+  const scheduledSessions = localizedSessions.filter((d) => !d.international);
+  const internationalSessions = localizedSessions.filter((d) => d.international);
+
+  const langBadges = (languages: string[]) => (
+    <div style={{ display: 'flex', gap: 6, marginBottom: 10 }}>
+      {languages.map((l) => (
+        <span key={l} style={{ fontSize: 10.5, fontWeight: 800, letterSpacing: '.1em', background: 'var(--surface)', border: '1px solid var(--border)', padding: '3px 8px', color: 'var(--text-muted)' }}>
+          {l}
+        </span>
+      ))}
+    </div>
+  );
+
   const crumbs = breadcrumbSchema([
     { name: tp('home'), url: `${localeBase(locale)}` },
     { name: t('crumb'), url: `${localeBase(locale)}/installer-training` },
@@ -122,11 +143,9 @@ export default async function TrainingPage({ params }: { params: { locale: strin
           </p>
         </div>
         <div className="tr-dates" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 14 }}>
-          {TRAINING_DATE_DETAIL.map((d, di) => ({
-            date: (tm.raw('trainingDates') as string[])[di] ?? d.date,
-            note: (tm.raw('trainingDateNotes') as string[])[di] ?? d.note,
-          })).map((d) => (
+          {scheduledSessions.map((d) => (
             <div key={d.date} style={{ border: '1px solid var(--border)', background: '#fff', padding: 'clamp(22px,2.4vw,28px)' }}>
+              {langBadges(d.languages)}
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 20, letterSpacing: '-.01em', marginBottom: 8 }}>{d.date}</div>
               <div style={{ fontSize: 13, color: 'var(--text-faint)' }}>{d.note}</div>
             </div>
@@ -138,12 +157,40 @@ export default async function TrainingPage({ params }: { params: { locale: strin
         </div>
       </section>
 
+      {/* International sessions — EN/DE interest funnel */}
+      <section id="international" className="section--surface">
+        <div className="container section--sm">
+          <div className="tr-intl" style={{ display: 'grid', gridTemplateColumns: '.9fr 1.1fr', gap: 'clamp(28px,4vw,56px)', alignItems: 'start' }}>
+            <div>
+              <Eyebrow num="04" label={t('international.eyebrow')} />
+              <h2 className="h2 h2--sm" style={{ margin: '0 0 18px' }}>{t('international.title')}<span className="accent">.</span></h2>
+              <p style={{ fontSize: 15.5, lineHeight: 1.65, color: 'var(--text-body)', maxWidth: '48ch', margin: '0 0 14px' }}>{t('international.lead')}</p>
+              <p style={{ fontSize: 14, lineHeight: 1.65, color: 'var(--text-muted)', maxWidth: '48ch', margin: 0 }}>{t('international.body')}</p>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              {internationalSessions.map((d) => (
+                <div key={d.date} style={{ border: '1px solid var(--border)', background: '#fff', padding: 'clamp(20px,2.2vw,26px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 18, flexWrap: 'wrap' }}>
+                  <div>
+                    {langBadges(d.languages)}
+                    <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 19, letterSpacing: '-.01em', marginBottom: 6 }}>{d.date}</div>
+                    <div style={{ fontSize: 13, color: 'var(--text-faint)' }}>{d.note}</div>
+                  </div>
+                  <ModalButton type="dates" source="training_international" className="btn btn--ghost btn--sm">
+                    {t('international.cta')} <ArrowRight size={14} />
+                  </ModalButton>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Booking form */}
       <section id="book" className="section--red">
         <div className="container section">
           <div className="tr-book" style={{ display: 'grid', gridTemplateColumns: '.85fr 1.15fr', gap: 'clamp(32px,4vw,64px)', alignItems: 'start' }}>
             <div>
-              <Eyebrow num="04" label={t('book.eyebrow')} tone="dark" />
+              <Eyebrow num="05" label={t('book.eyebrow')} tone="dark" />
               <h2 className="h2" style={{ color: '#fff', margin: '0 0 22px' }}>{t('book.titleA')}<br /><span style={{ color: 'var(--black)' }}>{t('book.titleB')}.</span></h2>
               <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,.8)', marginBottom: 14 }}>{t('book.includedLabel')}</div>
               <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -166,6 +213,7 @@ export default async function TrainingPage({ params }: { params: { locale: strin
           .tr-hero { grid-template-columns: 1fr !important; }
           .tr-curric { grid-template-columns: 1fr 1fr !important; }
           .tr-dates { grid-template-columns: 1fr 1fr !important; }
+          .tr-intl { grid-template-columns: 1fr !important; }
           .tr-book { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 560px) {

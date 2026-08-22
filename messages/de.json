@@ -1772,6 +1772,8 @@
             "15.–16. Sep. 2026",
             "06.–08. Okt. 2026",
             "17.–18. Nov. 2026",
+            "Session auf Englisch — neue Termine in Kürze",
+            "Session auf Deutsch — neue Termine in Kürze",
             "Individuelle Vor-Ort-Schulung"
           ]
         },
@@ -1811,6 +1813,8 @@
             "15.–16. Sep. 2026",
             "06.–08. Okt. 2026",
             "17.–18. Nov. 2026",
+            "Session auf Englisch — neue Termine in Kürze",
+            "Session auf Deutsch — neue Termine in Kürze",
             "Individuelle Vor-Ort-Schulung"
           ]
         }
@@ -1998,12 +2002,15 @@
       "15.–16. Sep. 2026",
       "06.–08. Okt. 2026",
       "17.–18. Nov. 2026",
-      "Individuelle Vor-Ort-Schulung"
+      "Session auf Englisch — neue Termine in Kürze",
+      "Session auf Deutsch — neue Termine in Kürze"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 Plätze",
       "Beveren-Waas · 6 Plätze",
-      "Beveren-Waas · 8 Plätze"
+      "Beveren-Waas · 8 Plätze",
+      "Beveren-Waas · internationale Gruppe",
+      "Beveren-Waas · internationale Gruppe"
     ],
     "close": "Schließen",
     "downloadDatasheet": "Datenblatt herunterladen",
@@ -4402,6 +4409,13 @@
         "Monteur-Starterkit",
         "Mittagessen & Material vor Ort"
       ]
+    },
+    "international": {
+      "eyebrow": "International",
+      "title": "Schulung auf Englisch oder Deutsch",
+      "lead": "Verarbeiter aus ganz Europa zertifizieren sich an unserem belgischen Hauptsitz — eine kurze Anreise, Praxistage an echten Rahmen, danach werden die Materialien in Ihr Land geliefert.",
+      "body": "Gleiches Programm, internationale Gruppe: die komplette Praxis-Zertifizierung auf Englisch oder Deutsch. Hinterlassen Sie Ihre Daten und wir bestätigen Ihren Platz, sobald die nächsten Termine feststehen.",
+      "cta": "Interesse anmelden"
     }
   },
   "aboutPage": {
@@ -4946,6 +4960,7 @@
         "q": "Kann ich vorher ein Training machen?",
         "a": "Gern — unser eintägiges Monteur-Training am belgischen Hauptsitz behandelt Tuch, Profile und Kaltmontage. Viele Kit-Kunden montieren allein mit der Anleitung, aber das Training macht es zur Routine."
       }
-    ]
+    ],
+    "faqTrainingLink": "Lieber zuerst praktisch üben? Nehmen Sie an einem internationalen Schulungstag teil"
   }
 }

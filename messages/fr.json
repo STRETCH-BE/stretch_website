@@ -1772,6 +1772,8 @@
             "15–16 sept. 2026",
             "06–08 oct. 2026",
             "17–18 nov. 2026",
+            "Session en anglais — nouvelles dates bientôt",
+            "Session en allemand — nouvelles dates bientôt",
             "Session sur mesure sur site"
           ]
         },
@@ -1811,6 +1813,8 @@
             "15–16 sept. 2026",
             "06–08 oct. 2026",
             "17–18 nov. 2026",
+            "Session en anglais — nouvelles dates bientôt",
+            "Session en allemand — nouvelles dates bientôt",
             "Session sur mesure sur site"
           ]
         }
@@ -1998,12 +2002,15 @@
       "15–16 sept. 2026",
       "06–08 oct. 2026",
       "17–18 nov. 2026",
-      "Session sur mesure sur site"
+      "Session en anglais — nouvelles dates bientôt",
+      "Session en allemand — nouvelles dates bientôt"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 places",
       "Beveren-Waas · 6 places",
-      "Beveren-Waas · 8 places"
+      "Beveren-Waas · 8 places",
+      "Beveren-Waas · groupe international",
+      "Beveren-Waas · groupe international"
     ],
     "close": "Fermer",
     "downloadDatasheet": "Télécharger la fiche technique",
@@ -4402,6 +4409,13 @@
         "Kit de démarrage installateur",
         "Déjeuner & matériel sur place"
       ]
+    },
+    "international": {
+      "eyebrow": "International",
+      "title": "Formation en anglais ou en allemand",
+      "lead": "Des installateurs de toute l’Europe se certifient à notre siège belge — un court déplacement, des journées pratiques sur de vrais cadres, puis les matériaux expédiés dans votre pays.",
+      "body": "Même programme, groupe international : la certification pratique complète, dispensée en anglais ou en allemand. Laissez vos coordonnées et nous confirmons votre place dès que les prochaines dates sont fixées.",
+      "cta": "Signaler mon intérêt"
     }
   },
   "aboutPage": {
@@ -4946,6 +4960,7 @@
         "q": "Puis-je me former avant d’acheter ?",
         "a": "Bien sûr — notre formation installateur d’une journée au siège belge couvre la toile, les profilés et la pose à froid. Beaucoup de clients posent leur kit avec le seul guide écrit, mais la formation en fait une routine."
       }
-    ]
+    ],
+    "faqTrainingLink": "Vous préférez d’abord pratiquer ? Rejoignez une journée de formation internationale"
   }
 }

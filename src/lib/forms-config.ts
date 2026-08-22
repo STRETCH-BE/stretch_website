@@ -53,13 +53,27 @@ export const TRAINING_DATES = [
   '15–16 Sep 2026',
   '06–08 Oct 2026',
   '17–18 Nov 2026',
+  'English session — new dates soon',
+  'German session — new dates soon',
   'Custom on-site session',
 ];
 
-export const TRAINING_DATE_DETAIL: { date: string; note: string }[] = [
-  { date: '15–16 Sep 2026', note: 'Beveren-Waas · 4 seats' },
-  { date: '06–08 Oct 2026', note: 'Beveren-Waas · 6 seats' },
-  { date: '17–18 Nov 2026', note: 'Beveren-Waas · 8 seats' },
+export type TrainingSession = {
+  date: string;
+  note: string;
+  /** Language(s) of instruction — rendered as badges (codes stay untranslated). */
+  languages: string[];
+  /** EN/DE international sessions: interest capture until real dates land
+   *  (Michael confirms them) — booked via source 'training_international'. */
+  international?: boolean;
+};
+
+export const TRAINING_DATE_DETAIL: TrainingSession[] = [
+  { date: '15–16 Sep 2026', note: 'Beveren-Waas · 4 seats', languages: ['NL'] },
+  { date: '06–08 Oct 2026', note: 'Beveren-Waas · 6 seats', languages: ['NL'] },
+  { date: '17–18 Nov 2026', note: 'Beveren-Waas · 8 seats', languages: ['NL'] },
+  { date: 'English session — new dates soon', note: 'Beveren-Waas · international group', languages: ['EN'], international: true },
+  { date: 'German session — new dates soon', note: 'Beveren-Waas · international group', languages: ['DE'], international: true },
 ];
 
 // ---------------------------------------------------------------------------

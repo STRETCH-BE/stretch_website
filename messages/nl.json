@@ -1772,6 +1772,8 @@
             "15–16 sep 2026",
             "06–08 okt 2026",
             "17–18 nov 2026",
+            "Engelstalige sessie — nieuwe data binnenkort",
+            "Duitstalige sessie — nieuwe data binnenkort",
             "Sessie op maat op locatie"
           ]
         },
@@ -1811,6 +1813,8 @@
             "15–16 sep 2026",
             "06–08 okt 2026",
             "17–18 nov 2026",
+            "Engelstalige sessie — nieuwe data binnenkort",
+            "Duitstalige sessie — nieuwe data binnenkort",
             "Sessie op maat op locatie"
           ]
         }
@@ -1998,12 +2002,15 @@
       "15–16 sep 2026",
       "06–08 okt 2026",
       "17–18 nov 2026",
-      "Sessie op maat op locatie"
+      "Engelstalige sessie — nieuwe data binnenkort",
+      "Duitstalige sessie — nieuwe data binnenkort"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 plaatsen",
       "Beveren-Waas · 6 plaatsen",
-      "Beveren-Waas · 8 plaatsen"
+      "Beveren-Waas · 8 plaatsen",
+      "Beveren-Waas · internationale groep",
+      "Beveren-Waas · internationale groep"
     ],
     "close": "Sluiten",
     "downloadDatasheet": "Download technische fiche",
@@ -4402,6 +4409,13 @@
         "Starterskit voor installateurs",
         "Lunch & materiaal ter plaatse"
       ]
+    },
+    "international": {
+      "eyebrow": "Internationaal",
+      "title": "Training in het Engels of Duits",
+      "lead": "Installateurs uit heel Europa certificeren zich op ons Belgische hoofdkantoor — één korte reis, hands-on dagen op echte frames, en daarna materialen verzonden naar uw land.",
+      "body": "Zelfde programma, internationale groep: de volledige hands-on certificering in het Engels of Duits. Laat uw gegevens achter en we bevestigen uw plaats zodra de volgende data vastliggen.",
+      "cta": "Interesse melden"
     }
   },
   "aboutPage": {
@@ -4946,6 +4960,7 @@
         "q": "Kan ik eerst een opleiding volgen?",
         "a": "Zeker — onze eendaagse plaatsersopleiding op het Belgisch hoofdkantoor behandelt doek, profielen en koude plaatsing. Veel kitklanten plaatsen vlot met enkel de gids, maar de opleiding maakt het routine."
       }
-    ]
+    ],
+    "faqTrainingLink": "Liever eerst hands-on oefenen? Volg een internationale trainingsdag"
   }
 }

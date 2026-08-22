@@ -1772,6 +1772,8 @@
             "15.–16. sep. 2026",
             "06.–08. okt. 2026",
             "17.–18. nov. 2026",
+            "Økt på engelsk — nye datoer snart",
+            "Økt på tysk — nye datoer snart",
             "Skreddersydd økt hos dere"
           ]
         },
@@ -1811,6 +1813,8 @@
             "15.–16. sep. 2026",
             "06.–08. okt. 2026",
             "17.–18. nov. 2026",
+            "Økt på engelsk — nye datoer snart",
+            "Økt på tysk — nye datoer snart",
             "Skreddersydd økt hos dere"
           ]
         }
@@ -1998,12 +2002,15 @@
       "15.–16. sep. 2026",
       "06.–08. okt. 2026",
       "17.–18. nov. 2026",
-      "Skreddersydd økt hos dere"
+      "Økt på engelsk — nye datoer snart",
+      "Økt på tysk — nye datoer snart"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 plasser",
       "Beveren-Waas · 6 plasser",
-      "Beveren-Waas · 8 plasser"
+      "Beveren-Waas · 8 plasser",
+      "Beveren-Waas · internasjonal gruppe",
+      "Beveren-Waas · internasjonal gruppe"
     ],
     "close": "Lukk",
     "downloadDatasheet": "Last ned datablad",
@@ -4402,6 +4409,13 @@
         "Startpakke for montører",
         "Lunsj & materiell på stedet"
       ]
+    },
+    "international": {
+      "eyebrow": "Internasjonalt",
+      "title": "Kurs på engelsk eller tysk",
+      "lead": "Montører fra hele Europa sertifiserer seg ved vårt belgiske hovedkontor — en kort reise, praktiske dager på ekte rammer, og etterpå sendes materialene til ditt land.",
+      "body": "Samme program, internasjonal gruppe: hele den praktiske sertifiseringen på engelsk eller tysk. Legg igjen opplysningene dine, så bekrefter vi plassen din så snart de neste datoene er satt.",
+      "cta": "Meld interesse"
     }
   },
   "aboutPage": {
@@ -4946,6 +4960,7 @@
         "q": "Kan jeg ta kurs før jeg kjøper?",
         "a": "Absolutt — endagskurset for montører ved det belgiske hovedkontoret dekker duk, profiler og kald montering. Mange kit-kunder monterer fint med bare guiden, men kurset gjør det til rutine."
       }
-    ]
+    ],
+    "faqTrainingLink": "Vil du heller øve praktisk først? Bli med på en internasjonal kursdag"
   }
 }

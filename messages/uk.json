@@ -1772,6 +1772,8 @@
             "15–16 Sep 2026",
             "06–08 Oct 2026",
             "17–18 Nov 2026",
+            "English session — new dates soon",
+            "German session — new dates soon",
             "Custom on-site session"
           ]
         },
@@ -1811,6 +1813,8 @@
             "15–16 Sep 2026",
             "06–08 Oct 2026",
             "17–18 Nov 2026",
+            "English session — new dates soon",
+            "German session — new dates soon",
             "Custom on-site session"
           ]
         }
@@ -1998,12 +2002,15 @@
       "15–16 Sep 2026",
       "06–08 Oct 2026",
       "17–18 Nov 2026",
-      "Custom on-site session"
+      "English session — new dates soon",
+      "German session — new dates soon"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 seats",
       "Beveren-Waas · 6 seats",
-      "Beveren-Waas · 8 seats"
+      "Beveren-Waas · 8 seats",
+      "Beveren-Waas · international group",
+      "Beveren-Waas · international group"
     ],
     "close": "Close",
     "downloadDatasheet": "Download datasheet",
@@ -4402,6 +4409,13 @@
         "Installer starter kit",
         "Lunch & materials on site"
       ]
+    },
+    "international": {
+      "eyebrow": "International",
+      "title": "Train in English or German",
+      "lead": "Installers from all over Europe certify at our Belgian HQ — one short trip, hands-on days on real frames, and materials shipped to your country afterwards.",
+      "body": "Same programme, international group: the full hands-on certification taught in English or German. Leave your details and we confirm your seat the moment the next dates are set.",
+      "cta": "Register interest"
     }
   },
   "aboutPage": {
@@ -4946,6 +4960,7 @@
         "q": "Can I be trained before I buy?",
         "a": "Absolutely — our one-day installer training at the Belgian HQ covers fabric handling, profiles and cold installation. Many kit customers install confidently after just the written guide, but training makes it routine."
       }
-    ]
+    ],
+    "faqTrainingLink": "Prefer hands-on practice first? Join an international training day"
   }
 }

@@ -1772,6 +1772,8 @@
             "15.–16. sep. 2026",
             "06.–08. okt. 2026",
             "17.–18. nov. 2026",
+            "Session på engelsk — nye datoer snart",
+            "Session på tysk — nye datoer snart",
             "Skræddersyet session hos jer"
           ]
         },
@@ -1811,6 +1813,8 @@
             "15.–16. sep. 2026",
             "06.–08. okt. 2026",
             "17.–18. nov. 2026",
+            "Session på engelsk — nye datoer snart",
+            "Session på tysk — nye datoer snart",
             "Skræddersyet session hos jer"
           ]
         }
@@ -1998,12 +2002,15 @@
       "15.–16. sep. 2026",
       "06.–08. okt. 2026",
       "17.–18. nov. 2026",
-      "Skræddersyet session hos jer"
+      "Session på engelsk — nye datoer snart",
+      "Session på tysk — nye datoer snart"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 pladser",
       "Beveren-Waas · 6 pladser",
-      "Beveren-Waas · 8 pladser"
+      "Beveren-Waas · 8 pladser",
+      "Beveren-Waas · international gruppe",
+      "Beveren-Waas · international gruppe"
     ],
     "close": "Luk",
     "downloadDatasheet": "Download datablad",
@@ -4402,6 +4409,13 @@
         "Startkit til montører",
         "Frokost & materialer på stedet"
       ]
+    },
+    "international": {
+      "eyebrow": "Internationalt",
+      "title": "Kursus på engelsk eller tysk",
+      "lead": "Montører fra hele Europa certificeres på vores belgiske hovedkontor — en kort rejse, praktiske dage på rigtige rammer, og bagefter sendes materialerne til dit land.",
+      "body": "Samme program, international gruppe: den fulde praktiske certificering undervist på engelsk eller tysk. Efterlad dine oplysninger, så bekræfter vi din plads, så snart de næste datoer ligger fast.",
+      "cta": "Meld interesse"
     }
   },
   "aboutPage": {
@@ -4946,6 +4960,7 @@
         "q": "Kan jeg blive uddannet, før jeg køber?",
         "a": "Bestemt — vores endags montørkursus på det belgiske hovedkontor dækker dug, profiler og kold montering. Mange kit-kunder monterer fint med vejledningen alene, men kurset gør det til rutine."
       }
-    ]
+    ],
+    "faqTrainingLink": "Vil du hellere øve dig først? Deltag i en international kursusdag"
   }
 }

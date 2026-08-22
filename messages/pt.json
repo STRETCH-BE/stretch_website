@@ -1772,6 +1772,8 @@
             "15–16 set 2026",
             "06–08 out 2026",
             "17–18 nov 2026",
+            "Sessão em inglês — novas datas em breve",
+            "Sessão em alemão — novas datas em breve",
             "Sessão à medida no local"
           ]
         },
@@ -1811,6 +1813,8 @@
             "15–16 set 2026",
             "06–08 out 2026",
             "17–18 nov 2026",
+            "Sessão em inglês — novas datas em breve",
+            "Sessão em alemão — novas datas em breve",
             "Sessão à medida no local"
           ]
         }
@@ -1998,12 +2002,15 @@
       "15–16 set 2026",
       "06–08 out 2026",
       "17–18 nov 2026",
-      "Sessão à medida no local"
+      "Sessão em inglês — novas datas em breve",
+      "Sessão em alemão — novas datas em breve"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 lugares",
       "Beveren-Waas · 6 lugares",
-      "Beveren-Waas · 8 lugares"
+      "Beveren-Waas · 8 lugares",
+      "Beveren-Waas · grupo internacional",
+      "Beveren-Waas · grupo internacional"
     ],
     "close": "Fechar",
     "downloadDatasheet": "Descarregar ficha técnica",
@@ -4402,6 +4409,13 @@
         "Kit de iniciação para instaladores",
         "Almoço e materiais no local"
       ]
+    },
+    "international": {
+      "eyebrow": "Internacional",
+      "title": "Formação em inglês ou alemão",
+      "lead": "Instaladores de toda a Europa certificam-se na nossa sede belga — uma viagem curta, dias práticos em estruturas reais e os materiais enviados depois para o seu país.",
+      "body": "Mesmo programa, grupo internacional: a certificação prática completa, dada em inglês ou alemão. Deixe os seus dados e confirmamos o seu lugar assim que as próximas datas forem definidas.",
+      "cta": "Registar interesse"
     }
   },
   "aboutPage": {
@@ -4946,6 +4960,7 @@
         "q": "Posso fazer formação antes de comprar?",
         "a": "Claro — a nossa formação de instalador de um dia na sede belga cobre tela, perfis e instalação a frio. Muitos clientes instalam o kit só com o guia, mas a formação torna-o rotina."
       }
-    ]
+    ],
+    "faqTrainingLink": "Prefere praticar primeiro? Participe num dia de formação internacional"
   }
 }

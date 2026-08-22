@@ -1772,6 +1772,8 @@
             "15.–16. sep. 2026",
             "06.–08. okt. 2026",
             "17.–18. nóv. 2026",
+            "Námskeið á ensku — nýjar dagsetningar væntanlegar",
+            "Námskeið á þýsku — nýjar dagsetningar væntanlegar",
             "Sérsniðin þjálfun á staðnum"
           ]
         },
@@ -1811,6 +1813,8 @@
             "15.–16. sep. 2026",
             "06.–08. okt. 2026",
             "17.–18. nóv. 2026",
+            "Námskeið á ensku — nýjar dagsetningar væntanlegar",
+            "Námskeið á þýsku — nýjar dagsetningar væntanlegar",
             "Sérsniðin þjálfun á staðnum"
           ]
         }
@@ -1998,12 +2002,15 @@
       "15.–16. sep. 2026",
       "06.–08. okt. 2026",
       "17.–18. nóv. 2026",
-      "Sérsniðin þjálfun á staðnum"
+      "Námskeið á ensku — nýjar dagsetningar væntanlegar",
+      "Námskeið á þýsku — nýjar dagsetningar væntanlegar"
     ],
     "trainingDateNotes": [
       "Beveren-Waas · 4 sæti",
       "Beveren-Waas · 6 sæti",
-      "Beveren-Waas · 8 sæti"
+      "Beveren-Waas · 8 sæti",
+      "Beveren-Waas · alþjóðlegur hópur",
+      "Beveren-Waas · alþjóðlegur hópur"
     ],
     "close": "Loka",
     "downloadDatasheet": "Sækja tækniblað",
@@ -4402,6 +4409,13 @@
         "Byrjunarsett fyrir uppsetningaraðila",
         "Hádegismatur og efni á staðnum"
       ]
+    },
+    "international": {
+      "eyebrow": "Alþjóðlegt",
+      "title": "Þjálfun á ensku eða þýsku",
+      "lead": "Uppsetningaraðilar víðs vegar að úr Evrópu fá vottun í belgísku höfuðstöðvunum okkar — stutt ferðalag, verklegir dagar á alvöru römmum og efnin síðan send til þíns lands.",
+      "body": "Sama dagskrá, alþjóðlegur hópur: full verkleg vottun kennd á ensku eða þýsku. Skildu eftir upplýsingarnar þínar og við staðfestum sætið þitt um leið og næstu dagsetningar liggja fyrir.",
+      "cta": "Skrá áhuga"
     }
   },
   "aboutPage": {
@@ -4946,6 +4960,7 @@
         "q": "Get ég farið á námskeið áður en ég kaupi?",
         "a": "Að sjálfsögðu — eins dags uppsetningarnámskeiðið í belgísku höfuðstöðvunum fer yfir dúk, prófíla og kalda uppsetningu. Margir viðskiptavinir setja settið upp með leiðbeiningunum einum, en námskeiðið gerir það að rútínu."
       }
-    ]
+    ],
+    "faqTrainingLink": "Viltu frekar æfa þig fyrst? Taktu þátt í alþjóðlegum þjálfunardegi"
   }
 }

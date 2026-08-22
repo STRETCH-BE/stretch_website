@@ -148,6 +148,11 @@ export default async function KitPage({ params }: { params: { locale: string } }
             </details>
           ))}
         </div>
+        <p style={{ margin: '22px 0 0' }}>
+          <Link href="/installer-training#international" className="lnk" style={{ fontWeight: 700 }}>
+            {t('faqTrainingLink')} →
+          </Link>
+        </p>
       </section>
 
       <style>{`
