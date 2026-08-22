@@ -82,7 +82,9 @@
     "supplyTitle": "Spændloftsmaterialer & konfektion til montører | STRETCH",
     "supplyDescription": "Fabrikslevering til professionelle montører: duge & folier, profiler, lys og konfektion efter mål, sendt i hele Europa. Fakturering i EUR.",
     "supplyCzSkTitle": "Spændloftsmaterialer til Tjekkiet & Slovakiet | STRETCH",
-    "supplyCzSkDescription": "Premium-spændloftsmaterialer og konfektion efter mål til tjekkiske og slovakiske fagfolk — produceret i Polen, en til to dage væk. EUR eller PLN."
+    "supplyCzSkDescription": "Premium-spændloftsmaterialer og konfektion efter mål til tjekkiske og slovakiske fagfolk — produceret i Polen, en til to dage væk. EUR eller PLN.",
+    "projectsExportTitle": "Spændlofter til internationale projekter | STRETCH",
+    "projectsExportDescription": "Translucente, printede og akustiske spændlofter til fit-out i hele verden — svejset på vores EU-fabrik, luftfragt, dokumenterede brandklasser."
   },
   "cookies": {
     "title": "Vi værner om dit privatliv",
@@ -170,7 +172,8 @@
       "clientPortal": "Kundeportal",
       "architects": "For arkitekter",
       "kit": "Gør-det-selv-kit",
-      "supply": "Levering til montører"
+      "supply": "Levering til montører",
+      "projectsExport": "Projekteksport"
     },
     "dealers": "Forhandlernetværk"
   },
@@ -2176,6 +2179,43 @@
         "message": {
           "label": "Hvad har du brug for?",
           "placeholder": "Materialer, konfektion, mængder, timing…"
+        }
+      }
+    },
+    "projects_export": {
+      "title": "Anmod om projekttilbud",
+      "subtitle": "Send dit projekts basisdata — vores projektteam svarer inden for én arbejdsdag med gennemførlighed, dokumentation og et tilbud i EUR.",
+      "submitLabel": "Anmod om mit tilbud",
+      "sentTitle": "Anmodning modtaget",
+      "sentMsg": "Tak — vores projektteam svarer inden for én arbejdsdag.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og efternavn"
+        },
+        "company": {
+          "label": "Virksomhed",
+          "placeholder": "Fit-out- eller entreprenørvirksomhed"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "dig@firma.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+971 ..."
+        },
+        "projectName": {
+          "label": "Projektnavn",
+          "placeholder": "Projekt- eller arbejdstitel"
+        },
+        "area": {
+          "label": "Loftsareal (m²)",
+          "placeholder": "f.eks. 250 m²"
+        },
+        "message": {
+          "label": "Dit projekt",
+          "placeholder": "Loftstyper, tilgængelige tegninger, tidsplan…"
         }
       }
     }
@@ -5063,7 +5103,8 @@
     "serviceDescription": "Fabrikslevering af spændloftsmaterialer, konfektion efter mål og montørkurser for professionelle i hele Europa.",
     "regional": {
       "label": "Regionalt",
-      "czsk": "Tjekkiet & Slovakiet — leveret fra vores polske produktion"
+      "czsk": "Tjekkiet & Slovakiet — leveret fra vores polske produktion",
+      "projectsExport": "Golfen & internationale projekter — premium-konfektion med luftfragt"
     }
   },
   "supplyCzSkPage": {
@@ -5100,5 +5141,91 @@
     "backToSupply": "Alle leveringsydelser",
     "serviceName": "Spændloftslevering til Tjekkiet & Slovakiet",
     "serviceDescription": "Premium-spændloftsmaterialer og konfektion efter mål til tjekkiske og slovakiske fagfolk, produceret i Polen med EU-kvalitet."
+  },
+  "projectsExportPage": {
+    "crumb": "Projekteksport",
+    "eyebrow": "Projektlevering",
+    "titleA": "Projektlofter,",
+    "titleB": "sendt til hele verden.",
+    "lead": "Spændlofter efter mål til fit-out- og indretningsentreprenører — konstrueret og svejset på vores EU-fabrik, sendt med fly som lette pakker og klar til montering på pladsen.",
+    "cta": "Anmod om projekttilbud",
+    "ctaDatasheets": "Tekniske datablade",
+    "capabilities": {
+      "eyebrow": "Hvad vi leverer",
+      "title": "Premium-konfektion til projekter",
+      "cta": "Se systemet",
+      "items": [
+        {
+          "title": "Translucent & bagbelyst",
+          "body": "Lysende lofter med jævnt lys uden hotspots — translucente membraner med 30–70% lystransmission."
+        },
+        {
+          "title": "Printet",
+          "body": "Printede membraner, der forvandler et loft til kunstværk eller brandflade — svejset i samme fugefri system."
+        },
+        {
+          "title": "Akustisk",
+          "body": "Mikroperforerede membraner og akustiske duge med absorption dokumenteret op til klasse A (αw 1,00)."
+        },
+        {
+          "title": "Stort format uden samlinger",
+          "body": "Fugefri membranbredder op til 515 cm, svejset efter din plan til store rum."
+        }
+      ]
+    },
+    "references": {
+      "eyebrow": "Referencer",
+      "title": "Bygget på rigtige projekter"
+    },
+    "fire": {
+      "eyebrow": "Dokumentation",
+      "title": "Brand- & teknisk dokumentation",
+      "body": "Fjerne markeder åbner med papirer, ikke løfter. Vores membransortimenter er dokumenteret i offentliggjorte datablade med brandklasser fra akkrediterede tests.",
+      "points": [
+        "PVC-, polyester-, akustiske og translucente membraner: brandklasse B-s1,d0 (EN 14716 / EN 13501-1)",
+        "Ikke-brændbar glasfiberloftsdug: brandklasse A2-s1,d0",
+        "Akustisk absorption dokumenteret op til klasse A (αw 1,00)"
+      ],
+      "fallback": "For ethvert produkt eller enhver konfiguration uden offentliggjort datablad er certificeringsdokumentation tilgængelig på forespørgsel."
+    },
+    "how": {
+      "eyebrow": "Proces",
+      "title": "Sådan fungerer projektlevering",
+      "steps": [
+        {
+          "title": "Tegninger ind",
+          "body": "Send planer eller en model — vi tjekker gennemførligheden inden for én arbejdsdag."
+        },
+        {
+          "title": "Produktionstegninger",
+          "body": "Du modtager produktionstegninger og et måleark til godkendelse."
+        },
+        {
+          "title": "Konfektion",
+          "body": "Membranerne svejses efter plan på vores EU-fabrik — med harpunkant."
+        },
+        {
+          "title": "Luftfragt",
+          "body": "Et loft på 40 m² sendes som én pakke på cirka 10 kg — med fly, til hele verden."
+        },
+        {
+          "title": "Første montering",
+          "body": "Dit hold monterer med vores støtte, eller vi superviserer den første montering på stedet."
+        }
+      ],
+      "currencyLine": "Fakturering i EUR."
+    },
+    "audiences": {
+      "eyebrow": "Hvem vi arbejder med",
+      "title": "Projektpartnere",
+      "items": [
+        "Fit-out- og indretningsentreprenører",
+        "Arkitekter og rådgivere",
+        "Lys- og AV-virksomheder"
+      ],
+      "architectsLink": "Besøg arkitektområdet"
+    },
+    "serviceName": "International projektlevering af spændlofter",
+    "serviceDescription": "Translucente, printede og akustiske spændlofter efter mål til fit-out-virksomheder i hele verden — konstrueret i EU og sendt med fly."
   }
 }

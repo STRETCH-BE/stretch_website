@@ -85,6 +85,7 @@ const SOURCE_LABELS: Record<string, string> = {
   kit_order: 'DIY kit order',
   supply_inquiry: 'Supply inquiry (installer materials)',
   supply_cz_sk: 'Supply inquiry (Czechia/Slovakia)',
+  projects_export: 'Project supply inquiry (export)',
 };
 
 /**

@@ -82,7 +82,9 @@
     "supplyTitle": "Materiales y confección de techo tensado para instaladores | STRETCH",
     "supplyDescription": "Suministro de fábrica para profesionales: telas y láminas, perfiles, iluminación y confección a medida, con envío por toda Europa. Facturación en EUR.",
     "supplyCzSkTitle": "Materiales de techo tensado para Chequia y Eslovaquia | STRETCH",
-    "supplyCzSkDescription": "Materiales premium de techo tensado y confección a medida para profesionales checos y eslovacos — producidos en Polonia, a uno o dos días. EUR o PLN."
+    "supplyCzSkDescription": "Materiales premium de techo tensado y confección a medida para profesionales checos y eslovacos — producidos en Polonia, a uno o dos días. EUR o PLN.",
+    "projectsExportTitle": "Techos tensados para proyectos internacionales | STRETCH",
+    "projectsExportDescription": "Techos tensados translúcidos, impresos y acústicos para fit-out en todo el mundo — soldados en nuestra fábrica de la UE, envío aéreo, clases de fuego."
   },
   "cookies": {
     "title": "Valoramos tu privacidad",
@@ -170,7 +172,8 @@
       "clientPortal": "Portal de clientes",
       "architects": "Para arquitectos",
       "kit": "Kit DIY",
-      "supply": "Suministro a instaladores"
+      "supply": "Suministro a instaladores",
+      "projectsExport": "Exportación de proyectos"
     },
     "dealers": "Red de distribuidores"
   },
@@ -2176,6 +2179,43 @@
         "message": {
           "label": "¿Qué necesita?",
           "placeholder": "Materiales, confección, volúmenes, plazos…"
+        }
+      }
+    },
+    "projects_export": {
+      "title": "Solicitar presupuesto de proyecto",
+      "subtitle": "Envíe los datos básicos de su proyecto — nuestro equipo responde en un día laborable con viabilidad, documentación y un presupuesto en EUR.",
+      "submitLabel": "Solicitar mi presupuesto",
+      "sentTitle": "Solicitud recibida",
+      "sentMsg": "Gracias — nuestro equipo de proyectos responde en un día laborable.",
+      "fields": {
+        "name": {
+          "label": "Nombre",
+          "placeholder": "Nombre y apellidos"
+        },
+        "company": {
+          "label": "Empresa",
+          "placeholder": "Empresa de fit-out o contratista"
+        },
+        "email": {
+          "label": "Correo",
+          "placeholder": "usted@empresa.com"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+971 ..."
+        },
+        "projectName": {
+          "label": "Nombre del proyecto",
+          "placeholder": "Título del proyecto"
+        },
+        "area": {
+          "label": "Superficie de techo (m²)",
+          "placeholder": "p. ej. 250 m²"
+        },
+        "message": {
+          "label": "Su proyecto",
+          "placeholder": "Tipos de techo, planos disponibles, plazos…"
         }
       }
     }
@@ -5063,7 +5103,8 @@
     "serviceDescription": "Suministro de fábrica de materiales para techos tensados, confección a medida y formación de instaladores para profesionales de toda Europa.",
     "regional": {
       "label": "Regional",
-      "czsk": "Chequia y Eslovaquia — suministradas desde nuestra producción polaca"
+      "czsk": "Chequia y Eslovaquia — suministradas desde nuestra producción polaca",
+      "projectsExport": "Golfo y proyectos internacionales — confección premium por vía aérea"
     }
   },
   "supplyCzSkPage": {
@@ -5100,5 +5141,91 @@
     "backToSupply": "Todos los servicios de suministro",
     "serviceName": "Suministro de techos tensados para Chequia y Eslovaquia",
     "serviceDescription": "Materiales premium para techos tensados y confección a medida para profesionales checos y eslovacos, producidos en Polonia con calidad de la UE."
+  },
+  "projectsExportPage": {
+    "crumb": "Exportación de proyectos",
+    "eyebrow": "Suministro de proyectos",
+    "titleA": "Techos para proyectos,",
+    "titleB": "enviados a todo el mundo.",
+    "lead": "Techos tensados a medida para empresas de fit-out e interiorismo — diseñados y soldados en nuestra fábrica de la UE, enviados por avión como paquetes ligeros y listos para instalar en obra.",
+    "cta": "Solicitar presupuesto de proyecto",
+    "ctaDatasheets": "Fichas técnicas",
+    "capabilities": {
+      "eyebrow": "Qué entregamos",
+      "title": "Confección premium para proyectos",
+      "cta": "Ver el sistema",
+      "items": [
+        {
+          "title": "Translúcido y retroiluminado",
+          "body": "Techos luminosos con luz uniforme y sin puntos calientes — membranas translúcidas con 30–70% de transmisión de luz."
+        },
+        {
+          "title": "Impreso",
+          "body": "Membranas impresas que convierten un techo en obra de arte o superficie de marca, soldadas en el mismo sistema sin juntas."
+        },
+        {
+          "title": "Acústico",
+          "body": "Membranas microperforadas y telas acústicas con absorción documentada hasta la clase A (αw 1,00)."
+        },
+        {
+          "title": "Gran formato sin juntas",
+          "body": "Anchos de membrana sin juntas hasta 515 cm, soldados según su plano para grandes volúmenes."
+        }
+      ]
+    },
+    "references": {
+      "eyebrow": "Referencias",
+      "title": "Construido sobre proyectos reales"
+    },
+    "fire": {
+      "eyebrow": "Documentación",
+      "title": "Documentación técnica y contra incendios",
+      "body": "Los mercados lejanos se abren con documentos, no con promesas. Nuestras gamas de membranas están documentadas en fichas técnicas publicadas, con clases de reacción al fuego de ensayos acreditados.",
+      "points": [
+        "Membranas de PVC, poliéster, acústicas y translúcidas: clase de fuego B-s1,d0 (EN 14716 / EN 13501-1)",
+        "Tela de techo de fibra de vidrio incombustible: clase A2-s1,d0",
+        "Absorción acústica documentada hasta la clase A (αw 1,00)"
+      ],
+      "fallback": "Para cualquier producto o configuración no cubierto por una ficha técnica publicada, la documentación de certificación está disponible bajo petición."
+    },
+    "how": {
+      "eyebrow": "Proceso",
+      "title": "Cómo funciona el suministro de proyectos",
+      "steps": [
+        {
+          "title": "Planos",
+          "body": "Envíe planos o un modelo — comprobamos la viabilidad en un día laborable."
+        },
+        {
+          "title": "Planos de taller",
+          "body": "Recibe planos de taller y una hoja de medición para su aprobación."
+        },
+        {
+          "title": "Confección",
+          "body": "Las membranas se sueldan según el plano en nuestra fábrica de la UE — con borde de arpón."
+        },
+        {
+          "title": "Carga aérea",
+          "body": "Un techo de 40 m² viaja como un paquete de unos 10 kg — en avión, a todo el mundo."
+        },
+        {
+          "title": "Primera instalación",
+          "body": "Su equipo instala con nuestro apoyo, o supervisamos la primera instalación en obra."
+        }
+      ],
+      "currencyLine": "Facturación en EUR."
+    },
+    "audiences": {
+      "eyebrow": "Con quién trabajamos",
+      "title": "Socios de proyecto",
+      "items": [
+        "Empresas de fit-out e interiorismo",
+        "Arquitectos y prescriptores",
+        "Empresas de iluminación y AV"
+      ],
+      "architectsLink": "Visitar el área de arquitectos"
+    },
+    "serviceName": "Suministro internacional de techos tensados para proyectos",
+    "serviceDescription": "Techos tensados translúcidos, impresos y acústicos a medida para empresas de fit-out en todo el mundo — diseñados en la UE y enviados por avión."
   }
 }

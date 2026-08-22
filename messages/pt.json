@@ -82,7 +82,9 @@
     "supplyTitle": "Materiais e confeção de teto tensionado para instaladores | STRETCH",
     "supplyDescription": "Fornecimento de fábrica para profissionais: telas e películas, perfis, iluminação e confeção à medida, com envio por toda a Europa. Faturação em EUR.",
     "supplyCzSkTitle": "Materiais de teto tensionado para a Chéquia e a Eslováquia | STRETCH",
-    "supplyCzSkDescription": "Materiais premium de teto tensionado e confeção à medida para profissionais checos e eslovacos — produzidos na Polónia, a um ou dois dias. EUR ou PLN."
+    "supplyCzSkDescription": "Materiais premium de teto tensionado e confeção à medida para profissionais checos e eslovacos — produzidos na Polónia, a um ou dois dias. EUR ou PLN.",
+    "projectsExportTitle": "Tetos tensionados para projetos internacionais | STRETCH",
+    "projectsExportDescription": "Tetos tensionados translúcidos, impressos e acústicos para fit-out em todo o mundo — soldados na fábrica na UE, frete aéreo, classes de fogo documentadas."
   },
   "cookies": {
     "title": "Valorizamos a sua privacidade",
@@ -170,7 +172,8 @@
       "clientPortal": "Portal do cliente",
       "architects": "Para arquitetos",
       "kit": "Kit DIY",
-      "supply": "Fornecimento a instaladores"
+      "supply": "Fornecimento a instaladores",
+      "projectsExport": "Exportação de projetos"
     },
     "dealers": "Rede de revendedores"
   },
@@ -2176,6 +2179,43 @@
         "message": {
           "label": "Do que precisa?",
           "placeholder": "Materiais, confeção, volumes, prazos…"
+        }
+      }
+    },
+    "projects_export": {
+      "title": "Pedir orçamento de projeto",
+      "subtitle": "Envie os dados básicos do seu projeto — a nossa equipa responde num dia útil com viabilidade, documentação e um orçamento em EUR.",
+      "submitLabel": "Pedir o meu orçamento",
+      "sentTitle": "Pedido recebido",
+      "sentMsg": "Obrigado — a nossa equipa de projetos responde num dia útil.",
+      "fields": {
+        "name": {
+          "label": "Nome",
+          "placeholder": "Nome e apelido"
+        },
+        "company": {
+          "label": "Empresa",
+          "placeholder": "Empresa de fit-out ou empreiteiro"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "voce@empresa.com"
+        },
+        "phone": {
+          "label": "Telefone",
+          "placeholder": "+971 ..."
+        },
+        "projectName": {
+          "label": "Nome do projeto",
+          "placeholder": "Título do projeto"
+        },
+        "area": {
+          "label": "Área de teto (m²)",
+          "placeholder": "p. ex. 250 m²"
+        },
+        "message": {
+          "label": "O seu projeto",
+          "placeholder": "Tipos de teto, desenhos disponíveis, prazos…"
         }
       }
     }
@@ -5063,7 +5103,8 @@
     "serviceDescription": "Fornecimento de fábrica de materiais para tetos tensionados, confeção à medida e formação de instaladores para profissionais em toda a Europa.",
     "regional": {
       "label": "Regional",
-      "czsk": "Chéquia e Eslováquia — fornecidas a partir da nossa produção polaca"
+      "czsk": "Chéquia e Eslováquia — fornecidas a partir da nossa produção polaca",
+      "projectsExport": "Golfo e projetos internacionais — confeção premium por frete aéreo"
     }
   },
   "supplyCzSkPage": {
@@ -5100,5 +5141,91 @@
     "backToSupply": "Todos os serviços de fornecimento",
     "serviceName": "Fornecimento de tetos tensionados para a Chéquia e a Eslováquia",
     "serviceDescription": "Materiais premium para tetos tensionados e confeção à medida para profissionais checos e eslovacos, produzidos na Polónia com qualidade da UE."
+  },
+  "projectsExportPage": {
+    "crumb": "Exportação de projetos",
+    "eyebrow": "Fornecimento de projetos",
+    "titleA": "Tetos para projetos,",
+    "titleB": "enviados para todo o mundo.",
+    "lead": "Tetos tensionados à medida para empresas de fit-out e interiores — projetados e soldados na nossa fábrica na UE, enviados por avião como encomendas leves e prontos a instalar em obra.",
+    "cta": "Pedir orçamento de projeto",
+    "ctaDatasheets": "Fichas técnicas",
+    "capabilities": {
+      "eyebrow": "O que entregamos",
+      "title": "Confeção premium para projetos",
+      "cta": "Ver o sistema",
+      "items": [
+        {
+          "title": "Translúcido e retroiluminado",
+          "body": "Tetos luminosos com luz uniforme e sem pontos quentes — membranas translúcidas com 30–70% de transmissão de luz."
+        },
+        {
+          "title": "Impresso",
+          "body": "Membranas impressas que transformam um teto em obra de arte ou superfície de marca, soldadas no mesmo sistema sem juntas."
+        },
+        {
+          "title": "Acústico",
+          "body": "Membranas microperfuradas e telas acústicas com absorção documentada até à classe A (αw 1,00)."
+        },
+        {
+          "title": "Grande formato sem juntas",
+          "body": "Larguras de membrana sem juntas até 515 cm, soldadas segundo o seu plano para grandes volumes."
+        }
+      ]
+    },
+    "references": {
+      "eyebrow": "Referências",
+      "title": "Construído sobre projetos reais"
+    },
+    "fire": {
+      "eyebrow": "Documentação",
+      "title": "Documentação técnica e de incêndio",
+      "body": "Os mercados distantes abrem-se com documentos, não com promessas. As nossas gamas de membranas estão documentadas em fichas técnicas publicadas, com classes de reação ao fogo de ensaios acreditados.",
+      "points": [
+        "Membranas de PVC, poliéster, acústicas e translúcidas: classe de fogo B-s1,d0 (EN 14716 / EN 13501-1)",
+        "Tela de teto de fibra de vidro incombustível: classe A2-s1,d0",
+        "Absorção acústica documentada até à classe A (αw 1,00)"
+      ],
+      "fallback": "Para qualquer produto ou configuração não coberto por uma ficha técnica publicada, a documentação de certificação está disponível a pedido."
+    },
+    "how": {
+      "eyebrow": "Processo",
+      "title": "Como funciona o fornecimento de projetos",
+      "steps": [
+        {
+          "title": "Desenhos",
+          "body": "Envie plantas ou um modelo — verificamos a viabilidade num dia útil."
+        },
+        {
+          "title": "Desenhos de fabrico",
+          "body": "Recebe desenhos de fabrico e uma folha de medições para aprovação."
+        },
+        {
+          "title": "Confeção",
+          "body": "As membranas são soldadas segundo o plano na nossa fábrica na UE — com bordo de arpão."
+        },
+        {
+          "title": "Frete aéreo",
+          "body": "Um teto de 40 m² segue como uma encomenda de cerca de 10 kg — de avião, para todo o mundo."
+        },
+        {
+          "title": "Primeira instalação",
+          "body": "A sua equipa instala com o nosso apoio, ou supervisionamos a primeira instalação em obra."
+        }
+      ],
+      "currencyLine": "Faturação em EUR."
+    },
+    "audiences": {
+      "eyebrow": "Com quem trabalhamos",
+      "title": "Parceiros de projeto",
+      "items": [
+        "Empresas de fit-out e interiores",
+        "Arquitetos e prescritores",
+        "Empresas de iluminação e AV"
+      ],
+      "architectsLink": "Visitar a área de arquitetos"
+    },
+    "serviceName": "Fornecimento internacional de tetos tensionados para projetos",
+    "serviceDescription": "Tetos tensionados translúcidos, impressos e acústicos à medida para empresas de fit-out em todo o mundo — projetados na UE e enviados por avião."
   }
 }

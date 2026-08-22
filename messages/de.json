@@ -82,7 +82,9 @@
     "supplyTitle": "Spanndecken-Material & Konfektion für Verarbeiter | STRETCH",
     "supplyDescription": "Werksbelieferung für Montageprofis: Membranen & Folien, Profile, Licht und Maßkonfektion, versandt durch ganz Europa. Rechnungsstellung in EUR.",
     "supplyCzSkTitle": "Spanndecken-Material für Tschechien & Slowakei | STRETCH",
-    "supplyCzSkDescription": "Premium-Spanndeckenmaterialien und Maßkonfektion für tschechische und slowakische Profis — produziert in Polen, ein bis zwei Tage entfernt. EUR oder PLN."
+    "supplyCzSkDescription": "Premium-Spanndeckenmaterialien und Maßkonfektion für tschechische und slowakische Profis — produziert in Polen, ein bis zwei Tage entfernt. EUR oder PLN.",
+    "projectsExportTitle": "Spanndecken für internationale Projekte | STRETCH",
+    "projectsExportDescription": "Transluzente, bedruckte und akustische Spanndecken für Fit-out-Unternehmen weltweit — geschweißt im EU-Werk, per Luftfracht, dokumentierte Brandklassen."
   },
   "cookies": {
     "title": "Wir respektieren Ihre Privatsphäre",
@@ -170,7 +172,8 @@
       "clientPortal": "Kundenportal",
       "architects": "Für Architekten",
       "kit": "DIY-Kit",
-      "supply": "Belieferung für Verarbeiter"
+      "supply": "Belieferung für Verarbeiter",
+      "projectsExport": "Projektexport"
     },
     "dealers": "Händlernetz"
   },
@@ -2176,6 +2179,43 @@
         "message": {
           "label": "Was brauchen Sie?",
           "placeholder": "Material, Konfektion, Mengen, Timing…"
+        }
+      }
+    },
+    "projects_export": {
+      "title": "Projektangebot anfragen",
+      "subtitle": "Senden Sie die Eckdaten Ihres Projekts — unser Projektteam antwortet innerhalb eines Werktags mit Machbarkeit, Dokumentation und einem Angebot in EUR.",
+      "submitLabel": "Mein Projektangebot anfragen",
+      "sentTitle": "Anfrage erhalten",
+      "sentMsg": "Danke — unser Projektteam antwortet innerhalb eines Werktags.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Vor- & Nachname"
+        },
+        "company": {
+          "label": "Firma",
+          "placeholder": "Fit-out- oder Bauunternehmen"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "sie@firma.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+971 ..."
+        },
+        "projectName": {
+          "label": "Projektname",
+          "placeholder": "Projekt- oder Arbeitstitel"
+        },
+        "area": {
+          "label": "Deckenfläche (m²)",
+          "placeholder": "z. B. 250 m²"
+        },
+        "message": {
+          "label": "Ihr Projekt",
+          "placeholder": "Deckentypen, vorhandene Pläne, Zeitplan…"
         }
       }
     }
@@ -5063,7 +5103,8 @@
     "serviceDescription": "Werksbelieferung mit Spanndecken-Materialien, Maßkonfektion und Verarbeiter-Schulung für Montageprofis in ganz Europa.",
     "regional": {
       "label": "Regional",
-      "czsk": "Tschechien & Slowakei — beliefert aus unserer polnischen Produktion"
+      "czsk": "Tschechien & Slowakei — beliefert aus unserer polnischen Produktion",
+      "projectsExport": "Golf & internationale Projekte — Premium-Konfektion per Luftfracht"
     }
   },
   "supplyCzSkPage": {
@@ -5100,5 +5141,91 @@
     "backToSupply": "Alle Belieferungsleistungen",
     "serviceName": "Spanndecken-Belieferung für Tschechien & Slowakei",
     "serviceDescription": "Premium-Spanndeckenmaterialien und Maßkonfektion für tschechische und slowakische Profis, produziert in Polen mit EU-weiter Qualität."
+  },
+  "projectsExportPage": {
+    "crumb": "Projektexport",
+    "eyebrow": "Projektbelieferung",
+    "titleA": "Projektdecken,",
+    "titleB": "weltweit versandt.",
+    "lead": "Maßgefertigte Spanndecken für Fit-out- und Innenausbau-Unternehmen — konstruiert und geschweißt in unserem EU-Werk, als leichte Pakete per Luftfracht versandt und montagefertig auf der Baustelle.",
+    "cta": "Projektangebot anfragen",
+    "ctaDatasheets": "Technische Datenblätter",
+    "capabilities": {
+      "eyebrow": "Was wir liefern",
+      "title": "Premium-Konfektion für Projekte",
+      "cta": "System ansehen",
+      "items": [
+        {
+          "title": "Transluzent & hinterleuchtet",
+          "body": "Leuchtdecken mit gleichmäßigem Licht ohne Hotspots — transluzente Membranen mit 30–70% Lichtdurchlässigkeit."
+        },
+        {
+          "title": "Bedruckt",
+          "body": "Bedruckte Membranen, die eine Decke in Kunstwerk oder Markenfläche verwandeln — geschweißt im selben fugenlosen System."
+        },
+        {
+          "title": "Akustik",
+          "body": "Mikroperforierte Membranen und Akustikgewebe mit dokumentierter Absorption bis Klasse A (αw 1,00)."
+        },
+        {
+          "title": "Großformat fugenlos",
+          "body": "Fugenlose Membranbreiten bis 515 cm, nach Ihrem Plan geschweißt für große Volumen."
+        }
+      ]
+    },
+    "references": {
+      "eyebrow": "Referenzen",
+      "title": "Auf echten Projekten gebaut"
+    },
+    "fire": {
+      "eyebrow": "Dokumentation",
+      "title": "Brandschutz- & technische Dokumentation",
+      "body": "Ferne Märkte öffnen sich mit Unterlagen, nicht mit Versprechen. Unsere Membran-Sortimente sind in veröffentlichten Datenblättern dokumentiert, mit Brandklassen aus akkreditierten Prüfungen.",
+      "points": [
+        "PVC-, Polyester-, Akustik- und transluzente Membranen: Brandklasse B-s1,d0 (EN 14716 / EN 13501-1)",
+        "Nicht brennbares Glasfaser-Deckengewebe: Brandklasse A2-s1,d0",
+        "Akustische Absorption dokumentiert bis Klasse A (αw 1,00)"
+      ],
+      "fallback": "Für jedes Produkt und jede Konfiguration ohne veröffentlichtes Datenblatt ist die Zertifizierungsdokumentation auf Anfrage erhältlich."
+    },
+    "how": {
+      "eyebrow": "Prozess",
+      "title": "So funktioniert Projektbelieferung",
+      "steps": [
+        {
+          "title": "Pläne einreichen",
+          "body": "Senden Sie Pläne oder ein Modell — wir prüfen die Machbarkeit innerhalb eines Werktags."
+        },
+        {
+          "title": "Werkpläne",
+          "body": "Sie erhalten Werkpläne und ein Aufmaßblatt zur Freigabe."
+        },
+        {
+          "title": "Konfektion",
+          "body": "Die Membranen werden nach Plan in unserem EU-Werk geschweißt — Harpunenrand inklusive."
+        },
+        {
+          "title": "Luftfracht",
+          "body": "Eine 40-m²-Decke reist als ein Paket von etwa 10 kg — per Flugzeug, weltweit."
+        },
+        {
+          "title": "Erstmontage",
+          "body": "Ihr Team montiert mit unserer Unterstützung, oder wir begleiten die Erstmontage vor Ort."
+        }
+      ],
+      "currencyLine": "Rechnungsstellung in EUR."
+    },
+    "audiences": {
+      "eyebrow": "Mit wem wir arbeiten",
+      "title": "Projektpartner",
+      "items": [
+        "Fit-out- und Innenausbau-Unternehmen",
+        "Architekten und Planer",
+        "Licht- und AV-Unternehmen"
+      ],
+      "architectsLink": "Zum Architektenbereich"
+    },
+    "serviceName": "Internationale Projektbelieferung mit Spanndecken",
+    "serviceDescription": "Maßgefertigte transluzente, bedruckte und akustische Spanndecken für Fit-out-Unternehmen weltweit — konstruiert in der EU, versandt per Luftfracht."
   }
 }

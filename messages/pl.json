@@ -82,7 +82,9 @@
     "supplyTitle": "Materiały i konfekcja sufitów napinanych dla monterów | STRETCH",
     "supplyDescription": "Fabryczne zaopatrzenie dla monterów: tkaniny i folie, profile, oświetlenie oraz konfekcja na wymiar, z wysyłką po całej Europie. Fakturowanie w EUR i PLN.",
     "supplyCzSkTitle": "Materiały do sufitów napinanych dla Czech i Słowacji | STRETCH",
-    "supplyCzSkDescription": "Materiały premium do sufitów napinanych i konfekcja na wymiar dla czeskich i słowackich profesjonalistów — produkcja w Polsce, dzień–dwa drogi. EUR lub PLN."
+    "supplyCzSkDescription": "Materiały premium do sufitów napinanych i konfekcja na wymiar dla czeskich i słowackich profesjonalistów — produkcja w Polsce, dzień–dwa drogi. EUR lub PLN.",
+    "projectsExportTitle": "Sufity napinane do projektów międzynarodowych | STRETCH",
+    "projectsExportDescription": "Transparentne, drukowane i akustyczne sufity napinane dla firm fit-out na świecie — zgrzewane w fabryce w UE, fracht lotniczy, udokumentowane klasy ogniowe."
   },
   "cookies": {
     "title": "Szanujemy Twoją prywatność",
@@ -170,7 +172,8 @@
       "clientPortal": "Panel klienta",
       "architects": "Dla architektów",
       "kit": "Zestaw DIY",
-      "supply": "Zaopatrzenie monterów"
+      "supply": "Zaopatrzenie monterów",
+      "projectsExport": "Eksport projektów"
     },
     "dealers": "Sieć dealerów"
   },
@@ -2176,6 +2179,43 @@
         "message": {
           "label": "Czego potrzebujesz?",
           "placeholder": "Materiały, konfekcja, ilości, terminy…"
+        }
+      }
+    },
+    "projects_export": {
+      "title": "Poproś o wycenę projektu",
+      "subtitle": "Prześlij podstawy projektu — nasz zespół projektowy odpowie w ciągu jednego dnia roboczego z wykonalnością, dokumentacją i wyceną w EUR.",
+      "submitLabel": "Poproś o moją wycenę",
+      "sentTitle": "Zapytanie otrzymane",
+      "sentMsg": "Dziękujemy — nasz zespół projektowy odpowiada w ciągu jednego dnia roboczego.",
+      "fields": {
+        "name": {
+          "label": "Imię i nazwisko",
+          "placeholder": "Imię i nazwisko"
+        },
+        "company": {
+          "label": "Firma",
+          "placeholder": "Firma fit-out lub wykonawcza"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "ty@firma.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+971 ..."
+        },
+        "projectName": {
+          "label": "Nazwa projektu",
+          "placeholder": "Nazwa lub tytuł roboczy"
+        },
+        "area": {
+          "label": "Powierzchnia sufitu (m²)",
+          "placeholder": "np. 250 m²"
+        },
+        "message": {
+          "label": "Twój projekt",
+          "placeholder": "Rodzaje sufitów, dostępne rysunki, harmonogram…"
         }
       }
     }
@@ -5063,7 +5103,8 @@
     "serviceDescription": "Fabryczne zaopatrzenie w materiały do sufitów napinanych, konfekcja na wymiar i szkolenia monterów dla profesjonalistów w całej Europie.",
     "regional": {
       "label": "Regionalnie",
-      "czsk": "Czechy i Słowacja — dostawy z naszej polskiej produkcji"
+      "czsk": "Czechy i Słowacja — dostawy z naszej polskiej produkcji",
+      "projectsExport": "Zatoka i projekty międzynarodowe — konfekcja premium frachtem lotniczym"
     }
   },
   "supplyCzSkPage": {
@@ -5100,5 +5141,91 @@
     "backToSupply": "Wszystkie usługi zaopatrzenia",
     "serviceName": "Zaopatrzenie w sufity napinane dla Czech i Słowacji",
     "serviceDescription": "Materiały premium do sufitów napinanych i konfekcja na wymiar dla czeskich i słowackich profesjonalistów, produkowane w Polsce z jakością UE."
+  },
+  "projectsExportPage": {
+    "crumb": "Eksport projektów",
+    "eyebrow": "Dostawy projektowe",
+    "titleA": "Sufity projektowe,",
+    "titleB": "wysyłane na cały świat.",
+    "lead": "Sufity napinane na wymiar dla firm fit-out i wykończeniowych — projektowane i zgrzewane w naszej fabryce w UE, wysyłane frachtem lotniczym jako lekkie paczki, gotowe do montażu na budowie.",
+    "cta": "Poproś o wycenę projektu",
+    "ctaDatasheets": "Karty techniczne",
+    "capabilities": {
+      "eyebrow": "Co dostarczamy",
+      "title": "Konfekcja premium do projektów",
+      "cta": "Zobacz system",
+      "items": [
+        {
+          "title": "Transparentne i podświetlane",
+          "body": "Sufity świetlne z równym światłem bez hotspotów — membrany transparentne o przepuszczalności 30–70%."
+        },
+        {
+          "title": "Drukowane",
+          "body": "Membrany z nadrukiem, które zamieniają sufit w dzieło sztuki lub powierzchnię marki — zgrzewane w tym samym bezszwowym systemie."
+        },
+        {
+          "title": "Akustyczne",
+          "body": "Membrany mikroperforowane i tkaniny akustyczne z absorpcją udokumentowaną do klasy A (αw 1,00)."
+        },
+        {
+          "title": "Wielki format bez łączeń",
+          "body": "Bezszwowe szerokości membran do 515 cm, zgrzewane według planu do dużych kubatur."
+        }
+      ]
+    },
+    "references": {
+      "eyebrow": "Referencje",
+      "title": "Zbudowane na prawdziwych projektach"
+    },
+    "fire": {
+      "eyebrow": "Dokumentacja",
+      "title": "Dokumentacja przeciwpożarowa i techniczna",
+      "body": "Dalekie rynki otwierają się dokumentami, nie obietnicami. Nasze gamy membran są udokumentowane w opublikowanych kartach technicznych, z klasami reakcji na ogień z akredytowanych badań.",
+      "points": [
+        "Membrany PVC, poliestrowe, akustyczne i transparentne: klasa ogniowa B-s1,d0 (EN 14716 / EN 13501-1)",
+        "Niepalna tkanina sufitowa z włókna szklanego: klasa A2-s1,d0",
+        "Absorpcja akustyczna udokumentowana do klasy A (αw 1,00)"
+      ],
+      "fallback": "Dla każdego produktu lub konfiguracji bez opublikowanej karty technicznej dokumentacja certyfikacyjna jest dostępna na życzenie."
+    },
+    "how": {
+      "eyebrow": "Proces",
+      "title": "Jak działają dostawy projektowe",
+      "steps": [
+        {
+          "title": "Rysunki",
+          "body": "Prześlij plany lub model — sprawdzamy wykonalność w ciągu jednego dnia roboczego."
+        },
+        {
+          "title": "Rysunki warsztatowe",
+          "body": "Otrzymujesz rysunki warsztatowe i arkusz pomiarowy do zatwierdzenia."
+        },
+        {
+          "title": "Konfekcja",
+          "body": "Membrany zgrzewamy według planu w naszej fabryce w UE — z krawędzią harpunową."
+        },
+        {
+          "title": "Fracht lotniczy",
+          "body": "Sufit 40 m² leci jako jedna paczka około 10 kg — samolotem, na cały świat."
+        },
+        {
+          "title": "Pierwszy montaż",
+          "body": "Twój zespół montuje z naszym wsparciem albo nadzorujemy pierwszy montaż na miejscu."
+        }
+      ],
+      "currencyLine": "Fakturowanie w EUR."
+    },
+    "audiences": {
+      "eyebrow": "Z kim pracujemy",
+      "title": "Partnerzy projektowi",
+      "items": [
+        "Firmy fit-out i wykończeniowe",
+        "Architekci i projektanci",
+        "Firmy oświetleniowe i AV"
+      ],
+      "architectsLink": "Odwiedź strefę architektów"
+    },
+    "serviceName": "Międzynarodowe dostawy projektowe sufitów napinanych",
+    "serviceDescription": "Transparentne, drukowane i akustyczne sufity napinane na wymiar dla firm fit-out na całym świecie — projektowane w UE, wysyłane frachtem lotniczym."
   }
 }

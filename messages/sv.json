@@ -82,7 +82,9 @@
     "supplyTitle": "Spänntaksmaterial & konfektion för montörer | STRETCH",
     "supplyDescription": "Fabriksleverans för professionella montörer: dukar & folier, profiler, ljus och måttillverkad konfektion, skickat i hela Europa. Fakturering i EUR.",
     "supplyCzSkTitle": "Spänntaksmaterial för Tjeckien & Slovakien | STRETCH",
-    "supplyCzSkDescription": "Premiummaterial för spänntak och måttillverkad konfektion för tjeckiska och slovakiska proffs — tillverkat i Polen, en till två dagar bort. EUR eller PLN."
+    "supplyCzSkDescription": "Premiummaterial för spänntak och måttillverkad konfektion för tjeckiska och slovakiska proffs — tillverkat i Polen, en till två dagar bort. EUR eller PLN.",
+    "projectsExportTitle": "Spänntak för internationella projekt | STRETCH",
+    "projectsExportDescription": "Translucenta, printade och akustiska spänntak för fit-out världen över — svetsade i vår EU-fabrik, flygfrakt, dokumenterade brandklasser."
   },
   "cookies": {
     "title": "Vi värnar om din integritet",
@@ -170,7 +172,8 @@
       "clientPortal": "Kundportal",
       "architects": "För arkitekter",
       "kit": "Gör-det-själv-kit",
-      "supply": "Leverans till montörer"
+      "supply": "Leverans till montörer",
+      "projectsExport": "Projektexport"
     },
     "dealers": "Återförsäljarnätverk"
   },
@@ -2176,6 +2179,43 @@
         "message": {
           "label": "Vad behöver du?",
           "placeholder": "Material, konfektion, volymer, timing…"
+        }
+      }
+    },
+    "projects_export": {
+      "title": "Begär projektoffert",
+      "subtitle": "Skicka projektets grunddata — vårt projektteam svarar inom en arbetsdag med genomförbarhet, dokumentation och en offert i EUR.",
+      "submitLabel": "Begär min offert",
+      "sentTitle": "Förfrågan mottagen",
+      "sentMsg": "Tack — vårt projektteam svarar inom en arbetsdag.",
+      "fields": {
+        "name": {
+          "label": "Namn",
+          "placeholder": "För- och efternamn"
+        },
+        "company": {
+          "label": "Företag",
+          "placeholder": "Fit-out- eller entreprenadföretag"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "du@foretag.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+971 ..."
+        },
+        "projectName": {
+          "label": "Projektnamn",
+          "placeholder": "Projekt- eller arbetstitel"
+        },
+        "area": {
+          "label": "Takyta (m²)",
+          "placeholder": "t.ex. 250 m²"
+        },
+        "message": {
+          "label": "Ditt projekt",
+          "placeholder": "Taktyper, tillgängliga ritningar, tidsplan…"
         }
       }
     }
@@ -5063,7 +5103,8 @@
     "serviceDescription": "Fabriksleverans av spänntaksmaterial, måttillverkad konfektion och montörsutbildning för proffs i hela Europa.",
     "regional": {
       "label": "Regionalt",
-      "czsk": "Tjeckien & Slovakien — levererat från vår polska produktion"
+      "czsk": "Tjeckien & Slovakien — levererat från vår polska produktion",
+      "projectsExport": "Gulfen & internationella projekt — premiumkonfektion med flygfrakt"
     }
   },
   "supplyCzSkPage": {
@@ -5100,5 +5141,91 @@
     "backToSupply": "Alla leveranstjänster",
     "serviceName": "Spänntaksleverans för Tjeckien & Slovakien",
     "serviceDescription": "Premiummaterial för spänntak och måttillverkad konfektion för tjeckiska och slovakiska proffs, tillverkade i Polen med EU-kvalitet."
+  },
+  "projectsExportPage": {
+    "crumb": "Projektexport",
+    "eyebrow": "Projektleverans",
+    "titleA": "Projekttak,",
+    "titleB": "skickade över hela världen.",
+    "lead": "Måttillverkade spänntak för fit-out- och inredningsentreprenörer — konstruerade och svetsade i vår EU-fabrik, skickade med flyg som lätta paket och klara att montera på plats.",
+    "cta": "Begär projektoffert",
+    "ctaDatasheets": "Tekniska datablad",
+    "capabilities": {
+      "eyebrow": "Vad vi levererar",
+      "title": "Premiumkonfektion för projekt",
+      "cta": "Se systemet",
+      "items": [
+        {
+          "title": "Translucent & bakbelyst",
+          "body": "Ljusa tak med jämnt ljus utan hotspots — translucenta membran med 30–70% ljustransmission."
+        },
+        {
+          "title": "Printat",
+          "body": "Printade membran som förvandlar ett tak till konstverk eller varumärkesyta — svetsade i samma skarvfria system."
+        },
+        {
+          "title": "Akustik",
+          "body": "Mikroperforerade membran och akustikdukar med absorption dokumenterad upp till klass A (αw 1,00)."
+        },
+        {
+          "title": "Storformat utan skarvar",
+          "body": "Skarvfria membranbredder upp till 515 cm, svetsade efter din ritning för stora volymer."
+        }
+      ]
+    },
+    "references": {
+      "eyebrow": "Referenser",
+      "title": "Byggt på riktiga projekt"
+    },
+    "fire": {
+      "eyebrow": "Dokumentation",
+      "title": "Brand- & teknisk dokumentation",
+      "body": "Avlägsna marknader öppnas med dokument, inte löften. Våra membransortiment är dokumenterade i publicerade datablad med brandklasser från ackrediterade tester.",
+      "points": [
+        "PVC-, polyester-, akustik- och translucenta membran: brandklass B-s1,d0 (EN 14716 / EN 13501-1)",
+        "Obrännbar glasfiberduk för tak: brandklass A2-s1,d0",
+        "Akustisk absorption dokumenterad upp till klass A (αw 1,00)"
+      ],
+      "fallback": "För varje produkt eller konfiguration utan publicerat datablad finns certifieringsdokumentation på begäran."
+    },
+    "how": {
+      "eyebrow": "Process",
+      "title": "Så fungerar projektleverans",
+      "steps": [
+        {
+          "title": "Ritningar in",
+          "body": "Skicka planer eller en modell — vi kontrollerar genomförbarheten inom en arbetsdag."
+        },
+        {
+          "title": "Tillverkningsritningar",
+          "body": "Du får tillverkningsritningar och ett mätblad för godkännande."
+        },
+        {
+          "title": "Konfektion",
+          "body": "Membranen svetsas efter ritning i vår EU-fabrik — med harpunkant."
+        },
+        {
+          "title": "Flygfrakt",
+          "body": "Ett tak på 40 m² skickas som ett paket på cirka 10 kg — med flyg, över hela världen."
+        },
+        {
+          "title": "Första montering",
+          "body": "Ditt team monterar med vårt stöd, eller så övervakar vi den första monteringen på plats."
+        }
+      ],
+      "currencyLine": "Fakturering i EUR."
+    },
+    "audiences": {
+      "eyebrow": "Vilka vi arbetar med",
+      "title": "Projektpartner",
+      "items": [
+        "Fit-out- och inredningsentreprenörer",
+        "Arkitekter och föreskrivare",
+        "Ljus- och AV-företag"
+      ],
+      "architectsLink": "Besök arkitektområdet"
+    },
+    "serviceName": "Internationell projektleverans av spänntak",
+    "serviceDescription": "Måttillverkade translucenta, printade och akustiska spänntak för fit-out-företag världen över — konstruerade i EU och skickade med flyg."
   }
 }

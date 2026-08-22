@@ -82,7 +82,9 @@
     "supplyTitle": "Stretch ceiling materials & confection for installers | STRETCH",
     "supplyDescription": "Factory supply for installation professionals: fabrics & foils, profiles, lighting and made-to-measure confection, shipped across Europe. Invoicing in EUR.",
     "supplyCzSkTitle": "Stretch ceiling materials for Czechia & Slovakia | STRETCH",
-    "supplyCzSkDescription": "Premium stretch-ceiling materials and made-to-measure confection for Czech and Slovak professionals — produced in Poland, one to two days away. EUR or PLN."
+    "supplyCzSkDescription": "Premium stretch-ceiling materials and made-to-measure confection for Czech and Slovak professionals — produced in Poland, one to two days away. EUR or PLN.",
+    "projectsExportTitle": "Stretch ceilings for international projects | STRETCH",
+    "projectsExportDescription": "Translucent, printed and acoustic stretch ceilings for fit-out contractors worldwide — welded in our EU factory, shipped by air, documented fire classes."
   },
   "cookies": {
     "title": "We value your privacy",
@@ -170,7 +172,8 @@
       "clientPortal": "Client portal",
       "architects": "For architects",
       "kit": "DIY kit",
-      "supply": "Installer supply"
+      "supply": "Installer supply",
+      "projectsExport": "Project export"
     },
     "dealers": "Dealer network"
   },
@@ -2176,6 +2179,43 @@
         "message": {
           "label": "What do you need?",
           "placeholder": "Materials, confection, volumes, timing…"
+        }
+      }
+    },
+    "projects_export": {
+      "title": "Request a project quote",
+      "subtitle": "Send your project basics — our project team replies within one working day with feasibility, documentation and a quote in EUR.",
+      "submitLabel": "Request my project quote",
+      "sentTitle": "Request received",
+      "sentMsg": "Thanks — our project team replies within one working day.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "First & last name"
+        },
+        "company": {
+          "label": "Company",
+          "placeholder": "Fit-out or contracting company"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+971 ..."
+        },
+        "projectName": {
+          "label": "Project name",
+          "placeholder": "Project or working title"
+        },
+        "area": {
+          "label": "Ceiling area (m²)",
+          "placeholder": "e.g. 250 m²"
+        },
+        "message": {
+          "label": "Your project",
+          "placeholder": "Ceiling types, drawings available, timeline…"
         }
       }
     }
@@ -5063,7 +5103,8 @@
     "serviceDescription": "Factory supply of stretch-ceiling materials, made-to-measure confection and installer training for installation professionals across Europe.",
     "regional": {
       "label": "Regional",
-      "czsk": "Czechia & Slovakia — supplied from our Polish production"
+      "czsk": "Czechia & Slovakia — supplied from our Polish production",
+      "projectsExport": "Gulf & international projects — premium confection by airfreight"
     }
   },
   "supplyCzSkPage": {
@@ -5100,5 +5141,91 @@
     "backToSupply": "All supply services",
     "serviceName": "Stretch ceiling supply for Czechia & Slovakia",
     "serviceDescription": "Premium stretch-ceiling materials and made-to-measure confection for Czech and Slovak professionals, produced in Poland with EU-wide quality."
+  },
+  "projectsExportPage": {
+    "crumb": "Project export",
+    "eyebrow": "Project supply",
+    "titleA": "Project ceilings,",
+    "titleB": "shipped worldwide.",
+    "lead": "Made-to-measure stretch ceilings for fit-out and interior contractors — engineered and welded in our EU factory, shipped by air as light parcels and ready to install on site.",
+    "cta": "Request a project quote",
+    "ctaDatasheets": "Technical datasheets",
+    "capabilities": {
+      "eyebrow": "What we deliver",
+      "title": "Premium confection for projects",
+      "cta": "View the system",
+      "items": [
+        {
+          "title": "Translucent & backlit",
+          "body": "Backlit ceilings with even, hotspot-free light — translucent membranes with 30–70% light transmission."
+        },
+        {
+          "title": "Printed",
+          "body": "Printed membranes that turn a ceiling into artwork or brand surface, welded into the same seamless system."
+        },
+        {
+          "title": "Acoustic",
+          "body": "Micro-perforated membranes and acoustic fabrics with absorption documented up to Class A (αw 1.00)."
+        },
+        {
+          "title": "Large-format seamless",
+          "body": "Seamless membrane widths up to 515 cm, welded to your plan for large volumes."
+        }
+      ]
+    },
+    "references": {
+      "eyebrow": "References",
+      "title": "Built on real projects"
+    },
+    "fire": {
+      "eyebrow": "Documentation",
+      "title": "Fire & technical documentation",
+      "body": "Far markets open with paperwork, not promises. Our membrane ranges are documented in published datasheets, with reaction-to-fire classes from accredited testing.",
+      "points": [
+        "PVC, polyester, acoustic and translucent membranes: fire class B-s1,d0 (EN 14716 / EN 13501-1)",
+        "Non-flammable glassfibre ceiling fabric: fire class A2-s1,d0",
+        "Acoustic absorption documented up to Class A (αw 1.00)"
+      ],
+      "fallback": "For any product or configuration not covered by a published datasheet, certification documentation is available on request."
+    },
+    "how": {
+      "eyebrow": "Process",
+      "title": "How project supply works",
+      "steps": [
+        {
+          "title": "Drawings in",
+          "body": "Send plans or a model — we check feasibility within one working day."
+        },
+        {
+          "title": "Shop drawings",
+          "body": "You receive shop drawings and a measurement sheet for sign-off."
+        },
+        {
+          "title": "Confection",
+          "body": "Membranes are welded to plan in our EU factory — harpoon edge included."
+        },
+        {
+          "title": "Airfreight",
+          "body": "A 40 m² ceiling ships as one parcel of about 10 kg — by air, worldwide."
+        },
+        {
+          "title": "First install",
+          "body": "Your team installs with our support, or we supervise the first install on site."
+        }
+      ],
+      "currencyLine": "Invoicing in EUR."
+    },
+    "audiences": {
+      "eyebrow": "Who we work with",
+      "title": "Project partners",
+      "items": [
+        "Fit-out and interior contractors",
+        "Architects and specifiers",
+        "Lighting and AV companies"
+      ],
+      "architectsLink": "Visit the architect area"
+    },
+    "serviceName": "International project supply of stretch ceilings",
+    "serviceDescription": "Made-to-measure translucent, printed and acoustic stretch ceilings for fit-out contractors worldwide — engineered in the EU and shipped by air."
   }
 }

@@ -82,7 +82,9 @@
     "supplyTitle": "Strekkhimlingsmaterialer & konfeksjon for montører | STRETCH",
     "supplyDescription": "Fabrikklevering for profesjonelle montører: duker & folier, profiler, lys og konfeksjon etter mål, sendt i hele Europa. Fakturering i EUR.",
     "supplyCzSkTitle": "Strekkhimlingsmaterialer for Tsjekkia & Slovakia | STRETCH",
-    "supplyCzSkDescription": "Premiummaterialer for strekkhimlinger og konfeksjon etter mål for tsjekkiske og slovakiske fagfolk — produsert i Polen, en til to dager unna. EUR eller PLN."
+    "supplyCzSkDescription": "Premiummaterialer for strekkhimlinger og konfeksjon etter mål for tsjekkiske og slovakiske fagfolk — produsert i Polen, en til to dager unna. EUR eller PLN.",
+    "projectsExportTitle": "Strekkhimlinger for internasjonale prosjekter | STRETCH",
+    "projectsExportDescription": "Translusente, trykte og akustiske strekkhimlinger for fit-out over hele verden — sveiset i vår EU-fabrikk, luftfrakt, dokumenterte brannklasser."
   },
   "cookies": {
     "title": "Vi verner om personvernet ditt",
@@ -170,7 +172,8 @@
       "clientPortal": "Kundeportal",
       "architects": "For arkitekter",
       "kit": "Gjør-det-selv-kit",
-      "supply": "Levering til montører"
+      "supply": "Levering til montører",
+      "projectsExport": "Prosjekteksport"
     },
     "dealers": "Forhandlernettverk"
   },
@@ -2176,6 +2179,43 @@
         "message": {
           "label": "Hva trenger du?",
           "placeholder": "Materialer, konfeksjon, volumer, timing…"
+        }
+      }
+    },
+    "projects_export": {
+      "title": "Be om prosjekttilbud",
+      "subtitle": "Send prosjektets basisdata — prosjektteamet vårt svarer innen én virkedag med gjennomførbarhet, dokumentasjon og et tilbud i EUR.",
+      "submitLabel": "Be om mitt tilbud",
+      "sentTitle": "Forespørsel mottatt",
+      "sentMsg": "Takk — prosjektteamet vårt svarer innen én virkedag.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og etternavn"
+        },
+        "company": {
+          "label": "Firma",
+          "placeholder": "Fit-out- eller entreprenørfirma"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "deg@firma.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+971 ..."
+        },
+        "projectName": {
+          "label": "Prosjektnavn",
+          "placeholder": "Prosjekt- eller arbeidstittel"
+        },
+        "area": {
+          "label": "Himlingsareal (m²)",
+          "placeholder": "f.eks. 250 m²"
+        },
+        "message": {
+          "label": "Prosjektet ditt",
+          "placeholder": "Himlingstyper, tilgjengelige tegninger, tidsplan…"
         }
       }
     }
@@ -5063,7 +5103,8 @@
     "serviceDescription": "Fabrikklevering av strekkhimlingsmaterialer, konfeksjon etter mål og montørkurs for profesjonelle i hele Europa.",
     "regional": {
       "label": "Regionalt",
-      "czsk": "Tsjekkia & Slovakia — levert fra vår polske produksjon"
+      "czsk": "Tsjekkia & Slovakia — levert fra vår polske produksjon",
+      "projectsExport": "Gulfen & internasjonale prosjekter — premiumkonfeksjon med luftfrakt"
     }
   },
   "supplyCzSkPage": {
@@ -5100,5 +5141,91 @@
     "backToSupply": "Alle leveringstjenester",
     "serviceName": "Strekkhimlingslevering for Tsjekkia & Slovakia",
     "serviceDescription": "Premiummaterialer for strekkhimlinger og konfeksjon etter mål for tsjekkiske og slovakiske fagfolk, produsert i Polen med EU-kvalitet."
+  },
+  "projectsExportPage": {
+    "crumb": "Prosjekteksport",
+    "eyebrow": "Prosjektlevering",
+    "titleA": "Prosjekthimlinger,",
+    "titleB": "sendt over hele verden.",
+    "lead": "Strekkhimlinger etter mål for fit-out- og innredningsentreprenører — konstruert og sveiset i vår EU-fabrikk, sendt med fly som lette pakker og klare til montering på stedet.",
+    "cta": "Be om prosjekttilbud",
+    "ctaDatasheets": "Tekniske datablader",
+    "capabilities": {
+      "eyebrow": "Hva vi leverer",
+      "title": "Premiumkonfeksjon for prosjekter",
+      "cta": "Se systemet",
+      "items": [
+        {
+          "title": "Translusent & bakbelyst",
+          "body": "Lysende himlinger med jevnt lys uten hotspots — translusente membraner med 30–70% lystransmisjon."
+        },
+        {
+          "title": "Trykket",
+          "body": "Trykte membraner som forvandler en himling til kunstverk eller merkevareflate — sveiset i samme skjøtefrie system."
+        },
+        {
+          "title": "Akustisk",
+          "body": "Mikroperforerte membraner og akustiske duker med absorpsjon dokumentert opp til klasse A (αw 1,00)."
+        },
+        {
+          "title": "Storformat uten skjøter",
+          "body": "Skjøtefrie membranbredder opp til 515 cm, sveiset etter din plan for store volumer."
+        }
+      ]
+    },
+    "references": {
+      "eyebrow": "Referanser",
+      "title": "Bygget på ekte prosjekter"
+    },
+    "fire": {
+      "eyebrow": "Dokumentasjon",
+      "title": "Brann- & teknisk dokumentasjon",
+      "body": "Fjerne markeder åpner med papirer, ikke løfter. Membransortimentene våre er dokumentert i publiserte datablader med brannklasser fra akkrediterte tester.",
+      "points": [
+        "PVC-, polyester-, akustiske og translusente membraner: brannklasse B-s1,d0 (EN 14716 / EN 13501-1)",
+        "Ikke-brennbar glassfiberduk for himling: brannklasse A2-s1,d0",
+        "Akustisk absorpsjon dokumentert opp til klasse A (αw 1,00)"
+      ],
+      "fallback": "For ethvert produkt eller enhver konfigurasjon uten publisert datablad er sertifiseringsdokumentasjon tilgjengelig på forespørsel."
+    },
+    "how": {
+      "eyebrow": "Prosess",
+      "title": "Slik fungerer prosjektlevering",
+      "steps": [
+        {
+          "title": "Tegninger inn",
+          "body": "Send planer eller en modell — vi sjekker gjennomførbarheten innen én virkedag."
+        },
+        {
+          "title": "Produksjonstegninger",
+          "body": "Du mottar produksjonstegninger og et måleark for godkjenning."
+        },
+        {
+          "title": "Konfeksjon",
+          "body": "Membranene sveises etter plan i vår EU-fabrikk — med harpunkant."
+        },
+        {
+          "title": "Luftfrakt",
+          "body": "En himling på 40 m² sendes som én pakke på rundt 10 kg — med fly, over hele verden."
+        },
+        {
+          "title": "Første montering",
+          "body": "Teamet ditt monterer med vår støtte, eller vi fører tilsyn med den første monteringen på stedet."
+        }
+      ],
+      "currencyLine": "Fakturering i EUR."
+    },
+    "audiences": {
+      "eyebrow": "Hvem vi jobber med",
+      "title": "Prosjektpartnere",
+      "items": [
+        "Fit-out- og innredningsentreprenører",
+        "Arkitekter og rådgivere",
+        "Lys- og AV-selskaper"
+      ],
+      "architectsLink": "Besøk arkitektområdet"
+    },
+    "serviceName": "Internasjonal prosjektlevering av strekkhimlinger",
+    "serviceDescription": "Translusente, trykte og akustiske strekkhimlinger etter mål for fit-out-selskaper over hele verden — konstruert i EU og sendt med fly."
   }
 }

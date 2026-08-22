@@ -16,7 +16,8 @@ export type ModalType =
   | 'datasheet'
   | 'project'
   | 'kit_order'
-  | 'supply_inquiry';
+  | 'supply_inquiry'
+  | 'projects_export';
 
 export type FieldKind = 'text' | 'select' | 'area';
 
@@ -298,6 +299,23 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+33 ...', required: true },
       countryField(),
       { name: 'message', kind: 'area', label: 'What do you need?', placeholder: 'Materials, confection, volumes, timing…', full: true },
+    ],
+  },
+  projects_export: {
+    title: 'Request a project quote',
+    subtitle: 'Send your project basics — our project team replies within one working day with feasibility, documentation and a quote in EUR.',
+    submitLabel: 'Request my project quote',
+    sentTitle: 'Request received',
+    sentMsg: 'Thanks — our project team replies within one working day.',
+    fields: [
+      { name: 'name', kind: 'text', inputType: 'text', label: 'Name', placeholder: 'First & last name', required: true },
+      { name: 'company', kind: 'text', inputType: 'text', label: 'Company', placeholder: 'Fit-out or contracting company', required: true },
+      { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@company.com', required: true },
+      { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+971 ...', required: true },
+      countryField(),
+      { name: 'projectName', kind: 'text', inputType: 'text', label: 'Project name', placeholder: 'Project or working title', required: true },
+      { name: 'area', kind: 'text', inputType: 'text', label: 'Ceiling area (m²)', placeholder: 'e.g. 250 m²' },
+      { name: 'message', kind: 'area', label: 'Your project', placeholder: 'Ceiling types, drawings available, timeline…', full: true },
     ],
   },
   project: {

@@ -82,7 +82,9 @@
     "supplyTitle": "Efni og sérsníðing strekkilofta fyrir uppsetningaraðila | STRETCH",
     "supplyDescription": "Verksmiðjuafhending fyrir fagfólk: dúkar og filmur, prófílar, lýsing og sérsniðin dúkavinnsla, send um alla Evrópu. Reikningar í EUR.",
     "supplyCzSkTitle": "Strekkiloftaefni fyrir Tékkland & Slóvakíu | STRETCH",
-    "supplyCzSkDescription": "Hágæðaefni fyrir strekkiloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila — framleitt í Póllandi, dags eða tveggja leið. EUR eða PLN."
+    "supplyCzSkDescription": "Hágæðaefni fyrir strekkiloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila — framleitt í Póllandi, dags eða tveggja leið. EUR eða PLN.",
+    "projectsExportTitle": "Strekkiloft fyrir alþjóðleg verkefni | STRETCH",
+    "projectsExportDescription": "Hálfgagnsæ, prentuð og hljóðvistarstrekkiloft fyrir innréttingafyrirtæki um allan heim — soðin í ESB-verksmiðju, flugfrakt, skjalfestir brunaflokkar."
   },
   "cookies": {
     "title": "Við virðum friðhelgi þína",
@@ -170,7 +172,8 @@
       "clientPortal": "Viðskiptavinagátt",
       "architects": "Fyrir arkitekta",
       "kit": "DIY-sett",
-      "supply": "Aðföng uppsetningaraðila"
+      "supply": "Aðföng uppsetningaraðila",
+      "projectsExport": "Verkefnaútflutningur"
     },
     "dealers": "Söluaðilanet"
   },
@@ -2176,6 +2179,43 @@
         "message": {
           "label": "Hvað vantar þig?",
           "placeholder": "Efni, sérsníðing, magn, tímasetning…"
+        }
+      }
+    },
+    "projects_export": {
+      "title": "Óska eftir verkefnatilboði",
+      "subtitle": "Sendu grunnupplýsingar verkefnisins — verkefnateymið okkar svarar innan eins virks dags með framkvæmanleika, skjölum og tilboði í EUR.",
+      "submitLabel": "Óska eftir tilboði",
+      "sentTitle": "Beiðni móttekin",
+      "sentMsg": "Takk — verkefnateymið okkar svarar innan eins virks dags.",
+      "fields": {
+        "name": {
+          "label": "Nafn",
+          "placeholder": "Fornafn og eftirnafn"
+        },
+        "company": {
+          "label": "Fyrirtæki",
+          "placeholder": "Innréttinga- eða verktakafyrirtæki"
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "thu@fyrirtaeki.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+971 ..."
+        },
+        "projectName": {
+          "label": "Heiti verkefnis",
+          "placeholder": "Heiti eða vinnuheiti"
+        },
+        "area": {
+          "label": "Loftflötur (m²)",
+          "placeholder": "t.d. 250 m²"
+        },
+        "message": {
+          "label": "Verkefnið þitt",
+          "placeholder": "Loftgerðir, fyrirliggjandi teikningar, tímalína…"
         }
       }
     }
@@ -5063,7 +5103,8 @@
     "serviceDescription": "Verksmiðjuafhending á efnum fyrir strekkiloft, sérsniðin dúkavinnsla og þjálfun uppsetningaraðila fyrir fagfólk um alla Evrópu.",
     "regional": {
       "label": "Svæðisbundið",
-      "czsk": "Tékkland & Slóvakía — afhent úr pólsku framleiðslunni okkar"
+      "czsk": "Tékkland & Slóvakía — afhent úr pólsku framleiðslunni okkar",
+      "projectsExport": "Persaflói og alþjóðleg verkefni — hágæða dúkavinnsla með flugfrakt"
     }
   },
   "supplyCzSkPage": {
@@ -5100,5 +5141,91 @@
     "backToSupply": "Öll aðfangaþjónusta",
     "serviceName": "Strekkiloftaaðföng fyrir Tékkland & Slóvakíu",
     "serviceDescription": "Hágæðaefni fyrir strekkiloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila, framleitt í Póllandi með ESB-gæðum."
+  },
+  "projectsExportPage": {
+    "crumb": "Verkefnaútflutningur",
+    "eyebrow": "Verkefnaafhending",
+    "titleA": "Verkefnaloft,",
+    "titleB": "send um allan heim.",
+    "lead": "Sérsniðin strekkiloft fyrir innréttinga- og frágangsverktaka — hönnuð og soðin í ESB-verksmiðjunni okkar, send með flugi sem léttir pakkar og tilbúin til uppsetningar á staðnum.",
+    "cta": "Óska eftir verkefnatilboði",
+    "ctaDatasheets": "Tæknileg gagnablöð",
+    "capabilities": {
+      "eyebrow": "Það sem við afhendum",
+      "title": "Hágæða dúkavinnsla fyrir verkefni",
+      "cta": "Skoða kerfið",
+      "items": [
+        {
+          "title": "Hálfgagnsætt og baklýst",
+          "body": "Lýsandi loft með jöfnu ljósi án heitra bletta — hálfgagnsæir dúkar með 30–70% ljósgegnumstreymi."
+        },
+        {
+          "title": "Prentað",
+          "body": "Prentaðir dúkar sem breyta lofti í listaverk eða vörumerkjaflöt — soðnir í sama samskeytalausa kerfið."
+        },
+        {
+          "title": "Hljóðvist",
+          "body": "Örgataðir dúkar og hljóðvistarefni með gleypni skjalfesta upp í flokk A (αw 1,00)."
+        },
+        {
+          "title": "Stórt snið án samskeyta",
+          "body": "Samskeytalausar dúkabreiddir allt að 515 cm, soðnar eftir þinni teikningu fyrir stór rými."
+        }
+      ]
+    },
+    "references": {
+      "eyebrow": "Verkefni",
+      "title": "Byggt á alvöru verkefnum"
+    },
+    "fire": {
+      "eyebrow": "Skjölun",
+      "title": "Bruna- og tækniskjölun",
+      "body": "Fjarlægir markaðir opnast með skjölum, ekki loforðum. Dúkalínurnar okkar eru skjalfestar í útgefnum gagnablöðum með brunaflokkum úr faggiltum prófunum.",
+      "points": [
+        "PVC-, pólýester-, hljóðvistar- og hálfgagnsæir dúkar: brunaflokkur B-s1,d0 (EN 14716 / EN 13501-1)",
+        "Óbrennanlegur glertrefjadúkur fyrir loft: brunaflokkur A2-s1,d0",
+        "Hljóðgleypni skjalfest upp í flokk A (αw 1,00)"
+      ],
+      "fallback": "Fyrir allar vörur eða útfærslur án útgefins gagnablaðs eru vottunarskjöl fáanleg sé þess óskað."
+    },
+    "how": {
+      "eyebrow": "Ferli",
+      "title": "Svona virkar verkefnaafhending",
+      "steps": [
+        {
+          "title": "Teikningar inn",
+          "body": "Sendu teikningar eða líkan — við könnum framkvæmanleika innan eins virks dags."
+        },
+        {
+          "title": "Verkteikningar",
+          "body": "Þú færð verkteikningar og mælingablað til samþykktar."
+        },
+        {
+          "title": "Dúkavinnsla",
+          "body": "Dúkarnir eru soðnir eftir teikningu í ESB-verksmiðjunni okkar — með harpúnkanti."
+        },
+        {
+          "title": "Flugfrakt",
+          "body": "40 m² loft fer sem einn pakki um 10 kg — með flugi, um allan heim."
+        },
+        {
+          "title": "Fyrsta uppsetning",
+          "body": "Þitt teymi setur upp með okkar stuðningi, eða við höfum umsjón með fyrstu uppsetningu á staðnum."
+        }
+      ],
+      "currencyLine": "Reikningar í EUR."
+    },
+    "audiences": {
+      "eyebrow": "Með hverjum við vinnum",
+      "title": "Verkefnafélagar",
+      "items": [
+        "Innréttinga- og frágangsverktakar",
+        "Arkitektar og hönnuðir",
+        "Lýsingar- og AV-fyrirtæki"
+      ],
+      "architectsLink": "Heimsækja arkitektasvæðið"
+    },
+    "serviceName": "Alþjóðleg verkefnaafhending strekkilofta",
+    "serviceDescription": "Sérsniðin hálfgagnsæ, prentuð og hljóðvistarstrekkiloft fyrir innréttingafyrirtæki um allan heim — hönnuð í ESB og send með flugi."
   }
 }

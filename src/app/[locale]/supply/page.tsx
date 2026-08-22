@@ -158,6 +158,9 @@ export default async function SupplyPage({ params }: { params: { locale: string 
             <Link href="/supply/czechia-slovakia" className="lnk" style={{ fontWeight: 700, fontSize: 14.5 }}>
               {t('regional.czsk')} →
             </Link>
+            <Link href="/projects-export" className="lnk" style={{ fontWeight: 700, fontSize: 14.5 }}>
+              {t('regional.projectsExport')} →
+            </Link>
           </div>
         </div>
       </section>

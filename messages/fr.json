@@ -82,7 +82,9 @@
     "supplyTitle": "Matériaux & confection de plafond tendu pour poseurs | STRETCH",
     "supplyDescription": "Fourniture usine pour les professionnels : toiles & films, profilés, éclairage et confection sur mesure, expédiés dans toute l’Europe. Facturation en EUR.",
     "supplyCzSkTitle": "Matériaux de plafond tendu pour la Tchéquie & la Slovaquie | STRETCH",
-    "supplyCzSkDescription": "Matériaux de plafond tendu premium et confection sur mesure pour les pros tchèques et slovaques — produits en Pologne, à un ou deux jours. EUR ou PLN."
+    "supplyCzSkDescription": "Matériaux de plafond tendu premium et confection sur mesure pour les pros tchèques et slovaques — produits en Pologne, à un ou deux jours. EUR ou PLN.",
+    "projectsExportTitle": "Plafonds tendus pour projets internationaux | STRETCH",
+    "projectsExportDescription": "Plafonds tendus translucides, imprimés et acoustiques pour le fit-out dans le monde — soudés dans notre usine UE, expédiés par avion, classes feu documentées."
   },
   "cookies": {
     "title": "Nous respectons votre vie privée",
@@ -170,7 +172,8 @@
       "clientPortal": "Espace client",
       "architects": "Pour les architectes",
       "kit": "Kit à poser soi-même",
-      "supply": "Fourniture poseurs"
+      "supply": "Fourniture poseurs",
+      "projectsExport": "Export projets"
     },
     "dealers": "Réseau de revendeurs"
   },
@@ -2176,6 +2179,43 @@
         "message": {
           "label": "De quoi avez-vous besoin ?",
           "placeholder": "Matériaux, confection, volumes, délais…"
+        }
+      }
+    },
+    "projects_export": {
+      "title": "Demander un devis projet",
+      "subtitle": "Envoyez les bases de votre projet — notre équipe projet répond sous un jour ouvré avec la faisabilité, la documentation et un devis en EUR.",
+      "submitLabel": "Demander mon devis projet",
+      "sentTitle": "Demande reçue",
+      "sentMsg": "Merci — notre équipe projet répond sous un jour ouvré.",
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Prénom & nom"
+        },
+        "company": {
+          "label": "Société",
+          "placeholder": "Entreprise de fit-out ou d’aménagement"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "vous@societe.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+971 ..."
+        },
+        "projectName": {
+          "label": "Nom du projet",
+          "placeholder": "Titre du projet"
+        },
+        "area": {
+          "label": "Surface de plafond (m²)",
+          "placeholder": "p. ex. 250 m²"
+        },
+        "message": {
+          "label": "Votre projet",
+          "placeholder": "Types de plafonds, plans disponibles, délais…"
         }
       }
     }
@@ -5063,7 +5103,8 @@
     "serviceDescription": "Fourniture usine de matériaux pour plafonds tendus, confection sur mesure et formation des poseurs pour les professionnels dans toute l’Europe.",
     "regional": {
       "label": "Régional",
-      "czsk": "Tchéquie & Slovaquie — livrées depuis notre production polonaise"
+      "czsk": "Tchéquie & Slovaquie — livrées depuis notre production polonaise",
+      "projectsExport": "Golfe & projets internationaux — confection premium par fret aérien"
     }
   },
   "supplyCzSkPage": {
@@ -5100,5 +5141,91 @@
     "backToSupply": "Tous les services d’approvisionnement",
     "serviceName": "Fourniture de plafonds tendus pour la Tchéquie & la Slovaquie",
     "serviceDescription": "Matériaux de plafond tendu premium et confection sur mesure pour les professionnels tchèques et slovaques, produits en Pologne avec une qualité européenne."
+  },
+  "projectsExportPage": {
+    "crumb": "Export projets",
+    "eyebrow": "Fourniture de projets",
+    "titleA": "Plafonds de projet,",
+    "titleB": "expédiés dans le monde entier.",
+    "lead": "Plafonds tendus sur mesure pour les entreprises de fit-out et d’aménagement — conçus et soudés dans notre usine européenne, expédiés par avion en colis légers, prêts à poser sur site.",
+    "cta": "Demander un devis projet",
+    "ctaDatasheets": "Fiches techniques",
+    "capabilities": {
+      "eyebrow": "Ce que nous livrons",
+      "title": "Confection premium pour projets",
+      "cta": "Voir le système",
+      "items": [
+        {
+          "title": "Translucide & rétroéclairé",
+          "body": "Plafonds lumineux à lumière uniforme, sans points chauds — membranes translucides de 30 à 70% de transmission lumineuse."
+        },
+        {
+          "title": "Imprimé",
+          "body": "Membranes imprimées qui transforment un plafond en œuvre ou en surface de marque, soudées dans le même système sans joint."
+        },
+        {
+          "title": "Acoustique",
+          "body": "Membranes micro-perforées et toiles acoustiques avec une absorption documentée jusqu’à la classe A (αw 1,00)."
+        },
+        {
+          "title": "Grand format sans joint",
+          "body": "Largeurs de membrane sans joint jusqu’à 515 cm, soudées selon votre plan pour les grands volumes."
+        }
+      ]
+    },
+    "references": {
+      "eyebrow": "Références",
+      "title": "Bâti sur de vrais projets"
+    },
+    "fire": {
+      "eyebrow": "Documentation",
+      "title": "Documentation feu & technique",
+      "body": "Les marchés lointains s’ouvrent avec des documents, pas des promesses. Nos gammes de membranes sont documentées dans des fiches techniques publiées, avec des classes de réaction au feu issues d’essais accrédités.",
+      "points": [
+        "Membranes PVC, polyester, acoustiques et translucides : classement au feu B-s1,d0 (EN 14716 / EN 13501-1)",
+        "Toile de plafond en fibre de verre incombustible : classement A2-s1,d0",
+        "Absorption acoustique documentée jusqu’à la classe A (αw 1,00)"
+      ],
+      "fallback": "Pour tout produit ou configuration non couvert par une fiche technique publiée, la documentation de certification est disponible sur demande."
+    },
+    "how": {
+      "eyebrow": "Processus",
+      "title": "Comment fonctionne la fourniture de projets",
+      "steps": [
+        {
+          "title": "Plans reçus",
+          "body": "Envoyez plans ou maquette — nous vérifions la faisabilité sous un jour ouvré."
+        },
+        {
+          "title": "Plans d’exécution",
+          "body": "Vous recevez les plans d’exécution et la feuille de mesures pour validation."
+        },
+        {
+          "title": "Confection",
+          "body": "Les membranes sont soudées selon le plan dans notre usine européenne — harpon inclus."
+        },
+        {
+          "title": "Fret aérien",
+          "body": "Un plafond de 40 m² part en un colis d’environ 10 kg — par avion, partout dans le monde."
+        },
+        {
+          "title": "Première pose",
+          "body": "Votre équipe pose avec notre support, ou nous supervisons la première pose sur site."
+        }
+      ],
+      "currencyLine": "Facturation en EUR."
+    },
+    "audiences": {
+      "eyebrow": "Avec qui nous travaillons",
+      "title": "Partenaires de projet",
+      "items": [
+        "Entreprises de fit-out et d’aménagement intérieur",
+        "Architectes et prescripteurs",
+        "Entreprises d’éclairage et d’AV"
+      ],
+      "architectsLink": "Visiter l’espace architectes"
+    },
+    "serviceName": "Fourniture internationale de plafonds tendus pour projets",
+    "serviceDescription": "Plafonds tendus translucides, imprimés et acoustiques sur mesure pour les entreprises de fit-out dans le monde — conçus dans l’UE et expédiés par avion."
   }
 }

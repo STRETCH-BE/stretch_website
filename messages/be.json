@@ -82,7 +82,9 @@
     "supplyTitle": "Spanplafondmaterialen & confectie voor installateurs | STRETCH",
     "supplyDescription": "Fabriekslevering voor installatieprofessionals: doeken & folies, profielen, verlichting en confectie op maat, verzonden door heel Europa. Facturatie in EUR.",
     "supplyCzSkTitle": "Spanplafondmaterialen voor Tsjechië & Slowakije | STRETCH",
-    "supplyCzSkDescription": "Premium spanplafondmaterialen en confectie op maat voor Tsjechische en Slowaakse professionals — geproduceerd in Polen, één à twee dagen ver. EUR of PLN."
+    "supplyCzSkDescription": "Premium spanplafondmaterialen en confectie op maat voor Tsjechische en Slowaakse professionals — geproduceerd in Polen, één à twee dagen ver. EUR of PLN.",
+    "projectsExportTitle": "Spanplafonds voor internationale projecten | STRETCH",
+    "projectsExportDescription": "Translucente, bedrukte en akoestische spanplafonds voor fit-out-aannemers wereldwijd — gelast in onze EU-fabriek, per luchtvracht, met brandklassen."
   },
   "cookies": {
     "title": "We hechten waarde aan je privacy",
@@ -170,7 +172,8 @@
       "clientPortal": "Klantenportaal",
       "architects": "Voor architecten",
       "kit": "Doe-het-zelfkit",
-      "supply": "Levering voor installateurs"
+      "supply": "Levering voor installateurs",
+      "projectsExport": "Projectexport"
     },
     "dealers": "Dealernetwerk"
   },
@@ -2176,6 +2179,43 @@
         "message": {
           "label": "Wat hebt u nodig?",
           "placeholder": "Materialen, confectie, volumes, timing…"
+        }
+      }
+    },
+    "projects_export": {
+      "title": "Vraag een projectofferte",
+      "subtitle": "Stuur de basis van uw project — ons projectteam antwoordt binnen één werkdag met haalbaarheid, documentatie en een offerte in EUR.",
+      "submitLabel": "Vraag mijn projectofferte",
+      "sentTitle": "Aanvraag ontvangen",
+      "sentMsg": "Bedankt — ons projectteam antwoordt binnen één werkdag.",
+      "fields": {
+        "name": {
+          "label": "Naam",
+          "placeholder": "Voor- & achternaam"
+        },
+        "company": {
+          "label": "Bedrijf",
+          "placeholder": "Fit-out- of aannemersbedrijf"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "u@bedrijf.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "projectName": {
+          "label": "Projectnaam",
+          "placeholder": "Project- of werktitel"
+        },
+        "area": {
+          "label": "Plafondoppervlak (m²)",
+          "placeholder": "bv. 250 m²"
+        },
+        "message": {
+          "label": "Uw project",
+          "placeholder": "Plafondtypes, beschikbare tekeningen, timing…"
         }
       }
     }
@@ -5063,7 +5103,8 @@
     "serviceDescription": "Fabriekslevering van spanplafondmaterialen, confectie op maat en installateurstraining voor installatieprofessionals in heel Europa.",
     "regional": {
       "label": "Regionaal",
-      "czsk": "Tsjechië & Slowakije — beleverd vanuit onze Poolse productie"
+      "czsk": "Tsjechië & Slowakije — beleverd vanuit onze Poolse productie",
+      "projectsExport": "Golf & internationale projecten — premium confectie per luchtvracht"
     }
   },
   "supplyCzSkPage": {
@@ -5100,5 +5141,91 @@
     "backToSupply": "Alle leveringsdiensten",
     "serviceName": "Spanplafondlevering voor Tsjechië & Slowakije",
     "serviceDescription": "Premium spanplafondmaterialen en confectie op maat voor Tsjechische en Slowaakse professionals, geproduceerd in Polen met EU-kwaliteit."
+  },
+  "projectsExportPage": {
+    "crumb": "Projectexport",
+    "eyebrow": "Projectlevering",
+    "titleA": "Projectplafonds,",
+    "titleB": "wereldwijd verzonden.",
+    "lead": "Spanplafonds op maat voor fit-out- en interieuraannemers — ontworpen en gelast in onze EU-fabriek, per luchtvracht verzonden als lichte pakketten en klaar voor montage op de werf.",
+    "cta": "Vraag een projectofferte",
+    "ctaDatasheets": "Technische datasheets",
+    "capabilities": {
+      "eyebrow": "Wat we leveren",
+      "title": "Premium confectie voor projecten",
+      "cta": "Bekijk het systeem",
+      "items": [
+        {
+          "title": "Translucent & backlit",
+          "body": "Verlichte plafonds met egaal licht zonder hotspots — translucente membranen met 30–70% lichtdoorlatendheid."
+        },
+        {
+          "title": "Bedrukt",
+          "body": "Bedrukte membranen die een plafond veranderen in kunstwerk of merkoppervlak, gelast in hetzelfde naadloze systeem."
+        },
+        {
+          "title": "Akoestisch",
+          "body": "Micro-geperforeerde membranen en akoestische doeken met absorptie gedocumenteerd tot klasse A (αw 1,00)."
+        },
+        {
+          "title": "Groot formaat naadloos",
+          "body": "Naadloze membraanbreedtes tot 515 cm, gelast volgens uw plan voor grote volumes."
+        }
+      ]
+    },
+    "references": {
+      "eyebrow": "Referenties",
+      "title": "Gebouwd op echte projecten"
+    },
+    "fire": {
+      "eyebrow": "Documentatie",
+      "title": "Brand- & technische documentatie",
+      "body": "Verre markten openen met papierwerk, niet met beloften. Onze membraangamma’s zijn gedocumenteerd in gepubliceerde datasheets, met brandklassen uit geaccrediteerde tests.",
+      "points": [
+        "Pvc-, polyester-, akoestische en translucente membranen: brandklasse B-s1,d0 (EN 14716 / EN 13501-1)",
+        "Onbrandbaar glasvezelplafonddoek: brandklasse A2-s1,d0",
+        "Akoestische absorptie gedocumenteerd tot klasse A (αw 1,00)"
+      ],
+      "fallback": "Voor elk product of elke configuratie zonder gepubliceerde datasheet is certificeringsdocumentatie op aanvraag beschikbaar."
+    },
+    "how": {
+      "eyebrow": "Proces",
+      "title": "Zo werkt projectlevering",
+      "steps": [
+        {
+          "title": "Tekeningen in",
+          "body": "Stuur plannen of een model — we toetsen de haalbaarheid binnen één werkdag."
+        },
+        {
+          "title": "Werktekeningen",
+          "body": "U ontvangt werktekeningen en een meetstaat ter goedkeuring."
+        },
+        {
+          "title": "Confectie",
+          "body": "Membranen worden volgens plan gelast in onze EU-fabriek — harpoenrand inbegrepen."
+        },
+        {
+          "title": "Luchtvracht",
+          "body": "Een plafond van 40 m² verzendt als één pakket van ongeveer 10 kg — per vliegtuig, wereldwijd."
+        },
+        {
+          "title": "Eerste montage",
+          "body": "Uw team monteert met onze ondersteuning, of wij begeleiden de eerste montage op locatie."
+        }
+      ],
+      "currencyLine": "Facturatie in EUR."
+    },
+    "audiences": {
+      "eyebrow": "Met wie we werken",
+      "title": "Projectpartners",
+      "items": [
+        "Fit-out- en interieuraannemers",
+        "Architecten en voorschrijvers",
+        "Verlichtings- en AV-bedrijven"
+      ],
+      "architectsLink": "Bezoek het architectengedeelte"
+    },
+    "serviceName": "Internationale projectlevering van spanplafonds",
+    "serviceDescription": "Translucente, bedrukte en akoestische spanplafonds op maat voor fit-out-aannemers wereldwijd — ontworpen in de EU en per luchtvracht verzonden."
   }
 }
