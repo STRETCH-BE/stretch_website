@@ -54,6 +54,46 @@ function button(url: string, label: string): string {
   </table>`;
 }
 
+/** "Confirm your STRETCH portal account" — WE send this instead of Supabase
+ *  (its own SMTP send made the signup request exceed the gateway timeout). */
+export function buildConfirmEmail(input: { name: string | null; confirmUrl: string }): {
+  subject: string;
+  html: string;
+  text: string;
+} {
+  const subject = 'Confirm your STRETCH portal account';
+  const greeting = input.name ? `Hello ${input.name},` : 'Hello,';
+  const intro =
+    'You created a STRETCH client-portal account with this email address. Confirm it to finish setting up your access.';
+  const note =
+    'If you did not create this account, you can safely ignore this email — nothing happens without confirmation.';
+
+  const html = shell(`<tr>
+    <td style="padding:32px 28px 8px;">
+      <p style="${FONT}font-size:15px;line-height:1.6;color:#0A0A0A;margin:0 0 14px;">${escapeHtml(greeting)}</p>
+      <p style="${FONT}font-size:15px;line-height:1.6;color:#0A0A0A;margin:0 0 22px;">${escapeHtml(intro)}</p>
+      ${button(input.confirmUrl, 'Confirm my email')}
+      <p style="${FONT}font-size:12.5px;line-height:1.6;color:#6E6B66;margin:0 0 6px;word-break:break-all;">If the button does not work, open this link: <a href="${escapeHtml(input.confirmUrl)}" style="color:#FF0000;">${escapeHtml(input.confirmUrl)}</a></p>
+      <p style="${FONT}font-size:12.5px;line-height:1.6;color:#6E6B66;margin:0 0 24px;">${escapeHtml(note)}</p>
+    </td>
+  </tr>`);
+
+  const text = [
+    greeting,
+    '',
+    intro,
+    '',
+    `Confirm my email: ${input.confirmUrl}`,
+    '',
+    note,
+    '',
+    `${brand.name} · ${contact.address.street}, ${contact.address.city}`,
+    `${contact.email} · ${contact.phoneDisplay}`,
+  ].join('\n');
+
+  return { subject, html, text };
+}
+
 /** "Your STRETCH account is approved" — sent to the user on approval. */
 export function buildApprovalEmail(input: { name: string | null; loginUrl: string }): {
   subject: string;

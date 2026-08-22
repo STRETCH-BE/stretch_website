@@ -24,7 +24,7 @@ import { scoreSubmission, FLAG_THRESHOLD, HARD_THRESHOLD } from '@/lib/spam/scor
 import { checkFormToken } from '@/lib/form-token';
 import { isTurnstileEnabled, verifyTurnstile } from '@/lib/turnstile';
 import { sendTransactionalEmail, isTransactionalConfigured } from '@/lib/transactional';
-import { buildAdminReviewEmail } from '@/lib/portal/emails';
+import { buildAdminReviewEmail, buildConfirmEmail } from '@/lib/portal/emails';
 import { mintReviewToken, isReviewTokenEnabled } from '@/lib/portal/review-token';
 import { contact } from '@/lib/site-config';
 import { locales } from '@/i18n/config';
@@ -222,49 +222,97 @@ export async function POST(req: NextRequest) {
     city: city || null,
   };
 
-  // A bare, stateless client — signup expects NO session (email confirmation
-  // is on) and needs no cookies. The ssr/PKCE client added flow state around
-  // signUp that interfered with Supabase's single-use captcha verification.
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL as string,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string,
-    { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false, flowType: 'implicit' } },
-  );
-  const { data, error } = await supabase.auth.signUp({
-    email,
-    password,
-    options: {
-      data: details,
-      // The Turnstile token was verified ABOVE by our own siteverify call —
-      // it is single-use, so it must NOT also be forwarded to Supabase (and
-      // the dashboard CAPTCHA toggle stays off).
-      // After the confirmation link, land the user on the portal login on
-      // the canonical portal host.
-      emailRedirectTo: `${portalOrigin(req.nextUrl.origin)}/portal/login`,
-    },
-  });
+  const redirectTo = `${portalOrigin(req.nextUrl.origin)}/portal/login`;
+  const EXISTS_RE = /already|registered|exists/i;
+  let user: { id: string } | null = null;
 
-  if (error) {
-    const exists = /already|registered|exists/i.test(error.message);
-    const captcha = /captcha/i.test(error.message);
-    if (captcha) console.warn(`[signup] captcha rejected by Supabase: ${error.message}`);
-    else if (!exists) console.warn(`[signup] signUp failed: ${error.message}`);
-    return NextResponse.json(
-      { ok: false, error: exists ? 'exists' : captcha ? 'captcha' : 'failed' },
-      { status: exists ? 409 : captcha ? 400 : 500 },
+  if (service && isTransactionalConfigured()) {
+    // FAST PATH — create the user + confirmation link via the ADMIN API and
+    // send the confirmation mail OURSELVES (the same provider chain that
+    // delivers datasheet mails). Supabase's own SMTP send made /auth/v1/signup
+    // exceed the gateway timeout (504s observed 22 Aug 2026 with the
+    // Microsoft 365 SMTP configured); generateLink is a fast DB operation
+    // and sends nothing.
+    let { data: linkData, error: linkError } = await service.auth.admin.generateLink({
+      type: 'signup',
+      email,
+      password,
+      options: { data: details, redirectTo },
+    });
+    if (linkError && EXISTS_RE.test(linkError.message)) {
+      // Orphan from an earlier timed-out attempt: an UNCONFIRMED auth user
+      // with no portal profile is safe to replace — heal and retry once.
+      const orphan = await findAuthUserByEmail(service, email);
+      const orphanProfile = orphan
+        ? (await service.from('portal_users').select('id').eq('id', orphan.id).maybeSingle()).data
+        : null;
+      if (orphan && !orphan.email_confirmed_at && !orphanProfile) {
+        await service.auth.admin.deleteUser(orphan.id).catch(() => undefined);
+        ({ data: linkData, error: linkError } = await service.auth.admin.generateLink({
+          type: 'signup',
+          email,
+          password,
+          options: { data: details, redirectTo },
+        }));
+      }
+    }
+    if (linkError || !linkData?.user) {
+      if (linkError && EXISTS_RE.test(linkError.message)) {
+        return NextResponse.json({ ok: false, error: 'exists' }, { status: 409 });
+      }
+      console.warn(`[signup] generateLink failed: ${linkError?.message ?? 'no user returned'}`);
+      return NextResponse.json({ ok: false, error: 'failed' }, { status: 500 });
+    }
+    user = linkData.user;
+    const confirmUrl = linkData.properties?.action_link;
+    if (confirmUrl) {
+      const mail = buildConfirmEmail({ name: contactName, confirmUrl });
+      const sent = await sendTransactionalEmail({
+        to: email,
+        subject: mail.subject,
+        html: mail.html,
+        text: mail.text,
+      });
+      if (!sent.ok) {
+        console.warn('[signup] confirmation mail could not be sent — resend via the admin panel');
+      }
+    }
+  } else {
+    // LEGACY PATH (no own mail provider): plain signUp, Supabase sends the
+    // confirmation mail through its configured SMTP.
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL as string,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string,
+      { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false, flowType: 'implicit' } },
     );
-  }
-  // Supabase quirk: signUp for an existing confirmed email returns a user with
-  // an empty identities array instead of an error.
-  if (data.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) {
-    return NextResponse.json({ ok: false, error: 'exists' }, { status: 409 });
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: { data: details, emailRedirectTo: redirectTo },
+    });
+    if (error) {
+      const exists = EXISTS_RE.test(error.message);
+      const captcha = /captcha/i.test(error.message);
+      if (captcha) console.warn(`[signup] captcha rejected by Supabase: ${error.message}`);
+      else if (!exists) console.warn(`[signup] signUp failed: ${error.message}`);
+      return NextResponse.json(
+        { ok: false, error: exists ? 'exists' : captcha ? 'captcha' : 'failed' },
+        { status: exists ? 409 : captcha ? 400 : 500 },
+      );
+    }
+    // Supabase quirk: signUp for an existing confirmed email returns a user
+    // with an empty identities array instead of an error.
+    if (data.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) {
+      return NextResponse.json({ ok: false, error: 'exists' }, { status: 409 });
+    }
+    user = data.user;
   }
 
   // Create the portal profile right away (service role — RLS has no insert
   // policies by design). If this fails, the login route self-heals it later.
-  if (data.user && service) {
+  if (user && service) {
     const base = {
-      id: data.user.id,
+      id: user.id,
       email,
       role: 'client',
       account_type: accountType,
@@ -297,7 +345,7 @@ export async function POST(req: NextRequest) {
     if (pendingReason && isTransactionalConfigured()) {
       const origin = portalOrigin(req.nextUrl.origin);
       const reviewUrl = isReviewTokenEnabled()
-        ? `${origin}/portal/review?t=${encodeURIComponent(mintReviewToken(data.user.id))}`
+        ? `${origin}/portal/review?t=${encodeURIComponent(mintReviewToken(user.id))}`
         : `${origin}/portal/admin`;
       const mail = buildAdminReviewEmail({
         accountType,
@@ -325,7 +373,28 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  // confirm=true → Supabase sent a confirmation email; no session yet.
+  // confirm=true → a confirmation email is on its way; no session yet.
   // pending=true → the success screen explains the review step.
-  return NextResponse.json({ ok: true, confirm: !data.session, pending: !active });
+  return NextResponse.json({ ok: true, confirm: true, pending: !active });
+}
+
+/** Look an auth user up by email via the admin list API (no direct filter
+ *  exists in supabase-js v2 — pages of 1000 cover this portal many times). */
+async function findAuthUserByEmail(
+  service: NonNullable<ReturnType<typeof createServiceClient>>,
+  email: string,
+): Promise<{ id: string; email_confirmed_at: string | null } | null> {
+  const needle = email.toLowerCase();
+  try {
+    for (let pageNo = 1; pageNo <= 5; pageNo++) {
+      const { data, error } = await service.auth.admin.listUsers({ page: pageNo, perPage: 1000 });
+      if (error || !data?.users?.length) return null;
+      const hit = data.users.find((u) => (u.email ?? '').toLowerCase() === needle);
+      if (hit) return { id: hit.id, email_confirmed_at: hit.email_confirmed_at ?? null };
+      if (data.users.length < 1000) return null;
+    }
+  } catch {
+    /* fall through */
+  }
+  return null;
 }
