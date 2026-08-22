@@ -7,8 +7,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { DEMO_USERS, getAdminSession } from '@/lib/portal/auth';
 import { createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
 import { normalizeAccountType, PRICE_MARKETS } from '@/lib/portal/types';
-import { isPortalAllowedHost } from '@/lib/portal/host';
+import { isPortalAllowedHost, portalOrigin } from '@/lib/portal/host';
 import { canonicalEmail, emailDomain } from '@/lib/spam/email';
+import { buildWelcomeEmail } from '@/lib/portal/emails';
+import { sendTransactionalEmail, isTransactionalConfigured } from '@/lib/transactional';
 
 export const runtime = 'nodejs';
 
@@ -226,14 +228,50 @@ export async function POST(req: NextRequest) {
     all_markets: allMarkets,
     active: true,
     country,
+    canonical_email: canonicalEmail(email),
   });
   if (profileError) {
-    // Roll back the orphaned auth user so the e-mail can be retried.
-    await service.auth.admin.deleteUser(created.user.id).catch(() => undefined);
-    return NextResponse.json({ ok: false, error: profileError.message }, { status: 500 });
+    // canonical_email is a later column — retry the pre-existing shape.
+    const { error: legacyError } = await service.from('portal_users').insert({
+      id: created.user.id,
+      email,
+      company,
+      role,
+      account_type: accountType,
+      markets,
+      all_markets: allMarkets,
+      active: true,
+      country,
+    });
+    if (legacyError) {
+      // Roll back the orphaned auth user so the e-mail can be retried.
+      await service.auth.admin.deleteUser(created.user.id).catch(() => undefined);
+      return NextResponse.json({ ok: false, error: legacyError.message }, { status: 500 });
+    }
   }
 
-  return NextResponse.json({ ok: true, persisted: true, id: created.user.id });
+  // Welcome mail (default ON): tell the client STRETCH created their account,
+  // with the temporary password. AWAITED — unawaited sends die when the
+  // serverless function freezes after the response.
+  let welcomed = false;
+  if (body?.sendWelcome !== false && isTransactionalConfigured()) {
+    const mail = buildWelcomeEmail({
+      name: null,
+      email,
+      tempPassword: password,
+      loginUrl: `${portalOrigin(req.nextUrl.origin)}/portal/login`,
+    });
+    const sent = await sendTransactionalEmail({
+      to: email,
+      subject: mail.subject,
+      html: mail.html,
+      text: mail.text,
+    }).catch(() => ({ ok: false as const }));
+    welcomed = sent.ok;
+    if (!sent.ok) console.warn('[users] welcome mail failed to send');
+  }
+
+  return NextResponse.json({ ok: true, persisted: true, id: created.user.id, welcomed });
 }
 
 export async function PATCH(req: NextRequest) {

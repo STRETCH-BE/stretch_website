@@ -558,6 +558,7 @@ function UsersCard({ demo }: { demo: boolean }) {
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [showForm, setShowForm] = useState(false);
+  const [showImport, setShowImport] = useState(false);
   const [tab, setTab] = useState<'all' | 'pending'>('all');
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
@@ -675,12 +676,25 @@ function UsersCard({ demo }: { demo: boolean }) {
         <h2>
           <UserRound size={16} /> {t('usersTitle')}
         </h2>
-        <button type="button" className="btn btn--ghost btn--sm" onClick={() => setShowForm((v) => !v)}>
-          <Plus size={13} /> {t('createTitle')}
-        </button>
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          <button type="button" className="btn btn--ghost btn--sm" onClick={() => setShowImport((v) => !v)}>
+            <CloudUpload size={13} /> Import Excel
+          </button>
+          <button type="button" className="btn btn--ghost btn--sm" onClick={() => setShowForm((v) => !v)}>
+            <Plus size={13} /> {t('createTitle')}
+          </button>
+        </div>
       </div>
       <p className="body">{t('usersBody')}</p>
 
+      {showImport && (
+        <ImportPanel
+          onDone={(msg) => {
+            setNotice(msg);
+            void load();
+          }}
+        />
+      )}
       {showForm && (
         <CreateForm
           demo={demo}
@@ -930,6 +944,96 @@ function FragmentRow(props: {
         </tr>
       )}
     </>
+  );
+}
+
+/** Excel bulk import — POST /api/portal/users/import. */
+function ImportPanel({ onDone }: { onDone: (msg: string) => void }) {
+  const fileRef = useRef<HTMLInputElement>(null);
+  const [fileName, setFileName] = useState<string | null>(null);
+  const [sendWelcome, setSendWelcome] = useState(true);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [report, setReport] = useState<{
+    created: number;
+    welcomed: number;
+    skipped: { email: string; reason: string }[];
+  } | null>(null);
+
+  async function upload() {
+    const file = fileRef.current?.files?.[0];
+    if (!file || busy) return;
+    setBusy(true);
+    setError(null);
+    setReport(null);
+    try {
+      const form = new FormData();
+      form.append('file', file);
+      form.append('sendWelcome', sendWelcome ? '1' : '0');
+      const res = await fetch('/api/portal/users/import', { method: 'POST', body: form });
+      const data = await res.json().catch(() => null);
+      if (!res.ok || !data?.ok) {
+        setError(data?.error ?? 'The import failed.');
+        return;
+      }
+      setReport({ created: data.created ?? 0, welcomed: data.welcomed ?? 0, skipped: data.skipped ?? [] });
+      onDone(`Import done: ${data.created} account(s) created, ${data.welcomed} welcome mail(s) sent.`);
+    } catch {
+      setError('The import failed.');
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <div style={{ border: '1px solid var(--border-2)', background: 'var(--surface)', padding: 16, margin: '0 0 18px' }}>
+      <p className="padm-note" style={{ marginBottom: 10 }}>
+        Upload an Excel file (.xlsx) with one account per row. Columns (first row = headers, order free):{' '}
+        <strong>email</strong> · password (empty = auto-generated) · company · contact · phone · vat · country ·
+        city · type (producer / installer / b2c / architect) · markets (e.g. “Installer; B2C” or “all”).
+        Existing accounts are skipped, never changed. Max 200 rows per upload.
+      </p>
+      <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
+        <input
+          ref={fileRef}
+          type="file"
+          accept=".xlsx,.xls,.csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          onChange={(e) => setFileName(e.target.files?.[0]?.name ?? null)}
+          style={{ fontSize: 13 }}
+        />
+        <label className="padm-chip" style={{ margin: 0 }}>
+          <input type="checkbox" checked={sendWelcome} onChange={(e) => setSendWelcome(e.target.checked)} />
+          Send each client the welcome email with their password
+        </label>
+        <button type="button" className="btn btn--dark btn--sm" onClick={upload} disabled={busy || !fileName}>
+          {busy ? <RefreshCw size={13} className="spin" /> : <CloudUpload size={13} />}
+          {busy ? 'Importing…' : 'Import accounts'}
+        </button>
+      </div>
+      {error && (
+        <p className="padm-err" role="alert">
+          {error}
+        </p>
+      )}
+      {report && (
+        <div style={{ marginTop: 12, fontSize: 13 }}>
+          <p style={{ margin: '0 0 6px', fontWeight: 700 }}>
+            {report.created} created · {report.welcomed} welcome mail(s) sent
+            {report.skipped.length > 0 ? ` · ${report.skipped.length} skipped` : ''}
+          </p>
+          {report.skipped.length > 0 && (
+            <ul style={{ margin: 0, paddingLeft: 18, maxHeight: 160, overflow: 'auto', color: 'var(--text-muted)' }}>
+              {report.skipped.map((s, i) => (
+                <li key={`${s.email}-${i}`}>
+                  {s.email}: {s.reason}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
+      <style dangerouslySetInnerHTML={{ __html: CARD_CSS }} />
+    </div>
   );
 }
 
@@ -1295,6 +1399,7 @@ function CreateForm({ demo, onCreated }: { demo: boolean; onCreated: (msg: strin
   const [country, setCountry] = useState('');
   const [allMarkets, setAllMarkets] = useState(false);
   const [markets, setMarkets] = useState<string[]>([]);
+  const [sendWelcome, setSendWelcome] = useState(true);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const countries = useMemo(() => signupCountryOptions(locale), [locale]);
@@ -1311,13 +1416,17 @@ function CreateForm({ demo, onCreated }: { demo: boolean; onCreated: (msg: strin
       const res = await fetch('/api/portal/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, company, role, accountType, country, markets, allMarkets }),
+        body: JSON.stringify({ email, password, company, role, accountType, country, markets, allMarkets, sendWelcome }),
       });
       const data = await res.json().catch(() => null);
       if (!res.ok || !data?.ok) {
         setError(data?.error ?? t('createFailed'));
       } else {
-        onCreated(data.persisted ? t('createdOk', { email }) : t('demoNote'));
+        onCreated(
+          data.persisted
+            ? `${t('createdOk', { email })}${data.welcomed ? ' Welcome email sent.' : ''}`
+            : t('demoNote'),
+        );
       }
     } catch {
       setError(t('createFailed'));
@@ -1394,6 +1503,11 @@ function CreateForm({ demo, onCreated }: { demo: boolean; onCreated: (msg: strin
           )}
         </div>
       )}
+
+      <label className="chk" style={{ margin: '0 0 14px' }}>
+        <input type="checkbox" checked={sendWelcome} onChange={(e) => setSendWelcome(e.target.checked)} />
+        Send the client a welcome email with these sign-in details
+      </label>
 
       {error && (
         <p className="err" role="alert">

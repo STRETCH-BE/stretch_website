@@ -94,6 +94,59 @@ export function buildConfirmEmail(input: { name: string | null; confirmUrl: stri
   return { subject, html, text };
 }
 
+/** "We created a STRETCH portal account for you" — sent when an ADMIN
+ *  creates the account (single form or Excel import). Includes the temporary
+ *  password the admin set, so the client can sign in right away. */
+export function buildWelcomeEmail(input: {
+  name: string | null;
+  email: string;
+  tempPassword: string;
+  loginUrl: string;
+}): { subject: string; html: string; text: string } {
+  const subject = 'Your STRETCH client-portal account is ready';
+  const greeting = input.name ? `Hello ${input.name},` : 'Hello,';
+  const intro =
+    'We created a STRETCH client-portal account for you. It gives you your trade pricelist — synced live with our pricing system — plus datasheets, the ceiling designer and your orders, all in one place.';
+  const note =
+    'Please keep these sign-in details safe. You can contact us at any time to change the password or if anything is unclear.';
+
+  const html = shell(`<tr>
+    <td style="padding:32px 28px 8px;">
+      <p style="${FONT}font-size:15px;line-height:1.6;color:#0A0A0A;margin:0 0 14px;">${escapeHtml(greeting)}</p>
+      <p style="${FONT}font-size:15px;line-height:1.6;color:#0A0A0A;margin:0 0 22px;">${escapeHtml(intro)}</p>
+      <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 22px;background:#F4F3F1;width:100%;">
+        <tr><td style="padding:16px 18px;">
+          <p style="${FONT}font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6E6B66;margin:0 0 4px;">Sign-in email</p>
+          <p style="${FONT}font-size:14.5px;color:#0A0A0A;margin:0 0 12px;word-break:break-all;">${escapeHtml(input.email)}</p>
+          <p style="${FONT}font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6E6B66;margin:0 0 4px;">Temporary password</p>
+          <p style="${FONT}font-size:14.5px;color:#0A0A0A;margin:0;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;">${escapeHtml(input.tempPassword)}</p>
+        </td></tr>
+      </table>
+      ${button(input.loginUrl, 'Sign in to the portal')}
+      <p style="${FONT}font-size:12.5px;line-height:1.6;color:#6E6B66;margin:0 0 6px;word-break:break-all;">Or open: <a href="${escapeHtml(input.loginUrl)}" style="color:#FF0000;">${escapeHtml(input.loginUrl)}</a></p>
+      <p style="${FONT}font-size:12.5px;line-height:1.6;color:#6E6B66;margin:0 0 24px;">${escapeHtml(note)}</p>
+    </td>
+  </tr>`);
+
+  const text = [
+    greeting,
+    '',
+    intro,
+    '',
+    `Sign-in email: ${input.email}`,
+    `Temporary password: ${input.tempPassword}`,
+    '',
+    `Sign in: ${input.loginUrl}`,
+    '',
+    note,
+    '',
+    `${brand.name} · ${contact.address.street}, ${contact.address.city}`,
+    `${contact.email} · ${contact.phoneDisplay}`,
+  ].join('\n');
+
+  return { subject, html, text };
+}
+
 /** "Your STRETCH account is approved" — sent to the user on approval. */
 export function buildApprovalEmail(input: { name: string | null; loginUrl: string }): {
   subject: string;
