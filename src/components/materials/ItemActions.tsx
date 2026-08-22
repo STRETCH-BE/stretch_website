@@ -10,6 +10,7 @@ import { ArrowRight, Check, Plus } from 'lucide-react';
 import { useLeadModal } from '@/components/LeadGenModal';
 import { analytics } from '@/lib/analytics';
 import { useInquiry } from '@/components/materials/Inquiry';
+import { Link } from '@/i18n/navigation';
 import type { MaterialItem } from '@/lib/materials';
 
 const VARIANT_KEY: Record<string, string> = {
@@ -23,11 +24,13 @@ export function ItemActions({
   name,
   source,
   variants,
+  pageHref,
 }: {
   group: string;
   name: string;
   source: string;
   variants?: MaterialItem['variants'];
+  pageHref?: string;
 }) {
   const t = useTranslations('materials');
   const { open } = useLeadModal();
@@ -60,9 +63,14 @@ export function ItemActions({
       )}
 
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+        {pageHref && (
+          <Link href={pageHref} className="btn btn--primary btn--sm">
+            {t('orderKitCta')} <ArrowRight size={14} />
+          </Link>
+        )}
         <button
           type="button"
-          className="btn btn--primary btn--sm"
+          className={pageHref ? 'btn btn--ghost btn--sm' : 'btn btn--primary btn--sm'}
           onClick={() => {
             analytics.quoteClick(product, source);
             open('quote', { source, product });

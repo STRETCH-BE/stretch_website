@@ -76,7 +76,9 @@
     "materialsTitle": "Materiais e consumíveis para teto tensionado | STRETCH",
     "materialsDescription": "Perfis, telas e películas, iluminação, acessórios, ferramentas e STRETCH Cleaner — peça orçamento por artigo e respondemos com preço e prazo. Sem loja online.",
     "architectsTitle": "Para arquitetos — especificar tetos tensados | STRETCH",
-    "architectsDescription": "Área de arquitetos gratuita: fichas técnicas, textos de especificação, CAD/BIM, casos medidos, faixas €/m² indicativas, eventos e apoio de projeto."
+    "architectsDescription": "Área de arquitetos gratuita: fichas técnicas, textos de especificação, CAD/BIM, casos medidos, faixas €/m² indicativas, eventos e apoio de projeto.",
+    "kitTitle": "Kit DIY de teto tensado — à medida | STRETCH",
+    "kitDescription": "Kit de teto tensado às suas medidas: tela de poliéster, perfis e instruções numa encomenda. Instalação a frio, entrega na UE e no Reino Unido."
   },
   "cookies": {
     "title": "Valorizamos a sua privacidade",
@@ -162,7 +164,8 @@
       "about": "Sobre nós",
       "faq": "FAQ",
       "clientPortal": "Portal do cliente",
-      "architects": "Para arquitetos"
+      "architects": "Para arquitetos",
+      "kit": "Kit DIY"
     },
     "dealers": "Rede de revendedores"
   },
@@ -2094,6 +2097,43 @@
         "Estados Unidos",
         "Outro país"
       ]
+    },
+    "kit_order": {
+      "title": "Encomendar o kit DIY",
+      "subtitle": "Fale-nos do seu teto — resposta num dia útil com orçamento e fatura proforma em EUR.",
+      "submitLabel": "Pedir orçamento do kit",
+      "sentTitle": "Pedido de kit recebido",
+      "sentMsg": "Obrigado — confirmamos o kit, o preço e a entrega num dia útil com uma fatura proforma em EUR.",
+      "fields": {
+        "name": {
+          "label": "Nome",
+          "placeholder": "Nome e apelido"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "voce@email.com"
+        },
+        "phone": {
+          "label": "Telefone",
+          "placeholder": "+351 ..."
+        },
+        "size": {
+          "label": "Medidas do teto",
+          "placeholder": "p. ex. 4 × 5 m ou 20 m²"
+        },
+        "finish": {
+          "label": "Tela",
+          "options": [
+            "Padrão (branco mate)",
+            "Acústica",
+            "Translúcida"
+          ]
+        },
+        "message": {
+          "label": "A sua divisão",
+          "placeholder": "Forma do teto, obstáculos, planos de iluminação…"
+        }
+      }
     }
   },
   "faqPage": {
@@ -4533,7 +4573,8 @@
     "colourTranslucent": "Translúcido",
     "colourPrinted": "Com impressão",
     "colourCodeLabel": "Código de cor",
-    "colourCodePlaceholder": "p. ex. RAL 9016 ou n.º da carta"
+    "colourCodePlaceholder": "p. ex. RAL 9016 ou n.º da carta",
+    "orderKitCta": "Encomendar o kit"
   },
   "materialsData": {
     "profiles": {
@@ -4850,5 +4891,58 @@
     "appLight": "Teto tensionado céu estrelado com fibra ótica",
     "appCommercial": "Teto tensionado impresso num interior comercial",
     "installer": "Instalador STRETCH certificado a montar um teto tensionado"
+  },
+  "kitPage": {
+    "eyebrow": "Kit DIY",
+    "crumb": "Kit",
+    "titleA": "Um teto novo",
+    "titleB": "numa caixa.",
+    "intro": "O kit DIY da STRETCH: um teto tensado de poliéster cortado à medida da sua divisão na nossa própria oficina europeia e entregue em casa como uma encomenda leve. Instalação a frio — sem pistola de calor, sem gesso, sem pintura.",
+    "heroAlt": "O kit DIY de teto tensado STRETCH pronto para a instalação",
+    "ctaOrder": "Encomendar o kit",
+    "ctaMaterials": "Todos os materiais",
+    "boxEyebrow": "Na caixa",
+    "boxTitle": "O que recebe",
+    "boxItems": [
+      "Tela de teto em poliéster, cortada às medidas da sua divisão",
+      "Perfis perimetrais e cantos para todo o contorno",
+      "Instruções de instalação passo a passo",
+      "Tela à escolha: branco mate padrão, acústica ou translúcida"
+    ],
+    "sizeBody": "Uma única tela sem emendas cobre larguras até 5,15 m — suficiente para quase todas as divisões. Mais largo? Envie as medidas e aconselhamos uma disposição em duas telas com perfil de junção.",
+    "howEyebrow": "Instalação",
+    "howTitle": "Posso instalar sozinho?",
+    "howBody": "Sim — o kit existe para isso. A tela monta-se a frio nos perfis perimetrais com ferramentas comuns; as instruções incluídas cobrem cada passo. Leia primeiro o nosso guia honesto e, se planeia instalar tetos mais vezes, faça a formação de um dia na nossa sede belga.",
+    "howBlog": "Ler: instalar um teto tensado sozinho",
+    "howTraining": "Prefere formação primeiro? Formação de instalador",
+    "priceEyebrow": "Preço e encomenda",
+    "priceTitle": "Encomendar o seu kit",
+    "priceOnRequest": "Preço sob consulta — envie as medidas e recebe um orçamento à medida num dia útil.",
+    "currencyNotice": "Todos os preços e pagamentos são em EUR. O valor em £ é uma indicação à taxa de referência do BCE de {asOf}; o seu banco ou cartão converte à sua própria taxa.",
+    "deliveryPoints": [
+      "Entrega DDP por encomenda de correio — tratamos da alfândega e das formalidades de importação, o preço confirmado é o preço que paga",
+      "Envio para toda a UE e o Reino Unido",
+      "Data de produção e entrega confirmada com a confirmação da encomenda"
+    ],
+    "faqEyebrow": "Perguntas",
+    "faqTitle": "FAQ do kit",
+    "faq": [
+      {
+        "q": "Enviam para o Reino Unido?",
+        "a": "Sim. Os kits seguem DDP (Delivered Duty Paid) por correio: desalfandegamento, direitos e IVA de importação ficam por nossa conta — o valor da confirmação da encomenda é o que paga, nada extra à porta."
+      },
+      {
+        "q": "Que ferramentas preciso?",
+        "a": "Ferramentas comuns: berbequim, nível, serra e chave de fendas para os perfis, mais uma espátula limpa para encaixar a tela. As instruções listam tudo antes de começar."
+      },
+      {
+        "q": "A minha divisão é mais larga do que uma tela — e agora?",
+        "a": "Uma tela sem emendas cobre até 5,15 m de largura. Em divisões mais largas o teto divide-se em duas telas sobre um perfil de junção — envie as medidas e propomos a disposição mais limpa."
+      },
+      {
+        "q": "Posso fazer formação antes de comprar?",
+        "a": "Claro — a nossa formação de instalador de um dia na sede belga cobre tela, perfis e instalação a frio. Muitos clientes instalam o kit só com o guia, mas a formação torna-o rotina."
+      }
+    ]
   }
 }

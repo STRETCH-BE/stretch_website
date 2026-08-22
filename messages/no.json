@@ -76,7 +76,9 @@
     "materialsTitle": "Materialer og tilbehør til strekktak | STRETCH",
     "materialsDescription": "Profiler, duker og folier, belysning, tilbehør, verktøy og STRETCH Cleaner — be om tilbud per vare, og vi svarer med pris og leveringstid. Uten nettbutikk.",
     "architectsTitle": "For arkitekter — foreskriv strekktak | STRETCH",
-    "architectsDescription": "Gratis arkitektområde: datablad, beskrivelsestekster, CAD/BIM, målte casestudier, veiledende €/m²-budsjettbånd, arrangementer og prosjektstøtte."
+    "architectsDescription": "Gratis arkitektområde: datablad, beskrivelsestekster, CAD/BIM, målte casestudier, veiledende €/m²-budsjettbånd, arrangementer og prosjektstøtte.",
+    "kitTitle": "Gjør-det-selv strekktakskit — etter mål | STRETCH",
+    "kitDescription": "Strekktakskit etter dine mål: polyesterduk, profiler og veiledning i én pakke. Kald montering, levering i EU og Storbritannia."
   },
   "cookies": {
     "title": "Vi verner om personvernet ditt",
@@ -162,7 +164,8 @@
       "about": "Om oss",
       "faq": "FAQ",
       "clientPortal": "Kundeportal",
-      "architects": "For arkitekter"
+      "architects": "For arkitekter",
+      "kit": "Gjør-det-selv-kit"
     },
     "dealers": "Forhandlernettverk"
   },
@@ -2094,6 +2097,43 @@
         "USA",
         "Annet land"
       ]
+    },
+    "kit_order": {
+      "title": "Bestill gjør-det-selv-kitet",
+      "subtitle": "Fortell oss om taket ditt — svar innen én arbeidsdag med tilbud og proformafaktura i EUR.",
+      "submitLabel": "Be om kit-tilbud",
+      "sentTitle": "Kit-forespørsel mottatt",
+      "sentMsg": "Takk — vi bekrefter kit, pris og levering innen én arbeidsdag med en proformafaktura i EUR.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og etternavn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "du@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+47 ..."
+        },
+        "size": {
+          "label": "Takmål",
+          "placeholder": "f.eks. 4 × 5 m eller 20 m²"
+        },
+        "finish": {
+          "label": "Duk",
+          "options": [
+            "Standard (matt hvit)",
+            "Akustisk",
+            "Translusent"
+          ]
+        },
+        "message": {
+          "label": "Rommet ditt",
+          "placeholder": "Takets form, hindringer, lysplaner…"
+        }
+      }
     }
   },
   "faqPage": {
@@ -4533,7 +4573,8 @@
     "colourTranslucent": "Translusent",
     "colourPrinted": "Med trykk",
     "colourCodeLabel": "Fargekode",
-    "colourCodePlaceholder": "f.eks. RAL 9016 eller kartnr."
+    "colourCodePlaceholder": "f.eks. RAL 9016 eller kartnr.",
+    "orderKitCta": "Bestill kitet"
   },
   "materialsData": {
     "profiles": {
@@ -4850,5 +4891,58 @@
     "appLight": "Stjernehimmel-strekktak med fiberoptisk lys",
     "appCommercial": "Trykket strekktak i et butikkinteriør",
     "installer": "Sertifisert STRETCH-montør monterer et strekktak"
+  },
+  "kitPage": {
+    "eyebrow": "Gjør-det-selv-kit",
+    "crumb": "Kit",
+    "titleA": "Et nytt tak",
+    "titleB": "i én eske.",
+    "intro": "STRETCH gjør-det-selv-kit: et strekktak i polyester, skåret etter rommet ditt i vårt eget EU-verksted og levert hjem som en lett pakke. Kald montering — ingen varmepistol, ingen puss, ingen maling.",
+    "heroAlt": "STRETCH gjør-det-selv-kit klart til montering",
+    "ctaOrder": "Bestill kitet",
+    "ctaMaterials": "Alle materialer",
+    "boxEyebrow": "I esken",
+    "boxTitle": "Dette får du",
+    "boxItems": [
+      "Takduk i polyester, skåret etter rommets mål",
+      "Kantprofiler og hjørnestykker til hele omkretsen",
+      "Trinn-for-trinn monteringsveiledning",
+      "Duk etter valg: standard matt hvit, akustisk eller translusent"
+    ],
+    "sizeBody": "Én skjøtefri duk spenner over bredder opp til 5,15 m — nok til nesten alle rom. Bredere? Send målene dine, så anbefaler vi en løsning med to duker og skjøteprofil.",
+    "howEyebrow": "Montering",
+    "howTitle": "Kan jeg montere selv?",
+    "howBody": "Ja — det er hele poenget med kitet. Duken monteres kaldt i kantprofilene med vanlig verktøy; veiledningen som følger med dekker hvert trinn. Les først vår ærlige guide, og vil du montere tak oftere — ta endagskurset ved vårt belgiske hovedkontor.",
+    "howBlog": "Les: montere et strekktak selv",
+    "howTraining": "Heller kurs først? Montørkurs",
+    "priceEyebrow": "Pris & bestilling",
+    "priceTitle": "Bestille kitet ditt",
+    "priceOnRequest": "Pris på forespørsel — send målene dine, og du får et skreddersydd tilbud innen én arbeidsdag.",
+    "currencyNotice": "Alle priser og betalinger er i EUR. £-beløpet er en indikasjon til ECBs referansekurs av {asOf}; banken eller kortet ditt regner om til egen kurs.",
+    "deliveryPoints": [
+      "Leveres DDP som kurérpakke — vi ordner toll og importformaliteter, den bekreftede prisen er prisen du betaler",
+      "Frakt i hele EU og Storbritannia",
+      "Produksjons- og leveringsdato bekreftes med ordrebekreftelsen"
+    ],
+    "faqEyebrow": "Spørsmål",
+    "faqTitle": "Kit-FAQ",
+    "faq": [
+      {
+        "q": "Sender dere til Storbritannia?",
+        "a": "Ja. Kit sendes DDP (Delivered Duty Paid) med kurér: fortolling, avgifter og importmoms tar vi oss av — beløpet på ordrebekreftelsen er det du betaler, ingenting ekstra ved døren."
+      },
+      {
+        "q": "Hvilket verktøy trenger jeg?",
+        "a": "Vanlig verktøy: drill, vater, sag og skrutrekker til profilene, pluss en ren sparkel til å stikke inn duken. Veiledningen lister alt før du starter."
+      },
+      {
+        "q": "Rommet mitt er bredere enn én duk — hva nå?",
+        "a": "Én skjøtefri duk spenner opp til 5,15 m i bredden. Bredere rom deles i to duker over en skjøteprofil — send målene, så foreslår vi den fineste løsningen."
+      },
+      {
+        "q": "Kan jeg ta kurs før jeg kjøper?",
+        "a": "Absolutt — endagskurset for montører ved det belgiske hovedkontoret dekker duk, profiler og kald montering. Mange kit-kunder monterer fint med bare guiden, men kurset gjør det til rutine."
+      }
+    ]
   }
 }

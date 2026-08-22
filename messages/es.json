@@ -76,7 +76,9 @@
     "materialsTitle": "Materiales y suministros para techo tensado | STRETCH",
     "materialsDescription": "Materiales para techos tensados: perfiles, telas y láminas, iluminación y accesorios — pida presupuesto por artículo y respondemos con precio y plazo.",
     "architectsTitle": "Para arquitectos — especificar techos tensados | STRETCH",
-    "architectsDescription": "Área de arquitectos gratuita: fichas técnicas, textos de especificación, CAD/BIM, casos medidos, rangos €/m² indicativos, eventos y apoyo de proyecto."
+    "architectsDescription": "Área de arquitectos gratuita: fichas técnicas, textos de especificación, CAD/BIM, casos medidos, rangos €/m² indicativos, eventos y apoyo de proyecto.",
+    "kitTitle": "Kit DIY de techo tensado — a medida | STRETCH",
+    "kitDescription": "Kit de techo tensado a tus medidas: tela de poliéster, perfiles e instrucciones en un paquete. Instalación en frío, entrega en la UE y el Reino Unido."
   },
   "cookies": {
     "title": "Valoramos tu privacidad",
@@ -162,7 +164,8 @@
       "about": "Sobre nosotros",
       "faq": "FAQ",
       "clientPortal": "Portal de clientes",
-      "architects": "Para arquitectos"
+      "architects": "Para arquitectos",
+      "kit": "Kit DIY"
     },
     "dealers": "Red de distribuidores"
   },
@@ -2094,6 +2097,43 @@
         "Estados Unidos",
         "Otro país"
       ]
+    },
+    "kit_order": {
+      "title": "Pedir el kit DIY",
+      "subtitle": "Cuéntanos sobre tu techo — respuesta en un día laborable con presupuesto y factura proforma en EUR.",
+      "submitLabel": "Solicitar presupuesto del kit",
+      "sentTitle": "Solicitud de kit recibida",
+      "sentMsg": "Gracias — confirmamos tu kit, precio y entrega en un día laborable con una factura proforma en EUR.",
+      "fields": {
+        "name": {
+          "label": "Nombre",
+          "placeholder": "Nombre y apellidos"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "tu@email.com"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+34 ..."
+        },
+        "size": {
+          "label": "Medidas del techo",
+          "placeholder": "p. ej. 4 × 5 m o 20 m²"
+        },
+        "finish": {
+          "label": "Tela",
+          "options": [
+            "Estándar (blanco mate)",
+            "Acústica",
+            "Translúcida"
+          ]
+        },
+        "message": {
+          "label": "Tu habitación",
+          "placeholder": "Forma del techo, obstáculos, planes de iluminación…"
+        }
+      }
     }
   },
   "faqPage": {
@@ -4533,7 +4573,8 @@
     "colourTranslucent": "Translúcido",
     "colourPrinted": "Con impresión",
     "colourCodeLabel": "Código de color",
-    "colourCodePlaceholder": "p. ej. RAL 9016 o n.º de carta"
+    "colourCodePlaceholder": "p. ej. RAL 9016 o n.º de carta",
+    "orderKitCta": "Pedir el kit"
   },
   "materialsData": {
     "profiles": {
@@ -4850,5 +4891,58 @@
     "appLight": "Techo tensado de cielo estrellado con fibra óptica",
     "appCommercial": "Techo tensado impreso en un interior comercial",
     "installer": "Instalador STRETCH certificado montando un techo tensado"
+  },
+  "kitPage": {
+    "eyebrow": "Kit DIY",
+    "crumb": "Kit",
+    "titleA": "Un techo nuevo",
+    "titleB": "en una caja.",
+    "intro": "El kit DIY de STRETCH: un techo tensado de poliéster cortado a la medida de tu habitación en nuestro propio taller europeo y entregado en casa como un paquete ligero. Instalación en frío — sin pistola de calor, sin yeso, sin pintura.",
+    "heroAlt": "El kit DIY de techo tensado STRETCH preparado para la instalación",
+    "ctaOrder": "Pedir el kit",
+    "ctaMaterials": "Todos los materiales",
+    "boxEyebrow": "En la caja",
+    "boxTitle": "Qué recibes",
+    "boxItems": [
+      "Tela de techo de poliéster, cortada a las medidas de tu habitación",
+      "Perfiles perimetrales y piezas de esquina para todo el contorno",
+      "Instrucciones de instalación paso a paso",
+      "Tela a elegir: blanco mate estándar, acústica o translúcida"
+    ],
+    "sizeBody": "Una sola tela sin juntas cubre anchos de hasta 5,15 m — suficiente para casi cualquier habitación. ¿Más ancho? Envía tus medidas y te aconsejamos una disposición en dos telas con perfil de unión.",
+    "howEyebrow": "Instalación",
+    "howTitle": "¿Puedo instalarlo yo mismo?",
+    "howBody": "Sí — para eso existe el kit. La tela se monta en frío en los perfiles perimetrales con herramientas de bricolaje normales; las instrucciones incluidas cubren cada paso. Lee primero nuestra guía honesta, y si piensas instalar techos más a menudo, haz la formación de un día en nuestra sede belga.",
+    "howBlog": "Leer: instalar un techo tensado uno mismo",
+    "howTraining": "¿Prefieres formarte antes? Formación de instalador",
+    "priceEyebrow": "Precio y pedido",
+    "priceTitle": "Pedir tu kit",
+    "priceOnRequest": "Precio a petición — envía tus medidas y recibirás un presupuesto a medida en un día laborable.",
+    "currencyNotice": "Todos los precios y pagos son en EUR. El importe en £ es una indicación al tipo de referencia del BCE del {asOf}; tu banco o tarjeta convierte a su propio tipo.",
+    "deliveryPoints": [
+      "Entrega DDP por paquetería — gestionamos aduanas y trámites de importación, el precio confirmado es el precio que pagas",
+      "Envío a toda la UE y al Reino Unido",
+      "Fecha de producción y entrega confirmada con tu confirmación de pedido"
+    ],
+    "faqEyebrow": "Preguntas",
+    "faqTitle": "FAQ del kit",
+    "faq": [
+      {
+        "q": "¿Enviáis al Reino Unido?",
+        "a": "Sí. Los kits viajan DDP (Delivered Duty Paid) por mensajería: despacho, aranceles e IVA de importación corren de nuestra cuenta — el importe de tu confirmación de pedido es lo que pagas, nada extra en la puerta."
+      },
+      {
+        "q": "¿Qué herramientas necesito?",
+        "a": "Herramientas normales de bricolaje: taladro, nivel, sierra y destornillador para los perfiles, más una espátula limpia para encajar la tela. Las instrucciones lo enumeran todo antes de empezar."
+      },
+      {
+        "q": "Mi habitación es más ancha que una tela — ¿y ahora?",
+        "a": "Una tela sin juntas cubre hasta 5,15 m de ancho. Para habitaciones más anchas el techo se divide en dos telas sobre un perfil de unión — envía tus medidas y te proponemos la disposición más limpia."
+      },
+      {
+        "q": "¿Puedo formarme antes de comprar?",
+        "a": "Claro — nuestra formación de instalador de un día en la sede belga cubre tela, perfiles e instalación en frío. Muchos clientes instalan su kit solo con la guía, pero la formación lo convierte en rutina."
+      }
+    ]
   }
 }

@@ -150,6 +150,7 @@ export const footerNav = {
     { key: 'acoustic', href: '/products/acoustic-stretch-system' },
     { key: 'light', href: '/products/light-print-stretch-ceiling' },
     { key: 'prefab', href: '/products/prefab-ceiling-unit' },
+    { key: 'kit', href: '/kit' },
   ] as NavLink[],
   company: [
     { key: 'reseller', href: '/partners' },
@@ -182,6 +183,7 @@ export const staticRoutes = [
   '/samples',
   '/datasheets',
   '/architects',
+  '/kit',
   '/products/prefab-lighting-elements',
   '/faq',
   '/blog',

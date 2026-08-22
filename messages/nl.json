@@ -76,7 +76,9 @@
     "materialsTitle": "Spanplafond materialen & benodigdheden | STRETCH",
     "materialsDescription": "Spanplafond-materialen: profielen, doeken & folies, verlichting, accessoires en gereedschap — vraag per item een offerte, wij antwoorden met prijs en termijn.",
     "architectsTitle": "Voor architecten — spanplafonds voorschrijven | STRETCH",
-    "architectsDescription": "Gratis architectenzone: datasheets, bestekteksten, CAD/BIM, gemeten casestudy’s, indicatieve €/m²-budgetbanden, events en projectondersteuning."
+    "architectsDescription": "Gratis architectenzone: datasheets, bestekteksten, CAD/BIM, gemeten casestudy’s, indicatieve €/m²-budgetbanden, events en projectondersteuning.",
+    "kitTitle": "Doe-het-zelf spanplafondkit — op maat | STRETCH",
+    "kitDescription": "Spanplafondkit op uw maten: polyesterdoek, profielen en instructies in één pakket. Koude plaatsing, levering in de EU en het VK."
   },
   "cookies": {
     "title": "We hechten waarde aan je privacy",
@@ -162,7 +164,8 @@
       "about": "Over ons",
       "faq": "FAQ",
       "clientPortal": "Klantenportaal",
-      "architects": "Voor architecten"
+      "architects": "Voor architecten",
+      "kit": "Doe-het-zelfkit"
     },
     "dealers": "Dealernetwerk"
   },
@@ -2094,6 +2097,43 @@
         "Verenigde Staten",
         "Ander land"
       ]
+    },
+    "kit_order": {
+      "title": "Bestel de doe-het-zelfkit",
+      "subtitle": "Vertel ons over uw plafond en u ontvangt binnen één werkdag een offerte op maat en een pro-formafactuur in EUR.",
+      "submitLabel": "Vraag mijn kitofferte",
+      "sentTitle": "Kitaanvraag ontvangen",
+      "sentMsg": "Bedankt — wij bevestigen uw kit, prijs en levering binnen één werkdag met een pro-formafactuur in EUR.",
+      "fields": {
+        "name": {
+          "label": "Naam",
+          "placeholder": "Voor- en achternaam"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "u@email.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "size": {
+          "label": "Plafondmaat",
+          "placeholder": "bv. 4 × 5 m of 20 m²"
+        },
+        "finish": {
+          "label": "Doek",
+          "options": [
+            "Standaard (mat wit)",
+            "Akoestisch",
+            "Lichtdoorlatend"
+          ]
+        },
+        "message": {
+          "label": "Uw ruimte",
+          "placeholder": "Vorm van het plafond, obstakels, verlichtingsplannen…"
+        }
+      }
     }
   },
   "faqPage": {
@@ -4533,7 +4573,8 @@
     "colourTranslucent": "Lichtdoorlatend",
     "colourPrinted": "Print",
     "colourCodeLabel": "Kleurcode",
-    "colourCodePlaceholder": "bv. RAL 9016 of kaartnummer"
+    "colourCodePlaceholder": "bv. RAL 9016 of kaartnummer",
+    "orderKitCta": "Bestel de kit"
   },
   "materialsData": {
     "profiles": {
@@ -4850,5 +4891,58 @@
     "appLight": "Sterrenhemel-spanplafond met glasvezelverlichting",
     "appCommercial": "Bedrukt spanplafond in een winkelinterieur",
     "installer": "Gecertificeerde STRETCH-plaatser monteert een spanplafond"
+  },
+  "kitPage": {
+    "eyebrow": "Doe-het-zelfkit",
+    "crumb": "Kit",
+    "titleA": "Een nieuw plafond",
+    "titleB": "in één doos.",
+    "intro": "De STRETCH doe-het-zelfkit: een polyester spanplafond op maat van uw ruimte gesneden in ons eigen EU-atelier en als licht pakket aan huis geleverd. Koude plaatsing — geen warmtepistool, geen pleisterwerk, geen schilderwerk.",
+    "heroAlt": "De STRETCH doe-het-zelf spanplafondkit klaargelegd voor plaatsing",
+    "ctaOrder": "Bestel de kit",
+    "ctaMaterials": "Alle materialen",
+    "boxEyebrow": "In de doos",
+    "boxTitle": "Wat u ontvangt",
+    "boxItems": [
+      "Polyester plafonddoek, gesneden op de maten van uw ruimte",
+      "Omtrekprofielen en hoekstukken voor de volledige omtrek",
+      "Stap-voor-stap plaatsingsinstructies",
+      "Doek naar keuze: standaard mat wit, akoestisch of lichtdoorlatend"
+    ],
+    "sizeBody": "Eén naadloos doek overspant breedtes tot 5,15 m — genoeg voor bijna elke kamer. Breder? Stuur uw maten en wij adviseren een indeling met twee doeken en een naadprofiel.",
+    "howEyebrow": "Plaatsing",
+    "howTitle": "Kan ik het zelf plaatsen?",
+    "howBody": "Ja — daarvoor bestaat de kit. Het doek wordt koud in de omtrekprofielen geplaatst met standaard doe-het-zelfgereedschap; de meegeleverde instructies behandelen elke stap. Lees eerst onze eerlijke gids, en wie vaker plafonds wil plaatsen volgt de eendaagse opleiding op ons Belgisch hoofdkantoor.",
+    "howBlog": "Lees: een spanplafond zelf plaatsen",
+    "howTraining": "Liever eerst een opleiding? Plaatsersopleiding",
+    "priceEyebrow": "Prijs & bestellen",
+    "priceTitle": "Uw kit bestellen",
+    "priceOnRequest": "Prijs op aanvraag — stuur uw maten en u ontvangt binnen één werkdag een offerte op maat.",
+    "currencyNotice": "Alle prijzen en betalingen zijn in EUR. Het £-bedrag is een indicatie tegen de ECB-referentiekoers van {asOf}; uw bank of kaart rekent tegen haar eigen koers om.",
+    "deliveryPoints": [
+      "DDP geleverd per koerierpakket — wij regelen douane en invoerformaliteiten, de bevestigde prijs is de prijs die u betaalt",
+      "Verzending in de hele EU en het VK",
+      "Productie- en leverdatum bevestigd bij uw orderbevestiging"
+    ],
+    "faqEyebrow": "Vragen",
+    "faqTitle": "Kit FAQ",
+    "faq": [
+      {
+        "q": "Leveren jullie in het VK?",
+        "a": "Ja. Kits verzenden we DDP (Delivered Duty Paid) per koerier: inklaring, rechten en invoer-btw nemen wij op ons — het bedrag op uw orderbevestiging is wat u betaalt, niets extra aan de deur."
+      },
+      {
+        "q": "Welk gereedschap heb ik nodig?",
+        "a": "Standaard doe-het-zelfgereedschap: boormachine, waterpas, zaag en schroevendraaier voor de profielen, plus een spatelvormig gereedschap om het doek in te steken. De instructies sommen alles op voor u begint."
+      },
+      {
+        "q": "Mijn kamer is breder dan één doek — wat nu?",
+        "a": "Eén naadloos doek overspant tot 5,15 m breedte. Voor bredere ruimtes wordt het plafond over een naadprofiel in twee doeken verdeeld — stuur uw maten en wij stellen de strakste indeling voor."
+      },
+      {
+        "q": "Kan ik eerst een opleiding volgen?",
+        "a": "Zeker — onze eendaagse plaatsersopleiding op het Belgisch hoofdkantoor behandelt doek, profielen en koude plaatsing. Veel kitklanten plaatsen vlot met enkel de gids, maar de opleiding maakt het routine."
+      }
+    ]
   }
 }

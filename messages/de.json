@@ -76,7 +76,9 @@
     "materialsTitle": "Spanndecken-Material & Zubehör | STRETCH",
     "materialsDescription": "Spanndecken-Material: Profile, Folien & Tücher, Beleuchtung, Zubehör und Werkzeug — pro Artikel Angebot anfragen, wir antworten mit Preis und Lieferzeit.",
     "architectsTitle": "Für Architekten — Spanndecken ausschreiben | STRETCH",
-    "architectsDescription": "Kostenloser Architektenbereich: Datenblätter, Ausschreibungstexte, CAD/BIM, gemessene Fallstudien, indikative €/m²-Budgetbänder, Events und Projektbegleitung."
+    "architectsDescription": "Kostenloser Architektenbereich: Datenblätter, Ausschreibungstexte, CAD/BIM, gemessene Fallstudien, indikative €/m²-Budgetbänder, Events und Projektbegleitung.",
+    "kitTitle": "DIY-Spanndecken-Kit — nach Maß | STRETCH",
+    "kitDescription": "Spanndecken-Kit nach Ihren Maßen: Polyestertuch, Profile und Anleitung in einem Paket. Kaltmontage, Lieferung in EU und UK."
   },
   "cookies": {
     "title": "Wir respektieren Ihre Privatsphäre",
@@ -162,7 +164,8 @@
       "about": "Über uns",
       "faq": "FAQ",
       "clientPortal": "Kundenportal",
-      "architects": "Für Architekten"
+      "architects": "Für Architekten",
+      "kit": "DIY-Kit"
     },
     "dealers": "Händlernetz"
   },
@@ -2094,6 +2097,43 @@
         "Vereinigte Staaten",
         "Anderes Land"
       ]
+    },
+    "kit_order": {
+      "title": "DIY-Kit bestellen",
+      "subtitle": "Erzählen Sie uns von Ihrer Decke — Antwort innerhalb eines Werktags mit Angebot und Proforma-Rechnung in EUR.",
+      "submitLabel": "Kit-Angebot anfragen",
+      "sentTitle": "Kit-Anfrage erhalten",
+      "sentMsg": "Danke — wir bestätigen Kit, Preis und Lieferung innerhalb eines Werktags mit einer Proforma-Rechnung in EUR.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Vor- und Nachname"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "sie@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+49 ..."
+        },
+        "size": {
+          "label": "Deckenmaß",
+          "placeholder": "z. B. 4 × 5 m oder 20 m²"
+        },
+        "finish": {
+          "label": "Tuch",
+          "options": [
+            "Standard (mattweiß)",
+            "Akustisch",
+            "Transluzent"
+          ]
+        },
+        "message": {
+          "label": "Ihr Raum",
+          "placeholder": "Deckenform, Hindernisse, Lichtplanung…"
+        }
+      }
     }
   },
   "faqPage": {
@@ -4533,7 +4573,8 @@
     "colourTranslucent": "Transluzent",
     "colourPrinted": "Druckdesign",
     "colourCodeLabel": "Farbcode",
-    "colourCodePlaceholder": "z. B. RAL 9016 oder Kartennr."
+    "colourCodePlaceholder": "z. B. RAL 9016 oder Kartennr.",
+    "orderKitCta": "Kit bestellen"
   },
   "materialsData": {
     "profiles": {
@@ -4850,5 +4891,58 @@
     "appLight": "Sternenhimmel-Spanndecke mit Glasfaserlicht",
     "appCommercial": "Bedruckte Spanndecke in einem Ladeninterieur",
     "installer": "Zertifizierter STRETCH-Monteur montiert eine Spanndecke"
+  },
+  "kitPage": {
+    "eyebrow": "DIY-Kit",
+    "crumb": "Kit",
+    "titleA": "Eine neue Decke",
+    "titleB": "in einer Box.",
+    "intro": "Das STRETCH DIY-Kit: eine Polyester-Spanndecke, in unserer eigenen EU-Werkstatt auf Ihren Raum zugeschnitten und als leichtes Paket geliefert. Kaltmontage — ohne Heißluft, ohne Putz, ohne Malerarbeiten.",
+    "heroAlt": "Das STRETCH DIY-Spanndecken-Kit bereit zur Montage",
+    "ctaOrder": "Kit bestellen",
+    "ctaMaterials": "Alle Materialien",
+    "boxEyebrow": "In der Box",
+    "boxTitle": "Was Sie erhalten",
+    "boxItems": [
+      "Polyester-Deckentuch, zugeschnitten auf die Maße Ihres Raums",
+      "Umlaufprofile und Eckstücke für den gesamten Umfang",
+      "Schritt-für-Schritt-Montageanleitung",
+      "Tuch nach Wahl: Standard mattweiß, akustisch oder transluzent"
+    ],
+    "sizeBody": "Ein fugenloses Tuch überspannt Breiten bis 5,15 m — genug für fast jeden Raum. Breiter? Senden Sie Ihre Maße und wir empfehlen eine Aufteilung in zwei Tücher mit Stoßprofil.",
+    "howEyebrow": "Montage",
+    "howTitle": "Kann ich selbst montieren?",
+    "howBody": "Ja — genau dafür gibt es das Kit. Das Tuch wird kalt in die Umlaufprofile montiert, mit üblichem Heimwerkerwerkzeug; die beiliegende Anleitung erklärt jeden Schritt. Lesen Sie zuerst unseren ehrlichen Ratgeber — und wer öfter Decken montieren will, besucht das eintägige Training an unserem belgischen Hauptsitz.",
+    "howBlog": "Lesen: eine Spanndecke selbst montieren",
+    "howTraining": "Lieber erst ein Training? Monteur-Training",
+    "priceEyebrow": "Preis & Bestellung",
+    "priceTitle": "Ihr Kit bestellen",
+    "priceOnRequest": "Preis auf Anfrage — senden Sie Ihre Maße und Sie erhalten innerhalb eines Werktags ein maßgeschneidertes Angebot.",
+    "currencyNotice": "Alle Preise und Zahlungen sind in EUR. Der £-Betrag ist eine Indikation zum EZB-Referenzkurs vom {asOf}; Ihre Bank oder Karte rechnet zu ihrem eigenen Kurs um.",
+    "deliveryPoints": [
+      "DDP-Lieferung per Kurierpaket — Zoll und Einfuhrformalitäten übernehmen wir, der bestätigte Preis ist der Preis, den Sie zahlen",
+      "Versand in die gesamte EU und nach Großbritannien",
+      "Produktions- und Liefertermin mit der Auftragsbestätigung bestätigt"
+    ],
+    "faqEyebrow": "Fragen",
+    "faqTitle": "Kit-FAQ",
+    "faq": [
+      {
+        "q": "Liefern Sie nach Großbritannien?",
+        "a": "Ja. Kits versenden wir DDP (Delivered Duty Paid) per Kurier: Verzollung, Abgaben und Einfuhrumsatzsteuer übernehmen wir — der Betrag Ihrer Auftragsbestätigung ist der Betrag, den Sie zahlen, nichts extra an der Tür."
+      },
+      {
+        "q": "Welches Werkzeug brauche ich?",
+        "a": "Übliches Heimwerkerwerkzeug: Bohrmaschine, Wasserwaage, Säge und Schraubendreher für die Profile, plus ein sauberes Spachtelwerkzeug zum Einstecken des Tuchs. Die Anleitung listet alles auf, bevor Sie beginnen."
+      },
+      {
+        "q": "Mein Raum ist breiter als ein Tuch — was nun?",
+        "a": "Ein fugenloses Tuch überspannt bis zu 5,15 m Breite. Für breitere Räume wird die Decke über ein Stoßprofil in zwei Tücher geteilt — senden Sie Ihre Maße und wir schlagen die sauberste Aufteilung vor."
+      },
+      {
+        "q": "Kann ich vorher ein Training machen?",
+        "a": "Gern — unser eintägiges Monteur-Training am belgischen Hauptsitz behandelt Tuch, Profile und Kaltmontage. Viele Kit-Kunden montieren allein mit der Anleitung, aber das Training macht es zur Routine."
+      }
+    ]
   }
 }

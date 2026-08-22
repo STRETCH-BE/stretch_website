@@ -93,7 +93,7 @@ export default async function MaterialGroupPage({ params }: { params: { locale: 
               <div style={{ padding: '18px 0 0' }}>
                 <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 18, letterSpacing: '-.01em', margin: '0 0 7px' }}>{item.name}</h2>
                 <p style={{ fontSize: 13.5, lineHeight: 1.6, color: 'var(--text-muted)', margin: '0 0 14px' }}>{item.body}</p>
-                <ItemActions group={g.name} name={item.name} source={`materials_${g.slug}`} variants={item.variants} />
+                <ItemActions group={g.name} name={item.name} source={`materials_${g.slug}`} variants={item.variants} pageHref={item.pageHref} />
               </div>
             </article>
           ))}

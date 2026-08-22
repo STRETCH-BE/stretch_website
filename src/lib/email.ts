@@ -61,6 +61,8 @@ const FIELD_LABELS: Record<string, string> = {
   system: 'System',
   stage: 'Stage',
   area: 'Area',
+  size: 'Ceiling size',
+  finish: 'Kit finish',
 };
 
 const SOURCE_LABELS: Record<string, string> = {
@@ -77,16 +79,19 @@ const SOURCE_LABELS: Record<string, string> = {
   architect_project: 'Project registration',
   architect_samples: 'Sample request',
   portal_architect_download: 'Architect portal download',
+  kit_order: 'DIY kit order',
 };
 
 /**
  * Materials-origin leads (per-item quote buttons post source
- * 'materials_<group>', the basket posts 'materials_inquiry'). These visitors
- * want SUPPLY of materials — flagged loudly in the email so the team never
- * follows up as if it were an installation project.
+ * 'materials_<group>', the basket posts 'materials_inquiry', the DIY kit
+ * page posts 'kit_order'). These visitors want SUPPLY of materials —
+ * flagged loudly in the email so the team never follows up as if it were
+ * an installation project.
  */
 export function isMaterialsLead(source: unknown): boolean {
-  return String(source ?? '').startsWith('materials');
+  const s = String(source ?? '');
+  return s.startsWith('materials') || s === 'kit_order';
 }
 
 // ISO code (the country select posts stable codes) -> readable name for the

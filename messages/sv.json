@@ -76,7 +76,9 @@
     "materialsTitle": "Material och tillbehör för spänntak | STRETCH",
     "materialsDescription": "Profiler, dukar och folier, belysning, tillbehör, verktyg och STRETCH Cleaner — begär offert per artikel så svarar vi med pris och leveranstid. Utan webbshop.",
     "architectsTitle": "För arkitekter — föreskriv spänntak | STRETCH",
-    "architectsDescription": "Gratis arkitektområde: datablad, föreskrivningstexter, CAD/BIM, uppmätta fallstudier, vägledande €/m²-budgetband, evenemang och projektstöd."
+    "architectsDescription": "Gratis arkitektområde: datablad, föreskrivningstexter, CAD/BIM, uppmätta fallstudier, vägledande €/m²-budgetband, evenemang och projektstöd.",
+    "kitTitle": "Gör-det-själv spänntakskit — efter mått | STRETCH",
+    "kitDescription": "Spänntakskit efter dina mått: polyesterduk, profiler och anvisning i ett paket. Kall montering, leverans i EU och Storbritannien."
   },
   "cookies": {
     "title": "Vi värnar om din integritet",
@@ -162,7 +164,8 @@
       "about": "Om oss",
       "faq": "FAQ",
       "clientPortal": "Kundportal",
-      "architects": "För arkitekter"
+      "architects": "För arkitekter",
+      "kit": "Gör-det-själv-kit"
     },
     "dealers": "Återförsäljarnätverk"
   },
@@ -2094,6 +2097,43 @@
         "USA",
         "Annat land"
       ]
+    },
+    "kit_order": {
+      "title": "Beställ gör-det-själv-kitet",
+      "subtitle": "Berätta om ditt tak — svar inom en arbetsdag med offert och proformafaktura i EUR.",
+      "submitLabel": "Begär kit-offert",
+      "sentTitle": "Kit-förfrågan mottagen",
+      "sentMsg": "Tack — vi bekräftar kit, pris och leverans inom en arbetsdag med en proformafaktura i EUR.",
+      "fields": {
+        "name": {
+          "label": "Namn",
+          "placeholder": "För- och efternamn"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "du@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+46 ..."
+        },
+        "size": {
+          "label": "Takmått",
+          "placeholder": "t.ex. 4 × 5 m eller 20 m²"
+        },
+        "finish": {
+          "label": "Duk",
+          "options": [
+            "Standard (matt vit)",
+            "Akustisk",
+            "Translucent"
+          ]
+        },
+        "message": {
+          "label": "Ditt rum",
+          "placeholder": "Takets form, hinder, ljusplaner…"
+        }
+      }
     }
   },
   "faqPage": {
@@ -4533,7 +4573,8 @@
     "colourTranslucent": "Translucent",
     "colourPrinted": "Med tryck",
     "colourCodeLabel": "Färgkod",
-    "colourCodePlaceholder": "t.ex. RAL 9016 eller kartnr"
+    "colourCodePlaceholder": "t.ex. RAL 9016 eller kartnr",
+    "orderKitCta": "Beställ kitet"
   },
   "materialsData": {
     "profiles": {
@@ -4850,5 +4891,58 @@
     "appLight": "Stjärnhimmel-spänntak med fiberoptiskt ljus",
     "appCommercial": "Printat spänntak i en butiksinteriör",
     "installer": "Certifierad STRETCH-montör monterar ett spänntak"
+  },
+  "kitPage": {
+    "eyebrow": "Gör-det-själv-kit",
+    "crumb": "Kit",
+    "titleA": "Ett nytt tak",
+    "titleB": "i en låda.",
+    "intro": "STRETCH gör-det-själv-kit: ett spänntak i polyester, skuret efter ditt rum i vår egen EU-verkstad och levererat hem som ett lätt paket. Kall montering — ingen värmepistol, inget bruk, ingen målning.",
+    "heroAlt": "STRETCH gör-det-själv-kit redo för montering",
+    "ctaOrder": "Beställ kitet",
+    "ctaMaterials": "Alla material",
+    "boxEyebrow": "I lådan",
+    "boxTitle": "Det här får du",
+    "boxItems": [
+      "Takduk i polyester, skuren efter rummets mått",
+      "Kantprofiler och hörnstycken för hela omkretsen",
+      "Steg-för-steg-monteringsanvisning",
+      "Duk efter val: standard matt vit, akustisk eller translucent"
+    ],
+    "sizeBody": "En skarvfri duk spänner över bredder upp till 5,15 m — nog för nästan alla rum. Bredare? Skicka dina mått så föreslår vi en lösning med två dukar och skarvprofil.",
+    "howEyebrow": "Montering",
+    "howTitle": "Kan jag montera själv?",
+    "howBody": "Ja — det är hela poängen med kitet. Duken monteras kallt i kantprofilerna med vanliga verktyg; den medföljande anvisningen täcker varje steg. Läs först vår ärliga guide, och vill du montera tak oftare — gå endagsutbildningen på vårt belgiska huvudkontor.",
+    "howBlog": "Läs: montera ett spänntak själv",
+    "howTraining": "Hellre utbildning först? Montörsutbildning",
+    "priceEyebrow": "Pris & beställning",
+    "priceTitle": "Beställa ditt kit",
+    "priceOnRequest": "Pris på förfrågan — skicka dina mått så får du en skräddarsydd offert inom en arbetsdag.",
+    "currencyNotice": "Alla priser och betalningar är i EUR. £-beloppet är en indikation till ECB:s referenskurs av {asOf}; din bank eller ditt kort växlar till egen kurs.",
+    "deliveryPoints": [
+      "Levereras DDP som kurirpaket — vi sköter tull och importformaliteter, det bekräftade priset är priset du betalar",
+      "Frakt i hela EU och Storbritannien",
+      "Produktions- och leveransdatum bekräftas med orderbekräftelsen"
+    ],
+    "faqEyebrow": "Frågor",
+    "faqTitle": "Kit-FAQ",
+    "faq": [
+      {
+        "q": "Skickar ni till Storbritannien?",
+        "a": "Ja. Kit skickas DDP (Delivered Duty Paid) med kurir: förtullning, avgifter och importmoms tar vi hand om — beloppet på din orderbekräftelse är det du betalar, inget extra vid dörren."
+      },
+      {
+        "q": "Vilka verktyg behöver jag?",
+        "a": "Vanliga verktyg: borrmaskin, vattenpass, såg och skruvmejsel för profilerna, plus en ren spackelspade för att sticka in duken. Anvisningen listar allt innan du börjar."
+      },
+      {
+        "q": "Mitt rum är bredare än en duk — vad gör jag?",
+        "a": "En skarvfri duk spänner upp till 5,15 m i bredd. Bredare rum delas i två dukar över en skarvprofil — skicka dina mått så föreslår vi den snyggaste lösningen."
+      },
+      {
+        "q": "Kan jag utbildas innan jag köper?",
+        "a": "Absolut — vår endagsutbildning för montörer på det belgiska huvudkontoret täcker duk, profiler och kall montering. Många kit-kunder monterar fint med bara guiden, men utbildningen gör det till rutin."
+      }
+    ]
   }
 }

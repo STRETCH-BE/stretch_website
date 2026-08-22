@@ -76,7 +76,9 @@
     "materialsTitle": "Matériaux & fournitures plafond tendu | STRETCH",
     "materialsDescription": "Matériaux pour plafond tendu : profilés, toiles & films, éclairage, accessoires et outillage — demandez un devis par article, réponse avec prix et délai.",
     "architectsTitle": "Pour les architectes — prescrire des plafonds tendus | STRETCH",
-    "architectsDescription": "Espace architectes gratuit : fiches techniques, textes de prescription, CAD/BIM, études de cas mesurées, budgets indicatifs et accompagnement projet."
+    "architectsDescription": "Espace architectes gratuit : fiches techniques, textes de prescription, CAD/BIM, études de cas mesurées, budgets indicatifs et accompagnement projet.",
+    "kitTitle": "Kit plafond tendu à poser soi-même — sur mesure | STRETCH",
+    "kitDescription": "Kit plafond tendu à vos mesures : toile polyester, profilés et instructions en un colis. Pose à froid, livraison UE et Royaume-Uni."
   },
   "cookies": {
     "title": "Nous respectons votre vie privée",
@@ -162,7 +164,8 @@
       "about": "À propos",
       "faq": "FAQ",
       "clientPortal": "Espace client",
-      "architects": "Pour les architectes"
+      "architects": "Pour les architectes",
+      "kit": "Kit à poser soi-même"
     },
     "dealers": "Réseau de revendeurs"
   },
@@ -2094,6 +2097,43 @@
         "États-Unis",
         "Autre pays"
       ]
+    },
+    "kit_order": {
+      "title": "Commander le kit",
+      "subtitle": "Parlez-nous de votre plafond : réponse sous un jour ouvré avec un devis sur mesure et une facture proforma en EUR.",
+      "submitLabel": "Demander mon devis kit",
+      "sentTitle": "Demande de kit reçue",
+      "sentMsg": "Merci — nous confirmons votre kit, le prix et la livraison sous un jour ouvré avec une facture proforma en EUR.",
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Prénom et nom"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "vous@email.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+33 ..."
+        },
+        "size": {
+          "label": "Dimensions du plafond",
+          "placeholder": "p. ex. 4 × 5 m ou 20 m²"
+        },
+        "finish": {
+          "label": "Toile",
+          "options": [
+            "Standard (blanc mat)",
+            "Acoustique",
+            "Translucide"
+          ]
+        },
+        "message": {
+          "label": "Votre pièce",
+          "placeholder": "Forme du plafond, obstacles, projets d’éclairage…"
+        }
+      }
     }
   },
   "faqPage": {
@@ -4533,7 +4573,8 @@
     "colourTranslucent": "Translucide",
     "colourPrinted": "Imprimé",
     "colourCodeLabel": "Code couleur",
-    "colourCodePlaceholder": "p. ex. RAL 9016 ou n° du nuancier"
+    "colourCodePlaceholder": "p. ex. RAL 9016 ou n° du nuancier",
+    "orderKitCta": "Commander le kit"
   },
   "materialsData": {
     "profiles": {
@@ -4850,5 +4891,58 @@
     "appLight": "Ciel étoilé tendu avec éclairage en fibre optique",
     "appCommercial": "Plafond tendu imprimé dans un intérieur commercial",
     "installer": "Installateur STRETCH certifié posant un plafond tendu"
+  },
+  "kitPage": {
+    "eyebrow": "Kit à poser soi-même",
+    "crumb": "Kit",
+    "titleA": "Un nouveau plafond",
+    "titleB": "dans une boîte.",
+    "intro": "Le kit STRETCH à poser soi-même : un plafond tendu polyester découpé aux mesures de votre pièce dans notre propre atelier européen et livré chez vous en colis léger. Pose à froid — sans pistolet à chaleur, sans plâtre, sans peinture.",
+    "heroAlt": "Le kit de plafond tendu STRETCH à poser soi-même, prêt pour la pose",
+    "ctaOrder": "Commander le kit",
+    "ctaMaterials": "Tous les matériaux",
+    "boxEyebrow": "Dans la boîte",
+    "boxTitle": "Ce que vous recevez",
+    "boxItems": [
+      "Toile de plafond polyester, découpée aux mesures de votre pièce",
+      "Profilés périphériques et pièces d’angle pour tout le pourtour",
+      "Instructions de pose pas à pas",
+      "Toile au choix : blanc mat standard, acoustique ou translucide"
+    ],
+    "sizeBody": "Une seule toile sans soudure couvre jusqu’à 5,15 m de largeur — assez pour presque toutes les pièces. Plus large ? Envoyez vos mesures et nous conseillons une disposition en deux toiles avec profilé de jonction.",
+    "howEyebrow": "Pose",
+    "howTitle": "Puis-je le poser moi-même ?",
+    "howBody": "Oui — le kit existe pour cela. La toile se monte à froid dans les profilés périphériques avec un outillage de bricolage classique ; les instructions fournies couvrent chaque étape. Lisez d’abord notre guide honnête, et si vous comptez poser des plafonds plus souvent, suivez la formation d’une journée à notre siège belge.",
+    "howBlog": "Lire : poser un plafond tendu soi-même",
+    "howTraining": "Plutôt une formation d’abord ? Formation installateur",
+    "priceEyebrow": "Prix & commande",
+    "priceTitle": "Commander votre kit",
+    "priceOnRequest": "Prix sur demande — envoyez vos mesures et recevez un devis sur mesure sous un jour ouvré.",
+    "currencyNotice": "Tous les prix et paiements sont en EUR. Le montant en £ est une indication au taux de référence BCE du {asOf} ; votre banque ou carte convertit à son propre taux.",
+    "deliveryPoints": [
+      "Livré DDP par colis courrier — nous gérons la douane et les formalités d’importation, le prix confirmé est le prix que vous payez",
+      "Expédition dans toute l’UE et au Royaume-Uni",
+      "Date de production et de livraison confirmée avec votre confirmation de commande"
+    ],
+    "faqEyebrow": "Questions",
+    "faqTitle": "FAQ du kit",
+    "faq": [
+      {
+        "q": "Livrez-vous au Royaume-Uni ?",
+        "a": "Oui. Les kits partent en DDP (Delivered Duty Paid) par courrier : dédouanement, droits et TVA d’importation sont pris en charge par nous — le montant de votre confirmation de commande est celui que vous payez, rien de plus à la porte."
+      },
+      {
+        "q": "De quels outils ai-je besoin ?",
+        "a": "Un outillage de bricolage classique : perceuse, niveau, scie et tournevis pour les profilés, plus une spatule propre pour rentrer la toile. Les instructions listent tout avant de commencer."
+      },
+      {
+        "q": "Ma pièce est plus large qu’une toile — que faire ?",
+        "a": "Une toile sans soudure couvre jusqu’à 5,15 m de largeur. Au-delà, le plafond se divise en deux toiles sur un profilé de jonction — envoyez vos mesures et nous proposons la disposition la plus nette."
+      },
+      {
+        "q": "Puis-je me former avant d’acheter ?",
+        "a": "Bien sûr — notre formation installateur d’une journée au siège belge couvre la toile, les profilés et la pose à froid. Beaucoup de clients posent leur kit avec le seul guide écrit, mais la formation en fait une routine."
+      }
+    ]
   }
 }

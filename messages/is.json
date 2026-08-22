@@ -76,7 +76,9 @@
     "materialsTitle": "Efni og fylgihlutir fyrir strekkloft | STRETCH",
     "materialsDescription": "Efni fyrir strekkiloft: prófílar, dúkar og filmur, lýsing, fylgihlutir og verkfæri — biddu um tilboð fyrir hverja vöru og við svörum með verði.",
     "architectsTitle": "Fyrir arkitekta — skilgreindu strekkloft | STRETCH",
-    "architectsDescription": "Ókeypis arkitektasvæði: tækniblöð, útboðstextar, CAD/BIM, mæld dæmi, leiðbeinandi €/m² kostnaðarbil, viðburðir og verkefnastuðningur."
+    "architectsDescription": "Ókeypis arkitektasvæði: tækniblöð, útboðstextar, CAD/BIM, mæld dæmi, leiðbeinandi €/m² kostnaðarbil, viðburðir og verkefnastuðningur.",
+    "kitTitle": "DIY-strekkiloftssett — eftir máli | STRETCH",
+    "kitDescription": "Strekkiloftssett eftir þínum málum: pólýesterdúkur, prófílar og leiðbeiningar í einum pakka. Köld uppsetning, afhending í ESB og Bretlandi."
   },
   "cookies": {
     "title": "Við virðum friðhelgi þína",
@@ -162,7 +164,8 @@
       "about": "Um okkur",
       "faq": "Algengar spurningar",
       "clientPortal": "Viðskiptavinagátt",
-      "architects": "Fyrir arkitekta"
+      "architects": "Fyrir arkitekta",
+      "kit": "DIY-sett"
     },
     "dealers": "Söluaðilanet"
   },
@@ -2094,6 +2097,43 @@
         "Bandaríkin",
         "Annað land"
       ]
+    },
+    "kit_order": {
+      "title": "Panta DIY-settið",
+      "subtitle": "Segðu okkur frá loftinu þínu — svar innan eins virks dags með tilboði og proforma-reikningi í EUR.",
+      "submitLabel": "Biðja um tilboð í sett",
+      "sentTitle": "Settbeiðni móttekin",
+      "sentMsg": "Takk — við staðfestum sett, verð og afhendingu innan eins virks dags með proforma-reikningi í EUR.",
+      "fields": {
+        "name": {
+          "label": "Nafn",
+          "placeholder": "Fullt nafn"
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "þú@email.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+354 ..."
+        },
+        "size": {
+          "label": "Mál loftsins",
+          "placeholder": "t.d. 4 × 5 m eða 20 m²"
+        },
+        "finish": {
+          "label": "Dúkur",
+          "options": [
+            "Staðlað (matt hvítt)",
+            "Hljóðdempandi",
+            "Hálfgegnsætt"
+          ]
+        },
+        "message": {
+          "label": "Rýmið þitt",
+          "placeholder": "Lögun loftsins, hindranir, lýsingaráform…"
+        }
+      }
     }
   },
   "faqPage": {
@@ -4533,7 +4573,8 @@
     "colourTranslucent": "Hálfgegnsætt",
     "colourPrinted": "Með prenti",
     "colourCodeLabel": "Litakóði",
-    "colourCodePlaceholder": "t.d. RAL 9016 eða númer af litakorti"
+    "colourCodePlaceholder": "t.d. RAL 9016 eða númer af litakorti",
+    "orderKitCta": "Panta settið"
   },
   "materialsData": {
     "profiles": {
@@ -4850,5 +4891,58 @@
     "appLight": "Stjörnuhiminn-strekkiloft með ljósleiðaralýsingu",
     "appCommercial": "Prentað strekkiloft í verslunarrými",
     "installer": "Vottaður STRETCH-uppsetningaraðili setur upp strekkiloft"
+  },
+  "kitPage": {
+    "eyebrow": "DIY-sett",
+    "crumb": "Sett",
+    "titleA": "Nýtt loft",
+    "titleB": "í einum kassa.",
+    "intro": "STRETCH DIY-settið: strekkiloft úr pólýester, skorið eftir rýminu þínu í okkar eigin ESB-verkstæði og sent heim sem létt pakki. Köld uppsetning — engin hitabyssa, ekkert múrverk, engin málning.",
+    "heroAlt": "STRETCH DIY-strekkiloftssettið tilbúið til uppsetningar",
+    "ctaOrder": "Panta settið",
+    "ctaMaterials": "Öll efni",
+    "boxEyebrow": "Í kassanum",
+    "boxTitle": "Það sem þú færð",
+    "boxItems": [
+      "Loftdúkur úr pólýester, skorinn eftir málum rýmisins",
+      "Kantprófílar og hornstykki fyrir allan jaðarinn",
+      "Skref-fyrir-skref uppsetningarleiðbeiningar",
+      "Dúkur að eigin vali: staðlað matt hvítt, hljóðdempandi eða hálfgegnsætt"
+    ],
+    "sizeBody": "Einn samskeytalaus dúkur nær yfir breiddir allt að 5,15 m — nóg fyrir nánast hvert herbergi. Breiðara? Sendu málin og við ráðleggjum uppröðun með tveimur dúkum og samskeytaprófíl.",
+    "howEyebrow": "Uppsetning",
+    "howTitle": "Get ég sett það upp sjálf(ur)?",
+    "howBody": "Já — settið er til einmitt þess vegna. Dúkurinn er settur kaldur í kantprófílana með venjulegum verkfærum; leiðbeiningarnar sem fylgja ná yfir hvert skref. Lestu fyrst hreinskilna leiðarvísinn okkar, og ef þú ætlar að setja upp loft oftar — taktu eins dags námskeiðið í belgísku höfuðstöðvunum.",
+    "howBlog": "Lesa: setja upp strekkiloft sjálf(ur)",
+    "howTraining": "Viltu frekar námskeið fyrst? Uppsetningarnámskeið",
+    "priceEyebrow": "Verð & pöntun",
+    "priceTitle": "Að panta settið",
+    "priceOnRequest": "Verð eftir beiðni — sendu málin og þú færð sérsniðið tilboð innan eins virks dags.",
+    "currencyNotice": "Öll verð og greiðslur eru í EUR. £-upphæðin er vísbending á viðmiðunargengi ECB frá {asOf}; bankinn þinn eða kortið umreiknar á eigin gengi.",
+    "deliveryPoints": [
+      "Afhent DDP með hraðsendingu — við sjáum um tolla og innflutningspappíra, staðfest verð er verðið sem þú greiðir",
+      "Sending um allt ESB og Bretland",
+      "Framleiðslu- og afhendingardagur staðfestur með pöntunarstaðfestingu"
+    ],
+    "faqEyebrow": "Spurningar",
+    "faqTitle": "Algengar spurningar um settið",
+    "faq": [
+      {
+        "q": "Sendið þið til Bretlands?",
+        "a": "Já. Sett eru send DDP (Delivered Duty Paid) með hraðsendingu: tollafgreiðslu, gjöld og innflutnings-VSK sjáum við um — upphæðin á pöntunarstaðfestingunni er það sem þú greiðir, ekkert aukalega við dyrnar."
+      },
+      {
+        "q": "Hvaða verkfæri þarf ég?",
+        "a": "Venjuleg verkfæri: borvél, hallamál, sög og skrúfjárn fyrir prófílana, auk hreinnar spaðaáhalds til að stinga dúknum inn. Leiðbeiningarnar telja allt upp áður en byrjað er."
+      },
+      {
+        "q": "Herbergið mitt er breiðara en einn dúkur — hvað þá?",
+        "a": "Einn samskeytalaus dúkur nær allt að 5,15 m breidd. Breiðari rými er skipt í tvo dúka yfir samskeytaprófíl — sendu málin og við leggjum til snyrtilegustu uppröðunina."
+      },
+      {
+        "q": "Get ég farið á námskeið áður en ég kaupi?",
+        "a": "Að sjálfsögðu — eins dags uppsetningarnámskeiðið í belgísku höfuðstöðvunum fer yfir dúk, prófíla og kalda uppsetningu. Margir viðskiptavinir setja settið upp með leiðbeiningunum einum, en námskeiðið gerir það að rútínu."
+      }
+    ]
   }
 }

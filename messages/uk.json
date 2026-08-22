@@ -76,7 +76,9 @@
     "materialsTitle": "Stretch ceiling materials & supplies | STRETCH",
     "materialsDescription": "Stretch-ceiling materials: profiles, fabrics & foils, lighting, accessories and tools — request a quote per item and we reply with price and delivery.",
     "architectsTitle": "For architects — specify stretch ceilings | STRETCH",
-    "architectsDescription": "Free architect area: datasheets, spec texts, CAD/BIM, measured case studies, indicative €/m² budget bands, events and project support."
+    "architectsDescription": "Free architect area: datasheets, spec texts, CAD/BIM, measured case studies, indicative €/m² budget bands, events and project support.",
+    "kitTitle": "DIY stretch ceiling kit — made to measure | STRETCH",
+    "kitDescription": "Stretch ceiling kit made to your measurements: polyester fabric, profiles and instructions in one parcel. Cold install, EU and UK delivery."
   },
   "cookies": {
     "title": "We value your privacy",
@@ -162,7 +164,8 @@
       "about": "About",
       "faq": "FAQ",
       "clientPortal": "Client portal",
-      "architects": "For architects"
+      "architects": "For architects",
+      "kit": "DIY kit"
     },
     "dealers": "Dealer network"
   },
@@ -2094,6 +2097,43 @@
         "United States",
         "Other country"
       ]
+    },
+    "kit_order": {
+      "title": "Order the DIY kit",
+      "subtitle": "Tell us about your ceiling and we reply within one working day with a tailored quote and a proforma invoice in EUR.",
+      "submitLabel": "Request my kit quote",
+      "sentTitle": "Kit request received",
+      "sentMsg": "Thanks — we confirm your kit, price and delivery within one working day with a proforma invoice in EUR.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "First & last name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@email.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+44 ..."
+        },
+        "size": {
+          "label": "Ceiling size",
+          "placeholder": "e.g. 4 × 5 m or 20 m²"
+        },
+        "finish": {
+          "label": "Fabric",
+          "options": [
+            "Standard (matte white)",
+            "Acoustic",
+            "Translucent"
+          ]
+        },
+        "message": {
+          "label": "Your room",
+          "placeholder": "Ceiling shape, obstacles, lighting plans…"
+        }
+      }
     }
   },
   "faqPage": {
@@ -4533,7 +4573,8 @@
     "colourTranslucent": "Translucent",
     "colourPrinted": "Printed design",
     "colourCodeLabel": "Colour code",
-    "colourCodePlaceholder": "e.g. RAL 9016 or chart no."
+    "colourCodePlaceholder": "e.g. RAL 9016 or chart no.",
+    "orderKitCta": "Order the kit"
   },
   "materialsData": {
     "profiles": {
@@ -4850,5 +4891,58 @@
     "appLight": "Starry-sky stretch ceiling with fibre-optic lights",
     "appCommercial": "Printed stretch ceiling in a retail interior",
     "installer": "Certified STRETCH installer fitting a stretch ceiling"
+  },
+  "kitPage": {
+    "eyebrow": "DIY kit",
+    "crumb": "Kit",
+    "titleA": "A new ceiling",
+    "titleB": "in one box.",
+    "intro": "The STRETCH DIY kit: a polyester stretch ceiling cut to your room in our own EU workshop and shipped to your door as a light parcel. Cold installation — no heat gun, no plaster, no painting.",
+    "heroAlt": "The STRETCH DIY stretch-ceiling kit laid out ready for installation",
+    "ctaOrder": "Order the kit",
+    "ctaMaterials": "All materials",
+    "boxEyebrow": "In the box",
+    "boxTitle": "What you receive",
+    "boxItems": [
+      "Polyester ceiling fabric, cut to the measurements of your room",
+      "Perimeter profiles and corner pieces for the full circumference",
+      "Step-by-step installation instructions",
+      "Your choice of fabric: standard matte white, acoustic or translucent"
+    ],
+    "sizeBody": "One seamless panel covers widths up to 5.15 m — enough for almost every room. Wider than that? Send your measurements and we advise on a two-panel layout with a joint profile.",
+    "howEyebrow": "Installation",
+    "howTitle": "Can I fit it myself?",
+    "howBody": "Yes — the kit exists for exactly that. The fabric mounts cold into the perimeter profiles with standard DIY tools; the included instructions cover every step. Read our honest guide first, and if you plan to fit ceilings more often, take the one-day training at our Belgian HQ.",
+    "howBlog": "Read: installing a stretch ceiling yourself",
+    "howTraining": "Prefer to be trained first? Installer training",
+    "priceEyebrow": "Price & ordering",
+    "priceTitle": "Ordering your kit",
+    "priceOnRequest": "Price on request — send your measurements and we reply with a tailored quote within one working day.",
+    "currencyNotice": "All prices and payments are in EUR. The £ amount is an indication at the ECB reference rate of {asOf}; your bank or card converts at its own rate.",
+    "deliveryPoints": [
+      "Delivered DDP by courier parcel — we handle customs and import paperwork, the price we confirm is the price you pay",
+      "Shipping across the EU and the UK",
+      "Production and delivery date confirmed with your order confirmation"
+    ],
+    "faqEyebrow": "Questions",
+    "faqTitle": "Kit FAQ",
+    "faq": [
+      {
+        "q": "Do you ship to the UK?",
+        "a": "Yes. Kits ship DDP (Delivered Duty Paid) by courier: customs clearance, duties and import VAT are handled by us, so the amount on your order confirmation is the amount you pay — nothing extra at the door."
+      },
+      {
+        "q": "Which tools do I need?",
+        "a": "Standard DIY tools: a drill, level, saw and screwdriver for the profiles, plus a clean spatula-style tool for tucking the fabric. The included instructions list everything before you start."
+      },
+      {
+        "q": "My room is wider than one panel — what now?",
+        "a": "One seamless panel covers up to 5.15 m in width. For wider rooms the ceiling is split into two panels over a joint profile — send your measurements and we propose the cleanest layout."
+      },
+      {
+        "q": "Can I be trained before I buy?",
+        "a": "Absolutely — our one-day installer training at the Belgian HQ covers fabric handling, profiles and cold installation. Many kit customers install confidently after just the written guide, but training makes it routine."
+      }
+    ]
   }
 }

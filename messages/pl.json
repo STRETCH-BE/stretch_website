@@ -76,7 +76,9 @@
     "materialsTitle": "Materiały i akcesoria do sufitów napinanych | STRETCH",
     "materialsDescription": "Materiały do sufitów napinanych: profile, tkaniny i folie, oświetlenie, akcesoria i narzędzia — zapytaj o wycenę, odpowiemy z ceną i terminem.",
     "architectsTitle": "Dla architektów — specyfikacja sufitów napinanych | STRETCH",
-    "architectsDescription": "Bezpłatna strefa architekta: karty techniczne, teksty specyfikacji, CAD/BIM, zmierzone studia przypadków, orientacyjne budżety i wsparcie projektowe."
+    "architectsDescription": "Bezpłatna strefa architekta: karty techniczne, teksty specyfikacji, CAD/BIM, zmierzone studia przypadków, orientacyjne budżety i wsparcie projektowe.",
+    "kitTitle": "Zestaw DIY sufitu napinanego — na wymiar | STRETCH",
+    "kitDescription": "Zestaw sufitu napinanego na Twój wymiar: tkanina poliestrowa, profile i instrukcja w jednej paczce. Montaż na zimno, dostawa w UE i UK."
   },
   "cookies": {
     "title": "Szanujemy Twoją prywatność",
@@ -162,7 +164,8 @@
       "about": "O nas",
       "faq": "FAQ",
       "clientPortal": "Panel klienta",
-      "architects": "Dla architektów"
+      "architects": "Dla architektów",
+      "kit": "Zestaw DIY"
     },
     "dealers": "Sieć dealerów"
   },
@@ -2094,6 +2097,43 @@
         "Stany Zjednoczone",
         "Inny kraj"
       ]
+    },
+    "kit_order": {
+      "title": "Zamów zestaw DIY",
+      "subtitle": "Opowiedz nam o swoim suficie — odpowiemy w ciągu jednego dnia roboczego z wyceną i fakturą proforma w EUR.",
+      "submitLabel": "Poproś o wycenę zestawu",
+      "sentTitle": "Zapytanie o zestaw przyjęte",
+      "sentMsg": "Dziękujemy — potwierdzimy zestaw, cenę i dostawę w ciągu jednego dnia roboczego fakturą proforma w EUR.",
+      "fields": {
+        "name": {
+          "label": "Imię i nazwisko",
+          "placeholder": "Imię i nazwisko"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "ty@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+48 ..."
+        },
+        "size": {
+          "label": "Wymiar sufitu",
+          "placeholder": "np. 4 × 5 m lub 20 m²"
+        },
+        "finish": {
+          "label": "Tkanina",
+          "options": [
+            "Standard (matowa biel)",
+            "Akustyczna",
+            "Transłucentna"
+          ]
+        },
+        "message": {
+          "label": "Twoje pomieszczenie",
+          "placeholder": "Kształt sufitu, przeszkody, plany oświetlenia…"
+        }
+      }
     }
   },
   "faqPage": {
@@ -4533,7 +4573,8 @@
     "colourTranslucent": "Transłucentny",
     "colourPrinted": "Z nadrukiem",
     "colourCodeLabel": "Kod koloru",
-    "colourCodePlaceholder": "np. RAL 9016 lub nr z wzornika"
+    "colourCodePlaceholder": "np. RAL 9016 lub nr z wzornika",
+    "orderKitCta": "Zamów zestaw"
   },
   "materialsData": {
     "profiles": {
@@ -4850,5 +4891,58 @@
     "appLight": "Sufit napinany gwiezdne niebo ze światłowodami",
     "appCommercial": "Zadrukowany sufit napinany we wnętrzu sklepu",
     "installer": "Certyfikowany monter STRETCH montuje sufit napinany"
+  },
+  "kitPage": {
+    "eyebrow": "Zestaw DIY",
+    "crumb": "Zestaw",
+    "titleA": "Nowy sufit",
+    "titleB": "w jednym pudełku.",
+    "intro": "Zestaw STRETCH DIY: poliestrowy sufit napinany docięty na wymiar Twojego pomieszczenia w naszym własnym unijnym zakładzie i dostarczony pod drzwi jako lekka paczka. Montaż na zimno — bez nagrzewnicy, bez tynku, bez malowania.",
+    "heroAlt": "Zestaw STRETCH DIY do sufitu napinanego przygotowany do montażu",
+    "ctaOrder": "Zamów zestaw",
+    "ctaMaterials": "Wszystkie materiały",
+    "boxEyebrow": "W pudełku",
+    "boxTitle": "Co otrzymujesz",
+    "boxItems": [
+      "Poliestrowa tkanina sufitowa, docięta na wymiary pomieszczenia",
+      "Profile obwodowe i narożniki na cały obwód",
+      "Instrukcja montażu krok po kroku",
+      "Tkanina do wyboru: standardowa matowa biel, akustyczna lub transłucentna"
+    ],
+    "sizeBody": "Jedna bezszwowa tkanina obejmuje szerokości do 5,15 m — wystarczy na niemal każdy pokój. Szerzej? Prześlij wymiary, a doradzimy układ z dwóch tkanin i profilem łączącym.",
+    "howEyebrow": "Montaż",
+    "howTitle": "Czy zamontuję sam?",
+    "howBody": "Tak — po to istnieje zestaw. Tkaninę montuje się na zimno w profilach obwodowych zwykłymi narzędziami; dołączona instrukcja opisuje każdy krok. Najpierw przeczytaj nasz szczery poradnik, a jeśli planujesz montować sufity częściej — jednodniowe szkolenie w belgijskiej siedzibie.",
+    "howBlog": "Przeczytaj: montaż sufitu napinanego samemu",
+    "howTraining": "Wolisz najpierw szkolenie? Szkolenie montażysty",
+    "priceEyebrow": "Cena i zamówienie",
+    "priceTitle": "Zamawianie zestawu",
+    "priceOnRequest": "Cena na zapytanie — prześlij wymiary, a w ciągu jednego dnia roboczego otrzymasz wycenę na miarę.",
+    "currencyNotice": "Wszystkie ceny i płatności są w EUR. Kwota w £ to orientacja według kursu referencyjnego EBC z {asOf}; Twój bank lub karta przelicza po własnym kursie.",
+    "deliveryPoints": [
+      "Dostawa DDP paczką kurierską — cło i formalności importowe bierzemy na siebie, potwierdzona cena to cena, którą płacisz",
+      "Wysyłka po całej UE i do Wielkiej Brytanii",
+      "Termin produkcji i dostawy potwierdzany w potwierdzeniu zamówienia"
+    ],
+    "faqEyebrow": "Pytania",
+    "faqTitle": "FAQ zestawu",
+    "faq": [
+      {
+        "q": "Czy wysyłacie do Wielkiej Brytanii?",
+        "a": "Tak. Zestawy wysyłamy DDP (Delivered Duty Paid) kurierem: odprawę, cła i VAT importowy bierzemy na siebie — kwota z potwierdzenia zamówienia to kwota, którą płacisz, nic ekstra przy odbiorze."
+      },
+      {
+        "q": "Jakich narzędzi potrzebuję?",
+        "a": "Zwykłych narzędzi DIY: wiertarki, poziomicy, piły i wkrętaka do profili, plus czystej szpachelki do wsuwania tkaniny. Instrukcja wymienia wszystko przed startem."
+      },
+      {
+        "q": "Pokój jest szerszy niż jedna tkanina — co teraz?",
+        "a": "Jedna bezszwowa tkanina obejmuje do 5,15 m szerokości. Szersze pomieszczenia dzieli się na dwie tkaniny na profilu łączącym — prześlij wymiary, a zaproponujemy najczystszy układ."
+      },
+      {
+        "q": "Czy mogę najpierw przejść szkolenie?",
+        "a": "Oczywiście — jednodniowe szkolenie montażysty w belgijskiej siedzibie obejmuje tkaninę, profile i montaż na zimno. Wielu klientów montuje zestaw z samą instrukcją, ale szkolenie czyni to rutyną."
+      }
+    ]
   }
 }

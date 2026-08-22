@@ -14,7 +14,8 @@ export type ModalType =
   | 'call'
   | 'samples'
   | 'datasheet'
-  | 'project';
+  | 'project'
+  | 'kit_order';
 
 export type FieldKind = 'text' | 'select' | 'area';
 
@@ -243,6 +244,30 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
       { name: 'city', kind: 'text', inputType: 'text', label: 'City', placeholder: 'Your city', required: true },
       countryField(false),
+    ],
+  },
+  kit_order: {
+    title: 'Order the DIY kit',
+    subtitle:
+      'Tell us about your ceiling and we reply within one working day with a tailored quote and a proforma invoice in EUR.',
+    submitLabel: 'Request my kit quote',
+    sentTitle: 'Kit request received',
+    sentMsg: 'Thanks — we confirm your kit, price and delivery within one working day with a proforma invoice in EUR.',
+    fields: [
+      { name: 'name', kind: 'text', inputType: 'text', label: 'Name', placeholder: 'First & last name', required: true },
+      { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@email.com', required: true },
+      { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+44 ...', required: true },
+      countryField(),
+      { name: 'size', kind: 'text', inputType: 'text', label: 'Ceiling size', placeholder: 'e.g. 4 × 5 m or 20 m²', required: true },
+      {
+        name: 'finish',
+        kind: 'select',
+        label: 'Fabric',
+        // The kit's real variants (materials.ts) — not the PVC finish range.
+        options: ['Standard (matte white)', 'Acoustic', 'Translucent'],
+        optionValues: ['standard', 'acoustic', 'translucent'],
+      },
+      { name: 'message', kind: 'area', label: 'Your room', placeholder: 'Ceiling shape, obstacles, lighting plans…', full: true },
     ],
   },
   project: {

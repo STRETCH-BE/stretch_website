@@ -26,6 +26,8 @@ export type MaterialItem = {
    * selection is appended to the product name in the quote modal / inquiry list.
    */
   variants?: ('standard' | 'acoustic' | 'translucent')[];
+  /** Optional dedicated page for this item (e.g. the DIY kit → /kit). */
+  pageHref?: string;
 };
 
 export type MaterialGroup = {
@@ -100,6 +102,7 @@ export const materialGroups: MaterialGroup[] = [
         body: 'The complete cold-install kit: polyester fabric cut to your room, profiles, corner pieces and instructions — the DIY route to a seamless fabric ceiling.',
         image: '/images/materials/polyester-diy-kit.jpg',
         variants: ['standard', 'acoustic', 'translucent'],
+        pageHref: '/kit',
       },
     ],
   },

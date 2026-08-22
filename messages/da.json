@@ -76,7 +76,9 @@
     "materialsTitle": "Materialer og tilbehør til stretchloft | STRETCH",
     "materialsDescription": "Profiler, duge og folier, belysning, tilbehør, værktøj og STRETCH Cleaner — bed om tilbud pr. vare, og vi svarer med pris og leveringstid. Uden webshop.",
     "architectsTitle": "For arkitekter — foreskriv spændlofter | STRETCH",
-    "architectsDescription": "Gratis arkitektområde: datablade, udbudstekster, CAD/BIM, målte casestudier, vejledende €/m²-budgetbånd, arrangementer og projektstøtte."
+    "architectsDescription": "Gratis arkitektområde: datablade, udbudstekster, CAD/BIM, målte casestudier, vejledende €/m²-budgetbånd, arrangementer og projektstøtte.",
+    "kitTitle": "Gør-det-selv spændloftskit — efter mål | STRETCH",
+    "kitDescription": "Spændloftskit efter dine mål: polyesterdug, profiler og vejledning i én pakke. Kold montering, levering i EU og Storbritannien."
   },
   "cookies": {
     "title": "Vi værner om dit privatliv",
@@ -162,7 +164,8 @@
       "about": "Om os",
       "faq": "FAQ",
       "clientPortal": "Kundeportal",
-      "architects": "For arkitekter"
+      "architects": "For arkitekter",
+      "kit": "Gør-det-selv-kit"
     },
     "dealers": "Forhandlernetværk"
   },
@@ -2094,6 +2097,43 @@
         "USA",
         "Andet land"
       ]
+    },
+    "kit_order": {
+      "title": "Bestil gør-det-selv-kittet",
+      "subtitle": "Fortæl os om dit loft — svar inden for én arbejdsdag med tilbud og proformafaktura i EUR.",
+      "submitLabel": "Anmod om kit-tilbud",
+      "sentTitle": "Kit-forespørgsel modtaget",
+      "sentMsg": "Tak — vi bekræfter kit, pris og levering inden for én arbejdsdag med en proformafaktura i EUR.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og efternavn"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "dig@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+45 ..."
+        },
+        "size": {
+          "label": "Loftsmål",
+          "placeholder": "f.eks. 4 × 5 m eller 20 m²"
+        },
+        "finish": {
+          "label": "Dug",
+          "options": [
+            "Standard (mat hvid)",
+            "Akustisk",
+            "Translucent"
+          ]
+        },
+        "message": {
+          "label": "Dit rum",
+          "placeholder": "Loftets form, forhindringer, lysplaner…"
+        }
+      }
     }
   },
   "faqPage": {
@@ -4533,7 +4573,8 @@
     "colourTranslucent": "Translucent",
     "colourPrinted": "Med print",
     "colourCodeLabel": "Farvekode",
-    "colourCodePlaceholder": "f.eks. RAL 9016 eller kortnr."
+    "colourCodePlaceholder": "f.eks. RAL 9016 eller kortnr.",
+    "orderKitCta": "Bestil kittet"
   },
   "materialsData": {
     "profiles": {
@@ -4850,5 +4891,58 @@
     "appLight": "Stjernehimmel-spændloft med fiberoptisk lys",
     "appCommercial": "Printet spændloft i et butiksinteriør",
     "installer": "Certificeret STRETCH-montør monterer et spændloft"
+  },
+  "kitPage": {
+    "eyebrow": "Gør-det-selv-kit",
+    "crumb": "Kit",
+    "titleA": "Et nyt loft",
+    "titleB": "i én kasse.",
+    "intro": "STRETCH gør-det-selv-kittet: et spændloft i polyester, skåret til dit rum i vores eget EU-værksted og leveret til døren som en let pakke. Kold montering — ingen varmepistol, intet puds, ingen maling.",
+    "heroAlt": "STRETCH gør-det-selv-kittet klar til montering",
+    "ctaOrder": "Bestil kittet",
+    "ctaMaterials": "Alle materialer",
+    "boxEyebrow": "I kassen",
+    "boxTitle": "Det får du",
+    "boxItems": [
+      "Loftsdug i polyester, skåret efter dit rums mål",
+      "Kantprofiler og hjørnestykker til hele omkredsen",
+      "Trin-for-trin monteringsvejledning",
+      "Dug efter valg: standard mat hvid, akustisk eller translucent"
+    ],
+    "sizeBody": "Én fugefri dug spænder over bredder op til 5,15 m — nok til næsten alle rum. Bredere? Send dine mål, og vi rådgiver om en løsning med to duge og samleprofil.",
+    "howEyebrow": "Montering",
+    "howTitle": "Kan jeg montere det selv?",
+    "howBody": "Ja — det er hele idéen med kittet. Dugen monteres koldt i kantprofilerne med almindeligt værktøj; den medfølgende vejledning dækker hvert trin. Læs først vores ærlige guide, og vil du montere lofter oftere, så tag endagskurset på vores belgiske hovedkontor.",
+    "howBlog": "Læs: montér selv et spændloft",
+    "howTraining": "Vil du hellere uddannes først? Montørkursus",
+    "priceEyebrow": "Pris & bestilling",
+    "priceTitle": "Bestil dit kit",
+    "priceOnRequest": "Pris på forespørgsel — send dine mål, og du får et skræddersyet tilbud inden for én arbejdsdag.",
+    "currencyNotice": "Alle priser og betalinger er i EUR. £-beløbet er en indikation til ECB-referencekursen af {asOf}; din bank eller dit kort omregner til egen kurs.",
+    "deliveryPoints": [
+      "Leveres DDP som kurérpakke — vi klarer told og importformaliteter, den bekræftede pris er den pris, du betaler",
+      "Forsendelse i hele EU og Storbritannien",
+      "Produktions- og leveringsdato bekræftes med ordrebekræftelsen"
+    ],
+    "faqEyebrow": "Spørgsmål",
+    "faqTitle": "Kit-FAQ",
+    "faq": [
+      {
+        "q": "Sender I til Storbritannien?",
+        "a": "Ja. Kits sendes DDP (Delivered Duty Paid) med kurér: fortoldning, afgifter og importmoms tager vi os af — beløbet på din ordrebekræftelse er det, du betaler, intet ekstra ved døren."
+      },
+      {
+        "q": "Hvilket værktøj skal jeg bruge?",
+        "a": "Almindeligt værktøj: boremaskine, vaterpas, sav og skruetrækker til profilerne, plus en ren spartel til at stikke dugen ind. Vejledningen lister alt, før du går i gang."
+      },
+      {
+        "q": "Mit rum er bredere end én dug — hvad så?",
+        "a": "Én fugefri dug spænder op til 5,15 m i bredden. Bredere rum deles i to duge over en samleprofil — send dine mål, og vi foreslår den flotteste løsning."
+      },
+      {
+        "q": "Kan jeg blive uddannet, før jeg køber?",
+        "a": "Bestemt — vores endags montørkursus på det belgiske hovedkontor dækker dug, profiler og kold montering. Mange kit-kunder monterer fint med vejledningen alene, men kurset gør det til rutine."
+      }
+    ]
   }
 }
