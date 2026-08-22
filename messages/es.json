@@ -225,7 +225,8 @@
       "tooMany": "Demasiados intentos. Espere unos minutos e inténtelo de nuevo.",
       "disposable": "No se aceptan direcciones de correo temporales — utilice su correo de empresa.",
       "couldNotCreate": "No se ha podido procesar su registro. Contacte con nosotros si cree que se trata de un error.",
-      "signupPendingBody": "Le hemos enviado un enlace de confirmación. Haga clic para verificar su correo — después nuestro equipo revisará su cuenta y activará el acceso. Recibirá un correo cuando sea aprobada."
+      "signupPendingBody": "Le hemos enviado un enlace de confirmación. Haga clic para verificar su correo — después nuestro equipo revisará su cuenta y activará el acceso. Recibirá un correo cuando sea aprobada.",
+      "confirmedBanner": "Su correo electrónico está confirmado. Si su cuenta requiere revisión, recibirá un correo de aprobación — de lo contrario, inicie sesión abajo."
     },
     "nav": {
       "label": "Portal de clientes",
@@ -368,7 +369,7 @@
       "createdOk": "Cuenta creada para {email}.",
       "typeProducer": "Productor/revendedor",
       "typeInstaller": "Instalador",
-      "typeB2c": "B2C",
+      "typeB2c": "Cliente particular",
       "typeArchitect": "Arquitecto",
       "filterAllTypes": "Todos los tipos",
       "colCountry": "País",

@@ -16,6 +16,7 @@ import { verifyTurnstile, isTurnstileEnabled } from '@/lib/turnstile';
 import { checkFormToken } from '@/lib/form-token';
 import { rateLimit, getClientIp } from '@/lib/rate-limit';
 import { canonicalEmail, emailDomain, isDisposable } from '@/lib/spam/email';
+import { isBlockedSender } from '@/lib/spam/blocklist';
 import { scoreSubmission, FLAG_THRESHOLD, type SpamMeta } from '@/lib/spam/score';
 import type { LeadSpamMeta } from '@/lib/lead-store';
 
@@ -24,7 +25,7 @@ export type LeadGuardResult =
   | { kind: 'rate_limited' }
   | { kind: 'captcha_fail' }
   | { kind: 'stale_token' }
-  | { kind: 'ok'; spam: LeadSpamMeta; disposable: boolean };
+  | { kind: 'ok'; spam: LeadSpamMeta; disposable: boolean; blocked: boolean };
 
 export async function runLeadGuards(opts: {
   request: Request;
@@ -77,8 +78,10 @@ export async function runLeadGuards(opts: {
   const tokenState = checkFormToken(opts.formToken, { minAgeMs: opts.minTokenAgeMs });
   if (tokenState === 'stale') return { kind: 'stale_token' };
 
-  // 5) Spam score.
+  // 5) Spam score + admin blocklist (a blocked sender is a HARD flag: the
+  //    lead is stored, never delivered, and no visitor mail is sent).
   const disposable = email ? isDisposable(emailDomain(email)) : false;
+  const blocked = email ? await isBlockedSender(email) : false;
   const meta: SpamMeta = {
     honeypot: false,
     disposable,
@@ -86,14 +89,16 @@ export async function runLeadGuards(opts: {
     turnstileUnavailable,
   };
   const { score, reasons } = scoreSubmission({ fields, meta });
+  if (blocked) reasons.push('blocked_sender');
 
   return {
     kind: 'ok',
     disposable,
+    blocked,
     spam: {
       score,
       reasons,
-      flagged: score >= FLAG_THRESHOLD,
+      flagged: blocked || score >= FLAG_THRESHOLD,
       ip,
       host,
       userAgent,

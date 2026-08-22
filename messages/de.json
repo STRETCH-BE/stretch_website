@@ -225,7 +225,8 @@
       "tooMany": "Zu viele Versuche. Bitte warten Sie einige Minuten und versuchen Sie es erneut.",
       "disposable": "Temporäre E-Mail-Adressen können nicht verwendet werden — bitte nutzen Sie Ihre geschäftliche E-Mail-Adresse.",
       "couldNotCreate": "Ihre Registrierung konnte nicht verarbeitet werden. Kontaktieren Sie uns, wenn Sie dies für einen Fehler halten.",
-      "signupPendingBody": "Wir haben Ihnen einen Bestätigungslink gesendet. Klicken Sie darauf, um Ihre E-Mail zu bestätigen — unser Team prüft anschließend Ihr Konto und schaltet den Zugang frei. Sie erhalten eine E-Mail, sobald es freigegeben ist."
+      "signupPendingBody": "Wir haben Ihnen einen Bestätigungslink gesendet. Klicken Sie darauf, um Ihre E-Mail zu bestätigen — unser Team prüft anschließend Ihr Konto und schaltet den Zugang frei. Sie erhalten eine E-Mail, sobald es freigegeben ist.",
+      "confirmedBanner": "Ihre E-Mail-Adresse ist bestätigt. Falls Ihr Konto noch geprüft wird, erhalten Sie eine E-Mail nach der Freigabe — andernfalls können Sie sich unten anmelden."
     },
     "nav": {
       "label": "Kundenportal",
@@ -368,7 +369,7 @@
       "createdOk": "Konto für {email} erstellt.",
       "typeProducer": "Hersteller/Wiederverkäufer",
       "typeInstaller": "Monteur",
-      "typeB2c": "B2C",
+      "typeB2c": "Privatkunde",
       "typeArchitect": "Architekt",
       "filterAllTypes": "Alle Typen",
       "colCountry": "Land",

@@ -225,7 +225,8 @@
       "tooMany": "Zbyt wiele prób. Odczekaj kilka minut i spróbuj ponownie.",
       "disposable": "Tymczasowe adresy e-mail nie są akceptowane — użyj firmowego adresu e-mail.",
       "couldNotCreate": "Nie udało się przetworzyć rejestracji. Skontaktuj się z nami, jeśli uważasz, że to pomyłka.",
-      "signupPendingBody": "Wysłaliśmy link potwierdzający. Kliknij go, aby zweryfikować adres e-mail — następnie nasz zespół sprawdzi konto i aktywuje dostęp. Otrzymasz e-mail po zatwierdzeniu."
+      "signupPendingBody": "Wysłaliśmy link potwierdzający. Kliknij go, aby zweryfikować adres e-mail — następnie nasz zespół sprawdzi konto i aktywuje dostęp. Otrzymasz e-mail po zatwierdzeniu.",
+      "confirmedBanner": "Adres e-mail został potwierdzony. Jeśli konto wymaga weryfikacji, otrzymasz e-mail po zatwierdzeniu — w przeciwnym razie zaloguj się poniżej."
     },
     "nav": {
       "label": "Panel klienta",
@@ -368,7 +369,7 @@
       "createdOk": "Utworzono konto dla {email}.",
       "typeProducer": "Producent/dystrybutor",
       "typeInstaller": "Monter",
-      "typeB2c": "B2C",
+      "typeB2c": "Klient prywatny",
       "typeArchitect": "Architekt",
       "filterAllTypes": "Wszystkie typy",
       "colCountry": "Kraj",

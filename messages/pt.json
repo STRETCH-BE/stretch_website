@@ -225,7 +225,8 @@
       "tooMany": "Demasiadas tentativas. Aguarde alguns minutos e tente novamente.",
       "disposable": "Endereços de e-mail temporários não são aceites — utilize o seu e-mail profissional.",
       "couldNotCreate": "Não foi possível processar o seu registo. Contacte-nos se considerar que se trata de um erro.",
-      "signupPendingBody": "Enviámos-lhe um link de confirmação. Clique nele para verificar o seu e-mail — a nossa equipa irá depois rever a conta e ativar o acesso. Receberá um e-mail assim que for aprovada."
+      "signupPendingBody": "Enviámos-lhe um link de confirmação. Clique nele para verificar o seu e-mail — a nossa equipa irá depois rever a conta e ativar o acesso. Receberá um e-mail assim que for aprovada.",
+      "confirmedBanner": "O seu e-mail está confirmado. Se a sua conta necessitar de revisão, receberá um e-mail de aprovação — caso contrário, inicie sessão abaixo."
     },
     "nav": {
       "label": "Portal do cliente",
@@ -368,7 +369,7 @@
       "createdOk": "Conta criada para {email}.",
       "typeProducer": "Produtor/revendedor",
       "typeInstaller": "Instalador",
-      "typeB2c": "B2C",
+      "typeB2c": "Cliente particular",
       "typeArchitect": "Arquiteto",
       "filterAllTypes": "Todos os tipos",
       "colCountry": "País",

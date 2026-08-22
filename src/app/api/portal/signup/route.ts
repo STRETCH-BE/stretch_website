@@ -18,10 +18,13 @@ import { createRouteClient, createServiceClient, isSupabaseConfigured } from '@/
 import { isPortalAllowedHost, portalOrigin } from '@/lib/portal/host';
 import { rateLimit, getClientIp } from '@/lib/rate-limit';
 import { canonicalEmail, emailDomain, isDisposable, isFreemail } from '@/lib/spam/email';
+import { isBlockedSender } from '@/lib/spam/blocklist';
 import { scoreSubmission, FLAG_THRESHOLD, HARD_THRESHOLD } from '@/lib/spam/score';
 import { checkFormToken } from '@/lib/form-token';
 import { isTurnstileEnabled } from '@/lib/turnstile';
 import { sendTransactionalEmail, isTransactionalConfigured } from '@/lib/transactional';
+import { buildAdminReviewEmail } from '@/lib/portal/emails';
+import { mintReviewToken, isReviewTokenEnabled } from '@/lib/portal/review-token';
 import { contact } from '@/lib/site-config';
 import { locales } from '@/i18n/config';
 
@@ -137,6 +140,10 @@ export async function POST(req: NextRequest) {
   const domain = emailDomain(email);
   if (isDisposable(domain)) {
     return NextResponse.json({ ok: false, error: 'disposable' }, { status: 400 });
+  }
+  // Admin blocklist (blocked_senders) — same message as a hard spam reject.
+  if (await isBlockedSender(email)) {
+    return NextResponse.json({ ok: false, error: 'rejected' }, { status: 400 });
   }
   // Per-email daily cap on signup attempts.
   if (!(await rateLimit(`signup:email:${canonical}`, 5, 24 * 60 * 60))) {
@@ -254,6 +261,38 @@ export async function POST(req: NextRequest) {
     }
     if (spamPending) {
       console.warn(`[signup] pending spam_review (score ${score}): ${reasons.join(', ')}`);
+    }
+
+    // Pending → notify the admin with the full profile + signed review link.
+    // Fire-and-forget: a mail hiccup must never fail the signup response.
+    if (pendingReason && isTransactionalConfigured()) {
+      const origin = portalOrigin(req.nextUrl.origin);
+      const reviewUrl = isReviewTokenEnabled()
+        ? `${origin}/portal/review?t=${encodeURIComponent(mintReviewToken(data.user.id))}`
+        : `${origin}/portal/admin`;
+      const mail = buildAdminReviewEmail({
+        accountType,
+        contactName,
+        company: company || null,
+        office: isArchitect ? office || null : null,
+        city: city || null,
+        country: country || null,
+        email,
+        canonicalEmail: canonical,
+        phone: phone || null,
+        pendingReason,
+        spamScore: score,
+        spamReasons: reasons,
+        signupHost: req.headers.get('host'),
+        signupLocale: signupLocale,
+        signupIp: ip === 'unknown' ? null : ip,
+        signupUserAgent: req.headers.get('user-agent'),
+        reviewUrl,
+      });
+      const to = process.env.PORTAL_ADMIN_EMAIL || contact.leadDestination;
+      sendTransactionalEmail({ to, subject: mail.subject, html: mail.html, text: mail.text }).catch(
+        () => undefined,
+      );
     }
   }
 

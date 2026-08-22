@@ -225,7 +225,8 @@
       "tooMany": "Te veel pogingen. Wacht enkele minuten en probeer het opnieuw.",
       "disposable": "Tijdelijke e-mailadressen kunnen niet worden gebruikt — gebruik uw zakelijke e-mailadres.",
       "couldNotCreate": "Uw registratie kon niet worden verwerkt. Neem contact met ons op als u denkt dat dit een vergissing is.",
-      "signupPendingBody": "We stuurden u een bevestigingslink. Klik erop om uw e-mailadres te bevestigen — ons team beoordeelt daarna uw account en activeert de toegang. U ontvangt een e-mail zodra het is goedgekeurd."
+      "signupPendingBody": "We stuurden u een bevestigingslink. Klik erop om uw e-mailadres te bevestigen — ons team beoordeelt daarna uw account en activeert de toegang. U ontvangt een e-mail zodra het is goedgekeurd.",
+      "confirmedBanner": "Uw e-mailadres is bevestigd. Als uw account nog wordt beoordeeld, ontvangt u een e-mail bij goedkeuring — anders kunt u hieronder inloggen."
     },
     "nav": {
       "label": "Klantenportaal",
@@ -368,7 +369,7 @@
       "createdOk": "Account aangemaakt voor {email}.",
       "typeProducer": "Producent/verdeler",
       "typeInstaller": "Installateur",
-      "typeB2c": "B2C",
+      "typeB2c": "Particulier",
       "typeArchitect": "Architect",
       "filterAllTypes": "Alle types",
       "colCountry": "Land",

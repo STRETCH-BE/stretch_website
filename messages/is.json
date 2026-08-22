@@ -225,7 +225,8 @@
       "tooMany": "Of margar tilraunir. Bíddu í nokkrar mínútur og reyndu aftur.",
       "disposable": "Ekki er hægt að nota tímabundin netföng — notaðu vinnunetfangið þitt.",
       "couldNotCreate": "Ekki var hægt að vinna úr skráningunni. Hafðu samband ef þú telur þetta vera mistök.",
-      "signupPendingBody": "Við sendum þér staðfestingarhlekk. Smelltu á hann til að staðfesta netfangið — teymið okkar fer svo yfir reikninginn og opnar aðganginn. Þú færð tölvupóst um leið og hann hefur verið samþykktur."
+      "signupPendingBody": "Við sendum þér staðfestingarhlekk. Smelltu á hann til að staðfesta netfangið — teymið okkar fer svo yfir reikninginn og opnar aðganginn. Þú færð tölvupóst um leið og hann hefur verið samþykktur.",
+      "confirmedBanner": "Netfangið þitt hefur verið staðfest. Ef reikningurinn þinn bíður samþykkis færðu tölvupóst þegar hann er samþykktur — annars geturðu skráð þig inn hér fyrir neðan."
     },
     "nav": {
       "label": "Viðskiptavinagátt",
@@ -368,7 +369,7 @@
       "createdOk": "Aðgangur stofnaður fyrir {email}.",
       "typeProducer": "Framleiðandi/endursali",
       "typeInstaller": "Uppsetningaraðili",
-      "typeB2c": "B2C",
+      "typeB2c": "Einstaklingur",
       "typeArchitect": "Arkitekt",
       "filterAllTypes": "Allar tegundir",
       "colCountry": "Land",

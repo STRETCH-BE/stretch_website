@@ -444,3 +444,76 @@ alter table public.leads add column if not exists host         text;
 alter table public.leads add column if not exists user_agent   text;
 
 create index if not exists leads_flagged_idx on public.leads (flagged) where flagged;
+
+-- ============================================================================
+-- ANTI-SPAM PART 2 (22 Aug 2026) — blocked senders, delivery timestamps and
+-- pg_cron retention. Idempotent: safe to re-run in the Supabase SQL editor.
+-- ============================================================================
+
+-- 1) BLOCKED SENDERS — canonical emails and whole domains an admin has
+--    blocked. Signups from them are refused; leads from them are stored as
+--    flagged and never delivered. Service-role access only (RLS, no policies).
+create table if not exists public.blocked_senders (
+  id         uuid primary key default gen_random_uuid(),
+  kind       text not null check (kind in ('email', 'domain')),
+  value      text not null,
+  reason     text,
+  created_at timestamptz not null default now(),
+  unique (kind, value)
+);
+alter table public.blocked_senders enable row level security;
+
+-- 2) LEAD DELIVERY TIMESTAMP — set on successful delivery (including a
+--    manual "Deliver now" from the admin panel).
+alter table public.leads add column if not exists delivered_at timestamptz;
+
+-- 3) PURGE + RETENTION (pg_cron — enable the extension in the dashboard
+--    first: Database → Extensions → pg_cron). Two nightly jobs:
+--      • purge-unconfirmed-signups: auth users that never confirmed their
+--        email within 48 h are deleted (FK cascade removes the profile);
+--        admins are excluded as a safety net.
+--      • purge-lead-pii: plain IPs/user agents are nulled after 30 days on
+--        portal_users and 90 days on leads — they must not live longer than
+--        the abuse-investigation window needs.
+--    cron.unschedule before each schedule keeps the block re-runnable.
+create extension if not exists pg_cron;
+
+do $$
+begin
+  if exists (select 1 from cron.job where jobname = 'purge-unconfirmed-signups') then
+    perform cron.unschedule('purge-unconfirmed-signups');
+  end if;
+  if exists (select 1 from cron.job where jobname = 'purge-lead-pii') then
+    perform cron.unschedule('purge-lead-pii');
+  end if;
+end
+$$;
+
+select cron.schedule(
+  'purge-unconfirmed-signups',
+  '20 3 * * *',
+  $$
+    delete from auth.users u
+    where u.email_confirmed_at is null
+      and u.created_at < now() - interval '48 hours'
+      and not exists (
+        select 1 from public.portal_users p
+        where p.id = u.id and p.role = 'admin'
+      )
+  $$
+);
+
+select cron.schedule(
+  'purge-lead-pii',
+  '40 3 * * *',
+  $$
+    update public.portal_users
+      set signup_ip = null, signup_ua = null
+      where created_at < now() - interval '30 days'
+        and (signup_ip is not null or signup_ua is not null);
+    update public.leads
+      set ip = null, user_agent = null
+      where created_at < now() - interval '90 days'
+        and (ip is not null or user_agent is not null)
+  $$
+);

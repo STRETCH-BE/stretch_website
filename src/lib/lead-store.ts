@@ -45,6 +45,8 @@ export async function storeLead(
       page,
       delivered: delivery.delivered,
       delivery_method: delivery.method,
+      // Timestamp of the successful delivery (also set by admin "Deliver now").
+      delivered_at: delivery.delivered ? new Date().toISOString() : null,
       payload,
     };
     if (spam) {
@@ -56,11 +58,12 @@ export async function storeLead(
       row.user_agent = str(spam.userAgent);
     }
     let { error } = await db.from('leads').insert(row);
-    if (error && spam) {
-      // Un-migrated database (spam columns missing) — never lose the lead:
+    if (error) {
+      // Un-migrated database (newer columns missing) — never lose the lead:
       // retry with the pre-existing shape.
       const legacy = { ...row };
-      for (const k of ['spam_score', 'spam_reasons', 'flagged', 'ip', 'host', 'user_agent']) delete legacy[k];
+      for (const k of ['spam_score', 'spam_reasons', 'flagged', 'ip', 'host', 'user_agent', 'delivered_at'])
+        delete legacy[k];
       ({ error } = await db.from('leads').insert(legacy));
     }
     if (error) console.error(`[lead] db store failed: ${error.message}`);

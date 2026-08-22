@@ -225,7 +225,8 @@
       "tooMany": "För många försök. Vänta några minuter och försök igen.",
       "disposable": "Tillfälliga e-postadresser kan inte användas — använd din jobbadress.",
       "couldNotCreate": "Din registrering kunde inte behandlas. Kontakta oss om du tror att detta är ett misstag.",
-      "signupPendingBody": "Vi har skickat en bekräftelselänk. Klicka på den för att verifiera din e-post — därefter granskar vårt team ditt konto och aktiverar åtkomsten. Du får ett mejl så snart det har godkänts."
+      "signupPendingBody": "Vi har skickat en bekräftelselänk. Klicka på den för att verifiera din e-post — därefter granskar vårt team ditt konto och aktiverar åtkomsten. Du får ett mejl så snart det har godkänts.",
+      "confirmedBanner": "Din e-postadress är bekräftad. Om ditt konto väntar på granskning får du ett mejl när det godkänts — annars kan du logga in nedan."
     },
     "nav": {
       "label": "Kundportal",
@@ -368,7 +369,7 @@
       "createdOk": "Konto skapat för {email}.",
       "typeProducer": "Producent/återförsäljare",
       "typeInstaller": "Montör",
-      "typeB2c": "B2C",
+      "typeB2c": "Privatkund",
       "typeArchitect": "Arkitekt",
       "filterAllTypes": "Alla typer",
       "colCountry": "Land",

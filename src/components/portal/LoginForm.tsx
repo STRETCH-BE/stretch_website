@@ -5,7 +5,7 @@
 // mode='demo'   → demo login; the preview accounts are listed on the card
 //                 (only when NEXT_PUBLIC_PORTAL_DEMO=1 — never by default).
 // mode='closed' → portal not configured: a "being activated" notice, no form.
-import { useMemo, useState, type FormEvent } from 'react';
+import { useEffect, useMemo, useState, type FormEvent } from 'react';
 import { useRouter } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowUpRight, Lock, MailCheck, UserRoundPlus } from 'lucide-react';
@@ -48,6 +48,25 @@ export default function LoginForm({
   const [signupPending, setSignupPending] = useState(false);
   const security = useFormSecurity();
   const architect = audience === 'architect';
+  // The Supabase confirmation link lands here with tokens in the URL — show a
+  // friendly "email confirmed" line instead of an unexplained login form, and
+  // scrub the tokens from the address bar.
+  const [confirmedBanner, setConfirmedBanner] = useState(false);
+  useEffect(() => {
+    try {
+      const hash = window.location.hash;
+      const search = window.location.search;
+      if (
+        (hash.includes('access_token') && hash.includes('type=signup')) ||
+        /[?&]code=/.test(search)
+      ) {
+        setConfirmedBanner(true);
+        window.history.replaceState(null, '', window.location.pathname);
+      }
+    } catch {
+      /* no banner */
+    }
+  }, []);
 
   // Localised country names — the shared EU/EEA + UK + CH list, Europe first.
   const countries = useMemo(() => signupCountryOptions(locale), [locale]);
@@ -213,6 +232,27 @@ export default function LoginForm({
 
   return (
     <div style={{ width: '100%', maxWidth: 440 }}>
+      {confirmedBanner && (
+        <p
+          role="status"
+          style={{
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: 9,
+            background: '#fff',
+            border: '1px solid var(--border)',
+            borderLeft: '3px solid var(--red)',
+            padding: '11px 14px',
+            fontSize: 13,
+            lineHeight: 1.5,
+            color: 'var(--text-muted)',
+            margin: '0 0 12px',
+          }}
+        >
+          <MailCheck size={15} style={{ flexShrink: 0, marginTop: 2, color: 'var(--red)' }} />
+          <span>{t('confirmedBanner')}</span>
+        </p>
+      )}
       {/* Sign in / Create account tabs (signup only in live mode) */}
       {mode === 'live' && (
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', marginBottom: -1 }}>

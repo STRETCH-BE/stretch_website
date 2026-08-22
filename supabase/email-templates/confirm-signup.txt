@@ -1,0 +1,10 @@
+Hello,
+
+You created a STRETCH client-portal account with this email address. Confirm it to finish setting up your access.
+
+Confirm my email: {{ .ConfirmationURL }}
+
+If you did not create this account, you can safely ignore this email — nothing happens without confirmation.
+
+STRETCH - Gentseweg 309 A3 (Beverpark), Beveren-Waas
+info@stretchgroup.be - +32 474 52 20 90

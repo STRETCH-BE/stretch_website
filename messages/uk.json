@@ -225,7 +225,8 @@
       "tooMany": "Too many attempts. Please wait a few minutes and try again.",
       "disposable": "Temporary email addresses cannot be used — please use your business email address.",
       "couldNotCreate": "Your registration could not be processed. Please contact us if you believe this is an error.",
-      "signupPendingBody": "We sent you a confirmation link. Click it to verify your email — our team will then review your account and unlock access. You will receive an email once it is approved."
+      "signupPendingBody": "We sent you a confirmation link. Click it to verify your email — our team will then review your account and unlock access. You will receive an email once it is approved.",
+      "confirmedBanner": "Your email address is confirmed. If your account requires review you will receive an approval email — otherwise you can sign in below."
     },
     "nav": {
       "label": "Client portal",
@@ -368,7 +369,7 @@
       "createdOk": "Account created for {email}.",
       "typeProducer": "Producer/Reseller",
       "typeInstaller": "Installer",
-      "typeB2c": "B2C",
+      "typeB2c": "Private client",
       "typeArchitect": "Architect",
       "filterAllTypes": "All types",
       "colCountry": "Country",

@@ -124,3 +124,73 @@ email confirmation.
   `/api/portal/login` → `404`.
 - Zero-config: unset every new var → forms, signup and login behave exactly
   as before (no widget rendered, no token required, no redirects).
+
+---
+
+# Part 2 — approval gate, admin hygiene, purge
+
+## Approval gate
+
+Every pending signup (`installer_review`, `freemail`, `spam_review`) emails
+`PORTAL_ADMIN_EMAIL` (fallback `LEAD_DESTINATION`) the full profile + spam
+context and a **signed review link** `/portal/review?t=<token>` (HMAC-SHA256
+over user id + expiry with `FORM_SIGNING_SECRET`, valid 7 days). The page is
+also reachable signed-in as an admin (`/portal/review?id=<userId>`, and via
+the Approve/Reject row actions in the admin panel).
+
+- The review page changes **nothing on GET** — mail scanners pre-fetch links.
+  Approve and Reject are POSTs to `/api/portal/review`.
+- **Approve**: b2b/trade accounts require markets (or "all markets") —
+  approval IS the market assignment; architects need none. Sets
+  `active=true`, clears `pending_reason`, emails the user "Your STRETCH
+  account is approved" (branded, with a login button).
+- **Reject**: reason (not a business / spam / duplicate / other) → deletes
+  the auth user + profile; checkboxes add the canonical address and/or the
+  domain to `blocked_senders`. The applicant is not notified.
+- Tampered/expired token → a small branded "link expired" page pointing to
+  `/portal/admin`.
+
+## Blocklist (`public.blocked_senders`)
+
+`kind 'email'` matches the CANONICAL address (gmail dots/+suffix collapsed);
+`kind 'domain'` matches the email domain. Consulted by:
+- `/api/portal/signup` → hit = 400 with the could-not-create message;
+- `/api/lead`, `/api/contact`, `/api/datasheet-request` → hit = hard flag
+  (stored, never delivered, no visitor mail).
+Managed in the admin panel ("Blocklist" card) or via Mark-as-spam / Reject.
+
+## Admin panel additions (`stretch.mt/portal/admin`)
+
+- **Accounts**: status badges (Active / Pending: reason / Deactivated /
+  Email unconfirmed — joined from `auth.users`), created date, search,
+  status/type/country filters, a "Pending (n)" tab, expandable signup
+  metadata (canonical email, IP, host, locale, user agent), row actions
+  (Approve, Reject, Deactivate, Delete, Mark as spam) and bulk
+  Delete / Mark as spam.
+- **Leads**: newest first, 50/page, All / Flagged / Delivered filter,
+  reasons on flagged rows, **Deliver now** (delivers exactly once — sets
+  `flagged=false`, `delivered_at`), Delete, CSV export of the filter.
+
+## Purge & retention (pg_cron)
+
+Enable the `pg_cron` extension in the dashboard first (Database →
+Extensions), then run the ANTI-SPAM PART 2 block in `supabase/schema.sql`.
+
+| Job | Schedule | What it does |
+| --- | --- | --- |
+| `purge-unconfirmed-signups` | 03:20 UTC nightly | deletes auth users with unconfirmed email older than 48 h (admins excluded; FK cascade removes the profile) |
+| `purge-lead-pii` | 03:40 UTC nightly | nulls `signup_ip`/`signup_ua` on portal_users after 30 days and `ip`/`user_agent` on leads after 90 days |
+
+Check job runs: `select * from cron.job_run_details order by start_time desc limit 20;`
+
+## Supabase email templates
+
+Files in `supabase/email-templates/` (HTML to paste into Authentication →
+Emails → Templates; the .txt files are the plain-text equivalents for
+reference). Magic-link is intentionally absent — the portal does not use it.
+
+| File | Dashboard template slot | Subject to set |
+| --- | --- | --- |
+| `confirm-signup.html` | Confirm signup | `Confirm your STRETCH portal account` |
+| `reset-password.html` | Reset password | `Reset your STRETCH portal password` |
+| `change-email.html` | Change email address | `Confirm your new email address — STRETCH` |

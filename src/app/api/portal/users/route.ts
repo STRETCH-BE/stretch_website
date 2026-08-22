@@ -8,6 +8,7 @@ import { DEMO_USERS, getAdminSession } from '@/lib/portal/auth';
 import { createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
 import { normalizeAccountType, PRICE_MARKETS } from '@/lib/portal/types';
 import { isPortalAllowedHost } from '@/lib/portal/host';
+import { canonicalEmail, emailDomain } from '@/lib/spam/email';
 
 export const runtime = 'nodejs';
 
@@ -41,14 +42,38 @@ export async function GET(request: Request) {
     );
   }
   const FULL: string =
+    'id, email, company, role, account_type, markets, all_markets, active, created_at, contact_name, vat, phone, country, business_type, office, city, pending_reason, canonical_email, signup_ip, signup_host, signup_ua, signup_locale';
+  const MID: string =
     'id, email, company, role, account_type, markets, all_markets, active, created_at, contact_name, vat, phone, country, business_type, office, city';
   const CORE: string = 'id, email, company, role, account_type, markets, all_markets, active, created_at';
-  // B2B columns are a later addition — un-migrated databases fall back.
-  let { data, error } = await service.from('portal_users').select(FULL).order('created_at', { ascending: true });
+  // Anti-spam and B2B columns are later additions — un-migrated databases
+  // fall back in two steps.
+  let { data, error } = await service.from('portal_users').select(FULL).order('created_at', { ascending: false });
   if (error) {
-    ({ data, error } = await service.from('portal_users').select(CORE).order('created_at', { ascending: true }));
+    ({ data, error } = await service.from('portal_users').select(MID).order('created_at', { ascending: false }));
+  }
+  if (error) {
+    ({ data, error } = await service.from('portal_users').select(CORE).order('created_at', { ascending: false }));
   }
   if (error) return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
+
+  // Email-confirmation state lives on the AUTH user — join by id via
+  // listUsers, paginated properly (1000/page covers this portal many times
+  // over, but loop anyway).
+  const confirmed = new Map<string, boolean>();
+  try {
+    for (let pageNo = 1; pageNo <= 20; pageNo++) {
+      const { data: pageData, error: listError } = await service.auth.admin.listUsers({
+        page: pageNo,
+        perPage: 1000,
+      });
+      if (listError || !pageData?.users?.length) break;
+      for (const au of pageData.users) confirmed.set(au.id, Boolean(au.email_confirmed_at));
+      if (pageData.users.length < 1000) break;
+    }
+  } catch {
+    /* confirmation state stays unknown */
+  }
 
   const users = ((data ?? []) as unknown as Record<string, unknown>[]).map((u) => ({
     id: u.id,
@@ -59,6 +84,7 @@ export async function GET(request: Request) {
     markets: (u.markets as string[] | null) ?? [],
     allMarkets: Boolean(u.all_markets),
     active: Boolean(u.active),
+    createdAt: (u.created_at as string | null) ?? null,
     contactName: (u.contact_name as string | null) ?? null,
     vat: (u.vat as string | null) ?? null,
     phone: (u.phone as string | null) ?? null,
@@ -66,8 +92,79 @@ export async function GET(request: Request) {
     businessType: (u.business_type as string | null) ?? null,
     office: (u.office as string | null) ?? null,
     city: (u.city as string | null) ?? null,
+    pendingReason: (u.pending_reason as string | null) ?? null,
+    canonicalEmail: (u.canonical_email as string | null) ?? null,
+    signupIp: u.signup_ip ? String(u.signup_ip) : null,
+    signupHost: (u.signup_host as string | null) ?? null,
+    signupUa: (u.signup_ua as string | null) ?? null,
+    signupLocale: (u.signup_locale as string | null) ?? null,
+    emailConfirmed: confirmed.has(String(u.id)) ? confirmed.get(String(u.id)) : null,
   }));
   return NextResponse.json({ ok: true, users, persisted: true });
+}
+
+// DELETE — remove accounts (auth user + profile via FK cascade).
+//   { ids: string[], markSpam?: boolean, blockDomain?: boolean }
+// markSpam additionally writes the canonical email (and optionally the
+// domain) to blocked_senders. Admin accounts are never deleted here.
+export async function DELETE(req: NextRequest) {
+  if (!isPortalAllowedHost(req.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+  const session = await getAdminSession();
+  if (!session) return NextResponse.json({ ok: false, error: 'forbidden' }, { status: 403 });
+
+  const body = await req.json().catch(() => null);
+  const ids = Array.isArray(body?.ids) ? body.ids.map(String).filter(Boolean).slice(0, 100) : [];
+  if (ids.length === 0) {
+    return NextResponse.json({ ok: false, error: 'Missing account ids.' }, { status: 400 });
+  }
+  if (!isSupabaseConfigured() || session.demo) {
+    return NextResponse.json({ ok: true, persisted: false, deleted: 0 });
+  }
+  const service = createServiceClient();
+  if (!service) {
+    return NextResponse.json(
+      { ok: false, error: 'SUPABASE_SERVICE_ROLE_KEY is not configured on the server.' },
+      { status: 500 },
+    );
+  }
+
+  const { data: rows } = await service
+    .from('portal_users')
+    .select('id, email, role')
+    .in('id', ids);
+  const targets = (rows ?? []).filter((r) => r.role !== 'admin');
+
+  if (body?.markSpam === true && targets.length > 0) {
+    const entries: { kind: string; value: string; reason: string }[] = [];
+    for (const r of targets) {
+      entries.push({ kind: 'email', value: canonicalEmail(r.email), reason: 'spam' });
+      if (body?.blockDomain === true) {
+        const domain = emailDomain(r.email);
+        if (domain) entries.push({ kind: 'domain', value: domain, reason: 'spam' });
+      }
+    }
+    // Un-migrated database (table missing) → the delete still proceeds.
+    const { error: blockError } = await service
+      .from('blocked_senders')
+      .upsert(entries, { onConflict: 'kind,value', ignoreDuplicates: true });
+    if (blockError) console.warn(`[users] blocklist write failed: ${blockError.message}`);
+  }
+
+  let deleted = 0;
+  const errors: string[] = [];
+  for (const r of targets) {
+    const { error } = await service.auth.admin.deleteUser(r.id);
+    if (error) {
+      errors.push(`${r.email}: ${error.message}`);
+      // Auth user may already be gone — remove the orphaned profile.
+      await service.from('portal_users').delete().eq('id', r.id);
+    } else {
+      deleted += 1;
+    }
+  }
+  return NextResponse.json({ ok: true, persisted: true, deleted, errors });
 }
 
 export async function POST(req: NextRequest) {

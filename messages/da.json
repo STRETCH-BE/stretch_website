@@ -225,7 +225,8 @@
       "tooMany": "For mange forsøg. Vent et par minutter, og prøv igen.",
       "disposable": "Midlertidige e-mailadresser kan ikke bruges — brug din arbejdsmail.",
       "couldNotCreate": "Din registrering kunne ikke behandles. Kontakt os, hvis du mener, det er en fejl.",
-      "signupPendingBody": "Vi har sendt dig et bekræftelseslink. Klik på det for at bekræfte din e-mail — derefter gennemgår vores team din konto og åbner adgangen. Du får en e-mail, så snart den er godkendt."
+      "signupPendingBody": "Vi har sendt dig et bekræftelseslink. Klik på det for at bekræfte din e-mail — derefter gennemgår vores team din konto og åbner adgangen. Du får en e-mail, så snart den er godkendt.",
+      "confirmedBanner": "Din e-mailadresse er bekræftet. Hvis din konto afventer godkendelse, får du en e-mail, når den er godkendt — ellers kan du logge ind nedenfor."
     },
     "nav": {
       "label": "Kundeportal",
@@ -368,7 +369,7 @@
       "createdOk": "Konto oprettet til {email}.",
       "typeProducer": "Producent/forhandler",
       "typeInstaller": "Montør",
-      "typeB2c": "B2C",
+      "typeB2c": "Privatkunde",
       "typeArchitect": "Arkitekt",
       "filterAllTypes": "Alle typer",
       "colCountry": "Land",

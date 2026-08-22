@@ -102,8 +102,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: 'stale_token' }, { status: 400 });
   }
   // Hard signal for the MAIL step: a disposable inbox never receives a mail
-  // (the address only exists to be burned) — the lead row is still stored.
-  const hardNoMail = guard.disposable;
+  // (the address only exists to be burned), and neither does a sender on the
+  // admin blocklist — the lead row is still stored in both cases.
+  const hardNoMail = guard.disposable || guard.blocked;
 
   const page = request.headers.get('referer');
   try {

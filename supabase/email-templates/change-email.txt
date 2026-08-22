@@ -1,0 +1,10 @@
+Hello,
+
+You asked to change the email address on your STRETCH portal account. Confirm the change with the button below.
+
+Confirm the new address: {{ .ConfirmationURL }}
+
+If you did not ask for this, ignore this email and contact us — your address stays unchanged.
+
+STRETCH - Gentseweg 309 A3 (Beverpark), Beveren-Waas
+info@stretchgroup.be - +32 474 52 20 90

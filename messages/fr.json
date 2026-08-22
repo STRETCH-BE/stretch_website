@@ -225,7 +225,8 @@
       "tooMany": "Trop de tentatives. Patientez quelques minutes puis réessayez.",
       "disposable": "Les adresses e-mail temporaires ne sont pas acceptées — utilisez votre adresse professionnelle.",
       "couldNotCreate": "Votre inscription n’a pas pu être traitée. Contactez-nous si vous pensez qu’il s’agit d’une erreur.",
-      "signupPendingBody": "Nous vous avons envoyé un lien de confirmation. Cliquez dessus pour vérifier votre e-mail — notre équipe examinera ensuite votre compte et activera l’accès. Vous recevrez un e-mail dès son approbation."
+      "signupPendingBody": "Nous vous avons envoyé un lien de confirmation. Cliquez dessus pour vérifier votre e-mail — notre équipe examinera ensuite votre compte et activera l’accès. Vous recevrez un e-mail dès son approbation.",
+      "confirmedBanner": "Votre adresse e-mail est confirmée. Si votre compte doit encore être validé, vous recevrez un e-mail d’approbation — sinon, connectez-vous ci-dessous."
     },
     "nav": {
       "label": "Espace client",
@@ -368,7 +369,7 @@
       "createdOk": "Compte créé pour {email}.",
       "typeProducer": "Producteur/revendeur",
       "typeInstaller": "Installateur",
-      "typeB2c": "B2C",
+      "typeB2c": "Particulier",
       "typeArchitect": "Architecte",
       "filterAllTypes": "Tous les types",
       "colCountry": "Pays",
