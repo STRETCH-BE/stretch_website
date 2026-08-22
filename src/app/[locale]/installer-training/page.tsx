@@ -3,9 +3,9 @@
 // BreadcrumbList + a Course JSON-LD describing the programme.
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, MapPin } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
-import { siteUrl, brand } from '@/lib/site-config';
+import { siteUrl, brand, contact } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import { TRAINING_DATE_DETAIL } from '@/lib/forms-config';
@@ -65,11 +65,43 @@ export default async function TrainingPage({ params }: { params: { locale: strin
     provider: { '@type': 'Organization', name: brand.name, sameAs: siteUrl },
     url: `${localeBase(locale)}/installer-training`,
   };
+  // Event nodes for the SCHEDULED sessions only (real ISO dates from
+  // forms-config; TBA interest-capture sessions carry no Event). No offers
+  // node — training pricing is not published (open decision per market).
+  const trainingLocation = {
+    '@type': 'Place',
+    name: `${brand.name} HQ`,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: contact.address.street,
+      postalCode: contact.address.postalCode,
+      addressLocality: contact.address.city,
+      addressCountry: contact.address.country,
+    },
+  };
+  const sessionEvents = TRAINING_DATE_DETAIL.map((d, di) => ({ d, di }))
+    .filter(({ d }) => d.isoStart)
+    .map(({ d, di }) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: `${t('courseName')} — ${(tm.raw('trainingDates') as string[])[di] ?? d.date}`,
+    startDate: d.isoStart,
+    endDate: d.isoEnd,
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    eventStatus: 'https://schema.org/EventScheduled',
+    location: trainingLocation,
+    inLanguage: d.languages.map((l) => l.toLowerCase()),
+    organizer: { '@type': 'Organization', name: brand.name, url: siteUrl },
+    url: `${localeBase(locale)}/installer-training#dates`,
+    }));
 
   return (
     <>
       <JsonLd data={crumbs} />
       <JsonLd data={course} />
+      {sessionEvents.map((e) => (
+        <JsonLd key={e.startDate} data={e} />
+      ))}
 
       {/* Hero */}
       <section className="container" style={{ padding: 'clamp(36px,5vw,72px) 0 clamp(40px,5vw,72px)' }}>
@@ -81,8 +113,13 @@ export default async function TrainingPage({ params }: { params: { locale: strin
               <br />
               {t('hero.titleB')} <span className="accent">{t('hero.titleC')}.</span>
             </h1>
-            <p className="lead" style={{ maxWidth: 460, margin: '0 0 30px' }}>
+            <p className="lead" style={{ maxWidth: 460, margin: '0 0 18px' }}>
               {t('hero.lead')}
+            </p>
+            {/* Location + travel line, localized per market (§3 goal B) */}
+            <p style={{ display: 'flex', alignItems: 'flex-start', gap: 9, fontSize: 14, fontWeight: 600, color: 'var(--text-muted)', maxWidth: 460, margin: '0 0 28px' }}>
+              <MapPin size={16} style={{ color: 'var(--red)', flexShrink: 0, marginTop: 2 }} />
+              {t('hero.travel')}
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14 }}>
               <ModalButton type="training" source="training_hero" className="btn btn--primary">

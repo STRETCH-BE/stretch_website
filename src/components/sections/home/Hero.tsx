@@ -86,11 +86,9 @@ export default function Hero() {
           <Link href="/products" className="btn btn--ghost-light btn--lg">
             {t('explore')} <ArrowRight size={16} className="btn__arrow" />
           </Link>
-          <span className="hero-rating">
-            <strong>5.0</strong>
-            <span className="hero-stars" aria-hidden="true">★★★★★</span>
-            <span className="hero-rating-label">{t('rated')}</span>
-          </span>
+          {/* The "5.0 ★ Rated on Google" badge is removed until it can be
+              backed by real, verifiable Google reviews (ranking audit §1.4 —
+              presenting non-genuine review claims violates the UCPD). */}
         </div>
       </div>
 

@@ -14,7 +14,9 @@ import Acoustics from '@/components/sections/home/Acoustics';
 import ApplicationAreas from '@/components/sections/home/ApplicationAreas';
 import InstallerPartner from '@/components/sections/home/InstallerPartner';
 import Gallery from '@/components/sections/home/Gallery';
-import Reviews from '@/components/sections/home/Reviews';
+// Reviews stays unmounted until real, permission-cleared Google reviews per
+// market replace the launch placeholders (ranking audit 22 Aug 2026, §1.4:
+// non-genuine review presentation is a blacklisted practice under the UCPD).
 import CtaBand from '@/components/sections/home/CtaBand';
 
 export default async function HomePage({ params }: { params: { locale: string } }) {
@@ -37,7 +39,6 @@ export default async function HomePage({ params }: { params: { locale: string } 
       <ApplicationAreas />
       <InstallerPartner />
       <Gallery />
-      <Reviews />
       <CtaBand />
     </>
   );

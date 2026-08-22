@@ -285,33 +285,95 @@ const ukRules = [
 
 // ---------------------------------------------------------------------------
 // GERMAN RULES — stretchdecken.de (also receives .at / .ch / .li paths via 308)
+// Content block added 22 Aug 2026: the old-site DE URL set was still 404ing
+// (only the shop sweep existed) while Google keeps the URLs indexed —
+// inventory from the ranking analysis, statuses verified live that day.
 // ---------------------------------------------------------------------------
 const germanRules = [
   ...genericRules('stretchdecken.de', '/portal/login'),
   R('stretchdecken.de', '/mein-konto/:path*', '/portal/login'),
   R('stretchdecken.de', '/warenkorb', SHOP_TARGET),
   R('stretchdecken.de', '/kasse', SHOP_TARGET),
+  R('stretchdecken.de', '/produkt-kategorie/:path*', SHOP_TARGET),
+  // --- legacy content URLs (22 Aug 2026 sweep) ---
+  R('stretchdecken.de', '/nicht-brennbare-spanndecke', '/technical/polyester/fire-safety'),
+  R('stretchdecken.de', '/pvc-spanndecke', '/products/pvc-stretch-ceiling'),
+  R('stretchdecken.de', '/spanndecke-aus-polyester', '/products/polyester-stretch-ceiling'),
+  R('stretchdecken.de', '/lichtdecke', '/products/light-print-stretch-ceiling'),
+  // old FAQ page (carried the €75–80/m² price answer)
+  R('stretchdecken.de', '/loesungen-de', '/faq'),
+  // the old plain-language guide → its recreation
+  R('stretchdecken.de', '/spanndecke', '/blog/what-is-a-stretch-ceiling'),
+  R('stretchdecken.de', '/decke', '/products'),
+  R('stretchdecken.de', '/stretch-spanndecken-de', '/products'),
+  // e-learning playlist page → training
+  R('stretchdecken.de', '/spanndecken-youtube', '/installer-training'),
 ];
 
 // ---------------------------------------------------------------------------
 // FRENCH RULES — stretchplafond.fr
+// Content block added 22 Aug 2026 (same sweep). NOTE: the specific
+// /product-category/... deep rule must come BEFORE the genericRules spread —
+// Next.js redirects are first-match-wins.
 // ---------------------------------------------------------------------------
 const frenchRules = [
+  // 495D acoustic roll — the one shop URL that earned clicks (45/yr)
+  R('stretchplafond.fr', '/product-category/tissus-stretch/plafond-tendu-en-rouleau', '/materials/fabrics'),
   ...genericRules('stretchplafond.fr', '/portal/login'),
   R('stretchplafond.fr', '/boutique/:path*', SHOP_TARGET),
   R('stretchplafond.fr', '/mon-compte/:path*', '/portal/login'),
   R('stretchplafond.fr', '/panier', SHOP_TARGET),
   R('stretchplafond.fr', '/commande', SHOP_TARGET),
+  // --- legacy content URLs (22 Aug 2026 sweep) ---
+  // the traffic carrier (65% of all .fr clicks) → its /blog recreation
+  R('stretchplafond.fr', '/decouvrez-les-avantages-du-plafond-tendu', '/blog/plafond-tendu-avantages-et-inconvenients'),
+  R('stretchplafond.fr', '/plafond-tendu-acoustique', '/products/acoustic-stretch-system'),
+  R('stretchplafond.fr', '/plafond-tendu-en-pvc', '/products/pvc-stretch-ceiling'),
+  R('stretchplafond.fr', '/plafond-tendu-textile-polyester', '/products/polyester-stretch-ceiling'),
+  R('stretchplafond.fr', '/plafond-tendu-lumineux', '/products/light-print-stretch-ceiling'),
+  R('stretchplafond.fr', '/plafond-tendu-brillant', '/products/pvc-stretch-ceiling'),
+  R('stretchplafond.fr', '/plafond-tendu-salle-de-bains', '/applications/bathroom-kitchen'),
+  R('stretchplafond.fr', '/plafond-tendu-salon', '/applications/living-cinema'),
+  R('stretchplafond.fr', '/revetement-de-plafond', '/products'),
+  R('stretchplafond.fr', '/plafond-tendu-standard', '/products/polyester-stretch-ceiling'),
+  R('stretchplafond.fr', '/solutions', '/products'),
+  R('stretchplafond.fr', '/plafonds', '/products'),
+  R('stretchplafond.fr', '/nouvelles-et-mises-a-jour', '/blog'),
+  // old dealer-recruitment page → partners
+  R('stretchplafond.fr', '/devenir-revendeur-plafond-tendu', '/partners'),
+  R('stretchplafond.fr', '/plafond-tendu-youtube', '/installer-training'),
 ];
 
 // ---------------------------------------------------------------------------
-// POLISH / ICELANDIC RULES — thin satellites, generic sweep
+// POLISH RULES — stretch-sufit.pl
+// Content block added 22 Aug 2026 (same sweep): the old Polish site had a
+// full content URL set, not just a shop. Pricelist URLs go to the portal —
+// trade pricing is login-gated on the new site.
 // ---------------------------------------------------------------------------
 const polishRules = [
   ...genericRules('stretch-sufit.pl'),
   R('stretch-sufit.pl', '/sklep/:path*', SHOP_TARGET),
   R('stretch-sufit.pl', '/moje-konto/:path*', '/portal/login'),
   R('stretch-sufit.pl', '/koszyk', SHOP_TARGET),
+  // --- legacy content URLs (22 Aug 2026 sweep) ---
+  R('stretch-sufit.pl', '/sufit-napinany-pvc', '/products/pvc-stretch-ceiling'),
+  R('stretch-sufit.pl', '/tekstylny-sufit-napinany', '/products/polyester-stretch-ceiling'),
+  R('stretch-sufit.pl', '/blyszczacy-sufit-napinany', '/products/pvc-stretch-ceiling'),
+  R('stretch-sufit.pl', '/akustyczny-sufit-napinany', '/products/acoustic-stretch-system'),
+  R('stretch-sufit.pl', '/swiecacy-sufit-napinany', '/products/light-print-stretch-ceiling'),
+  R('stretch-sufit.pl', '/oswietlenie-sufitowe-napinane', '/products/prefab-lighting-elements'),
+  R('stretch-sufit.pl', '/standardowy-sufit-napinany', '/products/polyester-stretch-ceiling'),
+  // old FAQ page (carried the PLN price answer)
+  R('stretch-sufit.pl', '/rozwiazania-sufitow-napinanych', '/faq'),
+  R('stretch-sufit.pl', '/sufity', '/products'),
+  // calculator → the honest price guide (a public estimate page can retarget this later)
+  R('stretch-sufit.pl', '/kalkulator-sufitow-napinanych', '/blog/spanplafond-prijs'),
+  // public PLN pricelist pages → portal (trade pricing is login-gated now)
+  R('stretch-sufit.pl', '/cennik-sufitow-napinanych-2', '/portal'),
+  R('stretch-sufit.pl', '/cennik-sufitow-napinanych', '/portal'),
+  R('stretch-sufit.pl', '/plan-treningowy-z-sufitem-napinanym', '/installer-training'),
+  // e-learning playlist page → training
+  R('stretch-sufit.pl', '/sufity-napinane-youtube', '/installer-training'),
 ];
 const icelandicRules = [...genericRules('stretch.is')];
 

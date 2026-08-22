@@ -1263,6 +1263,69 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    // Recreation of the old stretchplafond.fr traffic carrier
+    // /decouvrez-les-avantages-du-plafond-tendu/ (65% of all .fr clicks) —
+    // the legacy URL 301s here (redirects.mjs, French rules). Same pattern
+    // as the planchetten article on .be. Prices mirror the published
+    // price-guide article (€70–200/m²) — indicative only, never a quote.
+    slug: 'plafond-tendu-avantages-et-inconvenients',
+    title: 'Stretch ceilings: the advantages and disadvantages, honestly (2026 price guide)',
+    excerpt:
+      'A stretch ceiling gives you a seamless new ceiling in a day — but it is not the right answer for every room or budget. The real advantages, the honest disadvantages, and 2026 price ranges.',
+    datePublished: '2026-08-22',
+    dateModified: '2026-08-22',
+    author: 'STRETCH',
+    readMinutes: 6,
+    body: [
+      {
+        heading: 'What a stretch ceiling actually is',
+        paragraphs: [
+          'A stretch ceiling is a thin membrane — PVC film or polyester fabric — tensioned across the room and clipped into a slim perimeter profile a few centimetres below the existing ceiling. PVC is mounted with heat and cools drum-tight; polyester fabric mounts cold, without a heat gun.',
+          'The old ceiling stays where it is. Cracks, cables, pipes and decades of paint layers disappear behind one perfectly flat surface, and for a normal room the whole installation takes a single day.',
+        ],
+      },
+      {
+        heading: 'The advantages',
+        paragraphs: [
+          'Speed and cleanliness first: no demolition, no rubble container, no plaster dust, no painting afterwards. The furniture can usually stay in the room.',
+          'Then the surface itself: seamless up to roughly five metres wide, perfectly flat, and available matte, satin, glossy, translucent or printed. Lighting is where the system beats every alternative — LED lines, spots and even backlit fields integrate flush into the membrane.',
+          'The practical wins: the membrane does not crack with the building, never needs repainting, is washable, and handles humid rooms like bathrooms without flaking. Acoustic versions absorb sound through micro-perforations with absorption material hidden above. And the reaction-to-fire classes are documented — our membrane ranges are tested to B-s1,d0, with a non-flammable glassfibre option at A2-s1,d0.',
+          'Finally, access: the membrane is demountable. An installer can open a section for work in the plenum and re-tension it — try that with plasterboard.',
+        ],
+      },
+      {
+        heading: 'The disadvantages — the honest list',
+        paragraphs: [
+          'You lose a few centimetres of ceiling height: the profile needs mounting space, and integrated lighting needs a little more. In most rooms that is invisible; in a low cellar it can matter.',
+          'The membrane is tough but not invincible: a sharp object pushed into it can puncture it. Small damage is repairable and a damaged panel can be replaced, but a champagne cork is a better story than a ladder corner.',
+          'Quality depends on the installer. A stretch ceiling is measured and welded to the millimetre; a sloppy measurement or a cheap membrane shows. Work with a trained, certified installer and ask what membrane brand goes above your head.',
+          'And the price: a stretch ceiling costs more than a coat of paint on an already-good ceiling. It competes on total cost — against plastering plus painting plus repainting every few years — not against a paint roller.',
+        ],
+      },
+      {
+        heading: 'What it costs in 2026',
+        paragraphs: [
+          'Professionally installed, count on roughly €70 to €200 per square metre excluding VAT, installation included. A plain single-colour ceiling sits around €70–90 per m², a printed design around €90–100, an acoustic build-up around €100–150, and backlit or bathroom projects with integrated lighting €130–200 per m².',
+          'These are indicative ranges, not quotes — the membrane is made to measure for your exact room. Larger rooms come out cheaper per square metre; corners, curves and integrations add work. The full breakdown lives in our price guide, and a free quote gives you the firm number, usually the same working day.',
+        ],
+      },
+      {
+        heading: 'Stretch ceiling or plasterboard?',
+        paragraphs: [
+          'Plasterboard is cheaper on day one for a simple flat ceiling — if the room is empty, dust is acceptable and the finishing (jointing, sanding, priming, two coats of paint) is included in your comparison.',
+          'The stretch ceiling wins on renovation speed, on seamless large surfaces, on humid rooms, on integrated lighting and acoustics, and on the years after: no cracks, no repainting, and a surface that still looks new after a decade. That is why it is the renovation standard for finished, furnished homes.',
+        ],
+      },
+      {
+        heading: 'When it is the right choice',
+        paragraphs: [
+          'Choose a stretch ceiling when the room is lived-in and the ceiling above it is tired; when you want lighting inside the ceiling instead of on it; when a bathroom or pool area needs a moisture-proof finish; or when an office or practice needs acoustic calm without visible panels.',
+          'Doubting between systems, colours or budgets? Send us a photo and the room dimensions through the quote button — you get an honest recommendation and a free quote, without obligation.',
+        ],
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
