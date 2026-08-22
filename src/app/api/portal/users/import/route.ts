@@ -12,7 +12,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAdminSession } from '@/lib/portal/auth';
 import { createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
-import { isPortalAllowedHost, portalOrigin } from '@/lib/portal/host';
+import { isPortalAllowedHost, portalLoginUrl } from '@/lib/portal/host';
 import { canonicalEmail } from '@/lib/spam/email';
 import { parseRows, MAX_ROWS, type ImportRow } from '@/lib/portal/import-users';
 import { buildWelcomeEmail } from '@/lib/portal/emails';
@@ -88,7 +88,6 @@ export async function POST(req: NextRequest) {
     return true;
   });
 
-  const loginUrl = `${portalOrigin(req.nextUrl.origin)}/portal/login`;
   const created: { email: string; row: ImportRow }[] = [];
 
   for (const row of rows) {
@@ -159,7 +158,8 @@ export async function POST(req: NextRequest) {
             name: row.contactName,
             email,
             tempPassword: row.password,
-            loginUrl,
+            // Local-portal mode: each client gets their own country's domain.
+            loginUrl: portalLoginUrl({ fallbackOrigin: req.nextUrl.origin, country: row.country }),
           });
           return sendTransactionalEmail({ to: email, subject: mail.subject, html: mail.html, text: mail.text });
         }),

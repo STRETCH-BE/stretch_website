@@ -7,7 +7,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { DEMO_USERS, getAdminSession } from '@/lib/portal/auth';
 import { createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
 import { normalizeAccountType, PRICE_MARKETS } from '@/lib/portal/types';
-import { isPortalAllowedHost, portalOrigin } from '@/lib/portal/host';
+import { isPortalAllowedHost, portalLoginUrl } from '@/lib/portal/host';
 import { canonicalEmail, emailDomain } from '@/lib/spam/email';
 import { buildWelcomeEmail } from '@/lib/portal/emails';
 import { sendTransactionalEmail, isTransactionalConfigured } from '@/lib/transactional';
@@ -259,7 +259,8 @@ export async function POST(req: NextRequest) {
       name: null,
       email,
       tempPassword: password,
-      loginUrl: `${portalOrigin(req.nextUrl.origin)}/portal/login`,
+      // Local-portal mode: link the domain matching the client's country.
+      loginUrl: portalLoginUrl({ fallbackOrigin: req.nextUrl.origin, country }),
     });
     const sent = await sendTransactionalEmail({
       to: email,

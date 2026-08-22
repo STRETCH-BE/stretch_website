@@ -12,7 +12,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAdminSession } from '@/lib/portal/auth';
 import { createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
-import { isPortalAllowedHost, portalOrigin } from '@/lib/portal/host';
+import { isPortalAllowedHost, portalLoginUrl } from '@/lib/portal/host';
 import { checkReviewToken } from '@/lib/portal/review-token';
 import { canonicalEmail, emailDomain } from '@/lib/spam/email';
 import { normalizeAccountType, PRICE_MARKETS } from '@/lib/portal/types';
@@ -64,7 +64,7 @@ export async function POST(req: NextRequest) {
 
   const { data: profile } = await service
     .from('portal_users')
-    .select('id, email, role, account_type, active, pending_reason, contact_name')
+    .select('id, email, role, account_type, active, pending_reason, contact_name, country, signup_host')
     .eq('id', userId)
     .maybeSingle();
   if (!profile) {
@@ -105,7 +105,12 @@ export async function POST(req: NextRequest) {
     if (isTransactionalConfigured()) {
       const mail = buildApprovalEmail({
         name: (profile.contact_name as string | null) ?? null,
-        loginUrl: `${portalOrigin(req.nextUrl.origin)}/portal/login`,
+        // Local-portal mode: link the domain the client signed up on.
+        loginUrl: portalLoginUrl({
+          fallbackOrigin: req.nextUrl.origin,
+          signupHost: (profile as { signup_host?: string | null }).signup_host ?? null,
+          country: (profile as { country?: string | null }).country ?? null,
+        }),
       });
       // AWAITED — a serverless function freezes right after the response,
       // killing unawaited sends.
