@@ -80,7 +80,9 @@
     "kitTitle": "DIY-strekkiloftssett — eftir máli | STRETCH",
     "kitDescription": "Strekkiloftssett eftir þínum málum: pólýesterdúkur, prófílar og leiðbeiningar í einum pakka. Köld uppsetning, afhending í ESB og Bretlandi.",
     "supplyTitle": "Efni og sérsníðing strekkilofta fyrir uppsetningaraðila | STRETCH",
-    "supplyDescription": "Verksmiðjuafhending fyrir fagfólk: dúkar og filmur, prófílar, lýsing og sérsniðin dúkavinnsla, send um alla Evrópu. Reikningar í EUR."
+    "supplyDescription": "Verksmiðjuafhending fyrir fagfólk: dúkar og filmur, prófílar, lýsing og sérsniðin dúkavinnsla, send um alla Evrópu. Reikningar í EUR.",
+    "supplyCzSkTitle": "Strekkiloftaefni fyrir Tékkland & Slóvakíu | STRETCH",
+    "supplyCzSkDescription": "Hágæðaefni fyrir strekkiloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila — framleitt í Póllandi, dags eða tveggja leið. EUR eða PLN."
   },
   "cookies": {
     "title": "Við virðum friðhelgi þína",
@@ -5058,6 +5060,45 @@
       "cta": "Sjá þjálfunardaga"
     },
     "serviceName": "Afhending efna og sérsníðingar fyrir strekkiloft",
-    "serviceDescription": "Verksmiðjuafhending á efnum fyrir strekkiloft, sérsniðin dúkavinnsla og þjálfun uppsetningaraðila fyrir fagfólk um alla Evrópu."
+    "serviceDescription": "Verksmiðjuafhending á efnum fyrir strekkiloft, sérsniðin dúkavinnsla og þjálfun uppsetningaraðila fyrir fagfólk um alla Evrópu.",
+    "regional": {
+      "label": "Svæðisbundið",
+      "czsk": "Tékkland & Slóvakía — afhent úr pólsku framleiðslunni okkar"
+    }
+  },
+  "supplyCzSkPage": {
+    "crumb": "Tékkland & Slóvakía",
+    "eyebrow": "Tékkland & Slóvakía",
+    "titleA": "Hágæðaefni og sérsníðing,",
+    "titleB": "framleitt í næsta húsi — í Póllandi.",
+    "lead": "Hágæðaefni fyrir strekkiloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila — úr eigin pólskri framleiðslu, studd af belgísku samstæðunni.",
+    "freight": "Eins til tveggja daga flutningur frá Tékklandi og Slóvakíu.",
+    "ctaInquiry": "Talaðu við aðfangateymið",
+    "why": {
+      "eyebrow": "Af hverju við",
+      "title": "Meira en magnvara",
+      "body": "Markaðurinn er fullur af ódýrri filmu. Við afhendum lagið fyrir ofan: ESB-framleidda dúkavinnslu með stöðugum gæðum, alvöru dúkaúrval og hágæðaflokka sem vinna betri verkefni.",
+      "points": [
+        "Sérsniðin dúkavinnsla, soðin í eigin framleiðslu innan ESB — með harpúnkanti",
+        "Alvöru dúkaúrval: matt, satín, gljáandi, hálfgagnsætt og litir frá stærstu filmumerkjunum",
+        "Hágæðaflokkar fyrir betri verkefni: hálfgagnsæ, prentuð og hljóðvistarkerfi",
+        "Ál- og PVC-prófílar, LED-prófílar og 48V-tracklight-kerfið úr sömu framleiðslu",
+        "Þjálfun uppsetningaraðila og tæknistuðningur á bak við hverja afhendingu"
+      ]
+    },
+    "currencyLine": "Reikningar í EUR eða PLN — þitt val.",
+    "partner": {
+      "eyebrow": "Heildsala",
+      "title": "Einn dreifingaraðili í hverju landi",
+      "body": "Við leitum að einum heildsölusamstarfsaðila í Tékklandi og einum í Slóvakíu — fyrirtæki sem afhendir staðbundnum uppsetningaraðilum og byggir upp markaðinn með okkur.",
+      "points": [
+        "Þrepaskipt samstarfsverð í viðskiptavinagáttinni",
+        "Markaðsefni og vöruskjöl",
+        "Þjálfunardagar í verksmiðjunni í Póllandi eða í belgísku höfuðstöðvunum"
+      ]
+    },
+    "backToSupply": "Öll aðfangaþjónusta",
+    "serviceName": "Strekkiloftaaðföng fyrir Tékkland & Slóvakíu",
+    "serviceDescription": "Hágæðaefni fyrir strekkiloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila, framleitt í Póllandi með ESB-gæðum."
   }
 }

@@ -80,7 +80,9 @@
     "kitTitle": "DIY stretch ceiling kit — made to measure | STRETCH",
     "kitDescription": "Stretch ceiling kit made to your measurements: polyester fabric, profiles and instructions in one parcel. Cold install, EU and UK delivery.",
     "supplyTitle": "Stretch ceiling materials & confection for installers | STRETCH",
-    "supplyDescription": "Factory supply for installation professionals: fabrics & foils, profiles, lighting and made-to-measure confection, shipped across Europe. Invoicing in EUR."
+    "supplyDescription": "Factory supply for installation professionals: fabrics & foils, profiles, lighting and made-to-measure confection, shipped across Europe. Invoicing in EUR.",
+    "supplyCzSkTitle": "Stretch ceiling materials for Czechia & Slovakia | STRETCH",
+    "supplyCzSkDescription": "Premium stretch-ceiling materials and made-to-measure confection for Czech and Slovak professionals — produced in Poland, one to two days away. EUR or PLN."
   },
   "cookies": {
     "title": "We value your privacy",
@@ -5058,6 +5060,45 @@
       "cta": "See training dates"
     },
     "serviceName": "Stretch ceiling materials & confection supply",
-    "serviceDescription": "Factory supply of stretch-ceiling materials, made-to-measure confection and installer training for installation professionals across Europe."
+    "serviceDescription": "Factory supply of stretch-ceiling materials, made-to-measure confection and installer training for installation professionals across Europe.",
+    "regional": {
+      "label": "Regional",
+      "czsk": "Czechia & Slovakia — supplied from our Polish production"
+    }
+  },
+  "supplyCzSkPage": {
+    "crumb": "Czechia & Slovakia",
+    "eyebrow": "Czechia & Slovakia",
+    "titleA": "Premium materials & confection,",
+    "titleB": "produced next door in Poland.",
+    "lead": "Premium stretch-ceiling materials and made-to-measure confection for Czech and Slovak professionals — from our own Polish production, backed by the Belgian group.",
+    "freight": "One to two days’ freight from Czechia and Slovakia.",
+    "ctaInquiry": "Talk to the supply team",
+    "why": {
+      "eyebrow": "Why us",
+      "title": "More than commodity supply",
+      "body": "The market is full of cheap foil. We supply the layer above it: EU-made confection with consistent quality, a real fabric range and the premium tiers that win better projects.",
+      "points": [
+        "Made-to-measure confection welded in our own EU production — harpoon edge included",
+        "A real fabric range: matte, satin, glossy, translucent and colour finishes from the major foil brands",
+        "Premium tiers for better projects: translucent, printed and acoustic systems",
+        "Aluminium and PVC profiles, LED-line profiles and the 48V tracklight system from the same production",
+        "Installer training and technical support behind every delivery"
+      ]
+    },
+    "currencyLine": "Invoicing in EUR or PLN — your choice.",
+    "partner": {
+      "eyebrow": "Wholesale",
+      "title": "One distribution partner per country",
+      "body": "We are looking for one wholesale partner in Czechia and one in Slovakia — a company that supplies local installers and grows the market with us.",
+      "points": [
+        "Tiered partner pricing in the client portal",
+        "Marketing materials and product documentation",
+        "Training days at the factory in Poland or at our Belgian HQ"
+      ]
+    },
+    "backToSupply": "All supply services",
+    "serviceName": "Stretch ceiling supply for Czechia & Slovakia",
+    "serviceDescription": "Premium stretch-ceiling materials and made-to-measure confection for Czech and Slovak professionals, produced in Poland with EU-wide quality."
   }
 }

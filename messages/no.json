@@ -80,7 +80,9 @@
     "kitTitle": "Gjør-det-selv strekktakskit — etter mål | STRETCH",
     "kitDescription": "Strekktakskit etter dine mål: polyesterduk, profiler og veiledning i én pakke. Kald montering, levering i EU og Storbritannia.",
     "supplyTitle": "Strekkhimlingsmaterialer & konfeksjon for montører | STRETCH",
-    "supplyDescription": "Fabrikklevering for profesjonelle montører: duker & folier, profiler, lys og konfeksjon etter mål, sendt i hele Europa. Fakturering i EUR."
+    "supplyDescription": "Fabrikklevering for profesjonelle montører: duker & folier, profiler, lys og konfeksjon etter mål, sendt i hele Europa. Fakturering i EUR.",
+    "supplyCzSkTitle": "Strekkhimlingsmaterialer for Tsjekkia & Slovakia | STRETCH",
+    "supplyCzSkDescription": "Premiummaterialer for strekkhimlinger og konfeksjon etter mål for tsjekkiske og slovakiske fagfolk — produsert i Polen, en til to dager unna. EUR eller PLN."
   },
   "cookies": {
     "title": "Vi verner om personvernet ditt",
@@ -5058,6 +5060,45 @@
       "cta": "Se kursdatoer"
     },
     "serviceName": "Levering av materialer & konfeksjon for strekkhimlinger",
-    "serviceDescription": "Fabrikklevering av strekkhimlingsmaterialer, konfeksjon etter mål og montørkurs for profesjonelle i hele Europa."
+    "serviceDescription": "Fabrikklevering av strekkhimlingsmaterialer, konfeksjon etter mål og montørkurs for profesjonelle i hele Europa.",
+    "regional": {
+      "label": "Regionalt",
+      "czsk": "Tsjekkia & Slovakia — levert fra vår polske produksjon"
+    }
+  },
+  "supplyCzSkPage": {
+    "crumb": "Tsjekkia & Slovakia",
+    "eyebrow": "Tsjekkia & Slovakia",
+    "titleA": "Premiummaterialer & konfeksjon,",
+    "titleB": "produsert rett ved siden av — i Polen.",
+    "lead": "Premiummaterialer for strekkhimlinger og konfeksjon etter mål for tsjekkiske og slovakiske fagfolk — fra vår egen polske produksjon, støttet av den belgiske gruppen.",
+    "freight": "En til to dagers frakt fra Tsjekkia og Slovakia.",
+    "ctaInquiry": "Snakk med leveringsteamet",
+    "why": {
+      "eyebrow": "Hvorfor oss",
+      "title": "Mer enn bulklevering",
+      "body": "Markedet er fullt av billig folie. Vi leverer laget over: EU-konfeksjon med jevn kvalitet, et ekte duksortiment og premiumsegmentene som vinner bedre prosjekter.",
+      "points": [
+        "Konfeksjon etter mål, sveiset i vår egen EU-produksjon — med harpunkant",
+        "Et ekte duksortiment: matt, satin, blank, translusent og farger fra de store foliemerkene",
+        "Premiumsegmenter for bedre prosjekter: translusente, trykte og akustiske systemer",
+        "Aluminiums- og PVC-profiler, LED-profiler og 48V-tracklightsystemet fra samme produksjon",
+        "Montørkurs og teknisk støtte bak hver levering"
+      ]
+    },
+    "currencyLine": "Fakturering i EUR eller PLN — du velger.",
+    "partner": {
+      "eyebrow": "Engros",
+      "title": "Én distribusjonspartner per land",
+      "body": "Vi ser etter én engrospartner i Tsjekkia og én i Slovakia — et selskap som leverer til lokale montører og utvikler markedet sammen med oss.",
+      "points": [
+        "Trinnvise partnerpriser i kundeportalen",
+        "Markedsføringsmateriell og produktdokumentasjon",
+        "Kursdager på fabrikken i Polen eller ved vårt belgiske hovedkontor"
+      ]
+    },
+    "backToSupply": "Alle leveringstjenester",
+    "serviceName": "Strekkhimlingslevering for Tsjekkia & Slovakia",
+    "serviceDescription": "Premiummaterialer for strekkhimlinger og konfeksjon etter mål for tsjekkiske og slovakiske fagfolk, produsert i Polen med EU-kvalitet."
   }
 }

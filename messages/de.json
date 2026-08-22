@@ -80,7 +80,9 @@
     "kitTitle": "DIY-Spanndecken-Kit — nach Maß | STRETCH",
     "kitDescription": "Spanndecken-Kit nach Ihren Maßen: Polyestertuch, Profile und Anleitung in einem Paket. Kaltmontage, Lieferung in EU und UK.",
     "supplyTitle": "Spanndecken-Material & Konfektion für Verarbeiter | STRETCH",
-    "supplyDescription": "Werksbelieferung für Montageprofis: Membranen & Folien, Profile, Licht und Maßkonfektion, versandt durch ganz Europa. Rechnungsstellung in EUR."
+    "supplyDescription": "Werksbelieferung für Montageprofis: Membranen & Folien, Profile, Licht und Maßkonfektion, versandt durch ganz Europa. Rechnungsstellung in EUR.",
+    "supplyCzSkTitle": "Spanndecken-Material für Tschechien & Slowakei | STRETCH",
+    "supplyCzSkDescription": "Premium-Spanndeckenmaterialien und Maßkonfektion für tschechische und slowakische Profis — produziert in Polen, ein bis zwei Tage entfernt. EUR oder PLN."
   },
   "cookies": {
     "title": "Wir respektieren Ihre Privatsphäre",
@@ -5058,6 +5060,45 @@
       "cta": "Schulungstermine ansehen"
     },
     "serviceName": "Belieferung mit Spanndecken-Material & Konfektion",
-    "serviceDescription": "Werksbelieferung mit Spanndecken-Materialien, Maßkonfektion und Verarbeiter-Schulung für Montageprofis in ganz Europa."
+    "serviceDescription": "Werksbelieferung mit Spanndecken-Materialien, Maßkonfektion und Verarbeiter-Schulung für Montageprofis in ganz Europa.",
+    "regional": {
+      "label": "Regional",
+      "czsk": "Tschechien & Slowakei — beliefert aus unserer polnischen Produktion"
+    }
+  },
+  "supplyCzSkPage": {
+    "crumb": "Tschechien & Slowakei",
+    "eyebrow": "Tschechien & Slowakei",
+    "titleA": "Premium-Material & Konfektion,",
+    "titleB": "produziert direkt nebenan in Polen.",
+    "lead": "Premium-Spanndeckenmaterialien und Maßkonfektion für tschechische und slowakische Profis — aus unserer eigenen polnischen Produktion, getragen von der belgischen Gruppe.",
+    "freight": "Ein bis zwei Tage Fracht aus Tschechien und der Slowakei.",
+    "ctaInquiry": "Mit dem Belieferungsteam sprechen",
+    "why": {
+      "eyebrow": "Warum wir",
+      "title": "Mehr als Standardware",
+      "body": "Der Markt ist voll billiger Folie. Wir liefern die Ebene darüber: EU-Konfektion mit konstanter Qualität, ein echtes Membran-Sortiment und die Premium-Segmente, die bessere Projekte gewinnen.",
+      "points": [
+        "Maßkonfektion, geschweißt in unserer eigenen EU-Produktion — Harpunenrand inklusive",
+        "Ein echtes Membran-Sortiment: matt, satiniert, glänzend, transluzent und farbig von den großen Folienmarken",
+        "Premium-Segmente für bessere Projekte: transluzente, bedruckte und akustische Systeme",
+        "Aluminium- und PVC-Profile, LED-Linienprofile und das 48V-Tracklight-System aus derselben Produktion",
+        "Verarbeiter-Schulung und technischer Support hinter jeder Lieferung"
+      ]
+    },
+    "currencyLine": "Rechnungsstellung in EUR oder PLN — Sie wählen.",
+    "partner": {
+      "eyebrow": "Großhandel",
+      "title": "Ein Vertriebspartner pro Land",
+      "body": "Wir suchen einen Großhandelspartner in Tschechien und einen in der Slowakei — ein Unternehmen, das lokale Verarbeiter beliefert und den Markt mit uns ausbaut.",
+      "points": [
+        "Gestaffelte Partnerpreise im Kundenportal",
+        "Marketingmaterial und Produktdokumentation",
+        "Schulungstage im Werk in Polen oder an unserem belgischen Hauptsitz"
+      ]
+    },
+    "backToSupply": "Alle Belieferungsleistungen",
+    "serviceName": "Spanndecken-Belieferung für Tschechien & Slowakei",
+    "serviceDescription": "Premium-Spanndeckenmaterialien und Maßkonfektion für tschechische und slowakische Profis, produziert in Polen mit EU-weiter Qualität."
   }
 }

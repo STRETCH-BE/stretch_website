@@ -80,7 +80,9 @@
     "kitTitle": "Doe-het-zelf spanplafondkit — op maat | STRETCH",
     "kitDescription": "Spanplafondkit op uw maten: polyesterdoek, profielen en instructies in één pakket. Koude plaatsing, levering in de EU en het VK.",
     "supplyTitle": "Spanplafondmaterialen & confectie voor installateurs | STRETCH",
-    "supplyDescription": "Fabriekslevering voor installatieprofessionals: doeken & folies, profielen, verlichting en confectie op maat, verzonden door heel Europa. Facturatie in EUR."
+    "supplyDescription": "Fabriekslevering voor installatieprofessionals: doeken & folies, profielen, verlichting en confectie op maat, verzonden door heel Europa. Facturatie in EUR.",
+    "supplyCzSkTitle": "Spanplafondmaterialen voor Tsjechië & Slowakije | STRETCH",
+    "supplyCzSkDescription": "Premium spanplafondmaterialen en confectie op maat voor Tsjechische en Slowaakse professionals — geproduceerd in Polen, één à twee dagen ver. EUR of PLN."
   },
   "cookies": {
     "title": "We hechten waarde aan je privacy",
@@ -5058,6 +5060,45 @@
       "cta": "Bekijk trainingsdata"
     },
     "serviceName": "Levering van spanplafondmaterialen & confectie",
-    "serviceDescription": "Fabriekslevering van spanplafondmaterialen, confectie op maat en installateurstraining voor installatieprofessionals in heel Europa."
+    "serviceDescription": "Fabriekslevering van spanplafondmaterialen, confectie op maat en installateurstraining voor installatieprofessionals in heel Europa.",
+    "regional": {
+      "label": "Regionaal",
+      "czsk": "Tsjechië & Slowakije — beleverd vanuit onze Poolse productie"
+    }
+  },
+  "supplyCzSkPage": {
+    "crumb": "Tsjechië & Slowakije",
+    "eyebrow": "Tsjechië & Slowakije",
+    "titleA": "Premium materialen & confectie,",
+    "titleB": "geproduceerd vlak naast de deur in Polen.",
+    "lead": "Premium spanplafondmaterialen en confectie op maat voor Tsjechische en Slowaakse professionals — uit onze eigen Poolse productie, gedragen door de Belgische groep.",
+    "freight": "Eén à twee dagen transport vanuit Tsjechië en Slowakije.",
+    "ctaInquiry": "Praat met het leveringsteam",
+    "why": {
+      "eyebrow": "Waarom wij",
+      "title": "Meer dan bulklevering",
+      "body": "De markt zit vol goedkope folie. Wij leveren de laag daarboven: EU-confectie met constante kwaliteit, een echt doekengamma en de premiumsegmenten waarmee u betere projecten wint.",
+      "points": [
+        "Confectie op maat, gelast in onze eigen EU-productie — harpoenrand inbegrepen",
+        "Een echt doekengamma: mat, satijn, glans, translucent en kleur van de grote foliemerken",
+        "Premiumsegmenten voor betere projecten: translucente, bedrukte en akoestische systemen",
+        "Aluminium en pvc-profielen, LED-lijnprofielen en het 48V-tracklightsysteem uit dezelfde productie",
+        "Installateurstraining en technische ondersteuning achter elke levering"
+      ]
+    },
+    "currencyLine": "Facturatie in EUR of PLN — u kiest.",
+    "partner": {
+      "eyebrow": "Groothandel",
+      "title": "Eén distributiepartner per land",
+      "body": "We zoeken één groothandelspartner in Tsjechië en één in Slowakije — een bedrijf dat lokale installateurs belevert en de markt samen met ons laat groeien.",
+      "points": [
+        "Getrapte partnerprijzen in het klantenportaal",
+        "Marketingmateriaal en productdocumentatie",
+        "Trainingsdagen in de fabriek in Polen of op ons Belgische hoofdkantoor"
+      ]
+    },
+    "backToSupply": "Alle leveringsdiensten",
+    "serviceName": "Spanplafondlevering voor Tsjechië & Slowakije",
+    "serviceDescription": "Premium spanplafondmaterialen en confectie op maat voor Tsjechische en Slowaakse professionals, geproduceerd in Polen met EU-kwaliteit."
   }
 }

@@ -151,6 +151,14 @@ export default async function SupplyPage({ params }: { params: { locale: string 
             <Link href="/partners" className="lnk">{t('how.partnersLink')}</Link>
           </p>
           <p style={{ fontSize: 13.5, fontWeight: 700, color: 'var(--text-faint)', margin: 0 }}>{t('currencyLine')}</p>
+
+          {/* Regional strip — room for more regions later */}
+          <div style={{ marginTop: 'clamp(22px,3vw,32px)', border: '1px solid var(--border)', background: '#fff', padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+            <span style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--text-faint-2)' }}>{t('regional.label')}</span>
+            <Link href="/supply/czechia-slovakia" className="lnk" style={{ fontWeight: 700, fontSize: 14.5 }}>
+              {t('regional.czsk')} →
+            </Link>
+          </div>
         </div>
       </section>
 

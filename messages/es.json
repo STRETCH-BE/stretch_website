@@ -80,7 +80,9 @@
     "kitTitle": "Kit DIY de techo tensado — a medida | STRETCH",
     "kitDescription": "Kit de techo tensado a tus medidas: tela de poliéster, perfiles e instrucciones en un paquete. Instalación en frío, entrega en la UE y el Reino Unido.",
     "supplyTitle": "Materiales y confección de techo tensado para instaladores | STRETCH",
-    "supplyDescription": "Suministro de fábrica para profesionales: telas y láminas, perfiles, iluminación y confección a medida, con envío por toda Europa. Facturación en EUR."
+    "supplyDescription": "Suministro de fábrica para profesionales: telas y láminas, perfiles, iluminación y confección a medida, con envío por toda Europa. Facturación en EUR.",
+    "supplyCzSkTitle": "Materiales de techo tensado para Chequia y Eslovaquia | STRETCH",
+    "supplyCzSkDescription": "Materiales premium de techo tensado y confección a medida para profesionales checos y eslovacos — producidos en Polonia, a uno o dos días. EUR o PLN."
   },
   "cookies": {
     "title": "Valoramos tu privacidad",
@@ -5058,6 +5060,45 @@
       "cta": "Ver fechas de formación"
     },
     "serviceName": "Suministro de materiales y confección para techos tensados",
-    "serviceDescription": "Suministro de fábrica de materiales para techos tensados, confección a medida y formación de instaladores para profesionales de toda Europa."
+    "serviceDescription": "Suministro de fábrica de materiales para techos tensados, confección a medida y formación de instaladores para profesionales de toda Europa.",
+    "regional": {
+      "label": "Regional",
+      "czsk": "Chequia y Eslovaquia — suministradas desde nuestra producción polaca"
+    }
+  },
+  "supplyCzSkPage": {
+    "crumb": "Chequia y Eslovaquia",
+    "eyebrow": "Chequia y Eslovaquia",
+    "titleA": "Materiales premium y confección,",
+    "titleB": "producidos al lado, en Polonia.",
+    "lead": "Materiales premium para techos tensados y confección a medida para profesionales checos y eslovacos — desde nuestra propia producción polaca, respaldados por el grupo belga.",
+    "freight": "Uno o dos días de transporte desde Chequia y Eslovaquia.",
+    "ctaInquiry": "Hablar con el equipo de suministro",
+    "why": {
+      "eyebrow": "Por qué nosotros",
+      "title": "Más que suministro básico",
+      "body": "El mercado está lleno de lámina barata. Nosotros suministramos la capa superior: confección europea de calidad constante, una gama real de telas y los segmentos premium que ganan mejores proyectos.",
+      "points": [
+        "Confección a medida soldada en nuestra propia producción de la UE — con borde de arpón",
+        "Una gama real de telas: mate, satinado, brillo, translúcido y color de las grandes marcas de lámina",
+        "Segmentos premium para mejores proyectos: sistemas translúcidos, impresos y acústicos",
+        "Perfiles de aluminio y PVC, perfiles LED y el sistema tracklight 48V de la misma producción",
+        "Formación de instaladores y soporte técnico detrás de cada entrega"
+      ]
+    },
+    "currencyLine": "Facturación en EUR o PLN — usted elige.",
+    "partner": {
+      "eyebrow": "Mayorista",
+      "title": "Un socio de distribución por país",
+      "body": "Buscamos un socio mayorista en Chequia y otro en Eslovaquia — una empresa que suministre a los instaladores locales y haga crecer el mercado con nosotros.",
+      "points": [
+        "Precios de socio escalonados en el portal de clientes",
+        "Material de marketing y documentación de producto",
+        "Jornadas de formación en la fábrica de Polonia o en nuestra sede belga"
+      ]
+    },
+    "backToSupply": "Todos los servicios de suministro",
+    "serviceName": "Suministro de techos tensados para Chequia y Eslovaquia",
+    "serviceDescription": "Materiales premium para techos tensados y confección a medida para profesionales checos y eslovacos, producidos en Polonia con calidad de la UE."
   }
 }

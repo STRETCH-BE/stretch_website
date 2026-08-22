@@ -80,7 +80,9 @@
     "kitTitle": "Kit DIY de teto tensado — à medida | STRETCH",
     "kitDescription": "Kit de teto tensado às suas medidas: tela de poliéster, perfis e instruções numa encomenda. Instalação a frio, entrega na UE e no Reino Unido.",
     "supplyTitle": "Materiais e confeção de teto tensionado para instaladores | STRETCH",
-    "supplyDescription": "Fornecimento de fábrica para profissionais: telas e películas, perfis, iluminação e confeção à medida, com envio por toda a Europa. Faturação em EUR."
+    "supplyDescription": "Fornecimento de fábrica para profissionais: telas e películas, perfis, iluminação e confeção à medida, com envio por toda a Europa. Faturação em EUR.",
+    "supplyCzSkTitle": "Materiais de teto tensionado para a Chéquia e a Eslováquia | STRETCH",
+    "supplyCzSkDescription": "Materiais premium de teto tensionado e confeção à medida para profissionais checos e eslovacos — produzidos na Polónia, a um ou dois dias. EUR ou PLN."
   },
   "cookies": {
     "title": "Valorizamos a sua privacidade",
@@ -5058,6 +5060,45 @@
       "cta": "Ver datas de formação"
     },
     "serviceName": "Fornecimento de materiais e confeção para tetos tensionados",
-    "serviceDescription": "Fornecimento de fábrica de materiais para tetos tensionados, confeção à medida e formação de instaladores para profissionais em toda a Europa."
+    "serviceDescription": "Fornecimento de fábrica de materiais para tetos tensionados, confeção à medida e formação de instaladores para profissionais em toda a Europa.",
+    "regional": {
+      "label": "Regional",
+      "czsk": "Chéquia e Eslováquia — fornecidas a partir da nossa produção polaca"
+    }
+  },
+  "supplyCzSkPage": {
+    "crumb": "Chéquia e Eslováquia",
+    "eyebrow": "Chéquia e Eslováquia",
+    "titleA": "Materiais premium e confeção,",
+    "titleB": "produzidos mesmo ao lado, na Polónia.",
+    "lead": "Materiais premium para tetos tensionados e confeção à medida para profissionais checos e eslovacos — da nossa própria produção polaca, apoiados pelo grupo belga.",
+    "freight": "Um a dois dias de transporte desde a Chéquia e a Eslováquia.",
+    "ctaInquiry": "Falar com a equipa de fornecimento",
+    "why": {
+      "eyebrow": "Porquê nós",
+      "title": "Mais do que fornecimento básico",
+      "body": "O mercado está cheio de película barata. Nós fornecemos a camada acima: confeção europeia de qualidade constante, uma gama real de telas e os segmentos premium que ganham melhores projetos.",
+      "points": [
+        "Confeção à medida soldada na nossa própria produção na UE — com bordo de arpão",
+        "Uma gama real de telas: mate, acetinado, brilhante, translúcido e cor das grandes marcas de película",
+        "Segmentos premium para melhores projetos: sistemas translúcidos, impressos e acústicos",
+        "Perfis de alumínio e PVC, perfis LED e o sistema tracklight 48V da mesma produção",
+        "Formação de instaladores e apoio técnico por trás de cada entrega"
+      ]
+    },
+    "currencyLine": "Faturação em EUR ou PLN — a sua escolha.",
+    "partner": {
+      "eyebrow": "Grossista",
+      "title": "Um parceiro de distribuição por país",
+      "body": "Procuramos um parceiro grossista na Chéquia e outro na Eslováquia — uma empresa que forneça os instaladores locais e faça crescer o mercado connosco.",
+      "points": [
+        "Preços de parceiro escalonados no portal de clientes",
+        "Materiais de marketing e documentação de produto",
+        "Dias de formação na fábrica na Polónia ou na nossa sede belga"
+      ]
+    },
+    "backToSupply": "Todos os serviços de fornecimento",
+    "serviceName": "Fornecimento de tetos tensionados para a Chéquia e a Eslováquia",
+    "serviceDescription": "Materiais premium para tetos tensionados e confeção à medida para profissionais checos e eslovacos, produzidos na Polónia com qualidade da UE."
   }
 }

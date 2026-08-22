@@ -84,6 +84,7 @@ const SOURCE_LABELS: Record<string, string> = {
   portal_architect_download: 'Architect portal download',
   kit_order: 'DIY kit order',
   supply_inquiry: 'Supply inquiry (installer materials)',
+  supply_cz_sk: 'Supply inquiry (Czechia/Slovakia)',
 };
 
 /**

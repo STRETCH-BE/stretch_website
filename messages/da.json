@@ -80,7 +80,9 @@
     "kitTitle": "Gør-det-selv spændloftskit — efter mål | STRETCH",
     "kitDescription": "Spændloftskit efter dine mål: polyesterdug, profiler og vejledning i én pakke. Kold montering, levering i EU og Storbritannien.",
     "supplyTitle": "Spændloftsmaterialer & konfektion til montører | STRETCH",
-    "supplyDescription": "Fabrikslevering til professionelle montører: duge & folier, profiler, lys og konfektion efter mål, sendt i hele Europa. Fakturering i EUR."
+    "supplyDescription": "Fabrikslevering til professionelle montører: duge & folier, profiler, lys og konfektion efter mål, sendt i hele Europa. Fakturering i EUR.",
+    "supplyCzSkTitle": "Spændloftsmaterialer til Tjekkiet & Slovakiet | STRETCH",
+    "supplyCzSkDescription": "Premium-spændloftsmaterialer og konfektion efter mål til tjekkiske og slovakiske fagfolk — produceret i Polen, en til to dage væk. EUR eller PLN."
   },
   "cookies": {
     "title": "Vi værner om dit privatliv",
@@ -5058,6 +5060,45 @@
       "cta": "Se kursusdatoer"
     },
     "serviceName": "Levering af materialer & konfektion til spændlofter",
-    "serviceDescription": "Fabrikslevering af spændloftsmaterialer, konfektion efter mål og montørkurser for professionelle i hele Europa."
+    "serviceDescription": "Fabrikslevering af spændloftsmaterialer, konfektion efter mål og montørkurser for professionelle i hele Europa.",
+    "regional": {
+      "label": "Regionalt",
+      "czsk": "Tjekkiet & Slovakiet — leveret fra vores polske produktion"
+    }
+  },
+  "supplyCzSkPage": {
+    "crumb": "Tjekkiet & Slovakiet",
+    "eyebrow": "Tjekkiet & Slovakiet",
+    "titleA": "Premium-materialer & konfektion,",
+    "titleB": "produceret lige ved siden af i Polen.",
+    "lead": "Premium-spændloftsmaterialer og konfektion efter mål til tjekkiske og slovakiske fagfolk — fra vores egen polske produktion, båret af den belgiske gruppe.",
+    "freight": "En til to dages fragt fra Tjekkiet og Slovakiet.",
+    "ctaInquiry": "Tal med leveringsteamet",
+    "why": {
+      "eyebrow": "Hvorfor os",
+      "title": "Mere end bulklevering",
+      "body": "Markedet er fuldt af billig folie. Vi leverer laget over: EU-konfektion med konstant kvalitet, et ægte dugsortiment og de premium-segmenter, der vinder bedre projekter.",
+      "points": [
+        "Konfektion efter mål, svejset i vores egen EU-produktion — med harpunkant",
+        "Et ægte dugsortiment: mat, satin, blank, translucent og farver fra de store foliemærker",
+        "Premium-segmenter til bedre projekter: translucente, printede og akustiske systemer",
+        "Aluminiums- og PVC-profiler, LED-profiler og 48V-tracklightsystemet fra samme produktion",
+        "Montørkurser og teknisk support bag hver levering"
+      ]
+    },
+    "currencyLine": "Fakturering i EUR eller PLN — dit valg.",
+    "partner": {
+      "eyebrow": "Engros",
+      "title": "Én distributionspartner pr. land",
+      "body": "Vi søger én engrospartner i Tjekkiet og én i Slovakiet — en virksomhed, der leverer til lokale montører og udvikler markedet sammen med os.",
+      "points": [
+        "Trinvise partnerpriser i kundeportalen",
+        "Marketingmateriale og produktdokumentation",
+        "Kursusdage på fabrikken i Polen eller på vores belgiske hovedkontor"
+      ]
+    },
+    "backToSupply": "Alle leveringsydelser",
+    "serviceName": "Spændloftslevering til Tjekkiet & Slovakiet",
+    "serviceDescription": "Premium-spændloftsmaterialer og konfektion efter mål til tjekkiske og slovakiske fagfolk, produceret i Polen med EU-kvalitet."
   }
 }

@@ -80,7 +80,9 @@
     "kitTitle": "Zestaw DIY sufitu napinanego — na wymiar | STRETCH",
     "kitDescription": "Zestaw sufitu napinanego na Twój wymiar: tkanina poliestrowa, profile i instrukcja w jednej paczce. Montaż na zimno, dostawa w UE i UK.",
     "supplyTitle": "Materiały i konfekcja sufitów napinanych dla monterów | STRETCH",
-    "supplyDescription": "Fabryczne zaopatrzenie dla monterów: tkaniny i folie, profile, oświetlenie oraz konfekcja na wymiar, z wysyłką po całej Europie. Fakturowanie w EUR i PLN."
+    "supplyDescription": "Fabryczne zaopatrzenie dla monterów: tkaniny i folie, profile, oświetlenie oraz konfekcja na wymiar, z wysyłką po całej Europie. Fakturowanie w EUR i PLN.",
+    "supplyCzSkTitle": "Materiały do sufitów napinanych dla Czech i Słowacji | STRETCH",
+    "supplyCzSkDescription": "Materiały premium do sufitów napinanych i konfekcja na wymiar dla czeskich i słowackich profesjonalistów — produkcja w Polsce, dzień–dwa drogi. EUR lub PLN."
   },
   "cookies": {
     "title": "Szanujemy Twoją prywatność",
@@ -5058,6 +5060,45 @@
       "cta": "Zobacz terminy szkoleń"
     },
     "serviceName": "Zaopatrzenie w materiały i konfekcję sufitów napinanych",
-    "serviceDescription": "Fabryczne zaopatrzenie w materiały do sufitów napinanych, konfekcja na wymiar i szkolenia monterów dla profesjonalistów w całej Europie."
+    "serviceDescription": "Fabryczne zaopatrzenie w materiały do sufitów napinanych, konfekcja na wymiar i szkolenia monterów dla profesjonalistów w całej Europie.",
+    "regional": {
+      "label": "Regionalnie",
+      "czsk": "Czechy i Słowacja — dostawy z naszej polskiej produkcji"
+    }
+  },
+  "supplyCzSkPage": {
+    "crumb": "Czechy i Słowacja",
+    "eyebrow": "Czechy i Słowacja",
+    "titleA": "Materiały premium i konfekcja,",
+    "titleB": "produkowane tuż obok — w Polsce.",
+    "lead": "Materiały premium do sufitów napinanych i konfekcja na wymiar dla czeskich i słowackich profesjonalistów — z naszej własnej polskiej produkcji, wspierane przez belgijską grupę.",
+    "freight": "Jeden–dwa dni transportu z Czech i Słowacji.",
+    "ctaInquiry": "Porozmawiaj z zespołem dostaw",
+    "why": {
+      "eyebrow": "Dlaczego my",
+      "title": "Więcej niż dostawy z hurtowni",
+      "body": "Rynek jest pełen taniej folii. My dostarczamy poziom wyżej: unijną konfekcję o stałej jakości, prawdziwą gamę tkanin i segmenty premium, które wygrywają lepsze projekty.",
+      "points": [
+        "Konfekcja na wymiar zgrzewana we własnej produkcji w UE — z krawędzią harpunową",
+        "Prawdziwa gama tkanin: mat, satyna, połysk, transparentne i kolory od największych marek folii",
+        "Segmenty premium do lepszych projektów: systemy transparentne, drukowane i akustyczne",
+        "Profile aluminiowe i PVC, profile LED oraz system tracklight 48V z tej samej produkcji",
+        "Szkolenia monterów i wsparcie techniczne za każdą dostawą"
+      ]
+    },
+    "currencyLine": "Fakturowanie w EUR lub PLN — wybór należy do Ciebie.",
+    "partner": {
+      "eyebrow": "Hurt",
+      "title": "Jeden partner dystrybucyjny na kraj",
+      "body": "Szukamy jednego partnera hurtowego w Czechach i jednego na Słowacji — firmy, która zaopatruje lokalnych monterów i rozwija rynek razem z nami.",
+      "points": [
+        "Progowe ceny partnerskie w portalu klienta",
+        "Materiały marketingowe i dokumentacja produktowa",
+        "Dni szkoleniowe w fabryce w Polsce lub w belgijskiej centrali"
+      ]
+    },
+    "backToSupply": "Wszystkie usługi zaopatrzenia",
+    "serviceName": "Zaopatrzenie w sufity napinane dla Czech i Słowacji",
+    "serviceDescription": "Materiały premium do sufitów napinanych i konfekcja na wymiar dla czeskich i słowackich profesjonalistów, produkowane w Polsce z jakością UE."
   }
 }

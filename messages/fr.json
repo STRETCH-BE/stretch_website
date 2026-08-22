@@ -80,7 +80,9 @@
     "kitTitle": "Kit plafond tendu à poser soi-même — sur mesure | STRETCH",
     "kitDescription": "Kit plafond tendu à vos mesures : toile polyester, profilés et instructions en un colis. Pose à froid, livraison UE et Royaume-Uni.",
     "supplyTitle": "Matériaux & confection de plafond tendu pour poseurs | STRETCH",
-    "supplyDescription": "Fourniture usine pour les professionnels : toiles & films, profilés, éclairage et confection sur mesure, expédiés dans toute l’Europe. Facturation en EUR."
+    "supplyDescription": "Fourniture usine pour les professionnels : toiles & films, profilés, éclairage et confection sur mesure, expédiés dans toute l’Europe. Facturation en EUR.",
+    "supplyCzSkTitle": "Matériaux de plafond tendu pour la Tchéquie & la Slovaquie | STRETCH",
+    "supplyCzSkDescription": "Matériaux de plafond tendu premium et confection sur mesure pour les pros tchèques et slovaques — produits en Pologne, à un ou deux jours. EUR ou PLN."
   },
   "cookies": {
     "title": "Nous respectons votre vie privée",
@@ -5058,6 +5060,45 @@
       "cta": "Voir les dates de formation"
     },
     "serviceName": "Fourniture de matériaux & confection pour plafonds tendus",
-    "serviceDescription": "Fourniture usine de matériaux pour plafonds tendus, confection sur mesure et formation des poseurs pour les professionnels dans toute l’Europe."
+    "serviceDescription": "Fourniture usine de matériaux pour plafonds tendus, confection sur mesure et formation des poseurs pour les professionnels dans toute l’Europe.",
+    "regional": {
+      "label": "Régional",
+      "czsk": "Tchéquie & Slovaquie — livrées depuis notre production polonaise"
+    }
+  },
+  "supplyCzSkPage": {
+    "crumb": "Tchéquie & Slovaquie",
+    "eyebrow": "Tchéquie & Slovaquie",
+    "titleA": "Matériaux & confection premium,",
+    "titleB": "produits juste à côté, en Pologne.",
+    "lead": "Matériaux de plafond tendu premium et confection sur mesure pour les professionnels tchèques et slovaques — depuis notre propre production polonaise, portés par le groupe belge.",
+    "freight": "Un à deux jours de transport depuis la Tchéquie et la Slovaquie.",
+    "ctaInquiry": "Parler à l’équipe approvisionnement",
+    "why": {
+      "eyebrow": "Pourquoi nous",
+      "title": "Plus qu’une fourniture de base",
+      "body": "Le marché regorge de films bon marché. Nous livrons la couche au-dessus : une confection européenne de qualité constante, une vraie gamme de toiles et les segments premium qui gagnent les meilleurs projets.",
+      "points": [
+        "Confection sur mesure soudée dans notre propre production européenne — harpon inclus",
+        "Une vraie gamme de toiles : mat, satin, brillant, translucide et couleur des grandes marques de film",
+        "Segments premium pour de meilleurs projets : systèmes translucides, imprimés et acoustiques",
+        "Profilés aluminium et PVC, profilés LED et système tracklight 48V de la même production",
+        "Formation des poseurs et support technique derrière chaque livraison"
+      ]
+    },
+    "currencyLine": "Facturation en EUR ou PLN — à votre choix.",
+    "partner": {
+      "eyebrow": "Grossiste",
+      "title": "Un partenaire de distribution par pays",
+      "body": "Nous cherchons un partenaire grossiste en Tchéquie et un en Slovaquie — une entreprise qui fournit les poseurs locaux et développe le marché avec nous.",
+      "points": [
+        "Tarifs partenaires par paliers dans le portail client",
+        "Supports marketing et documentation produit",
+        "Journées de formation à l’usine en Pologne ou à notre siège belge"
+      ]
+    },
+    "backToSupply": "Tous les services d’approvisionnement",
+    "serviceName": "Fourniture de plafonds tendus pour la Tchéquie & la Slovaquie",
+    "serviceDescription": "Matériaux de plafond tendu premium et confection sur mesure pour les professionnels tchèques et slovaques, produits en Pologne avec une qualité européenne."
   }
 }

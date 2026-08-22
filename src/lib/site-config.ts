@@ -186,6 +186,7 @@ export const staticRoutes = [
   '/architects',
   '/kit',
   '/supply',
+  '/supply/czechia-slovakia',
   '/products/prefab-lighting-elements',
   '/faq',
   '/blog',

@@ -80,7 +80,9 @@
     "kitTitle": "Gör-det-själv spänntakskit — efter mått | STRETCH",
     "kitDescription": "Spänntakskit efter dina mått: polyesterduk, profiler och anvisning i ett paket. Kall montering, leverans i EU och Storbritannien.",
     "supplyTitle": "Spänntaksmaterial & konfektion för montörer | STRETCH",
-    "supplyDescription": "Fabriksleverans för professionella montörer: dukar & folier, profiler, ljus och måttillverkad konfektion, skickat i hela Europa. Fakturering i EUR."
+    "supplyDescription": "Fabriksleverans för professionella montörer: dukar & folier, profiler, ljus och måttillverkad konfektion, skickat i hela Europa. Fakturering i EUR.",
+    "supplyCzSkTitle": "Spänntaksmaterial för Tjeckien & Slovakien | STRETCH",
+    "supplyCzSkDescription": "Premiummaterial för spänntak och måttillverkad konfektion för tjeckiska och slovakiska proffs — tillverkat i Polen, en till två dagar bort. EUR eller PLN."
   },
   "cookies": {
     "title": "Vi värnar om din integritet",
@@ -5058,6 +5060,45 @@
       "cta": "Se utbildningsdatum"
     },
     "serviceName": "Leverans av material & konfektion för spänntak",
-    "serviceDescription": "Fabriksleverans av spänntaksmaterial, måttillverkad konfektion och montörsutbildning för proffs i hela Europa."
+    "serviceDescription": "Fabriksleverans av spänntaksmaterial, måttillverkad konfektion och montörsutbildning för proffs i hela Europa.",
+    "regional": {
+      "label": "Regionalt",
+      "czsk": "Tjeckien & Slovakien — levererat från vår polska produktion"
+    }
+  },
+  "supplyCzSkPage": {
+    "crumb": "Tjeckien & Slovakien",
+    "eyebrow": "Tjeckien & Slovakien",
+    "titleA": "Premiummaterial & konfektion,",
+    "titleB": "tillverkat granne med er — i Polen.",
+    "lead": "Premiummaterial för spänntak och måttillverkad konfektion för tjeckiska och slovakiska proffs — från vår egen polska produktion, uppbackade av den belgiska gruppen.",
+    "freight": "En till två dagars frakt från Tjeckien och Slovakien.",
+    "ctaInquiry": "Prata med leveransteamet",
+    "why": {
+      "eyebrow": "Varför vi",
+      "title": "Mer än bulkleverans",
+      "body": "Marknaden är full av billig folie. Vi levererar lagret ovanför: EU-konfektion med jämn kvalitet, ett riktigt duksortiment och de premiumsegment som vinner bättre projekt.",
+      "points": [
+        "Måttillverkad konfektion, svetsad i vår egen EU-produktion — med harpunkant",
+        "Ett riktigt duksortiment: matt, satin, blank, translucent och färger från de stora foliemärkena",
+        "Premiumsegment för bättre projekt: translucenta, printade och akustiska system",
+        "Aluminium- och PVC-profiler, LED-profiler och 48V-tracklightsystemet från samma produktion",
+        "Montörsutbildning och teknisk support bakom varje leverans"
+      ]
+    },
+    "currencyLine": "Fakturering i EUR eller PLN — du väljer.",
+    "partner": {
+      "eyebrow": "Grossist",
+      "title": "En distributionspartner per land",
+      "body": "Vi söker en grossistpartner i Tjeckien och en i Slovakien — ett företag som förser lokala montörer och bygger marknaden tillsammans med oss.",
+      "points": [
+        "Stegvisa partnerpriser i kundportalen",
+        "Marknadsföringsmaterial och produktdokumentation",
+        "Utbildningsdagar på fabriken i Polen eller på vårt belgiska huvudkontor"
+      ]
+    },
+    "backToSupply": "Alla leveranstjänster",
+    "serviceName": "Spänntaksleverans för Tjeckien & Slovakien",
+    "serviceDescription": "Premiummaterial för spänntak och måttillverkad konfektion för tjeckiska och slovakiska proffs, tillverkade i Polen med EU-kvalitet."
   }
 }
