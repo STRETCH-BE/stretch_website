@@ -1,7 +1,7 @@
 // /api/portal/users — admin-only client-account management.
 //   GET    → list portal accounts
-//   POST   → create account { email, password, company, role, accountType, markets, allMarkets }
-//   PATCH  → update account { id, active?, company?, role?, accountType?, markets?, allMarkets?, password? }
+//   POST   → create account { email, password, company, role, accountType, country?, markets, allMarkets }
+//   PATCH  → update account { id, active?, company?, role?, accountType?, country?, markets?, allMarkets?, password? }
 // Uses the service-role client AFTER verifying the caller's admin session.
 import { NextRequest, NextResponse } from 'next/server';
 import { DEMO_USERS, getAdminSession } from '@/lib/portal/auth';
@@ -76,6 +76,8 @@ export async function POST(req: NextRequest) {
   const accountType = normalizeAccountType(body?.accountType);
   const allMarkets = Boolean(body?.allMarkets) || role === 'admin';
   const markets = sanitizeMarkets(body?.markets);
+  // Same sanitization as PATCH: ISO alpha-2 (or 'OTHER'), stored uppercase.
+  const country = String(body?.country ?? '').trim().toUpperCase().slice(0, 8) || null;
 
   if (!email || !email.includes('@') || password.length < 8) {
     return NextResponse.json(
@@ -115,6 +117,7 @@ export async function POST(req: NextRequest) {
     markets,
     all_markets: allMarkets,
     active: true,
+    country,
   });
   if (profileError) {
     // Roll back the orphaned auth user so the e-mail can be retried.

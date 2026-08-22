@@ -5,11 +5,25 @@
 // account sees more than one price group), EUR/PLN currency switch, print
 // stylesheet and CSV export. Every category stays mounted in the DOM —
 // inactive ones are hidden on screen and ALL of them print.
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Check, Download, Minus, Plus, Printer, Search, ShoppingCart, X } from 'lucide-react';
 import type { PricebookMeta, PriceRow } from '@/lib/portal/types';
 import { categoryRank } from '@/lib/portal/types';
+import { formatGbpIndication, asOf } from '@/lib/currency';
+
+// GB export accounts: the ≈£ figures and the settlement banner below are
+// deliberately NOT localized — the portal's export UI is English-only copy,
+// and only country='GB' accounts ever see it (everyone else's pricelist is
+// pixel-identical to before).
+const GBP_BANNER_KEY = 'plv-gbp-banner-dismissed';
+const GBP_BANNER = {
+  title: 'Prices and settlement are in EUR',
+  body:
+    `Every invoice is issued and payable in EUR — the ≈£ figures are a courtesy indication at the ECB reference rate of ${asOf}; ` +
+    'your bank converts at its own rate. Most UK partners pay the EUR invoice from a Wise or Revolut EUR balance to avoid card mark-ups.',
+  dismiss: 'Got it',
+};
 
 type Currency = 'EUR' | 'PLN';
 
@@ -32,10 +46,30 @@ type Props = {
   meta: PricebookMeta;
   formatLocale: string;
   defaultCurrency: Currency;
+  /** Account's ISO country from signup — 'GB' switches on the £ indication. */
+  accountCountry?: string | null;
 };
 
-export default function PricelistView({ rows, meta, formatLocale, defaultCurrency }: Props) {
+export default function PricelistView({ rows, meta, formatLocale, defaultCurrency, accountCountry }: Props) {
   const t = useTranslations('portal.pricelist');
+  const gbAccount = (accountCountry ?? '').toUpperCase() === 'GB';
+  const [gbpBannerOpen, setGbpBannerOpen] = useState(false);
+  useEffect(() => {
+    if (!gbAccount) return;
+    try {
+      setGbpBannerOpen(localStorage.getItem(GBP_BANNER_KEY) !== '1');
+    } catch {
+      setGbpBannerOpen(true);
+    }
+  }, [gbAccount]);
+  function dismissGbpBanner() {
+    setGbpBannerOpen(false);
+    try {
+      localStorage.setItem(GBP_BANNER_KEY, '1');
+    } catch {
+      /* per-viewer convenience only */
+    }
+  }
 
   const markets = useMemo(
     () => Array.from(new Set(rows.map((r) => r.market))).sort(),
@@ -223,6 +257,21 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
         </div>
       </div>
 
+      {/* GB export accounts only — EUR settlement notice, dismissed per browser */}
+      {gbAccount && gbpBannerOpen && (
+        <div className="plv__gbp-banner no-print" role="note">
+          <div className="container plv__gbp-banner-in">
+            <div>
+              <strong>{GBP_BANNER.title}</strong>
+              <p>{GBP_BANNER.body}</p>
+            </div>
+            <button type="button" className="btn btn--ghost btn--sm" onClick={dismissGbpBanner}>
+              {GBP_BANNER.dismiss}
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Type filter — the first level: product family, then category below */}
       {types.length > 1 && (
         <div className="plv__types no-print">
@@ -362,7 +411,14 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
                         </div>
                         {showMarketChip && <span className="plv__chip plv__chip--mkt">{r.market}</span>}
                         {r.unit && <span className="plv__chip">{r.unit}</span>}
-                        <span className="plv__price">{price(r)}</span>
+                        <span className="plv__price">
+                          {price(r)}
+                          {gbAccount && currency === 'EUR' && (
+                            <small className="plv__gbp" title={GBP_BANNER.body}>
+                              {formatGbpIndication(r.price_eur)}
+                            </small>
+                          )}
+                        </span>
                         <button
                           type="button"
                           className={inCart ? 'plv__add plv__add--in no-print' : 'plv__add no-print'}
@@ -465,7 +521,12 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
 
                 <div className="plv__cart-total">
                   <span>{t('totalLabel')}</span>
-                  <strong>{fmtEur.format(cartTotal)}</strong>
+                  <strong>
+                    {fmtEur.format(cartTotal)}
+                    {gbAccount && cartTotal > 0 && (
+                      <small className="plv__gbp">{formatGbpIndication(cartTotal)}</small>
+                    )}
+                  </strong>
                 </div>
 
                 {cartStatus === 'error' && <p className="plv__cart-error">{t('errorMsg')}</p>}
@@ -528,6 +589,41 @@ export default function PricelistView({ rows, meta, formatLocale, defaultCurrenc
         }
         .plv__meta-facts strong {
           color: var(--text);
+        }
+
+        /* GB export accounts: EUR-settlement banner + ≈£ indication */
+        .plv__gbp-banner {
+          background: var(--surface);
+          border-bottom: 1px solid var(--border);
+        }
+        .plv__gbp-banner-in {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 18px;
+          flex-wrap: wrap;
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
+        .plv__gbp-banner strong {
+          display: block;
+          font-size: 13.5px;
+          margin-bottom: 2px;
+        }
+        .plv__gbp-banner p {
+          margin: 0;
+          font-size: 12.5px;
+          color: var(--text-muted-2);
+          max-width: 92ch;
+          line-height: 1.5;
+        }
+        .plv__gbp {
+          display: block;
+          font-size: 11px;
+          font-weight: 600;
+          color: var(--text-faint-2);
+          font-variant-numeric: tabular-nums;
+          white-space: nowrap;
         }
 
         /* Type — the PRIMARY filter: big display-font blocks, full width. */

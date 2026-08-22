@@ -187,7 +187,7 @@
       "demoBody": "Nog geen database gekoppeld — bekijk het portaal met deze accounts:",
       "tabSignIn": "Inloggen",
       "tabSignup": "Account aanmaken",
-      "signupSub": "Voor professionals — toegang na verificatie",
+      "signupSub": "Voor installateurs & handelspartners in heel Europa — toegang na beoordeling",
       "company": "Bedrijf",
       "contactName": "Contactpersoon",
       "vat": "BTW-nummer",
@@ -353,7 +353,10 @@
       "typeInstaller": "Installateur",
       "typeB2c": "B2C",
       "typeArchitect": "Architect",
-      "filterAllTypes": "Alle types"
+      "filterAllTypes": "Alle types",
+      "colCountry": "Land",
+      "filterAllCountries": "Alle landen",
+      "countryOther": "Ander land"
     },
     "designer": {
       "eyebrow": "Plafond-designer",

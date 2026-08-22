@@ -26,6 +26,7 @@ export default async function PortalPricelistPage({ params }: { params: { locale
       meta={meta}
       formatLocale={localeFullCodes[locale] ?? 'en'}
       defaultCurrency={locale === 'pl' ? 'PLN' : 'EUR'}
+      accountCountry={session.profile.country ?? null}
     />
   );
 }

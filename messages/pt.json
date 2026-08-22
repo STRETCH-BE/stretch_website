@@ -187,7 +187,7 @@
       "demoBody": "Ainda sem base de dados ligada — experimente o portal com estas contas:",
       "tabSignIn": "Iniciar sessão",
       "tabSignup": "Criar conta",
-      "signupSub": "Para profissionais — acesso após verificação",
+      "signupSub": "Para instaladores e parceiros profissionais em toda a Europa — acesso após análise",
       "company": "Empresa",
       "contactName": "Pessoa de contacto",
       "vat": "Número de IVA",
@@ -353,7 +353,10 @@
       "typeInstaller": "Instalador",
       "typeB2c": "B2C",
       "typeArchitect": "Arquiteto",
-      "filterAllTypes": "Todos os tipos"
+      "filterAllTypes": "Todos os tipos",
+      "colCountry": "País",
+      "filterAllCountries": "Todos os países",
+      "countryOther": "Outro país"
     },
     "designer": {
       "eyebrow": "Designer de tetos",

@@ -84,6 +84,9 @@ export type PortalProfile = {
   office?: string | null;
   city?: string | null;
   phone?: string | null;
+  /** ISO 3166-1 alpha-2 from signup (or 'OTHER'). Drives export-account UI
+   *  like the GBP indication for GB accounts — settlement stays EUR. */
+  country?: string | null;
 };
 
 /**

@@ -187,7 +187,7 @@
       "demoBody": "Noch keine Datenbank verbunden — testen Sie das Portal mit diesen Konten:",
       "tabSignIn": "Anmelden",
       "tabSignup": "Konto erstellen",
-      "signupSub": "Für Fachbetriebe — Zugang nach Prüfung",
+      "signupSub": "Für Verarbeiter & Handelspartner in ganz Europa — Zugang nach Prüfung",
       "company": "Firma",
       "contactName": "Ansprechpartner",
       "vat": "USt-IdNr.",
@@ -353,7 +353,10 @@
       "typeInstaller": "Monteur",
       "typeB2c": "B2C",
       "typeArchitect": "Architekt",
-      "filterAllTypes": "Alle Typen"
+      "filterAllTypes": "Alle Typen",
+      "colCountry": "Land",
+      "filterAllCountries": "Alle Länder",
+      "countryOther": "Anderes Land"
     },
     "designer": {
       "eyebrow": "Decken-Designer",

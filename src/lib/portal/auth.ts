@@ -42,11 +42,11 @@ export const getPortalSession = cache(async (): Promise<PortalSession | null> =>
   } = await supabase.auth.getUser();
   if (!user) return null;
 
-  // office/city/phone are later additions — retry without them so an
+  // office/city/phone/country are later additions — retry without them so an
   // un-migrated database still resolves sessions.
   let { data: profile } = await supabase
     .from('portal_users')
-    .select('id, email, company, role, account_type, markets, all_markets, active, office, city, phone')
+    .select('id, email, company, role, account_type, markets, all_markets, active, office, city, phone, country')
     .eq('id', user.id)
     .maybeSingle();
   if (!profile) {
@@ -72,6 +72,7 @@ export const getPortalSession = cache(async (): Promise<PortalSession | null> =>
       office: (profile as { office?: string | null }).office ?? null,
       city: (profile as { city?: string | null }).city ?? null,
       phone: (profile as { phone?: string | null }).phone ?? null,
+      country: (profile as { country?: string | null }).country ?? null,
     },
     demo: false,
   };

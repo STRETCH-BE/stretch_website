@@ -187,7 +187,7 @@
       "demoBody": "Ingen database tilkoblet ennå — prøv portalen med disse kontoene:",
       "tabSignIn": "Logg inn",
       "tabSignup": "Opprett konto",
-      "signupSub": "For fagfolk — tilgang etter godkjenning",
+      "signupSub": "For montører & forhandlere i hele Europa — tilgang etter godkjenning",
       "company": "Bedrift",
       "contactName": "Kontaktperson",
       "vat": "MVA-nummer",
@@ -353,7 +353,10 @@
       "typeInstaller": "Montør",
       "typeB2c": "B2C",
       "typeArchitect": "Arkitekt",
-      "filterAllTypes": "Alle typer"
+      "filterAllTypes": "Alle typer",
+      "colCountry": "Land",
+      "filterAllCountries": "Alle land",
+      "countryOther": "Annet land"
     },
     "designer": {
       "eyebrow": "Takdesigner",

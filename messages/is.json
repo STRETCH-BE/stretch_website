@@ -187,7 +187,7 @@
       "demoBody": "Enginn gagnagrunnur tengdur enn — prófaðu gáttina með þessum aðgöngum:",
       "tabSignIn": "Innskráning",
       "tabSignup": "Stofna aðgang",
-      "signupSub": "Fyrir fagaðila — aðgangur eftir yfirferð",
+      "signupSub": "Fyrir uppsetningaraðila & samstarfsaðila um alla Evrópu — aðgangur eftir yfirferð",
       "company": "Fyrirtæki",
       "contactName": "Tengiliður",
       "vat": "VSK-númer",
@@ -353,7 +353,10 @@
       "typeInstaller": "Uppsetningaraðili",
       "typeB2c": "B2C",
       "typeArchitect": "Arkitekt",
-      "filterAllTypes": "Allar tegundir"
+      "filterAllTypes": "Allar tegundir",
+      "colCountry": "Land",
+      "filterAllCountries": "Öll lönd",
+      "countryOther": "Annað land"
     },
     "designer": {
       "eyebrow": "Loftahönnuður",

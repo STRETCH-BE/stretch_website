@@ -10,15 +10,9 @@ import { useRouter } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowUpRight, Lock, MailCheck, UserRoundPlus } from 'lucide-react';
 import { DEMO_USERS } from '@/lib/portal/demo-users';
+import { signupCountryOptions } from '@/lib/signup-countries';
 
 type Mode = 'live' | 'demo' | 'closed';
-
-// Countries offered in the B2B signup form (ISO 3166-1 alpha-2); labels come
-// from the browser's own Intl region names in the visitor's language.
-const SIGNUP_COUNTRIES = [
-  'BE', 'NL', 'LU', 'FR', 'DE', 'AT', 'CH', 'ES', 'PT', 'IT', 'PL', 'CZ',
-  'DK', 'SE', 'NO', 'IS', 'FI', 'GB', 'IE', 'US', 'AE',
-] as const;
 
 const BUSINESS_TYPES = ['installer', 'distributor', 'architect', 'contractor', 'other'] as const;
 
@@ -50,18 +44,8 @@ export default function LoginForm({
   const [signupDone, setSignupDone] = useState(false);
   const architect = audience === 'architect';
 
-  // Localised country names, alphabetical in the visitor's language.
-  const countries = useMemo(() => {
-    let names: Intl.DisplayNames | null = null;
-    try {
-      names = new Intl.DisplayNames([locale], { type: 'region' });
-    } catch {
-      names = null;
-    }
-    return SIGNUP_COUNTRIES.map((code) => ({ code, label: names?.of(code) ?? code })).sort((a, b) =>
-      a.label.localeCompare(b.label, locale),
-    );
-  }, [locale]);
+  // Localised country names — the shared EU/EEA + UK + CH list, Europe first.
+  const countries = useMemo(() => signupCountryOptions(locale), [locale]);
 
   async function submitSignin(e: FormEvent) {
     e.preventDefault();

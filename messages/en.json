@@ -187,7 +187,7 @@
       "demoBody": "No database connected yet — preview the portal with these accounts:",
       "tabSignIn": "Sign in",
       "tabSignup": "Create account",
-      "signupSub": "For trade professionals — access after review",
+      "signupSub": "For installers & trade partners across Europe — access after review",
       "company": "Company",
       "contactName": "Contact person",
       "vat": "VAT number",
@@ -353,7 +353,10 @@
       "typeInstaller": "Installer",
       "typeB2c": "B2C",
       "typeArchitect": "Architect",
-      "filterAllTypes": "All types"
+      "filterAllTypes": "All types",
+      "colCountry": "Country",
+      "filterAllCountries": "All countries",
+      "countryOther": "Other country"
     },
     "designer": {
       "eyebrow": "Ceiling designer",

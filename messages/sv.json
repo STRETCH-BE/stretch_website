@@ -187,7 +187,7 @@
       "demoBody": "Ingen databas ansluten ännu — prova portalen med dessa konton:",
       "tabSignIn": "Logga in",
       "tabSignup": "Skapa konto",
-      "signupSub": "För proffs — åtkomst efter granskning",
+      "signupSub": "För montörer & handelspartner i hela Europa — åtkomst efter granskning",
       "company": "Företag",
       "contactName": "Kontaktperson",
       "vat": "Momsnummer",
@@ -353,7 +353,10 @@
       "typeInstaller": "Montör",
       "typeB2c": "B2C",
       "typeArchitect": "Arkitekt",
-      "filterAllTypes": "Alla typer"
+      "filterAllTypes": "Alla typer",
+      "colCountry": "Land",
+      "filterAllCountries": "Alla länder",
+      "countryOther": "Annat land"
     },
     "designer": {
       "eyebrow": "Takdesigner",

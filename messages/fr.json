@@ -187,7 +187,7 @@
       "demoBody": "Aucune base de données connectée — découvrez le portail avec ces comptes :",
       "tabSignIn": "Se connecter",
       "tabSignup": "Créer un compte",
-      "signupSub": "Pour les professionnels — accès après vérification",
+      "signupSub": "Pour installateurs & partenaires professionnels dans toute l’Europe — accès après vérification",
       "company": "Société",
       "contactName": "Personne de contact",
       "vat": "Numéro de TVA",
@@ -353,7 +353,10 @@
       "typeInstaller": "Installateur",
       "typeB2c": "B2C",
       "typeArchitect": "Architecte",
-      "filterAllTypes": "Tous les types"
+      "filterAllTypes": "Tous les types",
+      "colCountry": "Pays",
+      "filterAllCountries": "Tous les pays",
+      "countryOther": "Autre pays"
     },
     "designer": {
       "eyebrow": "Concepteur de plafond",

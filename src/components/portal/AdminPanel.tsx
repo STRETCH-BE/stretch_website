@@ -1,11 +1,12 @@
 'use client';
 
 // CLIENT PORTAL — admin panel: pricelist Excel sync + client-account manager.
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import { CheckCircle2, CloudUpload, Plus, RefreshCw, TriangleAlert, UserRound } from 'lucide-react';
 import type { SyncReport } from '@/lib/portal/types';
 import { PRICE_MARKETS } from '@/lib/portal/types';
+import { signupCountryOptions } from '@/lib/signup-countries';
 
 type PortalUserRow = {
   id: string;
@@ -319,6 +320,12 @@ function UsersCard({ demo }: { demo: boolean }) {
   const [notice, setNotice] = useState<string | null>(null);
   const [showForm, setShowForm] = useState(false);
   const [typeFilter, setTypeFilter] = useState<'all' | 'producer' | 'installer' | 'b2c' | 'architect'>('all');
+  const [countryFilter, setCountryFilter] = useState<string>('all');
+  // Only countries that actually occur in the account list.
+  const countryOptions = useMemo(
+    () => Array.from(new Set((users ?? []).map((u) => u.country).filter((c): c is string => Boolean(c)))).sort(),
+    [users],
+  );
 
   const load = useCallback(async () => {
     try {
@@ -385,6 +392,21 @@ function UsersCard({ demo }: { demo: boolean }) {
             <option value="b2c">{t('typeB2c')}</option>
             <option value="architect">{t('typeArchitect')}</option>
           </select>
+          {countryOptions.length > 1 && (
+            <select
+              className="typesel"
+              value={countryFilter}
+              onChange={(e) => setCountryFilter(e.target.value)}
+              aria-label={t('colCountry')}
+            >
+              <option value="all">{t('filterAllCountries')}</option>
+              {countryOptions.map((c) => (
+                <option key={c} value={c}>
+                  {c}
+                </option>
+              ))}
+            </select>
+          )}
           <button type="button" className="btn btn--ghost btn--sm" onClick={() => setShowForm((v) => !v)}>
             <Plus size={13} /> {t('createTitle')}
           </button>
@@ -419,6 +441,7 @@ function UsersCard({ demo }: { demo: boolean }) {
               <tr>
                 <th>{t('colEmail')}</th>
                 <th>{t('colCompany')}</th>
+                <th>{t('colCountry')}</th>
                 <th>{t('colRole')}</th>
                 <th>{t('colMarkets')}</th>
                 <th>{t('colStatus')}</th>
@@ -426,12 +449,15 @@ function UsersCard({ demo }: { demo: boolean }) {
               </tr>
             </thead>
             <tbody>
-              {users.filter((u) => typeFilter === 'all' || (u.accountType ?? 'installer') === typeFilter).map((u) => (
+              {users
+                .filter((u) => typeFilter === 'all' || (u.accountType ?? 'installer') === typeFilter)
+                .filter((u) => countryFilter === 'all' || u.country === countryFilter)
+                .map((u) => (
                 <tr key={u.id} className={u.active ? '' : 'off'}>
                   <td>{u.email}</td>
                   <td>
                     <div>{u.company ?? '—'}</div>
-                    {(u.contactName || u.phone || u.vat || u.country || u.businessType || u.office || u.city) && (
+                    {(u.contactName || u.phone || u.vat || u.businessType || u.office || u.city) && (
                       <div className="b2b">
                         {[
                           u.office,
@@ -439,7 +465,6 @@ function UsersCard({ demo }: { demo: boolean }) {
                           u.contactName,
                           u.phone,
                           u.vat,
-                          u.country,
                           u.businessType &&
                             ((BUSINESS_TYPE_KEYS as readonly string[]).includes(u.businessType)
                               ? bt(u.businessType as (typeof BUSINESS_TYPE_KEYS)[number])
@@ -450,6 +475,7 @@ function UsersCard({ demo }: { demo: boolean }) {
                       </div>
                     )}
                   </td>
+                  <td>{u.country ?? '—'}</td>
                   <td>
                     {u.role === 'admin' ? (
                       t('roleAdmin')
@@ -603,15 +629,18 @@ function UsersCard({ demo }: { demo: boolean }) {
 
 function CreateForm({ demo, onCreated }: { demo: boolean; onCreated: (msg: string) => void }) {
   const t = useTranslations('portal.admin');
+  const locale = useLocale();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [company, setCompany] = useState('');
   const [role, setRole] = useState<'client' | 'admin'>('client');
   const [accountType, setAccountType] = useState<'producer' | 'installer' | 'b2c' | 'architect'>('installer');
+  const [country, setCountry] = useState('');
   const [allMarkets, setAllMarkets] = useState(false);
   const [markets, setMarkets] = useState<string[]>([]);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const countries = useMemo(() => signupCountryOptions(locale), [locale]);
 
   function toggleMarket(m: string) {
     setMarkets((prev) => (prev.includes(m) ? prev.filter((x) => x !== m) : [...prev, m]));
@@ -625,7 +654,7 @@ function CreateForm({ demo, onCreated }: { demo: boolean; onCreated: (msg: strin
       const res = await fetch('/api/portal/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, company, role, accountType, markets, allMarkets }),
+        body: JSON.stringify({ email, password, company, role, accountType, country, markets, allMarkets }),
       });
       const data = await res.json().catch(() => null);
       if (!res.ok || !data?.ok) {
@@ -673,6 +702,18 @@ function CreateForm({ demo, onCreated }: { demo: boolean; onCreated: (msg: strin
             <option value="installer">{t('typeInstaller')}</option>
             <option value="b2c">{t('typeB2c')}</option>
             <option value="architect">{t('typeArchitect')}</option>
+          </select>
+        </label>
+        <label>
+          <span>{t('colCountry')}</span>
+          <select value={country} onChange={(e) => setCountry(e.target.value)}>
+            <option value="">—</option>
+            {countries.map((c) => (
+              <option key={c.code} value={c.code}>
+                {c.label}
+              </option>
+            ))}
+            <option value="OTHER">{t('countryOther')}</option>
           </select>
         </label>
       </div>

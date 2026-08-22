@@ -187,7 +187,7 @@
       "demoBody": "Baza danych nie jest jeszcze podłączona — wypróbuj portal na tych kontach:",
       "tabSignIn": "Zaloguj się",
       "tabSignup": "Utwórz konto",
-      "signupSub": "Dla profesjonalistów — dostęp po weryfikacji",
+      "signupSub": "Dla instalatorów i partnerów handlowych w całej Europie — dostęp po weryfikacji",
       "company": "Firma",
       "contactName": "Osoba kontaktowa",
       "vat": "Numer VAT (NIP)",
@@ -353,7 +353,10 @@
       "typeInstaller": "Monter",
       "typeB2c": "B2C",
       "typeArchitect": "Architekt",
-      "filterAllTypes": "Wszystkie typy"
+      "filterAllTypes": "Wszystkie typy",
+      "colCountry": "Kraj",
+      "filterAllCountries": "Wszystkie kraje",
+      "countryOther": "Inny kraj"
     },
     "designer": {
       "eyebrow": "Projektant sufitu",

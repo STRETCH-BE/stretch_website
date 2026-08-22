@@ -15,6 +15,7 @@ export const DEMO_USERS: Array<PortalProfile & { password: string }> = [
     markets: [],
     allMarkets: true,
     active: true,
+    country: 'BE',
   },
   {
     id: 'demo-client-west',
@@ -26,6 +27,7 @@ export const DEMO_USERS: Array<PortalProfile & { password: string }> = [
     markets: [],
     allMarkets: false,
     active: true,
+    country: 'BE',
   },
   {
     id: 'demo-client-east',
@@ -37,6 +39,21 @@ export const DEMO_USERS: Array<PortalProfile & { password: string }> = [
     markets: [],
     allMarkets: false,
     active: true,
+    country: 'PL',
+  },
+  {
+    // GB export account — previews the GBP indication + EUR-settlement banner
+    // that only country='GB' accounts see in the pricelist.
+    id: 'demo-client-uk',
+    email: 'uk@stretch.be',
+    password: 'stretch2026',
+    company: 'Demo Installers Ltd (Installer, UK)',
+    role: 'client',
+    accountType: 'installer',
+    markets: [],
+    allMarkets: false,
+    active: true,
+    country: 'GB',
   },
   {
     id: 'demo-architect',
@@ -50,6 +67,7 @@ export const DEMO_USERS: Array<PortalProfile & { password: string }> = [
     active: true,
     office: 'Demo Architecten BV',
     city: 'Antwerpen',
+    country: 'BE',
   },
 ];
 

@@ -187,7 +187,7 @@
       "demoBody": "Ingen database tilsluttet endnu — prøv portalen med disse konti:",
       "tabSignIn": "Log ind",
       "tabSignup": "Opret konto",
-      "signupSub": "For fagfolk — adgang efter godkendelse",
+      "signupSub": "For montører & forhandlere i hele Europa — adgang efter godkendelse",
       "company": "Virksomhed",
       "contactName": "Kontaktperson",
       "vat": "Momsnummer (CVR)",
@@ -353,7 +353,10 @@
       "typeInstaller": "Montør",
       "typeB2c": "B2C",
       "typeArchitect": "Arkitekt",
-      "filterAllTypes": "Alle typer"
+      "filterAllTypes": "Alle typer",
+      "colCountry": "Land",
+      "filterAllCountries": "Alle lande",
+      "countryOther": "Andet land"
     },
     "designer": {
       "eyebrow": "Loftsdesigner",
