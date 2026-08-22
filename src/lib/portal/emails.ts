@@ -138,7 +138,9 @@ export type ReviewNotification = {
   email: string;
   canonicalEmail: string;
   phone: string | null;
-  pendingReason: string;
+  /** null = the account was auto-approved (no review needed) — the mail is
+   *  then a plain new-account notification. */
+  pendingReason: string | null;
   spamScore: number | null;
   spamReasons: string[];
   signupHost: string | null;
@@ -148,13 +150,17 @@ export type ReviewNotification = {
   reviewUrl: string;
 };
 
-/** New-pending-signup notification for the admin, with the signed review link. */
+/** New-signup notification for the admin — with the signed review link when
+ *  the account awaits approval, as a plain FYI when it was auto-approved. */
 export function buildAdminReviewEmail(n: ReviewNotification): {
   subject: string;
   html: string;
   text: string;
 } {
-  const subject = `STRETCH portal — new ${n.accountType} signup awaiting review (${n.pendingReason})`;
+  const pending = n.pendingReason !== null;
+  const subject = pending
+    ? `STRETCH portal — new ${n.accountType} signup awaiting review (${n.pendingReason})`
+    : `STRETCH portal — new ${n.accountType} account (auto-approved)`;
   const rows: [string, string][] = [
     ['Type', n.accountType],
     ['Name', n.contactName ?? '—'],
@@ -163,7 +169,7 @@ export function buildAdminReviewEmail(n: ReviewNotification): {
     ['Country', n.country ?? '—'],
     ['Email', n.canonicalEmail !== n.email.toLowerCase() ? `${n.email} (canonical: ${n.canonicalEmail})` : n.email],
     ['Phone', n.phone ?? '—'],
-    ['Pending reason', n.pendingReason],
+    ['Status', pending ? `pending: ${n.pendingReason}` : 'active (auto-approved)'],
     ['Spam score', n.spamScore === null ? '—' : `${n.spamScore}${n.spamReasons.length ? ` (${n.spamReasons.join(', ')})` : ''}`],
     ['Signup host', n.signupHost ?? '—'],
     ['Signup locale', n.signupLocale ?? '—'],
@@ -180,22 +186,29 @@ export function buildAdminReviewEmail(n: ReviewNotification): {
     )
     .join('');
 
+  const introLine = pending
+    ? 'A new portal signup is awaiting your review:'
+    : 'A new portal account signed up and was auto-approved:';
+  const linkNote = pending
+    ? 'The link is valid for 7 days; the page changes nothing until you press Approve or Reject.'
+    : 'No action needed — this is for your information.';
+
   const html = shell(`<tr>
     <td style="padding:32px 28px 8px;">
-      <p style="${FONT}font-size:15px;line-height:1.6;color:#0A0A0A;margin:0 0 18px;">A new portal signup is awaiting your review:</p>
+      <p style="${FONT}font-size:15px;line-height:1.6;color:#0A0A0A;margin:0 0 18px;">${escapeHtml(introLine)}</p>
       <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 22px;width:100%;">${table}</table>
-      ${button(n.reviewUrl, 'Review this account')}
-      <p style="${FONT}font-size:12.5px;line-height:1.6;color:#6E6B66;margin:0 0 24px;word-break:break-all;">Or open: <a href="${escapeHtml(n.reviewUrl)}" style="color:#FF0000;">${escapeHtml(n.reviewUrl)}</a><br>The link is valid for 7 days; the page changes nothing until you press Approve or Reject.</p>
+      ${button(n.reviewUrl, pending ? 'Review this account' : 'Open the admin panel')}
+      <p style="${FONT}font-size:12.5px;line-height:1.6;color:#6E6B66;margin:0 0 24px;word-break:break-all;">Or open: <a href="${escapeHtml(n.reviewUrl)}" style="color:#FF0000;">${escapeHtml(n.reviewUrl)}</a><br>${escapeHtml(linkNote)}</p>
     </td>
   </tr>`);
 
   const text = [
-    'A new portal signup is awaiting your review:',
+    introLine,
     '',
     ...rows.map(([k, v]) => `${k}: ${v}`),
     '',
-    `Review: ${n.reviewUrl}`,
-    '(valid 7 days; the page changes nothing until you press Approve or Reject)',
+    `${pending ? 'Review' : 'Admin panel'}: ${n.reviewUrl}`,
+    linkNote,
   ].join('\n');
 
   return { subject, html, text };

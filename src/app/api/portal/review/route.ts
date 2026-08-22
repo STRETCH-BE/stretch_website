@@ -107,12 +107,15 @@ export async function POST(req: NextRequest) {
         name: (profile.contact_name as string | null) ?? null,
         loginUrl: `${portalOrigin(req.nextUrl.origin)}/portal/login`,
       });
-      sendTransactionalEmail({
+      // AWAITED — a serverless function freezes right after the response,
+      // killing unawaited sends.
+      const sent = await sendTransactionalEmail({
         to: profile.email,
         subject: mail.subject,
         html: mail.html,
         text: mail.text,
-      }).catch(() => undefined);
+      }).catch(() => ({ ok: false as const }));
+      if (!sent.ok) console.warn('[review] approval mail failed to send');
     }
     return NextResponse.json({ ok: true, action: 'approved' });
   }

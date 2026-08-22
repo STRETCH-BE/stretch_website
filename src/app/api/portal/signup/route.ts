@@ -340,13 +340,15 @@ export async function POST(req: NextRequest) {
       console.warn(`[signup] pending spam_review (score ${score}): ${reasons.join(', ')}`);
     }
 
-    // Pending → notify the admin with the full profile + signed review link.
-    // Fire-and-forget: a mail hiccup must never fail the signup response.
-    if (pendingReason && isTransactionalConfigured()) {
+    // Notify the admin about EVERY self-signup — pending ones carry the
+    // signed review link, auto-approved ones are an FYI. AWAITED: a serverless
+    // function freezes right after the response, killing unawaited sends.
+    if (isTransactionalConfigured()) {
       const origin = portalOrigin(req.nextUrl.origin);
-      const reviewUrl = isReviewTokenEnabled()
-        ? `${origin}/portal/review?t=${encodeURIComponent(mintReviewToken(user.id))}`
-        : `${origin}/portal/admin`;
+      const reviewUrl =
+        pendingReason && isReviewTokenEnabled()
+          ? `${origin}/portal/review?t=${encodeURIComponent(mintReviewToken(user.id))}`
+          : `${origin}/portal/admin`;
       const mail = buildAdminReviewEmail({
         accountType,
         contactName,
@@ -367,9 +369,13 @@ export async function POST(req: NextRequest) {
         reviewUrl,
       });
       const to = process.env.PORTAL_ADMIN_EMAIL || contact.leadDestination;
-      sendTransactionalEmail({ to, subject: mail.subject, html: mail.html, text: mail.text }).catch(
-        () => undefined,
-      );
+      const sent = await sendTransactionalEmail({
+        to,
+        subject: mail.subject,
+        html: mail.html,
+        text: mail.text,
+      }).catch(() => ({ ok: false as const }));
+      if (!sent.ok) console.warn('[signup] admin notification mail failed to send');
     }
   }
 
