@@ -378,7 +378,36 @@ const polishRules = [
 const icelandicRules = [...genericRules('stretch.is')];
 
 // ---------------------------------------------------------------------------
+// LOCALE-PREFIX STRIPS — each domain 308s its own locale prefix to the clean
+// URL (/de/kit on stretchdecken.de → /kit). The next-intl middleware does
+// this too, but with a 307 Temporary — wrong signal for URLs that moved
+// permanently when internal links went unprefixed (ranking audit §1.3).
+// These config-level rules run BEFORE the middleware and win with a 308.
+// Host-scoped, so localhost/preview path-prefix routing is untouched.
+// ---------------------------------------------------------------------------
+const LOCALE_DOMAINS = [
+  ['stretch.mt', 'en'],
+  ['stretch-ceilings.uk', 'uk'],
+  ['stretchplafond.be', 'be'],
+  ['stretchplafond.nl', 'nl'],
+  ['stretchplafond.fr', 'fr'],
+  ['stretch-sufit.pl', 'pl'],
+  ['stretchdecken.de', 'de'],
+  ['stretchtecho.es', 'es'],
+  ['stretchteto.pt', 'pt'],
+  ['straekloft.dk', 'da'],
+  ['stretchceilings.se', 'sv'],
+  ['stretchtak.no', 'no'],
+  ['stretch.is', 'is'],
+];
+const localePrefixStrips = LOCALE_DOMAINS.flatMap(([h, l]) => [
+  R(h, `/${l}`, '/'),
+  R(h, `/${l}/:path*`, '/:path*'),
+]);
+
+// ---------------------------------------------------------------------------
 export const legacyRedirects = [
+  ...localePrefixStrips,
   ...dutchRules('stretchplafond.be'),
   ...dutchRules('stretchplafond.nl'),
   ...englishRules,

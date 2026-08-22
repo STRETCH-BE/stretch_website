@@ -158,21 +158,31 @@ export type BreadcrumbItem = { name: string; url: string };
 export function branchLocalBusinessSchemas() {
   return offices
     .filter((o) => o.geo && o.role !== 'Headquarters')
-    .map((o) => ({
-      '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      '@id': `${siteUrl}/#branch-${o.country.toLowerCase()}`,
-      name: o.name,
-      parentOrganization: { '@id': ORG_ID },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: o.addressLines[0],
-        addressLocality: o.addressLines[1] ?? '',
-        addressCountry: o.country,
-      },
-      ...(o.email ? { email: o.email } : {}),
-      geo: { '@type': 'GeoCoordinates', latitude: o.geo!.lat, longitude: o.geo!.lng },
-    }));
+    .map((o) => {
+      // addressLines[1] is "postal locality" ("42-202 Częstochowa",
+      // "1100 Vienna") — split so postalCode is its own property, matching
+      // the HQ node's shape.
+      const cityLine = o.addressLines[1] ?? '';
+      const m = cityLine.match(/^(\S+)\s+(.+)$/);
+      const postalCode = m ? m[1] : undefined;
+      const locality = m ? m[2] : cityLine;
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': `${siteUrl}/#branch-${o.country.toLowerCase()}`,
+        name: o.name,
+        parentOrganization: { '@id': ORG_ID },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: o.addressLines[0],
+          addressLocality: locality,
+          ...(postalCode ? { postalCode } : {}),
+          addressCountry: o.country,
+        },
+        ...(o.email ? { email: o.email } : {}),
+        geo: { '@type': 'GeoCoordinates', latitude: o.geo!.lat, longitude: o.geo!.lng },
+      };
+    });
 }
 
 /**

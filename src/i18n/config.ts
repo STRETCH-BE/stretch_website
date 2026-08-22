@@ -85,6 +85,12 @@ export const routing = defineRouting({
   locales,
   defaultLocale,
   localePrefix: 'as-needed',
+  // The middleware's Link-header alternates use the INTERNAL market codes
+  // ('uk', 'be') — which BCP-47 reads as Ukrainian and Belarusian. Our
+  // correct hreflang (en-GB, nl-BE via localeFullCodes) already ships in the
+  // HTML head and the sitemap, so the header is disabled rather than let two
+  // sources disagree (ranking-audit verification, 22 Aug 2026).
+  alternateLinks: false,
   domains: locales.map((locale) => ({
     domain: localeDomains[locale],
     defaultLocale: locale,
