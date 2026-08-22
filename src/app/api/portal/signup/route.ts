@@ -14,7 +14,8 @@
 // once CAPTCHA protection is enabled — we never call siteverify here, the
 // token is single-use). Only available in Supabase mode.
 import { NextRequest, NextResponse } from 'next/server';
-import { createRouteClient, createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
+import { createClient } from '@supabase/supabase-js';
+import { createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
 import { isPortalAllowedHost, portalOrigin } from '@/lib/portal/host';
 import { rateLimit, getClientIp } from '@/lib/rate-limit';
 import { canonicalEmail, emailDomain, isDisposable, isFreemail } from '@/lib/spam/email';
@@ -204,7 +205,14 @@ export async function POST(req: NextRequest) {
     city: city || null,
   };
 
-  const supabase = createRouteClient();
+  // A bare, stateless client — signup expects NO session (email confirmation
+  // is on) and needs no cookies. The ssr/PKCE client added flow state around
+  // signUp that interfered with Supabase's single-use captcha verification.
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL as string,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string,
+    { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false, flowType: 'implicit' } },
+  );
   const { data, error } = await supabase.auth.signUp({
     email,
     password,

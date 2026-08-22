@@ -170,8 +170,13 @@ export default function LoginForm({
           return;
         }
         security.resetTurnstile();
-        // A consumed/expired token reads as a captcha failure — retry once
-        // silently with a freshly minted token before bothering the user.
+        // A consumed/expired token reads as a captcha failure, and a form
+        // token from a long-open tab comes back stale — both retry once
+        // silently with fresh tokens before bothering the user.
+        if (data?.error === 'stale_token' && attempt === 0) {
+          await security.refreshFormToken();
+          continue;
+        }
         if (data?.error === 'captcha' && attempt === 0) continue;
         setError(
           data?.error === 'exists'
