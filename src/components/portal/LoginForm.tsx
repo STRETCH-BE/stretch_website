@@ -77,33 +77,39 @@ export default function LoginForm({
     setBusy(true);
     setError(null);
     try {
-      const captchaToken = await security.waitForTurnstile();
-      const res = await fetch('/api/portal/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, captchaToken }),
-      });
-      if (res.ok) {
-        router.replace('/portal');
-        router.refresh();
+      for (let attempt = 0; attempt < 2; attempt++) {
+        const captchaToken = await security.waitForTurnstile();
+        const res = await fetch('/api/portal/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password, captchaToken }),
+        });
+        if (res.ok) {
+          router.replace('/portal');
+          router.refresh();
+          return;
+        }
+        // Turnstile tokens are single-use — a failed attempt needs a fresh one.
+        security.resetTurnstile();
+        const data = await res.json().catch(() => null);
+        // A consumed/expired token reads as a captcha failure — retry once
+        // silently with a freshly minted token before bothering the user.
+        if (data?.error === 'captcha' && attempt === 0) continue;
+        setError(
+          data?.error === 'pending'
+            ? t('pending')
+            : data?.error === 'inactive'
+              ? t('inactive')
+              : data?.error === 'captcha'
+                ? t('captcha')
+                : data?.error === 'rate_limited'
+                  ? t('tooMany')
+                  : data?.error === 'unavailable'
+                    ? t('unavailableBody')
+                    : t('invalid'),
+        );
         return;
       }
-      // Turnstile tokens are single-use — a failed attempt needs a fresh one.
-      security.resetTurnstile();
-      const data = await res.json().catch(() => null);
-      setError(
-        data?.error === 'pending'
-          ? t('pending')
-          : data?.error === 'inactive'
-            ? t('inactive')
-            : data?.error === 'captcha'
-              ? t('captcha')
-              : data?.error === 'rate_limited'
-                ? t('tooMany')
-                : data?.error === 'unavailable'
-                  ? t('unavailableBody')
-                  : t('invalid'),
-      );
     } catch {
       setError(t('failed'));
     } finally {
@@ -117,65 +123,71 @@ export default function LoginForm({
     setBusy(true);
     setError(null);
     try {
-      const captchaToken = await security.waitForTurnstile();
-      const res = await fetch('/api/portal/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          password,
-          company,
-          contactName,
-          vat,
-          phone,
-          country,
-          businessType,
-          // Architect audience: the company field doubles as the office name.
-          accountType: architect ? 'architect' : 'b2c',
-          office: architect ? company : undefined,
-          city: architect ? city : undefined,
-          captchaToken,
-          formToken: security.formToken,
-          locale,
-        }),
-      });
-      const data = await res.json().catch(() => null);
-      if (res.ok && data?.ok) {
-        if (data.pending) setSignupPending(true);
-        if (data.confirm || isTurnstileEnabled()) {
-          // Turnstile tokens are single-use — with the widget on, skip the
-          // auto-login and let the user sign in with a fresh token.
-          setSignupDone(true);
-        } else {
-          // No email confirmation required → sign straight in.
-          const login = await fetch('/api/portal/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password }),
-          });
-          if (login.ok) {
-            router.replace('/portal');
-            router.refresh();
-            return;
+      for (let attempt = 0; attempt < 2; attempt++) {
+        const captchaToken = await security.waitForTurnstile();
+        const res = await fetch('/api/portal/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            password,
+            company,
+            contactName,
+            vat,
+            phone,
+            country,
+            businessType,
+            // Architect audience: the company field doubles as the office name.
+            accountType: architect ? 'architect' : 'b2c',
+            office: architect ? company : undefined,
+            city: architect ? city : undefined,
+            captchaToken,
+            formToken: security.formToken,
+            locale,
+          }),
+        });
+        const data = await res.json().catch(() => null);
+        if (res.ok && data?.ok) {
+          if (data.pending) setSignupPending(true);
+          if (data.confirm || isTurnstileEnabled()) {
+            // Turnstile tokens are single-use — with the widget on, skip the
+            // auto-login and let the user sign in with a fresh token.
+            setSignupDone(true);
+          } else {
+            // No email confirmation required → sign straight in.
+            const login = await fetch('/api/portal/login', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, password }),
+            });
+            if (login.ok) {
+              router.replace('/portal');
+              router.refresh();
+              return;
+            }
+            setSignupDone(true);
           }
-          setSignupDone(true);
+          return;
         }
+        security.resetTurnstile();
+        // A consumed/expired token reads as a captcha failure — retry once
+        // silently with a freshly minted token before bothering the user.
+        if (data?.error === 'captcha' && attempt === 0) continue;
+        setError(
+          data?.error === 'exists'
+            ? t('signupExists')
+            : data?.error === 'disposable'
+              ? t('disposable')
+              : data?.error === 'rejected'
+                ? t('couldNotCreate')
+                : data?.error === 'captcha'
+                  ? t('captcha')
+                  : data?.error === 'rate_limited' || data?.error === 'busy'
+                    ? t('tooMany')
+                    : t('failed'),
+        );
         return;
       }
-      security.resetTurnstile();
-      setError(
-        data?.error === 'exists'
-          ? t('signupExists')
-          : data?.error === 'disposable'
-            ? t('disposable')
-            : data?.error === 'rejected'
-              ? t('couldNotCreate')
-              : data?.error === 'captcha'
-                ? t('captcha')
-                : data?.error === 'rate_limited' || data?.error === 'busy'
-                  ? t('tooMany')
-                  : t('failed'),
-      );
     } catch {
       setError(t('failed'));
     } finally {

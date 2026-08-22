@@ -81,7 +81,7 @@ function is missing or Supabase is down.
 | --- | --- |
 | `/api/lead` + `/api/contact` (shared keys) | 6/10 min per IP · 10/day per canonical email |
 | `/api/datasheet-request` | 5/h per IP · 3/day per email |
-| `/api/portal/signup` | 3/h + 10/day per IP · 5/day per email · **global 30/h circuit breaker** (503 + max one admin mail/hour to `PORTAL_ADMIN_EMAIL`) |
+| `/api/portal/signup` | 6/h + 12/day POSTs per IP (= 3/h real attempts — the client silently retries once on a captcha failure) · 5/day per email · **global 30/h circuit breaker** (503 + max one admin mail/hour to `PORTAL_ADMIN_EMAIL`) |
 | `/api/portal/login` | 10/10 min per IP · 20/h per email |
 | architect downloads | 30/h per user id |
 

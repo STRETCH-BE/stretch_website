@@ -68,9 +68,11 @@ export async function POST(req: NextRequest) {
 
   // --- Rate limits (fail-open in the helper) -------------------------------
   const ip = getClientIp(req);
+  // 6 POSTs/hour = 3 real attempts (the client silently retries once with a
+  // fresh token on a captcha failure, so every attempt can cost 2 POSTs).
   if (
-    !(await rateLimit(`signup:ip10m:${ip}`, 3, 60 * 60)) ||
-    !(await rateLimit(`signup:ipday:${ip}`, 10, 24 * 60 * 60))
+    !(await rateLimit(`signup:ip10m:${ip}`, 6, 60 * 60)) ||
+    !(await rateLimit(`signup:ipday:${ip}`, 12, 24 * 60 * 60))
   ) {
     return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 });
   }
@@ -132,6 +134,7 @@ export async function POST(req: NextRequest) {
   // Supabase CAPTCHA toggle is enabled, signUp would reject it anyway with a
   // less useful error.
   if (isTurnstileEnabled() && !captchaToken) {
+    console.warn('[signup] captcha rejected: no token from the client widget');
     return NextResponse.json({ ok: false, error: 'captcha' }, { status: 400 });
   }
 
@@ -220,6 +223,8 @@ export async function POST(req: NextRequest) {
   if (error) {
     const exists = /already|registered|exists/i.test(error.message);
     const captcha = /captcha/i.test(error.message);
+    if (captcha) console.warn(`[signup] captcha rejected by Supabase: ${error.message}`);
+    else if (!exists) console.warn(`[signup] signUp failed: ${error.message}`);
     return NextResponse.json(
       { ok: false, error: exists ? 'exists' : captcha ? 'captcha' : 'failed' },
       { status: exists ? 409 : captcha ? 400 : 500 },

@@ -49,6 +49,7 @@ export async function POST(req: NextRequest) {
   // Turnstile on and no token → loud 400 so the failure is visible once the
   // Supabase CAPTCHA toggle is enabled (Supabase verifies the token itself).
   if (isTurnstileEnabled() && isSupabaseConfigured() && !captchaToken) {
+    console.warn('[login] captcha rejected: no token from the client widget');
     return NextResponse.json({ ok: false, error: 'captcha' }, { status: 400 });
   }
 
@@ -80,6 +81,7 @@ export async function POST(req: NextRequest) {
   });
   if (error || !data.user) {
     const captcha = error && /captcha/i.test(error.message);
+    if (captcha) console.warn(`[login] captcha rejected by Supabase: ${error?.message}`);
     return NextResponse.json(
       { ok: false, error: captcha ? 'captcha' : 'invalid' },
       { status: captcha ? 400 : 401 },
