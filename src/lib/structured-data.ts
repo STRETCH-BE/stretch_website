@@ -146,6 +146,24 @@ export function productSchema(product: Product, locale: Locale): Record<string, 
 
 export type BreadcrumbItem = { name: string; url: string };
 
+/**
+ * Service node for B2B service landings (/supply): the service is offered by
+ * the ONE global Organization entity (same @id anchoring the technical
+ * pages), with the group's sales territory as area served.
+ */
+export function serviceSchema(opts: { name: string; description: string; url: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: opts.name,
+    description: opts.description,
+    url: opts.url,
+    serviceType: 'Stretch ceiling materials supply & confection',
+    provider: { '@id': ORG_ID },
+    areaServed: salesTerritory.map((code) => ({ '@type': 'Country', name: code })),
+  };
+}
+
 export function breadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     '@context': 'https://schema.org',

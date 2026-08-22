@@ -78,7 +78,9 @@
     "architectsTitle": "For arkitekter — foreskriv spændlofter | STRETCH",
     "architectsDescription": "Gratis arkitektområde: datablade, udbudstekster, CAD/BIM, målte casestudier, vejledende €/m²-budgetbånd, arrangementer og projektstøtte.",
     "kitTitle": "Gør-det-selv spændloftskit — efter mål | STRETCH",
-    "kitDescription": "Spændloftskit efter dine mål: polyesterdug, profiler og vejledning i én pakke. Kold montering, levering i EU og Storbritannien."
+    "kitDescription": "Spændloftskit efter dine mål: polyesterdug, profiler og vejledning i én pakke. Kold montering, levering i EU og Storbritannien.",
+    "supplyTitle": "Spændloftsmaterialer & konfektion til montører | STRETCH",
+    "supplyDescription": "Fabrikslevering til professionelle montører: duge & folier, profiler, lys og konfektion efter mål, sendt i hele Europa. Fakturering i EUR."
   },
   "cookies": {
     "title": "Vi værner om dit privatliv",
@@ -165,7 +167,8 @@
       "faq": "FAQ",
       "clientPortal": "Kundeportal",
       "architects": "For arkitekter",
-      "kit": "Gør-det-selv-kit"
+      "kit": "Gør-det-selv-kit",
+      "supply": "Levering til montører"
     },
     "dealers": "Forhandlernetværk"
   },
@@ -2142,6 +2145,35 @@
         "message": {
           "label": "Dit rum",
           "placeholder": "Loftets form, forhindringer, lysplaner…"
+        }
+      }
+    },
+    "supply_inquiry": {
+      "title": "Tal med vores leveringsteam",
+      "subtitle": "Fortæl os, hvad du monterer og hvor — vi svarer inden for én arbejdsdag med, hvordan vi kan levere til dig.",
+      "submitLabel": "Send min forespørgsel",
+      "sentTitle": "Forespørgsel modtaget",
+      "sentMsg": "Tak — vores leveringsteam svarer inden for én arbejdsdag.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og efternavn"
+        },
+        "company": {
+          "label": "Virksomhed",
+          "placeholder": "Din virksomhed"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "dig@firma.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+45 ..."
+        },
+        "message": {
+          "label": "Hvad har du brug for?",
+          "placeholder": "Materialer, konfektion, mængder, timing…"
         }
       }
     }
@@ -4285,7 +4317,12 @@
           "title": "Marketingstøtte",
           "body": "Produktbilleder, prøver og salgsmateriale, der hjælper dig med at vinde og lukke opgaver med spændlofter."
         }
-      ]
+      ],
+      "supplyCard": {
+        "title": "Vil du bare købe materialer?",
+        "body": "En leveringskonto er ikke et partnerskab: bestil materialer og konfektion efter mål til din montørpris, uden forpligtelser.",
+        "cta": "Levering til montører"
+      }
     },
     "how": {
       "eyebrow": "Sådan fungerer det",
@@ -4962,5 +4999,65 @@
       }
     ],
     "faqTrainingLink": "Vil du hellere øve dig først? Deltag i en international kursusdag"
+  },
+  "supplyPage": {
+    "crumb": "Levering",
+    "eyebrow": "Fabrikslevering",
+    "titleA": "Materialer, konfektion & kurser",
+    "titleB": "til professionelle montører.",
+    "lead": "Egen EU-fabrik, målsvejset konfektion med harpun og logistik i hele Europa — materialerne bag vores egne monteringer, leveret til dine.",
+    "independent": "Monterer du lofter, men afhænger af andres levering? Vi er fabrikken bag uafhængige montører. Bestil det, du har brug for, når du har brug for det — og behold dit eget navn på arbejdet.",
+    "ctaPortal": "Opret en montørkonto",
+    "ctaInquiry": "Tal med leveringsteamet",
+    "groupsEyebrow": "Hvad vi leverer",
+    "groupsTitle": "Alt bag et spændloft",
+    "groupsCta": "Se sortimentet",
+    "confection": {
+      "eyebrow": "Konfektion",
+      "title": "Efter mål, sendt som pakke",
+      "body": "Send din plan, og vi svejser loftet efter mål i vores egen produktion — med harpunkant, foldet, mærket og klar til ophæng. Et loft på 40 m² sendes som én let pakke på cirka 10 kg.",
+      "points": [
+        "Svejset efter din plan i vores egen EU-produktion",
+        "Harpunkant inkluderet — klar til at hænge i profilen",
+        "Et loft på 40 m² ≈ én pakke på cirka 10 kg",
+        "DDP-forsendelse i hele EU og Storbritannien"
+      ],
+      "leadTime": "Leveringstid: {days} arbejdsdage, bekræftet med din ordre.",
+      "leadTimeTbc": "Leveringstiden bekræftes med dit tilbud — spørg os om den aktuelle produktionsplan."
+    },
+    "how": {
+      "eyebrow": "Sådan fungerer det",
+      "title": "Fra konto til pakke",
+      "steps": [
+        {
+          "title": "Portalkonto",
+          "body": "Opret din gratis montørkonto i kundeportalen."
+        },
+        {
+          "title": "Dit prisniveau",
+          "body": "Vi aktiverer din montørpris — priserne bliver i portalen."
+        },
+        {
+          "title": "Bestil",
+          "body": "Bestil ruller, profiler, tilbehør eller konfektion efter mål."
+        },
+        {
+          "title": "Pakke ved døren",
+          "body": "Produktionen bekræfter din dato og sender DDP til din adresse."
+        }
+      ],
+      "notExclusiveA": "En leveringskonto er ikke et eksklusivt forhandlerskab — du køber det, du har brug for, uden forpligtelser. Vil du have mere end levering?",
+      "dealersLink": "Bliv forhandler",
+      "partnersLink": "Partnermodeller"
+    },
+    "currencyLine": "Priser og fakturering i EUR (PLN i Polen).",
+    "training": {
+      "eyebrow": "Kurser",
+      "title": "Montér vores systemer som vores egne hold",
+      "body": "Praktisk certificering på det belgiske hovedkontor — membrankonfektion, profiler, kold og varm montering, lys og akustik. Internationale sessioner på engelsk og tysk er på vej.",
+      "cta": "Se kursusdatoer"
+    },
+    "serviceName": "Levering af materialer & konfektion til spændlofter",
+    "serviceDescription": "Fabrikslevering af spændloftsmaterialer, konfektion efter mål og montørkurser for professionelle i hele Europa."
   }
 }

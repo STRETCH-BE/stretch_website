@@ -78,7 +78,9 @@
     "architectsTitle": "Dla architektów — specyfikacja sufitów napinanych | STRETCH",
     "architectsDescription": "Bezpłatna strefa architekta: karty techniczne, teksty specyfikacji, CAD/BIM, zmierzone studia przypadków, orientacyjne budżety i wsparcie projektowe.",
     "kitTitle": "Zestaw DIY sufitu napinanego — na wymiar | STRETCH",
-    "kitDescription": "Zestaw sufitu napinanego na Twój wymiar: tkanina poliestrowa, profile i instrukcja w jednej paczce. Montaż na zimno, dostawa w UE i UK."
+    "kitDescription": "Zestaw sufitu napinanego na Twój wymiar: tkanina poliestrowa, profile i instrukcja w jednej paczce. Montaż na zimno, dostawa w UE i UK.",
+    "supplyTitle": "Materiały i konfekcja sufitów napinanych dla monterów | STRETCH",
+    "supplyDescription": "Fabryczne zaopatrzenie dla monterów: tkaniny i folie, profile, oświetlenie oraz konfekcja na wymiar, z wysyłką po całej Europie. Fakturowanie w EUR i PLN."
   },
   "cookies": {
     "title": "Szanujemy Twoją prywatność",
@@ -165,7 +167,8 @@
       "faq": "FAQ",
       "clientPortal": "Panel klienta",
       "architects": "Dla architektów",
-      "kit": "Zestaw DIY"
+      "kit": "Zestaw DIY",
+      "supply": "Zaopatrzenie monterów"
     },
     "dealers": "Sieć dealerów"
   },
@@ -2142,6 +2145,35 @@
         "message": {
           "label": "Twoje pomieszczenie",
           "placeholder": "Kształt sufitu, przeszkody, plany oświetlenia…"
+        }
+      }
+    },
+    "supply_inquiry": {
+      "title": "Porozmawiaj z naszym zespołem dostaw",
+      "subtitle": "Powiedz nam, co montujesz i gdzie — odpowiemy w ciągu jednego dnia roboczego, jak możemy Cię zaopatrzyć.",
+      "submitLabel": "Wyślij zapytanie",
+      "sentTitle": "Zapytanie otrzymane",
+      "sentMsg": "Dziękujemy — nasz zespół dostaw odpowiada w ciągu jednego dnia roboczego.",
+      "fields": {
+        "name": {
+          "label": "Imię i nazwisko",
+          "placeholder": "Imię i nazwisko"
+        },
+        "company": {
+          "label": "Firma",
+          "placeholder": "Twoja firma"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "ty@firma.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+48 ..."
+        },
+        "message": {
+          "label": "Czego potrzebujesz?",
+          "placeholder": "Materiały, konfekcja, ilości, terminy…"
         }
       }
     }
@@ -4285,7 +4317,12 @@
           "title": "Wsparcie marketingowe",
           "body": "Zdjęcia produktowe, próbki i materiały sprzedażowe, które pomogą Ci zdobywać i domykać zlecenia na sufity napinane."
         }
-      ]
+      ],
+      "supplyCard": {
+        "title": "Chcesz tylko kupować materiały?",
+        "body": "Konto zaopatrzeniowe to nie partnerstwo: zamawiaj materiały i konfekcję na wymiar w swoim cenniku montera, bez zobowiązań.",
+        "cta": "Zaopatrzenie monterów"
+      }
     },
     "how": {
       "eyebrow": "Jak to działa",
@@ -4962,5 +4999,65 @@
       }
     ],
     "faqTrainingLink": "Wolisz najpierw poćwiczyć w praktyce? Dołącz do międzynarodowego dnia szkoleniowego"
+  },
+  "supplyPage": {
+    "crumb": "Zaopatrzenie",
+    "eyebrow": "Zaopatrzenie z fabryki",
+    "titleA": "Materiały, konfekcja i szkolenia",
+    "titleB": "dla profesjonalnych monterów.",
+    "lead": "Własna fabryka w UE, konfekcja na wymiar zgrzewana z harpunem i logistyka w całej Europie — materiały, na których pracują nasze ekipy, dostarczane także Tobie.",
+    "independent": "Montujesz sufity, ale zależysz od cudzych dostaw? Jesteśmy fabryką stojącą za niezależnymi monterami. Zamawiaj to, czego potrzebujesz, kiedy potrzebujesz — i podpisuj pracę własnym nazwiskiem.",
+    "ctaPortal": "Załóż konto montera",
+    "ctaInquiry": "Porozmawiaj z zespołem dostaw",
+    "groupsEyebrow": "Co dostarczamy",
+    "groupsTitle": "Wszystko, co kryje się za sufitem napinanym",
+    "groupsCta": "Zobacz asortyment",
+    "confection": {
+      "eyebrow": "Konfekcja",
+      "title": "Na wymiar, wysyłane jako paczka",
+      "body": "Prześlij plan, a my zgrzejemy sufit na wymiar we własnej produkcji — z krawędzią harpunową, złożony, opisany i gotowy do montażu. Sufit 40 m² to jedna lekka paczka około 10 kg.",
+      "points": [
+        "Zgrzewany według Twojego planu we własnej produkcji w UE",
+        "Krawędź harpunowa w zestawie — gotowy do zawieszenia w profilu",
+        "Sufit 40 m² ≈ jedna paczka około 10 kg",
+        "Wysyłka DDP w całej UE i Wielkiej Brytanii"
+      ],
+      "leadTime": "Termin realizacji: {days} dni roboczych, potwierdzany przy zamówieniu.",
+      "leadTimeTbc": "Termin realizacji potwierdzamy przy wycenie — zapytaj o aktualny harmonogram produkcji."
+    },
+    "how": {
+      "eyebrow": "Jak to działa",
+      "title": "Od konta do paczki",
+      "steps": [
+        {
+          "title": "Konto w portalu",
+          "body": "Załóż bezpłatne konto montera w portalu klienta."
+        },
+        {
+          "title": "Twój poziom cen",
+          "body": "Aktywujemy Twój cennik montera — ceny pozostają w portalu."
+        },
+        {
+          "title": "Zamówienie",
+          "body": "Zamawiaj rolki, profile, akcesoria lub konfekcję na wymiar."
+        },
+        {
+          "title": "Paczka pod drzwi",
+          "body": "Produkcja potwierdza termin i wysyła DDP na Twój adres."
+        }
+      ],
+      "notExclusiveA": "Konto zaopatrzeniowe to nie wyłączność dealerska — kupujesz to, czego potrzebujesz, bez zobowiązań. Chcesz więcej niż dostawy?",
+      "dealersLink": "Zostań dealerem",
+      "partnersLink": "Modele partnerskie"
+    },
+    "currencyLine": "Ceny i fakturowanie w EUR (PLN w Polsce).",
+    "training": {
+      "eyebrow": "Szkolenia",
+      "title": "Montuj nasze systemy jak nasze własne ekipy",
+      "body": "Praktyczna certyfikacja w belgijskiej centrali — konfekcja membrany, profile, montaż na zimno i na ciepło, światło i akustyka. Nadchodzą międzynarodowe sesje po angielsku i niemiecku.",
+      "cta": "Zobacz terminy szkoleń"
+    },
+    "serviceName": "Zaopatrzenie w materiały i konfekcję sufitów napinanych",
+    "serviceDescription": "Fabryczne zaopatrzenie w materiały do sufitów napinanych, konfekcja na wymiar i szkolenia monterów dla profesjonalistów w całej Europie."
   }
 }

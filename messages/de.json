@@ -78,7 +78,9 @@
     "architectsTitle": "Für Architekten — Spanndecken ausschreiben | STRETCH",
     "architectsDescription": "Kostenloser Architektenbereich: Datenblätter, Ausschreibungstexte, CAD/BIM, gemessene Fallstudien, indikative €/m²-Budgetbänder, Events und Projektbegleitung.",
     "kitTitle": "DIY-Spanndecken-Kit — nach Maß | STRETCH",
-    "kitDescription": "Spanndecken-Kit nach Ihren Maßen: Polyestertuch, Profile und Anleitung in einem Paket. Kaltmontage, Lieferung in EU und UK."
+    "kitDescription": "Spanndecken-Kit nach Ihren Maßen: Polyestertuch, Profile und Anleitung in einem Paket. Kaltmontage, Lieferung in EU und UK.",
+    "supplyTitle": "Spanndecken-Material & Konfektion für Verarbeiter | STRETCH",
+    "supplyDescription": "Werksbelieferung für Montageprofis: Membranen & Folien, Profile, Licht und Maßkonfektion, versandt durch ganz Europa. Rechnungsstellung in EUR."
   },
   "cookies": {
     "title": "Wir respektieren Ihre Privatsphäre",
@@ -165,7 +167,8 @@
       "faq": "FAQ",
       "clientPortal": "Kundenportal",
       "architects": "Für Architekten",
-      "kit": "DIY-Kit"
+      "kit": "DIY-Kit",
+      "supply": "Belieferung für Verarbeiter"
     },
     "dealers": "Händlernetz"
   },
@@ -2142,6 +2145,35 @@
         "message": {
           "label": "Ihr Raum",
           "placeholder": "Deckenform, Hindernisse, Lichtplanung…"
+        }
+      }
+    },
+    "supply_inquiry": {
+      "title": "Sprechen Sie mit unserem Belieferungsteam",
+      "subtitle": "Sagen Sie uns, was Sie montieren und wo — wir antworten innerhalb eines Werktags, wie wir Sie beliefern können.",
+      "submitLabel": "Anfrage senden",
+      "sentTitle": "Anfrage erhalten",
+      "sentMsg": "Danke — unser Belieferungsteam antwortet innerhalb eines Werktags.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Vor- & Nachname"
+        },
+        "company": {
+          "label": "Firma",
+          "placeholder": "Ihre Firma"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "sie@firma.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+49 ..."
+        },
+        "message": {
+          "label": "Was brauchen Sie?",
+          "placeholder": "Material, Konfektion, Mengen, Timing…"
         }
       }
     }
@@ -4285,7 +4317,12 @@
           "title": "Marketing-Unterstützung",
           "body": "Produktbilder, Muster und Verkaufsunterlagen, mit denen Sie Spanndecken-Aufträge gewinnen und abschließen."
         }
-      ]
+      ],
+      "supplyCard": {
+        "title": "Nur Material kaufen?",
+        "body": "Ein Belieferungskonto ist keine Partnerschaft: Bestellen Sie Material und Maßkonfektion zu Ihrer Verarbeiter-Preisstufe, ohne Verpflichtungen.",
+        "cta": "Belieferung für Verarbeiter"
+      }
     },
     "how": {
       "eyebrow": "So funktioniert es",
@@ -4962,5 +4999,65 @@
       }
     ],
     "faqTrainingLink": "Lieber zuerst praktisch üben? Nehmen Sie an einem internationalen Schulungstag teil"
+  },
+  "supplyPage": {
+    "crumb": "Belieferung",
+    "eyebrow": "Werksbelieferung",
+    "titleA": "Material, Konfektion & Schulung",
+    "titleB": "für Montageprofis.",
+    "lead": "Eigenes EU-Werk, maßgeschweißte Konfektion mit Harpune und Logistik durch ganz Europa — die Materialien hinter unseren eigenen Montagen, geliefert für Ihre.",
+    "independent": "Sie montieren Decken, hängen aber von fremder Belieferung ab? Wir sind das Werk hinter unabhängigen Verarbeitern. Bestellen Sie, was Sie brauchen, wann Sie es brauchen — und behalten Sie Ihren Namen auf der Arbeit.",
+    "ctaPortal": "Verarbeiter-Konto eröffnen",
+    "ctaInquiry": "Mit dem Belieferungsteam sprechen",
+    "groupsEyebrow": "Was wir liefern",
+    "groupsTitle": "Alles hinter einer Spanndecke",
+    "groupsCta": "Sortiment ansehen",
+    "confection": {
+      "eyebrow": "Konfektion",
+      "title": "Nach Maß, versandt als Paket",
+      "body": "Senden Sie Ihren Plan: Wir schweißen die Decke in unserer eigenen Produktion auf Maß — Harpunenrand inklusive, gefaltet, etikettiert und montagefertig. Eine 40-m²-Decke geht als ein leichtes Paket von rund 10 kg auf die Reise.",
+      "points": [
+        "Nach Ihrem Plan geschweißt, in unserer eigenen EU-Produktion",
+        "Harpunenrand inklusive — bereit zum Einhängen ins Profil",
+        "Eine 40-m²-Decke ≈ ein Paket von etwa 10 kg",
+        "DDP-Versand in die gesamte EU und nach Großbritannien"
+      ],
+      "leadTime": "Lieferzeit: {days} Werktage, bestätigt mit Ihrer Bestellung.",
+      "leadTimeTbc": "Die Lieferzeit wird mit Ihrem Angebot bestätigt — fragen Sie uns nach dem aktuellen Produktionsplan."
+    },
+    "how": {
+      "eyebrow": "So funktioniert es",
+      "title": "Vom Konto zum Paket",
+      "steps": [
+        {
+          "title": "Portal-Konto",
+          "body": "Erstellen Sie Ihr kostenloses Verarbeiter-Konto im Kundenportal."
+        },
+        {
+          "title": "Ihre Preisstufe",
+          "body": "Wir schalten Ihre Verarbeiter-Preisstufe frei — Preise bleiben im Portal."
+        },
+        {
+          "title": "Bestellen",
+          "body": "Bestellen Sie Rollen, Profile, Zubehör oder eine Maßkonfektion."
+        },
+        {
+          "title": "Paket vor der Tür",
+          "body": "Die Produktion bestätigt Ihren Termin und versendet DDP an Ihre Adresse."
+        }
+      ],
+      "notExclusiveA": "Ein Belieferungskonto ist kein Exklusivvertrieb — Sie kaufen, was Sie brauchen, ohne Verpflichtungen. Sie möchten mehr als Belieferung?",
+      "dealersLink": "Händler werden",
+      "partnersLink": "Partnermodelle"
+    },
+    "currencyLine": "Preise und Rechnungsstellung in EUR (PLN in Polen).",
+    "training": {
+      "eyebrow": "Schulung",
+      "title": "Montieren Sie unsere Systeme wie unsere eigenen Teams",
+      "body": "Praxis-Zertifizierung am belgischen Hauptsitz — Membrankonfektion, Profile, Kalt- und Warmmontage, Licht und Akustik. Internationale Sessions auf Englisch und Deutsch kommen.",
+      "cta": "Schulungstermine ansehen"
+    },
+    "serviceName": "Belieferung mit Spanndecken-Material & Konfektion",
+    "serviceDescription": "Werksbelieferung mit Spanndecken-Materialien, Maßkonfektion und Verarbeiter-Schulung für Montageprofis in ganz Europa."
   }
 }

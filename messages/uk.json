@@ -78,7 +78,9 @@
     "architectsTitle": "For architects — specify stretch ceilings | STRETCH",
     "architectsDescription": "Free architect area: datasheets, spec texts, CAD/BIM, measured case studies, indicative €/m² budget bands, events and project support.",
     "kitTitle": "DIY stretch ceiling kit — made to measure | STRETCH",
-    "kitDescription": "Stretch ceiling kit made to your measurements: polyester fabric, profiles and instructions in one parcel. Cold install, EU and UK delivery."
+    "kitDescription": "Stretch ceiling kit made to your measurements: polyester fabric, profiles and instructions in one parcel. Cold install, EU and UK delivery.",
+    "supplyTitle": "Stretch ceiling materials & confection for installers | STRETCH",
+    "supplyDescription": "Factory supply for installation professionals: fabrics & foils, profiles, lighting and made-to-measure confection, shipped across Europe. Invoicing in EUR."
   },
   "cookies": {
     "title": "We value your privacy",
@@ -165,7 +167,8 @@
       "faq": "FAQ",
       "clientPortal": "Client portal",
       "architects": "For architects",
-      "kit": "DIY kit"
+      "kit": "DIY kit",
+      "supply": "Installer supply"
     },
     "dealers": "Dealer network"
   },
@@ -2142,6 +2145,35 @@
         "message": {
           "label": "Your room",
           "placeholder": "Ceiling shape, obstacles, lighting plans…"
+        }
+      }
+    },
+    "supply_inquiry": {
+      "title": "Talk to our supply team",
+      "subtitle": "Tell us what you install and where — we reply within one working day with how we can supply you.",
+      "submitLabel": "Send my inquiry",
+      "sentTitle": "Inquiry received",
+      "sentMsg": "Thanks — our supply team replies within one working day.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "First & last name"
+        },
+        "company": {
+          "label": "Company",
+          "placeholder": "Your company"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+33 ..."
+        },
+        "message": {
+          "label": "What do you need?",
+          "placeholder": "Materials, confection, volumes, timing…"
         }
       }
     }
@@ -4285,7 +4317,12 @@
           "title": "Marketing support",
           "body": "Product imagery, samples and sales material to help you win and close stretch-ceiling work."
         }
-      ]
+      ],
+      "supplyCard": {
+        "title": "Just want to buy materials?",
+        "body": "A supply account is not a partnership: order materials and made-to-measure confection at your installer tier, with no commitments.",
+        "cta": "Installer supply"
+      }
     },
     "how": {
       "eyebrow": "How it works",
@@ -4962,5 +4999,65 @@
       }
     ],
     "faqTrainingLink": "Prefer hands-on practice first? Join an international training day"
+  },
+  "supplyPage": {
+    "crumb": "Supply",
+    "eyebrow": "Factory supply",
+    "titleA": "Materials, confection & training",
+    "titleB": "for installation professionals.",
+    "lead": "Own EU factory, made-to-measure harpoon-welded confection and logistics across Europe — the materials behind our own installations, supplied to yours.",
+    "independent": "If you install ceilings but depend on someone else’s supply: we are the factory behind independent installers. Order what you need, when you need it — and keep your own name on the work.",
+    "ctaPortal": "Open an installer account",
+    "ctaInquiry": "Talk to the supply team",
+    "groupsEyebrow": "What we supply",
+    "groupsTitle": "Everything behind a stretch ceiling",
+    "groupsCta": "View the range",
+    "confection": {
+      "eyebrow": "Confection",
+      "title": "Made to measure, shipped as a parcel",
+      "body": "Send your plan and we weld the ceiling to size in our own production — harpoon edge included, folded, labelled and ready to hang. A 40 m² ceiling ships as one light parcel of roughly 10 kg.",
+      "points": [
+        "Welded to your plan in our own EU production",
+        "Harpoon edge included — ready to hang in the profile",
+        "A 40 m² ceiling ≈ one parcel of about 10 kg",
+        "DDP shipping across the EU and the UK"
+      ],
+      "leadTime": "Lead time: {days} working days, confirmed with your order.",
+      "leadTimeTbc": "The lead time is confirmed with your quote — ask us for the current production schedule."
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "From account to parcel",
+      "steps": [
+        {
+          "title": "Portal account",
+          "body": "Create your free installer account in the client portal."
+        },
+        {
+          "title": "Your price tier",
+          "body": "We activate your installer price tier — pricing stays inside the portal."
+        },
+        {
+          "title": "Order",
+          "body": "Order rolls, profiles, accessories or a made-to-measure confection."
+        },
+        {
+          "title": "Parcel at your door",
+          "body": "Production confirms your date and ships DDP to your address."
+        }
+      ],
+      "notExclusiveA": "A supply account is not an exclusive dealership — you buy what you need, with no commitments. Want more than supply?",
+      "dealersLink": "Become a dealer",
+      "partnersLink": "Partner models"
+    },
+    "currencyLine": "Prices and invoicing in EUR (PLN in Poland).",
+    "training": {
+      "eyebrow": "Training",
+      "title": "Fit our systems like our own teams",
+      "body": "Hands-on certification at the Belgian HQ — membrane confection, profiles, cold and heat mounting, light and acoustics. International sessions in English and German are coming.",
+      "cta": "See training dates"
+    },
+    "serviceName": "Stretch ceiling materials & confection supply",
+    "serviceDescription": "Factory supply of stretch-ceiling materials, made-to-measure confection and installer training for installation professionals across Europe."
   }
 }

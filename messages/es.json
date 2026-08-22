@@ -78,7 +78,9 @@
     "architectsTitle": "Para arquitectos — especificar techos tensados | STRETCH",
     "architectsDescription": "Área de arquitectos gratuita: fichas técnicas, textos de especificación, CAD/BIM, casos medidos, rangos €/m² indicativos, eventos y apoyo de proyecto.",
     "kitTitle": "Kit DIY de techo tensado — a medida | STRETCH",
-    "kitDescription": "Kit de techo tensado a tus medidas: tela de poliéster, perfiles e instrucciones en un paquete. Instalación en frío, entrega en la UE y el Reino Unido."
+    "kitDescription": "Kit de techo tensado a tus medidas: tela de poliéster, perfiles e instrucciones en un paquete. Instalación en frío, entrega en la UE y el Reino Unido.",
+    "supplyTitle": "Materiales y confección de techo tensado para instaladores | STRETCH",
+    "supplyDescription": "Suministro de fábrica para profesionales: telas y láminas, perfiles, iluminación y confección a medida, con envío por toda Europa. Facturación en EUR."
   },
   "cookies": {
     "title": "Valoramos tu privacidad",
@@ -165,7 +167,8 @@
       "faq": "FAQ",
       "clientPortal": "Portal de clientes",
       "architects": "Para arquitectos",
-      "kit": "Kit DIY"
+      "kit": "Kit DIY",
+      "supply": "Suministro a instaladores"
     },
     "dealers": "Red de distribuidores"
   },
@@ -2142,6 +2145,35 @@
         "message": {
           "label": "Tu habitación",
           "placeholder": "Forma del techo, obstáculos, planes de iluminación…"
+        }
+      }
+    },
+    "supply_inquiry": {
+      "title": "Hable con nuestro equipo de suministro",
+      "subtitle": "Cuéntenos qué instala y dónde — respondemos en un día laborable con cómo podemos suministrarle.",
+      "submitLabel": "Enviar mi consulta",
+      "sentTitle": "Consulta recibida",
+      "sentMsg": "Gracias — nuestro equipo de suministro responde en un día laborable.",
+      "fields": {
+        "name": {
+          "label": "Nombre",
+          "placeholder": "Nombre y apellidos"
+        },
+        "company": {
+          "label": "Empresa",
+          "placeholder": "Su empresa"
+        },
+        "email": {
+          "label": "Correo",
+          "placeholder": "usted@empresa.com"
+        },
+        "phone": {
+          "label": "Teléfono",
+          "placeholder": "+34 ..."
+        },
+        "message": {
+          "label": "¿Qué necesita?",
+          "placeholder": "Materiales, confección, volúmenes, plazos…"
         }
       }
     }
@@ -4285,7 +4317,12 @@
           "title": "Apoyo de marketing",
           "body": "Imágenes de producto, muestras y material de venta para ganar y cerrar proyectos de techos tensados."
         }
-      ]
+      ],
+      "supplyCard": {
+        "title": "¿Solo quiere comprar materiales?",
+        "body": "Una cuenta de suministro no es una asociación: pida materiales y confección a medida a su tarifa de instalador, sin compromisos.",
+        "cta": "Suministro a instaladores"
+      }
     },
     "how": {
       "eyebrow": "Cómo funciona",
@@ -4962,5 +4999,65 @@
       }
     ],
     "faqTrainingLink": "¿Prefiere practicar primero? Únase a una jornada de formación internacional"
+  },
+  "supplyPage": {
+    "crumb": "Suministro",
+    "eyebrow": "Suministro de fábrica",
+    "titleA": "Materiales, confección y formación",
+    "titleB": "para profesionales de la instalación.",
+    "lead": "Fábrica propia en la UE, confección a medida soldada con arpón y logística por toda Europa — los materiales de nuestras propias instalaciones, suministrados a las suyas.",
+    "independent": "¿Instala techos pero depende del suministro de otros? Somos la fábrica detrás de los instaladores independientes. Pida lo que necesita, cuando lo necesita — y mantenga su nombre en el trabajo.",
+    "ctaPortal": "Abrir una cuenta de instalador",
+    "ctaInquiry": "Hablar con el equipo de suministro",
+    "groupsEyebrow": "Qué suministramos",
+    "groupsTitle": "Todo lo que hay detrás de un techo tensado",
+    "groupsCta": "Ver la gama",
+    "confection": {
+      "eyebrow": "Confección",
+      "title": "A medida, enviado como paquete",
+      "body": "Envíe su plano y soldamos el techo a medida en nuestra propia producción — con borde de arpón, plegado, etiquetado y listo para colgar. Un techo de 40 m² viaja en un solo paquete ligero de unos 10 kg.",
+      "points": [
+        "Soldado según su plano en nuestra propia producción de la UE",
+        "Borde de arpón incluido — listo para colgar en el perfil",
+        "Un techo de 40 m² ≈ un paquete de unos 10 kg",
+        "Envío DDP por toda la UE y el Reino Unido"
+      ],
+      "leadTime": "Plazo: {days} días laborables, confirmado con su pedido.",
+      "leadTimeTbc": "El plazo se confirma con su presupuesto — pregúntenos por el calendario de producción actual."
+    },
+    "how": {
+      "eyebrow": "Cómo funciona",
+      "title": "De la cuenta al paquete",
+      "steps": [
+        {
+          "title": "Cuenta del portal",
+          "body": "Cree su cuenta gratuita de instalador en el portal de clientes."
+        },
+        {
+          "title": "Su nivel de precios",
+          "body": "Activamos su tarifa de instalador — los precios permanecen en el portal."
+        },
+        {
+          "title": "Pedido",
+          "body": "Pida rollos, perfiles, accesorios o una confección a medida."
+        },
+        {
+          "title": "Paquete en su puerta",
+          "body": "Producción confirma su fecha y envía DDP a su dirección."
+        }
+      ],
+      "notExclusiveA": "Una cuenta de suministro no es una distribución exclusiva — compra lo que necesita, sin compromisos. ¿Quiere más que suministro?",
+      "dealersLink": "Hágase distribuidor",
+      "partnersLink": "Modelos de socio"
+    },
+    "currencyLine": "Precios y facturación en EUR (PLN en Polonia).",
+    "training": {
+      "eyebrow": "Formación",
+      "title": "Instale nuestros sistemas como nuestros propios equipos",
+      "body": "Certificación práctica en la sede belga — confección de la membrana, perfiles, montaje en frío y en caliente, luz y acústica. Llegan sesiones internacionales en inglés y alemán.",
+      "cta": "Ver fechas de formación"
+    },
+    "serviceName": "Suministro de materiales y confección para techos tensados",
+    "serviceDescription": "Suministro de fábrica de materiales para techos tensados, confección a medida y formación de instaladores para profesionales de toda Europa."
   }
 }

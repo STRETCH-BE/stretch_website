@@ -185,13 +185,27 @@ export default async function PartnersPage({ params }: { params: { locale: strin
           <div className="pt-why grid-lines grid-lines--dark" style={{ gridTemplateColumns: 'repeat(3,1fr)' }}>
             {whyCards.map((c, i) => {
               const Icon = WHY_ICONS[i] ?? WHY_ICONS[0];
-              return (
+              const card = (
                 <div key={c.title} style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)' }}>
                   <span style={{ color: 'var(--red)', display: 'inline-flex', marginBottom: 18 }}><Icon size={26} /></span>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 21, letterSpacing: '-.01em', margin: '0 0 11px' }}>{c.title}</h3>
                   <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: 0 }}>{c.body}</p>
                 </div>
               );
+              if (i !== 0) return card;
+              // Supply-only teaser — right next to the buy-from-the-factory
+              // card: installers can buy materials without partner commitment.
+              return [
+                card,
+                <Link key="supply-card" href="/supply" style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)', display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                  <span style={{ color: 'var(--red-bright)', display: 'inline-flex', marginBottom: 18 }}><Package size={26} /></span>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 21, letterSpacing: '-.01em', margin: '0 0 11px' }}>{t('why.supplyCard.title')}</h3>
+                  <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: '0 0 14px' }}>{t('why.supplyCard.body')}</p>
+                  <span style={{ color: 'var(--red-bright)', fontWeight: 700, fontSize: 14, display: 'inline-flex', alignItems: 'center', gap: 7 }}>
+                    {t('why.supplyCard.cta')} <ArrowRight size={15} />
+                  </span>
+                </Link>,
+              ];
             })}
           </div>
         </div>

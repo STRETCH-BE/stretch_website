@@ -154,6 +154,7 @@ export const footerNav = {
   ] as NavLink[],
   company: [
     { key: 'reseller', href: '/partners' },
+    { key: 'supply', href: '/supply' },
     { key: 'training', href: '/installer-training' },
     { key: 'architects', href: '/architects' },
     { key: 'inspiration', href: '/inspiration' },
@@ -184,6 +185,7 @@ export const staticRoutes = [
   '/datasheets',
   '/architects',
   '/kit',
+  '/supply',
   '/products/prefab-lighting-elements',
   '/faq',
   '/blog',

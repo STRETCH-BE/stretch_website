@@ -78,7 +78,9 @@
     "architectsTitle": "For arkitekter — foreskriv strekktak | STRETCH",
     "architectsDescription": "Gratis arkitektområde: datablad, beskrivelsestekster, CAD/BIM, målte casestudier, veiledende €/m²-budsjettbånd, arrangementer og prosjektstøtte.",
     "kitTitle": "Gjør-det-selv strekktakskit — etter mål | STRETCH",
-    "kitDescription": "Strekktakskit etter dine mål: polyesterduk, profiler og veiledning i én pakke. Kald montering, levering i EU og Storbritannia."
+    "kitDescription": "Strekktakskit etter dine mål: polyesterduk, profiler og veiledning i én pakke. Kald montering, levering i EU og Storbritannia.",
+    "supplyTitle": "Strekkhimlingsmaterialer & konfeksjon for montører | STRETCH",
+    "supplyDescription": "Fabrikklevering for profesjonelle montører: duker & folier, profiler, lys og konfeksjon etter mål, sendt i hele Europa. Fakturering i EUR."
   },
   "cookies": {
     "title": "Vi verner om personvernet ditt",
@@ -165,7 +167,8 @@
       "faq": "FAQ",
       "clientPortal": "Kundeportal",
       "architects": "For arkitekter",
-      "kit": "Gjør-det-selv-kit"
+      "kit": "Gjør-det-selv-kit",
+      "supply": "Levering til montører"
     },
     "dealers": "Forhandlernettverk"
   },
@@ -2142,6 +2145,35 @@
         "message": {
           "label": "Rommet ditt",
           "placeholder": "Takets form, hindringer, lysplaner…"
+        }
+      }
+    },
+    "supply_inquiry": {
+      "title": "Snakk med leveringsteamet vårt",
+      "subtitle": "Fortell oss hva du monterer og hvor — vi svarer innen én virkedag med hvordan vi kan levere til deg.",
+      "submitLabel": "Send min forespørsel",
+      "sentTitle": "Forespørsel mottatt",
+      "sentMsg": "Takk — leveringsteamet vårt svarer innen én virkedag.",
+      "fields": {
+        "name": {
+          "label": "Navn",
+          "placeholder": "For- og etternavn"
+        },
+        "company": {
+          "label": "Firma",
+          "placeholder": "Ditt firma"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "deg@firma.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+47 ..."
+        },
+        "message": {
+          "label": "Hva trenger du?",
+          "placeholder": "Materialer, konfeksjon, volumer, timing…"
         }
       }
     }
@@ -4285,7 +4317,12 @@
           "title": "Markedsføringsstøtte",
           "body": "Produktbilder, prøver og salgsmateriell som hjelper deg å vinne og lande strekkhimlingsjobber."
         }
-      ]
+      ],
+      "supplyCard": {
+        "title": "Vil du bare kjøpe materialer?",
+        "body": "En leveringskonto er ikke et partnerskap: bestill materialer og konfeksjon etter mål til din montørpris, uten forpliktelser.",
+        "cta": "Levering til montører"
+      }
     },
     "how": {
       "eyebrow": "Slik fungerer det",
@@ -4962,5 +4999,65 @@
       }
     ],
     "faqTrainingLink": "Vil du heller øve praktisk først? Bli med på en internasjonal kursdag"
+  },
+  "supplyPage": {
+    "crumb": "Levering",
+    "eyebrow": "Fabrikklevering",
+    "titleA": "Materialer, konfeksjon & kurs",
+    "titleB": "for profesjonelle montører.",
+    "lead": "Egen EU-fabrikk, målsveiset konfeksjon med harpun og logistikk i hele Europa — materialene bak våre egne monteringer, levert til dine.",
+    "independent": "Monterer du himlinger, men er avhengig av andres levering? Vi er fabrikken bak uavhengige montører. Bestill det du trenger, når du trenger det — og behold ditt eget navn på arbeidet.",
+    "ctaPortal": "Opprett en montørkonto",
+    "ctaInquiry": "Snakk med leveringsteamet",
+    "groupsEyebrow": "Hva vi leverer",
+    "groupsTitle": "Alt bak en strekkhimling",
+    "groupsCta": "Se sortimentet",
+    "confection": {
+      "eyebrow": "Konfeksjon",
+      "title": "Etter mål, sendt som pakke",
+      "body": "Send planen din, så sveiser vi himlingen etter mål i vår egen produksjon — med harpunkant, brettet, merket og klar til å henge. En himling på 40 m² sendes som én lett pakke på rundt 10 kg.",
+      "points": [
+        "Sveiset etter din plan i vår egen EU-produksjon",
+        "Harpunkant inkludert — klar til å henge i profilen",
+        "En himling på 40 m² ≈ én pakke på rundt 10 kg",
+        "DDP-frakt i hele EU og Storbritannia"
+      ],
+      "leadTime": "Leveringstid: {days} virkedager, bekreftet med bestillingen din.",
+      "leadTimeTbc": "Leveringstiden bekreftes med tilbudet ditt — spør oss om gjeldende produksjonsplan."
+    },
+    "how": {
+      "eyebrow": "Slik fungerer det",
+      "title": "Fra konto til pakke",
+      "steps": [
+        {
+          "title": "Portalkonto",
+          "body": "Opprett din gratis montørkonto i kundeportalen."
+        },
+        {
+          "title": "Ditt prisnivå",
+          "body": "Vi aktiverer din montørpris — prisene blir i portalen."
+        },
+        {
+          "title": "Bestill",
+          "body": "Bestill ruller, profiler, tilbehør eller konfeksjon etter mål."
+        },
+        {
+          "title": "Pakke på døren",
+          "body": "Produksjonen bekrefter datoen din og sender DDP til adressen din."
+        }
+      ],
+      "notExclusiveA": "En leveringskonto er ikke et eksklusivt forhandlerskap — du kjøper det du trenger, uten forpliktelser. Vil du ha mer enn levering?",
+      "dealersLink": "Bli forhandler",
+      "partnersLink": "Partnermodeller"
+    },
+    "currencyLine": "Priser og fakturering i EUR (PLN i Polen).",
+    "training": {
+      "eyebrow": "Kurs",
+      "title": "Monter systemene våre som våre egne lag",
+      "body": "Praktisk sertifisering ved det belgiske hovedkontoret — membrankonfeksjon, profiler, kald og varm montering, lys og akustikk. Internasjonale økter på engelsk og tysk kommer.",
+      "cta": "Se kursdatoer"
+    },
+    "serviceName": "Levering av materialer & konfeksjon for strekkhimlinger",
+    "serviceDescription": "Fabrikklevering av strekkhimlingsmaterialer, konfeksjon etter mål og montørkurs for profesjonelle i hele Europa."
   }
 }

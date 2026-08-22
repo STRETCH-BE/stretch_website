@@ -78,7 +78,9 @@
     "architectsTitle": "Voor architecten — spanplafonds voorschrijven | STRETCH",
     "architectsDescription": "Gratis architectenzone: datasheets, bestekteksten, CAD/BIM, gemeten casestudy’s, indicatieve €/m²-budgetbanden, events en projectondersteuning.",
     "kitTitle": "Doe-het-zelf spanplafondkit — op maat | STRETCH",
-    "kitDescription": "Spanplafondkit op uw maten: polyesterdoek, profielen en instructies in één pakket. Koude plaatsing, levering in de EU en het VK."
+    "kitDescription": "Spanplafondkit op uw maten: polyesterdoek, profielen en instructies in één pakket. Koude plaatsing, levering in de EU en het VK.",
+    "supplyTitle": "Spanplafondmaterialen & confectie voor installateurs | STRETCH",
+    "supplyDescription": "Fabriekslevering voor installatieprofessionals: doeken & folies, profielen, verlichting en confectie op maat, verzonden door heel Europa. Facturatie in EUR."
   },
   "cookies": {
     "title": "We hechten waarde aan je privacy",
@@ -165,7 +167,8 @@
       "faq": "FAQ",
       "clientPortal": "Klantenportaal",
       "architects": "Voor architecten",
-      "kit": "Doe-het-zelfkit"
+      "kit": "Doe-het-zelfkit",
+      "supply": "Levering voor installateurs"
     },
     "dealers": "Dealernetwerk"
   },
@@ -2142,6 +2145,35 @@
         "message": {
           "label": "Uw ruimte",
           "placeholder": "Vorm van het plafond, obstakels, verlichtingsplannen…"
+        }
+      }
+    },
+    "supply_inquiry": {
+      "title": "Praat met ons leveringsteam",
+      "subtitle": "Vertel ons wat u installeert en waar — we antwoorden binnen één werkdag met hoe we u kunnen beleveren.",
+      "submitLabel": "Verstuur mijn aanvraag",
+      "sentTitle": "Aanvraag ontvangen",
+      "sentMsg": "Bedankt — ons leveringsteam antwoordt binnen één werkdag.",
+      "fields": {
+        "name": {
+          "label": "Naam",
+          "placeholder": "Voor- & achternaam"
+        },
+        "company": {
+          "label": "Bedrijf",
+          "placeholder": "Uw bedrijf"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "u@bedrijf.com"
+        },
+        "phone": {
+          "label": "Telefoon",
+          "placeholder": "+32 ..."
+        },
+        "message": {
+          "label": "Wat hebt u nodig?",
+          "placeholder": "Materialen, confectie, volumes, timing…"
         }
       }
     }
@@ -4285,7 +4317,12 @@
           "title": "Marketingondersteuning",
           "body": "Productbeelden, stalen en verkoopmateriaal om spanplafondopdrachten binnen te halen en af te ronden."
         }
-      ]
+      ],
+      "supplyCard": {
+        "title": "Alleen materialen kopen?",
+        "body": "Een leveringsaccount is geen partnerschap: bestel materialen en confectie op maat aan uw installateurstarief, zonder verplichtingen.",
+        "cta": "Levering voor installateurs"
+      }
     },
     "how": {
       "eyebrow": "Zo werkt het",
@@ -4962,5 +4999,65 @@
       }
     ],
     "faqTrainingLink": "Liever eerst hands-on oefenen? Volg een internationale trainingsdag"
+  },
+  "supplyPage": {
+    "crumb": "Levering",
+    "eyebrow": "Fabriekslevering",
+    "titleA": "Materialen, confectie & training",
+    "titleB": "voor installatieprofessionals.",
+    "lead": "Eigen EU-fabriek, op maat gelaste confectie met harpoen en logistiek door heel Europa — de materialen achter onze eigen installaties, geleverd aan die van u.",
+    "independent": "Installeert u plafonds maar hangt u af van andermans levering? Wij zijn de fabriek achter onafhankelijke installateurs. Bestel wat u nodig hebt, wanneer u het nodig hebt — en houd uw eigen naam op het werk.",
+    "ctaPortal": "Open een installateursaccount",
+    "ctaInquiry": "Praat met het leveringsteam",
+    "groupsEyebrow": "Wat we leveren",
+    "groupsTitle": "Alles achter een spanplafond",
+    "groupsCta": "Bekijk het gamma",
+    "confection": {
+      "eyebrow": "Confectie",
+      "title": "Op maat gemaakt, verzonden als pakket",
+      "body": "Stuur uw plan en wij lassen het plafond op maat in onze eigen productie — harpoenrand inbegrepen, gevouwen, gelabeld en klaar om op te hangen. Een plafond van 40 m² verzendt als één licht pakket van ongeveer 10 kg.",
+      "points": [
+        "Gelast volgens uw plan in onze eigen EU-productie",
+        "Harpoenrand inbegrepen — klaar om in het profiel te hangen",
+        "Een plafond van 40 m² ≈ één pakket van ongeveer 10 kg",
+        "DDP-verzending in de hele EU en het VK"
+      ],
+      "leadTime": "Levertijd: {days} werkdagen, bevestigd bij uw bestelling.",
+      "leadTimeTbc": "De levertijd wordt bevestigd bij uw offerte — vraag ons naar de actuele productieplanning."
+    },
+    "how": {
+      "eyebrow": "Zo werkt het",
+      "title": "Van account tot pakket",
+      "steps": [
+        {
+          "title": "Portaalaccount",
+          "body": "Maak uw gratis installateursaccount aan in het klantenportaal."
+        },
+        {
+          "title": "Uw prijsniveau",
+          "body": "Wij activeren uw installateurstarief — prijzen blijven binnen het portaal."
+        },
+        {
+          "title": "Bestellen",
+          "body": "Bestel rollen, profielen, accessoires of confectie op maat."
+        },
+        {
+          "title": "Pakket aan de deur",
+          "body": "De productie bevestigt uw datum en verzendt DDP naar uw adres."
+        }
+      ],
+      "notExclusiveA": "Een leveringsaccount is geen exclusief dealerschap — u koopt wat u nodig hebt, zonder verplichtingen. Wilt u meer dan levering?",
+      "dealersLink": "Word dealer",
+      "partnersLink": "Partnermodellen"
+    },
+    "currencyLine": "Prijzen en facturatie in EUR (PLN in Polen).",
+    "training": {
+      "eyebrow": "Training",
+      "title": "Monteer onze systemen zoals onze eigen teams",
+      "body": "Hands-on certificering op het Belgische hoofdkantoor — membraanconfectie, profielen, koude en warme montage, licht en akoestiek. Internationale sessies in het Engels en Duits komen eraan.",
+      "cta": "Bekijk trainingsdata"
+    },
+    "serviceName": "Levering van spanplafondmaterialen & confectie",
+    "serviceDescription": "Fabriekslevering van spanplafondmaterialen, confectie op maat en installateurstraining voor installatieprofessionals in heel Europa."
   }
 }

@@ -65,7 +65,9 @@ export default async function PortalLoginPage({
       <section className="portal-login__form">
         <LoginForm
           mode={mode}
-          initialAudience={searchParams?.signup === 'architect' ? 'architect' : undefined}
+          // ?signup=architect opens the architect signup; any other ?signup
+          // value (e.g. 'installer' from /supply) opens the client signup tab.
+          initialAudience={searchParams?.signup === 'architect' ? 'architect' : searchParams?.signup ? 'client' : undefined}
         />
       </section>
 

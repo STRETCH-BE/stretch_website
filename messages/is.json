@@ -78,7 +78,9 @@
     "architectsTitle": "Fyrir arkitekta — skilgreindu strekkloft | STRETCH",
     "architectsDescription": "Ókeypis arkitektasvæði: tækniblöð, útboðstextar, CAD/BIM, mæld dæmi, leiðbeinandi €/m² kostnaðarbil, viðburðir og verkefnastuðningur.",
     "kitTitle": "DIY-strekkiloftssett — eftir máli | STRETCH",
-    "kitDescription": "Strekkiloftssett eftir þínum málum: pólýesterdúkur, prófílar og leiðbeiningar í einum pakka. Köld uppsetning, afhending í ESB og Bretlandi."
+    "kitDescription": "Strekkiloftssett eftir þínum málum: pólýesterdúkur, prófílar og leiðbeiningar í einum pakka. Köld uppsetning, afhending í ESB og Bretlandi.",
+    "supplyTitle": "Efni og sérsníðing strekkilofta fyrir uppsetningaraðila | STRETCH",
+    "supplyDescription": "Verksmiðjuafhending fyrir fagfólk: dúkar og filmur, prófílar, lýsing og sérsniðin dúkavinnsla, send um alla Evrópu. Reikningar í EUR."
   },
   "cookies": {
     "title": "Við virðum friðhelgi þína",
@@ -165,7 +167,8 @@
       "faq": "Algengar spurningar",
       "clientPortal": "Viðskiptavinagátt",
       "architects": "Fyrir arkitekta",
-      "kit": "DIY-sett"
+      "kit": "DIY-sett",
+      "supply": "Aðföng uppsetningaraðila"
     },
     "dealers": "Söluaðilanet"
   },
@@ -2142,6 +2145,35 @@
         "message": {
           "label": "Rýmið þitt",
           "placeholder": "Lögun loftsins, hindranir, lýsingaráform…"
+        }
+      }
+    },
+    "supply_inquiry": {
+      "title": "Talaðu við aðfangateymið okkar",
+      "subtitle": "Segðu okkur hvað þú setur upp og hvar — við svörum innan eins virks dags með hvernig við getum afhent þér.",
+      "submitLabel": "Senda fyrirspurn",
+      "sentTitle": "Fyrirspurn móttekin",
+      "sentMsg": "Takk — aðfangateymið okkar svarar innan eins virks dags.",
+      "fields": {
+        "name": {
+          "label": "Nafn",
+          "placeholder": "Fornafn og eftirnafn"
+        },
+        "company": {
+          "label": "Fyrirtæki",
+          "placeholder": "Fyrirtækið þitt"
+        },
+        "email": {
+          "label": "Netfang",
+          "placeholder": "thu@fyrirtaeki.com"
+        },
+        "phone": {
+          "label": "Sími",
+          "placeholder": "+354 ..."
+        },
+        "message": {
+          "label": "Hvað vantar þig?",
+          "placeholder": "Efni, sérsníðing, magn, tímasetning…"
         }
       }
     }
@@ -4285,7 +4317,12 @@
           "title": "Markaðsstuðningur",
           "body": "Vörumyndir, prufur og söluefni sem hjálpa þér að vinna og landa strekkiloftsverkefnum."
         }
-      ]
+      ],
+      "supplyCard": {
+        "title": "Viltu bara kaupa efni?",
+        "body": "Aðfangareikningur er ekki samstarf: pantaðu efni og sérsniðna dúkavinnslu á þínu verðþrepi, án skuldbindinga.",
+        "cta": "Aðföng uppsetningaraðila"
+      }
     },
     "how": {
       "eyebrow": "Svona virkar það",
@@ -4962,5 +4999,65 @@
       }
     ],
     "faqTrainingLink": "Viltu frekar æfa þig fyrst? Taktu þátt í alþjóðlegum þjálfunardegi"
+  },
+  "supplyPage": {
+    "crumb": "Aðföng",
+    "eyebrow": "Aðföng frá verksmiðju",
+    "titleA": "Efni, sérsníðing og þjálfun",
+    "titleB": "fyrir fagfólk í uppsetningu.",
+    "lead": "Eigin verksmiðja í ESB, sérsniðin soðin dúkavinnsla með harpúnkanti og flutningar um alla Evrópu — efnin á bak við okkar eigin uppsetningar, afhent þínum.",
+    "independent": "Setur þú upp loft en treystir á aðföng annarra? Við erum verksmiðjan á bak við sjálfstæða uppsetningaraðila. Pantaðu það sem þú þarft, þegar þú þarft það — og haltu þínu eigin nafni á verkinu.",
+    "ctaPortal": "Stofna reikning uppsetningaraðila",
+    "ctaInquiry": "Talaðu við aðfangateymið",
+    "groupsEyebrow": "Það sem við afhendum",
+    "groupsTitle": "Allt á bak við strekkiloft",
+    "groupsCta": "Skoða úrvalið",
+    "confection": {
+      "eyebrow": "Sérsníðing",
+      "title": "Sérsniðið, sent sem pakki",
+      "body": "Sendu teikninguna þína og við sjóðum loftið í réttri stærð í eigin framleiðslu — með harpúnkanti, brotið saman, merkt og tilbúið til uppsetningar. 40 m² loft fer sem einn léttur pakki, um 10 kg.",
+      "points": [
+        "Soðið eftir þinni teikningu í eigin framleiðslu innan ESB",
+        "Harpúnkantur innifalinn — tilbúið til að hengja í prófílinn",
+        "40 m² loft ≈ einn pakki um 10 kg",
+        "DDP-sending um allt ESB og Bretland"
+      ],
+      "leadTime": "Afhendingartími: {days} virkir dagar, staðfest með pöntun.",
+      "leadTimeTbc": "Afhendingartími er staðfestur með tilboðinu — spurðu okkur um núverandi framleiðsluáætlun."
+    },
+    "how": {
+      "eyebrow": "Svona virkar það",
+      "title": "Frá reikningi til pakka",
+      "steps": [
+        {
+          "title": "Reikningur í gátt",
+          "body": "Stofnaðu ókeypis reikning uppsetningaraðila í viðskiptavinagáttinni."
+        },
+        {
+          "title": "Þitt verðþrep",
+          "body": "Við virkum verðþrep uppsetningaraðila — verð eru áfram í gáttinni."
+        },
+        {
+          "title": "Pöntun",
+          "body": "Pantaðu rúllur, prófíla, fylgihluti eða sérsniðna dúkavinnslu."
+        },
+        {
+          "title": "Pakki við dyrnar",
+          "body": "Framleiðslan staðfestir dagsetningu og sendir DDP á heimilisfangið þitt."
+        }
+      ],
+      "notExclusiveA": "Aðfangareikningur er ekki einkaumboð — þú kaupir það sem þú þarft, án skuldbindinga. Viltu meira en aðföng?",
+      "dealersLink": "Gerast söluaðili",
+      "partnersLink": "Samstarfsleiðir"
+    },
+    "currencyLine": "Verð og reikningagerð í EUR (PLN í Póllandi).",
+    "training": {
+      "eyebrow": "Þjálfun",
+      "title": "Settu upp kerfin okkar eins og okkar eigin teymi",
+      "body": "Verkleg vottun í belgísku höfuðstöðvunum — dúkavinnsla, prófílar, köld og heit uppsetning, lýsing og hljóðvist. Alþjóðleg námskeið á ensku og þýsku eru væntanleg.",
+      "cta": "Sjá þjálfunardaga"
+    },
+    "serviceName": "Afhending efna og sérsníðingar fyrir strekkiloft",
+    "serviceDescription": "Verksmiðjuafhending á efnum fyrir strekkiloft, sérsniðin dúkavinnsla og þjálfun uppsetningaraðila fyrir fagfólk um alla Evrópu."
   }
 }

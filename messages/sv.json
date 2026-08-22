@@ -78,7 +78,9 @@
     "architectsTitle": "För arkitekter — föreskriv spänntak | STRETCH",
     "architectsDescription": "Gratis arkitektområde: datablad, föreskrivningstexter, CAD/BIM, uppmätta fallstudier, vägledande €/m²-budgetband, evenemang och projektstöd.",
     "kitTitle": "Gör-det-själv spänntakskit — efter mått | STRETCH",
-    "kitDescription": "Spänntakskit efter dina mått: polyesterduk, profiler och anvisning i ett paket. Kall montering, leverans i EU och Storbritannien."
+    "kitDescription": "Spänntakskit efter dina mått: polyesterduk, profiler och anvisning i ett paket. Kall montering, leverans i EU och Storbritannien.",
+    "supplyTitle": "Spänntaksmaterial & konfektion för montörer | STRETCH",
+    "supplyDescription": "Fabriksleverans för professionella montörer: dukar & folier, profiler, ljus och måttillverkad konfektion, skickat i hela Europa. Fakturering i EUR."
   },
   "cookies": {
     "title": "Vi värnar om din integritet",
@@ -165,7 +167,8 @@
       "faq": "FAQ",
       "clientPortal": "Kundportal",
       "architects": "För arkitekter",
-      "kit": "Gör-det-själv-kit"
+      "kit": "Gör-det-själv-kit",
+      "supply": "Leverans till montörer"
     },
     "dealers": "Återförsäljarnätverk"
   },
@@ -2142,6 +2145,35 @@
         "message": {
           "label": "Ditt rum",
           "placeholder": "Takets form, hinder, ljusplaner…"
+        }
+      }
+    },
+    "supply_inquiry": {
+      "title": "Prata med vårt leveransteam",
+      "subtitle": "Berätta vad du monterar och var — vi svarar inom en arbetsdag med hur vi kan leverera till dig.",
+      "submitLabel": "Skicka min förfrågan",
+      "sentTitle": "Förfrågan mottagen",
+      "sentMsg": "Tack — vårt leveransteam svarar inom en arbetsdag.",
+      "fields": {
+        "name": {
+          "label": "Namn",
+          "placeholder": "För- och efternamn"
+        },
+        "company": {
+          "label": "Företag",
+          "placeholder": "Ditt företag"
+        },
+        "email": {
+          "label": "E-post",
+          "placeholder": "du@foretag.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+46 ..."
+        },
+        "message": {
+          "label": "Vad behöver du?",
+          "placeholder": "Material, konfektion, volymer, timing…"
         }
       }
     }
@@ -4285,7 +4317,12 @@
           "title": "Marknadsföringsstöd",
           "body": "Produktbilder, prover och säljmaterial som hjälper dig att vinna och ro hem spänntaksaffärer."
         }
-      ]
+      ],
+      "supplyCard": {
+        "title": "Vill du bara köpa material?",
+        "body": "Ett leveranskonto är inget partnerskap: beställ material och måttillverkad konfektion till din montörsprislista, utan åtaganden.",
+        "cta": "Leverans till montörer"
+      }
     },
     "how": {
       "eyebrow": "Så funkar det",
@@ -4962,5 +4999,65 @@
       }
     ],
     "faqTrainingLink": "Vill du hellre öva praktiskt först? Delta i en internationell utbildningsdag"
+  },
+  "supplyPage": {
+    "crumb": "Leverans",
+    "eyebrow": "Fabriksleverans",
+    "titleA": "Material, konfektion & utbildning",
+    "titleB": "för professionella montörer.",
+    "lead": "Egen EU-fabrik, måttsvetsad konfektion med harpun och logistik i hela Europa — materialen bakom våra egna montage, levererade till dina.",
+    "independent": "Monterar du tak men är beroende av någon annans leverans? Vi är fabriken bakom oberoende montörer. Beställ det du behöver, när du behöver det — och behåll ditt eget namn på arbetet.",
+    "ctaPortal": "Öppna ett montörskonto",
+    "ctaInquiry": "Prata med leveransteamet",
+    "groupsEyebrow": "Vad vi levererar",
+    "groupsTitle": "Allt bakom ett spänntak",
+    "groupsCta": "Se sortimentet",
+    "confection": {
+      "eyebrow": "Konfektion",
+      "title": "Måttillverkat, skickat som paket",
+      "body": "Skicka din ritning så svetsar vi taket efter mått i vår egen produktion — med harpunkant, vikt, märkt och klart att hänga. Ett tak på 40 m² skickas som ett enda lätt paket på cirka 10 kg.",
+      "points": [
+        "Svetsat efter din ritning i vår egen EU-produktion",
+        "Harpunkant ingår — klart att hänga i profilen",
+        "Ett tak på 40 m² ≈ ett paket på cirka 10 kg",
+        "DDP-frakt i hela EU och Storbritannien"
+      ],
+      "leadTime": "Ledtid: {days} arbetsdagar, bekräftas med din order.",
+      "leadTimeTbc": "Ledtiden bekräftas med din offert — fråga oss om den aktuella produktionsplanen."
+    },
+    "how": {
+      "eyebrow": "Så fungerar det",
+      "title": "Från konto till paket",
+      "steps": [
+        {
+          "title": "Portalkonto",
+          "body": "Skapa ditt kostnadsfria montörskonto i kundportalen."
+        },
+        {
+          "title": "Din prisnivå",
+          "body": "Vi aktiverar din montörsprislista — priserna stannar i portalen."
+        },
+        {
+          "title": "Beställ",
+          "body": "Beställ rullar, profiler, tillbehör eller måttillverkad konfektion."
+        },
+        {
+          "title": "Paket vid dörren",
+          "body": "Produktionen bekräftar ditt datum och skickar DDP till din adress."
+        }
+      ],
+      "notExclusiveA": "Ett leveranskonto är ingen exklusiv återförsäljning — du köper det du behöver, utan åtaganden. Vill du ha mer än leverans?",
+      "dealersLink": "Bli återförsäljare",
+      "partnersLink": "Partnermodeller"
+    },
+    "currencyLine": "Priser och fakturering i EUR (PLN i Polen).",
+    "training": {
+      "eyebrow": "Utbildning",
+      "title": "Montera våra system som våra egna team",
+      "body": "Praktisk certifiering på det belgiska huvudkontoret — membrankonfektion, profiler, kall och varm montering, ljus och akustik. Internationella sessioner på engelska och tyska är på väg.",
+      "cta": "Se utbildningsdatum"
+    },
+    "serviceName": "Leverans av material & konfektion för spänntak",
+    "serviceDescription": "Fabriksleverans av spänntaksmaterial, måttillverkad konfektion och montörsutbildning för proffs i hela Europa."
   }
 }

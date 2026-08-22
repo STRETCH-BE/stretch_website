@@ -15,7 +15,8 @@ export type ModalType =
   | 'samples'
   | 'datasheet'
   | 'project'
-  | 'kit_order';
+  | 'kit_order'
+  | 'supply_inquiry';
 
 export type FieldKind = 'text' | 'select' | 'area';
 
@@ -282,6 +283,21 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
         optionValues: ['standard', 'acoustic', 'translucent'],
       },
       { name: 'message', kind: 'area', label: 'Your room', placeholder: 'Ceiling shape, obstacles, lighting plans…', full: true },
+    ],
+  },
+  supply_inquiry: {
+    title: 'Talk to our supply team',
+    subtitle: 'Tell us what you install and where — we reply within one working day with how we can supply you.',
+    submitLabel: 'Send my inquiry',
+    sentTitle: 'Inquiry received',
+    sentMsg: 'Thanks — our supply team replies within one working day.',
+    fields: [
+      { name: 'name', kind: 'text', inputType: 'text', label: 'Name', placeholder: 'First & last name', required: true },
+      { name: 'company', kind: 'text', inputType: 'text', label: 'Company', placeholder: 'Your company', required: true },
+      { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@company.com', required: true },
+      { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+33 ...', required: true },
+      countryField(),
+      { name: 'message', kind: 'area', label: 'What do you need?', placeholder: 'Materials, confection, volumes, timing…', full: true },
     ],
   },
   project: {

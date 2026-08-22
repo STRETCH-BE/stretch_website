@@ -78,7 +78,9 @@
     "architectsTitle": "Pour les architectes — prescrire des plafonds tendus | STRETCH",
     "architectsDescription": "Espace architectes gratuit : fiches techniques, textes de prescription, CAD/BIM, études de cas mesurées, budgets indicatifs et accompagnement projet.",
     "kitTitle": "Kit plafond tendu à poser soi-même — sur mesure | STRETCH",
-    "kitDescription": "Kit plafond tendu à vos mesures : toile polyester, profilés et instructions en un colis. Pose à froid, livraison UE et Royaume-Uni."
+    "kitDescription": "Kit plafond tendu à vos mesures : toile polyester, profilés et instructions en un colis. Pose à froid, livraison UE et Royaume-Uni.",
+    "supplyTitle": "Matériaux & confection de plafond tendu pour poseurs | STRETCH",
+    "supplyDescription": "Fourniture usine pour les professionnels : toiles & films, profilés, éclairage et confection sur mesure, expédiés dans toute l’Europe. Facturation en EUR."
   },
   "cookies": {
     "title": "Nous respectons votre vie privée",
@@ -165,7 +167,8 @@
       "faq": "FAQ",
       "clientPortal": "Espace client",
       "architects": "Pour les architectes",
-      "kit": "Kit à poser soi-même"
+      "kit": "Kit à poser soi-même",
+      "supply": "Fourniture poseurs"
     },
     "dealers": "Réseau de revendeurs"
   },
@@ -2142,6 +2145,35 @@
         "message": {
           "label": "Votre pièce",
           "placeholder": "Forme du plafond, obstacles, projets d’éclairage…"
+        }
+      }
+    },
+    "supply_inquiry": {
+      "title": "Parlez à notre équipe approvisionnement",
+      "subtitle": "Dites-nous ce que vous posez et où — nous répondons sous un jour ouvré avec ce que nous pouvons vous fournir.",
+      "submitLabel": "Envoyer ma demande",
+      "sentTitle": "Demande reçue",
+      "sentMsg": "Merci — notre équipe approvisionnement répond sous un jour ouvré.",
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Prénom & nom"
+        },
+        "company": {
+          "label": "Société",
+          "placeholder": "Votre société"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "vous@societe.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "+33 ..."
+        },
+        "message": {
+          "label": "De quoi avez-vous besoin ?",
+          "placeholder": "Matériaux, confection, volumes, délais…"
         }
       }
     }
@@ -4285,7 +4317,12 @@
           "title": "Support marketing",
           "body": "Visuels produits, échantillons et supports de vente pour décrocher et conclure vos chantiers de plafonds tendus."
         }
-      ]
+      ],
+      "supplyCard": {
+        "title": "Vous voulez juste acheter des matériaux ?",
+        "body": "Un compte approvisionnement n’est pas un partenariat : commandez matériaux et confection sur mesure à votre tarif poseur, sans engagement.",
+        "cta": "Fourniture poseurs"
+      }
     },
     "how": {
       "eyebrow": "Comment ça marche",
@@ -4962,5 +4999,65 @@
       }
     ],
     "faqTrainingLink": "Vous préférez d’abord pratiquer ? Rejoignez une journée de formation internationale"
+  },
+  "supplyPage": {
+    "crumb": "Approvisionnement",
+    "eyebrow": "Approvisionnement usine",
+    "titleA": "Matériaux, confection & formation",
+    "titleB": "pour les professionnels de la pose.",
+    "lead": "Notre propre usine européenne, une confection sur mesure soudée avec harpon et une logistique dans toute l’Europe — les matériaux derrière nos propres chantiers, livrés aux vôtres.",
+    "independent": "Vous posez des plafonds mais dépendez de l’approvisionnement d’un autre ? Nous sommes l’usine derrière les poseurs indépendants. Commandez ce qu’il vous faut, quand il le faut — et gardez votre nom sur le chantier.",
+    "ctaPortal": "Ouvrir un compte poseur",
+    "ctaInquiry": "Parler à l’équipe approvisionnement",
+    "groupsEyebrow": "Ce que nous livrons",
+    "groupsTitle": "Tout ce qu’il y a derrière un plafond tendu",
+    "groupsCta": "Voir la gamme",
+    "confection": {
+      "eyebrow": "Confection",
+      "title": "Sur mesure, expédié en colis",
+      "body": "Envoyez votre plan : nous soudons le plafond aux dimensions dans notre propre production — harpon inclus, plié, étiqueté et prêt à poser. Un plafond de 40 m² part en un seul colis léger d’environ 10 kg.",
+      "points": [
+        "Soudé selon votre plan dans notre propre production européenne",
+        "Harpon inclus — prêt à poser dans le profilé",
+        "Un plafond de 40 m² ≈ un colis d’environ 10 kg",
+        "Expédition DDP dans toute l’UE et au Royaume-Uni"
+      ],
+      "leadTime": "Délai : {days} jours ouvrés, confirmé à la commande.",
+      "leadTimeTbc": "Le délai est confirmé avec votre devis — demandez-nous le planning de production actuel."
+    },
+    "how": {
+      "eyebrow": "Comment ça marche",
+      "title": "Du compte au colis",
+      "steps": [
+        {
+          "title": "Compte portail",
+          "body": "Créez votre compte poseur gratuit dans le portail client."
+        },
+        {
+          "title": "Votre niveau de prix",
+          "body": "Nous activons votre tarif poseur — les prix restent dans le portail."
+        },
+        {
+          "title": "Commande",
+          "body": "Commandez rouleaux, profilés, accessoires ou une confection sur mesure."
+        },
+        {
+          "title": "Colis chez vous",
+          "body": "La production confirme votre date et expédie DDP à votre adresse."
+        }
+      ],
+      "notExclusiveA": "Un compte approvisionnement n’est pas une exclusivité de distribution — vous achetez ce qu’il vous faut, sans engagement. Vous voulez plus que la fourniture ?",
+      "dealersLink": "Devenir revendeur-poseur",
+      "partnersLink": "Modèles de partenariat"
+    },
+    "currencyLine": "Prix et facturation en EUR (PLN en Pologne).",
+    "training": {
+      "eyebrow": "Formation",
+      "title": "Posez nos systèmes comme nos propres équipes",
+      "body": "Certification pratique à notre siège belge — confection de la membrane, profilés, pose à froid et à chaud, lumière et acoustique. Des sessions internationales en anglais et en allemand arrivent.",
+      "cta": "Voir les dates de formation"
+    },
+    "serviceName": "Fourniture de matériaux & confection pour plafonds tendus",
+    "serviceDescription": "Fourniture usine de matériaux pour plafonds tendus, confection sur mesure et formation des poseurs pour les professionnels dans toute l’Europe."
   }
 }
