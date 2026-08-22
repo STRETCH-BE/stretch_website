@@ -219,7 +219,13 @@
       "audienceClient": "Kunde",
       "audienceArchitect": "Arkitekt",
       "officeName": "Kontorets navn",
-      "city": "By"
+      "city": "By",
+      "pending": "Kontoen din venter på godkjenning. Vi sender deg en e-post så snart den er godkjent.",
+      "captcha": "Sikkerhetskontrollen mislyktes. Prøv igjen.",
+      "tooMany": "For mange forsøk. Vent noen minutter og prøv igjen.",
+      "disposable": "Midlertidige e-postadresser kan ikke brukes — bruk jobbadressen din.",
+      "couldNotCreate": "Registreringen din kunne ikke behandles. Kontakt oss hvis du mener dette er en feil.",
+      "signupPendingBody": "Vi har sendt deg en bekreftelseslenke. Klikk på den for å bekrefte e-posten din — deretter går teamet vårt gjennom kontoen og åpner tilgangen. Du får en e-post så snart den er godkjent."
     },
     "nav": {
       "label": "Kundeportal",
@@ -5309,5 +5315,10 @@
     "disclaimer": "Veiledende intervall fra den publiserte prisguiden: montert, ekskl. mva. Membranen lages etter mål — hjørner, kurver og integrasjoner flytter tallet; se dette som et intervall, aldri som et tilbud.",
     "cta": "Få mitt gratis tilbud",
     "guideLink": "Les hele prisguiden"
+  },
+  "security": {
+    "captchaFailed": "Sikkerhetskontrollen mislyktes. Prøv igjen.",
+    "captchaLoadFailed": "Sikkerhetskontrollen kunne ikke lastes. Last siden på nytt, eller send oss en e-post på {email}.",
+    "tooManyRequests": "For mange forespørsler. Vent noen minutter og prøv igjen."
   }
 }

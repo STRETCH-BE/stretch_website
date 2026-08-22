@@ -31,6 +31,8 @@ import {
 import { localizeModalConfig, type ModalMessages, type SharedFieldMessages } from '@/lib/localize-content';
 import { analytics, sha256, normalizeEmail, normalizePhone } from '@/lib/analytics';
 import { getConsent } from '@/lib/consent';
+import TurnstileWidget from '@/components/ui/TurnstileWidget';
+import { useFormSecurity } from '@/lib/use-form-security';
 
 type OpenOptions = {
   /** Tracking source label (e.g. 'hero', 'product_pvc', 'footer'). */
@@ -143,6 +145,7 @@ function LeadGenModal({
 }) {
   const t = useTranslations('forms');
   const tm = useTranslations('modals');
+  const tsec = useTranslations('security');
   const locale = useLocale();
   const cfg = localizeModalConfig(
     MODAL_CONFIGS[type],
@@ -159,6 +162,8 @@ function LeadGenModal({
     isDatasheet ? loadSavedContact() : null,
   );
   const [status, setStatus] = useState<Status>(savedContact ? 'confirm' : 'form');
+  // Bot defences: signed form token + Turnstile (both no-op without env vars).
+  const security = useFormSecurity();
   const [consentChecked, setConsentChecked] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [prefill, setPrefill] = useState<Record<string, string> | null>(options.prefill ?? null);
@@ -260,14 +265,26 @@ function LeadGenModal({
   async function postDatasheetRequest(
     data: { name: string; role: string; email: string; phone: string; city: string; country?: string },
     gotcha: string,
+    quickConfirm = false,
+    retried = false,
   ): Promise<boolean> {
     const source = options.source || type;
     const sheet = options.datasheet!;
     try {
+      const turnstileToken = await security.waitForTurnstile();
       const res = await fetch('/api/datasheet-request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, slug: sheet.slug, locale, source, _gotcha: gotcha }),
+        body: JSON.stringify({
+          ...data,
+          slug: sheet.slug,
+          locale,
+          source,
+          _gotcha: gotcha,
+          formToken: security.formToken,
+          turnstileToken,
+          quickConfirm,
+        }),
       });
       if (res.status === 429) {
         setErrors({ __rate: tm('datasheet.rateLimited') });
@@ -275,6 +292,21 @@ function LeadGenModal({
         setPrefill(data);
         setStatus('form');
         return false;
+      }
+      if (res.status === 400) {
+        const err = (await res.clone().json().catch(() => null)) as { error?: string } | null;
+        if (err?.error === 'stale_token' && !retried) {
+          // Token older than its window — refetch silently and retry once.
+          await security.refreshFormToken();
+          return postDatasheetRequest(data, gotcha, quickConfirm, true);
+        }
+        if (err?.error === 'captcha') {
+          security.resetTurnstile();
+          setErrors({ __captcha: tsec('captchaFailed') });
+          setPrefill(data);
+          setStatus('form');
+          return false;
+        }
       }
       const json = (await res.json().catch(() => null)) as
         | { ok: boolean; mode?: 'email' | 'download'; url?: string }
@@ -323,7 +355,8 @@ function LeadGenModal({
     }
 
     const source = options.source || type;
-    try {
+    const postLead = async (retried: boolean): Promise<void> => {
+      const turnstileToken = await security.waitForTurnstile();
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -333,13 +366,36 @@ function LeadGenModal({
           product: options.product,
           // Honeypot — /api/lead silently drops submissions where this is set.
           _gotcha: gotcha,
+          formToken: security.formToken,
+          turnstileToken,
         }),
       });
+      if (res.status === 429) {
+        setErrors({ __rate: tsec('tooManyRequests') });
+        setStatus('form');
+        return;
+      }
+      if (res.status === 400) {
+        const err = (await res.clone().json().catch(() => null)) as { error?: string } | null;
+        if (err?.error === 'stale_token' && !retried) {
+          await security.refreshFormToken();
+          return postLead(true);
+        }
+        if (err?.error === 'captcha') {
+          security.resetTurnstile();
+          setErrors({ __captcha: tsec('captchaFailed') });
+          setStatus('form');
+          return;
+        }
+      }
       if (!res.ok) throw new Error('Request failed');
 
       await fireAnalytics(data, source);
 
       setStatus('sent');
+    };
+    try {
+      await postLead(false);
     } catch {
       setStatus('error');
     }
@@ -353,6 +409,7 @@ function LeadGenModal({
     await postDatasheetRequest(
       { name, role, email, phone, city, country: country ?? defaultCountryForLocale(locale) },
       '',
+      true, // returning-visitor one-click confirm — exempt from the too-fast rule
     );
     setConfirmBusy(false);
   }
@@ -510,6 +567,7 @@ function LeadGenModal({
               >
                 {tm('datasheet.confirm.msg', { email: savedContact.email })}
               </p>
+              <TurnstileWidget ref={security.widgetRef} onToken={security.setTurnstileToken} />
               <button
                 type="button"
                 onClick={handleConfirmSend}
@@ -652,6 +710,12 @@ function LeadGenModal({
                   consentPrefix={t('consentPrefix')}
                 />
 
+                <TurnstileWidget ref={security.widgetRef} onToken={security.setTurnstileToken} />
+                {errors.__captcha && (
+                  <p className="field-error" role="alert" style={{ marginBottom: 12 }}>
+                    {errors.__captcha}
+                  </p>
+                )}
                 {errors.__rate && (
                   <p className="field-error" role="alert" style={{ marginBottom: 12 }}>
                     {errors.__rate}

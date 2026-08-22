@@ -219,7 +219,13 @@
       "audienceClient": "Klient",
       "audienceArchitect": "Architekt",
       "officeName": "Nazwa pracowni",
-      "city": "Miasto"
+      "city": "Miasto",
+      "pending": "Konto oczekuje na weryfikację. Wyślemy e-mail, gdy tylko zostanie zatwierdzone.",
+      "captcha": "Weryfikacja bezpieczeństwa nie powiodła się. Spróbuj ponownie.",
+      "tooMany": "Zbyt wiele prób. Odczekaj kilka minut i spróbuj ponownie.",
+      "disposable": "Tymczasowe adresy e-mail nie są akceptowane — użyj firmowego adresu e-mail.",
+      "couldNotCreate": "Nie udało się przetworzyć rejestracji. Skontaktuj się z nami, jeśli uważasz, że to pomyłka.",
+      "signupPendingBody": "Wysłaliśmy link potwierdzający. Kliknij go, aby zweryfikować adres e-mail — następnie nasz zespół sprawdzi konto i aktywuje dostęp. Otrzymasz e-mail po zatwierdzeniu."
     },
     "nav": {
       "label": "Panel klienta",
@@ -5309,5 +5315,10 @@
     "disclaimer": "Przedział orientacyjny z opublikowanego przewodnika cenowego: z montażem, bez VAT. Membrana powstaje na wymiar — narożniki, łuki i integracje zmieniają kwotę; traktuj to jako widełki, nigdy jako wycenę.",
     "cta": "Poproś o bezpłatną wycenę",
     "guideLink": "Przeczytaj pełny przewodnik cenowy"
+  },
+  "security": {
+    "captchaFailed": "Weryfikacja bezpieczeństwa nie powiodła się. Spróbuj ponownie.",
+    "captchaLoadFailed": "Nie udało się załadować weryfikacji bezpieczeństwa. Odśwież stronę lub napisz do nas: {email}.",
+    "tooManyRequests": "Zbyt wiele żądań. Odczekaj kilka minut i spróbuj ponownie."
   }
 }

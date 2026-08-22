@@ -20,12 +20,18 @@ export default async function PortalPricelistPage({ params }: { params: { locale
 
   const { rows, meta } = await getPricebook(session);
 
+  // With the portal on one canonical host the viewing locale is always 'en',
+  // so the PLN default must come from the ACCOUNT (signup country). Accounts
+  // that predate the country column fall back to the locale heuristic.
+  const country = (session.profile.country ?? '').toUpperCase();
+  const preferPln = country ? country === 'PL' : locale === 'pl';
+
   return (
     <PricelistView
       rows={rows}
       meta={meta}
       formatLocale={localeFullCodes[locale] ?? 'en'}
-      defaultCurrency={locale === 'pl' ? 'PLN' : 'EUR'}
+      defaultCurrency={preferPln ? 'PLN' : 'EUR'}
       accountCountry={session.profile.country ?? null}
     />
   );

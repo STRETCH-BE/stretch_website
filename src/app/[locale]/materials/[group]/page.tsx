@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import PortalLink from '@/components/ui/PortalLink';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { isValidLocale, locales, type Locale } from '@/i18n/config';
 import { brand } from '@/lib/site-config';
@@ -109,7 +110,7 @@ export default async function MaterialGroupPage({ params }: { params: { locale: 
           <p style={{ color: 'var(--on-dark-muted)', fontSize: 14.5, lineHeight: 1.55, margin: 0, maxWidth: 560 }}>
             <strong style={{ color: '#fff' }}>{t('dealerTitle')}</strong> — {t('dealerBody')}
           </p>
-          <Link href="/portal" className="btn btn--primary">{t('dealerCta')} <ArrowRight size={16} /></Link>
+          <PortalLink href="/portal" className="btn btn--primary">{t('dealerCta')} <ArrowRight size={16} /></PortalLink>
         </div>
         <div style={{ marginTop: 22 }}>
           <Link href="/materials" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 12.5, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text-muted)', textDecoration: 'none' }}>

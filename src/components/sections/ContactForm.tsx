@@ -9,6 +9,8 @@ import { ArrowRight, Check } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { analytics } from '@/lib/analytics';
+import TurnstileWidget from '@/components/ui/TurnstileWidget';
+import { useFormSecurity } from '@/lib/use-form-security';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -18,6 +20,8 @@ function isEmail(v: string) {
 
 export default function ContactForm() {
   const t = useTranslations('forms');
+  const tsec = useTranslations('security');
+  const security = useFormSecurity();
   const tc = useTranslations('contactPage.form');
   const subjects = tc.raw('subjects') as string[];
   const timelines = tc.raw('timelines') as string[];
@@ -48,15 +52,37 @@ export default function ContactForm() {
     if (Object.keys(next).length > 0) return;
 
     setStatus('sending');
-    try {
+    const post = async (retried: boolean): Promise<void> => {
+      const turnstileToken = await security.waitForTurnstile();
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, formToken: security.formToken, turnstileToken }),
       });
+      if (res.status === 429) {
+        setErrors({ __captcha: tsec('tooManyRequests') });
+        setStatus('idle');
+        return;
+      }
+      if (res.status === 400) {
+        const err = (await res.clone().json().catch(() => null)) as { error?: string } | null;
+        if (err?.error === 'stale_token' && !retried) {
+          await security.refreshFormToken();
+          return post(true);
+        }
+        if (err?.error === 'captcha') {
+          security.resetTurnstile();
+          setErrors({ __captcha: tsec('captchaFailed') });
+          setStatus('idle');
+          return;
+        }
+      }
       if (!res.ok) throw new Error('failed');
       analytics.submitContactForm(true);
       setStatus('sent');
+    };
+    try {
+      await post(false);
     } catch {
       setStatus('error');
     }
@@ -124,6 +150,8 @@ export default function ContactForm() {
         </span>
       </label>
       {errors.__consent && <div style={errStyle}>{errors.__consent}</div>}
+      <TurnstileWidget ref={security.widgetRef} onToken={security.setTurnstileToken} />
+      {errors.__captcha && <div style={errStyle} role="alert">{errors.__captcha}</div>}
 
       {status === 'error' && (
         <div style={{ marginTop: 16, padding: '12px 16px', background: '#fff', border: '1px solid var(--red)', color: 'var(--red)', fontSize: 13.5 }}>

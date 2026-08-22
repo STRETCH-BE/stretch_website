@@ -20,7 +20,19 @@ import {
   type Locale,
 } from '@/i18n/config';
 import { useLeadModal } from '@/components/LeadGenModal';
+import PortalLink from '@/components/ui/PortalLink';
 import { analytics } from '@/lib/analytics';
+
+// Shared style for the primary drawer links (Link and PortalLink render alike).
+const drawerLinkStyle = {
+  fontFamily: 'var(--font-display)',
+  fontWeight: 800,
+  fontSize: 26,
+  textTransform: 'uppercase',
+  letterSpacing: '-.02em',
+  padding: '13px 0',
+  borderBottom: '1px solid var(--border)',
+} as const;
 
 export default function MobileMenu() {
   const t = useTranslations('common');
@@ -148,23 +160,17 @@ export default function MobileMenu() {
               { href: '/about', label: t('nav.about') },
               { href: '/contact', label: t('nav.contact') },
               { href: '/portal', label: t('nav.clientLogin') },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 800,
-                  fontSize: 26,
-                  textTransform: 'uppercase',
-                  letterSpacing: '-.02em',
-                  padding: '13px 0',
-                  borderBottom: '1px solid var(--border)',
-                }}
-              >
-                {item.label}
-              </Link>
-            ))}
+            ].map((item) =>
+              item.href === '/portal' ? (
+                <PortalLink key={item.href} href={item.href} style={drawerLinkStyle}>
+                  {item.label}
+                </PortalLink>
+              ) : (
+                <Link key={item.href} href={item.href} style={drawerLinkStyle}>
+                  {item.label}
+                </Link>
+              ),
+            )}
 
             <div
               style={{

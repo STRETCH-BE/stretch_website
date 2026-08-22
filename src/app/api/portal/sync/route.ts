@@ -10,6 +10,7 @@ import { getAdminSession } from '@/lib/portal/auth';
 import { createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
 import { parsePricebookWorkbook } from '@/lib/portal/parse-pricebook';
 import type { SyncReport } from '@/lib/portal/types';
+import { isPortalAllowedHost } from '@/lib/portal/host';
 
 export const runtime = 'nodejs';
 
@@ -18,6 +19,11 @@ const rowKey = (r: { category: string; product: string; market: string; seq: num
   `${r.category}||${r.product}||${r.market}||${r.seq}`;
 
 export async function POST(req: NextRequest) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(req.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const session = await getAdminSession();
   if (!session) return NextResponse.json({ ok: false, error: 'forbidden' }, { status: 403 });
 

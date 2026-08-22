@@ -6,6 +6,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getPortalSession } from '@/lib/portal/auth';
 import { hasTradeAccess } from '@/lib/portal/types';
 import { listDesigns, getDesign, saveDesign, deleteDesign } from '@/lib/portal/designer-store';
+import { isPortalAllowedHost } from '@/lib/portal/host';
 
 export const dynamic = 'force-dynamic';
 
@@ -20,6 +21,11 @@ async function guard() {
 }
 
 export async function GET(request: NextRequest) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(request.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const { session, error } = await guard();
   if (error) return error;
   if (session!.demo) return NextResponse.json({ ok: true, storage: 'none', demo: true, designs: [] });
@@ -36,6 +42,11 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(request.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const { session, error } = await guard();
   if (error) return error;
   if (session!.demo) return NextResponse.json({ ok: true, storage: 'none', demo: true, id: null });
@@ -63,6 +74,11 @@ export async function POST(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(request.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const { session, error } = await guard();
   if (error) return error;
   if (session!.demo) return NextResponse.json({ ok: true });

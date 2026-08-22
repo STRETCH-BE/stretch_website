@@ -75,6 +75,17 @@ export default function PrivacyPage({ params }: { params: { locale: string } }) 
               do not require consent.
             </p>
 
+            <h2>Spam protection</h2>
+            <p>
+              To protect our forms and the client-portal sign-in against automated abuse we use
+              Cloudflare Turnstile, a privacy-preserving verification service provided by
+              Cloudflare, Inc. Turnstile evaluates technical signals from your browser to tell
+              people apart from bots; it does not show puzzles and does not track you across
+              sites. This processing is based on our legitimate interest in keeping the site and
+              our forms secure. We also record the technical details of form submissions (such
+              as IP address and browser type) for the same purpose.
+            </p>
+
             <h2>Who we share it with</h2>
             <p>
               We do not sell your personal data. We share it only with service providers who help us

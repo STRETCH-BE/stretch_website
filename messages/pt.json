@@ -219,7 +219,13 @@
       "audienceClient": "Cliente",
       "audienceArchitect": "Arquiteto",
       "officeName": "Nome do gabinete",
-      "city": "Cidade"
+      "city": "Cidade",
+      "pending": "A sua conta aguarda aprovação. Enviaremos um e-mail assim que for aprovada.",
+      "captcha": "A verificação de segurança falhou. Tente novamente.",
+      "tooMany": "Demasiadas tentativas. Aguarde alguns minutos e tente novamente.",
+      "disposable": "Endereços de e-mail temporários não são aceites — utilize o seu e-mail profissional.",
+      "couldNotCreate": "Não foi possível processar o seu registo. Contacte-nos se considerar que se trata de um erro.",
+      "signupPendingBody": "Enviámos-lhe um link de confirmação. Clique nele para verificar o seu e-mail — a nossa equipa irá depois rever a conta e ativar o acesso. Receberá um e-mail assim que for aprovada."
     },
     "nav": {
       "label": "Portal do cliente",
@@ -5309,5 +5315,10 @@
     "disclaimer": "Intervalo indicativo do guia de preços publicado: instalado, sem IVA. A membrana é feita à medida — cantos, curvas e integrações movem o valor; encare isto como um intervalo, nunca como um orçamento.",
     "cta": "Pedir o meu orçamento gratuito",
     "guideLink": "Ler o guia de preços completo"
+  },
+  "security": {
+    "captchaFailed": "A verificação de segurança falhou. Tente novamente.",
+    "captchaLoadFailed": "Não foi possível carregar a verificação de segurança. Atualize a página ou escreva-nos para {email}.",
+    "tooManyRequests": "Demasiados pedidos. Aguarde alguns minutos e tente novamente."
   }
 }

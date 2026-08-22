@@ -219,7 +219,13 @@
       "audienceClient": "Klant",
       "audienceArchitect": "Architect",
       "officeName": "Naam bureau",
-      "city": "Stad"
+      "city": "Stad",
+      "pending": "Uw account wacht op goedkeuring. We mailen u zodra het is goedgekeurd.",
+      "captcha": "De veiligheidscontrole is mislukt. Probeer het opnieuw.",
+      "tooMany": "Te veel pogingen. Wacht enkele minuten en probeer het opnieuw.",
+      "disposable": "Tijdelijke e-mailadressen kunnen niet worden gebruikt — gebruik uw zakelijke e-mailadres.",
+      "couldNotCreate": "Uw registratie kon niet worden verwerkt. Neem contact met ons op als u denkt dat dit een vergissing is.",
+      "signupPendingBody": "We stuurden u een bevestigingslink. Klik erop om uw e-mailadres te bevestigen — ons team beoordeelt daarna uw account en activeert de toegang. U ontvangt een e-mail zodra het is goedgekeurd."
     },
     "nav": {
       "label": "Klantenportaal",
@@ -5309,5 +5315,10 @@
     "disclaimer": "Richtprijsvork uit de gepubliceerde prijsgids: geplaatst, exclusief btw. Het membraan wordt op maat gemaakt — hoeken, rondingen en integraties verschuiven het bedrag; zie dit als een vork, nooit als een offerte.",
     "cta": "Vraag mijn gratis offerte",
     "guideLink": "Lees de volledige prijsgids"
+  },
+  "security": {
+    "captchaFailed": "De veiligheidscontrole is mislukt. Probeer het opnieuw.",
+    "captchaLoadFailed": "De veiligheidscontrole kon niet laden. Vernieuw de pagina of mail ons via {email}.",
+    "tooManyRequests": "Te veel aanvragen. Wacht enkele minuten en probeer het opnieuw."
   }
 }

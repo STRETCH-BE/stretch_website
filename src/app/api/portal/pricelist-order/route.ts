@@ -11,6 +11,7 @@ import { getPricebook } from '@/lib/portal/data';
 import { storeOrder, logDesignerEvent } from '@/lib/portal/designer-store';
 import { deliverOrderEmails, type OrderAttachment } from '@/lib/portal/order-email';
 import { contact } from '@/lib/site-config';
+import { isPortalAllowedHost } from '@/lib/portal/host';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -26,6 +27,11 @@ const rowKey = (r: { category: string; product: string; market: string; seq: num
   `${r.category}||${r.product}||${r.market}||${r.seq}`;
 
 export async function POST(request: NextRequest) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(request.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const session = await getPortalSession();
   if (!session) return NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 });
   if (!hasTradeAccess(session.profile))

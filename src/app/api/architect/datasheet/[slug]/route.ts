@@ -10,6 +10,7 @@ import { getPortalSession } from '@/lib/portal/auth';
 import { hasArchitectAccess } from '@/lib/portal/types';
 import { getDatasheet } from '@/lib/datasheets';
 import { storeLead } from '@/lib/lead-store';
+import { rateLimit } from '@/lib/rate-limit';
 
 export const runtime = 'nodejs';
 
@@ -24,6 +25,12 @@ export async function GET(_request: Request, { params }: { params: { slug: strin
 
   // Demo mode: no real files, no lead rows.
   if (session.demo) return NextResponse.json({ ok: false, error: 'demo' }, { status: 403 });
+
+  // 30 downloads per hour per account — enough for any real specifier,
+  // a wall for scripted bulk pulls (fail-open helper).
+  if (!(await rateLimit(`architect-dl:${session.profile.id}`, 30, 60 * 60))) {
+    return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 });
+  }
 
   await storeLead(
     {

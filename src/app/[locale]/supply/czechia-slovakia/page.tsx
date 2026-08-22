@@ -21,6 +21,7 @@ import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import { ModalButton } from '@/components/ui/ModalButton';
 import { Link } from '@/i18n/navigation';
+import PortalLink from '@/components/ui/PortalLink';
 import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
@@ -70,9 +71,9 @@ export default async function SupplyCzSkPage({ params }: { params: { locale: str
             <ModalButton type="supply_inquiry" source="supply_cz_sk" className="btn btn--primary">
               {t('ctaInquiry')} <ArrowUpRight size={15} />
             </ModalButton>
-            <Link href="/portal/login?signup=installer" className="btn btn--ghost">
+            <PortalLink href="/portal/login?signup=installer" className="btn btn--ghost">
               {ts('ctaPortal')}
-            </Link>
+            </PortalLink>
           </div>
         </div>
       </section>

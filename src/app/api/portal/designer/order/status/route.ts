@@ -2,10 +2,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAdminSession } from '@/lib/portal/auth';
 import { updateOrderStatus, ORDER_STATUSES, type OrderStatus } from '@/lib/portal/designer-store';
+import { isPortalAllowedHost } from '@/lib/portal/host';
 
 export const dynamic = 'force-dynamic';
 
 export async function POST(request: NextRequest) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(request.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const session = await getAdminSession();
   if (!session) return NextResponse.json({ ok: false, error: 'forbidden' }, { status: 403 });
   if (session.demo) return NextResponse.json({ ok: true, demo: true });

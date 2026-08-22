@@ -219,7 +219,13 @@
       "audienceClient": "Kunde",
       "audienceArchitect": "Architekt",
       "officeName": "Büroname",
-      "city": "Stadt"
+      "city": "Stadt",
+      "pending": "Ihr Konto wird derzeit geprüft. Wir benachrichtigen Sie per E-Mail, sobald es freigeschaltet ist.",
+      "captcha": "Die Sicherheitsprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "tooMany": "Zu viele Versuche. Bitte warten Sie einige Minuten und versuchen Sie es erneut.",
+      "disposable": "Temporäre E-Mail-Adressen können nicht verwendet werden — bitte nutzen Sie Ihre geschäftliche E-Mail-Adresse.",
+      "couldNotCreate": "Ihre Registrierung konnte nicht verarbeitet werden. Kontaktieren Sie uns, wenn Sie dies für einen Fehler halten.",
+      "signupPendingBody": "Wir haben Ihnen einen Bestätigungslink gesendet. Klicken Sie darauf, um Ihre E-Mail zu bestätigen — unser Team prüft anschließend Ihr Konto und schaltet den Zugang frei. Sie erhalten eine E-Mail, sobald es freigegeben ist."
     },
     "nav": {
       "label": "Kundenportal",
@@ -5309,5 +5315,10 @@
     "disclaimer": "Richtspanne aus dem veröffentlichten Preisleitfaden: montiert, zzgl. MwSt. Die Membran wird nach Maß gefertigt — Ecken, Rundungen und Integrationen verschieben die Zahl; verstehen Sie dies als Spanne, nie als Angebot.",
     "cta": "Kostenloses Angebot anfordern",
     "guideLink": "Den vollständigen Preisleitfaden lesen"
+  },
+  "security": {
+    "captchaFailed": "Die Sicherheitsprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "captchaLoadFailed": "Die Sicherheitsprüfung konnte nicht geladen werden. Laden Sie die Seite neu oder schreiben Sie uns an {email}.",
+    "tooManyRequests": "Zu viele Anfragen. Bitte warten Sie einige Minuten und versuchen Sie es erneut."
   }
 }

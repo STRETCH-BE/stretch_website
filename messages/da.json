@@ -219,7 +219,13 @@
       "audienceClient": "Kunde",
       "audienceArchitect": "Arkitekt",
       "officeName": "Tegnestuens navn",
-      "city": "By"
+      "city": "By",
+      "pending": "Din konto afventer godkendelse. Vi sender en e-mail, så snart den er godkendt.",
+      "captcha": "Sikkerhedstjekket mislykkedes. Prøv igen.",
+      "tooMany": "For mange forsøg. Vent et par minutter, og prøv igen.",
+      "disposable": "Midlertidige e-mailadresser kan ikke bruges — brug din arbejdsmail.",
+      "couldNotCreate": "Din registrering kunne ikke behandles. Kontakt os, hvis du mener, det er en fejl.",
+      "signupPendingBody": "Vi har sendt dig et bekræftelseslink. Klik på det for at bekræfte din e-mail — derefter gennemgår vores team din konto og åbner adgangen. Du får en e-mail, så snart den er godkendt."
     },
     "nav": {
       "label": "Kundeportal",
@@ -5309,5 +5315,10 @@
     "disclaimer": "Vejledende interval fra den offentliggjorte prisguide: monteret, ekskl. moms. Membranen laves efter mål — hjørner, kurver og integrationer flytter tallet; se dette som et interval, aldrig som et tilbud.",
     "cta": "Få mit gratis tilbud",
     "guideLink": "Læs hele prisguiden"
+  },
+  "security": {
+    "captchaFailed": "Sikkerhedstjekket mislykkedes. Prøv igen.",
+    "captchaLoadFailed": "Sikkerhedstjekket kunne ikke indlæses. Genindlæs siden, eller skriv til os på {email}.",
+    "tooManyRequests": "For mange forespørgsler. Vent et par minutter, og prøv igen."
   }
 }

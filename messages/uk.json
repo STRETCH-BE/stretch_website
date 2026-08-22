@@ -219,7 +219,13 @@
       "audienceClient": "Client",
       "audienceArchitect": "Architect",
       "officeName": "Office name",
-      "city": "City"
+      "city": "City",
+      "pending": "Your account is awaiting review. We will email you as soon as it has been approved.",
+      "captcha": "The security check failed. Please try again.",
+      "tooMany": "Too many attempts. Please wait a few minutes and try again.",
+      "disposable": "Temporary email addresses cannot be used — please use your business email address.",
+      "couldNotCreate": "Your registration could not be processed. Please contact us if you believe this is an error.",
+      "signupPendingBody": "We sent you a confirmation link. Click it to verify your email — our team will then review your account and unlock access. You will receive an email once it is approved."
     },
     "nav": {
       "label": "Client portal",
@@ -5309,5 +5315,10 @@
     "disclaimer": "Indicative range from the published price guide: installed, excluding VAT. The membrane is made to measure — corners, curves and integrations move the number, so treat this as a bracket, never a quote.",
     "cta": "Get my free firm quote",
     "guideLink": "Read the full price guide"
+  },
+  "security": {
+    "captchaFailed": "The security check failed. Please try again.",
+    "captchaLoadFailed": "The security check could not load. Please refresh the page or email us at {email}.",
+    "tooManyRequests": "Too many requests. Please wait a few minutes and try again."
   }
 }

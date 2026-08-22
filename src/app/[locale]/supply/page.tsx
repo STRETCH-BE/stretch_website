@@ -22,6 +22,7 @@ import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import { ModalButton } from '@/components/ui/ModalButton';
 import { Link } from '@/i18n/navigation';
+import PortalLink from '@/components/ui/PortalLink';
 import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
@@ -75,9 +76,9 @@ export default async function SupplyPage({ params }: { params: { locale: string 
           {/* France-forward angle, written generically for every locale */}
           <p style={{ maxWidth: '62ch', color: 'var(--text-muted)', lineHeight: 1.65, margin: '0 0 28px' }}>{t('independent')}</p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-            <Link href="/portal/login?signup=installer" className="btn btn--primary">
+            <PortalLink href="/portal/login?signup=installer" className="btn btn--primary">
               {t('ctaPortal')} <ArrowUpRight size={15} />
-            </Link>
+            </PortalLink>
             <ModalButton type="supply_inquiry" source="supply_inquiry" className="btn btn--ghost">
               {t('ctaInquiry')}
             </ModalButton>

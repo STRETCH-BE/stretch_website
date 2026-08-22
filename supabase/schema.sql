@@ -345,3 +345,102 @@ create policy pricebook_read_by_market
         )
     )
   );
+
+-- ============================================================================
+-- ANTI-SPAM PART 1 (22 Aug 2026) — canonical emails, signup metadata,
+-- serverless rate limiting, lead spam columns. Every block is idempotent:
+-- running it twice is a no-op. Run in the Supabase SQL editor.
+-- ============================================================================
+
+-- 1) CANONICAL EMAIL on portal_users — dedupe target for alias tricks
+--    ('+' suffixes, Gmail dots). Backfill mirrors src/lib/spam/email.ts.
+alter table public.portal_users add column if not exists canonical_email text;
+
+update public.portal_users
+set canonical_email = case
+  when split_part(lower(trim(email)), '@', 2) in ('gmail.com', 'googlemail.com')
+    then replace(split_part(split_part(lower(trim(email)), '@', 1), '+', 1), '.', '')
+         || '@' || split_part(lower(trim(email)), '@', 2)
+  else split_part(split_part(lower(trim(email)), '@', 1), '+', 1)
+       || '@' || split_part(lower(trim(email)), '@', 2)
+end
+where canonical_email is null and email is not null;
+
+-- BEFORE the unique index: list canonical duplicates. If the CREATE INDEX
+-- below fails, resolve the accounts this SELECT lists (keep one, delete the
+-- others from auth.users — the FK cascade removes their profiles), then
+-- re-run this block.
+select canonical_email, count(*), array_agg(email order by created_at) as emails
+from public.portal_users
+where canonical_email is not null
+group by canonical_email
+having count(*) > 1;
+
+create unique index if not exists portal_users_canonical_email_key
+  on public.portal_users (canonical_email);
+
+-- 2) SIGNUP METADATA + PENDING STATE (approval gate lands in Part 2; until
+--    then pending accounts are approved with the existing Activate control).
+alter table public.portal_users add column if not exists pending_reason text;
+alter table public.portal_users add column if not exists signup_ip     inet;
+alter table public.portal_users add column if not exists signup_host   text;
+alter table public.portal_users add column if not exists signup_ua     text;
+alter table public.portal_users add column if not exists signup_locale text;
+
+-- 3) SERVERLESS-SAFE RATE LIMITING — one counter row per key. RLS enabled
+--    with NO policies: only the service role (and this SECURITY DEFINER
+--    function) touches it.
+create table if not exists public.rate_limits (
+  key          text primary key,
+  window_start timestamptz not null,
+  count        int not null
+);
+alter table public.rate_limits enable row level security;
+
+create or replace function public.rate_limit_hit(p_key text, p_limit int, p_window_seconds int)
+returns boolean
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  v_now   timestamptz := now();
+  v_count int;
+begin
+  insert into public.rate_limits as rl (key, window_start, count)
+  values (p_key, v_now, 1)
+  on conflict (key) do update set
+    count = case
+      when rl.window_start < v_now - make_interval(secs => p_window_seconds) then 1
+      else rl.count + 1
+    end,
+    window_start = case
+      when rl.window_start < v_now - make_interval(secs => p_window_seconds) then v_now
+      else rl.window_start
+    end
+  returning rl.count into v_count;
+
+  -- Opportunistic self-maintenance: on a fresh window, occasionally sweep
+  -- rows older than 24 h so the table never needs a cron.
+  if v_count = 1 and random() < 0.02 then
+    delete from public.rate_limits where window_start < v_now - interval '24 hours';
+  end if;
+
+  return v_count <= p_limit;
+end
+$$;
+
+revoke execute on function public.rate_limit_hit(text, int, int) from public;
+revoke execute on function public.rate_limit_hit(text, int, int) from anon;
+revoke execute on function public.rate_limit_hit(text, int, int) from authenticated;
+
+-- 4) LEAD SPAM COLUMNS — flagged leads are STORED, never delivered; nothing
+--    is dropped silently.
+alter table public.leads add column if not exists spam_score   int;
+alter table public.leads add column if not exists spam_reasons jsonb;
+alter table public.leads add column if not exists flagged      boolean not null default false;
+alter table public.leads add column if not exists ip           text;
+alter table public.leads add column if not exists host         text;
+alter table public.leads add column if not exists user_agent   text;
+
+create index if not exists leads_flagged_idx on public.leads (flagged) where flagged;

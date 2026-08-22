@@ -7,6 +7,7 @@
 import { NextResponse } from 'next/server';
 import { deliverLead } from '@/lib/deliver';
 import { storeLead } from '@/lib/lead-store';
+import { runLeadGuards } from '@/lib/spam/guard';
 import type { LeadPayload } from '@/lib/email';
 import { getDatasheet } from '@/lib/datasheets';
 import { createDatasheetLink } from '@/lib/datasheet-links';
@@ -28,32 +29,6 @@ function clean(value: unknown): string {
     .trim();
 }
 
-// Best-effort in-memory rate limit: max 8 requests/hour per IP. Serverless
-// instances each keep their own Map, so this is per-instance and resets on
-// cold starts — it exists so nobody can use this endpoint to spam a third
-// party's inbox from a single connection, not as a hard guarantee.
-const RATE_MAX = 8;
-const RATE_WINDOW_MS = 60 * 60 * 1000;
-const hits = new Map<string, number[]>();
-
-function rateLimited(ip: string): boolean {
-  const now = Date.now();
-  const list = (hits.get(ip) ?? []).filter((t) => now - t < RATE_WINDOW_MS);
-  if (list.length >= RATE_MAX) {
-    hits.set(ip, list);
-    return true;
-  }
-  list.push(now);
-  hits.set(ip, list);
-  // Prune other stale entries occasionally so the map cannot grow unbounded.
-  if (hits.size > 500) {
-    for (const [k, v] of hits) {
-      if (v.every((t) => now - t >= RATE_WINDOW_MS)) hits.delete(k);
-    }
-  }
-  return false;
-}
-
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
   try {
@@ -63,11 +38,6 @@ export async function POST(request: Request) {
   }
   if (!body || typeof body !== 'object') {
     return NextResponse.json({ ok: false, error: 'invalid_body' }, { status: 400 });
-  }
-
-  // Honeypot: silently accept bot submissions without doing anything.
-  if (clean(body._gotcha)) {
-    return NextResponse.json({ ok: true, mode: 'email' });
   }
 
   const name = clean(body.name);
@@ -94,12 +64,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: 'invalid_fields' }, { status: 422 });
   }
 
-  const ip = (request.headers.get('x-forwarded-for') ?? '').split(',')[0].trim() || 'unknown';
-  if (rateLimited(ip)) {
-    return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 });
-  }
-
-  // (a) Capture the lead exactly as /api/lead does.
+  // (a) Capture the lead exactly as /api/lead does — after the guard chain.
   const payload: LeadPayload = {
     source,
     name,
@@ -111,13 +76,55 @@ export async function POST(request: Request) {
     downloadedFile: sheet.title,
     datasheetSlug: sheet.slug,
   };
+
+  const guard = await runLeadGuards({
+    request,
+    honeypot: clean(body._gotcha),
+    fields: payload as Record<string, string>,
+    routeKey: 'datasheet',
+    ipLimit: [5, 60 * 60],
+    emailLimit: [3, 24 * 60 * 60],
+    formToken: body.formToken,
+    turnstileToken: body.turnstileToken,
+    // Returning visitors legitimately confirm within milliseconds — the
+    // one-click confirm step is exempt from the too-fast rule only.
+    minTokenAgeMs: body.quickConfirm === true ? 0 : undefined,
+  });
+  // Honeypot: silently accept bot submissions without doing anything.
+  if (guard.kind === 'honeypot') return NextResponse.json({ ok: true, mode: 'email' });
+  if (guard.kind === 'rate_limited') {
+    return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 });
+  }
+  if (guard.kind === 'captcha_fail') {
+    return NextResponse.json({ ok: false, error: 'captcha' }, { status: 400 });
+  }
+  if (guard.kind === 'stale_token') {
+    return NextResponse.json({ ok: false, error: 'stale_token' }, { status: 400 });
+  }
+  // Hard signal for the MAIL step: a disposable inbox never receives a mail
+  // (the address only exists to be burned) — the lead row is still stored.
+  const hardNoMail = guard.disposable;
+
   const page = request.headers.get('referer');
   try {
-    const result = await deliverLead(payload);
-    await storeLead(payload, { delivered: result.method !== 'log', method: result.method }, page);
+    const result = guard.spam.flagged ? null : await deliverLead(payload);
+    await storeLead(
+      payload,
+      result
+        ? { delivered: result.method !== 'log', method: result.method }
+        : { delivered: false, method: 'flagged' },
+      page,
+      guard.spam,
+    );
   } catch (err) {
     console.error(`[datasheet] lead delivery error: ${err instanceof Error ? err.message : 'unknown'}`);
-    await storeLead(payload, { delivered: false, method: 'failed' }, page);
+    await storeLead(payload, { delivered: false, method: 'failed' }, page, guard.spam);
+  }
+
+  // Disposable inbox → normal ok response, but no visitor mail and no
+  // fallback download link.
+  if (hardNoMail) {
+    return NextResponse.json({ ok: true, mode: 'email' });
   }
 
   // Signed link — relative path; make it absolute for the email.

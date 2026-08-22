@@ -1,7 +1,7 @@
 import createMiddleware from 'next-intl/middleware';
-import type { NextRequest } from 'next/server';
+import { NextResponse, type NextRequest } from 'next/server';
 import { createServerClient } from '@supabase/ssr';
-import { routing } from './i18n/config';
+import { routing, localeDomains, isValidLocale } from './i18n/config';
 
 // next-intl middleware in DOMAIN mode: the Host header decides the locale
 // (stretchplafond.nl → nl, stretchplafond.pl → pl, ...), and each domain
@@ -11,6 +11,25 @@ import { routing } from './i18n/config';
 const intlMiddleware = createMiddleware(routing);
 
 export default async function middleware(request: NextRequest) {
+  // PORTAL ON ONE HOST (NEXT_PUBLIC_PORTAL_HOST, production: stretch.mt):
+  // any /portal path — with or without locale prefix — on another PRODUCTION
+  // host 308s to the same portal path on the canonical host (en locale =
+  // unprefixed there). localhost and *.vercel.app previews are never
+  // redirected; unset env → feature off (zero-config).
+  const portalHost = (process.env.NEXT_PUBLIC_PORTAL_HOST || '').toLowerCase().split(':')[0];
+  if (portalHost) {
+    const host = (request.headers.get('host') ?? '').toLowerCase().split(':')[0].replace(/^www\./, '');
+    const isProductionHost = Object.values(localeDomains).some((d) => d.toLowerCase() === host);
+    if (isProductionHost && host !== portalHost) {
+      const { pathname, search } = request.nextUrl;
+      const parts = pathname.split('/').filter(Boolean);
+      const stripped = parts[0] && isValidLocale(parts[0]) ? `/${parts.slice(1).join('/')}` : pathname;
+      if (stripped === '/portal' || stripped.startsWith('/portal/')) {
+        return NextResponse.redirect(`https://${portalHost}${stripped}${search}`, 308);
+      }
+    }
+  }
+
   const response = intlMiddleware(request);
 
   // CLIENT PORTAL — keep the Supabase auth session fresh on /portal routes.

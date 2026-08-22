@@ -9,6 +9,7 @@ import { hasTradeAccess } from '@/lib/portal/types';
 import { storeOrder, uploadOrderFiles, logDesignerEvent } from '@/lib/portal/designer-store';
 import { deliverOrderEmails, type OrderAttachment } from '@/lib/portal/order-email';
 import { contact } from '@/lib/site-config';
+import { isPortalAllowedHost } from '@/lib/portal/host';
 
 export const dynamic = 'force-dynamic';
 
@@ -57,6 +58,11 @@ function parseFiles(body: OrderBody): OrderAttachment[] {
 }
 
 export async function POST(request: NextRequest) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(request.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const session = await getPortalSession();
   if (!session) return NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 });
   if (!hasTradeAccess(session.profile))

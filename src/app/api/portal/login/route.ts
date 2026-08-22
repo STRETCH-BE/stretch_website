@@ -9,21 +9,47 @@ import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { createRouteClient, createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
 import { DEMO_COOKIE, findDemoUser } from '@/lib/portal/auth';
+import { isPortalAllowedHost } from '@/lib/portal/host';
+import { rateLimit, getClientIp } from '@/lib/rate-limit';
+import { canonicalEmail, emailDomain, isFreemail } from '@/lib/spam/email';
+import { isTurnstileEnabled } from '@/lib/turnstile';
 
 export const runtime = 'nodejs';
 
 export async function POST(req: NextRequest) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(req.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   let email = '';
   let password = '';
+  let captchaToken = '';
   try {
     const body = await req.json();
     email = String(body.email ?? '').trim();
     password = String(body.password ?? '');
+    captchaToken = String(body.captchaToken ?? '').slice(0, 4096);
   } catch {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 400 });
   }
   if (!email || !password) {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 400 });
+  }
+
+  // Rate limits: per IP and per (canonical) email — fail-open in the helper.
+  const ip = getClientIp(req);
+  if (
+    !(await rateLimit(`login:ip:${ip}`, 10, 10 * 60)) ||
+    !(await rateLimit(`login:email:${canonicalEmail(email)}`, 20, 60 * 60))
+  ) {
+    return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 });
+  }
+
+  // Turnstile on and no token → loud 400 so the failure is visible once the
+  // Supabase CAPTCHA toggle is enabled (Supabase verifies the token itself).
+  if (isTurnstileEnabled() && isSupabaseConfigured() && !captchaToken) {
+    return NextResponse.json({ ok: false, error: 'captcha' }, { status: 400 });
   }
 
   // --- Demo mode (opt-in via NEXT_PUBLIC_PORTAL_DEMO=1) --------------------
@@ -45,17 +71,35 @@ export async function POST(req: NextRequest) {
 
   // --- Supabase mode -------------------------------------------------------
   const supabase = createRouteClient();
-  const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+    // Supabase verifies the Turnstile token itself once CAPTCHA protection
+    // is enabled in the dashboard (single-use — never siteverify'd here).
+    ...(captchaToken ? { options: { captchaToken } } : {}),
+  });
   if (error || !data.user) {
-    return NextResponse.json({ ok: false, error: 'invalid' }, { status: 401 });
+    const captcha = error && /captcha/i.test(error.message);
+    return NextResponse.json(
+      { ok: false, error: captcha ? 'captcha' : 'invalid' },
+      { status: captcha ? 400 : 401 },
+    );
   }
 
-  // The auth user must also have an ACTIVE portal profile.
-  const { data: profile } = await supabase
+  // The auth user must also have an ACTIVE portal profile. pending_reason is
+  // a later column — retry without it so an un-migrated database still works.
+  let { data: profile } = await supabase
     .from('portal_users')
-    .select('id, active')
+    .select('id, active, pending_reason')
     .eq('id', data.user.id)
     .maybeSingle();
+  if (!profile) {
+    ({ data: profile } = await supabase
+      .from('portal_users')
+      .select('id, active')
+      .eq('id', data.user.id)
+      .maybeSingle() as unknown as { data: typeof profile });
+  }
 
   if (!profile) {
     // Auth user without profile (self-signup edge case, or user created in the
@@ -70,6 +114,15 @@ export async function POST(req: NextRequest) {
       // Self-service tiers only from metadata: an architect signup must
       // self-heal as an architect, anything else stays b2c.
       const metaTier = metaText('account_type') === 'architect' ? 'architect' : 'b2c';
+      // The self-heal must apply the SAME gating rules as /api/portal/signup —
+      // otherwise a failed profile insert becomes a bypass around the
+      // approval gate (decisions locked 22 Aug 2026).
+      const healPending =
+        metaTier === 'architect'
+          ? isFreemail(emailDomain(email))
+            ? 'freemail'
+            : null
+          : 'installer_review';
       const base = {
         id: data.user.id,
         email,
@@ -78,7 +131,7 @@ export async function POST(req: NextRequest) {
         account_type: metaTier,
         markets: [],
         all_markets: false,
-        active: true,
+        active: healPending === null,
       };
       const { error: insertError } = await service.from('portal_users').insert({
         ...base,
@@ -90,11 +143,25 @@ export async function POST(req: NextRequest) {
         business_type: metaText('business_type'),
         office: metaText('office'),
         city: metaText('city'),
+        canonical_email: canonicalEmail(email),
+        pending_reason: healPending,
       });
-      if (!insertError) return NextResponse.json({ ok: true, demo: false });
+      if (!insertError) {
+        if (healPending) {
+          await supabase.auth.signOut();
+          return NextResponse.json({ ok: false, error: 'pending' }, { status: 403 });
+        }
+        return NextResponse.json({ ok: true, demo: false });
+      }
       // Un-migrated database (B2B columns missing) — core profile only.
       const { error: retryError } = await service.from('portal_users').insert(base);
-      if (!retryError) return NextResponse.json({ ok: true, demo: false });
+      if (!retryError) {
+        if (healPending) {
+          await supabase.auth.signOut();
+          return NextResponse.json({ ok: false, error: 'pending' }, { status: 403 });
+        }
+        return NextResponse.json({ ok: true, demo: false });
+      }
     }
     await supabase.auth.signOut();
     return NextResponse.json({ ok: false, error: 'inactive' }, { status: 403 });
@@ -102,7 +169,12 @@ export async function POST(req: NextRequest) {
 
   if (!profile.active) {
     await supabase.auth.signOut();
-    return NextResponse.json({ ok: false, error: 'inactive' }, { status: 403 });
+    // Awaiting approval reads differently from deactivated-by-an-admin.
+    const pending = Boolean((profile as { pending_reason?: string | null }).pending_reason);
+    return NextResponse.json(
+      { ok: false, error: pending ? 'pending' : 'inactive' },
+      { status: 403 },
+    );
   }
 
   return NextResponse.json({ ok: true, demo: false });

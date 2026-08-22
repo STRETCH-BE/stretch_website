@@ -11,6 +11,8 @@ import { Link } from '@/i18n/navigation';
 import { MODAL_CONFIGS, TRAINING_DATE_DETAIL, defaultCountryForLocale, type ModalType } from '@/lib/forms-config';
 import { localizeModalConfig, type ModalMessages, type SharedFieldMessages } from '@/lib/localize-content';
 import { analytics } from '@/lib/analytics';
+import TurnstileWidget from '@/components/ui/TurnstileWidget';
+import { useFormSecurity } from '@/lib/use-form-security';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -31,6 +33,7 @@ export default function InlineLeadForm({
   const tf = useTranslations('forms');
   const ti = useTranslations('inlineLead');
   const tm = useTranslations('modals');
+  const tsec = useTranslations('security');
   const locale = useLocale();
   const cfg = localizeModalConfig(
     MODAL_CONFIGS[type],
@@ -40,6 +43,7 @@ export default function InlineLeadForm({
   const [status, setStatus] = useState<Status>('idle');
   const [consent, setConsent] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const security = useFormSecurity();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -58,15 +62,37 @@ export default function InlineLeadForm({
     if (Object.keys(next).length > 0) return;
 
     setStatus('sending');
-    try {
+    const post = async (retried: boolean): Promise<void> => {
+      const turnstileToken = await security.waitForTurnstile();
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, source }),
+        body: JSON.stringify({ ...data, source, formToken: security.formToken, turnstileToken }),
       });
+      if (res.status === 429) {
+        setErrors({ __captcha: tsec('tooManyRequests') });
+        setStatus('idle');
+        return;
+      }
+      if (res.status === 400) {
+        const err = (await res.clone().json().catch(() => null)) as { error?: string } | null;
+        if (err?.error === 'stale_token' && !retried) {
+          await security.refreshFormToken();
+          return post(true);
+        }
+        if (err?.error === 'captcha') {
+          security.resetTurnstile();
+          setErrors({ __captcha: tsec('captchaFailed') });
+          setStatus('idle');
+          return;
+        }
+      }
       if (!res.ok) throw new Error('failed');
       analytics.generateLead({ source });
       setStatus('sent');
+    };
+    try {
+      await post(false);
     } catch {
       setStatus('error');
     }
@@ -158,6 +184,8 @@ export default function InlineLeadForm({
         </span>
       </label>
       {errors.__consent && <div style={errStyle}>{errors.__consent}</div>}
+      <TurnstileWidget ref={security.widgetRef} onToken={security.setTurnstileToken} />
+      {errors.__captcha && <div style={errStyle} role="alert">{errors.__captcha}</div>}
 
       {status === 'error' && (
         <div style={{ marginTop: 16, padding: '12px 16px', background: dark ? 'rgba(0,0,0,.25)' : '#fff', border: `1px solid ${dark ? '#fff' : 'var(--red)'}`, color: dark ? '#fff' : 'var(--red)', fontSize: 13.5 }}>

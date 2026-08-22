@@ -219,7 +219,13 @@
       "audienceClient": "Viðskiptavinur",
       "audienceArchitect": "Arkitekt",
       "officeName": "Nafn stofu",
-      "city": "Borg"
+      "city": "Borg",
+      "pending": "Reikningurinn þinn bíður samþykkis. Við sendum þér tölvupóst um leið og hann hefur verið samþykktur.",
+      "captcha": "Öryggisathugunin mistókst. Reyndu aftur.",
+      "tooMany": "Of margar tilraunir. Bíddu í nokkrar mínútur og reyndu aftur.",
+      "disposable": "Ekki er hægt að nota tímabundin netföng — notaðu vinnunetfangið þitt.",
+      "couldNotCreate": "Ekki var hægt að vinna úr skráningunni. Hafðu samband ef þú telur þetta vera mistök.",
+      "signupPendingBody": "Við sendum þér staðfestingarhlekk. Smelltu á hann til að staðfesta netfangið — teymið okkar fer svo yfir reikninginn og opnar aðganginn. Þú færð tölvupóst um leið og hann hefur verið samþykktur."
     },
     "nav": {
       "label": "Viðskiptavinagátt",
@@ -5309,5 +5315,10 @@
     "disclaimer": "Viðmiðunarbil úr útgefna verðleiðaranum: uppsett, án VSK. Dúkurinn er sérsniðinn — horn, bogar og innfellingar hreyfa töluna; líttu á þetta sem bil, aldrei sem tilboð.",
     "cta": "Fá ókeypis tilboð",
     "guideLink": "Lesa allan verðleiðarann"
+  },
+  "security": {
+    "captchaFailed": "Öryggisathugunin mistókst. Reyndu aftur.",
+    "captchaLoadFailed": "Ekki tókst að hlaða öryggisathuguninni. Endurhladdu síðunni eða sendu okkur póst á {email}.",
+    "tooManyRequests": "Of margar beiðnir. Bíddu í nokkrar mínútur og reyndu aftur."
   }
 }

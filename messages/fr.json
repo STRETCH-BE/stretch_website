@@ -219,7 +219,13 @@
       "audienceClient": "Client",
       "audienceArchitect": "Architecte",
       "officeName": "Nom de l’agence",
-      "city": "Ville"
+      "city": "Ville",
+      "pending": "Votre compte est en cours de validation. Nous vous enverrons un e-mail dès son approbation.",
+      "captcha": "La vérification de sécurité a échoué. Veuillez réessayer.",
+      "tooMany": "Trop de tentatives. Patientez quelques minutes puis réessayez.",
+      "disposable": "Les adresses e-mail temporaires ne sont pas acceptées — utilisez votre adresse professionnelle.",
+      "couldNotCreate": "Votre inscription n’a pas pu être traitée. Contactez-nous si vous pensez qu’il s’agit d’une erreur.",
+      "signupPendingBody": "Nous vous avons envoyé un lien de confirmation. Cliquez dessus pour vérifier votre e-mail — notre équipe examinera ensuite votre compte et activera l’accès. Vous recevrez un e-mail dès son approbation."
     },
     "nav": {
       "label": "Espace client",
@@ -5309,5 +5315,10 @@
     "disclaimer": "Fourchette indicative du guide des prix publié : posé, hors TVA. La membrane est confectionnée sur mesure — angles, courbes et intégrations font bouger le chiffre ; voyez ceci comme une fourchette, jamais comme un devis.",
     "cta": "Obtenir mon devis gratuit",
     "guideLink": "Lire le guide des prix complet"
+  },
+  "security": {
+    "captchaFailed": "La vérification de sécurité a échoué. Veuillez réessayer.",
+    "captchaLoadFailed": "La vérification de sécurité n’a pas pu se charger. Actualisez la page ou écrivez-nous à {email}.",
+    "tooManyRequests": "Trop de requêtes. Patientez quelques minutes puis réessayez."
   }
 }

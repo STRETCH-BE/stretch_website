@@ -17,6 +17,7 @@ import {
   UserRound,
 } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import PortalLink from '@/components/ui/PortalLink';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
@@ -74,12 +75,12 @@ export default async function ArchitectsPage({ params }: { params: { locale: str
         </h1>
         <p className="lead" style={{ maxWidth: 620, margin: '0 0 26px' }}>{t('lead')}</p>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          <Link href="/portal/login?signup=architect" className="btn btn--primary">
+          <PortalLink href="/portal/login?signup=architect" className="btn btn--primary">
             {t('ctaCreate')} <ArrowRight size={15} />
-          </Link>
-          <Link href="/portal" className="btn btn--ghost">
+          </PortalLink>
+          <PortalLink href="/portal" className="btn btn--ghost">
             {t('ctaSignIn')}
-          </Link>
+          </PortalLink>
         </div>
       </section>
 
@@ -167,9 +168,9 @@ export default async function ArchitectsPage({ params }: { params: { locale: str
             <h2 className="h2 h2--sm" style={{ color: '#fff', margin: '0 0 10px' }}>{t('ctaTitle')}<span className="accent">.</span></h2>
             <p style={{ margin: 0, color: 'var(--on-dark-muted)', fontSize: 14.5, lineHeight: 1.6, maxWidth: 560 }}>{t('ctaBody')}</p>
           </div>
-          <Link href="/portal/login?signup=architect" className="btn btn--primary">
+          <PortalLink href="/portal/login?signup=architect" className="btn btn--primary">
             {t('ctaCreate')} <ArrowRight size={15} />
-          </Link>
+          </PortalLink>
         </div>
       </section>
 

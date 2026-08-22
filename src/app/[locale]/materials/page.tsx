@@ -4,6 +4,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import PortalLink from '@/components/ui/PortalLink';
 import { ArrowRight, MessageSquareQuote, PackageOpen, Reply } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { pageMetadata } from '@/lib/page-meta';
@@ -100,7 +101,7 @@ export default async function MaterialsPage({ params }: { params: { locale: stri
             <p style={{ color: 'var(--on-dark-muted)', fontSize: 14.5, lineHeight: 1.55, margin: 0, maxWidth: 520 }}>{t('dealerBody')}</p>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-            <Link href="/portal" className="btn btn--primary">{t('dealerCta')} <ArrowRight size={16} /></Link>
+            <PortalLink href="/portal" className="btn btn--primary">{t('dealerCta')} <ArrowRight size={16} /></PortalLink>
             <Link href="/partners" className="btn" style={{ background: '#fff', color: 'var(--black)' }}>{t('partnerCta')}</Link>
           </div>
         </div>

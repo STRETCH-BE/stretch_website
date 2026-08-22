@@ -6,10 +6,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getPortalSession } from '@/lib/portal/auth';
 import { hasTradeAccess } from '@/lib/portal/types';
 import { DESIGNER_HTML_B64 } from '@/lib/portal/designer-html';
+import { isPortalAllowedHost } from '@/lib/portal/host';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(request.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const session = await getPortalSession();
   if (!session) {
     return NextResponse.redirect(new URL('/portal/login', request.url));

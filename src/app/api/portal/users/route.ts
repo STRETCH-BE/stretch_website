@@ -7,6 +7,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { DEMO_USERS, getAdminSession } from '@/lib/portal/auth';
 import { createServiceClient, isSupabaseConfigured } from '@/lib/portal/supabase';
 import { normalizeAccountType, PRICE_MARKETS } from '@/lib/portal/types';
+import { isPortalAllowedHost } from '@/lib/portal/host';
 
 export const runtime = 'nodejs';
 
@@ -20,7 +21,12 @@ function sanitizeMarkets(input: unknown): string[] {
   return input.map(String).filter((m) => valid.has(m));
 }
 
-export async function GET() {
+export async function GET(request: Request) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(request.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const session = await getAdminSession();
   if (!session) return NextResponse.json({ ok: false, error: 'forbidden' }, { status: 403 });
 
@@ -65,6 +71,11 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(req.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const session = await getAdminSession();
   if (!session) return NextResponse.json({ ok: false, error: 'forbidden' }, { status: 403 });
 
@@ -129,6 +140,11 @@ export async function POST(req: NextRequest) {
 }
 
 export async function PATCH(req: NextRequest) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(req.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const session = await getAdminSession();
   if (!session) return NextResponse.json({ ok: false, error: 'forbidden' }, { status: 403 });
 

@@ -219,7 +219,13 @@
       "audienceClient": "Cliente",
       "audienceArchitect": "Arquitecto",
       "officeName": "Nombre del estudio",
-      "city": "Ciudad"
+      "city": "Ciudad",
+      "pending": "Su cuenta está pendiente de revisión. Le enviaremos un correo en cuanto sea aprobada.",
+      "captcha": "La verificación de seguridad ha fallado. Inténtelo de nuevo.",
+      "tooMany": "Demasiados intentos. Espere unos minutos e inténtelo de nuevo.",
+      "disposable": "No se aceptan direcciones de correo temporales — utilice su correo de empresa.",
+      "couldNotCreate": "No se ha podido procesar su registro. Contacte con nosotros si cree que se trata de un error.",
+      "signupPendingBody": "Le hemos enviado un enlace de confirmación. Haga clic para verificar su correo — después nuestro equipo revisará su cuenta y activará el acceso. Recibirá un correo cuando sea aprobada."
     },
     "nav": {
       "label": "Portal de clientes",
@@ -5309,5 +5315,10 @@
     "disclaimer": "Horquilla indicativa de la guía de precios publicada: instalado, sin IVA. La membrana se confecciona a medida — esquinas, curvas e integraciones mueven la cifra; tómelo como una horquilla, nunca como un presupuesto.",
     "cta": "Pedir mi presupuesto gratuito",
     "guideLink": "Leer la guía de precios completa"
+  },
+  "security": {
+    "captchaFailed": "La verificación de seguridad ha fallado. Inténtelo de nuevo.",
+    "captchaLoadFailed": "La verificación de seguridad no se pudo cargar. Actualice la página o escríbanos a {email}.",
+    "tooManyRequests": "Demasiadas solicitudes. Espere unos minutos e inténtelo de nuevo."
   }
 }

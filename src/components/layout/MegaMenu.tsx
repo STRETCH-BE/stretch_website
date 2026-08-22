@@ -19,6 +19,7 @@ import {
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { ModalButton } from '@/components/ui/ModalButton';
+import PortalLink from '@/components/ui/PortalLink';
 import Placeholder from '@/components/ui/Placeholder';
 
 export type MegaItem = { title: string; sub: string; href: string; soon?: boolean };
@@ -222,18 +223,30 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
       <div className="mega-items">
         <div className="mega-items-label">{cat.title}</div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-          {cat.items.map((item) => (
-            <Link key={item.title} href={item.href} onClick={onNavigate} className="megaitem">
-              <span className="megaitem-text">
-                <span className="megaitem-t">
-                  {item.title}
-                  {item.soon && <span className="megaitem-soon">{tm('comingSoon')}</span>}
+          {cat.items.map((item) => {
+            const content = (
+              <>
+                <span className="megaitem-text">
+                  <span className="megaitem-t">
+                    {item.title}
+                    {item.soon && <span className="megaitem-soon">{tm('comingSoon')}</span>}
+                  </span>
+                  <span className="megaitem-s">{item.sub}</span>
                 </span>
-                <span className="megaitem-s">{item.sub}</span>
-              </span>
-              <span className="megaitem-arrow" aria-hidden>→</span>
-            </Link>
-          ))}
+                <span className="megaitem-arrow" aria-hidden>→</span>
+              </>
+            );
+            // Portal entries follow the canonical portal host when one is set.
+            return item.href.startsWith('/portal') ? (
+              <PortalLink key={item.title} href={item.href} onClick={onNavigate} className="megaitem">
+                {content}
+              </PortalLink>
+            ) : (
+              <Link key={item.title} href={item.href} onClick={onNavigate} className="megaitem">
+                {content}
+              </Link>
+            );
+          })}
         </div>
       </div>
 

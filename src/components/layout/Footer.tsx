@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { footerNav } from '@/lib/site-config';
 import { contact } from '@/lib/site-config';
+import PortalLink from '@/components/ui/PortalLink';
 import { CONSENT_OPEN_BANNER_EVENT } from '@/lib/consent';
 import { analytics } from '@/lib/analytics';
 
@@ -74,9 +75,15 @@ export default function Footer() {
           <FooterCol heading={t('companyHeading')}>
             {footerNav.company.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="lnk" style={{ color: 'var(--on-dark-soft)' }}>
-                  {t(`links.${l.key}`)}
-                </Link>
+                {l.key === 'clientPortal' ? (
+                  <PortalLink href={l.href} className="lnk" style={{ color: 'var(--on-dark-soft)' }}>
+                    {t(`links.${l.key}`)}
+                  </PortalLink>
+                ) : (
+                  <Link href={l.href} className="lnk" style={{ color: 'var(--on-dark-soft)' }}>
+                    {t(`links.${l.key}`)}
+                  </Link>
+                )}
               </li>
             ))}
           </FooterCol>

@@ -7,6 +7,8 @@
 // server-side). No prices, no payments — the reply comes by email.
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type FormEvent, type ReactNode } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
+import TurnstileWidget from '@/components/ui/TurnstileWidget';
+import { useFormSecurity } from '@/lib/use-form-security';
 import { COUNTRY_VALUES, defaultCountryForLocale } from '@/lib/forms-config';
 import type { SharedFieldMessages } from '@/lib/localize-content';
 import { Link } from '@/i18n/navigation';
@@ -103,6 +105,7 @@ export function InquiryBar() {
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(false);
   const [consent, setConsent] = useState(false);
+  const security = useFormSecurity();
 
   useEffect(() => {
     if (!open) return;
@@ -118,10 +121,13 @@ export function InquiryBar() {
     setBusy(true);
     setError(false);
     try {
+      const turnstileToken = await security.waitForTurnstile();
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          formToken: security.formToken,
+          turnstileToken,
           source: 'materials_inquiry',
           name: String(fd.get('name') ?? ''),
           company: String(fd.get('company') ?? ''),
@@ -138,6 +144,12 @@ export function InquiryBar() {
           _gotcha: String(fd.get('_gotcha') ?? ''),
         }),
       });
+      if (res.status === 400) {
+        const err = (await res.clone().json().catch(() => null)) as { error?: string } | null;
+        if (err?.error === 'stale_token') await security.refreshFormToken();
+        if (err?.error === 'captcha') security.resetTurnstile();
+        throw new Error('send failed');
+      }
       if (!res.ok) throw new Error('send failed');
       setSent(true);
       clear();
@@ -249,6 +261,7 @@ export function InquiryBar() {
                   {error && (
                     <p role="alert" style={{ color: 'var(--red)', fontSize: 13.5, fontWeight: 600, margin: '0 0 12px' }}>{t('sendError')}</p>
                   )}
+          <TurnstileWidget ref={security.widgetRef} onToken={security.setTurnstileToken} />
 
                   <button type="submit" className="btn btn--primary" disabled={busy || items.length === 0} style={{ width: '100%', justifyContent: 'center' }}>
                     {busy ? t('sending') : t('send')} <ArrowRight size={15} />

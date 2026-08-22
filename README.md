@@ -49,6 +49,13 @@ Every variable is **optional**. See `.env.example` for the full annotated list. 
 | `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Client portal auth + database ([Supabase](https://supabase.com)). Without them `/portal` runs in demo mode. |
 | `SUPABASE_SERVICE_ROLE_KEY` | Server-only — powers the portal's admin API (pricelist sync, account management). |
 | `DATASHEET_SIGNING_SECRET` | Any long random string — signs the expiring datasheet download links (`src/lib/datasheet-links.ts`). Unset = insecure dev fallback with a console warning. |
+| `NEXT_PUBLIC_PORTAL_HOST` | Canonical portal host (production: `stretch.mt`). When set, `/portal` on every other production domain 308s there and `/api/portal/*` 404s elsewhere. Unset = portal on every domain as before. |
+| `NEXT_PUBLIC_TURNSTILE_SITEKEY_A` / `TURNSTILE_SECRET_A` | Cloudflare Turnstile widget group A (main domains + previews + localhost). Unset = no CAPTCHA (zero-config). See [`docs/ANTI-SPAM.md`](docs/ANTI-SPAM.md). |
+| `NEXT_PUBLIC_TURNSTILE_SITEKEY_B` / `TURNSTILE_SECRET_B` | Turnstile widget group B (PT/DK/SE/NO/IS domains — one widget allows max 10 hostnames). |
+| `FORM_SIGNING_SECRET` | HMAC secret for the time-to-submit form tokens (anti-bot). Falls back to `DATASHEET_SIGNING_SECRET`. |
+| `PORTAL_ADMIN_EMAIL` | Recipient of the portal-signup circuit-breaker alert. Falls back to `LEAD_DESTINATION`. |
+
+**Anti-spam**: honeypots, Cloudflare Turnstile, Postgres rate limiting, disposable-email blocking and content-based spam scoring on every public form and the portal signup/login. All of it is off with no env vars set. Architecture, rollout order and the Turnstile/Supabase dashboard steps: **[`docs/ANTI-SPAM.md`](docs/ANTI-SPAM.md)**.
 
 **Lead delivery** auto-selects a method at runtime, in priority order: Microsoft Graph → webhook → SMTP → log-only. The first one whose env vars are present wins. `nodemailer` is an *optional* dependency, imported dynamically only when configured.
 

@@ -16,6 +16,7 @@ import { getPortalSession } from '@/lib/portal/auth';
 import { hasTradeAccess } from '@/lib/portal/types';
 import { getInstallerDoc } from '@/lib/installer-docs';
 import { storeLead } from '@/lib/lead-store';
+import { isPortalAllowedHost } from '@/lib/portal/host';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -27,6 +28,11 @@ const MIME: Record<string, string> = {
 };
 
 export async function GET(_request: Request, { params }: { params: { slug: string } }) {
+  // Canonical portal host only (404 elsewhere when NEXT_PUBLIC_PORTAL_HOST set).
+  if (!isPortalAllowedHost(_request.headers.get('host'))) {
+    return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 });
+  }
+
   const session = await getPortalSession();
   if (!session || !hasTradeAccess(session.profile)) {
     return NextResponse.json({ ok: false, error: 'forbidden' }, { status: 403 });

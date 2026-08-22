@@ -11,6 +11,9 @@ import { useLocale, useTranslations } from 'next-intl';
 import { ArrowUpRight, Lock, MailCheck, UserRoundPlus } from 'lucide-react';
 import { DEMO_USERS } from '@/lib/portal/demo-users';
 import { signupCountryOptions } from '@/lib/signup-countries';
+import TurnstileWidget from '@/components/ui/TurnstileWidget';
+import { useFormSecurity } from '@/lib/use-form-security';
+import { isTurnstileEnabled } from '@/lib/turnstile';
 
 type Mode = 'live' | 'demo' | 'closed';
 
@@ -42,6 +45,8 @@ export default function LoginForm({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [signupDone, setSignupDone] = useState(false);
+  const [signupPending, setSignupPending] = useState(false);
+  const security = useFormSecurity();
   const architect = audience === 'architect';
 
   // Localised country names — the shared EU/EEA + UK + CH list, Europe first.
@@ -53,19 +58,32 @@ export default function LoginForm({
     setBusy(true);
     setError(null);
     try {
+      const captchaToken = await security.waitForTurnstile();
       const res = await fetch('/api/portal/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, captchaToken }),
       });
       if (res.ok) {
         router.replace('/portal');
         router.refresh();
         return;
       }
+      // Turnstile tokens are single-use — a failed attempt needs a fresh one.
+      security.resetTurnstile();
       const data = await res.json().catch(() => null);
       setError(
-        data?.error === 'inactive' ? t('inactive') : data?.error === 'unavailable' ? t('unavailableBody') : t('invalid'),
+        data?.error === 'pending'
+          ? t('pending')
+          : data?.error === 'inactive'
+            ? t('inactive')
+            : data?.error === 'captcha'
+              ? t('captcha')
+              : data?.error === 'rate_limited'
+                ? t('tooMany')
+                : data?.error === 'unavailable'
+                  ? t('unavailableBody')
+                  : t('invalid'),
       );
     } catch {
       setError(t('failed'));
@@ -80,6 +98,7 @@ export default function LoginForm({
     setBusy(true);
     setError(null);
     try {
+      const captchaToken = await security.waitForTurnstile();
       const res = await fetch('/api/portal/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -96,11 +115,17 @@ export default function LoginForm({
           accountType: architect ? 'architect' : 'b2c',
           office: architect ? company : undefined,
           city: architect ? city : undefined,
+          captchaToken,
+          formToken: security.formToken,
+          locale,
         }),
       });
       const data = await res.json().catch(() => null);
       if (res.ok && data?.ok) {
-        if (data.confirm) {
+        if (data.pending) setSignupPending(true);
+        if (data.confirm || isTurnstileEnabled()) {
+          // Turnstile tokens are single-use — with the widget on, skip the
+          // auto-login and let the user sign in with a fresh token.
           setSignupDone(true);
         } else {
           // No email confirmation required → sign straight in.
@@ -118,7 +143,20 @@ export default function LoginForm({
         }
         return;
       }
-      setError(data?.error === 'exists' ? t('signupExists') : t('failed'));
+      security.resetTurnstile();
+      setError(
+        data?.error === 'exists'
+          ? t('signupExists')
+          : data?.error === 'disposable'
+            ? t('disposable')
+            : data?.error === 'rejected'
+              ? t('couldNotCreate')
+              : data?.error === 'captcha'
+                ? t('captcha')
+                : data?.error === 'rate_limited' || data?.error === 'busy'
+                  ? t('tooMany')
+                  : t('failed'),
+      );
     } catch {
       setError(t('failed'));
     } finally {
@@ -154,7 +192,7 @@ export default function LoginForm({
             </span>
             <div style={{ fontWeight: 800, fontSize: 15, letterSpacing: '.04em', textTransform: 'uppercase' }}>{t('signupDoneTitle')}</div>
           </div>
-          <p style={{ margin: '0 0 18px', color: 'var(--text-muted)', fontSize: 14.5, lineHeight: 1.6 }}>{t('signupDoneBody')}</p>
+          <p style={{ margin: '0 0 18px', color: 'var(--text-muted)', fontSize: 14.5, lineHeight: 1.6 }}>{signupPending ? t('signupPendingBody') : t('signupDoneBody')}</p>
           <button
             type="button"
             className="btn btn--ghost"
@@ -372,6 +410,7 @@ export default function LoginForm({
           </p>
         )}
 
+        <TurnstileWidget ref={security.widgetRef} onToken={security.setTurnstileToken} />
         <button type="submit" className="btn btn--primary" disabled={busy} style={{ width: '100%', justifyContent: 'center' }}>
           {signup ? (busy ? t('signupSubmitting') : t('signupSubmit')) : busy ? t('submitting') : t('submit')} <ArrowUpRight size={15} />
         </button>
