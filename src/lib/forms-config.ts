@@ -79,6 +79,7 @@ export const COUNTRY_OPTIONS_EN = [
 
 /** The pre-selected country per locale domain (en = international, no default). */
 const LOCALE_DEFAULT_COUNTRY: Record<string, string> = {
+  uk: 'GB',
   be: 'BE', nl: 'NL', fr: 'FR', de: 'DE', pl: 'PL', es: 'ES',
   pt: 'PT', da: 'DK', sv: 'SE', no: 'NO', is: 'IS',
 };

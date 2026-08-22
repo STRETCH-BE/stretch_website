@@ -30,6 +30,7 @@ const nextConfig = {
       // absolute URL from any of the production domains. Keep in sync with
       // `localeDomains` in src/i18n/config.ts.
       { protocol: 'https', hostname: 'stretch.mt' },
+      { protocol: 'https', hostname: 'stretch-ceilings.uk' },
       { protocol: 'https', hostname: 'stretchplafond.be' },
       { protocol: 'https', hostname: 'stretchplafond.nl' },
       { protocol: 'https', hostname: 'stretchplafond.fr' },

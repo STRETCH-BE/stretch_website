@@ -26,6 +26,7 @@ import { defineRouting } from 'next-intl/routing';
 
 export const locales = [
   'en', // English — international / x-default
+  'uk', // English — United Kingdom (market code, not ISO 639; en-GB below)
   'be', // Dutch — Belgium
   'nl', // Dutch — Netherlands
   'fr', // French — France
@@ -47,7 +48,8 @@ export const defaultLocale: Locale = 'en';
 // Override any entry per-deploy with NEXT_PUBLIC_DOMAIN_<LOCALE> if needed.
 // ---------------------------------------------------------------------------
 export const localeDomains: Record<Locale, string> = {
-  en: process.env.NEXT_PUBLIC_DOMAIN_EN || 'stretch.mt', // en + x-default; .uk/.us 301 → here (reserved for future en-GB/en-US split)
+  en: process.env.NEXT_PUBLIC_DOMAIN_EN || 'stretch.mt', // en + x-default (global); .us still 308 → here
+  uk: process.env.NEXT_PUBLIC_DOMAIN_UK || 'stretch-ceilings.uk', // en-GB — UK kit/materials market
   be: process.env.NEXT_PUBLIC_DOMAIN_BE || 'stretchplafond.be',
   nl: process.env.NEXT_PUBLIC_DOMAIN_NL || 'stretchplafond.nl',
   fr: process.env.NEXT_PUBLIC_DOMAIN_FR || 'stretchplafond.fr',
@@ -93,6 +95,7 @@ export const routing = defineRouting({
 // Native-language display names (shown in the language switcher).
 export const localeNames: Record<Locale, string> = {
   en: 'English',
+  uk: 'English (UK)',
   be: 'Nederlands (België)',
   nl: 'Nederlands',
   fr: 'Français',
@@ -109,6 +112,7 @@ export const localeNames: Record<Locale, string> = {
 // Emoji flags for the switcher.
 export const localeFlags: Record<Locale, string> = {
   en: '🌐',
+  uk: '🇬🇧',
   be: '🇧🇪',
   nl: '🇳🇱',
   fr: '🇫🇷',
@@ -126,6 +130,7 @@ export const localeFlags: Record<Locale, string> = {
 // These are the ONLY codes exposed to browsers/search engines.
 export const localeFullCodes: Record<Locale, string> = {
   en: 'en',      // international English (x-default lives on this domain)
+  uk: 'en-GB',
   be: 'nl-BE',
   nl: 'nl-NL',
   fr: 'fr-FR',

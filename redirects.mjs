@@ -257,7 +257,7 @@ const genericRules = (h, account = '/portal/login') => [
 ];
 
 // ---------------------------------------------------------------------------
-// ENGLISH RULES — stretch.mt (also receives legacy .uk / .us paths via 308)
+// ENGLISH RULES — stretch.mt (also receives legacy .us paths via 308)
 // ---------------------------------------------------------------------------
 const englishRules = [
   ...genericRules('stretch.mt'),
@@ -267,6 +267,20 @@ const englishRules = [
   R('stretch.mt', '/customer-service', '/contact'),
   R('stretch.mt', '/Knowledge-base/:path*', '/datasheets'),
   R('stretch.mt', '/knowledge-base/:path*', '/datasheets'),
+];
+
+// ---------------------------------------------------------------------------
+// UK RULES — stretch-ceilings.uk. Was a domain-level 308 → stretch.mt until the
+// uk locale went live (Aug 2026); once the domain is attached to the project
+// these host-scoped rules absorb the old WordPress-era .uk paths directly.
+// ---------------------------------------------------------------------------
+const ukRules = [
+  ...genericRules('stretch-ceilings.uk'),
+  R('stretch-ceilings.uk', '/warranty-repair-and-returns', '/faq'),
+  R('stretch-ceilings.uk', '/terms-and-conditions', '/terms'),
+  R('stretch-ceilings.uk', '/customer-service', '/contact'),
+  R('stretch-ceilings.uk', '/Knowledge-base/:path*', '/datasheets'),
+  R('stretch-ceilings.uk', '/knowledge-base/:path*', '/datasheets'),
 ];
 
 // ---------------------------------------------------------------------------
@@ -306,6 +320,7 @@ export const legacyRedirects = [
   ...dutchRules('stretchplafond.be'),
   ...dutchRules('stretchplafond.nl'),
   ...englishRules,
+  ...ukRules,
   ...germanRules,
   ...frenchRules,
   ...polishRules,
