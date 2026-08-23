@@ -9,33 +9,39 @@ import { isValidLocale, locales, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
 import { localeBase, buildAlternates, buildOgLocales } from '@/lib/seo';
 import { localeFullCodes } from '@/i18n/config';
-import { getBlogPost, blogSlugs } from '@/lib/content';
+import { blogPostsFor } from '@/lib/content';
 import { localizeBlogPost, type BlogPostMessages } from '@/lib/localize-content';
 import { articleSchema, breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
 
+// Every (locale, slug) pair is enumerated below — market-restricted posts only
+// on their own locales. dynamicParams=false → anything else 404s immediately
+// instead of rendering on demand (which trips next-intl's headers() lookup).
+export const dynamicParams = false;
+
 export function generateStaticParams() {
-  return locales.flatMap((locale) => blogSlugs.map((slug) => ({ locale, slug })));
+  return locales.flatMap((locale) => blogPostsFor(locale).map((p) => ({ locale, slug: p.slug })));
 }
 
 export async function generateMetadata({ params }: { params: { locale: string; slug: string } }): Promise<Metadata> {
   if (!isValidLocale(params.locale)) return {};
   const locale = params.locale as Locale;
-  const base = getBlogPost(params.slug);
+  const base = blogPostsFor(locale).find((p) => p.slug === params.slug);
   if (!base) return {};
   const tb = await getTranslations({ locale, namespace: 'blogPosts' });
   const post = localizeBlogPost(base, (tb.raw('posts') as Record<string, BlogPostMessages>)[base.slug]);
 
   const route = `/blog/${post.slug}`;
-  const { ogLocale, alternate } = buildOgLocales(locale);
+  // hreflang + OG alternates only span the locales the post exists on.
+  const { ogLocale, alternate } = buildOgLocales(locale, base.markets);
   const ogImg = `${localeBase(locale)}/api/og/${post.slug}`;
 
   return {
     title: { absolute: `${post.title} | ${brand.name}` },
     description: post.excerpt,
-    alternates: buildAlternates(locale, route),
+    alternates: buildAlternates(locale, route, base.markets),
     openGraph: {
       type: 'article',
       siteName: brand.name,
@@ -57,10 +63,10 @@ function fmtDate(iso: string, locale: Locale) {
 }
 
 export default async function BlogPostPage({ params }: { params: { locale: string; slug: string } }) {
-  const base = getBlogPost(params.slug);
-  if (!base) notFound();
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
+  const base = blogPostsFor(locale).find((p) => p.slug === params.slug);
+  if (!base) notFound();
   const tb = await getTranslations('blogPosts');
   const tp = await getTranslations('productPage');
   const post = localizeBlogPost(base, (tb.raw('posts') as Record<string, BlogPostMessages>)[base.slug]);
@@ -110,6 +116,28 @@ export default async function BlogPostPage({ params }: { params: { locale: strin
               {section.paragraphs.map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
+              {section.bullets && section.bullets.length > 0 && (
+                <ul>
+                  {section.bullets.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
+              )}
+              {section.links && section.links.length > 0 && (
+                <p style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 20px', fontWeight: 600 }}>
+                  {section.links.map((link, i) =>
+                    link.href.startsWith('https://') ? (
+                      <a key={i} href={link.href} target="_blank" rel="noopener noreferrer">
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link key={i} href={link.href}>
+                        {link.label}
+                      </Link>
+                    ),
+                  )}
+                </p>
+              )}
             </section>
           ))}
         </div>

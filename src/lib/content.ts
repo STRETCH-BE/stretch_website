@@ -4,6 +4,7 @@
 // FAQ are DRAFTED (evergreen, educational) and flagged in CHANGES.md for review;
 // none fabricate testimonials, prices or claims beyond the brief.
 // ============================================================================
+import type { Locale } from '@/i18n/config';
 
 export type Project = {
   key: string;
@@ -634,6 +635,16 @@ export const getProjectBySlug = (slug: string): Project | undefined =>
 // Blog — drafted evergreen / educational articles (flagged for review).
 // ---------------------------------------------------------------------------
 
+export type BlogSection = {
+  heading: string;
+  paragraphs: string[];
+  /** Optional bullet list rendered after the paragraphs. */
+  bullets?: string[];
+  /** Optional related-link row. Internal hrefs are locale-relative routes;
+   *  https hrefs open in a new tab. */
+  links?: { label: string; href: string }[];
+};
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -644,8 +655,10 @@ export type BlogPost = {
   readMinutes: number;
   /** Optional hero photo path from /public. Empty = branded placeholder. */
   image?: string;
-  /** Body as an ordered list of {heading, paragraphs}. */
-  body: { heading: string; paragraphs: string[] }[];
+  /** Locales the post exists on. Absent = every locale (the default). */
+  markets?: Locale[];
+  /** Body as an ordered list of sections. */
+  body: BlogSection[];
 };
 
 export const blogPosts: BlogPost[] = [
@@ -1326,6 +1339,281 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'spanplafond-premie-btw',
+    title: 'Grants and VAT for a stretch ceiling in Belgium (2026)',
+    excerpt:
+      'No Belgian region subsidises a ceiling or wall finish — a stretch ceiling included. What does count is the insulation above or behind it, and the 6% VAT rate. Here is where each region stands on 22 August 2026.',
+    datePublished: '2026-08-22',
+    dateModified: '2026-08-22',
+    author: 'STRETCH',
+    readMinutes: 7,
+    // Hero: add image: '/images/blog/spanplafond-premie-btw.jpg' once the photo exists.
+    // Belgium-specific: the Dutch/French markets + both English domains.
+    markets: ['be', 'nl', 'fr', 'en', 'uk'],
+    body: [
+      {
+        heading: 'The short answer',
+        paragraphs: [
+          'A stretch ceiling on its own does not qualify for a renovation grant in any of Belgium\'s three regions. Flanders scrapped its interior-renovation category (ceilings, interior walls, floors) on 1 July 2025 and explicitly lists plastering on walls and ceilings among the non-eligible works; Wallonia and Brussels only ever funded energy measures.',
+          'Two things do count. First, the insulation you tackle together with the ceiling — attic floor, roof, the inside of an exterior wall or a cellar ceiling. Second, the federal 6% VAT rate on the installed stretch ceiling itself, in a dwelling that is at least ten years old. For most stretch-ceiling projects that VAT rate is the only advantage, and by far the biggest one.',
+          'All three regions rewrote their rules in 2026. This article reflects the situation on 22 August 2026; always check your region\'s official simulator before you order.',
+        ],
+        links: [
+          { label: 'Premiezoeker.be (all Belgian schemes)', href: 'https://www.premiezoeker.be' },
+        ],
+      },
+      {
+        heading: 'Flanders: Mijn VerbouwPremie only for lower incomes',
+        paragraphs: [
+          'Since 1 March 2026, owner-occupiers in income categories 1 and 2 only qualify for a heat-pump or heat-pump-boiler premium. For roof, exterior wall, floor, windows and doors the premium continues for categories 3 and 4. Private landlords fall into category 1, and non-residential buildings (offices, hospitality, schools) no longer get Mijn VerbouwPremie at all.',
+          'Roughly: a single person with a taxable income up to €43,240 or a couple up to €60,520 (plus €4,420 per dependant) is in category 3 or 4. Above that — or if you fully own a second home or building plot — you are in category 1.',
+        ],
+        bullets: [
+          'Roof and attic floor: new insulation with Rd ≥ 4.5 m²K/W placed by a contractor. Category 4: 50% of the invoice excl. VAT, maximum €5,750. Category 3: 35%, maximum €4,025. Roof renovation works only count if you insulate at the same time.',
+          'Exterior wall, including from the inside: Rd ≥ 2 m²K/W for interior insulation, placed by a contractor with a certificate of competence or under an architect\'s supervision. Category 4: 50%, maximum €5,000. Category 3: 35%, maximum €3,500.',
+          'Floor: insulating a cellar ceiling or crawl space also falls under this category.',
+          'General: dwelling connected to the grid before 1 January 2006, invoice of at least €1,000 excl. VAT and no older than two years, one premium per category every five years. Apply via Mijn VerbouwLoket after the final invoice.',
+          'Never eligible: the stretch ceiling itself, plaster or plasterboard work, painting, do-it-yourself.',
+          'If you no longer qualify for the premium you may still get Mijn VerbouwLening, a loan of up to €60,000 at 0% for category 4, 0.5% for category 3 and 1.5% for category 2 (category 1 is excluded). It covers insulation and renovation of roof, walls and floors, glazing and heat pumps — not the ceiling finish. The EPC label premium has been discontinued.',
+        ],
+        links: [
+          { label: 'Mijn VerbouwPremie (official)', href: 'https://www.vlaanderen.be/bouwen-wonen-en-energie/bouwen-en-verbouwen/premies-voor-renovatie/mijn-verbouwpremie' },
+          { label: 'Simulator 2026', href: 'https://apps.energiesparen.be/simulator-mijnverbouwpremie' },
+        ],
+      },
+      {
+        heading: 'Wallonia: Primes Habitation until 30 September 2026, loans afterwards',
+        paragraphs: [
+          'Since 14 February 2025 Wallonia runs a temporary regime that merged its energy and renovation grants into Primes Habitation. Base amounts were cut by roughly 60% and a housing audit is mandatory for everything except roof and attic insulation. Every application, final invoice included, must be filed by 30 September 2026.',
+        ],
+        bullets: [
+          'Roof insulation: base €20/m² (€26 with bio-based insulation), multiplied by an income coefficient from 2 (R4) to 6 (R1) — up to €156/m². Cap: 70% of the invoice incl. VAT for R1 and R2, 50% for R3 and R4. Required thermal resistance: at least R = 5 m²K/W.',
+          'Wall insulation (cavity, inside or outside): base €8.80/m² (€12 bio-based), up to €72/m²; audit mandatory.',
+          'Conditions: dwelling at least 15 years old, works by a contractor registered with the Crossroads Bank for Enterprises, reference income up to €122,800.',
+          'Walloon residents only: a 30% tax reduction on roof insulation (R ≥ 2.5), capped at €4,120 for 2026 expenses, entered under code 3317 — cumulative with the premium and with 6% VAT.',
+          'From 1 October 2026 direct grants disappear. They are replaced by the Rénopack — an interest-free loan of which part is waived (up to 50% for income category C1, 40% for C2, 15% for C3) — and the Rénoprêt at a preferential rate for C4, landlords and co-ownerships. Support will then only be available for homes with EPB label G or F reaching at least D, or label E reaching at least C, calculated on a global quote instead of per item; the ceiling rises to €75,000 for a single-family house. The execution decrees still have to fix the details.',
+        ],
+        links: [
+          { label: 'Walloon government announcement', href: 'https://www.wallonie.be/fr/actualites/renovation-energetique-les-grandes-lignes-du-futur-regime-de-soutien-sont-connues' },
+          { label: 'Roof insulation tax reduction (FPS Finance)', href: 'https://fin.belgium.be/fr/particuliers/avantages-fiscaux/isolation-du-toit' },
+        ],
+      },
+      {
+        heading: 'Brussels: no grants for invoices dated 2025 or 2026',
+        paragraphs: [
+          'Brussels\' Renolution grants have been suspended since early 2025. No application can be filed for final invoices dated 2025 or 2026, and in February 2026 the new regional government confirmed the grants will not return in their current form. They are to be replaced by interest-free loans, start date unknown. The €56 million released in the 2026 budget only pays the backlog of 2024 files.',
+        ],
+        bullets: [
+          'What remains: the ECORENO loan from the Brussels Housing Fund (2.5% or 3.5% depending on income, reopened on 1 January 2026), municipal grants in a handful of communes, and of course the 6% VAT rate.',
+          'For reference if the scheme ever returns: the last scale paid €35, €55 or €75 per m² of roof insulation depending on income category, and interior wall insulation required R ≥ 2 m²K/W.',
+          'New since 1 January 2026: every rental in Brussels needs an EPB certificate with at least label E — one more reason landlords are insulating now.',
+        ],
+        links: [
+          { label: 'Renolution.brussels', href: 'https://renolution.brussels' },
+        ],
+      },
+      {
+        heading: '6% VAT: the advantage that does apply to a stretch ceiling',
+        paragraphs: [
+          'A stretch ceiling supplied and installed by a contractor is work on immovable property. In a dwelling first occupied at least ten years ago it carries 6% VAT instead of 21% — on the materials and on the labour. That is 15 percentage points off the whole invoice, with no file to submit.',
+        ],
+        bullets: [
+          'Conditions: the dwelling has been in use for at least ten calendar years on the date of the first invoice, is used more than half privately after the works, and the invoice is addressed to the end user — owner or tenant. Materials you buy to fit yourself stay at 21%.',
+          'Since 2022 a standard statement on the invoice replaces the old certificate; you have one month to object if the conditions are not met.',
+          'Lighting: loose fittings and lamps are excluded from the reduced rate unless they are built into a ceiling. Spots integrated in the stretch ceiling therefore follow the 6%.',
+          'Walls: wall covering cut to the size of the surface to be covered is treated as work on immovable property. A made-to-measure stretch wall system qualifies.',
+          'Not applicable: offices, hospitality and other non-residential buildings (21%), new builds under ten years old, and do-it-yourself materials.',
+        ],
+        links: [
+          { label: 'Renovation VAT rate (FPS Finance)', href: 'https://fin.belgium.be/nl/particulieren/woning/bouwen-verbouwen/verbouwen/verbouwen-btw-tarief' },
+        ],
+      },
+      {
+        heading: 'How to combine a grant with a stretch ceiling',
+        paragraphs: [
+          'Have the insulation and the stretch ceiling invoiced as two separate items. The insulation item must be at least €1,000 excl. VAT, carried out by the contractor and accompanied by the contractor\'s certificate; the stretch-ceiling item stands on its own. Both carry 6% VAT if the dwelling is old enough.',
+          'Plan the sequence: insulate first, with the vapour barrier your insulation contractor specifies, then the stretch ceiling. There is no drying time, so the ceiling can go in the day after the insulation. In Flanders you apply via Mijn VerbouwLoket as soon as you have the final invoice for the insulation; in Wallonia you meet the 30 September 2026 deadline.',
+          'Unsure about your income category, or what your municipality adds on top? The official simulators and Premiezoeker.be give you an answer in minutes. For a fixed price on the ceiling itself, a STRETCH installer in your region measures the room free of charge.',
+        ],
+        links: [
+          { label: 'Finishing a ceiling after insulation', href: '/blog/plafond-afwerken-na-isolatie' },
+          { label: 'Price guide', href: '/blog/spanplafond-prijs' },
+          { label: 'Find an installer', href: '/dealers' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'plafond-afwerken-na-isolatie',
+    title: 'Finishing a ceiling after insulation: plasterboard or stretch ceiling?',
+    excerpt:
+      'After roof, attic-floor or interior wall insulation you need a new ceiling or wall. Plaster, plasterboard or a stretch ceiling: here are the differences in time, dust, access to the insulation and VAT — and how to keep the grant for the insulation safe.',
+    datePublished: '2026-08-22',
+    dateModified: '2026-08-22',
+    author: 'STRETCH',
+    readMinutes: 6,
+    // Hero: add image: '/images/blog/plafond-afwerken-na-isolatie.jpg' once the photo exists.
+    body: [
+      {
+        heading: 'Why the finish after insulation is different',
+        paragraphs: [
+          'Insulate a pitched roof from the inside, a flat roof from below or the inside of an exterior wall, and you end up with an open build-up: insulation, a vapour barrier and a timber or metal frame. That needs a finish that looks crisp, leaves the vapour barrier intact and keeps the services reachable.',
+          'The finish decides more than looks. It decides how long the job takes, how much dust and drying time you accept, whether you can still reach the insulation and pipes later, and how the lighting is built in. It also decides which part of the invoice is eligible for a grant: the insulation is, the finish never is.',
+        ],
+      },
+      {
+        heading: 'Option 1: plasterboard, filler and paint',
+        paragraphs: [
+          'The classic route: plasterboard on the frame, joints and screw heads filled, sanded, primed and painted twice. Solid and available everywhere, but count on four to seven working days with drying times, fine dust throughout the house and a fixed construction: anyone who later needs to reach the insulation or the vapour barrier has to break the ceiling open.',
+          'On sloping ceilings and dormers the joints and junctions are the weak point too: settlement and temperature swings show up as hairline cracks in the seams.',
+        ],
+      },
+      {
+        heading: 'Option 2: a stretch ceiling as the finish',
+        paragraphs: [
+          'A stretch ceiling is tensioned into a slim perimeter profile a few centimetres below the new insulation layer. Installation usually takes one day, with no dust, no drying time and no need to empty the room. The membrane is seamless up to 5.15 m (polyester) or 6.4 m (PVC) and follows sloping planes and dormers.',
+        ],
+        bullets: [
+          'Access stays: a PVC membrane can be released from the profile and refitted, or you add an invisible inspection hatch. Handy for a leak check, extra cabling or a later change to the insulation.',
+          'Lighting is part of the system: spots, LED lines or a 48 V track are built into the ceiling — and so follow the 6% VAT rate in a dwelling older than ten years.',
+          'Acoustics: a micro-perforated membrane with an absorber above turns a freshly insulated attic room into a quiet bedroom or office straight away.',
+          'Humid rooms: PVC is unaffected by the humidity of a bathroom under the roof.',
+        ],
+        links: [
+          { label: 'Inspection hatch', href: '/products/inspection-hatch' },
+          { label: 'Acoustic stretch system', href: '/products/acoustic-stretch-system' },
+          { label: 'Stretch ceilings under a sloping roof', href: '/blog/schuin-dak' },
+        ],
+      },
+      {
+        heading: 'Vapour barrier and cavity: the technical agreements',
+        paragraphs: [
+          'A stretch ceiling is a finish, not a vapour barrier. The vapour barrier stays on the warm side of the insulation, continuous and taped, exactly as the insulation contractor specifies — in Flanders it is even a grant condition when a pitched roof is insulated from the inside. Never leave it out because a membrane is going underneath anyway.',
+          'Between insulation and membrane there is a cavity of a few centimetres. That is where pipes, cables and the recessed boxes for the spots go. Heavy items such as a ceiling fan or a large fitting hang from the structure above, not from the membrane. Agree the profile height and the spot positions before the insulation contractor finishes, so nobody has to come back.',
+          'For interior wall insulation the same applies to a stretch wall: insulation and vapour barrier first, the wall system over it, with frames for sockets and switches.',
+        ],
+        links: [
+          { label: 'Stretch wall systems', href: '/applications/walls' },
+        ],
+      },
+      {
+        heading: 'How to keep the grant for the insulation',
+        paragraphs: [
+          'In Flanders an owner-occupier in income category 3 or 4 gets a Mijn VerbouwPremie for roof or attic-floor insulation (Rd ≥ 4.5) and for insulation on the inside of an exterior wall (Rd ≥ 2, by a certified contractor or under an architect\'s supervision). In Wallonia the Primes Habitation for roof and wall insulation run until 30 September 2026. In Brussels there are no regional grants in 2026.',
+        ],
+        bullets: [
+          'Ask for two separate items on the quote and the invoice: insulation (with the contractor\'s certificate, at least €1,000 excl. VAT) and ceiling finish.',
+          'The finish is never eligible — plaster and plasterboard included — so a mixed invoice only makes the file harder.',
+          'Both items get 6% VAT if the dwelling has been in use for at least ten years and the contractor supplies and installs.',
+          'File the grant after the final invoice for the insulation; in Flanders via Mijn VerbouwLoket, within two years.',
+        ],
+        links: [
+          { label: 'Grants and VAT for a stretch ceiling in Belgium', href: '/blog/spanplafond-premie-btw' },
+        ],
+      },
+      {
+        heading: 'What it costs and how to plan it',
+        paragraphs: [
+          'Count on roughly €70 to €200 per m² excl. VAT, installed, for a stretch ceiling depending on type and lighting; a plasterboard ceiling with filling and painting usually lands between €35 and €70 per m² but takes a week on site. The gap narrows as soon as you count the spots, the acoustics and the lost days.',
+          'A practical schedule: days one and two insulation and vapour barrier, day three the stretch ceiling, the lights on that same evening. A STRETCH installer in your region measures the room free of charge and matches the profiles to the insulation contractor\'s frame.',
+        ],
+        links: [
+          { label: 'Price guide', href: '/blog/spanplafond-prijs' },
+          { label: 'Find an installer', href: '/dealers' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'plafond-renoveren-opties',
+    title: 'Renovating a ceiling: the four options compared (2026)',
+    excerpt:
+      'Re-plaster, plasterboard, timber slats or a stretch ceiling? What each option costs per m², how long the job takes, how much dust you accept and what the VAT rate does — so you choose on the basis of your ceiling, not out of habit.',
+    datePublished: '2026-08-22',
+    dateModified: '2026-08-22',
+    author: 'STRETCH',
+    readMinutes: 6,
+    // Hero: add image: '/images/blog/plafond-renoveren-opties.jpg' once the photo exists.
+    body: [
+      {
+        heading: 'The short answer',
+        paragraphs: [
+          'For an old ceiling with cracks, stains or a dated finish there are four realistic routes: re-plastering (or filling and painting), a new plasterboard ceiling, timber slats or panels, and a stretch ceiling. Per square metre they sit closer together than most people think; the difference is in the time on site, the dust, the access to what is above and the lifespan.',
+          'Rule of thumb: if the substrate is sound and flat, repainting or filling is cheapest. If the ceiling is cracked, uneven, full of pipes, or you want to add lighting and acoustics, a stretch ceiling wins on total cost and time. Plasterboard sits in between; slats are a style choice.',
+        ],
+      },
+      {
+        heading: 'Option 1: re-plastering, filling and painting',
+        paragraphs: [
+          'Small cracks, a yellowed paint layer or a slightly uneven ceiling: filling, sanding and two coats of paint will do, or a new plaster skim for larger damage. Indicatively €10 to €20 per m² for painting and €25 to €45 per m² for re-plastering, excl. VAT — at 6% VAT in a dwelling older than ten years.',
+          'Downsides: the room must be emptied and covered, fine dust gets everywhere, drying times dictate the schedule and a structural crack usually comes back. Pipes or an uneven concrete slab stay visible.',
+        ],
+        links: [
+          { label: 'Repairing cracks in a ceiling', href: '/blog/scheuren-in-plafond-herstellen' },
+        ],
+      },
+      {
+        heading: 'Option 2: a new plasterboard ceiling',
+        paragraphs: [
+          'A suspended plasterboard ceiling on a metal frame hides pipes and unevenness and allows spots. Indicatively €35 to €70 per m² including filling and painting, excl. VAT. It is a fixed construction: four to seven working days with drying times, and later access to the services only by demolition.',
+          'The result is classic and solid, but the joints remain the weak point — in large spans and with temperature swings, hairline cracks in the seams after a few years are common.',
+        ],
+      },
+      {
+        heading: 'Option 3: timber slats or panels',
+        paragraphs: [
+          'Slats add warmth and character and are relatively quick to fit: indicatively €40 to €90 per m² excl. VAT depending on timber and finish. They do need a frame, leave less freedom for lighting and require maintenance. If you already have a dated slatted ceiling, it is often smarter to hang a stretch ceiling underneath it than to tear it down.',
+        ],
+        links: [
+          { label: 'Renovating a wooden slatted ceiling', href: '/blog/houten-planchetten-plafond-renoveren-of-vernieuwen' },
+        ],
+      },
+      {
+        heading: 'Option 4: a stretch ceiling',
+        paragraphs: [
+          'A PVC or polyester membrane is tensioned into a slim profile along the walls, a few centimetres below the existing ceiling. Everything above it — cracks, slats, pipes, an uneven concrete slab — disappears behind one seamless plane. Installed in one day, without dust, without drying time and with the furniture still in the room.',
+        ],
+        bullets: [
+          'Price: roughly €70 to €200 per m² excl. VAT, installed; a plain matte white ceiling sits at the bottom, backlit or printed at the top.',
+          'Built-in lighting, acoustic absorption, a starry sky or a print all live in the same system.',
+          'Access: PVC is removable and can be fitted with an invisible inspection hatch.',
+          'Lifespan: decades without repainting; washable; unaffected by humidity in bathrooms and kitchens.',
+          'VAT: 6% on materials and installation in a dwelling older than ten years, built-in spots included.',
+        ],
+        links: [
+          { label: 'Price guide', href: '/blog/spanplafond-prijs' },
+          { label: 'PVC stretch ceiling', href: '/products/pvc-stretch-ceiling' },
+          { label: 'Polyester stretch ceiling', href: '/products/polyester-stretch-ceiling' },
+        ],
+      },
+      {
+        heading: 'Comparison at a glance',
+        paragraphs: [],
+        bullets: [
+          'Cost per m² (excl. VAT, indicative): painting €10–20 · re-plastering €25–45 · plasterboard €35–70 · slats €40–90 · stretch ceiling €70–200.',
+          'Time on site for a 30 m² living room: painting 1–2 days · re-plastering 3–5 days · plasterboard 4–7 days · slats 2–3 days · stretch ceiling 1 day.',
+          'Dust and drying time: plaster and plasterboard a lot · slats little · stretch ceiling none.',
+          'Hides pipes and unevenness: plaster no · plasterboard yes · slats yes · stretch ceiling yes.',
+          'Access afterwards: plaster and plasterboard no · slats limited · stretch ceiling yes (PVC).',
+          'Lighting and acoustics built in: plasterboard partly · stretch ceiling fully.',
+          'Grants: no finish is eligible anywhere in Belgium; only the insulation above it. VAT: 6% for every option if a contractor supplies and installs in a dwelling older than ten years.',
+        ],
+      },
+      {
+        heading: 'Which option for which ceiling?',
+        paragraphs: [
+          'Sound, flat ceiling with a tired paint layer: paint. Cracks in an old plaster ceiling: find the cause first, then fill — or, if they keep coming back, span over it. Slats you are tired of: span over them instead of demolishing. Pipes, uneven concrete or a renovation with new lighting and acoustics: stretch ceiling. Plasterboard still makes sense where a heavy appliance has to hang from the ceiling or where you deliberately want a classic, fixed construction.',
+          'If you are insulating in the same phase, choose the finish only after the insulation; the grant attaches to the insulation, not to the ceiling. For a fixed price, a STRETCH installer from your region measures the room free of charge.',
+        ],
+        links: [
+          { label: 'Finishing a ceiling after insulation', href: '/blog/plafond-afwerken-na-isolatie' },
+          { label: 'Grants and VAT in Belgium', href: '/blog/spanplafond-premie-btw' },
+          { label: 'Find an installer', href: '/dealers' },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
@@ -1333,6 +1621,12 @@ export function getBlogPost(slug: string): BlogPost | undefined {
 }
 
 export const blogSlugs = blogPosts.map((p) => p.slug);
+
+/** Posts visible on a locale — a post with `markets` exists ONLY there. The
+ *  single source of the market rule: every place that lists posts uses this. */
+export function blogPostsFor(locale: Locale): BlogPost[] {
+  return blogPosts.filter((p) => !p.markets || p.markets.includes(locale));
+}
 
 // ---------------------------------------------------------------------------
 // Global FAQ (for /faq). Drafted from standard B2B/B2C questions in the

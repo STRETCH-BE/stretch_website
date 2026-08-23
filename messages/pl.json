@@ -4231,6 +4231,323 @@
             ]
           }
         ]
+      },
+      "spanplafond-premie-btw": {
+        "title": "Grants and VAT for a stretch ceiling in Belgium (2026)",
+        "excerpt": "No Belgian region subsidises a ceiling or wall finish — a stretch ceiling included. What does count is the insulation above or behind it, and the 6% VAT rate. Here is where each region stands on 22 August 2026.",
+        "body": [
+          {
+            "heading": "The short answer",
+            "paragraphs": [
+              "A stretch ceiling on its own does not qualify for a renovation grant in any of Belgium's three regions. Flanders scrapped its interior-renovation category (ceilings, interior walls, floors) on 1 July 2025 and explicitly lists plastering on walls and ceilings among the non-eligible works; Wallonia and Brussels only ever funded energy measures.",
+              "Two things do count. First, the insulation you tackle together with the ceiling — attic floor, roof, the inside of an exterior wall or a cellar ceiling. Second, the federal 6% VAT rate on the installed stretch ceiling itself, in a dwelling that is at least ten years old. For most stretch-ceiling projects that VAT rate is the only advantage, and by far the biggest one.",
+              "All three regions rewrote their rules in 2026. This article reflects the situation on 22 August 2026; always check your region's official simulator before you order."
+            ],
+            "links": [
+              {
+                "label": "Premiezoeker.be (all Belgian schemes)",
+                "href": "https://www.premiezoeker.be"
+              }
+            ]
+          },
+          {
+            "heading": "Flanders: Mijn VerbouwPremie only for lower incomes",
+            "paragraphs": [
+              "Since 1 March 2026, owner-occupiers in income categories 1 and 2 only qualify for a heat-pump or heat-pump-boiler premium. For roof, exterior wall, floor, windows and doors the premium continues for categories 3 and 4. Private landlords fall into category 1, and non-residential buildings (offices, hospitality, schools) no longer get Mijn VerbouwPremie at all.",
+              "Roughly: a single person with a taxable income up to €43,240 or a couple up to €60,520 (plus €4,420 per dependant) is in category 3 or 4. Above that — or if you fully own a second home or building plot — you are in category 1."
+            ],
+            "bullets": [
+              "Roof and attic floor: new insulation with Rd ≥ 4.5 m²K/W placed by a contractor. Category 4: 50% of the invoice excl. VAT, maximum €5,750. Category 3: 35%, maximum €4,025. Roof renovation works only count if you insulate at the same time.",
+              "Exterior wall, including from the inside: Rd ≥ 2 m²K/W for interior insulation, placed by a contractor with a certificate of competence or under an architect's supervision. Category 4: 50%, maximum €5,000. Category 3: 35%, maximum €3,500.",
+              "Floor: insulating a cellar ceiling or crawl space also falls under this category.",
+              "General: dwelling connected to the grid before 1 January 2006, invoice of at least €1,000 excl. VAT and no older than two years, one premium per category every five years. Apply via Mijn VerbouwLoket after the final invoice.",
+              "Never eligible: the stretch ceiling itself, plaster or plasterboard work, painting, do-it-yourself.",
+              "If you no longer qualify for the premium you may still get Mijn VerbouwLening, a loan of up to €60,000 at 0% for category 4, 0.5% for category 3 and 1.5% for category 2 (category 1 is excluded). It covers insulation and renovation of roof, walls and floors, glazing and heat pumps — not the ceiling finish. The EPC label premium has been discontinued."
+            ],
+            "links": [
+              {
+                "label": "Mijn VerbouwPremie (official)",
+                "href": "https://www.vlaanderen.be/bouwen-wonen-en-energie/bouwen-en-verbouwen/premies-voor-renovatie/mijn-verbouwpremie"
+              },
+              {
+                "label": "Simulator 2026",
+                "href": "https://apps.energiesparen.be/simulator-mijnverbouwpremie"
+              }
+            ]
+          },
+          {
+            "heading": "Wallonia: Primes Habitation until 30 September 2026, loans afterwards",
+            "paragraphs": [
+              "Since 14 February 2025 Wallonia runs a temporary regime that merged its energy and renovation grants into Primes Habitation. Base amounts were cut by roughly 60% and a housing audit is mandatory for everything except roof and attic insulation. Every application, final invoice included, must be filed by 30 September 2026."
+            ],
+            "bullets": [
+              "Roof insulation: base €20/m² (€26 with bio-based insulation), multiplied by an income coefficient from 2 (R4) to 6 (R1) — up to €156/m². Cap: 70% of the invoice incl. VAT for R1 and R2, 50% for R3 and R4. Required thermal resistance: at least R = 5 m²K/W.",
+              "Wall insulation (cavity, inside or outside): base €8.80/m² (€12 bio-based), up to €72/m²; audit mandatory.",
+              "Conditions: dwelling at least 15 years old, works by a contractor registered with the Crossroads Bank for Enterprises, reference income up to €122,800.",
+              "Walloon residents only: a 30% tax reduction on roof insulation (R ≥ 2.5), capped at €4,120 for 2026 expenses, entered under code 3317 — cumulative with the premium and with 6% VAT.",
+              "From 1 October 2026 direct grants disappear. They are replaced by the Rénopack — an interest-free loan of which part is waived (up to 50% for income category C1, 40% for C2, 15% for C3) — and the Rénoprêt at a preferential rate for C4, landlords and co-ownerships. Support will then only be available for homes with EPB label G or F reaching at least D, or label E reaching at least C, calculated on a global quote instead of per item; the ceiling rises to €75,000 for a single-family house. The execution decrees still have to fix the details."
+            ],
+            "links": [
+              {
+                "label": "Walloon government announcement",
+                "href": "https://www.wallonie.be/fr/actualites/renovation-energetique-les-grandes-lignes-du-futur-regime-de-soutien-sont-connues"
+              },
+              {
+                "label": "Roof insulation tax reduction (FPS Finance)",
+                "href": "https://fin.belgium.be/fr/particuliers/avantages-fiscaux/isolation-du-toit"
+              }
+            ]
+          },
+          {
+            "heading": "Brussels: no grants for invoices dated 2025 or 2026",
+            "paragraphs": [
+              "Brussels' Renolution grants have been suspended since early 2025. No application can be filed for final invoices dated 2025 or 2026, and in February 2026 the new regional government confirmed the grants will not return in their current form. They are to be replaced by interest-free loans, start date unknown. The €56 million released in the 2026 budget only pays the backlog of 2024 files."
+            ],
+            "bullets": [
+              "What remains: the ECORENO loan from the Brussels Housing Fund (2.5% or 3.5% depending on income, reopened on 1 January 2026), municipal grants in a handful of communes, and of course the 6% VAT rate.",
+              "For reference if the scheme ever returns: the last scale paid €35, €55 or €75 per m² of roof insulation depending on income category, and interior wall insulation required R ≥ 2 m²K/W.",
+              "New since 1 January 2026: every rental in Brussels needs an EPB certificate with at least label E — one more reason landlords are insulating now."
+            ],
+            "links": [
+              {
+                "label": "Renolution.brussels",
+                "href": "https://renolution.brussels"
+              }
+            ]
+          },
+          {
+            "heading": "6% VAT: the advantage that does apply to a stretch ceiling",
+            "paragraphs": [
+              "A stretch ceiling supplied and installed by a contractor is work on immovable property. In a dwelling first occupied at least ten years ago it carries 6% VAT instead of 21% — on the materials and on the labour. That is 15 percentage points off the whole invoice, with no file to submit."
+            ],
+            "bullets": [
+              "Conditions: the dwelling has been in use for at least ten calendar years on the date of the first invoice, is used more than half privately after the works, and the invoice is addressed to the end user — owner or tenant. Materials you buy to fit yourself stay at 21%.",
+              "Since 2022 a standard statement on the invoice replaces the old certificate; you have one month to object if the conditions are not met.",
+              "Lighting: loose fittings and lamps are excluded from the reduced rate unless they are built into a ceiling. Spots integrated in the stretch ceiling therefore follow the 6%.",
+              "Walls: wall covering cut to the size of the surface to be covered is treated as work on immovable property. A made-to-measure stretch wall system qualifies.",
+              "Not applicable: offices, hospitality and other non-residential buildings (21%), new builds under ten years old, and do-it-yourself materials."
+            ],
+            "links": [
+              {
+                "label": "Renovation VAT rate (FPS Finance)",
+                "href": "https://fin.belgium.be/nl/particulieren/woning/bouwen-verbouwen/verbouwen/verbouwen-btw-tarief"
+              }
+            ]
+          },
+          {
+            "heading": "How to combine a grant with a stretch ceiling",
+            "paragraphs": [
+              "Have the insulation and the stretch ceiling invoiced as two separate items. The insulation item must be at least €1,000 excl. VAT, carried out by the contractor and accompanied by the contractor's certificate; the stretch-ceiling item stands on its own. Both carry 6% VAT if the dwelling is old enough.",
+              "Plan the sequence: insulate first, with the vapour barrier your insulation contractor specifies, then the stretch ceiling. There is no drying time, so the ceiling can go in the day after the insulation. In Flanders you apply via Mijn VerbouwLoket as soon as you have the final invoice for the insulation; in Wallonia you meet the 30 September 2026 deadline.",
+              "Unsure about your income category, or what your municipality adds on top? The official simulators and Premiezoeker.be give you an answer in minutes. For a fixed price on the ceiling itself, a STRETCH installer in your region measures the room free of charge."
+            ],
+            "links": [
+              {
+                "label": "Finishing a ceiling after insulation",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Price guide",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Find an installer",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-afwerken-na-isolatie": {
+        "title": "Wykończenie sufitu po ociepleniu: płyta gipsowo-kartonowa czy sufit napinany?",
+        "excerpt": "Po ociepleniu dachu, stropu poddasza lub ściany od wewnątrz potrzebny jest nowy sufit lub nowa ściana. Tynk, płyta gipsowo-kartonowa czy sufit napinany: oto różnice w czasie, kurzu i dostępie do izolacji — i sposób, by nie stracić dotacji na ocieplenie.",
+        "body": [
+          {
+            "heading": "Dlaczego wykończenie po ociepleniu jest inne",
+            "paragraphs": [
+              "Kto ociepla dach skośny od wewnątrz, dach płaski od spodu albo wewnętrzną stronę ściany zewnętrznej, kończy z otwartym układem warstw: izolacja, paroizolacja i ruszt drewniany lub metalowy. Potrzebne jest na to wykończenie, które wygląda estetycznie, nie narusza paroizolacji i pozostawia dostęp do instalacji.",
+              "To wykończenie decyduje o czymś więcej niż wygląd. Decyduje, jak długo potrwają prace, ile kurzu i czasu schnięcia trzeba zaakceptować, czy później będzie jeszcze dostęp do izolacji i przewodów oraz jak zostanie wbudowane oświetlenie. Decyduje też, która część faktury podlega dofinansowaniu: izolacja tak, wykończenie nigdy."
+            ]
+          },
+          {
+            "heading": "Opcja 1: płyta gipsowo-kartonowa, szpachlowanie i malowanie",
+            "paragraphs": [
+              "Klasyczna droga: płyty gipsowo-kartonowe na ruszcie, szpachlowanie spoin i łbów wkrętów, szlifowanie, gruntowanie i dwie warstwy farby. Solidne i wszędzie dostępne, ale trzeba liczyć się z czterema do siedmiu dniami roboczymi z czasem schnięcia, drobnym pyłem w całym domu i stałą konstrukcją: kto później będzie musiał dostać się do izolacji lub paroizolacji, musi rozkuć sufit.",
+              "Przy skosach i lukarnach słabym punktem są ponadto spoiny i połączenia: osiadanie budynku i wahania temperatury ujawniają się jako włoskowate pęknięcia w fugach."
+            ]
+          },
+          {
+            "heading": "Opcja 2: sufit napinany jako wykończenie",
+            "paragraphs": [
+              "Sufit napinany rozpina się w smukłym profilu wzdłuż ścian, kilka centymetrów pod nową warstwą izolacji. Montaż trwa zwykle jeden dzień — bez kurzu, bez czasu schnięcia i bez opróżniania pomieszczenia. Membrana jest bezszwowa do 5,15 m (poliester) lub 6,4 m (PVC) i podąża także za skosami i lukarnami."
+            ],
+            "bullets": [
+              "Dostęp pozostaje: membranę PVC można wypiąć z profilu i założyć ponownie albo przewidzieć niewidoczną klapę rewizyjną. Przydatne przy kontroli szczelności, dodatkowych przewodach lub późniejszej zmianie izolacji.",
+              "Oświetlenie jest częścią systemu: spoty, linie LED lub szynoprzewód 48 V zostają wbudowane w sufit — bez dodatkowej konstrukcji.",
+              "Akustyka: mikroperforowana membrana z absorberem nad nią zamienia świeżo ocieplony pokój na poddaszu od razu w cichą sypialnię lub gabinet.",
+              "Pomieszczenia wilgotne: PVC jest odporne na wilgoć łazienki pod dachem."
+            ],
+            "links": [
+              {
+                "label": "Klapa rewizyjna",
+                "href": "/products/inspection-hatch"
+              },
+              {
+                "label": "Akustyczny sufit napinany",
+                "href": "/products/acoustic-stretch-system"
+              },
+              {
+                "label": "Sufit napinany pod dachem skośnym",
+                "href": "/blog/schuin-dak"
+              }
+            ]
+          },
+          {
+            "heading": "Paroizolacja i pustka montażowa: ustalenia techniczne",
+            "paragraphs": [
+              "Sufit napinany to wykończenie, nie paroizolacja. Paroizolacja zostaje po ciepłej stronie izolacji, ciągła i sklejona taśmą, dokładnie tak, jak przewiduje wykonawca ocieplenia. Nigdy nie wolno jej pomijać tylko dlatego, że i tak pod spodem znajdzie się membrana.",
+              "Między izolacją a membraną pozostaje pustka kilku centymetrów. Mieszczą się w niej przewody, kable i puszki montażowe spotów. Ciężkie elementy, jak wentylator sufitowy czy duża oprawa, wiesza się na konstrukcji powyżej, nie na membranie. Wysokość profilu i pozycje spotów należy ustalić, zanim wykonawca ocieplenia skończy pracę — wtedy nikt nie musi wracać.",
+              "Przy ociepleniu ścian od wewnątrz to samo dotyczy ściany napinanej: najpierw izolacja i paroizolacja, potem system ścienny, z ramkami na gniazdka i włączniki."
+            ],
+            "links": [
+              {
+                "label": "Napinane systemy ścienne",
+                "href": "/applications/walls"
+              }
+            ]
+          },
+          {
+            "heading": "Jak nie stracić dotacji na ocieplenie",
+            "paragraphs": [
+              "Wiele krajów wspiera ocieplenie dachu, stropu i ścian dotacjami — a tam, gdzie taki program istnieje, dotyczy on izolacji, nigdy wykończenia pod nią. Dlatego na ofercie i fakturze trzeba trzymać jedno i drugie osobno."
+            ],
+            "bullets": [
+              "Proszę poprosić o dwie osobne pozycje na ofercie i fakturze: izolacja (z danymi produktu i powierzchnią, których wymaga program) oraz wykończenie sufitu.",
+              "Wykończenie nigdy nie podlega dofinansowaniu — tynk i płyta gipsowo-kartonowa również nie — więc mieszana faktura tylko utrudnia wniosek.",
+              "VAT rządzi się przepisami krajowymi; w wielu krajach remonty starszych mieszkań objęte są stawką obniżoną — warto sprawdzić przed podpisaniem umowy, co ma zastosowanie.",
+              "Wniosek o dotację składa się po fakturze końcowej za izolację, w terminie przewidzianym przez program."
+            ]
+          },
+          {
+            "heading": "Ile to kosztuje i jak to zaplanować",
+            "paragraphs": [
+              "Za sufit napinany trzeba liczyć orientacyjnie od 70 do 200 euro za m² netto, z montażem, zależnie od typu i oświetlenia; sufit z płyt gipsowo-kartonowych ze szpachlowaniem i malowaniem kosztuje zwykle od 35 do 70 euro za m², ale zajmuje tydzień prac. Różnica maleje, gdy doliczyć spoty, akustykę i stracone dni.",
+              "Praktyczny harmonogram: dzień pierwszy i drugi izolacja i paroizolacja, dzień trzeci sufit napinany, tego samego wieczoru działa oświetlenie. Instalator STRETCH z Państwa regionu bezpłatnie wykona pomiar i dopasuje profile do rusztu wykonawcy ocieplenia."
+            ],
+            "links": [
+              {
+                "label": "Przewodnik po cenach",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Znajdź instalatora",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-renoveren-opties": {
+        "title": "Remont sufitu: cztery opcje w porównaniu (2026)",
+        "excerpt": "Ponowne tynkowanie, płyta gipsowo-kartonowa, boazeria czy sufit napinany? Ile każda opcja kosztuje za m², jak długo trwają prace, ile kurzu trzeba zaakceptować i co robi VAT — aby wybierać na podstawie własnego sufitu, a nie z przyzwyczajenia.",
+        "body": [
+          {
+            "heading": "Krótka odpowiedź",
+            "paragraphs": [
+              "Dla starego sufitu z pęknięciami, plamami lub przestarzałym wykończeniem istnieją cztery realistyczne drogi: ponowne tynkowanie (albo szpachlowanie i malowanie), nowy sufit z płyt gipsowo-kartonowych, boazeria lub panele — i sufit napinany. W przeliczeniu na metr kwadratowy leżą bliżej siebie, niż większość ludzi sądzi; różnica tkwi w czasie prac, kurzu, dostępie do tego, co powyżej, i trwałości.",
+              "Reguła kciuka: jeśli podłoże jest zdrowe i równe, najtańsze jest malowanie lub szpachlowanie. Jeśli sufit jest popękany, nierówny, pełen przewodów albo chcą Państwo dołożyć oświetlenie i akustykę, sufit napinany wygrywa kosztem całkowitym i czasem. Płyta g-k plasuje się pośrodku; boazeria to kwestia stylu."
+            ]
+          },
+          {
+            "heading": "Opcja 1: ponowne tynkowanie, szpachlowanie i malowanie",
+            "paragraphs": [
+              "Małe pęknięcia, pożółkła warstwa farby lub lekko nierówny sufit: wystarczą szpachlowanie, szlifowanie i dwie warstwy farby, a przy większych uszkodzeniach nowa warstwa tynku. Orientacyjnie 10 do 20 euro za m² za malowanie i 25 do 45 euro za m² za ponowne tynkowanie, netto.",
+              "Wady: pomieszczenie musi być opróżnione i zabezpieczone, drobny pył wciska się wszędzie, czasy schnięcia dyktują harmonogram, a pęknięcie konstrukcyjne zwykle wraca. Przewody lub nierówny betonowy strop pozostają widoczne."
+            ],
+            "links": [
+              {
+                "label": "Naprawa pęknięć w suficie",
+                "href": "/blog/scheuren-in-plafond-herstellen"
+              }
+            ]
+          },
+          {
+            "heading": "Opcja 2: nowy sufit z płyt gipsowo-kartonowych",
+            "paragraphs": [
+              "Podwieszany sufit z płyt g-k na metalowym ruszcie ukrywa przewody i nierówności i pozwala na spoty. Orientacyjnie 35 do 70 euro za m² wraz ze szpachlowaniem i malowaniem, netto. To stała konstrukcja: cztery do siedmiu dni roboczych z czasem schnięcia, a późniejszy dostęp do instalacji tylko przez rozbiórkę.",
+              "Efekt jest klasyczny i solidny, ale spoiny pozostają słabym punktem — przy dużych płaszczyznach i wahaniach temperatury włoskowate pęknięcia w fugach po kilku latach to norma."
+            ]
+          },
+          {
+            "heading": "Opcja 3: boazeria lub panele drewniane",
+            "paragraphs": [
+              "Boazeria dodaje ciepła i charakteru i montuje się ją stosunkowo szybko: orientacyjnie 40 do 90 euro za m² netto, zależnie od gatunku drewna i wykończenia. Wymaga jednak rusztu, zostawia mniej swobody dla oświetlenia i potrzebuje konserwacji. Jeśli mają już Państwo przestarzałą boazerię, często mądrzej jest rozpiąć pod nią sufit napinany, niż ją zrywać."
+            ],
+            "links": [
+              {
+                "label": "Renowacja sufitu z boazerii",
+                "href": "/blog/houten-planchetten-plafond-renoveren-of-vernieuwen"
+              }
+            ]
+          },
+          {
+            "heading": "Opcja 4: sufit napinany",
+            "paragraphs": [
+              "Membranę z PVC lub poliestru rozpina się w smukłym profilu wzdłuż ścian, kilka centymetrów pod istniejącym sufitem. Wszystko powyżej — pęknięcia, boazeria, przewody, nierówna płyta betonowa — znika za jedną bezszwową płaszczyzną. Montaż w jeden dzień, bez kurzu, bez czasu schnięcia i z meblami w pokoju."
+            ],
+            "bullets": [
+              "Cena: około 70 do 200 euro za m² netto, z montażem; gładki matowy biały sufit leży na dole przedziału, podświetlany lub z nadrukiem na górze.",
+              "Wbudowane oświetlenie, pochłanianie dźwięku, gwiaździste niebo lub nadruk mieszczą się w tym samym systemie.",
+              "Dostęp: PVC jest demontowalne i można je wyposażyć w niewidoczną klapę rewizyjną.",
+              "Trwałość: dziesięciolecia bez malowania; powierzchnia zmywalna; odporność na wilgoć w łazience i kuchni.",
+              "VAT: obowiązują przepisy krajowe — w wielu krajach remonty starszych mieszkań objęte są stawką obniżoną; instalator podpowie, co ma zastosowanie."
+            ],
+            "links": [
+              {
+                "label": "Przewodnik po cenach",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Sufit napinany PVC",
+                "href": "/products/pvc-stretch-ceiling"
+              },
+              {
+                "label": "Sufit napinany z poliestru",
+                "href": "/products/polyester-stretch-ceiling"
+              }
+            ]
+          },
+          {
+            "heading": "Porównanie w pigułce",
+            "paragraphs": [],
+            "bullets": [
+              "Koszt za m² (netto, orientacyjnie): malowanie 10–20 € · ponowne tynkowanie 25–45 € · płyta g-k 35–70 € · boazeria 40–90 € · sufit napinany 70–200 €.",
+              "Czas prac dla salonu 30 m²: malowanie 1–2 dni · ponowne tynkowanie 3–5 dni · płyta g-k 4–7 dni · boazeria 2–3 dni · sufit napinany 1 dzień.",
+              "Kurz i czas schnięcia: tynk i płyta g-k dużo · boazeria mało · sufit napinany wcale.",
+              "Ukrywa przewody i nierówności: tynk nie · płyta g-k tak · boazeria tak · sufit napinany tak.",
+              "Dostęp po zakończeniu prac: tynk i płyta g-k nie · boazeria ograniczony · sufit napinany tak (PVC).",
+              "Oświetlenie i akustyka wbudowane: płyta g-k częściowo · sufit napinany w pełni.",
+              "Dotacje: tam, gdzie istnieją, dotyczą izolacji nad sufitem, nigdy wykończenia. VAT: według przepisów krajowych — w wielu krajach remonty objęte są stawką obniżoną."
+            ]
+          },
+          {
+            "heading": "Która opcja do którego sufitu?",
+            "paragraphs": [
+              "Zdrowy, równy sufit ze zmęczoną warstwą farby: malowanie. Pęknięcia w starym tynkowanym suficie: najpierw ustalić przyczynę, potem szpachlować — a jeśli wracają, rozpiąć nad nimi membranę. Boazeria, która się już opatrzyła: rozpiąć pod nią sufit zamiast ją zrywać. Przewody, nierówny beton albo remont z nowym oświetleniem i akustyką: sufit napinany. Płyta gipsowo-kartonowa pozostaje sensowna tam, gdzie na suficie ma wisieć ciężkie urządzenie, albo gdzie świadomie chcą Państwo klasycznej, stałej konstrukcji.",
+              "Jeśli w tej samej fazie planowane jest ocieplenie, wykończenie należy wybrać dopiero po izolacji; dotacja wiąże się z izolacją, nie z sufitem. Instalator STRETCH z Państwa regionu bezpłatnie wykona pomiar i poda stałą cenę."
+            ],
+            "links": [
+              {
+                "label": "Wykończenie sufitu po ociepleniu",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Znajdź instalatora",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
       }
     },
     "chrome": {

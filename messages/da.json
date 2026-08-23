@@ -4231,6 +4231,323 @@
             ]
           }
         ]
+      },
+      "spanplafond-premie-btw": {
+        "title": "Grants and VAT for a stretch ceiling in Belgium (2026)",
+        "excerpt": "No Belgian region subsidises a ceiling or wall finish — a stretch ceiling included. What does count is the insulation above or behind it, and the 6% VAT rate. Here is where each region stands on 22 August 2026.",
+        "body": [
+          {
+            "heading": "The short answer",
+            "paragraphs": [
+              "A stretch ceiling on its own does not qualify for a renovation grant in any of Belgium's three regions. Flanders scrapped its interior-renovation category (ceilings, interior walls, floors) on 1 July 2025 and explicitly lists plastering on walls and ceilings among the non-eligible works; Wallonia and Brussels only ever funded energy measures.",
+              "Two things do count. First, the insulation you tackle together with the ceiling — attic floor, roof, the inside of an exterior wall or a cellar ceiling. Second, the federal 6% VAT rate on the installed stretch ceiling itself, in a dwelling that is at least ten years old. For most stretch-ceiling projects that VAT rate is the only advantage, and by far the biggest one.",
+              "All three regions rewrote their rules in 2026. This article reflects the situation on 22 August 2026; always check your region's official simulator before you order."
+            ],
+            "links": [
+              {
+                "label": "Premiezoeker.be (all Belgian schemes)",
+                "href": "https://www.premiezoeker.be"
+              }
+            ]
+          },
+          {
+            "heading": "Flanders: Mijn VerbouwPremie only for lower incomes",
+            "paragraphs": [
+              "Since 1 March 2026, owner-occupiers in income categories 1 and 2 only qualify for a heat-pump or heat-pump-boiler premium. For roof, exterior wall, floor, windows and doors the premium continues for categories 3 and 4. Private landlords fall into category 1, and non-residential buildings (offices, hospitality, schools) no longer get Mijn VerbouwPremie at all.",
+              "Roughly: a single person with a taxable income up to €43,240 or a couple up to €60,520 (plus €4,420 per dependant) is in category 3 or 4. Above that — or if you fully own a second home or building plot — you are in category 1."
+            ],
+            "bullets": [
+              "Roof and attic floor: new insulation with Rd ≥ 4.5 m²K/W placed by a contractor. Category 4: 50% of the invoice excl. VAT, maximum €5,750. Category 3: 35%, maximum €4,025. Roof renovation works only count if you insulate at the same time.",
+              "Exterior wall, including from the inside: Rd ≥ 2 m²K/W for interior insulation, placed by a contractor with a certificate of competence or under an architect's supervision. Category 4: 50%, maximum €5,000. Category 3: 35%, maximum €3,500.",
+              "Floor: insulating a cellar ceiling or crawl space also falls under this category.",
+              "General: dwelling connected to the grid before 1 January 2006, invoice of at least €1,000 excl. VAT and no older than two years, one premium per category every five years. Apply via Mijn VerbouwLoket after the final invoice.",
+              "Never eligible: the stretch ceiling itself, plaster or plasterboard work, painting, do-it-yourself.",
+              "If you no longer qualify for the premium you may still get Mijn VerbouwLening, a loan of up to €60,000 at 0% for category 4, 0.5% for category 3 and 1.5% for category 2 (category 1 is excluded). It covers insulation and renovation of roof, walls and floors, glazing and heat pumps — not the ceiling finish. The EPC label premium has been discontinued."
+            ],
+            "links": [
+              {
+                "label": "Mijn VerbouwPremie (official)",
+                "href": "https://www.vlaanderen.be/bouwen-wonen-en-energie/bouwen-en-verbouwen/premies-voor-renovatie/mijn-verbouwpremie"
+              },
+              {
+                "label": "Simulator 2026",
+                "href": "https://apps.energiesparen.be/simulator-mijnverbouwpremie"
+              }
+            ]
+          },
+          {
+            "heading": "Wallonia: Primes Habitation until 30 September 2026, loans afterwards",
+            "paragraphs": [
+              "Since 14 February 2025 Wallonia runs a temporary regime that merged its energy and renovation grants into Primes Habitation. Base amounts were cut by roughly 60% and a housing audit is mandatory for everything except roof and attic insulation. Every application, final invoice included, must be filed by 30 September 2026."
+            ],
+            "bullets": [
+              "Roof insulation: base €20/m² (€26 with bio-based insulation), multiplied by an income coefficient from 2 (R4) to 6 (R1) — up to €156/m². Cap: 70% of the invoice incl. VAT for R1 and R2, 50% for R3 and R4. Required thermal resistance: at least R = 5 m²K/W.",
+              "Wall insulation (cavity, inside or outside): base €8.80/m² (€12 bio-based), up to €72/m²; audit mandatory.",
+              "Conditions: dwelling at least 15 years old, works by a contractor registered with the Crossroads Bank for Enterprises, reference income up to €122,800.",
+              "Walloon residents only: a 30% tax reduction on roof insulation (R ≥ 2.5), capped at €4,120 for 2026 expenses, entered under code 3317 — cumulative with the premium and with 6% VAT.",
+              "From 1 October 2026 direct grants disappear. They are replaced by the Rénopack — an interest-free loan of which part is waived (up to 50% for income category C1, 40% for C2, 15% for C3) — and the Rénoprêt at a preferential rate for C4, landlords and co-ownerships. Support will then only be available for homes with EPB label G or F reaching at least D, or label E reaching at least C, calculated on a global quote instead of per item; the ceiling rises to €75,000 for a single-family house. The execution decrees still have to fix the details."
+            ],
+            "links": [
+              {
+                "label": "Walloon government announcement",
+                "href": "https://www.wallonie.be/fr/actualites/renovation-energetique-les-grandes-lignes-du-futur-regime-de-soutien-sont-connues"
+              },
+              {
+                "label": "Roof insulation tax reduction (FPS Finance)",
+                "href": "https://fin.belgium.be/fr/particuliers/avantages-fiscaux/isolation-du-toit"
+              }
+            ]
+          },
+          {
+            "heading": "Brussels: no grants for invoices dated 2025 or 2026",
+            "paragraphs": [
+              "Brussels' Renolution grants have been suspended since early 2025. No application can be filed for final invoices dated 2025 or 2026, and in February 2026 the new regional government confirmed the grants will not return in their current form. They are to be replaced by interest-free loans, start date unknown. The €56 million released in the 2026 budget only pays the backlog of 2024 files."
+            ],
+            "bullets": [
+              "What remains: the ECORENO loan from the Brussels Housing Fund (2.5% or 3.5% depending on income, reopened on 1 January 2026), municipal grants in a handful of communes, and of course the 6% VAT rate.",
+              "For reference if the scheme ever returns: the last scale paid €35, €55 or €75 per m² of roof insulation depending on income category, and interior wall insulation required R ≥ 2 m²K/W.",
+              "New since 1 January 2026: every rental in Brussels needs an EPB certificate with at least label E — one more reason landlords are insulating now."
+            ],
+            "links": [
+              {
+                "label": "Renolution.brussels",
+                "href": "https://renolution.brussels"
+              }
+            ]
+          },
+          {
+            "heading": "6% VAT: the advantage that does apply to a stretch ceiling",
+            "paragraphs": [
+              "A stretch ceiling supplied and installed by a contractor is work on immovable property. In a dwelling first occupied at least ten years ago it carries 6% VAT instead of 21% — on the materials and on the labour. That is 15 percentage points off the whole invoice, with no file to submit."
+            ],
+            "bullets": [
+              "Conditions: the dwelling has been in use for at least ten calendar years on the date of the first invoice, is used more than half privately after the works, and the invoice is addressed to the end user — owner or tenant. Materials you buy to fit yourself stay at 21%.",
+              "Since 2022 a standard statement on the invoice replaces the old certificate; you have one month to object if the conditions are not met.",
+              "Lighting: loose fittings and lamps are excluded from the reduced rate unless they are built into a ceiling. Spots integrated in the stretch ceiling therefore follow the 6%.",
+              "Walls: wall covering cut to the size of the surface to be covered is treated as work on immovable property. A made-to-measure stretch wall system qualifies.",
+              "Not applicable: offices, hospitality and other non-residential buildings (21%), new builds under ten years old, and do-it-yourself materials."
+            ],
+            "links": [
+              {
+                "label": "Renovation VAT rate (FPS Finance)",
+                "href": "https://fin.belgium.be/nl/particulieren/woning/bouwen-verbouwen/verbouwen/verbouwen-btw-tarief"
+              }
+            ]
+          },
+          {
+            "heading": "How to combine a grant with a stretch ceiling",
+            "paragraphs": [
+              "Have the insulation and the stretch ceiling invoiced as two separate items. The insulation item must be at least €1,000 excl. VAT, carried out by the contractor and accompanied by the contractor's certificate; the stretch-ceiling item stands on its own. Both carry 6% VAT if the dwelling is old enough.",
+              "Plan the sequence: insulate first, with the vapour barrier your insulation contractor specifies, then the stretch ceiling. There is no drying time, so the ceiling can go in the day after the insulation. In Flanders you apply via Mijn VerbouwLoket as soon as you have the final invoice for the insulation; in Wallonia you meet the 30 September 2026 deadline.",
+              "Unsure about your income category, or what your municipality adds on top? The official simulators and Premiezoeker.be give you an answer in minutes. For a fixed price on the ceiling itself, a STRETCH installer in your region measures the room free of charge."
+            ],
+            "links": [
+              {
+                "label": "Finishing a ceiling after insulation",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Price guide",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Find an installer",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-afwerken-na-isolatie": {
+        "title": "Loftbeklædning efter isolering: gipsplade eller stretchloft?",
+        "excerpt": "Efter isolering af taget, loftsgulvet eller en ydervæg indefra skal der et nyt loft eller en ny væg til. Puds, gipsplade eller stretchloft: her er forskellene i tid, støv og adgang til isoleringen — og sådan holder du tilskuddet til isoleringen sikkert.",
+        "body": [
+          {
+            "heading": "Derfor er beklædningen efter isolering anderledes",
+            "paragraphs": [
+              "Isolerer man et skråtag indefra, et fladt tag nedefra eller indersiden af en ydervæg, ender man med en åben opbygning: isolering, dampspærre og et skelet af træ eller metal. Det kræver en beklædning, der ser skarp ud, lader dampspærren være intakt og holder installationerne tilgængelige.",
+              "Beklædningen afgør mere end udseendet. Den afgør, hvor længe arbejdet varer, hvor meget støv og tørretid du accepterer, om du senere stadig kan komme til isoleringen og rørene, og hvordan belysningen bygges ind. Og den afgør, hvilken del af fakturaen der kan få tilskud: isoleringen ja, beklædningen aldrig."
+            ]
+          },
+          {
+            "heading": "Mulighed 1: gipsplader, spartling og maling",
+            "paragraphs": [
+              "Den klassiske vej: gipsplader på skelettet, spartling af samlinger og skruehoveder, slibning, grunder og to lag maling. Solidt og til at få overalt, men regn med fire til syv arbejdsdage med tørretider, fint støv i hele huset og en fast konstruktion: Skal man senere til isoleringen eller dampspærren, må loftet brydes op.",
+              "Ved skrålofter og kviste er samlingerne desuden det svage punkt: sætninger og temperatursvingninger viser sig som hårfine revner i fugerne."
+            ]
+          },
+          {
+            "heading": "Mulighed 2: et stretchloft som beklædning",
+            "paragraphs": [
+              "Et stretchloft spændes op i en slank profil langs væggene, et par centimeter under det nye isoleringslag. Montagen tager som regel én dag — uden støv, uden tørretid og uden at rømme rummet. Membranen er sømløs op til 5,15 m (polyester) eller 6,4 m (pvc) og følger også skrå flader og kviste."
+            ],
+            "bullets": [
+              "Adgangen består: En pvc-membran kan tages ud af profilen og sættes i igen, eller du får en usynlig inspektionslem. Praktisk ved en lækagekontrol, ekstra kabler eller en senere ændring af isoleringen.",
+              "Belysningen hører til systemet: spots, LED-linjer eller en 48 V-skinne bygges ind i loftet — uden ekstra konstruktion.",
+              "Akustik: En mikroperforeret membran med absorbent ovenover gør et nyisoleret loftsværelse til et roligt sove- eller arbejdsværelse med det samme.",
+              "Fugtige rum: pvc er upåvirket af luftfugtigheden i et badeværelse under taget."
+            ],
+            "links": [
+              {
+                "label": "Inspektionslem",
+                "href": "/products/inspection-hatch"
+              },
+              {
+                "label": "Akustisk stretchloft",
+                "href": "/products/acoustic-stretch-system"
+              },
+              {
+                "label": "Stretchlofter under skråtag",
+                "href": "/blog/schuin-dak"
+              }
+            ]
+          },
+          {
+            "heading": "Dampspærre og hulrum: de tekniske aftaler",
+            "paragraphs": [
+              "Et stretchloft er en beklædning, ikke en dampspærre. Dampspærren bliver siddende på den varme side af isoleringen, ubrudt og tapet, præcis som isolatøren foreskriver. Udelad den aldrig, bare fordi der alligevel kommer en membran nedenunder.",
+              "Mellem isolering og membran er der et hulrum på nogle centimeter. Der er plads til rør, kabler og indbygningsdåserne til spots. Tunge ting som en loftventilator eller et stort armatur hænges op i konstruktionen ovenover, ikke i membranen. Aftal profilhøjde og spotplaceringer, før isolatøren er færdig — så skal ingen komme tilbage.",
+              "Ved indvendig vægisolering gælder det samme for en stretchvæg: først isolering og dampspærre, så vægsystemet ovenpå, med rammer til stikkontakter og afbrydere."
+            ],
+            "links": [
+              {
+                "label": "Stretchvægge",
+                "href": "/applications/walls"
+              }
+            ]
+          },
+          {
+            "heading": "Sådan beholder du tilskuddet til isoleringen",
+            "paragraphs": [
+              "Mange lande støtter tag-, lofts- og vægisolering med tilskud — og hvor sådan en ordning findes, gælder den isoleringen, aldrig beklædningen nedenunder. Hold derfor de to adskilt på tilbud og faktura."
+            ],
+            "bullets": [
+              "Bed om to separate poster på tilbud og faktura: isolering (med de produktdata og arealer, din ordning kræver) og loftbeklædning.",
+              "Beklædningen er aldrig tilskudsberettiget — puds og gipsplader heller ikke — så en blandet faktura gør kun sagen sværere.",
+              "Momsen følger de nationale regler; i flere lande har renoveringsarbejde på ældre boliger en nedsat sats — undersøg, hvad der gælder, før du skriver under.",
+              "Søg tilskuddet efter slutfakturaen for isoleringen, inden for ordningens frist."
+            ]
+          },
+          {
+            "heading": "Hvad det koster, og hvordan du planlægger det",
+            "paragraphs": [
+              "Regn med cirka 70 til 200 euro pr. m² ekskl. moms, monteret, for et stretchloft afhængigt af type og belysning; et gipsloft med spartling og maling lander som regel mellem 35 og 70 euro pr. m², men tager en uge på pladsen. Forskellen skrumper, så snart du regner spots, akustik og de tabte dage med.",
+              "En praktisk plan: dag et og to isolering og dampspærre, dag tre stretchloftet — og samme aften er lyset tændt. En STRETCH-montør fra din region måler rummet op gratis og afstemmer profilerne med isolatørens skelet."
+            ],
+            "links": [
+              {
+                "label": "Prisguide",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Find en montør",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-renoveren-opties": {
+        "title": "Renovering af loftet: de fire muligheder sammenlignet (2026)",
+        "excerpt": "Ny puds, gipsplader, træplancetter eller et stretchloft? Hvad hver mulighed koster pr. m², hvor længe arbejdet tager, hvor meget støv du accepterer, og hvad momsen gør — så du vælger ud fra dit loft og ikke af vane.",
+        "body": [
+          {
+            "heading": "Det korte svar",
+            "paragraphs": [
+              "For et gammelt loft med revner, pletter eller en bedaget overflade er der fire realistiske veje: ny puds (eller spartling og maling), et nyt gipsloft, træplancetter eller paneler — og et stretchloft. Pr. kvadratmeter ligger de tættere på hinanden, end de fleste tror; forskellen ligger i tiden på pladsen, støvet, adgangen til det, der er ovenover, og levetiden.",
+              "Tommelfingerregel: Er underlaget sundt og plant, er maling eller spartling billigst. Er loftet revnet, ujævnt eller fuldt af rør, eller vil du have belysning og akustik med, vinder stretchloftet på samlet pris og tid. Gips ligger midtimellem; plancetter er et stilvalg."
+            ]
+          },
+          {
+            "heading": "Mulighed 1: ny puds, spartling og maling",
+            "paragraphs": [
+              "Små revner, et gulnet malingslag eller et let ujævnt loft: Så rækker spartling, slibning og to lag maling, eller et nyt pudslag ved større skader. Vejledende 10 til 20 euro pr. m² for maling og 25 til 45 euro pr. m² for ny puds, ekskl. moms.",
+              "Ulemper: Rummet skal tømmes og dækkes af, fint støv trænger ind overalt, tørretider styrer planen, og en strukturel revne kommer som regel igen. Rør eller et ujævnt betondæk forbliver synlige."
+            ],
+            "links": [
+              {
+                "label": "Reparation af revner i loftet",
+                "href": "/blog/scheuren-in-plafond-herstellen"
+              }
+            ]
+          },
+          {
+            "heading": "Mulighed 2: et nyt gipsloft",
+            "paragraphs": [
+              "Et nedhængt gipsloft på et metalskelet skjuler rør og ujævnheder og giver plads til spots. Vejledende 35 til 70 euro pr. m² inklusive spartling og maling, ekskl. moms. Det er en fast konstruktion: fire til syv arbejdsdage med tørretider, og senere kun adgang til installationerne ved at bryde ned.",
+              "Resultatet er klassisk og solidt, men samlingerne er stadig det svage punkt — i store flader og ved temperatursvingninger er hårfine revner i fugerne efter nogle år almindelige."
+            ]
+          },
+          {
+            "heading": "Mulighed 3: træplancetter eller paneler",
+            "paragraphs": [
+              "Plancetter giver varme og karakter og er forholdsvis hurtige at montere: vejledende 40 til 90 euro pr. m² ekskl. moms, alt efter træsort og finish. De kræver dog et skelet, giver mindre frihed til belysning og skal vedligeholdes. Har du allerede et bedaget plancetloft, er det ofte klogere at spænde et stretchloft op under det end at rive det ned."
+            ],
+            "links": [
+              {
+                "label": "Renovering af et loft med træplancetter",
+                "href": "/blog/houten-planchetten-plafond-renoveren-of-vernieuwen"
+              }
+            ]
+          },
+          {
+            "heading": "Mulighed 4: et stretchloft",
+            "paragraphs": [
+              "En membran af pvc eller polyester spændes op i en slank profil langs væggene, et par centimeter under det eksisterende loft. Alt ovenover — revner, plancetter, rør, et ujævnt betondæk — forsvinder bag én sømløs flade. Monteret på én dag, uden støv, uden tørretid og med møblerne i rummet."
+            ],
+            "bullets": [
+              "Pris: cirka 70 til 200 euro pr. m² ekskl. moms, monteret; et enkelt, mat hvidt loft ligger i bunden, bagbelyst eller med print i toppen.",
+              "Indbygget belysning, akustisk absorption, en stjernehimmel eller et print bor i samme system.",
+              "Adgang: pvc kan afmonteres og udstyres med en usynlig inspektionslem.",
+              "Levetid: årtier uden maling; afvaskeligt; upåvirket af fugt i badeværelser og køkkener.",
+              "Moms: De nationale regler gælder — i flere lande har renoveringsarbejde på ældre boliger en nedsat sats; spørg din montør, hvad der gælder."
+            ],
+            "links": [
+              {
+                "label": "Prisguide",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Pvc-stretchloft",
+                "href": "/products/pvc-stretch-ceiling"
+              },
+              {
+                "label": "Polyester-stretchloft",
+                "href": "/products/polyester-stretch-ceiling"
+              }
+            ]
+          },
+          {
+            "heading": "Sammenligning med ét blik",
+            "paragraphs": [],
+            "bullets": [
+              "Pris pr. m² (ekskl. moms, vejledende): maling 10–20 € · ny puds 25–45 € · gips 35–70 € · plancetter 40–90 € · stretchloft 70–200 €.",
+              "Tid på pladsen for en stue på 30 m²: maling 1–2 dage · ny puds 3–5 dage · gips 4–7 dage · plancetter 2–3 dage · stretchloft 1 dag.",
+              "Støv og tørretid: puds og gips meget · plancetter lidt · stretchloft intet.",
+              "Skjuler rør og ujævnheder: puds nej · gips ja · plancetter ja · stretchloft ja.",
+              "Adgang bagefter: puds og gips nej · plancetter begrænset · stretchloft ja (pvc).",
+              "Belysning og akustik indbygget: gips delvist · stretchloft fuldt ud.",
+              "Tilskud: Hvor de findes, gælder de isoleringen over loftet, aldrig beklædningen. Moms: følger de nationale regler — i flere lande har renovering en nedsat sats."
+            ]
+          },
+          {
+            "heading": "Hvilken mulighed til hvilket loft?",
+            "paragraphs": [
+              "Sundt, plant loft med et træt malingslag: mal. Revner i et gammelt pudsloft: Find først årsagen, spartl så — eller spænd over, hvis de bliver ved med at komme igen. Plancetter, du er træt af: Spænd over i stedet for at rive ned. Rør, ujævn beton eller en renovering med ny belysning og akustik: stretchloft. Gips giver stadig mening, hvor et tungt apparat skal hænge i loftet, eller hvor du bevidst vil have en klassisk, fast konstruktion.",
+              "Isolerer du i samme omgang, så vælg først beklædningen efter isoleringen; tilskuddet hænger på isoleringen, ikke på loftet. For en fast pris måler en STRETCH-montør fra din region rummet op gratis."
+            ],
+            "links": [
+              {
+                "label": "Loftbeklædning efter isolering",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Find en montør",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
       }
     },
     "chrome": {

@@ -7,7 +7,7 @@ import { isValidLocale, localeFullCodes, type Locale } from '@/i18n/config';
 import { siteUrl } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
-import { blogPosts } from '@/lib/content';
+import { blogPostsFor } from '@/lib/content';
 import { localizeBlogPost, type BlogPostMessages } from '@/lib/localize-content';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -46,7 +46,7 @@ export default async function BlogIndex({ params }: { params: { locale: string }
         </h1>
 
         <div className="blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 18 }}>
-          {blogPosts.map((base) => {
+          {blogPostsFor(locale).map((base) => {
             const p = localizeBlogPost(base, (tb.raw('posts') as Record<string, BlogPostMessages>)[base.slug]);
             return (
             <article key={p.slug} style={{ border: '1px solid var(--border)', background: '#fff', display: 'flex', flexDirection: 'column' }}>

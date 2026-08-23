@@ -4231,6 +4231,332 @@
             ]
           }
         ]
+      },
+      "spanplafond-premie-btw": {
+        "title": "Primes et TVA pour un plafond tendu en Belgique (2026)",
+        "excerpt": "Aucune Région belge ne subsidie une finition de plafond ou de mur, plafond tendu compris. Ce qui compte : l'isolation au-dessus ou derrière, et le taux de TVA de 6 %. Voici la situation Région par Région au 22 août 2026.",
+        "body": [
+          {
+            "heading": "La réponse courte",
+            "paragraphs": [
+              "Un plafond tendu en tant que tel n'ouvre droit à aucune prime à la rénovation dans les trois Régions belges. La Flandre a supprimé sa catégorie rénovation intérieure (plafonds, murs intérieurs, sols) le 1er juillet 2025 et cite expressément le plafonnage des murs et plafonds parmi les travaux non éligibles ; la Wallonie et Bruxelles n'ont jamais financé que des travaux économiseurs d'énergie.",
+              "Deux choses comptent en revanche. D'abord l'isolation que vous réalisez en même temps que le plafond : plancher du grenier, toiture, face intérieure d'un mur extérieur ou plafond de cave. Ensuite le taux de TVA fédéral de 6 % sur le plafond tendu posé lui-même, dans un logement d'au moins dix ans. Pour la plupart des projets de plafond tendu, ce taux de TVA est le seul avantage, et de loin le plus important.",
+              "Les trois Régions ont réécrit leurs règles en 2026. Cet article reflète la situation au 22 août 2026 ; vérifiez toujours le simulateur officiel de votre Région avant de commander."
+            ],
+            "links": [
+              {
+                "label": "Énergie Wallonie (portail officiel)",
+                "href": "https://energie.wallonie.be"
+              }
+            ]
+          },
+          {
+            "heading": "Wallonie : Primes Habitation jusqu'au 30 septembre 2026, puis des prêts",
+            "paragraphs": [
+              "Depuis le 14 février 2025, la Wallonie applique un régime temporaire qui a fusionné les primes Énergie et Rénovation en Primes Habitation. Les montants de base ont été réduits d'environ 60 % et l'audit logement est obligatoire pour tout, sauf l'isolation de la toiture et des combles. Toute demande, facture finale comprise, doit être introduite au plus tard le 30 septembre 2026."
+            ],
+            "bullets": [
+              "Isolation de la toiture : montant de base de 20 €/m² (26 € avec un isolant biosourcé), multiplié par un coefficient de revenus de 2 (R4) à 6 (R1), jusqu'à 156 €/m². Plafond : 70 % de la facture TVAC pour R1 et R2, 50 % pour R3 et R4. Résistance thermique exigée : R ≥ 5 m²K/W.",
+              "Isolation des murs (coulisse, intérieur ou extérieur) : montant de base de 8,80 €/m² (12 € biosourcé), jusqu'à 72 €/m² ; audit obligatoire.",
+              "Conditions : logement d'au moins 15 ans, travaux réalisés par un entrepreneur inscrit à la Banque-Carrefour des Entreprises, revenu de référence jusqu'à 122 800 €.",
+              "Réservé aux résidents wallons : une réduction d'impôt de 30 % sur l'isolation de la toiture (R ≥ 2,5), plafonnée à 4 120 € pour les dépenses de 2026, à inscrire au code 3317 de la déclaration. Cumulable avec la prime et avec la TVA à 6 %.",
+              "À partir du 1er octobre 2026, les primes directes disparaissent. Elles sont remplacées par le Rénopack, un prêt à taux zéro dont une partie n'est pas à rembourser (jusqu'à 50 % pour la catégorie de revenus C1, 40 % pour C2, 15 % pour C3), et par le Rénoprêt à taux préférentiel pour C4, les bailleurs et les copropriétés. Le soutien sera alors réservé aux logements PEB G ou F atteignant au moins le label D, ou PEB E atteignant au moins le label C, calculé sur un devis global et non plus poste par poste ; le plafond passe à 75 000 € pour une maison unifamiliale. Les arrêtés d'exécution doivent encore en fixer les détails."
+            ],
+            "links": [
+              {
+                "label": "Annonce du Gouvernement wallon",
+                "href": "https://www.wallonie.be/fr/actualites/renovation-energetique-les-grandes-lignes-du-futur-regime-de-soutien-sont-connues"
+              },
+              {
+                "label": "Réduction d'impôt isolation du toit (SPF Finances)",
+                "href": "https://fin.belgium.be/fr/particuliers/avantages-fiscaux/isolation-du-toit"
+              }
+            ]
+          },
+          {
+            "heading": "Bruxelles : pas de primes pour les factures de 2025 et 2026",
+            "paragraphs": [
+              "Les primes Renolution sont suspendues depuis début 2025. Aucune demande ne peut être introduite pour une facture de solde datée de 2025 ou 2026, et le nouveau Gouvernement bruxellois a confirmé en février 2026 que les primes ne reviendraient pas sous leur forme actuelle. Elles seront remplacées par des prêts à taux zéro, dont la date de lancement n'est pas connue. Les 56 millions d'euros débloqués au budget 2026 servent uniquement à payer l'arriéré des dossiers de 2024."
+            ],
+            "bullets": [
+              "Ce qui reste : le crédit ECORENO du Fonds du Logement bruxellois (2,5 % ou 3,5 % selon les revenus, rouvert depuis le 1er janvier 2026), des primes communales dans une poignée de communes et, bien sûr, la TVA à 6 %.",
+              "Pour référence, si le dispositif renaissait un jour : le dernier barème accordait 35, 55 ou 75 € par m² d'isolation de toiture selon la catégorie de revenus, et l'isolation des murs par l'intérieur exigeait R ≥ 2 m²K/W.",
+              "Nouveau depuis le 1er janvier 2026 : toute mise en location à Bruxelles exige un certificat PEB de label E au minimum, une raison de plus pour laquelle les bailleurs isolent maintenant."
+            ],
+            "links": [
+              {
+                "label": "Renolution.brussels",
+                "href": "https://renolution.brussels"
+              }
+            ]
+          },
+          {
+            "heading": "Flandre : Mijn VerbouwPremie réservée aux revenus modestes",
+            "paragraphs": [
+              "Depuis le 1er mars 2026, les propriétaires-occupants des catégories de revenus 1 et 2 n'ont plus droit qu'à une prime pour pompe à chaleur ou chauffe-eau thermodynamique. Pour la toiture, les murs extérieurs, les sols, les fenêtres et les portes, la prime subsiste pour les catégories 3 et 4. Les bailleurs privés relèvent de la catégorie 1, et les bâtiments non résidentiels (bureaux, horeca, écoles) ne reçoivent plus aucune Mijn VerbouwPremie.",
+              "En gros : un isolé avec un revenu imposable jusqu'à 43 240 € ou un couple jusqu'à 60 520 € (plus 4 420 € par personne à charge) est en catégorie 3 ou 4. Au-delà, ou si vous possédez en pleine propriété une seconde habitation ou un terrain à bâtir, vous êtes en catégorie 1."
+            ],
+            "bullets": [
+              "Toiture et plancher du grenier : nouvelle isolation Rd ≥ 4,5 m²K/W posée par un entrepreneur. Catégorie 4 : 50 % de la facture hors TVA, maximum 5 750 €. Catégorie 3 : 35 %, maximum 4 025 €. Les travaux de rénovation de toiture ne comptent que si vous isolez en même temps.",
+              "Mur extérieur, y compris par l'intérieur : Rd ≥ 2 m²K/W pour l'isolation intérieure, posée par un entrepreneur titulaire d'un certificat de compétence ou sous la supervision d'un architecte. Catégorie 4 : 50 %, maximum 5 000 €. Catégorie 3 : 35 %, maximum 3 500 €.",
+              "Général : logement raccordé au réseau avant le 1er janvier 2006, facture d'au moins 1 000 € hors TVA et de moins de deux ans, une prime par catégorie tous les cinq ans. Demande via Mijn VerbouwLoket après la facture finale.",
+              "Jamais éligibles : le plafond tendu lui-même, le plafonnage ou le gyproc, la peinture, le bricolage.",
+              "Sans prime, le Mijn VerbouwLening reste accessible jusqu'à 60 000 € : 0 % pour la catégorie 4, 0,5 % pour la catégorie 3 et 1,5 % pour la catégorie 2 (catégorie 1 exclue), pour l'isolation et la rénovation de la toiture, des murs et des sols, le vitrage et les pompes à chaleur, pas pour la finition du plafond."
+            ],
+            "links": [
+              {
+                "label": "Mijn VerbouwPremie (officiel)",
+                "href": "https://www.vlaanderen.be/bouwen-wonen-en-energie/bouwen-en-verbouwen/premies-voor-renovatie/mijn-verbouwpremie"
+              },
+              {
+                "label": "Simulateur 2026",
+                "href": "https://apps.energiesparen.be/simulator-mijnverbouwpremie"
+              }
+            ]
+          },
+          {
+            "heading": "TVA à 6 % : l'avantage qui s'applique bel et bien au plafond tendu",
+            "paragraphs": [
+              "Un plafond tendu fourni et posé par un entrepreneur est un travail immobilier. Dans un logement occupé pour la première fois il y a au moins dix ans, il est soumis à 6 % de TVA au lieu de 21 %, sur les matériaux comme sur la main-d'œuvre. Soit 15 points de pourcentage en moins sur toute la facture, sans dossier ni demande."
+            ],
+            "bullets": [
+              "Conditions : le logement est occupé depuis au moins dix années civiles à la date de la première facture, est utilisé à plus de la moitié comme logement privé après les travaux, et la facture est adressée au consommateur final, propriétaire ou locataire. Les matériaux que vous achetez pour les poser vous-même restent à 21 %.",
+              "Depuis 2022, une mention standard sur la facture remplace l'ancienne attestation ; vous disposez d'un mois pour contester si les conditions ne sont pas remplies.",
+              "Éclairage : les luminaires et lampes isolés sont exclus du taux réduit, sauf s'ils sont encastrés dans un plafond. Les spots intégrés au plafond tendu suivent donc les 6 %.",
+              "Murs : un revêtement mural découpé aux dimensions de la surface à couvrir est assimilé à un travail immobilier. Un système de mur tendu sur mesure en fait partie.",
+              "Non applicable : bureaux, horeca et autres bâtiments non résidentiels (21 %), constructions neuves de moins de dix ans et matériaux de bricolage."
+            ],
+            "links": [
+              {
+                "label": "Taux de TVA en rénovation (SPF Finances)",
+                "href": "https://fin.belgium.be/fr/particuliers/habitation/construire-renover/renover/renover-taux-de-tva"
+              }
+            ]
+          },
+          {
+            "heading": "Comment combiner prime et plafond tendu",
+            "paragraphs": [
+              "Faites facturer l'isolation et le plafond tendu en deux postes séparés. Le poste isolation doit atteindre au moins 1 000 € hors TVA, être réalisé par l'entrepreneur et accompagné de son attestation ; le poste plafond tendu est indépendant. Les deux bénéficient de la TVA à 6 % si le logement est assez ancien.",
+              "Planifiez l'ordre : d'abord l'isolation, avec le pare-vapeur prescrit par l'isolateur, puis le plafond tendu. Il n'y a pas de temps de séchage, le plafond peut donc être posé le lendemain de l'isolation. En Wallonie, respectez la date limite du 30 septembre 2026 ; en Flandre, introduisez la demande via Mijn VerbouwLoket dès la facture finale de l'isolation.",
+              "Vous habitez en France ? Le régime est différent : TVA à 10 % sur la rénovation d'un logement de plus de deux ans (5,5 % pour les travaux d'amélioration énergétique) et aides MaPrimeRénov' pour l'isolation. Votre installateur STRETCH vous renseigne sur votre situation. Pour un prix ferme du plafond lui-même, un installateur STRETCH de votre région mesure la pièce gratuitement."
+            ],
+            "links": [
+              {
+                "label": "Finir un plafond après isolation",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Guide de prix",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Trouver un installateur",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-afwerken-na-isolatie": {
+        "title": "Finir un plafond après isolation : plaque de plâtre ou plafond tendu ?",
+        "excerpt": "Après l'isolation de la toiture, du plancher du grenier ou d'un mur par l'intérieur, il faut un nouveau plafond ou un nouveau mur. Plafonnage, plaque de plâtre ou plafond tendu : voici les différences de délai, de poussière, d'accès à l'isolation et de TVA, et comment préserver la prime pour l'isolation.",
+        "body": [
+          {
+            "heading": "Pourquoi la finition après isolation est différente",
+            "paragraphs": [
+              "Isolez une toiture inclinée par l'intérieur, une toiture plate par le dessous ou la face intérieure d'un mur extérieur, et vous obtenez une structure ouverte : isolant, pare-vapeur et ossature en bois ou en métal. Il lui faut une finition nette, qui laisse le pare-vapeur intact et garde les techniques accessibles.",
+              "Cette finition décide de bien plus que de l'aspect. Elle décide de la durée du chantier, de la poussière et du temps de séchage que vous acceptez, de la possibilité d'atteindre encore l'isolant et les conduites plus tard, et de la manière dont l'éclairage est intégré. Elle décide aussi de la part de la facture qui est éligible à une prime : l'isolation oui, la finition jamais."
+            ]
+          },
+          {
+            "heading": "Option 1 : plaque de plâtre, enduit et peinture",
+            "paragraphs": [
+              "La voie classique : plaques de plâtre sur l'ossature, joints et têtes de vis enduits, ponçage, primaire et deux couches de peinture. Solide et disponible partout, mais comptez quatre à sept jours ouvrables avec les temps de séchage, de la poussière fine dans toute la maison et une construction fixe : celui qui voudra plus tard accéder à l'isolant ou au pare-vapeur devra ouvrir le plafond.",
+              "Sous les toitures inclinées et dans les lucarnes, les joints et raccords sont en outre le point faible : tassements et variations de température se traduisent par des microfissures dans les joints."
+            ]
+          },
+          {
+            "heading": "Option 2 : un plafond tendu comme finition",
+            "paragraphs": [
+              "Un plafond tendu est tendu dans un profilé mince fixé en périphérie, quelques centimètres sous la nouvelle couche d'isolant. La pose prend généralement une journée, sans poussière, sans temps de séchage et sans vider la pièce. La toile est sans couture jusqu'à 5,15 m (polyester) ou 6,4 m (PVC) et suit les pans inclinés et les lucarnes."
+            ],
+            "bullets": [
+              "L'accès reste possible : une toile PVC se décroche du profilé et se remet en place, ou vous prévoyez une trappe de visite invisible. Pratique pour un contrôle de fuite, un câble supplémentaire ou une modification ultérieure de l'isolation.",
+              "L'éclairage fait partie du système : spots, lignes LED ou rail 48 V sont intégrés au plafond et suivent ainsi la TVA à 6 % dans un logement de plus de dix ans.",
+              "Acoustique : une toile microperforée avec absorbant au-dessus transforme immédiatement une chambre de grenier fraîchement isolée en chambre ou bureau calme.",
+              "Pièces humides : le PVC est insensible à l'humidité d'une salle de bains sous les toits."
+            ],
+            "links": [
+              {
+                "label": "Trappe de visite",
+                "href": "/products/inspection-hatch"
+              },
+              {
+                "label": "Système acoustique tendu",
+                "href": "/products/acoustic-stretch-system"
+              },
+              {
+                "label": "Plafond tendu sous une toiture inclinée",
+                "href": "/blog/schuin-dak"
+              }
+            ]
+          },
+          {
+            "heading": "Pare-vapeur et plénum : les accords techniques",
+            "paragraphs": [
+              "Un plafond tendu est une finition, pas un pare-vapeur. Le pare-vapeur reste du côté chaud de l'isolant, continu et jointoyé, exactement comme l'isolateur le prescrit ; en Flandre, c'est même une condition de prime pour l'isolation d'une toiture inclinée par l'intérieur. Ne l'omettez jamais sous prétexte qu'une toile viendra en dessous.",
+              "Entre l'isolant et la toile subsiste un plénum de quelques centimètres. Il accueille conduites, câbles et boîtiers d'encastrement des spots. Les appareils lourds, comme un ventilateur de plafond ou un grand luminaire, sont suspendus à la structure au-dessus, pas à la toile. Convenez de la hauteur du profilé et de la position des spots avant que l'isolateur termine, pour que personne ne doive revenir.",
+              "Pour l'isolation d'un mur par l'intérieur, il en va de même pour un mur tendu : d'abord l'isolant et le pare-vapeur, puis le système mural par-dessus, avec des cadres pour prises et interrupteurs."
+            ],
+            "links": [
+              {
+                "label": "Systèmes de murs tendus",
+                "href": "/applications/walls"
+              }
+            ]
+          },
+          {
+            "heading": "Comment préserver la prime pour l'isolation",
+            "paragraphs": [
+              "En Wallonie, les Primes Habitation pour l'isolation de la toiture et des murs courent jusqu'au 30 septembre 2026 (audit obligatoire sauf pour la toiture). À Bruxelles, il n'y a pas de primes régionales en 2026. En Flandre, un propriétaire-occupant de catégorie de revenus 3 ou 4 obtient une Mijn VerbouwPremie pour l'isolation de la toiture ou du plancher du grenier (Rd ≥ 4,5) et pour l'isolation d'un mur extérieur par l'intérieur (Rd ≥ 2, par un entrepreneur certifié ou sous la supervision d'un architecte)."
+            ],
+            "bullets": [
+              "Demandez deux postes séparés sur le devis et la facture : isolation (avec l'attestation de l'entrepreneur, au moins 1 000 € hors TVA) et finition du plafond.",
+              "La finition n'est jamais éligible, plafonnage et plaques de plâtre compris ; une facture mixte ne fait que compliquer le dossier.",
+              "Les deux postes bénéficient de la TVA à 6 % si le logement est occupé depuis au moins dix ans et si l'entrepreneur fournit et pose.",
+              "Introduisez la prime après la facture finale de l'isolation, dans les délais de votre Région."
+            ],
+            "links": [
+              {
+                "label": "Primes et TVA pour un plafond tendu en Belgique",
+                "href": "/blog/spanplafond-premie-btw"
+              }
+            ]
+          },
+          {
+            "heading": "Ce que cela coûte et comment le planifier",
+            "paragraphs": [
+              "Comptez environ 70 à 200 € par m² hors TVA, posé, pour un plafond tendu selon le type et l'éclairage ; un plafond en plaques de plâtre avec enduit et peinture se situe généralement entre 35 et 70 € par m², mais occupe une semaine de chantier. L'écart se réduit dès que vous comptez les spots, l'acoustique et les jours perdus.",
+              "Un planning pratique : jours un et deux, isolation et pare-vapeur ; jour trois, le plafond tendu ; le soir même, l'éclairage allumé. Un installateur STRETCH de votre région mesure la pièce gratuitement et accorde les profilés à l'ossature de l'isolateur."
+            ],
+            "links": [
+              {
+                "label": "Guide de prix",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Trouver un installateur",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-renoveren-opties": {
+        "title": "Rénover un plafond : les quatre options comparées (2026)",
+        "excerpt": "Replafonner, plaque de plâtre, lambris ou plafond tendu ? Voici ce que coûte chaque option au m², la durée du chantier, la poussière que vous acceptez et l'effet du taux de TVA, pour choisir en fonction de votre plafond et non par habitude.",
+        "body": [
+          {
+            "heading": "La réponse courte",
+            "paragraphs": [
+              "Pour un vieux plafond fissuré, taché ou démodé, quatre voies sont réalistes : replafonner (ou enduire et peindre), un nouveau plafond en plaques de plâtre, un lambris ou des panneaux en bois, et un plafond tendu. Au mètre carré, elles sont plus proches que la plupart des gens ne le pensent ; la différence se joue sur la durée du chantier, la poussière, l'accès à ce qui se trouve au-dessus et la durée de vie.",
+              "Règle de base : si le support est sain et plan, repeindre ou enduire est le moins cher. Si le plafond est fissuré, irrégulier, encombré de conduites, ou si vous voulez intégrer éclairage et acoustique, le plafond tendu l'emporte en coût total et en temps. La plaque de plâtre se situe entre les deux ; le lambris est un choix de style."
+            ]
+          },
+          {
+            "heading": "Option 1 : replafonner, enduire et peindre",
+            "paragraphs": [
+              "Petites fissures, peinture jaunie ou plafond légèrement irrégulier : enduire, poncer et deux couches de peinture suffisent, ou une nouvelle couche de plafonnage en cas de dégâts plus importants. Comptez à titre indicatif 10 à 20 € par m² pour la peinture et 25 à 45 € par m² pour le replafonnage, hors TVA, à 6 % de TVA dans un logement de plus de dix ans.",
+              "Inconvénients : la pièce doit être vidée et bâchée, la poussière fine s'infiltre partout, les temps de séchage dictent le planning et une fissure structurelle revient généralement. Les conduites ou une dalle de béton irrégulière restent visibles."
+            ],
+            "links": [
+              {
+                "label": "Réparer des fissures dans un plafond",
+                "href": "/blog/scheuren-in-plafond-herstellen"
+              }
+            ]
+          },
+          {
+            "heading": "Option 2 : un nouveau plafond en plaques de plâtre",
+            "paragraphs": [
+              "Un faux plafond en plaques de plâtre sur ossature métallique cache les conduites et les irrégularités et permet des spots. À titre indicatif 35 à 70 € par m² enduit et peinture compris, hors TVA. C'est une construction fixe : quatre à sept jours ouvrables avec temps de séchage, et plus tard un accès aux techniques uniquement par démolition.",
+              "Le résultat est classique et solide, mais les joints restent le point faible : sur de grandes surfaces et avec les variations de température, des microfissures dans les joints après quelques années sont courantes."
+            ]
+          },
+          {
+            "heading": "Option 3 : lambris ou panneaux en bois",
+            "paragraphs": [
+              "Le lambris apporte chaleur et caractère et se pose assez vite : à titre indicatif 40 à 90 € par m² hors TVA selon l'essence et la finition. Il exige toutefois une ossature, laisse moins de liberté pour l'éclairage et demande de l'entretien. Si vous avez déjà un plafond lambrissé démodé, il est souvent plus malin de tendre un plafond en dessous que de le démonter."
+            ],
+            "links": [
+              {
+                "label": "Rénover un plafond en lambris",
+                "href": "/blog/houten-planchetten-plafond-renoveren-of-vernieuwen"
+              }
+            ]
+          },
+          {
+            "heading": "Option 4 : un plafond tendu",
+            "paragraphs": [
+              "Une toile en PVC ou en polyester est tendue dans un profilé mince le long des murs, quelques centimètres sous le plafond existant. Tout ce qui se trouve au-dessus, fissures, lambris, conduites, dalle irrégulière, disparaît derrière une seule surface sans couture. Posé en une journée, sans poussière, sans temps de séchage et avec les meubles dans la pièce."
+            ],
+            "bullets": [
+              "Prix : environ 70 à 200 € par m² hors TVA, posé ; un plafond blanc mat uni se situe en bas de la fourchette, un plafond rétroéclairé ou imprimé en haut.",
+              "Éclairage intégré, absorption acoustique, ciel étoilé ou impression : tout tient dans le même système.",
+              "Accès : le PVC est démontable et peut recevoir une trappe de visite invisible.",
+              "Durée de vie : des décennies sans repeindre ; lavable ; insensible à l'humidité des salles de bains et cuisines.",
+              "TVA : 6 % sur les matériaux et la pose dans un logement de plus de dix ans, spots encastrés compris."
+            ],
+            "links": [
+              {
+                "label": "Guide de prix",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Plafond tendu PVC",
+                "href": "/products/pvc-stretch-ceiling"
+              },
+              {
+                "label": "Plafond tendu polyester",
+                "href": "/products/polyester-stretch-ceiling"
+              }
+            ]
+          },
+          {
+            "heading": "Comparaison en un coup d'œil",
+            "paragraphs": [],
+            "bullets": [
+              "Coût par m² (hors TVA, indicatif) : peinture 10–20 € · replafonnage 25–45 € · plaque de plâtre 35–70 € · lambris 40–90 € · plafond tendu 70–200 €.",
+              "Durée du chantier pour un séjour de 30 m² : peinture 1–2 jours · replafonnage 3–5 jours · plaque de plâtre 4–7 jours · lambris 2–3 jours · plafond tendu 1 jour.",
+              "Poussière et temps de séchage : plafonnage et plaque de plâtre beaucoup · lambris peu · plafond tendu aucun.",
+              "Cache conduites et irrégularités : plafonnage non · plaque de plâtre oui · lambris oui · plafond tendu oui.",
+              "Accès ultérieur : plafonnage et plaque de plâtre non · lambris limité · plafond tendu oui (PVC).",
+              "Éclairage et acoustique intégrés : plaque de plâtre en partie · plafond tendu entièrement.",
+              "Primes : aucune finition n'est éligible en Belgique, seule l'isolation au-dessus l'est. TVA : 6 % pour toutes les options si un entrepreneur fournit et pose dans un logement de plus de dix ans."
+            ]
+          },
+          {
+            "heading": "Quelle option pour quel plafond ?",
+            "paragraphs": [
+              "Plafond sain et plan avec une peinture fatiguée : peindre. Fissures dans un vieux plafond plafonné : chercher d'abord la cause, puis enduire ou, si elles reviennent, tendre par-dessus. Un lambris dont vous êtes lassé : tendre par-dessus plutôt que démolir. Conduites, béton irrégulier ou rénovation avec nouvel éclairage et acoustique : plafond tendu. La plaque de plâtre garde son sens là où un appareil lourd doit être suspendu au plafond ou si vous voulez délibérément une construction classique et fixe.",
+              "Si vous isolez dans la même phase, ne choisissez la finition qu'après l'isolation ; la prime est liée à l'isolation, pas au plafond. Pour un prix ferme, un installateur STRETCH de votre région mesure la pièce gratuitement."
+            ],
+            "links": [
+              {
+                "label": "Finir un plafond après isolation",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Primes et TVA en Belgique",
+                "href": "/blog/spanplafond-premie-btw"
+              },
+              {
+                "label": "Trouver un installateur",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
       }
     },
     "chrome": {

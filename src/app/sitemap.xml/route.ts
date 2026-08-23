@@ -17,7 +17,7 @@ import {
 import { staticRoutes } from '@/lib/site-config';
 import { productSlugs } from '@/lib/products';
 import { applicationSlugs } from '@/lib/applications';
-import { blogSlugs, blogPosts, projectSlugs } from '@/lib/content';
+import { blogPosts, blogPostsFor, projectSlugs } from '@/lib/content';
 import { dealerPlaceSlugs } from '@/lib/dealers';
 import { techMembranes, techTopicKeys } from '@/lib/technical';
 import { materialGroupSlugs } from '@/lib/materials';
@@ -28,10 +28,12 @@ function urlFor(locale: Locale, route: string): string {
   return `${originForLocale(locale)}${route === '/' ? '' : route}`;
 }
 
-function collectRoutes(): string[] {
+function collectRoutes(locale: Locale): string[] {
   const productRoutes = productSlugs.map((s) => `/products/${s}`);
   const applicationRoutes = applicationSlugs.map((s) => `/applications/${s}`);
-  const blogRoutes = blogSlugs.map((s) => `/blog/${s}`);
+  // Blog is the one per-locale group: market-restricted posts only appear in
+  // the sitemaps of the domains they exist on.
+  const blogRoutes = blogPostsFor(locale).map((p) => `/blog/${p.slug}`);
   const dealerRoutes = dealerPlaceSlugs.map((s) => `/dealers/${s}`);
   const technicalRoutes = Object.keys(techMembranes).flatMap((m) =>
     techTopicKeys.map((t) => `/technical/${m}/${t}`),
@@ -80,6 +82,15 @@ function esc(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+/** Locales a route exists on — all of them, except market-restricted posts. */
+function localesForRoute(route: string): readonly Locale[] {
+  if (route.startsWith('/blog/')) {
+    const post = blogPosts.find((p) => p.slug === route.slice('/blog/'.length));
+    if (post?.markets?.length) return locales.filter((l) => post.markets!.includes(l));
+  }
+  return locales;
+}
+
 export function GET(request: Request) {
   const host = request.headers.get('host');
   // Serve the locale owned by this domain; unknown hosts (previews) fall back
@@ -87,15 +98,17 @@ export function GET(request: Request) {
   const locale = localeForHost(host) ?? defaultLocale;
   const now = new Date().toISOString();
 
-  const entries = collectRoutes()
+  const entries = collectRoutes(locale)
     .map((route) => {
-      const alternates = locales
+      const routeLocales = localesForRoute(route);
+      const xDefault = routeLocales.includes(defaultLocale) ? defaultLocale : routeLocales[0];
+      const alternates = routeLocales
         .map(
           (l) =>
             `    <xhtml:link rel="alternate" hreflang="${localeFullCodes[l] ?? l}" href="${esc(urlFor(l, route))}"/>`,
         )
         .concat(
-          `    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(urlFor(defaultLocale, route))}"/>`,
+          `    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(urlFor(xDefault, route))}"/>`,
         )
         .join('\n');
       return [

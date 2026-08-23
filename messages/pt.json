@@ -4231,6 +4231,323 @@
             ]
           }
         ]
+      },
+      "spanplafond-premie-btw": {
+        "title": "Grants and VAT for a stretch ceiling in Belgium (2026)",
+        "excerpt": "No Belgian region subsidises a ceiling or wall finish — a stretch ceiling included. What does count is the insulation above or behind it, and the 6% VAT rate. Here is where each region stands on 22 August 2026.",
+        "body": [
+          {
+            "heading": "The short answer",
+            "paragraphs": [
+              "A stretch ceiling on its own does not qualify for a renovation grant in any of Belgium's three regions. Flanders scrapped its interior-renovation category (ceilings, interior walls, floors) on 1 July 2025 and explicitly lists plastering on walls and ceilings among the non-eligible works; Wallonia and Brussels only ever funded energy measures.",
+              "Two things do count. First, the insulation you tackle together with the ceiling — attic floor, roof, the inside of an exterior wall or a cellar ceiling. Second, the federal 6% VAT rate on the installed stretch ceiling itself, in a dwelling that is at least ten years old. For most stretch-ceiling projects that VAT rate is the only advantage, and by far the biggest one.",
+              "All three regions rewrote their rules in 2026. This article reflects the situation on 22 August 2026; always check your region's official simulator before you order."
+            ],
+            "links": [
+              {
+                "label": "Premiezoeker.be (all Belgian schemes)",
+                "href": "https://www.premiezoeker.be"
+              }
+            ]
+          },
+          {
+            "heading": "Flanders: Mijn VerbouwPremie only for lower incomes",
+            "paragraphs": [
+              "Since 1 March 2026, owner-occupiers in income categories 1 and 2 only qualify for a heat-pump or heat-pump-boiler premium. For roof, exterior wall, floor, windows and doors the premium continues for categories 3 and 4. Private landlords fall into category 1, and non-residential buildings (offices, hospitality, schools) no longer get Mijn VerbouwPremie at all.",
+              "Roughly: a single person with a taxable income up to €43,240 or a couple up to €60,520 (plus €4,420 per dependant) is in category 3 or 4. Above that — or if you fully own a second home or building plot — you are in category 1."
+            ],
+            "bullets": [
+              "Roof and attic floor: new insulation with Rd ≥ 4.5 m²K/W placed by a contractor. Category 4: 50% of the invoice excl. VAT, maximum €5,750. Category 3: 35%, maximum €4,025. Roof renovation works only count if you insulate at the same time.",
+              "Exterior wall, including from the inside: Rd ≥ 2 m²K/W for interior insulation, placed by a contractor with a certificate of competence or under an architect's supervision. Category 4: 50%, maximum €5,000. Category 3: 35%, maximum €3,500.",
+              "Floor: insulating a cellar ceiling or crawl space also falls under this category.",
+              "General: dwelling connected to the grid before 1 January 2006, invoice of at least €1,000 excl. VAT and no older than two years, one premium per category every five years. Apply via Mijn VerbouwLoket after the final invoice.",
+              "Never eligible: the stretch ceiling itself, plaster or plasterboard work, painting, do-it-yourself.",
+              "If you no longer qualify for the premium you may still get Mijn VerbouwLening, a loan of up to €60,000 at 0% for category 4, 0.5% for category 3 and 1.5% for category 2 (category 1 is excluded). It covers insulation and renovation of roof, walls and floors, glazing and heat pumps — not the ceiling finish. The EPC label premium has been discontinued."
+            ],
+            "links": [
+              {
+                "label": "Mijn VerbouwPremie (official)",
+                "href": "https://www.vlaanderen.be/bouwen-wonen-en-energie/bouwen-en-verbouwen/premies-voor-renovatie/mijn-verbouwpremie"
+              },
+              {
+                "label": "Simulator 2026",
+                "href": "https://apps.energiesparen.be/simulator-mijnverbouwpremie"
+              }
+            ]
+          },
+          {
+            "heading": "Wallonia: Primes Habitation until 30 September 2026, loans afterwards",
+            "paragraphs": [
+              "Since 14 February 2025 Wallonia runs a temporary regime that merged its energy and renovation grants into Primes Habitation. Base amounts were cut by roughly 60% and a housing audit is mandatory for everything except roof and attic insulation. Every application, final invoice included, must be filed by 30 September 2026."
+            ],
+            "bullets": [
+              "Roof insulation: base €20/m² (€26 with bio-based insulation), multiplied by an income coefficient from 2 (R4) to 6 (R1) — up to €156/m². Cap: 70% of the invoice incl. VAT for R1 and R2, 50% for R3 and R4. Required thermal resistance: at least R = 5 m²K/W.",
+              "Wall insulation (cavity, inside or outside): base €8.80/m² (€12 bio-based), up to €72/m²; audit mandatory.",
+              "Conditions: dwelling at least 15 years old, works by a contractor registered with the Crossroads Bank for Enterprises, reference income up to €122,800.",
+              "Walloon residents only: a 30% tax reduction on roof insulation (R ≥ 2.5), capped at €4,120 for 2026 expenses, entered under code 3317 — cumulative with the premium and with 6% VAT.",
+              "From 1 October 2026 direct grants disappear. They are replaced by the Rénopack — an interest-free loan of which part is waived (up to 50% for income category C1, 40% for C2, 15% for C3) — and the Rénoprêt at a preferential rate for C4, landlords and co-ownerships. Support will then only be available for homes with EPB label G or F reaching at least D, or label E reaching at least C, calculated on a global quote instead of per item; the ceiling rises to €75,000 for a single-family house. The execution decrees still have to fix the details."
+            ],
+            "links": [
+              {
+                "label": "Walloon government announcement",
+                "href": "https://www.wallonie.be/fr/actualites/renovation-energetique-les-grandes-lignes-du-futur-regime-de-soutien-sont-connues"
+              },
+              {
+                "label": "Roof insulation tax reduction (FPS Finance)",
+                "href": "https://fin.belgium.be/fr/particuliers/avantages-fiscaux/isolation-du-toit"
+              }
+            ]
+          },
+          {
+            "heading": "Brussels: no grants for invoices dated 2025 or 2026",
+            "paragraphs": [
+              "Brussels' Renolution grants have been suspended since early 2025. No application can be filed for final invoices dated 2025 or 2026, and in February 2026 the new regional government confirmed the grants will not return in their current form. They are to be replaced by interest-free loans, start date unknown. The €56 million released in the 2026 budget only pays the backlog of 2024 files."
+            ],
+            "bullets": [
+              "What remains: the ECORENO loan from the Brussels Housing Fund (2.5% or 3.5% depending on income, reopened on 1 January 2026), municipal grants in a handful of communes, and of course the 6% VAT rate.",
+              "For reference if the scheme ever returns: the last scale paid €35, €55 or €75 per m² of roof insulation depending on income category, and interior wall insulation required R ≥ 2 m²K/W.",
+              "New since 1 January 2026: every rental in Brussels needs an EPB certificate with at least label E — one more reason landlords are insulating now."
+            ],
+            "links": [
+              {
+                "label": "Renolution.brussels",
+                "href": "https://renolution.brussels"
+              }
+            ]
+          },
+          {
+            "heading": "6% VAT: the advantage that does apply to a stretch ceiling",
+            "paragraphs": [
+              "A stretch ceiling supplied and installed by a contractor is work on immovable property. In a dwelling first occupied at least ten years ago it carries 6% VAT instead of 21% — on the materials and on the labour. That is 15 percentage points off the whole invoice, with no file to submit."
+            ],
+            "bullets": [
+              "Conditions: the dwelling has been in use for at least ten calendar years on the date of the first invoice, is used more than half privately after the works, and the invoice is addressed to the end user — owner or tenant. Materials you buy to fit yourself stay at 21%.",
+              "Since 2022 a standard statement on the invoice replaces the old certificate; you have one month to object if the conditions are not met.",
+              "Lighting: loose fittings and lamps are excluded from the reduced rate unless they are built into a ceiling. Spots integrated in the stretch ceiling therefore follow the 6%.",
+              "Walls: wall covering cut to the size of the surface to be covered is treated as work on immovable property. A made-to-measure stretch wall system qualifies.",
+              "Not applicable: offices, hospitality and other non-residential buildings (21%), new builds under ten years old, and do-it-yourself materials."
+            ],
+            "links": [
+              {
+                "label": "Renovation VAT rate (FPS Finance)",
+                "href": "https://fin.belgium.be/nl/particulieren/woning/bouwen-verbouwen/verbouwen/verbouwen-btw-tarief"
+              }
+            ]
+          },
+          {
+            "heading": "How to combine a grant with a stretch ceiling",
+            "paragraphs": [
+              "Have the insulation and the stretch ceiling invoiced as two separate items. The insulation item must be at least €1,000 excl. VAT, carried out by the contractor and accompanied by the contractor's certificate; the stretch-ceiling item stands on its own. Both carry 6% VAT if the dwelling is old enough.",
+              "Plan the sequence: insulate first, with the vapour barrier your insulation contractor specifies, then the stretch ceiling. There is no drying time, so the ceiling can go in the day after the insulation. In Flanders you apply via Mijn VerbouwLoket as soon as you have the final invoice for the insulation; in Wallonia you meet the 30 September 2026 deadline.",
+              "Unsure about your income category, or what your municipality adds on top? The official simulators and Premiezoeker.be give you an answer in minutes. For a fixed price on the ceiling itself, a STRETCH installer in your region measures the room free of charge."
+            ],
+            "links": [
+              {
+                "label": "Finishing a ceiling after insulation",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Price guide",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Find an installer",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-afwerken-na-isolatie": {
+        "title": "Acabar o teto depois do isolamento: placa de gesso ou teto tensionado?",
+        "excerpt": "Depois de isolar o telhado, o piso do sótão ou uma parede pelo interior é preciso um teto ou uma parede novos. Reboco, placa de gesso ou teto tensionado: estas são as diferenças em tempo, pó e acesso ao isolamento — e assim mantém o apoio ao isolamento em segurança.",
+        "body": [
+          {
+            "heading": "Porque é que o acabamento depois do isolamento é diferente",
+            "paragraphs": [
+              "Quem isola um telhado inclinado pelo interior, uma cobertura plana por baixo ou a face interior de uma parede exterior fica com um conjunto aberto: isolamento, barreira de vapor e uma estrutura de madeira ou metal. Isso pede um acabamento que fique impecável, deixe a barreira de vapor intacta e mantenha as instalações acessíveis.",
+              "Esse acabamento decide mais do que o aspeto. Decide quanto tempo dura a obra, quanto pó e tempo de secagem aceita, se mais tarde ainda chega ao isolamento e às tubagens, e como a iluminação é integrada. E decide que parte da fatura é elegível para apoio: o isolamento sim, o acabamento nunca."
+            ]
+          },
+          {
+            "heading": "Opção 1: placa de gesso, betume e pintura",
+            "paragraphs": [
+              "A via clássica: placas de gesso na estrutura, betumar juntas e cabeças de parafuso, lixar, primário e duas demãos de tinta. Sólida e disponível em todo o lado, mas conte com quatro a sete dias úteis com tempos de secagem, pó fino por toda a casa e uma construção fixa: quem mais tarde precisar de chegar ao isolamento ou à barreira de vapor tem de abrir o teto.",
+              "Em tetos inclinados e trapeiras, as juntas e os remates são além disso o ponto fraco: assentamentos e variações de temperatura desenham-se como fissuras capilares nas juntas."
+            ]
+          },
+          {
+            "heading": "Opção 2: um teto tensionado como acabamento",
+            "paragraphs": [
+              "Um teto tensionado é esticado num perfil discreto ao longo do perímetro, alguns centímetros abaixo da nova camada de isolamento. A instalação demora normalmente um dia, sem pó, sem tempo de secagem e sem esvaziar a divisão. A membrana é contínua até 5,15 m (poliéster) ou 6,4 m (PVC) e acompanha planos inclinados e trapeiras."
+            ],
+            "bullets": [
+              "O acesso mantém-se: uma membrana de PVC pode soltar-se do perfil e voltar a ser colocada, ou prevê-se um alçapão de inspeção invisível. Útil numa verificação de fugas, em cabos extra ou numa alteração posterior do isolamento.",
+              "A iluminação faz parte do sistema: focos, linhas LED ou um carril de 48 V são integrados no teto — sem construção adicional.",
+              "Acústica: uma membrana microperfurada com absorsor por cima transforma um quarto de sótão recém-isolado num quarto ou escritório silencioso desde o primeiro dia.",
+              "Divisões húmidas: o PVC é insensível à humidade de uma casa de banho sob o telhado."
+            ],
+            "links": [
+              {
+                "label": "Alçapão de inspeção",
+                "href": "/products/inspection-hatch"
+              },
+              {
+                "label": "Teto tensionado acústico",
+                "href": "/products/acoustic-stretch-system"
+              },
+              {
+                "label": "Tetos tensionados sob telhado inclinado",
+                "href": "/blog/schuin-dak"
+              }
+            ]
+          },
+          {
+            "heading": "Barreira de vapor e caixa de ar: os acordos técnicos",
+            "paragraphs": [
+              "Um teto tensionado é um acabamento, não uma barreira de vapor. A barreira de vapor fica do lado quente do isolamento, contínua e selada com fita, exatamente como o instalador do isolamento prescreve. Nunca a dispense só porque vai ficar uma membrana por baixo.",
+              "Entre o isolamento e a membrana fica uma caixa de ar de alguns centímetros. É aí que passam tubagens, cabos e as caixas de encastrar dos focos. As cargas pesadas, como uma ventoinha de teto ou uma luminária grande, penduram-se na estrutura por cima, não na membrana. Combine a altura do perfil e a posição dos focos antes de o instalador do isolamento terminar — assim ninguém tem de voltar.",
+              "No isolamento de paredes pelo interior vale o mesmo para uma parede tensionada: primeiro o isolamento e a barreira de vapor, depois o sistema de parede por cima, com aros para tomadas e interruptores."
+            ],
+            "links": [
+              {
+                "label": "Sistemas de parede tensionada",
+                "href": "/applications/walls"
+              }
+            ]
+          },
+          {
+            "heading": "Assim mantém o apoio ao isolamento",
+            "paragraphs": [
+              "Muitos países apoiam o isolamento de telhados, pisos e paredes com subsídios — e onde existe um programa, ele aplica-se ao isolamento, nunca ao acabamento por baixo. Mantenha por isso os dois separados no orçamento e na fatura."
+            ],
+            "bullets": [
+              "Peça duas rubricas separadas no orçamento e na fatura: isolamento (com os dados do produto e a área que o seu programa exige) e acabamento do teto.",
+              "O acabamento nunca é elegível — reboco e placa de gesso incluídos —, pelo que uma fatura mista só dificulta o processo.",
+              "O IVA segue as regras nacionais; em muitos países a renovação de habitações antigas beneficia de uma taxa reduzida — verifique o que se aplica antes de assinar.",
+              "Apresente o pedido de apoio depois da fatura final do isolamento, dentro do prazo do seu programa."
+            ]
+          },
+          {
+            "heading": "Quanto custa e como planear",
+            "paragraphs": [
+              "Para um teto tensionado, conte com cerca de €70 a €200 por m², sem IVA, instalado, consoante o tipo e a iluminação; um teto de placa de gesso com betumagem e pintura fica normalmente entre €35 e €70 por m², mas leva uma semana de obra. A diferença encolhe assim que soma os focos, a acústica e os dias perdidos.",
+              "Um calendário prático: dias um e dois, isolamento e barreira de vapor; dia três, o teto tensionado — e nessa mesma noite a luz acesa. Um instalador STRETCH da sua região mede a divisão gratuitamente e ajusta os perfis à estrutura do instalador do isolamento."
+            ],
+            "links": [
+              {
+                "label": "Guia de preços",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Encontrar um instalador",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-renoveren-opties": {
+        "title": "Renovar um teto: as quatro opções comparadas (2026)",
+        "excerpt": "Rebocar de novo, placa de gesso, réguas de madeira ou um teto tensionado? Quanto custa cada opção por m², quanto tempo demora o trabalho, quanto pó aceita e o que faz o IVA — para escolher com base no seu teto e não por hábito.",
+        "body": [
+          {
+            "heading": "A resposta curta",
+            "paragraphs": [
+              "Para um teto velho com fissuras, manchas ou um acabamento datado há quatro vias realistas: rebocar de novo (ou betumar e pintar), um teto novo de placa de gesso, réguas ou painéis de madeira, e um teto tensionado. Por metro quadrado ficam mais próximos do que a maioria pensa; a diferença está no tempo de obra, no pó, no acesso ao que está por cima e na vida útil.",
+              "Regra prática: se o suporte está são e plano, repintar ou betumar é o mais barato. Se o teto está fissurado, irregular, cheio de tubagens, ou se quer acrescentar iluminação e acústica, o teto tensionado ganha em custo total e em tempo. A placa de gesso fica no meio; as réguas são uma escolha de estilo."
+            ]
+          },
+          {
+            "heading": "Opção 1: rebocar de novo, betumar e pintar",
+            "paragraphs": [
+              "Fissuras pequenas, uma camada de tinta amarelecida ou um teto ligeiramente irregular: bastam betume, lixagem e duas demãos de tinta, ou um novo reboco para danos maiores. Indicativamente €10 a €20 por m² para pintura e €25 a €45 por m² para rebocar de novo, sem IVA.",
+              "Desvantagens: a divisão tem de ser esvaziada e coberta, o pó fino chega a todo o lado, os tempos de secagem ditam o calendário e uma fissura estrutural costuma voltar. Tubagens ou uma laje de betão irregular continuam à vista."
+            ],
+            "links": [
+              {
+                "label": "Reparar fissuras num teto",
+                "href": "/blog/scheuren-in-plafond-herstellen"
+              }
+            ]
+          },
+          {
+            "heading": "Opção 2: um teto novo de placa de gesso",
+            "paragraphs": [
+              "Um teto suspenso de placa de gesso sobre estrutura metálica esconde tubagens e irregularidades e admite focos. Indicativamente €35 a €70 por m² com betumagem e pintura incluídas, sem IVA. É uma construção fixa: quatro a sete dias úteis com tempos de secagem, e depois só se chega às instalações demolindo.",
+              "O resultado é clássico e sólido, mas as juntas continuam a ser o ponto fraco — em vãos grandes e com variações de temperatura, fissuras capilares nas juntas ao fim de alguns anos são comuns."
+            ]
+          },
+          {
+            "heading": "Opção 3: réguas ou painéis de madeira",
+            "paragraphs": [
+              "As réguas dão calor e carácter e montam-se relativamente depressa: indicativamente €40 a €90 por m² sem IVA, consoante a madeira e o acabamento. Mas precisam de estrutura, deixam menos liberdade para a iluminação e pedem manutenção. Se já tem um teto de réguas datado, é muitas vezes mais inteligente tensionar um teto por baixo do que o desmontar."
+            ],
+            "links": [
+              {
+                "label": "Renovar um teto de réguas de madeira",
+                "href": "/blog/houten-planchetten-plafond-renoveren-of-vernieuwen"
+              }
+            ]
+          },
+          {
+            "heading": "Opção 4: um teto tensionado",
+            "paragraphs": [
+              "Uma membrana de PVC ou poliéster é esticada num perfil discreto ao longo das paredes, alguns centímetros abaixo do teto existente. Tudo o que está por cima — fissuras, réguas, tubagens, uma laje irregular — desaparece atrás de um único plano contínuo. Instalado num dia, sem pó, sem tempo de secagem e com os móveis na divisão."
+            ],
+            "bullets": [
+              "Preço: cerca de €70 a €200 por m² sem IVA, instalado; um teto simples branco mate fica na parte baixa do intervalo, retroiluminado ou impresso na parte alta.",
+              "Iluminação integrada, absorção acústica, um céu estrelado ou uma impressão vivem no mesmo sistema.",
+              "Acesso: o PVC é desmontável e pode receber um alçapão de inspeção invisível.",
+              "Vida útil: décadas sem repintar; lavável; insensível à humidade em casas de banho e cozinhas.",
+              "IVA: aplicam-se as regras nacionais — em muitos países a renovação de habitações antigas tem taxa reduzida; pergunte ao seu instalador o que se aplica."
+            ],
+            "links": [
+              {
+                "label": "Guia de preços",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Teto tensionado de PVC",
+                "href": "/products/pvc-stretch-ceiling"
+              },
+              {
+                "label": "Teto tensionado de poliéster",
+                "href": "/products/polyester-stretch-ceiling"
+              }
+            ]
+          },
+          {
+            "heading": "Comparação num relance",
+            "paragraphs": [],
+            "bullets": [
+              "Custo por m² (sem IVA, indicativo): pintar €10–20 · rebocar de novo €25–45 · placa de gesso €35–70 · réguas €40–90 · teto tensionado €70–200.",
+              "Tempo de obra para uma sala de 30 m²: pintar 1–2 dias · rebocar de novo 3–5 dias · placa de gesso 4–7 dias · réguas 2–3 dias · teto tensionado 1 dia.",
+              "Pó e tempo de secagem: reboco e placa de gesso muito · réguas pouco · teto tensionado nenhum.",
+              "Esconde tubagens e irregularidades: reboco não · placa de gesso sim · réguas sim · teto tensionado sim.",
+              "Acesso depois: reboco e placa de gesso não · réguas limitado · teto tensionado sim (PVC).",
+              "Iluminação e acústica integradas: placa de gesso em parte · teto tensionado por completo.",
+              "Apoios: onde existem, aplicam-se ao isolamento por cima do teto, nunca ao acabamento. IVA: segue as regras nacionais — em muitos países a renovação beneficia de taxa reduzida."
+            ]
+          },
+          {
+            "heading": "Que opção para que teto?",
+            "paragraphs": [
+              "Teto são e plano com uma camada de tinta cansada: pintar. Fissuras num teto antigo de reboco: primeiro procurar a causa, depois betumar — ou, se voltarem, tensionar por cima. Réguas de que já está cansado: tensionar por baixo em vez de demolir. Tubagens, betão irregular ou uma renovação com nova iluminação e acústica: teto tensionado. A placa de gesso continua a fazer sentido onde um aparelho pesado tem de ficar pendurado no teto ou onde quer, deliberadamente, uma construção clássica e fixa.",
+              "Se isolar na mesma fase, escolha o acabamento só depois do isolamento; o apoio está ligado ao isolamento, não ao teto. Por um preço fixo, um instalador STRETCH da sua região mede a divisão gratuitamente."
+            ],
+            "links": [
+              {
+                "label": "Acabar o teto depois do isolamento",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Encontrar um instalador",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
       }
     },
     "chrome": {

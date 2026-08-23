@@ -4231,6 +4231,333 @@
             ]
           }
         ]
+      },
+      "spanplafond-premie-btw": {
+        "title": "Premies en btw voor een spanplafond in België (2026)",
+        "excerpt": "Geen enkel gewest subsidieert een plafond- of wandafwerking, ook geen spanplafond. Wat wél telt: de isolatie erboven of erachter, en het btw-tarief van 6%. Dit is de stand van zaken per gewest op 22 augustus 2026.",
+        "body": [
+          {
+            "heading": "Het korte antwoord",
+            "paragraphs": [
+              "Een spanplafond op zich komt in geen enkel Belgisch gewest in aanmerking voor een renovatiepremie. In Vlaanderen is de categorie binnenrenovatie (plafonds, binnenmuren, vloeren) sinds 1 juli 2025 geschrapt en staat pleisterwerk op muren en plafonds letterlijk in de lijst van niet-subsidieerbare werken. Wallonië en Brussel hebben altijd alleen energiewerken gesubsidieerd.",
+              "Twee dingen tellen wél mee. Ten eerste de isolatie die u samen met het plafond aanpakt: zoldervloer, dak, de binnenkant van een buitenmuur of het kelderplafond. Ten tweede het federale btw-tarief van 6% op het geplaatste spanplafond zelf, in een woning van minstens tien jaar oud. Voor de meeste spanplafondprojecten is dat btw-tarief het enige voordeel, en meteen ook veruit het grootste.",
+              "De regels werden in 2026 in alle drie de gewesten hertekend. Dit artikel geeft de stand van zaken op 22 augustus 2026; controleer vóór u bestelt altijd de officiële simulator van uw gewest."
+            ],
+            "links": [
+              {
+                "label": "Premiezoeker.be (alle premies in België)",
+                "href": "https://www.premiezoeker.be"
+              }
+            ]
+          },
+          {
+            "heading": "Vlaanderen: Mijn VerbouwPremie enkel nog voor de lagere inkomens",
+            "paragraphs": [
+              "Sinds 1 maart 2026 komen eigenaar-bewoners uit inkomenscategorie 1 en 2 alleen nog in aanmerking voor een premie voor een warmtepomp of warmtepompboiler. Voor dak, buitenmuur, vloer, ramen en deuren blijft de premie bestaan voor categorie 3 en 4. Wie verhuurt op de private markt, valt in categorie 1; niet-woongebouwen (kantoren, horeca, scholen) krijgen geen Mijn VerbouwPremie meer.",
+              "Grosso modo: een alleenstaande met een belastbaar inkomen tot € 43.240 of een koppel tot € 60.520 (telkens plus € 4.420 per persoon ten laste) zit in categorie 3 of 4. Wie daarboven zit, of een tweede woning of bouwgrond in volle eigendom heeft, valt in categorie 1."
+            ],
+            "bullets": [
+              "Dak en zoldervloer: nieuwe isolatie met Rd ≥ 4,5 m²K/W, geplaatst door een aannemer. Categorie 4: 50% van de factuur excl. btw, maximaal € 5.750. Categorie 3: 35%, maximaal € 4.025. Dakrenovatiewerken tellen alleen mee als u tegelijk isoleert.",
+              "Buitenmuur, ook langs de binnenkant: Rd ≥ 2 m²K/W voor binnenisolatie, te plaatsen door een aannemer met certificaat van bekwaamheid of onder begeleiding van een architect. Categorie 4: 50%, maximaal € 5.000. Categorie 3: 35%, maximaal € 3.500.",
+              "Vloer: ook de isolatie van een kelderplafond of kruipruimte valt onder deze categorie.",
+              "Algemeen: woning aangesloten op het net vóór 1 januari 2006, factuur van minstens € 1.000 excl. btw en maximaal twee jaar oud, één premie per categorie per vijf jaar. Aanvragen via Mijn VerbouwLoket, na de eindfactuur.",
+              "Nooit subsidieerbaar: het spanplafond zelf, pleister- of gyprocwerk, schilderwerk, doe-het-zelf.",
+              "Komt u niet (meer) in aanmerking voor de premie, dan hebt u mogelijk wel recht op Mijn VerbouwLening tot € 60.000: 0% voor categorie 4, 0,5% voor categorie 3 en 1,5% voor categorie 2 (categorie 1 is uitgesloten). De lening dekt isolatie- en renovatiewerken aan dak, muren en vloeren, beglazing en warmtepompen, niet de plafondafwerking. Mijn EPC-labelpremie is stopgezet."
+            ],
+            "links": [
+              {
+                "label": "Mijn VerbouwPremie (officieel)",
+                "href": "https://www.vlaanderen.be/bouwen-wonen-en-energie/bouwen-en-verbouwen/premies-voor-renovatie/mijn-verbouwpremie"
+              },
+              {
+                "label": "Simulator 2026",
+                "href": "https://apps.energiesparen.be/simulator-mijnverbouwpremie"
+              }
+            ]
+          },
+          {
+            "heading": "Wallonië: Primes Habitation tot 30 september 2026, daarna leningen",
+            "paragraphs": [
+              "Sinds 14 februari 2025 geldt in Wallonië een tijdelijk regime waarin de energie- en renovatiepremies zijn samengevoegd tot Primes Habitation. De basisbedragen zakten met ongeveer 60% en een audit logement is verplicht voor alles behalve dak- en zolderisolatie. Elke aanvraag, eindfactuur inbegrepen, moet uiterlijk op 30 september 2026 zijn ingediend."
+            ],
+            "bullets": [
+              "Dakisolatie: basisbedrag € 20/m² (€ 26 met biogebaseerd isolatiemateriaal), vermenigvuldigd met een inkomenscoëfficiënt van 2 (R4) tot 6 (R1), tot € 156/m². Plafond: 70% van de factuur incl. btw voor R1 en R2, 50% voor R3 en R4. Vereiste isolatiewaarde: minstens R = 5 m²K/W.",
+              "Muurisolatie (spouw, binnen- of buitenkant): basisbedrag € 8,80/m² (€ 12 biogebaseerd), tot € 72/m²; audit verplicht.",
+              "Voorwaarden: woning van minstens 15 jaar oud, werken door een bij de KBO geregistreerde aannemer, referentie-inkomen tot € 122.800.",
+              "Alleen voor Waalse inwoners: een belastingvermindering van 30% op dakisolatie (R ≥ 2,5), begrensd op € 4.120 voor uitgaven in 2026, via code 3317 in de aangifte. Cumuleerbaar met de premie en met 6% btw.",
+              "Vanaf 1 oktober 2026 verdwijnen de rechtstreekse premies. Ze worden vervangen door het Rénopack, een renteloze lening waarvan een deel wordt kwijtgescholden (tot 50% voor inkomenscategorie C1, 40% voor C2, 15% voor C3), en het Rénoprêt aan een voordelig tarief voor C4, verhuurders en mede-eigendommen. Steun is dan alleen nog mogelijk voor woningen met EPB-label G of F die minstens label D halen, of label E dat minstens C wordt, berekend op een globale offerte in plaats van per werk; het plafond stijgt naar € 75.000 voor een eengezinswoning. De uitvoeringsbesluiten moeten de details nog vastleggen."
+            ],
+            "links": [
+              {
+                "label": "Aankondiging Waalse regering",
+                "href": "https://www.wallonie.be/fr/actualites/renovation-energetique-les-grandes-lignes-du-futur-regime-de-soutien-sont-connues"
+              },
+              {
+                "label": "Belastingvermindering dakisolatie (FOD Financiën)",
+                "href": "https://fin.belgium.be/fr/particuliers/avantages-fiscaux/isolation-du-toit"
+              }
+            ]
+          },
+          {
+            "heading": "Brussel: geen premies voor facturen van 2025 en 2026",
+            "paragraphs": [
+              "De Brusselse Renolution-premies zijn sinds begin 2025 opgeschort. Voor eindfacturen met een datum in 2025 of 2026 kan geen enkele aanvraag worden ingediend, en de nieuwe Brusselse regering bevestigde in februari 2026 dat de premies niet in hun huidige vorm terugkomen. Ze worden vervangen door renteloze leningen, maar de startdatum daarvan is nog niet bekend. Het vrijgemaakte budget van € 56 miljoen dient enkel om de achterstallige dossiers van 2024 uit te betalen."
+            ],
+            "bullets": [
+              "Wat blijft: de ECORENO-lening van het Brusselse Woningfonds (2,5% of 3,5% naargelang het inkomen, opnieuw open sinds 1 januari 2026), gemeentelijke premies in een handvol gemeenten en uiteraard het btw-tarief van 6%.",
+              "Ter referentie, mocht het stelsel ooit herleven: de laatste barema's gaven € 35, € 55 of € 75 per m² dakisolatie naargelang de inkomenscategorie, en voor binnenmuurisolatie gold R ≥ 2 m²K/W.",
+              "Nieuw sinds 1 januari 2026: elke verhuring in Brussel vereist een EPB-certificaat met minstens label E, een extra reden waarom verhuurders nu isoleren."
+            ],
+            "links": [
+              {
+                "label": "Renolution.brussels",
+                "href": "https://renolution.brussels"
+              }
+            ]
+          },
+          {
+            "heading": "6% btw: het voordeel dat wél voor een spanplafond geldt",
+            "paragraphs": [
+              "Een spanplafond dat door een aannemer wordt geleverd én geplaatst, is werk in onroerende staat. In een woning die minstens tien jaar geleden voor het eerst in gebruik werd genomen, geldt daarop 6% btw in plaats van 21%, op de materialen én op het werkuur. Dat scheelt 15 procentpunten op de hele factuur, zonder dossier of aanvraag."
+            ],
+            "bullets": [
+              "Voorwaarden: de woning is op de datum van de eerste factuur minstens tien kalenderjaren in gebruik, wordt na de werken voor meer dan de helft privé gebruikt, en de factuur is gericht aan de eindgebruiker, eigenaar of huurder. Materiaal dat u zelf koopt om zelf te plaatsen, blijft aan 21%.",
+              "Op de factuur staat sinds 2022 een standaardvermelding in plaats van het vroegere attest; u hebt één maand om te betwisten als de voorwaarden niet kloppen.",
+              "Verlichting: losse armaturen en lampen vallen buiten het verlaagde tarief, behalve wanneer ze in een plafond worden ingewerkt. Spots die in het spanplafond zitten, volgen dus de 6%.",
+              "Wanden: wandbekleding op maat van het te bekleden oppervlak wordt gelijkgesteld met werk in onroerende staat. Een gespannen wandsysteem op maat valt daaronder.",
+              "Niet van toepassing: kantoren, horeca en andere niet-woongebouwen (21%), nieuwbouw jonger dan tien jaar en doe-het-zelfmateriaal."
+            ],
+            "links": [
+              {
+                "label": "Btw-tarief bij verbouwen (FOD Financiën)",
+                "href": "https://fin.belgium.be/nl/particulieren/woning/bouwen-verbouwen/verbouwen/verbouwen-btw-tarief"
+              }
+            ]
+          },
+          {
+            "heading": "Zo combineert u premie en spanplafond slim",
+            "paragraphs": [
+              "Laat de isolatie en het spanplafond als twee aparte posten factureren. De isolatiepost moet minstens € 1.000 excl. btw bedragen, door de aannemer worden uitgevoerd en vergezeld zijn van zijn attest; de spanplafondpost staat er los van. Beide posten vallen onder 6% btw als de woning oud genoeg is.",
+              "Plan de volgorde: eerst isoleren, met het dampscherm dat de isolatieaannemer voorschrijft, dan het spanplafond. Er is geen droogtijd, dus het plafond kan de dag na de isolatie geplaatst worden. In Vlaanderen dient u de premie in via Mijn VerbouwLoket zodra u de eindfactuur van de isolatie hebt; in Wallonië haalt u de deadline van 30 september 2026.",
+              "Twijfelt u over uw inkomenscategorie of over wat uw gemeente er bovenop legt? De officiële simulatoren en Premiezoeker.be geven binnen enkele minuten uitsluitsel. Voor een vaste prijs voor het plafond zelf komt een STRETCH-installateur uit uw regio de ruimte gratis opmeten."
+            ],
+            "links": [
+              {
+                "label": "Plafond afwerken na isolatie",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Prijsgids spanplafond",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Vind een installateur",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-afwerken-na-isolatie": {
+        "title": "Plafond afwerken na isolatie: gyproc of spanplafond?",
+        "excerpt": "Na dak-, zoldervloer- of binnenmuurisolatie moet er een nieuw plafond of een nieuwe wand komen. Pleisterwerk, gyproc of een spanplafond: dit zijn de verschillen in tijd, stof, toegang tot de isolatie en btw, en zo stelt u de premie voor de isolatie veilig.",
+        "body": [
+          {
+            "heading": "Waarom de afwerking na isolatie anders is",
+            "paragraphs": [
+              "Wie een hellend dak van binnenuit isoleert, een plat dak langs de onderkant aanpakt of de binnenkant van een buitenmuur isoleert, eindigt met een open opbouw: isolatie, een dampscherm en een houten of metalen regelwerk. Daar moet een afwerking op die strak oogt, het dampscherm intact laat en de technieken bereikbaar houdt.",
+              "Die afwerking bepaalt meer dan het uitzicht. Ze bepaalt hoelang de werf duurt, hoeveel stof en droogtijd u erbij neemt, of u later nog aan de isolatie en de leidingen kunt, en hoe de verlichting wordt ingewerkt. En ze bepaalt welk deel van de factuur subsidieerbaar is: de isolatie wel, de afwerking nooit."
+            ]
+          },
+          {
+            "heading": "Optie 1: gyproc, plamuren en schilderen",
+            "paragraphs": [
+              "De klassieke route: gyprocplaten op het regelwerk, voegen en schroefkoppen plamuren, schuren, primer en twee lagen verf. Degelijk en overal verkrijgbaar, maar reken op vier tot zeven werkdagen met droogtijden, fijn stof in de hele woning en een vaste constructie: wie later aan de isolatie of het dampscherm wil, moet het plafond openbreken.",
+              "Bij schuine daken en dakkapellen zijn de naden en aansluitingen bovendien het zwakke punt: zettingen en temperatuurschommelingen tekenen zich af als haarscheurtjes in de voegen."
+            ]
+          },
+          {
+            "heading": "Optie 2: een spanplafond als afwerking",
+            "paragraphs": [
+              "Een spanplafond wordt in een slank profiel langs de omtrek gespannen, een paar centimeter onder de nieuwe isolatielaag. De plaatsing duurt doorgaans één dag, zonder stof, zonder droogtijd en zonder de ruimte leeg te maken. Het membraan is naadloos tot 5,15 m (polyester) of 6,4 m (pvc) en volgt ook schuine vlakken en dakkapellen."
+            ],
+            "bullets": [
+              "De toegang blijft: een pvc-membraan kan uit het profiel worden gehaald en teruggeplaatst, of u voorziet een onzichtbaar inspectieluik. Handig bij een lekcontrole, extra kabels of een latere aanpassing van de isolatie.",
+              "De verlichting hoort bij het systeem: spots, ledlijnen of een 48V-tracklight worden in het plafond ingewerkt en volgen zo het btw-tarief van 6% in een woning ouder dan tien jaar.",
+              "Akoestiek: een microgeperforeerd membraan met absorber erboven maakt van een pas geïsoleerde zolderkamer meteen een rustige slaap- of werkkamer.",
+              "Vochtige ruimtes: pvc is ongevoelig voor de luchtvochtigheid van een badkamer onder het dak."
+            ],
+            "links": [
+              {
+                "label": "Inspectieluik",
+                "href": "/products/inspection-hatch"
+              },
+              {
+                "label": "Akoestisch spanplafond",
+                "href": "/products/acoustic-stretch-system"
+              },
+              {
+                "label": "Spanplafond onder een schuin dak",
+                "href": "/blog/schuin-dak"
+              }
+            ]
+          },
+          {
+            "heading": "Dampscherm en luchtspouw: de technische afspraken",
+            "paragraphs": [
+              "Een spanplafond is een afwerking, geen dampscherm. Het dampscherm blijft aan de warme kant van de isolatie zitten, doorlopend en afgeplakt, precies zoals de isolatieaannemer het voorschrijft; in Vlaanderen is het bij isolatie van een hellend dak langs de binnenkant zelfs een premievoorwaarde. Laat het nooit weg omdat er toch een membraan onder komt.",
+              "Tussen isolatie en membraan blijft een plenum van enkele centimeters. Daarin passen leidingen, kabels en de inbouwdozen van de spots. Zware toestellen, zoals een plafondventilator of een groot armatuur, worden aan de structuur erboven opgehangen en niet aan het membraan. Spreek de profielhoogte en de positie van de spots af vóór de isolatieaannemer klaar is, dan hoeft niemand terug te komen.",
+              "Bij binnenmuurisolatie geldt hetzelfde voor een gespannen wand: eerst de isolatie en het dampscherm, dan het wandsysteem erover, met kaders voor stopcontacten en schakelaars."
+            ],
+            "links": [
+              {
+                "label": "Gespannen wandsystemen",
+                "href": "/applications/walls"
+              }
+            ]
+          },
+          {
+            "heading": "Zo houdt u de premie voor de isolatie",
+            "paragraphs": [
+              "In Vlaanderen krijgt een eigenaar-bewoner uit inkomenscategorie 3 of 4 een Mijn VerbouwPremie voor dak- of zoldervloerisolatie (Rd ≥ 4,5) en voor isolatie langs de binnenkant van een buitenmuur (Rd ≥ 2, door een gecertificeerde aannemer of onder begeleiding van een architect). In Wallonië lopen de Primes Habitation voor dak- en muurisolatie nog tot 30 september 2026. In Brussel zijn er in 2026 geen gewestelijke premies."
+            ],
+            "bullets": [
+              "Vraag twee aparte posten op de offerte en de factuur: isolatie (met aannemersattest, minstens € 1.000 excl. btw) en plafondafwerking.",
+              "De afwerking is nooit subsidieerbaar, ook pleisterwerk en gyproc niet, dus een gemengde factuur maakt het dossier alleen maar moeilijker.",
+              "Beide posten genieten 6% btw als de woning minstens tien jaar in gebruik is en de aannemer levert én plaatst.",
+              "Dien de premie in na de eindfactuur van de isolatie; in Vlaanderen via Mijn VerbouwLoket, binnen de twee jaar."
+            ],
+            "links": [
+              {
+                "label": "Premies en btw voor een spanplafond in België",
+                "href": "/blog/spanplafond-premie-btw"
+              }
+            ]
+          },
+          {
+            "heading": "Wat kost het en hoe plant u het?",
+            "paragraphs": [
+              "Reken voor een spanplafond op ongeveer € 70 tot € 200 per m² excl. btw, geplaatst, naargelang het type en de verlichting; een gyprocplafond met plamuur- en schilderwerk zit meestal tussen € 35 en € 70 per m², maar neemt een week werf in beslag. Het prijsverschil wordt kleiner zodra u de spots, de akoestiek en de verloren dagen meerekent.",
+              "Een praktische planning: dag één en twee isolatie en dampscherm, dag drie het spanplafond, diezelfde avond de verlichting aan. Een STRETCH-installateur uit uw regio meet de ruimte gratis op en stemt de profielen af op het regelwerk van de isolateur."
+            ],
+            "links": [
+              {
+                "label": "Prijsgids spanplafond",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Vind een installateur",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-renoveren-opties": {
+        "title": "Plafond renoveren: de vier opties vergeleken (2026)",
+        "excerpt": "Herpleisteren, gyproc, planchetten of een spanplafond? Dit is wat elke optie kost per m², hoelang de werf duurt, hoeveel stof u erbij neemt en wat het btw-tarief doet, zodat u kiest op basis van uw plafond en niet uit gewoonte.",
+        "body": [
+          {
+            "heading": "Het korte antwoord",
+            "paragraphs": [
+              "Voor een oud plafond met scheuren, vlekken of een gedateerde afwerking zijn er vier realistische routes: herpleisteren (of plamuren en schilderen), een nieuw gyprocplafond, houten planchetten of panelen, en een spanplafond. Per vierkante meter liggen ze dichter bij elkaar dan de meeste mensen denken; het verschil zit in de werfduur, het stof, de toegang tot wat erboven zit en de levensduur.",
+              "Vuistregel: is de ondergrond gezond en vlak, dan is opnieuw schilderen of plamuren het goedkoopst. Is het plafond gescheurd, ongelijk of vol leidingen, of wilt u verlichting en akoestiek meenemen, dan wint een spanplafond op totale kost en tijd. Gyproc zit daartussenin; planchetten zijn een stijlkeuze."
+            ]
+          },
+          {
+            "heading": "Optie 1: herpleisteren, plamuren en schilderen",
+            "paragraphs": [
+              "Kleine scheuren, een vergeelde verflaag of een licht ongelijk plafond: dan volstaan plamuren, schuren en twee lagen verf, of een nieuwe pleisterlaag bij grotere schade. Reken indicatief op € 10 tot € 20 per m² voor schilderwerk en € 25 tot € 45 per m² voor herpleisteren, excl. btw, aan 6% btw in een woning ouder dan tien jaar.",
+              "Nadelen: de ruimte moet leeg en afgedekt, fijn stof dringt overal door, droogtijden bepalen de planning en een structurele scheur komt meestal terug. Leidingen of een oneffen betonplafond blijven zichtbaar."
+            ],
+            "links": [
+              {
+                "label": "Scheuren in een plafond herstellen",
+                "href": "/blog/scheuren-in-plafond-herstellen"
+              }
+            ]
+          },
+          {
+            "heading": "Optie 2: een nieuw gyprocplafond",
+            "paragraphs": [
+              "Een verlaagd plafond in gipskarton op een metalen regelwerk verbergt leidingen en oneffenheden en laat spots toe. Indicatief € 35 tot € 70 per m² inclusief plamuren en schilderen, excl. btw. Het is een vaste constructie: vier tot zeven werkdagen met droogtijden, en later alleen nog toegang tot de technieken door te slopen.",
+              "Het resultaat is klassiek en degelijk, maar de naden blijven het zwakke punt: vooral in grote vlakken en bij temperatuurschommelingen zijn haarscheuren in de voegen na enkele jaren courant."
+            ]
+          },
+          {
+            "heading": "Optie 3: houten planchetten of panelen",
+            "paragraphs": [
+              "Planchetten geven warmte en karakter en zijn relatief snel geplaatst: indicatief € 40 tot € 90 per m² excl. btw, naargelang houtsoort en afwerking. Ze vragen wel een regelwerk, laten minder vrijheid voor verlichting en vergen onderhoud. Hebt u al een planchettenplafond dat gedateerd oogt, dan is het vaak slimmer om er een spanplafond onder te hangen dan om het te verwijderen."
+            ],
+            "links": [
+              {
+                "label": "Houten planchettenplafond renoveren",
+                "href": "/blog/houten-planchetten-plafond-renoveren-of-vernieuwen"
+              }
+            ]
+          },
+          {
+            "heading": "Optie 4: een spanplafond",
+            "paragraphs": [
+              "Een membraan in pvc of polyester wordt in een slank profiel langs de wanden gespannen, een paar centimeter onder het bestaande plafond. Alles erboven, scheuren, planchetten, leidingen, een ongelijke betonplaat, verdwijnt achter één naadloos vlak. Geplaatst in één dag, zonder stof, zonder droogtijd en met de meubels in de kamer."
+            ],
+            "bullets": [
+              "Prijs: ongeveer € 70 tot € 200 per m² excl. btw, geplaatst; een effen mat wit plafond zit onderaan, lichtdoorlatend of bedrukt bovenaan.",
+              "Ingebouwde verlichting, akoestische absorptie, een sterrenhemel of een print zitten in hetzelfde systeem.",
+              "Toegang: pvc is demonteerbaar en kan met een onzichtbaar inspectieluik worden uitgerust.",
+              "Levensduur: tientallen jaren zonder herschilderen; afwasbaar; bestand tegen vocht in badkamers en keukens.",
+              "Btw: 6% op materiaal en plaatsing in een woning ouder dan tien jaar, ingebouwde spots inbegrepen."
+            ],
+            "links": [
+              {
+                "label": "Prijsgids spanplafond",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Pvc-spanplafond",
+                "href": "/products/pvc-stretch-ceiling"
+              },
+              {
+                "label": "Polyester spanplafond",
+                "href": "/products/polyester-stretch-ceiling"
+              }
+            ]
+          },
+          {
+            "heading": "Vergelijking in één oogopslag",
+            "paragraphs": [],
+            "bullets": [
+              "Kostprijs per m² (excl. btw, indicatief): schilderen € 10–20 · herpleisteren € 25–45 · gyproc € 35–70 · planchetten € 40–90 · spanplafond € 70–200.",
+              "Werfduur voor een woonkamer van 30 m²: schilderen 1–2 dagen · herpleisteren 3–5 dagen · gyproc 4–7 dagen · planchetten 2–3 dagen · spanplafond 1 dag.",
+              "Stof en droogtijd: pleister en gyproc veel · planchetten weinig · spanplafond geen.",
+              "Verbergt leidingen en oneffenheden: pleister nee · gyproc ja · planchetten ja · spanplafond ja.",
+              "Toegang achteraf: pleister en gyproc nee · planchetten beperkt · spanplafond ja (pvc).",
+              "Verlichting en akoestiek ingebouwd: gyproc deels · spanplafond volledig.",
+              "Premie: geen enkele afwerking is in België subsidieerbaar, alleen de isolatie erboven. Btw: 6% voor alle opties als een aannemer levert en plaatst in een woning ouder dan tien jaar."
+            ]
+          },
+          {
+            "heading": "Welke optie voor welk plafond?",
+            "paragraphs": [
+              "Gezond, vlak plafond met een versleten verflaag: schilderen. Scheuren in een oud pleisterplafond: eerst de oorzaak bekijken, dan plamuren of, als ze terugkomen, overspannen. Planchetten die u moe bent: overspannen in plaats van slopen. Leidingen, ongelijk beton of een verbouwing met nieuwe verlichting en akoestiek: spanplafond. Gyproc blijft zinvol waar een zwaar toestel aan het plafond moet hangen of waar u bewust een klassieke, vaste constructie wilt.",
+              "Plant u isolatie in dezelfde fase, kies de afwerking dan pas na de isolatie; de premie hangt aan de isolatie, niet aan het plafond. Voor een vaste prijs komt een STRETCH-installateur uit uw regio de ruimte gratis opmeten."
+            ],
+            "links": [
+              {
+                "label": "Plafond afwerken na isolatie",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Premies en btw in België",
+                "href": "/blog/spanplafond-premie-btw"
+              },
+              {
+                "label": "Vind een installateur",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
       }
     },
     "chrome": {

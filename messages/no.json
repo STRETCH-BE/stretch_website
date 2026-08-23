@@ -4231,6 +4231,323 @@
             ]
           }
         ]
+      },
+      "spanplafond-premie-btw": {
+        "title": "Grants and VAT for a stretch ceiling in Belgium (2026)",
+        "excerpt": "No Belgian region subsidises a ceiling or wall finish — a stretch ceiling included. What does count is the insulation above or behind it, and the 6% VAT rate. Here is where each region stands on 22 August 2026.",
+        "body": [
+          {
+            "heading": "The short answer",
+            "paragraphs": [
+              "A stretch ceiling on its own does not qualify for a renovation grant in any of Belgium's three regions. Flanders scrapped its interior-renovation category (ceilings, interior walls, floors) on 1 July 2025 and explicitly lists plastering on walls and ceilings among the non-eligible works; Wallonia and Brussels only ever funded energy measures.",
+              "Two things do count. First, the insulation you tackle together with the ceiling — attic floor, roof, the inside of an exterior wall or a cellar ceiling. Second, the federal 6% VAT rate on the installed stretch ceiling itself, in a dwelling that is at least ten years old. For most stretch-ceiling projects that VAT rate is the only advantage, and by far the biggest one.",
+              "All three regions rewrote their rules in 2026. This article reflects the situation on 22 August 2026; always check your region's official simulator before you order."
+            ],
+            "links": [
+              {
+                "label": "Premiezoeker.be (all Belgian schemes)",
+                "href": "https://www.premiezoeker.be"
+              }
+            ]
+          },
+          {
+            "heading": "Flanders: Mijn VerbouwPremie only for lower incomes",
+            "paragraphs": [
+              "Since 1 March 2026, owner-occupiers in income categories 1 and 2 only qualify for a heat-pump or heat-pump-boiler premium. For roof, exterior wall, floor, windows and doors the premium continues for categories 3 and 4. Private landlords fall into category 1, and non-residential buildings (offices, hospitality, schools) no longer get Mijn VerbouwPremie at all.",
+              "Roughly: a single person with a taxable income up to €43,240 or a couple up to €60,520 (plus €4,420 per dependant) is in category 3 or 4. Above that — or if you fully own a second home or building plot — you are in category 1."
+            ],
+            "bullets": [
+              "Roof and attic floor: new insulation with Rd ≥ 4.5 m²K/W placed by a contractor. Category 4: 50% of the invoice excl. VAT, maximum €5,750. Category 3: 35%, maximum €4,025. Roof renovation works only count if you insulate at the same time.",
+              "Exterior wall, including from the inside: Rd ≥ 2 m²K/W for interior insulation, placed by a contractor with a certificate of competence or under an architect's supervision. Category 4: 50%, maximum €5,000. Category 3: 35%, maximum €3,500.",
+              "Floor: insulating a cellar ceiling or crawl space also falls under this category.",
+              "General: dwelling connected to the grid before 1 January 2006, invoice of at least €1,000 excl. VAT and no older than two years, one premium per category every five years. Apply via Mijn VerbouwLoket after the final invoice.",
+              "Never eligible: the stretch ceiling itself, plaster or plasterboard work, painting, do-it-yourself.",
+              "If you no longer qualify for the premium you may still get Mijn VerbouwLening, a loan of up to €60,000 at 0% for category 4, 0.5% for category 3 and 1.5% for category 2 (category 1 is excluded). It covers insulation and renovation of roof, walls and floors, glazing and heat pumps — not the ceiling finish. The EPC label premium has been discontinued."
+            ],
+            "links": [
+              {
+                "label": "Mijn VerbouwPremie (official)",
+                "href": "https://www.vlaanderen.be/bouwen-wonen-en-energie/bouwen-en-verbouwen/premies-voor-renovatie/mijn-verbouwpremie"
+              },
+              {
+                "label": "Simulator 2026",
+                "href": "https://apps.energiesparen.be/simulator-mijnverbouwpremie"
+              }
+            ]
+          },
+          {
+            "heading": "Wallonia: Primes Habitation until 30 September 2026, loans afterwards",
+            "paragraphs": [
+              "Since 14 February 2025 Wallonia runs a temporary regime that merged its energy and renovation grants into Primes Habitation. Base amounts were cut by roughly 60% and a housing audit is mandatory for everything except roof and attic insulation. Every application, final invoice included, must be filed by 30 September 2026."
+            ],
+            "bullets": [
+              "Roof insulation: base €20/m² (€26 with bio-based insulation), multiplied by an income coefficient from 2 (R4) to 6 (R1) — up to €156/m². Cap: 70% of the invoice incl. VAT for R1 and R2, 50% for R3 and R4. Required thermal resistance: at least R = 5 m²K/W.",
+              "Wall insulation (cavity, inside or outside): base €8.80/m² (€12 bio-based), up to €72/m²; audit mandatory.",
+              "Conditions: dwelling at least 15 years old, works by a contractor registered with the Crossroads Bank for Enterprises, reference income up to €122,800.",
+              "Walloon residents only: a 30% tax reduction on roof insulation (R ≥ 2.5), capped at €4,120 for 2026 expenses, entered under code 3317 — cumulative with the premium and with 6% VAT.",
+              "From 1 October 2026 direct grants disappear. They are replaced by the Rénopack — an interest-free loan of which part is waived (up to 50% for income category C1, 40% for C2, 15% for C3) — and the Rénoprêt at a preferential rate for C4, landlords and co-ownerships. Support will then only be available for homes with EPB label G or F reaching at least D, or label E reaching at least C, calculated on a global quote instead of per item; the ceiling rises to €75,000 for a single-family house. The execution decrees still have to fix the details."
+            ],
+            "links": [
+              {
+                "label": "Walloon government announcement",
+                "href": "https://www.wallonie.be/fr/actualites/renovation-energetique-les-grandes-lignes-du-futur-regime-de-soutien-sont-connues"
+              },
+              {
+                "label": "Roof insulation tax reduction (FPS Finance)",
+                "href": "https://fin.belgium.be/fr/particuliers/avantages-fiscaux/isolation-du-toit"
+              }
+            ]
+          },
+          {
+            "heading": "Brussels: no grants for invoices dated 2025 or 2026",
+            "paragraphs": [
+              "Brussels' Renolution grants have been suspended since early 2025. No application can be filed for final invoices dated 2025 or 2026, and in February 2026 the new regional government confirmed the grants will not return in their current form. They are to be replaced by interest-free loans, start date unknown. The €56 million released in the 2026 budget only pays the backlog of 2024 files."
+            ],
+            "bullets": [
+              "What remains: the ECORENO loan from the Brussels Housing Fund (2.5% or 3.5% depending on income, reopened on 1 January 2026), municipal grants in a handful of communes, and of course the 6% VAT rate.",
+              "For reference if the scheme ever returns: the last scale paid €35, €55 or €75 per m² of roof insulation depending on income category, and interior wall insulation required R ≥ 2 m²K/W.",
+              "New since 1 January 2026: every rental in Brussels needs an EPB certificate with at least label E — one more reason landlords are insulating now."
+            ],
+            "links": [
+              {
+                "label": "Renolution.brussels",
+                "href": "https://renolution.brussels"
+              }
+            ]
+          },
+          {
+            "heading": "6% VAT: the advantage that does apply to a stretch ceiling",
+            "paragraphs": [
+              "A stretch ceiling supplied and installed by a contractor is work on immovable property. In a dwelling first occupied at least ten years ago it carries 6% VAT instead of 21% — on the materials and on the labour. That is 15 percentage points off the whole invoice, with no file to submit."
+            ],
+            "bullets": [
+              "Conditions: the dwelling has been in use for at least ten calendar years on the date of the first invoice, is used more than half privately after the works, and the invoice is addressed to the end user — owner or tenant. Materials you buy to fit yourself stay at 21%.",
+              "Since 2022 a standard statement on the invoice replaces the old certificate; you have one month to object if the conditions are not met.",
+              "Lighting: loose fittings and lamps are excluded from the reduced rate unless they are built into a ceiling. Spots integrated in the stretch ceiling therefore follow the 6%.",
+              "Walls: wall covering cut to the size of the surface to be covered is treated as work on immovable property. A made-to-measure stretch wall system qualifies.",
+              "Not applicable: offices, hospitality and other non-residential buildings (21%), new builds under ten years old, and do-it-yourself materials."
+            ],
+            "links": [
+              {
+                "label": "Renovation VAT rate (FPS Finance)",
+                "href": "https://fin.belgium.be/nl/particulieren/woning/bouwen-verbouwen/verbouwen/verbouwen-btw-tarief"
+              }
+            ]
+          },
+          {
+            "heading": "How to combine a grant with a stretch ceiling",
+            "paragraphs": [
+              "Have the insulation and the stretch ceiling invoiced as two separate items. The insulation item must be at least €1,000 excl. VAT, carried out by the contractor and accompanied by the contractor's certificate; the stretch-ceiling item stands on its own. Both carry 6% VAT if the dwelling is old enough.",
+              "Plan the sequence: insulate first, with the vapour barrier your insulation contractor specifies, then the stretch ceiling. There is no drying time, so the ceiling can go in the day after the insulation. In Flanders you apply via Mijn VerbouwLoket as soon as you have the final invoice for the insulation; in Wallonia you meet the 30 September 2026 deadline.",
+              "Unsure about your income category, or what your municipality adds on top? The official simulators and Premiezoeker.be give you an answer in minutes. For a fixed price on the ceiling itself, a STRETCH installer in your region measures the room free of charge."
+            ],
+            "links": [
+              {
+                "label": "Finishing a ceiling after insulation",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Price guide",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Find an installer",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-afwerken-na-isolatie": {
+        "title": "Himling etter isolering: gipsplate eller strekktak?",
+        "excerpt": "Etter isolering av taket, loftsgulvet eller en yttervegg innenfra trengs det en ny himling eller en ny vegg. Puss, gipsplate eller strekktak: her er forskjellene i tid, støv og tilgang til isolasjonen — og slik holder du tilskuddet til isolasjonen trygt.",
+        "body": [
+          {
+            "heading": "Derfor er overflaten etter isolering annerledes",
+            "paragraphs": [
+              "Den som isolerer et skråtak innenfra, et flatt tak nedenfra eller innsiden av en yttervegg, ender med en åpen oppbygging: isolasjon, dampsperre og et bindingsverk av tre eller metall. Det krever en overflate som ser stram ut, lar dampsperren være intakt og holder de tekniske installasjonene tilgjengelige.",
+              "Overflaten avgjør mer enn utseendet. Den avgjør hvor lenge arbeidet varer, hvor mye støv og tørketid du godtar, om du senere fortsatt kommer til isolasjonen og rørene, og hvordan belysningen bygges inn. Og den avgjør hvilken del av fakturaen som kan få tilskudd: isolasjonen ja, overflaten aldri."
+            ]
+          },
+          {
+            "heading": "Alternativ 1: gipsplater, sparkling og maling",
+            "paragraphs": [
+              "Den klassiske veien: gipsplater på bindingsverket, sparkling av skjøter og skruehoder, sliping, grunning og to strøk maling. Solid og å få tak i overalt, men regn med fire til sju arbeidsdager med tørketider, fint støv i hele huset og en fast konstruksjon: Den som senere må til isolasjonen eller dampsperren, må bryte opp himlingen.",
+              "Ved skråhimlinger og arker er skjøtene dessuten det svake punktet: setninger og temperatursvingninger viser seg som hårfine riss i fugene."
+            ]
+          },
+          {
+            "heading": "Alternativ 2: et strekktak som overflate",
+            "paragraphs": [
+              "Et strekktak spennes opp i en slank profil langs veggene, et par centimeter under det nye isolasjonslaget. Montasjen tar som regel én dag — uten støv, uten tørketid og uten å tømme rommet. Membranen er skjøtefri opptil 5,15 m (polyester) eller 6,4 m (pvc) og følger også skrå flater og arker."
+            ],
+            "bullets": [
+              "Tilgangen består: En pvc-membran kan løsnes fra profilen og settes inn igjen, eller du legger inn en usynlig inspeksjonsluke. Praktisk ved lekkasjekontroll, ekstra kabler eller en senere endring av isolasjonen.",
+              "Belysningen hører til systemet: spotter, LED-linjer eller en 48 V-skinne bygges inn i taket — uten ekstra konstruksjon.",
+              "Akustikk: En mikroperforert membran med absorbent over gjør et nyisolert loftsrom til et stille sove- eller arbeidsrom med en gang.",
+              "Fuktige rom: pvc påvirkes ikke av luftfuktigheten i et bad under taket."
+            ],
+            "links": [
+              {
+                "label": "Inspeksjonsluke",
+                "href": "/products/inspection-hatch"
+              },
+              {
+                "label": "Akustisk strekktak",
+                "href": "/products/acoustic-stretch-system"
+              },
+              {
+                "label": "Strekktak under skråtak",
+                "href": "/blog/schuin-dak"
+              }
+            ]
+          },
+          {
+            "heading": "Dampsperre og hulrom: de tekniske avtalene",
+            "paragraphs": [
+              "Et strekktak er en overflate, ingen dampsperre. Dampsperren blir sittende på den varme siden av isolasjonen, ubrutt og tapet, akkurat slik isolasjonsentreprenøren foreskriver. Dropp den aldri bare fordi det uansett kommer en membran under.",
+              "Mellom isolasjon og membran er det et hulrom på noen centimeter. Der er det plass til rør, kabler og innbyggingsboksene til spottene. Tunge ting som en takvifte eller en stor armatur henges i konstruksjonen over, ikke i membranen. Avtal profilhøyde og spotplasseringer før isolasjonsentreprenøren er ferdig — da slipper noen å komme tilbake.",
+              "Ved innvendig veggisolering gjelder det samme for en strekkvegg: først isolasjon og dampsperre, deretter veggsystemet utenpå, med rammer for stikkontakter og brytere."
+            ],
+            "links": [
+              {
+                "label": "Strekkveggsystemer",
+                "href": "/applications/walls"
+              }
+            ]
+          },
+          {
+            "heading": "Slik beholder du tilskuddet til isolasjonen",
+            "paragraphs": [
+              "Mange land støtter tak-, bjelkelags- og veggisolering med tilskudd — og der en slik ordning finnes, gjelder den isolasjonen, aldri overflaten under. Hold derfor de to adskilt på tilbud og faktura."
+            ],
+            "bullets": [
+              "Be om to separate poster på tilbud og faktura: isolasjon (med produktdataene og arealene ordningen din krever) og himling.",
+              "Overflaten er aldri tilskuddsberettiget — puss og gipsplater inkludert — så en blandet faktura gjør bare saken vanskeligere.",
+              "Momsen følger de nasjonale reglene; i flere land har renoveringsarbeid på eldre boliger en redusert sats — sjekk hva som gjelder før du signerer.",
+              "Søk om tilskuddet etter sluttfakturaen for isolasjonen, innen fristen i ordningen din."
+            ]
+          },
+          {
+            "heading": "Hva det koster og hvordan du planlegger det",
+            "paragraphs": [
+              "Regn med omtrent 70 til 200 euro per m² ekskl. mva, montert, for et strekktak avhengig av type og belysning; en gipshimling med sparkling og maling lander som regel mellom 35 og 70 euro per m², men tar en uke på byggeplassen. Avstanden krymper så snart du regner med spottene, akustikken og de tapte dagene.",
+              "En praktisk plan: dag én og to isolasjon og dampsperre, dag tre strekktaket — og samme kveld er lyset på. En STRETCH-montør fra din region måler rommet gratis og tilpasser profilene til isolasjonsentreprenørens bindingsverk."
+            ],
+            "links": [
+              {
+                "label": "Prisguide",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Finn en montør",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-renoveren-opties": {
+        "title": "Renovere himlingen: de fire alternativene sammenlignet (2026)",
+        "excerpt": "Pusse på nytt, gipsplater, trepanel eller et strekktak? Hva hvert alternativ koster per m², hvor lang tid arbeidet tar, hvor mye støv du godtar og hva momsen gjør — slik at du velger ut fra taket ditt og ikke av gammel vane.",
+        "body": [
+          {
+            "heading": "Det korte svaret",
+            "paragraphs": [
+              "For en gammel himling med riss, flekker eller en datert overflate finnes det fire realistiske veier: pusse på nytt (eller sparkle og male), en ny gipshimling, trepanel — og et strekktak. Per kvadratmeter ligger de nærmere hverandre enn de fleste tror; forskjellen sitter i tiden på byggeplassen, støvet, tilgangen til det som er over, og levetiden.",
+              "Tommelfingerregel: Er underlaget friskt og plant, er maling eller sparkling billigst. Er taket sprukket, ujevnt eller fullt av rør, eller vil du ha med belysning og akustikk, vinner strekktaket på totalkostnad og tid. Gips ligger imellom; panel er et stilvalg."
+            ]
+          },
+          {
+            "heading": "Alternativ 1: pusse på nytt, sparkle og male",
+            "paragraphs": [
+              "Små riss, et gulnet malingslag eller en lett ujevn himling: Da holder det med sparkling, sliping og to strøk, eller et nytt pusslag ved større skader. Veiledende 10 til 20 euro per m² for maling og 25 til 45 euro per m² for ny puss, ekskl. mva.",
+              "Ulemper: Rommet må tømmes og dekkes til, fint støv trenger inn overalt, tørketider styrer fremdriften, og et strukturelt riss kommer som regel tilbake. Rør eller et ujevnt betongdekke forblir synlige."
+            ],
+            "links": [
+              {
+                "label": "Reparere riss i taket",
+                "href": "/blog/scheuren-in-plafond-herstellen"
+              }
+            ]
+          },
+          {
+            "heading": "Alternativ 2: en ny gipshimling",
+            "paragraphs": [
+              "En nedsenket gipshimling på et metallskjelett skjuler rør og ujevnheter og gir plass til spotter. Veiledende 35 til 70 euro per m² inkludert sparkling og maling, ekskl. mva. Det er en fast konstruksjon: fire til sju arbeidsdager med tørketider, og senere kommer man til installasjonene bare ved riving.",
+              "Resultatet er klassisk og solid, men skjøtene forblir det svake punktet — i store flater og ved temperatursvingninger er hårfine riss i fugene etter noen år vanlige."
+            ]
+          },
+          {
+            "heading": "Alternativ 3: trepanel",
+            "paragraphs": [
+              "Panel gir varme og karakter og monteres forholdsvis raskt: veiledende 40 til 90 euro per m² ekskl. mva, avhengig av treslag og overflate. Det krever imidlertid et bindingsverk, gir mindre frihet for belysningen og trenger vedlikehold. Har du allerede et datert paneltak, er det ofte smartere å spenne et strekktak under det enn å rive det ned."
+            ],
+            "links": [
+              {
+                "label": "Renovere et tak med trepanel",
+                "href": "/blog/houten-planchetten-plafond-renoveren-of-vernieuwen"
+              }
+            ]
+          },
+          {
+            "heading": "Alternativ 4: et strekktak",
+            "paragraphs": [
+              "En membran av pvc eller polyester spennes opp i en slank profil langs veggene, et par centimeter under den eksisterende himlingen. Alt over — riss, panel, rør, et ujevnt betongdekke — forsvinner bak én skjøtefri flate. Montert på én dag, uten støv, uten tørketid og med møblene i rommet."
+            ],
+            "bullets": [
+              "Pris: omtrent 70 til 200 euro per m² ekskl. mva, montert; et enkelt matt hvitt tak ligger nederst, baklyst eller med trykk øverst.",
+              "Innebygd belysning, lydabsorpsjon, en stjernehimmel eller et trykk bor i samme system.",
+              "Tilgang: pvc kan demonteres og utstyres med en usynlig inspeksjonsluke.",
+              "Levetid: tiår uten maling; vaskbart; upåvirket av fukt på bad og kjøkken.",
+              "Moms: De nasjonale reglene gjelder — i flere land har renoveringsarbeid på eldre boliger en redusert sats; spør montøren din om hva som gjelder."
+            ],
+            "links": [
+              {
+                "label": "Prisguide",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Pvc-strekktak",
+                "href": "/products/pvc-stretch-ceiling"
+              },
+              {
+                "label": "Polyester-strekktak",
+                "href": "/products/polyester-stretch-ceiling"
+              }
+            ]
+          },
+          {
+            "heading": "Sammenligning i ett blikk",
+            "paragraphs": [],
+            "bullets": [
+              "Kostnad per m² (ekskl. mva, veiledende): maling 10–20 € · ny puss 25–45 € · gips 35–70 € · panel 40–90 € · strekktak 70–200 €.",
+              "Tid på byggeplassen for en stue på 30 m²: maling 1–2 dager · ny puss 3–5 dager · gips 4–7 dager · panel 2–3 dager · strekktak 1 dag.",
+              "Støv og tørketid: puss og gips mye · panel lite · strekktak ingenting.",
+              "Skjuler rør og ujevnheter: puss nei · gips ja · panel ja · strekktak ja.",
+              "Tilgang etterpå: puss og gips nei · panel begrenset · strekktak ja (pvc).",
+              "Belysning og akustikk innebygd: gips delvis · strekktak fullt ut.",
+              "Tilskudd: Der de finnes, gjelder de isolasjonen over himlingen, aldri overflaten. Moms: følger de nasjonale reglene — i flere land har renovering en redusert sats."
+            ]
+          },
+          {
+            "heading": "Hvilket alternativ for hvilken himling?",
+            "paragraphs": [
+              "Frisk, plan himling med et slitt malingslag: mal. Riss i en gammel pusset himling: Finn først årsaken, sparkle så — eller spenn over hvis de stadig kommer tilbake. Panel du er lei av: Spenn over i stedet for å rive. Rør, ujevn betong eller en renovering med ny belysning og akustikk: strekktak. Gips gir fortsatt mening der et tungt apparat skal henge i taket, eller der du bevisst vil ha en klassisk, fast konstruksjon.",
+              "Isolerer du i samme fase, velg overflaten først etter isolasjonen; tilskuddet henger på isolasjonen, ikke på himlingen. For en fast pris måler en STRETCH-montør fra din region rommet gratis."
+            ],
+            "links": [
+              {
+                "label": "Himling etter isolering",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Finn en montør",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
       }
     },
     "chrome": {

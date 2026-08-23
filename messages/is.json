@@ -4231,6 +4231,323 @@
             ]
           }
         ]
+      },
+      "spanplafond-premie-btw": {
+        "title": "Grants and VAT for a stretch ceiling in Belgium (2026)",
+        "excerpt": "No Belgian region subsidises a ceiling or wall finish — a stretch ceiling included. What does count is the insulation above or behind it, and the 6% VAT rate. Here is where each region stands on 22 August 2026.",
+        "body": [
+          {
+            "heading": "The short answer",
+            "paragraphs": [
+              "A stretch ceiling on its own does not qualify for a renovation grant in any of Belgium's three regions. Flanders scrapped its interior-renovation category (ceilings, interior walls, floors) on 1 July 2025 and explicitly lists plastering on walls and ceilings among the non-eligible works; Wallonia and Brussels only ever funded energy measures.",
+              "Two things do count. First, the insulation you tackle together with the ceiling — attic floor, roof, the inside of an exterior wall or a cellar ceiling. Second, the federal 6% VAT rate on the installed stretch ceiling itself, in a dwelling that is at least ten years old. For most stretch-ceiling projects that VAT rate is the only advantage, and by far the biggest one.",
+              "All three regions rewrote their rules in 2026. This article reflects the situation on 22 August 2026; always check your region's official simulator before you order."
+            ],
+            "links": [
+              {
+                "label": "Premiezoeker.be (all Belgian schemes)",
+                "href": "https://www.premiezoeker.be"
+              }
+            ]
+          },
+          {
+            "heading": "Flanders: Mijn VerbouwPremie only for lower incomes",
+            "paragraphs": [
+              "Since 1 March 2026, owner-occupiers in income categories 1 and 2 only qualify for a heat-pump or heat-pump-boiler premium. For roof, exterior wall, floor, windows and doors the premium continues for categories 3 and 4. Private landlords fall into category 1, and non-residential buildings (offices, hospitality, schools) no longer get Mijn VerbouwPremie at all.",
+              "Roughly: a single person with a taxable income up to €43,240 or a couple up to €60,520 (plus €4,420 per dependant) is in category 3 or 4. Above that — or if you fully own a second home or building plot — you are in category 1."
+            ],
+            "bullets": [
+              "Roof and attic floor: new insulation with Rd ≥ 4.5 m²K/W placed by a contractor. Category 4: 50% of the invoice excl. VAT, maximum €5,750. Category 3: 35%, maximum €4,025. Roof renovation works only count if you insulate at the same time.",
+              "Exterior wall, including from the inside: Rd ≥ 2 m²K/W for interior insulation, placed by a contractor with a certificate of competence or under an architect's supervision. Category 4: 50%, maximum €5,000. Category 3: 35%, maximum €3,500.",
+              "Floor: insulating a cellar ceiling or crawl space also falls under this category.",
+              "General: dwelling connected to the grid before 1 January 2006, invoice of at least €1,000 excl. VAT and no older than two years, one premium per category every five years. Apply via Mijn VerbouwLoket after the final invoice.",
+              "Never eligible: the stretch ceiling itself, plaster or plasterboard work, painting, do-it-yourself.",
+              "If you no longer qualify for the premium you may still get Mijn VerbouwLening, a loan of up to €60,000 at 0% for category 4, 0.5% for category 3 and 1.5% for category 2 (category 1 is excluded). It covers insulation and renovation of roof, walls and floors, glazing and heat pumps — not the ceiling finish. The EPC label premium has been discontinued."
+            ],
+            "links": [
+              {
+                "label": "Mijn VerbouwPremie (official)",
+                "href": "https://www.vlaanderen.be/bouwen-wonen-en-energie/bouwen-en-verbouwen/premies-voor-renovatie/mijn-verbouwpremie"
+              },
+              {
+                "label": "Simulator 2026",
+                "href": "https://apps.energiesparen.be/simulator-mijnverbouwpremie"
+              }
+            ]
+          },
+          {
+            "heading": "Wallonia: Primes Habitation until 30 September 2026, loans afterwards",
+            "paragraphs": [
+              "Since 14 February 2025 Wallonia runs a temporary regime that merged its energy and renovation grants into Primes Habitation. Base amounts were cut by roughly 60% and a housing audit is mandatory for everything except roof and attic insulation. Every application, final invoice included, must be filed by 30 September 2026."
+            ],
+            "bullets": [
+              "Roof insulation: base €20/m² (€26 with bio-based insulation), multiplied by an income coefficient from 2 (R4) to 6 (R1) — up to €156/m². Cap: 70% of the invoice incl. VAT for R1 and R2, 50% for R3 and R4. Required thermal resistance: at least R = 5 m²K/W.",
+              "Wall insulation (cavity, inside or outside): base €8.80/m² (€12 bio-based), up to €72/m²; audit mandatory.",
+              "Conditions: dwelling at least 15 years old, works by a contractor registered with the Crossroads Bank for Enterprises, reference income up to €122,800.",
+              "Walloon residents only: a 30% tax reduction on roof insulation (R ≥ 2.5), capped at €4,120 for 2026 expenses, entered under code 3317 — cumulative with the premium and with 6% VAT.",
+              "From 1 October 2026 direct grants disappear. They are replaced by the Rénopack — an interest-free loan of which part is waived (up to 50% for income category C1, 40% for C2, 15% for C3) — and the Rénoprêt at a preferential rate for C4, landlords and co-ownerships. Support will then only be available for homes with EPB label G or F reaching at least D, or label E reaching at least C, calculated on a global quote instead of per item; the ceiling rises to €75,000 for a single-family house. The execution decrees still have to fix the details."
+            ],
+            "links": [
+              {
+                "label": "Walloon government announcement",
+                "href": "https://www.wallonie.be/fr/actualites/renovation-energetique-les-grandes-lignes-du-futur-regime-de-soutien-sont-connues"
+              },
+              {
+                "label": "Roof insulation tax reduction (FPS Finance)",
+                "href": "https://fin.belgium.be/fr/particuliers/avantages-fiscaux/isolation-du-toit"
+              }
+            ]
+          },
+          {
+            "heading": "Brussels: no grants for invoices dated 2025 or 2026",
+            "paragraphs": [
+              "Brussels' Renolution grants have been suspended since early 2025. No application can be filed for final invoices dated 2025 or 2026, and in February 2026 the new regional government confirmed the grants will not return in their current form. They are to be replaced by interest-free loans, start date unknown. The €56 million released in the 2026 budget only pays the backlog of 2024 files."
+            ],
+            "bullets": [
+              "What remains: the ECORENO loan from the Brussels Housing Fund (2.5% or 3.5% depending on income, reopened on 1 January 2026), municipal grants in a handful of communes, and of course the 6% VAT rate.",
+              "For reference if the scheme ever returns: the last scale paid €35, €55 or €75 per m² of roof insulation depending on income category, and interior wall insulation required R ≥ 2 m²K/W.",
+              "New since 1 January 2026: every rental in Brussels needs an EPB certificate with at least label E — one more reason landlords are insulating now."
+            ],
+            "links": [
+              {
+                "label": "Renolution.brussels",
+                "href": "https://renolution.brussels"
+              }
+            ]
+          },
+          {
+            "heading": "6% VAT: the advantage that does apply to a stretch ceiling",
+            "paragraphs": [
+              "A stretch ceiling supplied and installed by a contractor is work on immovable property. In a dwelling first occupied at least ten years ago it carries 6% VAT instead of 21% — on the materials and on the labour. That is 15 percentage points off the whole invoice, with no file to submit."
+            ],
+            "bullets": [
+              "Conditions: the dwelling has been in use for at least ten calendar years on the date of the first invoice, is used more than half privately after the works, and the invoice is addressed to the end user — owner or tenant. Materials you buy to fit yourself stay at 21%.",
+              "Since 2022 a standard statement on the invoice replaces the old certificate; you have one month to object if the conditions are not met.",
+              "Lighting: loose fittings and lamps are excluded from the reduced rate unless they are built into a ceiling. Spots integrated in the stretch ceiling therefore follow the 6%.",
+              "Walls: wall covering cut to the size of the surface to be covered is treated as work on immovable property. A made-to-measure stretch wall system qualifies.",
+              "Not applicable: offices, hospitality and other non-residential buildings (21%), new builds under ten years old, and do-it-yourself materials."
+            ],
+            "links": [
+              {
+                "label": "Renovation VAT rate (FPS Finance)",
+                "href": "https://fin.belgium.be/nl/particulieren/woning/bouwen-verbouwen/verbouwen/verbouwen-btw-tarief"
+              }
+            ]
+          },
+          {
+            "heading": "How to combine a grant with a stretch ceiling",
+            "paragraphs": [
+              "Have the insulation and the stretch ceiling invoiced as two separate items. The insulation item must be at least €1,000 excl. VAT, carried out by the contractor and accompanied by the contractor's certificate; the stretch-ceiling item stands on its own. Both carry 6% VAT if the dwelling is old enough.",
+              "Plan the sequence: insulate first, with the vapour barrier your insulation contractor specifies, then the stretch ceiling. There is no drying time, so the ceiling can go in the day after the insulation. In Flanders you apply via Mijn VerbouwLoket as soon as you have the final invoice for the insulation; in Wallonia you meet the 30 September 2026 deadline.",
+              "Unsure about your income category, or what your municipality adds on top? The official simulators and Premiezoeker.be give you an answer in minutes. For a fixed price on the ceiling itself, a STRETCH installer in your region measures the room free of charge."
+            ],
+            "links": [
+              {
+                "label": "Finishing a ceiling after insulation",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Price guide",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Find an installer",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-afwerken-na-isolatie": {
+        "title": "Loftaklæðning eftir einangrun: gifsplata eða strekkloft?",
+        "excerpt": "Eftir einangrun þaks, háaloftsgólfs eða útveggjar að innan þarf nýtt loft eða nýjan vegg. Múrhúð, gifsplata eða strekkloft: hér er munurinn í tíma, ryki og aðgengi að einangruninni — og svona heldurðu styrknum fyrir einangrunina öruggum.",
+        "body": [
+          {
+            "heading": "Af hverju frágangurinn eftir einangrun er öðruvísi",
+            "paragraphs": [
+              "Sá sem einangrar hallandi þak að innan, flatt þak að neðan eða innra byrði útveggjar endar með opna uppbyggingu: einangrun, rakasperru og grind úr timbri eða málmi. Á það þarf frágang sem lítur vel út, skilur rakasperruna eftir órofna og heldur lögnunum aðgengilegum.",
+              "Frágangurinn ræður meiru en útlitinu. Hann ræður því hve lengi verkið stendur, hve miklu ryki og þurrktíma þú tekur á þig, hvort þú kemst síðar að einangruninni og lögnunum og hvernig lýsingin er felld inn. Og hann ræður því hvaða hluti reikningsins getur fengið styrk: einangrunin já, frágangurinn aldrei."
+            ]
+          },
+          {
+            "heading": "Kostur 1: gifsplötur, sparsl og málning",
+            "paragraphs": [
+              "Klassíska leiðin: gifsplötur á grindina, samskeyti og skrúfuhausar spörsluð, pússað, grunnað og málað tvisvar. Traust og fæst alls staðar, en gerðu ráð fyrir fjórum til sjö virkum dögum með þurrktímum, fínu ryki um allt hús og fastri smíði: Sá sem þarf síðar að komast að einangruninni eða rakasperrunni verður að brjóta loftið upp.",
+              "Í súðarloftum og kvistum eru samskeytin auk þess veiki punkturinn: sig og hitasveiflur koma fram sem hárfínar sprungur í fúgunum."
+            ]
+          },
+          {
+            "heading": "Kostur 2: strekkloft sem frágangur",
+            "paragraphs": [
+              "Strekkloft er strekkt í nettan prófíl meðfram veggjunum, nokkrum sentimetrum undir nýja einangrunarlaginu. Uppsetningin tekur yfirleitt einn dag — án ryks, án þurrktíma og án þess að tæma rýmið. Dúkurinn er samskeytalaus upp í 5,15 m (pólýester) eða 6,4 m (PVC) og fylgir líka hallandi flötum og kvistum."
+            ],
+            "bullets": [
+              "Aðgengið helst: PVC-dúk má losa úr prófílnum og setja aftur í, eða þú lætur setja ósýnilega skoðunarlúgu. Hentugt við lekaleit, auka lagnir eða síðari breytingu á einangruninni.",
+              "Lýsingin er hluti af kerfinu: kastarar, LED-línur eða 48 V braut eru felld inn í loftið — án auka smíði.",
+              "Hljóðvist: Örgataður dúkur með ísogsefni fyrir ofan gerir nýeinangrað háaloftsherbergi strax að rólegu svefn- eða vinnuherbergi.",
+              "Rök rými: PVC þolir rakastig baðherbergis undir þaki án vandkvæða."
+            ],
+            "links": [
+              {
+                "label": "Skoðunarlúga",
+                "href": "/products/inspection-hatch"
+              },
+              {
+                "label": "Hljóðvistarstrekkloft",
+                "href": "/products/acoustic-stretch-system"
+              },
+              {
+                "label": "Strekkloft undir súð",
+                "href": "/blog/schuin-dak"
+              }
+            ]
+          },
+          {
+            "heading": "Rakasperra og holrými: tæknilegu atriðin",
+            "paragraphs": [
+              "Strekkloft er frágangur, ekki rakasperra. Rakasperran situr áfram hlýja megin einangrunarinnar, órofin og límd, nákvæmlega eins og einangrunarverktakinn mælir fyrir um. Slepptu henni aldrei bara af því að dúkur kemur hvort sem er undir.",
+              "Milli einangrunar og dúks er holrými upp á nokkra sentimetra. Þar rúmast rör, kaplar og innfelldu dósirnar fyrir kastarana. Þungir hlutir, eins og loftvifta eða stórt ljós, eru hengdir í burðarvirkið fyrir ofan, ekki í dúkinn. Ákveðið prófílhæð og staðsetningu kastara áður en einangrunarverktakinn lýkur verki — þá þarf enginn að koma aftur.",
+              "Við innri einangrun veggja gildir það sama um strekkvegg: fyrst einangrun og rakasperra, svo veggjakerfið yfir, með römmum fyrir innstungur og rofa."
+            ],
+            "links": [
+              {
+                "label": "Strekkveggjakerfi",
+                "href": "/applications/walls"
+              }
+            ]
+          },
+          {
+            "heading": "Svona heldurðu styrknum fyrir einangrunina",
+            "paragraphs": [
+              "Mörg lönd styðja þak-, gólf- og veggeinangrun með styrkjum — og þar sem slíkt kerfi er til gildir það um einangrunina, aldrei um frágang undir henni. Haltu þessu tvennu því aðskildu á tilboði og reikningi."
+            ],
+            "bullets": [
+              "Biddu um tvo aðskilda liði á tilboði og reikningi: einangrun (með vöruupplýsingum og flatarmáli sem kerfið þitt krefst) og loftaklæðningu.",
+              "Frágangurinn er aldrei styrkhæfur — múrhúð og gifsplötur meðtaldar — svo blandaður reikningur gerir umsóknina bara erfiðari.",
+              "Virðisaukaskattur fer eftir landsreglum; í ýmsum löndum er lægra þrep á endurbótum eldri íbúða — kannaðu hvað gildir áður en þú skrifar undir.",
+              "Sæktu um styrkinn eftir lokareikning einangrunarinnar, innan frests kerfisins."
+            ]
+          },
+          {
+            "heading": "Hvað kostar það og hvernig skipuleggurðu það",
+            "paragraphs": [
+              "Gerðu ráð fyrir um það bil 70 til 200 evrum á m² án vsk, uppsettu, fyrir strekkloft eftir gerð og lýsingu; gifsloft með spörslun og málun lendir oftast á milli 35 og 70 evra á m² en tekur viku á verkstað. Bilið minnkar um leið og þú telur með kastarana, hljóðvistina og töpuðu dagana.",
+              "Hagnýt áætlun: dagur eitt og tvö einangrun og rakasperra, dagur þrjú strekkloftið — og sama kvöld er kveikt á ljósunum. STRETCH-uppsetningaraðili á þínu svæði mælir rýmið án endurgjalds og stillir prófílana af við grind einangrunarverktakans."
+            ],
+            "links": [
+              {
+                "label": "Verðleiðarvísir",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "Finndu uppsetningaraðila",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
+      },
+      "plafond-renoveren-opties": {
+        "title": "Að endurnýja loft: fjórir kostir bornir saman (2026)",
+        "excerpt": "Múrhúða upp á nýtt, gifsplötur, viðarpanell eða strekkloft? Hvað hver kostur kostar á m², hve langan tíma verkið tekur, hve mikið ryk þú sættir þig við og hvað virðisaukaskatturinn gerir — svo þú veljir út frá loftinu þínu en ekki af vana.",
+        "body": [
+          {
+            "heading": "Stutta svarið",
+            "paragraphs": [
+              "Fyrir gamalt loft með sprungum, blettum eða úreltum frágangi eru fjórar raunhæfar leiðir: múrhúða upp á nýtt (eða sparsla og mála), nýtt gifsloft, viðarpanell eða plötur — og strekkloft. Á fermetra liggja þær nær hver annarri en flestir halda; munurinn liggur í tímanum á verkstað, rykinu, aðgenginu að því sem er fyrir ofan og endingunni.",
+              "Þumalputtaregla: Sé undirlagið heilt og slétt er málun eða spörslun ódýrust. Sé loftið sprungið, ójafnt eða fullt af lögnum, eða viljirðu bæta við lýsingu og hljóðvist, vinnur strekkloftið á heildarkostnaði og tíma. Gifs liggur þar á milli; panell er stílval."
+            ]
+          },
+          {
+            "heading": "Kostur 1: múrhúða upp á nýtt, sparsla og mála",
+            "paragraphs": [
+              "Litlar sprungur, gulnuð málning eða örlítið ójafnt loft: Þá duga spörslun, pússun og tvær umferðir af málningu, eða ný múrhúð við stærri skemmdir. Til viðmiðunar 10 til 20 evrur á m² fyrir málun og 25 til 45 evrur á m² fyrir nýja múrhúð, án vsk.",
+              "Gallar: Rýmið þarf að tæma og hylja, fínt ryk smýgur alls staðar, þurrktímar stjórna áætluninni og burðarsprungur koma yfirleitt aftur. Lagnir eða ójöfn steinsteypa halda áfram að sjást."
+            ],
+            "links": [
+              {
+                "label": "Að gera við sprungur í lofti",
+                "href": "/blog/scheuren-in-plafond-herstellen"
+              }
+            ]
+          },
+          {
+            "heading": "Kostur 2: nýtt gifsloft",
+            "paragraphs": [
+              "Niðurtekið gifsloft á málmgrind felur lagnir og ójöfnur og leyfir kastara. Til viðmiðunar 35 til 70 evrur á m² með spörslun og málun, án vsk. Þetta er föst smíði: fjórir til sjö virkir dagar með þurrktímum, og síðar kemst maður að lögnunum aðeins með því að brjóta.",
+              "Útkoman er klassísk og traust, en samskeytin eru áfram veiki punkturinn — í stórum flötum og við hitasveiflur eru hárfínar sprungur í fúgunum eftir nokkur ár algengar."
+            ]
+          },
+          {
+            "heading": "Kostur 3: viðarpanell eða plötur",
+            "paragraphs": [
+              "Panell gefur hlýju og karakter og er tiltölulega fljótuppsettur: til viðmiðunar 40 til 90 evrur á m² án vsk, eftir viðartegund og áferð. Hann þarf þó grind, gefur minna frelsi fyrir lýsingu og krefst viðhalds. Ef þú ert nú þegar með úreltan panel í loftinu er oft skynsamlegra að strekkja loft undir hann en að rífa hann niður."
+            ],
+            "links": [
+              {
+                "label": "Að endurnýja loft með viðarpanel",
+                "href": "/blog/houten-planchetten-plafond-renoveren-of-vernieuwen"
+              }
+            ]
+          },
+          {
+            "heading": "Kostur 4: strekkloft",
+            "paragraphs": [
+              "Dúkur úr PVC eða pólýester er strekktur í nettan prófíl meðfram veggjunum, nokkrum sentimetrum undir gamla loftinu. Allt fyrir ofan — sprungur, panell, lagnir, ójöfn steinplata — hverfur á bak við einn samskeytalausan flöt. Sett upp á einum degi, án ryks, án þurrktíma og með húsgögnin inni í stofunni."
+            ],
+            "bullets": [
+              "Verð: um það bil 70 til 200 evrur á m² án vsk, uppsett; einfalt matt hvítt loft er neðst á bilinu, baklýst eða prentað efst.",
+              "Innfelld lýsing, hljóðísog, stjörnuhiminn eða prent búa öll í sama kerfinu.",
+              "Aðgengi: PVC má taka niður og útbúa með ósýnilegri skoðunarlúgu.",
+              "Ending: áratugir án þess að mála; þvottheldur flötur; ónæmur fyrir raka á baðherbergjum og í eldhúsum.",
+              "Virðisaukaskattur: Landsreglur gilda — í ýmsum löndum er lægra þrep á endurbótum eldri íbúða; spurðu uppsetningaraðilann þinn hvað gildir."
+            ],
+            "links": [
+              {
+                "label": "Verðleiðarvísir",
+                "href": "/blog/spanplafond-prijs"
+              },
+              {
+                "label": "PVC-strekkloft",
+                "href": "/products/pvc-stretch-ceiling"
+              },
+              {
+                "label": "Pólýester-strekkloft",
+                "href": "/products/polyester-stretch-ceiling"
+              }
+            ]
+          },
+          {
+            "heading": "Samanburður í fljótu bragði",
+            "paragraphs": [],
+            "bullets": [
+              "Kostnaður á m² (án vsk, til viðmiðunar): málun 10–20 € · ný múrhúð 25–45 € · gifs 35–70 € · panell 40–90 € · strekkloft 70–200 €.",
+              "Tími á verkstað fyrir 30 m² stofu: málun 1–2 dagar · ný múrhúð 3–5 dagar · gifs 4–7 dagar · panell 2–3 dagar · strekkloft 1 dagur.",
+              "Ryk og þurrktími: múrhúð og gifs mikið · panell lítið · strekkloft ekkert.",
+              "Felur lagnir og ójöfnur: múrhúð nei · gifs já · panell já · strekkloft já.",
+              "Aðgengi eftir á: múrhúð og gifs nei · panell takmarkað · strekkloft já (PVC).",
+              "Lýsing og hljóðvist innbyggð: gifs að hluta · strekkloft að fullu.",
+              "Styrkir: Þar sem þeir eru til gilda þeir um einangrunina fyrir ofan loftið, aldrei um fráganginn. Vsk: fer eftir landsreglum — í ýmsum löndum er lægra þrep á endurbótum."
+            ]
+          },
+          {
+            "heading": "Hvaða kostur fyrir hvaða loft?",
+            "paragraphs": [
+              "Heilt, slétt loft með þreyttri málningu: mála. Sprungur í gömlu múrhúðuðu lofti: Finndu fyrst orsökina, sparslaðu svo — eða strekktu yfir ef þær koma sífellt aftur. Panell sem þú ert orðinn þreyttur á: Strekktu yfir í stað þess að rífa. Lagnir, ójöfn steypa eða endurbætur með nýrri lýsingu og hljóðvist: strekkloft. Gifs á áfram rétt á sér þar sem þungt tæki þarf að hanga í loftinu eða þar sem þú vilt meðvitað klassíska, fasta smíði.",
+              "Ef þú einangrar í sömu lotu skaltu velja fráganginn fyrst eftir einangrunina; styrkurinn fylgir einangruninni, ekki loftinu. STRETCH-uppsetningaraðili á þínu svæði mælir rýmið án endurgjalds og gefur fast verð."
+            ],
+            "links": [
+              {
+                "label": "Loftaklæðning eftir einangrun",
+                "href": "/blog/plafond-afwerken-na-isolatie"
+              },
+              {
+                "label": "Finndu uppsetningaraðila",
+                "href": "/dealers"
+              }
+            ]
+          }
+        ]
       }
     },
     "chrome": {
