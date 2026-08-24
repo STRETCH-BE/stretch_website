@@ -86,7 +86,7 @@ export default async function ContactPage({ params }: { params: { locale: string
             style={{ minHeight: 380 }}
           />
             <div style={{ position: 'absolute', left: 0, bottom: 0, right: 0, background: 'var(--black)', color: '#fff', padding: '20px 24px' }}>
-              <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red)', marginBottom: 8 }}>{t('hqKicker')}</div>
+              <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red-bright)', marginBottom: 8 }}>{t('hqKicker')}</div>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>{contact.address.street}</div>
               <div style={{ fontSize: 15, color: 'var(--on-dark-soft)' }}>{t('hqLocation', { postalCode: contact.address.postalCode, city: contact.address.city })}</div>
             </div>

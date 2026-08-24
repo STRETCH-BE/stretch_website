@@ -1,7 +1,7 @@
 'use client';
 
 // Full-bleed, photography-led hero. Four background images crossfade (opacity,
-// 1s) on a ~5.5s timer that pauses on hover and resets when a tab is clicked.
+// 1s) on a 5s timer that pauses on hover and resets when a tab is clicked.
 // Two dark gradient overlays keep the headline legible; the headline itself is
 // always rendered at full opacity (no fade-in). A pinned tab row lets visitors
 // jump straight to a slide.
@@ -23,27 +23,36 @@ const SLIDE_IMAGES = [
   homeImages.heroSlides.light,
 ];
 
-const ADVANCE_MS = 3000;
+const ADVANCE_MS = 5000;
 
 export default function Hero() {
   const t = useTranslations('home.hero');
   const ta = useTranslations('alt');
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
-  // Mount the three hidden crossfade layers only after hydration: on a slow
-  // connection all four hero images otherwise download together and compete
-  // with the visible (LCP) image for bandwidth.
+  // Mount the three hidden crossfade layers only after the window load event:
+  // on a slow connection all four hero images otherwise download together and
+  // compete with the visible (LCP) image for bandwidth. Waiting for `load`
+  // (not just hydration) keeps them entirely off the critical path.
   const [layersReady, setLayersReady] = useState(false);
   useEffect(() => {
-    setLayersReady(true);
+    if (document.readyState === 'complete') {
+      setLayersReady(true);
+      return;
+    }
+    const onLoad = () => setLayersReady(true);
+    window.addEventListener('load', onLoad);
+    return () => window.removeEventListener('load', onLoad);
   }, []);
 
+  // Auto-advance only once the hidden layers are mounted — otherwise the
+  // crossfade would reveal a slide whose image hasn't even started loading.
   useEffect(() => {
-    if (paused) return;
+    if (!layersReady || paused) return;
     if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const id = setTimeout(() => setActive((a) => (a + 1) % SLIDE_IMAGES.length), ADVANCE_MS);
     return () => clearTimeout(id);
-  }, [active, paused]);
+  }, [active, paused, layersReady]);
 
 
   return (
@@ -59,7 +68,7 @@ export default function Hero() {
         {SLIDE_IMAGES.map((image, i) => (
           <div key={image} className="hero-layer" style={{ opacity: i === active ? 1 : 0 }}>
             {(i === 0 || layersReady) && (
-              <Placeholder label={`Hero — ${t(`slides.${i}.tabName`)}`} src={image} alt={ta(SLIDE_ALT_KEYS[i])} priority={i === 0} sizes="100vw" quality={65} />
+              <Placeholder label={`Hero — ${t(`slides.${i}.tabName`)}`} src={image} alt={ta(SLIDE_ALT_KEYS[i])} priority={i === 0} sizes="100vw" quality={55} />
             )}
           </div>
         ))}
@@ -160,7 +169,7 @@ export default function Hero() {
           color: #fff; font-size: 13px;
         }
         .hero-rating strong { font-family: var(--font-display); font-weight: 900; font-size: 19px; line-height: 1; }
-        .hero-stars { color: var(--red); letter-spacing: .04em; font-size: 13px; }
+        .hero-stars { color: var(--red-bright); letter-spacing: .04em; font-size: 13px; }
         .hero-rating-label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--on-dark-muted); }
 
         .hero-tabs-bar {
@@ -187,7 +196,7 @@ export default function Hero() {
         .hero-tab-body { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
         .hero-tab-name { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; letter-spacing: -.01em; font-size: clamp(13px, 1.25vw, 17px); color: #fff; line-height: 1; }
         .hero-tab-desc { font-size: 11.5px; color: rgba(255,255,255,.6); }
-        .hero-tab-arrow { color: var(--red); flex-shrink: 0; }
+        .hero-tab-arrow { color: var(--red-bright); flex-shrink: 0; }
 
         @media (max-width: 760px) {
           .hero { min-height: 90vh; }

@@ -58,7 +58,7 @@ export default async function PortalLoginPage({
           </p>
         </div>
         <p style={{ color: 'var(--on-dark-faint)', fontSize: 12.5, letterSpacing: '.14em', textTransform: 'uppercase', margin: 0 }}>
-          STRETCH<span style={{ color: 'var(--red)' }}>®</span> — {t('eyebrow')}
+          STRETCH<span style={{ color: 'var(--red-bright)' }}>®</span> — {t('eyebrow')}
         </p>
       </section>
 

@@ -48,7 +48,7 @@ export default function Solutions() {
                   <li key={fi}><span className="tick tick--sm" />{t(`cards.${ci}.features.${fi}`)}</li>
                 ))}
               </ul>
-              <span className="sol-link">{t(`cards.${ci}.cta`)} <span style={{ color: 'var(--red)' }}>&rarr;</span></span>
+              <span className="sol-link">{t(`cards.${ci}.cta`)} <span style={{ color: 'var(--red-bright)' }}>&rarr;</span></span>
             </div>
           </Link>
         ))}
@@ -67,7 +67,7 @@ export default function Solutions() {
         }
         .sol-tags { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
         .sol-tag { font-size: 11.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.65); }
-        .sol-tag--red { color: var(--red); }
+        .sol-tag--red { color: var(--red-bright); }
         .sol-name { font-family: var(--font-display); font-weight: 900; font-size: clamp(30px,3.6vw,46px); letter-spacing: -.025em; text-transform: uppercase; color: #fff; margin: 0 0 14px; line-height: .9; }
         .sol-blurb { font-size: 14.5px; line-height: 1.6; color: var(--on-dark-soft); margin: 0 0 20px; max-width: 42ch; }
         .sol-features { list-style: none; margin: 0 0 24px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 420px; }

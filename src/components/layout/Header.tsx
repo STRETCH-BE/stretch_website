@@ -55,7 +55,7 @@ export default function Header() {
             <Link href="/installer-training" className="lnk">{t('nav.training')}</Link>
             <PortalLink href="/portal" className="lnk">{t('nav.clientLogin')}</PortalLink>
             <span style={{ opacity: 0.4 }}>|</span>
-            <a href={contact.phoneHref} className="lnk" style={{ color: 'var(--red)' }} onClick={() => analytics.phoneClick('header_utility')}>
+            <a href={contact.phoneHref} className="lnk" style={{ color: 'var(--red-bright)' }} onClick={() => analytics.phoneClick('header_utility')}>
               {contact.phoneDisplay}
             </a>
             <LanguageSwitcher />

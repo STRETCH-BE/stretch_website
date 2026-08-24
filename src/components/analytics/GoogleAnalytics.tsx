@@ -36,11 +36,14 @@ export default function GoogleAnalytics() {
 
   return (
     <>
+      {/* lazyOnload: gtag.js (162 KiB) stays off the load-critical path so it
+          never competes with the LCP image; hits queue in dataLayer and are
+          processed once the script arrives after the load event. */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="ga-init" strategy="afterInteractive">
+      <Script id="ga-init" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments)}

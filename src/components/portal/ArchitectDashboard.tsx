@@ -363,7 +363,7 @@ export default async function ArchitectDashboard({
         .arch-advisor__who span { display: block; font-size: 12px; color: var(--on-dark-muted); line-height: 1.45; margin-top: 2px; }
         .arch-advisor__contact { display: flex; flex-direction: column; line-height: 1.5; }
         .arch-advisor__contact a { color: #fff; text-decoration: none; font-size: 13.5px; font-weight: 700; white-space: nowrap; }
-        .arch-advisor__mail { color: var(--red) !important; }
+        .arch-advisor__mail { color: var(--red-bright) !important; }
         .arch-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
         .arch-tile { background: #fff; border: 1px solid var(--border); padding: clamp(18px,2vw,24px); display: flex; flex-direction: column; gap: 9px; color: var(--text); text-decoration: none; }
         .arch-tile--link:hover { border-color: var(--black); }

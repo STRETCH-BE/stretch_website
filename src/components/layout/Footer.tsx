@@ -45,7 +45,7 @@ export default function Footer() {
               >
                 STRETCH
               </span>
-              <span style={{ color: 'var(--red)', fontWeight: 900, fontSize: 15 }}>®</span>
+              <span style={{ color: 'var(--red-bright)', fontWeight: 900, fontSize: 15 }}>®</span>
             </div>
             <p
               style={{

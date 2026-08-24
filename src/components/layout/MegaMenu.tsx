@@ -271,18 +271,18 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
             )}
             {config.promo.ctaHref ? (
               <Link href={config.promo.ctaHref} onClick={onNavigate} className="mega-promo-cta">
-                {config.promo.ctaLabel} <span style={{ color: 'var(--red)' }}>→</span>
+                {config.promo.ctaLabel} <span style={{ color: 'var(--red-bright)' }}>→</span>
               </Link>
             ) : (
               <ModalButton type="quote" source={config.promo.source ?? 'header_mega'} trackQuote className="mega-promo-cta">
-                {config.promo.ctaLabel} <span style={{ color: 'var(--red)' }}>→</span>
+                {config.promo.ctaLabel} <span style={{ color: 'var(--red-bright)' }}>→</span>
               </ModalButton>
             )}
           </div>
         </div>
       ) : (
         <div className="mega-promo" style={{ position: 'relative', minHeight: 300, background: 'var(--black)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 26 }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--red)' }}>
+          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--red-bright)' }}>
             {config.promo.eyebrow}
           </div>
           <div>
@@ -291,7 +291,7 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
             </div>
             <p style={{ color: 'var(--on-dark-muted)', fontSize: 13, lineHeight: 1.55, margin: '0 0 16px' }}>{config.promo.body}</p>
             <Link href={config.promo.ctaHref} onClick={onNavigate} className="mega-promo-cta">
-              {config.promo.ctaLabel} <span style={{ color: 'var(--red)' }}>→</span>
+              {config.promo.ctaLabel} <span style={{ color: 'var(--red-bright)' }}>→</span>
             </Link>
           </div>
         </div>

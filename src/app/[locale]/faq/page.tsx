@@ -63,7 +63,7 @@ export default async function FaqPage({ params }: { params: { locale: string } }
 
           <aside className="faq-aside">
             <div className="faq-card">
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--red)', marginBottom: 14 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--red-bright)', marginBottom: 14 }}>
                 {t('asideKicker')}
               </div>
               <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(22px,2vw,26px)', letterSpacing: '-.01em', lineHeight: 1.05, color: '#fff', margin: '0 0 14px' }}>
@@ -118,7 +118,7 @@ export default async function FaqPage({ params }: { params: { locale: string } }
           margin-top: 14px; padding-top: 18px; border-top: 1px solid var(--line-dark);
           color: #fff; text-decoration: none; font-size: 14px; font-weight: 600;
         }
-        .faq-call:hover { color: var(--red); }
+        .faq-call:hover { color: var(--red-bright); }
         @media (max-width: 860px) {
           .faq-grid { grid-template-columns: 1fr; }
           .faq-aside { position: static; }

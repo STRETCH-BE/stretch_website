@@ -138,7 +138,7 @@ export default function ApplicationAreas() {
           text-transform: uppercase;
           color: #fff;
         }
-        .bento-cell:hover .bento-link { color: var(--red); }
+        .bento-cell:hover .bento-link { color: var(--red-bright); }
         @media (max-width: 860px) {
           .bento {
             grid-template-columns: 1fr 1fr;
