@@ -25,6 +25,10 @@ const nextConfig = {
   images: {
     // Serve modern formats first; Next falls back automatically.
     formats: ['image/avif', 'image/webp'],
+    // Default ladder plus a 1440 step: 100vw images on a typical desktop
+    // viewport (~1280-1440) otherwise jump to the 1920 variant (~35% more
+    // pixels than displayed — flagged by PageSpeed's image-delivery audit).
+    deviceSizes: [640, 750, 828, 1080, 1200, 1440, 1920, 2048, 3840],
     remotePatterns: [
       // One locale per domain — allow next/image to load assets referenced by
       // absolute URL from any of the production domains. Keep in sync with
