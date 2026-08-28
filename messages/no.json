@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Et nytt tak på én dag | Strekktak & strekkvegger",
     "homeDescription": "Glatte, skjøtefrie strekktak og strekkvegger, kaldmontert på én dag — uten støv og uten maling. Akustikk-, lys- og printmuligheter. Håndlaget i Belgia.",
     "productsTitle": "Strekktak & akustikkløsninger | STRETCH",
-    "productsDescription": "Strekktak i polyester og PVC, akustikksystemer, bakbelyste og trykte design og prefab-enheter — skjøtefritt opptil 6,4 m, 25 års garanti.",
+    "productsDescription": "Strekktak i polyester og PVC, akustikksystemer, bakbelyste og trykte design og prefab-enheter — skjøtefritt opptil 6,5 m, 25 års garanti.",
     "partnersTitle": "Bli STRETCH-forhandler — forhandlerpriser & leads | STRETCH",
     "partnersDescription": "Legg til strekktak i tilbudet ditt med forhandlerpriser, skreddersydd levering fra vårt belgiske verksted, praktisk opplæring og videresendte lokale leads.",
     "trainingTitle": "Kurs i montering av strekkhimling — sertifisert på 2–3 dager | STRETCH",
@@ -481,7 +481,7 @@
       "1": "Bedre akustikk",
       "2": "25 års levetid",
       "3": "100 % resirkulerbart",
-      "4": "Skjøtefritt opptil 6,4 m",
+      "4": "Skjøtefritt opptil 6,5 m",
       "5": "Intet støv · Ingen maling",
       "6": "Håndlaget i Belgia"
     },
@@ -534,12 +534,12 @@
         },
         "1": {
           "mount": "Varmmontering",
-          "span": "Skjøtefritt opptil 6,4 m",
+          "span": "Skjøtefritt opptil 6,5 m",
           "name": "PVC-folie",
           "blurb": "En oppvarmet folie som spennes ved montering — fullt resirkulerbar og enkel å demontere. Bytt himling på én enkelt dag.",
           "features": {
             "0": "100 % resirkulerbart",
-            "1": "Skjøtefritt opptil 6,4 m",
+            "1": "Skjøtefritt opptil 6,5 m",
             "2": "Enkel å demontere",
             "3": "Akustisk & vaskbart"
           },
@@ -783,16 +783,16 @@
       "category": "Varmmontert folie",
       "mount": "Varmmontering",
       "intro": "En oppvarmet PVC-folie som spennes ved montering — fullt resirkulerbar og enkel å demontere. Bytt ut en sliten himling med en feilfri ny på én enkelt dag.",
-      "summary": "Varmmontert strekkhimling i PVC-folie, 100 % resirkulerbar og avtakbar, skjøtefri opptil 6,4 m med 10 års garanti.",
+      "summary": "Varmmontert strekkhimling i PVC-folie, 100 % resirkulerbar og avtakbar, skjøtefri opptil 6,5 m med 10 års garanti.",
       "chips": [
-        "Skjøtefritt opptil 6,4 m",
+        "Skjøtefritt opptil 6,5 m",
         "100 % gjenvinnbar",
         "Enkel å demontere",
         "Vaskbar"
       ],
       "highlights": [
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Skjøtefri bredde"
         },
         {
@@ -833,7 +833,7 @@
         },
         {
           "k": "Maks. skjøtefri bredde",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Overflate",
@@ -1333,7 +1333,7 @@
           "label": "Valgfri glød"
         },
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Skjøtefri bredde"
         }
       ],
@@ -1370,7 +1370,7 @@
         },
         {
           "k": "Maks. skjøtefri bredde",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Brannklasse",
@@ -2259,7 +2259,7 @@
       },
       {
         "q": "Hvor bred himling kan dere montere uten skjøt?",
-        "a": "Opptil 6.4 m sømløst med PVC-folie og opptil 5.15 m med polyester. Større spenn dekkes med en nesten usynlig sveiseskjøt eller en bevisst plassert profillinje."
+        "a": "Opptil 6.5 m sømløst med PVC-folie og opptil 5.15 m med polyester. Større spenn dekkes med en nesten usynlig sveiseskjøt eller en bevisst plassert profillinje."
       },
       {
         "q": "Kan jeg få belysning, baklys eller et trykket design?",
@@ -2309,7 +2309,7 @@
       },
       {
         "q": "Hvor stort spenn kan en PVC-himling dekke uten skjøt?",
-        "a": "Opptil 6.4 m sømløst — det bredeste i sortimentet vårt. Større rom dekkes ved å sveise baner sammen med en nesten usynlig skjøt eller ved å legge inn en bevisst plassert profillinje."
+        "a": "Opptil 6.5 m sømløst — det bredeste i sortimentet vårt. Større rom dekkes ved å sveise baner sammen med en nesten usynlig skjøt eller ved å legge inn en bevisst plassert profillinje."
       },
       {
         "q": "Egner PVC-folie seg til bad og våtrom?",
@@ -2405,7 +2405,7 @@
       },
       {
         "q": "Er det en synlig skjøt på store trykk?",
-        "a": "Nei. Bildet trykkes fra kant til kant på én sømløs membran i opptil 6.4 m bredde, så ingen banelinjer krysser motivet ditt."
+        "a": "Nei. Bildet trykkes fra kant til kant på én sømløs membran i opptil 6.5 m bredde, så ingen banelinjer krysser motivet ditt."
       }
     ]
   },
@@ -2657,7 +2657,7 @@
     "pvc": {
       "label": "Strekkhimling i PVC",
       "short": "PVC-folie",
-      "blurb": "Varmmontert PVC-folie — fullt resirkulerbar, avtakbar og sømløs inntil 6.4 m.",
+      "blurb": "Varmmontert PVC-folie — fullt resirkulerbar, avtakbar og sømløs inntil 6.5 m.",
       "fireSafety": {
         "intro": "PVC-folien er klassifisert B-s1,d0 etter EN 13501-1 — flammehemmende, med svært begrenset røykutvikling og uten brennende dråper.",
         "rows": [
@@ -2689,7 +2689,7 @@
         "steps": [
           {
             "title": "Oppmåling",
-            "body": "Rommet måles opp, og folien høyfrekvenssveises i riktig mål med en harpunkant rundt det hele — formet etter rommet og sømløs inntil 6.4 m bredde."
+            "body": "Rommet måles opp, og folien høyfrekvenssveises i riktig mål med en harpunkant rundt det hele — formet etter rommet og sømløs inntil 6.5 m bredde."
           },
           {
             "title": "Monter kantprofilen",
@@ -3813,7 +3813,7 @@
             "heading": "Kald montering vs. varm montering",
             "paragraphs": [
               "Polyestermembraner spennes opp kaldt: ingen varme, ingen damper og ingen tørketid. De gir en dyp, svært matt overflate og spenner over inntil 5.15 m uten skjøt.",
-              "PVC-folier varmes opp under monteringen slik at de slapper av, og strammer seg til en feilfri flate når de kjølner. PVC er fullt resirkulerbart, kan demonteres for tilgang til det tekniske over, og spenner inntil 6.4 m sømløst — det bredeste alternativet."
+              "PVC-folier varmes opp under monteringen slik at de slapper av, og strammer seg til en feilfri flate når de kjølner. PVC er fullt resirkulerbart, kan demonteres for tilgang til det tekniske over, og spenner inntil 6.5 m sømløst — det bredeste alternativet."
             ]
           },
           {
@@ -4513,7 +4513,7 @@
           {
             "heading": "Alternativ 2: et strekktak som overflate",
             "paragraphs": [
-              "Et strekktak spennes opp i en slank profil langs veggene, et par centimeter under det nye isolasjonslaget. Montasjen tar som regel én dag — uten støv, uten tørketid og uten å tømme rommet. Membranen er skjøtefri opptil 5,15 m (polyester) eller 6,4 m (pvc) og følger også skrå flater og arker."
+              "Et strekktak spennes opp i en slank profil langs veggene, et par centimeter under det nye isolasjonslaget. Montasjen tar som regel én dag — uten støv, uten tørketid og uten å tømme rommet. Membranen er skjøtefri opptil 5,15 m (polyester) eller 6,5 m (pvc) og følger også skrå flater og arker."
             ],
             "bullets": [
               "Tilgangen består: En pvc-membran kan løsnes fra profilen og settes inn igjen, eller du legger inn en usynlig inspeksjonsluke. Praktisk ved lekkasjekontroll, ekstra kabler eller en senere endring av isolasjonen.",

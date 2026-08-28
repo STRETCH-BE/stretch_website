@@ -95,7 +95,7 @@ export const techMembranes: Record<TechMembraneKey, TechMembrane> = {
     productSlug: 'pvc-stretch-ceiling',
     label: 'PVC stretch ceiling',
     short: 'PVC film',
-    blurb: 'Heat-mounted PVC film — fully recyclable, removable and seamless to 6.4 m.',
+    blurb: 'Heat-mounted PVC film — fully recyclable, removable and seamless to 6.5 m.',
     fireSafety: {
       intro:
         'The PVC film is classified B-s1,d0 to EN 13501-1 — flame-retardant, with very limited smoke development and no flaming droplets.',
@@ -115,7 +115,7 @@ export const techMembranes: Record<TechMembraneKey, TechMembrane> = {
       intro:
         'PVC film is warmed and tensioned on install — a tired ceiling becomes a flawless new one in a single day, with the old surface left in place underneath.',
       steps: [
-        { title: 'Survey & measure', body: 'The room is measured and the film is high-frequency welded to size with a perimeter harpoon edge, made to the shape of the room and seamless up to 6.4 m wide.' },
+        { title: 'Survey & measure', body: 'The room is measured and the film is high-frequency welded to size with a perimeter harpoon edge, made to the shape of the room and seamless up to 6.5 m wide.' },
         { title: 'Fit the perimeter profile', body: 'A harpoon/clip profile is fixed around the room at the chosen height, following the wall line and any features.' },
         { title: 'Heat & tension', body: 'The space is warmed with a heat source to soften the film; the harpoon edge is hooked into the profile and the film tensions taut and flat as it cools.' },
         { title: 'Finish & detailing', body: 'Edges, corners, light fittings and inspection hatches are finished. The film wipes clean and is immediately serviceable.' },

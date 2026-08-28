@@ -683,7 +683,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'Cold mount vs. heat mount',
         paragraphs: [
           'Polyester membranes are tensioned cold: no heat, no fumes and no drying time. They give a deep, very matte finish and can span up to 5.15 m without a seam.',
-          'PVC films are warmed during installation so they relax, then tighten as they cool to a flawless surface. PVC is fully recyclable, removable for access to the services above, and spans up to 6.4 m seamless — the widest option.',
+          'PVC films are warmed during installation so they relax, then tighten as they cool to a flawless surface. PVC is fully recyclable, removable for access to the services above, and spans up to 6.5 m seamless — the widest option.',
         ],
       },
       {
@@ -1472,7 +1472,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: 'Option 2: a stretch ceiling as the finish',
         paragraphs: [
-          'A stretch ceiling is tensioned into a slim perimeter profile a few centimetres below the new insulation layer. Installation usually takes one day, with no dust, no drying time and no need to empty the room. The membrane is seamless up to 5.15 m (polyester) or 6.4 m (PVC) and follows sloping planes and dormers.',
+          'A stretch ceiling is tensioned into a slim perimeter profile a few centimetres below the new insulation layer. Installation usually takes one day, with no dust, no drying time and no need to empty the room. The membrane is seamless up to 5.15 m (polyester) or 6.5 m (PVC) and follows sloping planes and dormers.',
         ],
         bullets: [
           'Access stays: a PVC membrane can be released from the profile and refitted, or you add an invisible inspection hatch. Handy for a leak check, extra cabling or a later change to the insulation.',
@@ -1658,7 +1658,7 @@ export const globalFaqs: Faq[] = [
   },
   {
     q: 'What is the widest ceiling you can install without a seam?',
-    a: 'Up to 6.4 m seamless with PVC film, and up to 5.15 m with polyester. Larger spans are covered with a near-invisible welded joint or a deliberate profile line.',
+    a: 'Up to 6.5 m seamless with PVC film, and up to 5.15 m with polyester. Larger spans are covered with a near-invisible welded joint or a deliberate profile line.',
   },
   {
     q: 'Can I have lighting, backlighting or a printed design?',

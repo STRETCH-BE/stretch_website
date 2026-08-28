@@ -27,7 +27,7 @@ export function Ticker() {
 const STATS = [
   { value: '1', accent: '.' },
   { value: '+25', accent: '.' },
-  { value: '6.4', accent: 'm' },
+  { value: '6.5', accent: 'm' },
   { value: '100', accent: '%' },
 ];
 

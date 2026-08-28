@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Nýtt loft á einum degi | Strekkiloft & strekkiveggir",
     "homeDescription": "Strekkiloft og strekkiveggir, samskeytalaus og sett upp á einum degi — ekkert ryk, engin málning. Hljóðvist, lýsing og prent. Handgert í Belgíu.",
     "productsTitle": "Strekkiloft & hljóðvistarlausnir | STRETCH",
-    "productsDescription": "Strekkiloft úr pólýester og PVC, hljóðvistarkerfi, baklýst og prentuð hönnun og forsmíðaðar einingar — samskeytalaust upp í 6,4 m, 25 ára ábyrgð.",
+    "productsDescription": "Strekkiloft úr pólýester og PVC, hljóðvistarkerfi, baklýst og prentuð hönnun og forsmíðaðar einingar — samskeytalaust upp í 6,5 m, 25 ára ábyrgð.",
     "partnersTitle": "Gerstu STRETCH-endursöluaðili — heildsöluverð & fyrirspurnir | STRETCH",
     "partnersDescription": "Bættu strekkiloftum við þjónustuframboð þitt: heildsöluverð, sérsmíði úr belgíska verkstæðinu okkar, verkleg þjálfun og áframsendar staðbundnar fyrirspurnir.",
     "trainingTitle": "Þjálfun í uppsetningu strekkilofta — vottun á 2–3 dögum | STRETCH",
@@ -481,7 +481,7 @@
       "1": "Bætt hljóðvist",
       "2": "25 ára ending",
       "3": "100% endurvinnanlegt",
-      "4": "Samskeytalaust að 6,4 m",
+      "4": "Samskeytalaust að 6,5 m",
       "5": "Ekkert ryk · Engin málning",
       "6": "Handgert í Belgíu"
     },
@@ -534,12 +534,12 @@
         },
         "1": {
           "mount": "Heit uppsetning",
-          "span": "Samskeytalaust að 6,4 m",
+          "span": "Samskeytalaust að 6,5 m",
           "name": "PVC-filma",
           "blurb": "Hituð filma sem er strekkt við uppsetningu — fullkomlega endurvinnanleg og auðveld í niðurtekt. Skiptu um loft á einum degi.",
           "features": {
             "0": "100% endurvinnanlegt",
-            "1": "Samskeytalaust að 6,4 m",
+            "1": "Samskeytalaust að 6,5 m",
             "2": "Auðvelt að fjarlægja",
             "3": "Hljóðvist & þvottekta"
           },
@@ -783,16 +783,16 @@
       "category": "Heitsett filma",
       "mount": "Heit uppsetning",
       "intro": "Hituð PVC-filma sem er strekkt við uppsetningu — fullkomlega endurvinnanleg og auðveld í niðurtekt. Skiptu þreyttu lofti út fyrir gallalaust nýtt á einum degi.",
-      "summary": "Heitsett strekkiloft úr PVC-filmu, 100% endurvinnanlegt og fjarlægjanlegt, samskeytalaust að 6,4 m með 10 ára ábyrgð.",
+      "summary": "Heitsett strekkiloft úr PVC-filmu, 100% endurvinnanlegt og fjarlægjanlegt, samskeytalaust að 6,5 m með 10 ára ábyrgð.",
       "chips": [
-        "Samskeytalaust að 6,4 m",
+        "Samskeytalaust að 6,5 m",
         "100% endurvinnanlegt",
         "Auðvelt að fjarlægja",
         "Þvottekta"
       ],
       "highlights": [
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Samskeytalaus breidd"
         },
         {
@@ -833,7 +833,7 @@
         },
         {
           "k": "Hám. samskeytalaus breidd",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Yfirborð",
@@ -1333,7 +1333,7 @@
           "label": "Valkvæður bjarmi"
         },
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Samskeytalaus breidd"
         }
       ],
@@ -1370,7 +1370,7 @@
         },
         {
           "k": "Hám. samskeytalaus breidd",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Brunaflokkur",
@@ -2259,7 +2259,7 @@
       },
       {
         "q": "Hvað getur loftið verið breitt án samskeyta?",
-        "a": "Allt að 6.4 m saumlaust með PVC-filmu og allt að 5.15 m með pólýester. Stærri haf eru þakin með nánast ósýnilegum soðnum samskeytum eða meðvitaðri prófíllínu."
+        "a": "Allt að 6.5 m saumlaust með PVC-filmu og allt að 5.15 m með pólýester. Stærri haf eru þakin með nánast ósýnilegum soðnum samskeytum eða meðvitaðri prófíllínu."
       },
       {
         "q": "Get ég fengið lýsingu, baklýsingu eða prentaða hönnun?",
@@ -2309,7 +2309,7 @@
       },
       {
         "q": "Hvað getur PVC-loft spannað breitt haf án samskeyta?",
-        "a": "Allt að 6.4 m saumlaust — það breiðasta í úrvalinu okkar. Stærri rými eru þakin með því að sjóða saman dúka með nánast ósýnilegum samskeytum eða með því að setja meðvitaða prófíllínu."
+        "a": "Allt að 6.5 m saumlaust — það breiðasta í úrvalinu okkar. Stærri rými eru þakin með því að sjóða saman dúka með nánast ósýnilegum samskeytum eða með því að setja meðvitaða prófíllínu."
       },
       {
         "q": "Hentar PVC-filma fyrir baðherbergi og vot rými?",
@@ -2405,7 +2405,7 @@
       },
       {
         "q": "Eru sýnileg samskeyti á stórum prentunum?",
-        "a": "Nei. Myndin er prentuð út í jaðra á eina saumlausa himnu allt að 6.4 m breiða, svo engar dúklínur liggja yfir myndefnið þitt."
+        "a": "Nei. Myndin er prentuð út í jaðra á eina saumlausa himnu allt að 6.5 m breiða, svo engar dúklínur liggja yfir myndefnið þitt."
       }
     ]
   },
@@ -2657,7 +2657,7 @@
     "pvc": {
       "label": "Strekkiloft úr PVC",
       "short": "PVC-filma",
-      "blurb": "Heitt uppsett PVC-filma — að fullu endurvinnanleg, fjarlægjanleg og saumlaus allt að 6.4 m.",
+      "blurb": "Heitt uppsett PVC-filma — að fullu endurvinnanleg, fjarlægjanleg og saumlaus allt að 6.5 m.",
       "fireSafety": {
         "intro": "PVC-filman er flokkuð B-s1,d0 samkvæmt EN 13501-1 — eldtefjandi, með mjög takmarkaðri reykmyndun og án logandi dropa.",
         "rows": [
@@ -2689,7 +2689,7 @@
         "steps": [
           {
             "title": "Mæling",
-            "body": "Rýmið er mælt og filman hátíðnisoðin í rétta stærð með harpúnbrún allan hringinn — löguð eftir rýminu og saumlaus allt að 6.4 m á breidd."
+            "body": "Rýmið er mælt og filman hátíðnisoðin í rétta stærð með harpúnbrún allan hringinn — löguð eftir rýminu og saumlaus allt að 6.5 m á breidd."
           },
           {
             "title": "Jaðarprófíll settur upp",
@@ -3813,7 +3813,7 @@
             "heading": "Köld uppsetning eða heit",
             "paragraphs": [
               "Pólýesterhimnur eru strekktar kaldar: enginn hiti, engar gufur og enginn þurrkunartími. Þær gefa djúpa, mjög matta áferð og ná allt að 5.15 m án samskeyta.",
-              "PVC-filmur eru hitaðar við uppsetningu svo þær slakni og strekkjast síðan í gallalausan flöt þegar þær kólna. PVC er fullkomlega endurvinnanlegt, hægt að taka niður til að komast að lögnum fyrir ofan og nær allt að 6.4 m saumlaust — breiðasti kosturinn."
+              "PVC-filmur eru hitaðar við uppsetningu svo þær slakni og strekkjast síðan í gallalausan flöt þegar þær kólna. PVC er fullkomlega endurvinnanlegt, hægt að taka niður til að komast að lögnum fyrir ofan og nær allt að 6.5 m saumlaust — breiðasti kosturinn."
             ]
           },
           {
@@ -4513,7 +4513,7 @@
           {
             "heading": "Kostur 2: strekkloft sem frágangur",
             "paragraphs": [
-              "Strekkloft er strekkt í nettan prófíl meðfram veggjunum, nokkrum sentimetrum undir nýja einangrunarlaginu. Uppsetningin tekur yfirleitt einn dag — án ryks, án þurrktíma og án þess að tæma rýmið. Dúkurinn er samskeytalaus upp í 5,15 m (pólýester) eða 6,4 m (PVC) og fylgir líka hallandi flötum og kvistum."
+              "Strekkloft er strekkt í nettan prófíl meðfram veggjunum, nokkrum sentimetrum undir nýja einangrunarlaginu. Uppsetningin tekur yfirleitt einn dag — án ryks, án þurrktíma og án þess að tæma rýmið. Dúkurinn er samskeytalaus upp í 5,15 m (pólýester) eða 6,5 m (PVC) og fylgir líka hallandi flötum og kvistum."
             ],
             "bullets": [
               "Aðgengið helst: PVC-dúk má losa úr prófílnum og setja aftur í, eða þú lætur setja ósýnilega skoðunarlúgu. Hentugt við lekaleit, auka lagnir eða síðari breytingu á einangruninni.",

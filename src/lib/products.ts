@@ -129,10 +129,10 @@ export const products: Product[] = [
     intro:
       'A warmed PVC film tensioned on install — fully recyclable and easily removable. Replace a tired ceiling with a flawless new one in a single day.',
     summary:
-      'Heat-mounted PVC film stretch ceiling, 100% recyclable and removable, seamless to 6.4 m with a 10-year warranty.',
-    chips: ['Seamless to 6.4 m', '100% recyclable', 'Easily removable', 'Washable'],
+      'Heat-mounted PVC film stretch ceiling, 100% recyclable and removable, seamless to 6.5 m with a 10-year warranty.',
+    chips: ['Seamless to 6.5 m', '100% recyclable', 'Easily removable', 'Washable'],
     highlights: [
-      { value: '6.4m', label: 'Seamless width' },
+      { value: '6.5m', label: 'Seamless width' },
       { value: 'Heat', label: 'Mounting method' },
       { value: '100%', label: 'Recyclable' },
       { value: 'A', label: 'Acoustic class' },
@@ -154,7 +154,7 @@ export const products: Product[] = [
     specs: [
       { k: 'Material', v: 'Calendered PVC film' },
       { k: 'Mounting', v: 'Heat-tensioned, clip profile' },
-      { k: 'Max seamless width', v: '6.4 m' },
+      { k: 'Max seamless width', v: '6.5 m' },
       { k: 'Surface', v: 'Matte / satin / gloss / translucent' },
       { k: 'Fire rating', v: 'B-s1,d0' },
       { k: 'Acoustic', v: 'Up to Class A (perforated)' },
@@ -169,7 +169,7 @@ export const products: Product[] = [
     material: 'Calendered PVC film',
     countryOfOrigin: 'PL',
     warrantyYears: 10,
-    maxSeamlessWidthM: 6.4,
+    maxSeamlessWidthM: 6.5,
     faqs: [
       {
         q: 'What makes a PVC stretch ceiling “100% recyclable”?',
@@ -177,7 +177,7 @@ export const products: Product[] = [
       },
       {
         q: 'How wide a span can a PVC ceiling cover without a seam?',
-        a: 'Up to 6.4 m seamless — the widest in our range. Larger rooms can be covered by welding panels with a near-invisible joint or by introducing a deliberate profile line.',
+        a: 'Up to 6.5 m seamless — the widest in our range. Larger rooms can be covered by welding panels with a near-invisible joint or by introducing a deliberate profile line.',
       },
       {
         q: 'Is PVC film suitable for bathrooms and wet areas?',
@@ -433,7 +433,7 @@ export const products: Product[] = [
     material: 'Translucent PVC film + fibre optics',
     countryOfOrigin: 'EU',
     warrantyYears: 10,
-    maxSeamlessWidthM: 6.4,
+    maxSeamlessWidthM: 6.5,
     faqs: [
       {
         q: 'How many stars can a starry-sky ceiling have?',
@@ -530,7 +530,7 @@ export const products: Product[] = [
       { value: 'Any', label: 'Image or art' },
       { value: 'HD', label: 'Photo-grade print' },
       { value: 'Backlit', label: 'Optional glow' },
-      { value: '6.4m', label: 'Seamless width' },
+      { value: '6.5m', label: 'Seamless width' },
     ],
     features: [
       {
@@ -551,7 +551,7 @@ export const products: Product[] = [
       { k: 'Resolution', v: 'Photo-grade, colour-managed' },
       { k: 'Membrane', v: 'PVC film (opaque or translucent)' },
       { k: 'Backlight', v: 'Optional LED field' },
-      { k: 'Max seamless width', v: '6.4 m' },
+      { k: 'Max seamless width', v: '6.5 m' },
       { k: 'Fire rating', v: 'B-s2,d0' },
       { k: 'Cleaning', v: 'Washable' },
       { k: 'Warranty', v: '25 years' },
@@ -562,7 +562,7 @@ export const products: Product[] = [
     material: 'Printed PVC film',
     countryOfOrigin: 'BE',
     warrantyYears: 25,
-    maxSeamlessWidthM: 6.4,
+    maxSeamlessWidthM: 6.5,
     faqs: [
       {
         q: 'What image quality do I need for a printed ceiling?',
@@ -574,7 +574,7 @@ export const products: Product[] = [
       },
       {
         q: 'Is there a visible seam on large prints?',
-        a: 'No. The image is printed edge-to-edge across a single seamless membrane up to 6.4 m wide, so there are no panel lines across your artwork.',
+        a: 'No. The image is printed edge-to-edge across a single seamless membrane up to 6.5 m wide, so there are no panel lines across your artwork.',
       },
     ],
   },

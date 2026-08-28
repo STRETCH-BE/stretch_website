@@ -46,7 +46,7 @@
     "homeTitle": "Sufity napinane od producenta — nowy sufit w jeden dzień | STRETCH",
     "homeDescription": "Sufity napinane i ściany bez szwów, montowane na zimno w jeden dzień — bez kurzu i malowania. Akustyka, światło i nadruk. Ręcznie robione w Belgii.",
     "productsTitle": "Sufity napinane i rozwiązania akustyczne | STRETCH",
-    "productsDescription": "Sufity napinane z poliestru i PCV, systemy akustyczne, wzory podświetlane i drukowane oraz moduły prefab — bez szwów do 6,4 m, 25 lat gwarancji.",
+    "productsDescription": "Sufity napinane z poliestru i PCV, systemy akustyczne, wzory podświetlane i drukowane oraz moduły prefab — bez szwów do 6,5 m, 25 lat gwarancji.",
     "partnersTitle": "Zostań dystrybutorem STRETCH — ceny hurtowe i leady | STRETCH",
     "partnersDescription": "Dodaj sufity napinane do swojej oferty: ceny hurtowe, produkcja na wymiar w naszej belgijskiej pracowni, praktyczne szkolenia i przekazywane lokalne leady.",
     "trainingTitle": "Szkolenie z montażu sufitów napinanych — certyfikat w 2–3 dni | STRETCH",
@@ -481,7 +481,7 @@
       "1": "Poprawa akustyki",
       "2": "25 lat żywotności",
       "3": "100% do recyklingu",
-      "4": "Bez łączeń do 6,4 m",
+      "4": "Bez łączeń do 6,5 m",
       "5": "Bez kurzu · Bez malowania",
       "6": "Ręcznie robione w Belgii"
     },
@@ -534,12 +534,12 @@
         },
         "1": {
           "mount": "Montaż na ciepło",
-          "span": "Bez łączeń do 6,4 m",
+          "span": "Bez łączeń do 6,5 m",
           "name": "Folia PVC",
           "blurb": "Podgrzewana folia napinana podczas montażu — w pełni nadająca się do recyklingu i łatwa w demontażu. Wymień sufit w jeden dzień.",
           "features": {
             "0": "100% do recyklingu",
-            "1": "Bez łączeń do 6,4 m",
+            "1": "Bez łączeń do 6,5 m",
             "2": "Łatwy demontaż",
             "3": "Akustyczny i zmywalny"
           },
@@ -783,16 +783,16 @@
       "category": "Folia montowana na ciepło",
       "mount": "Montaż na ciepło",
       "intro": "Podgrzewana folia PVC napinana podczas montażu — w pełni nadająca się do recyklingu i łatwa w demontażu. Wymień zmęczony sufit na nieskazitelnie nowy w jeden dzień.",
-      "summary": "Montowany na ciepło sufit napinany z folii PVC, w 100% nadający się do recyklingu i demontażu, bez łączeń do 6,4 m, z 10-letnią gwarancją.",
+      "summary": "Montowany na ciepło sufit napinany z folii PVC, w 100% nadający się do recyklingu i demontażu, bez łączeń do 6,5 m, z 10-letnią gwarancją.",
       "chips": [
-        "Bez łączeń do 6,4 m",
+        "Bez łączeń do 6,5 m",
         "W 100% zdatny do recyklingu",
         "Łatwy demontaż",
         "Zmywalny"
       ],
       "highlights": [
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Szerokość bez łączeń"
         },
         {
@@ -833,7 +833,7 @@
         },
         {
           "k": "Maks. szerokość bez łączeń",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Powierzchnia",
@@ -1333,7 +1333,7 @@
           "label": "Opcjonalna poświata"
         },
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Szerokość bez łączeń"
         }
       ],
@@ -1370,7 +1370,7 @@
         },
         {
           "k": "Maks. szerokość bez łączeń",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Klasa ogniowa",
@@ -2259,7 +2259,7 @@
       },
       {
         "q": "Jak szeroki sufit można zamontować bez łączenia?",
-        "a": "Do 6.4 m bez łączeń przy folii PVC i do 5.15 m przy poliestrze. Większe rozpiętości pokrywamy niemal niewidoczną zgrzewaną spoiną lub celowo poprowadzoną linią profilu."
+        "a": "Do 6.5 m bez łączeń przy folii PVC i do 5.15 m przy poliestrze. Większe rozpiętości pokrywamy niemal niewidoczną zgrzewaną spoiną lub celowo poprowadzoną linią profilu."
       },
       {
         "q": "Czy mogę mieć oświetlenie, podświetlenie lub nadruk?",
@@ -2309,7 +2309,7 @@
       },
       {
         "q": "Jaką rozpiętość może pokryć sufit PVC bez łączenia?",
-        "a": "Do 6.4 m bez łączeń — najwięcej w naszej ofercie. Większe pomieszczenia pokrywa się, zgrzewając bryty niemal niewidoczną spoiną albo wprowadzając celowo poprowadzoną linię profilu."
+        "a": "Do 6.5 m bez łączeń — najwięcej w naszej ofercie. Większe pomieszczenia pokrywa się, zgrzewając bryty niemal niewidoczną spoiną albo wprowadzając celowo poprowadzoną linię profilu."
       },
       {
         "q": "Czy folia PVC nadaje się do łazienek i pomieszczeń mokrych?",
@@ -2405,7 +2405,7 @@
       },
       {
         "q": "Czy na dużych wydrukach widać łączenie?",
-        "a": "Nie. Obraz drukowany jest od krawędzi do krawędzi na jednej membranie bez łączeń o szerokości do 6.4 m, więc przez Twoją grafikę nie biegną żadne linie paneli."
+        "a": "Nie. Obraz drukowany jest od krawędzi do krawędzi na jednej membranie bez łączeń o szerokości do 6.5 m, więc przez Twoją grafikę nie biegną żadne linie paneli."
       }
     ]
   },
@@ -2657,7 +2657,7 @@
     "pvc": {
       "label": "Sufit napinany PVC",
       "short": "Folia PVC",
-      "blurb": "Folia PVC montowana na ciepło — w pełni nadająca się do recyklingu, demontowalna i bez łączeń do 6.4 m.",
+      "blurb": "Folia PVC montowana na ciepło — w pełni nadająca się do recyklingu, demontowalna i bez łączeń do 6.5 m.",
       "fireSafety": {
         "intro": "Folia PVC ma klasyfikację B-s1,d0 według EN 13501-1 — jest trudnozapalna, o bardzo ograniczonym wydzielaniu dymu i bez płonących kropli.",
         "rows": [
@@ -2689,7 +2689,7 @@
         "steps": [
           {
             "title": "Pomiar i inwentaryzacja",
-            "body": "Pomieszczenie jest mierzone, a folia zgrzewana wysokoczęstotliwościowo na wymiar, z obwodową krawędzią harpunową — w kształcie pomieszczenia i bez łączeń do szerokości 6.4 m."
+            "body": "Pomieszczenie jest mierzone, a folia zgrzewana wysokoczęstotliwościowo na wymiar, z obwodową krawędzią harpunową — w kształcie pomieszczenia i bez łączeń do szerokości 6.5 m."
           },
           {
             "title": "Montaż profilu obwodowego",
@@ -3813,7 +3813,7 @@
             "heading": "Montaż na zimno czy na ciepło",
             "paragraphs": [
               "Membrany poliestrowe napina się na zimno: bez ciepła, bez oparów i bez czasu schnięcia. Dają głębokie, bardzo matowe wykończenie i pokrywają do 5.15 m bez łączenia.",
-              "Folie PVC podgrzewa się podczas montażu, aby się rozluźniły, a stygnąc naprężają się do nieskazitelnej powierzchni. PVC jest w pełni recyklingowalne, demontowalne, gdy trzeba dostać się do instalacji nad sufitem, i pokrywa do 6.4 m bez łączeń — to najszersza opcja."
+              "Folie PVC podgrzewa się podczas montażu, aby się rozluźniły, a stygnąc naprężają się do nieskazitelnej powierzchni. PVC jest w pełni recyklingowalne, demontowalne, gdy trzeba dostać się do instalacji nad sufitem, i pokrywa do 6.5 m bez łączeń — to najszersza opcja."
             ]
           },
           {
@@ -4513,7 +4513,7 @@
           {
             "heading": "Opcja 2: sufit napinany jako wykończenie",
             "paragraphs": [
-              "Sufit napinany rozpina się w smukłym profilu wzdłuż ścian, kilka centymetrów pod nową warstwą izolacji. Montaż trwa zwykle jeden dzień — bez kurzu, bez czasu schnięcia i bez opróżniania pomieszczenia. Membrana jest bezszwowa do 5,15 m (poliester) lub 6,4 m (PVC) i podąża także za skosami i lukarnami."
+              "Sufit napinany rozpina się w smukłym profilu wzdłuż ścian, kilka centymetrów pod nową warstwą izolacji. Montaż trwa zwykle jeden dzień — bez kurzu, bez czasu schnięcia i bez opróżniania pomieszczenia. Membrana jest bezszwowa do 5,15 m (poliester) lub 6,5 m (PVC) i podąża także za skosami i lukarnami."
             ],
             "bullets": [
               "Dostęp pozostaje: membranę PVC można wypiąć z profilu i założyć ponownie albo przewidzieć niewidoczną klapę rewizyjną. Przydatne przy kontroli szczelności, dodatkowych przewodach lub późniejszej zmianie izolacji.",

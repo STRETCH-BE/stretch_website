@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Een nieuw plafond in één dag | Spanplafonds & spanwanden",
     "homeDescription": "Spanplafonds en spanwanden, naadloos en koud geplaatst in één dag — zonder stof of schilderwerk. Akoestiek, licht en print. Handgemaakt in België.",
     "productsTitle": "Spanplafonds & akoestische oplossingen | STRETCH",
-    "productsDescription": "Spanplafonds in polyester en pvc, akoestische systemen, verlichte en bedrukte designs en prefab-units — naadloos tot 6,4 m, 25 jaar garantie.",
+    "productsDescription": "Spanplafonds in polyester en pvc, akoestische systemen, verlichte en bedrukte designs en prefab-units — naadloos tot 6,5 m, 25 jaar garantie.",
     "partnersTitle": "Word STRETCH-wederverkoper — handelsprijzen & leads | STRETCH",
     "partnersDescription": "Voeg spanplafonds toe aan uw aanbod: handelsprijzen, levering op maat uit ons Belgisch atelier, praktijkopleiding en doorverwezen lokale leads.",
     "trainingTitle": "Opleiding spanplafond plaatsen — word gecertificeerd installateur | STRETCH",
@@ -481,7 +481,7 @@
       "1": "Akoestische verbetering",
       "2": "25 jaar levensduur",
       "3": "100% recycleerbaar",
-      "4": "Naadloos tot 6,4 m",
+      "4": "Naadloos tot 6,5 m",
       "5": "Geen stof · Geen verf",
       "6": "Handgemaakt in België"
     },
@@ -534,12 +534,12 @@
         },
         "1": {
           "mount": "Warme montage",
-          "span": "Naadloos tot 6,4 m",
+          "span": "Naadloos tot 6,5 m",
           "name": "PVC-folie",
           "blurb": "Een verwarmde folie die bij plaatsing wordt opgespannen — volledig recycleerbaar en eenvoudig te verwijderen. Vervang uw plafond in één dag.",
           "features": {
             "0": "100% recycleerbaar",
-            "1": "Naadloos tot 6,4 m",
+            "1": "Naadloos tot 6,5 m",
             "2": "Eenvoudig te verwijderen",
             "3": "Akoestisch & afwasbaar"
           },
@@ -783,16 +783,16 @@
       "category": "Warm gemonteerde folie",
       "mount": "Warme montage",
       "intro": "Een verwarmde PVC-folie die bij plaatsing wordt opgespannen — volledig recycleerbaar en eenvoudig te verwijderen. Vervang een vermoeid plafond in één dag door een vlekkeloos nieuw exemplaar.",
-      "summary": "Warm gemonteerd PVC-folie spanplafond, 100% recycleerbaar en verwijderbaar, naadloos tot 6,4 m met 10 jaar garantie.",
+      "summary": "Warm gemonteerd PVC-folie spanplafond, 100% recycleerbaar en verwijderbaar, naadloos tot 6,5 m met 10 jaar garantie.",
       "chips": [
-        "Naadloos tot 6,4 m",
+        "Naadloos tot 6,5 m",
         "100% recycleerbaar",
         "Eenvoudig te verwijderen",
         "Afwasbaar"
       ],
       "highlights": [
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Naadloze breedte"
         },
         {
@@ -833,7 +833,7 @@
         },
         {
           "k": "Max. naadloze breedte",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Oppervlak",
@@ -1333,7 +1333,7 @@
           "label": "Optionele gloed"
         },
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Naadloze breedte"
         }
       ],
@@ -1370,7 +1370,7 @@
         },
         {
           "k": "Max. naadloze breedte",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Brandklasse",
@@ -2259,7 +2259,7 @@
       },
       {
         "q": "Hoe breed kan een plafond zijn zonder naad?",
-        "a": "Tot 6.4 m naadloos met pvc-folie, en tot 5.15 m met polyester. Grotere overspanningen krijgen een vrijwel onzichtbare lasnaad of een bewust geplaatste profiellijn."
+        "a": "Tot 6.5 m naadloos met pvc-folie, en tot 5.15 m met polyester. Grotere overspanningen krijgen een vrijwel onzichtbare lasnaad of een bewust geplaatste profiellijn."
       },
       {
         "q": "Kan ik verlichting, backlight of een bedrukt ontwerp krijgen?",
@@ -2309,7 +2309,7 @@
       },
       {
         "q": "Hoe breed kan een pvc-plafond zijn zonder naad?",
-        "a": "Tot 6.4 m naadloos — het breedste uit ons gamma. Grotere ruimtes worden gedekt door panelen te lassen met een vrijwel onzichtbare naad of door een bewust geplaatste profiellijn."
+        "a": "Tot 6.5 m naadloos — het breedste uit ons gamma. Grotere ruimtes worden gedekt door panelen te lassen met een vrijwel onzichtbare naad of door een bewust geplaatste profiellijn."
       },
       {
         "q": "Is pvc-folie geschikt voor badkamers en natte ruimtes?",
@@ -2405,7 +2405,7 @@
       },
       {
         "q": "Is er een zichtbare naad op grote prints?",
-        "a": "Nee. Het beeld wordt van rand tot rand geprint op één naadloos doek tot 6.4 m breed, dus er lopen geen paneellijnen door uw ontwerp."
+        "a": "Nee. Het beeld wordt van rand tot rand geprint op één naadloos doek tot 6.5 m breed, dus er lopen geen paneellijnen door uw ontwerp."
       }
     ]
   },
@@ -2657,7 +2657,7 @@
     "pvc": {
       "label": "PVC spanplafond",
       "short": "PVC-folie",
-      "blurb": "Warm gemonteerde PVC-folie — volledig recycleerbaar, wegneembaar en naadloos tot 6.4 m.",
+      "blurb": "Warm gemonteerde PVC-folie — volledig recycleerbaar, wegneembaar en naadloos tot 6.5 m.",
       "fireSafety": {
         "intro": "De PVC-folie is geclassificeerd als B-s1,d0 volgens EN 13501-1 — brandvertragend, met zeer beperkte rookontwikkeling en zonder brandende druppels.",
         "rows": [
@@ -2689,7 +2689,7 @@
         "steps": [
           {
             "title": "Opname & opmeting",
-            "body": "De ruimte wordt opgemeten en de folie wordt hoogfrequent op maat gelast met een omlopende harpoenrand, in de vorm van de ruimte en naadloos tot 6.4 m breed."
+            "body": "De ruimte wordt opgemeten en de folie wordt hoogfrequent op maat gelast met een omlopende harpoenrand, in de vorm van de ruimte en naadloos tot 6.5 m breed."
           },
           {
             "title": "Randprofiel plaatsen",
@@ -3813,7 +3813,7 @@
             "heading": "Koude montage vs. warme montage",
             "paragraphs": [
               "Polyesterdoeken worden koud gespannen: geen warmte, geen dampen en geen droogtijd. Ze geven een diepe, zeer matte afwerking en overspannen tot 5.15 m zonder naad.",
-              "PVC-folies worden tijdens de plaatsing verwarmd zodat ze ontspannen, en trekken bij het afkoelen strak tot een vlekkeloos oppervlak. PVC is volledig recycleerbaar, wegneembaar voor toegang tot de technieken erboven, en overspant tot 6.4 m naadloos — de breedste optie."
+              "PVC-folies worden tijdens de plaatsing verwarmd zodat ze ontspannen, en trekken bij het afkoelen strak tot een vlekkeloos oppervlak. PVC is volledig recycleerbaar, wegneembaar voor toegang tot de technieken erboven, en overspant tot 6.5 m naadloos — de breedste optie."
             ]
           },
           {
@@ -4519,7 +4519,7 @@
           {
             "heading": "Optie 2: een spanplafond als afwerking",
             "paragraphs": [
-              "Een spanplafond wordt in een slank profiel langs de omtrek gespannen, een paar centimeter onder de nieuwe isolatielaag. De plaatsing duurt doorgaans één dag, zonder stof, zonder droogtijd en zonder de ruimte leeg te maken. Het membraan is naadloos tot 5,15 m (polyester) of 6,4 m (pvc) en volgt ook schuine vlakken en dakkapellen."
+              "Een spanplafond wordt in een slank profiel langs de omtrek gespannen, een paar centimeter onder de nieuwe isolatielaag. De plaatsing duurt doorgaans één dag, zonder stof, zonder droogtijd en zonder de ruimte leeg te maken. Het membraan is naadloos tot 5,15 m (polyester) of 6,5 m (pvc) en volgt ook schuine vlakken en dakkapellen."
             ],
             "bullets": [
               "De toegang blijft: een pvc-membraan kan uit het profiel worden gehaald en teruggeplaatst, of u voorziet een onzichtbaar inspectieluik. Handig bij een lekcontrole, extra kabels of een latere aanpassing van de isolatie.",

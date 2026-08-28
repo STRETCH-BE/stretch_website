@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Ett nytt tak på en dag | Spänntak & spännväggar",
     "homeDescription": "Spänntak och spännväggar, skarvfria och kallmonterade på en dag — utan damm och målning. Akustik, ljus och print. Handgjorda i Belgien.",
     "productsTitle": "Spänntak & akustiklösningar | STRETCH",
-    "productsDescription": "Spänntak i polyester och PVC, akustiksystem, bakbelysta och tryckta designer och prefab-enheter — skarvfritt upp till 6,4 m, 25 års garanti.",
+    "productsDescription": "Spänntak i polyester och PVC, akustiksystem, bakbelysta och tryckta designer och prefab-enheter — skarvfritt upp till 6,5 m, 25 års garanti.",
     "partnersTitle": "Bli STRETCH-återförsäljare — grossistpriser & leads | STRETCH",
     "partnersDescription": "Lägg till spänntak i ditt utbud med grossistpriser, måttillverkad leverans från vår belgiska verkstad, praktisk utbildning och förmedlade lokala leads.",
     "trainingTitle": "Utbildning i montering av spänntak — certifierad på 2–3 dagar | STRETCH",
@@ -481,7 +481,7 @@
       "1": "Bättre akustik",
       "2": "25 års livslängd",
       "3": "100 % återvinningsbart",
-      "4": "Skarvfritt upp till 6,4 m",
+      "4": "Skarvfritt upp till 6,5 m",
       "5": "Inget damm · Ingen målning",
       "6": "Handgjort i Belgien"
     },
@@ -534,12 +534,12 @@
         },
         "1": {
           "mount": "Varmmontering",
-          "span": "Skarvfritt upp till 6,4 m",
+          "span": "Skarvfritt upp till 6,5 m",
           "name": "PVC-folie",
           "blurb": "En uppvärmd folie som spänns vid monteringen — helt återvinningsbar och lätt att demontera. Byt tak på en enda dag.",
           "features": {
             "0": "100 % återvinningsbart",
-            "1": "Skarvfritt upp till 6,4 m",
+            "1": "Skarvfritt upp till 6,5 m",
             "2": "Lätt att demontera",
             "3": "Akustiskt & tvättbart"
           },
@@ -783,16 +783,16 @@
       "category": "Varmmonterad folie",
       "mount": "Varmmontering",
       "intro": "En uppvärmd PVC-folie som spänns vid monteringen — helt återvinningsbar och lätt att demontera. Byt ut ett trött tak mot ett felfritt nytt på en enda dag.",
-      "summary": "Varmmonterat spänntak i PVC-folie, 100 % återvinningsbart och demonterbart, skarvfritt upp till 6,4 m med 10 års garanti.",
+      "summary": "Varmmonterat spänntak i PVC-folie, 100 % återvinningsbart och demonterbart, skarvfritt upp till 6,5 m med 10 års garanti.",
       "chips": [
-        "Skarvfritt upp till 6,4 m",
+        "Skarvfritt upp till 6,5 m",
         "100 % återvinningsbar",
         "Lätt att demontera",
         "Tvättbar"
       ],
       "highlights": [
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Skarvfri bredd"
         },
         {
@@ -833,7 +833,7 @@
         },
         {
           "k": "Max skarvfri bredd",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Yta",
@@ -1333,7 +1333,7 @@
           "label": "Valfri glöd"
         },
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Skarvfri bredd"
         }
       ],
@@ -1370,7 +1370,7 @@
         },
         {
           "k": "Max skarvfri bredd",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Brandklass",
@@ -2259,7 +2259,7 @@
       },
       {
         "q": "Hur brett tak kan ni montera utan skarv?",
-        "a": "Upp till 6.4 m skarvfritt med PVC-folie och upp till 5.15 m med polyester. Större spännvidder täcks med en nästan osynlig svetsad skarv eller en medvetet placerad profillinje."
+        "a": "Upp till 6.5 m skarvfritt med PVC-folie och upp till 5.15 m med polyester. Större spännvidder täcks med en nästan osynlig svetsad skarv eller en medvetet placerad profillinje."
       },
       {
         "q": "Kan jag få belysning, bakgrundsbelysning eller ett tryckt motiv?",
@@ -2309,7 +2309,7 @@
       },
       {
         "q": "Hur stor spännvidd klarar ett PVC-tak utan skarv?",
-        "a": "Upp till 6.4 m skarvfritt — störst i vårt sortiment. Större rum täcks genom att våder svetsas samman med en nästan osynlig skarv eller genom en medvetet placerad profillinje."
+        "a": "Upp till 6.5 m skarvfritt — störst i vårt sortiment. Större rum täcks genom att våder svetsas samman med en nästan osynlig skarv eller genom en medvetet placerad profillinje."
       },
       {
         "q": "Passar PVC-folie i badrum och våtutrymmen?",
@@ -2405,7 +2405,7 @@
       },
       {
         "q": "Syns det någon skarv på stora tryck?",
-        "a": "Nej. Bilden trycks från kant till kant på ett enda skarvfritt membran upp till 6.4 m brett, så inga vådlinjer korsar ditt motiv."
+        "a": "Nej. Bilden trycks från kant till kant på ett enda skarvfritt membran upp till 6.5 m brett, så inga vådlinjer korsar ditt motiv."
       }
     ]
   },
@@ -2657,7 +2657,7 @@
     "pvc": {
       "label": "Spänntak i PVC",
       "short": "PVC-folie",
-      "blurb": "Varmmonterad PVC-folie — helt återvinningsbar, demonterbar och skarvfri upp till 6.4 m.",
+      "blurb": "Varmmonterad PVC-folie — helt återvinningsbar, demonterbar och skarvfri upp till 6.5 m.",
       "fireSafety": {
         "intro": "PVC-folien är klassificerad B-s1,d0 enligt EN 13501-1 — flamskyddad, med mycket begränsad rökutveckling och utan brinnande droppar.",
         "rows": [
@@ -2689,7 +2689,7 @@
         "steps": [
           {
             "title": "Uppmätning",
-            "body": "Rummet mäts upp och folien högfrekvenssvetsas till rätt mått med en harpunkant runt om — formad efter rummet och skarvfri upp till 6.4 m bredd."
+            "body": "Rummet mäts upp och folien högfrekvenssvetsas till rätt mått med en harpunkant runt om — formad efter rummet och skarvfri upp till 6.5 m bredd."
           },
           {
             "title": "Montera kantprofilen",
@@ -3813,7 +3813,7 @@
             "heading": "Kall montering vs. varm montering",
             "paragraphs": [
               "Polyestermembran spänns kallt: ingen värme, inga ångor och ingen torktid. De ger en djup, mycket matt yta och klarar spännvidder upp till 5.15 m utan skarv.",
-              "PVC-folier värms under monteringen så att de mjuknar, och spänns sedan till en felfri yta när de svalnar. PVC är helt återvinningsbart, kan tas ned för åtkomst till installationerna ovanför och klarar upp till 6.4 m skarvfritt — det bredaste alternativet."
+              "PVC-folier värms under monteringen så att de mjuknar, och spänns sedan till en felfri yta när de svalnar. PVC är helt återvinningsbart, kan tas ned för åtkomst till installationerna ovanför och klarar upp till 6.5 m skarvfritt — det bredaste alternativet."
             ]
           },
           {
@@ -4513,7 +4513,7 @@
           {
             "heading": "Alternativ 2: ett spänntak som ytskikt",
             "paragraphs": [
-              "Ett spänntak spänns in i en smäcker profil längs väggarna, ett par centimeter under det nya isoleringsskiktet. Montaget tar i regel en dag — utan damm, utan torktid och utan att rummet behöver tömmas. Membranet är skarvfritt upp till 5,15 m (polyester) eller 6,4 m (pvc) och följer även snedställda ytor och takkupor."
+              "Ett spänntak spänns in i en smäcker profil längs väggarna, ett par centimeter under det nya isoleringsskiktet. Montaget tar i regel en dag — utan damm, utan torktid och utan att rummet behöver tömmas. Membranet är skarvfritt upp till 5,15 m (polyester) eller 6,5 m (pvc) och följer även snedställda ytor och takkupor."
             ],
             "bullets": [
               "Åtkomsten består: Ett pvc-membran kan lossas ur profilen och sättas tillbaka, eller så förbereder du en osynlig inspektionslucka. Praktiskt vid läckagekontroll, extra kablar eller en senare ändring av isoleringen.",

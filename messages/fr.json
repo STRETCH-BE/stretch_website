@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Un nouveau plafond en un jour | Plafonds & murs tendus",
     "homeDescription": "Plafonds tendus et murs sans soudure, posés à froid en une journée — sans poussière ni peinture. Acoustique, lumière et impression. Fabriqués en Belgique.",
     "productsTitle": "Plafonds tendus & solutions acoustiques | STRETCH",
-    "productsDescription": "Plafonds tendus polyester et PVC, systèmes acoustiques, designs rétroéclairés et imprimés et unités préfab — sans soudure jusqu’à 6,4 m, garantie 25 ans.",
+    "productsDescription": "Plafonds tendus polyester et PVC, systèmes acoustiques, designs rétroéclairés et imprimés et unités préfab — sans soudure jusqu’à 6,5 m, garantie 25 ans.",
     "partnersTitle": "Devenez revendeur STRETCH — tarifs pro & leads | STRETCH",
     "partnersDescription": "Ajoutez les plafonds tendus à votre offre : tarifs pro, fabrication sur mesure dans notre atelier belge, formation pratique et leads locaux référés.",
     "trainingTitle": "Formation pose de plafond tendu — devenez installateur agréé | STRETCH",
@@ -481,7 +481,7 @@
       "1": "Amélioration acoustique",
       "2": "25 ans de durée de vie",
       "3": "100 % recyclable",
-      "4": "Sans soudure jusqu'à 6,4 m",
+      "4": "Sans soudure jusqu'à 6,5 m",
       "5": "Sans poussière · Sans peinture",
       "6": "Fait main en Belgique"
     },
@@ -534,12 +534,12 @@
         },
         "1": {
           "mount": "Pose à chaud",
-          "span": "Sans soudure jusqu'à 6,4 m",
+          "span": "Sans soudure jusqu'à 6,5 m",
           "name": "Film PVC",
           "blurb": "Un film chauffé puis tendu à la pose — entièrement recyclable et facilement démontable. Remplacez votre plafond en une journée.",
           "features": {
             "0": "100 % recyclable",
-            "1": "Sans soudure jusqu'à 6,4 m",
+            "1": "Sans soudure jusqu'à 6,5 m",
             "2": "Facilement démontable",
             "3": "Acoustique & lavable"
           },
@@ -783,16 +783,16 @@
       "category": "Film posé à chaud",
       "mount": "Pose à chaud",
       "intro": "Un film PVC chauffé puis tendu à la pose — entièrement recyclable et facilement démontable. Remplacez un plafond fatigué par un neuf impeccable en une seule journée.",
-      "summary": "Plafond tendu en film PVC posé à chaud, 100 % recyclable et démontable, sans soudure jusqu’à 6,4 m et garanti 10 ans.",
+      "summary": "Plafond tendu en film PVC posé à chaud, 100 % recyclable et démontable, sans soudure jusqu’à 6,5 m et garanti 10 ans.",
       "chips": [
-        "Sans soudure jusqu’à 6,4 m",
+        "Sans soudure jusqu’à 6,5 m",
         "100 % recyclable",
         "Facilement démontable",
         "Lavable"
       ],
       "highlights": [
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Largeur sans soudure"
         },
         {
@@ -833,7 +833,7 @@
         },
         {
           "k": "Largeur max sans soudure",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Surface",
@@ -1333,7 +1333,7 @@
           "label": "Halo lumineux en option"
         },
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Largeur sans soudure"
         }
       ],
@@ -1370,7 +1370,7 @@
         },
         {
           "k": "Largeur max sans soudure",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Classement au feu",
@@ -2259,7 +2259,7 @@
       },
       {
         "q": "Quelle est la largeur maximale sans soudure ?",
-        "a": "Jusqu'à 6.4 m sans soudure avec un film PVC, et jusqu'à 5.15 m avec du polyester. Les portées supérieures sont couvertes par une soudure quasi invisible ou par une ligne de profilé assumée."
+        "a": "Jusqu'à 6.5 m sans soudure avec un film PVC, et jusqu'à 5.15 m avec du polyester. Les portées supérieures sont couvertes par une soudure quasi invisible ou par une ligne de profilé assumée."
       },
       {
         "q": "Puis-je avoir un éclairage, un rétroéclairage ou un design imprimé ?",
@@ -2309,7 +2309,7 @@
       },
       {
         "q": "Quelle portée un plafond PVC peut-il couvrir sans soudure ?",
-        "a": "Jusqu'à 6.4 m sans soudure — la plus grande largeur de notre gamme. Les pièces plus grandes sont couvertes en soudant des lés avec une jonction quasi invisible ou en introduisant une ligne de profilé assumée."
+        "a": "Jusqu'à 6.5 m sans soudure — la plus grande largeur de notre gamme. Les pièces plus grandes sont couvertes en soudant des lés avec une jonction quasi invisible ou en introduisant une ligne de profilé assumée."
       },
       {
         "q": "Le film PVC convient-il aux salles de bains et pièces humides ?",
@@ -2405,7 +2405,7 @@
       },
       {
         "q": "Y a-t-il une soudure visible sur les grands formats ?",
-        "a": "Non. L'image est imprimée bord à bord sur une seule membrane sans soudure jusqu'à 6.4 m de large : aucune ligne de panneau ne traverse votre visuel."
+        "a": "Non. L'image est imprimée bord à bord sur une seule membrane sans soudure jusqu'à 6.5 m de large : aucune ligne de panneau ne traverse votre visuel."
       }
     ]
   },
@@ -2657,7 +2657,7 @@
     "pvc": {
       "label": "Plafond tendu PVC",
       "short": "Film PVC",
-      "blurb": "Film PVC posé à chaud — entièrement recyclable, démontable et sans soudure jusqu'à 6.4 m.",
+      "blurb": "Film PVC posé à chaud — entièrement recyclable, démontable et sans soudure jusqu'à 6.5 m.",
       "fireSafety": {
         "intro": "Le film PVC est classé B-s1,d0 selon EN 13501-1 — ignifuge, avec un dégagement de fumée très limité et sans gouttelettes enflammées.",
         "rows": [
@@ -2689,7 +2689,7 @@
         "steps": [
           {
             "title": "Relevé & métré",
-            "body": "La pièce est mesurée et le film est soudé à dimension par haute fréquence avec un bord harpon périphérique, réalisé à la forme de la pièce et sans soudure jusqu'à 6.4 m de large."
+            "body": "La pièce est mesurée et le film est soudé à dimension par haute fréquence avec un bord harpon périphérique, réalisé à la forme de la pièce et sans soudure jusqu'à 6.5 m de large."
           },
           {
             "title": "Pose du profilé périphérique",
@@ -3813,7 +3813,7 @@
             "heading": "Pose à froid ou pose à chaud",
             "paragraphs": [
               "Les membranes polyester sont tendues à froid : ni chaleur, ni émanations, ni temps de séchage. Elles offrent une finition profonde, très mate, et couvrent jusqu'à 5.15 m sans soudure.",
-              "Les films PVC sont chauffés pendant la pose pour se détendre, puis se retendent en refroidissant jusqu'à une surface impeccable. Le PVC est entièrement recyclable, démontable pour accéder aux techniques au-dessus, et couvre jusqu'à 6.4 m sans soudure — l'option la plus large."
+              "Les films PVC sont chauffés pendant la pose pour se détendre, puis se retendent en refroidissant jusqu'à une surface impeccable. Le PVC est entièrement recyclable, démontable pour accéder aux techniques au-dessus, et couvre jusqu'à 6.5 m sans soudure — l'option la plus large."
             ]
           },
           {
@@ -4512,7 +4512,7 @@
           {
             "heading": "Option 2 : un plafond tendu comme finition",
             "paragraphs": [
-              "Un plafond tendu est tendu dans un profilé mince fixé en périphérie, quelques centimètres sous la nouvelle couche d'isolant. La pose prend généralement une journée, sans poussière, sans temps de séchage et sans vider la pièce. La toile est sans couture jusqu'à 5,15 m (polyester) ou 6,4 m (PVC) et suit les pans inclinés et les lucarnes."
+              "Un plafond tendu est tendu dans un profilé mince fixé en périphérie, quelques centimètres sous la nouvelle couche d'isolant. La pose prend généralement une journée, sans poussière, sans temps de séchage et sans vider la pièce. La toile est sans couture jusqu'à 5,15 m (polyester) ou 6,5 m (PVC) et suit les pans inclinés et les lucarnes."
             ],
             "bullets": [
               "L'accès reste possible : une toile PVC se décroche du profilé et se remet en place, ou vous prévoyez une trappe de visite invisible. Pratique pour un contrôle de fuite, un câble supplémentaire ou une modification ultérieure de l'isolation.",

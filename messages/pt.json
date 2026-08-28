@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Um teto novo num dia | Tetos e paredes tensados",
     "homeDescription": "Tetos tensados e paredes sem juntas, instalados a frio num dia — sem pó nem pintura. Acústica, iluminação e impressão. Feitos à mão na Bélgica.",
     "productsTitle": "Tetos tensados e soluções acústicas | STRETCH",
-    "productsDescription": "Tetos tensados de poliéster e PVC, sistemas acústicos, designs retroiluminados e impressos e unidades prefab — sem juntas até 6,4 m, 25 anos de garantia.",
+    "productsDescription": "Tetos tensados de poliéster e PVC, sistemas acústicos, designs retroiluminados e impressos e unidades prefab — sem juntas até 6,5 m, 25 anos de garantia.",
     "partnersTitle": "Torne-se revendedor STRETCH — preços profissionais e leads | STRETCH",
     "partnersDescription": "Adicione tetos tensados à sua oferta com preços profissionais, fabrico à medida na nossa oficina belga, formação prática e leads locais encaminhados.",
     "trainingTitle": "Formação em instalação de tetos tensionados — certificado em 2–3 dias | STRETCH",
@@ -481,7 +481,7 @@
       "1": "Melhoria acústica",
       "2": "25 anos de vida útil",
       "3": "100 % reciclável",
-      "4": "Sem juntas até 6,4 m",
+      "4": "Sem juntas até 6,5 m",
       "5": "Sem pó · Sem pintura",
       "6": "Feito à mão na Bélgica"
     },
@@ -534,12 +534,12 @@
         },
         "1": {
           "mount": "Montagem a quente",
-          "span": "Sem juntas até 6,4 m",
+          "span": "Sem juntas até 6,5 m",
           "name": "Película PVC",
           "blurb": "Uma película aquecida e tensada na instalação — totalmente reciclável e fácil de remover. Substitua o seu teto num único dia.",
           "features": {
             "0": "100 % reciclável",
-            "1": "Sem juntas até 6,4 m",
+            "1": "Sem juntas até 6,5 m",
             "2": "Fácil de remover",
             "3": "Acústico e lavável"
           },
@@ -783,16 +783,16 @@
       "category": "Película montada a quente",
       "mount": "Montagem a quente",
       "intro": "Uma película de PVC aquecida e tensada na instalação — totalmente reciclável e fácil de remover. Substitua um teto cansado por um novo e impecável num único dia.",
-      "summary": "Teto tensado de película PVC montado a quente, 100 % reciclável e removível, sem juntas até 6,4 m e com 10 anos de garantia.",
+      "summary": "Teto tensado de película PVC montado a quente, 100 % reciclável e removível, sem juntas até 6,5 m e com 10 anos de garantia.",
       "chips": [
-        "Sem juntas até 6,4 m",
+        "Sem juntas até 6,5 m",
         "100% reciclável",
         "Fácil de remover",
         "Lavável"
       ],
       "highlights": [
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Largura sem juntas"
         },
         {
@@ -833,7 +833,7 @@
         },
         {
           "k": "Largura máx. sem juntas",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Superfície",
@@ -1333,7 +1333,7 @@
           "label": "Brilho opcional"
         },
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Largura sem juntas"
         }
       ],
@@ -1370,7 +1370,7 @@
         },
         {
           "k": "Largura máx. sem juntas",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Classificação ao fogo",
@@ -2259,7 +2259,7 @@
       },
       {
         "q": "Qual é a largura máxima sem juntas?",
-        "a": "Até 6.4 m sem juntas com película de PVC e até 5.15 m com poliéster. Vãos maiores são cobertos com uma soldadura quase invisível ou com uma linha de perfil assumida."
+        "a": "Até 6.5 m sem juntas com película de PVC e até 5.15 m com poliéster. Vãos maiores são cobertos com uma soldadura quase invisível ou com uma linha de perfil assumida."
       },
       {
         "q": "Posso ter iluminação, retroiluminação ou um design impresso?",
@@ -2309,7 +2309,7 @@
       },
       {
         "q": "Que vão pode um teto em PVC cobrir sem juntas?",
-        "a": "Até 6.4 m sem juntas — o maior da nossa gama. Divisões maiores são cobertas soldando painéis com uma união quase invisível ou introduzindo uma linha de perfil assumida."
+        "a": "Até 6.5 m sem juntas — o maior da nossa gama. Divisões maiores são cobertas soldando painéis com uma união quase invisível ou introduzindo uma linha de perfil assumida."
       },
       {
         "q": "A película de PVC é adequada para casas de banho e zonas húmidas?",
@@ -2405,7 +2405,7 @@
       },
       {
         "q": "Há juntas visíveis em impressões grandes?",
-        "a": "Não. A imagem é impressa de borda a borda numa única membrana sem juntas até 6.4 m de largura, pelo que nenhuma linha de painel atravessa a sua imagem."
+        "a": "Não. A imagem é impressa de borda a borda numa única membrana sem juntas até 6.5 m de largura, pelo que nenhuma linha de painel atravessa a sua imagem."
       }
     ]
   },
@@ -2657,7 +2657,7 @@
     "pvc": {
       "label": "Teto tensionado de PVC",
       "short": "Película de PVC",
-      "blurb": "Película de PVC montada a quente — totalmente reciclável, removível e sem juntas até 6.4 m.",
+      "blurb": "Película de PVC montada a quente — totalmente reciclável, removível e sem juntas até 6.5 m.",
       "fireSafety": {
         "intro": "A película de PVC está classificada B-s1,d0 segundo a EN 13501-1 — retardadora de chama, com desenvolvimento de fumo muito limitado e sem gotículas inflamadas.",
         "rows": [
@@ -2689,7 +2689,7 @@
         "steps": [
           {
             "title": "Levantamento e medição",
-            "body": "A divisão é medida e a película é soldada à medida por alta frequência, com um bordo de arpão perimetral, feita à forma da divisão e sem juntas até 6.4 m de largura."
+            "body": "A divisão é medida e a película é soldada à medida por alta frequência, com um bordo de arpão perimetral, feita à forma da divisão e sem juntas até 6.5 m de largura."
           },
           {
             "title": "Colocação do perfil perimetral",
@@ -3813,7 +3813,7 @@
             "heading": "Montagem a frio vs. montagem a quente",
             "paragraphs": [
               "As membranas de poliéster são tensionadas a frio: sem calor, sem vapores e sem tempo de secagem. Proporcionam um acabamento profundo, muito mate, e cobrem até 5.15 m sem juntas.",
-              "As películas de PVC são aquecidas durante a instalação para relaxarem e, ao arrefecer, esticam até uma superfície impecável. O PVC é totalmente reciclável, amovível para aceder às instalações técnicas por cima e cobre até 6.4 m sem juntas — a opção mais larga."
+              "As películas de PVC são aquecidas durante a instalação para relaxarem e, ao arrefecer, esticam até uma superfície impecável. O PVC é totalmente reciclável, amovível para aceder às instalações técnicas por cima e cobre até 6.5 m sem juntas — a opção mais larga."
             ]
           },
           {
@@ -4513,7 +4513,7 @@
           {
             "heading": "Opção 2: um teto tensionado como acabamento",
             "paragraphs": [
-              "Um teto tensionado é esticado num perfil discreto ao longo do perímetro, alguns centímetros abaixo da nova camada de isolamento. A instalação demora normalmente um dia, sem pó, sem tempo de secagem e sem esvaziar a divisão. A membrana é contínua até 5,15 m (poliéster) ou 6,4 m (PVC) e acompanha planos inclinados e trapeiras."
+              "Um teto tensionado é esticado num perfil discreto ao longo do perímetro, alguns centímetros abaixo da nova camada de isolamento. A instalação demora normalmente um dia, sem pó, sem tempo de secagem e sem esvaziar a divisão. A membrana é contínua até 5,15 m (poliéster) ou 6,5 m (PVC) e acompanha planos inclinados e trapeiras."
             ],
             "bullets": [
               "O acesso mantém-se: uma membrana de PVC pode soltar-se do perfil e voltar a ser colocada, ou prevê-se um alçapão de inspeção invisível. Útil numa verificação de fugas, em cabos extra ou numa alteração posterior do isolamento.",

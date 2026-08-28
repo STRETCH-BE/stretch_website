@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Un techo nuevo en un día | Techos y paredes tensados",
     "homeDescription": "Techos tensados y paredes sin juntas, instalados en frío en un día — sin polvo ni pintura. Acústica, luz e impresión. Hechos a mano en Bélgica.",
     "productsTitle": "Techos tensados y soluciones acústicas | STRETCH",
-    "productsDescription": "Techos tensados de poliéster y PVC, sistemas acústicos, diseños retroiluminados e impresos y unidades prefab — sin juntas hasta 6,4 m, 25 años de garantía.",
+    "productsDescription": "Techos tensados de poliéster y PVC, sistemas acústicos, diseños retroiluminados e impresos y unidades prefab — sin juntas hasta 6,5 m, 25 años de garantía.",
     "partnersTitle": "Hazte distribuidor STRETCH — precios profesionales y leads | STRETCH",
     "partnersDescription": "Añade techos tensados a tu oferta con precios profesionales, fabricación a medida en nuestro taller belga, formación práctica y leads locales referidos.",
     "trainingTitle": "Formación en instalación de techos tensados — certificado en 2–3 días | STRETCH",
@@ -481,7 +481,7 @@
       "1": "Mejora acústica",
       "2": "25 años de vida útil",
       "3": "100 % reciclable",
-      "4": "Sin juntas hasta 6,4 m",
+      "4": "Sin juntas hasta 6,5 m",
       "5": "Sin polvo · Sin pintura",
       "6": "Hecho a mano en Bélgica"
     },
@@ -534,12 +534,12 @@
         },
         "1": {
           "mount": "Montaje en caliente",
-          "span": "Sin juntas hasta 6,4 m",
+          "span": "Sin juntas hasta 6,5 m",
           "name": "Lámina PVC",
           "blurb": "Una lámina calentada y tensada durante la instalación — totalmente reciclable y fácil de desmontar. Cambia tu techo en un solo día.",
           "features": {
             "0": "100 % reciclable",
-            "1": "Sin juntas hasta 6,4 m",
+            "1": "Sin juntas hasta 6,5 m",
             "2": "Fácil de desmontar",
             "3": "Acústico y lavable"
           },
@@ -783,16 +783,16 @@
       "category": "Lámina montada en caliente",
       "mount": "Montaje en caliente",
       "intro": "Una lámina de PVC calentada y tensada durante la instalación — totalmente reciclable y fácil de desmontar. Sustituye un techo cansado por uno impecable en un solo día.",
-      "summary": "Techo tensado de lámina PVC montado en caliente, 100 % reciclable y desmontable, sin juntas hasta 6,4 m y con 10 años de garantía.",
+      "summary": "Techo tensado de lámina PVC montado en caliente, 100 % reciclable y desmontable, sin juntas hasta 6,5 m y con 10 años de garantía.",
       "chips": [
-        "Sin juntas hasta 6,4 m",
+        "Sin juntas hasta 6,5 m",
         "100 % reciclable",
         "Fácil de desmontar",
         "Lavable"
       ],
       "highlights": [
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Anchura sin juntas"
         },
         {
@@ -833,7 +833,7 @@
         },
         {
           "k": "Anchura máx. sin juntas",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Superficie",
@@ -1333,7 +1333,7 @@
           "label": "Brillo opcional"
         },
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Anchura sin juntas"
         }
       ],
@@ -1370,7 +1370,7 @@
         },
         {
           "k": "Anchura máx. sin juntas",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Clasificación al fuego",
@@ -2259,7 +2259,7 @@
       },
       {
         "q": "¿Cuál es el ancho máximo sin juntas?",
-        "a": "Hasta 6.4 m sin juntas con lámina de PVC y hasta 5.15 m con poliéster. Las luces mayores se cubren con una soldadura casi invisible o con una línea de perfil colocada a propósito."
+        "a": "Hasta 6.5 m sin juntas con lámina de PVC y hasta 5.15 m con poliéster. Las luces mayores se cubren con una soldadura casi invisible o con una línea de perfil colocada a propósito."
       },
       {
         "q": "¿Puedo tener iluminación, retroiluminación o un diseño impreso?",
@@ -2309,7 +2309,7 @@
       },
       {
         "q": "¿Qué luz puede cubrir un techo de PVC sin juntas?",
-        "a": "Hasta 6.4 m sin juntas, la mayor de nuestra gama. Las estancias más grandes se cubren soldando paños con una unión casi invisible o introduciendo una línea de perfil colocada a propósito."
+        "a": "Hasta 6.5 m sin juntas, la mayor de nuestra gama. Las estancias más grandes se cubren soldando paños con una unión casi invisible o introduciendo una línea de perfil colocada a propósito."
       },
       {
         "q": "¿La lámina de PVC sirve para baños y zonas húmedas?",
@@ -2405,7 +2405,7 @@
       },
       {
         "q": "¿Hay juntas visibles en las impresiones grandes?",
-        "a": "No. La imagen se imprime de borde a borde sobre una única membrana sin juntas de hasta 6.4 m de ancho, así que ninguna línea de paño cruza tu diseño."
+        "a": "No. La imagen se imprime de borde a borde sobre una única membrana sin juntas de hasta 6.5 m de ancho, así que ninguna línea de paño cruza tu diseño."
       }
     ]
   },
@@ -2657,7 +2657,7 @@
     "pvc": {
       "label": "Techo tensado de PVC",
       "short": "Lámina de PVC",
-      "blurb": "Lámina de PVC con montaje en caliente — totalmente reciclable, desmontable y sin juntas hasta 6.4 m.",
+      "blurb": "Lámina de PVC con montaje en caliente — totalmente reciclable, desmontable y sin juntas hasta 6.5 m.",
       "fireSafety": {
         "intro": "La lámina de PVC está clasificada B-s1,d0 según EN 13501-1 — ignífuga, con un desarrollo de humo muy limitado y sin gotas inflamadas.",
         "rows": [
@@ -2689,7 +2689,7 @@
         "steps": [
           {
             "title": "Replanteo y medición",
-            "body": "La estancia se mide y la lámina se suelda a medida por alta frecuencia con un borde de arpón perimetral, con la forma de la habitación y sin juntas hasta 6.4 m de ancho."
+            "body": "La estancia se mide y la lámina se suelda a medida por alta frecuencia con un borde de arpón perimetral, con la forma de la habitación y sin juntas hasta 6.5 m de ancho."
           },
           {
             "title": "Colocación del perfil perimetral",
@@ -3813,7 +3813,7 @@
             "heading": "Montaje en frío vs. montaje en caliente",
             "paragraphs": [
               "Las membranas de poliéster se tensan en frío: sin calor, sin vapores y sin tiempo de secado. Ofrecen un acabado profundo, muy mate, y cubren hasta 5.15 m sin juntas.",
-              "Las láminas de PVC se calientan durante la instalación para que se relajen y, al enfriarse, se tensan hasta lograr una superficie impecable. El PVC es totalmente reciclable, desmontable para acceder a las instalaciones superiores y cubre hasta 6.4 m sin juntas — la opción más ancha."
+              "Las láminas de PVC se calientan durante la instalación para que se relajen y, al enfriarse, se tensan hasta lograr una superficie impecable. El PVC es totalmente reciclable, desmontable para acceder a las instalaciones superiores y cubre hasta 6.5 m sin juntas — la opción más ancha."
             ]
           },
           {
@@ -4513,7 +4513,7 @@
           {
             "heading": "Opción 2: un techo tensado como acabado",
             "paragraphs": [
-              "Un techo tensado se tensa en un perfil estrecho a lo largo del perímetro, unos centímetros por debajo de la nueva capa de aislamiento. La instalación suele durar un día, sin polvo, sin tiempo de secado y sin vaciar la habitación. La membrana es continua hasta 5,15 m (poliéster) o 6,4 m (PVC) y sigue también los planos inclinados y las buhardillas."
+              "Un techo tensado se tensa en un perfil estrecho a lo largo del perímetro, unos centímetros por debajo de la nueva capa de aislamiento. La instalación suele durar un día, sin polvo, sin tiempo de secado y sin vaciar la habitación. La membrana es continua hasta 5,15 m (poliéster) o 6,5 m (PVC) y sigue también los planos inclinados y las buhardillas."
             ],
             "bullets": [
               "El acceso se conserva: una membrana de PVC puede soltarse del perfil y volver a colocarse, o se prevé una trampilla de inspección invisible. Útil para revisar una fuga, pasar cables nuevos o modificar el aislamiento más adelante.",

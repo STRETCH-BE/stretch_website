@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — Et nyt loft på én dag | Spændlofter & spændvægge",
     "homeDescription": "Glatte, fugefri spændlofter og spændvægge, koldmonteret på en enkelt dag — uden støv og uden maling. Akustik-, lys- og printmuligheder. Håndlavet i Belgien.",
     "productsTitle": "Spændlofter & akustikløsninger | STRETCH",
-    "productsDescription": "Spændlofter i polyester og PVC, akustiksystemer, bagbelyste og printede designs og præfab-enheder — fugefrit op til 6,4 m, 25 års garanti.",
+    "productsDescription": "Spændlofter i polyester og PVC, akustiksystemer, bagbelyste og printede designs og præfab-enheder — fugefrit op til 6,5 m, 25 års garanti.",
     "partnersTitle": "Bliv STRETCH-forhandler — forhandlerpriser & leads | STRETCH",
     "partnersDescription": "Tilføj spændlofter til dit sortiment med forhandlerpriser, målsyet levering fra vores belgiske værksted, praktisk uddannelse og henviste lokale leads.",
     "trainingTitle": "Kursus i montering af spændlofter — certificeret på 2–3 dage | STRETCH",
@@ -481,7 +481,7 @@
       "1": "Bedre akustik",
       "2": "25 års levetid",
       "3": "100 % genanvendeligt",
-      "4": "Fugefrit op til 6,4 m",
+      "4": "Fugefrit op til 6,5 m",
       "5": "Intet støv · Ingen maling",
       "6": "Håndlavet i Belgien"
     },
@@ -534,12 +534,12 @@
         },
         "1": {
           "mount": "Varmmontering",
-          "span": "Fugefrit op til 6,4 m",
+          "span": "Fugefrit op til 6,5 m",
           "name": "PVC-folie",
           "blurb": "En opvarmet folie, der spændes op ved monteringen — fuldt genanvendelig og nem at afmontere. Udskift dit loft på en enkelt dag.",
           "features": {
             "0": "100 % genanvendeligt",
-            "1": "Fugefrit op til 6,4 m",
+            "1": "Fugefrit op til 6,5 m",
             "2": "Let at afmontere",
             "3": "Akustisk & vaskbart"
           },
@@ -783,16 +783,16 @@
       "category": "Varmmonteret folie",
       "mount": "Varmmontering",
       "intro": "En opvarmet PVC-folie, der spændes op ved montering — fuldt genanvendelig og nem at afmontere. Udskift et træt loft med et fejlfrit nyt på en enkelt dag.",
-      "summary": "Varmmonteret spændloft i PVC-folie, 100 % genanvendeligt og aftageligt, fugefrit op til 6,4 m med 10 års garanti.",
+      "summary": "Varmmonteret spændloft i PVC-folie, 100 % genanvendeligt og aftageligt, fugefrit op til 6,5 m med 10 års garanti.",
       "chips": [
-        "Fugefrit op til 6,4 m",
+        "Fugefrit op til 6,5 m",
         "100% genanvendelig",
         "Let at afmontere",
         "Vaskbar"
       ],
       "highlights": [
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Fugefri bredde"
         },
         {
@@ -833,7 +833,7 @@
         },
         {
           "k": "Maks. fugefri bredde",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Overflade",
@@ -1333,7 +1333,7 @@
           "label": "Valgfri glød"
         },
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Fugefri bredde"
         }
       ],
@@ -1370,7 +1370,7 @@
         },
         {
           "k": "Maks. fugefri bredde",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Brandklasse",
@@ -2259,7 +2259,7 @@
       },
       {
         "q": "Hvor bredt et loft kan I montere uden samling?",
-        "a": "Op til 6.4 m sømløst med PVC-folie og op til 5.15 m med polyester. Større spænd dækkes med en næsten usynlig svejsesamling eller en bevidst placeret profillinje."
+        "a": "Op til 6.5 m sømløst med PVC-folie og op til 5.15 m med polyester. Større spænd dækkes med en næsten usynlig svejsesamling eller en bevidst placeret profillinje."
       },
       {
         "q": "Kan jeg få belysning, bagbelysning eller et printet design?",
@@ -2309,7 +2309,7 @@
       },
       {
         "q": "Hvor stort et spænd kan et PVC-loft dække uden samling?",
-        "a": "Op til 6.4 m sømløst — det bredeste i vores sortiment. Større rum dækkes ved at svejse baner sammen med en næsten usynlig samling eller ved at indføre en bevidst placeret profillinje."
+        "a": "Op til 6.5 m sømløst — det bredeste i vores sortiment. Større rum dækkes ved at svejse baner sammen med en næsten usynlig samling eller ved at indføre en bevidst placeret profillinje."
       },
       {
         "q": "Egner PVC-folie sig til badeværelser og vådrum?",
@@ -2405,7 +2405,7 @@
       },
       {
         "q": "Er der en synlig samling på store print?",
-        "a": "Nej. Billedet printes fra kant til kant på én sømløs membran i op til 6.4 m bredde, så der løber ingen banelinjer hen over dit motiv."
+        "a": "Nej. Billedet printes fra kant til kant på én sømløs membran i op til 6.5 m bredde, så der løber ingen banelinjer hen over dit motiv."
       }
     ]
   },
@@ -2657,7 +2657,7 @@
     "pvc": {
       "label": "Spændloft i PVC",
       "short": "PVC-folie",
-      "blurb": "Varmmonteret PVC-folie — fuldt genanvendelig, aftagelig og sømløs op til 6.4 m.",
+      "blurb": "Varmmonteret PVC-folie — fuldt genanvendelig, aftagelig og sømløs op til 6.5 m.",
       "fireSafety": {
         "intro": "PVC-folien er klassificeret B-s1,d0 efter EN 13501-1 — brandhæmmende, med meget begrænset røgudvikling og uden brændende dråber.",
         "rows": [
@@ -2689,7 +2689,7 @@
         "steps": [
           {
             "title": "Opmåling",
-            "body": "Rummet måles op, og folien højfrekvenssvejses på mål med en harpunkant hele vejen rundt — formet efter rummet og sømløs op til 6.4 m i bredden."
+            "body": "Rummet måles op, og folien højfrekvenssvejses på mål med en harpunkant hele vejen rundt — formet efter rummet og sømløs op til 6.5 m i bredden."
           },
           {
             "title": "Montér kantprofilen",
@@ -3813,7 +3813,7 @@
             "heading": "Kold montering vs. varm montering",
             "paragraphs": [
               "Polyestermembraner spændes op koldt: ingen varme, ingen dampe og ingen tørretid. De giver en dyb, meget mat overflade og dækker op til 5.15 m uden samlinger.",
-              "PVC-folier opvarmes under monteringen, så de slapper af, og strammer derefter op til en fejlfri overflade, når de køler ned. PVC er fuldt genanvendeligt, kan tages ned igen for adgang til installationerne ovenover og dækker op til 6.4 m sømløst — den bredeste løsning."
+              "PVC-folier opvarmes under monteringen, så de slapper af, og strammer derefter op til en fejlfri overflade, når de køler ned. PVC er fuldt genanvendeligt, kan tages ned igen for adgang til installationerne ovenover og dækker op til 6.5 m sømløst — den bredeste løsning."
             ]
           },
           {
@@ -4513,7 +4513,7 @@
           {
             "heading": "Mulighed 2: et stretchloft som beklædning",
             "paragraphs": [
-              "Et stretchloft spændes op i en slank profil langs væggene, et par centimeter under det nye isoleringslag. Montagen tager som regel én dag — uden støv, uden tørretid og uden at rømme rummet. Membranen er sømløs op til 5,15 m (polyester) eller 6,4 m (pvc) og følger også skrå flader og kviste."
+              "Et stretchloft spændes op i en slank profil langs væggene, et par centimeter under det nye isoleringslag. Montagen tager som regel én dag — uden støv, uden tørretid og uden at rømme rummet. Membranen er sømløs op til 5,15 m (polyester) eller 6,5 m (pvc) og følger også skrå flader og kviste."
             ],
             "bullets": [
               "Adgangen består: En pvc-membran kan tages ud af profilen og sættes i igen, eller du får en usynlig inspektionslem. Praktisk ved en lækagekontrol, ekstra kabler eller en senere ændring af isoleringen.",

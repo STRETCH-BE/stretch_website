@@ -46,7 +46,7 @@
     "homeTitle": "STRETCH — A new ceiling in one day | Stretch ceilings & walls",
     "homeDescription": "Stretch ceilings and walls, seamless and installed cold in one day — no dust, no painting. Acoustic, lighting and print options. Hand-made in Belgium.",
     "productsTitle": "Stretch ceiling & acoustic solutions | STRETCH",
-    "productsDescription": "Stretch ceilings in polyester and PVC, acoustic systems, backlit and printed designs and prefab units — seamless to 6.4 m, 25-year warranty.",
+    "productsDescription": "Stretch ceilings in polyester and PVC, acoustic systems, backlit and printed designs and prefab units — seamless to 6.5 m, 25-year warranty.",
     "partnersTitle": "Become a STRETCH reseller — trade pricing & leads | STRETCH",
     "partnersDescription": "Add stretch ceilings to your offer with trade pricing, made-to-measure supply from our Belgian workshop, hands-on training and referred local leads.",
     "trainingTitle": "Stretch ceiling installer training — certified in 2–3 days | STRETCH",
@@ -481,7 +481,7 @@
       "1": "Acoustic improvement",
       "2": "25-year lifespan",
       "3": "100% recyclable",
-      "4": "Seamless to 6.4m",
+      "4": "Seamless to 6.5m",
       "5": "No dust · No paint",
       "6": "Hand made in Belgium"
     },
@@ -534,12 +534,12 @@
         },
         "1": {
           "mount": "Heat mount",
-          "span": "Seamless to 6.4m",
+          "span": "Seamless to 6.5m",
           "name": "PVC Film",
           "blurb": "A warmed film tensioned on install — fully recyclable and easily removable. Replace your ceiling in a single day.",
           "features": {
             "0": "100% recyclable",
-            "1": "Seamless to 6.4m",
+            "1": "Seamless to 6.5m",
             "2": "Easily removable",
             "3": "Acoustic & washable"
           },
@@ -783,16 +783,16 @@
       "category": "Heat-mounted film",
       "mount": "Heat mount",
       "intro": "A warmed PVC film tensioned on install — fully recyclable and easily removable. Replace a tired ceiling with a flawless new one in a single day.",
-      "summary": "Heat-mounted PVC film stretch ceiling, 100% recyclable and removable, seamless to 6.4 m with a 10-year warranty.",
+      "summary": "Heat-mounted PVC film stretch ceiling, 100% recyclable and removable, seamless to 6.5 m with a 10-year warranty.",
       "chips": [
-        "Seamless to 6.4 m",
+        "Seamless to 6.5 m",
         "100% recyclable",
         "Easily removable",
         "Washable"
       ],
       "highlights": [
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Seamless width"
         },
         {
@@ -833,7 +833,7 @@
         },
         {
           "k": "Max seamless width",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Surface",
@@ -1333,7 +1333,7 @@
           "label": "Optional glow"
         },
         {
-          "value": "6.4m",
+          "value": "6.5m",
           "label": "Seamless width"
         }
       ],
@@ -1370,7 +1370,7 @@
         },
         {
           "k": "Max seamless width",
-          "v": "6.4 m"
+          "v": "6.5 m"
         },
         {
           "k": "Fire rating",
@@ -2259,7 +2259,7 @@
       },
       {
         "q": "What is the widest ceiling you can install without a seam?",
-        "a": "Up to 6.4 m seamless with PVC film, and up to 5.15 m with polyester. Larger spans are covered with a near-invisible welded joint or a deliberate profile line."
+        "a": "Up to 6.5 m seamless with PVC film, and up to 5.15 m with polyester. Larger spans are covered with a near-invisible welded joint or a deliberate profile line."
       },
       {
         "q": "Can I have lighting, backlighting or a printed design?",
@@ -2309,7 +2309,7 @@
       },
       {
         "q": "How wide a span can a PVC ceiling cover without a seam?",
-        "a": "Up to 6.4 m seamless — the widest in our range. Larger rooms can be covered by welding panels with a near-invisible joint or by introducing a deliberate profile line."
+        "a": "Up to 6.5 m seamless — the widest in our range. Larger rooms can be covered by welding panels with a near-invisible joint or by introducing a deliberate profile line."
       },
       {
         "q": "Is PVC film suitable for bathrooms and wet areas?",
@@ -2405,7 +2405,7 @@
       },
       {
         "q": "Is there a visible seam on large prints?",
-        "a": "No. The image is printed edge-to-edge across a single seamless membrane up to 6.4 m wide, so there are no panel lines across your artwork."
+        "a": "No. The image is printed edge-to-edge across a single seamless membrane up to 6.5 m wide, so there are no panel lines across your artwork."
       }
     ]
   },
@@ -2657,7 +2657,7 @@
     "pvc": {
       "label": "PVC stretch ceiling",
       "short": "PVC film",
-      "blurb": "Heat-mounted PVC film — fully recyclable, removable and seamless to 6.4 m.",
+      "blurb": "Heat-mounted PVC film — fully recyclable, removable and seamless to 6.5 m.",
       "fireSafety": {
         "intro": "The PVC film is classified B-s1,d0 to EN 13501-1 — flame-retardant, with very limited smoke development and no flaming droplets.",
         "rows": [
@@ -2689,7 +2689,7 @@
         "steps": [
           {
             "title": "Survey & measure",
-            "body": "The room is measured and the film is high-frequency welded to size with a perimeter harpoon edge, made to the shape of the room and seamless up to 6.4 m wide."
+            "body": "The room is measured and the film is high-frequency welded to size with a perimeter harpoon edge, made to the shape of the room and seamless up to 6.5 m wide."
           },
           {
             "title": "Fit the perimeter profile",
@@ -3813,7 +3813,7 @@
             "heading": "Cold mount vs. heat mount",
             "paragraphs": [
               "Polyester membranes are tensioned cold: no heat, no fumes and no drying time. They give a deep, very matte finish and can span up to 5.15 m without a seam.",
-              "PVC films are warmed during installation so they relax, then tighten as they cool to a flawless surface. PVC is fully recyclable, removable for access to the services above, and spans up to 6.4 m seamless — the widest option."
+              "PVC films are warmed during installation so they relax, then tighten as they cool to a flawless surface. PVC is fully recyclable, removable for access to the services above, and spans up to 6.5 m seamless — the widest option."
             ]
           },
           {
@@ -4513,7 +4513,7 @@
           {
             "heading": "Option 2: a stretch ceiling as the finish",
             "paragraphs": [
-              "A stretch ceiling is tensioned into a slim perimeter profile a few centimetres below the new insulation layer. Installation usually takes one day, with no dust, no drying time and no need to empty the room. The membrane is seamless up to 5.15 m (polyester) or 6.4 m (PVC) and follows sloping planes and dormers."
+              "A stretch ceiling is tensioned into a slim perimeter profile a few centimetres below the new insulation layer. Installation usually takes one day, with no dust, no drying time and no need to empty the room. The membrane is seamless up to 5.15 m (polyester) or 6.5 m (PVC) and follows sloping planes and dormers."
             ],
             "bullets": [
               "Access stays: a PVC membrane can be released from the profile and refitted, or you add an invisible inspection hatch. Handy for a leak check, extra cabling or a later change to the insulation.",
