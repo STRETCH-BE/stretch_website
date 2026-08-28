@@ -2646,7 +2646,12 @@
       },
       "specification": {
         "intro": "Uma cláusula pronta a copiar para cadernos de encargos e concursos. Ajuste os valores entre parênteses retos ao seu projeto.",
-        "clause": "Fornecimento e instalação de um sistema de teto tensionado de poliéster tensionado a frio [STRETCH ou equivalente aprovado]. A membrana será um têxtil de poliéster tricotado, tensionado a frio num perfil perimetral de clip, sem aplicação de calor, formando uma superfície sem juntas e muito mate até 5.15 m de largura. A reação ao fogo será da classe B-s1,d0 segundo a EN 13501-1 (classe A2-s1,d0 onde indicado). O sistema será lavável e resistente à humidade, adequado à instalação em espaços ocupados, e terá uma garantia do fabricante de [10] anos. Cor: [RAL ____]. Onde for especificado desempenho acústico, prever uma membrana microperfurada com base absorvente de alta densidade, com absorção sonora até à classe A."
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Fornecimento e instalação de um sistema de teto tensionado de poliéster tensionado a frio [STRETCH ou equivalente aprovado]. A membrana será um têxtil de poliéster tricotado, tensionado a frio num perfil perimetral de clip, sem aplicação de calor, formando uma superfície sem juntas e muito mate até 5.15 m de largura. A reação ao fogo será da classe B-s1,d0 segundo a EN 13501-1 (classe A2-s1,d0 onde indicado). O sistema será lavável e resistente à humidade, adequado à instalação em espaços ocupados, e terá uma garantia do fabricante de [10] anos. Cor: [RAL ____]. Onde for especificado desempenho acústico, prever uma membrana microperfurada com base absorvente de alta densidade, com absorção sonora até à classe A."
+          }
+        ]
       }
     },
     "pvc": {
@@ -2701,8 +2706,137 @@
         ]
       },
       "specification": {
-        "intro": "Uma cláusula pronta a copiar para cadernos de encargos e concursos. Ajuste os valores entre parênteses retos ao seu projeto.",
-        "clause": "Fornecimento e instalação de um sistema de teto tensionado em película de PVC tensionada a quente [STRETCH ou equivalente aprovado]. A membrana será uma película de PVC calandrada, soldada à medida e tensionada num perfil perimetral de arpão/clip, formando uma superfície sem juntas até 6.4 m de largura, em acabamento [mate / acetinado / lacado / translúcido]. A reação ao fogo será da classe B-s1,d0 segundo a EN 13501-1. A película será 100% reciclável, removível e novamente tensionável para acesso ao espaço técnico superior, lavável e resistente à humidade, e terá uma garantia do fabricante de [10] anos. Cor/acabamento: [____]. Onde for especificada retroiluminação, prever uma película translúcida sobre um campo de LED, para uma iluminação uniforme e sem pontos quentes."
+        "intro": "Um texto de especificação pronto a copiar para cadernos de encargos — a descrição completa do sistema conforme a EN 14716. Ajuste os valores entre parênteses ao seu projeto.",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Sistema de teto tensionado STRETCH® [ou equivalente]"
+          },
+          {
+            "type": "p",
+            "text": "Tipo de tela: tela de PVC STRETCH®, série SM [referência SM]. Teto tensionado conforme a norma europeia EN 14716 — marcação CE."
+          },
+          {
+            "type": "heading",
+            "text": "Descrição"
+          },
+          {
+            "type": "p",
+            "text": "O sistema é composto por três elementos:"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Tela flexível: tela de PVC calandrada, cortada à medida na oficina de confeção segundo as dimensões e formas do local e, quando necessário, unida por soldadura de alta frequência. Sem juntas — sem perfil de separação nem soldadura — até uma largura de 650 cm (branco mate); restantes cores e acabamentos até 560 cm.",
+              "Arpão semiflexível: arpão (obtido por extrusão) soldado em todo o perímetro da tela, em branco ou preto à escolha, com o qual o teto é tensionado no perfil. O teto pode assim ser desmontado e recolocado sem limite e sem deformação, com acesso total ao pleno.",
+              "Perfis: perfis STRETCH em alumínio extrudido, à escolha em versão visível, invisível ou com junta de sombra. Altura mínima de montagem: 15 mm."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "O teto tensionado é confecionado à medida na oficina segundo as dimensões do local. A tela é tensionada após o aquecimento do local e fixada nos perfis STRETCH previamente instalados."
+          },
+          {
+            "type": "heading",
+            "text": "Composição do sistema"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Tela polimérica flexível obtida por calandragem, conforme a EN 14716, marcação CE.",
+              "Arpão semiflexível obtido por extrusão.",
+              "A tela possui a etiqueta A+ (emissões para o ar interior) conforme a legislação em vigor sobre a qualidade do ar interior.",
+              "Tela, arpão e perfis são 100 % recicláveis.",
+              "As telas são produzidas com plastificantes isentos de metais pesados, conforme a RoHS."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Características da tela"
+          },
+          {
+            "type": "kv",
+            "rows": [
+              {
+                "k": "Largura máx. sem juntas sob tensão",
+                "v": "650 cm (branco mate) · 560 cm (restantes cores e acabamentos)"
+              },
+              {
+                "k": "Comprimento máximo",
+                "v": "Dependente do peso, normalmente 20 m"
+              },
+              {
+                "k": "Espessura da tela",
+                "v": "170 µm"
+              },
+              {
+                "k": "Solidez da cor à luz",
+                "v": "≥ 6"
+              },
+              {
+                "k": "Permeabilidade ao vapor de água",
+                "v": "27 g/m²/24 h"
+              },
+              {
+                "k": "Resistência à água",
+                "v": "Lavável — adequada a espaços húmidos"
+              },
+              {
+                "k": "Acabamentos",
+                "v": "Supermirror · Satin · Mate — 24 cores standard; versão translúcida para tetos luminosos"
+              },
+              {
+                "k": "Vida útil",
+                "v": "≥ 30 anos"
+              },
+              {
+                "k": "Reação ao fogo",
+                "v": "B-s1,d0 (EN 13501-1)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Garantia"
+          },
+          {
+            "type": "p",
+            "text": "Garantia do fabricante: 10 anos sobre a tela, as soldaduras e a conservação da cor. A garantia só é válida com um certificado de garantia que indique o ID único do produto, o revendedor e a data de instalação."
+          },
+          {
+            "type": "heading",
+            "text": "Opções"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Teto retroiluminado: onde indicado, prevê-se uma tela translúcida sobre um campo de LED, com difusão de luz uniforme e sem pontos quentes.",
+              "Teto acústico: tela microperfurada, perfuração Ø 0,30 mm (0,15 ou 0,45 mm sob pedido), aprox. 250 000 perfurações/m², praticamente invisíveis com a tela tensionada; disponível em todas as cores e acabamentos. Em combinação com material absorvente no pleno (p. ex. lã de poliéster); montagem total normalmente de 40–50 mm.",
+              "Céu estrelado: tela com pontos de fibra ótica ou LED integrados segundo o desenho."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Instalação da tela tensionada"
+          },
+          {
+            "type": "p",
+            "text": "A instalação é executada por uma empresa especializada, formada e aprovada pelo fabricante; só então se aplica a garantia do fabricante e é emitido o certificado de garantia (ID único do produto, revendedor, data de instalação). A tela confecionada à medida é colocada com o seu arpão perimetral nos perfis de alumínio STRETCH após o aquecimento do local, podendo ser desmontada e recolocada sem limite e sem deformação."
+          },
+          {
+            "type": "heading",
+            "text": "Prescrições adicionais"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Devem ser tomadas as precauções necessárias para que o espaço acima do teto tensionado seja suficientemente estanque ao ar.",
+              "Os tetos de dimensões excessivas são subdivididos por um perfil de separação invisível em alumínio anodizado, suspenso de suportes metálicos.",
+              "Os elementos embutidos (projetores, grelhas, sprinklers, altifalantes) são dotados de estruturas de apoio adequadas e anéis de reforço.",
+              "As amostras devem ser submetidas à aprovação do arquiteto."
+            ]
+          }
+        ]
       }
     }
   },

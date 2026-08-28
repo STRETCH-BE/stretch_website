@@ -200,7 +200,43 @@ export default function TechnicalPage({
             <>
               <p style={{ fontSize: 15, lineHeight: 1.65, color: 'var(--text-muted)', margin: '0 0 22px', maxWidth: 680 }}>{m.specification.intro}</p>
               <div style={{ border: '1px solid var(--border)', background: 'var(--surface)', padding: 'clamp(20px,2.6vw,30px)', fontSize: 15, lineHeight: 1.75, color: 'var(--text)', maxWidth: 720 }}>
-                {m.specification.clause}
+                {m.specification.blocks.map((block, i) => {
+                  if (block.type === 'heading') {
+                    return (
+                      <h3 key={i} style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 15, letterSpacing: '.03em', textTransform: 'uppercase', margin: i === 0 ? '0 0 10px' : '26px 0 10px' }}>
+                        {block.text}
+                      </h3>
+                    );
+                  }
+                  if (block.type === 'p') {
+                    return (
+                      <p key={i} style={{ margin: '0 0 12px' }}>
+                        {block.text}
+                      </p>
+                    );
+                  }
+                  if (block.type === 'bullets') {
+                    return (
+                      <ul key={i} style={{ margin: '0 0 12px', paddingLeft: 20 }}>
+                        {block.items.map((item, j) => (
+                          <li key={j} style={{ marginBottom: 7 }}>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    );
+                  }
+                  return (
+                    <div key={i} style={{ margin: '0 0 12px' }}>
+                      {block.rows.map((r) => (
+                        <div key={r.k} style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 20, padding: '10px 0', borderBottom: '1px solid var(--border)' }}>
+                          <span style={{ fontSize: 12.5, fontWeight: 600, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--text-faint-2)', flexShrink: 0 }}>{r.k}</span>
+                          <span style={{ fontSize: 14.5, fontWeight: 700, textAlign: 'right' }}>{r.v}</span>
+                        </div>
+                      ))}
+                    </div>
+                  );
+                })}
               </div>
               <p style={{ fontSize: 13, color: 'var(--text-faint-2)', margin: '14px 0 0' }}>{t('copyHint')}</p>
             </>

@@ -2646,7 +2646,12 @@
       },
       "specification": {
         "intro": "En klar-til-brug klausul til udbuds- og beskrivelsesdokumenter. Tilpas værdierne i kantede parenteser til dit projekt.",
-        "clause": "Levering og montering af et koldopspændt spændloftsystem i polyester [STRETCH eller godkendt tilsvarende]. Membranen skal være et strikket polyestertekstil, der spændes koldt op i en kantprofil med klikfæste uden brug af varme og danner en sømløs, meget mat overflade på op til 5.15 m i bredden. Reaktion på brand skal være klasse B-s1,d0 efter EN 13501-1 (klasse A2-s1,d0, hvor det er angivet). Systemet skal være vaskbart og fugtbestandigt, egnet til montering i rum i brug, og leveres med [10] års producentgaranti. Farve: [RAL ____]. Hvor der stilles krav om akustisk ydeevne, leveres en mikroperforeret membran med bagvedliggende absorbent i høj densitet, der opnår lydabsorption op til klasse A."
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Levering og montering af et koldopspændt spændloftsystem i polyester [STRETCH eller godkendt tilsvarende]. Membranen skal være et strikket polyestertekstil, der spændes koldt op i en kantprofil med klikfæste uden brug af varme og danner en sømløs, meget mat overflade på op til 5.15 m i bredden. Reaktion på brand skal være klasse B-s1,d0 efter EN 13501-1 (klasse A2-s1,d0, hvor det er angivet). Systemet skal være vaskbart og fugtbestandigt, egnet til montering i rum i brug, og leveres med [10] års producentgaranti. Farve: [RAL ____]. Hvor der stilles krav om akustisk ydeevne, leveres en mikroperforeret membran med bagvedliggende absorbent i høj densitet, der opnår lydabsorption op til klasse A."
+          }
+        ]
       }
     },
     "pvc": {
@@ -2701,8 +2706,137 @@
         ]
       },
       "specification": {
-        "intro": "En klar-til-brug klausul til udbuds- og beskrivelsesdokumenter. Tilpas værdierne i kantede parenteser til dit projekt.",
-        "clause": "Levering og montering af et varmopspændt spændloftsystem i PVC-folie [STRETCH eller godkendt tilsvarende]. Membranen skal være en kalandreret PVC-folie, svejset på mål og opspændt i en kantprofil med harpun-/klikfæste, som danner en sømløs overflade på op til 6.4 m i bredden i [mat / satin / blank / translucent] finish. Reaktion på brand skal være klasse B-s1,d0 efter EN 13501-1. Folien skal være 100% genanvendelig, aftagelig og kunne spændes op igen for adgang til hulrummet ovenover, være vaskbar og fugtbestandig samt leveres med [10] års producentgaranti. Farve/finish: [____]. Hvor der er foreskrevet bagbelysning, leveres en translucent folie over et LED-felt, der giver et jævnt lys uden synlige lyspunkter."
+        "intro": "En kopiklar udbudstekst til beskrivelser og udbudsmateriale — den fulde systembeskrivelse i henhold til EN 14716. Tilpas værdierne i parentes til dit projekt.",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "STRETCH® stretchloft-system [eller tilsvarende]"
+          },
+          {
+            "type": "p",
+            "text": "Folietype: STRETCH® pvc-folie, SM-serie [SM-reference]. Stretchloft i henhold til den europæiske standard EN 14716 — CE-mærket."
+          },
+          {
+            "type": "heading",
+            "text": "Beskrivelse"
+          },
+          {
+            "type": "p",
+            "text": "Systemet består af tre komponenter:"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Fleksibel folie: kalandreret pvc-folie, skåret til mål i konfektionsværkstedet efter rummets mål og former og om nødvendigt samlet ved højfrekvenssvejsning. Sømløs — uden delingsprofil eller svejsesøm — op til en bredde på 650 cm (mat hvid); øvrige farver og overflader op til 560 cm.",
+              "Halvfleksibel harpun: harpunkant (fremstillet ved ekstrudering) svejset hele vejen rundt om folien, i hvid eller sort efter valg, hvormed loftet spændes ind i profilen. Loftet kan dermed tages ud og genmonteres ubegrænset uden deformation, med fuld adgang til hulrummet ovenover.",
+              "Profiler: ekstruderede STRETCH-aluminiumprofiler, efter valg i synlig, usynlig eller skyggefuge-udførelse. Minimal opbygningshøjde: 15 mm."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Stretchloftet fremstilles på mål i konfektionsværkstedet efter rummets dimensioner. Folien spændes op efter opvarmning af rummet og fastgøres i de forud monterede STRETCH-profiler."
+          },
+          {
+            "type": "heading",
+            "text": "Systemets sammensætning"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Fleksibel polymerfolie fremstillet ved kalandrering, i henhold til EN 14716, CE-mærkning.",
+              "Halvfleksibel harpun fremstillet ved ekstrudering.",
+              "Folien bærer A+-mærket (emissioner til indeluften) i henhold til gældende lovgivning om indeluftkvalitet.",
+              "Folie, harpun og profiler er 100 % genanvendelige.",
+              "Folierne fremstilles med blødgørere uden tungmetaller, i henhold til RoHS."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Foliens egenskaber"
+          },
+          {
+            "type": "kv",
+            "rows": [
+              {
+                "k": "Maks. sømløs bredde under spænding",
+                "v": "650 cm (mat hvid) · 560 cm (øvrige farver og overflader)"
+              },
+              {
+                "k": "Maksimal længde",
+                "v": "Vægtafhængig, typisk 20 m"
+              },
+              {
+                "k": "Folietykkelse",
+                "v": "170 µm"
+              },
+              {
+                "k": "Farveægthed over for lys",
+                "v": "≥ 6"
+              },
+              {
+                "k": "Vanddampgennemtrængelighed",
+                "v": "27 g/m²/24 t"
+              },
+              {
+                "k": "Vandbestandighed",
+                "v": "Afvaskelig — egnet til fugtige rum"
+              },
+              {
+                "k": "Overflader",
+                "v": "Supermirror · Satin · Mat — 24 standardfarver; translucent til lyslofter"
+              },
+              {
+                "k": "Levetid",
+                "v": "≥ 30 år"
+              },
+              {
+                "k": "Reaktion ved brand",
+                "v": "B-s1,d0 (EN 13501-1)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Garanti"
+          },
+          {
+            "type": "p",
+            "text": "Fabriksgaranti: 10 år på folien, svejsesømmene og farvebestandigheden. Garantien er kun gyldig med et garanticertifikat med det unikke produkt-ID, forhandleren og installationsdatoen."
+          },
+          {
+            "type": "heading",
+            "text": "Tilvalg"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Lysloft: hvor det er angivet, monteres en translucent folie over et LED-felt med jævn lysfordeling uden hotspots.",
+              "Akustikloft: mikroperforeret folie, perforering Ø 0,30 mm (0,15 eller 0,45 mm på forespørgsel), ca. 250.000 perforeringer/m², næsten usynlige i opspændt tilstand; fås i alle farver og overflader. I kombination med absorberende materiale i hulrummet (f.eks. polyesteruld); samlet opbygning typisk 40–50 mm.",
+              "Stjernehimmel: folie med integrerede fiberoptiske eller LED-stjernepunkter efter tegning."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Montering af folien"
+          },
+          {
+            "type": "p",
+            "text": "Monteringen udføres af et specialiseret firma, uddannet og godkendt af producenten; kun da gælder fabriksgarantien, og garanticertifikatet (unikt produkt-ID, forhandler, installationsdato) udstedes. Den målkonfektionerede folie sættes med sin omkredsharpun i STRETCH-aluminiumprofilerne efter opvarmning af rummet og kan tages ud og genmonteres ubegrænset uden deformation."
+          },
+          {
+            "type": "heading",
+            "text": "Supplerende krav"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Der skal træffes de nødvendige forholdsregler, så rummet over stretchloftet er tilstrækkeligt lufttæt.",
+              "For store lofter opdeles med en usynlig delingsprofil i anodiseret aluminium, ophængt i metalbeslag.",
+              "Indbygningselementer (spots, riste, sprinklere, højttalere) forsynes med egnede bagvedliggende konstruktioner og forstærkningsringe.",
+              "Prøver forelægges arkitekten til godkendelse."
+            ]
+          }
+        ]
       }
     }
   },

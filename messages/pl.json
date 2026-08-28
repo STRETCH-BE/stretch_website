@@ -2646,7 +2646,12 @@
       },
       "specification": {
         "intro": "Gotowa do skopiowania klauzula do specyfikacji i dokumentów przetargowych. Dostosuj wartości w nawiasach do swojego projektu.",
-        "clause": "Dostawa i montaż systemu poliestrowego sufitu napinanego montowanego na zimno [STRETCH lub zatwierdzony równoważny]. Membranę stanowi dzianina poliestrowa napinana na zimno w obwodowym profilu zatrzaskowym, bez użycia ciepła, tworząca bardzo matową powierzchnię bez łączeń o szerokości do 5.15 m. Reakcja na ogień: klasa B-s1,d0 według EN 13501-1 (klasa A2-s1,d0 tam, gdzie wskazano). System ma być zmywalny i odporny na wilgoć, przystosowany do montażu w pomieszczeniach użytkowanych, oraz objęty gwarancją producenta na [10] lat. Kolor: [RAL ____]. Tam, gdzie wymagane są parametry akustyczne, należy zastosować membranę mikroperforowaną z wkładem pochłaniającym o wysokiej gęstości, zapewniającą pochłanianie dźwięku aż do klasy A."
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Dostawa i montaż systemu poliestrowego sufitu napinanego montowanego na zimno [STRETCH lub zatwierdzony równoważny]. Membranę stanowi dzianina poliestrowa napinana na zimno w obwodowym profilu zatrzaskowym, bez użycia ciepła, tworząca bardzo matową powierzchnię bez łączeń o szerokości do 5.15 m. Reakcja na ogień: klasa B-s1,d0 według EN 13501-1 (klasa A2-s1,d0 tam, gdzie wskazano). System ma być zmywalny i odporny na wilgoć, przystosowany do montażu w pomieszczeniach użytkowanych, oraz objęty gwarancją producenta na [10] lat. Kolor: [RAL ____]. Tam, gdzie wymagane są parametry akustyczne, należy zastosować membranę mikroperforowaną z wkładem pochłaniającym o wysokiej gęstości, zapewniającą pochłanianie dźwięku aż do klasy A."
+          }
+        ]
       }
     },
     "pvc": {
@@ -2701,8 +2706,137 @@
         ]
       },
       "specification": {
-        "intro": "Gotowa do skopiowania klauzula do specyfikacji i dokumentów przetargowych. Dostosuj wartości w nawiasach do swojego projektu.",
-        "clause": "Dostawa i montaż systemu sufitu napinanego z folii PVC montowanego na ciepło [STRETCH lub zatwierdzony równoważny]. Membranę stanowi kalandrowana folia PVC, zgrzewana na wymiar i napinana w obwodowym profilu harpunowym/zatrzaskowym, tworząca powierzchnię bez łączeń o szerokości do 6.4 m, w wykończeniu [matowym / satynowym / błyszczącym / półprzezroczystym]. Reakcja na ogień: klasa B-s1,d0 według EN 13501-1. Folia ma być w 100% zdatna do recyklingu, demontowalna i umożliwiająca ponowne napięcie w celu dostępu do przestrzeni nad sufitem, zmywalna i odporna na wilgoć, oraz objęta gwarancją producenta na [10] lat. Kolor/wykończenie: [____]. Tam, gdzie przewidziano podświetlenie, należy zastosować folię półprzezroczystą nad polem LED, zapewniającą równomierne światło bez widocznych punktów świetlnych."
+        "intro": "Gotowy do skopiowania tekst do specyfikacji przetargowej — pełny opis systemu zgodny z EN 14716. Wartości w nawiasach należy dostosować do projektu.",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "System sufitu napinanego STRETCH® [lub równoważny]"
+          },
+          {
+            "type": "p",
+            "text": "Typ folii: folia PVC STRETCH®, seria SM [oznaczenie SM]. Sufit napinany zgodny z normą europejską EN 14716 — oznakowanie CE."
+          },
+          {
+            "type": "heading",
+            "text": "Opis"
+          },
+          {
+            "type": "p",
+            "text": "System składa się z trzech elementów:"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Elastyczna folia: kalandrowana folia PVC, docinana na wymiar w zakładzie konfekcji według wymiarów i kształtów pomieszczenia, a w razie potrzeby łączona zgrzewaniem wysokoczęstotliwościowym. Bezszwowa — bez profilu dzielącego i bez zgrzewu — do szerokości 650 cm (biały mat); pozostałe kolory i wykończenia do 560 cm.",
+              "Półelastyczny harpun: harpun (wytwarzany metodą wytłaczania) zgrzany po całym obwodzie folii, w kolorze białym lub czarnym do wyboru, za pomocą którego sufit napinany jest w profilu. Dzięki temu sufit można bez ograniczeń demontować i montować ponownie bez odkształceń, z pełnym dostępem do przestrzeni nad sufitem.",
+              "Profile: wytłaczane aluminiowe profile STRETCH, do wyboru w wersji widocznej, niewidocznej lub z fugą cieniową. Minimalna wysokość zabudowy: 15 mm."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Sufit napinany wykonywany jest na wymiar w zakładzie konfekcji zgodnie z wymiarami pomieszczenia. Folia jest napinana po nagrzaniu pomieszczenia i mocowana w zamontowanych wcześniej profilach STRETCH."
+          },
+          {
+            "type": "heading",
+            "text": "Skład systemu"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Elastyczna folia polimerowa wytwarzana metodą kalandrowania, zgodna z EN 14716, oznakowanie CE.",
+              "Półelastyczny harpun wytwarzany metodą wytłaczania.",
+              "Folia posiada etykietę A+ (emisje do powietrza wewnętrznego) zgodnie z obowiązującymi przepisami o jakości powietrza wewnętrznego.",
+              "Folia, harpun i profile są w 100% zdatne do recyklingu.",
+              "Folie produkowane są z plastyfikatorami wolnymi od metali ciężkich, zgodnie z RoHS."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Charakterystyka folii"
+          },
+          {
+            "type": "kv",
+            "rows": [
+              {
+                "k": "Maks. szerokość bezszwowa pod napięciem",
+                "v": "650 cm (biały mat) · 560 cm (pozostałe kolory i wykończenia)"
+              },
+              {
+                "k": "Maksymalna długość",
+                "v": "Zależna od masy, zwykle 20 m"
+              },
+              {
+                "k": "Grubość folii",
+                "v": "170 µm"
+              },
+              {
+                "k": "Odporność kolorów na światło",
+                "v": "≥ 6"
+              },
+              {
+                "k": "Przepuszczalność pary wodnej",
+                "v": "27 g/m²/24 h"
+              },
+              {
+                "k": "Odporność na wodę",
+                "v": "Zmywalna — odpowiednia do pomieszczeń wilgotnych"
+              },
+              {
+                "k": "Wykończenia",
+                "v": "Supermirror · Satin · Mat — 24 kolory standardowe; wersja transparentna do sufitów świetlnych"
+              },
+              {
+                "k": "Trwałość",
+                "v": "≥ 30 lat"
+              },
+              {
+                "k": "Reakcja na ogień",
+                "v": "B-s1,d0 (EN 13501-1)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Gwarancja"
+          },
+          {
+            "type": "p",
+            "text": "Gwarancja producenta: 10 lat na folię, zgrzewy i trwałość kolorów. Gwarancja jest ważna wyłącznie z certyfikatem gwarancyjnym zawierającym unikalny identyfikator produktu, dane dealera i datę montażu."
+          },
+          {
+            "type": "heading",
+            "text": "Opcje"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Sufit świetlny: w miejscach wskazanych przewiduje się folię transparentną nad polem LED, z równomiernym rozproszeniem światła bez punktów świetlnych (hotspotów).",
+              "Sufit akustyczny: folia mikroperforowana, perforacja Ø 0,30 mm (0,15 lub 0,45 mm na zamówienie), ok. 250 000 perforacji/m², w stanie napiętym praktycznie niewidoczna; dostępna we wszystkich kolorach i wykończeniach. W połączeniu z materiałem pochłaniającym w przestrzeni nad sufitem (np. wełną poliestrową); całkowita zabudowa zwykle 40–50 mm.",
+              "Gwiaździste niebo: folia ze zintegrowanymi punktami światłowodowymi lub LED według projektu."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Montaż folii napinanej"
+          },
+          {
+            "type": "p",
+            "text": "Montaż wykonuje wyspecjalizowana firma przeszkolona i autoryzowana przez producenta; tylko wtedy obowiązuje gwarancja producenta i wydawany jest certyfikat gwarancyjny (unikalny identyfikator produktu, dealer, data montażu). Skonfekcjonowana na wymiar folia z obwodowym harpunem osadzana jest w aluminiowych profilach STRETCH po nagrzaniu pomieszczenia i pozostaje bez ograniczeń demontowalna i ponownie montowalna bez odkształceń."
+          },
+          {
+            "type": "heading",
+            "text": "Wymagania dodatkowe"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Należy podjąć niezbędne środki, aby przestrzeń nad sufitem napinanym była wystarczająco szczelna powietrznie.",
+              "Zbyt duże sufity dzieli się za pomocą niewidocznego profilu dzielącego z anodowanego aluminium, podwieszonego na metalowych wspornikach.",
+              "Elementy wbudowane (oprawy punktowe, kratki, tryskacze, głośniki) wyposaża się w odpowiednie konstrukcje nośne i pierścienie wzmacniające.",
+              "Próbki należy przedłożyć architektowi do zatwierdzenia."
+            ]
+          }
+        ]
       }
     }
   },

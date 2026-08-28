@@ -2646,7 +2646,12 @@
       },
       "specification": {
         "intro": "Eine kopierfertige Klausel für Ausschreibungs- und Leistungsverzeichnistexte. Passen Sie die Werte in eckigen Klammern an Ihr Projekt an.",
-        "clause": "Liefern und Montieren einer kalt gespannten Polyester-Spanndecke als System [STRETCH oder anerkannt gleichwertig]. Die Membran besteht aus einem gewirkten Polyestertextil, das ohne Wärmeeinsatz kalt in ein umlaufendes Klemm-Randprofil gespannt wird und eine nahtlose, sehr matte Fläche von bis zu 5.15 m Breite bildet. Das Brandverhalten muss der Klasse B-s1,d0 nach EN 13501-1 entsprechen (Klasse A2-s1,d0, wo angegeben). Das System muss abwaschbar und feuchtigkeitsbeständig sein, für die Montage in genutzten Räumen geeignet sein und eine Herstellergarantie von [10] Jahren aufweisen. Farbe: [RAL ____]. Wo eine akustische Leistung vorgeschrieben ist, ist eine mikroperforierte Membran mit hochdichter Absorberauflage vorzusehen, die eine Schallabsorption bis Klasse A erreicht."
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Liefern und Montieren einer kalt gespannten Polyester-Spanndecke als System [STRETCH oder anerkannt gleichwertig]. Die Membran besteht aus einem gewirkten Polyestertextil, das ohne Wärmeeinsatz kalt in ein umlaufendes Klemm-Randprofil gespannt wird und eine nahtlose, sehr matte Fläche von bis zu 5.15 m Breite bildet. Das Brandverhalten muss der Klasse B-s1,d0 nach EN 13501-1 entsprechen (Klasse A2-s1,d0, wo angegeben). Das System muss abwaschbar und feuchtigkeitsbeständig sein, für die Montage in genutzten Räumen geeignet sein und eine Herstellergarantie von [10] Jahren aufweisen. Farbe: [RAL ____]. Wo eine akustische Leistung vorgeschrieben ist, ist eine mikroperforierte Membran mit hochdichter Absorberauflage vorzusehen, die eine Schallabsorption bis Klasse A erreicht."
+          }
+        ]
       }
     },
     "pvc": {
@@ -2701,8 +2706,137 @@
         ]
       },
       "specification": {
-        "intro": "Eine kopierfertige Klausel für Ausschreibungs- und Leistungsverzeichnistexte. Passen Sie die Werte in eckigen Klammern an Ihr Projekt an.",
-        "clause": "Liefern und Montieren einer warm gespannten PVC-Folien-Spanndecke als System [STRETCH oder anerkannt gleichwertig]. Die Membran besteht aus einer kalandrierten PVC-Folie, die maßgenau verschweißt und über ein umlaufendes Harpunen-/Klemmprofil gespannt wird und eine nahtlose Fläche von bis zu 6.4 m Breite in [matter / satinierter / glänzender / transluzenter] Ausführung bildet. Das Brandverhalten muss der Klasse B-s1,d0 nach EN 13501-1 entsprechen. Die Folie muss zu 100% recycelbar, abnehmbar und für den Zugang zum darüberliegenden Hohlraum neu spannbar sein, abwaschbar und feuchtigkeitsbeständig, und eine Herstellergarantie von [10] Jahren aufweisen. Farbe/Ausführung: [____]. Wo eine Hinterleuchtung vorgeschrieben ist, ist eine transluzente Folie über einem LED-Feld vorzusehen — für gleichmäßiges Licht ohne Hotspots."
+        "intro": "Ein kopierfertiger Ausschreibungstext für Leistungsverzeichnisse — die vollständige Systembeschreibung gemäß EN 14716. Passen Sie die Werte in Klammern an Ihr Projekt an.",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "STRETCH® Spanndeckensystem [oder gleichwertig]"
+          },
+          {
+            "type": "p",
+            "text": "Folientyp: STRETCH® PVC-Folie, SM-Serie [SM-Referenz]. Spanndecke gemäß der europäischen Norm EN 14716 — CE-gekennzeichnet."
+          },
+          {
+            "type": "heading",
+            "text": "Beschreibung"
+          },
+          {
+            "type": "p",
+            "text": "Das System besteht aus drei Komponenten:"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Flexible Folie: kalandrierte PVC-Folie, im Konfektionsatelier nach den Abmessungen und Formen des Raumes zugeschnitten und wo erforderlich durch Hochfrequenzschweißen gefügt. Nahtlos — ohne Trennprofil oder Schweißnaht — bis zu einer Breite von 650 cm (mattweiß); übrige Farben und Oberflächen bis 560 cm.",
+              "Halbflexibler Harpunenrand: umlaufend an die Folie geschweißter Harpunenrand (im Extrusionsverfahren hergestellt), wahlweise in Weiß oder Schwarz, mit dem die Decke in das Profil gespannt wird. Die Decke ist dadurch unbegrenzt aus- und wiedereinbaubar ohne Verformung, für den vollständigen Zugang zum Deckenhohlraum.",
+              "Profile: stranggepresste STRETCH-Aluminiumprofile, wahlweise in sichtbarer, unsichtbarer oder Schattenfugen-Ausführung. Mindestaufbauhöhe: 15 mm."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Die Spanndecke wird entsprechend den Raumabmessungen im Konfektionsatelier maßgefertigt. Die Folie wird nach dem Erwärmen des Raumes gespannt und in den zuvor montierten STRETCH-Profilen befestigt."
+          },
+          {
+            "type": "heading",
+            "text": "Systemaufbau"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Flexible Polymerfolie, im Kalandrierverfahren hergestellt, gemäß EN 14716, CE-Kennzeichnung.",
+              "Halbflexibler Harpunenrand, im Extrusionsverfahren hergestellt.",
+              "Die Folie trägt das Label A+ (Emissionen in die Innenraumluft) gemäß der geltenden Gesetzgebung zur Innenraumluftqualität.",
+              "Folie, Harpunenrand und Profile sind zu 100 % recycelbar.",
+              "Die Folien werden mit schwermetallfreien Weichmachern hergestellt, gemäß RoHS."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Folieneigenschaften"
+          },
+          {
+            "type": "kv",
+            "rows": [
+              {
+                "k": "Max. nahtlose Breite unter Spannung",
+                "v": "650 cm (mattweiß) · 560 cm (übrige Farben und Oberflächen)"
+              },
+              {
+                "k": "Maximale Bahnlänge",
+                "v": "Gewichtsabhängig, in der Regel 20 m"
+              },
+              {
+                "k": "Foliendicke",
+                "v": "170 µm"
+              },
+              {
+                "k": "Lichtechtheit",
+                "v": "≥ 6"
+              },
+              {
+                "k": "Wasserdampfdurchlässigkeit",
+                "v": "27 g/m²/24 h"
+              },
+              {
+                "k": "Wasserbeständigkeit",
+                "v": "Abwaschbar — für Feuchträume geeignet"
+              },
+              {
+                "k": "Oberflächen",
+                "v": "Supermirror · Satin · Matt — 24 Standardfarben; transluzent für Lichtdecken"
+              },
+              {
+                "k": "Lebensdauer",
+                "v": "≥ 30 Jahre"
+              },
+              {
+                "k": "Brandverhalten",
+                "v": "B-s1,d0 (EN 13501-1)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Garantie"
+          },
+          {
+            "type": "p",
+            "text": "Herstellergarantie: 10 Jahre auf Folie, Schweißnähte und Farbbeständigkeit. Die Garantie gilt ausschließlich mit Garantiezertifikat, das die eindeutige Produkt-ID, den Händler und das Installationsdatum ausweist."
+          },
+          {
+            "type": "heading",
+            "text": "Optionen"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Lichtdecke: wo angegeben wird eine transluzente Folie über einem LED-Feld vorgesehen, mit gleichmäßiger, hotspotfreier Lichtverteilung.",
+              "Akustikdecke: mikroperforierte Folie, Perforation Ø 0,30 mm (0,15 oder 0,45 mm auf Anfrage), ca. 250.000 Perforationen/m², im gespannten Zustand kaum sichtbar; lieferbar in allen Farben und Oberflächen. In Kombination mit Absorbermaterial im Deckenhohlraum (z. B. Polyesterwolle); Gesamtaufbau in der Regel 40–50 mm.",
+              "Sternenhimmel: Folie mit integrierten Glasfaser- oder LED-Sternenpunkten gemäß Plan."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Montage der Spannfolie"
+          },
+          {
+            "type": "p",
+            "text": "Die Montage erfolgt durch einen spezialisierten, vom Hersteller geschulten und zugelassenen Fachbetrieb; nur dann gilt die Herstellergarantie und wird das Garantiezertifikat (eindeutige Produkt-ID, Händler, Installationsdatum) ausgestellt. Die maßkonfektionierte Folie wird mit ihrem umlaufenden Harpunenrand nach dem Erwärmen des Raumes in die STRETCH-Aluminiumprofile eingesetzt und ist unbegrenzt aus- und wiedereinbaubar ohne Verformung."
+          },
+          {
+            "type": "heading",
+            "text": "Zusätzliche Vorgaben"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Es sind die erforderlichen Vorkehrungen zu treffen, damit der Raum oberhalb der Spanndecke ausreichend luftdicht ist.",
+              "Zu große Deckenflächen werden durch ein unsichtbares Trennprofil aus eloxiertem Aluminium unterteilt, das an Metallwinkeln abgehängt wird.",
+              "Einbauelemente (Spots, Gitter, Sprinkler, Lautsprecher) erhalten geeignete Hinterkonstruktionen und Verstärkungsringe.",
+              "Muster sind dem Architekten zur Genehmigung vorzulegen."
+            ]
+          }
+        ]
       }
     }
   },

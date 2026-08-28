@@ -2646,7 +2646,12 @@
       },
       "specification": {
         "intro": "En klausul klar til å kopieres inn i beskrivelses- og anbudsdokumenter. Tilpass verdiene i hakeparentes til prosjektet ditt.",
-        "clause": "Levering og montering av et kaldstrammet strekkhimlingssystem i polyester [STRETCH eller godkjent likeverdig]. Membranen skal være en strikket polyestertekstil som strammes kaldt i en kantprofil med klikkfeste uten varmetilførsel, og danner en sømløs, svært matt flate på inntil 5.15 m bredde. Brannreaksjonen skal være klasse B-s1,d0 etter EN 13501-1 (klasse A2-s1,d0 der det er angitt). Systemet skal være vaskbart og fukttålig, egnet for montering i rom som er i bruk, og leveres med [10] års produsentgaranti. Farge: [RAL ____]. Der det stilles krav til akustisk ytelse, skal det leveres en mikroperforert membran med bakenforliggende absorbent med høy tetthet, som oppnår lydabsorpsjon opptil klasse A."
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Levering og montering av et kaldstrammet strekkhimlingssystem i polyester [STRETCH eller godkjent likeverdig]. Membranen skal være en strikket polyestertekstil som strammes kaldt i en kantprofil med klikkfeste uten varmetilførsel, og danner en sømløs, svært matt flate på inntil 5.15 m bredde. Brannreaksjonen skal være klasse B-s1,d0 etter EN 13501-1 (klasse A2-s1,d0 der det er angitt). Systemet skal være vaskbart og fukttålig, egnet for montering i rom som er i bruk, og leveres med [10] års produsentgaranti. Farge: [RAL ____]. Der det stilles krav til akustisk ytelse, skal det leveres en mikroperforert membran med bakenforliggende absorbent med høy tetthet, som oppnår lydabsorpsjon opptil klasse A."
+          }
+        ]
       }
     },
     "pvc": {
@@ -2701,8 +2706,137 @@
         ]
       },
       "specification": {
-        "intro": "En klausul klar til å kopieres inn i beskrivelses- og anbudsdokumenter. Tilpass verdiene i hakeparentes til prosjektet ditt.",
-        "clause": "Levering og montering av et varmstrammet strekkhimlingssystem i PVC-folie [STRETCH eller godkjent likeverdig]. Membranen skal være en kalandrert PVC-folie, sveiset i riktig mål og strammet i en kantprofil med harpun-/klikkfeste, som danner en sømløs flate på inntil 6.4 m bredde i [matt / sateng / blank / gjennomskinnelig] utførelse. Brannreaksjonen skal være klasse B-s1,d0 etter EN 13501-1. Folien skal være 100% resirkulerbar, avtakbar og mulig å stramme på nytt for tilgang til hulrommet over, vaskbar og fukttålig, og leveres med [10] års produsentgaranti. Farge/utførelse: [____]. Der det er foreskrevet baklys, skal det leveres en gjennomskinnelig folie over et LED-felt, for jevnt lys uten synlige lyspunkter."
+        "intro": "En kopiklar beskrivelsestekst til anbuds- og beskrivelsesdokumenter — den fullstendige systembeskrivelsen i henhold til EN 14716. Tilpass verdiene i parentes til prosjektet ditt.",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "STRETCH® strekktaksystem [eller tilsvarende]"
+          },
+          {
+            "type": "p",
+            "text": "Folietype: STRETCH® pvc-folie, SM-serie [SM-referanse]. Strekktak i henhold til den europeiske standarden EN 14716 — CE-merket."
+          },
+          {
+            "type": "heading",
+            "text": "Beskrivelse"
+          },
+          {
+            "type": "p",
+            "text": "Systemet består av tre komponenter:"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Fleksibel folie: kalandrert pvc-folie, skåret til mål i konfeksjonsverkstedet etter rommets mål og former og om nødvendig sammenføyd ved høyfrekvenssveising. Skjøtefri — uten delingsprofil eller sveiseskjøt — opptil en bredde på 650 cm (matt hvit); øvrige farger og overflater opptil 560 cm.",
+              "Halvfleksibel harpun: harpunkant (fremstilt ved ekstrudering) sveiset rundt hele folien, i hvitt eller svart etter valg, som taket spennes inn i profilen med. Taket kan dermed tas ut og remonteres ubegrenset uten deformasjon, med full tilgang til hulrommet over.",
+              "Profiler: ekstruderte STRETCH-aluminiumprofiler, etter valg i synlig, usynlig eller skyggefuge-utførelse. Minste byggehøyde: 15 mm."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Strekktaket lages på mål i konfeksjonsverkstedet etter rommets dimensjoner. Folien spennes opp etter oppvarming av rommet og festes i de forhåndsmonterte STRETCH-profilene."
+          },
+          {
+            "type": "heading",
+            "text": "Systemets sammensetning"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Fleksibel polymerfolie fremstilt ved kalandrering, i henhold til EN 14716, CE-merking.",
+              "Halvfleksibel harpun fremstilt ved ekstrudering.",
+              "Folien bærer A+-merket (utslipp til inneluften) i henhold til gjeldende lovgivning om inneluftkvalitet.",
+              "Folie, harpun og profiler er 100 % resirkulerbare.",
+              "Foliene produseres med mykgjørere uten tungmetaller, i henhold til RoHS."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Foliens egenskaper"
+          },
+          {
+            "type": "kv",
+            "rows": [
+              {
+                "k": "Maks. skjøtefri bredde under spenning",
+                "v": "650 cm (matt hvit) · 560 cm (øvrige farger og overflater)"
+              },
+              {
+                "k": "Maksimal lengde",
+                "v": "Vektavhengig, vanligvis 20 m"
+              },
+              {
+                "k": "Folietykkelse",
+                "v": "170 µm"
+              },
+              {
+                "k": "Fargeekthet mot lys",
+                "v": "≥ 6"
+              },
+              {
+                "k": "Vanndampgjennomtrengelighet",
+                "v": "27 g/m²/24 t"
+              },
+              {
+                "k": "Vannbestandighet",
+                "v": "Vaskbar — egnet for fuktige rom"
+              },
+              {
+                "k": "Overflater",
+                "v": "Supermirror · Satin · Matt — 24 standardfarger; translusent for lystak"
+              },
+              {
+                "k": "Levetid",
+                "v": "≥ 30 år"
+              },
+              {
+                "k": "Brannreaksjon",
+                "v": "B-s1,d0 (EN 13501-1)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Garanti"
+          },
+          {
+            "type": "p",
+            "text": "Fabrikkgaranti: 10 år på folien, sveiseskjøtene og fargebestandigheten. Garantien gjelder kun med et garantisertifikat som angir den unike produkt-ID-en, forhandleren og installasjonsdatoen."
+          },
+          {
+            "type": "heading",
+            "text": "Tilvalg"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Lystak: der det er angitt, monteres en translusent folie over et LED-felt, med jevn lysfordeling uten hotspots.",
+              "Akustikktak: mikroperforert folie, perforering Ø 0,30 mm (0,15 eller 0,45 mm på forespørsel), ca. 250 000 perforeringer/m², knapt synlige i oppspent tilstand; leveres i alle farger og overflater. I kombinasjon med absorberende materiale i hulrommet (f.eks. polyesterull); total byggehøyde vanligvis 40–50 mm.",
+              "Stjernehimmel: folie med integrerte fiberoptiske eller LED-stjernepunkter etter tegning."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Montering av folien"
+          },
+          {
+            "type": "p",
+            "text": "Monteringen utføres av et spesialisert firma, opplært og godkjent av produsenten; kun da gjelder fabrikkgarantien, og garantisertifikatet (unik produkt-ID, forhandler, installasjonsdato) utstedes. Den målkonfeksjonerte folien settes med sin omkretsharpun i STRETCH-aluminiumprofilene etter oppvarming av rommet og kan tas ut og remonteres ubegrenset uten deformasjon."
+          },
+          {
+            "type": "heading",
+            "text": "Tilleggskrav"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Nødvendige tiltak skal treffes slik at rommet over strekktaket er tilstrekkelig lufttett.",
+              "For store tak deles opp med en usynlig delingsprofil i anodisert aluminium, opphengt i metallbraketter.",
+              "Innbyggingselementer (spotter, rister, sprinklere, høyttalere) utstyres med egnede bakenforliggende konstruksjoner og forsterkningsringer.",
+              "Prøver skal forelegges arkitekten for godkjenning."
+            ]
+          }
+        ]
       }
     }
   },

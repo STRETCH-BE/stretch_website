@@ -2646,7 +2646,12 @@
       },
       "specification": {
         "intro": "Una cláusula lista para copiar en pliegos y licitaciones. Ajusta los valores entre corchetes a tu proyecto.",
-        "clause": "Suministro e instalación de un sistema de techo tensado de poliéster tensado en frío [STRETCH o equivalente aprobado]. La membrana será un textil de poliéster tricotado, tensado en frío en un perfil perimetral de clip sin aplicación de calor, formando una superficie sin juntas y muy mate de hasta 5.15 m de ancho. La reacción al fuego será de clase B-s1,d0 según EN 13501-1 (clase A2-s1,d0 donde se indique). El sistema será lavable y resistente a la humedad, apto para su instalación en espacios ocupados, y contará con una garantía del fabricante de [10] años. Color: [RAL ____]. Donde se prescriba una prestación acústica, se dispondrá una membrana microperforada con respaldo absorbente de alta densidad que alcance una absorción acústica hasta clase A."
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Suministro e instalación de un sistema de techo tensado de poliéster tensado en frío [STRETCH o equivalente aprobado]. La membrana será un textil de poliéster tricotado, tensado en frío en un perfil perimetral de clip sin aplicación de calor, formando una superficie sin juntas y muy mate de hasta 5.15 m de ancho. La reacción al fuego será de clase B-s1,d0 según EN 13501-1 (clase A2-s1,d0 donde se indique). El sistema será lavable y resistente a la humedad, apto para su instalación en espacios ocupados, y contará con una garantía del fabricante de [10] años. Color: [RAL ____]. Donde se prescriba una prestación acústica, se dispondrá una membrana microperforada con respaldo absorbente de alta densidad que alcance una absorción acústica hasta clase A."
+          }
+        ]
       }
     },
     "pvc": {
@@ -2701,8 +2706,137 @@
         ]
       },
       "specification": {
-        "intro": "Una cláusula lista para copiar en pliegos y licitaciones. Ajusta los valores entre corchetes a tu proyecto.",
-        "clause": "Suministro e instalación de un sistema de techo tensado de lámina de PVC tensada en caliente [STRETCH o equivalente aprobado]. La membrana será una lámina de PVC calandrada, soldada a medida y tensada mediante un perfil perimetral de arpón/clip, formando una superficie sin juntas de hasta 6.4 m de ancho en acabado [mate / satinado / brillo / translúcido]. La reacción al fuego será de clase B-s1,d0 según EN 13501-1. La lámina será 100% reciclable, desmontable y podrá volver a tensarse para acceder al plénum superior; será lavable y resistente a la humedad, y contará con una garantía del fabricante de [10] años. Color/acabado: [____]. Donde se prescriba retroiluminación, se dispondrá una lámina translúcida sobre un campo de LED para una iluminación uniforme y sin puntos calientes."
+        "intro": "Un texto de especificación listo para copiar en pliegos de condiciones — la descripción completa del sistema conforme a la EN 14716. Ajuste los valores entre corchetes a su proyecto.",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Sistema de techo tensado STRETCH® [o equivalente]"
+          },
+          {
+            "type": "p",
+            "text": "Tipo de lámina: lámina de PVC STRETCH®, serie SM [referencia SM]. Techo tensado conforme a la norma europea EN 14716 — marcado CE."
+          },
+          {
+            "type": "heading",
+            "text": "Descripción"
+          },
+          {
+            "type": "p",
+            "text": "El sistema se compone de tres elementos:"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Lámina flexible: lámina de PVC calandrada, cortada a medida en el taller de confección según las dimensiones y formas del local y, cuando es necesario, unida mediante soldadura de alta frecuencia. Sin juntas — sin perfil de separación ni soldadura — hasta una anchura de 650 cm (blanco mate); demás colores y acabados hasta 560 cm.",
+              "Arpón semiflexible: arpón (obtenido por extrusión) soldado en todo el perímetro de la lámina, en blanco o negro a elegir, mediante el cual el techo se tensa en el perfil. El techo puede así desmontarse y volver a montarse sin límite y sin deformación, con acceso completo al plénum.",
+              "Perfiles: perfiles STRETCH de aluminio extruido, a elegir en versión vista, oculta o con junta de sombra. Altura mínima de montaje: 15 mm."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "El techo tensado se confecciona a medida en el taller según las dimensiones del local. La lámina se tensa tras calentar el local y se fija en los perfiles STRETCH instalados previamente."
+          },
+          {
+            "type": "heading",
+            "text": "Composición del sistema"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Lámina polimérica flexible obtenida por calandrado, conforme a la EN 14716, marcado CE.",
+              "Arpón semiflexible obtenido por extrusión.",
+              "La lámina cuenta con la etiqueta A+ (emisiones al aire interior) conforme a la legislación vigente sobre calidad del aire interior.",
+              "Lámina, arpón y perfiles son 100 % reciclables.",
+              "Las láminas se fabrican con plastificantes exentos de metales pesados, conforme a RoHS."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Características de la lámina"
+          },
+          {
+            "type": "kv",
+            "rows": [
+              {
+                "k": "Anchura máx. sin juntas en tensión",
+                "v": "650 cm (blanco mate) · 560 cm (demás colores y acabados)"
+              },
+              {
+                "k": "Longitud máxima",
+                "v": "Según el peso, normalmente 20 m"
+              },
+              {
+                "k": "Espesor de la lámina",
+                "v": "170 µm"
+              },
+              {
+                "k": "Solidez del color a la luz",
+                "v": "≥ 6"
+              },
+              {
+                "k": "Permeabilidad al vapor de agua",
+                "v": "27 g/m²/24 h"
+              },
+              {
+                "k": "Resistencia al agua",
+                "v": "Lavable — apto para estancias húmedas"
+              },
+              {
+                "k": "Acabados",
+                "v": "Supermirror · Satin · Mate — 24 colores estándar; versión translúcida para techos luminosos"
+              },
+              {
+                "k": "Vida útil",
+                "v": "≥ 30 años"
+              },
+              {
+                "k": "Reacción al fuego",
+                "v": "B-s1,d0 (EN 13501-1)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Garantía"
+          },
+          {
+            "type": "p",
+            "text": "Garantía del fabricante: 10 años sobre la lámina, las soldaduras y la conservación del color. La garantía solo es válida con un certificado de garantía que indique el ID único del producto, el distribuidor y la fecha de instalación."
+          },
+          {
+            "type": "heading",
+            "text": "Opciones"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Techo retroiluminado: donde se indique, se prevé una lámina translúcida sobre un campo de LED, con una difusión de la luz uniforme y sin puntos calientes.",
+              "Techo acústico: lámina microperforada, perforación Ø 0,30 mm (0,15 o 0,45 mm bajo pedido), aprox. 250 000 perforaciones/m², apenas visibles con la lámina tensada; disponible en todos los colores y acabados. En combinación con material absorbente en el plénum (p. ej. lana de poliéster); montaje total normalmente de 40–50 mm.",
+              "Cielo estrellado: lámina con puntos de fibra óptica o LED integrados según plano."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Instalación de la lámina tensada"
+          },
+          {
+            "type": "p",
+            "text": "La instalación la realiza una empresa especializada, formada y homologada por el fabricante; solo entonces se aplica la garantía del fabricante y se emite el certificado de garantía (ID único del producto, distribuidor, fecha de instalación). La lámina confeccionada a medida se coloca con su arpón perimetral en los perfiles de aluminio STRETCH tras calentar el local, y puede desmontarse y volver a montarse sin límite y sin deformación."
+          },
+          {
+            "type": "heading",
+            "text": "Prescripciones adicionales"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Se tomarán las precauciones necesarias para que el espacio sobre el techo tensado sea suficientemente estanco al aire.",
+              "Los techos de dimensiones excesivas se subdividirán mediante un perfil de separación invisible de aluminio anodizado, suspendido de escuadras metálicas.",
+              "Los elementos empotrados (focos, rejillas, rociadores, altavoces) se dotarán de estructuras de soporte adecuadas y anillos de refuerzo.",
+              "Se presentarán muestras al arquitecto para su aprobación."
+            ]
+          }
+        ]
       }
     }
   },

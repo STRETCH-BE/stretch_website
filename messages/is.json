@@ -2646,7 +2646,12 @@
       },
       "specification": {
         "intro": "Tilbúið ákvæði til að afrita í útboðs- og verklýsingargögn. Aðlagaðu gildin innan hornklofa að verkefninu þínu.",
-        "clause": "Útvega skal og setja upp kaldstrekkt strekkiloftskerfi úr pólýester [STRETCH eða samþykkt jafngilt]. Himnan skal vera prjónað pólýesterefni, strekkt kalt í jaðarprófíl með smellufestingu án hitanotkunar, og mynda saumlaust, mjög matt yfirborð allt að 5.15 m á breidd. Brunaviðbrögð skulu vera í flokki B-s1,d0 samkvæmt EN 13501-1 (flokki A2-s1,d0 þar sem það er tilgreint). Kerfið skal vera þvottekta og rakaþolið, hæft til uppsetningar í rýmum í notkun, og með [10] ára framleiðandaábyrgð. Litur: [RAL ____]. Þar sem krafist er hljóðvistareiginleika skal nota örgataða himnu með þéttu ísogsundirlagi sem nær hljóðísogi allt að flokki A."
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Útvega skal og setja upp kaldstrekkt strekkiloftskerfi úr pólýester [STRETCH eða samþykkt jafngilt]. Himnan skal vera prjónað pólýesterefni, strekkt kalt í jaðarprófíl með smellufestingu án hitanotkunar, og mynda saumlaust, mjög matt yfirborð allt að 5.15 m á breidd. Brunaviðbrögð skulu vera í flokki B-s1,d0 samkvæmt EN 13501-1 (flokki A2-s1,d0 þar sem það er tilgreint). Kerfið skal vera þvottekta og rakaþolið, hæft til uppsetningar í rýmum í notkun, og með [10] ára framleiðandaábyrgð. Litur: [RAL ____]. Þar sem krafist er hljóðvistareiginleika skal nota örgataða himnu með þéttu ísogsundirlagi sem nær hljóðísogi allt að flokki A."
+          }
+        ]
       }
     },
     "pvc": {
@@ -2701,8 +2706,137 @@
         ]
       },
       "specification": {
-        "intro": "Tilbúið ákvæði til að afrita í útboðs- og verklýsingargögn. Aðlagaðu gildin innan hornklofa að verkefninu þínu.",
-        "clause": "Útvega skal og setja upp heitstrekkt strekkiloftskerfi úr PVC-filmu [STRETCH eða samþykkt jafngilt]. Himnan skal vera völsuð PVC-filma, soðin í rétta stærð og strekkt í jaðarprófíl með harpún-/smellufestingu, og mynda saumlaust yfirborð allt að 6.4 m á breidd með [mattri / satín / gljáandi / hálfgegnsærri] áferð. Brunaviðbrögð skulu vera í flokki B-s1,d0 samkvæmt EN 13501-1. Filman skal vera 100% endurvinnanleg, fjarlægjanleg og strekkjanleg á ný til að komast að rýminu fyrir ofan, þvottekta og rakaþolin, og með [10] ára framleiðandaábyrgð. Litur/áferð: [____]. Þar sem baklýsing er tilgreind skal nota hálfgegnsæja filmu yfir LED-fleti fyrir jafna lýsingu án ljósbletta."
+        "intro": "Tilbúinn útboðstexti til að afrita í útboðslýsingar — heildarlýsing kerfisins í samræmi við EN 14716. Aðlagaðu gildin innan sviga að verkefninu þínu.",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "STRETCH® strekkloftskerfi [eða sambærilegt]"
+          },
+          {
+            "type": "p",
+            "text": "Dúkgerð: STRETCH® PVC-dúkur, SM-lína [SM-tilvísun]. Strekkloft í samræmi við evrópska staðalinn EN 14716 — CE-merkt."
+          },
+          {
+            "type": "heading",
+            "text": "Lýsing"
+          },
+          {
+            "type": "p",
+            "text": "Kerfið samanstendur af þremur hlutum:"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Sveigjanlegur dúkur: PVC-dúkur framleiddur með völsun, skorinn í mál á verkstæði eftir málum og lögun rýmisins og, þar sem þörf krefur, samsettur með hátíðnisuðu. Samskeytalaus — án skilprófíls eða suðusamskeyta — upp í 650 cm breidd (matt hvítt); aðrir litir og áferðir upp í 560 cm.",
+              "Hálfsveigjanlegur harpúnkantur: harpúnkantur (framleiddur með þrýstimótun) soðinn hringinn í kringum dúkinn, hvítur eða svartur eftir vali, sem loftið er strekkt með í prófílinn. Loftið má því taka niður og setja upp aftur ótakmarkað án aflögunar, með fullum aðgangi að holrýminu fyrir ofan.",
+              "Prófílar: þrýstimótaðir STRETCH-álprófílar, eftir vali sýnilegir, ósýnilegir eða með skuggafúgu. Lágmarks uppbyggingarhæð: 15 mm."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Strekkloftið er framleitt í mál á verkstæði eftir málum rýmisins. Dúkurinn er strekktur eftir upphitun rýmisins og festur í STRETCH-prófílana sem áður hafa verið settir upp."
+          },
+          {
+            "type": "heading",
+            "text": "Samsetning kerfisins"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Sveigjanlegur fjölliðudúkur framleiddur með völsun, í samræmi við EN 14716, CE-merking.",
+              "Hálfsveigjanlegur harpúnkantur framleiddur með þrýstimótun.",
+              "Dúkurinn ber A+-merki (losun í innilofti) í samræmi við gildandi löggjöf um loftgæði innandyra.",
+              "Dúkur, harpúnkantur og prófílar eru 100% endurvinnanlegir.",
+              "Dúkarnir eru framleiddir með mýkingarefnum án þungmálma, í samræmi við RoHS."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Eiginleikar dúksins"
+          },
+          {
+            "type": "kv",
+            "rows": [
+              {
+                "k": "Hám. samskeytalaus breidd undir spennu",
+                "v": "650 cm (matt hvítt) · 560 cm (aðrir litir og áferðir)"
+              },
+              {
+                "k": "Hámarkslengd",
+                "v": "Fer eftir þyngd, yfirleitt 20 m"
+              },
+              {
+                "k": "Þykkt dúks",
+                "v": "170 µm"
+              },
+              {
+                "k": "Litaþol gegn ljósi",
+                "v": "≥ 6"
+              },
+              {
+                "k": "Vatnsgufugegndræpi",
+                "v": "27 g/m²/24 klst."
+              },
+              {
+                "k": "Vatnsþol",
+                "v": "Þvottheldur — hentar fyrir rök rými"
+              },
+              {
+                "k": "Áferðir",
+                "v": "Supermirror · Satin · Matt — 24 staðallitir; hálfgagnsær fyrir ljósloft"
+              },
+              {
+                "k": "Ending",
+                "v": "≥ 30 ár"
+              },
+              {
+                "k": "Brunaviðbrögð",
+                "v": "B-s1,d0 (EN 13501-1)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Ábyrgð"
+          },
+          {
+            "type": "p",
+            "text": "Verksmiðjuábyrgð: 10 ár á dúk, suðusamskeytum og litheldni. Ábyrgðin gildir aðeins með ábyrgðarskírteini sem tilgreinir einkvæmt vöruauðkenni, söluaðila og uppsetningardag."
+          },
+          {
+            "type": "heading",
+            "text": "Valkostir"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Ljósloft: þar sem tilgreint er, er hálfgagnsær dúkur settur yfir LED-flöt, með jafnri ljósdreifingu án ljósbletta.",
+              "Hljóðvistarloft: örgataður dúkur, götun Ø 0,30 mm (0,15 eða 0,45 mm eftir pöntun), u.þ.b. 250.000 göt/m², varla sýnileg í strekktu ástandi; fáanlegur í öllum litum og áferðum. Ásamt ísogsefni í holrýminu (t.d. pólýesterull); heildaruppbygging yfirleitt 40–50 mm.",
+              "Stjörnuhiminn: dúkur með innbyggðum ljósleiðara- eða LED-stjörnupunktum samkvæmt teikningu."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Uppsetning dúksins"
+          },
+          {
+            "type": "p",
+            "text": "Uppsetningin er framkvæmd af sérhæfðu fyrirtæki, þjálfuðu og viðurkenndu af framleiðanda; aðeins þá gildir verksmiðjuábyrgðin og ábyrgðarskírteinið (einkvæmt vöruauðkenni, söluaðili, uppsetningardagur) er gefið út. Málframleiddi dúkurinn er settur með harpúnkanti sínum í STRETCH-álprófílana eftir upphitun rýmisins og má taka niður og setja upp aftur ótakmarkað án aflögunar."
+          },
+          {
+            "type": "heading",
+            "text": "Viðbótarkröfur"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Gera skal nauðsynlegar ráðstafanir svo að rýmið fyrir ofan strekkloftið sé nægilega loftþétt.",
+              "Of stór loft eru hólfuð niður með ósýnilegum skilprófíl úr rafhúðuðu áli, hengdum upp í málmfestingar.",
+              "Innfelldir hlutir (kastarar, ristar, úðarar, hátalarar) fá viðeigandi burðarvirki og styrktarhringi.",
+              "Sýnishorn skulu lögð fyrir arkitekt til samþykktar."
+            ]
+          }
+        ]
       }
     }
   },

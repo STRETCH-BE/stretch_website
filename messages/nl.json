@@ -2646,7 +2646,12 @@
       },
       "specification": {
         "intro": "Een kant-en-klare clausule voor bestek- en aanbestedingsdocumenten. Pas de waarden tussen haakjes aan uw project aan.",
-        "clause": "Leveren en plaatsen van een koud opgespannen polyester spanplafondsysteem [STRETCH of goedgekeurd gelijkwaardig]. Het membraan bestaat uit een gebreid polyestertextiel dat zonder toepassing van warmte koud in een omlopend klemprofiel wordt opgespannen en zo een naadloos, zeer mat oppervlak vormt tot 5.15 m breed. De brandreactie dient klasse B-s1,d0 volgens EN 13501-1 te bedragen (klasse A2-s1,d0 waar aangegeven). Het systeem dient afwasbaar en vochtbestendig te zijn, geschikt voor plaatsing in gebruikte ruimtes, en voorzien van een fabrieksgarantie van [10] jaar. Kleur: [RAL ____]. Waar een akoestische prestatie is voorgeschreven, dient een microgeperforeerd membraan met een absorberende rug in hoge dichtheid te worden voorzien, met een geluidsabsorptie tot klasse A."
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Leveren en plaatsen van een koud opgespannen polyester spanplafondsysteem [STRETCH of goedgekeurd gelijkwaardig]. Het membraan bestaat uit een gebreid polyestertextiel dat zonder toepassing van warmte koud in een omlopend klemprofiel wordt opgespannen en zo een naadloos, zeer mat oppervlak vormt tot 5.15 m breed. De brandreactie dient klasse B-s1,d0 volgens EN 13501-1 te bedragen (klasse A2-s1,d0 waar aangegeven). Het systeem dient afwasbaar en vochtbestendig te zijn, geschikt voor plaatsing in gebruikte ruimtes, en voorzien van een fabrieksgarantie van [10] jaar. Kleur: [RAL ____]. Waar een akoestische prestatie is voorgeschreven, dient een microgeperforeerd membraan met een absorberende rug in hoge dichtheid te worden voorzien, met een geluidsabsorptie tot klasse A."
+          }
+        ]
       }
     },
     "pvc": {
@@ -2701,8 +2706,137 @@
         ]
       },
       "specification": {
-        "intro": "Een kant-en-klare clausule voor bestek- en aanbestedingsdocumenten. Pas de waarden tussen haakjes aan uw project aan.",
-        "clause": "Leveren en plaatsen van een warm opgespannen spanplafondsysteem in PVC-folie [STRETCH of goedgekeurd gelijkwaardig]. Het membraan bestaat uit een gekalanderde PVC-folie, op maat gelast en opgespannen in een omlopend harpoen-/klemprofiel, en vormt een naadloos oppervlak tot 6.4 m breed in [matte / satijnen / glanzende / doorschijnende] afwerking. De brandreactie dient klasse B-s1,d0 volgens EN 13501-1 te bedragen. De folie dient 100% recycleerbaar, wegneembaar en opnieuw opspanbaar te zijn voor toegang tot het plenum erboven, afwasbaar en vochtbestendig, en voorzien van een fabrieksgarantie van [10] jaar. Kleur/afwerking: [____]. Waar backlight is voorgeschreven, dient een doorschijnende folie over een LED-veld te worden voorzien voor een gelijkmatige verlichting zonder hotspots."
+        "intro": "Een kant-en-klare bestekomschrijving — de volledige systeembeschrijving conform EN 14716. Pas de waarden tussen haakjes aan uw project aan.",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "STRETCH® spanplafond [of gelijkwaardig]"
+          },
+          {
+            "type": "p",
+            "text": "Folietype: STRETCH® PVC-folie, SM-serie [SM-referentie]. Spanplafond conform de Europese norm EN 14716 — CE-gemarkeerd."
+          },
+          {
+            "type": "heading",
+            "text": "Omschrijving"
+          },
+          {
+            "type": "p",
+            "text": "Het systeem bestaat uit drie onderdelen:"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Soepele folie: gekalanderde PVC-folie, in het confectieatelier op maat gesneden volgens de afmetingen en vormen van de ruimte en waar nodig door hoogfrequentlassen samengevoegd. Naadloos — zonder scheidingsprofiel of lasnaad — tot een breedte van 650 cm (mat wit); overige kleuren en afwerkingen tot 560 cm.",
+              "Halfsoepele harpoen: rondom aan de folie gelaste harpoen (verkregen door extrusie), kleur wit of zwart naar keuze, waarmee het plafond in het profiel wordt gespannen. Het plafond is hierdoor onbeperkt uitneembaar en herplaatsbaar zonder vervorming, voor volledige toegang tot het plenum.",
+              "Profielen: geëxtrudeerde aluminium STRETCH-profielen, naar keuze in zichtbare, onzichtbare of schaduwvoeg-uitvoering. Minimale opbouwhoogte: 15 mm."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Het spanplafond wordt overeenkomstig de afmetingen van de ruimte in het confectieatelier op maat gemaakt. De folie wordt na opwarming van de ruimte opgespannen en in de vooraf geplaatste STRETCH-profielen bevestigd."
+          },
+          {
+            "type": "heading",
+            "text": "Samenstelling van het systeem"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Soepele polymeerfolie verkregen door kalanderen, conform EN 14716, CE-markering.",
+              "Halfsoepele harpoen verkregen door extrusie.",
+              "De folie heeft een A+ label (emissies in de binnenlucht) conform de geldende wetgeving inzake binnenluchtkwaliteit.",
+              "Folie, harpoen en profielen zijn 100% recyclebaar.",
+              "De folies worden geproduceerd met weekmakers vrij van zware metalen, conform RoHS."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Karakteristieken van de folie"
+          },
+          {
+            "type": "kv",
+            "rows": [
+              {
+                "k": "Max. naadloze breedte onder spanning",
+                "v": "650 cm (mat wit) · 560 cm (overige kleuren en afwerkingen)"
+              },
+              {
+                "k": "Maximale baanlengte",
+                "v": "Gewichtsafhankelijk, doorgaans 20 m"
+              },
+              {
+                "k": "Foliedikte",
+                "v": "170 µm"
+              },
+              {
+                "k": "Kleurvastheid bij licht",
+                "v": "≥ 6"
+              },
+              {
+                "k": "Waterdampdoorlaatbaarheid",
+                "v": "27 g/m²/24 u"
+              },
+              {
+                "k": "Waterbestendig",
+                "v": "Afwasbaar — geschikt voor vochtige ruimten"
+              },
+              {
+                "k": "Afwerkingen",
+                "v": "Supermirror · Satin · Mat — 24 standaardkleuren; translucent voor lichtplafonds"
+              },
+              {
+                "k": "Levensduur",
+                "v": "≥ 30 jaar"
+              },
+              {
+                "k": "Reactie bij brand",
+                "v": "B-s1,d0 (EN 13501-1)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Garantie"
+          },
+          {
+            "type": "p",
+            "text": "Fabrieksgarantie: 10 jaar op de folie, de lasnaden en het kleurbehoud. De garantie is uitsluitend geldig met een garantiecertificaat met het unieke product-ID, de dealer en de installatiedatum."
+          },
+          {
+            "type": "heading",
+            "text": "Opties"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Verlicht plafond: waar aangegeven wordt een translucente folie voorzien over een LED-veld, met egale, hotspotvrije lichtspreiding.",
+              "Akoestisch plafond: micro-geperforeerde folie, perforatie Ø 0,30 mm (0,15 of 0,45 mm op aanvraag), ± 250.000 perforaties/m², in gespannen toestand nauwelijks zichtbaar; leverbaar in alle kleuren en afwerkingen. In combinatie met absorberend materiaal in het plenum (bijv. polyesterwol); totale opbouw doorgaans 40–50 mm.",
+              "Sterrenhemel: folie met geïntegreerde glasvezel- of LED-sterrenpunten volgens tekening."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Plaatsing van de spanfolie"
+          },
+          {
+            "type": "p",
+            "text": "De plaatsing wordt uitgevoerd door een gespecialiseerd, door de fabrikant opgeleid en erkend bedrijf; alleen dan is de fabrieksgarantie van toepassing en wordt het garantiecertificaat (uniek product-ID, dealer, installatiedatum) afgeleverd. De op maat geconfectioneerde folie wordt met haar omtrekharpoen na opwarming van de ruimte in de STRETCH aluminium profielen geplaatst en is onbeperkt uitneem- en terugplaatsbaar zonder vervorming."
+          },
+          {
+            "type": "heading",
+            "text": "Aanvullende voorschriften"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "De nodige voorzorgsmaatregelen dienen te worden getroffen zodat de ruimte boven het spanplafond voldoende luchtdicht is.",
+              "Te grote plafonds worden onderverdeeld door middel van een onzichtbaar scheidingsprofiel in geanodiseerd aluminium, opgehangen aan metalen beugels.",
+              "Inbouwelementen (spots, roosters, sprinklers, luidsprekers) worden voorzien van aangepaste achterconstructies en versterkingsringen.",
+              "Monsters ter goedkeuring voor te leggen aan de architect."
+            ]
+          }
+        ]
       }
     }
   },

@@ -2646,7 +2646,12 @@
       },
       "specification": {
         "intro": "Une clause prête à copier pour vos cahiers des charges et appels d'offres. Adaptez les valeurs entre crochets à votre projet.",
-        "clause": "Fourniture et pose d'un système de plafond tendu polyester tendu à froid [STRETCH ou équivalent approuvé]. La membrane sera un textile polyester tricoté, tendu à froid dans un profilé périphérique à clipser sans apport de chaleur, formant une surface sans soudure et très mate jusqu'à 5.15 m de large. La réaction au feu sera de classe B-s1,d0 selon EN 13501-1 (classe A2-s1,d0 si indiqué). Le système sera lavable et résistant à l'humidité, adapté à une pose en locaux occupés, et couvert par une garantie fabricant de [10] ans. Couleur : [RAL ____]. Lorsqu'une performance acoustique est prescrite, prévoir une membrane micro-perforée avec dossier absorbant haute densité offrant une absorption acoustique jusqu'à la classe A."
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Fourniture et pose d'un système de plafond tendu polyester tendu à froid [STRETCH ou équivalent approuvé]. La membrane sera un textile polyester tricoté, tendu à froid dans un profilé périphérique à clipser sans apport de chaleur, formant une surface sans soudure et très mate jusqu'à 5.15 m de large. La réaction au feu sera de classe B-s1,d0 selon EN 13501-1 (classe A2-s1,d0 si indiqué). Le système sera lavable et résistant à l'humidité, adapté à une pose en locaux occupés, et couvert par une garantie fabricant de [10] ans. Couleur : [RAL ____]. Lorsqu'une performance acoustique est prescrite, prévoir une membrane micro-perforée avec dossier absorbant haute densité offrant une absorption acoustique jusqu'à la classe A."
+          }
+        ]
       }
     },
     "pvc": {
@@ -2701,8 +2706,137 @@
         ]
       },
       "specification": {
-        "intro": "Une clause prête à copier pour vos cahiers des charges et appels d'offres. Adaptez les valeurs entre crochets à votre projet.",
-        "clause": "Fourniture et pose d'un système de plafond tendu en film PVC tendu à chaud [STRETCH ou équivalent approuvé]. La membrane sera un film PVC calandré, soudé à dimension et tendu dans un profilé périphérique harpon/à clipser, formant une surface sans soudure jusqu'à 6.4 m de large en finition [mate / satinée / laquée / translucide]. La réaction au feu sera de classe B-s1,d0 selon EN 13501-1. Le film sera 100% recyclable, démontable et pourra être retendu pour l'accès au plénum ; il sera lavable et résistant à l'humidité, et couvert par une garantie fabricant de [10] ans. Couleur/finition : [____]. Lorsqu'un rétroéclairage est prescrit, prévoir un film translucide posé devant un champ de LED pour un éclairage homogène, sans points chauds."
+        "intro": "Un descriptif type prêt à copier pour vos cahiers des charges — la description complète du système conforme à l’EN 14716. Adaptez les valeurs entre crochets à votre projet.",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "Plafond tendu STRETCH® [ou équivalent]"
+          },
+          {
+            "type": "p",
+            "text": "Type de toile : toile PVC STRETCH®, série SM [référence SM]. Plafond tendu conforme à la norme européenne EN 14716 — marquage CE."
+          },
+          {
+            "type": "heading",
+            "text": "Description"
+          },
+          {
+            "type": "p",
+            "text": "Le système se compose de trois éléments :"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Toile souple : toile PVC calandrée, découpée sur mesure en atelier de confection selon les dimensions et les formes du local et, si nécessaire, assemblée par soudure haute fréquence. Sans joint — sans profil de séparation ni soudure — jusqu’à une largeur de 650 cm (blanc mat) ; autres coloris et finitions jusqu’à 560 cm.",
+              "Harpon semi-rigide : harpon (obtenu par extrusion) soudé sur tout le périmètre de la toile, en blanc ou en noir au choix, par lequel le plafond est tendu dans le profil. Le plafond est ainsi démontable et remontable sans limite et sans déformation, pour un accès complet au plénum.",
+              "Profils : profils STRETCH en aluminium extrudé, au choix en version apparente, invisible ou à joint creux. Hauteur de réservation minimale : 15 mm."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Le plafond tendu est confectionné sur mesure en atelier selon les dimensions du local. La toile est tendue après mise en température du local et fixée dans les profils STRETCH posés au préalable."
+          },
+          {
+            "type": "heading",
+            "text": "Composition du système"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Toile polymère souple obtenue par calandrage, conforme à l’EN 14716, marquage CE.",
+              "Harpon semi-rigide obtenu par extrusion.",
+              "La toile bénéficie du label A+ (émissions dans l’air intérieur) conformément à la réglementation en vigueur sur la qualité de l’air intérieur.",
+              "Toile, harpon et profils sont 100 % recyclables.",
+              "Les toiles sont produites avec des plastifiants exempts de métaux lourds, conformément à la directive RoHS."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Caractéristiques de la toile"
+          },
+          {
+            "type": "kv",
+            "rows": [
+              {
+                "k": "Largeur max. sans joint sous tension",
+                "v": "650 cm (blanc mat) · 560 cm (autres coloris et finitions)"
+              },
+              {
+                "k": "Longueur maximale",
+                "v": "Selon le poids, généralement 20 m"
+              },
+              {
+                "k": "Épaisseur de la toile",
+                "v": "170 µm"
+              },
+              {
+                "k": "Solidité des couleurs à la lumière",
+                "v": "≥ 6"
+              },
+              {
+                "k": "Perméabilité à la vapeur d’eau",
+                "v": "27 g/m²/24 h"
+              },
+              {
+                "k": "Résistance à l’eau",
+                "v": "Lessivable — adapté aux pièces humides"
+              },
+              {
+                "k": "Finitions",
+                "v": "Supermirror · Satin · Mat — 24 coloris standard ; version translucide pour plafonds lumineux"
+              },
+              {
+                "k": "Durée de vie",
+                "v": "≥ 30 ans"
+              },
+              {
+                "k": "Réaction au feu",
+                "v": "B-s1,d0 (EN 13501-1)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Garantie"
+          },
+          {
+            "type": "p",
+            "text": "Garantie fabricant : 10 ans sur la toile, les soudures et la tenue des couleurs. La garantie n’est valable qu’avec un certificat de garantie mentionnant l’identifiant produit unique, le revendeur et la date d’installation."
+          },
+          {
+            "type": "heading",
+            "text": "Options"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Plafond lumineux : aux emplacements indiqués, une toile translucide est posée devant un champ de LED, pour une diffusion homogène de la lumière, sans points chauds.",
+              "Plafond acoustique : toile micro-perforée, perforations Ø 0,30 mm (0,15 ou 0,45 mm sur demande), ± 250 000 perforations/m², à peine visibles une fois la toile tendue ; disponible dans tous les coloris et finitions. En combinaison avec un matériau absorbant dans le plénum (p. ex. laine de polyester) ; épaisseur totale généralement de 40 à 50 mm.",
+              "Ciel étoilé : toile avec points lumineux intégrés en fibre optique ou LED, selon plan."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Pose de la toile tendue"
+          },
+          {
+            "type": "p",
+            "text": "La pose est réalisée par une entreprise spécialisée, formée et agréée par le fabricant ; c’est à cette seule condition que la garantie fabricant s’applique et que le certificat de garantie (identifiant produit unique, revendeur, date d’installation) est délivré. La toile confectionnée sur mesure est mise en place avec son harpon périphérique dans les profils aluminium STRETCH après mise en température du local, et reste démontable et remontable sans limite et sans déformation."
+          },
+          {
+            "type": "heading",
+            "text": "Prescriptions complémentaires"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Les précautions nécessaires seront prises afin que l’espace au-dessus du plafond tendu soit suffisamment étanche à l’air.",
+              "Les plafonds de trop grandes dimensions seront subdivisés au moyen d’un profil de séparation invisible en aluminium anodisé, suspendu à des équerres métalliques.",
+              "Les éléments encastrés (spots, grilles, sprinklers, haut-parleurs) seront pourvus de structures support adaptées et d’anneaux de renfort.",
+              "Des échantillons seront soumis à l’approbation de l’architecte."
+            ]
+          }
+        ]
       }
     }
   },

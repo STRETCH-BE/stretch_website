@@ -2646,7 +2646,12 @@
       },
       "specification": {
         "intro": "En klausul färdig att kopiera in i förfrågningsunderlag och beskrivningar. Anpassa värdena inom hakparentes till ditt projekt.",
-        "clause": "Leverans och montering av ett kallspänt spänntakssystem i polyester [STRETCH eller godkänd likvärdig]. Membranet ska vara en stickad polyestertextil som spänns kallt i en kantprofil med klickfäste utan värmetillförsel och bildar en skarvfri, mycket matt yta på upp till 5.15 m bredd. Brandreaktionen ska vara klass B-s1,d0 enligt EN 13501-1 (klass A2-s1,d0 där så anges). Systemet ska vara tvättbart och fukttåligt, lämpligt för montering i lokaler i drift, och levereras med [10] års tillverkargaranti. Kulör: [RAL ____]. Där akustisk prestanda föreskrivs ska ett mikroperforerat membran med bakomliggande absorbent av hög densitet användas, med ljudabsorption upp till klass A."
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Leverans och montering av ett kallspänt spänntakssystem i polyester [STRETCH eller godkänd likvärdig]. Membranet ska vara en stickad polyestertextil som spänns kallt i en kantprofil med klickfäste utan värmetillförsel och bildar en skarvfri, mycket matt yta på upp till 5.15 m bredd. Brandreaktionen ska vara klass B-s1,d0 enligt EN 13501-1 (klass A2-s1,d0 där så anges). Systemet ska vara tvättbart och fukttåligt, lämpligt för montering i lokaler i drift, och levereras med [10] års tillverkargaranti. Kulör: [RAL ____]. Där akustisk prestanda föreskrivs ska ett mikroperforerat membran med bakomliggande absorbent av hög densitet användas, med ljudabsorption upp till klass A."
+          }
+        ]
       }
     },
     "pvc": {
@@ -2701,8 +2706,137 @@
         ]
       },
       "specification": {
-        "intro": "En klausul färdig att kopiera in i förfrågningsunderlag och beskrivningar. Anpassa värdena inom hakparentes till ditt projekt.",
-        "clause": "Leverans och montering av ett varmspänt spänntakssystem i PVC-folie [STRETCH eller godkänd likvärdig]. Membranet ska vara en kalandrerad PVC-folie, svetsad till rätt mått och spänd i en kantprofil med harpun-/klickfäste, som bildar en skarvfri yta på upp till 6.4 m bredd i [matt / satin / blank / genomskinlig] finish. Brandreaktionen ska vara klass B-s1,d0 enligt EN 13501-1. Folien ska vara 100% återvinningsbar, demonterbar och möjlig att spänna om för åtkomst till utrymmet ovanför, tvättbar och fukttålig, och levereras med [10] års tillverkargaranti. Kulör/finish: [____]. Där bakbelysning föreskrivs ska en genomskinlig folie över ett LED-fält användas, för ett jämnt ljus utan synliga ljuspunkter."
+        "intro": "En kopieringsklar föreskrivningstext för beskrivningar och förfrågningsunderlag — den fullständiga systembeskrivningen enligt EN 14716. Anpassa värdena inom parentes till ditt projekt.",
+        "blocks": [
+          {
+            "type": "heading",
+            "text": "STRETCH® spänntakssystem [eller likvärdigt]"
+          },
+          {
+            "type": "p",
+            "text": "Folietyp: STRETCH® pvc-folie, SM-serie [SM-referens]. Spänntak enligt den europeiska standarden EN 14716 — CE-märkt."
+          },
+          {
+            "type": "heading",
+            "text": "Beskrivning"
+          },
+          {
+            "type": "p",
+            "text": "Systemet består av tre komponenter:"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Flexibel folie: kalandrerad pvc-folie, måttskuren i konfektionsateljén efter rummets mått och former och vid behov sammanfogad genom högfrekvenssvetsning. Skarvfri — utan delningsprofil eller svetsskarv — upp till 650 cm bredd (matt vit); övriga färger och ytor upp till 560 cm.",
+              "Halvflexibel harpun: harpunkant (tillverkad genom extrudering) svetsad runt hela foliens omkrets, i vitt eller svart efter val, med vilken taket spänns in i profilen. Taket kan därmed tas ur och återmonteras obegränsat utan deformation, med full åtkomst till utrymmet ovanför.",
+              "Profiler: extruderade STRETCH-aluminiumprofiler, efter val i synligt, osynligt eller skuggfogsutförande. Minsta bygghöjd: 15 mm."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Spänntaket måttillverkas i konfektionsateljén efter rummets dimensioner. Folien spänns upp efter uppvärmning av rummet och fästs i de i förväg monterade STRETCH-profilerna."
+          },
+          {
+            "type": "heading",
+            "text": "Systemets sammansättning"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Flexibel polymerfolie tillverkad genom kalandrering, enligt EN 14716, CE-märkning.",
+              "Halvflexibel harpun tillverkad genom extrudering.",
+              "Folien bär A+-märkning (emissioner till inomhusluften) enligt gällande lagstiftning om inomhusluftkvalitet.",
+              "Folie, harpun och profiler är 100 % återvinningsbara.",
+              "Folierna tillverkas med mjukgörare fria från tungmetaller, enligt RoHS."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Foliens egenskaper"
+          },
+          {
+            "type": "kv",
+            "rows": [
+              {
+                "k": "Max. skarvfri bredd under spänning",
+                "v": "650 cm (matt vit) · 560 cm (övriga färger och ytor)"
+              },
+              {
+                "k": "Maximal längd",
+                "v": "Viktberoende, vanligtvis 20 m"
+              },
+              {
+                "k": "Folietjocklek",
+                "v": "170 µm"
+              },
+              {
+                "k": "Färgbeständighet mot ljus",
+                "v": "≥ 6"
+              },
+              {
+                "k": "Vattenånggenomsläpplighet",
+                "v": "27 g/m²/24 h"
+              },
+              {
+                "k": "Vattenbeständighet",
+                "v": "Avtorkbar — lämplig för fuktiga rum"
+              },
+              {
+                "k": "Ytor",
+                "v": "Supermirror · Satin · Matt — 24 standardfärger; translucent för ljustak"
+              },
+              {
+                "k": "Livslängd",
+                "v": "≥ 30 år"
+              },
+              {
+                "k": "Brandreaktion",
+                "v": "B-s1,d0 (EN 13501-1)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Garanti"
+          },
+          {
+            "type": "p",
+            "text": "Fabriksgaranti: 10 år på folien, svetsskarvarna och färgbeständigheten. Garantin gäller endast med ett garanticertifikat som anger det unika produkt-ID:t, återförsäljaren och installationsdatumet."
+          },
+          {
+            "type": "heading",
+            "text": "Tillval"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Ljustak: där så anges monteras en translucent folie över ett LED-fält, med jämn ljusfördelning utan hotspots.",
+              "Akustiktak: mikroperforerad folie, perforering Ø 0,30 mm (0,15 eller 0,45 mm på begäran), ca 250 000 perforeringar/m², knappt synliga i uppspänt tillstånd; finns i alla färger och ytor. I kombination med absorberande material i utrymmet ovanför (t.ex. polyesterull); total bygghöjd vanligtvis 40–50 mm.",
+              "Stjärnhimmel: folie med integrerade fiberoptik- eller LED-stjärnpunkter enligt ritning."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Montering av folien"
+          },
+          {
+            "type": "p",
+            "text": "Monteringen utförs av ett specialiserat företag, utbildat och godkänt av tillverkaren; endast då gäller fabriksgarantin och utfärdas garanticertifikatet (unikt produkt-ID, återförsäljare, installationsdatum). Den måttillverkade folien sätts med sin omkretsharpun i STRETCH-aluminiumprofilerna efter uppvärmning av rummet och kan tas ur och återmonteras obegränsat utan deformation."
+          },
+          {
+            "type": "heading",
+            "text": "Kompletterande föreskrifter"
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "Nödvändiga åtgärder ska vidtas så att utrymmet ovanför spänntaket är tillräckligt lufttätt.",
+              "För stora tak delas upp med en osynlig delningsprofil i anodiserad aluminium, upphängd i metallfästen.",
+              "Inbyggnadselement (spottar, galler, sprinkler, högtalare) förses med lämpliga bakomliggande konstruktioner och förstärkningsringar.",
+              "Prover ska lämnas till arkitekten för godkännande."
+            ]
+          }
+        ]
       }
     }
   },
