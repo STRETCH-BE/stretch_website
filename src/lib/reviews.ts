@@ -25,7 +25,81 @@ export type Review = {
   quote: string; // original language, verbatim, never translated
 };
 
-export const reviews: Review[] = []; // Michael populates with real reviews
+// Populated 30 Aug 2026 from the two managed Google Business profiles
+// (screenshots supplied by Michael): STRETCH, Gentseweg 309/A3 Beveren (be)
+// and Alto Design Sp. z o.o., Legionów 59 Częstochowa (pl). Only reviews
+// whose full text was visible are included (truncated ones cannot be quoted
+// verbatim); rating-only reviews carry no quote and are omitted. Dates are
+// year-precision ISO ("about N years ago" on Google). sourceUrl points at
+// the public profile's review list — swap in per-review Share links when
+// available.
+export const reviews: Review[] = [
+  // --- stretchplafond.be — STRETCH, Beveren (5.0, managed profile) ---------
+  {
+    author: 'Paulina Piotrovska',
+    locale: 'be',
+    rating: 5,
+    datePublished: '2024',
+    source: 'google',
+    sourceUrl: 'https://www.google.com/maps/search/?api=1&query=STRETCH+Gentseweg+309+A3+9120+Beveren',
+    quote: 'High quality products and service, they put the customers first!',
+  },
+  {
+    author: 'Dorus Lippens',
+    locale: 'be',
+    rating: 5,
+    datePublished: '2021',
+    source: 'google',
+    sourceUrl: 'https://www.google.com/maps/search/?api=1&query=STRETCH+Gentseweg+309+A3+9120+Beveren',
+    quote: 'Top service',
+  },
+  // --- stretch-sufit.pl — Alto Design Sp. z o.o., Częstochowa --------------
+  {
+    author: 'Dorota Kucharska',
+    locale: 'pl',
+    rating: 5,
+    datePublished: '2024',
+    source: 'google',
+    sourceUrl: 'https://www.google.com/maps/search/?api=1&query=Alto+Design+Sufity+napinane+Legion%C3%B3w+59+Cz%C4%99stochowa',
+    quote: 'Polecam z całego serca , wykończony sufit wyglada naprawdę pięknie , rzetelna i uczciwa firma.',
+  },
+  {
+    author: 'Dawid Łukasik',
+    locale: 'pl',
+    rating: 5,
+    datePublished: '2023',
+    source: 'google',
+    sourceUrl: 'https://www.google.com/maps/search/?api=1&query=Alto+Design+Sufity+napinane+Legion%C3%B3w+59+Cz%C4%99stochowa',
+    quote: 'Polecam w 100% super kontakt, szybki pomiar, wycena i efekt znakomity',
+  },
+  {
+    author: 'Tarek Daghestani',
+    locale: 'pl',
+    rating: 5,
+    datePublished: '2021',
+    source: 'google',
+    sourceUrl: 'https://www.google.com/maps/search/?api=1&query=Alto+Design+Sufity+napinane+Legion%C3%B3w+59+Cz%C4%99stochowa',
+    quote: 'Bardzo dobry kontakt z wykonawcą sufitów napinanych. Ekipa monterów bardzo miła, konkretna i fachowa, zrobili swoje bardzo szybko i bez marudzenia 😊. Polecam współpracę, będziecie zadowoleni 😉.',
+  },
+  {
+    author: 'Anna Gołębiowska',
+    locale: 'pl',
+    rating: 5,
+    datePublished: '2021',
+    source: 'google',
+    sourceUrl: 'https://www.google.com/maps/search/?api=1&query=Alto+Design+Sufity+napinane+Legion%C3%B3w+59+Cz%C4%99stochowa',
+    quote: 'Firma zatrudnia profesjonalnych pracowników, którzy świetnie wykonują swoją pracę, oczywiście zgodnie z umową. Bardzo szybki termin realizacji. Super. Bardzo polecamy',
+  },
+  {
+    author: 'Patryk Krzywdziński',
+    locale: 'pl',
+    rating: 5,
+    datePublished: '2020',
+    source: 'google',
+    sourceUrl: 'https://www.google.com/maps/search/?api=1&query=Alto+Design+Sufity+napinane+Legion%C3%B3w+59+Cz%C4%99stochowa',
+    quote: 'Super wykonanie i super ekipa dokładna i czysta robota polecam',
+  },
+];
 
 /** The reviews shown on a market's own domain. */
 export function reviewsFor(locale: Locale): Review[] {
