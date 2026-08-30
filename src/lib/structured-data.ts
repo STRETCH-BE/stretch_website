@@ -8,6 +8,7 @@ import { locales, localeFullCodes, originForLocale, type Locale } from '@/i18n/c
 import { indicativePriceRange } from '@/lib/indicative-prices';
 import type { Product, Faq } from '@/lib/products';
 import type { BlogPost } from '@/lib/content';
+import { reviewsFor, aggregateFor } from '@/lib/reviews';
 import { localeBase } from '@/lib/seo';
 
 const ORG_ID = `${siteUrl}/#organization`;
@@ -272,5 +273,41 @@ export function articleSchema(post: BlogPost, locale: Locale) {
     image: { '@type': 'ImageObject', url: `${siteUrl}/api/og/${post.slug}`, width: 1200, height: 630 },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     inLanguage: localeFullCodes[locale] ?? 'en-BE',
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Genuine reviews — Review nodes for exactly what the homepage displays, and
+// an aggregateRating ONLY when >= 3 genuine reviews exist for the market
+// (computed in src/lib/reviews.ts, never hardcoded). Returns null when the
+// market shows no reviews, so that domain emits no rating markup at all.
+// ---------------------------------------------------------------------------
+export function reviewsSchema(locale: Locale) {
+  const rs = reviewsFor(locale);
+  if (rs.length === 0) return null;
+  const agg = aggregateFor(locale);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': ORG_ID,
+    review: rs.map((r) => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: r.author },
+      datePublished: r.datePublished,
+      reviewBody: r.quote,
+      reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5, worstRating: 1 },
+      url: r.sourceUrl,
+    })),
+    ...(agg
+      ? {
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: agg.ratingValue,
+            reviewCount: agg.reviewCount,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        }
+      : {}),
   };
 }

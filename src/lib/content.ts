@@ -1674,36 +1674,7 @@ export const globalFaqs: Faq[] = [
   },
 ];
 
-// ---------------------------------------------------------------------------
-// Reviews — PLACEHOLDER testimonials, DRAFTED for layout only and flagged in
-// CHANGES.md. These are NOT real customer quotes: replace every entry with
-// genuine, permission-cleared reviews (e.g. imported from the Google Business
-// Profile) before launch. The 5.0 / Google rating reflects the live site's
-// public rating; do not emit an aggregateRating in schema until real review
-// data backs it.
-// ---------------------------------------------------------------------------
-
-export type Review = { name: string; role: string; quote: string };
-
-export const reviews: Review[] = [
-  {
-    name: 'Paul A.',
-    role: 'Homeowner · Antwerp',
-    quote:
-      'They fitted our living-room ceiling in a single day with no mess at all. The matte finish looks exactly like fresh plaster — we are genuinely delighted.',
-  },
-  {
-    name: 'Hanne D.',
-    role: 'Architect · Ghent',
-    quote:
-      'I specify STRETCH for the acoustic ceilings now. The room reads as one clean surface and the reverberation is gone — clients always notice the difference.',
-  },
-  {
-    name: 'Matthias V.',
-    role: 'Contractor · Sint-Niklaas',
-    quote:
-      'The training got my team installing fast, and the made-to-measure supply is reliable. Becoming a partner added a whole new service to our business.',
-  },
-];
-
-export const ratingDisplay = { score: '5.0', source: 'Google' } as const;
+// Reviews moved to src/lib/reviews.ts — genuine, permission-cleared Google
+// reviews only. The placeholder testimonials and the hardcoded rating that
+// lived here were removed (network audit 30 Aug 2026, F10): nothing may
+// render or emit rating markup that is not derived from real review data.

@@ -4,7 +4,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { defaultLocale, isValidLocale, type Locale } from '@/i18n/config';
 import JsonLd from '@/components/seo/JsonLd';
-import { organizationSchema, websiteSchema, localBusinessSchema } from '@/lib/structured-data';
+import { organizationSchema, websiteSchema, localBusinessSchema, reviewsSchema } from '@/lib/structured-data';
 
 import Hero from '@/components/sections/home/Hero';
 import { Ticker, Stats } from '@/components/sections/home/TickerStats';
@@ -14,9 +14,10 @@ import Acoustics from '@/components/sections/home/Acoustics';
 import ApplicationAreas from '@/components/sections/home/ApplicationAreas';
 import InstallerPartner from '@/components/sections/home/InstallerPartner';
 import Gallery from '@/components/sections/home/Gallery';
-// Reviews stays unmounted until real, permission-cleared Google reviews per
-// market replace the launch placeholders (ranking audit 22 Aug 2026, §1.4:
-// non-genuine review presentation is a blacklisted practice under the UCPD).
+// Reviews renders ONLY genuine, permission-cleared Google reviews from
+// src/lib/reviews.ts — and renders nothing at all for markets without them
+// (UCPD: non-genuine review presentation is a blacklisted practice).
+import Reviews from '@/components/sections/home/Reviews';
 import CtaBand from '@/components/sections/home/CtaBand';
 
 export default async function HomePage({ params }: { params: { locale: string } }) {
@@ -29,6 +30,12 @@ export default async function HomePage({ params }: { params: { locale: string } 
       <JsonLd data={organizationSchema()} />
       <JsonLd data={websiteSchema({ locale, description: t('homeDescription'), hasSearch: false })} />
       <JsonLd data={localBusinessSchema()} />
+      {(() => {
+        // Review/AggregateRating markup only when this market displays
+        // genuine reviews — null (no markup at all) otherwise.
+        const reviewsLd = reviewsSchema(locale);
+        return reviewsLd ? <JsonLd data={reviewsLd} /> : null;
+      })()}
 
       <Hero />
       <Ticker />
@@ -39,6 +46,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
       <ApplicationAreas />
       <InstallerPartner />
       <Gallery />
+      <Reviews />
       <CtaBand />
     </>
   );

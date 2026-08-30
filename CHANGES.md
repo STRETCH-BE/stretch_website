@@ -34,6 +34,18 @@ Fixes from the 30 Aug 2026 network audit (F1–F13), one task per commit.
   `/products/pvc-stretch-ceiling`, `/sjalfbaert-dukaloft` →
   `/products/polyester-stretch-ceiling`. Full map awaits the GSC
   "All known pages" export for stretch.is.
+- **T5/F10 — real reviews or none.** New `src/lib/reviews.ts`: a typed,
+  EMPTY array of genuine Google reviews (author as published, market
+  locale, rating, date, link to the actual public review, quote verbatim
+  in its ORIGINAL language — never translated). The Reviews section is now
+  mounted but renders NOTHING for a market without entries; the star score
+  appears only from a computed aggregate of ≥3 genuine reviews. JSON-LD
+  emits Review nodes for exactly what is displayed and AggregateRating
+  only from the real array — a domain that shows no reviews emits no
+  rating markup at all. The placeholder testimonials and the hardcoded
+  `ratingDisplay` 5.0 score were deleted from content.ts; the
+  `reviewsData` message namespace is no longer read. Honest provenance
+  line under the section, localized.
 
 ## 2026-08-08 (21) — SEO audit: three shadowing bugs fixed
 
