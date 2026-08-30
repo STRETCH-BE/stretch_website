@@ -75,9 +75,9 @@ export const localeDomains: Record<Locale, string> = {
 export const localeStatus: Record<Locale, 'live' | 'pending'> = {
   en: 'live',
   uk: 'live',
-  // Flip to 'live' once the Vercel redirect on stretchceiling.us is removed
-  // and the domain is attached to the project as a normal domain.
-  us: 'pending',
+  // Live since 30 Aug 2026 — the Vercel domain-level redirect was removed
+  // and stretchceiling.us serves en-US directly.
+  us: 'live',
   be: 'live',
   nl: 'live',
   fr: 'live',
