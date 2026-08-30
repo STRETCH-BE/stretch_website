@@ -19,6 +19,21 @@ Fixes from the 30 Aug 2026 network audit (F1–F13), one task per commit.
   quiet "STRETCH worldwide" row linking every LIVE sibling domain on every
   page, preserving the current path. New key `footer.worldwideHeading` in
   all message files (this pass also adds the Task-5 review chrome keys).
+- **T3/F4 — UK/MT kit redirects.** `/product-category/stretch-kits/` on
+  stretch-ceilings.uk (ranks #3 for "stretch ceiling kit", ~2/3 of UK
+  clicks) redirected to the generic `/materials` hub because genericRules'
+  `/product-category/:path*` catch-all fired first. Four kit rules now sit
+  BEFORE the spread on both stretch-ceilings.uk and stretch.mt → `/kit`.
+  A path-to-regexp audit of the whole file (Next's own matcher, real array
+  order) found ZERO rules shadowed to a different destination; four
+  case-only duplicate `/knowledge-base/` rules are dead-but-harmless and
+  kept deliberately (they become live if caseSensitiveRoutes is enabled).
+- **T4/F5 — Icelandic content redirects.** stretch.is had only the generic
+  shop sweep; the old site's strongest page `/dukaloft/` (~312 clicks/yr)
+  404ed. Seed content rules (before the spread): `/dukaloft` →
+  `/products/pvc-stretch-ceiling`, `/sjalfbaert-dukaloft` →
+  `/products/polyester-stretch-ceiling`. Full map awaits the GSC
+  "All known pages" export for stretch.is.
 
 ## 2026-08-08 (21) — SEO audit: three shadowing bugs fixed
 

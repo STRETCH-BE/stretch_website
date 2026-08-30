@@ -260,6 +260,13 @@ const genericRules = (h, account = '/portal/login') => [
 // ENGLISH RULES — stretch.mt (also receives legacy .us paths via 308)
 // ---------------------------------------------------------------------------
 const englishRules = [
+  // Kit rules FIRST — they must outrank genericRules' /product-category and
+  // /shop catch-alls (first match wins; a rule appended after the spread can
+  // never fire). The kit category is the highest-value legacy URL set.
+  R('stretch.mt', '/product-category/stretch-kits/:path*', '/kit'),
+  R('stretch.mt', '/product-category/stretch-kit/:path*', '/kit'),
+  R('stretch.mt', '/stretch-ceiling-kit', '/kit'),
+  R('stretch.mt', '/diy-stretch-ceiling-kit', '/kit'),
   ...genericRules('stretch.mt'),
   R('stretch.mt', '/soluzzjonijiet', '/products'),
   R('stretch.mt', '/warranty-repair-and-returns', '/faq'),
@@ -275,6 +282,13 @@ const englishRules = [
 // these host-scoped rules absorb the old WordPress-era .uk paths directly.
 // ---------------------------------------------------------------------------
 const ukRules = [
+  // Kit rules FIRST — /product-category/stretch-kits ranks #3 for "stretch
+  // ceiling kit" (~2/3 of all UK clicks) and must land on /kit, not the
+  // generic /materials hub. Must precede the genericRules spread.
+  R('stretch-ceilings.uk', '/product-category/stretch-kits/:path*', '/kit'),
+  R('stretch-ceilings.uk', '/product-category/stretch-kit/:path*', '/kit'),
+  R('stretch-ceilings.uk', '/stretch-ceiling-kit', '/kit'),
+  R('stretch-ceilings.uk', '/diy-stretch-ceiling-kit', '/kit'),
   ...genericRules('stretch-ceilings.uk'),
   R('stretch-ceilings.uk', '/warranty-repair-and-returns', '/faq'),
   R('stretch-ceilings.uk', '/terms-and-conditions', '/terms'),
@@ -375,7 +389,32 @@ const polishRules = [
   // e-learning playlist page → training
   R('stretch-sufit.pl', '/sufity-napinane-youtube', '/installer-training'),
 ];
-const icelandicRules = [...genericRules('stretch.is')];
+// ---------------------------------------------------------------------------
+// US RULES — stretchceiling.us. Effective once the Vercel domain-level
+// redirect to stretch.mt is removed and the domain is attached to the
+// project (audit 30 Aug 2026, F13). Content rules BEFORE the generic spread.
+// Known old .us URLs still surfacing in search; awaiting the GSC URL export
+// for stretchceiling.us to complete the map.
+// ---------------------------------------------------------------------------
+const usRules = [
+  R('stretchceiling.us', '/shop/stretch-kits/stretch-fabric-stretch-ceiling-kit/:path*', '/kit'),
+  R('stretchceiling.us', '/shop/stretch-kits/:path*', '/kit'),
+  R('stretchceiling.us', '/spanplafond-laten-plaatsen', '/products'),
+  ...genericRules('stretchceiling.us'),
+];
+
+// ---------------------------------------------------------------------------
+// ICELANDIC RULES — stretch.is. Content rules BEFORE the generic spread.
+// Seeded from the URLs confirmed as previously indexed (network audit 30 Aug
+// 2026, F5): /dukaloft was the old site's strongest page (~312 clicks/yr at
+// position ~4). Awaiting the GSC "All known pages" export for stretch.is to
+// map the remaining legacy URLs the way dutchRules/germanRules were built.
+// ---------------------------------------------------------------------------
+const icelandicRules = [
+  R('stretch.is', '/dukaloft', '/products/pvc-stretch-ceiling'),
+  R('stretch.is', '/sjalfbaert-dukaloft', '/products/polyester-stretch-ceiling'),
+  ...genericRules('stretch.is'),
+];
 
 // ---------------------------------------------------------------------------
 // LOCALE-PREFIX STRIPS — each domain 308s its own locale prefix to the clean
@@ -388,6 +427,7 @@ const icelandicRules = [...genericRules('stretch.is')];
 const LOCALE_DOMAINS = [
   ['stretch.mt', 'en'],
   ['stretch-ceilings.uk', 'uk'],
+  ['stretchceiling.us', 'us'],
   ['stretchplafond.be', 'be'],
   ['stretchplafond.nl', 'nl'],
   ['stretchplafond.fr', 'fr'],
@@ -412,6 +452,7 @@ export const legacyRedirects = [
   ...dutchRules('stretchplafond.nl'),
   ...englishRules,
   ...ukRules,
+  ...usRules,
   ...germanRules,
   ...frenchRules,
   ...polishRules,
