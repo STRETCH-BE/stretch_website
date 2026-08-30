@@ -178,7 +178,8 @@
       "projectsExport": "Project export",
       "priceCalculator": "Price calculator"
     },
-    "dealers": "Dealer network"
+    "dealers": "Dealer network",
+    "worldwideHeading": "STRETCH worldwide"
   },
   "portal": {
     "login": {
@@ -638,7 +639,9 @@
     "reviews": {
       "eyebrow": "Reviews",
       "title": "Rated {score}",
-      "ratedOn": "Rated on {source}"
+      "ratedOn": "Rated on {source}",
+      "titlePlain": "What clients say",
+      "provenance": "Verified Google reviews, quoted verbatim from our public Google Business profile."
     }
   },
   "ctaBand": {

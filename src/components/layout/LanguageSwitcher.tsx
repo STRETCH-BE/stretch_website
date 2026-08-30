@@ -11,11 +11,12 @@ import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { ChevronDown } from 'lucide-react';
 import {
-  locales,
+  liveLocales,
   localeNames,
   localeFlags,
   localeForHost,
   originForLocale,
+  localeFullCodes,
   type Locale,
 } from '@/i18n/config';
 import { analytics } from '@/lib/analytics';
@@ -101,21 +102,28 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
             zIndex: 80,
           }}
         >
-          {locales.map((l) => (
+          {liveLocales.map((l) => (
             <li key={l}>
-              <button
-                type="button"
+              {/* Real anchor: crawlable absolute URL in the markup; the click
+                  handler keeps the JS behaviour (analytics + dev fallback) as
+                  progressive enhancement on top of a working href. */}
+              <a
                 role="option"
                 aria-selected={l === locale}
-                onClick={() => switchTo(l)}
+                href={`${originForLocale(l)}${pathname === '/' ? '' : pathname}`}
+                hrefLang={localeFullCodes[l]}
+                onClick={(e) => {
+                  e.preventDefault();
+                  switchTo(l);
+                }}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: 8,
                   width: '100%',
                   textAlign: 'left',
+                  textDecoration: 'none',
                   background: l === locale ? 'var(--surface)' : 'none',
-                  border: 'none',
                   cursor: 'pointer',
                   padding: '9px 12px',
                   fontSize: 13,
@@ -124,7 +132,7 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
               >
                 <span aria-hidden>{localeFlags[l]}</span>
                 {localeNames[l] ?? l}
-              </button>
+              </a>
             </li>
           ))}
         </ul>

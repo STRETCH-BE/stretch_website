@@ -178,7 +178,8 @@
       "projectsExport": "Prosjekteksport",
       "priceCalculator": "Beregn pris"
     },
-    "dealers": "Forhandlernettverk"
+    "dealers": "Forhandlernettverk",
+    "worldwideHeading": "STRETCH i verden"
   },
   "portal": {
     "login": {
@@ -638,7 +639,9 @@
     "reviews": {
       "eyebrow": "Vurderinger",
       "title": "Vurdert til {score}",
-      "ratedOn": "Vurdert på {source}"
+      "ratedOn": "Vurdert på {source}",
+      "titlePlain": "Hva kundene sier",
+      "provenance": "Verifiserte Google-omtaler, sitert ordrett fra vår offentlige Google-bedriftsprofil."
     }
   },
   "ctaBand": {

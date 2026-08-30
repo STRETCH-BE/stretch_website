@@ -12,11 +12,12 @@ import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { products } from '@/lib/products';
 import { contact } from '@/lib/site-config';
 import {
-  locales,
+  liveLocales,
   localeNames,
   localeFlags,
   localeForHost,
   originForLocale,
+  localeFullCodes,
   type Locale,
 } from '@/i18n/config';
 import { useLeadModal } from '@/components/LeadGenModal';
@@ -267,18 +268,24 @@ export default function MobileMenu() {
                 border: '1px solid var(--border)',
               }}
             >
-              {locales.map((l) => (
-                <button
+              {liveLocales.map((l) => (
+                /* Real anchor: crawlable absolute URL; JS click handler keeps
+                   analytics + the dev/preview in-app switch on top. */
+                <a
                   key={l}
-                  type="button"
-                  onClick={() => switchTo(l)}
+                  href={`${originForLocale(l)}${pathname === '/' ? '' : pathname}`}
+                  hrefLang={localeFullCodes[l]}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    switchTo(l);
+                  }}
                   aria-current={l === locale ? 'true' : undefined}
                   style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: 8,
                     background: l === locale ? 'var(--surface)' : '#fff',
-                    border: 'none',
+                    textDecoration: 'none',
                     cursor: 'pointer',
                     padding: '12px 12px',
                     fontSize: 14,
@@ -289,7 +296,7 @@ export default function MobileMenu() {
                 >
                   <span aria-hidden>{localeFlags[l]}</span>
                   {localeNames[l] ?? l}
-                </button>
+                </a>
               ))}
             </div>
           </nav>

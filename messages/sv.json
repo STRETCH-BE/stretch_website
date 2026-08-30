@@ -178,7 +178,8 @@
       "projectsExport": "Projektexport",
       "priceCalculator": "Beräkna pris"
     },
-    "dealers": "Återförsäljarnätverk"
+    "dealers": "Återförsäljarnätverk",
+    "worldwideHeading": "STRETCH i världen"
   },
   "portal": {
     "login": {
@@ -638,7 +639,9 @@
     "reviews": {
       "eyebrow": "Omdömen",
       "title": "Betyg {score}",
-      "ratedOn": "Betyg på {source}"
+      "ratedOn": "Betyg på {source}",
+      "titlePlain": "Vad kunderna säger",
+      "provenance": "Verifierade Google-recensioner, ordagrant citerade från vår offentliga Google-företagsprofil."
     }
   },
   "ctaBand": {

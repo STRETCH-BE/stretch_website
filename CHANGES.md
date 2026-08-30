@@ -10,6 +10,15 @@ Fixes from the 30 Aug 2026 network audit (F1–F13), one task per commit.
   xhtml:link alternates and x-default, and the language switcher now
   intersect with `liveLocales`; a pending locale's own domain serves an
   empty sitemap. Flipping one flag to `'live'` restores a locale everywhere.
+- **T2/F3 — crawlable cross-domain links.** The 13 domains had not a single
+  crawlable `<a href>` between them (the switcher used `<button>` +
+  `window.location.assign`), leaving each domain an island — the likely
+  cause of the zero-indexed .dk/.se domains. The language switcher and
+  mobile menu now render real anchors (absolute sibling URL + `hrefLang`,
+  JS behaviour kept as progressive enhancement), and the footer gains a
+  quiet "STRETCH worldwide" row linking every LIVE sibling domain on every
+  page, preserving the current path. New key `footer.worldwideHeading` in
+  all message files (this pass also adds the Task-5 review chrome keys).
 
 ## 2026-08-08 (21) — SEO audit: three shadowing bugs fixed
 

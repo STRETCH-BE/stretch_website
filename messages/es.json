@@ -178,7 +178,8 @@
       "projectsExport": "Exportación de proyectos",
       "priceCalculator": "Calcular precio"
     },
-    "dealers": "Red de distribuidores"
+    "dealers": "Red de distribuidores",
+    "worldwideHeading": "STRETCH en el mundo"
   },
   "portal": {
     "login": {
@@ -638,7 +639,9 @@
     "reviews": {
       "eyebrow": "Opiniones",
       "title": "Valorado con {score}",
-      "ratedOn": "Valorado en {source}"
+      "ratedOn": "Valorado en {source}",
+      "titlePlain": "Lo que dicen los clientes",
+      "provenance": "Reseñas de Google verificadas, citadas literalmente de nuestro perfil de empresa público en Google."
     }
   },
   "ctaBand": {

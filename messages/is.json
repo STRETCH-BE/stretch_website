@@ -178,7 +178,8 @@
       "projectsExport": "Verkefnaútflutningur",
       "priceCalculator": "Reikna verð"
     },
-    "dealers": "Söluaðilanet"
+    "dealers": "Söluaðilanet",
+    "worldwideHeading": "STRETCH um allan heim"
   },
   "portal": {
     "login": {
@@ -638,7 +639,9 @@
     "reviews": {
       "eyebrow": "Umsagnir",
       "title": "Einkunn {score}",
-      "ratedOn": "Einkunn á {source}"
+      "ratedOn": "Einkunn á {source}",
+      "titlePlain": "Það sem viðskiptavinir segja",
+      "provenance": "Staðfestar Google-umsagnir, teknar orðréttar af opinberu Google-fyrirtækjasíðunni okkar."
     }
   },
   "ctaBand": {

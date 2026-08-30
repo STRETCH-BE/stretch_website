@@ -4,16 +4,27 @@
 // Legal row with Privacy/Terms/Warranty + a "Manage cookies" trigger that
 // reopens the consent banner via the consent-open-banner event.
 import { Link } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { usePathname } from '@/i18n/navigation';
+import { useLocale, useTranslations } from 'next-intl';
 import { footerNav } from '@/lib/site-config';
 import { contact } from '@/lib/site-config';
 import PortalLink from '@/components/ui/PortalLink';
 import { CONSENT_OPEN_BANNER_EVENT } from '@/lib/consent';
 import { analytics } from '@/lib/analytics';
+import {
+  liveLocales,
+  localeNames,
+  localeFullCodes,
+  originForLocale,
+  type Locale,
+} from '@/i18n/config';
 
 export default function Footer() {
   const t = useTranslations('footer');
   const tc = useTranslations('cookies');
+  const locale = useLocale() as Locale;
+  const pathname = usePathname(); // locale-agnostic path, identical across domains
+  const path = pathname === '/' ? '' : pathname;
   const year = new Date().getFullYear();
 
   return (
@@ -150,6 +161,39 @@ export default function Footer() {
             </div>
           </div>
         </div>
+
+        {/* STRETCH worldwide — crawlable cross-domain links. Real anchors so
+            every page gives Google a crawl path into each live sibling domain
+            (hreflang alone passes no crawl signal). Visually quiet by design. */}
+        <nav
+          aria-label={t('worldwideHeading')}
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'baseline',
+            gap: '8px 18px',
+            paddingTop: 26,
+            marginBottom: 4,
+            borderTop: '1px solid rgba(255,255,255,.12)',
+          }}
+        >
+          <span style={{ fontSize: 11.5, fontWeight: 600, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--on-dark-muted)' }}>
+            {t('worldwideHeading')}
+          </span>
+          {liveLocales
+            .filter((l) => l !== locale)
+            .map((l) => (
+              <a
+                key={l}
+                href={`${originForLocale(l)}${path}`}
+                hrefLang={localeFullCodes[l]}
+                className="lnk"
+                style={{ fontSize: 12.5, color: 'var(--on-dark-muted)' }}
+              >
+                {localeNames[l] ?? l}
+              </a>
+            ))}
+        </nav>
 
         {/* Legal row */}
         <div

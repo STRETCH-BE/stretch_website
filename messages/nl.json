@@ -178,7 +178,8 @@
       "projectsExport": "Projectexport",
       "priceCalculator": "Prijs berekenen"
     },
-    "dealers": "Dealernetwerk"
+    "dealers": "Dealernetwerk",
+    "worldwideHeading": "STRETCH wereldwijd"
   },
   "portal": {
     "login": {
@@ -638,7 +639,9 @@
     "reviews": {
       "eyebrow": "Beoordelingen",
       "title": "Score {score}",
-      "ratedOn": "Beoordeeld op {source}"
+      "ratedOn": "Beoordeeld op {source}",
+      "titlePlain": "Wat klanten zeggen",
+      "provenance": "Geverifieerde Google-reviews, woordelijk overgenomen uit ons openbare Google Bedrijfsprofiel."
     }
   },
   "ctaBand": {
