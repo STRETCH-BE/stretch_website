@@ -1,3 +1,16 @@
+## 2026-08-30 (22) — Network audit fixes: liveness, crawl paths, redirects, reviews, US market
+
+Fixes from the 30 Aug 2026 network audit (F1–F13), one task per commit.
+
+- **T1/F2 — hreflang liveness.** `localeStatus` in `src/i18n/config.ts` marks
+  `pt` (stretchteto.pt) and `no` (stretchtak.no) as `'pending'` — their
+  domains do not resolve in DNS, yet every page and sitemap advertised them
+  as alternates, breaking the reciprocal confirmation of the whole hreflang
+  cluster. `buildAlternates`/`buildOgLocales` (seo.ts), the sitemap's
+  xhtml:link alternates and x-default, and the language switcher now
+  intersect with `liveLocales`; a pending locale's own domain serves an
+  empty sitemap. Flipping one flag to `'live'` restores a locale everywhere.
+
 ## 2026-08-08 (21) — SEO audit: three shadowing bugs fixed
 
 Full-codebase SEO audit (metadata, hreflang, canonicals, sitemaps, robots,

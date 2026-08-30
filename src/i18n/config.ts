@@ -27,6 +27,7 @@ import { defineRouting } from 'next-intl/routing';
 export const locales = [
   'en', // English — international / x-default
   'uk', // English — United Kingdom (market code, not ISO 639; en-GB below)
+  'us', // English — United States (market code; en-US below)
   'be', // Dutch — Belgium
   'nl', // Dutch — Netherlands
   'fr', // French — France
@@ -50,6 +51,7 @@ export const defaultLocale: Locale = 'en';
 export const localeDomains: Record<Locale, string> = {
   en: process.env.NEXT_PUBLIC_DOMAIN_EN || 'stretch.mt', // en + x-default (global); .us still 308 → here
   uk: process.env.NEXT_PUBLIC_DOMAIN_UK || 'stretch-ceilings.uk', // en-GB — UK kit/materials market
+  us: process.env.NEXT_PUBLIC_DOMAIN_US || 'stretchceiling.us', // en-US — own market (audit 30 Aug 2026, F13)
   be: process.env.NEXT_PUBLIC_DOMAIN_BE || 'stretchplafond.be',
   nl: process.env.NEXT_PUBLIC_DOMAIN_NL || 'stretchplafond.nl',
   fr: process.env.NEXT_PUBLIC_DOMAIN_FR || 'stretchplafond.fr',
@@ -62,6 +64,34 @@ export const localeDomains: Record<Locale, string> = {
   no: process.env.NEXT_PUBLIC_DOMAIN_NO || 'stretchtak.no', // strekktak.no held by competitor, registrar lapsed — backorder for the drop
   is: process.env.NEXT_PUBLIC_DOMAIN_IS || 'stretch.is',
 };
+
+// ---------------------------------------------------------------------------
+// LIVENESS — 'live' = the domain resolves and is served. 'pending' =
+// configured but not yet reachable (no DNS / still redirecting); excluded
+// from hreflang, sitemaps and the language switcher so the live domains
+// never advertise a dead host. Flipping a flag to 'live' restores the
+// locale everywhere with no other code change.
+// ---------------------------------------------------------------------------
+export const localeStatus: Record<Locale, 'live' | 'pending'> = {
+  en: 'live',
+  uk: 'live',
+  // Flip to 'live' once the Vercel redirect on stretchceiling.us is removed
+  // and the domain is attached to the project as a normal domain.
+  us: 'pending',
+  be: 'live',
+  nl: 'live',
+  fr: 'live',
+  pl: 'live',
+  de: 'live',
+  es: 'live',
+  pt: 'pending', // stretchteto.pt — no DNS yet
+  da: 'live',
+  sv: 'live',
+  no: 'pending', // stretchtak.no — no DNS yet (name question open: strekktak.no is taken)
+  is: 'live',
+};
+
+export const liveLocales = locales.filter((l) => localeStatus[l] === 'live');
 
 /** Absolute https origin for a locale, e.g. "https://stretchplafond.nl". */
 export function originForLocale(locale: Locale): string {
@@ -102,6 +132,7 @@ export const routing = defineRouting({
 export const localeNames: Record<Locale, string> = {
   en: 'English',
   uk: 'English (UK)',
+  us: 'English (US)',
   be: 'Nederlands (België)',
   nl: 'Nederlands',
   fr: 'Français',
@@ -119,6 +150,7 @@ export const localeNames: Record<Locale, string> = {
 export const localeFlags: Record<Locale, string> = {
   en: '🌐',
   uk: '🇬🇧',
+  us: '🇺🇸',
   be: '🇧🇪',
   nl: '🇳🇱',
   fr: '🇫🇷',
@@ -137,6 +169,7 @@ export const localeFlags: Record<Locale, string> = {
 export const localeFullCodes: Record<Locale, string> = {
   en: 'en',      // international English (x-default lives on this domain)
   uk: 'en-GB',
+  us: 'en-US',
   be: 'nl-BE',
   nl: 'nl-NL',
   fr: 'fr-FR',

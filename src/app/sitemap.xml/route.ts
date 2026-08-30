@@ -7,7 +7,8 @@
 // the Host header, so this is a dynamic route handler instead.
 // ============================================================================
 import {
-  locales,
+  liveLocales,
+  localeStatus,
   defaultLocale,
   localeFullCodes,
   localeForHost,
@@ -82,13 +83,14 @@ function esc(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-/** Locales a route exists on — all of them, except market-restricted posts. */
+/** Locales a route exists on — all LIVE locales, intersected with a
+ *  market-restricted post's markets. Pending locales never appear. */
 function localesForRoute(route: string): readonly Locale[] {
   if (route.startsWith('/blog/')) {
     const post = blogPosts.find((p) => p.slug === route.slice('/blog/'.length));
-    if (post?.markets?.length) return locales.filter((l) => post.markets!.includes(l));
+    if (post?.markets?.length) return liveLocales.filter((l) => post.markets!.includes(l));
   }
-  return locales;
+  return liveLocales;
 }
 
 export function GET(request: Request) {
@@ -96,12 +98,20 @@ export function GET(request: Request) {
   // Serve the locale owned by this domain; unknown hosts (previews) fall back
   // to the default locale so the sitemap is always valid.
   const locale = localeForHost(host) ?? defaultLocale;
+  // A pending locale's domain serves an EMPTY sitemap — its URLs must not be
+  // advertised anywhere until the domain is flipped to 'live'.
+  if (localeStatus[locale] !== 'live') {
+    return new Response(
+      '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>\n',
+      { headers: { 'Content-Type': 'application/xml; charset=utf-8' } },
+    );
+  }
   const now = new Date().toISOString();
 
   const entries = collectRoutes(locale)
     .map((route) => {
       const routeLocales = localesForRoute(route);
-      const xDefault = routeLocales.includes(defaultLocale) ? defaultLocale : routeLocales[0];
+      const xDefault = routeLocales.includes(defaultLocale) ? defaultLocale : (routeLocales[0] ?? defaultLocale);
       const alternates = routeLocales
         .map(
           (l) =>

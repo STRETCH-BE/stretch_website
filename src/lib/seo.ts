@@ -9,7 +9,7 @@
 // ============================================================================
 import type { Metadata } from 'next';
 import {
-  locales,
+  liveLocales,
   defaultLocale,
   localeFullCodes,
   originForLocale,
@@ -37,11 +37,13 @@ export function buildCanonical(locale: Locale, route: string): string {
   return `${originForLocale(locale)}${normalizeRoute(route)}`;
 }
 
-/** Canonical-order locale subset: all locales, or `only` when given (used by
- *  market-restricted content that exists on a subset of domains). */
+/** Canonical-order locale subset: all LIVE locales, or their intersection
+ *  with `only` when given (used by market-restricted content that exists on
+ *  a subset of domains). Pending locales never appear in alternates. */
 function subsetOf(only?: readonly Locale[]): readonly Locale[] {
-  if (!only || only.length === 0) return locales;
-  return locales.filter((l) => only.includes(l));
+  const base = !only || only.length === 0 ? liveLocales : liveLocales.filter((l) => only.includes(l));
+  // Never return an empty set — alternates always need at least one URL.
+  return base.length > 0 ? base : [defaultLocale];
 }
 
 /**
