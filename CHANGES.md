@@ -1,3 +1,18 @@
+## 2026-08-30 (23) — Fix round 2: honest review markup, US dealer reality, sitemap dates
+
+Re-analysis fixes (N1, N2, F12), one task per commit.
+
+- **N1 — no self-serving review markup.** `reviewsSchema()` attached
+  `Review` + `AggregateRating` nodes to our own `Organization` node — the
+  business marking up reviews about itself, which Google's review-snippet
+  rules make ineligible for stars. The schema function is removed and the
+  homepage no longer emits it; no `Organization`/`LocalBusiness` node
+  anywhere carries rating markup. The VISIBLE reviews section is untouched
+  (`aggregateFor()` stays — it feeds the on-page score header, plain text).
+  A comment in `src/lib/reviews.ts` documents why, and that `Product`
+  schema with genuine per-product reviews is the only legitimate future
+  route to stars — reviews we do not yet collect.
+
 ## 2026-08-30 (22) — Network audit fixes: liveness, crawl paths, redirects, reviews, US market
 
 Fixes from the 30 Aug 2026 network audit (F1–F13), one task per commit.

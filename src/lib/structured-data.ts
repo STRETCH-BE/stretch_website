@@ -8,7 +8,6 @@ import { locales, localeFullCodes, originForLocale, type Locale } from '@/i18n/c
 import { indicativePriceRange } from '@/lib/indicative-prices';
 import type { Product, Faq } from '@/lib/products';
 import type { BlogPost } from '@/lib/content';
-import { reviewsFor, aggregateFor } from '@/lib/reviews';
 import { localeBase } from '@/lib/seo';
 
 const ORG_ID = `${siteUrl}/#organization`;
@@ -276,38 +275,8 @@ export function articleSchema(post: BlogPost, locale: Locale) {
   };
 }
 
-// ---------------------------------------------------------------------------
-// Genuine reviews — Review nodes for exactly what the homepage displays, and
-// an aggregateRating ONLY when >= 3 genuine reviews exist for the market
-// (computed in src/lib/reviews.ts, never hardcoded). Returns null when the
-// market shows no reviews, so that domain emits no rating markup at all.
-// ---------------------------------------------------------------------------
-export function reviewsSchema(locale: Locale) {
-  const rs = reviewsFor(locale);
-  if (rs.length === 0) return null;
-  const agg = aggregateFor(locale);
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': ORG_ID,
-    review: rs.map((r) => ({
-      '@type': 'Review',
-      author: { '@type': 'Person', name: r.author },
-      datePublished: r.datePublished,
-      reviewBody: r.quote,
-      reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5, worstRating: 1 },
-      url: r.sourceUrl,
-    })),
-    ...(agg
-      ? {
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: agg.ratingValue,
-            reviewCount: agg.reviewCount,
-            bestRating: 5,
-            worstRating: 1,
-          },
-        }
-      : {}),
-  };
-}
+// There is deliberately NO reviewsSchema here. Review/AggregateRating on an
+// Organization/LocalBusiness node marks up reviews the business controls
+// about itself — ineligible for star results per Google's review-snippet
+// rules (fix round 2, N1). The visible reviews section reads straight from
+// src/lib/reviews.ts; see the note there before re-adding any rating markup.

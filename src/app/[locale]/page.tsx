@@ -4,7 +4,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { defaultLocale, isValidLocale, type Locale } from '@/i18n/config';
 import JsonLd from '@/components/seo/JsonLd';
-import { organizationSchema, websiteSchema, localBusinessSchema, reviewsSchema } from '@/lib/structured-data';
+import { organizationSchema, websiteSchema, localBusinessSchema } from '@/lib/structured-data';
 
 import Hero from '@/components/sections/home/Hero';
 import { Ticker, Stats } from '@/components/sections/home/TickerStats';
@@ -30,12 +30,6 @@ export default async function HomePage({ params }: { params: { locale: string } 
       <JsonLd data={organizationSchema()} />
       <JsonLd data={websiteSchema({ locale, description: t('homeDescription'), hasSearch: false })} />
       <JsonLd data={localBusinessSchema()} />
-      {(() => {
-        // Review/AggregateRating markup only when this market displays
-        // genuine reviews — null (no markup at all) otherwise.
-        const reviewsLd = reviewsSchema(locale);
-        return reviewsLd ? <JsonLd data={reviewsLd} /> : null;
-      })()}
 
       <Hero />
       <Ticker />

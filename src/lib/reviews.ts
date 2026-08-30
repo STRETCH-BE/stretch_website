@@ -10,7 +10,8 @@
 //  - `sourceUrl` must point at the actual public review.
 //  - A market renders the section only for its own `locale` entries and
 //    renders NOTHING when it has none.
-//  - aggregateRating is computed from >= 3 genuine reviews, never hardcoded.
+//  - The aggregate score is computed from >= 3 genuine reviews, never
+//    hardcoded — and it is VISIBLE TEXT ONLY (the Reviews section header).
 // =============================================================================
 import type { Locale } from '@/i18n/config';
 
@@ -33,6 +34,11 @@ export type Review = {
 // year-precision ISO ("about N years ago" on Google). sourceUrl points at
 // the public profile's review list — swap in per-review Share links when
 // available.
+//
+// NO Review/AggregateRating structured data: self-serving reviews on an
+// Organization/LocalBusiness node are ineligible for star results.
+// Stars are only reachable via Product schema with genuine per-product
+// reviews — which we do not yet collect.
 export const reviews: Review[] = [
   // --- stretchplafond.be — STRETCH, Beveren (5.0, managed profile) ---------
   {
