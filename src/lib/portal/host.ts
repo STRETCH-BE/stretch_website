@@ -65,7 +65,7 @@ export function portalOrigin(fallbackOrigin: string): string {
 const COUNTRY_TO_LOCALE: Record<string, keyof typeof localeDomains> = {
   BE: 'be', NL: 'nl', FR: 'fr', LU: 'fr', PL: 'pl',
   DE: 'de', AT: 'de', CH: 'de', ES: 'es', PT: 'pt',
-  DK: 'da', SE: 'sv', NO: 'no', IS: 'is', GB: 'uk', UK: 'uk', IE: 'uk', MT: 'en',
+  DK: 'da', SE: 'sv', NO: 'no', IS: 'is', GB: 'uk', UK: 'uk', IE: 'uk', MT: 'en', US: 'us',
 };
 
 /**

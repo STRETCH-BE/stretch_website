@@ -46,6 +46,17 @@ Fixes from the 30 Aug 2026 network audit (F1–F13), one task per commit.
   `ratingDisplay` 5.0 score were deleted from content.ts; the
   `reviewsData` message namespace is no longer read. Honest provenance
   line under the section, localized.
+- **T6/F13 — the US serves the US.** New `us` locale on stretchceiling.us
+  (uk pattern: market code → en-US), status `'pending'` until Michael
+  removes the Vercel domain redirect — then one flag flip activates it in
+  hreflang, sitemap and switcher everywhere. `messages/us.json` is a
+  full-parity Americanization of en.json: US spelling, imperial-first
+  units with metric in parentheses, "excl. tax" phrasing, US date style —
+  and NO EU fire-class claims (B-s1,d0 / EN 13501-1 replaced with neutral
+  "flame-retardant, fire test documentation on request" wording pending
+  Michael's answer on ASTM E84 / NFPA 286 testing). GA/Clarity env slots,
+  usRules redirects, image remotePattern, US→us portal-login mapping.
+  Open for Michael: USD pricing, US dealer/training routes, GSC export.
 
 ## 2026-08-08 (21) — SEO audit: three shadowing bugs fixed
 

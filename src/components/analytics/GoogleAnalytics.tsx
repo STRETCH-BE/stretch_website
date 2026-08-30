@@ -15,6 +15,7 @@ import { useLocale } from 'next-intl';
 const LOCALE_IDS: Record<string, string | undefined> = {
   en: process.env.NEXT_PUBLIC_GA_ID_EN,
   uk: process.env.NEXT_PUBLIC_GA_ID_UK,
+  us: process.env.NEXT_PUBLIC_GA_ID_US,
   be: process.env.NEXT_PUBLIC_GA_ID_BE,
   nl: process.env.NEXT_PUBLIC_GA_ID_NL,
   fr: process.env.NEXT_PUBLIC_GA_ID_FR,

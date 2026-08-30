@@ -39,6 +39,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'stretchplafond.nl' },
       { protocol: 'https', hostname: 'stretchplafond.fr' },
       { protocol: 'https', hostname: 'stretch-sufit.pl' },
+      { protocol: 'https', hostname: 'stretchceiling.us' },
       { protocol: 'https', hostname: 'stretchdecken.de' },
       { protocol: 'https', hostname: 'stretchtecho.es' },
       { protocol: 'https', hostname: 'stretchteto.pt' },
