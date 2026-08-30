@@ -197,3 +197,33 @@ export const staticRoutes = [
   '/privacy',
   '/terms',
 ] as const;
+
+// Sitemap <lastmod> for the static routes above — the date each page's
+// content last genuinely changed, seeded from git history (fix round 2,
+// F12). Bump an entry when you materially change that page. A route
+// missing here falls back to the sitemap's build-time constant, which
+// means someone forgot to date it — add it.
+export const staticRouteDates: Record<string, string> = {
+  '/': '2026-08-30', // reviews section + schema cleanup
+  '/about': '2026-08-06',
+  '/contact': '2026-08-30', // direct-installation band (N2)
+  '/products': '2026-08-06',
+  '/partners': '2026-08-30',
+  '/installer-training': '2026-08-30',
+  '/inspiration': '2026-08-06',
+  '/materials': '2026-08-22',
+  '/dealers': '2026-08-30',
+  '/samples': '2026-08-06',
+  '/datasheets': '2026-08-06',
+  '/architects': '2026-08-22',
+  '/kit': '2026-08-30',
+  '/supply': '2026-08-30',
+  '/supply/czechia-slovakia': '2026-08-22',
+  '/projects-export': '2026-08-22',
+  '/price-calculator': '2026-08-22',
+  '/products/prefab-lighting-elements': '2026-08-06',
+  '/faq': '2026-08-24',
+  '/blog': '2026-08-23',
+  '/privacy': '2026-08-22',
+  '/terms': '2026-08-06',
+};

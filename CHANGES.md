@@ -34,6 +34,17 @@ Re-analysis fixes (N1, N2, F12), one task per commit.
   *Option B (US installer recruitment now): add a `usa` region with
   empty-`dealerIds` recruitment places and widen `primaryLocale` to
   include `'us'` — a commercial decision, deliberately not taken here.*
+- **F12 — real sitemap freshness.** Every `<lastmod>` was request time
+  (`new Date()` per fetch), telling Google nothing. Now: blog posts keep
+  their own `dateModified`; products/applications/technical/materials/
+  projects/dealer places carry a maintained `*UpdatedAt` constant in
+  their data file (seeded from `git log -1 --format=%cs`, e.g. products
+  2026-08-28 = the 6.5 m correction); static routes have an explicit
+  `staticRouteDates` map in `site-config.ts`. The fallback is a single
+  build-time constant — a route resolving to it means someone forgot to
+  date it. `force-dynamic` dropped (the Host-header read keeps the
+  handler request-dynamic); two fetches minutes apart are byte-identical,
+  10 distinct honest dates, none in the future.
 
 ## 2026-08-30 (22) — Network audit fixes: liveness, crawl paths, redirects, reviews, US market
 

@@ -173,6 +173,8 @@ export const materialGroups: MaterialGroup[] = [
   },
 ];
 
+/** Sitemap <lastmod> for /materials/[slug] — bump when the catalog changes (F12). */
+export const materialsUpdatedAt = '2026-08-22'; // kit split + currency policy
 export const materialGroupSlugs = materialGroups.map((g) => g.slug);
 export const getMaterialGroup = (slug: string): MaterialGroup | undefined =>
   materialGroups.find((g) => g.slug === slug);

@@ -147,6 +147,8 @@ export const dealerMarkets: readonly Locale[] = locales.filter(
 );
 export const isDealerMarket = (l: Locale): boolean => dealerMarkets.includes(l);
 
+/** Sitemap <lastmod> for /dealers/[place] — bump when places/dealers change (F12). */
+export const dealersUpdatedAt = '2026-08-08'; // last place/dealer data edit
 export const dealerPlaceSlugs = dealerPlaces.map((p) => p.slug);
 export const getDealerPlace = (slug: string): DealerPlace | undefined =>
   dealerPlaces.find((p) => p.slug === slug);

@@ -15,15 +15,22 @@ import {
   originForLocale,
   type Locale,
 } from '@/i18n/config';
-import { staticRoutes } from '@/lib/site-config';
-import { productSlugs } from '@/lib/products';
-import { applicationSlugs } from '@/lib/applications';
-import { blogPosts, blogPostsFor, projectSlugs } from '@/lib/content';
-import { dealerPlaceSlugs, isDealerMarket } from '@/lib/dealers';
-import { techMembranes, techTopicKeys } from '@/lib/technical';
-import { materialGroupSlugs } from '@/lib/materials';
+import { staticRoutes, staticRouteDates } from '@/lib/site-config';
+import { productSlugs, productsUpdatedAt } from '@/lib/products';
+import { applicationSlugs, applicationsUpdatedAt } from '@/lib/applications';
+import { blogPosts, blogPostsFor, projectSlugs, projectsUpdatedAt } from '@/lib/content';
+import { dealerPlaceSlugs, isDealerMarket, dealersUpdatedAt } from '@/lib/dealers';
+import { techMembranes, techTopicKeys, technicalUpdatedAt } from '@/lib/technical';
+import { materialGroupSlugs, materialsUpdatedAt } from '@/lib/materials';
 
-export const dynamic = 'force-dynamic';
+// No force-dynamic: reading request.headers already keeps this handler
+// request-dynamic, and every <lastmod> below is a real content date (F12) —
+// two fetches minutes apart return byte-identical XML.
+
+// Build-time fallback ONLY — evaluated once at module scope, never per
+// request. A route resolving to this means someone forgot to date it: add
+// it to staticRouteDates or the family's *UpdatedAt constant.
+const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 function urlFor(locale: Locale, route: string): string {
   return `${originForLocale(locale)}${route === '/' ? '' : route}`;
@@ -74,13 +81,21 @@ function changeFreqFor(route: string): string {
   return 'monthly';
 }
 
-function lastModFor(route: string, now: string): string {
-  if (route.startsWith('/blog/')) {
-    const slug = route.replace('/blog/', '');
-    const post = blogPosts.find((p) => p.slug === slug);
-    if (post) return `${post.dateModified}T00:00:00.000Z`;
+// Real freshness per route family (F12): blog posts carry their own
+// dateModified; every other family carries a maintained *UpdatedAt date;
+// static routes have an explicit map in site-config.ts.
+function lastModFor(route: string): string {
+  let d: string | undefined = staticRouteDates[route];
+  if (!d && route.startsWith('/blog/')) {
+    d = blogPosts.find((p) => p.slug === route.slice('/blog/'.length))?.dateModified;
   }
-  return now;
+  if (!d && route.startsWith('/inspiration/')) d = projectsUpdatedAt;
+  if (!d && route.startsWith('/products/')) d = productsUpdatedAt;
+  if (!d && route.startsWith('/applications/')) d = applicationsUpdatedAt;
+  if (!d && route.startsWith('/technical/')) d = technicalUpdatedAt;
+  if (!d && route.startsWith('/materials/')) d = materialsUpdatedAt;
+  if (!d && route.startsWith('/dealers/')) d = dealersUpdatedAt;
+  return `${d ?? BUILD_DATE}T00:00:00.000Z`;
 }
 
 function esc(s: string): string {
@@ -115,8 +130,6 @@ export function GET(request: Request) {
       { headers: { 'Content-Type': 'application/xml; charset=utf-8' } },
     );
   }
-  const now = new Date().toISOString();
-
   const entries = collectRoutes(locale)
     .map((route) => {
       const routeLocales = localesForRoute(route);
@@ -133,7 +146,7 @@ export function GET(request: Request) {
       return [
         '  <url>',
         `    <loc>${esc(urlFor(locale, route))}</loc>`,
-        `    <lastmod>${lastModFor(route, now)}</lastmod>`,
+        `    <lastmod>${lastModFor(route)}</lastmod>`,
         `    <changefreq>${changeFreqFor(route)}</changefreq>`,
         `    <priority>${priorityFor(route)}</priority>`,
         alternates,

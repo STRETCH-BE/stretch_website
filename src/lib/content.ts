@@ -626,6 +626,8 @@ export const projects: Project[] = [
 ];
 
 /** All project slugs, for static params + sitemap. */
+/** Sitemap <lastmod> for /inspiration/[slug] — bump when project entries change (F12). */
+export const projectsUpdatedAt = '2026-08-08'; // placeholder purge + real photos
 export const projectSlugs = projects.map((p) => p.slug);
 /** Look up a project by its slug. */
 export const getProjectBySlug = (slug: string): Project | undefined =>

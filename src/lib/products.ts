@@ -584,4 +584,6 @@ export function getProduct(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);
 }
 
+/** Sitemap <lastmod> for /products/[slug] — bump when product copy/data changes (F12). */
+export const productsUpdatedAt = '2026-08-28'; // PVC seamless width 6.4 m -> 6.5 m
 export const productSlugs = products.map((p) => p.slug);

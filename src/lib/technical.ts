@@ -24,6 +24,8 @@ export const techTopics: { key: TechTopicKey; label: string; sub: string }[] = [
   { key: 'faq', label: 'FAQ', sub: 'Common questions' },
 ];
 
+/** Sitemap <lastmod> for /technical/[membrane]/[topic] — bump when spec content changes (F12). */
+export const technicalUpdatedAt = '2026-08-28'; // lastenboek spec + 6.5 m width
 export const techTopicKeys = techTopics.map((t) => t.key);
 export const isTechTopic = (s: string): s is TechTopicKey => (techTopicKeys as string[]).includes(s);
 export const isTechMembrane = (s: string): s is TechMembraneKey => s === 'polyester' || s === 'pvc';

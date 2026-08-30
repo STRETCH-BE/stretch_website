@@ -117,4 +117,6 @@ export function getApplication(slug: string): Application | undefined {
   return applications.find((a) => a.slug === slug);
 }
 
+/** Sitemap <lastmod> for /applications/[slug] — bump when application copy changes (F12). */
+export const applicationsUpdatedAt = '2026-08-07';
 export const applicationSlugs = applications.map((a) => a.slug);
