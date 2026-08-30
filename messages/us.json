@@ -61,8 +61,8 @@
     "blogDescription": "Plain-English guides to stretch ceilings — how they work, acoustics explained, finishes and applications — from the STRETCH team in Belgium.",
     "aboutTitle": "About STRETCH — hand-made ceilings from Belgium | STRETCH",
     "aboutDescription": "STRETCH designs and hand-makes seamless stretch ceilings and walls in Belgium, fitted in a single day across Europe and the US. Part of the STRETCH Group.",
-    "contactTitle": "Contact STRETCH — quotes, dealers & partnerships | STRETCH",
-    "contactDescription": "Reach the STRETCH specialists for a quote, your nearest dealer or a partnership. Belgium HQ in Beveren-Waas, with offices in the US, Poland and Austria.",
+    "contactTitle": "Contact STRETCH — quotes, direct installation & partnerships | STRETCH",
+    "contactDescription": "Reach the STRETCH specialists for a quote, direct delivery & installation or a partnership. Belgium HQ in Beveren-Waas, with offices in the US, Poland and Austria.",
     "privacyTitle": "Privacy policy | STRETCH",
     "privacyDescription": "How STRETCH (Stretch Productions BV) collects, uses and protects personal data submitted through this website, under the EU GDPR.",
     "termsTitle": "Terms of use | STRETCH",
@@ -651,7 +651,8 @@
     "quote": "Request a free quote",
     "dealer": "Find your nearest dealer",
     "preferTalk": "Prefer to talk?",
-    "hours": "Mon–Fri · 08:30–17:00"
+    "hours": "Mon–Fri · 08:30–17:00",
+    "dealerDirect": "We deliver & install directly — contact us"
   },
   "productPage": {
     "home": "Home",
@@ -675,7 +676,8 @@
     "ctaTitle": "Want this ceiling",
     "dealer": "Find your nearest dealer",
     "chartCount": "{count, plural, one {# color} other {# colors}}",
-    "anyRal": "Any RAL on request"
+    "anyRal": "Any RAL on request",
+    "dealerDirect": "We deliver & install directly — contact us"
   },
   "productsPage": {
     "eyebrow": "Our solutions",
@@ -4563,12 +4565,6 @@
               "The finish is never eligible — plaster and drywall included — so a mixed invoice only makes the file harder.",
               "Both items get 6% VAT if the dwelling has been in use for at least ten years and the contractor supplies and installs.",
               "File the grant after the final invoice for the insulation; in Flanders via Mijn VerbouwLoket, within two years."
-            ],
-            "links": [
-              {
-                "label": "Grants and VAT for a stretch ceiling in Belgium",
-                "href": "/blog/spanplafond-premie-btw"
-              }
             ]
           },
           {
@@ -4581,10 +4577,6 @@
               {
                 "label": "Price guide",
                 "href": "/blog/spanplafond-prijs"
-              },
-              {
-                "label": "Find an installer",
-                "href": "/dealers"
               }
             ]
           }
@@ -4683,14 +4675,6 @@
               {
                 "label": "Finishing a ceiling after insulation",
                 "href": "/blog/plafond-afwerken-na-isolatie"
-              },
-              {
-                "label": "Grants and VAT in Belgium",
-                "href": "/blog/spanplafond-premie-btw"
-              },
-              {
-                "label": "Find an installer",
-                "href": "/dealers"
               }
             ]
           }
@@ -5101,7 +5085,7 @@
     "form": {
       "subjects": [
         "Request a quote",
-        "Find a dealer",
+        "Direct installation",
         "Partnership",
         "Installer training",
         "Other"
@@ -5117,7 +5101,10 @@
       "consentPrivacy": "privacy policy",
       "submit": "Send message"
     },
-    "hours": "Mon–Fri · 08:30–17:00"
+    "hours": "Mon–Fri · 08:30–17:00",
+    "directTitle": "No local dealer needed.",
+    "directBody": "STRETCH delivers and installs directly from our own production while the US network is being built — one team, one point of guarantee.",
+    "directCta": "Request a free quote"
   },
   "datasheetsPage": {
     "eyebrow": "Technical datasheets",

@@ -10,6 +10,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Check, ArrowUpRight } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
+import { isDealerMarket } from '@/lib/dealers';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema, faqPageSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
@@ -102,9 +103,12 @@ export default async function KitPage({ params }: { params: { locale: string } }
           <Link href="/blog/spanplafond-zelf-plaatsen" className="lnk" style={{ fontWeight: 700 }}>
             {t('howBlog')} →
           </Link>
-          <Link href="/installer-training" className="lnk" style={{ fontWeight: 700 }}>
-            {t('howTraining')} →
-          </Link>
+          {/* Training route only exists on dealer markets (N2). */}
+          {isDealerMarket(locale) && (
+            <Link href="/installer-training" className="lnk" style={{ fontWeight: 700 }}>
+              {t('howTraining')} →
+            </Link>
+          )}
         </div>
       </section>
 
@@ -148,11 +152,13 @@ export default async function KitPage({ params }: { params: { locale: string } }
             </details>
           ))}
         </div>
-        <p style={{ margin: '22px 0 0' }}>
-          <Link href="/installer-training#international" className="lnk" style={{ fontWeight: 700 }}>
-            {t('faqTrainingLink')} →
-          </Link>
-        </p>
+        {isDealerMarket(locale) && (
+          <p style={{ margin: '22px 0 0' }}>
+            <Link href="/installer-training#international" className="lnk" style={{ fontWeight: 700 }}>
+              {t('faqTrainingLink')} →
+            </Link>
+          </p>
+        )}
       </section>
 
       <style>{`

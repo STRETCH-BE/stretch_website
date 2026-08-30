@@ -651,7 +651,8 @@
     "quote": "Request a free quote",
     "dealer": "Find your nearest dealer",
     "preferTalk": "Prefer to talk?",
-    "hours": "Mon–Fri · 08:30–17:00"
+    "hours": "Mon–Fri · 08:30–17:00",
+    "dealerDirect": "We deliver & install directly — contact us"
   },
   "productPage": {
     "home": "Home",
@@ -675,7 +676,8 @@
     "ctaTitle": "Want this ceiling",
     "dealer": "Find your nearest dealer",
     "chartCount": "{count, plural, one {# colour} other {# colours}}",
-    "anyRal": "Any RAL on request"
+    "anyRal": "Any RAL on request",
+    "dealerDirect": "We deliver & install directly — contact us"
   },
   "productsPage": {
     "eyebrow": "Our solutions",
@@ -5117,7 +5119,10 @@
       "consentPrivacy": "privacy policy",
       "submit": "Send message"
     },
-    "hours": "Mon–Fri · 08:30–17:00"
+    "hours": "Mon–Fri · 08:30–17:00",
+    "directTitle": "No local dealer needed.",
+    "directBody": "STRETCH delivers and installs directly from our own production while the local network is being built — one team, one point of guarantee.",
+    "directCta": "Request a free quote"
   },
   "datasheetsPage": {
     "eyebrow": "Technical datasheets",

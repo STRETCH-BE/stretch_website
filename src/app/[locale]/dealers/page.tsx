@@ -2,6 +2,7 @@
 // Wallonia, Netherlands) with province + city links; places without a dealer
 // show the "dealer wanted" chip. Recruitment band at the bottom.
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { ArrowRight, BadgeCheck, Search } from 'lucide-react';
@@ -12,18 +13,20 @@ import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import { ModalButton } from '@/components/ui/ModalButton';
-import { dealerPlaces, placeDealers, type DealerRegion } from '@/lib/dealers';
+import { dealerPlaces, placeDealers, dealerMarkets, isDealerMarket, type DealerRegion } from '@/lib/dealers';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   if (!isValidLocale(params.locale)) return {};
   const locale = params.locale as Locale;
+  // Market-restricted (N2): no dealer network on this locale → no page.
+  if (!isDealerMarket(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'dealersPage' });
   const route = '/dealers';
   const ogImg = `${localeBase(locale)}/api/og`;
   return {
     title: { absolute: t('ovMetaTitle') },
     description: t('ovMetaDescription'),
-    alternates: buildAlternates(locale, route),
+    alternates: buildAlternates(locale, route, dealerMarkets),
     openGraph: {
       type: 'website', siteName: brand.name, title: t('ovMetaTitle'), description: t('ovMetaDescription'),
       url: `${localeBase(locale)}${route}`,
@@ -44,6 +47,9 @@ const REGIONS: { key: DealerRegion; labelKey: string }[] = [
 export default async function DealersOverviewPage({ params }: { params: { locale: string } }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   setRequestLocale(locale);
+  // Market-restricted (N2): the directory does not exist on locales without
+  // a dealer network (currently `us`) — hard 404, mirroring BlogPost.markets.
+  if (!isDealerMarket(locale)) notFound();
   const t = await getTranslations('dealersPage');
   const tp = await getTranslations('productPage');
 

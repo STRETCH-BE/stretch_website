@@ -651,7 +651,8 @@
     "quote": "Peça um orçamento gratuito",
     "dealer": "Encontre o revendedor mais próximo",
     "preferTalk": "Prefere falar?",
-    "hours": "seg–sex · 08:30–17:00"
+    "hours": "seg–sex · 08:30–17:00",
+    "dealerDirect": "Entregamos e instalamos diretamente — contacte-nos"
   },
   "productPage": {
     "home": "Início",
@@ -675,7 +676,8 @@
     "ctaTitle": "Quer este teto",
     "dealer": "Encontre o revendedor mais próximo",
     "chartCount": "{count, plural, one {# cor} other {# cores}}",
-    "anyRal": "Qualquer cor RAL sob pedido"
+    "anyRal": "Qualquer cor RAL sob pedido",
+    "dealerDirect": "Entregamos e instalamos diretamente — contacte-nos"
   },
   "productsPage": {
     "eyebrow": "As nossas soluções",
@@ -5107,7 +5109,10 @@
       "consentPrivacy": "política de privacidade",
       "submit": "Enviar mensagem"
     },
-    "hours": "seg–sex · 08:30–17:00"
+    "hours": "seg–sex · 08:30–17:00",
+    "directTitle": "Não precisa de um revendedor local.",
+    "directBody": "A STRETCH entrega e instala diretamente a partir da sua própria produção enquanto a rede local cresce — uma equipa, uma garantia.",
+    "directCta": "Peça um orçamento gratuito"
   },
   "datasheetsPage": {
     "eyebrow": "Fichas técnicas",

@@ -19,7 +19,7 @@ import { staticRoutes } from '@/lib/site-config';
 import { productSlugs } from '@/lib/products';
 import { applicationSlugs } from '@/lib/applications';
 import { blogPosts, blogPostsFor, projectSlugs } from '@/lib/content';
-import { dealerPlaceSlugs } from '@/lib/dealers';
+import { dealerPlaceSlugs, isDealerMarket } from '@/lib/dealers';
 import { techMembranes, techTopicKeys } from '@/lib/technical';
 import { materialGroupSlugs } from '@/lib/materials';
 
@@ -35,14 +35,18 @@ function collectRoutes(locale: Locale): string[] {
   // Blog is the one per-locale group: market-restricted posts only appear in
   // the sitemaps of the domains they exist on.
   const blogRoutes = blogPostsFor(locale).map((p) => `/blog/${p.slug}`);
-  const dealerRoutes = dealerPlaceSlugs.map((s) => `/dealers/${s}`);
+  // Dealer directory + installer training exist on dealer markets only (N2).
+  const dealerRoutes = isDealerMarket(locale) ? dealerPlaceSlugs.map((s) => `/dealers/${s}`) : [];
   const technicalRoutes = Object.keys(techMembranes).flatMap((m) =>
     techTopicKeys.map((t) => `/technical/${m}/${t}`),
   );
   const projectRoutes = projectSlugs.map((s) => `/inspiration/${s}`);
   const materialRoutes = materialGroupSlugs.map((s) => `/materials/${s}`);
+  const statics = isDealerMarket(locale)
+    ? [...staticRoutes]
+    : staticRoutes.filter((r) => r !== '/dealers' && r !== '/installer-training');
   return [
-    ...staticRoutes,
+    ...statics,
     ...productRoutes,
     ...applicationRoutes,
     ...technicalRoutes,
@@ -89,6 +93,11 @@ function localesForRoute(route: string): readonly Locale[] {
   if (route.startsWith('/blog/')) {
     const post = blogPosts.find((p) => p.slug === route.slice('/blog/'.length));
     if (post?.markets?.length) return liveLocales.filter((l) => post.markets!.includes(l));
+  }
+  // Dealer directory + installer training: dealer markets only (N2) — no
+  // domain may advertise an en-US alternate for them.
+  if (route === '/dealers' || route.startsWith('/dealers/') || route === '/installer-training') {
+    return liveLocales.filter(isDealerMarket);
   }
   return liveLocales;
 }

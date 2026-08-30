@@ -651,7 +651,8 @@
     "quote": "Be om et gratis tilbud",
     "dealer": "Finn din nærmeste forhandler",
     "preferTalk": "Vil du heller snakke med oss?",
-    "hours": "man–fre · 08:30–17:00"
+    "hours": "man–fre · 08:30–17:00",
+    "dealerDirect": "Vi leverer og monterer direkte — kontakt oss"
   },
   "productPage": {
     "home": "Hjem",
@@ -675,7 +676,8 @@
     "ctaTitle": "Vil du ha denne himlingen",
     "dealer": "Finn din nærmeste forhandler",
     "chartCount": "{count, plural, one {# farge} other {# farger}}",
-    "anyRal": "Enhver RAL-farge på forespørsel"
+    "anyRal": "Enhver RAL-farge på forespørsel",
+    "dealerDirect": "Vi leverer og monterer direkte — kontakt oss"
   },
   "productsPage": {
     "eyebrow": "Våre løsninger",
@@ -5107,7 +5109,10 @@
       "consentPrivacy": "personvernerklæringen",
       "submit": "Send melding"
     },
-    "hours": "man–fre · 08:30–17:00"
+    "hours": "man–fre · 08:30–17:00",
+    "directTitle": "Ingen lokal forhandler nødvendig.",
+    "directBody": "STRETCH leverer og monterer direkte fra egen produksjon mens det lokale nettverket bygges opp — ett team, én garanti.",
+    "directCta": "Be om et gratis tilbud"
   },
   "datasheetsPage": {
     "eyebrow": "Tekniske datablader",

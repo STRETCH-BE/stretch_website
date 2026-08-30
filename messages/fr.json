@@ -651,7 +651,8 @@
     "quote": "Demander un devis gratuit",
     "dealer": "Trouver votre revendeur le plus proche",
     "preferTalk": "Vous préférez en parler ?",
-    "hours": "lun–ven · 08h30–17h00"
+    "hours": "lun–ven · 08h30–17h00",
+    "dealerDirect": "Livraison et pose en direct — contactez-nous"
   },
   "productPage": {
     "home": "Accueil",
@@ -675,7 +676,8 @@
     "ctaTitle": "Envie de ce plafond",
     "dealer": "Trouver votre revendeur le plus proche",
     "chartCount": "{count, plural, one {# couleur} other {# couleurs}}",
-    "anyRal": "Toute teinte RAL sur demande"
+    "anyRal": "Toute teinte RAL sur demande",
+    "dealerDirect": "Livraison et pose en direct — contactez-nous"
   },
   "productsPage": {
     "eyebrow": "Nos solutions",
@@ -5116,7 +5118,10 @@
       "consentPrivacy": "politique de confidentialité",
       "submit": "Envoyer le message"
     },
-    "hours": "lun–ven · 08h30–17h00"
+    "hours": "lun–ven · 08h30–17h00",
+    "directTitle": "Pas besoin de revendeur local.",
+    "directBody": "STRETCH livre et installe directement depuis sa propre production pendant que le réseau local se construit — une seule équipe, une seule garantie.",
+    "directCta": "Demandez un devis gratuit"
   },
   "datasheetsPage": {
     "eyebrow": "Fiches techniques",

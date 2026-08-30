@@ -14,6 +14,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ArrowRight, ArrowUpRight, Check, Package } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
+import { isDealerMarket } from '@/lib/dealers';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema, serviceSchema } from '@/lib/structured-data';
 import { materialGroups } from '@/lib/materials';
@@ -147,8 +148,13 @@ export default async function SupplyPage({ params }: { params: { locale: string 
           </ol>
           <p style={{ fontSize: 14, color: 'var(--text-muted)', maxWidth: '72ch', margin: '0 0 10px' }}>
             {t('how.notExclusiveA')}{' '}
-            <Link href="/dealers" className="lnk">{t('how.dealersLink')}</Link>
-            {' · '}
+            {/* Dealer directory only exists on dealer markets (N2). */}
+            {isDealerMarket(locale) && (
+              <>
+                <Link href="/dealers" className="lnk">{t('how.dealersLink')}</Link>
+                {' · '}
+              </>
+            )}
             <Link href="/partners" className="lnk">{t('how.partnersLink')}</Link>
           </p>
           <p style={{ fontSize: 13.5, fontWeight: 700, color: 'var(--text-faint)', margin: 0 }}>{t('currencyLine')}</p>
@@ -173,9 +179,11 @@ export default async function SupplyPage({ params }: { params: { locale: string 
           <h2 className="h2 h2--sm" style={{ margin: '0 0 16px' }}>{t('training.title')}</h2>
           <p style={{ maxWidth: '62ch', color: 'var(--on-dark-soft)', lineHeight: 1.65, margin: '0 0 26px' }}>{t('training.body')}</p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-            <Link href="/installer-training" className="btn btn--primary">
-              {t('training.cta')} <ArrowRight size={15} />
-            </Link>
+            {isDealerMarket(locale) && (
+              <Link href="/installer-training" className="btn btn--primary">
+                {t('training.cta')} <ArrowRight size={15} />
+              </Link>
+            )}
             <ModalButton type="supply_inquiry" source="supply_inquiry" className="btn btn--ghost-light">
               {t('ctaInquiry')}
             </ModalButton>

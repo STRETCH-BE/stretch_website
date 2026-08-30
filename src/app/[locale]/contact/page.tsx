@@ -12,6 +12,7 @@ import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { pageImages } from '@/lib/page-images';
+import { isDealerMarket } from '@/lib/dealers';
 import ContactForm from '@/components/sections/ContactForm';
 import { ModalButton } from '@/components/ui/ModalButton';
 import { localeBase } from '@/lib/seo';
@@ -118,17 +119,20 @@ export default async function ContactPage({ params }: { params: { locale: string
         </div>
       </section>
 
-      {/* Dealer CTA */}
+      {/* Dealer CTA — or, on markets without a dealer network (N2), the
+          truthful direct-installation band. Same layout, honest copy. */}
       <section className="section--red">
         <div className="container section--sm" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
           <div>
-            <h2 className="h2 h2--sm" style={{ color: '#fff', margin: '0 0 8px' }}>{t('dealerTitle')}</h2>
+            <h2 className="h2 h2--sm" style={{ color: '#fff', margin: '0 0 8px' }}>
+              {isDealerMarket(locale) ? t('dealerTitle') : t('directTitle')}
+            </h2>
             <p style={{ color: 'rgba(255,255,255,.9)', margin: 0, maxWidth: 460 }}>
-              {t('dealerBody')}
+              {isDealerMarket(locale) ? t('dealerBody') : t('directBody')}
             </p>
           </div>
           <ModalButton type="quote" source="contact_dealer" trackQuote className="btn btn--dark">
-            {t('dealerCta')} <ArrowRight size={16} />
+            {isDealerMarket(locale) ? t('dealerCta') : t('directCta')} <ArrowRight size={16} />
           </ModalButton>
         </div>
       </section>

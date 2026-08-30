@@ -651,7 +651,8 @@
     "quote": "Vraag een gratis offerte",
     "dealer": "Vind uw dichtstbijzijnde dealer",
     "preferTalk": "Liever even bellen?",
-    "hours": "ma–vr · 08:30–17:00"
+    "hours": "ma–vr · 08:30–17:00",
+    "dealerDirect": "Wij leveren en plaatsen rechtstreeks — neem contact op"
   },
   "productPage": {
     "home": "Home",
@@ -675,7 +676,8 @@
     "ctaTitle": "Wilt u dit plafond",
     "dealer": "Vind uw dichtstbijzijnde dealer",
     "chartCount": "{count, plural, one {# kleur} other {# kleuren}}",
-    "anyRal": "Elke RAL-kleur op aanvraag"
+    "anyRal": "Elke RAL-kleur op aanvraag",
+    "dealerDirect": "Wij leveren en plaatsen rechtstreeks — neem contact op"
   },
   "productsPage": {
     "eyebrow": "Onze oplossingen",
@@ -5123,7 +5125,10 @@
       "consentPrivacy": "privacybeleid",
       "submit": "Verstuur bericht"
     },
-    "hours": "ma–vr · 08:30–17:00"
+    "hours": "ma–vr · 08:30–17:00",
+    "directTitle": "Geen lokale dealer nodig.",
+    "directBody": "STRETCH levert en plaatst rechtstreeks vanuit onze eigen productie terwijl het lokale netwerk groeit — één team, één aanspreekpunt voor de garantie.",
+    "directCta": "Vraag een gratis offerte"
   },
   "datasheetsPage": {
     "eyebrow": "Technische fiches",

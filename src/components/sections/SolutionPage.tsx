@@ -3,11 +3,13 @@
 // → dark datasheet → colour swatches → applications → related → red CTA.
 // Server component; the quote/samples CTAs are the client ModalButton/-TextLink.
 import { Link } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton, ModalTextLink } from '@/components/ui/ModalButton';
 import { getProduct, type Product } from '@/lib/products';
+import { isDealerMarket } from '@/lib/dealers';
+import type { Locale } from '@/i18n/config';
 import { localizeProduct, type CatalogEntry } from '@/lib/localize-product';
 import { productImage, pimg } from '@/lib/product-images';
 import ColourChart from '@/components/sections/ColourChart';
@@ -41,6 +43,7 @@ function swatch(name: string): { background: string; border: string } {
 
 export default function SolutionPage({ product: baseProduct }: { product: Product }) {
   const t = useTranslations('productPage');
+  const locale = useLocale() as Locale;
   const tc = useTranslations('catalog');
   const tCol = useTranslations('colourNames');
   const product = localizeProduct(baseProduct, tc.raw(baseProduct.key) as CatalogEntry);
@@ -303,7 +306,8 @@ export default function SolutionPage({ product: baseProduct }: { product: Produc
               {t('quote')} <ArrowRight size={16} />
             </ModalButton>
             <Link href="/contact" className="btn btn--ghost-light">
-              {t('dealer')}
+              {/* No dealer network on this market (N2) → truthful direct label. */}
+              {isDealerMarket(locale) ? t('dealer') : t('dealerDirect')}
             </Link>
           </div>
         </div>

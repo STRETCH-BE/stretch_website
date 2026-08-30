@@ -5,9 +5,11 @@
 // (see MegaMenu). "Free quote" opens the lead modal.
 import { useEffect, useState } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ChevronDown, ArrowUpRight } from 'lucide-react';
 import { contact } from '@/lib/site-config';
+import { isDealerMarket } from '@/lib/dealers';
+import type { Locale } from '@/i18n/config';
 import { ModalButton } from '@/components/ui/ModalButton';
 import PortalLink from '@/components/ui/PortalLink';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -19,6 +21,7 @@ type OpenMenu = 'solutions' | 'technical' | null;
 
 export default function Header() {
   const t = useTranslations('common');
+  const locale = useLocale() as Locale;
   const solutionsMenu = useSolutionsMenu();
   const technicalMenu = useTechnicalMenu();
   const pathname = usePathname();
@@ -52,7 +55,10 @@ export default function Header() {
           </div>
           <div className="only-desktop" style={{ display: 'flex', alignItems: 'center', gap: 26, fontSize: 11.5, letterSpacing: '.12em', textTransform: 'uppercase', fontWeight: 600 }}>
             <Link href="/partners" className="lnk">{t('nav.reseller')}</Link>
-            <Link href="/installer-training" className="lnk">{t('nav.training')}</Link>
+            {/* Training only exists on dealer markets (N2) — no dead link on us. */}
+            {isDealerMarket(locale) && (
+              <Link href="/installer-training" className="lnk">{t('nav.training')}</Link>
+            )}
             <PortalLink href="/portal" className="lnk">{t('nav.clientLogin')}</PortalLink>
             <span style={{ opacity: 0.4 }}>|</span>
             <a href={contact.phoneHref} className="lnk" style={{ color: 'var(--red-bright)' }} onClick={() => analytics.phoneClick('header_utility')}>

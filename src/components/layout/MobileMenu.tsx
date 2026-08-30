@@ -22,6 +22,7 @@ import {
 } from '@/i18n/config';
 import { useLeadModal } from '@/components/LeadGenModal';
 import PortalLink from '@/components/ui/PortalLink';
+import { isDealerMarket } from '@/lib/dealers';
 import { analytics } from '@/lib/analytics';
 
 // Shared style for the primary drawer links (Link and PortalLink render alike).
@@ -161,7 +162,10 @@ export default function MobileMenu() {
               { href: '/about', label: t('nav.about') },
               { href: '/contact', label: t('nav.contact') },
               { href: '/portal', label: t('nav.clientLogin') },
-            ].map((item) =>
+            ]
+              // Training only exists on dealer markets (N2) — no dead link on us.
+              .filter((item) => item.href !== '/installer-training' || isDealerMarket(locale))
+              .map((item) =>
               item.href === '/portal' ? (
                 <PortalLink key={item.href} href={item.href} style={drawerLinkStyle}>
                   {item.label}

@@ -651,7 +651,8 @@
     "quote": "Poproś o darmową wycenę",
     "dealer": "Znajdź najbliższego dystrybutora",
     "preferTalk": "Wolisz porozmawiać?",
-    "hours": "pn–pt · 08:30–17:00"
+    "hours": "pn–pt · 08:30–17:00",
+    "dealerDirect": "Dostarczamy i montujemy bezpośrednio — skontaktuj się z nami"
   },
   "productPage": {
     "home": "Strona główna",
@@ -675,7 +676,8 @@
     "ctaTitle": "Chcesz taki sufit",
     "dealer": "Znajdź najbliższego dystrybutora",
     "chartCount": "{count, plural, one {# kolor} few {# kolory} many {# kolorów} other {# koloru}}",
-    "anyRal": "Dowolny kolor RAL na zamówienie"
+    "anyRal": "Dowolny kolor RAL na zamówienie",
+    "dealerDirect": "Dostarczamy i montujemy bezpośrednio — skontaktuj się z nami"
   },
   "productsPage": {
     "eyebrow": "Nasze rozwiązania",
@@ -5107,7 +5109,10 @@
       "consentPrivacy": "polityką prywatności",
       "submit": "Wyślij wiadomość"
     },
-    "hours": "pn–pt · 08:30–17:00"
+    "hours": "pn–pt · 08:30–17:00",
+    "directTitle": "Nie potrzebujesz lokalnego dealera.",
+    "directBody": "STRETCH dostarcza i montuje bezpośrednio z własnej produkcji, podczas gdy lokalna sieć dopiero powstaje — jeden zespół, jedna gwarancja.",
+    "directCta": "Poproś o bezpłatną wycenę"
   },
   "datasheetsPage": {
     "eyebrow": "Karty techniczne",

@@ -8,6 +8,7 @@ import { usePathname } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { footerNav } from '@/lib/site-config';
 import { contact } from '@/lib/site-config';
+import { isDealerMarket } from '@/lib/dealers';
 import PortalLink from '@/components/ui/PortalLink';
 import { CONSENT_OPEN_BANNER_EVENT } from '@/lib/consent';
 import { analytics } from '@/lib/analytics';
@@ -84,7 +85,10 @@ export default function Footer() {
 
           {/* Company */}
           <FooterCol heading={t('companyHeading')}>
-            {footerNav.company.map((l) => (
+            {footerNav.company
+              // Training only exists on dealer markets (N2) — no dead link on us.
+              .filter((l) => l.href !== '/installer-training' || isDealerMarket(locale))
+              .map((l) => (
               <li key={l.href}>
                 {l.key === 'clientPortal' ? (
                   <PortalLink href={l.href} className="lnk" style={{ color: 'var(--on-dark-soft)' }}>

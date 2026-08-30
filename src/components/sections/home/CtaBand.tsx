@@ -1,14 +1,17 @@
 // Closing CTA — a full-bleed photo band under a dark overlay (not flat black),
 // with the primary quote CTA, a dealer link and the phone line.
 import { Link } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
 import { contact } from '@/lib/site-config';
+import { isDealerMarket } from '@/lib/dealers';
+import type { Locale } from '@/i18n/config';
 
 export default function CtaBand() {
   const t = useTranslations('ctaBand');
+  const locale = useLocale() as Locale;
   return (
     <section className="cta-band" id="cta">
       <div className="cta-bg" aria-hidden="true">
@@ -38,7 +41,9 @@ export default function CtaBand() {
             {t('quote')} →
           </ModalButton>
           <Link href="/contact" className="btn btn--ghost-light btn--lg">
-            {t('dealer')}
+            {/* No dealer network on this market (N2) → the truthful direct-
+                installation label instead of "find your nearest dealer". */}
+            {isDealerMarket(locale) ? t('dealer') : t('dealerDirect')}
           </Link>
         </div>
 

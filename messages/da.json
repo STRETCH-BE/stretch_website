@@ -651,7 +651,8 @@
     "quote": "Få et gratis tilbud",
     "dealer": "Find din nærmeste forhandler",
     "preferTalk": "Vil du hellere tale med os?",
-    "hours": "man–fre · 08:30–17:00"
+    "hours": "man–fre · 08:30–17:00",
+    "dealerDirect": "Vi leverer og monterer direkte — kontakt os"
   },
   "productPage": {
     "home": "Forside",
@@ -675,7 +676,8 @@
     "ctaTitle": "Vil du have dette loft",
     "dealer": "Find din nærmeste forhandler",
     "chartCount": "{count, plural, one {# farve} other {# farver}}",
-    "anyRal": "Enhver RAL-farve på forespørgsel"
+    "anyRal": "Enhver RAL-farve på forespørgsel",
+    "dealerDirect": "Vi leverer og monterer direkte — kontakt os"
   },
   "productsPage": {
     "eyebrow": "Vores løsninger",
@@ -5107,7 +5109,10 @@
       "consentPrivacy": "privatlivspolitikken",
       "submit": "Send besked"
     },
-    "hours": "man–fre · 08:30–17:00"
+    "hours": "man–fre · 08:30–17:00",
+    "directTitle": "Ingen lokal forhandler nødvendig.",
+    "directBody": "STRETCH leverer og monterer direkte fra egen produktion, mens det lokale netværk bygges op — ét team, én garanti.",
+    "directCta": "Få et gratis tilbud"
   },
   "datasheetsPage": {
     "eyebrow": "Tekniske datablade",

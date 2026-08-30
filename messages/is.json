@@ -651,7 +651,8 @@
     "quote": "Fáðu ókeypis tilboð",
     "dealer": "Finndu næsta söluaðila",
     "preferTalk": "Viltu frekar tala við okkur?",
-    "hours": "mán–fös · 08:30–17:00"
+    "hours": "mán–fös · 08:30–17:00",
+    "dealerDirect": "Við afhendum og setjum upp beint — hafðu samband"
   },
   "productPage": {
     "home": "Heim",
@@ -675,7 +676,8 @@
     "ctaTitle": "Viltu þetta loft",
     "dealer": "Finndu næsta söluaðila",
     "chartCount": "{count, plural, one {# litur} other {# litir}}",
-    "anyRal": "Hvaða RAL-litur sem er eftir ósk"
+    "anyRal": "Hvaða RAL-litur sem er eftir ósk",
+    "dealerDirect": "Við afhendum og setjum upp beint — hafðu samband"
   },
   "productsPage": {
     "eyebrow": "Lausnirnar okkar",
@@ -5107,7 +5109,10 @@
       "consentPrivacy": "persónuverndarstefnunni",
       "submit": "Senda skilaboð"
     },
-    "hours": "mán–fös · 08:30–17:00"
+    "hours": "mán–fös · 08:30–17:00",
+    "directTitle": "Engin þörf á staðbundnum söluaðila.",
+    "directBody": "STRETCH afhendir og setur upp beint frá eigin framleiðslu á meðan staðbundið net byggist upp — eitt teymi, ein ábyrgð.",
+    "directCta": "Fáðu ókeypis tilboð"
   },
   "datasheetsPage": {
     "eyebrow": "Tækniblöð",

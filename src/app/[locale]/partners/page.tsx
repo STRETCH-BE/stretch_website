@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ArrowRight, TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone, Store, Wrench, Check, Factory } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
+import { isDealerMarket } from '@/lib/dealers';
 import { Link } from '@/i18n/navigation';
 import { siteUrl } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
@@ -145,9 +146,12 @@ export default async function PartnersPage({ params }: { params: { locale: strin
                 <ModalButton type="partner" source="partners_dealer" className="btn btn--primary" style={{ flex: '1 1 auto', justifyContent: 'center' }}>
                   {t('models.dealer.cta')} <ArrowRight size={15} />
                 </ModalButton>
-                <Link href="/installer-training" className="btn btn--ghost btn--sm" style={{ flex: '0 0 auto' }}>
-                  {t('models.dealer.trainingLink')} <ArrowRight size={14} />
-                </Link>
+                {/* Training route only exists on dealer markets (N2). */}
+                {isDealerMarket(locale) && (
+                  <Link href="/installer-training" className="btn btn--ghost btn--sm" style={{ flex: '0 0 auto' }}>
+                    {t('models.dealer.trainingLink')} <ArrowRight size={14} />
+                  </Link>
+                )}
               </div>
             </div>
           </div>

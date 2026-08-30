@@ -2,8 +2,10 @@
 // a full-height installer photo beside the red copy block (intro, three steps,
 // and the partner / training CTAs).
 import { Link } from '@/i18n/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Eyebrow from '@/components/ui/Eyebrow';
+import { isDealerMarket } from '@/lib/dealers';
+import type { Locale } from '@/i18n/config';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
@@ -12,6 +14,7 @@ const STEP_NUMBERS = ['01', '02', '03'];
 
 export default function InstallerPartner() {
   const t = useTranslations('home.installer');
+  const locale = useLocale() as Locale;
   const ta = useTranslations('alt');
   return (
     <section className="ip" id="installer">
@@ -46,9 +49,12 @@ export default function InstallerPartner() {
               <ModalButton type="partner" source="home_installer" className="btn btn--dark">
                 {t('ctaPartner')} →
               </ModalButton>
-              <Link href="/installer-training" className="btn btn--ghost-light">
-                {t('ctaTraining')} →
-              </Link>
+              {/* Training route only exists on dealer markets (N2). */}
+              {isDealerMarket(locale) && (
+                <Link href="/installer-training" className="btn btn--ghost-light">
+                  {t('ctaTraining')} →
+                </Link>
+              )}
             </div>
           </div>
         </div>

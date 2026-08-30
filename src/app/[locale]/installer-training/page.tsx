@@ -2,6 +2,7 @@
 // six-cell curriculum, upcoming-date cards, and the booking form (→ /api/lead).
 // BreadcrumbList + a Course JSON-LD describing the programme.
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ArrowRight, Check, MapPin } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
@@ -9,6 +10,7 @@ import { siteUrl, brand, contact } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import { TRAINING_DATE_DETAIL } from '@/lib/forms-config';
+import { dealerMarkets, isDealerMarket } from '@/lib/dealers';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
@@ -18,12 +20,15 @@ import InlineLeadForm from '@/components/sections/InlineLeadForm';
 import { localeBase } from '@/lib/seo';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  return pageMetadata({ locale: params.locale, route: '/installer-training', titleKey: 'trainingTitle', descKey: 'trainingDescription' });
+  // `only` (N2): training exists on dealer markets only — no en-US alternate.
+  return pageMetadata({ locale: params.locale, route: '/installer-training', titleKey: 'trainingTitle', descKey: 'trainingDescription', only: dealerMarkets });
 }
 
 export default async function TrainingPage({ params }: { params: { locale: string } }) {
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
+  // Market-restricted (N2): no dealer/installer network on this locale → 404.
+  if (!isDealerMarket(locale)) notFound();
   const t = await getTranslations('trainingPage');
   const tm = await getTranslations('modals');
   const tp = await getTranslations('productPage');

@@ -651,7 +651,8 @@
     "quote": "Kostenloses Angebot anfordern",
     "dealer": "Händler in Ihrer Nähe finden",
     "preferTalk": "Lieber sprechen?",
-    "hours": "Mo–Fr · 08:30–17:00"
+    "hours": "Mo–Fr · 08:30–17:00",
+    "dealerDirect": "Wir liefern und montieren direkt — kontaktieren Sie uns"
   },
   "productPage": {
     "home": "Startseite",
@@ -675,7 +676,8 @@
     "ctaTitle": "Diese Decke gewünscht",
     "dealer": "Händler in Ihrer Nähe finden",
     "chartCount": "{count, plural, one {# Farbe} other {# Farben}}",
-    "anyRal": "Jede RAL-Farbe auf Anfrage"
+    "anyRal": "Jede RAL-Farbe auf Anfrage",
+    "dealerDirect": "Wir liefern und montieren direkt — kontaktieren Sie uns"
   },
   "productsPage": {
     "eyebrow": "Unsere Lösungen",
@@ -5107,7 +5109,10 @@
       "consentPrivacy": "Datenschutzerklärung",
       "submit": "Nachricht senden"
     },
-    "hours": "Mo–Fr · 08:30–17:00"
+    "hours": "Mo–Fr · 08:30–17:00",
+    "directTitle": "Kein lokaler Händler nötig.",
+    "directBody": "STRETCH liefert und montiert direkt aus der eigenen Produktion, während das lokale Netzwerk aufgebaut wird — ein Team, eine Garantie.",
+    "directCta": "Kostenloses Angebot anfordern"
   },
   "datasheetsPage": {
     "eyebrow": "Technische Datenblätter",

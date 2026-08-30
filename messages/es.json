@@ -651,7 +651,8 @@
     "quote": "Solicita un presupuesto gratis",
     "dealer": "Encuentra tu distribuidor más cercano",
     "preferTalk": "¿Prefieres hablar?",
-    "hours": "lun–vie · 08:30–17:00"
+    "hours": "lun–vie · 08:30–17:00",
+    "dealerDirect": "Entregamos e instalamos directamente — contáctenos"
   },
   "productPage": {
     "home": "Inicio",
@@ -675,7 +676,8 @@
     "ctaTitle": "Quieres este techo",
     "dealer": "Encuentra tu distribuidor más cercano",
     "chartCount": "{count, plural, one {# color} other {# colores}}",
-    "anyRal": "Cualquier color RAL bajo pedido"
+    "anyRal": "Cualquier color RAL bajo pedido",
+    "dealerDirect": "Entregamos e instalamos directamente — contáctenos"
   },
   "productsPage": {
     "eyebrow": "Nuestras soluciones",
@@ -5107,7 +5109,10 @@
       "consentPrivacy": "política de privacidad",
       "submit": "Enviar mensaje"
     },
-    "hours": "lun–vie · 08:30–17:00"
+    "hours": "lun–vie · 08:30–17:00",
+    "directTitle": "No necesita un distribuidor local.",
+    "directBody": "STRETCH entrega e instala directamente desde su propia producción mientras se construye la red local — un solo equipo, una sola garantía.",
+    "directCta": "Solicite un presupuesto gratuito"
   },
   "datasheetsPage": {
     "eyebrow": "Fichas técnicas",

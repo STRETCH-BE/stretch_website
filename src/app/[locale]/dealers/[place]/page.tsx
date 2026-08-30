@@ -16,16 +16,24 @@ import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
-import { getDealerPlace, dealerPlaceSlugs, placeDealers, nearbyPlaces, getDealerPlace as getPlace } from '@/lib/dealers';
+import { getDealerPlace, dealerPlaceSlugs, placeDealers, nearbyPlaces, getDealerPlace as getPlace, dealerMarkets, isDealerMarket } from '@/lib/dealers';
 import { getProjectBySlug } from '@/lib/content';
 import { localizeProject, type ProjectMessages } from '@/lib/localize-content';
 
+// Every valid (locale, place) pair is enumerated below. dynamicParams=false →
+// anything else (unknown slug, or a non-dealer-market locale like `us`) 404s
+// immediately instead of rendering on demand, which trips next-intl's
+// headers() lookup into a 500 (same pattern as the blog slug route).
+export const dynamicParams = false;
+
 export function generateStaticParams() {
-  return locales.flatMap((locale) => dealerPlaceSlugs.map((place) => ({ locale, place })));
+  // Market-restricted (N2): place pages are only built for dealer markets.
+  return dealerMarkets.flatMap((locale) => dealerPlaceSlugs.map((place) => ({ locale, place })));
 }
 
 export async function generateMetadata({ params }: { params: { locale: string; place: string } }): Promise<Metadata> {
   if (!isValidLocale(params.locale)) return {};
+  if (!isDealerMarket(params.locale as Locale)) return {};
   const place = getDealerPlace(params.place);
   if (!place) return {};
   const locale = params.locale as Locale;
@@ -38,7 +46,7 @@ export async function generateMetadata({ params }: { params: { locale: string; p
   return {
     title: { absolute: `${title} | ${brand.name}` },
     description,
-    alternates: buildAlternates(locale, route),
+    alternates: buildAlternates(locale, route, dealerMarkets),
     openGraph: {
       type: 'website', siteName: brand.name, title, description, url: `${localeBase(locale)}${route}`,
       images: [{ url: ogImg, width: 1200, height: 630, alt: brand.name }],
@@ -50,6 +58,8 @@ export async function generateMetadata({ params }: { params: { locale: string; p
 export default async function DealerPlacePage({ params }: { params: { locale: string; place: string } }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   setRequestLocale(locale);
+  // Market-restricted (N2): no dealer network on this locale → 404.
+  if (!isDealerMarket(locale)) notFound();
   const place = getDealerPlace(params.place);
   if (!place) notFound();
 

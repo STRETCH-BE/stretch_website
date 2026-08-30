@@ -651,7 +651,8 @@
     "quote": "Begär en kostnadsfri offert",
     "dealer": "Hitta din närmaste återförsäljare",
     "preferTalk": "Pratar du hellre med oss?",
-    "hours": "mån–fre · 08:30–17:00"
+    "hours": "mån–fre · 08:30–17:00",
+    "dealerDirect": "Vi levererar och monterar direkt — kontakta oss"
   },
   "productPage": {
     "home": "Start",
@@ -675,7 +676,8 @@
     "ctaTitle": "Vill du ha det här taket",
     "dealer": "Hitta din närmaste återförsäljare",
     "chartCount": "{count, plural, one {# färg} other {# färger}}",
-    "anyRal": "Alla RAL-kulörer på begäran"
+    "anyRal": "Alla RAL-kulörer på begäran",
+    "dealerDirect": "Vi levererar och monterar direkt — kontakta oss"
   },
   "productsPage": {
     "eyebrow": "Våra lösningar",
@@ -5107,7 +5109,10 @@
       "consentPrivacy": "integritetspolicyn",
       "submit": "Skicka meddelande"
     },
-    "hours": "mån–fre · 08:30–17:00"
+    "hours": "mån–fre · 08:30–17:00",
+    "directTitle": "Ingen lokal återförsäljare behövs.",
+    "directBody": "STRETCH levererar och monterar direkt från egen produktion medan det lokala nätverket byggs upp — ett team, en garanti.",
+    "directCta": "Begär en kostnadsfri offert"
   },
   "datasheetsPage": {
     "eyebrow": "Tekniska datablad",

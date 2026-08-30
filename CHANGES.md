@@ -12,6 +12,28 @@ Re-analysis fixes (N1, N2, F12), one task per commit.
   A comment in `src/lib/reviews.ts` documents why, and that `Product`
   schema with genuine per-product reviews is the only legitimate future
   route to stars — reviews we do not yet collect.
+- **N2 — no Belgian dealer directory for Americans (option A).** The US
+  homepage sent visitors to a Flanders/Wallonia/NL/LUX/AT dealer list.
+  `dealerMarkets` in `src/lib/dealers.ts` (derived from the places'
+  `primaryLocale` values + the deliberate recruitment locales, same idiom
+  as `BlogPost.markets`) now market-restricts `/dealers`, `/dealers/
+  [place]` and `/installer-training`: on `us` they 404
+  (`dynamicParams=false` on the place route — which also turned the
+  pre-existing 500 on unknown place slugs into a clean 404), drop out of
+  the sitemap, and no domain advertises an en-US alternate for them
+  (`buildAlternates`/`pageMetadata` gained `only`). Header, mobile menu,
+  footer, /supply, /partners, /kit and the home installer band hide the
+  dead links on `us` (the mega menu never carried them). The "Find your
+  nearest dealer" CTAs (home CTA band, product pages, contact band) swap
+  on non-dealer markets to the truthful direct-installation message —
+  new keys `ctaBand.dealerDirect`, `productPage.dealerDirect`,
+  `contactPage.directTitle/directBody/directCta` in all 14 message
+  files. us.json also drops its four dead blog links (2× `/dealers`,
+  2× the market-restricted premie post) and stops offering "Find a
+  dealer" as a contact subject. Every other domain is unchanged.
+  *Option B (US installer recruitment now): add a `usa` region with
+  empty-`dealerIds` recruitment places and widen `primaryLocale` to
+  include `'us'` — a commercial decision, deliberately not taken here.*
 
 ## 2026-08-30 (22) — Network audit fixes: liveness, crawl paths, redirects, reviews, US market
 

@@ -14,11 +14,15 @@ export async function pageMetadata(opts: {
   descKey: string;
   ogPath?: string;
   index?: boolean;
+  /** Market restriction: the locales this route exists on (buildAlternates `only`). */
+  only?: readonly Locale[];
 }): Promise<Metadata> {
   if (!isValidLocale(opts.locale)) return {};
   const locale = opts.locale as Locale;
+  // A market-restricted route on a locale it does not exist on has no metadata.
+  if (opts.only && !opts.only.includes(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'meta' });
-  const { ogLocale, alternate } = buildOgLocales(locale);
+  const { ogLocale, alternate } = buildOgLocales(locale, opts.only);
   const title = t(opts.titleKey);
   const description = t(opts.descKey);
   const ogImg = `${localeBase(locale)}${opts.ogPath ?? '/api/og'}`;
@@ -28,7 +32,7 @@ export async function pageMetadata(opts: {
     title: { absolute: title },
     description,
     robots: opts.index === false ? { index: false, follow: true } : { index: true, follow: true },
-    alternates: buildAlternates(locale, opts.route),
+    alternates: buildAlternates(locale, opts.route, opts.only),
     openGraph: {
       type: 'website',
       siteName: brand.name,

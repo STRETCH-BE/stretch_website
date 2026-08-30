@@ -13,6 +13,8 @@
 // with {place}/{province} slots) — nothing to translate when adding places.
 // =============================================================================
 
+import { locales, type Locale } from '@/i18n/config';
+
 export type Dealer = {
   id: string;
   name: string;
@@ -126,6 +128,24 @@ export const dealerPlaces: DealerPlace[] = [
   // ---------------------------------------------------------------- Austria
   { slug: 'wien', name: 'Wien', kind: 'city', region: 'austria', primaryLocale: 'de', dealerIds: [] },
 ];
+
+// ---------------------------------------------------------------------------
+// MARKET COVERAGE — the locales /dealers, /dealers/[place] and
+// /installer-training exist on (same idiom as BlogPost.markets). Derived from
+// the data — every locale whose market has places listed above — plus the
+// locales we deliberately keep the directory + recruitment funnel live on.
+// stretchceiling.us is in neither set: there is no US dealer network yet, so
+// on `us` these routes 404, stay out of the sitemap and are never advertised
+// as an en-US alternate, and the "find a dealer" CTAs swap to the truthful
+// direct-installation message (fix round 2, N2). Listing a first US place in
+// dealerPlaces (primaryLocale 'us') brings it all back automatically.
+// ---------------------------------------------------------------------------
+const dataLocales = new Set<Locale>(dealerPlaces.map((p) => p.primaryLocale));
+const recruitmentLocales: readonly Locale[] = ['en', 'uk', 'pl', 'es', 'pt', 'da', 'sv', 'no', 'is'];
+export const dealerMarkets: readonly Locale[] = locales.filter(
+  (l) => dataLocales.has(l) || recruitmentLocales.includes(l),
+);
+export const isDealerMarket = (l: Locale): boolean => dealerMarkets.includes(l);
 
 export const dealerPlaceSlugs = dealerPlaces.map((p) => p.slug);
 export const getDealerPlace = (slug: string): DealerPlace | undefined =>
