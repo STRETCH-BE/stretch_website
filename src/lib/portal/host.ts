@@ -64,7 +64,7 @@ export function portalOrigin(fallbackOrigin: string): string {
  *  the canonical portal host is off. Neighbours map to the nearest domain. */
 const COUNTRY_TO_LOCALE: Record<string, keyof typeof localeDomains> = {
   BE: 'be', NL: 'nl', FR: 'fr', LU: 'fr', PL: 'pl',
-  DE: 'de', AT: 'de', CH: 'de', ES: 'es', PT: 'pt',
+  DE: 'de', AT: 'de', CH: 'ch', LI: 'ch', ES: 'es', PT: 'pt',
   DK: 'da', SE: 'sv', NO: 'no', IS: 'is', GB: 'uk', UK: 'uk', IE: 'uk', MT: 'en', US: 'us',
 };
 

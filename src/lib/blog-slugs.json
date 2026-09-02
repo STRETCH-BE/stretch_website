@@ -1,5 +1,6 @@
 {
   "clipso-spanplafonds": {
+    "ch": "clipso-spanndecken",
     "da": "straekloft-fra-clipso",
     "de": "clipso-spanndecken",
     "en": "clipso-stretch-ceilings",
@@ -14,6 +15,7 @@
     "us": "clipso-stretch-ceilings"
   },
   "de-ideale-plafondhoogte": {
+    "ch": "die-ideale-deckenhoehe",
     "da": "den-ideelle-loftshoejde",
     "de": "die-ideale-deckenhoehe",
     "en": "ideal-ceiling-height",
@@ -28,6 +30,7 @@
     "us": "ideal-ceiling-height"
   },
   "geluidsoverlast-van-uw-bovenburen": {
+    "ch": "laerm-der-nachbarn-von-oben",
     "da": "stoej-fra-overboen",
     "de": "laerm-der-nachbarn-von-oben",
     "en": "noise-from-upstairs-neighbours",
@@ -42,6 +45,7 @@
     "us": "noise-from-upstairs-neighbours"
   },
   "houten-planchetten-plafond-renoveren-of-vernieuwen": {
+    "ch": "holzpaneeldecke-renovieren-oder-erneuern",
     "da": "renovering-af-loft-med-traeplancetter",
     "de": "holzpaneeldecke-renovieren-oder-erneuern",
     "en": "renovating-a-wooden-slat-ceiling",
@@ -56,6 +60,7 @@
     "us": "renovating-a-wooden-slat-ceiling"
   },
   "kan-je-een-spanplafond-afwassen": {
+    "ch": "kann-man-eine-spanndecke-abwaschen",
     "da": "kan-man-vaske-et-straekloft",
     "de": "kann-man-eine-spanndecke-abwaschen",
     "en": "can-you-wash-a-stretch-ceiling",
@@ -70,6 +75,7 @@
     "us": "can-you-wash-a-stretch-ceiling"
   },
   "klimaat-plafond": {
+    "ch": "klimadecke-heizen-und-kuehlen",
     "da": "klimaloft-opvarmning-og-koeling",
     "de": "klimadecke-heizen-und-kuehlen",
     "en": "climate-ceiling-heating-and-cooling",
@@ -84,6 +90,7 @@
     "us": "climate-ceiling-heating-and-cooling"
   },
   "plafond-afwerken-na-isolatie": {
+    "ch": "decke-nach-der-daemmung-ausbauen",
     "da": "loftbeklaedning-efter-isolering",
     "de": "decke-nach-der-daemmung-ausbauen",
     "en": "finishing-a-ceiling-after-insulation",
@@ -98,6 +105,7 @@
     "us": "finishing-a-ceiling-after-insulation"
   },
   "plafond-renoveren-opties": {
+    "ch": "decke-renovieren-optionen-im-vergleich",
     "da": "renovering-af-loftet-fire-muligheder",
     "de": "decke-renovieren-optionen-im-vergleich",
     "en": "ceiling-renovation-options-compared",
@@ -112,6 +120,7 @@
     "us": "ceiling-renovation-options-compared"
   },
   "plafond-tendu-avantages-et-inconvenients": {
+    "ch": "spanndecke-vor-und-nachteile",
     "da": "straekloft-fordele-og-ulemper",
     "de": "spanndecke-vor-und-nachteile",
     "en": "stretch-ceiling-pros-and-cons",
@@ -125,6 +134,7 @@
     "us": "stretch-ceiling-pros-and-cons"
   },
   "scheuren-in-plafond-herstellen": {
+    "ch": "risse-in-der-decke-reparieren",
     "da": "reparation-af-revner-i-loftet",
     "de": "risse-in-der-decke-reparieren",
     "en": "how-to-repair-ceiling-cracks",
@@ -139,6 +149,7 @@
     "us": "how-to-repair-ceiling-cracks"
   },
   "schuin-dak": {
+    "ch": "dachschraege-ausbauen-schicht-fuer-schicht",
     "da": "skraatag-indvendig-beklaedning",
     "de": "dachschraege-ausbauen-schicht-fuer-schicht",
     "en": "finishing-a-sloped-roof-interior",
@@ -153,6 +164,7 @@
     "us": "finishing-a-sloped-roof-interior"
   },
   "spanplafond-buiten": {
+    "ch": "spanndecke-im-aussenbereich",
     "da": "straekloft-udendoers-terrasse",
     "de": "spanndecke-im-aussenbereich",
     "en": "outdoor-stretch-ceilings",
@@ -172,6 +184,7 @@
     "uk": "stretch-ceiling-grants-vat-belgium"
   },
   "spanplafond-prijs": {
+    "ch": "was-kostet-eine-spanndecke",
     "da": "hvad-koster-et-straekloft",
     "de": "was-kostet-eine-spanndecke",
     "en": "stretch-ceiling-cost-price-guide",
@@ -186,6 +199,7 @@
     "us": "stretch-ceiling-cost-price-guide"
   },
   "spanplafond-zelf-plaatsen": {
+    "ch": "spanndecke-selbst-montieren",
     "da": "monter-selv-dit-straekloft",
     "de": "spanndecke-selbst-montieren",
     "en": "diy-stretch-ceiling-installation",
@@ -200,6 +214,7 @@
     "us": "diy-stretch-ceiling-installation"
   },
   "sterrenhemel": {
+    "ch": "sternenhimmel-decke-so-funktioniert-sie",
     "da": "stjernehimmel-i-loftet",
     "de": "sternenhimmel-decke-so-funktioniert-sie",
     "en": "starry-sky-ceiling",
@@ -214,6 +229,7 @@
     "us": "starry-sky-ceiling"
   },
   "stretch-ceiling-acoustics-explained": {
+    "ch": "spanndecken-akustik-erklaert",
     "da": "akustik-i-straekloft-forklaret",
     "de": "spanndecken-akustik-erklaert",
     "es": "acustica-del-techo-tensado-explicada",
@@ -225,6 +241,7 @@
     "sv": "spanntak-akustik-forklarat"
   },
   "what-is-a-stretch-ceiling": {
+    "ch": "was-ist-eine-spanndecke",
     "da": "hvad-er-et-straekloft",
     "de": "was-ist-eine-spanndecke",
     "es": "que-es-un-techo-tensado",

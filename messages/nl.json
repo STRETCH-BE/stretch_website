@@ -180,7 +180,9 @@
       "priceCalculator": "Prijs berekenen"
     },
     "dealers": "Dealernetwerk",
-    "worldwideHeading": "STRETCH wereldwijd"
+    "worldwideHeading": "STRETCH wereldwijd",
+    "swissPartnerHeading": "Algemeen vertegenwoordiger — Zwitserland & Liechtenstein",
+    "manufacturerHeading": "Fabrikant — België"
   },
   "portal": {
     "login": {
@@ -2250,7 +2252,8 @@
           "placeholder": "Plafondtypes, beschikbare tekeningen, timing…"
         }
       }
-    }
+    },
+    "swissPartnerNote": "Uw aanvraag gaat naar QuinLay AG, Rickenbach LU, de algemeen vertegenwoordiger van STRETCH voor Zwitserland en Liechtenstein, met STRETCH in kopie. QuinLay AG belt u terug."
   },
   "faqPage": {
     "items": [
@@ -4917,6 +4920,11 @@
         "title": "Alleen materialen kopen?",
         "body": "Een leveringsaccount is geen partnerschap: bestel materialen en confectie op maat aan uw installateurstarief, zonder verplichtingen.",
         "cta": "Levering voor installateurs"
+      },
+      "quinlayCard": {
+        "title": "Zwitserland & Liechtenstein: QuinLay AG",
+        "body": "Onze algemeen vertegenwoordiger voor Zwitserland en Liechtenstein: showroom en opleidingslokaal in Rickenbach LU, materialen uit Zwitserse voorraad, plaatsingspartners in het hele land.",
+        "cta": "Bezoek quinlay.ch"
       }
     },
     "how": {
@@ -5030,7 +5038,10 @@
       "title": "Reserveer uw plaats",
       "lead": "Kleine groepen, wie eerst boekt, eerst plaats. Sessies op locatie mogelijk op aanvraag.",
       "onRequestTitle": "Op aanvraag",
-      "onRequestNote": "Sessie op locatie op maat"
+      "onRequestNote": "Sessie op locatie op maat",
+      "externalCta": "Data & boeking op quinlay.ch",
+      "swissRoom": "De opleidingen vinden plaats in het eigen opleidings- en testlokaal van QuinLay AG in Rickenbach LU.",
+      "secondaryCta": "Vragen over de opleiding? Neem contact op"
     },
     "book": {
       "eyebrow": "Plan uw opleiding",
@@ -5142,7 +5153,15 @@
     "hours": "ma–vr · 08:30–17:00",
     "directTitle": "Geen lokale dealer nodig.",
     "directBody": "STRETCH levert en plaatst rechtstreeks vanuit onze eigen productie terwijl het lokale netwerk groeit — één team, één aanspreekpunt voor de garantie.",
-    "directCta": "Vraag een gratis offerte"
+    "directCta": "Vraag een gratis offerte",
+    "swissPartnerKicker": "Zwitserland & Liechtenstein",
+    "swissPartnerTitle": "Uw aanspreekpunt in Zwitserland en Liechtenstein: QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG is de algemeen vertegenwoordiger van STRETCH voor Zwitserland en Liechtenstein: showroom en opleidingslokaal in Rickenbach LU, materialen uit Zwitserse voorraad, plaatsing door opgeleide partners. Elke aanvraag uit Zwitserland wordt beantwoord door QuinLay AG, met STRETCH in kopie.",
+    "swissCallback": "QuinLay AG belt u terug",
+    "impressumHeading": "Juridische informatie — Zwitserland & Liechtenstein",
+    "impressumManufacturer": "Fabrikant",
+    "impressumSwissParty": "Contractpartij voor Zwitserland en Liechtenstein",
+    "impressumNote": "Offertes, leveringen en facturen voor Zwitserland en Liechtenstein verlopen via QuinLay AG."
   },
   "datasheetsPage": {
     "eyebrow": "Technische fiches",
@@ -5439,7 +5458,19 @@
     "factoryBody": "Hier produceert de groep in Polen: Alto Design Sp. z o.o. snijdt en last pvc-membranen op maat, geeft de Poolstalige installateursopleiding en bouwt het STRETCH-netwerk voor Polen uit — een fabriek met naam en locatie, geen handelsadres.",
     "factoryTraining": "Installateursopleiding in Częstochowa",
     "factoryCta": "Bezoek altodesign.pl",
-    "why1Pl": "Geproduceerd in de EU — elk plafond wordt op maat gelast in onze eigen fabrieken in Częstochowa en Beveren-Waas en komt installatieklaar aan."
+    "why1Pl": "Geproduceerd in de EU — elk plafond wordt op maat gelast in onze eigen fabrieken in Częstochowa en Beveren-Waas en komt installatieklaar aan.",
+    "regionSwitzerland": "Zwitserland & Liechtenstein",
+    "liechtenstein": "Liechtenstein",
+    "driveTime": "Ongeveer {minutes} min van de showroom in Rickenbach LU",
+    "contactHeading": "Uw aanspreekpunt voor Zwitserland en Liechtenstein",
+    "generalAgent": "Algemeen vertegenwoordiger van STRETCH voor Zwitserland & Liechtenstein",
+    "showroomLabel": "Showroom & opleidingslokaal",
+    "showroomCta": "Plan een showroomafspraak",
+    "servicesHeading": "Diensten",
+    "serviceConsulting": "Advies en showroom",
+    "serviceInstallation": "Plaatsing door opgeleide partners",
+    "serviceTraining": "Installateursopleiding in eigen opleidingslokaal",
+    "serviceStock": "Materialen uit Zwitserse voorraad"
   },
   "datasheetEmail": {
     "subject": "Uw STRETCH-datasheet — {title}",

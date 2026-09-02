@@ -6,7 +6,7 @@
 import { siteUrl, brand, contact, offices, salesTerritory, social } from '@/lib/site-config';
 import { locales, localeFullCodes, originForLocale, type Locale } from '@/i18n/config';
 import { indicativePriceRange } from '@/lib/indicative-prices';
-import { settlementCurrencyFor } from '@/lib/currency';
+import { settlementCurrencyFor, pricesPublished } from '@/lib/currency';
 import type { Product, Faq } from '@/lib/products';
 import { blogHref, type BlogPost } from '@/lib/content';
 import { localeBase } from '@/lib/seo';
@@ -55,7 +55,7 @@ export function organizationSchema() {
 }
 
 /**
- * Per-origin WebSite node: each of the 12 domains declares ITS OWN website
+ * Per-origin WebSite node: each of the 15 domains declares ITS OWN website
  * (own @id/url, its single language, its translated description) — Bing was
  * seeing every domain claim stretch.mt as its website. The publisher still
  * points at the ONE global Organization @id, so the company entity stays
@@ -97,6 +97,9 @@ export function productSchema(product: Product, locale: Locale): Record<string, 
   // The offer is priced in the locale's SETTLEMENT currency: EUR everywhere,
   // PLN on stretch-sufit.pl (its own published PLN buckets — never a
   // conversion). Display-only indications (DKK, SEK, …) never reach the markup.
+  // No public prices on this locale (Switzerland) → no Product markup at all:
+  // an offer-less Product is a Search Console error, an invented price worse.
+  if (!pricesPublished(locale)) return null;
   const currency = settlementCurrencyFor(locale);
   const range = indicativePriceRange(product.slug, currency);
   if (!range) return null;
@@ -134,7 +137,7 @@ export function productSchema(product: Product, locale: Locale): Record<string, 
       highPrice: range.high,
       // Documents that the figures are per m² installed (MTK = square metre),
       // matching the published guide. unitCode only — a unitText string would
-      // be untranslated English on 11 of the 12 locales.
+      // be untranslated English on 14 of the 15 locales.
       priceSpecification: {
         '@type': 'UnitPriceSpecification',
         priceCurrency: currency,

@@ -1,3 +1,138 @@
+## 2026-09-02 (26) — Switzerland Part 1: stretchdecken.ch (de-CH) with QuinLay AG
+
+Fifteenth locale **`ch`** (Swiss Standard German, `de-CH`) on
+**stretchdecken.ch**, with **QuinLay AG, Rickenbach LU** as the general
+representative for Switzerland & Liechtenstein: every Swiss lead is theirs,
+every Swiss page names them, and the public Swiss site shows **no product
+prices** — the only CHF figures are QuinLay's two public course prices.
+Build: **2523 → 2871** static pages (182 routes on the ch locale + 12 Swiss
+dealer places × 13 other dealer markets = 156; the remaining 10 are the
+per-locale non-page entries Next counts alongside), typecheck clean,
+0 MISSING_MESSAGE, key parity across **15** message files. `localeStatus.ch` ships as **`pending`** (the
+domain is not on Vercel yet): the ch pages render, but de-CH is not
+advertised in hreflang/sitemaps until the flag flips to `live` — see the
+go-live list at the end.
+
+- **Locale & routing.** `src/i18n/config.ts`: `'ch'` after `'de'` in
+  `locales`, domain `stretchdecken.ch` (overridable with
+  `NEXT_PUBLIC_DOMAIN_CH`), flag 🇨🇭, `localeFullCodes.ch = 'de-CH'`, name
+  "Deutsch (Schweiz)", and a new `hreflangAliases = { 'de-AT': 'de' }`:
+  `buildAlternates()` (`src/lib/seo.ts`) and the sitemap emit **de-CH → .ch,
+  de-DE → .de, de-AT → the same URL as de-DE**, x-default en. Robots and
+  the sitemap are host-aware already (derived from the domain map). Locale
+  hard-codes extended in `GoogleAnalytics.tsx` / `Clarity.tsx`
+  (`NEXT_PUBLIC_GA_ID_CH`, `NEXT_PUBLIC_CLARITY_ID_CH`), `turnstile.ts`
+  (stretchdecken.ch in widget group B), `next.config.mjs` (image
+  remotePattern), `portal/host.ts` (CH and LI → ch), `forms-config.ts`
+  (default country CH), `blog-slugs.json` (ch = the German slugs). Locale
+  COUNT comments updated in `fonts.ts`, `sitemap.xml/route.ts`,
+  `localize-content.ts`, `site-config.ts`, `structured-data.ts`,
+  `.env.example`.
+- **Redirects** (`redirects.mjs`): stretchdecken.ch gets the same blog-slug
+  and legacy rules as every domain; **stretchdecken.li → 301 → .ch** with the
+  root landing on `/dealers/vaduz` (Liechtenstein page), plus
+  stretchgroup.ch / stretchgroup.li (and www) as a safety net. The
+  stretchdecken.at → .de redirect is a Vercel domain-level rule and is
+  untouched.
+- **Messages.** `messages/ch.json` is generated from `de.json` by
+  **`scripts/ch-overlay.mjs`** (idempotent: `--check` fails when stale,
+  `--report` lists every touched key). Values only, keys/slugs/ICU
+  placeholders untouched: **ß → ss** in 310 strings; vocabulary in 64
+  (Angebot → Offerte with the article/adjective chain re-gendered —
+  "eine kostenlose, unverbindliche Offerte", "einer Offerte", "die
+  verbindliche Offerte"; Angebote → Offerten, Angebots… → Offerten…,
+  Kostenvoranschlag → Offerte, Bundesland → Kanton; "Angebot" in the
+  product-range sense stays); **"inkl./zzgl. MwSt." → "… 8.1 % MwSt."** in
+  12 strings that already mention VAT; **€/EUR → CHF in 7 non-price
+  strings** (`meta.architectsDescription`, `meta.supplyDescription`,
+  `modals.kit_order.subtitle`, `modals.kit_order.sentMsg`,
+  `modals.projects_export.subtitle`, `supplyPage.currencyLine`,
+  `projectsExportPage.how.currencyLine`); 34 strings that quote product
+  prices or describe EUR settlement are left as they are and never render
+  on ch; 44 Swiss overrides (hero subline "Hersteller aus Belgien und
+  Polen – Generalvertretung Schweiz & Liechtenstein: QuinLay AG, Showroom
+  Rickenbach LU.", dealer copy, contact/Impressum/footer/modal strings,
+  training copy). **29 new keys** (`dealersPage.regionSwitzerland`,
+  `driveTime`, `generalAgent`, `showroomCta`, service labels,
+  `contactPage.swissPartner*` / `impressum*`, `modals.swissPartnerNote`,
+  `footer.swissPartnerHeading` / `manufacturerHeading`,
+  `partnersPage.why.quinlayCard.*`, `trainingPage.dates.externalCta` /
+  `swissRoom` / `secondaryCta`) added to all 15 files — so `de.json`
+  changed by exactly those 29 additions and nothing else. Checks: 0 "ß" in
+  ch.json values, "€" only in the 34 listed strings, no ASCII apostrophe
+  in any ICU string, `grep -c '"regionSwitzerland"' messages/*.json` = 15 × 1.
+- **No product prices on ch.** `pricesPublished(locale)` in
+  `src/lib/currency.ts` (false for ch) gates: `/price-calculator` (404,
+  out of the sitemap, mega menu, footer, mobile menu and every "what does
+  this cost" link on solution, prefab, blog and dealer pages), the four
+  articles that quote €/m² (`hidePrices` in `content.ts`), the Product
+  `AggregateOffer` JSON-LD, the `/kit` price and currency note. The ch
+  policy in `currency.ts` is CHF/indication — dormant while the gate holds.
+- **Dealers** (`src/lib/dealers.ts`): region `switzerland`, dealer
+  **QuinLay AG** with a `contact` block (Stierenberg Park 1A, 6221
+  Rickenbach, +41 41 313 47 32 shown as "041 313 47 32", tel:+41413134732,
+  office@quinlay.ch, https://www.quinlay.ch, showroom + training room,
+  four service chips), and **12 places** — luzern, zug, zuerich, aargau,
+  bern, basel, solothurn, winterthur, st-gallen, thurgau, graubuenden,
+  **vaduz** (`country: 'LI'` → "Spanndecke Vaduz / Liechtenstein") — each
+  with a drive time from the showroom. Real dealer pages on every dealer
+  market: title "Spanndecke {Ort} – Beratung, Showroom & Montage | STRETCH ×
+  QuinLay AG", QuinLay contact block with showroom CTA, identity card naming
+  QuinLay (not the Belgian office), LocalBusiness JSON-LD for the dealer,
+  lead form source `dealers_<place>`.
+- **Lead routing** (`src/lib/deliver.ts`): `leadRecipients(payload, host)`
+  — ch host or a Swiss source (`dealers_<swiss place>`, `training_ch`,
+  `price_guide_ch`, derived from `swissPlaceSlugs`) → deliver to
+  **`QUINLAY_LEAD_EMAIL`** (default office@quinlay.ch) with the existing
+  destination in **CC**, and `market: 'CH'` stored in the lead payload (no
+  migration — the leads table keeps it in `payload`). Graph
+  (`ccRecipients`), webhook (`cc`), SMTP (`cc`) and the log line all carry
+  the CC. `/api/lead` and `/api/contact` pass the request host. Honeypot,
+  rate limits, Turnstile, form token and sanitisation unchanged; PII still
+  never logged. Verified locally (no delivery method configured → log
+  path): `dealers_luzern` on the .de host, `quote` and `training_ch` on the
+  .ch host → `office@quinlay.ch (cc leads@stretchgroup.be)`; a `quote` on
+  the .de host → `leads@stretchgroup.be` only.
+- **Chrome & pages.** `localContactFor(locale)` (`src/lib/local-contact.ts`)
+  puts QuinLay's phone and e-mail in the header, mobile menu, CTA band,
+  footer and contact cards on ch; the footer adds a "Generalvertretung
+  Schweiz & Liechtenstein" block (QuinLay address) and a "Hersteller –
+  Belgien" line (Stretch Productions BV, Beveren-Waas). Contact page: Swiss
+  partner section + a minimal **Impressum** naming both the manufacturer
+  and QuinLay AG as the contracting party for CH & FL. Lead modal: one-line
+  note that the enquiry goes to QuinLay AG with STRETCH in copy. Partners
+  page: QuinLay card with logo slot `/images/partners/quinlay.png` (file to
+  be supplied). Installer training on ch: `trainingSessionsFor(locale)`
+  (`forms-config.ts`) swaps the Belgian dates for two QuinLay cards —
+  **Tageskurs Basic – CHF 1 050 exkl. MwSt.** and **Tageskurs Advanced –
+  CHF 750 exkl. MwSt.** — linking to quinlay.ch (`rel="noopener"`), a
+  secondary modal CTA with source `training_ch`, no Belgian dates, no
+  Event JSON-LD; the hero reads "als Tageskurs" with QuinLay's format band
+  (1 day per course · Rickenbach LU · Basic & Advanced), the HQ "included"
+  list (certificate, starter kit, lunch) is not shown for partner-run
+  courses, and the booking form — inline and modal (`InlineLeadForm`,
+  `LeadGenModal`) — offers the two QuinLay courses instead of the
+  Beveren-Waas dates on a partner-run locale. All 13 phone placeholders on
+  ch read "+41 ..." (overlay rule). Home hero subline names QuinLay.
+- **Verified** on `next start` with Host headers and Playwright (Chromium,
+  consent pre-seeded): `/dealers/zuerich`, `/dealers/vaduz`,
+  `/installer-training`, `/contact`, `/partners`, `/kit` and `/` on
+  stretchdecken.ch render the Swiss content with `lang="de-CH"`, no "ß" and
+  no "€" in the visible markup; `/price-calculator` 404s on ch and still
+  200s on de; the ch sitemap lists only .ch URLs (no calculator); hreflang
+  on a ch page lists de-CH (.ch) and de-DE (.de) with de-AT on the de-DE
+  URL and no duplicate URL (checked with `localeStatus.ch` temporarily
+  `live`); the .li and stretchgroup redirects 308 to .ch.
+- **Go-live (Michael, one-time).** Add stretchdecken.ch (and
+  stretchdecken.li, stretchgroup.ch/.li as redirect domains) to the Vercel
+  project + DNS; Vercel env: `QUINLAY_LEAD_EMAIL=office@quinlay.ch`,
+  `NEXT_PUBLIC_GA_ID_CH`, `NEXT_PUBLIC_CLARITY_ID_CH` (optional:
+  `NEXT_PUBLIC_DOMAIN_CH`); add stretchdecken.ch to Turnstile widget group
+  B; drop the QuinLay logo at `public/images/partners/quinlay.png`; then
+  flip `localeStatus.ch` to `'live'` in `src/i18n/config.ts` (one line —
+  hreflang, sitemap and the language switcher follow). Part 2 (Swiss CHF
+  price guide agreed with QuinLay, fr-CH) only after Part 1 is live.
+
 ## 2026-09-02 (25) — Fix round 3: market localisation (per-market audit, D1–D5)
 
 The 2 Sep 2026 per-market audit found the network *engineered* as twelve

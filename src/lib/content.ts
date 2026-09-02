@@ -6,6 +6,7 @@
 // ============================================================================
 import type { Locale } from '@/i18n/config';
 import { blogSlugMap, marketOnlyBlogSlugs } from '@/lib/blog-slugs';
+import { pricesPublished } from '@/lib/currency';
 
 export type Project = {
   key: string;
@@ -678,6 +679,12 @@ export type BlogPost = {
   calculatorCta?: boolean;
   /** Render the per-market currency note for the published EUR ranges (T2). */
   priceGuide?: boolean;
+  /**
+   * The body quotes product prices (€/m² ranges). Hidden on locales where
+   * public prices are not published (pricesPublished() in currency.ts —
+   * Switzerland since 2 Sep 2026). Absent = the post carries no prices.
+   */
+  hidePrices?: boolean;
   /** Body as an ordered list of sections. */
   body: BlogSection[];
 };
@@ -1209,6 +1216,7 @@ export const blogPosts: BlogPost[] = [
     // The public price guide: currency note per market (T2) + calculator card (T6).
     priceGuide: true,
     calculatorCta: true,
+    hidePrices: true,
     title: 'What does a stretch ceiling cost? An honest price guide',
     excerpt:
       'Stretch ceiling prices range from roughly €70 to €200 per m² installed, depending on the type and the room. Here is what sits behind that spread, indicative ranges per ceiling type, and how to get a firm number for your project.',
@@ -1307,6 +1315,7 @@ export const blogPosts: BlogPost[] = [
     // as the planchetten article on .be. Prices mirror the published
     // price-guide article (€70–200/m²) — indicative only, never a quote.
     slug: 'plafond-tendu-avantages-et-inconvenients',
+    hidePrices: true, // quotes €/m² figures
     title: 'Stretch ceilings: the advantages and disadvantages, honestly (2026 price guide)',
     excerpt:
       'A stretch ceiling gives you a seamless new ceiling in a day — but it is not the right answer for every room or budget. The real advantages, the honest disadvantages, and 2026 price ranges.',
@@ -1470,6 +1479,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'plafond-afwerken-na-isolatie',
+    hidePrices: true, // quotes €/m² figures
     title: 'Finishing a ceiling after insulation: plasterboard or stretch ceiling?',
     excerpt:
       'After roof, attic-floor or interior wall insulation you need a new ceiling or wall. Plaster, plasterboard or a stretch ceiling: here are the differences in time, dust, access to the insulation and VAT — and how to keep the grant for the insulation safe.',
@@ -1551,6 +1561,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'plafond-renoveren-opties',
+    hidePrices: true, // quotes €/m² figures
     title: 'Renovating a ceiling: the four options compared (2026)',
     excerpt:
       'Re-plaster, plasterboard, timber slats or a stretch ceiling? What each option costs per m², how long the job takes, how much dust you accept and what the VAT rate does — so you choose on the basis of your ceiling, not out of habit.',
@@ -3046,7 +3057,8 @@ export const blogSlugs = blogPosts.map((p) => p.slug);
 /** Posts visible on a locale — a post with `markets` exists ONLY there. The
  *  single source of the market rule: every place that lists posts uses this. */
 export function blogPostsFor(locale: Locale): BlogPost[] {
-  return blogPosts.filter((p) => !p.markets || p.markets.includes(locale));
+  const prices = pricesPublished(locale);
+  return blogPosts.filter((p) => (!p.markets || p.markets.includes(locale)) && (prices || !p.hidePrices));
 }
 
 /** The slug a post uses on a locale (its own, else the canonical one). */

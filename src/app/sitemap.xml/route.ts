@@ -1,6 +1,6 @@
 // ============================================================================
 // HOST-AWARE SITEMAP — /sitemap.xml
-// One Vercel deployment serves 12 domains (one locale each). Each domain must
+// One Vercel deployment serves 15 domains (one locale each). Each domain must
 // expose a sitemap containing ONLY its own URLs, with xhtml:link hreflang
 // alternates pointing at the sibling domains (Google's recommended pattern
 // for multi-domain international sites). A static app/sitemap.ts can't read
@@ -13,6 +13,7 @@ import {
   localeFullCodes,
   localeForHost,
   originForLocale,
+  hreflangAliases,
   type Locale,
 } from '@/i18n/config';
 import { staticRoutes, staticRouteDates } from '@/lib/site-config';
@@ -20,6 +21,7 @@ import { productSlugs, productsUpdatedAt } from '@/lib/products';
 import { applicationSlugs, applicationsUpdatedAt } from '@/lib/applications';
 import { blogPostsFor, blogHref, blogPostForSlug, projectSlugs, projectsUpdatedAt } from '@/lib/content';
 import { dealerPlaceSlugs, isDealerMarket, dealersUpdatedAt } from '@/lib/dealers';
+import { pricesPublished } from '@/lib/currency';
 import { techMembranes, techTopicKeys, technicalUpdatedAt } from '@/lib/technical';
 import { materialGroupSlugs, materialsUpdatedAt } from '@/lib/materials';
 
@@ -49,9 +51,11 @@ function collectRoutes(locale: Locale): string[] {
   );
   const projectRoutes = projectSlugs.map((s) => `/inspiration/${s}`);
   const materialRoutes = materialGroupSlugs.map((s) => `/materials/${s}`);
-  const statics = isDealerMarket(locale)
+  const statics = (isDealerMarket(locale)
     ? [...staticRoutes]
-    : staticRoutes.filter((r) => r !== '/dealers' && r !== '/installer-training');
+    : staticRoutes.filter((r) => r !== '/dealers' && r !== '/installer-training'))
+    // No public prices on this locale → no calculator page (pricesPublished).
+    .filter((r) => r !== '/price-calculator' || pricesPublished(locale));
   return [
     ...statics,
     ...productRoutes,
@@ -114,6 +118,7 @@ function localesForRoute(route: string, locale: Locale): readonly Locale[] {
   if (route === '/dealers' || route.startsWith('/dealers/') || route === '/installer-training') {
     return liveLocales.filter(isDealerMarket);
   }
+  if (route === '/price-calculator') return liveLocales.filter(pricesPublished);
   return liveLocales;
 }
 
@@ -142,6 +147,12 @@ export function GET(request: Request) {
         .map(
           (l) =>
             `    <xhtml:link rel="alternate" hreflang="${localeFullCodes[l] ?? l}" href="${esc(urlFor(l, routeOn(l)))}"/>`,
+        )
+        // de-AT → the de-DE URL (see hreflangAliases in config).
+        .concat(
+          Object.entries(hreflangAliases)
+            .filter(([, l]) => routeLocales.includes(l))
+            .map(([tag, l]) => `    <xhtml:link rel="alternate" hreflang="${tag}" href="${esc(urlFor(l, routeOn(l)))}"/>`),
         )
         .concat(
           `    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(urlFor(xDefault, routeOn(xDefault)))}"/>`,

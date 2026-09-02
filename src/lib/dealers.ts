@@ -28,6 +28,21 @@ export type Dealer = {
   name: string;
   /** Dealer link exactly as supplied (may point to a subpage). */
   url: string;
+  /** Full contact block — rendered on the place page when present (general
+   *  representatives such as QuinLay AG; the Benelux dealers link out only). */
+  contact?: {
+    addressLines: string[];
+    /** E.164 for the tel: link. */
+    phone: string;
+    /** Local display form ("041 313 47 32"). */
+    phoneDisplay: string;
+    email: string;
+    showroom?: boolean;
+    /** Message keys under dealersPage.* naming the services offered. */
+    serviceKeys?: string[];
+    /** Message key under dealersPage.* for the role line (e.g. generalAgent). */
+    roleKey?: string;
+  };
 };
 
 export type PlaceKind = 'city' | 'province';
@@ -39,7 +54,8 @@ export type DealerRegion =
   | 'austria'
   | 'germany'
   | 'poland'
-  | 'france';
+  | 'france'
+  | 'switzerland';
 
 /**
  * Which company entity a place page speaks for (per-market audit, T5/T7):
@@ -58,7 +74,7 @@ export type DealerPlace = {
   kind: PlaceKind;
   region: DealerRegion;
   /** Locale whose search market this page primarily targets. */
-  primaryLocale: 'be' | 'fr' | 'nl' | 'de' | 'pl';
+  primaryLocale: 'be' | 'fr' | 'nl' | 'de' | 'pl' | 'ch';
   /** Parent province slug (cities only). */
   province?: string;
   dealerIds: string[];
@@ -66,6 +82,11 @@ export type DealerPlace = {
   projects?: string[];
   /** The place hosts one of the group's own plants — renders the factory block. */
   factory?: boolean;
+  /** ISO country when it differs from the region's main country (Vaduz → LI):
+   *  the page copy names the country and the H1 reads "Vaduz / Liechtenstein". */
+  country?: 'LI';
+  /** Approximate drive time from the dealer's showroom (Swiss pages). */
+  driveMinutes?: number;
 };
 
 export const dealers: Dealer[] = [
@@ -80,6 +101,23 @@ export const dealers: Dealer[] = [
   { id: 'dsc', name: 'De Spanplafond Concurrent', url: 'https://www.despanplafondconcurrent.nl/' },
   { id: 'spannende', name: 'Spannende Plafonds', url: 'https://spannendeplafonds.nl/' },
   { id: 'maas', name: 'Maas Afbouw', url: 'https://maasafbouw.nl/' },
+  // Generalvertretung STRETCH Schweiz & Liechtenstein (2 Sep 2026): showroom,
+  // own training room and warehouse in Switzerland. Official contact data —
+  // use exactly this everywhere (also src/lib/site-config.ts swissPartner).
+  {
+    id: 'quinlay',
+    name: 'QuinLay AG',
+    url: 'https://www.quinlay.ch',
+    contact: {
+      addressLines: ['Stierenberg Park 1A', '6221 Rickenbach'],
+      phone: '+41413134732',
+      phoneDisplay: '041 313 47 32',
+      email: 'office@quinlay.ch',
+      showroom: true,
+      serviceKeys: ['serviceConsulting', 'serviceInstallation', 'serviceTraining', 'serviceStock'],
+      roleKey: 'generalAgent',
+    },
+  },
 ];
 
 export const dealerPlaces: DealerPlace[] = [
@@ -191,7 +229,30 @@ export const dealerPlaces: DealerPlace[] = [
   { slug: 'toulouse', name: 'Toulouse', kind: 'city', region: 'france', primaryLocale: 'fr', dealerIds: [] },
   { slug: 'nantes', name: 'Nantes', kind: 'city', region: 'france', primaryLocale: 'fr', dealerIds: [] },
   { slug: 'strasbourg', name: 'Strasbourg', kind: 'city', region: 'france', primaryLocale: 'fr', dealerIds: [] },
+
+  // ------------------------------------------ Switzerland & Liechtenstein
+  // REAL dealer pages (QuinLay AG serves every one of them), not the
+  // recruitment variant. Cantons without a namesake city are 'province'
+  // entries; drive times are approximate, from the Rickenbach showroom.
+  { slug: 'luzern', name: 'Luzern', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 15 },
+  { slug: 'zug', name: 'Zug', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 25 },
+  { slug: 'zuerich', name: 'Zürich', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 50 },
+  { slug: 'aargau', name: 'Aargau', kind: 'province', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 45 },
+  { slug: 'bern', name: 'Bern', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 75 },
+  { slug: 'basel', name: 'Basel', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 80 },
+  { slug: 'solothurn', name: 'Solothurn', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 60 },
+  { slug: 'winterthur', name: 'Winterthur', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 65 },
+  { slug: 'st-gallen', name: 'St. Gallen', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 100 },
+  { slug: 'thurgau', name: 'Thurgau', kind: 'province', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 85 },
+  { slug: 'graubuenden', name: 'Graubünden', kind: 'province', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 110 },
+  { slug: 'vaduz', name: 'Vaduz', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], country: 'LI', driveMinutes: 105 },
 ];
+
+/** Slugs of the Swiss/Liechtenstein places — lead sources `dealers_<slug>`
+ *  route to QuinLay AG (src/lib/deliver.ts). Derived, never hard-coded. */
+export const swissPlaceSlugs: readonly string[] = dealerPlaces
+  .filter((p) => p.region === 'switzerland')
+  .map((p) => p.slug);
 
 // ---------------------------------------------------------------------------
 // REGIONS — display order + the message key of each label (dealersPage.*).
@@ -207,10 +268,11 @@ export const regionLabelKeys: Record<DealerRegion, string> = {
   germany: 'regionGermany',
   poland: 'regionPoland',
   france: 'regionFrance',
+  switzerland: 'regionSwitzerland',
 };
 
 const defaultRegionOrder: readonly DealerRegion[] = [
-  'flanders', 'wallonia', 'netherlands', 'luxembourg', 'austria', 'germany', 'poland', 'france',
+  'flanders', 'wallonia', 'netherlands', 'luxembourg', 'austria', 'germany', 'poland', 'france', 'switzerland',
 ];
 
 const homeRegions: Partial<Record<Locale, readonly DealerRegion[]>> = {
@@ -219,6 +281,7 @@ const homeRegions: Partial<Record<Locale, readonly DealerRegion[]>> = {
   fr: ['wallonia', 'luxembourg', 'france'],
   de: ['germany', 'austria'],
   pl: ['poland'],
+  ch: ['switzerland'],
 };
 
 /** Regions in the order the /dealers overview shows them on a locale. */
@@ -258,7 +321,7 @@ export const dealerMarkets: readonly Locale[] = locales.filter(
 export const isDealerMarket = (l: Locale): boolean => dealerMarkets.includes(l);
 
 /** Sitemap <lastmod> for /dealers/[place] — bump when places/dealers change (F12). */
-export const dealersUpdatedAt = '2026-09-02'; // DE/PL/FR places + Belgian identity block
+export const dealersUpdatedAt = '2026-09-02'; // DE/PL/FR places, Belgian identity block, Swiss QuinLay pages
 export const dealerPlaceSlugs = dealerPlaces.map((p) => p.slug);
 export const getDealerPlace = (slug: string): DealerPlace | undefined =>
   dealerPlaces.find((p) => p.slug === slug);

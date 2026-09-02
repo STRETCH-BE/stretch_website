@@ -180,7 +180,9 @@
       "priceCalculator": "Calcular precio"
     },
     "dealers": "Red de distribuidores",
-    "worldwideHeading": "STRETCH en el mundo"
+    "worldwideHeading": "STRETCH en el mundo",
+    "swissPartnerHeading": "Representante general — Suiza y Liechtenstein",
+    "manufacturerHeading": "Fabricante — Bélgica"
   },
   "portal": {
     "login": {
@@ -2250,7 +2252,8 @@
           "placeholder": "Tipos de techo, planos disponibles, plazos…"
         }
       }
-    }
+    },
+    "swissPartnerNote": "Su solicitud se envía a QuinLay AG, Rickenbach LU, representante general de STRETCH para Suiza y Liechtenstein, con STRETCH en copia. QuinLay AG le devolverá la llamada."
   },
   "faqPage": {
     "items": [
@@ -4901,6 +4904,11 @@
         "title": "¿Solo quiere comprar materiales?",
         "body": "Una cuenta de suministro no es una asociación: pida materiales y confección a medida a su tarifa de instalador, sin compromisos.",
         "cta": "Suministro a instaladores"
+      },
+      "quinlayCard": {
+        "title": "Suiza y Liechtenstein: QuinLay AG",
+        "body": "Nuestro representante general para Suiza y Liechtenstein: showroom y sala de formación en Rickenbach LU, materiales en stock en Suiza y socios instaladores en todo el país.",
+        "cta": "Visitar quinlay.ch"
       }
     },
     "how": {
@@ -5014,7 +5022,10 @@
       "title": "Reserva tu plaza",
       "lead": "Grupos reducidos, por orden de reserva. Sesiones a medida en tus instalaciones bajo petición.",
       "onRequestTitle": "Bajo petición",
-      "onRequestNote": "Sesión a medida in situ"
+      "onRequestNote": "Sesión a medida in situ",
+      "externalCta": "Fechas y reservas en quinlay.ch",
+      "swissRoom": "Los cursos se imparten en la sala de formación y pruebas propia de QuinLay AG en Rickenbach LU.",
+      "secondaryCta": "¿Preguntas sobre el curso? Póngase en contacto"
     },
     "book": {
       "eyebrow": "Planifica tu formación",
@@ -5126,7 +5137,15 @@
     "hours": "lun–vie · 08:30–17:00",
     "directTitle": "No necesita un distribuidor local.",
     "directBody": "STRETCH entrega e instala directamente desde su propia producción mientras se construye la red local — un solo equipo, una sola garantía.",
-    "directCta": "Solicite un presupuesto gratuito"
+    "directCta": "Solicite un presupuesto gratuito",
+    "swissPartnerKicker": "Suiza y Liechtenstein",
+    "swissPartnerTitle": "Su contacto en Suiza y Liechtenstein: QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG es el representante general de STRETCH para Suiza y Liechtenstein: showroom y sala de formación en Rickenbach LU, materiales en stock en Suiza e instalación a través de socios formados. Todas las solicitudes procedentes de Suiza las responde QuinLay AG, con STRETCH en copia.",
+    "swissCallback": "QuinLay AG le devolverá la llamada",
+    "impressumHeading": "Aviso legal — Suiza y Liechtenstein",
+    "impressumManufacturer": "Fabricante",
+    "impressumSwissParty": "Parte contratante para Suiza y Liechtenstein",
+    "impressumNote": "Los presupuestos, las entregas y las facturas para Suiza y Liechtenstein corren a cargo de QuinLay AG."
   },
   "datasheetsPage": {
     "eyebrow": "Fichas técnicas",
@@ -5423,7 +5442,19 @@
     "factoryBody": "Aquí es donde el grupo produce en Polonia: Alto Design Sp. z o.o. corta y suelda a medida las membranas de PVC, imparte la formación de instaladores en polaco y construye la red STRETCH para Polonia — una fábrica con nombre y ubicación reales, no una simple dirección comercial.",
     "factoryTraining": "Formación de instaladores en Częstochowa",
     "factoryCta": "Visitar altodesign.pl",
-    "why1Pl": "Producido en la UE — cada techo se suelda a medida en nuestras propias fábricas de Częstochowa y Beveren-Waas y llega listo para instalar."
+    "why1Pl": "Producido en la UE — cada techo se suelda a medida en nuestras propias fábricas de Częstochowa y Beveren-Waas y llega listo para instalar.",
+    "regionSwitzerland": "Suiza y Liechtenstein",
+    "liechtenstein": "Liechtenstein",
+    "driveTime": "A unos {minutes} min del showroom de Rickenbach LU",
+    "contactHeading": "Su contacto para Suiza y Liechtenstein",
+    "generalAgent": "Representante general de STRETCH para Suiza y Liechtenstein",
+    "showroomLabel": "Showroom y sala de formación",
+    "showroomCta": "Reserve una cita en el showroom",
+    "servicesHeading": "Servicios",
+    "serviceConsulting": "Asesoramiento y showroom",
+    "serviceInstallation": "Instalación a través de socios formados",
+    "serviceTraining": "Formación de instaladores en su propia sala de formación",
+    "serviceStock": "Materiales en stock en Suiza"
   },
   "datasheetEmail": {
     "subject": "Su ficha técnica STRETCH — {title}",

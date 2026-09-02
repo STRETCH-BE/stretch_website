@@ -7,7 +7,7 @@
 // Primary origin — the default-locale (en / international) domain. Page URLs
 // are always built per-locale via localeBase() in src/lib/seo.ts; siteUrl is
 // only used for domain-stable identifiers (Organization @id, logo URL) so the
-// brand keeps ONE schema.org entity across all 12 domains.
+// brand keeps ONE schema.org entity across all 15 domains.
 export const siteUrl = (
   // stretch.mt = the en / x-default domain — the group's schema.org identity.
   process.env.NEXT_PUBLIC_SITE_URL || 'https://stretch.mt'
@@ -56,6 +56,25 @@ export const contact = {
     country: 'BE',
   },
   geo: { lat: 51.1953188, lng: 4.2239015 },
+} as const;
+
+// Generalvertretung STRETCH Schweiz & Liechtenstein (2 Sep 2026). Official
+// contact data — use exactly this everywhere on the ch locale; every Swiss
+// lead is delivered to swissPartner.email (QUINLAY_LEAD_EMAIL overrides) with
+// leadDestination in copy (src/lib/deliver.ts).
+export const swissPartner = {
+  name: 'QuinLay AG',
+  role: 'Generalvertretung STRETCH Schweiz & Liechtenstein',
+  street: 'Stierenberg Park 1A',
+  postalCode: '6221',
+  city: 'Rickenbach',
+  canton: 'LU',
+  country: 'CH',
+  phone: '+41413134732',
+  phoneDisplay: '041 313 47 32',
+  phoneHref: 'tel:+41413134732',
+  email: 'office@quinlay.ch',
+  url: 'https://www.quinlay.ch',
 } as const;
 
 export type Office = {

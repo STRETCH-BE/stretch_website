@@ -21,6 +21,7 @@ import JsonLd from '@/components/seo/JsonLd';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
 import PriceGuideCurrencyNote from '@/components/sections/PriceGuideCurrencyNote';
+import { pricesPublished } from '@/lib/currency';
 
 // Every (locale, slug) pair is enumerated below — market-restricted posts only
 // on their own locales, each at the locale's own slug. dynamicParams=false →
@@ -162,7 +163,7 @@ export default async function BlogPostPage({ params }: { params: { locale: strin
         </div>
 
         {/* Calculator card — price-led articles hand straight into the estimator (T6). */}
-        {base.calculatorCta && (
+        {base.calculatorCta && pricesPublished(locale) && (
           <div style={{ maxWidth: 760, margin: 'clamp(32px,4vw,48px) auto 0' }}>
             <Link href="/price-calculator" className="blog-calc" style={{ display: 'flex', alignItems: 'center', gap: 18, border: '1.5px solid var(--black)', background: '#fff', padding: 'clamp(18px,2.4vw,26px)', textDecoration: 'none', color: 'inherit' }}>
               <span style={{ display: 'inline-flex', width: 46, height: 46, background: 'var(--black)', color: '#fff', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>

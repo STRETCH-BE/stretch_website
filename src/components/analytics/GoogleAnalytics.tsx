@@ -21,6 +21,7 @@ const LOCALE_IDS: Record<string, string | undefined> = {
   fr: process.env.NEXT_PUBLIC_GA_ID_FR,
   pl: process.env.NEXT_PUBLIC_GA_ID_PL,
   de: process.env.NEXT_PUBLIC_GA_ID_DE,
+  ch: process.env.NEXT_PUBLIC_GA_ID_CH,
   es: process.env.NEXT_PUBLIC_GA_ID_ES,
   pt: process.env.NEXT_PUBLIC_GA_ID_PT,
   da: process.env.NEXT_PUBLIC_GA_ID_DA,

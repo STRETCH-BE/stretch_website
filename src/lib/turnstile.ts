@@ -52,6 +52,8 @@ export const TURNSTILE_HOSTS_B = [
   // Live since 30 Aug 2026 (F13) — was missing from both groups, so every US
   // lead failed the captcha. Add the hostname to widget B in Cloudflare too.
   'stretchceiling.us',
+  // stretchdecken.ch (de-CH, 2 Sep 2026) — add the hostname to widget B in Cloudflare too.
+  'stretchdecken.ch',
 ] as const;
 
 const ALL_HOSTS = new Set<string>([...TURNSTILE_HOSTS_A, ...TURNSTILE_HOSTS_B]);

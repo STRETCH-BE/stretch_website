@@ -5,7 +5,8 @@
 // Host-scoped: Vercel's domain-level 308s preserve paths, so legacy URLs from
 // stretch-ceilings.uk / stretchceiling.us land on stretch.mt (English rules)
 // and stretchdecken.at / stretchgroup.ch / stretchgroup.li land on
-// stretchdecken.de (German rules). Seven host groups cover sixteen domains.
+// stretchdecken.de (German rules); stretchdecken.ch is its own site since 2 Sep
+// 2026 (Swiss rules below). Host groups cover every domain the group owns.
 //
 // DECISION FLAG — set before deploy:
 //   Shop lives on  →  '/materials'                      (webshop retired)
@@ -460,6 +461,30 @@ const swedishRules = [...blogSlugRules('stretchceilings.se', 'sv'), ...genericRu
 const norwegianRules = [...blogSlugRules('stretchtak.no', 'no'), ...genericRules('stretchtak.no')];
 
 // ---------------------------------------------------------------------------
+// SWISS RULES — stretchdecken.ch (de-CH, QuinLay AG, 2 Sep 2026). The .ch host
+// used to be stretchgroup.ch redirecting to .de; the blog slugs are the German
+// ones, then the generic WP/Woo sweep.
+//   stretchdecken.li  → stretchdecken.ch (root → the Vaduz / Liechtenstein
+//                       place page, everything else path-preserving)
+//   stretchgroup.ch / stretchgroup.li → stretchdecken.ch — Michael points
+//                       them there at the registrar; these host rules are the
+//                       safety net should either host ever reach Vercel.
+// All absolute-destination 308s; the .at → .de redirect stays at Vercel level.
+// ---------------------------------------------------------------------------
+const swissRules = [...blogSlugRules('stretchdecken.ch', 'ch'), ...genericRules('stretchdecken.ch')];
+const CH_ORIGIN = 'https://stretchdecken.ch';
+const swissHostRedirects = [
+  R('stretchdecken.li', '/', `${CH_ORIGIN}/dealers/vaduz`),
+  R('stretchdecken.li', '/:path*', `${CH_ORIGIN}/:path*`),
+  R('www.stretchdecken.li', '/', `${CH_ORIGIN}/dealers/vaduz`),
+  R('www.stretchdecken.li', '/:path*', `${CH_ORIGIN}/:path*`),
+  R('stretchgroup.ch', '/:path*', `${CH_ORIGIN}/:path*`),
+  R('www.stretchgroup.ch', '/:path*', `${CH_ORIGIN}/:path*`),
+  R('stretchgroup.li', '/:path*', `${CH_ORIGIN}/:path*`),
+  R('www.stretchgroup.li', '/:path*', `${CH_ORIGIN}/:path*`),
+];
+
+// ---------------------------------------------------------------------------
 // LOCALE-PREFIX STRIPS — each domain 308s its own locale prefix to the clean
 // URL (/de/kit on stretchdecken.de → /kit). The next-intl middleware does
 // this too, but with a 307 Temporary — wrong signal for URLs that moved
@@ -476,6 +501,7 @@ const LOCALE_DOMAINS = [
   ['stretchplafond.fr', 'fr'],
   ['stretch-sufit.pl', 'pl'],
   ['stretchdecken.de', 'de'],
+  ['stretchdecken.ch', 'ch'],
   ['stretchtecho.es', 'es'],
   ['stretchteto.pt', 'pt'],
   ['straekloft.dk', 'da'],
@@ -505,6 +531,8 @@ export const legacyRedirects = [
   ...danishRules,
   ...swedishRules,
   ...norwegianRules,
+  ...swissRules,
+  ...swissHostRedirects,
 ];
 
 export default legacyRedirects;

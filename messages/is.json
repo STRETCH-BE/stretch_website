@@ -180,7 +180,9 @@
       "priceCalculator": "Reikna verð"
     },
     "dealers": "Söluaðilanet",
-    "worldwideHeading": "STRETCH um allan heim"
+    "worldwideHeading": "STRETCH um allan heim",
+    "swissPartnerHeading": "Aðalumboðsaðili — Sviss & Liechtenstein",
+    "manufacturerHeading": "Framleiðandi — Belgía"
   },
   "portal": {
     "login": {
@@ -2250,7 +2252,8 @@
           "placeholder": "Loftgerðir, fyrirliggjandi teikningar, tímalína…"
         }
       }
-    }
+    },
+    "swissPartnerNote": "Fyrirspurn þín fer til QuinLay AG, Rickenbach LU, aðalumboðsaðila STRETCH fyrir Sviss og Liechtenstein, með afriti til STRETCH. QuinLay AG hringir til baka."
   },
   "faqPage": {
     "items": [
@@ -4901,6 +4904,11 @@
         "title": "Viltu bara kaupa efni?",
         "body": "Aðfangareikningur er ekki samstarf: pantaðu efni og sérsniðna dúkavinnslu á þínu verðþrepi, án skuldbindinga.",
         "cta": "Aðföng uppsetningaraðila"
+      },
+      "quinlayCard": {
+        "title": "Sviss & Liechtenstein: QuinLay AG",
+        "body": "Aðalumboðsaðili okkar fyrir Sviss og Liechtenstein: sýningarsalur og kennslurými í Rickenbach LU, efni af lager í Sviss og uppsetningaraðilar um allt land.",
+        "cta": "Heimsækja quinlay.ch"
       }
     },
     "how": {
@@ -5014,7 +5022,10 @@
       "title": "Tryggðu þér sæti",
       "lead": "Litlir hópar, fyrstur kemur, fyrstur fær. Sérsniðin námskeið á þínum stað í boði sé þess óskað.",
       "onRequestTitle": "Eftir samkomulagi",
-      "onRequestNote": "Sérsniðið námskeið á staðnum"
+      "onRequestNote": "Sérsniðið námskeið á staðnum",
+      "externalCta": "Dagsetningar & skráning á quinlay.ch",
+      "swissRoom": "Námskeiðin fara fram í eigin kennslu- og prófunarrými QuinLay AG í Rickenbach LU.",
+      "secondaryCta": "Spurningar um námskeiðið? Hafðu samband"
     },
     "book": {
       "eyebrow": "Skipuleggðu þjálfunina",
@@ -5126,7 +5137,15 @@
     "hours": "mán–fös · 08:30–17:00",
     "directTitle": "Engin þörf á staðbundnum söluaðila.",
     "directBody": "STRETCH afhendir og setur upp beint frá eigin framleiðslu á meðan staðbundið net byggist upp — eitt teymi, ein ábyrgð.",
-    "directCta": "Fáðu ókeypis tilboð"
+    "directCta": "Fáðu ókeypis tilboð",
+    "swissPartnerKicker": "Sviss & Liechtenstein",
+    "swissPartnerTitle": "Tengiliður þinn í Sviss og Liechtenstein: QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG er aðalumboðsaðili STRETCH fyrir Sviss og Liechtenstein: sýningarsalur og kennslurými í Rickenbach LU, efni af lager í Sviss og uppsetning í gegnum þjálfaða samstarfsaðila. Öllum fyrirspurnum frá Sviss svarar QuinLay AG, með afriti til STRETCH.",
+    "swissCallback": "QuinLay AG hringir til baka",
+    "impressumHeading": "Lagalegar upplýsingar — Sviss & Liechtenstein",
+    "impressumManufacturer": "Framleiðandi",
+    "impressumSwissParty": "Samningsaðili fyrir Sviss og Liechtenstein",
+    "impressumNote": "Tilboð, afhending og reikningar fyrir Sviss og Liechtenstein eru í höndum QuinLay AG."
   },
   "datasheetsPage": {
     "eyebrow": "Tækniblöð",
@@ -5423,7 +5442,19 @@
     "factoryBody": "Hér framleiðir samstæðan í Póllandi: Alto Design Sp. z o.o. sníður og sýður PVC-dúka eftir máli, heldur uppsetningarnámskeið á pólsku og byggir upp STRETCH-netið fyrir Pólland — nafngreind verksmiðja sem hægt er að heimsækja, ekki bara skráð heimilisfang.",
     "factoryTraining": "Uppsetningarnámskeið í Częstochowa",
     "factoryCta": "Heimsækja altodesign.pl",
-    "why1Pl": "Framleitt í ESB — hvert loft er soðið eftir máli í okkar eigin verksmiðjum í Częstochowa og Beveren-Waas og kemur tilbúið til uppsetningar."
+    "why1Pl": "Framleitt í ESB — hvert loft er soðið eftir máli í okkar eigin verksmiðjum í Częstochowa og Beveren-Waas og kemur tilbúið til uppsetningar.",
+    "regionSwitzerland": "Sviss & Liechtenstein",
+    "liechtenstein": "Liechtenstein",
+    "driveTime": "Um {minutes} mín. frá sýningarsalnum í Rickenbach LU",
+    "contactHeading": "Tengiliður þinn fyrir Sviss og Liechtenstein",
+    "generalAgent": "Aðalumboðsaðili STRETCH fyrir Sviss & Liechtenstein",
+    "showroomLabel": "Sýningarsalur & kennslurými",
+    "showroomCta": "Bókaðu tíma í sýningarsalnum",
+    "servicesHeading": "Þjónusta",
+    "serviceConsulting": "Ráðgjöf og sýningarsalur",
+    "serviceInstallation": "Uppsetning í gegnum þjálfaða samstarfsaðila",
+    "serviceTraining": "Uppsetningarnámskeið í eigin kennslurými",
+    "serviceStock": "Efni af lager í Sviss"
   },
   "datasheetEmail": {
     "subject": "STRETCH-tækniblaðið þitt — {title}",

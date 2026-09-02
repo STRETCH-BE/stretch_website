@@ -19,6 +19,7 @@ import {
 import { useLocale, useTranslations } from 'next-intl';
 import type { Locale } from '@/i18n/config';
 import { localizeHref } from '@/lib/blog-slugs';
+import { pricesPublished } from '@/lib/currency';
 import { Link } from '@/i18n/navigation';
 import { ModalButton } from '@/components/ui/ModalButton';
 import PortalLink from '@/components/ui/PortalLink';
@@ -141,7 +142,12 @@ function buildCategories(skeleton: Skeleton, t: ReturnType<typeof useTranslation
     href: c.href,
     title: t(`cats.${i}.title`),
     desc: t(`cats.${i}.desc`),
-    items: c.items.map((item, j) => ({
+    // Render-time filter (never delete index-keyed items): the calculator
+    // only where public prices are published (not on stretchdecken.ch).
+    items: c.items
+      .map((item, j) => ({ item, j }))
+      .filter(({ item }) => item.href !== '/price-calculator' || pricesPublished(locale))
+      .map(({ item, j }) => ({
       // Blog links are written with the canonical slug → this locale's own slug.
       href: localizeHref(item.href, locale),
       soon: item.soon,

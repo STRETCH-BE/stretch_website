@@ -13,6 +13,7 @@ import {
   defaultLocale,
   localeFullCodes,
   originForLocale,
+  hreflangAliases,
   type Locale,
 } from '@/i18n/config';
 
@@ -67,6 +68,10 @@ export function buildAlternates(
   const languages: Record<string, string> = {};
   for (const l of subset) {
     languages[localeFullCodes[l] ?? l] = buildCanonical(l, pathFor(l));
+  }
+  // de-AT → the de-DE URL (stretchdecken.at redirects there) — see config.
+  for (const [tag, l] of Object.entries(hreflangAliases)) {
+    if (subset.includes(l)) languages[tag] = buildCanonical(l, pathFor(l));
   }
   const xDefault = subset.includes(defaultLocale) ? defaultLocale : subset[0];
   languages['x-default'] = buildCanonical(xDefault, pathFor(xDefault));

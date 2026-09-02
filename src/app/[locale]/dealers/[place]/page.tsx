@@ -13,13 +13,17 @@
 //       get their own block without the Belgian address.
 //  T7 — Częstochowa names the group's Polish plant and emits its branch node.
 //  T6 — every city page links the price calculator ("what does it cost in …").
+//  CH — Switzerland & Liechtenstein (2 Sep 2026): QuinLay AG is a REAL dealer
+//       on every Swiss place: contact block (showroom, phone, e-mail, services,
+//       drive time from Rickenbach) + its LocalBusiness node; Vaduz names
+//       Liechtenstein; no price line (pricesPublished).
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, Calculator, Factory, MapPin } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, Calculator, Car, Factory, Mail, MapPin, Phone } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
-import { brand, contact, offices } from '@/lib/site-config';
+import { brand, contact, offices, siteUrl, swissPartner } from '@/lib/site-config';
 import { localeBase, buildAlternates } from '@/lib/seo';
 import { breadcrumbSchema, localBusinessSchema, branchLocalBusinessSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
@@ -39,6 +43,7 @@ import {
   regionLabelKeys,
 } from '@/lib/dealers';
 import { getProjectBySlug, blogPostsFor, blogHref } from '@/lib/content';
+import { pricesPublished } from '@/lib/currency';
 import { localizeProject, type ProjectMessages } from '@/lib/localize-content';
 
 // Every valid (locale, place) pair is enumerated below. dynamicParams=false →
@@ -60,12 +65,15 @@ export async function generateMetadata({ params }: { params: { locale: string; p
   const locale = params.locale as Locale;
   const t = await getTranslations({ locale, namespace: 'dealersPage' });
   const hasDealers = placeDealers(place).length > 0;
-  const title = hasDealers ? t('metaTitleDealer', { place: place.name }) : t('metaTitleRecruit', { place: place.name });
-  const description = hasDealers ? t('metaDescDealer', { place: place.name }) : t('metaDescRecruit', { place: place.name });
+  const placeLabel = place.country === 'LI' ? `${place.name} / ${t('liechtenstein')}` : place.name;
+  const title = hasDealers ? t('metaTitleDealer', { place: placeLabel }) : t('metaTitleRecruit', { place: placeLabel });
+  const description = hasDealers ? t('metaDescDealer', { place: placeLabel }) : t('metaDescRecruit', { place: placeLabel });
   const route = `/dealers/${place.slug}`;
   const ogImg = `${localeBase(locale)}/api/og`;
+  // A locale may carry the brand in its own title pattern ("… | STRETCH × QuinLay AG").
+  const fullTitle = title.includes(`| ${brand.name}`) ? title : `${title} | ${brand.name}`;
   return {
-    title: { absolute: `${title} | ${brand.name}` },
+    title: { absolute: fullTitle },
     description,
     alternates: buildAlternates(locale, route, dealerMarkets),
     openGraph: {
@@ -89,6 +97,8 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
   const tpr = await getTranslations('projects');
   const found = placeDealers(place!);
   const hasDealers = found.length > 0;
+  // Vaduz belongs to Liechtenstein: the H1 and every {place} slot say so.
+  const placeLabel = place!.country === 'LI' ? `${place!.name} / ${t('liechtenstein')}` : place!.name;
   const near = nearbyPlaces(place!);
   const province = place!.province ? getPlace(place!.province) : undefined;
   const regionLabel = t(regionLabelKeys[place!.region]);
@@ -103,6 +113,9 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
   // Identity (T5/T7): which entity speaks on this page.
   const entity = placeEntity(place!);
   const belgian = isBelgianPlace(place!) || place!.region === 'luxembourg';
+  // Swiss places (any locale): the contracting party is QuinLay AG, so the
+  // identity card names them — never the Belgian office line.
+  const swissPlace = place!.region === 'switzerland';
   const plOffice = offices.find((o) => o.country === 'PL');
   // The Belgian grants/VAT article exists on be/nl/fr/en/uk only — link it
   // where it exists (it is the most Belgium-specific proof on the site).
@@ -117,11 +130,38 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
   // Częstochowa plant on Polish pages. French/German/Austrian pages emit no
   // local entity node — there is no local address to claim.
   const localBusiness = belgian ? localBusinessSchema() : entity === 'pl' ? branchLocalBusinessSchema('PL') : undefined;
+  // Dealers with a full contact block (QuinLay AG) get their own LocalBusiness
+  // node: the showroom is a real, locatable local entity.
+  const dealerNodes = found
+    .filter((d) => d.contact)
+    .map((d) => {
+      const c = d.contact!;
+      const m = (c.addressLines[1] ?? '').match(/^(\S+)\s+(.+)$/);
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': `${siteUrl}/#dealer-${d.id}`,
+        name: d.name,
+        url: d.url,
+        telephone: c.phone,
+        email: c.email,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: c.addressLines[0],
+          ...(m ? { postalCode: m[1], addressLocality: m[2] } : { addressLocality: c.addressLines[1] }),
+          addressCountry: 'CH',
+        },
+        parentOrganization: { '@id': `${siteUrl}/#organization` },
+      };
+    });
 
   return (
     <>
       <JsonLd data={crumbs} />
       {localBusiness && <JsonLd data={localBusiness} />}
+      {dealerNodes.map((n) => (
+        <JsonLd key={n['@id']} data={n} />
+      ))}
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="container" style={{ paddingTop: 'clamp(20px,3vw,30px)' }}>
@@ -130,7 +170,7 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
           <li aria-hidden>/</li>
           <li><Link href="/dealers" style={{ color: 'inherit', textDecoration: 'none' }}>{t('crumbDealers')}</Link></li>
           <li aria-hidden>/</li>
-          <li aria-current="page" style={{ color: 'var(--text-muted)' }}>{place!.name}</li>
+          <li aria-current="page" style={{ color: 'var(--text-muted)' }}>{placeLabel}</li>
         </ol>
       </nav>
 
@@ -138,15 +178,22 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
       <section className="container" style={{ padding: 'clamp(22px,3vw,36px) 0 clamp(26px,3vw,40px)' }}>
         <Eyebrow num="01" label={`${t('eyebrow')} · ${regionLabel}`} />
         <h1 className="h1" style={{ fontSize: 'clamp(34px,5vw,72px)', margin: '0 0 clamp(14px,2vw,20px)' }}>
-          {t('h1', { place: place!.name })}<span className="accent">.</span>
+          {t('h1', { place: placeLabel })}<span className="accent">.</span>
         </h1>
         <p className="lead" style={{ maxWidth: 680, margin: '0 0 18px' }}>
-          {hasDealers ? t('introDealer', { place: place!.name }) : t('introRecruit', { place: place!.name })}
+          {hasDealers ? t('introDealer', { place: placeLabel }) : t('introRecruit', { place: placeLabel })}
         </p>
+        {typeof place!.driveMinutes === 'number' && (
+          <p style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, fontWeight: 600, color: 'var(--text-muted)', margin: '0 0 14px' }}>
+            <Car size={15} style={{ color: 'var(--red)' }} /> {t('driveTime', { minutes: place!.driveMinutes })}
+          </p>
+        )}
         {/* "What does a stretch ceiling cost in <place>?" → the calculator (T6). */}
-        <Link href="/price-calculator" className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, fontWeight: 700, fontSize: 14.5 }}>
-          <Calculator size={16} style={{ color: 'var(--red)' }} /> {t('costLine', { place: place!.name })} →
-        </Link>
+        {pricesPublished(locale) && (
+          <Link href="/price-calculator" className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, fontWeight: 700, fontSize: 14.5 }}>
+            <Calculator size={16} style={{ color: 'var(--red)' }} /> {t('costLine', { place: placeLabel })} →
+          </Link>
+        )}
       </section>
 
       {/* Factory (Częstochowa) — the plant is the story (T7) */}
@@ -185,12 +232,41 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
                 </div>
                 <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(21px,2.2vw,27px)', letterSpacing: '-.01em', textTransform: 'uppercase', margin: '0 0 6px' }}>{d.name}</h2>
                 <p style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'var(--text-muted)', margin: '0 0 18px' }}>
-                  <MapPin size={14} /> {place!.name}
+                  <MapPin size={14} /> {d.contact ? `${d.contact.addressLines.join(', ')} · ${placeLabel}` : placeLabel}
                 </p>
+                {d.contact && (
+                  /* General representative (QuinLay AG): role, showroom, phone, e-mail, services. */
+                  <div style={{ margin: '0 0 18px', fontSize: 14, lineHeight: 1.7, color: 'var(--text-body)' }}>
+                    {d.contact.roleKey && <div style={{ fontWeight: 700, color: 'var(--black)' }}>{t(d.contact.roleKey)}</div>}
+                    {d.contact.showroom && <div>{t('showroomLabel')}: {d.contact.addressLines.join(', ')}</div>}
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 18px', marginTop: 4 }}>
+                      <a href={`tel:${d.contact.phone}`} className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontWeight: 700 }}><Phone size={14} style={{ color: 'var(--red)' }} /> {d.contact.phoneDisplay}</a>
+                      <a href={`mailto:${d.contact.email}`} className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontWeight: 700 }}><Mail size={14} style={{ color: 'var(--red)' }} /> {d.contact.email}</a>
+                    </div>
+                    {d.contact.serviceKeys && d.contact.serviceKeys.length > 0 && (
+                      <ul style={{ margin: '10px 0 0', padding: 0, listStyle: 'none', display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                        {d.contact.serviceKeys.map((k) => (
+                          <li key={k} style={{ fontSize: 12.5, fontWeight: 700, border: '1px solid var(--border-input)', padding: '5px 10px' }}>{t(k)}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                  <ModalButton type="quote" source={`dealers_${place!.slug}`} trackQuote className="btn btn--primary btn--sm">
-                    {t('quoteCta')} <ArrowRight size={14} />
-                  </ModalButton>
+                  {d.contact?.showroom ? (
+                    <ModalButton type="quote" source={`dealers_${place!.slug}`} trackQuote className="btn btn--primary btn--sm">
+                      {t('showroomCta')} <ArrowRight size={14} />
+                    </ModalButton>
+                  ) : (
+                    <ModalButton type="quote" source={`dealers_${place!.slug}`} trackQuote className="btn btn--primary btn--sm">
+                      {t('quoteCta')} <ArrowRight size={14} />
+                    </ModalButton>
+                  )}
+                  {d.contact?.showroom && (
+                    <ModalButton type="quote" source={`dealers_${place!.slug}`} trackQuote className="btn btn--ghost btn--sm">
+                      {t('quoteCta')}
+                    </ModalButton>
+                  )}
                   <a href={d.url} target="_blank" rel="noopener" className="btn btn--ghost btn--sm">
                     {t('visitSite')} <ArrowUpRight size={14} />
                   </a>
@@ -201,8 +277,8 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
         ) : (
           <div style={{ background: 'var(--black)', padding: 'clamp(26px,3.6vw,46px)' }}>
             <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--red)', marginBottom: 10 }}>{t('recruitChip')}</div>
-            <h2 className="h2 h2--sm" style={{ color: '#fff', fontSize: 'clamp(22px,2.8vw,34px)', margin: '0 0 10px' }}>{t('recruitTitle', { place: place!.name })}</h2>
-            <p style={{ color: 'var(--on-dark-muted)', fontSize: 14.5, lineHeight: 1.6, margin: '0 0 20px', maxWidth: 640 }}>{t('recruitBody', { place: place!.name })}</p>
+            <h2 className="h2 h2--sm" style={{ color: '#fff', fontSize: 'clamp(22px,2.8vw,34px)', margin: '0 0 10px' }}>{t('recruitTitle', { place: placeLabel })}</h2>
+            <p style={{ color: 'var(--on-dark-muted)', fontSize: 14.5, lineHeight: 1.6, margin: '0 0 20px', maxWidth: 640 }}>{t('recruitBody', { place: placeLabel })}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
               <Link href="/partners" className="btn btn--primary">{t('recruitCta')} <ArrowRight size={16} /></Link>
               <ModalButton type="quote" source={`dealers_${place!.slug}`} trackQuote className="btn" style={{ background: '#fff', color: 'var(--black)' }}>
@@ -221,10 +297,10 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
               {entity === 'pl' ? t('identityPlKicker') : belgian ? t('identityBeKicker') : t('identityDirectKicker')}
             </div>
             <h2 className="h2 h2--sm" style={{ margin: '0 0 10px' }}>
-              {entity === 'pl' ? t('identityPlTitle') : belgian ? t('identityBeTitle') : t('identityDirectTitle', { place: place!.name })}
+              {entity === 'pl' ? t('identityPlTitle') : belgian ? t('identityBeTitle') : t('identityDirectTitle', { place: placeLabel })}
             </h2>
             <p style={{ fontSize: 15, lineHeight: 1.65, color: 'var(--text-body)', margin: 0, maxWidth: 640 }}>
-              {entity === 'pl' ? t('identityPlBody', { place: place!.name }) : belgian ? t('identityBeBody', { place: place!.name }) : t('identityDirectBody', { place: place!.name })}
+              {entity === 'pl' ? t('identityPlBody', { place: placeLabel }) : belgian ? t('identityBeBody', { place: placeLabel }) : t('identityDirectBody', { place: placeLabel })}
             </p>
           </div>
           <div className="dlr-identity__card">
@@ -249,6 +325,13 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
                     {t('identityVatArticle')} <ArrowRight size={14} style={{ color: 'var(--red)' }} />
                   </Link>
                 )}
+              </>
+            ) : swissPlace ? (
+              <>
+                <div className="dlr-identity__name">{swissPartner.name}</div>
+                <div>{t('generalAgent')}</div>
+                <div>{swissPartner.street}, {swissPartner.postalCode} {swissPartner.city}</div>
+                <a href={swissPartner.phoneHref} className="lnk" style={{ display: 'inline-block', marginTop: 10, fontWeight: 700 }}>{swissPartner.phoneDisplay}</a>
               </>
             ) : (
               <>
@@ -277,7 +360,7 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
       {/* Local projects */}
       {projects.length > 0 && (
         <section className="container" style={{ paddingBottom: 'clamp(40px,5vw,64px)' }}>
-          <h2 className="h2 h2--sm" style={{ margin: '0 0 18px' }}>{t('projectsHeading', { place: place!.name })}</h2>
+          <h2 className="h2 h2--sm" style={{ margin: '0 0 18px' }}>{t('projectsHeading', { place: placeLabel })}</h2>
           <div className="dlr-proj">
             {projects.map((p) => (
               <Link key={p!.slug} href={`/inspiration/${p!.slug}`} className="dlr-proj__card zoom-wrap">
@@ -299,7 +382,7 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
           <>
             <h2 style={{ fontSize: 12.5, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text-muted)', margin: '0 0 12px' }}>
               {place!.kind === 'province'
-                ? t('nearbyHeadingProvince', { place: place!.name })
+                ? t('nearbyHeadingProvince', { place: placeLabel })
                 : province
                   ? t('nearbyHeading', { province: province.name })
                   : t('nearbyHeadingRegion', { region: regionLabel })}

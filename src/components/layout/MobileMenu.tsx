@@ -10,7 +10,7 @@ import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { products } from '@/lib/products';
-import { contact } from '@/lib/site-config';
+import { localContactFor } from '@/lib/local-contact';
 import {
   liveLocales,
   localeNames,
@@ -25,6 +25,7 @@ import PortalLink from '@/components/ui/PortalLink';
 import { isDealerMarket } from '@/lib/dealers';
 import { analytics } from '@/lib/analytics';
 import { pathForLocale } from '@/lib/blog-slugs';
+import { pricesPublished } from '@/lib/currency';
 
 // Shared style for the primary drawer links (Link and PortalLink render alike).
 const drawerLinkStyle = {
@@ -46,6 +47,7 @@ export default function MobileMenu() {
   const pathname = usePathname();
   const router = useRouter();
   const { open: openModal } = useLeadModal();
+  const local = localContactFor(locale);
   // Blog slugs differ per locale: translate the path for the target domain.
   const targetPath = (l: Locale) => {
     const p = pathForLocale(pathname, locale, l);
@@ -174,6 +176,7 @@ export default function MobileMenu() {
             ]
               // Training only exists on dealer markets (N2) — no dead link on us.
               .filter((item) => (item.href !== '/installer-training' && item.href !== '/dealers') || isDealerMarket(locale))
+              .filter((item) => item.href !== '/price-calculator' || pricesPublished(locale))
               .map((item) =>
               item.href === '/portal' ? (
                 <PortalLink key={item.href} href={item.href} style={drawerLinkStyle}>
@@ -246,7 +249,7 @@ export default function MobileMenu() {
               {t('cta.requestQuote')} <ArrowUpRight size={16} />
             </button>
             <a
-              href={contact.phoneHref}
+              href={local.phoneHref}
               onClick={() => analytics.phoneClick('mobile_menu')}
               style={{
                 marginTop: 18,
@@ -257,7 +260,7 @@ export default function MobileMenu() {
                 color: 'var(--black)',
               }}
             >
-              {contact.phoneDisplay}
+              {local.phoneDisplay}
             </a>
 
             <div

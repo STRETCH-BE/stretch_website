@@ -180,7 +180,9 @@
       "priceCalculator": "Beräkna pris"
     },
     "dealers": "Återförsäljarnätverk",
-    "worldwideHeading": "STRETCH i världen"
+    "worldwideHeading": "STRETCH i världen",
+    "swissPartnerHeading": "Generalagent — Schweiz & Liechtenstein",
+    "manufacturerHeading": "Tillverkare — Belgien"
   },
   "portal": {
     "login": {
@@ -2250,7 +2252,8 @@
           "placeholder": "Taktyper, tillgängliga ritningar, tidsplan…"
         }
       }
-    }
+    },
+    "swissPartnerNote": "Din förfrågan går till QuinLay AG, Rickenbach LU, STRETCHs generalagent för Schweiz och Liechtenstein, med kopia till STRETCH. QuinLay AG ringer upp dig."
   },
   "faqPage": {
     "items": [
@@ -4901,6 +4904,11 @@
         "title": "Vill du bara köpa material?",
         "body": "Ett leveranskonto är inget partnerskap: beställ material och måttillverkad konfektion till din montörsprislista, utan åtaganden.",
         "cta": "Leverans till montörer"
+      },
+      "quinlayCard": {
+        "title": "Schweiz & Liechtenstein: QuinLay AG",
+        "body": "Vår generalagent för Schweiz och Liechtenstein: showroom och utbildningsrum i Rickenbach LU, material från schweiziskt lager och monteringspartner i hela landet.",
+        "cta": "Besök quinlay.ch"
       }
     },
     "how": {
@@ -5014,7 +5022,10 @@
       "title": "Boka din plats",
       "lead": "Små grupper, först till kvarn. Skräddarsydda utbildningar på plats hos er kan ordnas på förfrågan.",
       "onRequestTitle": "På förfrågan",
-      "onRequestNote": "Skräddarsydd utbildning på plats"
+      "onRequestNote": "Skräddarsydd utbildning på plats",
+      "externalCta": "Datum & anmälan på quinlay.ch",
+      "swissRoom": "Kurserna hålls i QuinLay AG:s eget utbildnings- och testrum i Rickenbach LU.",
+      "secondaryCta": "Frågor om utbildningen? Hör av dig"
     },
     "book": {
       "eyebrow": "Planera din utbildning",
@@ -5126,7 +5137,15 @@
     "hours": "mån–fre · 08:30–17:00",
     "directTitle": "Ingen lokal återförsäljare behövs.",
     "directBody": "STRETCH levererar och monterar direkt från egen produktion medan det lokala nätverket byggs upp — ett team, en garanti.",
-    "directCta": "Begär en kostnadsfri offert"
+    "directCta": "Begär en kostnadsfri offert",
+    "swissPartnerKicker": "Schweiz & Liechtenstein",
+    "swissPartnerTitle": "Din kontakt i Schweiz och Liechtenstein: QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG är generalagent för STRETCH i Schweiz och Liechtenstein: showroom och utbildningsrum i Rickenbach LU, material från schweiziskt lager och montering genom utbildade partner. Varje förfrågan från Schweiz besvaras av QuinLay AG, med kopia till STRETCH.",
+    "swissCallback": "QuinLay AG ringer upp dig",
+    "impressumHeading": "Juridisk information — Schweiz & Liechtenstein",
+    "impressumManufacturer": "Tillverkare",
+    "impressumSwissParty": "Avtalspart för Schweiz och Liechtenstein",
+    "impressumNote": "Offerter, leveranser och fakturor för Schweiz och Liechtenstein hanteras av QuinLay AG."
   },
   "datasheetsPage": {
     "eyebrow": "Tekniska datablad",
@@ -5423,7 +5442,19 @@
     "factoryBody": "Här tillverkar koncernen i Polen: Alto Design Sp. z o.o. skär och svetsar PVC-membran efter mått, håller montörsutbildningen på polska och bygger upp STRETCH-nätverket i Polen — en namngiven fabrik som går att hitta på kartan, inte bara en kontorsadress.",
     "factoryTraining": "Montörsutbildning i Częstochowa",
     "factoryCta": "Besök altodesign.pl",
-    "why1Pl": "Tillverkat i EU — varje tak svetsas efter mått i våra egna fabriker i Częstochowa och Beveren-Waas och levereras klart att montera."
+    "why1Pl": "Tillverkat i EU — varje tak svetsas efter mått i våra egna fabriker i Częstochowa och Beveren-Waas och levereras klart att montera.",
+    "regionSwitzerland": "Schweiz & Liechtenstein",
+    "liechtenstein": "Liechtenstein",
+    "driveTime": "Cirka {minutes} min från showroomet i Rickenbach LU",
+    "contactHeading": "Din kontakt för Schweiz och Liechtenstein",
+    "generalAgent": "Generalagent för STRETCH i Schweiz & Liechtenstein",
+    "showroomLabel": "Showroom & utbildningsrum",
+    "showroomCta": "Boka en tid i showroomet",
+    "servicesHeading": "Tjänster",
+    "serviceConsulting": "Rådgivning och showroom",
+    "serviceInstallation": "Montering genom utbildade partner",
+    "serviceTraining": "Montörsutbildning i eget utbildningsrum",
+    "serviceStock": "Material från schweiziskt lager"
   },
   "datasheetEmail": {
     "subject": "Ditt STRETCH-datablad — {title}",

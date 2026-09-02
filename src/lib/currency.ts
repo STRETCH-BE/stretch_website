@@ -40,10 +40,8 @@ export const ratesPerEur: Record<Exclude<DisplayCurrency, 'EUR'>, number> = {
   SEK: 11.05,
   NOK: 11.65,
   ISK: 143,
-  // Switzerland has no locale of its own yet (.ch still redirects to .de).
-  // The rate is ready; it activates the day a `ch` locale is added to
-  // `policies` below — nothing else to change.
-  CHF: 0.94,
+  CHF: 0.94, // stretchdecken.ch (de-CH) — display only; supplies via QuinLay AG
+
   // PLN is a SETTLEMENT currency for Poland. It is listed here only so that
   // an EUR-denominated public figure (e.g. the kit retail price, if ever set)
   // can be shown with a PLN indication. The Polish indicative m² buckets are
@@ -79,8 +77,23 @@ const policies: Partial<Record<Locale, DisplayPolicy>> = {
   uk: { currency: 'GBP', mode: 'indication' },
   us: { currency: 'USD', mode: 'indication' },
   pl: { currency: 'PLN', mode: 'settlement' },
-  // ch: { currency: 'CHF', mode: 'indication' },  ← when a Swiss locale exists
+  // Switzerland: CHF indication. Moot while pricesPublished('ch') is false —
+  // the Swiss site shows no product prices until the QuinLay-agreed guide.
+  ch: { currency: 'CHF', mode: 'indication' },
 };
+
+/**
+ * Whether the PUBLIC indicative product prices (calculator, price guide and
+ * the posts that quote €/m² figures, Product AggregateOffer, "what does this
+ * cost" links) render on a locale. Switzerland (QuinLay AG, 2 Sep 2026): NO
+ * product prices on the public site — nobody Swiss publishes them and every
+ * Swiss supply goes through QuinLay; the only CHF figures allowed are
+ * QuinLay's public course prices. A Swiss CHF price guide agreed with QuinLay
+ * follows in Part 2 and lifts this gate for that page only.
+ */
+export function pricesPublished(locale: Locale): boolean {
+  return locale !== 'ch';
+}
 
 export function displayPolicyFor(locale: Locale): DisplayPolicy {
   return policies[locale] ?? { currency: 'EUR', mode: 'eur' };

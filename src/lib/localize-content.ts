@@ -22,7 +22,7 @@ export type ModalMessages = {
 /**
  * Translations for the fields shared by every lead form (modals.shared in
  * messages): the city/country labels and the ONE country-name list, so 9 forms
- * x 12 locales don't repeat 17 country names per form.
+ * x 15 locales don't repeat 17 country names per form.
  */
 export type SharedFieldMessages = {
   city?: { label: string; placeholder?: string };

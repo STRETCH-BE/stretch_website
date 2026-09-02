@@ -4,12 +4,12 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { ArrowRight, Check, MapPin } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Check, MapPin } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand, contact } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
-import { TRAINING_DATE_DETAIL } from '@/lib/forms-config';
+import { TRAINING_DATE_DETAIL, trainingSessionsFor } from '@/lib/forms-config';
 import { dealerMarkets, isDealerMarket } from '@/lib/dealers';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -40,13 +40,18 @@ export default async function TrainingPage({ params }: { params: { locale: strin
   // Localize by GLOBAL index into modals.trainingDates/Notes, then split:
   // scheduled sessions fill the dates grid, EN/DE international sessions get
   // their own funnel section (booked via source 'training_international').
-  const localizedSessions = TRAINING_DATE_DETAIL.map((d, di) => ({
-    ...d,
-    date: (tm.raw('trainingDates') as string[])[di] ?? d.date,
-    note: (tm.raw('trainingDateNotes') as string[])[di] ?? d.note,
-  }));
+  // ch: QuinLay AG runs the courses (per-locale override, copy in the config
+  // itself — not index-localized through modals.trainingDates).
+  const { sessions, partnerRun } = trainingSessionsFor(locale);
+  const localizedSessions = partnerRun
+    ? sessions
+    : sessions.map((d, di) => ({
+        ...d,
+        date: (tm.raw('trainingDates') as string[])[di] ?? d.date,
+        note: (tm.raw('trainingDateNotes') as string[])[di] ?? d.note,
+      }));
   const scheduledSessions = localizedSessions.filter((d) => !d.international);
-  const internationalSessions = localizedSessions.filter((d) => d.international);
+  const internationalSessions = partnerRun ? [] : localizedSessions.filter((d) => d.international);
 
   const langBadges = (languages: string[]) => (
     <div style={{ display: 'flex', gap: 6, marginBottom: 10 }}>
@@ -84,7 +89,7 @@ export default async function TrainingPage({ params }: { params: { locale: strin
       addressCountry: contact.address.country,
     },
   };
-  const sessionEvents = TRAINING_DATE_DETAIL.map((d, di) => ({ d, di }))
+  const sessionEvents = (partnerRun ? [] : TRAINING_DATE_DETAIL).map((d, di) => ({ d, di }))
     .filter(({ d }) => d.isoStart)
     .map(({ d, di }) => ({
     '@context': 'https://schema.org',
@@ -186,20 +191,39 @@ export default async function TrainingPage({ params }: { params: { locale: strin
         </div>
         <div className="tr-dates" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 14 }}>
           {scheduledSessions.map((d) => (
-            <div key={d.date} style={{ border: '1px solid var(--border)', background: '#fff', padding: 'clamp(22px,2.4vw,28px)' }}>
+            <div key={d.date} style={{ border: '1px solid var(--border)', background: '#fff', padding: 'clamp(22px,2.4vw,28px)', display: 'flex', flexDirection: 'column' }}>
               {langBadges(d.languages)}
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 20, letterSpacing: '-.01em', marginBottom: 8 }}>{d.date}</div>
-              <div style={{ fontSize: 13, color: 'var(--text-faint)' }}>{d.note}</div>
+              <div style={{ fontSize: 13, color: 'var(--text-faint)', flex: 1 }}>{d.note}</div>
+              {d.external && (
+                /* Partner-run course (QuinLay AG): booking on quinlay.ch, our modal as the secondary CTA. */
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 16 }}>
+                  <a href={d.external.href} target="_blank" rel="noopener" className="btn btn--primary btn--sm" style={{ justifyContent: 'center' }}>
+                    {t('dates.externalCta')} <ArrowUpRight size={14} />
+                  </a>
+                  <ModalButton type="training" source={d.source ?? 'training_hero'} className="btn btn--ghost btn--sm" style={{ justifyContent: 'center' }}>
+                    {t('dates.secondaryCta')}
+                  </ModalButton>
+                </div>
+              )}
             </div>
           ))}
-          <div style={{ border: '1px dashed var(--border-input)', background: 'var(--surface)', padding: 'clamp(22px,2.4vw,28px)' }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 20, letterSpacing: '-.01em', marginBottom: 8 }}>{t('dates.onRequestTitle')}</div>
-            <div style={{ fontSize: 13, color: 'var(--text-faint)' }}>{t('dates.onRequestNote')}</div>
-          </div>
+          {!partnerRun && (
+            <div style={{ border: '1px dashed var(--border-input)', background: 'var(--surface)', padding: 'clamp(22px,2.4vw,28px)' }}>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 20, letterSpacing: '-.01em', marginBottom: 8 }}>{t('dates.onRequestTitle')}</div>
+              <div style={{ fontSize: 13, color: 'var(--text-faint)' }}>{t('dates.onRequestNote')}</div>
+            </div>
+          )}
         </div>
+        {partnerRun && (
+          <p style={{ display: 'flex', alignItems: 'center', gap: 9, fontSize: 14, fontWeight: 600, color: 'var(--text-muted)', margin: '18px 0 0' }}>
+            <MapPin size={15} style={{ color: 'var(--red)' }} /> {t('dates.swissRoom')}
+          </p>
+        )}
       </section>
 
-      {/* International sessions — EN/DE interest funnel */}
+      {/* International sessions — EN/DE interest funnel (not on partner-run locales) */}
+      {!partnerRun && (
       <section id="international" className="section--surface">
         <div className="container section--sm">
           <div className="tr-intl" style={{ display: 'grid', gridTemplateColumns: '.9fr 1.1fr', gap: 'clamp(28px,4vw,56px)', alignItems: 'start' }}>
@@ -226,6 +250,7 @@ export default async function TrainingPage({ params }: { params: { locale: strin
           </div>
         </div>
       </section>
+      )}
 
       {/* Booking form */}
       <section id="book" className="section--red">
@@ -234,14 +259,20 @@ export default async function TrainingPage({ params }: { params: { locale: strin
             <div>
               <Eyebrow num="05" label={t('book.eyebrow')} tone="dark" />
               <h2 className="h2" style={{ color: '#fff', margin: '0 0 22px' }}>{t('book.titleA')}<br /><span style={{ color: 'var(--black)' }}>{t('book.titleB')}.</span></h2>
-              <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,.8)', marginBottom: 14 }}>{t('book.includedLabel')}</div>
-              <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
-                {included.map((p) => (
-                  <li key={p} style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 15, color: '#fff', fontWeight: 500 }}>
-                    <Check size={18} /> {p}
-                  </li>
-                ))}
-              </ul>
+              {/* HQ inclusions (certificate, starter kit, lunch) are Beveren-Waas facts —
+                  a partner-run locale makes no such claims for the partner's courses. */}
+              {!partnerRun && (
+                <>
+                  <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,.8)', marginBottom: 14 }}>{t('book.includedLabel')}</div>
+                  <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
+                    {included.map((p) => (
+                      <li key={p} style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 15, color: '#fff', fontWeight: 500 }}>
+                        <Check size={18} /> {p}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </div>
             <div style={{ background: '#fff', padding: 'clamp(26px,3vw,40px)', border: '1px solid var(--border)' }}>
               <InlineLeadForm type="training" source="training_book" />

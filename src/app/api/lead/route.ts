@@ -5,7 +5,7 @@
 // token → spam score. Flagged leads are ALWAYS stored, never delivered, and
 // the response stays the normal success state (a bot never learns).
 import { NextResponse } from 'next/server';
-import { deliverLead } from '@/lib/deliver';
+import { deliverLead, leadRecipients } from '@/lib/deliver';
 import { storeLead } from '@/lib/lead-store';
 import { runLeadGuards } from '@/lib/spam/guard';
 import type { LeadPayload } from '@/lib/email';
@@ -74,10 +74,15 @@ export async function POST(request: Request) {
 
   // Page the visitor submitted from (referer) — stored with the lead.
   const page = request.headers.get('referer');
+  // Swiss leads (ch host or a Swiss source) carry market=CH in the stored payload
+  // and the e-mail — no migration: the leads table keeps it in `payload`.
+  const host = request.headers.get('host');
+  const { market } = leadRecipients(payload, host);
+  if (market) payload.market = market;
 
   try {
     // Flagged → store only; the response stays the normal success state.
-    const result = guard.spam.flagged ? null : await deliverLead(payload);
+    const result = guard.spam.flagged ? null : await deliverLead(payload, { host });
     await storeLead(
       payload,
       result

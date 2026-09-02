@@ -180,7 +180,9 @@
       "priceCalculator": "Kalkulator cen"
     },
     "dealers": "Sieć dealerów",
-    "worldwideHeading": "STRETCH na świecie"
+    "worldwideHeading": "STRETCH na świecie",
+    "swissPartnerHeading": "Generalny przedstawiciel — Szwajcaria i Liechtenstein",
+    "manufacturerHeading": "Producent — Belgia"
   },
   "portal": {
     "login": {
@@ -2250,7 +2252,8 @@
           "placeholder": "Rodzaje sufitów, dostępne rysunki, harmonogram…"
         }
       }
-    }
+    },
+    "swissPartnerNote": "Twoje zapytanie trafia do QuinLay AG w Rickenbach LU, generalnego przedstawiciela STRETCH na Szwajcarię i Liechtenstein, a STRETCH otrzymuje kopię. Oddzwoni do Ciebie QuinLay AG."
   },
   "faqPage": {
     "items": [
@@ -4901,6 +4904,11 @@
         "title": "Chcesz tylko kupować materiały?",
         "body": "Konto zaopatrzeniowe to nie partnerstwo: zamawiaj materiały i konfekcję na wymiar w swoim cenniku montera, bez zobowiązań.",
         "cta": "Zaopatrzenie monterów"
+      },
+      "quinlayCard": {
+        "title": "Szwajcaria i Liechtenstein: QuinLay AG",
+        "body": "Nasz generalny przedstawiciel na Szwajcarię i Liechtenstein: showroom i sala szkoleniowa w Rickenbach LU, materiały z magazynu w Szwajcarii, partnerzy montażowi w całym kraju.",
+        "cta": "Odwiedź quinlay.ch"
       }
     },
     "how": {
@@ -5014,7 +5022,10 @@
       "title": "Zarezerwuj miejsce",
       "lead": "Małe grupy, o miejscu decyduje kolejność zgłoszeń. Na życzenie organizujemy sesje wyjazdowe u Ciebie.",
       "onRequestTitle": "Na życzenie",
-      "onRequestNote": "Indywidualna sesja na miejscu"
+      "onRequestNote": "Indywidualna sesja na miejscu",
+      "externalCta": "Terminy i rezerwacja na quinlay.ch",
+      "swissRoom": "Szkolenia odbywają się we własnej sali szkoleniowo-testowej QuinLay AG w Rickenbach LU.",
+      "secondaryCta": "Masz pytania o szkolenie? Skontaktuj się z nami"
     },
     "book": {
       "eyebrow": "Zaplanuj szkolenie",
@@ -5126,7 +5137,15 @@
     "hours": "pn–pt · 08:30–17:00",
     "directTitle": "Nie potrzebujesz lokalnego dealera.",
     "directBody": "STRETCH dostarcza i montuje bezpośrednio z własnej produkcji, podczas gdy lokalna sieć dopiero powstaje — jeden zespół, jedna gwarancja.",
-    "directCta": "Poproś o bezpłatną wycenę"
+    "directCta": "Poproś o bezpłatną wycenę",
+    "swissPartnerKicker": "Szwajcaria i Liechtenstein",
+    "swissPartnerTitle": "Twój kontakt w Szwajcarii i Liechtensteinie: QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG jest generalnym przedstawicielem STRETCH na Szwajcarię i Liechtenstein: showroom i sala szkoleniowa w Rickenbach LU, materiały z magazynu w Szwajcarii, montaż przez przeszkolonych partnerów. Na każde zapytanie ze Szwajcarii odpowiada QuinLay AG, a STRETCH otrzymuje kopię.",
+    "swissCallback": "Oddzwoni QuinLay AG",
+    "impressumHeading": "Nota prawna — Szwajcaria i Liechtenstein",
+    "impressumManufacturer": "Producent",
+    "impressumSwissParty": "Strona umowy dla Szwajcarii i Liechtensteinu",
+    "impressumNote": "Za wyceny, dostawy i faktury dla Szwajcarii i Liechtensteinu odpowiada QuinLay AG."
   },
   "datasheetsPage": {
     "eyebrow": "Karty techniczne",
@@ -5423,7 +5442,19 @@
     "factoryBody": "To tutaj grupa produkuje w Polsce: Alto Design Sp. z o.o. kroi i zgrzewa membrany PVC na wymiar, prowadzi polskojęzyczne szkolenia monterów i buduje sieć STRETCH w Polsce — fabryka z nazwą i adresem, którą można odwiedzić, a nie tylko adres handlowy.",
     "factoryTraining": "Szkolenie monterów w Częstochowie",
     "factoryCta": "Odwiedź altodesign.pl",
-    "why1Pl": "Wyprodukowano w UE — każdy sufit zgrzewamy na wymiar w naszych własnych zakładach w Częstochowie i Beveren-Waas, a dostarczamy go gotowy do montażu."
+    "why1Pl": "Wyprodukowano w UE — każdy sufit zgrzewamy na wymiar w naszych własnych zakładach w Częstochowie i Beveren-Waas, a dostarczamy go gotowy do montażu.",
+    "regionSwitzerland": "Szwajcaria i Liechtenstein",
+    "liechtenstein": "Liechtenstein",
+    "driveTime": "Ok. {minutes} min od showroomu w Rickenbach LU",
+    "contactHeading": "Twój kontakt dla Szwajcarii i Liechtensteinu",
+    "generalAgent": "Generalny przedstawiciel STRETCH na Szwajcarię i Liechtenstein",
+    "showroomLabel": "Showroom i sala szkoleniowa",
+    "showroomCta": "Umów wizytę w showroomie",
+    "servicesHeading": "Usługi",
+    "serviceConsulting": "Doradztwo i showroom",
+    "serviceInstallation": "Montaż przez przeszkolonych partnerów",
+    "serviceTraining": "Szkolenie monterów we własnej sali szkoleniowej",
+    "serviceStock": "Materiały z magazynu w Szwajcarii"
   },
   "datasheetEmail": {
     "subject": "Twoja karta techniczna STRETCH — {title}",

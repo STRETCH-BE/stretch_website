@@ -180,7 +180,9 @@
       "priceCalculator": "Price calculator"
     },
     "dealers": "Dealer network",
-    "worldwideHeading": "STRETCH worldwide"
+    "worldwideHeading": "STRETCH worldwide",
+    "swissPartnerHeading": "General representative — Switzerland & Liechtenstein",
+    "manufacturerHeading": "Manufacturer — Belgium"
   },
   "portal": {
     "login": {
@@ -2250,7 +2252,8 @@
           "placeholder": "Ceiling types, drawings available, timeline…"
         }
       }
-    }
+    },
+    "swissPartnerNote": "Your inquiry goes to QuinLay AG, Rickenbach LU, the STRETCH general representative for Switzerland and Liechtenstein, with STRETCH copied. Callback by QuinLay AG."
   },
   "faqPage": {
     "items": [
@@ -4893,6 +4896,11 @@
         "title": "Just want to buy materials?",
         "body": "A supply account is not a partnership: order materials and made-to-measure confection at your installer tier, with no commitments.",
         "cta": "Installer supply"
+      },
+      "quinlayCard": {
+        "title": "Switzerland & Liechtenstein: QuinLay AG",
+        "body": "Our general representative for Switzerland and Liechtenstein: showroom and training room in Rickenbach LU, materials from Swiss stock, installation partners across the country.",
+        "cta": "Visit quinlay.ch"
       }
     },
     "how": {
@@ -5006,7 +5014,10 @@
       "title": "Reserve your seat",
       "lead": "Small groups, booked first-come. Custom on-site sessions available on request.",
       "onRequestTitle": "On request",
-      "onRequestNote": "Custom on-site session"
+      "onRequestNote": "Custom on-site session",
+      "externalCta": "Dates & booking on quinlay.ch",
+      "swissRoom": "Courses take place in QuinLay AG’s own training and test room in Rickenbach LU.",
+      "secondaryCta": "Questions about the course? Get in touch"
     },
     "book": {
       "eyebrow": "Plan your training",
@@ -5118,7 +5129,15 @@
     "hours": "Mon–Fri · 08:30–17:00",
     "directTitle": "No local dealer needed.",
     "directBody": "STRETCH delivers and installs directly from our own production while the US network is being built — one team, one point of guarantee.",
-    "directCta": "Request a free quote"
+    "directCta": "Request a free quote",
+    "swissPartnerKicker": "Switzerland & Liechtenstein",
+    "swissPartnerTitle": "Your contact in Switzerland and Liechtenstein: QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG is the general representative of STRETCH for Switzerland and Liechtenstein: showroom and training room in Rickenbach LU, materials from Swiss stock, installation through trained partners. Every inquiry from Switzerland is answered by QuinLay AG, with STRETCH copied.",
+    "swissCallback": "Callback by QuinLay AG",
+    "impressumHeading": "Legal notice — Switzerland & Liechtenstein",
+    "impressumManufacturer": "Manufacturer",
+    "impressumSwissParty": "Contracting party for Switzerland and Liechtenstein",
+    "impressumNote": "Quotes, supplies and invoices for Switzerland and Liechtenstein are issued by QuinLay AG."
   },
   "datasheetsPage": {
     "eyebrow": "Technical datasheets",
@@ -5415,7 +5434,19 @@
     "factoryBody": "This is where the group produces in Poland: Alto Design Sp. z o.o. cuts and welds PVC membranes to size, runs the Polish-language installer training and builds the STRETCH network for Poland — a named factory you can find on a map, not just a business address.",
     "factoryTraining": "Installer training in Częstochowa",
     "factoryCta": "Visit altodesign.pl",
-    "why1Pl": "Made in the EU — every ceiling is welded to size in our own plants in Częstochowa and Beveren-Waas and arrives ready to install."
+    "why1Pl": "Made in the EU — every ceiling is welded to size in our own plants in Częstochowa and Beveren-Waas and arrives ready to install.",
+    "regionSwitzerland": "Switzerland & Liechtenstein",
+    "liechtenstein": "Liechtenstein",
+    "driveTime": "About {minutes} min from the showroom in Rickenbach LU",
+    "contactHeading": "Your contact for Switzerland and Liechtenstein",
+    "generalAgent": "General representative of STRETCH for Switzerland & Liechtenstein",
+    "showroomLabel": "Showroom & training room",
+    "showroomCta": "Schedule a showroom appointment",
+    "servicesHeading": "Services",
+    "serviceConsulting": "Consulting and showroom",
+    "serviceInstallation": "Installation through trained partners",
+    "serviceTraining": "Installer training in its own training room",
+    "serviceStock": "Materials from Swiss stock"
   },
   "datasheetEmail": {
     "subject": "Your STRETCH datasheet — {title}",

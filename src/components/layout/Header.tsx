@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { ChevronDown, ArrowUpRight } from 'lucide-react';
-import { contact } from '@/lib/site-config';
+import { localContactFor } from '@/lib/local-contact';
 import { isDealerMarket } from '@/lib/dealers';
 import type { Locale } from '@/i18n/config';
 import { ModalButton } from '@/components/ui/ModalButton';
@@ -26,6 +26,8 @@ export default function Header() {
   const technicalMenu = useTechnicalMenu();
   const pathname = usePathname();
   const [open, setOpen] = useState<OpenMenu>(null);
+  // ch: QuinLay AG's number (the Swiss general representative) instead of the Belgian HQ.
+  const local = localContactFor(locale);
 
   // Close any open mega menu whenever the route changes.
   useEffect(() => {
@@ -61,8 +63,8 @@ export default function Header() {
             )}
             <PortalLink href="/portal" className="lnk">{t('nav.clientLogin')}</PortalLink>
             <span style={{ opacity: 0.4 }}>|</span>
-            <a href={contact.phoneHref} className="lnk" style={{ color: 'var(--red-bright)' }} onClick={() => analytics.phoneClick('header_utility')}>
-              {contact.phoneDisplay}
+            <a href={local.phoneHref} className="lnk" style={{ color: 'var(--red-bright)' }} onClick={() => analytics.phoneClick('header_utility')}>
+              {local.phoneDisplay}
             </a>
             <LanguageSwitcher />
           </div>

@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { MODAL_CONFIGS, TRAINING_DATE_DETAIL, defaultCountryForLocale, type ModalType } from '@/lib/forms-config';
+import { MODAL_CONFIGS, TRAINING_DATE_DETAIL, defaultCountryForLocale, trainingSessionsFor, type ModalType } from '@/lib/forms-config';
 import { localizeModalConfig, type ModalMessages, type SharedFieldMessages } from '@/lib/localize-content';
 import { analytics } from '@/lib/analytics';
 import TurnstileWidget from '@/components/ui/TurnstileWidget';
@@ -40,6 +40,18 @@ export default function InlineLeadForm({
     tm.raw(type) as ModalMessages,
     tm.raw('shared') as SharedFieldMessages,
   );
+  // Partner-run locale (QuinLay AG on ch): the partner's courses replace the
+  // Beveren-Waas dates — in the cards AND in the preferred-date select.
+  const { sessions: partnerSessions, partnerRun } = trainingSessionsFor(locale);
+  const dateCards = partnerRun
+    ? partnerSessions.map((d) => ({ date: d.date, note: d.note }))
+    : TRAINING_DATE_DETAIL.map((d, i) => ({
+        date: (tm.raw('trainingDates') as string[])[i] ?? d.date,
+        note: (tm.raw('trainingDateNotes') as string[])[i] ?? d.note,
+      }));
+  const fields = partnerRun
+    ? cfg.fields.map((f) => (f.name === 'preferredDate' ? { ...f, options: partnerSessions.map((d) => d.date), optionValues: partnerSessions.map((d) => d.date) } : f))
+    : cfg.fields;
   const [status, setStatus] = useState<Status>('idle');
   const [consent, setConsent] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -125,10 +137,7 @@ export default function InlineLeadForm({
 
       {cfg.showDates && (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 10, marginBottom: 20 }}>
-          {TRAINING_DATE_DETAIL.map((d, i) => ({
-            date: (tm.raw('trainingDates') as string[])[i] ?? d.date,
-            note: (tm.raw('trainingDateNotes') as string[])[i] ?? d.note,
-          })).map((d) => (
+          {dateCards.map((d) => (
             <div key={d.date} style={{ border: cardBorder, padding: '14px 16px', background: cardBg }}>
               <div style={{ fontWeight: 700, fontSize: 14, color: dark ? '#fff' : 'var(--black)' }}>{d.date}</div>
               <div style={{ fontSize: 12, color: dark ? 'rgba(255,255,255,.75)' : 'var(--text-faint)', marginTop: 4 }}>{d.note}</div>
@@ -138,7 +147,7 @@ export default function InlineLeadForm({
       )}
 
       <div className="ilf-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-        {cfg.fields.map((f) => (
+        {fields.map((f) => (
           <div key={f.name} style={{ gridColumn: f.full || f.kind === 'area' ? '1 / -1' : undefined }}>
             <label style={labelStyle} htmlFor={`ilf-${f.name}`}>
               {f.label}{f.required ? ' *' : ''}

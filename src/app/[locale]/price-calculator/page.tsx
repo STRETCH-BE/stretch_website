@@ -14,14 +14,22 @@ import Eyebrow from '@/components/ui/Eyebrow';
 import PriceEstimator from '@/components/sections/PriceEstimator';
 import { localeBase } from '@/lib/seo';
 import { blogPath } from '@/lib/blog-slugs';
+import { notFound } from 'next/navigation';
+import { locales } from '@/i18n/config';
+import { pricesPublished } from '@/lib/currency';
+
+// Locales that publish indicative prices — the page does not exist elsewhere
+// (Switzerland: no product prices on the public site, QuinLay AG 2 Sep 2026).
+const PRICE_MARKETS = locales.filter(pricesPublished);
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  return pageMetadata({ locale: params.locale, route: '/price-calculator', titleKey: 'priceCalculatorTitle', descKey: 'priceCalculatorDescription' });
+  return pageMetadata({ locale: params.locale, route: '/price-calculator', titleKey: 'priceCalculatorTitle', descKey: 'priceCalculatorDescription', only: PRICE_MARKETS });
 }
 
 export default async function PriceCalculatorPage({ params }: { params: { locale: string } }) {
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
+  if (!pricesPublished(locale)) notFound();
   const t = await getTranslations('priceCalculatorPage');
   const tp = await getTranslations('productPage');
 

@@ -37,6 +37,7 @@ export const locales = [
   'fr', // French — France
   'pl', // Polish — Poland
   'de', // German — Germany
+  'ch', // German — Switzerland & Liechtenstein (market code; de-CH below) — stretchdecken.ch, QuinLay AG
   'es', // Spanish — Spain
   'pt', // Portuguese — Portugal
   'da', // Danish — Denmark
@@ -61,6 +62,7 @@ export const localeDomains: Record<Locale, string> = {
   fr: process.env.NEXT_PUBLIC_DOMAIN_FR || 'stretchplafond.fr',
   pl: process.env.NEXT_PUBLIC_DOMAIN_PL || 'stretch-sufit.pl',
   de: process.env.NEXT_PUBLIC_DOMAIN_DE || 'stretchdecken.de',
+  ch: process.env.NEXT_PUBLIC_DOMAIN_CH || 'stretchdecken.ch', // bought 2 Sep 2026 (+ .li → 308 here); stretchgroup.ch/.li → here at the registrar
   es: process.env.NEXT_PUBLIC_DOMAIN_ES || 'stretchtecho.es',
   pt: process.env.NEXT_PUBLIC_DOMAIN_PT || 'stretchteto.pt',
   da: process.env.NEXT_PUBLIC_DOMAIN_DA || 'straekloft.dk', // strækloft.dk (xn--strkloft-l0a.dk) 308 → here
@@ -87,6 +89,10 @@ export const localeStatus: Record<Locale, 'live' | 'pending'> = {
   fr: 'live',
   pl: 'live',
   de: 'live',
+  // stretchdecken.ch — domain bought 2 Sep 2026, not yet on Vercel/DNS. Flip to
+  // 'live' the day it resolves: that one change adds de-CH to hreflang, the
+  // sitemaps and the switcher on every domain.
+  ch: 'pending',
   es: 'live',
   pt: 'pending', // stretchteto.pt — no DNS yet
   da: 'live',
@@ -142,6 +148,7 @@ export const localeNames: Record<Locale, string> = {
   fr: 'Français',
   pl: 'Polski',
   de: 'Deutsch',
+  ch: 'Deutsch (Schweiz)',
   es: 'Español',
   pt: 'Português',
   da: 'Dansk',
@@ -160,6 +167,7 @@ export const localeFlags: Record<Locale, string> = {
   fr: '🇫🇷',
   pl: '🇵🇱',
   de: '🇩🇪',
+  ch: '🇨🇭',
   es: '🇪🇸',
   pt: '🇵🇹',
   da: '🇩🇰',
@@ -179,12 +187,24 @@ export const localeFullCodes: Record<Locale, string> = {
   fr: 'fr-FR',
   pl: 'pl-PL',
   de: 'de-DE',
+  ch: 'de-CH',
   es: 'es-ES',
   pt: 'pt-PT',
   da: 'da-DK',
   sv: 'sv-SE',
   no: 'nb-NO',
   is: 'is-IS',
+};
+
+// ---------------------------------------------------------------------------
+// HREFLANG ALIASES — extra BCP-47 tags that point at ANOTHER locale's URL.
+// stretchdecken.at redirects to stretchdecken.de (Vercel domain level), so
+// de-AT is served by the German pages: every hreflang set and sitemap
+// alternate lists de-AT with the de-DE URL (Google accepts several tags on
+// one URL). Not a locale: no domain, no messages, no pages of its own.
+// ---------------------------------------------------------------------------
+export const hreflangAliases: Record<string, Locale> = {
+  'de-AT': 'de',
 };
 
 // ---------------------------------------------------------------------------
