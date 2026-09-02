@@ -4240,20 +4240,20 @@
       },
       "spanplafond-prijs": {
         "title": "Hva koster et strekktak? En ærlig prisguide",
-        "excerpt": "Prisen på et strekktak ligger som regel mellom 800 kr og 2 300 kr per m² ferdig montert, avhengig av taktype og rom. Her får du forklaringen bak prisspennet, veiledende intervaller per taktype – og veien til et konkret tall for prosjektet ditt.",
+        "excerpt": "Prisen på et strekktak ligger som regel mellom 70 € og 200 € per m² ferdig montert, avhengig av taktype og rom. Her får du forklaringen bak prisspennet, veiledende intervaller per taktype – og veien til et konkret tall for prosjektet ditt.",
         "body": [
           {
             "heading": "Det korte svaret",
             "paragraphs": [
-              "For et profesjonelt montert strekktak bør du regne med omtrent 800 kr til 2 300 kr per kvadratmeter ekskl. mva, montering inkludert. Spennet er reelt: et enkelt, matt hvitt tak i en rektangulær stue ligger nederst i intervallet, mens et baklyst baderomstak med integrert belysning ligger øverst.",
+              "For et profesjonelt montert strekktak bør du regne med omtrent 70 € til 200 € per kvadratmeter ekskl. mva, montering inkludert. Spennet er reelt: et enkelt, matt hvitt tak i en rektangulær stue ligger nederst i intervallet, mens et baklyst baderomstak med integrert belysning ligger øverst.",
               "Alle tall i denne guiden er veiledende intervaller – ikke et tilbud. Duken produseres på mål til akkurat ditt rom, så det ærlige, endelige tallet kommer alltid fra et gratis og uforpliktende tilbud."
             ]
           },
           {
             "heading": "Veiledende priser per taktype",
             "paragraphs": [
-              "Et enkelt, ensfarget tak i PVC eller polyester er inngangsnivået på rundt 800 kr til 1 050 kr per m² – den raske, sømløse oppgraderingen for stuer, soverom og kontorer. Et trykket design legger til motiv og forberedelse og lander på rundt 1 050 kr til 1 200 kr per m².",
-              "Et akustisk tak – mikroperforert duk med absorpsjon bak – ligger rundt 1 200 kr til 1 750 kr per m² avhengig av oppbygningen. Et translusent, baklyst tak med LED-felter bak duken ligger rundt 1 500 kr til 1 850 kr per m² inkludert lysflaten. Baderomsprosjekter som kombinerer fuktbestandig duk med integrert belysning, ender typisk på 1 750 kr til 2 300 kr per m².",
+              "Et enkelt, ensfarget tak i PVC eller polyester er inngangsnivået på rundt 70 € til 90 € per m² – den raske, sømløse oppgraderingen for stuer, soverom og kontorer. Et trykket design legger til motiv og forberedelse og lander på rundt 90 € til 100 € per m².",
+              "Et akustisk tak – mikroperforert duk med absorpsjon bak – ligger rundt 100 € til 150 € per m² avhengig av oppbygningen. Et translusent, baklyst tak med LED-felter bak duken ligger rundt 130 € til 160 € per m² inkludert lysflaten. Baderomsprosjekter som kombinerer fuktbestandig duk med integrert belysning, ender typisk på 150 € til 200 € per m².",
               "Spesialarbeid – stjernehimmel, trykte baklyste design, prefabrikkerte elementer – utformes per prosjekt og prises per design."
             ]
           },
@@ -5542,7 +5542,6 @@
     "priceEyebrow": "Pris & bestilling",
     "priceTitle": "Bestille kitet ditt",
     "priceOnRequest": "Pris på forespørsel — send målene dine, og du får et skreddersydd tilbud innen én arbeidsdag.",
-    "currencyNotice": "Alle priser og betalinger er i EUR. £-beløpet er en indikasjon til ECBs referansekurs av {asOf}; banken eller kortet ditt regner om til egen kurs.",
     "deliveryPoints": [
       "Leveres DDP som kurérpakke — vi ordner toll og importformaliteter, den bekreftede prisen er prisen du betaler",
       "Frakt i hele EU og Storbritannia",
@@ -5780,5 +5779,12 @@
     "captchaFailed": "Sikkerhetskontrollen mislyktes. Prøv igjen.",
     "captchaLoadFailed": "Sikkerhetskontrollen kunne ikke lastes. Last siden på nytt, eller send oss en e-post på {email}.",
     "tooManyRequests": "For mange forespørsler. Vent noen minutter og prøv igjen."
+  },
+  "currency": {
+    "indicationNote": "{currency}-beløpet er en indikasjon etter ECBs referansekurs per {asOf}; alle priser og betalinger er i EUR. Banken eller kortet ditt regner om til sin egen kurs.",
+    "settlementNote": "Alle priser og betalinger er i {currency}.",
+    "indicationAria": "{eur} — kun veiledende, alle betalinger i EUR",
+    "guideNoteTitle": "I {currency}, omtrent",
+    "guideNoteBody": "Tallene i denne guiden er i EUR, valutaen vi fakturerer i. Til orientering: de samme intervallene etter ECBs referansekurs per {asOf}:"
   }
 }

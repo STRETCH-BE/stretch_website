@@ -5558,7 +5558,6 @@
     "priceEyebrow": "Prijs & bestellen",
     "priceTitle": "Uw kit bestellen",
     "priceOnRequest": "Prijs op aanvraag — stuur uw maten en u ontvangt binnen één werkdag een offerte op maat.",
-    "currencyNotice": "Alle prijzen en betalingen zijn in EUR. Het £-bedrag is een indicatie tegen de ECB-referentiekoers van {asOf}; uw bank of kaart rekent tegen haar eigen koers om.",
     "deliveryPoints": [
       "DDP geleverd per koerierpakket — wij regelen douane en invoerformaliteiten, de bevestigde prijs is de prijs die u betaalt",
       "Verzending in de hele EU en het VK",
@@ -5796,5 +5795,12 @@
     "captchaFailed": "De veiligheidscontrole is mislukt. Probeer het opnieuw.",
     "captchaLoadFailed": "De veiligheidscontrole kon niet laden. Vernieuw de pagina of mail ons via {email}.",
     "tooManyRequests": "Te veel aanvragen. Wacht enkele minuten en probeer het opnieuw."
+  },
+  "currency": {
+    "indicationNote": "Het bedrag in {currency} is een indicatie tegen de ECB-referentiekoers van {asOf}; alle prijzen en betalingen zijn in EUR. Uw bank of kaart rekent tegen haar eigen koers om.",
+    "settlementNote": "Alle prijzen en betalingen zijn in {currency}.",
+    "indicationAria": "{eur} — enkel ter indicatie, alle betalingen in EUR",
+    "guideNoteTitle": "In {currency}, bij benadering",
+    "guideNoteBody": "De bedragen in deze gids zijn in EUR, de valuta waarin wij factureren. Ter oriëntatie: dezelfde prijsvorken tegen de ECB-referentiekoers van {asOf}:"
   }
 }

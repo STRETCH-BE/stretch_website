@@ -5542,7 +5542,6 @@
     "priceEyebrow": "Preço e encomenda",
     "priceTitle": "Encomendar o seu kit",
     "priceOnRequest": "Preço sob consulta — envie as medidas e recebe um orçamento à medida num dia útil.",
-    "currencyNotice": "Todos os preços e pagamentos são em EUR. O valor em £ é uma indicação à taxa de referência do BCE de {asOf}; o seu banco ou cartão converte à sua própria taxa.",
     "deliveryPoints": [
       "Entrega DDP por encomenda de correio — tratamos da alfândega e das formalidades de importação, o preço confirmado é o preço que paga",
       "Envio para toda a UE e o Reino Unido",
@@ -5780,5 +5779,12 @@
     "captchaFailed": "A verificação de segurança falhou. Tente novamente.",
     "captchaLoadFailed": "Não foi possível carregar a verificação de segurança. Atualize a página ou escreva-nos para {email}.",
     "tooManyRequests": "Demasiados pedidos. Aguarde alguns minutos e tente novamente."
+  },
+  "currency": {
+    "indicationNote": "O valor em {currency} é uma indicação à taxa de referência do BCE de {asOf}; todos os preços e pagamentos são em EUR. O seu banco ou cartão converte à sua própria taxa.",
+    "settlementNote": "Todos os preços e pagamentos são em {currency}.",
+    "indicationAria": "{eur} — apenas indicativo, todos os pagamentos em EUR",
+    "guideNoteTitle": "Em {currency}, aproximadamente",
+    "guideNoteBody": "Os valores deste guia estão em EUR, a moeda em que faturamos. Para orientação, os mesmos intervalos à taxa de referência do BCE de {asOf}:"
   }
 }

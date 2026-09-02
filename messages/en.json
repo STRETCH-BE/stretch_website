@@ -5552,7 +5552,6 @@
     "priceEyebrow": "Price & ordering",
     "priceTitle": "Ordering your kit",
     "priceOnRequest": "Price on request — send your measurements and we reply with a tailored quote within one working day.",
-    "currencyNotice": "All prices and payments are in EUR. The £ amount is an indication at the ECB reference rate of {asOf}; your bank or card converts at its own rate.",
     "deliveryPoints": [
       "Delivered DDP by courier parcel — we handle customs and import paperwork, the price we confirm is the price you pay",
       "Shipping across the EU and the UK",
@@ -5790,5 +5789,12 @@
     "captchaFailed": "The security check failed. Please try again.",
     "captchaLoadFailed": "The security check could not load. Please refresh the page or email us at {email}.",
     "tooManyRequests": "Too many requests. Please wait a few minutes and try again."
+  },
+  "currency": {
+    "indicationNote": "The {currency} amount is an indication at the ECB reference rate of {asOf}; all prices and payments are in EUR. Your bank or card converts at its own rate.",
+    "settlementNote": "All prices and payments are in {currency}.",
+    "indicationAria": "{eur} — indication only, all payments in EUR",
+    "guideNoteTitle": "In {currency}, approximately",
+    "guideNoteBody": "The figures in this guide are in EUR, the currency we invoice in. For orientation, the same ranges at the ECB reference rate of {asOf}:"
   }
 }

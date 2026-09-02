@@ -13,6 +13,7 @@ import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import PriceEstimator from '@/components/sections/PriceEstimator';
 import { localeBase } from '@/lib/seo';
+import { blogPath } from '@/lib/blog-slugs';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/price-calculator', titleKey: 'priceCalculatorTitle', descKey: 'priceCalculatorDescription' });
@@ -42,7 +43,7 @@ export default async function PriceCalculatorPage({ params }: { params: { locale
           </h1>
           <p className="lead" style={{ maxWidth: '56ch', margin: '0 0 30px' }}>{t('lead')}</p>
         </div>
-        <PriceEstimator />
+        <PriceEstimator guideHref={blogPath('spanplafond-prijs', locale)} />
       </section>
     </>
   );

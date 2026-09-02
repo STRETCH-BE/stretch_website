@@ -5542,7 +5542,6 @@
     "priceEyebrow": "Preis & Bestellung",
     "priceTitle": "Ihr Kit bestellen",
     "priceOnRequest": "Preis auf Anfrage — senden Sie Ihre Maße und Sie erhalten innerhalb eines Werktags ein maßgeschneidertes Angebot.",
-    "currencyNotice": "Alle Preise und Zahlungen sind in EUR. Der £-Betrag ist eine Indikation zum EZB-Referenzkurs vom {asOf}; Ihre Bank oder Karte rechnet zu ihrem eigenen Kurs um.",
     "deliveryPoints": [
       "DDP-Lieferung per Kurierpaket — Zoll und Einfuhrformalitäten übernehmen wir, der bestätigte Preis ist der Preis, den Sie zahlen",
       "Versand in die gesamte EU und nach Großbritannien",
@@ -5780,5 +5779,12 @@
     "captchaFailed": "Die Sicherheitsprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
     "captchaLoadFailed": "Die Sicherheitsprüfung konnte nicht geladen werden. Laden Sie die Seite neu oder schreiben Sie uns an {email}.",
     "tooManyRequests": "Zu viele Anfragen. Bitte warten Sie einige Minuten und versuchen Sie es erneut."
+  },
+  "currency": {
+    "indicationNote": "Der {currency}-Betrag ist eine Indikation zum EZB-Referenzkurs vom {asOf}; alle Preise und Zahlungen sind in EUR. Ihre Bank oder Karte rechnet zu ihrem eigenen Kurs um.",
+    "settlementNote": "Alle Preise und Zahlungen sind in {currency}.",
+    "indicationAria": "{eur} — nur zur Orientierung, alle Zahlungen in EUR",
+    "guideNoteTitle": "In {currency}, ungefähr",
+    "guideNoteBody": "Die Zahlen in diesem Leitfaden sind in EUR, der Währung, in der wir abrechnen. Zur Orientierung dieselben Spannen zum EZB-Referenzkurs vom {asOf}:"
   }
 }

@@ -4240,20 +4240,20 @@
       },
       "spanplafond-prijs": {
         "title": "Vad kostar ett spänntak? En ärlig prisguide",
-        "excerpt": "Priset på ett spänntak ligger normalt mellan 800 kr och 2 300 kr per m² inklusive montering, beroende på taktyp och rum. Här får du förklaringen bakom prisspannet, vägledande intervall per taktyp – och hur du får en fast siffra för ditt projekt.",
+        "excerpt": "Priset på ett spänntak ligger normalt mellan 70 € och 200 € per m² inklusive montering, beroende på taktyp och rum. Här får du förklaringen bakom prisspannet, vägledande intervall per taktyp – och hur du får en fast siffra för ditt projekt.",
         "body": [
           {
             "heading": "Det korta svaret",
             "paragraphs": [
-              "För ett professionellt monterat spänntak får du räkna med ungefär 800 kr till 2 300 kr per kvadratmeter exkl. moms, montering inräknad. Spannet är på riktigt: ett enkelt, matt vitt tak i ett rektangulärt vardagsrum ligger i botten av intervallet, medan ett bakbelyst badrumstak med integrerad belysning ligger i toppen.",
+              "För ett professionellt monterat spänntak får du räkna med ungefär 70 € till 200 € per kvadratmeter exkl. moms, montering inräknad. Spannet är på riktigt: ett enkelt, matt vitt tak i ett rektangulärt vardagsrum ligger i botten av intervallet, medan ett bakbelyst badrumstak med integrerad belysning ligger i toppen.",
               "Alla siffror i den här guiden är vägledande intervall – inte en offert. Duken tillverkas på mått efter just ditt rum, så den ärliga slutsiffran kommer alltid från en kostnadsfri offert utan förpliktelser."
             ]
           },
           {
             "heading": "Vägledande priser per taktyp",
             "paragraphs": [
-              "Ett enkelt, enfärgat tak i PVC eller polyester är instegsnivån på ungefär 800 kr till 1 000 kr per m² – den snabba, skarvfria uppgraderingen för vardagsrum, sovrum och kontor. Ett tryckt motiv lägger till design och förberedelse och landar på ungefär 1 000 kr till 1 150 kr per m².",
-              "Ett akustiskt tak – mikroperforerad duk med absorption bakom – ligger runt 1 150 kr till 1 700 kr per m² beroende på uppbyggnaden. Ett translucent, bakbelyst tak med LED-fält bakom duken ligger runt 1 500 kr till 1 800 kr per m² inklusive ljusytan. Badrumsprojekt som kombinerar fukttålig duk med integrerad belysning landar normalt på 1 700 kr till 2 300 kr per m².",
+              "Ett enkelt, enfärgat tak i PVC eller polyester är instegsnivån på ungefär 70 € till 90 € per m² – den snabba, skarvfria uppgraderingen för vardagsrum, sovrum och kontor. Ett tryckt motiv lägger till design och förberedelse och landar på ungefär 90 € till 100 € per m².",
+              "Ett akustiskt tak – mikroperforerad duk med absorption bakom – ligger runt 100 € till 150 € per m² beroende på uppbyggnaden. Ett translucent, bakbelyst tak med LED-fält bakom duken ligger runt 130 € till 160 € per m² inklusive ljusytan. Badrumsprojekt som kombinerar fukttålig duk med integrerad belysning landar normalt på 150 € till 200 € per m².",
               "Specialarbeten – stjärnhimlar, tryckta bakbelysta motiv, prefabricerade element – designas per projekt och prissätts per design."
             ]
           },
@@ -5542,7 +5542,6 @@
     "priceEyebrow": "Pris & beställning",
     "priceTitle": "Beställa ditt kit",
     "priceOnRequest": "Pris på förfrågan — skicka dina mått så får du en skräddarsydd offert inom en arbetsdag.",
-    "currencyNotice": "Alla priser och betalningar är i EUR. £-beloppet är en indikation till ECB:s referenskurs av {asOf}; din bank eller ditt kort växlar till egen kurs.",
     "deliveryPoints": [
       "Levereras DDP som kurirpaket — vi sköter tull och importformaliteter, det bekräftade priset är priset du betalar",
       "Frakt i hela EU och Storbritannien",
@@ -5780,5 +5779,12 @@
     "captchaFailed": "Säkerhetskontrollen misslyckades. Försök igen.",
     "captchaLoadFailed": "Säkerhetskontrollen kunde inte läsas in. Ladda om sidan eller mejla oss på {email}.",
     "tooManyRequests": "För många förfrågningar. Vänta några minuter och försök igen."
+  },
+  "currency": {
+    "indicationNote": "Beloppet i {currency} är en indikation enligt ECB:s referenskurs per {asOf}; alla priser och betalningar är i EUR. Din bank eller ditt kort växlar till egen kurs.",
+    "settlementNote": "Alla priser och betalningar är i {currency}.",
+    "indicationAria": "{eur} — endast indikation, alla betalningar i EUR",
+    "guideNoteTitle": "Ungefär i {currency}",
+    "guideNoteBody": "Siffrorna i den här guiden är i EUR, valutan vi fakturerar i. Som vägledning visas samma intervall här enligt ECB:s referenskurs per {asOf}:"
   }
 }

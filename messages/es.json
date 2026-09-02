@@ -5542,7 +5542,6 @@
     "priceEyebrow": "Precio y pedido",
     "priceTitle": "Pedir tu kit",
     "priceOnRequest": "Precio a petición — envía tus medidas y recibirás un presupuesto a medida en un día laborable.",
-    "currencyNotice": "Todos los precios y pagos son en EUR. El importe en £ es una indicación al tipo de referencia del BCE del {asOf}; tu banco o tarjeta convierte a su propio tipo.",
     "deliveryPoints": [
       "Entrega DDP por paquetería — gestionamos aduanas y trámites de importación, el precio confirmado es el precio que pagas",
       "Envío a toda la UE y al Reino Unido",
@@ -5780,5 +5779,12 @@
     "captchaFailed": "La verificación de seguridad ha fallado. Inténtelo de nuevo.",
     "captchaLoadFailed": "La verificación de seguridad no se pudo cargar. Actualice la página o escríbanos a {email}.",
     "tooManyRequests": "Demasiadas solicitudes. Espere unos minutos e inténtelo de nuevo."
+  },
+  "currency": {
+    "indicationNote": "El importe en {currency} es una indicación al tipo de referencia del BCE del {asOf}; todos los precios y pagos son en EUR. La conversión la aplica el banco o la entidad emisora de la tarjeta a su propio tipo de cambio.",
+    "settlementNote": "Todos los precios y pagos son en {currency}.",
+    "indicationAria": "{eur} — solo indicativo, todos los pagos en EUR",
+    "guideNoteTitle": "En {currency}, aproximadamente",
+    "guideNoteBody": "Las cifras de esta guía están en EUR, la moneda en la que facturamos. A modo de orientación, los mismos rangos al tipo de referencia del BCE del {asOf}:"
   }
 }

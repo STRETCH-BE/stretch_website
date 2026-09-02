@@ -4351,7 +4351,7 @@
           {
             "heading": "Ile to kosztuje w 2026 roku",
             "paragraphs": [
-              "Przy profesjonalnym montażu licz się z kwotą od około €70 do €200 za metr kwadratowy bez VAT, z montażem w cenie. Gładki sufit w jednym kolorze to około €70–90 za m², wersja z nadrukiem około €90–100, zabudowa akustyczna około €100–150, a projekty z podświetleniem lub łazienkowe ze zintegrowanym oświetleniem €130–200 za m².",
+              "Przy profesjonalnym montażu licz się z kwotą od około 150 zł do 450 zł za metr kwadratowy netto, z montażem w cenie. Gładki sufit w jednym kolorze to około 150–200 zł za m², wersja z nadrukiem około 200–250 zł, zabudowa akustyczna około 250–350 zł, a projekty z podświetleniem lub łazienkowe ze zintegrowanym oświetleniem 300–450 zł za m².",
               "To widełki orientacyjne, nie wycena — membranę wykonuje się na wymiar, dokładnie pod twoje pomieszczenie. Większe pomieszczenia wychodzą taniej w przeliczeniu na metr kwadratowy; narożniki, łuki i integracje to dodatkowa praca. Pełne zestawienie znajdziesz w naszym przewodniku cenowym, a bezpłatna wycena daje już konkretną kwotę — zwykle jeszcze tego samego dnia roboczego."
             ]
           },
@@ -5542,7 +5542,6 @@
     "priceEyebrow": "Cena i zamówienie",
     "priceTitle": "Zamawianie zestawu",
     "priceOnRequest": "Cena na zapytanie — prześlij wymiary, a w ciągu jednego dnia roboczego otrzymasz wycenę na miarę.",
-    "currencyNotice": "Wszystkie ceny i płatności są w EUR. Kwota w £ to orientacja według kursu referencyjnego EBC z {asOf}; Twój bank lub karta przelicza po własnym kursie.",
     "deliveryPoints": [
       "Dostawa DDP paczką kurierską — cło i formalności importowe bierzemy na siebie, potwierdzona cena to cena, którą płacisz",
       "Wysyłka po całej UE i do Wielkiej Brytanii",
@@ -5780,5 +5779,12 @@
     "captchaFailed": "Weryfikacja bezpieczeństwa nie powiodła się. Spróbuj ponownie.",
     "captchaLoadFailed": "Nie udało się załadować weryfikacji bezpieczeństwa. Odśwież stronę lub napisz do nas: {email}.",
     "tooManyRequests": "Zbyt wiele żądań. Odczekaj kilka minut i spróbuj ponownie."
+  },
+  "currency": {
+    "indicationNote": "Kwota w {currency} to orientacja według kursu referencyjnego EBC z {asOf}; wszystkie ceny i płatności są w EUR. Twój bank lub karta przelicza po własnym kursie.",
+    "settlementNote": "Wszystkie ceny i płatności są w {currency}.",
+    "indicationAria": "{eur} — wyłącznie orientacyjnie, wszystkie płatności w EUR",
+    "guideNoteTitle": "Orientacyjnie w {currency}",
+    "guideNoteBody": "Kwoty w tym przewodniku podajemy w EUR — walucie, w której wystawiamy faktury. Dla orientacji te same widełki według kursu referencyjnego EBC z {asOf}:"
   }
 }

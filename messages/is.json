@@ -4240,20 +4240,20 @@
       },
       "spanplafond-prijs": {
         "title": "Hvað kostar dúkaloft? Heiðarlegur verðleiðarvísir",
-        "excerpt": "Verð á dúkalofti liggur að jafnaði á bilinu 10.000 kr. til 30.000 kr. per m² með uppsetningu, eftir gerð lofts og rými. Hér færðu skýringuna á verðbilinu, viðmiðunarverð fyrir hverja gerð lofts – og hvernig þú færð fast verð fyrir þitt verkefni.",
+        "excerpt": "Verð á dúkalofti liggur að jafnaði á bilinu 70 EUR til 200 EUR per m² með uppsetningu, eftir gerð lofts og rými. Hér færðu skýringuna á verðbilinu, viðmiðunarverð fyrir hverja gerð lofts – og hvernig þú færð fast verð fyrir þitt verkefni.",
         "body": [
           {
             "heading": "Stutta svarið",
             "paragraphs": [
-              "Fyrir dúkaloft sem fagfólk setur upp máttu gera ráð fyrir um það bil 10.000 kr. til 30.000 kr. á fermetra án vsk, með uppsetningu innifalinni. Bilið er raunverulegt: einfalt, matt hvítt loft í rétthyrndri stofu er neðst á bilinu, en baklýst baðherbergisloft með innbyggðri lýsingu er efst.",
+              "Fyrir dúkaloft sem fagfólk setur upp máttu gera ráð fyrir um það bil 70 EUR til 200 EUR á fermetra án vsk, með uppsetningu innifalinni. Bilið er raunverulegt: einfalt, matt hvítt loft í rétthyrndri stofu er neðst á bilinu, en baklýst baðherbergisloft með innbyggðri lýsingu er efst.",
               "Allar tölur í þessum leiðarvísi eru viðmiðunarbil – ekki tilboð. Dúkurinn er framleiddur eftir máli fyrir þitt rými, svo heiðarlega lokatalan kemur alltaf úr ókeypis og óskuldbindandi tilboði."
             ]
           },
           {
             "heading": "Viðmiðunarverð eftir gerð lofts",
             "paragraphs": [
-              "Einfalt, einlitt loft úr PVC eða pólýester er upphafspunkturinn á um 10.000 kr. til 13.000 kr. per m² – hröð og samskeytalaus uppfærsla fyrir stofur, svefnherbergi og skrifstofur. Prentuð hönnun bætir við myndefni og undirbúningi og endar í kringum 13.000 kr. til 15.000 kr. per m².",
-              "Hljóðdempandi loft – örgataður dúkur með hljóðísogi fyrir ofan – kostar um 15.000 kr. til 22.000 kr. per m² eftir uppbyggingu. Hálfgegnsætt, baklýst loft með LED-flötum bak við dúkinn liggur í kringum 19.000 kr. til 24.000 kr. per m² að meðtöldum ljósfletinum. Baðherbergisverkefni sem sameina rakaþolinn dúk og innbyggða lýsingu ná yfirleitt 22.000 kr. til 30.000 kr. per m².",
+              "Einfalt, einlitt loft úr PVC eða pólýester er upphafspunkturinn á um 70 EUR til 90 EUR per m² – hröð og samskeytalaus uppfærsla fyrir stofur, svefnherbergi og skrifstofur. Prentuð hönnun bætir við myndefni og undirbúningi og endar í kringum 90 EUR til 100 EUR per m².",
+              "Hljóðdempandi loft – örgataður dúkur með hljóðísogi fyrir ofan – kostar um 100 EUR til 150 EUR per m² eftir uppbyggingu. Hálfgegnsætt, baklýst loft með LED-flötum bak við dúkinn liggur í kringum 130 EUR til 160 EUR per m² að meðtöldum ljósfletinum. Baðherbergisverkefni sem sameina rakaþolinn dúk og innbyggða lýsingu ná yfirleitt 150 EUR til 200 EUR per m².",
               "Sérverkefni – stjörnuhiminn, prentuð baklýst hönnun, forsmíðaðar einingar – eru hönnuð fyrir hvert verkefni og verðlögð eftir hönnun."
             ]
           },
@@ -5542,7 +5542,6 @@
     "priceEyebrow": "Verð & pöntun",
     "priceTitle": "Að panta settið",
     "priceOnRequest": "Verð eftir beiðni — sendu málin og þú færð sérsniðið tilboð innan eins virks dags.",
-    "currencyNotice": "Öll verð og greiðslur eru í EUR. £-upphæðin er vísbending á viðmiðunargengi ECB frá {asOf}; bankinn þinn eða kortið umreiknar á eigin gengi.",
     "deliveryPoints": [
       "Afhent DDP með hraðsendingu — við sjáum um tolla og innflutningspappíra, staðfest verð er verðið sem þú greiðir",
       "Sending um allt ESB og Bretland",
@@ -5780,5 +5779,12 @@
     "captchaFailed": "Öryggisathugunin mistókst. Reyndu aftur.",
     "captchaLoadFailed": "Ekki tókst að hlaða öryggisathuguninni. Endurhladdu síðunni eða sendu okkur póst á {email}.",
     "tooManyRequests": "Of margar beiðnir. Bíddu í nokkrar mínútur og reyndu aftur."
+  },
+  "currency": {
+    "indicationNote": "Upphæðin í {currency} er aðeins vísbending, miðuð við viðmiðunargengi ECB frá {asOf}; öll verð og greiðslur eru í EUR. Bankinn þinn eða kortið umreiknar á eigin gengi.",
+    "settlementNote": "Öll verð og greiðslur eru í {currency}.",
+    "indicationAria": "{eur} — aðeins vísbending, allar greiðslur í EUR",
+    "guideNoteTitle": "Í {currency}, um það bil",
+    "guideNoteBody": "Tölurnar í þessum leiðarvísi eru í EUR, gjaldmiðlinum sem við sendum reikninga í. Til viðmiðunar eru hér sömu bil á viðmiðunargengi ECB frá {asOf}:"
   }
 }

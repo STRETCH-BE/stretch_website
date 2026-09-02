@@ -6,8 +6,9 @@
 import { siteUrl, brand, contact, offices, salesTerritory, social } from '@/lib/site-config';
 import { locales, localeFullCodes, originForLocale, type Locale } from '@/i18n/config';
 import { indicativePriceRange } from '@/lib/indicative-prices';
+import { settlementCurrencyFor } from '@/lib/currency';
 import type { Product, Faq } from '@/lib/products';
-import type { BlogPost } from '@/lib/content';
+import { blogHref, type BlogPost } from '@/lib/content';
 import { localeBase } from '@/lib/seo';
 
 const ORG_ID = `${siteUrl}/#organization`;
@@ -93,7 +94,11 @@ export function websiteSchema(opts: { locale: Locale; description?: string; hasS
  * without offers/review/aggregateRating is itself a Search Console error).
  */
 export function productSchema(product: Product, locale: Locale): Record<string, unknown> | null {
-  const range = indicativePriceRange(product.slug);
+  // The offer is priced in the locale's SETTLEMENT currency: EUR everywhere,
+  // PLN on stretch-sufit.pl (its own published PLN buckets — never a
+  // conversion). Display-only indications (DKK, SEK, …) never reach the markup.
+  const currency = settlementCurrencyFor(locale);
+  const range = indicativePriceRange(product.slug, currency);
   if (!range) return null;
 
   const url = `${localeBase(locale)}/products/${product.slug}`;
@@ -124,15 +129,15 @@ export function productSchema(product: Product, locale: Locale): Record<string, 
     additionalProperty,
     offers: {
       '@type': 'AggregateOffer',
-      priceCurrency: 'EUR',
+      priceCurrency: currency,
       lowPrice: range.low,
       highPrice: range.high,
-      // Documents that the figures are €/m² installed (MTK = square metre),
+      // Documents that the figures are per m² installed (MTK = square metre),
       // matching the published guide. unitCode only — a unitText string would
       // be untranslated English on 11 of the 12 locales.
       priceSpecification: {
         '@type': 'UnitPriceSpecification',
-        priceCurrency: 'EUR',
+        priceCurrency: currency,
         minPrice: range.low,
         maxPrice: range.high,
         unitCode: 'MTK',
@@ -184,6 +189,11 @@ export function branchLocalBusinessSchemas() {
         geo: { '@type': 'GeoCoordinates', latitude: o.geo!.lat, longitude: o.geo!.lng },
       };
     });
+}
+
+/** The LocalBusiness node of ONE branch (e.g. 'PL' for the Częstochowa plant). */
+export function branchLocalBusinessSchema(country: string) {
+  return branchLocalBusinessSchemas().find((b) => (b['@id'] as string).endsWith(`#branch-${country.toLowerCase()}`));
 }
 
 /**
@@ -259,7 +269,9 @@ export function localBusinessSchema() {
 }
 
 export function articleSchema(post: BlogPost, locale: Locale) {
-  const url = `${localeBase(locale)}/blog/${post.slug}`;
+  // The page URL uses the locale's OWN slug; the OG image resolves by the
+  // canonical slug (api/og/[slug] looks the post up by it).
+  const url = `${localeBase(locale)}${blogHref(post, locale)}`;
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
