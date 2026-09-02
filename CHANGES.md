@@ -1,3 +1,145 @@
+## 2026-09-02 (25) — Fix round 3: market localisation (per-market audit, D1–D5)
+
+The 2 Sep 2026 per-market audit found the network *engineered* as twelve
+local businesses but *stocked* as one Belgian one. This round fixes four of
+the five structural defects in code and lands the five named market tasks,
+one commit per task. Build: **2241 → 2523 (2514 before the nine articles)** static pages, typecheck
+clean, 0 MISSING_MESSAGE, full key parity across 14 files.
+
+- **T1 / D5 — the Danish and Icelandic product noun.** `messages/da.json`
+  said *spændloft* (135×) and *stretchloft* (73×); `messages/is.json` said
+  *strekkiloft* (132×) and *strekkloft* (50×) — words the markets do not
+  search (straekloft.dk is already the domain; `/dukaloft/` was stretch.is's
+  strongest old page). Every occurrence is now **strækloft** / **dúkaloft**:
+  title tags, meta descriptions, H1s, body copy, nav, breadcrumbs, alt text,
+  FAQ answers. Rules followed to the letter: Danish only in the singular
+  (strækloft / strækloftet) — plurals and compounds restructured to the
+  singular or left with a `TODO(da):` prefix; Icelandic only where the
+  inflection sits on the unchanged head noun *loft* (dúkaloftið, dúkalofta,
+  dúkaloftum …), compounds restructured with a preposition or marked
+  `TODO(is):`. Counts: da 130 noun swaps, 88 sentences restructured to the singular, 0 TODO(da); is 192 prefix swaps on the unchanged head noun, 33 restructured with a preposition, 1 TODO(is). Residual old
+  stems: **0** in both files (`grep -ci`). `src/i18n/config.ts` now carries
+  the market-term line so the old words cannot creep back.
+  *Native-speaker pass required before shipping — see the TODO markers.*
+- **T2 / D4 — euros in five non-euro markets.** `src/lib/currency.ts` is now a
+  per-locale DISPLAY policy: settlement stays EUR (PLN for Poland) and
+  nothing financial reads the file. A hand-maintained ECB rate table
+  (GBP, USD, DKK, SEK, NOK, ISK, CHF + PLN for EUR-denominated figures),
+  `asOf` dated, never fetched live — two builds render identical figures.
+  `displayCurrencyFor()`, `formatIndication()` and friends generalise the
+  UK GBP treatment: `da→DKK sv→SEK no→NOK is→ISK uk→GBP us→USD` render "≈ …"
+  beside the dominant EUR amount; CHF is in the table, dormant until a `ch`
+  locale exists. `PriceEstimator` no longer hardcodes EUR: it reads the
+  buckets from `src/lib/indicative-prices.ts`, which is now the ONE public
+  price source for the estimator, the Product JSON-LD and the price guide —
+  and carries the Polish **PLN** buckets (150–450 zł/m², the figures the
+  Polish price guide already publishes) as a second settlement list, so on
+  stretch-sufit.pl PLN is the primary amount, never a conversion, and the
+  Product `AggregateOffer` on .pl is finally priced in PLN. The price-guide
+  article shows the EUR buckets with the local "≈" equivalents on
+  indication markets (`PriceGuideCurrencyNote`); `/kit` and
+  `PriceIndication` follow the same policy (the hardcoded English note is
+  now the `currency.*` namespace, translated ×14; `kitPage.currencyNotice`
+  removed from all 14 files). **Meta descriptions keep "€70–200/m²"
+  deliberately**: they quote the published EUR range the page itself shows
+  as the dominant figure; a converted figure in a title would need a monthly
+  edit and would go stale. **Rates were seeded, not fetched** — the build
+  sandbox cannot reach ecb.europa.eu; verify the eight values before deploy.
+- **T3 / D2 — 21 new local pages outside the Benelux.** `DealerRegion` gains
+  `germany | poland | france`, `primaryLocale` gains `'pl'`. Recruitment
+  variants (empty `dealerIds`): Berlin, Hamburg, München, Köln, Frankfurt am
+  Main, Stuttgart, Düsseldorf, Dortmund, Essen, Leipzig · Częstochowa
+  (`factory: true`), Warszawa, Kraków · Paris, Lyon, Marseille, Lille,
+  Bordeaux, Toulouse, Nantes, Strasbourg. Region labels ×14. The overview
+  now orders the visitor's HOME regions first (`regionsForLocale`), and
+  `nearbyPlaces` no longer treats every province-less city as a neighbour of
+  every other (a latent bug that Wien alone never exposed). `dealerMarkets`
+  still derives from `primaryLocale` + the recruitment list — verified:
+  `stretchceiling.us/dealers` still 404s, no en-US alternate anywhere.
+- **T4a / D1 — per-locale blog slugs.** `BlogPost.slugs` (from
+  `src/lib/blog-slugs.json`, the one map `content.ts` AND `redirects.mjs`
+  read), `slugForLocale`/`blogHref`/`blogPostForSlug`, `localizeHref` for
+  the link rows inside article bodies and the mega-menu skeleton.
+  `generateStaticParams`, `generateMetadata`, the page, the blog index, the
+  sitemap, `articleSchema`, the kit page and the estimator all build blog
+  URLs through it; `buildAlternates` takes a `routeFor` so every hreflang
+  names THAT locale's slug (verified in the built sitemap). 200 native slugs across 12 locales (en/uk/us share the English set; the premie post only where it exists) → 200
+  host-scoped 301s are generated from the JSON and spread BEFORE each
+  host's `genericRules` (first match wins); the es/pt/dk/se/no hosts got
+  their first rule groups. `be`/`nl` slugs untouched.
+- **T4b — nine market-native articles**, written in the market language for
+  that market only (`native` + single-locale `markets`, no overlay in any
+  message file, never translated): DE `spanndecke-kosten-pro-m2`, `spanndecke-oder-abgehaengte-decke`, `spanndecke-kosten-renovierung` (each linking `/price-calculator`) · PL `co-to-jest-sufit-napinany`, `sufit-napinany-pvc-czy-tkanina`, `o-co-zapytac-producenta-sufitow-napinanych` (factory-led, linking `/dealers/czestochowa` and `/installer-training`)
+  · FR `plafond-tendu-prix-m2`, `plafond-tendu-prix-pose`, `plafond-tendu-devis-comparer` (the “plafond tendu prix” target). Fact-checked against the published figures only
+  (EUR buckets for DE/FR, PLN for PL, no warranty durations, no tax advice).
+- **T5 — Wallonia & Luxembourg carry the Belgian identity.** Every Belgian
+  and Luxembourg place page renders an identity block naming Stretch
+  Productions BV, Beveren-Waas production, phone, VAT (once
+  `brand.vatNumber` is set — it is NOT in the repo, so it renders nothing
+  until Michael fills it in) and links the Belgian grants/VAT article
+  wherever that post exists (be/nl/fr/en/uk); the page emits the Belgian
+  `LocalBusiness` node. The Wallonia label reads "Wallonie · Belgique".
+  French cities get a "served directly" block WITHOUT the Belgian address —
+  there is no French sales address in the data to show; Michael to supply
+  one if the French pages should carry a French NAP.
+- **T6 — the calculator is reachable.** `/price-calculator` is the last item
+  of the first mega-menu category on every locale (appended — index-keyed
+  messages, cats.0.items.4), in the mobile menu, linked under the CTA of
+  all eight product pages ("what does this cost per m²"), from the price
+  guide (calculator card), from every German (and other) city page under
+  the H1, and from the German articles. **stretchdecken.de** gets a compact
+  estimator band directly under the hero (area + type → `/price-calculator?
+  area=&type=`; the estimator reads the query on mount) — the full entry
+  point, not just a CTA. Published figures untouched.
+- **T7 — Poland: the factory is the story.** Częstochowa is the first Polish
+  place and names the plant (Alto Design Sp. z o.o., Legionów 59) with its
+  own `LocalBusiness` node and a training CTA; Polish pages say "two EU
+  plants: Częstochowa and Beveren-Waas"; installer training is a PRIMARY
+  nav item on stretch-sufit.pl and the installer band moves up to right
+  after the stats, reframed as the academy for installers and contractors;
+  pl.json's header chip and tagline now state the two plants. PLN stays the
+  primary amount (T2).
+
+- **Codebase analysis** (`docs/CODEBASE-ANALYSIS-2026-09-02.md`): ten
+  subsystem readers, a refute pass over the 42 high-rated findings (9
+  confirmed, 33 rejected as pre-fix-state), a completeness critic, and a
+  status per finding. Two follow-up commits fixed the cheap, safe ones:
+  robots.txt allowed nothing under `/api/` although every og:image and
+  schema image is `/api/og` (now `Allow: /api/og/`); `stretchceiling.us` was
+  in neither Turnstile widget group, so every US lead failed the captcha
+  (added to group B in code — **add it to widget B in Cloudflare too**); the
+  language switcher, mobile language grid and footer “worldwide” links carried
+  the current path across domains, which per-locale slugs would have turned
+  into 404s (`pathForLocale()` translates blog paths, market-only articles
+  go to `/blog`); the Polish calculator meta and renovation article still
+  said €70–200; llms.txt said STRETCH publishes no prices, 6.4 m, 12 domains,
+  made in Belgium in-house; legacy content rules now land on the host’s own
+  blog slug in one hop; the `/dealers` hub was linked from `/supply` only
+  (now footer + mobile menu on dealer markets); three server pages used bare
+  `<style>{…}</style>` blocks; `us` had no default country; the Technical
+  mega menu’s “All specs” button went to `/products`; `/price-calculator`
+  and `/dealers` rank 0.8 in the sitemap; `salesTerritory` gains ES, PT, DK,
+  SE, NO. Open items (portal/security backlog, README rewrite, dead root
+  `middleware.ts`, warranty 10 vs 25 years, Norwegian strekktak vs
+  strekkhimling, OG images per locale) are prioritised in the report.
+
+**Decisions for Michael (not code):**
+- **Sweden:** switch the canonical to `spänntak.se` (owned, resolving) —
+  `localeDomains.sv` + Vercel domain + 308 from stretchceilings.se.
+- **Norway:** settle the domain before anything ships — `stretchtak.no` is
+  the wrong word; `strekktak.no` is taken, `strekk-tak.no` is a competitor's.
+- **Wallonia, structural option:** an `fr-BE` locale on its own host
+  (`fr.stretchplafond.be` — `localeDomains` maps a locale to a host string,
+  so it works mechanically) would put Wallonia on a Belgian domain in
+  French. It is a domain and content-duplication decision (the .fr content
+  would exist twice); the pragmatic identity fix above is live meanwhile.
+- **French sales address** for the French city pages (T5.4) and the
+  **Belgian VAT number** (`brand.vatNumber`) — both render nothing until set.
+- **ECB rates** — verify the seeded table in `src/lib/currency.ts`.
+- **Austria / Switzerland / Liechtenstein:** the three redirects still answer
+  302 — set them to 308 in Vercel → Domains (outstanding for three rounds).
+- **Native-speaker check** of the `TODO(da)` / `TODO(is)` strings before T1 ships.
+
 ## 2026-09-02 (24) — Footer: altodesign.pl branch link
 
 - The "PL · Częstochowa" office chip in the shared footer is now a
