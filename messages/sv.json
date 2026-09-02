@@ -5380,7 +5380,7 @@
     "ovTitle": "Återförsäljare",
     "ovIntro": "Spänntak från STRETCH mäts upp och monteras av certifierade lokala partner, med vår egen produktion nära Lokeren i ryggen. Hitta din region — eller ta en av de lediga platserna.",
     "regionFlanders": "Flandern & Bryssel",
-    "regionWallonia": "Vallonien",
+    "regionWallonia": "Vallonien · Belgien",
     "regionNetherlands": "Nederländerna",
     "lookingLabel": "Återförsäljare sökes",
     "ovRecruitTitle": "Ingen återförsäljare i ditt område ännu?",
@@ -5390,7 +5390,16 @@
     "regionGermany": "Tyskland",
     "regionPoland": "Polen",
     "regionFrance": "Frankrike",
-    "nearbyHeadingRegion": "Även i {region}"
+    "nearbyHeadingRegion": "Även i {region}",
+    "identityBeKicker": "Belgisk tillverkare",
+    "identityBeTitle": "Tillverkat i Beveren-Waas, Belgien",
+    "identityBeBody": "STRETCH är en belgisk tillverkare: varje tak till {place} mäts upp på plats, skärs och svetsas sedan efter mått i vår egen produktion i Beveren-Waas (Östflandern) och monteras av våra egna montörer eller en certifierad återförsäljare. Ett belgiskt företag, en samlad garanti.",
+    "identityVat": "Moms",
+    "identityVatArticle": "Bidrag och moms för ett spänntak i Belgien",
+    "identityDirectKicker": "Direkt från oss",
+    "identityDirectTitle": "{place} betjänas direkt från vår produktion",
+    "identityDirectBody": "Medan vårt montörsnätverk i regionen växer levererar och monterar STRETCH direkt i {place}: uppmätt på plats, svetsat efter mått i vår egen EU-produktion och monterat på en dag av våra egna montörer. Montörer som tar regionen får dess förfrågningar.",
+    "identityDirectCard": "Tillverkare av spänntak och spännväggar — direkt leverans och montering."
   },
   "datasheetEmail": {
     "subject": "Ditt STRETCH-datablad — {title}",

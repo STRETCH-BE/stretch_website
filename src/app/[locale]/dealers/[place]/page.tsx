@@ -1,23 +1,44 @@
 // DEALERS — place page (/dealers/[place]). Catches "spanplafond <stad>" /
-// "plafond tendu <ville>" searches. Two variants from src/lib/dealers.ts:
-// dealer card(s) for served areas, or the "become our dealer in <place>"
-// recruitment variant. All copy = template strings in the `dealersPage`
-// namespace with {place}/{province} slots — adding a place needs no new keys.
+// "plafond tendu <ville>" / "Spanndecke <Stadt>" / "sufit napinany <miasto>"
+// searches. Two variants from src/lib/dealers.ts: dealer card(s) for served
+// areas, or the "become our dealer in <place>" recruitment variant. All copy =
+// template strings in the `dealersPage` namespace with {place}/{province}
+// slots — adding a place needs no new keys.
+//
+// Per-market audit (2 Sep 2026):
+//  T5 — every Belgian and Luxembourg page carries the BELGIAN company identity
+//       (legal entity, Beveren-Waas production, VAT once set) and emits the
+//       Belgian LocalBusiness node, so a Walloon reader on stretchplafond.fr
+//       sees a Belgian manufacturer, not a French-looking one. French cities
+//       get their own block without the Belgian address.
+//  T7 — Częstochowa names the group's Polish plant and emits its branch node.
+//  T6 — every city page links the price calculator ("what does it cost in …").
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, MapPin } from 'lucide-react';
-import { isValidLocale, locales, type Locale } from '@/i18n/config';
-import { brand } from '@/lib/site-config';
+import { ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, Calculator, Factory, MapPin } from 'lucide-react';
+import { isValidLocale, type Locale } from '@/i18n/config';
+import { brand, contact, offices } from '@/lib/site-config';
 import { localeBase, buildAlternates } from '@/lib/seo';
-import { breadcrumbSchema } from '@/lib/structured-data';
+import { breadcrumbSchema, localBusinessSchema, branchLocalBusinessSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
-import { getDealerPlace, dealerPlaceSlugs, placeDealers, nearbyPlaces, getDealerPlace as getPlace, dealerMarkets, isDealerMarket } from '@/lib/dealers';
-import { getProjectBySlug } from '@/lib/content';
+import {
+  getDealerPlace,
+  dealerPlaceSlugs,
+  placeDealers,
+  nearbyPlaces,
+  getDealerPlace as getPlace,
+  dealerMarkets,
+  isDealerMarket,
+  isBelgianPlace,
+  placeEntity,
+  regionLabelKeys,
+} from '@/lib/dealers';
+import { getProjectBySlug, blogPostsFor, blogHref } from '@/lib/content';
 import { localizeProject, type ProjectMessages } from '@/lib/localize-content';
 
 // Every valid (locale, place) pair is enumerated below. dynamicParams=false →
@@ -70,6 +91,7 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
   const hasDealers = found.length > 0;
   const near = nearbyPlaces(place!);
   const province = place!.province ? getPlace(place!.province) : undefined;
+  const regionLabel = t(regionLabelKeys[place!.region]);
   const projects = (place!.projects ?? [])
     .map((slug) => {
       const base = getProjectBySlug(slug);
@@ -78,15 +100,28 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
     })
     .filter(Boolean);
 
+  // Identity (T5/T7): which entity speaks on this page.
+  const entity = placeEntity(place!);
+  const belgian = isBelgianPlace(place!) || place!.region === 'luxembourg';
+  const plOffice = offices.find((o) => o.country === 'PL');
+  // The Belgian grants/VAT article exists on be/nl/fr/en/uk only — link it
+  // where it exists (it is the most Belgium-specific proof on the site).
+  const vatPost = belgian ? blogPostsFor(locale).find((p) => p.slug === 'spanplafond-premie-btw') : undefined;
+
   const crumbs = breadcrumbSchema([
     { name: tp('home'), url: `${localeBase(locale)}` },
     { name: t('crumbDealers'), url: `${localeBase(locale)}/dealers` },
     { name: place!.name, url: `${localeBase(locale)}/dealers/${place!.slug}` },
   ]);
+  // LocalBusiness: the Belgian manufacturer on Belgian/Luxembourg pages, the
+  // Częstochowa plant on Polish pages. French/German/Austrian pages emit no
+  // local entity node — there is no local address to claim.
+  const localBusiness = belgian ? localBusinessSchema() : entity === 'pl' ? branchLocalBusinessSchema('PL') : undefined;
 
   return (
     <>
       <JsonLd data={crumbs} />
+      {localBusiness && <JsonLd data={localBusiness} />}
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="container" style={{ paddingTop: 'clamp(20px,3vw,30px)' }}>
@@ -101,14 +136,43 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
 
       {/* Head */}
       <section className="container" style={{ padding: 'clamp(22px,3vw,36px) 0 clamp(26px,3vw,40px)' }}>
-        <Eyebrow num="01" label={t('eyebrow')} />
+        <Eyebrow num="01" label={`${t('eyebrow')} · ${regionLabel}`} />
         <h1 className="h1" style={{ fontSize: 'clamp(34px,5vw,72px)', margin: '0 0 clamp(14px,2vw,20px)' }}>
           {t('h1', { place: place!.name })}<span className="accent">.</span>
         </h1>
-        <p className="lead" style={{ maxWidth: 680, margin: 0 }}>
+        <p className="lead" style={{ maxWidth: 680, margin: '0 0 18px' }}>
           {hasDealers ? t('introDealer', { place: place!.name }) : t('introRecruit', { place: place!.name })}
         </p>
+        {/* "What does a stretch ceiling cost in <place>?" → the calculator (T6). */}
+        <Link href="/price-calculator" className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, fontWeight: 700, fontSize: 14.5 }}>
+          <Calculator size={16} style={{ color: 'var(--red)' }} /> {t('costLine', { place: place!.name })} →
+        </Link>
       </section>
+
+      {/* Factory (Częstochowa) — the plant is the story (T7) */}
+      {place!.factory && plOffice && (
+        <section className="container" style={{ paddingBottom: 'clamp(36px,4vw,56px)' }}>
+          <div style={{ border: '1.5px solid var(--black)', background: '#fff', padding: 'clamp(24px,3vw,40px)', display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 'clamp(18px,2.4vw,28px)', alignItems: 'start' }}>
+            <span style={{ display: 'inline-flex', width: 52, height: 52, background: 'var(--black)', color: '#fff', alignItems: 'center', justifyContent: 'center' }}>
+              <Factory size={24} />
+            </span>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--red)', marginBottom: 8 }}>{t('factoryKicker')}</div>
+              <h2 className="h2 h2--sm" style={{ margin: '0 0 10px' }}>{t('factoryTitle')}</h2>
+              <p style={{ fontSize: 15, lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 12px', maxWidth: 640 }}>{t('factoryBody')}</p>
+              <p style={{ fontSize: 14, fontWeight: 600, margin: '0 0 18px', display: 'flex', alignItems: 'center', gap: 8 }}>
+                <MapPin size={15} style={{ color: 'var(--red)' }} /> {plOffice.name} · {plOffice.addressLines.join(', ')}
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+                <Link href="/installer-training" className="btn btn--primary btn--sm">{t('factoryTraining')} <ArrowRight size={14} /></Link>
+                {plOffice.url && (
+                  <a href={plOffice.url} className="btn btn--ghost btn--sm">{t('factoryCta')} <ArrowUpRight size={14} /></a>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Dealer cards OR recruitment band */}
       <section className="container" style={{ paddingBottom: 'clamp(36px,4vw,56px)' }}>
@@ -149,11 +213,59 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
         )}
       </section>
 
+      {/* Identity — who is speaking on this page (T5/T7) */}
+      <section className="container" style={{ paddingBottom: 'clamp(40px,5vw,64px)' }}>
+        <div className="dlr-identity">
+          <div>
+            <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--red)', marginBottom: 8 }}>
+              {entity === 'pl' ? t('identityPlKicker') : belgian ? t('identityBeKicker') : t('identityDirectKicker')}
+            </div>
+            <h2 className="h2 h2--sm" style={{ margin: '0 0 10px' }}>
+              {entity === 'pl' ? t('identityPlTitle') : belgian ? t('identityBeTitle') : t('identityDirectTitle', { place: place!.name })}
+            </h2>
+            <p style={{ fontSize: 15, lineHeight: 1.65, color: 'var(--text-body)', margin: 0, maxWidth: 640 }}>
+              {entity === 'pl' ? t('identityPlBody', { place: place!.name }) : belgian ? t('identityBeBody', { place: place!.name }) : t('identityDirectBody', { place: place!.name })}
+            </p>
+          </div>
+          <div className="dlr-identity__card">
+            {entity === 'pl' && plOffice ? (
+              <>
+                <div className="dlr-identity__name">{plOffice.name}</div>
+                <div>{plOffice.addressLines.join(', ')}</div>
+                <div>{plOffice.countryName}</div>
+                <div className="dlr-identity__name" style={{ marginTop: 12 }}>{brand.legalName}</div>
+                <div>{contact.address.street}, {contact.address.postalCode} {contact.address.city}</div>
+                <div>{offices[0].countryName}</div>
+              </>
+            ) : belgian ? (
+              <>
+                <div className="dlr-identity__name">{brand.legalName}</div>
+                <div>{contact.address.street}</div>
+                <div>{contact.address.postalCode} {contact.address.city} · {offices[0].countryName}</div>
+                {brand.vatNumber && <div style={{ marginTop: 6 }}>{t('identityVat')} {brand.vatNumber}</div>}
+                <a href={contact.phoneHref} className="lnk" style={{ display: 'inline-block', marginTop: 10, fontWeight: 700 }}>{contact.phoneDisplay}</a>
+                {vatPost && (
+                  <Link href={blogHref(vatPost, locale)} className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 14, fontWeight: 700, fontSize: 13.5 }}>
+                    {t('identityVatArticle')} <ArrowRight size={14} style={{ color: 'var(--red)' }} />
+                  </Link>
+                )}
+              </>
+            ) : (
+              <>
+                <div className="dlr-identity__name">{brand.name}</div>
+                <div>{t('identityDirectCard')}</div>
+                <a href={contact.phoneHref} className="lnk" style={{ display: 'inline-block', marginTop: 10, fontWeight: 700 }}>{contact.phoneDisplay}</a>
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Why via a dealer / direct */}
       <section className="container" style={{ paddingBottom: 'clamp(40px,5vw,64px)' }}>
         <h2 className="h2 h2--sm" style={{ margin: '0 0 18px' }}>{t('whyTitle')}</h2>
         <div className="dlr-why">
-          {[t('why1'), t('why2'), t('why3')].map((w, i) => (
+          {[entity === 'pl' ? t('why1Pl') : t('why1'), t('why2'), t('why3')].map((w, i) => (
             <div key={i} className="dlr-why__item">
               <span className="dlr-why__num">0{i + 1}</span>
               <p style={{ fontSize: 13.5, lineHeight: 1.6, color: 'var(--text-muted)', margin: 0 }}>{w}</p>
@@ -186,7 +298,11 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
         {near.length > 0 && (
           <>
             <h2 style={{ fontSize: 12.5, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text-muted)', margin: '0 0 12px' }}>
-              {place!.kind === 'province' ? t('nearbyHeadingProvince', { place: place!.name }) : province ? t('nearbyHeading', { province: province.name }) : t('nearbyHeadingProvince', { place: place!.name })}
+              {place!.kind === 'province'
+                ? t('nearbyHeadingProvince', { place: place!.name })
+                : province
+                  ? t('nearbyHeading', { province: province.name })
+                  : t('nearbyHeadingRegion', { region: regionLabel })}
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 22 }}>
               {province && place!.kind === 'city' && (
@@ -206,6 +322,9 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
       <style dangerouslySetInnerHTML={{ __html: `
         .dlr-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(16px,2vw,24px); }
         .dlr-card { border: 1.5px solid var(--black); background: #fff; padding: clamp(20px,2.6vw,32px); }
+        .dlr-identity { display: grid; grid-template-columns: 1.3fr .9fr; gap: clamp(18px,3vw,40px); border: 1px solid var(--border); background: var(--surface); padding: clamp(22px,3vw,36px); }
+        .dlr-identity__card { background: #fff; border: 1px solid var(--border); padding: clamp(18px,2.2vw,26px); font-size: 14px; line-height: 1.65; color: var(--text-muted); align-self: start; }
+        .dlr-identity__name { font-family: var(--font-display); font-weight: 800; font-size: 16px; letter-spacing: -.01em; color: var(--black); margin-bottom: 4px; }
         .dlr-why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
         .dlr-why__item { border: 1px solid var(--border); background: var(--surface); padding: clamp(18px,2vw,24px); position: relative; }
         .dlr-why__num { display: block; font-size: 11px; font-weight: 800; letter-spacing: .14em; color: var(--red); margin-bottom: 8px; }
@@ -215,7 +334,7 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
         .dlr-chip:hover { border-color: var(--black); color: var(--black); }
         .dlr-chip--dark { background: var(--black); color: #fff; border-color: var(--black); }
         .dlr-chip--dark:hover { color: #fff; }
-        @media (max-width: 860px) { .dlr-grid, .dlr-why, .dlr-proj { grid-template-columns: 1fr; } }
+        @media (max-width: 860px) { .dlr-grid, .dlr-why, .dlr-proj, .dlr-identity { grid-template-columns: 1fr; } }
         @media (min-width: 861px) and (max-width: 1100px) { .dlr-proj { grid-template-columns: 1fr 1fr; } }
       ` }} />
     </>

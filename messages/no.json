@@ -5380,7 +5380,7 @@
     "ovTitle": "Forhandlere",
     "ovIntro": "Strekktak fra STRETCH måles opp og monteres av sertifiserte lokale partnere, med vår egen produksjon nær Lokeren i ryggen. Finn din region — eller sikre deg en av de ledige plassene.",
     "regionFlanders": "Flandern & Brussel",
-    "regionWallonia": "Vallonia",
+    "regionWallonia": "Vallonia · Belgia",
     "regionNetherlands": "Nederland",
     "lookingLabel": "Forhandler søkes",
     "ovRecruitTitle": "Ingen forhandler i ditt område ennå?",
@@ -5390,7 +5390,16 @@
     "regionGermany": "Tyskland",
     "regionPoland": "Polen",
     "regionFrance": "Frankrike",
-    "nearbyHeadingRegion": "Også i {region}"
+    "nearbyHeadingRegion": "Også i {region}",
+    "identityBeKicker": "Belgisk produsent",
+    "identityBeTitle": "Produsert i Beveren-Waas, Belgia",
+    "identityBeBody": "STRETCH er en belgisk produsent: hvert tak til {place} måles opp lokalt, deretter skjæres og sveises det på mål i vår egen produksjon i Beveren-Waas (Øst-Flandern) og monteres av våre egne montører eller en sertifisert forhandler. Ett belgisk selskap, én samlet garanti.",
+    "identityVat": "Mva.",
+    "identityVatArticle": "Tilskudd og mva. for strekktak i Belgia",
+    "identityDirectKicker": "Betjenes direkte",
+    "identityDirectTitle": "{place}, betjent direkte fra vår produksjon",
+    "identityDirectBody": "Mens montørnettverket vårt i denne regionen vokser, leverer og monterer STRETCH direkte i {place}: målt opp på stedet, sveiset på mål i vår egen EU-produksjon og montert på én dag av våre egne montører. Montører som sikrer seg regionen, får regionens henvendelser.",
+    "identityDirectCard": "Produsent av strekktak og strekkvegger — direkte levering og montering."
   },
   "datasheetEmail": {
     "subject": "Ditt STRETCH-datablad — {title}",

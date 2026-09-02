@@ -5380,7 +5380,7 @@
     "ovTitle": "Söluaðilar",
     "ovIntro": "Dúkaloft frá STRETCH eru mæld og sett upp af vottuðum samstarfsaðilum á hverjum stað, studd af okkar eigin framleiðslu nálægt Lokeren. Finndu þitt svæði — eða gríptu þau sem enn eru laus.",
     "regionFlanders": "Flæmingjaland & Brussel",
-    "regionWallonia": "Vallónía",
+    "regionWallonia": "Vallónía · Belgía",
     "regionNetherlands": "Holland",
     "lookingLabel": "Söluaðili óskast",
     "ovRecruitTitle": "Enginn söluaðili á þínu svæði enn?",
@@ -5390,7 +5390,16 @@
     "regionGermany": "Þýskaland",
     "regionPoland": "Pólland",
     "regionFrance": "Frakkland",
-    "nearbyHeadingRegion": "Einnig í {region}"
+    "nearbyHeadingRegion": "Einnig í {region}",
+    "identityBeKicker": "Belgískur framleiðandi",
+    "identityBeTitle": "Framleitt í Beveren-Waas í Belgíu",
+    "identityBeBody": "STRETCH er belgískur framleiðandi: hvert loft fyrir {place} er mælt á staðnum, síðan sniðið og soðið eftir máli í okkar eigin framleiðslu í Beveren-Waas (Austur-Flæmingjalandi) og sett upp af okkar eigin teymum eða vottuðum söluaðila. Eitt belgískt fyrirtæki, ein ábyrgð á einum stað.",
+    "identityVat": "VSK",
+    "identityVatArticle": "Styrkir og VSK fyrir dúkaloft í Belgíu",
+    "identityDirectKicker": "Þjónað beint",
+    "identityDirectTitle": "{place} — þjónað beint frá framleiðslu okkar",
+    "identityDirectBody": "Á meðan uppsetningaraðilanet okkar á þessu svæði stækkar afhendir STRETCH og setur upp beint í {place}: mælt á staðnum, soðið eftir máli í okkar eigin framleiðslu innan ESB og sett upp á einum degi af okkar eigin teymum. Uppsetningaraðilar sem tryggja sér svæðið fá fyrirspurnir þess.",
+    "identityDirectCard": "Framleiðandi dúkalofta og strekktra veggja — bein afhending og uppsetning."
   },
   "datasheetEmail": {
     "subject": "STRETCH-tækniblaðið þitt — {title}",

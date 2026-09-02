@@ -5380,7 +5380,7 @@
     "ovTitle": "Händler",
     "ovIntro": "STRETCH-Spanndecken werden von zertifizierten Fachpartnern vor Ort aufgemessen und montiert — in Deutschland von Berlin, Hamburg und München über Köln, Frankfurt, Stuttgart, Düsseldorf, Dortmund und Essen bis Leipzig, in Österreich und in den Benelux-Ländern. Dahinter steht unsere eigene belgische Produktion in Beveren-Waas. Finden Sie Ihre Region — oder sichern Sie sich eine der freien Regionen.",
     "regionFlanders": "Flandern & Brüssel",
-    "regionWallonia": "Wallonien",
+    "regionWallonia": "Wallonien · Belgien",
     "regionNetherlands": "Niederlande",
     "lookingLabel": "Händler gesucht",
     "ovRecruitTitle": "Noch kein Händler in Ihrer Nähe?",
@@ -5390,7 +5390,16 @@
     "regionGermany": "Deutschland",
     "regionPoland": "Polen",
     "regionFrance": "Frankreich",
-    "nearbyHeadingRegion": "Auch in {region}"
+    "nearbyHeadingRegion": "Auch in {region}",
+    "identityBeKicker": "Belgischer Hersteller",
+    "identityBeTitle": "Hergestellt in Beveren-Waas, Belgien",
+    "identityBeBody": "STRETCH ist ein belgischer Hersteller: Jede Decke für {place} wird vor Ort aufgemessen, anschließend in unserer eigenen Produktion in Beveren-Waas (Ostflandern) maßgenau zugeschnitten und verschweißt und von unseren eigenen Teams oder einem zertifizierten Händler montiert. Ein belgisches Unternehmen — Garantie aus einer Hand.",
+    "identityVat": "MwSt.",
+    "identityVatArticle": "Förderungen und MwSt. für eine Spanndecke in Belgien",
+    "identityDirectKicker": "Direkt betreut",
+    "identityDirectTitle": "{place} — direkt aus unserer Produktion betreut",
+    "identityDirectBody": "Solange unser Monteurnetzwerk in dieser Region noch wächst, liefert und montiert STRETCH in {place} direkt: vor Ort aufgemessen, in unserer eigenen EU-Produktion maßgenau verschweißt und von unseren eigenen Teams an einem Tag montiert. Monteure, die sich die Region sichern, erhalten deren Anfragen.",
+    "identityDirectCard": "Hersteller von Spanndecken und Spannwänden — direkte Lieferung und Montage."
   },
   "datasheetEmail": {
     "subject": "Ihr STRETCH-Datenblatt — {title}",

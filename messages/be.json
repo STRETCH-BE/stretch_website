@@ -5390,7 +5390,7 @@
     "ovTitle": "Dealers",
     "ovIntro": "STRETCH-spanplafonds worden opgemeten en geplaatst door gecertificeerde lokale partners, ondersteund door onze eigen productie bij Lokeren. Vind uw regio — of claim een van de vrije plekken.",
     "regionFlanders": "Vlaanderen & Brussel",
-    "regionWallonia": "Wallonië",
+    "regionWallonia": "Wallonië · België",
     "regionNetherlands": "Nederland",
     "lookingLabel": "Dealer gezocht",
     "ovRecruitTitle": "Nog geen dealer in uw buurt?",
@@ -5400,7 +5400,16 @@
     "regionGermany": "Duitsland",
     "regionPoland": "Polen",
     "regionFrance": "Frankrijk",
-    "nearbyHeadingRegion": "Ook in {region}"
+    "nearbyHeadingRegion": "Ook in {region}",
+    "identityBeKicker": "Belgische fabrikant",
+    "identityBeTitle": "Gemaakt in Beveren-Waas, België",
+    "identityBeBody": "STRETCH is een Belgische fabrikant: elk plafond voor {place} wordt lokaal opgemeten, daarna op maat gesneden en gelast in onze eigen productie in Beveren-Waas (Oost-Vlaanderen) en geplaatst door onze eigen teams of een gecertificeerde dealer. Eén Belgisch bedrijf, één aanspreekpunt voor garantie.",
+    "identityVat": "Btw",
+    "identityVatArticle": "Premies en btw voor een spanplafond in België",
+    "identityDirectKicker": "Rechtstreeks bediend",
+    "identityDirectTitle": "{place}, rechtstreeks bediend vanuit onze productie",
+    "identityDirectBody": "Terwijl ons installateursnetwerk in deze regio groeit, levert en plaatst STRETCH rechtstreeks in {place}: ter plaatse opgemeten, op maat gelast in onze eigen EU-productie en op één dag geplaatst door onze eigen teams. Installateurs die de regio claimen, krijgen de aanvragen uit die regio.",
+    "identityDirectCard": "Fabrikant van spanplafonds en spanwanden — rechtstreekse levering en plaatsing."
   },
   "datasheetEmail": {
     "subject": "Uw STRETCH-datasheet — {title}",

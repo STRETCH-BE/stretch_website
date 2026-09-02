@@ -5390,7 +5390,7 @@
     "ovTitle": "Dealers",
     "ovIntro": "STRETCH ceilings are measured and installed by certified local partners, backed by our own production near Lokeren. Find your region — or claim the open spots.",
     "regionFlanders": "Flanders & Brussels",
-    "regionWallonia": "Wallonia",
+    "regionWallonia": "Wallonia · Belgium",
     "regionNetherlands": "Netherlands",
     "lookingLabel": "Dealer wanted",
     "ovRecruitTitle": "No dealer in your area yet?",
@@ -5400,7 +5400,16 @@
     "regionGermany": "Germany",
     "regionPoland": "Poland",
     "regionFrance": "France",
-    "nearbyHeadingRegion": "Also in {region}"
+    "nearbyHeadingRegion": "Also in {region}",
+    "identityBeKicker": "Belgian manufacturer",
+    "identityBeTitle": "Made in Beveren-Waas, Belgium",
+    "identityBeBody": "STRETCH is a Belgian manufacturer: every ceiling for {place} is measured locally, then cut and welded to size in our own production in Beveren-Waas (East Flanders) and installed by our own teams or a certified dealer. One Belgian company, one point of guarantee.",
+    "identityVat": "VAT",
+    "identityVatArticle": "Grants and VAT for a stretch ceiling in Belgium",
+    "identityDirectKicker": "Served directly",
+    "identityDirectTitle": "{place}, served directly from our production",
+    "identityDirectBody": "While our installer network in this region grows, STRETCH delivers and installs in {place} directly: measured on site, welded to size in our own EU production and fitted in a day by our own teams. Installers who claim the region receive its enquiries.",
+    "identityDirectCard": "Manufacturer of stretch ceilings and walls — direct delivery and installation."
   },
   "datasheetEmail": {
     "subject": "Your STRETCH datasheet — {title}",

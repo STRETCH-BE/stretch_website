@@ -5389,7 +5389,7 @@
     "ovTitle": "Revendeurs",
     "ovIntro": "Les plafonds tendus STRETCH sont mesurés et posés en Wallonie, au Luxembourg et en France (Paris, Lyon, Marseille, Lille, Bordeaux, Toulouse, Nantes, Strasbourg) par des partenaires locaux certifiés ou directement depuis notre propre production belge près de Lokeren. Trouvez votre région — ou réservez une zone encore libre.",
     "regionFlanders": "Flandre & Bruxelles",
-    "regionWallonia": "Wallonie",
+    "regionWallonia": "Wallonie · Belgique",
     "regionNetherlands": "Pays-Bas",
     "lookingLabel": "Revendeur recherché",
     "ovRecruitTitle": "Pas encore de revendeur près de chez vous ?",
@@ -5399,7 +5399,16 @@
     "regionGermany": "Allemagne",
     "regionPoland": "Pologne",
     "regionFrance": "France",
-    "nearbyHeadingRegion": "Aussi dans la région : {region}"
+    "nearbyHeadingRegion": "Aussi dans la région : {region}",
+    "identityBeKicker": "Fabricant belge",
+    "identityBeTitle": "Fabriqué à Beveren-Waas, en Belgique",
+    "identityBeBody": "STRETCH est un fabricant belge : chaque plafond pour {place} est mesuré sur place, puis découpé et soudé sur mesure dans notre propre production à Beveren-Waas (Flandre-Orientale) et posé par nos propres équipes ou par un revendeur certifié. Une seule entreprise belge, un seul point de garantie.",
+    "identityVat": "TVA",
+    "identityVatArticle": "Primes et TVA pour un plafond tendu en Belgique",
+    "identityDirectKicker": "Service direct",
+    "identityDirectTitle": "{place}, directement depuis notre production",
+    "identityDirectBody": "Le temps que notre réseau de poseurs grandisse dans cette région, STRETCH livre et pose directement à {place} : prise de mesures sur place, toile soudée sur mesure dans notre propre production européenne et pose en une journée par nos propres équipes. Les poseurs qui réservent la région en reçoivent les demandes.",
+    "identityDirectCard": "Fabricant de plafonds et murs tendus — livraison et pose directes."
   },
   "datasheetEmail": {
     "subject": "Votre fiche technique STRETCH — {title}",

@@ -5380,7 +5380,7 @@
     "ovTitle": "Forhandlere",
     "ovIntro": "STRETCH-lofter opmåles og monteres af certificerede lokale partnere med vores egen produktion nær Lokeren i ryggen. Find din region — eller grib de ledige pladser.",
     "regionFlanders": "Flandern & Bruxelles",
-    "regionWallonia": "Vallonien",
+    "regionWallonia": "Vallonien · Belgien",
     "regionNetherlands": "Holland",
     "lookingLabel": "Forhandler søges",
     "ovRecruitTitle": "Endnu ingen forhandler i dit område?",
@@ -5390,7 +5390,16 @@
     "regionGermany": "Tyskland",
     "regionPoland": "Polen",
     "regionFrance": "Frankrig",
-    "nearbyHeadingRegion": "Også i {region}"
+    "nearbyHeadingRegion": "Også i {region}",
+    "identityBeKicker": "Belgisk producent",
+    "identityBeTitle": "Fremstillet i Beveren-Waas, Belgien",
+    "identityBeBody": "STRETCH er en belgisk producent: hvert loft til {place} måles op lokalt, skæres og svejses derefter på mål i vores egen produktion i Beveren-Waas (Østflandern) og monteres af vores egne hold eller en certificeret forhandler. Ét belgisk firma, én samlet garanti.",
+    "identityVat": "Moms",
+    "identityVatArticle": "Tilskud og moms for et strækloft i Belgien",
+    "identityDirectKicker": "Betjenes direkte",
+    "identityDirectTitle": "{place} — betjent direkte fra vores produktion",
+    "identityDirectBody": "Mens vores montørnetværk i regionen vokser, leverer og monterer STRETCH direkte i {place}: opmålt på stedet, svejset på mål i vores egen EU-produktion og monteret på én dag af vores egne hold. Montører, der overtager regionen, får regionens henvendelser.",
+    "identityDirectCard": "Producent af strækloft og opspændte vægge — vi leverer og monterer direkte."
   },
   "datasheetEmail": {
     "subject": "Dit STRETCH-datablad — {title}",

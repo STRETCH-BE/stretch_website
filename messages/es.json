@@ -5380,7 +5380,7 @@
     "ovTitle": "Distribuidores",
     "ovIntro": "Los techos tensados STRETCH son medidos e instalados por socios locales certificados, con el respaldo de nuestra propia fábrica cerca de Lokeren. Encuentre su región — o hágase con las zonas libres.",
     "regionFlanders": "Flandes y Bruselas",
-    "regionWallonia": "Valonia",
+    "regionWallonia": "Valonia · Bélgica",
     "regionNetherlands": "Países Bajos",
     "lookingLabel": "Se busca distribuidor",
     "ovRecruitTitle": "¿Todavía no hay distribuidor en su zona?",
@@ -5390,7 +5390,16 @@
     "regionGermany": "Alemania",
     "regionPoland": "Polonia",
     "regionFrance": "Francia",
-    "nearbyHeadingRegion": "También en {region}"
+    "nearbyHeadingRegion": "También en {region}",
+    "identityBeKicker": "Fabricante belga",
+    "identityBeTitle": "Fabricado en Beveren-Waas, Bélgica",
+    "identityBeBody": "STRETCH es un fabricante belga: cada techo para {place} se mide in situ y después se corta y se suelda a medida en nuestra propia producción de Beveren-Waas (Flandes Oriental), y lo instalan nuestros propios equipos o un distribuidor certificado. Una sola empresa belga, un único interlocutor para la garantía.",
+    "identityVat": "IVA",
+    "identityVatArticle": "Ayudas e IVA para un techo tensado en Bélgica",
+    "identityDirectKicker": "Servicio directo",
+    "identityDirectTitle": "{place}: servicio directo desde nuestra producción",
+    "identityDirectBody": "Mientras crece nuestra red de instaladores en esta región, STRETCH entrega e instala directamente en {place}: medición in situ, soldadura a medida en nuestra propia producción en la UE e instalación en un día por nuestros propios equipos. Los instaladores que asuman la región reciben sus solicitudes.",
+    "identityDirectCard": "Fabricante de techos y paredes tensados — entrega e instalación directas."
   },
   "datasheetEmail": {
     "subject": "Su ficha técnica STRETCH — {title}",

@@ -19,6 +19,10 @@ export const brand = {
   parentCompany: 'STRETCH Group',
   poweredBy: 'Powered by STRETCH Media',
   founded: 2018,
+  // Belgian enterprise / VAT number (BE 0xxx.xxx.xxx). Shown on the Belgian
+  // place pages' identity block (per-market audit, T5) ONLY once set — never
+  // invented. Michael: fill in from the KBO/BCE extract.
+  vatNumber: '',
   tagline: 'A new ceiling in one day.',
   description:
     'STRETCH installs sleek, seamless stretch ceilings and walls in a single day — cold-mounted, with no dust and no painting — offering acoustic, lighting and printed-design options. Hand-made in Belgium for residential and commercial projects.',

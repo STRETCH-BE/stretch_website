@@ -5380,7 +5380,7 @@
     "ovTitle": "Dealerzy",
     "ovIntro": "Sufity napinane STRETCH mierzą i montują certyfikowani lokalni partnerzy, wspierani przez nasz własny zakład produkcyjny koło Lokeren. Znajdź swój region — albo zajmij wolne miejsca.",
     "regionFlanders": "Flandria i Bruksela",
-    "regionWallonia": "Walonia",
+    "regionWallonia": "Walonia · Belgia",
     "regionNetherlands": "Holandia",
     "lookingLabel": "Szukamy dealera",
     "ovRecruitTitle": "Nie ma jeszcze dealera w Twojej okolicy?",
@@ -5390,7 +5390,16 @@
     "regionGermany": "Niemcy",
     "regionPoland": "Polska",
     "regionFrance": "Francja",
-    "nearbyHeadingRegion": "Inne miejscowości: {region}"
+    "nearbyHeadingRegion": "Inne miejscowości: {region}",
+    "identityBeKicker": "Belgijski producent",
+    "identityBeTitle": "Wyprodukowano w Beveren-Waas w Belgii",
+    "identityBeBody": "STRETCH to belgijski producent: każdy sufit dla klienta w {place} mierzymy na miejscu, następnie kroimy i zgrzewamy na wymiar w naszym własnym zakładzie w Beveren-Waas (Flandria Wschodnia), a montaż wykonują nasze własne ekipy lub certyfikowany dealer. Jedna belgijska firma, jedna gwarancja.",
+    "identityVat": "VAT",
+    "identityVatArticle": "Dotacje i VAT na sufit napinany w Belgii",
+    "identityDirectKicker": "Obsługa bezpośrednia",
+    "identityDirectTitle": "{place} — dostawa i montaż prosto z naszego zakładu",
+    "identityDirectBody": "Dopóki nasza sieć monterów w tym regionie się rozbudowuje, STRETCH dostarcza i montuje w {place} bezpośrednio: pomiar na miejscu, zgrzewanie na wymiar w naszym własnym zakładzie w UE i montaż w jeden dzień przez nasze własne ekipy. Monterzy, którzy przejmą ten region, zyskują płynące z niego zapytania.",
+    "identityDirectCard": "Producent sufitów i ścian napinanych — dostawa i montaż bezpośrednio od nas."
   },
   "datasheetEmail": {
     "subject": "Twoja karta techniczna STRETCH — {title}",
