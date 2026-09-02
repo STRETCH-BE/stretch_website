@@ -91,7 +91,7 @@ export default function Footer() {
           <FooterCol heading={t('companyHeading')}>
             {footerNav.company
               // Training only exists on dealer markets (N2) — no dead link on us.
-              .filter((l) => l.href !== '/installer-training' || isDealerMarket(locale))
+              .filter((l) => (l.href !== '/installer-training' && l.href !== '/dealers') || isDealerMarket(locale))
               .map((l) => (
               <li key={l.href}>
                 {l.key === 'clientPortal' ? (
@@ -100,7 +100,7 @@ export default function Footer() {
                   </PortalLink>
                 ) : (
                   <Link href={l.href} className="lnk" style={{ color: 'var(--on-dark-soft)' }}>
-                    {t(`links.${l.key}`)}
+                    {l.key === 'dealers' ? t('dealers') : t(`links.${l.key}`)}
                   </Link>
                 )}
               </li>

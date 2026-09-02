@@ -174,6 +174,10 @@ export const footerNav = {
     { key: 'supply', href: '/supply' },
     { key: 'projectsExport', href: '/projects-export' },
     { key: 'training', href: '/installer-training' },
+    // The dealer directory hub was linked from /supply only (codebase
+    // analysis 2 Sep 2026) — the local pages are the proven tactic, so the hub
+    // sits in the footer on every dealer market (label: footer.dealers).
+    { key: 'dealers', href: '/dealers' },
     { key: 'architects', href: '/architects' },
     { key: 'inspiration', href: '/inspiration' },
     { key: 'about', href: '/about' },

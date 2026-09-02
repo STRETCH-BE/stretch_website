@@ -171,7 +171,8 @@ export function useTechnicalMenu(): MegaConfig {
   return {
     railLabel: t('railLabel'),
     allLabel: t('allLabel'),
-    allHref: '/products',
+    // "All specs & downloads" → the datasheet library, not the product grid.
+    allHref: '/datasheets',
     promo: {
       kind: 'image',
       title: t('promoTitle'),

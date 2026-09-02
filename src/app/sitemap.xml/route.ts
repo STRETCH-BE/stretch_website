@@ -67,7 +67,7 @@ function collectRoutes(locale: Locale): string[] {
 function priorityFor(route: string): number {
   if (route === '/') return 1;
   if (route === '/products' || route.startsWith('/products/')) return 0.9;
-  if (['/contact', '/partners', '/installer-training'].includes(route)) return 0.8;
+  if (['/contact', '/partners', '/installer-training', '/price-calculator', '/dealers'].includes(route)) return 0.8;
   if (route === '/inspiration' || route === '/samples' || route === '/blog') return 0.7;
   if (route.startsWith('/blog/')) return 0.6;
   if (route.startsWith('/technical/')) return 0.6;

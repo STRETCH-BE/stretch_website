@@ -167,11 +167,11 @@ export default async function KitPage({ params }: { params: { locale: string } }
         )}
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 900px) {
           .kit-grid { grid-template-columns: 1fr !important; }
         }
-      `}</style>
+      ` }} />
     </>
   );
 }

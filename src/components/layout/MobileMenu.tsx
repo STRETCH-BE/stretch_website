@@ -41,6 +41,7 @@ export default function MobileMenu() {
   const t = useTranslations('common');
   const tc = useTranslations('catalog');
   const tb = useTranslations('blogPage');
+  const tf = useTranslations('footer');
   const locale = useLocale() as Locale;
   const pathname = usePathname();
   const router = useRouter();
@@ -164,6 +165,7 @@ export default function MobileMenu() {
               { href: '/inspiration', label: t('nav.inspiration') },
               { href: '/partners', label: t('nav.partners') },
               { href: '/installer-training', label: t('nav.training') },
+              { href: '/dealers', label: tf('dealers') },
               { href: '/architects', label: t('nav.architects') },
               { href: '/faq', label: t('nav.faq') },
               { href: '/about', label: t('nav.about') },
@@ -171,7 +173,7 @@ export default function MobileMenu() {
               { href: '/portal', label: t('nav.clientLogin') },
             ]
               // Training only exists on dealer markets (N2) — no dead link on us.
-              .filter((item) => item.href !== '/installer-training' || isDealerMarket(locale))
+              .filter((item) => (item.href !== '/installer-training' && item.href !== '/dealers') || isDealerMarket(locale))
               .map((item) =>
               item.href === '/portal' ? (
                 <PortalLink key={item.href} href={item.href} style={drawerLinkStyle}>
