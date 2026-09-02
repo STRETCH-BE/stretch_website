@@ -125,6 +125,13 @@ export const salesTerritory = [
   'US',
   'IS',
   'MT',
+  // Markets with their own domain (codebase analysis 2 Sep 2026): the Product
+  // eligibleRegion on stretchtecho.es / straekloft.dk / … must include them.
+  'ES',
+  'PT',
+  'DK',
+  'SE',
+  'NO',
 ] as const;
 
 // Social handles are [LATER] in the brief — only Telegram is public today.

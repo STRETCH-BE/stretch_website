@@ -20,10 +20,16 @@ import {
   type Locale,
 } from '@/i18n/config';
 import { analytics } from '@/lib/analytics';
+import { pathForLocale } from '@/lib/blog-slugs';
 
 export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'light' }) {
   const locale = useLocale() as Locale;
   const pathname = usePathname(); // locale-agnostic path, e.g. "/products"
+  // Blog slugs differ per locale: translate the path for the target domain.
+  const targetPath = (l: Locale) => {
+    const p = pathForLocale(pathname, locale, l);
+    return p === '/' ? '' : p;
+  };
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -51,7 +57,7 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
       typeof window !== 'undefined' && localeForHost(window.location.host) !== null;
     if (onKnownDomain) {
       const search = window.location.search || '';
-      window.location.assign(`${originForLocale(next)}${pathname === '/' ? '' : pathname}${search}`);
+      window.location.assign(`${originForLocale(next)}${targetPath(next)}${search}`);
       return;
     }
 
@@ -110,7 +116,7 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
               <a
                 role="option"
                 aria-selected={l === locale}
-                href={`${originForLocale(l)}${pathname === '/' ? '' : pathname}`}
+                href={`${originForLocale(l)}${targetPath(l)}`}
                 hrefLang={localeFullCodes[l]}
                 onClick={(e) => {
                   e.preventDefault();

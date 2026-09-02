@@ -44,6 +44,8 @@ const R = (h, source, destination) => ({
 // ---------------------------------------------------------------------------
 const requireJson = createRequire(import.meta.url);
 const BLOG_SLUGS = requireJson('./src/lib/blog-slugs.json');
+/** The host's own path for a canonical blog slug (avoids a two-hop chain through the slug 301). */
+const blog = (locale, canonical) => `/blog/${(BLOG_SLUGS[canonical] && BLOG_SLUGS[canonical][locale]) || canonical}`;
 const blogSlugRules = (h, locale) =>
   Object.entries(BLOG_SLUGS).flatMap(([canonical, perLocale]) => {
     const own = perLocale[locale];
@@ -343,7 +345,7 @@ const germanRules = [
   // old FAQ page (carried the €75–80/m² price answer)
   R('stretchdecken.de', '/loesungen-de', '/faq'),
   // the old plain-language guide → its recreation
-  R('stretchdecken.de', '/spanndecke', '/blog/what-is-a-stretch-ceiling'),
+  R('stretchdecken.de', '/spanndecke', blog('de', 'what-is-a-stretch-ceiling')),
   R('stretchdecken.de', '/decke', '/products'),
   R('stretchdecken.de', '/stretch-spanndecken-de', '/products'),
   // e-learning playlist page → training
@@ -367,7 +369,7 @@ const frenchRules = [
   R('stretchplafond.fr', '/commande', SHOP_TARGET),
   // --- legacy content URLs (22 Aug 2026 sweep) ---
   // the traffic carrier (65% of all .fr clicks) → its /blog recreation
-  R('stretchplafond.fr', '/decouvrez-les-avantages-du-plafond-tendu', '/blog/plafond-tendu-avantages-et-inconvenients'),
+  R('stretchplafond.fr', '/decouvrez-les-avantages-du-plafond-tendu', blog('fr', 'plafond-tendu-avantages-et-inconvenients')),
   R('stretchplafond.fr', '/plafond-tendu-acoustique', '/products/acoustic-stretch-system'),
   R('stretchplafond.fr', '/plafond-tendu-en-pvc', '/products/pvc-stretch-ceiling'),
   R('stretchplafond.fr', '/plafond-tendu-textile-polyester', '/products/polyester-stretch-ceiling'),

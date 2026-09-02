@@ -11,6 +11,7 @@ import { contact } from '@/lib/site-config';
 import { isDealerMarket } from '@/lib/dealers';
 import PortalLink from '@/components/ui/PortalLink';
 import { CONSENT_OPEN_BANNER_EVENT } from '@/lib/consent';
+import { pathForLocale } from '@/lib/blog-slugs';
 import { analytics } from '@/lib/analytics';
 import {
   liveLocales,
@@ -24,8 +25,11 @@ export default function Footer() {
   const t = useTranslations('footer');
   const tc = useTranslations('cookies');
   const locale = useLocale() as Locale;
-  const pathname = usePathname(); // locale-agnostic path, identical across domains
-  const path = pathname === '/' ? '' : pathname;
+  const pathname = usePathname(); // locale-agnostic path (blog slugs translate per locale below)
+  const pathOn = (l: Locale) => {
+    const p = pathForLocale(pathname, locale, l);
+    return p === '/' ? '' : p;
+  };
   const year = new Date().getFullYear();
 
   return (
@@ -194,7 +198,7 @@ export default function Footer() {
             .map((l) => (
               <a
                 key={l}
-                href={`${originForLocale(l)}${path}`}
+                href={`${originForLocale(l)}${pathOn(l)}`}
                 hrefLang={localeFullCodes[l]}
                 className="lnk"
                 style={{ fontSize: 12.5, color: 'var(--on-dark-muted)' }}

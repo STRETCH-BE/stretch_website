@@ -5,7 +5,7 @@
 // none fabricate testimonials, prices or claims beyond the brief.
 // ============================================================================
 import type { Locale } from '@/i18n/config';
-import { blogSlugMap } from '@/lib/blog-slugs';
+import { blogSlugMap, marketOnlyBlogSlugs } from '@/lib/blog-slugs';
 
 export type Project = {
   key: string;
@@ -3030,6 +3030,11 @@ export const blogPosts: BlogPost[] = [
 for (const p of blogPosts) {
   const m = blogSlugMap[p.slug];
   if (m && Object.keys(m).length > 0) p.slugs = m;
+  // Market-native posts must be listed in the client-safe map the language
+  // switcher uses, or a cross-domain link to them 404s on the sibling domain.
+  if (p.native && marketOnlyBlogSlugs[p.slug] !== p.native) {
+    throw new Error(`content.ts: market-native post "${p.slug}" is missing from marketOnlyBlogSlugs (src/lib/blog-slugs.ts)`);
+  }
 }
 
 export function getBlogPost(slug: string): BlogPost | undefined {

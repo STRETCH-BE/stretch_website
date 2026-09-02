@@ -24,6 +24,7 @@ import { useLeadModal } from '@/components/LeadGenModal';
 import PortalLink from '@/components/ui/PortalLink';
 import { isDealerMarket } from '@/lib/dealers';
 import { analytics } from '@/lib/analytics';
+import { pathForLocale } from '@/lib/blog-slugs';
 
 // Shared style for the primary drawer links (Link and PortalLink render alike).
 const drawerLinkStyle = {
@@ -44,6 +45,11 @@ export default function MobileMenu() {
   const pathname = usePathname();
   const router = useRouter();
   const { open: openModal } = useLeadModal();
+  // Blog slugs differ per locale: translate the path for the target domain.
+  const targetPath = (l: Locale) => {
+    const p = pathForLocale(pathname, locale, l);
+    return p === '/' ? '' : p;
+  };
   const [open, setOpen] = useState(false);
 
   // Cross-domain language switch — same logic as the desktop LanguageSwitcher:
@@ -59,7 +65,7 @@ export default function MobileMenu() {
       typeof window !== 'undefined' && localeForHost(window.location.host) !== null;
     if (onKnownDomain) {
       const search = window.location.search || '';
-      window.location.assign(`${originForLocale(next)}${pathname === '/' ? '' : pathname}${search}`);
+      window.location.assign(`${originForLocale(next)}${targetPath(next)}${search}`);
       return;
     }
     setOpen(false);
@@ -278,7 +284,7 @@ export default function MobileMenu() {
                    analytics + the dev/preview in-app switch on top. */
                 <a
                   key={l}
-                  href={`${originForLocale(l)}${pathname === '/' ? '' : pathname}`}
+                  href={`${originForLocale(l)}${targetPath(l)}`}
                   hrefLang={localeFullCodes[l]}
                   onClick={(e) => {
                     e.preventDefault();

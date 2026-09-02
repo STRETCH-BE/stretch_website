@@ -20,6 +20,24 @@ export type BlogSlugMap = Record<string, Partial<Record<Locale, string>>>;
 
 export const blogSlugMap: BlogSlugMap = slugMap as BlogSlugMap;
 
+/**
+ * Market-native articles (BlogPost.native): they exist on ONE locale only, so
+ * a cross-domain link to them must land on /blog, not on a 404. Kept here
+ * (client-safe) rather than derived from content.ts, which must never reach
+ * the client bundle; content.ts asserts the two agree at module load.
+ */
+export const marketOnlyBlogSlugs: Record<string, Locale> = {
+  'spanndecke-kosten-pro-m2': 'de',
+  'spanndecke-oder-abgehaengte-decke': 'de',
+  'spanndecke-kosten-renovierung': 'de',
+  'co-to-jest-sufit-napinany': 'pl',
+  'sufit-napinany-pvc-czy-tkanina': 'pl',
+  'o-co-zapytac-producenta-sufitow-napinanych': 'pl',
+  'plafond-tendu-prix-m2': 'fr',
+  'plafond-tendu-prix-pose': 'fr',
+  'plafond-tendu-devis-comparer': 'fr',
+};
+
 /** The slug a post uses on a locale: its per-locale slug, else the canonical one. */
 export function localizedBlogSlug(canonicalSlug: string, locale: Locale): string {
   return blogSlugMap[canonicalSlug]?.[locale] ?? canonicalSlug;
@@ -48,4 +66,23 @@ export function localizeHref(href: string, locale: Locale): string {
   const m = /^\/blog\/([^/?#]+)(.*)$/.exec(href);
   if (!m) return href;
   return `/blog/${localizedBlogSlug(m[1], locale)}${m[2]}`;
+}
+
+/**
+ * The same page on ANOTHER locale's domain — for the language switcher, the
+ * mobile language grid and the footer's "STRETCH worldwide" links, which
+ * preserve the current path across domains. Blog paths are translated to the
+ * target locale's own slug (a Polish slug on stretchdecken.de would 404);
+ * market-only articles fall back to /blog on every other domain. All other
+ * paths pass through unchanged.
+ */
+export function pathForLocale(pathname: string, from: Locale, to: Locale): string {
+  const m = /^\/blog\/([^/?#]+)(.*)$/.exec(pathname);
+  if (!m) return pathname;
+  const slugInUrl = m[1];
+  const canonical =
+    Object.keys(blogSlugMap).find((c) => localizedBlogSlug(c, from) === slugInUrl) ?? slugInUrl;
+  const only = marketOnlyBlogSlugs[canonical];
+  if (only && only !== to) return '/blog';
+  return `/blog/${localizedBlogSlug(canonical, to)}${m[2]}`;
 }

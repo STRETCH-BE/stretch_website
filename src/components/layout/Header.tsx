@@ -56,7 +56,7 @@ export default function Header() {
           <div className="only-desktop" style={{ display: 'flex', alignItems: 'center', gap: 26, fontSize: 11.5, letterSpacing: '.12em', textTransform: 'uppercase', fontWeight: 600 }}>
             <Link href="/partners" className="lnk">{t('nav.reseller')}</Link>
             {/* Training only exists on dealer markets (N2) — no dead link on us. */}
-            {isDealerMarket(locale) && (
+            {isDealerMarket(locale) && locale !== 'pl' && (
               <Link href="/installer-training" className="lnk">{t('nav.training')}</Link>
             )}
             <PortalLink href="/portal" className="lnk">{t('nav.clientLogin')}</PortalLink>
