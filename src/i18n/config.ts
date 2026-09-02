@@ -22,6 +22,10 @@
 // canonical URLs, OG alternateLocale, robots.txt — derives from this file.
 // To change a domain, edit `localeDomains` below. Nothing else.
 // ============================================================================
+// Market product term (per-market audit 2 Sep 2026, defect 5 — the word the
+// market actually searches; never reintroduce the old spændloft/strekkiloft):
+// da=strækloft · sv=spänntak · no=strekktak · is=dúkaloft · de=Spanndecke ·
+// pl=sufit napinany · fr=plafond tendu · nl/be=spanplafond
 import { defineRouting } from 'next-intl/routing';
 
 export const locales = [
