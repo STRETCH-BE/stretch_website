@@ -16,7 +16,9 @@ import {
   DraftingCompass,
   type LucideIcon,
 } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import type { Locale } from '@/i18n/config';
+import { localizeHref } from '@/lib/blog-slugs';
 import { Link } from '@/i18n/navigation';
 import { ModalButton } from '@/components/ui/ModalButton';
 import PortalLink from '@/components/ui/PortalLink';
@@ -49,6 +51,9 @@ const SOLUTIONS_SKELETON: Skeleton = [
       { href: '/products/pvc-stretch-ceiling' },
       { href: '/products/prefab-ceiling-unit', soon: true },
       { href: '/products' },
+      // Price calculator — APPENDED (i18n keys are index-based: cats.0.items.4).
+      // A primary commercial page, not a footer link (per-market audit, T6).
+      { href: '/price-calculator' },
     ],
   },
   {
@@ -130,14 +135,15 @@ const TECHNICAL_SKELETON: Skeleton = [
   },
 ];
 
-function buildCategories(skeleton: Skeleton, t: ReturnType<typeof useTranslations>): MegaCategory[] {
+function buildCategories(skeleton: Skeleton, t: ReturnType<typeof useTranslations>, locale: Locale): MegaCategory[] {
   return skeleton.map((c, i) => ({
     icon: c.icon,
     href: c.href,
     title: t(`cats.${i}.title`),
     desc: t(`cats.${i}.desc`),
     items: c.items.map((item, j) => ({
-      href: item.href,
+      // Blog links are written with the canonical slug → this locale's own slug.
+      href: localizeHref(item.href, locale),
       soon: item.soon,
       title: t(`cats.${i}.items.${j}.title`),
       sub: t(`cats.${i}.items.${j}.sub`),
@@ -148,18 +154,20 @@ function buildCategories(skeleton: Skeleton, t: ReturnType<typeof useTranslation
 // --- Solutions ------------------------------------------------------------
 export function useSolutionsMenu(): MegaConfig {
   const t = useTranslations('megaMenu.solutions');
+  const locale = useLocale() as Locale;
   return {
     railLabel: t('railLabel'),
     allLabel: t('allLabel'),
     allHref: '/products',
     promo: { kind: 'image', title: t('promoTitle'), ctaLabel: t('promoCta'), source: 'header_mega_solutions', image: '/images/home/Hero.jpg' },
-    categories: buildCategories(SOLUTIONS_SKELETON, t),
+    categories: buildCategories(SOLUTIONS_SKELETON, t, locale),
   };
 }
 
 // --- Technical ------------------------------------------------------------
 export function useTechnicalMenu(): MegaConfig {
   const t = useTranslations('megaMenu.technical');
+  const locale = useLocale() as Locale;
   return {
     railLabel: t('railLabel'),
     allLabel: t('allLabel'),
@@ -172,7 +180,7 @@ export function useTechnicalMenu(): MegaConfig {
       ctaHref: '/contact',
       image: '/images/home/installer.jpg',
     },
-    categories: buildCategories(TECHNICAL_SKELETON, t),
+    categories: buildCategories(TECHNICAL_SKELETON, t, locale),
   };
 }
 

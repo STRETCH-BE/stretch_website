@@ -21,7 +21,8 @@
       "faq": "Algengar spurningar",
       "clientLogin": "Innskráning viðskiptavina",
       "materials": "Efni",
-      "architects": "Arkitektar"
+      "architects": "Arkitektar",
+      "priceCalculator": "Verðreiknivél"
     },
     "cta": {
       "freeQuote": "Ókeypis tilboð",
@@ -642,6 +643,12 @@
       "ratedOn": "Einkunn á {source}",
       "titlePlain": "Það sem viðskiptavinir segja",
       "provenance": "Staðfestar Google-umsagnir, teknar orðréttar af opinberu Google-fyrirtækjasíðunni okkar."
+    },
+    "estimator": {
+      "kicker": "Verðreiknivél",
+      "title": "Hvað kostar dúkaloft?",
+      "sub": "Sláðu inn flatarmálið og loftgerðina — útgefið viðmiðunarbil birtist strax; fast tilboð er ókeypis.",
+      "cta": "Reikna verð"
     }
   },
   "ctaBand": {
@@ -677,7 +684,8 @@
     "dealer": "Finndu næsta söluaðila",
     "chartCount": "{count, plural, one {# litur} other {# litir}}",
     "anyRal": "Hvaða RAL-litur sem er eftir ósk",
-    "dealerDirect": "Við afhendum og setjum upp beint — hafðu samband"
+    "dealerDirect": "Við afhendum og setjum upp beint — hafðu samband",
+    "priceLink": "Hvað kostar þetta á m²?"
   },
   "productsPage": {
     "eyebrow": "Lausnirnar okkar",
@@ -1498,6 +1506,10 @@
             {
               "title": "Öll loftakerfi",
               "sub": "Berðu saman úrvalið"
+            },
+            {
+              "title": "Verðreiknivél",
+              "sub": "Verðið þitt á m² á 30 sekúndum"
             }
           ]
         },
@@ -4697,7 +4709,9 @@
       "eyebrow": "Leiðarvísar",
       "ctaTitle": "Ertu að hugsa um dúkaloft?",
       "ctaBody": "Fáðu ókeypis tilboð án skuldbindinga fyrir rýmið þitt.",
-      "ctaBtn": "Fá ókeypis tilboð"
+      "ctaBtn": "Fá ókeypis tilboð",
+      "calculatorTitle": "Hvað mun loftið þitt kosta?",
+      "calculatorBody": "Fermetrar × loftgerð gefa þér útgefið viðmiðunarbil á 30 sekúndum."
     }
   },
   "inspirationPage": {
@@ -5399,7 +5413,8 @@
     "identityDirectKicker": "Þjónað beint",
     "identityDirectTitle": "{place} — þjónað beint frá framleiðslu okkar",
     "identityDirectBody": "Á meðan uppsetningaraðilanet okkar á þessu svæði stækkar afhendir STRETCH og setur upp beint í {place}: mælt á staðnum, soðið eftir máli í okkar eigin framleiðslu innan ESB og sett upp á einum degi af okkar eigin teymum. Uppsetningaraðilar sem tryggja sér svæðið fá fyrirspurnir þess.",
-    "identityDirectCard": "Framleiðandi dúkalofta og strekktra veggja — bein afhending og uppsetning."
+    "identityDirectCard": "Framleiðandi dúkalofta og strekktra veggja — bein afhending og uppsetning.",
+    "costLine": "Hvað kostar dúkaloft í {place}? Reiknaðu verðið á m²"
   },
   "datasheetEmail": {
     "subject": "STRETCH-tækniblaðið þitt — {title}",

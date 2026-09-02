@@ -153,6 +153,7 @@ export default function MobileMenu() {
           >
             {[
               { href: '/products', label: t('nav.solutions') },
+              { href: '/price-calculator', label: t('nav.priceCalculator') },
               { href: '/materials', label: t('nav.materials') },
               { href: '/inspiration', label: t('nav.inspiration') },
               { href: '/partners', label: t('nav.partners') },

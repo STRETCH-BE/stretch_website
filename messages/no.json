@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Kundeinnlogging",
       "materials": "Materialer",
-      "architects": "Arkitekter"
+      "architects": "Arkitekter",
+      "priceCalculator": "Prisberegner"
     },
     "cta": {
       "freeQuote": "Gratis tilbud",
@@ -642,6 +643,12 @@
       "ratedOn": "Vurdert på {source}",
       "titlePlain": "Hva kundene sier",
       "provenance": "Verifiserte Google-omtaler, sitert ordrett fra vår offentlige Google-bedriftsprofil."
+    },
+    "estimator": {
+      "kicker": "Prisberegner",
+      "title": "Hva koster et strekktak?",
+      "sub": "Oppgi areal og taktype — det publiserte veiledende intervallet vises med én gang; det faste tilbudet er gratis.",
+      "cta": "Beregn pris"
     }
   },
   "ctaBand": {
@@ -677,7 +684,8 @@
     "dealer": "Finn din nærmeste forhandler",
     "chartCount": "{count, plural, one {# farge} other {# farger}}",
     "anyRal": "Enhver RAL-farge på forespørsel",
-    "dealerDirect": "Vi leverer og monterer direkte — kontakt oss"
+    "dealerDirect": "Vi leverer og monterer direkte — kontakt oss",
+    "priceLink": "Hva koster dette per m²?"
   },
   "productsPage": {
     "eyebrow": "Våre løsninger",
@@ -1498,6 +1506,10 @@
             {
               "title": "Alle himlingssystemer",
               "sub": "Sammenlign utvalget"
+            },
+            {
+              "title": "Prisberegner",
+              "sub": "Din pris per m² på 30 sekunder"
             }
           ]
         },
@@ -4697,7 +4709,9 @@
       "eyebrow": "Guider",
       "ctaTitle": "Vurderer du en strekkhimling?",
       "ctaBody": "Få et gratis og uforpliktende tilbud for ditt rom.",
-      "ctaBtn": "Be om et gratis tilbud"
+      "ctaBtn": "Be om et gratis tilbud",
+      "calculatorTitle": "Hva vil taket ditt koste?",
+      "calculatorBody": "Kvadratmeter × taktype gir deg det publiserte veiledende intervallet på 30 sekunder."
     }
   },
   "inspirationPage": {
@@ -5399,7 +5413,8 @@
     "identityDirectKicker": "Betjenes direkte",
     "identityDirectTitle": "{place}, betjent direkte fra vår produksjon",
     "identityDirectBody": "Mens montørnettverket vårt i denne regionen vokser, leverer og monterer STRETCH direkte i {place}: målt opp på stedet, sveiset på mål i vår egen EU-produksjon og montert på én dag av våre egne montører. Montører som sikrer seg regionen, får regionens henvendelser.",
-    "identityDirectCard": "Produsent av strekktak og strekkvegger — direkte levering og montering."
+    "identityDirectCard": "Produsent av strekktak og strekkvegger — direkte levering og montering.",
+    "costLine": "Hva koster et strekktak i {place}? Beregn prisen per m²"
   },
   "datasheetEmail": {
     "subject": "Ditt STRETCH-datablad — {title}",

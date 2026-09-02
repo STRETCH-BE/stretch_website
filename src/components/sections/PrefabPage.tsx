@@ -6,7 +6,7 @@
 // Driven by src/lib/prefab.ts. No datasheet / colour swatches / "where it's used".
 import { Link } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import { ArrowRight, Globe } from 'lucide-react';
+import { ArrowRight, Globe, Calculator } from 'lucide-react';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -78,6 +78,12 @@ export default function PrefabPage({ data }: { data: PrefabPageData }) {
               </ModalButton>
               <Link href="/partners" className="btn btn--ghost">{t('becomeDealer')}</Link>
             </div>
+            {/* Price on request — the calculator answers "what does this cost per m²" (T6). */}
+            <p style={{ margin: '18px 0 0' }}>
+              <Link href="/price-calculator" className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontWeight: 700, fontSize: 14 }}>
+                <Calculator size={15} style={{ color: 'var(--red)' }} /> {tp('priceLink')} →
+              </Link>
+            </p>
           </div>
           <div style={{ minWidth: 0 }}>
             <Placeholder label={`${data.name} photo`} src={data.hero} alt={data.name} priority sizes="(max-width: 860px) 100vw, 50vw" ratio="4/3.2" />

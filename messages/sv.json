@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Kundinloggning",
       "materials": "Material",
-      "architects": "Arkitekter"
+      "architects": "Arkitekter",
+      "priceCalculator": "Prisberäknare"
     },
     "cta": {
       "freeQuote": "Gratis offert",
@@ -642,6 +643,12 @@
       "ratedOn": "Betyg på {source}",
       "titlePlain": "Vad kunderna säger",
       "provenance": "Verifierade Google-recensioner, ordagrant citerade från vår offentliga Google-företagsprofil."
+    },
+    "estimator": {
+      "kicker": "Prisberäknare",
+      "title": "Vad kostar ett spänntak?",
+      "sub": "Ange yta och taktyp — det publicerade riktintervallet visas direkt; den fasta offerten är kostnadsfri.",
+      "cta": "Beräkna pris"
     }
   },
   "ctaBand": {
@@ -677,7 +684,8 @@
     "dealer": "Hitta din närmaste återförsäljare",
     "chartCount": "{count, plural, one {# färg} other {# färger}}",
     "anyRal": "Alla RAL-kulörer på begäran",
-    "dealerDirect": "Vi levererar och monterar direkt — kontakta oss"
+    "dealerDirect": "Vi levererar och monterar direkt — kontakta oss",
+    "priceLink": "Vad kostar det här per m²?"
   },
   "productsPage": {
     "eyebrow": "Våra lösningar",
@@ -1498,6 +1506,10 @@
             {
               "title": "Alla taksystem",
               "sub": "Jämför sortimentet"
+            },
+            {
+              "title": "Prisberäknare",
+              "sub": "Ditt pris per m² på 30 sekunder"
             }
           ]
         },
@@ -4697,7 +4709,9 @@
       "eyebrow": "Guider",
       "ctaTitle": "Funderar du på ett spänntak?",
       "ctaBody": "Få en kostnadsfri offert utan förpliktelser för ditt utrymme.",
-      "ctaBtn": "Begär en kostnadsfri offert"
+      "ctaBtn": "Begär en kostnadsfri offert",
+      "calculatorTitle": "Vad kommer ditt tak att kosta?",
+      "calculatorBody": "Kvadratmeter × taktyp ger det publicerade riktintervallet på 30 sekunder."
     }
   },
   "inspirationPage": {
@@ -5399,7 +5413,8 @@
     "identityDirectKicker": "Direkt från oss",
     "identityDirectTitle": "{place} betjänas direkt från vår produktion",
     "identityDirectBody": "Medan vårt montörsnätverk i regionen växer levererar och monterar STRETCH direkt i {place}: uppmätt på plats, svetsat efter mått i vår egen EU-produktion och monterat på en dag av våra egna montörer. Montörer som tar regionen får dess förfrågningar.",
-    "identityDirectCard": "Tillverkare av spänntak och spännväggar — direkt leverans och montering."
+    "identityDirectCard": "Tillverkare av spänntak och spännväggar — direkt leverans och montering.",
+    "costLine": "Vad kostar ett spänntak i {place}? Beräkna priset per m²"
   },
   "datasheetEmail": {
     "subject": "Ditt STRETCH-datablad — {title}",

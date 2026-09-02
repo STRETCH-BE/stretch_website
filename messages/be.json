@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Klantenzone",
       "materials": "Materialen",
-      "architects": "Architecten"
+      "architects": "Architecten",
+      "priceCalculator": "Prijscalculator"
     },
     "cta": {
       "freeQuote": "Gratis offerte",
@@ -642,6 +643,12 @@
       "ratedOn": "Beoordeeld op {source}",
       "titlePlain": "Wat klanten zeggen",
       "provenance": "Geverifieerde Google-reviews, woordelijk overgenomen uit ons openbare Google Bedrijfsprofiel."
+    },
+    "estimator": {
+      "kicker": "Prijscalculator",
+      "title": "Wat kost een spanplafond?",
+      "sub": "Geef de oppervlakte en het plafondtype in — de gepubliceerde richtprijsvork verschijnt meteen; de vaste offerte is gratis.",
+      "cta": "Bereken de prijs"
     }
   },
   "ctaBand": {
@@ -677,7 +684,8 @@
     "dealer": "Vind uw dichtstbijzijnde dealer",
     "chartCount": "{count, plural, one {# kleur} other {# kleuren}}",
     "anyRal": "Elke RAL-kleur op aanvraag",
-    "dealerDirect": "Wij leveren en plaatsen rechtstreeks — contacteer ons"
+    "dealerDirect": "Wij leveren en plaatsen rechtstreeks — contacteer ons",
+    "priceLink": "Wat kost dit per m²?"
   },
   "productsPage": {
     "eyebrow": "Onze oplossingen",
@@ -1498,6 +1506,10 @@
             {
               "title": "Alle plafondsystemen",
               "sub": "Vergelijk het gamma"
+            },
+            {
+              "title": "Prijscalculator",
+              "sub": "Uw prijs per m² in 30 seconden"
             }
           ]
         },
@@ -4707,7 +4719,9 @@
       "eyebrow": "Gidsen",
       "ctaTitle": "Denkt u aan een spanplafond?",
       "ctaBody": "Ontvang een gratis en vrijblijvende offerte voor uw ruimte.",
-      "ctaBtn": "Vraag een gratis offerte aan"
+      "ctaBtn": "Vraag een gratis offerte aan",
+      "calculatorTitle": "Wat zal uw plafond kosten?",
+      "calculatorBody": "Vierkante meters × plafondtype geeft u in 30 seconden de gepubliceerde richtprijsvork."
     }
   },
   "inspirationPage": {
@@ -5409,7 +5423,8 @@
     "identityDirectKicker": "Rechtstreeks bediend",
     "identityDirectTitle": "{place}, rechtstreeks bediend vanuit onze productie",
     "identityDirectBody": "Terwijl ons installateursnetwerk in deze regio groeit, levert en plaatst STRETCH rechtstreeks in {place}: ter plaatse opgemeten, op maat gelast in onze eigen EU-productie en op één dag geplaatst door onze eigen teams. Installateurs die de regio claimen, krijgen de aanvragen uit die regio.",
-    "identityDirectCard": "Fabrikant van spanplafonds en spanwanden — rechtstreekse levering en plaatsing."
+    "identityDirectCard": "Fabrikant van spanplafonds en spanwanden — rechtstreekse levering en plaatsing.",
+    "costLine": "Wat kost een spanplafond in {place}? Bereken de prijs per m²"
   },
   "datasheetEmail": {
     "subject": "Uw STRETCH-datasheet — {title}",

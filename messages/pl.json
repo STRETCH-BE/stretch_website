@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Strefa klienta",
       "materials": "Materiały",
-      "architects": "Architekci"
+      "architects": "Architekci",
+      "priceCalculator": "Kalkulator cen"
     },
     "cta": {
       "freeQuote": "Darmowa wycena",
@@ -642,6 +643,12 @@
       "ratedOn": "Ocena w {source}",
       "titlePlain": "Co mówią klienci",
       "provenance": "Zweryfikowane opinie Google, cytowane dosłownie z naszego publicznego profilu firmy w Google."
+    },
+    "estimator": {
+      "kicker": "Kalkulator cen",
+      "title": "Ile kosztuje sufit napinany?",
+      "sub": "Podaj powierzchnię i typ sufitu — opublikowany przedział orientacyjny pojawi się od razu, a wiążąca wycena jest bezpłatna.",
+      "cta": "Oblicz cenę"
     }
   },
   "ctaBand": {
@@ -677,7 +684,8 @@
     "dealer": "Znajdź najbliższego dystrybutora",
     "chartCount": "{count, plural, one {# kolor} few {# kolory} many {# kolorów} other {# koloru}}",
     "anyRal": "Dowolny kolor RAL na zamówienie",
-    "dealerDirect": "Dostarczamy i montujemy bezpośrednio — skontaktuj się z nami"
+    "dealerDirect": "Dostarczamy i montujemy bezpośrednio — skontaktuj się z nami",
+    "priceLink": "Ile to kosztuje za m²?"
   },
   "productsPage": {
     "eyebrow": "Nasze rozwiązania",
@@ -1498,6 +1506,10 @@
             {
               "title": "Wszystkie systemy sufitowe",
               "sub": "Porównaj ofertę"
+            },
+            {
+              "title": "Kalkulator cen",
+              "sub": "Twoja cena za m² w 30 sekund"
             }
           ]
         },
@@ -4697,7 +4709,9 @@
       "eyebrow": "Poradniki",
       "ctaTitle": "Myślisz o suficie napinanym?",
       "ctaBody": "Otrzymaj bezpłatną, niezobowiązującą wycenę dla swojego wnętrza.",
-      "ctaBtn": "Poproś o bezpłatną wycenę"
+      "ctaBtn": "Poproś o bezpłatną wycenę",
+      "calculatorTitle": "Ile będzie kosztował Twój sufit?",
+      "calculatorBody": "Metry kwadratowe × typ sufitu — opublikowany przedział orientacyjny w 30 sekund."
     }
   },
   "inspirationPage": {
@@ -5399,7 +5413,8 @@
     "identityDirectKicker": "Obsługa bezpośrednia",
     "identityDirectTitle": "{place} — dostawa i montaż prosto z naszego zakładu",
     "identityDirectBody": "Dopóki nasza sieć monterów w tym regionie się rozbudowuje, STRETCH dostarcza i montuje w {place} bezpośrednio: pomiar na miejscu, zgrzewanie na wymiar w naszym własnym zakładzie w UE i montaż w jeden dzień przez nasze własne ekipy. Monterzy, którzy przejmą ten region, zyskują płynące z niego zapytania.",
-    "identityDirectCard": "Producent sufitów i ścian napinanych — dostawa i montaż bezpośrednio od nas."
+    "identityDirectCard": "Producent sufitów i ścian napinanych — dostawa i montaż bezpośrednio od nas.",
+    "costLine": "{place} — ile kosztuje sufit napinany? Oblicz cenę za m²"
   },
   "datasheetEmail": {
     "subject": "Twoja karta techniczna STRETCH — {title}",

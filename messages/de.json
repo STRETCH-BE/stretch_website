@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Kundenlogin",
       "materials": "Material",
-      "architects": "Architekten"
+      "architects": "Architekten",
+      "priceCalculator": "Kostenrechner"
     },
     "cta": {
       "freeQuote": "Kostenloses Angebot",
@@ -642,6 +643,12 @@
       "ratedOn": "Bewertet auf {source}",
       "titlePlain": "Was Kunden sagen",
       "provenance": "Verifizierte Google-Bewertungen, wörtlich zitiert aus unserem öffentlichen Google-Unternehmensprofil."
+    },
+    "estimator": {
+      "kicker": "Kostenrechner",
+      "title": "Was kostet eine Spanndecke?",
+      "sub": "Fläche und Deckentyp eingeben — die veröffentlichte Richtspanne erscheint sofort; das verbindliche Angebot ist kostenlos.",
+      "cta": "Preis berechnen"
     }
   },
   "ctaBand": {
@@ -677,7 +684,8 @@
     "dealer": "Händler in Ihrer Nähe finden",
     "chartCount": "{count, plural, one {# Farbe} other {# Farben}}",
     "anyRal": "Jede RAL-Farbe auf Anfrage",
-    "dealerDirect": "Wir liefern und montieren direkt — kontaktieren Sie uns"
+    "dealerDirect": "Wir liefern und montieren direkt — kontaktieren Sie uns",
+    "priceLink": "Was kostet das pro m²?"
   },
   "productsPage": {
     "eyebrow": "Unsere Lösungen",
@@ -1498,6 +1506,10 @@
             {
               "title": "Alle Deckensysteme",
               "sub": "Sortiment vergleichen"
+            },
+            {
+              "title": "Kostenrechner",
+              "sub": "Ihr Preis pro m² in 30 Sekunden"
             }
           ]
         },
@@ -4697,7 +4709,9 @@
       "eyebrow": "Leitfäden",
       "ctaTitle": "Denken Sie über eine Spanndecke nach?",
       "ctaBody": "Erhalten Sie ein kostenloses, unverbindliches Angebot für Ihren Raum.",
-      "ctaBtn": "Kostenloses Angebot anfordern"
+      "ctaBtn": "Kostenloses Angebot anfordern",
+      "calculatorTitle": "Was kostet Ihre Decke?",
+      "calculatorBody": "Quadratmeter × Deckentyp ergibt in 30 Sekunden die veröffentlichte Richtspanne."
     }
   },
   "inspirationPage": {
@@ -5399,7 +5413,8 @@
     "identityDirectKicker": "Direkt betreut",
     "identityDirectTitle": "{place} — direkt aus unserer Produktion betreut",
     "identityDirectBody": "Solange unser Monteurnetzwerk in dieser Region noch wächst, liefert und montiert STRETCH in {place} direkt: vor Ort aufgemessen, in unserer eigenen EU-Produktion maßgenau verschweißt und von unseren eigenen Teams an einem Tag montiert. Monteure, die sich die Region sichern, erhalten deren Anfragen.",
-    "identityDirectCard": "Hersteller von Spanndecken und Spannwänden — direkte Lieferung und Montage."
+    "identityDirectCard": "Hersteller von Spanndecken und Spannwänden — direkte Lieferung und Montage.",
+    "costLine": "Was kostet eine Spanndecke in {place}? Preis pro m² berechnen"
   },
   "datasheetEmail": {
     "subject": "Ihr STRETCH-Datenblatt — {title}",

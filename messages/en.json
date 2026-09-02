@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Client login",
       "materials": "Materials",
-      "architects": "Architects"
+      "architects": "Architects",
+      "priceCalculator": "Price calculator"
     },
     "cta": {
       "freeQuote": "Free quote",
@@ -642,6 +643,12 @@
       "ratedOn": "Rated on {source}",
       "titlePlain": "What clients say",
       "provenance": "Verified Google reviews, quoted verbatim from our public Google Business profile."
+    },
+    "estimator": {
+      "kicker": "Price calculator",
+      "title": "What does a stretch ceiling cost?",
+      "sub": "Enter the area and the ceiling type — the published indicative range appears immediately; the firm quote is free.",
+      "cta": "Calculate price"
     }
   },
   "ctaBand": {
@@ -677,7 +684,8 @@
     "dealer": "Find your nearest dealer",
     "chartCount": "{count, plural, one {# colour} other {# colours}}",
     "anyRal": "Any RAL on request",
-    "dealerDirect": "We deliver & install directly — contact us"
+    "dealerDirect": "We deliver & install directly — contact us",
+    "priceLink": "What does this cost per m²?"
   },
   "productsPage": {
     "eyebrow": "Our solutions",
@@ -1498,6 +1506,10 @@
             {
               "title": "All ceiling systems",
               "sub": "Compare the range"
+            },
+            {
+              "title": "Price calculator",
+              "sub": "Your price per m² in 30 seconds"
             }
           ]
         },
@@ -4707,7 +4719,9 @@
       "eyebrow": "Guides",
       "ctaTitle": "Thinking about a stretch ceiling?",
       "ctaBody": "Get a free, no-obligation quote for your space.",
-      "ctaBtn": "Request a free quote"
+      "ctaBtn": "Request a free quote",
+      "calculatorTitle": "What will your ceiling cost?",
+      "calculatorBody": "Square metres × ceiling type gives the published indicative range in 30 seconds."
     }
   },
   "inspirationPage": {
@@ -5409,7 +5423,8 @@
     "identityDirectKicker": "Served directly",
     "identityDirectTitle": "{place}, served directly from our production",
     "identityDirectBody": "While our installer network in this region grows, STRETCH delivers and installs in {place} directly: measured on site, welded to size in our own EU production and fitted in a day by our own teams. Installers who claim the region receive its enquiries.",
-    "identityDirectCard": "Manufacturer of stretch ceilings and walls — direct delivery and installation."
+    "identityDirectCard": "Manufacturer of stretch ceilings and walls — direct delivery and installation.",
+    "costLine": "What does a stretch ceiling cost in {place}? Calculate the price per m²"
   },
   "datasheetEmail": {
     "subject": "Your STRETCH datasheet — {title}",

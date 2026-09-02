@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Acceso clientes",
       "materials": "Materiales",
-      "architects": "Arquitectos"
+      "architects": "Arquitectos",
+      "priceCalculator": "Calculadora de precios"
     },
     "cta": {
       "freeQuote": "Presupuesto gratis",
@@ -642,6 +643,12 @@
       "ratedOn": "Valorado en {source}",
       "titlePlain": "Lo que dicen los clientes",
       "provenance": "Reseñas de Google verificadas, citadas literalmente de nuestro perfil de empresa público en Google."
+    },
+    "estimator": {
+      "kicker": "Calculadora de precios",
+      "title": "¿Cuánto cuesta un techo tensado?",
+      "sub": "Introduce la superficie y el tipo de techo — la horquilla indicativa publicada aparece al instante; el presupuesto en firme es gratuito.",
+      "cta": "Calcular precio"
     }
   },
   "ctaBand": {
@@ -677,7 +684,8 @@
     "dealer": "Encuentra tu distribuidor más cercano",
     "chartCount": "{count, plural, one {# color} other {# colores}}",
     "anyRal": "Cualquier color RAL bajo pedido",
-    "dealerDirect": "Entregamos e instalamos directamente — contáctenos"
+    "dealerDirect": "Entregamos e instalamos directamente — contáctenos",
+    "priceLink": "¿Cuánto cuesta por m²?"
   },
   "productsPage": {
     "eyebrow": "Nuestras soluciones",
@@ -1498,6 +1506,10 @@
             {
               "title": "Todos los sistemas de techo",
               "sub": "Compara la gama"
+            },
+            {
+              "title": "Calculadora de precios",
+              "sub": "Tu precio por m² en 30 segundos"
             }
           ]
         },
@@ -4697,7 +4709,9 @@
       "eyebrow": "Guías",
       "ctaTitle": "¿Estás pensando en un techo tensado?",
       "ctaBody": "Consigue un presupuesto gratuito y sin compromiso para tu espacio.",
-      "ctaBtn": "Solicitar presupuesto gratuito"
+      "ctaBtn": "Solicitar presupuesto gratuito",
+      "calculatorTitle": "¿Cuánto costará tu techo?",
+      "calculatorBody": "Metros cuadrados × tipo de techo te dan la horquilla indicativa publicada en 30 segundos."
     }
   },
   "inspirationPage": {
@@ -5399,7 +5413,8 @@
     "identityDirectKicker": "Servicio directo",
     "identityDirectTitle": "{place}: servicio directo desde nuestra producción",
     "identityDirectBody": "Mientras crece nuestra red de instaladores en esta región, STRETCH entrega e instala directamente en {place}: medición in situ, soldadura a medida en nuestra propia producción en la UE e instalación en un día por nuestros propios equipos. Los instaladores que asuman la región reciben sus solicitudes.",
-    "identityDirectCard": "Fabricante de techos y paredes tensados — entrega e instalación directas."
+    "identityDirectCard": "Fabricante de techos y paredes tensados — entrega e instalación directas.",
+    "costLine": "¿Cuánto cuesta un techo tensado en {place}? Calcule el precio por m²"
   },
   "datasheetEmail": {
     "subject": "Su ficha técnica STRETCH — {title}",

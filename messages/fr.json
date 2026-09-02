@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Espace client",
       "materials": "Matériaux",
-      "architects": "Architectes"
+      "architects": "Architectes",
+      "priceCalculator": "Calculateur de prix"
     },
     "cta": {
       "freeQuote": "Devis gratuit",
@@ -642,6 +643,12 @@
       "ratedOn": "Noté sur {source}",
       "titlePlain": "Ce que disent nos clients",
       "provenance": "Avis Google vérifiés, cités mot pour mot depuis notre profil d’établissement Google public."
+    },
+    "estimator": {
+      "kicker": "Calculateur de prix",
+      "title": "Combien coûte un plafond tendu ?",
+      "sub": "Indiquez la surface et le type de plafond — la fourchette indicative publiée s’affiche immédiatement ; le devis ferme est gratuit.",
+      "cta": "Calculer le prix"
     }
   },
   "ctaBand": {
@@ -677,7 +684,8 @@
     "dealer": "Trouver votre revendeur le plus proche",
     "chartCount": "{count, plural, one {# couleur} other {# couleurs}}",
     "anyRal": "Toute teinte RAL sur demande",
-    "dealerDirect": "Livraison et pose en direct — contactez-nous"
+    "dealerDirect": "Livraison et pose en direct — contactez-nous",
+    "priceLink": "Quel est le prix au m² ?"
   },
   "productsPage": {
     "eyebrow": "Nos solutions",
@@ -1498,6 +1506,10 @@
             {
               "title": "Tous les systèmes de plafond",
               "sub": "Comparer la gamme"
+            },
+            {
+              "title": "Calculateur de prix",
+              "sub": "Votre prix au m² en 30 secondes"
             }
           ]
         },
@@ -4706,7 +4718,9 @@
       "eyebrow": "Guides",
       "ctaTitle": "Vous pensez à un plafond tendu ?",
       "ctaBody": "Recevez un devis gratuit et sans engagement pour votre espace.",
-      "ctaBtn": "Demander un devis gratuit"
+      "ctaBtn": "Demander un devis gratuit",
+      "calculatorTitle": "Combien coûtera votre plafond ?",
+      "calculatorBody": "Mètres carrés × type de plafond : la fourchette indicative publiée en 30 secondes."
     }
   },
   "inspirationPage": {
@@ -5408,7 +5422,8 @@
     "identityDirectKicker": "Service direct",
     "identityDirectTitle": "{place}, directement depuis notre production",
     "identityDirectBody": "Le temps que notre réseau de poseurs grandisse dans cette région, STRETCH livre et pose directement à {place} : prise de mesures sur place, toile soudée sur mesure dans notre propre production européenne et pose en une journée par nos propres équipes. Les poseurs qui réservent la région en reçoivent les demandes.",
-    "identityDirectCard": "Fabricant de plafonds et murs tendus — livraison et pose directes."
+    "identityDirectCard": "Fabricant de plafonds et murs tendus — livraison et pose directes.",
+    "costLine": "Combien coûte un plafond tendu à {place} ? Calculez le prix au m²"
   },
   "datasheetEmail": {
     "subject": "Votre fiche technique STRETCH — {title}",

@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Kundelogin",
       "materials": "Materialer",
-      "architects": "Arkitekter"
+      "architects": "Arkitekter",
+      "priceCalculator": "Prisberegner"
     },
     "cta": {
       "freeQuote": "Gratis tilbud",
@@ -642,6 +643,12 @@
       "ratedOn": "Bedømt på {source}",
       "titlePlain": "Hvad kunderne siger",
       "provenance": "Verificerede Google-anmeldelser, citeret ordret fra vores offentlige Google-virksomhedsprofil."
+    },
+    "estimator": {
+      "kicker": "Prisberegner",
+      "title": "Hvad koster et strækloft?",
+      "sub": "Indtast areal og loftstype — det offentliggjorte, vejledende prisinterval vises med det samme; det faste tilbud er gratis.",
+      "cta": "Beregn pris"
     }
   },
   "ctaBand": {
@@ -677,7 +684,8 @@
     "dealer": "Find din nærmeste forhandler",
     "chartCount": "{count, plural, one {# farve} other {# farver}}",
     "anyRal": "Enhver RAL-farve på forespørgsel",
-    "dealerDirect": "Vi leverer og monterer direkte — kontakt os"
+    "dealerDirect": "Vi leverer og monterer direkte — kontakt os",
+    "priceLink": "Hvad koster det pr. m²?"
   },
   "productsPage": {
     "eyebrow": "Vores løsninger",
@@ -1498,6 +1506,10 @@
             {
               "title": "Alle loftsystemer",
               "sub": "Sammenlign sortimentet"
+            },
+            {
+              "title": "Prisberegner",
+              "sub": "Din pris pr. m² på 30 sekunder"
             }
           ]
         },
@@ -4697,7 +4709,9 @@
       "eyebrow": "Guider",
       "ctaTitle": "Overvejer du et strækloft?",
       "ctaBody": "Få et gratis og uforpligtende tilbud til dit rum.",
-      "ctaBtn": "Få et gratis tilbud"
+      "ctaBtn": "Få et gratis tilbud",
+      "calculatorTitle": "Hvad kommer dit loft til at koste?",
+      "calculatorBody": "Kvadratmeter × loftstype giver dig det offentliggjorte, vejledende prisinterval på 30 sekunder."
     }
   },
   "inspirationPage": {
@@ -5399,7 +5413,8 @@
     "identityDirectKicker": "Betjenes direkte",
     "identityDirectTitle": "{place} — betjent direkte fra vores produktion",
     "identityDirectBody": "Mens vores montørnetværk i regionen vokser, leverer og monterer STRETCH direkte i {place}: opmålt på stedet, svejset på mål i vores egen EU-produktion og monteret på én dag af vores egne hold. Montører, der overtager regionen, får regionens henvendelser.",
-    "identityDirectCard": "Producent af strækloft og opspændte vægge — vi leverer og monterer direkte."
+    "identityDirectCard": "Producent af strækloft og opspændte vægge — vi leverer og monterer direkte.",
+    "costLine": "Hvad koster et strækloft i {place}? Beregn prisen pr. m²"
   },
   "datasheetEmail": {
     "subject": "Dit STRETCH-datablad — {title}",
