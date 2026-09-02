@@ -5423,7 +5423,16 @@
     "identityDirectTitle": "{place}, directement depuis notre production",
     "identityDirectBody": "Le temps que notre réseau de poseurs grandisse dans cette région, STRETCH livre et pose directement à {place} : prise de mesures sur place, toile soudée sur mesure dans notre propre production européenne et pose en une journée par nos propres équipes. Les poseurs qui réservent la région en reçoivent les demandes.",
     "identityDirectCard": "Fabricant de plafonds et murs tendus — livraison et pose directes.",
-    "costLine": "Combien coûte un plafond tendu à {place} ? Calculez le prix au m²"
+    "costLine": "Combien coûte un plafond tendu à {place} ? Calculez le prix au m²",
+    "identityPlKicker": "Produit en Pologne et en Belgique",
+    "identityPlTitle": "Deux usines dans l’UE : Częstochowa et Beveren-Waas",
+    "identityPlBody": "STRETCH fabrique dans deux usines qui lui appartiennent : Alto Design Sp. z o.o. à Częstochowa et Stretch Productions BV à Beveren-Waas, en Belgique. Les plafonds pour {place} sont soudés sur mesure à Częstochowa et posés par nos propres équipes ou par un partenaire certifié — un producteur avec une usine que vous pouvez visiter, pas un importateur.",
+    "factoryKicker": "Notre usine",
+    "factoryTitle": "L’usine STRETCH de Częstochowa",
+    "factoryBody": "C’est ici que le groupe produit en Pologne : Alto Design Sp. z o.o. découpe et soude les toiles PVC sur mesure, assure la formation d’installateur en polonais et développe le réseau STRETCH pour la Pologne — une usine qui a un nom et une adresse sur la carte, pas une simple domiciliation commerciale.",
+    "factoryTraining": "Formation d’installateur à Częstochowa",
+    "factoryCta": "Visiter altodesign.pl",
+    "why1Pl": "Produit dans l’UE — chaque plafond est soudé sur mesure dans nos propres usines de Częstochowa et de Beveren-Waas et arrive prêt à poser."
   },
   "datasheetEmail": {
     "subject": "Votre fiche technique STRETCH — {title}",

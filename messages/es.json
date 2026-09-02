@@ -5414,7 +5414,16 @@
     "identityDirectTitle": "{place}: servicio directo desde nuestra producción",
     "identityDirectBody": "Mientras crece nuestra red de instaladores en esta región, STRETCH entrega e instala directamente en {place}: medición in situ, soldadura a medida en nuestra propia producción en la UE e instalación en un día por nuestros propios equipos. Los instaladores que asuman la región reciben sus solicitudes.",
     "identityDirectCard": "Fabricante de techos y paredes tensados — entrega e instalación directas.",
-    "costLine": "¿Cuánto cuesta un techo tensado en {place}? Calcule el precio por m²"
+    "costLine": "¿Cuánto cuesta un techo tensado en {place}? Calcule el precio por m²",
+    "identityPlKicker": "Producido en Polonia y Bélgica",
+    "identityPlTitle": "Dos fábricas en la UE: Częstochowa y Beveren-Waas",
+    "identityPlBody": "STRETCH fabrica en dos plantas propias: Alto Design Sp. z o.o. en Częstochowa y Stretch Productions BV en Beveren-Waas, Bélgica. Los techos para {place} se sueldan a medida en Częstochowa y los instalan nuestros propios equipos o un socio certificado — un fabricante con una fábrica que se puede visitar, no un importador.",
+    "factoryKicker": "Nuestra fábrica",
+    "factoryTitle": "La fábrica STRETCH de Częstochowa",
+    "factoryBody": "Aquí es donde el grupo produce en Polonia: Alto Design Sp. z o.o. corta y suelda a medida las membranas de PVC, imparte la formación de instaladores en polaco y construye la red STRETCH para Polonia — una fábrica con nombre y ubicación reales, no una simple dirección comercial.",
+    "factoryTraining": "Formación de instaladores en Częstochowa",
+    "factoryCta": "Visitar altodesign.pl",
+    "why1Pl": "Producido en la UE — cada techo se suelda a medida en nuestras propias fábricas de Częstochowa y Beveren-Waas y llega listo para instalar."
   },
   "datasheetEmail": {
     "subject": "Su ficha técnica STRETCH — {title}",

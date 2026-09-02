@@ -5414,7 +5414,16 @@
     "identityDirectTitle": "{place}: serviço direto a partir da nossa produção",
     "identityDirectBody": "Enquanto a nossa rede de instaladores nesta região cresce, a STRETCH entrega e instala diretamente em {place}: medição no local, soldadura à medida na nossa própria produção na UE e montagem num só dia pelas nossas próprias equipas. Os instaladores que assumam a região recebem os pedidos dessa região.",
     "identityDirectCard": "Fabricante de tetos e paredes tensionados — entrega e instalação diretas.",
-    "costLine": "Quanto custa um teto tensionado em {place}? Calcule o preço por m²"
+    "costLine": "Quanto custa um teto tensionado em {place}? Calcule o preço por m²",
+    "identityPlKicker": "Produzido na Polónia e na Bélgica",
+    "identityPlTitle": "Duas fábricas na UE: Częstochowa e Beveren-Waas",
+    "identityPlBody": "A STRETCH produz em duas fábricas próprias: a Alto Design Sp. z o.o. em Częstochowa e a Stretch Productions BV em Beveren-Waas, na Bélgica. Os tetos para {place} são soldados à medida em Częstochowa e instalados pelas nossas próprias equipas ou por um parceiro certificado — um produtor com uma fábrica que pode visitar, não um importador.",
+    "factoryKicker": "A nossa fábrica",
+    "factoryTitle": "A fábrica STRETCH em Częstochowa",
+    "factoryBody": "É aqui que o grupo produz na Polónia: a Alto Design Sp. z o.o. corta e solda membranas de PVC à medida, dá a formação de instaladores em polaco e constrói a rede STRETCH para a Polónia — uma fábrica com nome e localização concretos, não uma mera morada comercial.",
+    "factoryTraining": "Formação de instaladores em Częstochowa",
+    "factoryCta": "Visitar altodesign.pl",
+    "why1Pl": "Produzido na UE — cada teto é soldado à medida nas nossas próprias fábricas em Częstochowa e Beveren-Waas e chega pronto a instalar."
   },
   "datasheetEmail": {
     "subject": "A sua ficha técnica STRETCH — {title}",

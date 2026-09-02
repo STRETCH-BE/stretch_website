@@ -5414,7 +5414,16 @@
     "identityDirectTitle": "{place} — þjónað beint frá framleiðslu okkar",
     "identityDirectBody": "Á meðan uppsetningaraðilanet okkar á þessu svæði stækkar afhendir STRETCH og setur upp beint í {place}: mælt á staðnum, soðið eftir máli í okkar eigin framleiðslu innan ESB og sett upp á einum degi af okkar eigin teymum. Uppsetningaraðilar sem tryggja sér svæðið fá fyrirspurnir þess.",
     "identityDirectCard": "Framleiðandi dúkalofta og strekktra veggja — bein afhending og uppsetning.",
-    "costLine": "Hvað kostar dúkaloft í {place}? Reiknaðu verðið á m²"
+    "costLine": "Hvað kostar dúkaloft í {place}? Reiknaðu verðið á m²",
+    "identityPlKicker": "Framleitt í Póllandi og Belgíu",
+    "identityPlTitle": "Tvær verksmiðjur í ESB: Częstochowa og Beveren-Waas",
+    "identityPlBody": "STRETCH framleiðir í tveimur eigin verksmiðjum: Alto Design Sp. z o.o. í Częstochowa og Stretch Productions BV í Beveren-Waas í Belgíu. Loft fyrir {place} eru soðin eftir máli í Częstochowa og sett upp af okkar eigin teymum eða vottuðum samstarfsaðila — framleiðandi með verksmiðju sem þú getur heimsótt, ekki innflytjandi.",
+    "factoryKicker": "Verksmiðjan okkar",
+    "factoryTitle": "STRETCH-verksmiðjan í Częstochowa",
+    "factoryBody": "Hér framleiðir samstæðan í Póllandi: Alto Design Sp. z o.o. sníður og sýður PVC-dúka eftir máli, heldur uppsetningarnámskeið á pólsku og byggir upp STRETCH-netið fyrir Pólland — nafngreind verksmiðja sem hægt er að heimsækja, ekki bara skráð heimilisfang.",
+    "factoryTraining": "Uppsetningarnámskeið í Częstochowa",
+    "factoryCta": "Heimsækja altodesign.pl",
+    "why1Pl": "Framleitt í ESB — hvert loft er soðið eftir máli í okkar eigin verksmiðjum í Częstochowa og Beveren-Waas og kemur tilbúið til uppsetningar."
   },
   "datasheetEmail": {
     "subject": "STRETCH-tækniblaðið þitt — {title}",

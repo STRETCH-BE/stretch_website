@@ -5414,7 +5414,16 @@
     "identityDirectTitle": "{place} betjänas direkt från vår produktion",
     "identityDirectBody": "Medan vårt montörsnätverk i regionen växer levererar och monterar STRETCH direkt i {place}: uppmätt på plats, svetsat efter mått i vår egen EU-produktion och monterat på en dag av våra egna montörer. Montörer som tar regionen får dess förfrågningar.",
     "identityDirectCard": "Tillverkare av spänntak och spännväggar — direkt leverans och montering.",
-    "costLine": "Vad kostar ett spänntak i {place}? Beräkna priset per m²"
+    "costLine": "Vad kostar ett spänntak i {place}? Beräkna priset per m²",
+    "identityPlKicker": "Tillverkat i Polen och Belgien",
+    "identityPlTitle": "Två EU-fabriker: Częstochowa och Beveren-Waas",
+    "identityPlBody": "STRETCH tillverkar i två egna fabriker: Alto Design Sp. z o.o. i Częstochowa och Stretch Productions BV i Beveren-Waas, Belgien. Tak till {place} svetsas efter mått i Częstochowa och monteras av våra egna montörer eller en certifierad partner — en tillverkare med en fabrik du kan besöka, inte en importör.",
+    "factoryKicker": "Vår fabrik",
+    "factoryTitle": "STRETCH-fabriken i Częstochowa",
+    "factoryBody": "Här tillverkar koncernen i Polen: Alto Design Sp. z o.o. skär och svetsar PVC-membran efter mått, håller montörsutbildningen på polska och bygger upp STRETCH-nätverket i Polen — en namngiven fabrik som går att hitta på kartan, inte bara en kontorsadress.",
+    "factoryTraining": "Montörsutbildning i Częstochowa",
+    "factoryCta": "Besök altodesign.pl",
+    "why1Pl": "Tillverkat i EU — varje tak svetsas efter mått i våra egna fabriker i Częstochowa och Beveren-Waas och levereras klart att montera."
   },
   "datasheetEmail": {
     "subject": "Ditt STRETCH-datablad — {title}",

@@ -5414,7 +5414,16 @@
     "identityDirectTitle": "{place} — direkt aus unserer Produktion betreut",
     "identityDirectBody": "Solange unser Monteurnetzwerk in dieser Region noch wächst, liefert und montiert STRETCH in {place} direkt: vor Ort aufgemessen, in unserer eigenen EU-Produktion maßgenau verschweißt und von unseren eigenen Teams an einem Tag montiert. Monteure, die sich die Region sichern, erhalten deren Anfragen.",
     "identityDirectCard": "Hersteller von Spanndecken und Spannwänden — direkte Lieferung und Montage.",
-    "costLine": "Was kostet eine Spanndecke in {place}? Preis pro m² berechnen"
+    "costLine": "Was kostet eine Spanndecke in {place}? Preis pro m² berechnen",
+    "identityPlKicker": "Produziert in Polen und Belgien",
+    "identityPlTitle": "Zwei EU-Werke: Częstochowa und Beveren-Waas",
+    "identityPlBody": "STRETCH produziert in zwei eigenen Werken: Alto Design Sp. z o.o. in Częstochowa und Stretch Productions BV in Beveren-Waas, Belgien. Decken für {place} werden in Częstochowa maßgenau verschweißt und von unseren eigenen Teams oder einem zertifizierten Partner montiert — ein Hersteller mit einem Werk, das Sie besichtigen können, kein Importeur.",
+    "factoryKicker": "Unser Werk",
+    "factoryTitle": "Das STRETCH-Werk in Częstochowa",
+    "factoryBody": "Hier produziert die Gruppe in Polen: Alto Design Sp. z o.o. schneidet PVC-Folien zu und verschweißt sie maßgenau, führt die polnischsprachige Monteurschulung durch und baut das STRETCH-Netzwerk für Polen auf — ein Werk mit Namen und Standort, keine bloße Handelsadresse.",
+    "factoryTraining": "Monteurschulung in Częstochowa",
+    "factoryCta": "altodesign.pl besuchen",
+    "why1Pl": "Produziert in der EU — jede Decke wird in unseren eigenen Werken in Częstochowa und Beveren-Waas maßgenau verschweißt und kommt montagefertig an."
   },
   "datasheetEmail": {
     "subject": "Ihr STRETCH-Datenblatt — {title}",

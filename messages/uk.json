@@ -5424,7 +5424,16 @@
     "identityDirectTitle": "{place}, served directly from our production",
     "identityDirectBody": "While our installer network in this region grows, STRETCH delivers and installs in {place} directly: measured on site, welded to size in our own EU production and fitted in a day by our own teams. Installers who claim the region receive its enquiries.",
     "identityDirectCard": "Manufacturer of stretch ceilings and walls — direct delivery and installation.",
-    "costLine": "What does a stretch ceiling cost in {place}? Calculate the price per m²"
+    "costLine": "What does a stretch ceiling cost in {place}? Calculate the price per m²",
+    "identityPlKicker": "Produced in Poland and Belgium",
+    "identityPlTitle": "Two EU plants: Częstochowa and Beveren-Waas",
+    "identityPlBody": "STRETCH manufactures in two plants of its own: Alto Design Sp. z o.o. in Częstochowa and Stretch Productions BV in Beveren-Waas, Belgium. Ceilings for {place} are welded to size in Częstochowa and installed by our own teams or a certified partner — a producer with a factory you can visit, not an importer.",
+    "factoryKicker": "Our plant",
+    "factoryTitle": "The STRETCH plant in Częstochowa",
+    "factoryBody": "This is where the group produces in Poland: Alto Design Sp. z o.o. cuts and welds PVC membranes to size, runs the Polish-language installer training and builds the STRETCH network for Poland — a named, locatable factory, not a trading address.",
+    "factoryTraining": "Installer training in Częstochowa",
+    "factoryCta": "Visit altodesign.pl",
+    "why1Pl": "Produced in the EU — every ceiling is welded to size in our own plants in Częstochowa and Beveren-Waas and arrives ready to install."
   },
   "datasheetEmail": {
     "subject": "Your STRETCH datasheet — {title}",

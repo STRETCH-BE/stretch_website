@@ -5414,7 +5414,16 @@
     "identityDirectTitle": "{place} — betjent direkte fra vores produktion",
     "identityDirectBody": "Mens vores montørnetværk i regionen vokser, leverer og monterer STRETCH direkte i {place}: opmålt på stedet, svejset på mål i vores egen EU-produktion og monteret på én dag af vores egne hold. Montører, der overtager regionen, får regionens henvendelser.",
     "identityDirectCard": "Producent af strækloft og opspændte vægge — vi leverer og monterer direkte.",
-    "costLine": "Hvad koster et strækloft i {place}? Beregn prisen pr. m²"
+    "costLine": "Hvad koster et strækloft i {place}? Beregn prisen pr. m²",
+    "identityPlKicker": "Produceret i Polen og Belgien",
+    "identityPlTitle": "To fabrikker i EU: Częstochowa og Beveren-Waas",
+    "identityPlBody": "STRETCH producerer på to egne fabrikker: Alto Design Sp. z o.o. i Częstochowa og Stretch Productions BV i Beveren-Waas, Belgien. Lofter til {place} svejses på mål i Częstochowa og monteres af vores egne hold eller en certificeret partner — en producent med en fabrik, du kan besøge, ikke en importør.",
+    "factoryKicker": "Vores fabrik",
+    "factoryTitle": "STRETCH-fabrikken i Częstochowa",
+    "factoryBody": "Her producerer koncernen i Polen: Alto Design Sp. z o.o. skærer og svejser PVC-membraner på mål, står for montøruddannelsen på polsk og bygger STRETCH-netværket i Polen op — en navngiven fabrik på en adresse, du kan finde, ikke bare en handelsadresse.",
+    "factoryTraining": "Montøruddannelse i Częstochowa",
+    "factoryCta": "Besøg altodesign.pl",
+    "why1Pl": "Produceret i EU — hvert loft svejses på mål på vores egne fabrikker i Częstochowa og Beveren-Waas og leveres klar til montering."
   },
   "datasheetEmail": {
     "subject": "Dit STRETCH-datablad — {title}",

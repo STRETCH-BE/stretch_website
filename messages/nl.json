@@ -5430,7 +5430,16 @@
     "identityDirectTitle": "{place}, rechtstreeks bediend vanuit onze productie",
     "identityDirectBody": "Terwijl ons installateursnetwerk in deze regio groeit, levert en plaatst STRETCH rechtstreeks in {place}: ter plaatse opgemeten, op maat gelast in onze eigen EU-productie en op één dag geplaatst door onze eigen teams. Installateurs die de regio claimen, krijgen de aanvragen uit die regio.",
     "identityDirectCard": "Fabrikant van spanplafonds en spanwanden — rechtstreekse levering en plaatsing.",
-    "costLine": "Wat kost een spanplafond in {place}? Bereken de prijs per m²"
+    "costLine": "Wat kost een spanplafond in {place}? Bereken de prijs per m²",
+    "identityPlKicker": "Geproduceerd in Polen en België",
+    "identityPlTitle": "Twee EU-fabrieken: Częstochowa en Beveren-Waas",
+    "identityPlBody": "STRETCH produceert in twee eigen fabrieken: Alto Design Sp. z o.o. in Częstochowa en Stretch Productions BV in Beveren-Waas, België. Plafonds voor {place} worden op maat gelast in Częstochowa en geplaatst door onze eigen teams of een gecertificeerde partner — een producent met een fabriek die u kunt bezoeken, geen importeur.",
+    "factoryKicker": "Onze fabriek",
+    "factoryTitle": "De STRETCH-fabriek in Częstochowa",
+    "factoryBody": "Hier produceert de groep in Polen: Alto Design Sp. z o.o. snijdt en last pvc-membranen op maat, geeft de Poolstalige installateursopleiding en bouwt het STRETCH-netwerk voor Polen uit — een fabriek met naam en locatie, geen handelsadres.",
+    "factoryTraining": "Installateursopleiding in Częstochowa",
+    "factoryCta": "Bezoek altodesign.pl",
+    "why1Pl": "Geproduceerd in de EU — elk plafond wordt op maat gelast in onze eigen fabrieken in Częstochowa en Beveren-Waas en komt installatieklaar aan."
   },
   "datasheetEmail": {
     "subject": "Uw STRETCH-datasheet — {title}",

@@ -5414,7 +5414,16 @@
     "identityDirectTitle": "{place}, betjent direkte fra vår produksjon",
     "identityDirectBody": "Mens montørnettverket vårt i denne regionen vokser, leverer og monterer STRETCH direkte i {place}: målt opp på stedet, sveiset på mål i vår egen EU-produksjon og montert på én dag av våre egne montører. Montører som sikrer seg regionen, får regionens henvendelser.",
     "identityDirectCard": "Produsent av strekktak og strekkvegger — direkte levering og montering.",
-    "costLine": "Hva koster et strekktak i {place}? Beregn prisen per m²"
+    "costLine": "Hva koster et strekktak i {place}? Beregn prisen per m²",
+    "identityPlKicker": "Produsert i Polen og Belgia",
+    "identityPlTitle": "To EU-fabrikker: Częstochowa og Beveren-Waas",
+    "identityPlBody": "STRETCH produserer i to egne fabrikker: Alto Design Sp. z o.o. i Częstochowa og Stretch Productions BV i Beveren-Waas i Belgia. Tak til {place} sveises på mål i Częstochowa og monteres av våre egne montører eller en sertifisert partner — en produsent med en fabrikk du kan besøke, ikke en importør.",
+    "factoryKicker": "Vår fabrikk",
+    "factoryTitle": "STRETCH-fabrikken i Częstochowa",
+    "factoryBody": "Her produserer konsernet i Polen: Alto Design Sp. z o.o. skjærer og sveiser PVC-membraner på mål, holder den polskspråklige montøropplæringen og bygger STRETCH-nettverket for Polen — en navngitt fabrikk du finner på kartet, ikke bare en forretningsadresse.",
+    "factoryTraining": "Montøropplæring i Częstochowa",
+    "factoryCta": "Besøk altodesign.pl",
+    "why1Pl": "Produsert i EU — hvert tak sveises på mål i våre egne fabrikker i Częstochowa og Beveren-Waas og leveres klart til montering."
   },
   "datasheetEmail": {
     "subject": "Ditt STRETCH-datablad — {title}",
