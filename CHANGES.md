@@ -1,3 +1,12 @@
+## 2026-09-02 (24) — Footer: altodesign.pl branch link
+
+- The "PL · Częstochowa" office chip in the shared footer is now a
+  followed link to https://altodesign.pl on every page of every domain —
+  site-wide, same-industry, group-owned, telling Google the two domains
+  are related rather than competing. The Alto Design office entry in
+  site-config carries `url`, which the branch LocalBusiness node on the
+  contact pages now also emits.
+
 ## 2026-08-30 (23) — Fix round 2: honest review markup, US dealer reality, sitemap dates
 
 Re-analysis fixes (N1, N2, F12), one task per commit.

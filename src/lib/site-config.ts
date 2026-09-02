@@ -61,6 +61,8 @@ export type Office = {
   name: string;
   addressLines: string[];
   email?: string;
+  /** The branch's own public website, when it operates under its own name. */
+  url?: string;
   geo?: { lat: number; lng: number };
 };
 
@@ -89,6 +91,9 @@ export const offices: Office[] = [
     name: 'Alto Design Sp. z o.o.',
     addressLines: ['Legionów 59', '42-202 Częstochowa'],
     email: 'info@stretch-sufit.pl',
+    // Group-owned installer brand — linked from the shared footer so Google
+    // reads the two domains as related, not competing.
+    url: 'https://altodesign.pl',
     geo: { lat: 50.8074338, lng: 19.1585487 },
   },
   {

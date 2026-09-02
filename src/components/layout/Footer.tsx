@@ -160,7 +160,12 @@ export default function Footer() {
               }}
             >
               <span>US · New York</span>
-              <span>PL · Częstochowa</span>
+              {/* The PL branch trades under its own name — a followed link to
+                  the group-owned altodesign.pl on every page of every domain,
+                  so Google reads the two sites as related, not competing. */}
+              <a href="https://altodesign.pl" className="lnk" style={{ color: 'var(--on-dark-muted)' }}>
+                PL · Częstochowa
+              </a>
               <span>AT · Vienna</span>
             </div>
           </div>

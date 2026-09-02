@@ -180,6 +180,7 @@ export function branchLocalBusinessSchemas() {
           addressCountry: o.country,
         },
         ...(o.email ? { email: o.email } : {}),
+        ...(o.url ? { url: o.url } : {}),
         geo: { '@type': 'GeoCoordinates', latitude: o.geo!.lat, longitude: o.geo!.lng },
       };
     });
