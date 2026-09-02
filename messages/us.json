@@ -5378,7 +5378,11 @@
     "ovRecruitTitle": "No dealer in your area yet?",
     "ovRecruitBody": "We deliver and install directly from our production while the network grows — and installers who claim an open region get its inquiries, dealer pricing and training.",
     "regionLuxembourg": "Luxembourg (Grand Duchy)",
-    "regionAustria": "Austria"
+    "regionAustria": "Austria",
+    "regionGermany": "Germany",
+    "regionPoland": "Poland",
+    "regionFrance": "France",
+    "nearbyHeadingRegion": "Also in {region}"
   },
   "datasheetEmail": {
     "subject": "Your STRETCH datasheet — {title}",

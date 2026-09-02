@@ -5386,7 +5386,11 @@
     "ovRecruitTitle": "Endnu ingen forhandler i dit område?",
     "ovRecruitBody": "Vi leverer og monterer direkte fra vores produktion, mens netværket vokser — og montører, der overtager en ledig region, får regionens henvendelser, forhandlerpriser og træning.",
     "regionLuxembourg": "Luxembourg (Storhertugdømmet)",
-    "regionAustria": "Østrig"
+    "regionAustria": "Østrig",
+    "regionGermany": "Tyskland",
+    "regionPoland": "Polen",
+    "regionFrance": "Frankrig",
+    "nearbyHeadingRegion": "Også i {region}"
   },
   "datasheetEmail": {
     "subject": "Dit STRETCH-datablad — {title}",

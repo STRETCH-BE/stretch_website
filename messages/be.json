@@ -5396,7 +5396,11 @@
     "ovRecruitTitle": "Nog geen dealer in uw buurt?",
     "ovRecruitBody": "Terwijl het netwerk groeit, leveren en plaatsen wij rechtstreeks vanuit onze eigen productie — en installateurs die een vrije regio claimen, krijgen de aanvragen uit die regio, dealerprijzen en opleiding.",
     "regionLuxembourg": "Luxemburg (Groothertogdom)",
-    "regionAustria": "Oostenrijk"
+    "regionAustria": "Oostenrijk",
+    "regionGermany": "Duitsland",
+    "regionPoland": "Polen",
+    "regionFrance": "Frankrijk",
+    "nearbyHeadingRegion": "Ook in {region}"
   },
   "datasheetEmail": {
     "subject": "Uw STRETCH-datasheet — {title}",

@@ -5386,7 +5386,11 @@
     "ovRecruitTitle": "Enginn söluaðili á þínu svæði enn?",
     "ovRecruitBody": "Við afhendum og setjum upp beint frá framleiðslunni á meðan netið stækkar — og uppsetningaraðilar sem tryggja sér laust svæði fá fyrirspurnir þess, söluaðilaverð og þjálfun.",
     "regionLuxembourg": "Lúxemborg (Stórhertogadæmið)",
-    "regionAustria": "Austurríki"
+    "regionAustria": "Austurríki",
+    "regionGermany": "Þýskaland",
+    "regionPoland": "Pólland",
+    "regionFrance": "Frakkland",
+    "nearbyHeadingRegion": "Einnig í {region}"
   },
   "datasheetEmail": {
     "subject": "STRETCH-tækniblaðið þitt — {title}",

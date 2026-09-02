@@ -5383,11 +5383,11 @@
     "metaTitleRecruit": "Plafond tendu {place} — posé depuis notre production belge",
     "metaDescDealer": "Vous cherchez un plafond tendu à {place} ? Notre revendeur STRETCH certifié prend les mesures sur place et pose des plafonds soudés sur mesure dans notre production belge. Demandez un devis gratuit.",
     "metaDescRecruit": "Un plafond tendu à {place} ? Nous posons directement depuis notre production belge — et nous cherchons un revendeur local. Demandez un devis ou devenez notre partenaire à {place}.",
-    "ovMetaTitle": "Revendeurs STRETCH — Belgique & Pays-Bas | STRETCH",
-    "ovMetaDescription": "Trouvez votre revendeur STRETCH certifié en Flandre, à Bruxelles, en Wallonie ou aux Pays-Bas. Chaque plafond sort de notre production belge.",
+    "ovMetaTitle": "Revendeurs STRETCH — Wallonie, Luxembourg & France | STRETCH",
+    "ovMetaDescription": "Trouvez votre revendeur STRETCH certifié en Wallonie, au Luxembourg et en France (Paris, Lyon, Marseille…). Chaque plafond tendu sort de notre production belge.",
     "ovEyebrow": "Réseau",
     "ovTitle": "Revendeurs",
-    "ovIntro": "Les plafonds tendus STRETCH sont mesurés et posés par des partenaires locaux certifiés, soutenus par notre propre production près de Lokeren. Trouvez votre région — ou réservez une zone encore libre.",
+    "ovIntro": "Les plafonds tendus STRETCH sont mesurés et posés en Wallonie, au Luxembourg et en France (Paris, Lyon, Marseille, Lille, Bordeaux, Toulouse, Nantes, Strasbourg) par des partenaires locaux certifiés ou directement depuis notre propre production belge près de Lokeren. Trouvez votre région — ou réservez une zone encore libre.",
     "regionFlanders": "Flandre & Bruxelles",
     "regionWallonia": "Wallonie",
     "regionNetherlands": "Pays-Bas",
@@ -5395,7 +5395,11 @@
     "ovRecruitTitle": "Pas encore de revendeur près de chez vous ?",
     "ovRecruitBody": "Pendant que le réseau grandit, nous livrons et posons directement depuis notre production — et les poseurs qui réservent une région libre en reçoivent les demandes, les tarifs revendeur et la formation.",
     "regionLuxembourg": "Luxembourg (Grand-Duché)",
-    "regionAustria": "Autriche"
+    "regionAustria": "Autriche",
+    "regionGermany": "Allemagne",
+    "regionPoland": "Pologne",
+    "regionFrance": "France",
+    "nearbyHeadingRegion": "Aussi dans la région : {region}"
   },
   "datasheetEmail": {
     "subject": "Votre fiche technique STRETCH — {title}",

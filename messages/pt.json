@@ -5386,7 +5386,11 @@
     "ovRecruitTitle": "Ainda sem revendedor na sua zona?",
     "ovRecruitBody": "Enquanto a rede cresce, entregamos e instalamos diretamente a partir da nossa fábrica — e os instaladores que assumam uma região em aberto recebem os pedidos dessa região, preços de revendedor e formação.",
     "regionLuxembourg": "Luxemburgo (Grão-Ducado)",
-    "regionAustria": "Áustria"
+    "regionAustria": "Áustria",
+    "regionGermany": "Alemanha",
+    "regionPoland": "Polónia",
+    "regionFrance": "França",
+    "nearbyHeadingRegion": "Também em {region}"
   },
   "datasheetEmail": {
     "subject": "A sua ficha técnica STRETCH — {title}",

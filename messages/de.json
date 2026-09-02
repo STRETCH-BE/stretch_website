@@ -5374,11 +5374,11 @@
     "metaTitleRecruit": "Spanndecke {place} — Montage direkt aus unserer belgischen Produktion",
     "metaDescDealer": "Sie suchen eine Spanndecke in {place}? Unser zertifizierter STRETCH-Händler misst vor Ort auf und montiert Decken, die in unserer belgischen Produktion maßgenau verschweißt werden. Fordern Sie ein kostenloses Angebot an.",
     "metaDescRecruit": "Eine Spanndecke in {place}? Wir montieren direkt aus unserer belgischen Produktion — und suchen einen Händler vor Ort. Fordern Sie ein Angebot an oder werden Sie unser Partner in {place}.",
-    "ovMetaTitle": "STRETCH-Händler — Belgien & Niederlande | STRETCH",
-    "ovMetaDescription": "Finden Sie Ihren zertifizierten STRETCH-Händler in Flandern, Brüssel, Wallonien oder den Niederlanden. Jede Spanndecke stammt aus belgischer Produktion.",
+    "ovMetaTitle": "STRETCH-Händler — Deutschland, Österreich & Benelux | STRETCH",
+    "ovMetaDescription": "Finden Sie Ihren zertifizierten STRETCH-Händler in Deutschland (Berlin, Hamburg, München, Köln, Frankfurt, Stuttgart, Düsseldorf, Dortmund, Essen, Leipzig), in Österreich und in den Benelux-Ländern. Jede Spanndecke stammt aus belgischer Produktion.",
     "ovEyebrow": "Netzwerk",
     "ovTitle": "Händler",
-    "ovIntro": "STRETCH-Spanndecken werden von zertifizierten Fachpartnern vor Ort aufgemessen und montiert — mit unserer eigenen Produktion bei Lokeren im Rücken. Finden Sie Ihre Region — oder sichern Sie sich eine der freien Regionen.",
+    "ovIntro": "STRETCH-Spanndecken werden von zertifizierten Fachpartnern vor Ort aufgemessen und montiert — in Deutschland von Berlin, Hamburg und München über Köln, Frankfurt, Stuttgart, Düsseldorf, Dortmund und Essen bis Leipzig, in Österreich und in den Benelux-Ländern. Dahinter steht unsere eigene belgische Produktion in Beveren-Waas. Finden Sie Ihre Region — oder sichern Sie sich eine der freien Regionen.",
     "regionFlanders": "Flandern & Brüssel",
     "regionWallonia": "Wallonien",
     "regionNetherlands": "Niederlande",
@@ -5386,7 +5386,11 @@
     "ovRecruitTitle": "Noch kein Händler in Ihrer Nähe?",
     "ovRecruitBody": "Solange das Netzwerk wächst, liefern und montieren wir direkt aus unserer Produktion — und Monteure, die sich eine freie Region sichern, erhalten deren Anfragen, Händlerpreise und Schulungen.",
     "regionLuxembourg": "Luxemburg (Großherzogtum)",
-    "regionAustria": "Österreich"
+    "regionAustria": "Österreich",
+    "regionGermany": "Deutschland",
+    "regionPoland": "Polen",
+    "regionFrance": "Frankreich",
+    "nearbyHeadingRegion": "Auch in {region}"
   },
   "datasheetEmail": {
     "subject": "Ihr STRETCH-Datenblatt — {title}",
