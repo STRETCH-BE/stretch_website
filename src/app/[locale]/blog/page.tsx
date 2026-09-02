@@ -7,7 +7,7 @@ import { isValidLocale, localeFullCodes, type Locale } from '@/i18n/config';
 import { siteUrl } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
-import { blogPostsFor } from '@/lib/content';
+import { blogPostsFor, blogHref } from '@/lib/content';
 import { localizeBlogPost, type BlogPostMessages } from '@/lib/localize-content';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -50,7 +50,7 @@ export default async function BlogIndex({ params }: { params: { locale: string }
             const p = localizeBlogPost(base, (tb.raw('posts') as Record<string, BlogPostMessages>)[base.slug]);
             return (
             <article key={p.slug} style={{ border: '1px solid var(--border)', background: '#fff', display: 'flex', flexDirection: 'column' }}>
-              <Link href={`/blog/${p.slug}`} className="zoom-wrap" style={{ display: 'block', overflow: 'hidden' }}>
+              <Link href={blogHref(base, locale)} className="zoom-wrap" style={{ display: 'block', overflow: 'hidden' }}>
                 <Placeholder label={p.title} src={p.image} alt={p.title} sizes="(max-width: 860px) 100vw, 50vw" light ratio="16/9" className="zoom-img" decorative />
               </Link>
               <div style={{ padding: 'clamp(24px,2.6vw,34px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
@@ -58,10 +58,10 @@ export default async function BlogIndex({ params }: { params: { locale: string }
                   {t('postMeta', { date: fmtDate(p.datePublished, locale), minutes: p.readMinutes })}
                 </div>
                 <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(22px,2.4vw,28px)', letterSpacing: '-.02em', lineHeight: 1.05, margin: '0 0 14px' }}>
-                  <Link href={`/blog/${p.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>{p.title}</Link>
+                  <Link href={blogHref(base, locale)} style={{ color: 'inherit', textDecoration: 'none' }}>{p.title}</Link>
                 </h2>
                 <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--text-muted)', margin: '0 0 22px', flex: 1 }}>{p.excerpt}</p>
-                <Link href={`/blog/${p.slug}`} className="lnk" style={{ fontWeight: 700, fontSize: 13.5, letterSpacing: '.04em', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 9 }}>
+                <Link href={blogHref(base, locale)} className="lnk" style={{ fontWeight: 700, fontSize: 13.5, letterSpacing: '.04em', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 9 }}>
                   {t('readArticle')} <ArrowRight size={15} style={{ color: 'var(--red)' }} />
                 </Link>
               </div>

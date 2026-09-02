@@ -18,7 +18,7 @@ import {
 import { staticRoutes, staticRouteDates } from '@/lib/site-config';
 import { productSlugs, productsUpdatedAt } from '@/lib/products';
 import { applicationSlugs, applicationsUpdatedAt } from '@/lib/applications';
-import { blogPosts, blogPostsFor, projectSlugs, projectsUpdatedAt } from '@/lib/content';
+import { blogPostsFor, blogHref, blogPostForSlug, projectSlugs, projectsUpdatedAt } from '@/lib/content';
 import { dealerPlaceSlugs, isDealerMarket, dealersUpdatedAt } from '@/lib/dealers';
 import { techMembranes, techTopicKeys, technicalUpdatedAt } from '@/lib/technical';
 import { materialGroupSlugs, materialsUpdatedAt } from '@/lib/materials';
@@ -40,8 +40,8 @@ function collectRoutes(locale: Locale): string[] {
   const productRoutes = productSlugs.map((s) => `/products/${s}`);
   const applicationRoutes = applicationSlugs.map((s) => `/applications/${s}`);
   // Blog is the one per-locale group: market-restricted posts only appear in
-  // the sitemaps of the domains they exist on.
-  const blogRoutes = blogPostsFor(locale).map((p) => `/blog/${p.slug}`);
+  // the sitemaps of the domains they exist on, each at THIS locale's slug.
+  const blogRoutes = blogPostsFor(locale).map((p) => blogHref(p, locale));
   // Dealer directory + installer training exist on dealer markets only (N2).
   const dealerRoutes = isDealerMarket(locale) ? dealerPlaceSlugs.map((s) => `/dealers/${s}`) : [];
   const technicalRoutes = Object.keys(techMembranes).flatMap((m) =>
@@ -84,10 +84,10 @@ function changeFreqFor(route: string): string {
 // Real freshness per route family (F12): blog posts carry their own
 // dateModified; every other family carries a maintained *UpdatedAt date;
 // static routes have an explicit map in site-config.ts.
-function lastModFor(route: string): string {
+function lastModFor(route: string, locale: Locale): string {
   let d: string | undefined = staticRouteDates[route];
   if (!d && route.startsWith('/blog/')) {
-    d = blogPosts.find((p) => p.slug === route.slice('/blog/'.length))?.dateModified;
+    d = blogPostForSlug(locale, route.slice('/blog/'.length))?.dateModified;
   }
   if (!d && route.startsWith('/inspiration/')) d = projectsUpdatedAt;
   if (!d && route.startsWith('/products/')) d = productsUpdatedAt;
@@ -104,9 +104,9 @@ function esc(s: string): string {
 
 /** Locales a route exists on — all LIVE locales, intersected with a
  *  market-restricted post's markets. Pending locales never appear. */
-function localesForRoute(route: string): readonly Locale[] {
+function localesForRoute(route: string, locale: Locale): readonly Locale[] {
   if (route.startsWith('/blog/')) {
-    const post = blogPosts.find((p) => p.slug === route.slice('/blog/'.length));
+    const post = blogPostForSlug(locale, route.slice('/blog/'.length));
     if (post?.markets?.length) return liveLocales.filter((l) => post.markets!.includes(l));
   }
   // Dealer directory + installer training: dealer markets only (N2) — no
@@ -132,21 +132,25 @@ export function GET(request: Request) {
   }
   const entries = collectRoutes(locale)
     .map((route) => {
-      const routeLocales = localesForRoute(route);
+      const routeLocales = localesForRoute(route, locale);
       const xDefault = routeLocales.includes(defaultLocale) ? defaultLocale : (routeLocales[0] ?? defaultLocale);
+      // Blog posts carry a different slug per locale: every alternate must
+      // name THAT locale's own path (per-market audit 2 Sep 2026, defect 1).
+      const post = route.startsWith('/blog/') ? blogPostForSlug(locale, route.slice('/blog/'.length)) : undefined;
+      const routeOn = (l: Locale) => (post ? blogHref(post, l) : route);
       const alternates = routeLocales
         .map(
           (l) =>
-            `    <xhtml:link rel="alternate" hreflang="${localeFullCodes[l] ?? l}" href="${esc(urlFor(l, route))}"/>`,
+            `    <xhtml:link rel="alternate" hreflang="${localeFullCodes[l] ?? l}" href="${esc(urlFor(l, routeOn(l)))}"/>`,
         )
         .concat(
-          `    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(urlFor(xDefault, route))}"/>`,
+          `    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(urlFor(xDefault, routeOn(xDefault)))}"/>`,
         )
         .join('\n');
       return [
         '  <url>',
         `    <loc>${esc(urlFor(locale, route))}</loc>`,
-        `    <lastmod>${lastModFor(route)}</lastmod>`,
+        `    <lastmod>${lastModFor(route, locale)}</lastmod>`,
         `    <changefreq>${changeFreqFor(route)}</changefreq>`,
         `    <priority>${priorityFor(route)}</priority>`,
         alternates,

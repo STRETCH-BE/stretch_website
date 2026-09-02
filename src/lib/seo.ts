@@ -57,17 +57,22 @@ export function buildAlternates(
   locale: Locale,
   route: string,
   only?: readonly Locale[],
+  /** Per-locale route (blog posts carry a different slug per locale). Each
+   *  hreflang MUST point at that locale's OWN path — a Polish alternate that
+   *  names the Dutch slug 404s on stretch-sufit.pl and breaks the cluster. */
+  routeFor?: (l: Locale) => string,
 ): Metadata['alternates'] {
   const subset = subsetOf(only);
+  const pathFor = (l: Locale) => (routeFor ? routeFor(l) : route);
   const languages: Record<string, string> = {};
   for (const l of subset) {
-    languages[localeFullCodes[l] ?? l] = buildCanonical(l, route);
+    languages[localeFullCodes[l] ?? l] = buildCanonical(l, pathFor(l));
   }
   const xDefault = subset.includes(defaultLocale) ? defaultLocale : subset[0];
-  languages['x-default'] = buildCanonical(xDefault, route);
+  languages['x-default'] = buildCanonical(xDefault, pathFor(xDefault));
 
   return {
-    canonical: buildCanonical(locale, route),
+    canonical: buildCanonical(locale, pathFor(locale)),
     languages,
   };
 }

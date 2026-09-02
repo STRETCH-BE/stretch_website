@@ -5,6 +5,7 @@
 // none fabricate testimonials, prices or claims beyond the brief.
 // ============================================================================
 import type { Locale } from '@/i18n/config';
+import { blogSlugMap } from '@/lib/blog-slugs';
 
 export type Project = {
   key: string;
@@ -648,7 +649,15 @@ export type BlogSection = {
 };
 
 export type BlogPost = {
+  /** CANONICAL slug — the key for messages overlays, OG images and redirects. */
   slug: string;
+  /**
+   * Per-locale URL slugs (per-market audit 2 Sep 2026, defect 1). Sourced from
+   * src/lib/blog-slugs.json at module load — never set here by hand: that JSON
+   * is also what redirects.mjs reads to 301 the old paths. A locale absent
+   * from the map keeps `slug`. `be`/`nl` are never remapped (those URLs rank).
+   */
+  slugs?: Partial<Record<Locale, string>>;
   title: string;
   excerpt: string;
   datePublished: string; // ISO
@@ -659,6 +668,16 @@ export type BlogPost = {
   image?: string;
   /** Locales the post exists on. Absent = every locale (the default). */
   markets?: Locale[];
+  /**
+   * Market-native article: written in the market language directly here (no
+   * English structural source, no message overlays anywhere — by design it is
+   * never translated). Must always come with a single-locale `markets`.
+   */
+  native?: Locale;
+  /** Render the price-calculator CTA card under the article (T6). */
+  calculatorCta?: boolean;
+  /** Render the per-market currency note for the published EUR ranges (T2). */
+  priceGuide?: boolean;
   /** Body as an ordered list of sections. */
   body: BlogSection[];
 };
@@ -1187,6 +1206,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'spanplafond-prijs',
+    // The public price guide: currency note per market (T2) + calculator card (T6).
+    priceGuide: true,
+    calculatorCta: true,
     title: 'What does a stretch ceiling cost? An honest price guide',
     excerpt:
       'Stretch ceiling prices range from roughly €70 to €200 per m² installed, depending on the type and the room. Here is what sits behind that spread, indicative ranges per ceiling type, and how to get a firm number for your project.',
@@ -1618,6 +1640,12 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
+// Per-locale slugs come from the shared JSON (see BlogPost.slugs).
+for (const p of blogPosts) {
+  const m = blogSlugMap[p.slug];
+  if (m && Object.keys(m).length > 0) p.slugs = m;
+}
+
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
@@ -1628,6 +1656,23 @@ export const blogSlugs = blogPosts.map((p) => p.slug);
  *  single source of the market rule: every place that lists posts uses this. */
 export function blogPostsFor(locale: Locale): BlogPost[] {
   return blogPosts.filter((p) => !p.markets || p.markets.includes(locale));
+}
+
+/** The slug a post uses on a locale (its own, else the canonical one). */
+export function slugForLocale(post: BlogPost, locale: Locale): string {
+  return post.slugs?.[locale] ?? post.slug;
+}
+
+/** "/blog/<slug for this locale>" — the ONLY way to build a blog href. */
+export function blogHref(post: BlogPost, locale: Locale): string {
+  return `/blog/${slugForLocale(post, locale)}`;
+}
+
+/** Resolve the slug seen in a URL on a locale to the post (localized slug
+ *  first; the canonical slug is NOT accepted on a locale that has its own —
+ *  the old path 301s in redirects.mjs and must not double-serve). */
+export function blogPostForSlug(locale: Locale, slugInUrl: string): BlogPost | undefined {
+  return blogPostsFor(locale).find((p) => slugForLocale(p, locale) === slugInUrl);
 }
 
 // ---------------------------------------------------------------------------
