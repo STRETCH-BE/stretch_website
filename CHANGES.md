@@ -15,6 +15,19 @@ Google Maps embed (`src/components/sections/ContactMap.tsx`, keyless
   shows QuinLay ("Schweiz & Liechtenstein" kicker). Every other locale maps
   the Beveren HQ (Gentseweg 309 A3, 9120 Beveren-Waas) with the existing
   "Headquarters" box. Map UI language follows the locale (`hl=`).
+- **The listing, not an address pin.** Michael asked for the STRETCH Google
+  Business Profile (https://maps.app.goo.gl/fiRQxCoyWXjvLpJi8). Listing
+  data lives in `contact.maps` / `swissPartner.maps` (`src/lib/site-config.ts`,
+  type `MapPlace`): the embed uses the name + address query ("STRETCH,
+  Gentseweg 309 A3, 9120 Beveren-Waas"), which Google resolves to the
+  listing, and "Open in Google Maps" is the share link. Once `ftid` (the
+  "0x…:0x…" feature id from the profile's full google.com/maps/place/… URL
+  or its "Embed a map" code) is filled, `mapEmbedUrl()` switches to the
+  keyless `maps/embed?pb=` URL Google itself generates for a place, pinned
+  to that exact listing (profile card with name, rating, photos). The
+  short link could not be resolved from the build sandbox (Google hosts
+  are blocked there), so `ftid` is a TODO for STRETCH and for QuinLay
+  (whose share link is also still to be supplied).
 - The address box moved from *over* the image to *under* the map so
   Google's logo and terms links stay visible (embed terms).
 - New messages `contactPage.map.{load,note,open}` in all 16 locale files

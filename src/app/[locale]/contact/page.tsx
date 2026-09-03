@@ -113,14 +113,13 @@ export default async function ContactPage({ params }: { params: { locale: string
             </p>
             <ContactForm />
           </div>
-          {/* Google Maps (consent-aware, see ContactMap) + the address it shows:
-              QuinLay AG for the Swiss locales, the Beveren HQ everywhere else.
+          {/* Google Maps (consent-aware, see ContactMap) showing the Google
+              Business Profile listing: QuinLay AG for the Swiss locales, the
+              Beveren HQ (contact.maps) everywhere else.
               The address box sits BELOW the map so Google's attribution stays visible. */}
           <div className="ct-map-col" style={{ display: 'flex', flexDirection: 'column', alignSelf: 'stretch', minHeight: 380 }}>
             <ContactMap
-              query={swiss
-                ? `${swissPartner.street}, ${swissPartner.postalCode} ${swissPartner.city}, Switzerland`
-                : `${offices[0].addressLines.join(', ')}, ${offices[0].countryName}`}
+              place={swiss ? swissPartner.maps : contact.maps}
               lang={localeFullCodes[locale].split('-')[0]}
               title={t('mapLabel')}
               loadLabel={t('map.load')}

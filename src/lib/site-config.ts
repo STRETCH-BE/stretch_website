@@ -56,6 +56,22 @@ export const contact = {
     country: 'BE',
   },
   geo: { lat: 51.1953188, lng: 4.2239015 },
+  // Google Business Profile of the HQ — the contact-page map embeds this
+  // LISTING (profile card: name, rating, photos, directions), not a bare
+  // address pin. `ftid` is the "0x…:0x…" feature id from the profile's full
+  // google.com/maps/place/… URL (or its "Embed a map" code); with it the
+  // embed is pinned to the exact listing. While it is empty the map falls
+  // back to the name + address query, which Google resolves to the listing
+  // in most cases. `shareUrl` is the maps.app.goo.gl link (3 Sep 2026).
+  maps: {
+    name: 'STRETCH',
+    query: 'STRETCH, Gentseweg 309 A3, 9120 Beveren-Waas',
+    shareUrl: 'https://maps.app.goo.gl/fiRQxCoyWXjvLpJi8',
+    ftid: '', // TODO: "0x…:0x…" from the profile URL
+    lat: 51.1953188,
+    lng: 4.2239015,
+    region: 'be',
+  },
 } as const;
 
 // Generalvertretung STRETCH Schweiz & Liechtenstein (2 Sep 2026). Official
@@ -75,6 +91,16 @@ export const swissPartner = {
   phoneHref: 'tel:+41413134732',
   email: 'office@quinlay.ch',
   url: 'https://www.quinlay.ch',
+  // Google listing for the Swiss contact-page map (same shape as contact.maps).
+  maps: {
+    name: 'QuinLay AG',
+    query: 'QuinLay AG, Stierenberg Park 1A, 6221 Rickenbach',
+    shareUrl: '', // TODO: QuinLay's maps.app.goo.gl share link
+    ftid: '', // TODO: "0x…:0x…" from the listing URL
+    lat: undefined as number | undefined,
+    lng: undefined as number | undefined,
+    region: 'ch',
+  },
 } as const;
 
 export type Office = {
