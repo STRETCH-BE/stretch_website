@@ -1,3 +1,24 @@
+## 2026-09-03 (31) — Installer-training hero: photo sizing
+
+On stretch.mt/installer-training the hero photo rendered ~230px wide next
+to a headline filling the rest of the row. Cause: the page used the global
+`.h1` size (up to 142px) in a `1.1fr .9fr` grid, and `fr` columns have a
+`min-content` minimum — the longest headline word set the text column's
+minimum width and the photo column got what was left. Fix in
+`src/app/[locale]/installer-training/page.tsx`:
+
+- Grid columns `minmax(0, 1.1fr) minmax(0, .9fr)` — the photo column keeps
+  its 45 % whatever the headline does.
+- The h1 is sized for this page's long words (nl/be "gecertificeerd",
+  sv "spänntaksmontering", no "strekkhimling"): `clamp(32px, 4.5vw, 62px)`,
+  `lang` set for hyphenation, `overflow-wrap: anywhere` as the last resort.
+- The training photo is portrait (1536×2048); the slot is now 4/5 instead
+  of 4/3.4 (which cropped half of it), 4/3 on mobile; `sizes` 45vw.
+
+The page (and so the photo) exists on the dealer markets only
+(`isDealerMarket`) — the other locales 404 by design. Verified per domain
+on the built site (see the commit).
+
 ## 2026-09-03 (30) — Contact page: Google Maps instead of the "Workshop / map" placeholder
 
 The label-only "Workshop / map" block next to the contact form is now a
@@ -28,6 +49,17 @@ Google Maps embed (`src/components/sections/ContactMap.tsx`, keyless
   short link could not be resolved from the build sandbox (Google hosts
   are blocked there), so `ftid` is a TODO for STRETCH and for QuinLay
   (whose share link is also still to be supplied).
+- **Branches** (Michael, 3 Sep 2026): `offices[].maps` carries the
+  Częstochowa listing (https://maps.app.goo.gl/qYH9brkHhnA2uUKC9) and the
+  Vienna office listing (https://maps.app.goo.gl/GKK8ccVg44QBw22G9); the
+  HQ card references `contact.maps`. `mapPlaceFor(locale)`
+  (`src/lib/local-contact.ts`) picks the map: stretch-sufit.pl embeds the
+  Częstochowa branch (Alto Design Sp. z o.o., Legionów 59 in the box under
+  the map), the Swiss locales QuinLay, everything else the HQ. Every office
+  card in the "Our offices" grid links to its Google listing ("Open in
+  Google Maps"). The Vienna listing is linked from the card only; since
+  .at redirects to .de, the German site's map stays on the HQ unless
+  Michael wants Vienna there. Helpers moved to `src/lib/maps.ts`.
 - The address box moved from *over* the image to *under* the map so
   Google's logo and terms links stay visible (embed terms).
 - New messages `contactPage.map.{load,note,open}` in all 16 locale files

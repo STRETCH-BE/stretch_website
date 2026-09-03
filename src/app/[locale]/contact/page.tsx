@@ -2,11 +2,11 @@
 // beside a workshop/map placeholder, the four-office grid, and a dealer CTA.
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { Phone, Mail, MessageCircle, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MessageCircle, ArrowRight, MapPin } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { isValidLocale, localeFullCodes, type Locale } from '@/i18n/config';
 import { siteUrl, contact, offices, swissPartner, brand } from '@/lib/site-config';
-import { localContactFor, isSwissLocale } from '@/lib/local-contact';
+import { localContactFor, isSwissLocale, mapPlaceFor } from '@/lib/local-contact';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema, localBusinessSchema, branchLocalBusinessSchemas } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
@@ -29,6 +29,7 @@ export default async function ContactPage({ params }: { params: { locale: string
   // ch: the Swiss general representative answers — QuinLay's number and inbox.
   const local = localContactFor(locale);
   const swiss = isSwissLocale(locale);
+  const map = mapPlaceFor(locale);
   // "Tessin / Ticino: contattateci in italiano — office@quinlay.ch", e-mail linked.
   const ticino = t('ticinoLine').split(swissPartner.email);
 
@@ -115,11 +116,12 @@ export default async function ContactPage({ params }: { params: { locale: string
           </div>
           {/* Google Maps (consent-aware, see ContactMap) showing the Google
               Business Profile listing: QuinLay AG for the Swiss locales, the
-              Beveren HQ (contact.maps) everywhere else.
-              The address box sits BELOW the map so Google's attribution stays visible. */}
+              Częstochowa branch on stretch-sufit.pl, the Beveren HQ
+              everywhere else (mapPlaceFor). The address box sits BELOW the
+              map so Google's attribution stays visible. */}
           <div className="ct-map-col" style={{ display: 'flex', flexDirection: 'column', alignSelf: 'stretch', minHeight: 380 }}>
             <ContactMap
-              place={swiss ? swissPartner.maps : contact.maps}
+              place={map.place}
               lang={localeFullCodes[locale].split('-')[0]}
               title={t('mapLabel')}
               loadLabel={t('map.load')}
@@ -127,9 +129,25 @@ export default async function ContactPage({ params }: { params: { locale: string
               openLabel={t('map.open')}
             />
             <div style={{ background: 'var(--black)', color: '#fff', padding: '20px 24px' }}>
-              <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red-bright)', marginBottom: 8 }}>{swiss ? t('swissPartnerKicker') : t('hqKicker')}</div>
-              <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>{swiss ? `${swissPartner.name} · ${swissPartner.street}` : contact.address.street}</div>
-              <div style={{ fontSize: 15, color: 'var(--on-dark-soft)' }}>{swiss ? `${swissPartner.postalCode} ${swissPartner.city} ${swissPartner.canton}` : t('hqLocation', { postalCode: contact.address.postalCode, city: contact.address.city })}</div>
+              {swiss ? (
+                <>
+                  <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red-bright)', marginBottom: 8 }}>{t('swissPartnerKicker')}</div>
+                  <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>{swissPartner.name} · {swissPartner.street}</div>
+                  <div style={{ fontSize: 15, color: 'var(--on-dark-soft)' }}>{swissPartner.postalCode} {swissPartner.city} {swissPartner.canton}</div>
+                </>
+              ) : map.office ? (
+                <>
+                  <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red-bright)', marginBottom: 8 }}>{map.office.name}</div>
+                  <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>{map.office.addressLines[0]}</div>
+                  <div style={{ fontSize: 15, color: 'var(--on-dark-soft)' }}>{map.office.addressLines.slice(1).join(', ')}</div>
+                </>
+              ) : (
+                <>
+                  <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red-bright)', marginBottom: 8 }}>{t('hqKicker')}</div>
+                  <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>{contact.address.street}</div>
+                  <div style={{ fontSize: 15, color: 'var(--on-dark-soft)' }}>{t('hqLocation', { postalCode: contact.address.postalCode, city: contact.address.city })}</div>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -152,6 +170,11 @@ export default async function ContactPage({ params }: { params: { locale: string
                 </div>
                 {o.email && (
                   <a href={`mailto:${o.email}`} className="lnk" style={{ display: 'inline-block', marginTop: 12, fontSize: 13, color: 'var(--red)' }}>{o.email}</a>
+                )}
+                {o.maps?.shareUrl && (
+                  <a href={o.maps.shareUrl} target="_blank" rel="noopener noreferrer" className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 5, marginTop: 8, fontSize: 12.5, fontWeight: 700 }}>
+                    <MapPin size={13} style={{ color: 'var(--red)' }} /> {t('map.open')}
+                  </a>
                 )}
               </div>
             ))}

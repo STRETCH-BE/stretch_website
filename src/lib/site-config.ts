@@ -8,6 +8,8 @@
 // are always built per-locale via localeBase() in src/lib/seo.ts; siteUrl is
 // only used for domain-stable identifiers (Organization @id, logo URL) so the
 // brand keeps ONE schema.org entity across all 15 domains.
+import type { MapPlace } from '@/lib/maps';
+
 export const siteUrl = (
   // stretch.mt = the en / x-default domain — the group's schema.org identity.
   process.env.NEXT_PUBLIC_SITE_URL || 'https://stretch.mt'
@@ -63,6 +65,7 @@ export const contact = {
   // embed is pinned to the exact listing. While it is empty the map falls
   // back to the name + address query, which Google resolves to the listing
   // in most cases. `shareUrl` is the maps.app.goo.gl link (3 Sep 2026).
+  // The branches' listings live on offices[].maps below.
   maps: {
     name: 'STRETCH',
     query: 'STRETCH, Gentseweg 309 A3, 9120 Beveren-Waas',
@@ -71,7 +74,7 @@ export const contact = {
     lat: 51.1953188,
     lng: 4.2239015,
     region: 'be',
-  },
+  } satisfies MapPlace,
 } as const;
 
 // Generalvertretung STRETCH Schweiz & Liechtenstein (2 Sep 2026). Official
@@ -100,7 +103,7 @@ export const swissPartner = {
     lat: undefined as number | undefined,
     lng: undefined as number | undefined,
     region: 'ch',
-  },
+  } satisfies MapPlace,
 } as const;
 
 export type Office = {
@@ -113,6 +116,8 @@ export type Office = {
   /** The branch's own public website, when it operates under its own name. */
   url?: string;
   geo?: { lat: number; lng: number };
+  /** Google Business Profile listing — the contact page's map (pl) and each office card's Maps link. */
+  maps?: MapPlace;
 };
 
 export const offices: Office[] = [
@@ -124,6 +129,7 @@ export const offices: Office[] = [
     addressLines: ['Gentseweg 309 A3', '9120 Beveren-Waas'],
     email: 'info@stretchgroup.be',
     geo: { lat: 51.1953188, lng: 4.2239015 },
+    maps: contact.maps,
   },
   {
     role: 'Sales',
@@ -144,6 +150,16 @@ export const offices: Office[] = [
     // reads the two domains as related, not competing.
     url: 'https://altodesign.pl',
     geo: { lat: 50.8074338, lng: 19.1585487 },
+    // The stretch-sufit.pl contact map shows this listing (Michael, 3 Sep 2026).
+    maps: {
+      name: 'Alto Design Sufity napinane',
+      query: 'Alto Design Sufity napinane, Legionów 59, 42-202 Częstochowa',
+      shareUrl: 'https://maps.app.goo.gl/qYH9brkHhnA2uUKC9',
+      ftid: '', // TODO: "0x…:0x…" from the listing URL
+      lat: 50.8074338,
+      lng: 19.1585487,
+      region: 'pl',
+    },
   },
   {
     role: 'Branch',
@@ -153,6 +169,16 @@ export const offices: Office[] = [
     addressLines: ['Gertrude-Fröhlich-Sandner-Straße 2', '1100 Vienna'],
     email: 'info@stretchdecken.at',
     geo: { lat: 48.1861668, lng: 16.3767073 },
+    // Austrian office listing (Michael, 3 Sep 2026) — linked from the office card.
+    maps: {
+      name: 'STRETCH Austria',
+      query: 'STRETCH, Gertrude-Fröhlich-Sandner-Straße 2, 1100 Wien',
+      shareUrl: 'https://maps.app.goo.gl/GKK8ccVg44QBw22G9',
+      ftid: '', // TODO: "0x…:0x…" from the listing URL
+      lat: 48.1861668,
+      lng: 16.3767073,
+      region: 'at',
+    },
   },
 ];
 
