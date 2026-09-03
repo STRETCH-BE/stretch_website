@@ -16,7 +16,9 @@ import {
   localeNames,
   localeFlags,
   localeForHost,
+  localeDomains,
   originForLocale,
+  publicPrefix,
   localeFullCodes,
   type Locale,
 } from '@/i18n/config';
@@ -54,6 +56,11 @@ export default function MobileMenu() {
     return p === '/' ? '' : p;
   };
   const [open, setOpen] = useState(false);
+  // Every live locale, this domain's own first (see LanguageSwitcher).
+  const mobileLocales = [
+    ...liveLocales.filter((l) => localeDomains[l] === localeDomains[locale]),
+    ...liveLocales.filter((l) => localeDomains[l] !== localeDomains[locale]),
+  ];
 
   // Cross-domain language switch — same logic as the desktop LanguageSwitcher:
   // on a known locale domain, jump to the target locale's domain preserving
@@ -68,7 +75,7 @@ export default function MobileMenu() {
       typeof window !== 'undefined' && localeForHost(window.location.host) !== null;
     if (onKnownDomain) {
       const search = window.location.search || '';
-      window.location.assign(`${originForLocale(next)}${targetPath(next)}${search}`);
+      window.location.assign(`${originForLocale(next)}${publicPrefix(next)}${targetPath(next)}${search}`);
       return;
     }
     setOpen(false);
@@ -286,12 +293,12 @@ export default function MobileMenu() {
                 border: '1px solid var(--border)',
               }}
             >
-              {liveLocales.map((l) => (
+              {mobileLocales.map((l) => (
                 /* Real anchor: crawlable absolute URL; JS click handler keeps
                    analytics + the dev/preview in-app switch on top. */
                 <a
                   key={l}
-                  href={`${originForLocale(l)}${targetPath(l)}`}
+                  href={`${originForLocale(l)}${publicPrefix(l)}${targetPath(l)}`}
                   hrefLang={localeFullCodes[l]}
                   onClick={(e) => {
                     e.preventDefault();
