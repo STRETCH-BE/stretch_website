@@ -4,7 +4,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ArrowRight, Phone } from 'lucide-react';
-import { isValidLocale, type Locale } from '@/i18n/config';
+import { isValidLocale, type Locale, localeFullCodes } from '@/i18n/config';
 import { siteUrl, contact } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema, faqPageSchema } from '@/lib/structured-data';
@@ -66,7 +66,10 @@ export default async function FaqPage({ params }: { params: { locale: string } }
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--red-bright)', marginBottom: 14 }}>
                 {t('asideKicker')}
               </div>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(22px,2vw,26px)', letterSpacing: '-.01em', lineHeight: 1.05, color: '#fff', margin: '0 0 14px' }}>
+              {/* nl "spanplafondspecialist.", sv "spänntaksspecialist." are one
+                  unbreakable word: white text overflowed the black card invisibly.
+                  Smaller cap, hyphenation, and a hard wrap as the last resort. */}
+              <h2 lang={localeFullCodes[locale]} style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(20px,1.7vw,23px)', letterSpacing: '-.01em', lineHeight: 1.08, color: '#fff', margin: '0 0 14px', hyphens: 'auto', overflowWrap: 'anywhere' }}>
                 {t('asideTitle')}
               </h2>
               <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: '0 0 22px' }}>
@@ -112,7 +115,7 @@ export default async function FaqPage({ params }: { params: { locale: string } }
           color: var(--text-muted); max-width: 68ch;
         }
         .faq-aside { position: sticky; top: calc(var(--header-h) + 60px); }
-        .faq-card { background: var(--black); padding: clamp(26px,2.6vw,34px); }
+        .faq-card { background: var(--black); padding: clamp(26px,2.6vw,34px); min-width: 0; }
         .faq-call {
           display: flex; align-items: center; justify-content: center; gap: 9px;
           margin-top: 14px; padding-top: 18px; border-top: 1px solid var(--line-dark);
