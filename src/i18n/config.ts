@@ -91,11 +91,11 @@ export const localeStatus: Record<Locale, 'live' | 'pending'> = {
   fr: 'live',
   pl: 'live',
   de: 'live',
-  // stretchdecken.ch — domain bought 2 Sep 2026, not yet on Vercel/DNS. Flip to
-  // 'live' the day it resolves: that one change adds de-CH to hreflang, the
-  // sitemaps and the switcher on every domain.
-  ch: 'pending',
-  'fr-ch': 'pending', // flips together with ch — same domain
+  // stretchdecken.ch — live since 3 Sep 2026 (domain on Vercel, QuinLay AG):
+  // de-CH and fr-CH are in hreflang, the sitemaps and the switcher on every
+  // domain. Both flags move together — one domain, two locales.
+  ch: 'live',
+  'fr-ch': 'live',
   es: 'live',
   pt: 'pending', // stretchteto.pt — no DNS yet
   da: 'live',

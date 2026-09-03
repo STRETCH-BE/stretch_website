@@ -1,3 +1,18 @@
+## 2026-09-03 (28) — Switzerland live: de-CH and fr-CH advertised everywhere
+
+`localeStatus.ch` and `localeStatus['fr-ch']` flipped from `pending` to
+`live` in `src/i18n/config.ts` — the one-line go-live from entries 26/27,
+now that stretchdecken.ch is attached to the Vercel project. Effect on
+every domain, with no other code change: de-CH (stretchdecken.ch) and
+fr-CH (stretchdecken.ch/fr/) appear in the hreflang set of every page, in
+the language switcher (DE | FR on the Swiss host, "Deutsch (Schweiz)" /
+"Français (Suisse)" elsewhere) and in the footer world list; the Swiss
+host's sitemap carries both locales instead of the empty pending sitemap;
+market-restricted alternates (dealer pages, installer training) include
+the Swiss locales. The Swiss price guide stays `noindex` until its ranges
+are filled (`priceGuideChReady`). Verified on `next start`: a de page lists
+de-CH and fr-CH alternates, the ch sitemap is non-empty and .ch-only.
+
 ## 2026-09-03 (27) — Switzerland Part 2: Swiss CHF price guide, Romandie (fr-ch), Ticino line
 
 Three additions on stretchdecken.ch, all behind the same `pending` flags as
