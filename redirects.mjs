@@ -155,6 +155,7 @@ const dutchRules = (h) => [
   R(h, '/wat-kost-een-spanplafond', '/blog/spanplafond-prijs'),
   R(h, '/bereken-prijs-spanplafond', '/blog/spanplafond-prijs'),
   R(h, '/clipso-spanplafonds', '/blog/clipso-spanplafonds'),
+  R(h, '/clipso-spanplafond', '/blog/clipso-spanplafonds'), // singular variant still linked externally (404 on .be, 3 Sep 2026)
   R(h, '/wat-is-een-spanplafond', '/blog/what-is-a-stretch-ceiling'),
   R(h, '/blog-wat-is-een-spanplafond', '/blog/what-is-a-stretch-ceiling'),
   R(h, '/le-plafond-tendu', '/blog/what-is-a-stretch-ceiling'),

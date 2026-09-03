@@ -28,7 +28,7 @@ export const homeImages = {
   installer: '/images/home/installer.jpg', // → '/images/home/installer.jpg'
 
   // CLOSING CTA — full-bleed background photo behind the dark overlay.
-  ctaBand: '', // → '/images/home/cta-band.jpg'
+  ctaBand: '/images/home/cta-band.jpg', // finished interior — closing CTA (picture audit, 3 Sep 2026)
 
   // SOLUTIONS — two room shots.
   solutionsPolyester: '/images/home/polyester.jpg',

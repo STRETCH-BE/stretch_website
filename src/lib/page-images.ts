@@ -22,8 +22,11 @@ export const pageImages = {
   training: '/images/pages/training.jpg', // membrane tuck-in during a workshop session
 
   // About page — your workshop or team (4:3).
-  about: '', // public/images/pages/about.jpg
+  about: '/images/pages/about-workshop.jpg', // the workshop (picture audit, 3 Sep 2026)
 
   // Contact page — workshop exterior, map, or a welcoming shot (tall block).
   contact: '', // public/images/pages/contact.jpg
+
+  // Dealer network overview — a dealer team in the field (wide band under the intro).
+  dealers: '/images/pages/dealer-network.jpg', // Corpus Interieur team (picture audit, 3 Sep 2026)
 };

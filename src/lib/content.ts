@@ -566,7 +566,7 @@ export const projects: Project[] = [
   {
     key: 'commercial', slug: 'veta-interieur-showroom', cat: 'Retail', title: 'Veta Interieur',
     meta: 'Dendermonde · Bathroom showroom',
-    image: '/images/products/illuminated-printed-stretch-ceiling.jpg',
+    image: '/images/projects/veta-interieur-showroom-hero.jpg',
     summary: 'Printed, illuminated ceilings across a 350 m² bathroom showroom.',
     hook: 'Eighteen bathroom worlds under one roof — printed, glowing ceilings setting each scene.',
     description: [
@@ -581,7 +581,7 @@ export const projects: Project[] = [
       { label: 'Client', value: 'Veta Interieur' },
     ],
     solutions: ['custom-print', 'light-print-stretch-ceiling'],
-    gallery: ['', '', ''],
+    gallery: ['/images/projects/veta-interieur-showroom-1.jpg', '/images/projects/veta-interieur-showroom-2.jpg', '/images/projects/veta-interieur-showroom-3.jpg'],
   },
   {
     key: 'commercial', slug: 'creneau-afas-lounge', cat: 'Commercial', title: 'AFAS Lounge — BE•AT',
