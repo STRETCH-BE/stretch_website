@@ -5146,7 +5146,12 @@
     "impressumManufacturer": "Framleiðandi",
     "impressumSwissParty": "Samningsaðili fyrir Sviss og Liechtenstein",
     "impressumNote": "Tilboð, afhending og reikningar fyrir Sviss og Liechtenstein eru í höndum QuinLay AG.",
-    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch"
+    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch",
+    "map": {
+      "load": "Hlaða korti",
+      "note": "Kortið er sótt frá Google Maps sem setur Google-vafrakökur.",
+      "open": "Opna í Google Maps"
+    }
   },
   "datasheetsPage": {
     "eyebrow": "Tækniblöð",

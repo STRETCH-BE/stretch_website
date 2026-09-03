@@ -5146,7 +5146,12 @@
     "impressumManufacturer": "Fabricante",
     "impressumSwissParty": "Parte contratante para a Suíça e o Liechtenstein",
     "impressumNote": "Os orçamentos, os fornecimentos e as faturas para a Suíça e o Liechtenstein são da responsabilidade da QuinLay AG.",
-    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch"
+    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch",
+    "map": {
+      "load": "Carregar o mapa",
+      "note": "O mapa é carregado a partir do Google Maps, que coloca cookies da Google.",
+      "open": "Abrir no Google Maps"
+    }
   },
   "datasheetsPage": {
     "eyebrow": "Fichas técnicas",

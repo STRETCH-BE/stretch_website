@@ -5155,7 +5155,12 @@
     "impressumManufacturer": "Fabricant",
     "impressumSwissParty": "Partie contractante pour la Suisse et le Liechtenstein",
     "impressumNote": "Devis, livraisons et factures pour la Suisse et le Liechtenstein sont assurés par QuinLay AG.",
-    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch"
+    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch",
+    "map": {
+      "load": "Charger la carte",
+      "note": "La carte est chargée via Google Maps, qui dépose des cookies Google.",
+      "open": "Ouvrir dans Google Maps"
+    }
   },
   "datasheetsPage": {
     "eyebrow": "Fiches techniques",

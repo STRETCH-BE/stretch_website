@@ -4,17 +4,16 @@ import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Phone, Mail, MessageCircle, ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import { isValidLocale, type Locale } from '@/i18n/config';
+import { isValidLocale, localeFullCodes, type Locale } from '@/i18n/config';
 import { siteUrl, contact, offices, swissPartner, brand } from '@/lib/site-config';
 import { localContactFor, isSwissLocale } from '@/lib/local-contact';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema, localBusinessSchema, branchLocalBusinessSchemas } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
-import Placeholder from '@/components/ui/Placeholder';
-import { pageImages } from '@/lib/page-images';
 import { isDealerMarket } from '@/lib/dealers';
 import ContactForm from '@/components/sections/ContactForm';
+import ContactMap from '@/components/sections/ContactMap';
 import { ModalButton } from '@/components/ui/ModalButton';
 import { localeBase } from '@/lib/seo';
 
@@ -114,18 +113,24 @@ export default async function ContactPage({ params }: { params: { locale: string
             </p>
             <ContactForm />
           </div>
-          <div style={{ position: 'relative', minHeight: 380, height: '100%' }}>
-            <Placeholder
-            label={t('mapLabel')}
-            src={pageImages.contact}
-            alt={t('mapAlt')}
-            sizes="(max-width: 860px) 100vw, 45vw"
-            style={{ minHeight: 380 }}
-          />
-            <div style={{ position: 'absolute', left: 0, bottom: 0, right: 0, background: 'var(--black)', color: '#fff', padding: '20px 24px' }}>
-              <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red-bright)', marginBottom: 8 }}>{t('hqKicker')}</div>
-              <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>{contact.address.street}</div>
-              <div style={{ fontSize: 15, color: 'var(--on-dark-soft)' }}>{t('hqLocation', { postalCode: contact.address.postalCode, city: contact.address.city })}</div>
+          {/* Google Maps (consent-aware, see ContactMap) + the address it shows:
+              QuinLay AG for the Swiss locales, the Beveren HQ everywhere else.
+              The address box sits BELOW the map so Google's attribution stays visible. */}
+          <div className="ct-map-col" style={{ display: 'flex', flexDirection: 'column', alignSelf: 'stretch', minHeight: 380 }}>
+            <ContactMap
+              query={swiss
+                ? `${swissPartner.street}, ${swissPartner.postalCode} ${swissPartner.city}, Switzerland`
+                : `${offices[0].addressLines.join(', ')}, ${offices[0].countryName}`}
+              lang={localeFullCodes[locale].split('-')[0]}
+              title={t('mapLabel')}
+              loadLabel={t('map.load')}
+              note={t('map.note')}
+              openLabel={t('map.open')}
+            />
+            <div style={{ background: 'var(--black)', color: '#fff', padding: '20px 24px' }}>
+              <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--red-bright)', marginBottom: 8 }}>{swiss ? t('swissPartnerKicker') : t('hqKicker')}</div>
+              <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>{swiss ? `${swissPartner.name} · ${swissPartner.street}` : contact.address.street}</div>
+              <div style={{ fontSize: 15, color: 'var(--on-dark-soft)' }}>{swiss ? `${swissPartner.postalCode} ${swissPartner.city} ${swissPartner.canton}` : t('hqLocation', { postalCode: contact.address.postalCode, city: contact.address.city })}</div>
             </div>
           </div>
         </div>
