@@ -69,8 +69,13 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
       return;
     }
 
-    // Dev / preview: in-app switch via path prefix.
-    router.replace(pathname, { locale: next });
+    // Any other host (localhost, previews — or a production host the domain
+    // map does not recognise): navigate to the path-prefixed URL. The
+    // middleware routes /<locale>/... everywhere; on a production domain that
+    // does not serve <locale> next-intl forwards to the domain that does.
+    // (A cookie-based in-app switch would be ignored: localeDetection is off.)
+    const search = window.location.search || '';
+    window.location.assign(`/${next}${targetPath(next)}${search}`);
   }
 
   return (

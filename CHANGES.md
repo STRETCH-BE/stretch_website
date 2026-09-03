@@ -13,6 +13,24 @@ the Swiss locales. The Swiss price guide stays `noindex` until its ranges
 are filled (`priceGuideChReady`). Verified on `next start`: a de page lists
 de-CH and fr-CH alternates, the ch sitemap is non-empty and .ch-only.
 
+Two hardenings found while checking production on the day of the flip:
+
+- **Language switch on an unrecognised host.** The dev/preview fallback
+  (`router.replace(pathname, { locale })`) relied on the `NEXT_LOCALE`
+  cookie, which the middleware no longer reads (`localeDetection: false`
+  since entry 27) — a click did nothing. `LanguageSwitcher` and
+  `MobileMenu` now navigate to the path-prefixed URL (`/de/…`,
+  `/fr-ch/…`): the middleware routes it on any host, and on a production
+  domain that does not serve that locale next-intl forwards to the domain
+  that does. So the switch works even when the domain map does not
+  recognise the host.
+- **`NEXT_PUBLIC_DOMAIN_*` overrides are normalised** (`domain()` in
+  `src/i18n/config.ts`): scheme, `www.`, trailing path, whitespace and case
+  are stripped. Production served stretchdecken.ch as English with
+  `/de/contact` answering instead of forwarding to .de — the signature of a
+  host the map does not know, i.e. an override pasted in a non-bare form.
+  The bare-hostname value (or no override at all) is what the map needs.
+
 ## 2026-09-03 (27) — Switzerland Part 2: Swiss CHF price guide, Romandie (fr-ch), Ticino line
 
 Three additions on stretchdecken.ch, all behind the same `pending` flags as
