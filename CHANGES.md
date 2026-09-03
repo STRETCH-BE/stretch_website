@@ -23,7 +23,10 @@
   "Prata med en spänntaksspecialist." (sv) end in one unbreakable word
   that overflowed the 340px black card as white-on-white. The title is
   capped at 23px with `hyphens: auto` (lang set) and `overflow-wrap:
-  anywhere`; the card has `min-width: 0`.
+  anywhere`; the card has `min-width: 0`. The nl/be and sv titles carry
+  a soft hyphen (U+00AD: "spanplafond·specialist", "spänntaks·specialist")
+  so every browser breaks the word with a hyphen at the same place,
+  whether or not it has a Dutch/Swedish hyphenation dictionary.
 
 ## 2026-09-03 (31) — Installer-training hero: photo sizing
 
