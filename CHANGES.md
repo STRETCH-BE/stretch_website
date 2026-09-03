@@ -46,9 +46,11 @@ Google Maps embed (`src/components/sections/ContactMap.tsx`, keyless
   or its "Embed a map" code) is filled, `mapEmbedUrl()` switches to the
   keyless `maps/embed?pb=` URL Google itself generates for a place, pinned
   to that exact listing (profile card with name, rating, photos). The
-  short link could not be resolved from the build sandbox (Google hosts
-  are blocked there), so `ftid` is a TODO for STRETCH and for QuinLay
-  (whose share link is also still to be supplied).
+  short links cannot be resolved from the build sandbox (Google hosts are
+  blocked there), so `ftid` is a TODO for every listing. QuinLay's share
+  link (https://maps.app.goo.gl/AkrXeiLk2KHeppqU9) is in
+  `swissPartner.maps` — "Open in Google Maps" on the Swiss contact page
+  opens QuinLay's listing.
 - **Branches** (Michael, 3 Sep 2026): `offices[].maps` carries the
   Częstochowa listing (https://maps.app.goo.gl/qYH9brkHhnA2uUKC9) and the
   Vienna office listing (https://maps.app.goo.gl/GKK8ccVg44QBw22G9); the

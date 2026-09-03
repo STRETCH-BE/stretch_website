@@ -98,7 +98,7 @@ export const swissPartner = {
   maps: {
     name: 'QuinLay AG',
     query: 'QuinLay AG, Stierenberg Park 1A, 6221 Rickenbach',
-    shareUrl: '', // TODO: QuinLay's maps.app.goo.gl share link
+    shareUrl: 'https://maps.app.goo.gl/AkrXeiLk2KHeppqU9', // QuinLay's listing (Michael, 3 Sep 2026)
     ftid: '', // TODO: "0x…:0x…" from the listing URL
     lat: undefined as number | undefined,
     lng: undefined as number | undefined,
