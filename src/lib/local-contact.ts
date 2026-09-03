@@ -6,7 +6,7 @@
 // address on the ch locale. Every other locale keeps the Belgian HQ.
 // Client-safe: only reads site-config constants.
 // ============================================================================
-import type { Locale } from '@/i18n/config';
+import { isSwissLocale, type Locale } from '@/i18n/config';
 import { contact, swissPartner } from '@/lib/site-config';
 
 export type LocalContact = {
@@ -18,7 +18,7 @@ export type LocalContact = {
 };
 
 export function localContactFor(locale: Locale): LocalContact {
-  if (locale === 'ch') {
+  if (isSwissLocale(locale)) {
     return {
       phoneDisplay: swissPartner.phoneDisplay,
       phoneHref: swissPartner.phoneHref,
@@ -29,7 +29,5 @@ export function localContactFor(locale: Locale): LocalContact {
   return { phoneDisplay: contact.phoneDisplay, phoneHref: contact.phoneHref, email: contact.email, name: 'STRETCH' };
 }
 
-/** True on the locale served by QuinLay AG (Switzerland & Liechtenstein). */
-export function isSwissLocale(locale: Locale): boolean {
-  return locale === 'ch';
-}
+/** True on the locales served by QuinLay AG (ch, fr-ch) — re-exported from i18n/config. */
+export { isSwissLocale };

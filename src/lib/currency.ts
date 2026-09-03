@@ -23,7 +23,7 @@
 // number here is a conscious exception to the "dealer prices are never
 // public" rule that only Michael makes.
 // ============================================================================
-import { localeFullCodes, type Locale } from '@/i18n/config';
+import { localeFullCodes, type Locale, isSwissLocale } from '@/i18n/config';
 
 export type DisplayCurrency = 'EUR' | 'PLN' | 'GBP' | 'USD' | 'DKK' | 'SEK' | 'NOK' | 'ISK' | 'CHF';
 
@@ -80,6 +80,7 @@ const policies: Partial<Record<Locale, DisplayPolicy>> = {
   // Switzerland: CHF indication. Moot while pricesPublished('ch') is false —
   // the Swiss site shows no product prices until the QuinLay-agreed guide.
   ch: { currency: 'CHF', mode: 'indication' },
+  'fr-ch': { currency: 'CHF', mode: 'indication' },
 };
 
 /**
@@ -92,7 +93,7 @@ const policies: Partial<Record<Locale, DisplayPolicy>> = {
  * follows in Part 2 and lifts this gate for that page only.
  */
 export function pricesPublished(locale: Locale): boolean {
-  return locale !== 'ch';
+  return !isSwissLocale(locale);
 }
 
 export function displayPolicyFor(locale: Locale): DisplayPolicy {

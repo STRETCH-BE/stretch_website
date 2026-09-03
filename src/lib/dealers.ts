@@ -74,7 +74,7 @@ export type DealerPlace = {
   kind: PlaceKind;
   region: DealerRegion;
   /** Locale whose search market this page primarily targets. */
-  primaryLocale: 'be' | 'fr' | 'nl' | 'de' | 'pl' | 'ch';
+  primaryLocale: 'be' | 'fr' | 'nl' | 'de' | 'pl' | 'ch' | 'fr-ch';
   /** Parent province slug (cities only). */
   province?: string;
   dealerIds: string[];
@@ -246,6 +246,16 @@ export const dealerPlaces: DealerPlace[] = [
   { slug: 'thurgau', name: 'Thurgau', kind: 'province', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 85 },
   { slug: 'graubuenden', name: 'Graubünden', kind: 'province', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 110 },
   { slug: 'vaduz', name: 'Vaduz', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], country: 'LI', driveMinutes: 105 },
+  // Romandie (French-speaking Switzerland — fr-ch on stretchdecken.ch/fr/,
+  // 3 Sep 2026): RECRUITMENT variant, no installer named yet. The identity
+  // card and every lead from these pages point at QuinLay AG as the Swiss
+  // representative; Michael adds an installer here the day QuinLay names one.
+  { slug: 'lausanne', name: 'Lausanne', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
+  { slug: 'geneve', name: 'Genève', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
+  { slug: 'fribourg', name: 'Fribourg', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
+  { slug: 'neuchatel', name: 'Neuchâtel', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
+  { slug: 'sion', name: 'Sion', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
+  { slug: 'yverdon', name: 'Yverdon-les-Bains', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
 ];
 
 /** Slugs of the Swiss/Liechtenstein places — lead sources `dealers_<slug>`
@@ -282,6 +292,7 @@ const homeRegions: Partial<Record<Locale, readonly DealerRegion[]>> = {
   de: ['germany', 'austria'],
   pl: ['poland'],
   ch: ['switzerland'],
+  'fr-ch': ['switzerland'],
 };
 
 /** Regions in the order the /dealers overview shows them on a locale. */
@@ -321,7 +332,7 @@ export const dealerMarkets: readonly Locale[] = locales.filter(
 export const isDealerMarket = (l: Locale): boolean => dealerMarkets.includes(l);
 
 /** Sitemap <lastmod> for /dealers/[place] — bump when places/dealers change (F12). */
-export const dealersUpdatedAt = '2026-09-02'; // DE/PL/FR places, Belgian identity block, Swiss QuinLay pages
+export const dealersUpdatedAt = '2026-09-03'; // Swiss QuinLay pages + Romandie recruitment places
 export const dealerPlaceSlugs = dealerPlaces.map((p) => p.slug);
 export const getDealerPlace = (slug: string): DealerPlace | undefined =>
   dealerPlaces.find((p) => p.slug === slug);

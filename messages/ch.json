@@ -5145,7 +5145,8 @@
     "impressumHeading": "Impressum – Schweiz & Liechtenstein",
     "impressumManufacturer": "Hersteller",
     "impressumSwissParty": "Vertragspartnerin für die Schweiz und Liechtenstein",
-    "impressumNote": "Offerten, Lieferungen und Rechnungen für die Schweiz und Liechtenstein erfolgen durch die QuinLay AG."
+    "impressumNote": "Offerten, Lieferungen und Rechnungen für die Schweiz und Liechtenstein erfolgen durch die QuinLay AG.",
+    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch"
   },
   "datasheetsPage": {
     "eyebrow": "Technische Datenblätter",
@@ -5386,7 +5387,7 @@
     "eyebrow": "Händlernetz",
     "h1": "Spanndecke {place}",
     "introDealer": "Eine STRETCH-Spanndecke in {place} beginnt bei der QuinLay AG, unserer Generalvertretung für die Schweiz und Liechtenstein: Beratung im Showroom in Rickenbach LU, Aufmass vor Ort, Fertigung nach Mass in unseren Werken in Belgien und Polen, Montage durch geschulte Partner – Material ab Schweizer Lager.",
-    "introRecruit": "In {place} gibt es noch keinen zertifizierten STRETCH-Händler — deshalb bedienen wir {place} vorerst direkt aus unserer belgischen Produktion und suchen den passenden Partner vor Ort.",
+    "introRecruit": "In {place} gibt es noch keinen STRETCH-Montagepartner – bis dahin berät die QuinLay AG, unsere Generalvertretung für die Schweiz und Liechtenstein, und organisiert die Montage ab Rickenbach LU. Wir suchen den passenden Partner vor Ort.",
     "dealerBadge": "Generalvertretung STRETCH Schweiz & Liechtenstein",
     "dealerBadgeShort": "Generalvertretung",
     "visitSite": "Website besuchen",
@@ -5404,9 +5405,9 @@
     "nearbyHeadingProvince": "Orte in {place}",
     "backToAll": "Alle Regionen",
     "metaTitleDealer": "Spanndecke {place} – Beratung, Showroom & Montage | STRETCH × QuinLay AG",
-    "metaTitleRecruit": "Spanndecke {place} — Montage direkt aus unserer belgischen Produktion",
+    "metaTitleRecruit": "Spanndecke {place} – Beratung & Montage über QuinLay AG | STRETCH",
     "metaDescDealer": "Spanndecke in {place}: Beratung im Showroom Rickenbach LU, Aufmass vor Ort, Fertigung nach Mass in unseren Werken in Belgien und Polen, Montage durch geschulte Partner. QuinLay AG, Generalvertretung STRETCH Schweiz & Liechtenstein – Offerte anfragen.",
-    "metaDescRecruit": "Eine Spanndecke in {place}? Wir montieren direkt aus unserer belgischen Produktion — und suchen einen Händler vor Ort. Fordern Sie eine Offerte an oder werden Sie unser Partner in {place}.",
+    "metaDescRecruit": "Eine Spanndecke in {place}? Beratung und Montage über die QuinLay AG, Generalvertretung STRETCH Schweiz & Liechtenstein – und wir suchen einen Montagepartner vor Ort. Offerte anfragen oder Partner werden.",
     "ovMetaTitle": "STRETCH-Händler Schweiz & Liechtenstein – QuinLay AG | STRETCH",
     "ovMetaDescription": "Spanndecken in der Schweiz und in Liechtenstein: Beratung, Showroom und Montage über die Generalvertretung QuinLay AG in Rickenbach LU – von Luzern über Zürich, Bern und Basel bis Vaduz.",
     "ovEyebrow": "Netzwerk",

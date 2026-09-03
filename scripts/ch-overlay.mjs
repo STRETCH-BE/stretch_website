@@ -117,6 +117,13 @@ const OVERRIDES = {
   'dealersPage.identityDirectBody':
     'Die QuinLay AG in Rickenbach LU ist die Generalvertretung von STRETCH für die Schweiz und Liechtenstein: Beratung im Showroom, Aufmass vor Ort in {place}, Material ab Schweizer Lager und Montage durch geschulte Partner. Hergestellt werden die Decken nach Mass in unseren Werken in Belgien und Polen.',
   'dealersPage.identityDirectCard': 'Generalvertretung STRETCH Schweiz & Liechtenstein – Beratung, Showroom, Montage.',
+  // Recruitment variant (Romandie places on de-CH): served via QuinLay AG,
+  // never "direkt aus unserer belgischen Produktion".
+  'dealersPage.introRecruit':
+    'In {place} gibt es noch keinen STRETCH-Montagepartner – bis dahin berät die QuinLay AG, unsere Generalvertretung für die Schweiz und Liechtenstein, und organisiert die Montage ab Rickenbach LU. Wir suchen den passenden Partner vor Ort.',
+  'dealersPage.metaTitleRecruit': 'Spanndecke {place} – Beratung & Montage über QuinLay AG | STRETCH',
+  'dealersPage.metaDescRecruit':
+    'Eine Spanndecke in {place}? Beratung und Montage über die QuinLay AG, Generalvertretung STRETCH Schweiz & Liechtenstein – und wir suchen einen Montagepartner vor Ort. Offerte anfragen oder Partner werden.',
   'dealersPage.recruitBody':
     'Wir suchen aktiv einen Montagepartner in {place}: Schulung im Schulungsraum der QuinLay AG in Rickenbach LU, Material ab Schweizer Lager, Marketingunterstützung – und die Anfragen dieser Seite gehen an Sie.',
   // Contact page, footer, modals — Swiss German register.

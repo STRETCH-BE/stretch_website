@@ -30,6 +30,8 @@ export default async function ContactPage({ params }: { params: { locale: string
   // ch: the Swiss general representative answers — QuinLay's number and inbox.
   const local = localContactFor(locale);
   const swiss = isSwissLocale(locale);
+  // "Tessin / Ticino: contattateci in italiano — office@quinlay.ch", e-mail linked.
+  const ticino = t('ticinoLine').split(swissPartner.email);
 
   const cards = [
     { icon: Phone, label: t('cards.call.label'), value: local.phoneDisplay, sub: swiss ? t('swissCallback') : t('hours'), href: local.phoneHref },
@@ -93,6 +95,12 @@ export default async function ContactPage({ params }: { params: { locale: string
               <div style={{ marginTop: 10, fontSize: 12.5 }}>{t('swissCallback')}</div>
             </div>
           </div>
+          {/* Ticino: no Italian locale — one line, in Italian, pointing at QuinLay. */}
+          <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--text-muted)', margin: '14px 0 0' }}>
+            {ticino[0]}
+            <a href={`mailto:${swissPartner.email}`} className="lnk" style={{ fontWeight: 700 }}>{swissPartner.email}</a>
+            {ticino[1]}
+          </p>
         </section>
       )}
 

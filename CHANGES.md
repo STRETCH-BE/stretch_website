@@ -1,3 +1,90 @@
+## 2026-09-03 (27) — Switzerland Part 2: Swiss CHF price guide, Romandie (fr-ch), Ticino line
+
+Three additions on stretchdecken.ch, all behind the same `pending` flags as
+Part 1 (flip `ch` AND `fr-ch` to `live` together). Build: **2871 → 3154** static
+pages, typecheck clean, 0 MISSING_MESSAGE, key parity across **16** message
+files (`grep -c '"ticinoLine"' messages/*.json` = 16 × 1).
+
+- **Swiss price guide** — `/spanndecke-preis-schweiz`, de-CH only. The one
+  exception to "no public prices on the Swiss site": INDICATIVE CHF/m²
+  ranges for INSTALLED ceilings by finish (matt, satiniert, glänzend,
+  bedruckt, Lichtdecke, Akustik), "inkl. 8.1 % MwSt., Montage durch
+  QuinLay-Partner, Richtwerte", what drives the price (room shape, corners,
+  spots/built-ins, acoustic layer, access), FAQ (+ FAQPage JSON-LD),
+  breadcrumb JSON-LD, and the lead form with source **`price_guide_ch`**
+  (already a Swiss source → QuinLay + CC). Numbers and copy live in
+  **`src/lib/price-guide-ch.ts`** — every `low`/`high` is a `null`
+  placeholder marked `TODO(Michael)`; until ALL are filled the page renders
+  with a visible "Richtwerte in Abstimmung mit der QuinLay AG" notice and
+  "CHF – / m² · Richtwert folgt" per row, is `noindex`, out of the sitemap
+  and unlinked. `priceGuideChReady` flips index + sitemap + the dealer-page
+  "Was kostet eine Spanndecke in {Ort}?" link automatically. No other locale
+  gets an empty page: `dynamicParams=false` (404) plus a 308 on every other
+  domain to its own price article (`/blog/was-kostet-eine-spanndecke`,
+  `/blog/prix-plafond-tendu`, …) and `/fr/spanndecke-preis-schweiz` → `/fr`.
+  Single-locale page, so its copy sits next to the numbers rather than in
+  16 message files.
+- **fr-ch (Romandie) on the same domain** — locale `fr-ch` (fr-CH) served
+  under **stretchdecken.ch/fr/**. next-intl routing now groups locales per
+  DOMAIN (`stretchdecken.ch` → `['ch','fr-ch']`, default ch) with
+  `localeDetection: false` (URL-driven only — no cookie bounce). The public
+  prefix is declared once (`localePathPrefix` in `src/i18n/config.ts`):
+  the middleware maps `/fr` ↔ next-intl's internal `/fr-ch` prefix (and
+  any redirect target back), `src/i18n/navigation.tsx` (was `.ts`) wraps
+  `Link`/`usePathname` to add and strip it, `localeBase()` /
+  `buildCanonical()` put it in canonicals and hreflang, the sitemap serves
+  BOTH locales of the host (prefix-aware), OG image URLs go through the new
+  `apiBase()` (APIs live outside the prefix), and `/fr-ch/…` 308s to
+  `/fr/…`. Language switcher: on a multi-locale domain only its own
+  locales (**DE | FR** on the Swiss host, trigger label = language), on every
+  other domain one entry per domain (no fr-ch). `messages/fr-ch.json` is
+  generated from `fr.json` by the idempotent **`scripts/fr-ch-overlay.mjs`**
+  (`--check` / `--report`): "hors TVA" / "TVA incluse" / "TVAC" / "HTVA" →
+  8.1 % in 14 strings (the Belgian premium article keeps its 6 %), €/EUR →
+  CHF in 6 non-price strings (`meta.supplyDescription`,
+  `modals.kit_order.subtitle`, `modals.kit_order.sentMsg`,
+  `modals.projects_export.subtitle`, `supplyPage.currencyLine`,
+  `projectsExportPage.how.currencyLine`), 34 price/EUR-settlement strings
+  left as they are (never render — `pricesPublished()` is false for every
+  Swiss locale), 13 phone placeholders → "+41 …", 55 Swiss-French overrides
+  (hero, dealer copy with the "Plafond tendu {place} – Conseil, showroom &
+  pose | STRETCH × QuinLay AG" title, contact/Impressum/footer/modal,
+  QuinLay day-course cards). "devis" and "code postal" stay. Dealers:
+  **lausanne, geneve, fribourg, neuchatel, sion, yverdon** as RECRUITMENT
+  places (`dealerIds: []`, `primaryLocale: 'fr-ch'`), identity card and
+  every lead pointing at QuinLay AG (`swissPlaceSlugs` is derived from the
+  region, so `dealers_lausanne` routes to QuinLay + CC). Every Swiss check
+  that keyed on `'ch'` now uses `isSwissLocale()` (ch + fr-ch): local
+  contact, prices gate, currency policy, default country, training cards,
+  partners card, modal note, GA/Clarity (same CH IDs). Blog slugs: fr-ch =
+  fr (`blog-slugs.json`); market-restricted French articles stay on fr.
+- **Ticino** — no Italian locale. One line on the ch and fr-ch contact
+  pages, key `contactPage.ticinoLine` (same Italian string in all 16
+  files): "Tessin / Ticino: contattateci in italiano — office@quinlay.ch",
+  e-mail linked.
+- **Verified** on `next start` with Host headers and Playwright (flags
+  temporarily `live`): `/fr` and `/fr/dealers/lausanne`
+  render fr-CH on the Swiss host with `/fr/…` internal links and canonicals,
+  `/fr/dealers/zuerich` carries the French QuinLay title, `/fr/installer-training`
+  the French QuinLay cards, `/fr-ch/…` 308s to `/fr/…`, `/fr/…` on
+  stretchdecken.de is NOT fr-ch and `/fr/contact` on stretchplafond.fr still
+  strips to `/contact`; hreflang on a ch page lists de-CH, fr-CH (…/fr/…),
+  de-DE, de-AT and x-default; the ch sitemap carries both locales (368 URLs,
+  183 under /fr/), only .ch, no /fr/api and no unready price guide; OG image
+  URLs stay outside the prefix; the switcher shows DE | FR (trigger "FR" /
+  "DE") on both Swiss locales; in-app navigation on fr-ch stays under /fr;
+  `/spanndecke-preis-schweiz` renders the H1, six finishes with visible
+  placeholders, the 8.1 % wording, `noindex`, source `price_guide_ch`, hreflang
+  de-CH only, no ß / no €; the fr-ch and every other domain's variant 308s as
+  designed; both Swiss contact pages show the Ticino line with the mailto.
+  Playwright screenshots: /fr/dealers/lausanne, /spanndecke-preis-schweiz, /fr.
+- **Placeholders Michael fills in:** the 12 numbers in
+  `src/lib/price-guide-ch.ts` (`low`/`high` per finish, CHF/m² installed,
+  incl. 8.1 % MwSt.); optionally a Romandie installer in `dealers.ts`
+  (turns the recruitment pages into dealer pages). Go-live: flip `ch` and
+  `fr-ch` to `live` in `src/i18n/config.ts`; nothing extra on Vercel
+  (fr-ch shares the host, `QUINLAY_LEAD_EMAIL` and the CH GA/Clarity IDs).
+
 ## 2026-09-02 (26) — Switzerland Part 1: stretchdecken.ch (de-CH) with QuinLay AG
 
 Fifteenth locale **`ch`** (Swiss Standard German, `de-CH`) on

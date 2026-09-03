@@ -119,6 +119,26 @@ export const TRAINING_SESSIONS_BY_LOCALE: Partial<Record<string, TrainingSession
       source: 'training_ch',
     },
   ],
+  // Romandie: the same two QuinLay courses (German-language instruction —
+  // the DE badge stays honest), French card copy.
+  'fr-ch': [
+    {
+      date: 'Tageskurs Basic (cours d’une journée) – CHF 1 050 hors TVA',
+      note: 'Rickenbach LU · Salle de formation et d’essai de QuinLay AG · Cours d’initiation, contenu sur quinlay.ch',
+      languages: ['DE'],
+      price: 'CHF 1 050 hors TVA',
+      external: { href: 'https://www.quinlay.ch' },
+      source: 'training_ch',
+    },
+    {
+      date: 'Tageskurs Advanced (cours d’une journée) – CHF 750 hors TVA',
+      note: 'Rickenbach LU · Salle de formation et d’essai de QuinLay AG · Cours avancé, contenu sur quinlay.ch',
+      languages: ['DE'],
+      price: 'CHF 750 hors TVA',
+      external: { href: 'https://www.quinlay.ch' },
+      source: 'training_ch',
+    },
+  ],
 };
 
 /** Sessions for a locale: the partner override when one exists, else the HQ list. */
@@ -147,7 +167,7 @@ export const COUNTRY_OPTIONS_EN = [
 const LOCALE_DEFAULT_COUNTRY: Record<string, string> = {
   uk: 'GB',
   us: 'US',
-  be: 'BE', nl: 'NL', fr: 'FR', de: 'DE', ch: 'CH', pl: 'PL', es: 'ES',
+  be: 'BE', nl: 'NL', fr: 'FR', de: 'DE', ch: 'CH', 'fr-ch': 'CH', pl: 'PL', es: 'ES',
   pt: 'PT', da: 'DK', sv: 'SE', no: 'NO', is: 'IS',
 };
 

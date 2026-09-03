@@ -19,6 +19,7 @@ import {
   type ReactNode,
 } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
+import { isSwissLocale, type Locale } from '@/i18n/config';
 import { Link } from '@/i18n/navigation';
 import { X, ArrowRight, Check } from 'lucide-react';
 import {
@@ -649,7 +650,7 @@ function LeadGenModal({
                 {cfg.subtitle}
               </p>
               {/* ch: every Swiss enquiry is answered by QuinLay AG (STRETCH in copy). */}
-              {locale === 'ch' && (
+              {isSwissLocale(locale as Locale) && (
                 <p style={{ fontSize: 13, lineHeight: 1.55, color: 'var(--text-muted)', margin: '-12px 0 22px', padding: '10px 12px', background: 'var(--surface)', border: '1px solid var(--border)' }}>
                   {tModals('swissPartnerNote')}
                 </p>

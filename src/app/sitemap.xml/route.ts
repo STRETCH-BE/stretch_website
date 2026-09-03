@@ -11,11 +11,12 @@ import {
   localeStatus,
   defaultLocale,
   localeFullCodes,
-  localeForHost,
-  originForLocale,
+  localesForHost,
   hreflangAliases,
   type Locale,
 } from '@/i18n/config';
+import { buildCanonical } from '@/lib/seo';
+import { priceGuideCh, priceGuideChReady } from '@/lib/price-guide-ch';
 import { staticRoutes, staticRouteDates } from '@/lib/site-config';
 import { productSlugs, productsUpdatedAt } from '@/lib/products';
 import { applicationSlugs, applicationsUpdatedAt } from '@/lib/applications';
@@ -34,8 +35,10 @@ import { materialGroupSlugs, materialsUpdatedAt } from '@/lib/materials';
 // it to staticRouteDates or the family's *UpdatedAt constant.
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
+// Absolute URL on the locale's own domain — with the public path prefix of a
+// second locale on a shared domain (fr-ch → https://stretchdecken.ch/fr/...).
 function urlFor(locale: Locale, route: string): string {
-  return `${originForLocale(locale)}${route === '/' ? '' : route}`;
+  return buildCanonical(locale, route);
 }
 
 function collectRoutes(locale: Locale): string[] {
@@ -56,8 +59,11 @@ function collectRoutes(locale: Locale): string[] {
     : staticRoutes.filter((r) => r !== '/dealers' && r !== '/installer-training'))
     // No public prices on this locale → no calculator page (pricesPublished).
     .filter((r) => r !== '/price-calculator' || pricesPublished(locale));
+  // The Swiss CHF price guide: de-CH only, and only once QuinLay's ranges are in.
+  const swissGuide = locale === 'ch' && priceGuideChReady ? [priceGuideCh.route] : [];
   return [
     ...statics,
+    ...swissGuide,
     ...productRoutes,
     ...applicationRoutes,
     ...technicalRoutes,
@@ -119,23 +125,26 @@ function localesForRoute(route: string, locale: Locale): readonly Locale[] {
     return liveLocales.filter(isDealerMarket);
   }
   if (route === '/price-calculator') return liveLocales.filter(pricesPublished);
+  if (route === priceGuideCh.route) return liveLocales.filter((l) => l === 'ch');
   return liveLocales;
 }
 
 export function GET(request: Request) {
   const host = request.headers.get('host');
-  // Serve the locale owned by this domain; unknown hosts (previews) fall back
-  // to the default locale so the sitemap is always valid.
-  const locale = localeForHost(host) ?? defaultLocale;
-  // A pending locale's domain serves an EMPTY sitemap — its URLs must not be
-  // advertised anywhere until the domain is flipped to 'live'.
-  if (localeStatus[locale] !== 'live') {
+  // Serve EVERY locale owned by this domain (stretchdecken.ch → ch + fr-ch);
+  // unknown hosts (previews) fall back to the default locale so the sitemap
+  // is always valid. A pending locale is skipped — its URLs must not be
+  // advertised anywhere until it is flipped to 'live' — and a domain with no
+  // live locale serves an EMPTY sitemap.
+  const hostLocales = localesForHost(host);
+  const served = (hostLocales.length > 0 ? hostLocales : [defaultLocale]).filter((l) => localeStatus[l] === 'live');
+  if (served.length === 0) {
     return new Response(
       '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>\n',
       { headers: { 'Content-Type': 'application/xml; charset=utf-8' } },
     );
   }
-  const entries = collectRoutes(locale)
+  const entriesFor = (locale: Locale) => collectRoutes(locale)
     .map((route) => {
       const routeLocales = localesForRoute(route, locale);
       const xDefault = routeLocales.includes(defaultLocale) ? defaultLocale : (routeLocales[0] ?? defaultLocale);
@@ -167,8 +176,8 @@ export function GET(request: Request) {
         alternates,
         '  </url>',
       ].join('\n');
-    })
-    .join('\n');
+    });
+  const entries = served.flatMap(entriesFor).join('\n');
 
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',

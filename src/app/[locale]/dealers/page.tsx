@@ -9,7 +9,7 @@ import { Link } from '@/i18n/navigation';
 import { ArrowRight, BadgeCheck, Search } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { brand } from '@/lib/site-config';
-import { localeBase, buildAlternates } from '@/lib/seo';
+import { localeBase, buildAlternates, apiBase } from '@/lib/seo';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   if (!isDealerMarket(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'dealersPage' });
   const route = '/dealers';
-  const ogImg = `${localeBase(locale)}/api/og`;
+  const ogImg = `${apiBase(locale)}/api/og`;
   return {
     title: { absolute: t('ovMetaTitle') },
     description: t('ovMetaDescription'),

@@ -14,7 +14,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { locales, isValidLocale, localeFullCodes, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
-import { localeBase, buildAlternates, buildOgLocales } from '@/lib/seo';
+import { localeBase, buildAlternates, buildOgLocales, apiBase } from '@/lib/seo';
 import { ConsentModeDefaults, ScrollTracker, AnalyticsScripts } from '@/components/analytics';
 import { LeadModalProvider } from '@/components/LeadGenModal';
 import Header from '@/components/layout/Header';
@@ -53,13 +53,13 @@ export async function generateMetadata({
       url: `${localeBase(locale)}`,
       locale: ogLocale,
       alternateLocale: alternate,
-      images: [{ url: `${localeBase(locale)}/api/og`, width: 1200, height: 630, alt: brand.name }],
+      images: [{ url: `${apiBase(locale)}/api/og`, width: 1200, height: 630, alt: brand.name }],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('homeTitle'),
       description: t('homeDescription'),
-      images: [`${localeBase(locale)}/api/og`],
+      images: [`${apiBase(locale)}/api/og`],
     },
     icons: {
       icon: [{ url: '/favicon.ico' }, { url: '/favicon.svg', type: 'image/svg+xml' }],

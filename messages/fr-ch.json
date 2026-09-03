@@ -5,7 +5,7 @@
     "closeMenu": "Fermer le menu",
     "close": "Fermer",
     "menu": "Menu",
-    "handMadeInBelgium": "Fabriqué à la main en Belgique",
+    "handMadeInBelgium": "Représentation générale CH & FL : QuinLay AG",
     "languageLabel": "Langue",
     "nav": {
       "solutions": "Solutions",
@@ -44,8 +44,8 @@
     }
   },
   "meta": {
-    "homeTitle": "STRETCH — Un nouveau plafond en un jour | Plafonds & murs tendus",
-    "homeDescription": "Plafonds tendus et murs sans soudure, posés à froid en une journée — sans poussière ni peinture. Acoustique, lumière et impression. Fabriqués en Belgique.",
+    "homeTitle": "STRETCH Suisse — Un nouveau plafond en un jour | Plafonds & murs tendus",
+    "homeDescription": "Plafonds tendus et murs sans soudure, posés à froid en une journée — sans poussière ni peinture. Fabriqués en Belgique et en Pologne ; conseil, livraison et pose en Suisse par QuinLay AG, Rickenbach LU.",
     "productsTitle": "Plafonds tendus & solutions acoustiques | STRETCH",
     "productsDescription": "Plafonds tendus polyester et PVC, systèmes acoustiques, designs rétroéclairés et imprimés et unités préfab — sans soudure jusqu’à 6,5 m, garantie 25 ans.",
     "partnersTitle": "Devenez revendeur STRETCH — tarifs pro & leads | STRETCH",
@@ -81,7 +81,7 @@
     "kitTitle": "Kit plafond tendu à poser soi-même — sur mesure | STRETCH",
     "kitDescription": "Kit plafond tendu à vos mesures : toile polyester, profilés et instructions en un colis. Pose à froid, livraison UE et Royaume-Uni.",
     "supplyTitle": "Fournisseur plafond tendu — toiles, profilés & confection | STRETCH",
-    "supplyDescription": "Fourniture usine pour les professionnels : toiles & films, profilés, éclairage et confection sur mesure, expédiés dans toute l’Europe. Facturation en EUR.",
+    "supplyDescription": "Fourniture usine pour les professionnels : toiles & films, profilés, éclairage et confection sur mesure, expédiés dans toute l’Europe. Facturation en CHF.",
     "supplyCzSkTitle": "Matériaux de plafond tendu pour la Tchéquie & la Slovaquie | STRETCH",
     "supplyCzSkDescription": "Matériaux de plafond tendu premium et confection sur mesure pour les pros tchèques et slovaques — produits en Pologne, à un ou deux jours. EUR ou PLN.",
     "projectsExportTitle": "Plafonds tendus pour projets internationaux | STRETCH",
@@ -129,7 +129,7 @@
       "name": "Prénom et nom",
       "email": "vous@email.com",
       "companyEmail": "vous@societe.com",
-      "phone": "+33 ...",
+      "phone": "+41 ...",
       "company": "Votre société",
       "address": "Rue, code postal, ville",
       "country": "France",
@@ -153,7 +153,7 @@
     }
   },
   "footer": {
-    "tagline": "Plafonds et murs tendus faits main dans notre propre production belge — fabricant, pas importateur — posés en une seule journée, partout en Europe et aux États-Unis.",
+    "tagline": "Plafonds et murs tendus de notre propre production en Belgique et en Pologne – en Suisse et au Liechtenstein, conseil, livraison et pose via notre représentation générale QuinLay AG, Rickenbach LU.",
     "solutionsHeading": "Solutions",
     "companyHeading": "Société",
     "hqHeading": "Siège — Belgique",
@@ -181,8 +181,8 @@
     },
     "dealers": "Réseau de revendeurs",
     "worldwideHeading": "STRETCH dans le monde",
-    "swissPartnerHeading": "Représentant général — Suisse & Liechtenstein",
-    "manufacturerHeading": "Fabricant — Belgique"
+    "swissPartnerHeading": "Représentation générale Suisse & Liechtenstein",
+    "manufacturerHeading": "Fabricant – Belgique"
   },
   "portal": {
     "login": {
@@ -318,7 +318,7 @@
       "qty": "Qté",
       "noteLabel": "Remarque (optionnel)",
       "notePlaceholder": "Souhaits de livraison, référence projet...",
-      "totalLabel": "Total (hors TVA)",
+      "totalLabel": "Total (hors TVA 8.1 %)",
       "submitOrder": "Passer la commande",
       "submitQuote": "Demander un devis",
       "sendingLabel": "Envoi…",
@@ -431,10 +431,10 @@
       "eyebrow": "Espace architectes",
       "title": "Guide budgétaire",
       "intro": "Fourchettes de prix posé indicatives par système — volontairement larges, pour les budgets amont et les études de faisabilité.",
-      "disclaimer": "Fourchettes de prix posé indicatives, hors TVA, réservées aux budgets amont. Chaque projet est chiffré individuellement — enregistrez votre projet pour un chiffre réel.",
+      "disclaimer": "Fourchettes de prix posé indicatives, hors TVA 8.1 %, réservées aux budgets amont. Chaque projet est chiffré individuellement — enregistrez votre projet pour un chiffre réel.",
       "includes": "Ce qui est inclus",
-      "perM2": "par m² posé, hors TVA",
-      "perUnit": "par unité posée, hors TVA",
+      "perM2": "par m² posé, hors TVA 8.1 %",
+      "perUnit": "par unité posée, hors TVA 8.1 %",
       "ctaBody": "Besoin d’un chiffre réel pour un projet en cours ? Enregistrez-le : un conseiller dédié le chiffre correctement sous un jour ouvré.",
       "ctaButton": "Enregistrer votre projet"
     }
@@ -446,7 +446,7 @@
           "kicker": "Plafonds Stretch® — posés en un jour",
           "line1": "Un nouveau plafond",
           "line2": "en un jour.",
-          "subhead": "Des plafonds tendus sans soudure, posés à froid en une seule journée — sans poussière, sans désordre.",
+          "subhead": "Fabricant en Belgique et en Pologne – représentation générale Suisse & Liechtenstein : QuinLay AG, showroom à Rickenbach LU.",
           "tabName": "Plafonds",
           "tabDesc": "Polyester & PVC"
         },
@@ -1712,7 +1712,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+32 ..."
+          "placeholder": "+41 ..."
         },
         "rooms": {
           "label": "Pièces",
@@ -1756,7 +1756,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+32 ..."
+          "placeholder": "+41 ..."
         },
         "address": {
           "label": "Adresse",
@@ -1802,7 +1802,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+32 ..."
+          "placeholder": "+41 ..."
         },
         "preferredDate": {
           "label": "Date préférée",
@@ -1844,7 +1844,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+32 ..."
+          "placeholder": "+41 ..."
         },
         "preferredDate": {
           "label": "Date préférée",
@@ -1889,7 +1889,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+32 ..."
+          "placeholder": "+41 ..."
         },
         "country": {
           "label": "Pays",
@@ -1924,7 +1924,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+32 ..."
+          "placeholder": "+41 ..."
         },
         "bestTime": {
           "label": "Meilleur moment",
@@ -1967,7 +1967,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+32 ..."
+          "placeholder": "+41 ..."
         },
         "shippingAddress": {
           "label": "Adresse de livraison",
@@ -2018,7 +2018,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+32 ..."
+          "placeholder": "+41 ..."
         },
         "city": {
           "label": "Ville",
@@ -2114,7 +2114,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+32 ..."
+          "placeholder": "+41 ..."
         },
         "notes": {
           "label": "Notes",
@@ -2152,10 +2152,10 @@
     },
     "kit_order": {
       "title": "Commander le kit",
-      "subtitle": "Parlez-nous de votre plafond : réponse sous un jour ouvré avec un devis sur mesure et une facture proforma en EUR.",
+      "subtitle": "Parlez-nous de votre plafond : réponse sous un jour ouvré avec un devis sur mesure et une facture proforma en CHF.",
       "submitLabel": "Demander mon devis kit",
       "sentTitle": "Demande de kit reçue",
-      "sentMsg": "Merci — nous confirmons votre kit, le prix et la livraison sous un jour ouvré avec une facture proforma en EUR.",
+      "sentMsg": "Merci — nous confirmons votre kit, le prix et la livraison sous un jour ouvré avec une facture proforma en CHF.",
       "fields": {
         "name": {
           "label": "Nom",
@@ -2167,7 +2167,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+33 ..."
+          "placeholder": "+41 ..."
         },
         "size": {
           "label": "Dimensions du plafond",
@@ -2208,7 +2208,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+33 ..."
+          "placeholder": "+41 ..."
         },
         "message": {
           "label": "De quoi avez-vous besoin ?",
@@ -2218,7 +2218,7 @@
     },
     "projects_export": {
       "title": "Demander un devis projet",
-      "subtitle": "Envoyez les bases de votre projet — notre équipe projet répond sous un jour ouvré avec la faisabilité, la documentation et un devis en EUR.",
+      "subtitle": "Envoyez les bases de votre projet — notre équipe projet répond sous un jour ouvré avec la faisabilité, la documentation et un devis en CHF.",
       "submitLabel": "Demander mon devis projet",
       "sentTitle": "Demande reçue",
       "sentMsg": "Merci — notre équipe projet répond sous un jour ouvré.",
@@ -2237,7 +2237,7 @@
         },
         "phone": {
           "label": "Téléphone",
-          "placeholder": "+971 ..."
+          "placeholder": "+41 ..."
         },
         "projectName": {
           "label": "Nom du projet",
@@ -2253,7 +2253,7 @@
         }
       }
     },
-    "swissPartnerNote": "Votre demande est transmise à QuinLay AG, Rickenbach LU, représentant général de STRETCH pour la Suisse et le Liechtenstein, avec STRETCH en copie. Rappel par QuinLay AG."
+    "swissPartnerNote": "Votre demande est transmise à QuinLay AG, Rickenbach LU – représentation générale STRETCH Suisse & Liechtenstein – avec STRETCH en copie. Rappel par QuinLay AG."
   },
   "faqPage": {
     "items": [
@@ -4260,7 +4260,7 @@
           {
             "heading": "La réponse courte",
             "paragraphs": [
-              "Pour un plafond tendu posé par un professionnel, comptez environ €70 à €200 par mètre carré hors TVA, pose comprise. L'écart est réel : un plafond blanc mat uni dans un séjour rectangulaire se situe en bas de la fourchette, tandis qu'un plafond de salle de bains rétroéclairé avec éclairage intégré se situe tout en haut.",
+              "Pour un plafond tendu posé par un professionnel, comptez environ €70 à €200 par mètre carré hors TVA 8.1 %, pose comprise. L'écart est réel : un plafond blanc mat uni dans un séjour rectangulaire se situe en bas de la fourchette, tandis qu'un plafond de salle de bains rétroéclairé avec éclairage intégré se situe tout en haut.",
               "Chaque chiffre de ce guide est une fourchette indicative, pas un devis. La toile est fabriquée sur mesure pour votre pièce exacte : le vrai chiffre final sort donc toujours d'un devis gratuit et sans engagement."
             ]
           },
@@ -4366,7 +4366,7 @@
           {
             "heading": "Ce que ça coûte en 2026",
             "paragraphs": [
-              "Posé par un professionnel, comptez environ 70 à 200 € par mètre carré hors TVA, pose comprise. Un plafond uni simple se situe autour de 70–90 € par m², un design imprimé autour de 90–100 €, une composition acoustique autour de 100–150 €, et les projets rétroéclairés ou de salle de bains avec éclairage intégré entre 130 et 200 € par m².",
+              "Posé par un professionnel, comptez environ 70 à 200 € par mètre carré hors TVA 8.1 %, pose comprise. Un plafond uni simple se situe autour de 70–90 € par m², un design imprimé autour de 90–100 €, une composition acoustique autour de 100–150 €, et les projets rétroéclairés ou de salle de bains avec éclairage intégré entre 130 et 200 € par m².",
               "Ce sont des fourchettes indicatives, pas des devis — la membrane est confectionnée sur mesure pour votre pièce exacte. Les grandes pièces reviennent moins cher au mètre carré ; les angles, courbes et intégrations ajoutent du travail. Le détail complet se trouve dans notre guide des prix, et un devis gratuit vous donne le chiffre ferme, généralement le jour ouvré même."
             ]
           },
@@ -4575,7 +4575,7 @@
               "En Wallonie, les Primes Habitation pour l'isolation de la toiture et des murs courent jusqu'au 30 septembre 2026 (audit obligatoire sauf pour la toiture). À Bruxelles, il n'y a pas de primes régionales en 2026. En Flandre, un propriétaire-occupant de catégorie de revenus 3 ou 4 obtient une Mijn VerbouwPremie pour l'isolation de la toiture ou du plancher du grenier (Rd ≥ 4,5) et pour l'isolation d'un mur extérieur par l'intérieur (Rd ≥ 2, par un entrepreneur certifié ou sous la supervision d'un architecte)."
             ],
             "bullets": [
-              "Demandez deux postes séparés sur le devis et la facture : isolation (avec l'attestation de l'entrepreneur, au moins 1 000 € hors TVA) et finition du plafond.",
+              "Demandez deux postes séparés sur le devis et la facture : isolation (avec l'attestation de l'entrepreneur, au moins 1 000 € hors TVA 8.1 %) et finition du plafond.",
               "La finition n'est jamais éligible, plafonnage et plaques de plâtre compris ; une facture mixte ne fait que compliquer le dossier.",
               "Les deux postes bénéficient de la TVA à 6 % si le logement est occupé depuis au moins dix ans et si l'entrepreneur fournit et pose.",
               "Introduisez la prime après la facture finale de l'isolation, dans les délais de votre Région."
@@ -4590,7 +4590,7 @@
           {
             "heading": "Ce que cela coûte et comment le planifier",
             "paragraphs": [
-              "Comptez environ 70 à 200 € par m² hors TVA, posé, pour un plafond tendu selon le type et l'éclairage ; un plafond en plaques de plâtre avec enduit et peinture se situe généralement entre 35 et 70 € par m², mais occupe une semaine de chantier. L'écart se réduit dès que vous comptez les spots, l'acoustique et les jours perdus.",
+              "Comptez environ 70 à 200 € par m² hors TVA 8.1 %, posé, pour un plafond tendu selon le type et l'éclairage ; un plafond en plaques de plâtre avec enduit et peinture se situe généralement entre 35 et 70 € par m², mais occupe une semaine de chantier. L'écart se réduit dès que vous comptez les spots, l'acoustique et les jours perdus.",
               "Un planning pratique : jours un et deux, isolation et pare-vapeur ; jour trois, le plafond tendu ; le soir même, l'éclairage allumé. Un installateur STRETCH de votre région mesure la pièce gratuitement et accorde les profilés à l'ossature de l'isolateur."
             ],
             "links": [
@@ -4620,7 +4620,7 @@
           {
             "heading": "Option 1 : replafonner, enduire et peindre",
             "paragraphs": [
-              "Petites fissures, peinture jaunie ou plafond légèrement irrégulier : enduire, poncer et deux couches de peinture suffisent, ou une nouvelle couche de plafonnage en cas de dégâts plus importants. Comptez à titre indicatif 10 à 20 € par m² pour la peinture et 25 à 45 € par m² pour le replafonnage, hors TVA, à 6 % de TVA dans un logement de plus de dix ans.",
+              "Petites fissures, peinture jaunie ou plafond légèrement irrégulier : enduire, poncer et deux couches de peinture suffisent, ou une nouvelle couche de plafonnage en cas de dégâts plus importants. Comptez à titre indicatif 10 à 20 € par m² pour la peinture et 25 à 45 € par m² pour le replafonnage, hors TVA 8.1 %, à 6 % de TVA dans un logement de plus de dix ans.",
               "Inconvénients : la pièce doit être vidée et bâchée, la poussière fine s'infiltre partout, les temps de séchage dictent le planning et une fissure structurelle revient généralement. Les conduites ou une dalle de béton irrégulière restent visibles."
             ],
             "links": [
@@ -4633,14 +4633,14 @@
           {
             "heading": "Option 2 : un nouveau plafond en plaques de plâtre",
             "paragraphs": [
-              "Un faux plafond en plaques de plâtre sur ossature métallique cache les conduites et les irrégularités et permet des spots. À titre indicatif 35 à 70 € par m² enduit et peinture compris, hors TVA. C'est une construction fixe : quatre à sept jours ouvrables avec temps de séchage, et plus tard un accès aux techniques uniquement par démolition.",
+              "Un faux plafond en plaques de plâtre sur ossature métallique cache les conduites et les irrégularités et permet des spots. À titre indicatif 35 à 70 € par m² enduit et peinture compris, hors TVA 8.1 %. C'est une construction fixe : quatre à sept jours ouvrables avec temps de séchage, et plus tard un accès aux techniques uniquement par démolition.",
               "Le résultat est classique et solide, mais les joints restent le point faible : sur de grandes surfaces et avec les variations de température, des microfissures dans les joints après quelques années sont courantes."
             ]
           },
           {
             "heading": "Option 3 : lambris ou panneaux en bois",
             "paragraphs": [
-              "Le lambris apporte chaleur et caractère et se pose assez vite : à titre indicatif 40 à 90 € par m² hors TVA selon l'essence et la finition. Il exige toutefois une ossature, laisse moins de liberté pour l'éclairage et demande de l'entretien. Si vous avez déjà un plafond lambrissé démodé, il est souvent plus malin de tendre un plafond en dessous que de le démonter."
+              "Le lambris apporte chaleur et caractère et se pose assez vite : à titre indicatif 40 à 90 € par m² hors TVA 8.1 % selon l'essence et la finition. Il exige toutefois une ossature, laisse moins de liberté pour l'éclairage et demande de l'entretien. Si vous avez déjà un plafond lambrissé démodé, il est souvent plus malin de tendre un plafond en dessous que de le démonter."
             ],
             "links": [
               {
@@ -4655,7 +4655,7 @@
               "Une toile en PVC ou en polyester est tendue dans un profilé mince le long des murs, quelques centimètres sous le plafond existant. Tout ce qui se trouve au-dessus, fissures, lambris, conduites, dalle irrégulière, disparaît derrière une seule surface sans couture. Posé en une journée, sans poussière, sans temps de séchage et avec les meubles dans la pièce."
             ],
             "bullets": [
-              "Prix : environ 70 à 200 € par m² hors TVA, posé ; un plafond blanc mat uni se situe en bas de la fourchette, un plafond rétroéclairé ou imprimé en haut.",
+              "Prix : environ 70 à 200 € par m² hors TVA 8.1 %, posé ; un plafond blanc mat uni se situe en bas de la fourchette, un plafond rétroéclairé ou imprimé en haut.",
               "Éclairage intégré, absorption acoustique, ciel étoilé ou impression : tout tient dans le même système.",
               "Accès : le PVC est démontable et peut recevoir une trappe de visite invisible.",
               "Durée de vie : des décennies sans repeindre ; lavable ; insensible à l'humidité des salles de bains et cuisines.",
@@ -4680,7 +4680,7 @@
             "heading": "Comparaison en un coup d'œil",
             "paragraphs": [],
             "bullets": [
-              "Coût par m² (hors TVA, indicatif) : peinture 10–20 € · replafonnage 25–45 € · plaque de plâtre 35–70 € · lambris 40–90 € · plafond tendu 70–200 €.",
+              "Coût par m² (hors TVA 8.1 %, indicatif) : peinture 10–20 € · replafonnage 25–45 € · plaque de plâtre 35–70 € · lambris 40–90 € · plafond tendu 70–200 €.",
               "Durée du chantier pour un séjour de 30 m² : peinture 1–2 jours · replafonnage 3–5 jours · plaque de plâtre 4–7 jours · lambris 2–3 jours · plafond tendu 1 jour.",
               "Poussière et temps de séchage : plafonnage et plaque de plâtre beaucoup · lambris peu · plafond tendu aucun.",
               "Cache conduites et irrégularités : plafonnage non · plaque de plâtre oui · lambris oui · plafond tendu oui.",
@@ -4916,8 +4916,8 @@
       },
       "quinlayCard": {
         "title": "Suisse & Liechtenstein : QuinLay AG",
-        "body": "Notre représentant général pour la Suisse et le Liechtenstein : showroom et salle de formation à Rickenbach LU, matériaux en stock en Suisse, partenaires de pose dans tout le pays.",
-        "cta": "Visiter quinlay.ch"
+        "body": "Notre représentation générale pour la Suisse et le Liechtenstein – showroom et salle de formation à Rickenbach LU, matériaux en stock en Suisse, partenaires de pose dans tout le pays.",
+        "cta": "Vers quinlay.ch"
       }
     },
     "how": {
@@ -4968,37 +4968,37 @@
   },
   "trainingPage": {
     "crumb": "Formation installateur",
-    "courseName": "Certification installateur STRETCH",
-    "courseDescription": "Certification pratique d'installateur de plafonds tendus au siège de STRETCH en Belgique : confection de la membrane, profilés, pose à froid & à chaud, lumière, acoustique, finitions et chiffrage.",
+    "courseName": "Cours d’une journée STRETCH chez QuinLay AG",
+    "courseDescription": "Cours d’une journée Basic et Advanced de pose de plafonds tendus dans la salle de formation et d’essai de QuinLay AG à Rickenbach LU – dates et réservation sur quinlay.ch.",
     "hero": {
       "eyebrow": "Formation installateur",
       "titleA": "Formation pose de plafond tendu",
       "titleB": "installateur agréé",
-      "titleC": "en quelques jours",
-      "lead": "Certification pratique à notre siège belge. Apprenez la confection de la membrane, les profilés, la pose à froid & à chaud, la lumière et l'acoustique — aucune expérience préalable requise.",
+      "titleC": "en une journée",
+      "lead": "Cours pratiques dans la salle de formation et d’essai de QuinLay AG à Rickenbach LU – cours Basic pour débuter, cours Advanced pour approfondir. Dates, contenu et réservation sur quinlay.ch.",
       "ctaBook": "Réserver votre formation",
       "ctaDates": "Voir les dates",
       "imageLabel": "Photo formation / atelier",
-      "travel": "Beveren-Waas, Belgique — à 1 h 30 de Lille, 2 h de Paris en train"
+      "travel": "Rickenbach LU – salle de formation et d’essai de QuinLay AG, à 15 minutes de Lucerne"
     },
     "format": [
       {
-        "value": "2–3",
-        "label": "Jours de pratique"
+        "value": "1 jour",
+        "label": "par cours"
       },
       {
-        "value": "Siège",
-        "label": "Beveren-Waas, Belgique"
+        "value": "Rickenbach LU",
+        "label": "Salle de formation et d’essai QuinLay AG"
       },
       {
-        "value": "1:4",
-        "label": "Ratio formateur-installateurs"
+        "value": "2",
+        "label": "Cours : Basic & Advanced"
       }
     ],
     "curriculum": {
       "eyebrow": "Ce que vous apprendrez",
       "title": "Tout le métier",
-      "lead": "Du rouleau de membrane au plafond fini, éclairé et acoustique — avec les compétences commerciales pour le vendre.",
+      "lead": "Le programme STRETCH – du rouleau de membrane au plafond fini, éclairé et acoustique. Le contenu exact des deux cours d’une journée est sur quinlay.ch.",
       "items": [
         {
           "title": "Membrane & confection",
@@ -5029,12 +5029,12 @@
     "dates": {
       "eyebrow": "Prochaines dates",
       "title": "Réservez votre place",
-      "lead": "Petits groupes, premiers inscrits, premiers servis. Sessions sur site personnalisées disponibles sur demande.",
+      "lead": "Deux cours d’une journée chez QuinLay AG à Rickenbach LU – dates et réservation directement sur quinlay.ch.",
       "onRequestTitle": "Sur demande",
       "onRequestNote": "Session sur site personnalisée",
       "externalCta": "Dates & réservation sur quinlay.ch",
-      "swissRoom": "Les formations ont lieu dans la salle de formation et d’essai de QuinLay AG, à Rickenbach LU.",
-      "secondaryCta": "Des questions sur la formation ? Contactez-nous"
+      "swissRoom": "Les cours ont lieu dans la salle de formation et d’essai de QuinLay AG, à Rickenbach LU.",
+      "secondaryCta": "Des questions sur le cours ? Contactez-nous"
     },
     "book": {
       "eyebrow": "Planifiez votre formation",
@@ -5143,18 +5143,18 @@
       "consentPrivacy": "politique de confidentialité",
       "submit": "Envoyer le message"
     },
-    "hours": "lun–ven · 08h30–17h00",
+    "hours": "Rappel par QuinLay AG",
     "directTitle": "Pas besoin de revendeur local.",
     "directBody": "STRETCH livre et installe directement depuis sa propre production pendant que le réseau local se construit — une seule équipe, une seule garantie.",
     "directCta": "Demandez un devis gratuit",
     "swissPartnerKicker": "Suisse & Liechtenstein",
-    "swissPartnerTitle": "Votre contact en Suisse et au Liechtenstein : QuinLay AG, Rickenbach LU",
-    "swissPartnerBody": "QuinLay AG est le représentant général de STRETCH pour la Suisse et le Liechtenstein : showroom et salle de formation à Rickenbach LU, matériaux en stock en Suisse, pose par des partenaires formés. Chaque demande venant de Suisse est traitée par QuinLay AG, avec STRETCH en copie.",
+    "swissPartnerTitle": "Votre interlocuteur en Suisse et au Liechtenstein : QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG est la représentation générale de STRETCH pour la Suisse et le Liechtenstein : showroom et salle de formation à Rickenbach LU, matériaux en stock en Suisse, pose par des partenaires formés. Chaque demande venant de Suisse est traitée par QuinLay AG – avec STRETCH en copie.",
     "swissCallback": "Rappel par QuinLay AG",
-    "impressumHeading": "Mentions légales — Suisse & Liechtenstein",
+    "impressumHeading": "Mentions légales – Suisse & Liechtenstein",
     "impressumManufacturer": "Fabricant",
     "impressumSwissParty": "Partie contractante pour la Suisse et le Liechtenstein",
-    "impressumNote": "Devis, livraisons et factures pour la Suisse et le Liechtenstein sont assurés par QuinLay AG.",
+    "impressumNote": "Devis, livraisons et factures pour la Suisse et le Liechtenstein sont établis par QuinLay AG.",
     "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch"
   },
   "datasheetsPage": {
@@ -5394,34 +5394,34 @@
   "dealersPage": {
     "crumbDealers": "Revendeurs",
     "eyebrow": "Réseau de revendeurs",
-    "h1": "Plafonds tendus à {place}",
-    "introDealer": "Un plafond tendu STRETCH à {place} commence chez notre revendeur certifié ci-dessous : prise de mesures sur place, toile soudée sur mesure dans notre propre production belge et pose en une journée.",
-    "introRecruit": "Il n’y a pas encore de revendeur STRETCH certifié à {place} — en attendant, nous servons {place} directement depuis notre production belge, et nous cherchons le bon partenaire local.",
-    "dealerBadge": "Revendeur STRETCH certifié",
-    "dealerBadgeShort": "Revendeur",
+    "h1": "Plafond tendu {place}",
+    "introDealer": "Un plafond tendu STRETCH à {place} commence chez QuinLay AG, notre représentation générale pour la Suisse et le Liechtenstein : conseil au showroom de Rickenbach LU, prise de mesures sur place, fabrication sur mesure dans nos usines en Belgique et en Pologne, pose par des partenaires formés – matériaux en stock en Suisse.",
+    "introRecruit": "Il n’y a pas encore de partenaire poseur STRETCH à {place} – en attendant, QuinLay AG, notre représentation générale pour la Suisse et le Liechtenstein, vous conseille et organise la pose depuis Rickenbach LU. Nous cherchons le bon partenaire local.",
+    "dealerBadge": "Représentation générale STRETCH Suisse & Liechtenstein",
+    "dealerBadgeShort": "Représentation générale",
     "visitSite": "Visiter le site",
     "quoteCta": "Demander un devis gratuit",
-    "whyTitle": "Pourquoi choisir STRETCH ici",
-    "why1": "Fabriqué en Belgique — chaque plafond est soudé sur mesure dans notre propre production et arrive prêt à poser.",
-    "why2": "Pose certifiée — nos revendeurs suivent la formation d’installateur STRETCH et travaillent avec nos profilés, toiles et éclairages.",
-    "why3": "Un seul point de garantie — matériau et pose sous un même toit, avec STRETCH derrière les deux.",
+    "whyTitle": "Pourquoi STRETCH en Suisse",
+    "why1": "Du fabricant – chaque plafond est soudé sur mesure dans nos propres usines en Belgique et en Pologne et arrive en Suisse prêt à poser.",
+    "why2": "Pose formée – les partenaires de QuinLay AG suivent la formation STRETCH dans leur propre salle de formation à Rickenbach LU et travaillent avec nos profilés, toiles et éclairages.",
+    "why3": "Un seul interlocuteur – conseil, matériaux en stock en Suisse et pose d’une seule main, avec STRETCH en soutien.",
     "recruitChip": "Revendeur recherché",
     "recruitTitle": "Devenez notre revendeur STRETCH à {place}",
-    "recruitBody": "Nous cherchons activement un partenaire poseur à {place} : tarifs revendeur dans l’espace client, formation produit et pose, soutien marketing — et les demandes de cette page vous reviennent.",
+    "recruitBody": "Nous cherchons activement un partenaire poseur à {place} : formation dans la salle de formation de QuinLay AG à Rickenbach LU, matériaux en stock en Suisse, soutien marketing – et les demandes de cette page vous reviennent.",
     "recruitCta": "Devenir revendeur",
     "projectsHeading": "Nos réalisations à {place} et dans les environs",
     "nearbyHeading": "Aussi dans la province : {province}",
     "nearbyHeadingProvince": "Localités dans la province : {place}",
     "backToAll": "Toutes les régions",
-    "metaTitleDealer": "Plafond tendu {place} — revendeur STRETCH certifié",
-    "metaTitleRecruit": "Plafond tendu {place} — posé depuis notre production belge",
-    "metaDescDealer": "Vous cherchez un plafond tendu à {place} ? Notre revendeur STRETCH certifié prend les mesures sur place et pose des plafonds soudés sur mesure dans notre production belge. Demandez un devis gratuit.",
-    "metaDescRecruit": "Un plafond tendu à {place} ? Nous posons directement depuis notre production belge — et nous cherchons un revendeur local. Demandez un devis ou devenez notre partenaire à {place}.",
-    "ovMetaTitle": "Revendeurs STRETCH — Wallonie, Luxembourg & France | STRETCH",
-    "ovMetaDescription": "Trouvez votre revendeur STRETCH certifié en Wallonie, au Luxembourg et en France (Paris, Lyon, Marseille…). Chaque plafond tendu sort de notre production belge.",
+    "metaTitleDealer": "Plafond tendu {place} – Conseil, showroom & pose | STRETCH × QuinLay AG",
+    "metaTitleRecruit": "Plafond tendu {place} – Conseil & pose via QuinLay AG | STRETCH",
+    "metaDescDealer": "Plafond tendu à {place} : conseil au showroom de Rickenbach LU, prise de mesures sur place, fabrication sur mesure et pose par des partenaires formés – QuinLay AG, représentation générale STRETCH Suisse & Liechtenstein. Demandez un devis.",
+    "metaDescRecruit": "Un plafond tendu à {place} ? Conseil et pose via QuinLay AG, représentation générale STRETCH Suisse & Liechtenstein – et nous cherchons un partenaire poseur local. Demandez un devis ou devenez notre partenaire à {place}.",
+    "ovMetaTitle": "Plafonds tendus en Suisse & au Liechtenstein – QuinLay AG | STRETCH",
+    "ovMetaDescription": "Plafonds tendus STRETCH en Suisse et au Liechtenstein : conseil au showroom de Rickenbach LU, pose par des partenaires formés – Lausanne, Genève, Fribourg, Neuchâtel, Sion, Zurich, Berne, Bâle et plus. Représentation générale : QuinLay AG.",
     "ovEyebrow": "Réseau",
     "ovTitle": "Revendeurs",
-    "ovIntro": "Les plafonds tendus STRETCH sont mesurés et posés en Wallonie, au Luxembourg et en France (Paris, Lyon, Marseille, Lille, Bordeaux, Toulouse, Nantes, Strasbourg) par des partenaires locaux certifiés ou directement depuis notre propre production belge près de Lokeren. Trouvez votre région — ou réservez une zone encore libre.",
+    "ovIntro": "En Suisse et au Liechtenstein, les plafonds tendus STRETCH sont conseillés, mesurés et posés via QuinLay AG, notre représentation générale à Rickenbach LU – showroom, salle de formation et matériaux en stock en Suisse. Trouvez votre région ; en Suisse romande, nous cherchons encore des partenaires poseurs.",
     "regionFlanders": "Flandre & Bruxelles",
     "regionWallonia": "Wallonie · Belgique",
     "regionNetherlands": "Pays-Bas",
@@ -5439,10 +5439,10 @@
     "identityBeBody": "STRETCH est un fabricant belge : chaque plafond pour {place} est mesuré sur place, puis découpé et soudé sur mesure dans notre propre production à Beveren-Waas (Flandre-Orientale) et posé par nos propres équipes ou par un revendeur certifié. Une seule entreprise belge, un seul point de garantie.",
     "identityVat": "TVA",
     "identityVatArticle": "Primes et TVA pour un plafond tendu en Belgique",
-    "identityDirectKicker": "Service direct",
-    "identityDirectTitle": "{place}, directement depuis notre production",
-    "identityDirectBody": "Le temps que notre réseau de poseurs grandisse dans cette région, STRETCH livre et pose directement à {place} : prise de mesures sur place, toile soudée sur mesure dans notre propre production européenne et pose en une journée par nos propres équipes. Les poseurs qui réservent la région en reçoivent les demandes.",
-    "identityDirectCard": "Fabricant de plafonds et murs tendus — livraison et pose directes.",
+    "identityDirectKicker": "Représentation générale Suisse & Liechtenstein",
+    "identityDirectTitle": "{place} : conseil et pose via QuinLay AG",
+    "identityDirectBody": "QuinLay AG à Rickenbach LU est la représentation générale de STRETCH pour la Suisse et le Liechtenstein : conseil au showroom, prise de mesures sur place à {place}, matériaux en stock en Suisse et pose par des partenaires formés. Les plafonds sont fabriqués sur mesure dans nos usines en Belgique et en Pologne.",
+    "identityDirectCard": "Représentation générale STRETCH Suisse & Liechtenstein – conseil, showroom, pose.",
     "costLine": "Combien coûte un plafond tendu à {place} ? Calculez le prix au m²",
     "identityPlKicker": "Produit en Pologne et en Belgique",
     "identityPlTitle": "Deux usines dans l’UE : Częstochowa et Beveren-Waas",
@@ -5697,7 +5697,7 @@
       "dealersLink": "Devenir revendeur-poseur",
       "partnersLink": "Modèles de partenariat"
     },
-    "currencyLine": "Prix et facturation en EUR (PLN en Pologne).",
+    "currencyLine": "Prix et facturation en CHF par QuinLay AG (Suisse & Liechtenstein).",
     "training": {
       "eyebrow": "Formation",
       "title": "Posez nos systèmes comme nos propres équipes",
@@ -5818,7 +5818,7 @@
           "body": "Votre équipe pose avec notre support, ou nous supervisons la première pose sur site."
         }
       ],
-      "currencyLine": "Facturation en EUR."
+      "currencyLine": "Facturation en CHF par QuinLay AG (Suisse & Liechtenstein)."
     },
     "audiences": {
       "eyebrow": "Avec qui nous travaillons",
@@ -5849,7 +5849,7 @@
       "bathroom": "Salle de bains / éclairage intégré"
     },
     "estimateLabel": "Fourchette indicative pour {area} m²",
-    "disclaimer": "Fourchette indicative du guide des prix publié : posé, hors TVA. La membrane est confectionnée sur mesure — angles, courbes et intégrations font bouger le chiffre ; voyez ceci comme une fourchette, jamais comme un devis.",
+    "disclaimer": "Fourchette indicative du guide des prix publié : posé, hors TVA 8.1 %. La membrane est confectionnée sur mesure — angles, courbes et intégrations font bouger le chiffre ; voyez ceci comme une fourchette, jamais comme un devis.",
     "cta": "Obtenir mon devis gratuit",
     "guideLink": "Lire le guide des prix complet"
   },

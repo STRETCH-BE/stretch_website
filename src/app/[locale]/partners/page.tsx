@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ArrowRight, TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone, Store, Wrench, Check, Factory, ArrowUpRight } from 'lucide-react';
 import { swissPartner } from '@/lib/site-config';
-import { isValidLocale, type Locale } from '@/i18n/config';
+import { isValidLocale, type Locale, isSwissLocale } from '@/i18n/config';
 import { isDealerMarket } from '@/lib/dealers';
 import { Link } from '@/i18n/navigation';
 import { siteUrl } from '@/lib/site-config';
@@ -204,7 +204,7 @@ export default async function PartnersPage({ params }: { params: { locale: strin
               // (logo slot: /images/partners/quinlay.png — Michael supplies it).
               return [
                 card,
-                ...(locale === 'ch'
+                ...(isSwissLocale(locale)
                   ? [
                       <a key="quinlay-card" href={swissPartner.url} target="_blank" rel="noopener" style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)', display: 'block', textDecoration: 'none', color: 'inherit' }}>
                         <div style={{ width: 120, height: 44, marginBottom: 18, position: 'relative' }}>

@@ -515,6 +515,22 @@ const localePrefixStrips = LOCALE_DOMAINS.flatMap(([h, l]) => [
 ]);
 
 // ---------------------------------------------------------------------------
+// ROMANDIE — fr-ch lives on the SAME host as ch, under /fr/ (3 Sep 2026). The
+// middleware maps /fr ↔ next-intl's internal /fr-ch prefix; anyone reaching
+// the internal form gets the public one, permanently. The Swiss CHF price
+// guide (/spanndecke-preis-schweiz) exists on de-CH only: the fr-ch variant
+// goes to the Romandie home, every OTHER domain to its own price article.
+// ---------------------------------------------------------------------------
+const romandieRules = [
+  R('stretchdecken.ch', '/fr-ch', '/fr'),
+  R('stretchdecken.ch', '/fr-ch/:path*', '/fr/:path*'),
+  R('stretchdecken.ch', '/fr/spanndecke-preis-schweiz', '/fr'),
+];
+const priceGuideChRules = LOCALE_DOMAINS.filter(([h]) => h !== 'stretchdecken.ch').map(([h, l]) =>
+  R(h, '/spanndecke-preis-schweiz', blog(l, 'spanplafond-prijs')),
+);
+
+// ---------------------------------------------------------------------------
 export const legacyRedirects = [
   ...localePrefixStrips,
   ...dutchRules('stretchplafond.be'),
@@ -533,6 +549,8 @@ export const legacyRedirects = [
   ...norwegianRules,
   ...swissRules,
   ...swissHostRedirects,
+  ...romandieRules,
+  ...priceGuideChRules,
 ];
 
 export default legacyRedirects;

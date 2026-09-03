@@ -21,6 +21,7 @@ import {
   localeFullCodes,
   originForLocale,
   type Locale,
+  publicPrefix,
 } from '@/i18n/config';
 
 export default function Footer() {
@@ -223,7 +224,7 @@ export default function Footer() {
             .map((l) => (
               <a
                 key={l}
-                href={`${originForLocale(l)}${pathOn(l)}`}
+                href={`${originForLocale(l)}${publicPrefix(l)}${pathOn(l)}`}
                 hrefLang={localeFullCodes[l]}
                 className="lnk"
                 style={{ fontSize: 12.5, color: 'var(--on-dark-muted)' }}

@@ -13,6 +13,7 @@ import {
   defaultLocale,
   localeFullCodes,
   originForLocale,
+  publicPrefix,
   hreflangAliases,
   type Locale,
 } from '@/i18n/config';
@@ -29,13 +30,21 @@ function normalizeRoute(route: string): string {
  * `${siteUrl}/${locale}/products` was used before.
  */
 export function localeBase(locale: Locale): string {
+  // A path-prefixed locale (fr-ch → https://stretchdecken.ch/fr) carries its
+  // public prefix in every page URL.
+  return `${originForLocale(locale)}${publicPrefix(locale)}`;
+}
+
+/** Origin for API routes (/api/og, …) — they live OUTSIDE any locale path prefix. */
+export function apiBase(locale: Locale): string {
   return originForLocale(locale);
 }
 
 /** Absolute URL for a (locale, route) pair, e.g. https://stretchplafond.nl/products. */
 export function buildCanonical(locale: Locale, route: string): string {
-  // Home resolves to the bare origin; every other route is origin + path.
-  return `${originForLocale(locale)}${normalizeRoute(route)}`;
+  // Home resolves to the bare origin (+ public prefix); every other route is
+  // origin + prefix + path.
+  return `${localeBase(locale)}${normalizeRoute(route)}`;
 }
 
 /** Canonical-order locale subset: all LIVE locales, or their intersection

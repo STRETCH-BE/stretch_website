@@ -24,7 +24,7 @@ import { Link } from '@/i18n/navigation';
 import { ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, Calculator, Car, Factory, Mail, MapPin, Phone } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { brand, contact, offices, siteUrl, swissPartner } from '@/lib/site-config';
-import { localeBase, buildAlternates } from '@/lib/seo';
+import { localeBase, buildAlternates, apiBase } from '@/lib/seo';
 import { breadcrumbSchema, localBusinessSchema, branchLocalBusinessSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -44,6 +44,7 @@ import {
 } from '@/lib/dealers';
 import { getProjectBySlug, blogPostsFor, blogHref } from '@/lib/content';
 import { pricesPublished } from '@/lib/currency';
+import { priceGuideCh, priceGuideChReady } from '@/lib/price-guide-ch';
 import { localizeProject, type ProjectMessages } from '@/lib/localize-content';
 
 // Every valid (locale, place) pair is enumerated below. dynamicParams=false →
@@ -69,7 +70,7 @@ export async function generateMetadata({ params }: { params: { locale: string; p
   const title = hasDealers ? t('metaTitleDealer', { place: placeLabel }) : t('metaTitleRecruit', { place: placeLabel });
   const description = hasDealers ? t('metaDescDealer', { place: placeLabel }) : t('metaDescRecruit', { place: placeLabel });
   const route = `/dealers/${place.slug}`;
-  const ogImg = `${localeBase(locale)}/api/og`;
+  const ogImg = `${apiBase(locale)}/api/og`;
   // A locale may carry the brand in its own title pattern ("… | STRETCH × QuinLay AG").
   const fullTitle = title.includes(`| ${brand.name}`) ? title : `${title} | ${brand.name}`;
   return {
@@ -188,9 +189,15 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
             <Car size={15} style={{ color: 'var(--red)' }} /> {t('driveTime', { minutes: place!.driveMinutes })}
           </p>
         )}
-        {/* "What does a stretch ceiling cost in <place>?" → the calculator (T6). */}
+        {/* "What does a stretch ceiling cost in <place>?" → the calculator (T6);
+            on de-CH the Swiss CHF price guide instead, once QuinLay's ranges are in. */}
         {pricesPublished(locale) && (
           <Link href="/price-calculator" className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, fontWeight: 700, fontSize: 14.5 }}>
+            <Calculator size={16} style={{ color: 'var(--red)' }} /> {t('costLine', { place: placeLabel })} →
+          </Link>
+        )}
+        {locale === 'ch' && priceGuideChReady && (
+          <Link href={priceGuideCh.route} className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, fontWeight: 700, fontSize: 14.5 }}>
             <Calculator size={16} style={{ color: 'var(--red)' }} /> {t('costLine', { place: placeLabel })} →
           </Link>
         )}

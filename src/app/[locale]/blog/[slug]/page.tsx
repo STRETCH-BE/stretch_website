@@ -11,7 +11,7 @@ import { ArrowLeft, ArrowRight, Calculator } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { isValidLocale, locales, type Locale } from '@/i18n/config';
 import { brand } from '@/lib/site-config';
-import { localeBase, buildAlternates, buildOgLocales } from '@/lib/seo';
+import { localeBase, buildAlternates, buildOgLocales, apiBase } from '@/lib/seo';
 import { localeFullCodes } from '@/i18n/config';
 import { blogPostsFor, blogPostForSlug, blogHref, slugForLocale } from '@/lib/content';
 import { localizeHref } from '@/lib/blog-slugs';
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: { locale: string; s
   // each alternate names THAT locale's slug (routeFor) — never the Dutch one.
   const { ogLocale, alternate } = buildOgLocales(locale, base.markets);
   // OG images resolve by CANONICAL slug (api/og/[slug] looks the post up).
-  const ogImg = `${localeBase(locale)}/api/og/${base.slug}`;
+  const ogImg = `${apiBase(locale)}/api/og/${base.slug}`;
 
   return {
     title: { absolute: `${post.title} | ${brand.name}` },

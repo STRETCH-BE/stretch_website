@@ -17,6 +17,9 @@ import {
   localeForHost,
   originForLocale,
   localeFullCodes,
+  localeDomains,
+  publicPrefix,
+  localeShortLabel,
   type Locale,
 } from '@/i18n/config';
 import { analytics } from '@/lib/analytics';
@@ -30,6 +33,11 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
     const p = pathForLocale(pathname, locale, l);
     return p === '/' ? '' : p;
   };
+  // A domain that serves several locales (stretchdecken.ch: DE | FR) lists
+  // only its own; everywhere else the list is one entry per DOMAIN — a
+  // path-prefixed second locale is reached through its domain's entry.
+  const siblings = liveLocales.filter((l) => localeDomains[l] === localeDomains[locale]);
+  const options = siblings.length > 1 ? siblings : liveLocales.filter((l) => !publicPrefix(l));
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -57,7 +65,7 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
       typeof window !== 'undefined' && localeForHost(window.location.host) !== null;
     if (onKnownDomain) {
       const search = window.location.search || '';
-      window.location.assign(`${originForLocale(next)}${targetPath(next)}${search}`);
+      window.location.assign(`${originForLocale(next)}${publicPrefix(next)}${targetPath(next)}${search}`);
       return;
     }
 
@@ -86,7 +94,7 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
           textTransform: 'uppercase',
         }}
       >
-        {locale.toUpperCase()}
+        {localeShortLabel(locale)}
         <ChevronDown size={12} />
       </button>
       {open && (
@@ -108,7 +116,7 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
             zIndex: 80,
           }}
         >
-          {liveLocales.map((l) => (
+          {options.map((l) => (
             <li key={l}>
               {/* Real anchor: crawlable absolute URL in the markup; the click
                   handler keeps the JS behaviour (analytics + dev fallback) as
@@ -116,7 +124,7 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
               <a
                 role="option"
                 aria-selected={l === locale}
-                href={`${originForLocale(l)}${targetPath(l)}`}
+                href={`${originForLocale(l)}${publicPrefix(l)}${targetPath(l)}`}
                 hrefLang={localeFullCodes[l]}
                 onClick={(e) => {
                   e.preventDefault();
