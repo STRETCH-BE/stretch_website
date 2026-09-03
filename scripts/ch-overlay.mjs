@@ -88,7 +88,8 @@ const OVERRIDES = {
   'meta.homeTitle': 'STRETCH — Spanndecken Schweiz & Liechtenstein | Generalvertretung QuinLay AG',
   'meta.homeDescription':
     'Fugenlose Spanndecken und Spannwände vom Hersteller (Belgien & Polen), in der Schweiz und in Liechtenstein beraten, ausgestellt und montiert über die Generalvertretung QuinLay AG, Rickenbach LU. Showroom, Schulungsraum, Lager in der Schweiz.',
-  'common.handMadeInBelgium': 'Hersteller aus Belgien & Polen · Generalvertretung Schweiz: QuinLay AG',
+  // Utility-bar tagline: one line at 11.5px beside five links — keep it short.
+  'common.handMadeInBelgium': 'Generalvertretung CH & FL: QuinLay AG',
   'footer.tagline':
     'Spanndecken und Spannwände aus eigener Produktion in Belgien und Polen – in der Schweiz und in Liechtenstein beraten, geliefert und montiert über unsere Generalvertretung QuinLay AG, Rickenbach LU.',
   // Dealer directory — every Swiss page is a real QuinLay page.

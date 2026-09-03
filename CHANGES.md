@@ -114,6 +114,18 @@ go-live list at the end.
   `LeadGenModal`) — offers the two QuinLay courses instead of the
   Beveren-Waas dates on a partner-run locale. All 13 phone placeholders on
   ch read "+41 ..." (overlay rule). Home hero subline names QuinLay.
+- **Header sizing.** The Vercel preview showed the ch utility bar wrapping
+  onto two lines (a 71-character tagline beside five links) and the CTA
+  wrapping its arrow. The Swiss tagline is now "Generalvertretung CH & FL:
+  QuinLay AG"; structurally, `Header.tsx` + `globals.css` make the bar and
+  the nav one-line for every locale: the tagline truncates with an ellipsis
+  (`.hdr-tag__text`), links/phone/switcher never wrap or shrink
+  (`.hdr-util`), `.btn` is `white-space: nowrap`, `.btn.only-desktop` is
+  `inline-flex` again (the later `.only-desktop { display: initial }` rule
+  had turned the header CTA into a block on EVERY locale — that is why its
+  arrow wrapped), and below 1280px / 1100px
+  the nav and utility gaps tighten so seven German nav items plus the CTA
+  still fit on one line.
 - **Verified** on `next start` with Host headers and Playwright (Chromium,
   consent pre-seeded): `/dealers/zuerich`, `/dealers/vaduz`,
   `/installer-training`, `/contact`, `/partners`, `/kit` and `/` on
