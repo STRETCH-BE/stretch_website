@@ -254,7 +254,7 @@ export function InquiryBar() {
                     <input type="checkbox" required checked={consent} onChange={(e) => setConsent(e.target.checked)} style={{ marginTop: 2, accentColor: 'var(--red)' }} />
                     <span>
                       {t('consent')}{' '}
-                      <Link href="/privacy" style={{ color: 'var(--red)' }}>{t('privacyLabel')}</Link>
+                      <Link href="/privacy" prefetch={false} style={{ color: 'var(--red)' }}>{t('privacyLabel')}</Link>
                     </span>
                   </label>
 

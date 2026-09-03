@@ -176,7 +176,7 @@ export default async function TrainingPage({ params }: { params: { locale: strin
           <div className="tr-curric grid-lines grid-lines--dark" style={{ gridTemplateColumns: 'repeat(3,1fr)' }}>
             {curriculum.map((c, i) => (
               <div key={c.title} style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)' }}>
-                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, color: 'var(--red)', fontSize: 14, letterSpacing: '.05em' }}>{String(i + 1).padStart(2, '0')}</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, color: 'var(--red-bright)', fontSize: 14, letterSpacing: '.05em' }}>{String(i + 1).padStart(2, '0')}</div>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 21, letterSpacing: '-.01em', margin: '16px 0 11px' }}>{c.title}</h3>
                 <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: 0 }}>{c.body}</p>
               </div>
@@ -264,13 +264,13 @@ export default async function TrainingPage({ params }: { params: { locale: strin
         <div className="container section">
           <div className="tr-book" style={{ display: 'grid', gridTemplateColumns: '.85fr 1.15fr', gap: 'clamp(32px,4vw,64px)', alignItems: 'start' }}>
             <div>
-              <Eyebrow num="05" label={t('book.eyebrow')} tone="dark" />
+              <Eyebrow num="05" label={t('book.eyebrow')} tone="red" />
               <h2 className="h2" style={{ color: '#fff', margin: '0 0 22px' }}>{t('book.titleA')}<br /><span style={{ color: 'var(--black)' }}>{t('book.titleB')}.</span></h2>
               {/* HQ inclusions (certificate, starter kit, lunch) are Beveren-Waas facts —
                   a partner-run locale makes no such claims for the partner's courses. */}
               {!partnerRun && (
                 <>
-                  <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,.8)', marginBottom: 14 }}>{t('book.includedLabel')}</div>
+                  <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: '#fff', marginBottom: 14 }}>{t('book.includedLabel')}</div>
                   <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
                     {included.map((p) => (
                       <li key={p} style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 15, color: '#fff', fontWeight: 500 }}>

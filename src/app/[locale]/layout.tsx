@@ -13,6 +13,7 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { locales, isValidLocale, localeFullCodes, type Locale } from '@/i18n/config';
+import { clientMessages } from '@/i18n/client-messages';
 import { siteUrl, brand } from '@/lib/site-config';
 import { localeBase, buildAlternates, buildOgLocales, apiBase } from '@/lib/seo';
 import { ConsentModeDefaults, ScrollTracker, AnalyticsScripts } from '@/components/analytics';
@@ -87,7 +88,7 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={clientMessages(messages)}>
       {/* Consent Mode v2 defaults — must run before analytics. */}
       <ConsentModeDefaults />
       <AnalyticsScripts />

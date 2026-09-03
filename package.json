@@ -2,14 +2,15 @@
   "name": "stretch-website",
   "version": "1.0.0",
   "private": true,
-  "description": "STRETCH — production marketing website (Next.js 14, App Router)",
+  "description": "STRETCH \u2014 production marketing website (Next.js 14, App Router)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test": "node scripts/spam-score.test.mjs"
+    "test": "node scripts/spam-score.test.mjs",
+    "check:client-messages": "node scripts/check-client-messages.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",

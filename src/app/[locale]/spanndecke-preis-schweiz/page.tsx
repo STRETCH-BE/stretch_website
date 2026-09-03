@@ -144,9 +144,9 @@ export default async function SwissPriceGuidePage({ params }: { params: { locale
         <div className="container section">
           <div className="pg-cta" style={{ display: 'grid', gridTemplateColumns: '.9fr 1.1fr', gap: 'clamp(32px,4vw,64px)', alignItems: 'start' }}>
             <div>
-              <Eyebrow num="03" label={g.eyebrow} tone="dark" />
+              <Eyebrow num="03" label={g.eyebrow} tone="red" />
               <h2 className="h2" style={{ color: '#fff', margin: '0 0 18px' }}>{g.ctaHeading}<span style={{ color: 'var(--black)' }}>.</span></h2>
-              <p style={{ fontSize: 15.5, lineHeight: 1.65, color: 'rgba(255,255,255,.9)', margin: '0 0 22px', maxWidth: 520 }}>{g.ctaBody}</p>
+              <p style={{ fontSize: 15.5, lineHeight: 1.65, color: '#fff', margin: '0 0 22px', maxWidth: 520 }}>{g.ctaBody}</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
                 <ModalButton type="quote" source={g.sources.quote} trackQuote className="btn btn--dark">
                   {g.ctaButton} <ArrowRight size={16} />
@@ -155,7 +155,7 @@ export default async function SwissPriceGuidePage({ params }: { params: { locale
                   {g.ctaShowroom} <ArrowRight size={16} />
                 </Link>
               </div>
-              <p style={{ fontSize: 13, color: 'rgba(255,255,255,.8)', margin: '22px 0 0', maxWidth: 520 }}>
+              <p style={{ fontSize: 13, color: '#fff', margin: '22px 0 0', maxWidth: 520 }}>
                 {swissPartner.name} · {swissPartner.street}, {swissPartner.postalCode} {swissPartner.city} ·{' '}
                 <a href={swissPartner.phoneHref} style={{ color: '#fff', fontWeight: 700 }}>{swissPartner.phoneDisplay}</a>
               </p>

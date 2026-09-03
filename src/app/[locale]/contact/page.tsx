@@ -190,7 +190,7 @@ export default async function ContactPage({ params }: { params: { locale: string
             <h2 className="h2 h2--sm" style={{ color: '#fff', margin: '0 0 8px' }}>
               {isDealerMarket(locale) ? t('dealerTitle') : t('directTitle')}
             </h2>
-            <p style={{ color: 'rgba(255,255,255,.9)', margin: 0, maxWidth: 460 }}>
+            <p style={{ color: '#fff', margin: 0, maxWidth: 460 }}>
               {isDealerMarket(locale) ? t('dealerBody') : t('directBody')}
             </p>
           </div>

@@ -4,7 +4,9 @@
 // closed — demo mode (with the preview accounts listed) only appears when
 // NEXT_PUBLIC_PORTAL_DEMO=1 is set, so demo credentials never show on the
 // production site by accident.
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale, getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import { clientMessagesWith, PAGE_NAMESPACES } from '@/i18n/client-messages';
 import { redirect } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
@@ -20,6 +22,7 @@ export default async function PortalLoginPage({
 }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   setRequestLocale(locale);
+  const messages = await getMessages();
 
   // Already signed in → straight to the portal.
   const session = await getPortalSession();
@@ -33,6 +36,7 @@ export default async function PortalLoginPage({
   const mode: 'live' | 'demo' | 'closed' = configured ? 'live' : demo ? 'demo' : 'closed';
 
   return (
+    <NextIntlClientProvider messages={clientMessagesWith(messages, PAGE_NAMESPACES.portal)}>
     <div className="portal-login">
       <section className="portal-login__brand">
         <div>
@@ -81,5 +85,6 @@ export default async function PortalLoginPage({
         }
       ` }} />
     </div>
+    </NextIntlClientProvider>
   );
 }

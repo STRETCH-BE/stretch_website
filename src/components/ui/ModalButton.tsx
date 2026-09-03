@@ -5,7 +5,7 @@
 // section becoming a client component. `as="link"` renders an <a> styled like a
 // text link; default renders a styled button.
 import type { ReactNode } from 'react';
-import { useLeadModal } from '@/components/LeadGenModal';
+import { useLeadModal, preloadLeadModal } from '@/components/LeadGenModal';
 import type { ModalType } from '@/lib/forms-config';
 import { analytics } from '@/lib/analytics';
 
@@ -35,6 +35,8 @@ export function ModalButton({
   const { open } = useLeadModal();
   return (
     <button
+      onPointerEnter={preloadLeadModal}
+      onFocus={preloadLeadModal}
       type="button"
       className={className}
       style={style}
@@ -59,6 +61,8 @@ export function ModalTextLink({
   const { open } = useLeadModal();
   return (
     <button
+      onPointerEnter={preloadLeadModal}
+      onFocus={preloadLeadModal}
       type="button"
       className={className}
       style={{

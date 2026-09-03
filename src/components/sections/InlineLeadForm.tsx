@@ -189,7 +189,7 @@ export default function InlineLeadForm({
         <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} style={{ marginTop: 3, accentColor: dark ? '#fff' : 'var(--red)', width: 16, height: 16, flexShrink: 0 }} />
         <span>
           {ti('consentPrefix')}{' '}
-          <Link href="/privacy" className="lnk" style={{ color: dark ? '#fff' : 'var(--red)', textDecoration: 'underline' }}>{ti('consentPrivacy')}</Link>.
+          <Link href="/privacy" prefetch={false} className="lnk" style={{ color: dark ? '#fff' : 'var(--red)', textDecoration: 'underline' }}>{ti('consentPrivacy')}</Link>.
         </span>
       </label>
       {errors.__consent && <div style={errStyle}>{errors.__consent}</div>}

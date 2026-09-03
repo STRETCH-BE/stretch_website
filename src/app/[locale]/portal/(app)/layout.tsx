@@ -2,7 +2,9 @@
 // /portal/admin. Redirects to the login page when there is no active session
 // and renders the dark portal bar (nav + account + sign out) above the pages.
 import type { ReactNode } from 'react';
-import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { setRequestLocale, getTranslations, getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import { clientMessagesWith, PAGE_NAMESPACES } from '@/i18n/client-messages';
 import { redirect } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
@@ -18,6 +20,7 @@ export default async function PortalAppLayout({
 }) {
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   setRequestLocale(locale);
+  const messages = await getMessages();
 
   const session = await getPortalSession();
   if (!session) redirect({ href: '/portal/login', locale });
@@ -26,6 +29,7 @@ export default async function PortalAppLayout({
   const { profile } = session!;
 
   return (
+    <NextIntlClientProvider messages={clientMessagesWith(messages, PAGE_NAMESPACES.portal)}>
     <div style={{ background: 'var(--surface)', minHeight: '60vh' }}>
       <PortalNav
         isAdmin={profile.role === 'admin'}
@@ -49,5 +53,6 @@ export default async function PortalAppLayout({
       />
       {children}
     </div>
+    </NextIntlClientProvider>
   );
 }
