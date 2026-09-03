@@ -19,6 +19,13 @@ import { pageImages } from '@/lib/page-images';
 import { ModalButton } from '@/components/ui/ModalButton';
 import InlineLeadForm from '@/components/sections/InlineLeadForm';
 import { localeBase } from '@/lib/seo';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+// QuinLay AG logo for the Swiss partner card — rendered only when the file
+// exists (build-time check), so the card never shows an empty logo box.
+const QUINLAY_LOGO_PATH = '/images/partners/quinlay.png';
+const QUINLAY_LOGO = existsSync(join(process.cwd(), 'public', QUINLAY_LOGO_PATH)) ? QUINLAY_LOGO_PATH : '';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/partners', titleKey: 'partnersTitle', descKey: 'partnersDescription' });
@@ -207,9 +214,12 @@ export default async function PartnersPage({ params }: { params: { locale: strin
                 ...(isSwissLocale(locale)
                   ? [
                       <a key="quinlay-card" href={swissPartner.url} target="_blank" rel="noopener" style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)', display: 'block', textDecoration: 'none', color: 'inherit' }}>
-                        <div style={{ width: 120, height: 44, marginBottom: 18, position: 'relative' }}>
-                          <Placeholder label="QuinLay AG" src="/images/partners/quinlay.png" alt={swissPartner.name} sizes="120px" fit="contain" bg="#fff" />
-                        </div>
+                        {/* Logo only once the file is in the repo — no empty white box before that. */}
+                        {QUINLAY_LOGO && (
+                          <div style={{ width: 120, height: 44, marginBottom: 18, position: 'relative' }}>
+                            <Placeholder label="QuinLay AG" src={QUINLAY_LOGO} alt={swissPartner.name} sizes="120px" fit="contain" bg="#fff" />
+                          </div>
+                        )}
                         <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 21, letterSpacing: '-.01em', margin: '0 0 11px' }}>{t('why.quinlayCard.title')}</h3>
                         <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: '0 0 14px' }}>{t('why.quinlayCard.body')}</p>
                         <span style={{ color: 'var(--red-bright)', fontWeight: 700, fontSize: 14, display: 'inline-flex', alignItems: 'center', gap: 7 }}>
