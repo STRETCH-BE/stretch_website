@@ -54,23 +54,32 @@ export const defaultLocale: Locale = 'en';
 // DOMAIN MAP — the only place production domains are defined.
 // Override any entry per-deploy with NEXT_PUBLIC_DOMAIN_<LOCALE> if needed.
 // ---------------------------------------------------------------------------
+// An env override is a bare hostname. Tolerate the ways it gets pasted wrong
+// ("https://…", "www.…", a trailing slash, whitespace, upper case): a domain
+// the map does not recognise makes every page on it fall back to English and
+// breaks the cross-domain language switch — silently.
+function domain(env: string | undefined, fallback: string): string {
+  const v = (env ?? '').trim().toLowerCase().replace(/^https?:\/\//, '').replace(/\/.*$/, '').replace(/^www\./, '');
+  return v || fallback;
+}
+
 export const localeDomains: Record<Locale, string> = {
-  en: process.env.NEXT_PUBLIC_DOMAIN_EN || 'stretch.mt', // en + x-default (global); .us still 308 → here
-  uk: process.env.NEXT_PUBLIC_DOMAIN_UK || 'stretch-ceilings.uk', // en-GB — UK kit/materials market
-  us: process.env.NEXT_PUBLIC_DOMAIN_US || 'stretchceiling.us', // en-US — own market (audit 30 Aug 2026, F13)
-  be: process.env.NEXT_PUBLIC_DOMAIN_BE || 'stretchplafond.be',
-  nl: process.env.NEXT_PUBLIC_DOMAIN_NL || 'stretchplafond.nl',
-  fr: process.env.NEXT_PUBLIC_DOMAIN_FR || 'stretchplafond.fr',
-  pl: process.env.NEXT_PUBLIC_DOMAIN_PL || 'stretch-sufit.pl',
-  de: process.env.NEXT_PUBLIC_DOMAIN_DE || 'stretchdecken.de',
-  ch: process.env.NEXT_PUBLIC_DOMAIN_CH || 'stretchdecken.ch', // bought 2 Sep 2026 (+ .li → 308 here); stretchgroup.ch/.li → here at the registrar
-  'fr-ch': process.env.NEXT_PUBLIC_DOMAIN_CH || 'stretchdecken.ch', // Romandie — same host as ch, public prefix /fr (localePathPrefix below)
-  es: process.env.NEXT_PUBLIC_DOMAIN_ES || 'stretchtecho.es',
-  pt: process.env.NEXT_PUBLIC_DOMAIN_PT || 'stretchteto.pt',
-  da: process.env.NEXT_PUBLIC_DOMAIN_DA || 'straekloft.dk', // strækloft.dk (xn--strkloft-l0a.dk) 308 → here
-  sv: process.env.NEXT_PUBLIC_DOMAIN_SV || 'stretchceilings.se', // spänntak.se (xn--spnntak-6wa.se) 308 → here
-  no: process.env.NEXT_PUBLIC_DOMAIN_NO || 'stretchtak.no', // strekktak.no held by competitor, registrar lapsed — backorder for the drop
-  is: process.env.NEXT_PUBLIC_DOMAIN_IS || 'stretch.is',
+  en: domain(process.env.NEXT_PUBLIC_DOMAIN_EN, 'stretch.mt'), // en + x-default (global); .us still 308 → here
+  uk: domain(process.env.NEXT_PUBLIC_DOMAIN_UK, 'stretch-ceilings.uk'), // en-GB — UK kit/materials market
+  us: domain(process.env.NEXT_PUBLIC_DOMAIN_US, 'stretchceiling.us'), // en-US — own market (audit 30 Aug 2026, F13)
+  be: domain(process.env.NEXT_PUBLIC_DOMAIN_BE, 'stretchplafond.be'),
+  nl: domain(process.env.NEXT_PUBLIC_DOMAIN_NL, 'stretchplafond.nl'),
+  fr: domain(process.env.NEXT_PUBLIC_DOMAIN_FR, 'stretchplafond.fr'),
+  pl: domain(process.env.NEXT_PUBLIC_DOMAIN_PL, 'stretch-sufit.pl'),
+  de: domain(process.env.NEXT_PUBLIC_DOMAIN_DE, 'stretchdecken.de'),
+  ch: domain(process.env.NEXT_PUBLIC_DOMAIN_CH, 'stretchdecken.ch'), // bought 2 Sep 2026 (+ .li → 308 here); stretchgroup.ch/.li → here at the registrar
+  'fr-ch': domain(process.env.NEXT_PUBLIC_DOMAIN_CH, 'stretchdecken.ch'), // Romandie — same host as ch, public prefix /fr (localePathPrefix below)
+  es: domain(process.env.NEXT_PUBLIC_DOMAIN_ES, 'stretchtecho.es'),
+  pt: domain(process.env.NEXT_PUBLIC_DOMAIN_PT, 'stretchteto.pt'),
+  da: domain(process.env.NEXT_PUBLIC_DOMAIN_DA, 'straekloft.dk'), // strækloft.dk (xn--strkloft-l0a.dk) 308 → here
+  sv: domain(process.env.NEXT_PUBLIC_DOMAIN_SV, 'stretchceilings.se'), // spänntak.se (xn--spnntak-6wa.se) 308 → here
+  no: domain(process.env.NEXT_PUBLIC_DOMAIN_NO, 'stretchtak.no'), // strekktak.no held by competitor, registrar lapsed — backorder for the drop
+  is: domain(process.env.NEXT_PUBLIC_DOMAIN_IS, 'stretch.is'),
 };
 
 // ---------------------------------------------------------------------------
@@ -91,11 +100,11 @@ export const localeStatus: Record<Locale, 'live' | 'pending'> = {
   fr: 'live',
   pl: 'live',
   de: 'live',
-  // stretchdecken.ch — domain bought 2 Sep 2026, not yet on Vercel/DNS. Flip to
-  // 'live' the day it resolves: that one change adds de-CH to hreflang, the
-  // sitemaps and the switcher on every domain.
-  ch: 'pending',
-  'fr-ch': 'pending', // flips together with ch — same domain
+  // stretchdecken.ch — live since 3 Sep 2026 (domain on Vercel, QuinLay AG):
+  // de-CH and fr-CH are in hreflang, the sitemaps and the switcher on every
+  // domain. Both flags move together — one domain, two locales.
+  ch: 'live',
+  'fr-ch': 'live',
   es: 'live',
   pt: 'pending', // stretchteto.pt — no DNS yet
   da: 'live',

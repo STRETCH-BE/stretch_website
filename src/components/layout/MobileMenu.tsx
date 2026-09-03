@@ -72,7 +72,9 @@ export default function MobileMenu() {
       return;
     }
     setOpen(false);
-    router.replace(pathname, { locale: next });
+    // Any other host: navigate to the path-prefixed URL (see LanguageSwitcher).
+    const search = window.location.search || '';
+    window.location.assign(`/${next}${targetPath(next)}${search}`);
   }
 
   useEffect(() => {
