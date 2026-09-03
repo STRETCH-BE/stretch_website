@@ -58,7 +58,14 @@ domains + previews + localhost, so there are two widgets (`src/lib/turnstile.ts`
   `stretchplafond.fr`, `stretch-sufit.pl`, `stretchdecken.de`, `stretchtecho.es`
 - **Group B** (`NEXT_PUBLIC_TURNSTILE_SITEKEY_B` / `TURNSTILE_SECRET_B`):
   `stretchteto.pt`, `straekloft.dk`, `stretchceilings.se`, `stretchtak.no`,
-  `stretch.is`
+  `stretch.is`, `stretchceiling.us`, `stretchdecken.ch`
+
+A hostname that is missing from its widget in the Cloudflare dashboard fails
+closed: the widget never issues a token and every lead from that domain gets
+the "security check failed" message (US, 30 Aug 2026; Switzerland, 3 Sep
+2026). The hostname does NOT have to be a Cloudflare zone — type it into the
+widget's hostname field. Adding a hostname needs no redeploy; changing a
+`NEXT_PUBLIC_*` key does (inlined at build).
 
 The client picks the sitekey by `window.location.hostname`; the server tries
 the matching secret first and the other one as fallback. Local testing keys

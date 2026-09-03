@@ -13,6 +13,8 @@ import { localeBase, buildAlternates, apiBase } from '@/lib/seo';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
+import Placeholder from '@/components/ui/Placeholder';
+import { pageImages } from '@/lib/page-images';
 import { ModalButton } from '@/components/ui/ModalButton';
 import { dealerPlaces, placeDealers, dealerMarkets, isDealerMarket, regionsForLocale, regionLabelKeys } from '@/lib/dealers';
 
@@ -64,6 +66,10 @@ export default async function DealersOverviewPage({ params }: { params: { locale
           {t('ovTitle')}<span className="accent">.</span>
         </h1>
         <p className="lead" style={{ maxWidth: 660, margin: 0 }}>{t('ovIntro')}</p>
+        {/* Dealer network photo — wide band under the intro (pageImages.dealers). */}
+        <div style={{ marginTop: 'clamp(24px,3vw,40px)' }}>
+          <Placeholder label="Dealer network" src={pageImages.dealers} alt="" decorative sizes="(max-width: 1200px) 100vw, 1200px" ratio="21/9" />
+        </div>
       </section>
 
       {/* Regions */}

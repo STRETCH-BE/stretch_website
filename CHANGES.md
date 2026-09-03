@@ -1,3 +1,38 @@
+## 2026-09-03 (29) — Picture audit, part 1 + Clipso 404
+
+Michael's picture audit (first batch, 11 files) filled the empty image
+slots; the files were resized to a 2048px long edge (2400px for the print
+photo), 82 % progressive JPEG, EXIF-rotated and stripped:
+
+- `home/cta-band.jpg` → `homeImages.ctaBand` (closing CTA, was label-only).
+- `pages/about-workshop.jpg` → `pageImages.about` (was label-only).
+- `pages/training.jpg` and `home/installer.jpg` replaced with the new
+  photos (the installer photo also feeds the partners page and the
+  technical mega-menu promo).
+- `products/led-line-stretch-ceiling.jpg` (PNG → JPEG, flattened) →
+  light-print feature [1] "LED line lighting" (was empty).
+- `products/custom-print-edge-to-edge.jpg` → custom-print feature [0] "Your
+  image, edge to edge" (was empty).
+- `projects/veta-interieur-showroom-{hero,1,2,3}.jpg` → the Veta Interieur
+  project's `image` (was borrowing a product photo) and its gallery (was
+  three empty strings).
+- `pages/dealer-network.jpg` (the Corpus Interieur team) → a new
+  `pageImages.dealers` slot, rendered as a wide band under the intro of
+  the dealer-network overview.
+
+Still label-only after this batch: `pageImages.contact`, the prefab
+feature tiles, four blog images (`acoustics-explained`,
+`plafond-afwerken-na-isolatie`, `plafond-renoveren-opties`,
+`spanplafond-premie-btw`), `materials/alu-profile.jpg`,
+`products/polyester-hero.jpg` and the QuinLay logo.
+
+Redirect: `/clipso-spanplafond` (singular, still linked externally) 404ed
+on stretchplafond.be — now 308 → `/blog/clipso-spanplafonds` on .be and .nl
+next to the existing plural rule.
+
+`docs/ANTI-SPAM.md` group B hostname list now includes stretchceiling.us and
+stretchdecken.ch (matches `src/lib/turnstile.ts`).
+
 ## 2026-09-03 (28) — Switzerland live: de-CH and fr-CH advertised everywhere
 
 `localeStatus.ch` and `localeStatus['fr-ch']` flipped from `pending` to
