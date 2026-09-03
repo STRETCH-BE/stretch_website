@@ -1,3 +1,30 @@
+## 2026-09-03 (32) — Header nav on long-label locales, mega-menu photo quality, FAQ card
+
+- **Header nav overlapped the logo and the CTA on stretch-sufit.pl and
+  stretch.is.** Polish has eight primary items ("Szkolenie dla
+  montażystów" among them) and Icelandic labels like "Algengar
+  spurningar" / "Samstarfsaðilar" — 89 and 76 characters against ~55 on
+  the other locales — at one fixed 13.5px / 30px-gap size. `Header.tsx`
+  now sets `data-nav` on the header from the total label length
+  (`dense` > 60, `x-dense` > 72 characters) and `globals.css` tightens
+  font-size and gaps per step and per breakpoint (the nav's gap/size moved
+  from inline styles into the stylesheet so the steps apply). The Polish
+  training item reads "Szkolenia" (was "Szkolenie dla montażystów";
+  `common.nav.training`, also the mobile menu). Below 1100px the two
+  x-dense locales open the mobile drawer instead (the other locales keep
+  the desktop nav down to 860px, with a slightly narrower CTA). Verified
+  on all 16 locales at 1100 / 1280 / 1440 / 1920px: no overlap between
+  logo, nav and CTA.
+- **Mega-menu promo photos were blurry**: the 330px promo column is
+  ~480px tall, so object-fit cover scales the 3:2 photo to ~720 CSS px
+  (1440 on retina), but `sizes="360px"` fetched the 384px variant and
+  upscaled it. Now `sizes="720px"`, quality 82.
+- **FAQ side card**: "Praat met een spanplafondspecialist." (nl/be) and
+  "Prata med en spänntaksspecialist." (sv) end in one unbreakable word
+  that overflowed the 340px black card as white-on-white. The title is
+  capped at 23px with `hyphens: auto` (lang set) and `overflow-wrap:
+  anywhere`; the card has `min-width: 0`.
+
 ## 2026-09-03 (31) — Installer-training hero: photo sizing
 
 On stretch.mt/installer-training the hero photo rendered ~230px wide next

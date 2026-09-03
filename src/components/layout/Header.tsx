@@ -22,6 +22,12 @@ type OpenMenu = 'solutions' | 'technical' | null;
 export default function Header() {
   const t = useTranslations('common');
   const locale = useLocale() as Locale;
+  // Primary-nav density: Polish (8 items, "Szkolenia") and Icelandic
+  // ("Algengar spurningar", "Samstarfsaðilar") labels are far longer than the
+  // others and overlapped the logo and the CTA. The nav tightens its
+  // font-size and gaps by total label length (globals.css, [data-nav]).
+  const navChars = [t('nav.solutions'), t('nav.technical'), ...(locale === 'pl' ? [t('nav.training')] : []), t('nav.materials'), t('nav.inspiration'), t('nav.partners'), t('nav.faq'), t('nav.contact')].join('').length;
+  const navDensity = navChars > 72 ? 'x-dense' : navChars > 60 ? 'dense' : 'normal';
   const solutionsMenu = useSolutionsMenu();
   const technicalMenu = useTechnicalMenu();
   const pathname = usePathname();
@@ -47,7 +53,7 @@ export default function Header() {
         backdropFilter: 'blur(10px)',
         borderBottom: '1px solid var(--border)',
       }}
-    >
+     data-nav={navDensity}>
       {/* Utility bar */}
       <div style={{ background: 'var(--black)', color: '#fff' }}>
         <div className="container" style={{ height: 42, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -80,7 +86,7 @@ export default function Header() {
           <span style={{ color: 'var(--red)', fontWeight: 900, fontSize: 16 }}>®</span>
         </Link>
 
-        <nav className="only-desktop hdr-nav" aria-label="Primary" style={{ display: 'flex', alignItems: 'center', gap: 30, fontSize: 13.5, fontWeight: 600, letterSpacing: '.03em', textTransform: 'uppercase' }}>
+        <nav className="only-desktop hdr-nav" aria-label="Primary" style={{ display: 'flex', alignItems: 'center', fontWeight: 600, textTransform: 'uppercase' }}>
           <NavDrop label={t('nav.solutions')} href="/products" active={open === 'solutions'} onEnter={() => setOpen('solutions')} />
           <NavDrop label={t('nav.technical')} href="/products" active={open === 'technical'} onEnter={() => setOpen('technical')} />
           {/* Poland: the academy is the differentiator — installer training is a

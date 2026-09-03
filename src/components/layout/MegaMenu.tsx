@@ -272,7 +272,11 @@ export default function MegaMenu({ config, onNavigate }: { config: MegaConfig; o
             label="Featured ceiling"
             src={config.promo.image}
             alt={config.promo.title}
-            sizes="360px"
+            // The 330px column is ~480px tall: object-fit cover scales a 3:2 photo
+            // to ~720 CSS px wide (×2 on retina). sizes="360px" fetched the 384px
+            // variant and upscaled it — blurry.
+            sizes="720px"
+            quality={82}
             style={{ position: 'absolute', inset: 0, height: '100%' }}
           />
           <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: 22, background: 'linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,0))' }}>
