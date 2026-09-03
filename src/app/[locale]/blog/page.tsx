@@ -46,12 +46,12 @@ export default async function BlogIndex({ params }: { params: { locale: string }
         </h1>
 
         <div className="blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 18 }}>
-          {blogPostsFor(locale).map((base) => {
+          {blogPostsFor(locale).map((base, i) => {
             const p = localizeBlogPost(base, (tb.raw('posts') as Record<string, BlogPostMessages>)[base.slug]);
             return (
             <article key={p.slug} style={{ border: '1px solid var(--border)', background: '#fff', display: 'flex', flexDirection: 'column' }}>
-              <Link href={blogHref(base, locale)} className="zoom-wrap" style={{ display: 'block', overflow: 'hidden' }}>
-                <Placeholder label={p.title} src={p.image} alt={p.title} sizes="(max-width: 860px) 100vw, 50vw" light ratio="16/9" className="zoom-img" decorative />
+              <Link href={blogHref(base, locale)} className="zoom-wrap" aria-label={p.title} style={{ display: 'block', overflow: 'hidden' }}>
+                <Placeholder label={p.title} src={p.image} alt={p.title} sizes="(max-width: 860px) 100vw, 50vw" priority={i < 2} light ratio="16/9" className="zoom-img" decorative />
               </Link>
               <div style={{ padding: 'clamp(24px,2.6vw,34px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <div style={{ fontSize: 12, fontWeight: 600, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--text-faint)', marginBottom: 14 }}>

@@ -146,7 +146,7 @@ export default function ContactForm() {
         <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} style={{ marginTop: 3, accentColor: 'var(--red)', width: 16, height: 16, flexShrink: 0 }} />
         <span>
           {tc('consentPrefix')}{' '}
-          <Link href="/privacy" className="lnk" style={{ color: 'var(--red)' }}>{tc('consentPrivacy')}</Link>.
+          <Link href="/privacy" prefetch={false} className="lnk" style={{ color: 'var(--red)' }}>{tc('consentPrivacy')}</Link>.
         </span>
       </label>
       {errors.__consent && <div style={errStyle}>{errors.__consent}</div>}

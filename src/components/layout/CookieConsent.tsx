@@ -81,7 +81,7 @@ export default function CookieConsent() {
             </h2>
             <p style={{ fontSize: 13.5, lineHeight: 1.6, color: 'var(--text-muted)', margin: 0 }}>
               {t('body')}{' '}
-              <Link href="/privacy" style={{ color: 'var(--red)', textDecoration: 'underline' }}>
+              <Link href="/privacy" prefetch={false} style={{ color: 'var(--red)', textDecoration: 'underline' }}>
                 {t('privacyLink')}
               </Link>
             </p>

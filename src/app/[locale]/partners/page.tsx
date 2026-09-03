@@ -291,7 +291,7 @@ export default async function PartnersPage({ params }: { params: { locale: strin
         <div className="container section">
           <div className="pt-apply" style={{ display: 'grid', gridTemplateColumns: '.85fr 1.15fr', gap: 'clamp(32px,4vw,64px)', alignItems: 'start' }}>
             <div>
-              <Eyebrow num="05" label={t('apply.eyebrow')} tone="dark" />
+              <Eyebrow num="05" label={t('apply.eyebrow')} tone="red" />
               <h2 className="h2" style={{ color: '#fff', margin: '0 0 18px' }}>{t('apply.titleA')}<br /><span style={{ color: 'var(--black)' }}>{t('apply.titleB')}.</span></h2>
               <p style={{ fontSize: 15, lineHeight: 1.6, color: '#fff', margin: '0 0 22px', maxWidth: 360 }}>
                 {t('apply.lead')}

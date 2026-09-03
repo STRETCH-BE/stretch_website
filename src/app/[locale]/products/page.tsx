@@ -75,7 +75,7 @@ export default async function ProductsPage({ params }: { params: { locale: strin
       {/* Product grid */}
       <section className="container" style={{ paddingBottom: 'clamp(50px,6vw,90px)' }}>
         <div className="prod-grid">
-          {listed.map((p) => {
+          {listed.map((p, i) => {
             const soon = COMING_SOON.includes(p.slug);
             return (
               <Link key={p.slug} href={`/products/${p.slug}`} className="prod-card zoom-wrap">
@@ -104,6 +104,8 @@ export default async function ProductsPage({ params }: { params: { locale: strin
                     src={pimg(productImage(p.slug).hero, '16/10').src}
                     alt={p.name}
                     sizes="(max-width: 900px) 100vw, 33vw"
+                    // The first cards are the LCP element: eager + high priority.
+                    priority={i < 2}
                     light
                     ratio="16/10"
                     className="zoom-img"

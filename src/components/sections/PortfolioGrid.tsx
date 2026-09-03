@@ -63,7 +63,7 @@ export default function PortfolioGrid() {
       </div>
 
       <div className="pf-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
-        {shown.map((p) => (
+        {shown.map((p, i) => (
           <Link
             key={p.slug}
             href={`/inspiration/${p.slug}`}
@@ -76,6 +76,7 @@ export default function PortfolioGrid() {
               src={p.image}
               alt={`${title(p.slug, p.title)} — ${cat(p.cat)}`}
               sizes="(max-width: 980px) 50vw, 25vw"
+              priority={i < 2}
               light
               ratio="4/3"
               className="zoom-img"

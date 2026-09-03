@@ -1,7 +1,9 @@
 // Inspiration page (/inspiration). Hero, two featured projects, browse-by-
 // solution tiles, the filterable portfolio grid, and a closing CTA.
 import type { Metadata } from 'next';
-import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { setRequestLocale, getTranslations, getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import { clientMessagesWith, PAGE_NAMESPACES } from '@/i18n/client-messages';
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
@@ -24,6 +26,7 @@ const FEATURED = projects.filter((p) => p.featured).slice(0, 2);
 
 export default async function InspirationPage({ params }: { params: { locale: string } }) {
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
+  const messages = await getMessages();
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   const t = await getTranslations('inspirationPage');
   const tp = await getTranslations('productPage');
@@ -100,7 +103,10 @@ export default async function InspirationPage({ params }: { params: { locale: st
           <Eyebrow num="03" label={t('allEyebrow')} />
           <h2 className="h2 h2--sm" style={{ margin: 0 }}>{t('portfolioTitle')}<span className="accent">.</span></h2>
         </div>
-        <PortfolioGrid />
+        {/* PortfolioGrid reads `projects` on the client — only this page ships it. */}
+        <NextIntlClientProvider messages={clientMessagesWith(messages, PAGE_NAMESPACES.projects)}>
+          <PortfolioGrid />
+        </NextIntlClientProvider>
       </section>
 
       {/* CTA */}

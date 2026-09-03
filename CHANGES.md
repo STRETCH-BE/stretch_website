@@ -1,3 +1,89 @@
+## 2026-09-03 (33) — PageSpeed round: client messages subset, lead modal on demand, grid LCP images, contrast
+
+Google's PageSpeed Insights API was over its anonymous daily quota from
+the build sandbox (HTTP 429), so the analysis ran Lighthouse 12 (the
+engine behind PageSpeed) locally against the production build, one run per
+domain with that domain's host header, mobile preset (simulated slow 4G,
+4× CPU), plus desktop and the deeper pages on .be. Baseline: home pages
+84–95 on mobile with the hero photo as the LCP element; /products and
+/blog 78 (their LCP image was lazy-loaded); /installer-training 82;
+accessibility 96–97 on /contact, /blog and /installer-training; best
+practices and SEO 100 everywhere.
+
+What changed:
+
+- **Client messages subset (the big one).** `NextIntlClientProvider` in
+  the locale layout received the *whole* locale file — ~240 KB raw on nl,
+  serialised into every page for hydration (the nl home HTML was 427 KB,
+  105 KB gzipped, more than half of it messages). Client components only
+  read 18 top-level namespaces; `src/i18n/client-messages.ts` lists them
+  (`CLIENT_NAMESPACES`) and the layout ships only those. Two page-level
+  namespaces are added by a nested provider on the pages that need them
+  (`projects` on /inspiration for PortfolioGrid, `portal` on the dealer
+  portal) — a nested provider replaces the parent's messages, so it
+  receives the union. `npm run check:client-messages`
+  (`scripts/check-client-messages.mjs`) walks the client module graph and
+  fails when a client component reads a namespace that is not shipped.
+  nl home HTML: 427 KB → 223 KB raw, 105 KB → 42 KB gzipped; every page
+  loses ~200 KB of inline script to parse.
+- **Lead modal on demand.** `LeadGenModal.tsx` is now only the provider,
+  context and hook; the dialog (form, Turnstile, phone/country helpers)
+  lives in `LeadGenModalDialog.tsx` and is loaded with `next/dynamic`
+  on the first open — `ModalButton` warms the chunk on hover/focus so the
+  click still feels instant. It was part of every page's initial JS.
+- **Grid pages' LCP image.** The first two cards on /products, /blog and
+  the inspiration grid are `priority` (eager, fetchpriority high, preload);
+  they were lazy-loaded, which Lighthouse flags and which delays the LCP.
+- **Accessibility.** Blog cards' image links have an accessible name
+  (`aria-label` = post title); the curriculum numbers on the training page
+  use `--red-bright` on black (4.5:1); the lead paragraph on the red
+  contact band is pure white (`rgba(255,255,255,.9)` failed 4.5:1).
+- **No prefetch of /privacy.** The privacy link in the cookie banner and
+  in every form used the default `Link` prefetch, pulling the 80 KB legal
+  page's RSC payload on every first visit; `prefetch={false}`.
+
+Left as is, with reasons: the single render-blocking CSS file (3 KB
+gzipped, ~100–200 ms on slow 4G — inlining it needs Next's experimental
+`optimizeCss`, not worth the risk on 16 domains); the Archivo variable
+font (79 KB, latin only, both axes used); the ~11 KB "legacy JavaScript"
+in a framework chunk (browserslist is already modern); the hero carousel
+(already loads the three hidden slides after `load`, first slide
+priority). Note on the numbers: Lighthouse's simulated throttling pins
+the LCP paint to the JavaScript that finished before it on a fast server,
+so lab LCP (~3 s) overstates what a throttled real browser shows for the
+same page (~1 s in a CPU-4×/slow-4G Playwright run); field data will look
+better than the lab score.
+
+Lighthouse 12, local production build, before → after (mobile unless noted;
+LCP in ms):
+
+| Page | Perf | LCP | Accessibility |
+| --- | --- | --- | --- |
+| stretch.mt / | 94 → 97 | 3033 → 2574 | 100 |
+| stretchplafond.be / | 81 → 96 | 4704 → 2663 | 100 |
+| stretchplafond.nl / | 87 → 97 | 3122 → 2582 | 100 |
+| stretchdecken.de / | 91 → 95 | 3407 → 2959 | 100 |
+| stretch-sufit.pl / | 91 → 93 | 3334 → 3111 | 100 |
+| stretchceilings.se / | 91 → 97 | 3264 → 2660 | 100 |
+| stretch.is / | 91 → 95 | 3339 → 2958 | 100 |
+| stretchdecken.ch / | 90 → 94 | 3114 → 2957 | 100 |
+| stretchdecken.ch /fr/ | 89 → 92 | 3558 → 3279 | 100 |
+| uk, us, fr, es, pt, dk, no homes | 92–95 → 94–97 | | 100 |
+| .be /contact | 94 → 97 | 2890 → 2577 | 96 → 100 |
+| .be /faq | 93 → 97 | 3186 → 2605 | 100 |
+| .be /products | 78 → 93 | 5796 → 3206 | 100 |
+| .be /blog | 78 → 94 | 5389 → 2941 | 96 → 100 |
+| .be /installer-training | 82 → 92 | 4708 → 3197 | 97 → 100 (red-section contrast, below) |
+| .be, .de, .pl home, desktop | 100 | 730–800 | 100 |
+
+Total blocking time on the home pages dropped from 60–290 ms to 15–125 ms.
+Best practices and SEO: 100 before and after on every page measured.
+
+Contrast on the red sections: the eyebrow inside the red booking / apply /
+Offerte bands used `tone="dark"` (red-bright number on red, 1.3:1) — now
+`tone="red"` (white); the small white-at-80 % labels in those bands are
+pure white.
+
 ## 2026-09-03 (32) — Header nav on long-label locales, mega-menu photo quality, FAQ card
 
 - **Header nav overlapped the logo and the CTA on stretch-sufit.pl and
