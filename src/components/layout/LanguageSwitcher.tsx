@@ -6,7 +6,7 @@
 // locales). On hosts that aren't in the domain map (localhost, Vercel
 // previews) it falls back to next-intl's in-app locale switch so dev/QA
 // keeps working without DNS.
-import { useState, useRef, useEffect } from 'react';
+import { Fragment, useState, useRef, useEffect } from 'react';
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { ChevronDown } from 'lucide-react';
@@ -33,11 +33,14 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
     const p = pathForLocale(pathname, locale, l);
     return p === '/' ? '' : p;
   };
-  // A domain that serves several locales (stretchdecken.ch: DE | FR) lists
-  // only its own; everywhere else the list is one entry per DOMAIN — a
-  // path-prefixed second locale is reached through its domain's entry.
+  // EVERY live locale, the current domain's own locales first (stretchdecken.ch:
+  // Deutsch (Schweiz) | Français (Suisse), then a divider, then the other
+  // domains) — nobody is ever stuck on a domain, and a path-prefixed locale
+  // (fr-ch) is listed from every domain, like the footer's world list.
   const siblings = liveLocales.filter((l) => localeDomains[l] === localeDomains[locale]);
-  const options = siblings.length > 1 ? siblings : liveLocales.filter((l) => !publicPrefix(l));
+  const others = liveLocales.filter((l) => localeDomains[l] !== localeDomains[locale]);
+  const options = [...siblings, ...others];
+  const dividerAfter = siblings.length > 1 && others.length > 0 ? siblings[siblings.length - 1] : null;
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -122,7 +125,8 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
           }}
         >
           {options.map((l) => (
-            <li key={l}>
+            <Fragment key={l}>
+            <li>
               {/* Real anchor: crawlable absolute URL in the markup; the click
                   handler keeps the JS behaviour (analytics + dev fallback) as
                   progressive enhancement on top of a working href. */}
@@ -153,6 +157,8 @@ export default function LanguageSwitcher({ tone = 'dark' }: { tone?: 'dark' | 'l
                 {localeNames[l] ?? l}
               </a>
             </li>
+            {l === dividerAfter && <li role="separator" aria-hidden style={{ borderTop: '1px solid var(--border)', margin: '6px 4px' }} />}
+            </Fragment>
           ))}
         </ul>
       )}

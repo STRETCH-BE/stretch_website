@@ -13,6 +13,15 @@ the Swiss locales. The Swiss price guide stays `noindex` until its ranges
 are filled (`priceGuideChReady`). Verified on `next start`: a de page lists
 de-CH and fr-CH alternates, the ch sitemap is non-empty and .ch-only.
 
+**Switcher completeness (same day, after Michael's check on the live
+domain):** the Swiss host listed only Deutsch (Schweiz) | Français (Suisse),
+so a visitor on stretchdecken.ch had no way to any other country — while every
+other domain listed all countries. Both switchers (`LanguageSwitcher`,
+`MobileMenu`) now list EVERY live locale on every host: the current domain's
+own locales first (the Swiss pair, then a divider on the Swiss host), then the
+other domains; Français (Suisse) is listed from every domain, like the footer
+world list. The mobile menu's Swiss-French links carry the `/fr` prefix.
+
 Two hardenings found while checking production on the day of the flip:
 
 - **Language switch on an unrecognised host.** The dev/preview fallback
