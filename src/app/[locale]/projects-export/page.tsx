@@ -208,7 +208,7 @@ export default async function ProjectsExportPage({ params }: { params: { locale:
         </div>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 1000px) {
           .pe-caps { grid-template-columns: 1fr 1fr !important; }
           .pe-refs { grid-template-columns: 1fr 1fr !important; }
@@ -219,7 +219,7 @@ export default async function ProjectsExportPage({ params }: { params: { locale:
           .pe-refs { grid-template-columns: 1fr !important; }
           .pe-steps { grid-template-columns: 1fr !important; }
         }
-      `}</style>
+      ` }} />
     </>
   );
 }

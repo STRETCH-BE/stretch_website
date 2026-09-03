@@ -5,7 +5,8 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Phone, Mail, MessageCircle, ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
-import { siteUrl, contact, offices } from '@/lib/site-config';
+import { siteUrl, contact, offices, swissPartner, brand } from '@/lib/site-config';
+import { localContactFor, isSwissLocale } from '@/lib/local-contact';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema, localBusinessSchema, branchLocalBusinessSchemas } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
@@ -26,10 +27,15 @@ export default async function ContactPage({ params }: { params: { locale: string
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   const t = await getTranslations('contactPage');
   const tp = await getTranslations('productPage');
+  // ch: the Swiss general representative answers — QuinLay's number and inbox.
+  const local = localContactFor(locale);
+  const swiss = isSwissLocale(locale);
+  // "Tessin / Ticino: contattateci in italiano — office@quinlay.ch", e-mail linked.
+  const ticino = t('ticinoLine').split(swissPartner.email);
 
   const cards = [
-    { icon: Phone, label: t('cards.call.label'), value: contact.phoneDisplay, sub: t('hours'), href: contact.phoneHref },
-    { icon: Mail, label: t('cards.email.label'), value: contact.email, sub: t('cards.email.sub'), href: `mailto:${contact.email}` },
+    { icon: Phone, label: t('cards.call.label'), value: local.phoneDisplay, sub: swiss ? t('swissCallback') : t('hours'), href: local.phoneHref },
+    { icon: Mail, label: t('cards.email.label'), value: local.email, sub: swiss ? swissPartner.name : t('cards.email.sub'), href: `mailto:${local.email}` },
     { icon: MessageCircle, label: t('cards.chat.label'), value: t('cards.chat.value'), sub: t('cards.chat.sub'), href: contact.whatsappHref },
   ];
 
@@ -67,6 +73,36 @@ export default async function ContactPage({ params }: { params: { locale: string
           ))}
         </div>
       </section>
+
+      {/* Switzerland & Liechtenstein: QuinLay AG is the partner every enquiry reaches (2 Sep 2026). */}
+      {swiss && (
+        <section className="container" style={{ paddingBottom: 'clamp(32px,4vw,48px)' }}>
+          <div style={{ border: '1.5px solid var(--black)', background: '#fff', padding: 'clamp(22px,3vw,36px)', display: 'grid', gridTemplateColumns: '1.3fr .9fr', gap: 'clamp(18px,3vw,40px)' }} className="ct-swiss">
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--red)', marginBottom: 8 }}>{t('swissPartnerKicker')}</div>
+              <h2 className="h2 h2--sm" style={{ margin: '0 0 10px' }}>{t('swissPartnerTitle')}</h2>
+              <p style={{ fontSize: 15, lineHeight: 1.65, color: 'var(--text-body)', margin: 0, maxWidth: 640 }}>{t('swissPartnerBody')}</p>
+            </div>
+            <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', padding: 'clamp(18px,2.2vw,26px)', fontSize: 14, lineHeight: 1.7, color: 'var(--text-muted)', alignSelf: 'start' }}>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 16, color: 'var(--black)', marginBottom: 4 }}>{swissPartner.name}</div>
+              <div>{swissPartner.street}</div>
+              <div>{swissPartner.postalCode} {swissPartner.city} {swissPartner.canton}</div>
+              <a href={swissPartner.phoneHref} className="lnk" style={{ display: 'inline-block', marginTop: 10, fontWeight: 700 }}>{swissPartner.phoneDisplay}</a>
+              <br />
+              <a href={`mailto:${swissPartner.email}`} className="lnk" style={{ fontWeight: 700 }}>{swissPartner.email}</a>
+              <br />
+              <a href={swissPartner.url} className="lnk" rel="noopener" target="_blank" style={{ fontWeight: 700 }}>quinlay.ch</a>
+              <div style={{ marginTop: 10, fontSize: 12.5 }}>{t('swissCallback')}</div>
+            </div>
+          </div>
+          {/* Ticino: no Italian locale — one line, in Italian, pointing at QuinLay. */}
+          <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--text-muted)', margin: '14px 0 0' }}>
+            {ticino[0]}
+            <a href={`mailto:${swissPartner.email}`} className="lnk" style={{ fontWeight: 700 }}>{swissPartner.email}</a>
+            {ticino[1]}
+          </p>
+        </section>
+      )}
 
       {/* Form + workshop image */}
       <section className="container" style={{ paddingBottom: 'clamp(50px,6vw,90px)' }}>
@@ -137,10 +173,34 @@ export default async function ContactPage({ params }: { params: { locale: string
         </div>
       </section>
 
+      {/* Swiss Impressum — minimal, both parties named; legal wording to be checked by Michael. */}
+      {swiss && (
+        <section className="container" style={{ padding: 'clamp(28px,4vw,48px) 0' }}>
+          <h2 style={{ fontSize: 12.5, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text-muted)', margin: '0 0 14px' }}>{t('impressumHeading')}</h2>
+          <div className="ct-impressum" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18, fontSize: 13.5, lineHeight: 1.7, color: 'var(--text-muted)' }}>
+            <div style={{ border: '1px solid var(--border)', padding: '16px 18px' }}>
+              <div style={{ fontWeight: 800, color: 'var(--black)' }}>{t('impressumManufacturer')}</div>
+              <div>{brand.legalName}</div>
+              <div>{contact.address.street}, {contact.address.postalCode} {contact.address.city}, {offices[0].countryName}</div>
+              <div>{contact.email} · {contact.phoneDisplay}</div>
+            </div>
+            <div style={{ border: '1px solid var(--border)', padding: '16px 18px' }}>
+              <div style={{ fontWeight: 800, color: 'var(--black)' }}>{t('impressumSwissParty')}</div>
+              <div>{swissPartner.name}</div>
+              <div>{swissPartner.street}, {swissPartner.postalCode} {swissPartner.city} {swissPartner.canton}, Schweiz</div>
+              <div>{swissPartner.email} · {swissPartner.phoneDisplay}</div>
+            </div>
+          </div>
+          <p style={{ fontSize: 13, color: 'var(--text-faint)', margin: '12px 0 0' }}>{t('impressumNote')}</p>
+        </section>
+      )}
+
       <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 860px) {
           .qc-grid { grid-template-columns: 1fr !important; }
           .ct-grid { grid-template-columns: 1fr !important; }
+          .ct-swiss { grid-template-columns: 1fr !important; }
+          .ct-impressum { grid-template-columns: 1fr !important; }
           .off-grid { grid-template-columns: 1fr 1fr !important; }
         }
         @media (max-width: 520px) {

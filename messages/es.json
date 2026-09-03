@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Acceso clientes",
       "materials": "Materiales",
-      "architects": "Arquitectos"
+      "architects": "Arquitectos",
+      "priceCalculator": "Calculadora de precios"
     },
     "cta": {
       "freeQuote": "Presupuesto gratis",
@@ -179,7 +180,9 @@
       "priceCalculator": "Calcular precio"
     },
     "dealers": "Red de distribuidores",
-    "worldwideHeading": "STRETCH en el mundo"
+    "worldwideHeading": "STRETCH en el mundo",
+    "swissPartnerHeading": "Representante general — Suiza y Liechtenstein",
+    "manufacturerHeading": "Fabricante — Bélgica"
   },
   "portal": {
     "login": {
@@ -642,6 +645,12 @@
       "ratedOn": "Valorado en {source}",
       "titlePlain": "Lo que dicen los clientes",
       "provenance": "Reseñas de Google verificadas, citadas literalmente de nuestro perfil de empresa público en Google."
+    },
+    "estimator": {
+      "kicker": "Calculadora de precios",
+      "title": "¿Cuánto cuesta un techo tensado?",
+      "sub": "Introduce la superficie y el tipo de techo — la horquilla indicativa publicada aparece al instante; el presupuesto en firme es gratuito.",
+      "cta": "Calcular precio"
     }
   },
   "ctaBand": {
@@ -677,7 +686,8 @@
     "dealer": "Encuentra tu distribuidor más cercano",
     "chartCount": "{count, plural, one {# color} other {# colores}}",
     "anyRal": "Cualquier color RAL bajo pedido",
-    "dealerDirect": "Entregamos e instalamos directamente — contáctenos"
+    "dealerDirect": "Entregamos e instalamos directamente — contáctenos",
+    "priceLink": "¿Cuánto cuesta por m²?"
   },
   "productsPage": {
     "eyebrow": "Nuestras soluciones",
@@ -1498,6 +1508,10 @@
             {
               "title": "Todos los sistemas de techo",
               "sub": "Compara la gama"
+            },
+            {
+              "title": "Calculadora de precios",
+              "sub": "Tu precio por m² en 30 segundos"
             }
           ]
         },
@@ -2238,7 +2252,8 @@
           "placeholder": "Tipos de techo, planos disponibles, plazos…"
         }
       }
-    }
+    },
+    "swissPartnerNote": "Su solicitud se envía a QuinLay AG, Rickenbach LU, representante general de STRETCH para Suiza y Liechtenstein, con STRETCH en copia. QuinLay AG le devolverá la llamada."
   },
   "faqPage": {
     "items": [
@@ -4697,7 +4712,9 @@
       "eyebrow": "Guías",
       "ctaTitle": "¿Estás pensando en un techo tensado?",
       "ctaBody": "Consigue un presupuesto gratuito y sin compromiso para tu espacio.",
-      "ctaBtn": "Solicitar presupuesto gratuito"
+      "ctaBtn": "Solicitar presupuesto gratuito",
+      "calculatorTitle": "¿Cuánto costará tu techo?",
+      "calculatorBody": "Metros cuadrados × tipo de techo te dan la horquilla indicativa publicada en 30 segundos."
     }
   },
   "inspirationPage": {
@@ -4887,6 +4904,11 @@
         "title": "¿Solo quiere comprar materiales?",
         "body": "Una cuenta de suministro no es una asociación: pida materiales y confección a medida a su tarifa de instalador, sin compromisos.",
         "cta": "Suministro a instaladores"
+      },
+      "quinlayCard": {
+        "title": "Suiza y Liechtenstein: QuinLay AG",
+        "body": "Nuestro representante general para Suiza y Liechtenstein: showroom y sala de formación en Rickenbach LU, materiales en stock en Suiza y socios instaladores en todo el país.",
+        "cta": "Visitar quinlay.ch"
       }
     },
     "how": {
@@ -5000,7 +5022,10 @@
       "title": "Reserva tu plaza",
       "lead": "Grupos reducidos, por orden de reserva. Sesiones a medida en tus instalaciones bajo petición.",
       "onRequestTitle": "Bajo petición",
-      "onRequestNote": "Sesión a medida in situ"
+      "onRequestNote": "Sesión a medida in situ",
+      "externalCta": "Fechas y reservas en quinlay.ch",
+      "swissRoom": "Los cursos se imparten en la sala de formación y pruebas propia de QuinLay AG en Rickenbach LU.",
+      "secondaryCta": "¿Preguntas sobre el curso? Póngase en contacto"
     },
     "book": {
       "eyebrow": "Planifica tu formación",
@@ -5112,7 +5137,16 @@
     "hours": "lun–vie · 08:30–17:00",
     "directTitle": "No necesita un distribuidor local.",
     "directBody": "STRETCH entrega e instala directamente desde su propia producción mientras se construye la red local — un solo equipo, una sola garantía.",
-    "directCta": "Solicite un presupuesto gratuito"
+    "directCta": "Solicite un presupuesto gratuito",
+    "swissPartnerKicker": "Suiza y Liechtenstein",
+    "swissPartnerTitle": "Su contacto en Suiza y Liechtenstein: QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG es el representante general de STRETCH para Suiza y Liechtenstein: showroom y sala de formación en Rickenbach LU, materiales en stock en Suiza e instalación a través de socios formados. Todas las solicitudes procedentes de Suiza las responde QuinLay AG, con STRETCH en copia.",
+    "swissCallback": "QuinLay AG le devolverá la llamada",
+    "impressumHeading": "Aviso legal — Suiza y Liechtenstein",
+    "impressumManufacturer": "Fabricante",
+    "impressumSwissParty": "Parte contratante para Suiza y Liechtenstein",
+    "impressumNote": "Los presupuestos, las entregas y las facturas para Suiza y Liechtenstein corren a cargo de QuinLay AG.",
+    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch"
   },
   "datasheetsPage": {
     "eyebrow": "Fichas técnicas",
@@ -5380,13 +5414,48 @@
     "ovTitle": "Distribuidores",
     "ovIntro": "Los techos tensados STRETCH son medidos e instalados por socios locales certificados, con el respaldo de nuestra propia fábrica cerca de Lokeren. Encuentre su región — o hágase con las zonas libres.",
     "regionFlanders": "Flandes y Bruselas",
-    "regionWallonia": "Valonia",
+    "regionWallonia": "Valonia · Bélgica",
     "regionNetherlands": "Países Bajos",
     "lookingLabel": "Se busca distribuidor",
     "ovRecruitTitle": "¿Todavía no hay distribuidor en su zona?",
     "ovRecruitBody": "Mientras la red crece, entregamos e instalamos directamente desde nuestra fábrica — y los instaladores que asuman una región libre reciben sus solicitudes, precios de distribuidor y formación.",
     "regionLuxembourg": "Luxemburgo (Gran Ducado)",
-    "regionAustria": "Austria"
+    "regionAustria": "Austria",
+    "regionGermany": "Alemania",
+    "regionPoland": "Polonia",
+    "regionFrance": "Francia",
+    "nearbyHeadingRegion": "También en {region}",
+    "identityBeKicker": "Fabricante belga",
+    "identityBeTitle": "Fabricado en Beveren-Waas, Bélgica",
+    "identityBeBody": "STRETCH es un fabricante belga: cada techo para {place} se mide in situ y después se corta y se suelda a medida en nuestra propia producción de Beveren-Waas (Flandes Oriental), y lo instalan nuestros propios equipos o un distribuidor certificado. Una sola empresa belga, un único interlocutor para la garantía.",
+    "identityVat": "IVA",
+    "identityVatArticle": "Ayudas e IVA para un techo tensado en Bélgica",
+    "identityDirectKicker": "Servicio directo",
+    "identityDirectTitle": "{place}: servicio directo desde nuestra producción",
+    "identityDirectBody": "Mientras crece nuestra red de instaladores en esta región, STRETCH entrega e instala directamente en {place}: medición in situ, soldadura a medida en nuestra propia producción en la UE e instalación en un día por nuestros propios equipos. Los instaladores que asuman la región reciben sus solicitudes.",
+    "identityDirectCard": "Fabricante de techos y paredes tensados — entrega e instalación directas.",
+    "costLine": "¿Cuánto cuesta un techo tensado en {place}? Calcule el precio por m²",
+    "identityPlKicker": "Producido en Polonia y Bélgica",
+    "identityPlTitle": "Dos fábricas en la UE: Częstochowa y Beveren-Waas",
+    "identityPlBody": "STRETCH fabrica en dos plantas propias: Alto Design Sp. z o.o. en Częstochowa y Stretch Productions BV en Beveren-Waas, Bélgica. Los techos para {place} se sueldan a medida en Częstochowa y los instalan nuestros propios equipos o un socio certificado — un fabricante con una fábrica que se puede visitar, no un importador.",
+    "factoryKicker": "Nuestra fábrica",
+    "factoryTitle": "La fábrica STRETCH de Częstochowa",
+    "factoryBody": "Aquí es donde el grupo produce en Polonia: Alto Design Sp. z o.o. corta y suelda a medida las membranas de PVC, imparte la formación de instaladores en polaco y construye la red STRETCH para Polonia — una fábrica con nombre y ubicación reales, no una simple dirección comercial.",
+    "factoryTraining": "Formación de instaladores en Częstochowa",
+    "factoryCta": "Visitar altodesign.pl",
+    "why1Pl": "Producido en la UE — cada techo se suelda a medida en nuestras propias fábricas de Częstochowa y Beveren-Waas y llega listo para instalar.",
+    "regionSwitzerland": "Suiza y Liechtenstein",
+    "liechtenstein": "Liechtenstein",
+    "driveTime": "A unos {minutes} min del showroom de Rickenbach LU",
+    "contactHeading": "Su contacto para Suiza y Liechtenstein",
+    "generalAgent": "Representante general de STRETCH para Suiza y Liechtenstein",
+    "showroomLabel": "Showroom y sala de formación",
+    "showroomCta": "Reserve una cita en el showroom",
+    "servicesHeading": "Servicios",
+    "serviceConsulting": "Asesoramiento y showroom",
+    "serviceInstallation": "Instalación a través de socios formados",
+    "serviceTraining": "Formación de instaladores en su propia sala de formación",
+    "serviceStock": "Materiales en stock en Suiza"
   },
   "datasheetEmail": {
     "subject": "Su ficha técnica STRETCH — {title}",
@@ -5542,7 +5611,6 @@
     "priceEyebrow": "Precio y pedido",
     "priceTitle": "Pedir tu kit",
     "priceOnRequest": "Precio a petición — envía tus medidas y recibirás un presupuesto a medida en un día laborable.",
-    "currencyNotice": "Todos los precios y pagos son en EUR. El importe en £ es una indicación al tipo de referencia del BCE del {asOf}; tu banco o tarjeta convierte a su propio tipo.",
     "deliveryPoints": [
       "Entrega DDP por paquetería — gestionamos aduanas y trámites de importación, el precio confirmado es el precio que pagas",
       "Envío a toda la UE y al Reino Unido",
@@ -5780,5 +5848,12 @@
     "captchaFailed": "La verificación de seguridad ha fallado. Inténtelo de nuevo.",
     "captchaLoadFailed": "La verificación de seguridad no se pudo cargar. Actualice la página o escríbanos a {email}.",
     "tooManyRequests": "Demasiadas solicitudes. Espere unos minutos e inténtelo de nuevo."
+  },
+  "currency": {
+    "indicationNote": "El importe en {currency} es una indicación al tipo de referencia del BCE del {asOf}; todos los precios y pagos son en EUR. La conversión la aplica el banco o la entidad emisora de la tarjeta a su propio tipo de cambio.",
+    "settlementNote": "Todos los precios y pagos son en {currency}.",
+    "indicationAria": "{eur} — solo indicativo, todos los pagos en EUR",
+    "guideNoteTitle": "En {currency}, aproximadamente",
+    "guideNoteBody": "Las cifras de esta guía están en EUR, la moneda en la que facturamos. A modo de orientación, los mismos rangos al tipo de referencia del BCE del {asOf}:"
   }
 }

@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Kundeinnlogging",
       "materials": "Materialer",
-      "architects": "Arkitekter"
+      "architects": "Arkitekter",
+      "priceCalculator": "Prisberegner"
     },
     "cta": {
       "freeQuote": "Gratis tilbud",
@@ -179,7 +180,9 @@
       "priceCalculator": "Beregn pris"
     },
     "dealers": "Forhandlernettverk",
-    "worldwideHeading": "STRETCH i verden"
+    "worldwideHeading": "STRETCH i verden",
+    "swissPartnerHeading": "Generalagent — Sveits & Liechtenstein",
+    "manufacturerHeading": "Produsent — Belgia"
   },
   "portal": {
     "login": {
@@ -642,6 +645,12 @@
       "ratedOn": "Vurdert på {source}",
       "titlePlain": "Hva kundene sier",
       "provenance": "Verifiserte Google-omtaler, sitert ordrett fra vår offentlige Google-bedriftsprofil."
+    },
+    "estimator": {
+      "kicker": "Prisberegner",
+      "title": "Hva koster et strekktak?",
+      "sub": "Oppgi areal og taktype — det publiserte veiledende intervallet vises med én gang; det faste tilbudet er gratis.",
+      "cta": "Beregn pris"
     }
   },
   "ctaBand": {
@@ -677,7 +686,8 @@
     "dealer": "Finn din nærmeste forhandler",
     "chartCount": "{count, plural, one {# farge} other {# farger}}",
     "anyRal": "Enhver RAL-farge på forespørsel",
-    "dealerDirect": "Vi leverer og monterer direkte — kontakt oss"
+    "dealerDirect": "Vi leverer og monterer direkte — kontakt oss",
+    "priceLink": "Hva koster dette per m²?"
   },
   "productsPage": {
     "eyebrow": "Våre løsninger",
@@ -1498,6 +1508,10 @@
             {
               "title": "Alle himlingssystemer",
               "sub": "Sammenlign utvalget"
+            },
+            {
+              "title": "Prisberegner",
+              "sub": "Din pris per m² på 30 sekunder"
             }
           ]
         },
@@ -2238,7 +2252,8 @@
           "placeholder": "Himlingstyper, tilgjengelige tegninger, tidsplan…"
         }
       }
-    }
+    },
+    "swissPartnerNote": "Henvendelsen din går til QuinLay AG, Rickenbach LU, STRETCHs generalagent for Sveits og Liechtenstein, med kopi til STRETCH. QuinLay AG ringer deg tilbake."
   },
   "faqPage": {
     "items": [
@@ -4240,20 +4255,20 @@
       },
       "spanplafond-prijs": {
         "title": "Hva koster et strekktak? En ærlig prisguide",
-        "excerpt": "Prisen på et strekktak ligger som regel mellom 800 kr og 2 300 kr per m² ferdig montert, avhengig av taktype og rom. Her får du forklaringen bak prisspennet, veiledende intervaller per taktype – og veien til et konkret tall for prosjektet ditt.",
+        "excerpt": "Prisen på et strekktak ligger som regel mellom 70 € og 200 € per m² ferdig montert, avhengig av taktype og rom. Her får du forklaringen bak prisspennet, veiledende intervaller per taktype – og veien til et konkret tall for prosjektet ditt.",
         "body": [
           {
             "heading": "Det korte svaret",
             "paragraphs": [
-              "For et profesjonelt montert strekktak bør du regne med omtrent 800 kr til 2 300 kr per kvadratmeter ekskl. mva, montering inkludert. Spennet er reelt: et enkelt, matt hvitt tak i en rektangulær stue ligger nederst i intervallet, mens et baklyst baderomstak med integrert belysning ligger øverst.",
+              "For et profesjonelt montert strekktak bør du regne med omtrent 70 € til 200 € per kvadratmeter ekskl. mva, montering inkludert. Spennet er reelt: et enkelt, matt hvitt tak i en rektangulær stue ligger nederst i intervallet, mens et baklyst baderomstak med integrert belysning ligger øverst.",
               "Alle tall i denne guiden er veiledende intervaller – ikke et tilbud. Duken produseres på mål til akkurat ditt rom, så det ærlige, endelige tallet kommer alltid fra et gratis og uforpliktende tilbud."
             ]
           },
           {
             "heading": "Veiledende priser per taktype",
             "paragraphs": [
-              "Et enkelt, ensfarget tak i PVC eller polyester er inngangsnivået på rundt 800 kr til 1 050 kr per m² – den raske, sømløse oppgraderingen for stuer, soverom og kontorer. Et trykket design legger til motiv og forberedelse og lander på rundt 1 050 kr til 1 200 kr per m².",
-              "Et akustisk tak – mikroperforert duk med absorpsjon bak – ligger rundt 1 200 kr til 1 750 kr per m² avhengig av oppbygningen. Et translusent, baklyst tak med LED-felter bak duken ligger rundt 1 500 kr til 1 850 kr per m² inkludert lysflaten. Baderomsprosjekter som kombinerer fuktbestandig duk med integrert belysning, ender typisk på 1 750 kr til 2 300 kr per m².",
+              "Et enkelt, ensfarget tak i PVC eller polyester er inngangsnivået på rundt 70 € til 90 € per m² – den raske, sømløse oppgraderingen for stuer, soverom og kontorer. Et trykket design legger til motiv og forberedelse og lander på rundt 90 € til 100 € per m².",
+              "Et akustisk tak – mikroperforert duk med absorpsjon bak – ligger rundt 100 € til 150 € per m² avhengig av oppbygningen. Et translusent, baklyst tak med LED-felter bak duken ligger rundt 130 € til 160 € per m² inkludert lysflaten. Baderomsprosjekter som kombinerer fuktbestandig duk med integrert belysning, ender typisk på 150 € til 200 € per m².",
               "Spesialarbeid – stjernehimmel, trykte baklyste design, prefabrikkerte elementer – utformes per prosjekt og prises per design."
             ]
           },
@@ -4697,7 +4712,9 @@
       "eyebrow": "Guider",
       "ctaTitle": "Vurderer du en strekkhimling?",
       "ctaBody": "Få et gratis og uforpliktende tilbud for ditt rom.",
-      "ctaBtn": "Be om et gratis tilbud"
+      "ctaBtn": "Be om et gratis tilbud",
+      "calculatorTitle": "Hva vil taket ditt koste?",
+      "calculatorBody": "Kvadratmeter × taktype gir deg det publiserte veiledende intervallet på 30 sekunder."
     }
   },
   "inspirationPage": {
@@ -4887,6 +4904,11 @@
         "title": "Vil du bare kjøpe materialer?",
         "body": "En leveringskonto er ikke et partnerskap: bestill materialer og konfeksjon etter mål til din montørpris, uten forpliktelser.",
         "cta": "Levering til montører"
+      },
+      "quinlayCard": {
+        "title": "Sveits & Liechtenstein: QuinLay AG",
+        "body": "Vår generalagent for Sveits og Liechtenstein: showroom og kursrom i Rickenbach LU, materialer fra sveitsisk lager og monteringspartnere over hele landet.",
+        "cta": "Besøk quinlay.ch"
       }
     },
     "how": {
@@ -5000,7 +5022,10 @@
       "title": "Reserver plassen din",
       "lead": "Små grupper, førstemann til mølla. Skreddersydde kurs hos dere er tilgjengelig på forespørsel.",
       "onRequestTitle": "På forespørsel",
-      "onRequestNote": "Skreddersydd kurs på stedet"
+      "onRequestNote": "Skreddersydd kurs på stedet",
+      "externalCta": "Datoer & påmelding på quinlay.ch",
+      "swissRoom": "Kursene holdes i QuinLay AGs eget kurs- og testrom i Rickenbach LU.",
+      "secondaryCta": "Spørsmål om kurset? Ta kontakt"
     },
     "book": {
       "eyebrow": "Planlegg kurset ditt",
@@ -5112,7 +5137,16 @@
     "hours": "man–fre · 08:30–17:00",
     "directTitle": "Ingen lokal forhandler nødvendig.",
     "directBody": "STRETCH leverer og monterer direkte fra egen produksjon mens det lokale nettverket bygges opp — ett team, én garanti.",
-    "directCta": "Be om et gratis tilbud"
+    "directCta": "Be om et gratis tilbud",
+    "swissPartnerKicker": "Sveits & Liechtenstein",
+    "swissPartnerTitle": "Din kontakt i Sveits og Liechtenstein: QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG er generalagent for STRETCH i Sveits og Liechtenstein: showroom og kursrom i Rickenbach LU, materialer fra sveitsisk lager og montering gjennom opplærte partnere. Alle henvendelser fra Sveits besvares av QuinLay AG, med kopi til STRETCH.",
+    "swissCallback": "QuinLay AG ringer deg tilbake",
+    "impressumHeading": "Juridisk informasjon — Sveits & Liechtenstein",
+    "impressumManufacturer": "Produsent",
+    "impressumSwissParty": "Avtalepart for Sveits og Liechtenstein",
+    "impressumNote": "Tilbud, leveranser og fakturaer for Sveits og Liechtenstein håndteres av QuinLay AG.",
+    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch"
   },
   "datasheetsPage": {
     "eyebrow": "Tekniske datablader",
@@ -5380,13 +5414,48 @@
     "ovTitle": "Forhandlere",
     "ovIntro": "Strekktak fra STRETCH måles opp og monteres av sertifiserte lokale partnere, med vår egen produksjon nær Lokeren i ryggen. Finn din region — eller sikre deg en av de ledige plassene.",
     "regionFlanders": "Flandern & Brussel",
-    "regionWallonia": "Vallonia",
+    "regionWallonia": "Vallonia · Belgia",
     "regionNetherlands": "Nederland",
     "lookingLabel": "Forhandler søkes",
     "ovRecruitTitle": "Ingen forhandler i ditt område ennå?",
     "ovRecruitBody": "Vi leverer og monterer direkte fra vår produksjon mens nettverket vokser — og montører som sikrer seg en ledig region, får regionens henvendelser, forhandlerpriser og opplæring.",
     "regionLuxembourg": "Luxembourg (Storhertugdømmet)",
-    "regionAustria": "Østerrike"
+    "regionAustria": "Østerrike",
+    "regionGermany": "Tyskland",
+    "regionPoland": "Polen",
+    "regionFrance": "Frankrike",
+    "nearbyHeadingRegion": "Også i {region}",
+    "identityBeKicker": "Belgisk produsent",
+    "identityBeTitle": "Produsert i Beveren-Waas, Belgia",
+    "identityBeBody": "STRETCH er en belgisk produsent: hvert tak til {place} måles opp lokalt, deretter skjæres og sveises det på mål i vår egen produksjon i Beveren-Waas (Øst-Flandern) og monteres av våre egne montører eller en sertifisert forhandler. Ett belgisk selskap, én samlet garanti.",
+    "identityVat": "Mva.",
+    "identityVatArticle": "Tilskudd og mva. for strekktak i Belgia",
+    "identityDirectKicker": "Betjenes direkte",
+    "identityDirectTitle": "{place}, betjent direkte fra vår produksjon",
+    "identityDirectBody": "Mens montørnettverket vårt i denne regionen vokser, leverer og monterer STRETCH direkte i {place}: målt opp på stedet, sveiset på mål i vår egen EU-produksjon og montert på én dag av våre egne montører. Montører som sikrer seg regionen, får regionens henvendelser.",
+    "identityDirectCard": "Produsent av strekktak og strekkvegger — direkte levering og montering.",
+    "costLine": "Hva koster et strekktak i {place}? Beregn prisen per m²",
+    "identityPlKicker": "Produsert i Polen og Belgia",
+    "identityPlTitle": "To EU-fabrikker: Częstochowa og Beveren-Waas",
+    "identityPlBody": "STRETCH produserer i to egne fabrikker: Alto Design Sp. z o.o. i Częstochowa og Stretch Productions BV i Beveren-Waas i Belgia. Tak til {place} sveises på mål i Częstochowa og monteres av våre egne montører eller en sertifisert partner — en produsent med en fabrikk du kan besøke, ikke en importør.",
+    "factoryKicker": "Vår fabrikk",
+    "factoryTitle": "STRETCH-fabrikken i Częstochowa",
+    "factoryBody": "Her produserer konsernet i Polen: Alto Design Sp. z o.o. skjærer og sveiser PVC-membraner på mål, holder den polskspråklige montøropplæringen og bygger STRETCH-nettverket for Polen — en navngitt fabrikk du finner på kartet, ikke bare en forretningsadresse.",
+    "factoryTraining": "Montøropplæring i Częstochowa",
+    "factoryCta": "Besøk altodesign.pl",
+    "why1Pl": "Produsert i EU — hvert tak sveises på mål i våre egne fabrikker i Częstochowa og Beveren-Waas og leveres klart til montering.",
+    "regionSwitzerland": "Sveits & Liechtenstein",
+    "liechtenstein": "Liechtenstein",
+    "driveTime": "Ca. {minutes} min fra showroomet i Rickenbach LU",
+    "contactHeading": "Din kontakt for Sveits og Liechtenstein",
+    "generalAgent": "Generalagent for STRETCH i Sveits & Liechtenstein",
+    "showroomLabel": "Showroom & kursrom",
+    "showroomCta": "Bestill en tid i showroomet",
+    "servicesHeading": "Tjenester",
+    "serviceConsulting": "Rådgivning og showroom",
+    "serviceInstallation": "Montering gjennom opplærte partnere",
+    "serviceTraining": "Montøropplæring i eget kursrom",
+    "serviceStock": "Materialer fra sveitsisk lager"
   },
   "datasheetEmail": {
     "subject": "Ditt STRETCH-datablad — {title}",
@@ -5542,7 +5611,6 @@
     "priceEyebrow": "Pris & bestilling",
     "priceTitle": "Bestille kitet ditt",
     "priceOnRequest": "Pris på forespørsel — send målene dine, og du får et skreddersydd tilbud innen én arbeidsdag.",
-    "currencyNotice": "Alle priser og betalinger er i EUR. £-beløpet er en indikasjon til ECBs referansekurs av {asOf}; banken eller kortet ditt regner om til egen kurs.",
     "deliveryPoints": [
       "Leveres DDP som kurérpakke — vi ordner toll og importformaliteter, den bekreftede prisen er prisen du betaler",
       "Frakt i hele EU og Storbritannia",
@@ -5780,5 +5848,12 @@
     "captchaFailed": "Sikkerhetskontrollen mislyktes. Prøv igjen.",
     "captchaLoadFailed": "Sikkerhetskontrollen kunne ikke lastes. Last siden på nytt, eller send oss en e-post på {email}.",
     "tooManyRequests": "For mange forespørsler. Vent noen minutter og prøv igjen."
+  },
+  "currency": {
+    "indicationNote": "{currency}-beløpet er en indikasjon etter ECBs referansekurs per {asOf}; alle priser og betalinger er i EUR. Banken eller kortet ditt regner om til sin egen kurs.",
+    "settlementNote": "Alle priser og betalinger er i {currency}.",
+    "indicationAria": "{eur} — kun veiledende, alle betalinger i EUR",
+    "guideNoteTitle": "I {currency}, omtrent",
+    "guideNoteBody": "Tallene i denne guiden er i EUR, valutaen vi fakturerer i. Til orientering: de samme intervallene etter ECBs referansekurs per {asOf}:"
   }
 }

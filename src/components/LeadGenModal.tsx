@@ -19,12 +19,14 @@ import {
   type ReactNode,
 } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
+import { isSwissLocale, type Locale } from '@/i18n/config';
 import { Link } from '@/i18n/navigation';
 import { X, ArrowRight, Check } from 'lucide-react';
 import {
   MODAL_CONFIGS,
   defaultCountryForLocale,
   TRAINING_DATE_DETAIL,
+  trainingSessionsFor,
   type ModalType,
   type FormField,
 } from '@/lib/forms-config';
@@ -147,11 +149,24 @@ function LeadGenModal({
   const tm = useTranslations('modals');
   const tsec = useTranslations('security');
   const locale = useLocale();
+  const tModals = useTranslations('modals');
   const cfg = localizeModalConfig(
     MODAL_CONFIGS[type],
     tm.raw(type) as ModalMessages,
     tm.raw('shared') as SharedFieldMessages,
   );
+  // Partner-run locale (QuinLay AG on ch): the partner's courses replace the
+  // Beveren-Waas dates — in the cards AND in the preferred-date select.
+  const { sessions: partnerSessions, partnerRun } = trainingSessionsFor(locale);
+  const dateCards = partnerRun
+    ? partnerSessions.map((d) => ({ date: d.date, note: d.note }))
+    : TRAINING_DATE_DETAIL.map((d, i) => ({
+        date: (tm.raw('trainingDates') as string[])[i] ?? d.date,
+        note: (tm.raw('trainingDateNotes') as string[])[i] ?? d.note,
+      }));
+  const fields = partnerRun
+    ? cfg.fields.map((f) => (f.name === 'preferredDate' ? { ...f, options: partnerSessions.map((d) => d.date), optionValues: partnerSessions.map((d) => d.date) } : f))
+    : cfg.fields;
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const titleId = useId();
   const descId = useId();
@@ -213,7 +228,7 @@ function LeadGenModal({
 
   function validate(data: Record<string, string>): boolean {
     const next: Record<string, string> = {};
-    for (const f of cfg.fields) {
+    for (const f of fields) {
       if (f.required && !data[f.name]?.trim()) {
         next[f.name] = t('validation.required');
       }
@@ -338,7 +353,7 @@ function LeadGenModal({
     const form = e.currentTarget;
     const fd = new FormData(form);
     const data: Record<string, string> = {};
-    for (const f of cfg.fields) {
+    for (const f of fields) {
       data[f.name] = String(fd.get(f.name) ?? '').trim();
     }
     if (!validate(data)) return;
@@ -634,6 +649,12 @@ function LeadGenModal({
               >
                 {cfg.subtitle}
               </p>
+              {/* ch: every Swiss enquiry is answered by QuinLay AG (STRETCH in copy). */}
+              {isSwissLocale(locale as Locale) && (
+                <p style={{ fontSize: 13, lineHeight: 1.55, color: 'var(--text-muted)', margin: '-12px 0 22px', padding: '10px 12px', background: 'var(--surface)', border: '1px solid var(--border)' }}>
+                  {tModals('swissPartnerNote')}
+                </p>
+              )}
 
               {/* The item this request is about (materials / product CTAs / datasheet) */}
               {(options.product || options.datasheet) && (
@@ -647,10 +668,7 @@ function LeadGenModal({
                 <div
                   style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 22 }}
                 >
-                  {TRAINING_DATE_DETAIL.map((d, i) => ({
-                    date: (tm.raw('trainingDates') as string[])[i] ?? d.date,
-                    note: (tm.raw('trainingDateNotes') as string[])[i] ?? d.note,
-                  })).map((d) => (
+                  {dateCards.map((d) => (
                     <div
                       key={d.date}
                       style={{
@@ -689,7 +707,7 @@ function LeadGenModal({
                     marginBottom: 18,
                   }}
                 >
-                  {cfg.fields.map((f) => (
+                  {fields.map((f) => (
                     <Field
                       key={f.name}
                       field={f}

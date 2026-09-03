@@ -344,6 +344,8 @@ h4 {
   text-decoration: none;
   line-height: 1;
   min-height: 44px;
+  /* Label + icon stay on one line — a tight header must never wrap the arrow. */
+  white-space: nowrap;
 }
 .btn--sm {
   font-size: 12px;
@@ -564,9 +566,57 @@ h4 {
   text-decoration: underline;
 }
 
+/* --- Header sizing --------------------------------------------------------
+   The utility bar is 42px tall and the main nav one line: nothing in either
+   may wrap. The tagline (locale-dependent, longest on ch) truncates with an
+   ellipsis; links, phone and the CTA never shrink. Below 1280px the nav and
+   utility gaps tighten so seven German nav items + the CTA still fit. */
+.hdr-tag {
+  min-width: 0;
+  flex: 1 1 auto;
+  margin-right: 24px;
+}
+.hdr-tag__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hdr-util {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.hdr-nav {
+  white-space: nowrap;
+}
+@media (max-width: 1280px) {
+  .hdr-nav {
+    gap: 20px !important;
+    font-size: 12.5px !important;
+  }
+  .hdr-util {
+    gap: 18px !important;
+  }
+}
+@media (max-width: 1100px) {
+  .hdr-nav {
+    gap: 14px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.01em !important;
+  }
+  .hdr-util {
+    gap: 14px !important;
+    font-size: 11px !important;
+  }
+}
+
 /* --- Responsive helpers --------------------------------------------------- */
 .only-desktop {
   display: initial;
+}
+/* `display: initial` is declared after .btn and would turn a desktop-only
+   button into a block whose icon wraps onto a second line (the header CTA). */
+.btn.only-desktop {
+  display: inline-flex;
 }
 .only-mobile {
   display: none;

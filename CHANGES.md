@@ -1,3 +1,379 @@
+## 2026-09-03 (27) — Switzerland Part 2: Swiss CHF price guide, Romandie (fr-ch), Ticino line
+
+Three additions on stretchdecken.ch, all behind the same `pending` flags as
+Part 1 (flip `ch` AND `fr-ch` to `live` together). Build: **2871 → 3154** static
+pages, typecheck clean, 0 MISSING_MESSAGE, key parity across **16** message
+files (`grep -c '"ticinoLine"' messages/*.json` = 16 × 1).
+
+- **Swiss price guide** — `/spanndecke-preis-schweiz`, de-CH only. The one
+  exception to "no public prices on the Swiss site": INDICATIVE CHF/m²
+  ranges for INSTALLED ceilings by finish (matt, satiniert, glänzend,
+  bedruckt, Lichtdecke, Akustik), "inkl. 8.1 % MwSt., Montage durch
+  QuinLay-Partner, Richtwerte", what drives the price (room shape, corners,
+  spots/built-ins, acoustic layer, access), FAQ (+ FAQPage JSON-LD),
+  breadcrumb JSON-LD, and the lead form with source **`price_guide_ch`**
+  (already a Swiss source → QuinLay + CC). Numbers and copy live in
+  **`src/lib/price-guide-ch.ts`** — every `low`/`high` is a `null`
+  placeholder marked `TODO(Michael)`; until ALL are filled the page renders
+  with a visible "Richtwerte in Abstimmung mit der QuinLay AG" notice and
+  "CHF – / m² · Richtwert folgt" per row, is `noindex`, out of the sitemap
+  and unlinked. `priceGuideChReady` flips index + sitemap + the dealer-page
+  "Was kostet eine Spanndecke in {Ort}?" link automatically. No other locale
+  gets an empty page: `dynamicParams=false` (404) plus a 308 on every other
+  domain to its own price article (`/blog/was-kostet-eine-spanndecke`,
+  `/blog/prix-plafond-tendu`, …) and `/fr/spanndecke-preis-schweiz` → `/fr`.
+  Single-locale page, so its copy sits next to the numbers rather than in
+  16 message files.
+- **fr-ch (Romandie) on the same domain** — locale `fr-ch` (fr-CH) served
+  under **stretchdecken.ch/fr/**. next-intl routing now groups locales per
+  DOMAIN (`stretchdecken.ch` → `['ch','fr-ch']`, default ch) with
+  `localeDetection: false` (URL-driven only — no cookie bounce). The public
+  prefix is declared once (`localePathPrefix` in `src/i18n/config.ts`):
+  the middleware maps `/fr` ↔ next-intl's internal `/fr-ch` prefix (and
+  any redirect target back), `src/i18n/navigation.tsx` (was `.ts`) wraps
+  `Link`/`usePathname` to add and strip it, `localeBase()` /
+  `buildCanonical()` put it in canonicals and hreflang, the sitemap serves
+  BOTH locales of the host (prefix-aware), OG image URLs go through the new
+  `apiBase()` (APIs live outside the prefix), and `/fr-ch/…` 308s to
+  `/fr/…`. Language switcher: on a multi-locale domain only its own
+  locales (**DE | FR** on the Swiss host, trigger label = language), on every
+  other domain one entry per domain (no fr-ch). `messages/fr-ch.json` is
+  generated from `fr.json` by the idempotent **`scripts/fr-ch-overlay.mjs`**
+  (`--check` / `--report`): "hors TVA" / "TVA incluse" / "TVAC" / "HTVA" →
+  8.1 % in 14 strings (the Belgian premium article keeps its 6 %), €/EUR →
+  CHF in 6 non-price strings (`meta.supplyDescription`,
+  `modals.kit_order.subtitle`, `modals.kit_order.sentMsg`,
+  `modals.projects_export.subtitle`, `supplyPage.currencyLine`,
+  `projectsExportPage.how.currencyLine`), 34 price/EUR-settlement strings
+  left as they are (never render — `pricesPublished()` is false for every
+  Swiss locale), 13 phone placeholders → "+41 …", 55 Swiss-French overrides
+  (hero, dealer copy with the "Plafond tendu {place} – Conseil, showroom &
+  pose | STRETCH × QuinLay AG" title, contact/Impressum/footer/modal,
+  QuinLay day-course cards). "devis" and "code postal" stay. Dealers:
+  **lausanne, geneve, fribourg, neuchatel, sion, yverdon** as RECRUITMENT
+  places (`dealerIds: []`, `primaryLocale: 'fr-ch'`), identity card and
+  every lead pointing at QuinLay AG (`swissPlaceSlugs` is derived from the
+  region, so `dealers_lausanne` routes to QuinLay + CC). Every Swiss check
+  that keyed on `'ch'` now uses `isSwissLocale()` (ch + fr-ch): local
+  contact, prices gate, currency policy, default country, training cards,
+  partners card, modal note, GA/Clarity (same CH IDs). Blog slugs: fr-ch =
+  fr (`blog-slugs.json`); market-restricted French articles stay on fr.
+- **Ticino** — no Italian locale. One line on the ch and fr-ch contact
+  pages, key `contactPage.ticinoLine` (same Italian string in all 16
+  files): "Tessin / Ticino: contattateci in italiano — office@quinlay.ch",
+  e-mail linked.
+- **Verified** on `next start` with Host headers and Playwright (flags
+  temporarily `live`): `/fr` and `/fr/dealers/lausanne`
+  render fr-CH on the Swiss host with `/fr/…` internal links and canonicals,
+  `/fr/dealers/zuerich` carries the French QuinLay title, `/fr/installer-training`
+  the French QuinLay cards, `/fr-ch/…` 308s to `/fr/…`, `/fr/…` on
+  stretchdecken.de is NOT fr-ch and `/fr/contact` on stretchplafond.fr still
+  strips to `/contact`; hreflang on a ch page lists de-CH, fr-CH (…/fr/…),
+  de-DE, de-AT and x-default; the ch sitemap carries both locales (368 URLs,
+  183 under /fr/), only .ch, no /fr/api and no unready price guide; OG image
+  URLs stay outside the prefix; the switcher shows DE | FR (trigger "FR" /
+  "DE") on both Swiss locales; in-app navigation on fr-ch stays under /fr;
+  `/spanndecke-preis-schweiz` renders the H1, six finishes with visible
+  placeholders, the 8.1 % wording, `noindex`, source `price_guide_ch`, hreflang
+  de-CH only, no ß / no €; the fr-ch and every other domain's variant 308s as
+  designed; both Swiss contact pages show the Ticino line with the mailto.
+  Playwright screenshots: /fr/dealers/lausanne, /spanndecke-preis-schweiz, /fr.
+- **Placeholders Michael fills in:** the 12 numbers in
+  `src/lib/price-guide-ch.ts` (`low`/`high` per finish, CHF/m² installed,
+  incl. 8.1 % MwSt.); optionally a Romandie installer in `dealers.ts`
+  (turns the recruitment pages into dealer pages). Go-live: flip `ch` and
+  `fr-ch` to `live` in `src/i18n/config.ts`; nothing extra on Vercel
+  (fr-ch shares the host, `QUINLAY_LEAD_EMAIL` and the CH GA/Clarity IDs).
+
+## 2026-09-02 (26) — Switzerland Part 1: stretchdecken.ch (de-CH) with QuinLay AG
+
+Fifteenth locale **`ch`** (Swiss Standard German, `de-CH`) on
+**stretchdecken.ch**, with **QuinLay AG, Rickenbach LU** as the general
+representative for Switzerland & Liechtenstein: every Swiss lead is theirs,
+every Swiss page names them, and the public Swiss site shows **no product
+prices** — the only CHF figures are QuinLay's two public course prices.
+Build: **2523 → 2871** static pages (182 routes on the ch locale + 12 Swiss
+dealer places × 13 other dealer markets = 156; the remaining 10 are the
+per-locale non-page entries Next counts alongside), typecheck clean,
+0 MISSING_MESSAGE, key parity across **15** message files. `localeStatus.ch` ships as **`pending`** (the
+domain is not on Vercel yet): the ch pages render, but de-CH is not
+advertised in hreflang/sitemaps until the flag flips to `live` — see the
+go-live list at the end.
+
+- **Locale & routing.** `src/i18n/config.ts`: `'ch'` after `'de'` in
+  `locales`, domain `stretchdecken.ch` (overridable with
+  `NEXT_PUBLIC_DOMAIN_CH`), flag 🇨🇭, `localeFullCodes.ch = 'de-CH'`, name
+  "Deutsch (Schweiz)", and a new `hreflangAliases = { 'de-AT': 'de' }`:
+  `buildAlternates()` (`src/lib/seo.ts`) and the sitemap emit **de-CH → .ch,
+  de-DE → .de, de-AT → the same URL as de-DE**, x-default en. Robots and
+  the sitemap are host-aware already (derived from the domain map). Locale
+  hard-codes extended in `GoogleAnalytics.tsx` / `Clarity.tsx`
+  (`NEXT_PUBLIC_GA_ID_CH`, `NEXT_PUBLIC_CLARITY_ID_CH`), `turnstile.ts`
+  (stretchdecken.ch in widget group B), `next.config.mjs` (image
+  remotePattern), `portal/host.ts` (CH and LI → ch), `forms-config.ts`
+  (default country CH), `blog-slugs.json` (ch = the German slugs). Locale
+  COUNT comments updated in `fonts.ts`, `sitemap.xml/route.ts`,
+  `localize-content.ts`, `site-config.ts`, `structured-data.ts`,
+  `.env.example`.
+- **Redirects** (`redirects.mjs`): stretchdecken.ch gets the same blog-slug
+  and legacy rules as every domain; **stretchdecken.li → 301 → .ch** with the
+  root landing on `/dealers/vaduz` (Liechtenstein page), plus
+  stretchgroup.ch / stretchgroup.li (and www) as a safety net. The
+  stretchdecken.at → .de redirect is a Vercel domain-level rule and is
+  untouched.
+- **Messages.** `messages/ch.json` is generated from `de.json` by
+  **`scripts/ch-overlay.mjs`** (idempotent: `--check` fails when stale,
+  `--report` lists every touched key). Values only, keys/slugs/ICU
+  placeholders untouched: **ß → ss** in 310 strings; vocabulary in 64
+  (Angebot → Offerte with the article/adjective chain re-gendered —
+  "eine kostenlose, unverbindliche Offerte", "einer Offerte", "die
+  verbindliche Offerte"; Angebote → Offerten, Angebots… → Offerten…,
+  Kostenvoranschlag → Offerte, Bundesland → Kanton; "Angebot" in the
+  product-range sense stays); **"inkl./zzgl. MwSt." → "… 8.1 % MwSt."** in
+  12 strings that already mention VAT; **€/EUR → CHF in 7 non-price
+  strings** (`meta.architectsDescription`, `meta.supplyDescription`,
+  `modals.kit_order.subtitle`, `modals.kit_order.sentMsg`,
+  `modals.projects_export.subtitle`, `supplyPage.currencyLine`,
+  `projectsExportPage.how.currencyLine`); 34 strings that quote product
+  prices or describe EUR settlement are left as they are and never render
+  on ch; 44 Swiss overrides (hero subline "Hersteller aus Belgien und
+  Polen – Generalvertretung Schweiz & Liechtenstein: QuinLay AG, Showroom
+  Rickenbach LU.", dealer copy, contact/Impressum/footer/modal strings,
+  training copy). **29 new keys** (`dealersPage.regionSwitzerland`,
+  `driveTime`, `generalAgent`, `showroomCta`, service labels,
+  `contactPage.swissPartner*` / `impressum*`, `modals.swissPartnerNote`,
+  `footer.swissPartnerHeading` / `manufacturerHeading`,
+  `partnersPage.why.quinlayCard.*`, `trainingPage.dates.externalCta` /
+  `swissRoom` / `secondaryCta`) added to all 15 files — so `de.json`
+  changed by exactly those 29 additions and nothing else. Checks: 0 "ß" in
+  ch.json values, "€" only in the 34 listed strings, no ASCII apostrophe
+  in any ICU string, `grep -c '"regionSwitzerland"' messages/*.json` = 15 × 1.
+- **No product prices on ch.** `pricesPublished(locale)` in
+  `src/lib/currency.ts` (false for ch) gates: `/price-calculator` (404,
+  out of the sitemap, mega menu, footer, mobile menu and every "what does
+  this cost" link on solution, prefab, blog and dealer pages), the four
+  articles that quote €/m² (`hidePrices` in `content.ts`), the Product
+  `AggregateOffer` JSON-LD, the `/kit` price and currency note. The ch
+  policy in `currency.ts` is CHF/indication — dormant while the gate holds.
+- **Dealers** (`src/lib/dealers.ts`): region `switzerland`, dealer
+  **QuinLay AG** with a `contact` block (Stierenberg Park 1A, 6221
+  Rickenbach, +41 41 313 47 32 shown as "041 313 47 32", tel:+41413134732,
+  office@quinlay.ch, https://www.quinlay.ch, showroom + training room,
+  four service chips), and **12 places** — luzern, zug, zuerich, aargau,
+  bern, basel, solothurn, winterthur, st-gallen, thurgau, graubuenden,
+  **vaduz** (`country: 'LI'` → "Spanndecke Vaduz / Liechtenstein") — each
+  with a drive time from the showroom. Real dealer pages on every dealer
+  market: title "Spanndecke {Ort} – Beratung, Showroom & Montage | STRETCH ×
+  QuinLay AG", QuinLay contact block with showroom CTA, identity card naming
+  QuinLay (not the Belgian office), LocalBusiness JSON-LD for the dealer,
+  lead form source `dealers_<place>`.
+- **Lead routing** (`src/lib/deliver.ts`): `leadRecipients(payload, host)`
+  — ch host or a Swiss source (`dealers_<swiss place>`, `training_ch`,
+  `price_guide_ch`, derived from `swissPlaceSlugs`) → deliver to
+  **`QUINLAY_LEAD_EMAIL`** (default office@quinlay.ch) with the existing
+  destination in **CC**, and `market: 'CH'` stored in the lead payload (no
+  migration — the leads table keeps it in `payload`). Graph
+  (`ccRecipients`), webhook (`cc`), SMTP (`cc`) and the log line all carry
+  the CC. `/api/lead` and `/api/contact` pass the request host. Honeypot,
+  rate limits, Turnstile, form token and sanitisation unchanged; PII still
+  never logged. Verified locally (no delivery method configured → log
+  path): `dealers_luzern` on the .de host, `quote` and `training_ch` on the
+  .ch host → `office@quinlay.ch (cc leads@stretchgroup.be)`; a `quote` on
+  the .de host → `leads@stretchgroup.be` only.
+- **Chrome & pages.** `localContactFor(locale)` (`src/lib/local-contact.ts`)
+  puts QuinLay's phone and e-mail in the header, mobile menu, CTA band,
+  footer and contact cards on ch; the footer adds a "Generalvertretung
+  Schweiz & Liechtenstein" block (QuinLay address) and a "Hersteller –
+  Belgien" line (Stretch Productions BV, Beveren-Waas). Contact page: Swiss
+  partner section + a minimal **Impressum** naming both the manufacturer
+  and QuinLay AG as the contracting party for CH & FL. Lead modal: one-line
+  note that the enquiry goes to QuinLay AG with STRETCH in copy. Partners
+  page: QuinLay card with logo slot `/images/partners/quinlay.png` (file to
+  be supplied). Installer training on ch: `trainingSessionsFor(locale)`
+  (`forms-config.ts`) swaps the Belgian dates for two QuinLay cards —
+  **Tageskurs Basic – CHF 1 050 exkl. MwSt.** and **Tageskurs Advanced –
+  CHF 750 exkl. MwSt.** — linking to quinlay.ch (`rel="noopener"`), a
+  secondary modal CTA with source `training_ch`, no Belgian dates, no
+  Event JSON-LD; the hero reads "als Tageskurs" with QuinLay's format band
+  (1 day per course · Rickenbach LU · Basic & Advanced), the HQ "included"
+  list (certificate, starter kit, lunch) is not shown for partner-run
+  courses, and the booking form — inline and modal (`InlineLeadForm`,
+  `LeadGenModal`) — offers the two QuinLay courses instead of the
+  Beveren-Waas dates on a partner-run locale. All 13 phone placeholders on
+  ch read "+41 ..." (overlay rule). Home hero subline names QuinLay.
+- **Header sizing.** The Vercel preview showed the ch utility bar wrapping
+  onto two lines (a 71-character tagline beside five links) and the CTA
+  wrapping its arrow. The Swiss tagline is now "Generalvertretung CH & FL:
+  QuinLay AG"; structurally, `Header.tsx` + `globals.css` make the bar and
+  the nav one-line for every locale: the tagline truncates with an ellipsis
+  (`.hdr-tag__text`), links/phone/switcher never wrap or shrink
+  (`.hdr-util`), `.btn` is `white-space: nowrap`, `.btn.only-desktop` is
+  `inline-flex` again (the later `.only-desktop { display: initial }` rule
+  had turned the header CTA into a block on EVERY locale — that is why its
+  arrow wrapped), and below 1280px / 1100px
+  the nav and utility gaps tighten so seven German nav items plus the CTA
+  still fit on one line.
+- **Verified** on `next start` with Host headers and Playwright (Chromium,
+  consent pre-seeded): `/dealers/zuerich`, `/dealers/vaduz`,
+  `/installer-training`, `/contact`, `/partners`, `/kit` and `/` on
+  stretchdecken.ch render the Swiss content with `lang="de-CH"`, no "ß" and
+  no "€" in the visible markup; `/price-calculator` 404s on ch and still
+  200s on de; the ch sitemap lists only .ch URLs (no calculator); hreflang
+  on a ch page lists de-CH (.ch) and de-DE (.de) with de-AT on the de-DE
+  URL and no duplicate URL (checked with `localeStatus.ch` temporarily
+  `live`); the .li and stretchgroup redirects 308 to .ch.
+- **Go-live (Michael, one-time).** Add stretchdecken.ch (and
+  stretchdecken.li, stretchgroup.ch/.li as redirect domains) to the Vercel
+  project + DNS; Vercel env: `QUINLAY_LEAD_EMAIL=office@quinlay.ch`,
+  `NEXT_PUBLIC_GA_ID_CH`, `NEXT_PUBLIC_CLARITY_ID_CH` (optional:
+  `NEXT_PUBLIC_DOMAIN_CH`); add stretchdecken.ch to Turnstile widget group
+  B; drop the QuinLay logo at `public/images/partners/quinlay.png`; then
+  flip `localeStatus.ch` to `'live'` in `src/i18n/config.ts` (one line —
+  hreflang, sitemap and the language switcher follow). Part 2 (Swiss CHF
+  price guide agreed with QuinLay, fr-CH) only after Part 1 is live.
+
+## 2026-09-02 (25) — Fix round 3: market localisation (per-market audit, D1–D5)
+
+The 2 Sep 2026 per-market audit found the network *engineered* as twelve
+local businesses but *stocked* as one Belgian one. This round fixes four of
+the five structural defects in code and lands the five named market tasks,
+one commit per task. Build: **2241 → 2523 (2514 before the nine articles)** static pages, typecheck
+clean, 0 MISSING_MESSAGE, full key parity across 14 files.
+
+- **T1 / D5 — the Danish and Icelandic product noun.** `messages/da.json`
+  said *spændloft* (135×) and *stretchloft* (73×); `messages/is.json` said
+  *strekkiloft* (132×) and *strekkloft* (50×) — words the markets do not
+  search (straekloft.dk is already the domain; `/dukaloft/` was stretch.is's
+  strongest old page). Every occurrence is now **strækloft** / **dúkaloft**:
+  title tags, meta descriptions, H1s, body copy, nav, breadcrumbs, alt text,
+  FAQ answers. Rules followed to the letter: Danish only in the singular
+  (strækloft / strækloftet) — plurals and compounds restructured to the
+  singular or left with a `TODO(da):` prefix; Icelandic only where the
+  inflection sits on the unchanged head noun *loft* (dúkaloftið, dúkalofta,
+  dúkaloftum …), compounds restructured with a preposition or marked
+  `TODO(is):`. Counts: da 130 noun swaps, 88 sentences restructured to the singular, 0 TODO(da); is 192 prefix swaps on the unchanged head noun, 33 restructured with a preposition, 1 TODO(is). Residual old
+  stems: **0** in both files (`grep -ci`). `src/i18n/config.ts` now carries
+  the market-term line so the old words cannot creep back.
+  *Native-speaker pass required before shipping — see the TODO markers.*
+- **T2 / D4 — euros in five non-euro markets.** `src/lib/currency.ts` is now a
+  per-locale DISPLAY policy: settlement stays EUR (PLN for Poland) and
+  nothing financial reads the file. A hand-maintained ECB rate table
+  (GBP, USD, DKK, SEK, NOK, ISK, CHF + PLN for EUR-denominated figures),
+  `asOf` dated, never fetched live — two builds render identical figures.
+  `displayCurrencyFor()`, `formatIndication()` and friends generalise the
+  UK GBP treatment: `da→DKK sv→SEK no→NOK is→ISK uk→GBP us→USD` render "≈ …"
+  beside the dominant EUR amount; CHF is in the table, dormant until a `ch`
+  locale exists. `PriceEstimator` no longer hardcodes EUR: it reads the
+  buckets from `src/lib/indicative-prices.ts`, which is now the ONE public
+  price source for the estimator, the Product JSON-LD and the price guide —
+  and carries the Polish **PLN** buckets (150–450 zł/m², the figures the
+  Polish price guide already publishes) as a second settlement list, so on
+  stretch-sufit.pl PLN is the primary amount, never a conversion, and the
+  Product `AggregateOffer` on .pl is finally priced in PLN. The price-guide
+  article shows the EUR buckets with the local "≈" equivalents on
+  indication markets (`PriceGuideCurrencyNote`); `/kit` and
+  `PriceIndication` follow the same policy (the hardcoded English note is
+  now the `currency.*` namespace, translated ×14; `kitPage.currencyNotice`
+  removed from all 14 files). **Meta descriptions keep "€70–200/m²"
+  deliberately**: they quote the published EUR range the page itself shows
+  as the dominant figure; a converted figure in a title would need a monthly
+  edit and would go stale. **Rates were seeded, not fetched** — the build
+  sandbox cannot reach ecb.europa.eu; verify the eight values before deploy.
+- **T3 / D2 — 21 new local pages outside the Benelux.** `DealerRegion` gains
+  `germany | poland | france`, `primaryLocale` gains `'pl'`. Recruitment
+  variants (empty `dealerIds`): Berlin, Hamburg, München, Köln, Frankfurt am
+  Main, Stuttgart, Düsseldorf, Dortmund, Essen, Leipzig · Częstochowa
+  (`factory: true`), Warszawa, Kraków · Paris, Lyon, Marseille, Lille,
+  Bordeaux, Toulouse, Nantes, Strasbourg. Region labels ×14. The overview
+  now orders the visitor's HOME regions first (`regionsForLocale`), and
+  `nearbyPlaces` no longer treats every province-less city as a neighbour of
+  every other (a latent bug that Wien alone never exposed). `dealerMarkets`
+  still derives from `primaryLocale` + the recruitment list — verified:
+  `stretchceiling.us/dealers` still 404s, no en-US alternate anywhere.
+- **T4a / D1 — per-locale blog slugs.** `BlogPost.slugs` (from
+  `src/lib/blog-slugs.json`, the one map `content.ts` AND `redirects.mjs`
+  read), `slugForLocale`/`blogHref`/`blogPostForSlug`, `localizeHref` for
+  the link rows inside article bodies and the mega-menu skeleton.
+  `generateStaticParams`, `generateMetadata`, the page, the blog index, the
+  sitemap, `articleSchema`, the kit page and the estimator all build blog
+  URLs through it; `buildAlternates` takes a `routeFor` so every hreflang
+  names THAT locale's slug (verified in the built sitemap). 200 native slugs across 12 locales (en/uk/us share the English set; the premie post only where it exists) → 200
+  host-scoped 301s are generated from the JSON and spread BEFORE each
+  host's `genericRules` (first match wins); the es/pt/dk/se/no hosts got
+  their first rule groups. `be`/`nl` slugs untouched.
+- **T4b — nine market-native articles**, written in the market language for
+  that market only (`native` + single-locale `markets`, no overlay in any
+  message file, never translated): DE `spanndecke-kosten-pro-m2`, `spanndecke-oder-abgehaengte-decke`, `spanndecke-kosten-renovierung` (each linking `/price-calculator`) · PL `co-to-jest-sufit-napinany`, `sufit-napinany-pvc-czy-tkanina`, `o-co-zapytac-producenta-sufitow-napinanych` (factory-led, linking `/dealers/czestochowa` and `/installer-training`)
+  · FR `plafond-tendu-prix-m2`, `plafond-tendu-prix-pose`, `plafond-tendu-devis-comparer` (the “plafond tendu prix” target). Fact-checked against the published figures only
+  (EUR buckets for DE/FR, PLN for PL, no warranty durations, no tax advice).
+- **T5 — Wallonia & Luxembourg carry the Belgian identity.** Every Belgian
+  and Luxembourg place page renders an identity block naming Stretch
+  Productions BV, Beveren-Waas production, phone, VAT (once
+  `brand.vatNumber` is set — it is NOT in the repo, so it renders nothing
+  until Michael fills it in) and links the Belgian grants/VAT article
+  wherever that post exists (be/nl/fr/en/uk); the page emits the Belgian
+  `LocalBusiness` node. The Wallonia label reads "Wallonie · Belgique".
+  French cities get a "served directly" block WITHOUT the Belgian address —
+  there is no French sales address in the data to show; Michael to supply
+  one if the French pages should carry a French NAP.
+- **T6 — the calculator is reachable.** `/price-calculator` is the last item
+  of the first mega-menu category on every locale (appended — index-keyed
+  messages, cats.0.items.4), in the mobile menu, linked under the CTA of
+  all eight product pages ("what does this cost per m²"), from the price
+  guide (calculator card), from every German (and other) city page under
+  the H1, and from the German articles. **stretchdecken.de** gets a compact
+  estimator band directly under the hero (area + type → `/price-calculator?
+  area=&type=`; the estimator reads the query on mount) — the full entry
+  point, not just a CTA. Published figures untouched.
+- **T7 — Poland: the factory is the story.** Częstochowa is the first Polish
+  place and names the plant (Alto Design Sp. z o.o., Legionów 59) with its
+  own `LocalBusiness` node and a training CTA; Polish pages say "two EU
+  plants: Częstochowa and Beveren-Waas"; installer training is a PRIMARY
+  nav item on stretch-sufit.pl and the installer band moves up to right
+  after the stats, reframed as the academy for installers and contractors;
+  pl.json's header chip and tagline now state the two plants. PLN stays the
+  primary amount (T2).
+
+- **Codebase analysis** (`docs/CODEBASE-ANALYSIS-2026-09-02.md`): ten
+  subsystem readers, a refute pass over the 42 high-rated findings (9
+  confirmed, 33 rejected as pre-fix-state), a completeness critic, and a
+  status per finding. Two follow-up commits fixed the cheap, safe ones:
+  robots.txt allowed nothing under `/api/` although every og:image and
+  schema image is `/api/og` (now `Allow: /api/og/`); `stretchceiling.us` was
+  in neither Turnstile widget group, so every US lead failed the captcha
+  (added to group B in code — **add it to widget B in Cloudflare too**); the
+  language switcher, mobile language grid and footer “worldwide” links carried
+  the current path across domains, which per-locale slugs would have turned
+  into 404s (`pathForLocale()` translates blog paths, market-only articles
+  go to `/blog`); the Polish calculator meta and renovation article still
+  said €70–200; llms.txt said STRETCH publishes no prices, 6.4 m, 12 domains,
+  made in Belgium in-house; legacy content rules now land on the host’s own
+  blog slug in one hop; the `/dealers` hub was linked from `/supply` only
+  (now footer + mobile menu on dealer markets); three server pages used bare
+  `<style>{…}</style>` blocks; `us` had no default country; the Technical
+  mega menu’s “All specs” button went to `/products`; `/price-calculator`
+  and `/dealers` rank 0.8 in the sitemap; `salesTerritory` gains ES, PT, DK,
+  SE, NO. Open items (portal/security backlog, README rewrite, dead root
+  `middleware.ts`, warranty 10 vs 25 years, Norwegian strekktak vs
+  strekkhimling, OG images per locale) are prioritised in the report.
+
+**Decisions for Michael (not code):**
+- **Sweden:** switch the canonical to `spänntak.se` (owned, resolving) —
+  `localeDomains.sv` + Vercel domain + 308 from stretchceilings.se.
+- **Norway:** settle the domain before anything ships — `stretchtak.no` is
+  the wrong word; `strekktak.no` is taken, `strekk-tak.no` is a competitor's.
+- **Wallonia, structural option:** an `fr-BE` locale on its own host
+  (`fr.stretchplafond.be` — `localeDomains` maps a locale to a host string,
+  so it works mechanically) would put Wallonia on a Belgian domain in
+  French. It is a domain and content-duplication decision (the .fr content
+  would exist twice); the pragmatic identity fix above is live meanwhile.
+- **French sales address** for the French city pages (T5.4) and the
+  **Belgian VAT number** (`brand.vatNumber`) — both render nothing until set.
+- **ECB rates** — verify the seeded table in `src/lib/currency.ts`.
+- **Austria / Switzerland / Liechtenstein:** the three redirects still answer
+  302 — set them to 308 in Vercel → Domains (outstanding for three rounds).
+- **Native-speaker check** of the `TODO(da)` / `TODO(is)` strings before T1 ships.
+
 ## 2026-09-02 (24) — Footer: altodesign.pl branch link
 
 - The "PL · Częstochowa" office chip in the shared footer is now a

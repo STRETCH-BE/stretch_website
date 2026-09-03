@@ -4,11 +4,12 @@
 // Server component; the quote/samples CTAs are the client ModalButton/-TextLink.
 import { Link } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import { ArrowRight, ArrowDown } from 'lucide-react';
+import { ArrowRight, ArrowDown, Calculator } from 'lucide-react';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton, ModalTextLink } from '@/components/ui/ModalButton';
 import { getProduct, type Product } from '@/lib/products';
 import { isDealerMarket } from '@/lib/dealers';
+import { pricesPublished } from '@/lib/currency';
 import type { Locale } from '@/i18n/config';
 import { localizeProduct, type CatalogEntry } from '@/lib/localize-product';
 import { productImage, pimg } from '@/lib/product-images';
@@ -95,6 +96,15 @@ export default function SolutionPage({ product: baseProduct }: { product: Produc
                 {t('viewSpecs')} <ArrowRight size={16} className="btn__arrow" />
               </a>
             </div>
+            {/* Price is on request — the calculator answers "what does this cost
+                per m²" from the published guide (per-market audit, T6). */}
+            {pricesPublished(locale) && (
+              <p style={{ margin: '18px 0 0' }}>
+                <Link href="/price-calculator" className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontWeight: 700, fontSize: 14 }}>
+                  <Calculator size={15} style={{ color: 'var(--red)' }} /> {t('priceLink')} →
+                </Link>
+              </p>
+            )}
           </div>
           <div style={{ position: 'relative' }}>
             <Placeholder

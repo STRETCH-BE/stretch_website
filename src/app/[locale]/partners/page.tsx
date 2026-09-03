@@ -4,8 +4,9 @@
 // per-path how-it-works, and a tagged application form. BreadcrumbList JSON-LD.
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { ArrowRight, TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone, Store, Wrench, Check, Factory } from 'lucide-react';
-import { isValidLocale, type Locale } from '@/i18n/config';
+import { ArrowRight, TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone, Store, Wrench, Check, Factory, ArrowUpRight } from 'lucide-react';
+import { swissPartner } from '@/lib/site-config';
+import { isValidLocale, type Locale, isSwissLocale } from '@/i18n/config';
 import { isDealerMarket } from '@/lib/dealers';
 import { Link } from '@/i18n/navigation';
 import { siteUrl } from '@/lib/site-config';
@@ -199,8 +200,24 @@ export default async function PartnersPage({ params }: { params: { locale: strin
               if (i !== 0) return card;
               // Supply-only teaser — right next to the buy-from-the-factory
               // card: installers can buy materials without partner commitment.
+              // ch: the general representative sits beside the factory card
+              // (logo slot: /images/partners/quinlay.png — Michael supplies it).
               return [
                 card,
+                ...(isSwissLocale(locale)
+                  ? [
+                      <a key="quinlay-card" href={swissPartner.url} target="_blank" rel="noopener" style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)', display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                        <div style={{ width: 120, height: 44, marginBottom: 18, position: 'relative' }}>
+                          <Placeholder label="QuinLay AG" src="/images/partners/quinlay.png" alt={swissPartner.name} sizes="120px" fit="contain" bg="#fff" />
+                        </div>
+                        <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 21, letterSpacing: '-.01em', margin: '0 0 11px' }}>{t('why.quinlayCard.title')}</h3>
+                        <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: '0 0 14px' }}>{t('why.quinlayCard.body')}</p>
+                        <span style={{ color: 'var(--red-bright)', fontWeight: 700, fontSize: 14, display: 'inline-flex', alignItems: 'center', gap: 7 }}>
+                          {t('why.quinlayCard.cta')} <ArrowUpRight size={15} />
+                        </span>
+                      </a>,
+                    ]
+                  : []),
                 <Link key="supply-card" href="/supply" style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)', display: 'block', textDecoration: 'none', color: 'inherit' }}>
                   <span style={{ color: 'var(--red-bright)', display: 'inline-flex', marginBottom: 18 }}><Package size={26} /></span>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 21, letterSpacing: '-.01em', margin: '0 0 11px' }}>{t('why.supplyCard.title')}</h3>

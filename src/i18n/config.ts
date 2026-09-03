@@ -22,6 +22,10 @@
 // canonical URLs, OG alternateLocale, robots.txt — derives from this file.
 // To change a domain, edit `localeDomains` below. Nothing else.
 // ============================================================================
+// Market product term (per-market audit 2 Sep 2026, defect 5 — the word the
+// market actually searches; never reintroduce the old spændloft/strekkiloft):
+// da=strækloft · sv=spänntak · no=strekktak · is=dúkaloft · de=Spanndecke ·
+// pl=sufit napinany · fr=plafond tendu · nl/be=spanplafond
 import { defineRouting } from 'next-intl/routing';
 
 export const locales = [
@@ -33,6 +37,8 @@ export const locales = [
   'fr', // French — France
   'pl', // Polish — Poland
   'de', // German — Germany
+  'ch', // German — Switzerland & Liechtenstein (market code; de-CH below) — stretchdecken.ch, QuinLay AG
+  'fr-ch', // French — Romandie: the SAME domain as ch, served under /fr/ (fr-CH below; localePathPrefix)
   'es', // Spanish — Spain
   'pt', // Portuguese — Portugal
   'da', // Danish — Denmark
@@ -57,6 +63,8 @@ export const localeDomains: Record<Locale, string> = {
   fr: process.env.NEXT_PUBLIC_DOMAIN_FR || 'stretchplafond.fr',
   pl: process.env.NEXT_PUBLIC_DOMAIN_PL || 'stretch-sufit.pl',
   de: process.env.NEXT_PUBLIC_DOMAIN_DE || 'stretchdecken.de',
+  ch: process.env.NEXT_PUBLIC_DOMAIN_CH || 'stretchdecken.ch', // bought 2 Sep 2026 (+ .li → 308 here); stretchgroup.ch/.li → here at the registrar
+  'fr-ch': process.env.NEXT_PUBLIC_DOMAIN_CH || 'stretchdecken.ch', // Romandie — same host as ch, public prefix /fr (localePathPrefix below)
   es: process.env.NEXT_PUBLIC_DOMAIN_ES || 'stretchtecho.es',
   pt: process.env.NEXT_PUBLIC_DOMAIN_PT || 'stretchteto.pt',
   da: process.env.NEXT_PUBLIC_DOMAIN_DA || 'straekloft.dk', // strækloft.dk (xn--strkloft-l0a.dk) 308 → here
@@ -83,6 +91,11 @@ export const localeStatus: Record<Locale, 'live' | 'pending'> = {
   fr: 'live',
   pl: 'live',
   de: 'live',
+  // stretchdecken.ch — domain bought 2 Sep 2026, not yet on Vercel/DNS. Flip to
+  // 'live' the day it resolves: that one change adds de-CH to hreflang, the
+  // sitemaps and the switcher on every domain.
+  ch: 'pending',
+  'fr-ch': 'pending', // flips together with ch — same domain
   es: 'live',
   pt: 'pending', // stretchteto.pt — no DNS yet
   da: 'live',
@@ -121,10 +134,17 @@ export const routing = defineRouting({
   // HTML head and the sitemap, so the header is disabled rather than let two
   // sources disagree (ranking-audit verification, 22 Aug 2026).
   alternateLinks: false,
-  domains: locales.map((locale) => ({
-    domain: localeDomains[locale],
-    defaultLocale: locale,
-    locales: [locale],
+  // URL-driven only — no cookie / Accept-Language redirects. On the
+  // two-locale Swiss domain a detection redirect would bounce a visitor who
+  // switched back to German straight to /fr again (the switcher navigates
+  // by URL); single-locale domains never needed detection.
+  localeDetection: false,
+  // One entry per DOMAIN: its default (unprefixed) locale first, then any
+  // path-prefixed locale it also serves (stretchdecken.ch → ch + fr-ch).
+  domains: Array.from(new Set(locales.map((l) => localeDomains[l]))).map((domain) => ({
+    domain,
+    defaultLocale: localesForDomain(domain)[0] ?? defaultLocale,
+    locales: localesForDomain(domain),
   })),
 });
 
@@ -138,6 +158,8 @@ export const localeNames: Record<Locale, string> = {
   fr: 'Français',
   pl: 'Polski',
   de: 'Deutsch',
+  ch: 'Deutsch (Schweiz)',
+  'fr-ch': 'Français (Suisse)',
   es: 'Español',
   pt: 'Português',
   da: 'Dansk',
@@ -156,6 +178,8 @@ export const localeFlags: Record<Locale, string> = {
   fr: '🇫🇷',
   pl: '🇵🇱',
   de: '🇩🇪',
+  ch: '🇨🇭',
+  'fr-ch': '🇨🇭',
   es: '🇪🇸',
   pt: '🇵🇹',
   da: '🇩🇰',
@@ -175,6 +199,8 @@ export const localeFullCodes: Record<Locale, string> = {
   fr: 'fr-FR',
   pl: 'pl-PL',
   de: 'de-DE',
+  ch: 'de-CH',
+  'fr-ch': 'fr-CH',
   es: 'es-ES',
   pt: 'pt-PT',
   da: 'da-DK',
@@ -182,6 +208,64 @@ export const localeFullCodes: Record<Locale, string> = {
   no: 'nb-NO',
   is: 'is-IS',
 };
+
+// ---------------------------------------------------------------------------
+// HREFLANG ALIASES — extra BCP-47 tags that point at ANOTHER locale's URL.
+// stretchdecken.at redirects to stretchdecken.de (Vercel domain level), so
+// de-AT is served by the German pages: every hreflang set and sitemap
+// alternate lists de-AT with the de-DE URL (Google accepts several tags on
+// one URL). Not a locale: no domain, no messages, no pages of its own.
+// ---------------------------------------------------------------------------
+export const hreflangAliases: Record<string, Locale> = {
+  'de-AT': 'de',
+};
+
+// ---------------------------------------------------------------------------
+// PATH-PREFIXED LOCALES — a second locale on an existing domain, served under
+// a public path prefix. Romandie (fr-ch, 3 Sep 2026) lives on
+// stretchdecken.ch/fr/. The middleware maps /fr ↔ next-intl's internal
+// /fr-ch prefix, Link/usePathname (src/i18n/navigation.tsx) add and strip
+// it, localeBase/buildCanonical (src/lib/seo.ts) and the sitemap put it in
+// every absolute URL. A locale WITHOUT an entry here is its domain's default
+// and stays unprefixed.
+// ---------------------------------------------------------------------------
+export const localePathPrefix: Partial<Record<Locale, string>> = {
+  'fr-ch': '/fr',
+};
+
+/** Public path prefix of a locale ('' for a domain's default locale). */
+export function publicPrefix(locale: Locale): string {
+  return localePathPrefix[locale] ?? '';
+}
+
+/** Every locale a domain serves, the domain's default (unprefixed) first — config order. */
+export function localesForDomain(domain: string): Locale[] {
+  const d = domain.toLowerCase();
+  return locales.filter((l) => localeDomains[l].toLowerCase() === d);
+}
+
+/** Every locale served by a request host (empty on unknown hosts). */
+export function localesForHost(host: string | null | undefined): Locale[] {
+  const first = localeForHost(host);
+  return first ? localesForDomain(localeDomains[first]) : [];
+}
+
+// ---------------------------------------------------------------------------
+// SWISS LOCALES — served by QuinLay AG (Switzerland & Liechtenstein): Swiss
+// contact data in the chrome, no public product prices, CHF, leads to QuinLay.
+// ---------------------------------------------------------------------------
+export const swissLocales: readonly Locale[] = ['ch', 'fr-ch'];
+export function isSwissLocale(locale: Locale): boolean {
+  return swissLocales.includes(locale);
+}
+
+/** Two-letter trigger label for the language switcher: the LANGUAGE on a
+ *  multi-locale domain (DE | FR on stretchdecken.ch), the market code elsewhere. */
+export function localeShortLabel(locale: Locale): string {
+  if (locale === 'ch') return 'DE';
+  if (locale === 'fr-ch') return 'FR';
+  return locale.toUpperCase();
+}
 
 // ---------------------------------------------------------------------------
 // Helpers

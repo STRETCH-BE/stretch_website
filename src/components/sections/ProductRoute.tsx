@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand } from '@/lib/site-config';
-import { localeBase, buildAlternates, buildOgLocales } from '@/lib/seo';
+import { localeBase, buildAlternates, buildOgLocales, apiBase } from '@/lib/seo';
 import { getProduct } from '@/lib/products';
 import { localizeProduct, type CatalogEntry } from '@/lib/localize-product';
 import { productSchema, breadcrumbSchema, faqPageSchema } from '@/lib/structured-data';
@@ -30,7 +30,7 @@ export async function productMetadata(slug: string, localeParam: string): Promis
 
   const route = `/products/${slug}`;
   const { ogLocale, alternate } = buildOgLocales(locale);
-  const ogImg = `${localeBase(locale)}/api/og/${slug}`;
+  const ogImg = `${apiBase(locale)}/api/og/${slug}`;
 
   return {
     title: product.name,

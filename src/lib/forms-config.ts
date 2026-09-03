@@ -72,6 +72,12 @@ export type TrainingSession = {
   /** ISO dates for scheduled sessions only — drive the Event JSON-LD on
    *  /installer-training. Keep in sync with src/lib/events.ts. */
   isoStart?: string;
+  /** Public course price line (only QuinLay's Swiss course prices may be public). */
+  price?: string;
+  /** Booked externally (QuinLay AG on quinlay.ch): link instead of the modal. */
+  external?: { href: string };
+  /** Lead-modal source for the secondary CTA on external sessions. */
+  source?: string;
   isoEnd?: string;
 };
 
@@ -85,6 +91,61 @@ export const TRAINING_DATE_DETAIL: TrainingSession[] = [
   // dates are confirmed — interest capture until then (ranking audit §2.1).
   { date: 'Polish session — new dates soon', note: 'Częstochowa (PL) · Polish-language group', languages: ['PL'], international: true },
 ];
+
+// ---------------------------------------------------------------------------
+// PER-LOCALE SESSION OVERRIDES — a locale whose training is run by a partner
+// replaces the Beveren-Waas cards entirely. Switzerland & Liechtenstein
+// (2 Sep 2026): QuinLay AG runs the courses in its own training and test room
+// in Rickenbach LU, booked on quinlay.ch. The only CHF figures allowed on the
+// public Swiss site are these two public course prices. Copy is Swiss German
+// (no ß, "exkl. MwSt."); the generic labels come from trainingPage.dates.*.
+// ---------------------------------------------------------------------------
+export const TRAINING_SESSIONS_BY_LOCALE: Partial<Record<string, TrainingSession[]>> = {
+  ch: [
+    {
+      date: 'Tageskurs Basic – CHF 1 050 exkl. MwSt.',
+      note: 'Rickenbach LU · Schulungs- und Testraum der QuinLay AG · Einstiegskurs, Inhalte auf quinlay.ch',
+      languages: ['DE'],
+      price: 'CHF 1 050 exkl. MwSt.',
+      external: { href: 'https://www.quinlay.ch' },
+      source: 'training_ch',
+    },
+    {
+      date: 'Tageskurs Advanced – CHF 750 exkl. MwSt.',
+      note: 'Rickenbach LU · Schulungs- und Testraum der QuinLay AG · Aufbaukurs, Inhalte auf quinlay.ch',
+      languages: ['DE'],
+      price: 'CHF 750 exkl. MwSt.',
+      external: { href: 'https://www.quinlay.ch' },
+      source: 'training_ch',
+    },
+  ],
+  // Romandie: the same two QuinLay courses (German-language instruction —
+  // the DE badge stays honest), French card copy.
+  'fr-ch': [
+    {
+      date: 'Tageskurs Basic (cours d’une journée) – CHF 1 050 hors TVA',
+      note: 'Rickenbach LU · Salle de formation et d’essai de QuinLay AG · Cours d’initiation, contenu sur quinlay.ch',
+      languages: ['DE'],
+      price: 'CHF 1 050 hors TVA',
+      external: { href: 'https://www.quinlay.ch' },
+      source: 'training_ch',
+    },
+    {
+      date: 'Tageskurs Advanced (cours d’une journée) – CHF 750 hors TVA',
+      note: 'Rickenbach LU · Salle de formation et d’essai de QuinLay AG · Cours avancé, contenu sur quinlay.ch',
+      languages: ['DE'],
+      price: 'CHF 750 hors TVA',
+      external: { href: 'https://www.quinlay.ch' },
+      source: 'training_ch',
+    },
+  ],
+};
+
+/** Sessions for a locale: the partner override when one exists, else the HQ list. */
+export function trainingSessionsFor(locale: string): { sessions: TrainingSession[]; partnerRun: boolean } {
+  const override = TRAINING_SESSIONS_BY_LOCALE[locale];
+  return override ? { sessions: override, partnerRun: true } : { sessions: TRAINING_DATE_DETAIL, partnerRun: false };
+}
 
 // ---------------------------------------------------------------------------
 // COUNTRY + CITY — shared across every lead form so the team can route each
@@ -105,7 +166,8 @@ export const COUNTRY_OPTIONS_EN = [
 /** The pre-selected country per locale domain (en = international, no default). */
 const LOCALE_DEFAULT_COUNTRY: Record<string, string> = {
   uk: 'GB',
-  be: 'BE', nl: 'NL', fr: 'FR', de: 'DE', pl: 'PL', es: 'ES',
+  us: 'US',
+  be: 'BE', nl: 'NL', fr: 'FR', de: 'DE', ch: 'CH', 'fr-ch': 'CH', pl: 'PL', es: 'ES',
   pt: 'PT', da: 'DK', sv: 'SE', no: 'NO', is: 'IS',
 };
 

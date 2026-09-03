@@ -10,7 +10,7 @@ import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { products } from '@/lib/products';
-import { contact } from '@/lib/site-config';
+import { localContactFor } from '@/lib/local-contact';
 import {
   liveLocales,
   localeNames,
@@ -24,6 +24,8 @@ import { useLeadModal } from '@/components/LeadGenModal';
 import PortalLink from '@/components/ui/PortalLink';
 import { isDealerMarket } from '@/lib/dealers';
 import { analytics } from '@/lib/analytics';
+import { pathForLocale } from '@/lib/blog-slugs';
+import { pricesPublished } from '@/lib/currency';
 
 // Shared style for the primary drawer links (Link and PortalLink render alike).
 const drawerLinkStyle = {
@@ -40,10 +42,17 @@ export default function MobileMenu() {
   const t = useTranslations('common');
   const tc = useTranslations('catalog');
   const tb = useTranslations('blogPage');
+  const tf = useTranslations('footer');
   const locale = useLocale() as Locale;
   const pathname = usePathname();
   const router = useRouter();
   const { open: openModal } = useLeadModal();
+  const local = localContactFor(locale);
+  // Blog slugs differ per locale: translate the path for the target domain.
+  const targetPath = (l: Locale) => {
+    const p = pathForLocale(pathname, locale, l);
+    return p === '/' ? '' : p;
+  };
   const [open, setOpen] = useState(false);
 
   // Cross-domain language switch — same logic as the desktop LanguageSwitcher:
@@ -59,7 +68,7 @@ export default function MobileMenu() {
       typeof window !== 'undefined' && localeForHost(window.location.host) !== null;
     if (onKnownDomain) {
       const search = window.location.search || '';
-      window.location.assign(`${originForLocale(next)}${pathname === '/' ? '' : pathname}${search}`);
+      window.location.assign(`${originForLocale(next)}${targetPath(next)}${search}`);
       return;
     }
     setOpen(false);
@@ -153,10 +162,12 @@ export default function MobileMenu() {
           >
             {[
               { href: '/products', label: t('nav.solutions') },
+              { href: '/price-calculator', label: t('nav.priceCalculator') },
               { href: '/materials', label: t('nav.materials') },
               { href: '/inspiration', label: t('nav.inspiration') },
               { href: '/partners', label: t('nav.partners') },
               { href: '/installer-training', label: t('nav.training') },
+              { href: '/dealers', label: tf('dealers') },
               { href: '/architects', label: t('nav.architects') },
               { href: '/faq', label: t('nav.faq') },
               { href: '/about', label: t('nav.about') },
@@ -164,7 +175,8 @@ export default function MobileMenu() {
               { href: '/portal', label: t('nav.clientLogin') },
             ]
               // Training only exists on dealer markets (N2) — no dead link on us.
-              .filter((item) => item.href !== '/installer-training' || isDealerMarket(locale))
+              .filter((item) => (item.href !== '/installer-training' && item.href !== '/dealers') || isDealerMarket(locale))
+              .filter((item) => item.href !== '/price-calculator' || pricesPublished(locale))
               .map((item) =>
               item.href === '/portal' ? (
                 <PortalLink key={item.href} href={item.href} style={drawerLinkStyle}>
@@ -237,7 +249,7 @@ export default function MobileMenu() {
               {t('cta.requestQuote')} <ArrowUpRight size={16} />
             </button>
             <a
-              href={contact.phoneHref}
+              href={local.phoneHref}
               onClick={() => analytics.phoneClick('mobile_menu')}
               style={{
                 marginTop: 18,
@@ -248,7 +260,7 @@ export default function MobileMenu() {
                 color: 'var(--black)',
               }}
             >
-              {contact.phoneDisplay}
+              {local.phoneDisplay}
             </a>
 
             <div
@@ -277,7 +289,7 @@ export default function MobileMenu() {
                    analytics + the dev/preview in-app switch on top. */
                 <a
                   key={l}
-                  href={`${originForLocale(l)}${pathname === '/' ? '' : pathname}`}
+                  href={`${originForLocale(l)}${targetPath(l)}`}
                   hrefLang={localeFullCodes[l]}
                   onClick={(e) => {
                     e.preventDefault();

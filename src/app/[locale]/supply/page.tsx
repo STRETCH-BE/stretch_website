@@ -191,7 +191,7 @@ export default async function SupplyPage({ params }: { params: { locale: string 
         </div>
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 900px) {
           .sup-groups { grid-template-columns: 1fr 1fr !important; }
           .sup-conf { grid-template-columns: 1fr !important; }
@@ -201,7 +201,7 @@ export default async function SupplyPage({ params }: { params: { locale: string 
           .sup-groups { grid-template-columns: 1fr !important; }
           .sup-steps { grid-template-columns: 1fr !important; }
         }
-      `}</style>
+      ` }} />
     </>
   );
 }

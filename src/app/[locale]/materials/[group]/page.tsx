@@ -10,7 +10,7 @@ import PortalLink from '@/components/ui/PortalLink';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { isValidLocale, locales, type Locale } from '@/i18n/config';
 import { brand } from '@/lib/site-config';
-import { localeBase, buildAlternates } from '@/lib/seo';
+import { localeBase, buildAlternates, apiBase } from '@/lib/seo';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: { locale: string; g
   const tData = await getTranslations({ locale, namespace: 'materialsData' });
   const g = localizeMaterialGroup(base, tData.has(`${base.slug}.name`) ? (tData.raw(base.slug) as MaterialGroupMessages) : undefined);
   const url = `${localeBase(locale)}/materials/${g.slug}`;
-  const ogImg = `${localeBase(locale)}/api/og`;
+  const ogImg = `${apiBase(locale)}/api/og`;
   return {
     title: { absolute: g.metaTitle },
     description: g.metaDescription,

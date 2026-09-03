@@ -13,6 +13,8 @@ import {
   defaultLocale,
   localeFullCodes,
   originForLocale,
+  publicPrefix,
+  hreflangAliases,
   type Locale,
 } from '@/i18n/config';
 
@@ -28,13 +30,21 @@ function normalizeRoute(route: string): string {
  * `${siteUrl}/${locale}/products` was used before.
  */
 export function localeBase(locale: Locale): string {
+  // A path-prefixed locale (fr-ch → https://stretchdecken.ch/fr) carries its
+  // public prefix in every page URL.
+  return `${originForLocale(locale)}${publicPrefix(locale)}`;
+}
+
+/** Origin for API routes (/api/og, …) — they live OUTSIDE any locale path prefix. */
+export function apiBase(locale: Locale): string {
   return originForLocale(locale);
 }
 
 /** Absolute URL for a (locale, route) pair, e.g. https://stretchplafond.nl/products. */
 export function buildCanonical(locale: Locale, route: string): string {
-  // Home resolves to the bare origin; every other route is origin + path.
-  return `${originForLocale(locale)}${normalizeRoute(route)}`;
+  // Home resolves to the bare origin (+ public prefix); every other route is
+  // origin + prefix + path.
+  return `${localeBase(locale)}${normalizeRoute(route)}`;
 }
 
 /** Canonical-order locale subset: all LIVE locales, or their intersection
@@ -57,17 +67,26 @@ export function buildAlternates(
   locale: Locale,
   route: string,
   only?: readonly Locale[],
+  /** Per-locale route (blog posts carry a different slug per locale). Each
+   *  hreflang MUST point at that locale's OWN path — a Polish alternate that
+   *  names the Dutch slug 404s on stretch-sufit.pl and breaks the cluster. */
+  routeFor?: (l: Locale) => string,
 ): Metadata['alternates'] {
   const subset = subsetOf(only);
+  const pathFor = (l: Locale) => (routeFor ? routeFor(l) : route);
   const languages: Record<string, string> = {};
   for (const l of subset) {
-    languages[localeFullCodes[l] ?? l] = buildCanonical(l, route);
+    languages[localeFullCodes[l] ?? l] = buildCanonical(l, pathFor(l));
+  }
+  // de-AT → the de-DE URL (stretchdecken.at redirects there) — see config.
+  for (const [tag, l] of Object.entries(hreflangAliases)) {
+    if (subset.includes(l)) languages[tag] = buildCanonical(l, pathFor(l));
   }
   const xDefault = subset.includes(defaultLocale) ? defaultLocale : subset[0];
-  languages['x-default'] = buildCanonical(xDefault, route);
+  languages['x-default'] = buildCanonical(xDefault, pathFor(xDefault));
 
   return {
-    canonical: buildCanonical(locale, route),
+    canonical: buildCanonical(locale, pathFor(locale)),
     languages,
   };
 }

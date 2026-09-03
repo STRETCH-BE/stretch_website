@@ -1,7 +1,7 @@
 import createMiddleware from 'next-intl/middleware';
-import { NextResponse, type NextRequest } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 import { createServerClient } from '@supabase/ssr';
-import { routing, localeDomains, isValidLocale } from './i18n/config';
+import { routing, localeDomains, isValidLocale, localeForHost, localesForDomain, localePathPrefix } from './i18n/config';
 
 // next-intl middleware in DOMAIN mode: the Host header decides the locale
 // (stretchplafond.nl → nl, stretchplafond.pl → pl, ...), and each domain
@@ -30,7 +30,41 @@ export default async function middleware(request: NextRequest) {
     }
   }
 
-  const response = intlMiddleware(request);
+  // PATH-PREFIXED LOCALE on a shared domain (fr-ch on stretchdecken.ch/fr/):
+  // next-intl only knows its own prefix (/fr-ch). Map the public prefix to it
+  // before routing, and map any redirect target back, so the browser only
+  // ever sees /fr/... — /fr-ch/... itself 308s to /fr/... in redirects.mjs.
+  // Unknown hosts (localhost, previews) are untouched: there /fr-ch/... is
+  // the way in and /fr/... stays the French locale.
+  // Same host resolution as next-intl (x-forwarded-host first) so both agree behind a proxy.
+  const hostLocale = localeForHost(request.headers.get('x-forwarded-host') ?? request.headers.get('host'));
+  const prefixedLocale = hostLocale
+    ? localesForDomain(localeDomains[hostLocale]).find((l) => localePathPrefix[l])
+    : undefined;
+  const publicPrefix = prefixedLocale ? localePathPrefix[prefixedLocale]! : '';
+  let intlRequest = request;
+  if (prefixedLocale) {
+    const { pathname } = request.nextUrl;
+    if (pathname === publicPrefix || pathname.startsWith(`${publicPrefix}/`)) {
+      const url = request.nextUrl.clone();
+      url.pathname = `/${prefixedLocale}${pathname.slice(publicPrefix.length)}`;
+      intlRequest = new NextRequest(url, { headers: request.headers, method: request.method });
+    }
+  }
+
+  const response = intlMiddleware(intlRequest);
+
+  if (prefixedLocale) {
+    const location = response.headers.get('location');
+    if (location) {
+      const target = new URL(location, request.url);
+      const internal = `/${prefixedLocale}`;
+      if (target.pathname === internal || target.pathname.startsWith(`${internal}/`)) {
+        target.pathname = `${publicPrefix}${target.pathname.slice(internal.length)}` || '/';
+        response.headers.set('location', target.toString());
+      }
+    }
+  }
 
   // CLIENT PORTAL — keep the Supabase auth session fresh on /portal routes.
   // Server Components cannot write cookies, so expired access tokens are

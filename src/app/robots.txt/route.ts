@@ -34,10 +34,13 @@ export function GET(request: Request) {
 
   const body = [
     '# robots.txt — STRETCH (host-aware, one locale per domain)',
-    '# Search and AI crawlers are explicitly welcome; only the API is disallowed.',
+    '# Search and AI crawlers are explicitly welcome; only the API (except OG images) is disallowed.',
     '',
     'User-agent: *',
     'Allow: /',
+    // Every og:image / twitter:image / Product.image / Article.image is
+    // /api/og[/slug] — it must stay fetchable (codebase analysis 2 Sep 2026).
+    'Allow: /api/og/',
     'Disallow: /api/',
     '# Client portal — private, login-gated area (also served noindex).',
     'Disallow: /portal',

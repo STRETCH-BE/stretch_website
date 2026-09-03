@@ -7,10 +7,13 @@ import { Link } from '@/i18n/navigation';
 import { usePathname } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { footerNav } from '@/lib/site-config';
-import { contact } from '@/lib/site-config';
+import { contact, swissPartner } from '@/lib/site-config';
+import { localContactFor, isSwissLocale } from '@/lib/local-contact';
 import { isDealerMarket } from '@/lib/dealers';
 import PortalLink from '@/components/ui/PortalLink';
 import { CONSENT_OPEN_BANNER_EVENT } from '@/lib/consent';
+import { pathForLocale } from '@/lib/blog-slugs';
+import { pricesPublished } from '@/lib/currency';
 import { analytics } from '@/lib/analytics';
 import {
   liveLocales,
@@ -18,14 +21,20 @@ import {
   localeFullCodes,
   originForLocale,
   type Locale,
+  publicPrefix,
 } from '@/i18n/config';
 
 export default function Footer() {
   const t = useTranslations('footer');
   const tc = useTranslations('cookies');
   const locale = useLocale() as Locale;
-  const pathname = usePathname(); // locale-agnostic path, identical across domains
-  const path = pathname === '/' ? '' : pathname;
+  const local = localContactFor(locale);
+  const swiss = isSwissLocale(locale);
+  const pathname = usePathname(); // locale-agnostic path (blog slugs translate per locale below)
+  const pathOn = (l: Locale) => {
+    const p = pathForLocale(pathname, locale, l);
+    return p === '/' ? '' : p;
+  };
   const year = new Date().getFullYear();
 
   return (
@@ -74,7 +83,10 @@ export default function Footer() {
 
           {/* Solutions */}
           <FooterCol heading={t('solutionsHeading')}>
-            {footerNav.solutions.map((l) => (
+            {footerNav.solutions
+              // No public prices on this locale → no calculator link (stretchdecken.ch).
+              .filter((l) => l.href !== '/price-calculator' || pricesPublished(locale))
+              .map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="lnk" style={{ color: 'var(--on-dark-soft)' }}>
                   {t(`links.${l.key}`)}
@@ -87,7 +99,7 @@ export default function Footer() {
           <FooterCol heading={t('companyHeading')}>
             {footerNav.company
               // Training only exists on dealer markets (N2) — no dead link on us.
-              .filter((l) => l.href !== '/installer-training' || isDealerMarket(locale))
+              .filter((l) => (l.href !== '/installer-training' && l.href !== '/dealers') || isDealerMarket(locale))
               .map((l) => (
               <li key={l.href}>
                 {l.key === 'clientPortal' ? (
@@ -96,7 +108,7 @@ export default function Footer() {
                   </PortalLink>
                 ) : (
                   <Link href={l.href} className="lnk" style={{ color: 'var(--on-dark-soft)' }}>
-                    {t(`links.${l.key}`)}
+                    {l.key === 'dealers' ? t('dealers') : t(`links.${l.key}`)}
                   </Link>
                 )}
               </li>
@@ -117,15 +129,26 @@ export default function Footer() {
                 margin: '0 0 18px',
               }}
             >
-              {t('hqHeading')}
+              {swiss ? t('swissPartnerHeading') : t('hqHeading')}
             </p>
-            <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--on-dark-soft)', margin: '0 0 16px' }}>
-              Beverpark, Gentseweg 309 A3
-              <br />
-              9120 Beveren-Waas, Belgium
-            </p>
+            {swiss ? (
+              /* ch: QuinLay AG first (the Swiss contracting party), the manufacturer below. */
+              <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--on-dark-soft)', margin: '0 0 16px' }}>
+                {swissPartner.name}
+                <br />
+                {swissPartner.street}
+                <br />
+                {swissPartner.postalCode} {swissPartner.city} {swissPartner.canton}
+              </p>
+            ) : (
+              <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--on-dark-soft)', margin: '0 0 16px' }}>
+                Beverpark, Gentseweg 309 A3
+                <br />
+                9120 Beveren-Waas, Belgium
+              </p>
+            )}
             <a
-              href={contact.phoneHref}
+              href={local.phoneHref}
               onClick={() => analytics.phoneClick('footer')}
               style={{
                 display: 'block',
@@ -136,16 +159,23 @@ export default function Footer() {
                 marginBottom: 6,
               }}
             >
-              {contact.phoneDisplay}
+              {local.phoneDisplay}
             </a>
             <a
-              href={`mailto:${contact.email}`}
+              href={`mailto:${local.email}`}
               className="lnk"
               style={{ fontSize: 14, color: 'var(--red-bright)' }}
               onClick={() => analytics.emailClick('footer')}
             >
-              {contact.email}
+              {local.email}
             </a>
+            {swiss && (
+              <p style={{ fontSize: 12.5, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: '14px 0 0' }}>
+                <span style={{ fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', fontSize: 11 }}>{t('manufacturerHeading')}</span>
+                <br />
+                Stretch Productions BV · Gentseweg 309 A3 · 9120 Beveren-Waas
+              </p>
+            )}
             <div
               style={{
                 display: 'flex',
@@ -194,7 +224,7 @@ export default function Footer() {
             .map((l) => (
               <a
                 key={l}
-                href={`${originForLocale(l)}${path}`}
+                href={`${originForLocale(l)}${publicPrefix(l)}${pathOn(l)}`}
                 hrefLang={localeFullCodes[l]}
                 className="lnk"
                 style={{ fontSize: 12.5, color: 'var(--on-dark-muted)' }}

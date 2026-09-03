@@ -5,13 +5,14 @@ import { useLocale, useTranslations } from 'next-intl';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
-import { contact } from '@/lib/site-config';
+import { localContactFor } from '@/lib/local-contact';
 import { isDealerMarket } from '@/lib/dealers';
 import type { Locale } from '@/i18n/config';
 
 export default function CtaBand() {
   const t = useTranslations('ctaBand');
   const locale = useLocale() as Locale;
+  const local = localContactFor(locale);
   return (
     <section className="cta-band" id="cta">
       <div className="cta-bg" aria-hidden="true">
@@ -49,8 +50,8 @@ export default function CtaBand() {
 
         <p style={{ marginTop: 30, fontSize: 13.5, color: 'var(--on-dark-soft)' }}>
           {t('preferTalk')}{' '}
-          <a href={contact.phoneHref} style={{ color: '#fff', fontWeight: 600 }}>
-            {contact.phoneDisplay}
+          <a href={local.phoneHref} style={{ color: '#fff', fontWeight: 600 }}>
+            {local.phoneDisplay}
           </a>{' '}
           · {t('hours')}
         </p>

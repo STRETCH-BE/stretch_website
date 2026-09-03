@@ -5,7 +5,8 @@
 // Host-scoped: Vercel's domain-level 308s preserve paths, so legacy URLs from
 // stretch-ceilings.uk / stretchceiling.us land on stretch.mt (English rules)
 // and stretchdecken.at / stretchgroup.ch / stretchgroup.li land on
-// stretchdecken.de (German rules). Seven host groups cover sixteen domains.
+// stretchdecken.de (German rules); stretchdecken.ch is its own site since 2 Sep
+// 2026 (Swiss rules below). Host groups cover every domain the group owns.
 //
 // DECISION FLAG — set before deploy:
 //   Shop lives on  →  '/materials'                      (webshop retired)
@@ -21,6 +22,8 @@ const SHOP_TARGET = '/materials';
 // 425 URLs — full sweep, every URL matched or explicitly mapped below).
 // ============================================================================
 
+import { createRequire } from 'node:module';
+
 const host = (h) => [{ type: 'host', value: h }];
 const R = (h, source, destination) => ({
   source,
@@ -28,6 +31,27 @@ const R = (h, source, destination) => ({
   destination,
   permanent: true,
 });
+
+// ---------------------------------------------------------------------------
+// PER-LOCALE BLOG SLUGS (per-market audit 2 Sep 2026, defect 1). Every locale
+// used to serve its translated article at the canonical (Dutch) slug; a locale
+// listed in src/lib/blog-slugs.json now serves its OWN slug and the old path
+// must 301. The rules are derived from the SAME JSON the app reads (via
+// src/lib/blog-slugs.ts), so the redirect map and the routes cannot drift.
+// `be`/`nl` are never in the map — their Dutch URLs rank and stay.
+// Each host's rules are spread BEFORE that host's genericRules spread
+// (first match wins; a /blog path never collides with the shop catch-alls,
+// but the ordering discipline is the same as for the kit rules).
+// ---------------------------------------------------------------------------
+const requireJson = createRequire(import.meta.url);
+const BLOG_SLUGS = requireJson('./src/lib/blog-slugs.json');
+/** The host's own path for a canonical blog slug (avoids a two-hop chain through the slug 301). */
+const blog = (locale, canonical) => `/blog/${(BLOG_SLUGS[canonical] && BLOG_SLUGS[canonical][locale]) || canonical}`;
+const blogSlugRules = (h, locale) =>
+  Object.entries(BLOG_SLUGS).flatMap(([canonical, perLocale]) => {
+    const own = perLocale[locale];
+    return own && own !== canonical ? [R(h, `/blog/${canonical}`, `/blog/${own}`)] : [];
+  });
 
 // ---------------------------------------------------------------------------
 // DUTCH RULES — applied to stretchplafond.be AND stretchplafond.nl
@@ -206,8 +230,10 @@ const dutchRules = (h) => [
   R(h, '/garantie-aanmelden', '/contact'),
   R(h, '/herstelling-aanmelden', '/contact'),
   R(h, '/klantenservice', '/contact'),
-  R(h, '/calculeer-je-eigen-spanplafond', '/contact'),
-  R(h, '/bereken-je-spanplafond', '/contact'),
+  // Old calculator pages → the public estimator (they went to /contact
+  // until the calculator existed — per-market audit 2 Sep 2026, T6).
+  R(h, '/calculeer-je-eigen-spanplafond', '/price-calculator'),
+  R(h, '/bereken-je-spanplafond', '/price-calculator'),
   R(h, '/reseller-worden', '/partners'),
   R(h, '/verkooppunt-worden', '/partners'),
   R(h, '/booking', '/installer-training'),
@@ -267,6 +293,7 @@ const englishRules = [
   R('stretch.mt', '/product-category/stretch-kit/:path*', '/kit'),
   R('stretch.mt', '/stretch-ceiling-kit', '/kit'),
   R('stretch.mt', '/diy-stretch-ceiling-kit', '/kit'),
+  ...blogSlugRules('stretch.mt', 'en'),
   ...genericRules('stretch.mt'),
   R('stretch.mt', '/soluzzjonijiet', '/products'),
   R('stretch.mt', '/warranty-repair-and-returns', '/faq'),
@@ -289,6 +316,7 @@ const ukRules = [
   R('stretch-ceilings.uk', '/product-category/stretch-kit/:path*', '/kit'),
   R('stretch-ceilings.uk', '/stretch-ceiling-kit', '/kit'),
   R('stretch-ceilings.uk', '/diy-stretch-ceiling-kit', '/kit'),
+  ...blogSlugRules('stretch-ceilings.uk', 'uk'),
   ...genericRules('stretch-ceilings.uk'),
   R('stretch-ceilings.uk', '/warranty-repair-and-returns', '/faq'),
   R('stretch-ceilings.uk', '/terms-and-conditions', '/terms'),
@@ -304,6 +332,7 @@ const ukRules = [
 // inventory from the ranking analysis, statuses verified live that day.
 // ---------------------------------------------------------------------------
 const germanRules = [
+  ...blogSlugRules('stretchdecken.de', 'de'),
   ...genericRules('stretchdecken.de', '/portal/login'),
   R('stretchdecken.de', '/mein-konto/:path*', '/portal/login'),
   R('stretchdecken.de', '/warenkorb', SHOP_TARGET),
@@ -317,7 +346,7 @@ const germanRules = [
   // old FAQ page (carried the €75–80/m² price answer)
   R('stretchdecken.de', '/loesungen-de', '/faq'),
   // the old plain-language guide → its recreation
-  R('stretchdecken.de', '/spanndecke', '/blog/what-is-a-stretch-ceiling'),
+  R('stretchdecken.de', '/spanndecke', blog('de', 'what-is-a-stretch-ceiling')),
   R('stretchdecken.de', '/decke', '/products'),
   R('stretchdecken.de', '/stretch-spanndecken-de', '/products'),
   // e-learning playlist page → training
@@ -333,6 +362,7 @@ const germanRules = [
 const frenchRules = [
   // 495D acoustic roll — the one shop URL that earned clicks (45/yr)
   R('stretchplafond.fr', '/product-category/tissus-stretch/plafond-tendu-en-rouleau', '/materials/fabrics'),
+  ...blogSlugRules('stretchplafond.fr', 'fr'),
   ...genericRules('stretchplafond.fr', '/portal/login'),
   R('stretchplafond.fr', '/boutique/:path*', SHOP_TARGET),
   R('stretchplafond.fr', '/mon-compte/:path*', '/portal/login'),
@@ -340,7 +370,7 @@ const frenchRules = [
   R('stretchplafond.fr', '/commande', SHOP_TARGET),
   // --- legacy content URLs (22 Aug 2026 sweep) ---
   // the traffic carrier (65% of all .fr clicks) → its /blog recreation
-  R('stretchplafond.fr', '/decouvrez-les-avantages-du-plafond-tendu', '/blog/plafond-tendu-avantages-et-inconvenients'),
+  R('stretchplafond.fr', '/decouvrez-les-avantages-du-plafond-tendu', blog('fr', 'plafond-tendu-avantages-et-inconvenients')),
   R('stretchplafond.fr', '/plafond-tendu-acoustique', '/products/acoustic-stretch-system'),
   R('stretchplafond.fr', '/plafond-tendu-en-pvc', '/products/pvc-stretch-ceiling'),
   R('stretchplafond.fr', '/plafond-tendu-textile-polyester', '/products/polyester-stretch-ceiling'),
@@ -365,6 +395,7 @@ const frenchRules = [
 // trade pricing is login-gated on the new site.
 // ---------------------------------------------------------------------------
 const polishRules = [
+  ...blogSlugRules('stretch-sufit.pl', 'pl'),
   ...genericRules('stretch-sufit.pl'),
   R('stretch-sufit.pl', '/sklep/:path*', SHOP_TARGET),
   R('stretch-sufit.pl', '/moje-konto/:path*', '/portal/login'),
@@ -400,6 +431,7 @@ const usRules = [
   R('stretchceiling.us', '/shop/stretch-kits/stretch-fabric-stretch-ceiling-kit/:path*', '/kit'),
   R('stretchceiling.us', '/shop/stretch-kits/:path*', '/kit'),
   R('stretchceiling.us', '/spanplafond-laten-plaatsen', '/products'),
+  ...blogSlugRules('stretchceiling.us', 'us'),
   ...genericRules('stretchceiling.us'),
 ];
 
@@ -413,7 +445,43 @@ const usRules = [
 const icelandicRules = [
   R('stretch.is', '/dukaloft', '/products/pvc-stretch-ceiling'),
   R('stretch.is', '/sjalfbaert-dukaloft', '/products/polyester-stretch-ceiling'),
+  ...blogSlugRules('stretch.is', 'is'),
   ...genericRules('stretch.is'),
+];
+
+// ---------------------------------------------------------------------------
+// SPANISH / PORTUGUESE / NORDIC RULES — these hosts had no legacy map yet;
+// they carry only the per-locale blog slug 301s (2 Sep 2026) plus the
+// generic WP/Woo sweep, in that order.
+// ---------------------------------------------------------------------------
+const spanishRules = [...blogSlugRules('stretchtecho.es', 'es'), ...genericRules('stretchtecho.es')];
+const portugueseRules = [...blogSlugRules('stretchteto.pt', 'pt'), ...genericRules('stretchteto.pt')];
+const danishRules = [...blogSlugRules('straekloft.dk', 'da'), ...genericRules('straekloft.dk')];
+const swedishRules = [...blogSlugRules('stretchceilings.se', 'sv'), ...genericRules('stretchceilings.se')];
+const norwegianRules = [...blogSlugRules('stretchtak.no', 'no'), ...genericRules('stretchtak.no')];
+
+// ---------------------------------------------------------------------------
+// SWISS RULES — stretchdecken.ch (de-CH, QuinLay AG, 2 Sep 2026). The .ch host
+// used to be stretchgroup.ch redirecting to .de; the blog slugs are the German
+// ones, then the generic WP/Woo sweep.
+//   stretchdecken.li  → stretchdecken.ch (root → the Vaduz / Liechtenstein
+//                       place page, everything else path-preserving)
+//   stretchgroup.ch / stretchgroup.li → stretchdecken.ch — Michael points
+//                       them there at the registrar; these host rules are the
+//                       safety net should either host ever reach Vercel.
+// All absolute-destination 308s; the .at → .de redirect stays at Vercel level.
+// ---------------------------------------------------------------------------
+const swissRules = [...blogSlugRules('stretchdecken.ch', 'ch'), ...genericRules('stretchdecken.ch')];
+const CH_ORIGIN = 'https://stretchdecken.ch';
+const swissHostRedirects = [
+  R('stretchdecken.li', '/', `${CH_ORIGIN}/dealers/vaduz`),
+  R('stretchdecken.li', '/:path*', `${CH_ORIGIN}/:path*`),
+  R('www.stretchdecken.li', '/', `${CH_ORIGIN}/dealers/vaduz`),
+  R('www.stretchdecken.li', '/:path*', `${CH_ORIGIN}/:path*`),
+  R('stretchgroup.ch', '/:path*', `${CH_ORIGIN}/:path*`),
+  R('www.stretchgroup.ch', '/:path*', `${CH_ORIGIN}/:path*`),
+  R('stretchgroup.li', '/:path*', `${CH_ORIGIN}/:path*`),
+  R('www.stretchgroup.li', '/:path*', `${CH_ORIGIN}/:path*`),
 ];
 
 // ---------------------------------------------------------------------------
@@ -433,6 +501,7 @@ const LOCALE_DOMAINS = [
   ['stretchplafond.fr', 'fr'],
   ['stretch-sufit.pl', 'pl'],
   ['stretchdecken.de', 'de'],
+  ['stretchdecken.ch', 'ch'],
   ['stretchtecho.es', 'es'],
   ['stretchteto.pt', 'pt'],
   ['straekloft.dk', 'da'],
@@ -446,6 +515,22 @@ const localePrefixStrips = LOCALE_DOMAINS.flatMap(([h, l]) => [
 ]);
 
 // ---------------------------------------------------------------------------
+// ROMANDIE — fr-ch lives on the SAME host as ch, under /fr/ (3 Sep 2026). The
+// middleware maps /fr ↔ next-intl's internal /fr-ch prefix; anyone reaching
+// the internal form gets the public one, permanently. The Swiss CHF price
+// guide (/spanndecke-preis-schweiz) exists on de-CH only: the fr-ch variant
+// goes to the Romandie home, every OTHER domain to its own price article.
+// ---------------------------------------------------------------------------
+const romandieRules = [
+  R('stretchdecken.ch', '/fr-ch', '/fr'),
+  R('stretchdecken.ch', '/fr-ch/:path*', '/fr/:path*'),
+  R('stretchdecken.ch', '/fr/spanndecke-preis-schweiz', '/fr'),
+];
+const priceGuideChRules = LOCALE_DOMAINS.filter(([h]) => h !== 'stretchdecken.ch').map(([h, l]) =>
+  R(h, '/spanndecke-preis-schweiz', blog(l, 'spanplafond-prijs')),
+);
+
+// ---------------------------------------------------------------------------
 export const legacyRedirects = [
   ...localePrefixStrips,
   ...dutchRules('stretchplafond.be'),
@@ -457,6 +542,15 @@ export const legacyRedirects = [
   ...frenchRules,
   ...polishRules,
   ...icelandicRules,
+  ...spanishRules,
+  ...portugueseRules,
+  ...danishRules,
+  ...swedishRules,
+  ...norwegianRules,
+  ...swissRules,
+  ...swissHostRedirects,
+  ...romandieRules,
+  ...priceGuideChRules,
 ];
 
 export default legacyRedirects;

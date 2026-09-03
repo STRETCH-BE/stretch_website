@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Client login",
       "materials": "Materials",
-      "architects": "Architects"
+      "architects": "Architects",
+      "priceCalculator": "Price calculator"
     },
     "cta": {
       "freeQuote": "Free quote",
@@ -179,7 +180,9 @@
       "priceCalculator": "Price calculator"
     },
     "dealers": "Dealer network",
-    "worldwideHeading": "STRETCH worldwide"
+    "worldwideHeading": "STRETCH worldwide",
+    "swissPartnerHeading": "General representative — Switzerland & Liechtenstein",
+    "manufacturerHeading": "Manufacturer — Belgium"
   },
   "portal": {
     "login": {
@@ -642,6 +645,12 @@
       "ratedOn": "Rated on {source}",
       "titlePlain": "What clients say",
       "provenance": "Verified Google reviews, quoted verbatim from our public Google Business profile."
+    },
+    "estimator": {
+      "kicker": "Price calculator",
+      "title": "How much does a stretch ceiling cost?",
+      "sub": "Enter the area and ceiling type — the published indicative range appears instantly; the firm quote is free.",
+      "cta": "Calculate price"
     }
   },
   "ctaBand": {
@@ -677,7 +686,8 @@
     "dealer": "Find your nearest dealer",
     "chartCount": "{count, plural, one {# color} other {# colors}}",
     "anyRal": "Any RAL on request",
-    "dealerDirect": "We deliver & install directly — contact us"
+    "dealerDirect": "We deliver & install directly — contact us",
+    "priceLink": "How much does this cost per m²?"
   },
   "productsPage": {
     "eyebrow": "Our solutions",
@@ -1498,6 +1508,10 @@
             {
               "title": "All ceiling systems",
               "sub": "Compare the range"
+            },
+            {
+              "title": "Price calculator",
+              "sub": "Your price per m² in 30 seconds"
             }
           ]
         },
@@ -2238,7 +2252,8 @@
           "placeholder": "Ceiling types, drawings available, timeline…"
         }
       }
-    }
+    },
+    "swissPartnerNote": "Your inquiry goes to QuinLay AG, Rickenbach LU, the STRETCH general representative for Switzerland and Liechtenstein, with STRETCH copied. Callback by QuinLay AG."
   },
   "faqPage": {
     "items": [
@@ -4689,7 +4704,9 @@
       "eyebrow": "Guides",
       "ctaTitle": "Thinking about a stretch ceiling?",
       "ctaBody": "Get a free, no-obligation quote for your space.",
-      "ctaBtn": "Request a free quote"
+      "ctaBtn": "Request a free quote",
+      "calculatorTitle": "What will your ceiling cost?",
+      "calculatorBody": "Square meters × ceiling type gives you the published indicative range in 30 seconds."
     }
   },
   "inspirationPage": {
@@ -4879,6 +4896,11 @@
         "title": "Just want to buy materials?",
         "body": "A supply account is not a partnership: order materials and made-to-measure confection at your installer tier, with no commitments.",
         "cta": "Installer supply"
+      },
+      "quinlayCard": {
+        "title": "Switzerland & Liechtenstein: QuinLay AG",
+        "body": "Our general representative for Switzerland and Liechtenstein: showroom and training room in Rickenbach LU, materials from Swiss stock, installation partners across the country.",
+        "cta": "Visit quinlay.ch"
       }
     },
     "how": {
@@ -4992,7 +5014,10 @@
       "title": "Reserve your seat",
       "lead": "Small groups, booked first-come. Custom on-site sessions available on request.",
       "onRequestTitle": "On request",
-      "onRequestNote": "Custom on-site session"
+      "onRequestNote": "Custom on-site session",
+      "externalCta": "Dates & booking on quinlay.ch",
+      "swissRoom": "Courses take place in QuinLay AG’s own training and test room in Rickenbach LU.",
+      "secondaryCta": "Questions about the course? Get in touch"
     },
     "book": {
       "eyebrow": "Plan your training",
@@ -5104,7 +5129,16 @@
     "hours": "Mon–Fri · 08:30–17:00",
     "directTitle": "No local dealer needed.",
     "directBody": "STRETCH delivers and installs directly from our own production while the US network is being built — one team, one point of guarantee.",
-    "directCta": "Request a free quote"
+    "directCta": "Request a free quote",
+    "swissPartnerKicker": "Switzerland & Liechtenstein",
+    "swissPartnerTitle": "Your contact in Switzerland and Liechtenstein: QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG is the general representative of STRETCH for Switzerland and Liechtenstein: showroom and training room in Rickenbach LU, materials from Swiss stock, installation through trained partners. Every inquiry from Switzerland is answered by QuinLay AG, with STRETCH copied.",
+    "swissCallback": "Callback by QuinLay AG",
+    "impressumHeading": "Legal notice — Switzerland & Liechtenstein",
+    "impressumManufacturer": "Manufacturer",
+    "impressumSwissParty": "Contracting party for Switzerland and Liechtenstein",
+    "impressumNote": "Quotes, supplies and invoices for Switzerland and Liechtenstein are issued by QuinLay AG.",
+    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch"
   },
   "datasheetsPage": {
     "eyebrow": "Technical datasheets",
@@ -5372,13 +5406,48 @@
     "ovTitle": "Dealers",
     "ovIntro": "STRETCH ceilings are measured and installed by certified local partners, backed by our own production near Lokeren. Find your region — or claim the open spots.",
     "regionFlanders": "Flanders & Brussels",
-    "regionWallonia": "Wallonia",
+    "regionWallonia": "Wallonia · Belgium",
     "regionNetherlands": "Netherlands",
     "lookingLabel": "Dealer wanted",
     "ovRecruitTitle": "No dealer in your area yet?",
     "ovRecruitBody": "We deliver and install directly from our production while the network grows — and installers who claim an open region get its inquiries, dealer pricing and training.",
     "regionLuxembourg": "Luxembourg (Grand Duchy)",
-    "regionAustria": "Austria"
+    "regionAustria": "Austria",
+    "regionGermany": "Germany",
+    "regionPoland": "Poland",
+    "regionFrance": "France",
+    "nearbyHeadingRegion": "Also in {region}",
+    "identityBeKicker": "Belgian manufacturer",
+    "identityBeTitle": "Made in Beveren-Waas, Belgium",
+    "identityBeBody": "STRETCH is a Belgian manufacturer: every ceiling for {place} is measured locally, then cut and welded to size in our own production in Beveren-Waas (East Flanders) and installed by our own teams or a certified dealer. One Belgian company, one point of guarantee.",
+    "identityVat": "VAT",
+    "identityVatArticle": "Grants and VAT for a stretch ceiling in Belgium",
+    "identityDirectKicker": "Served directly",
+    "identityDirectTitle": "{place}, served directly from our production",
+    "identityDirectBody": "While our installer network in this region grows, STRETCH delivers and installs in {place} directly: measured on site, welded to size in our own EU production and installed in a day by our own teams. Installers who claim the region receive its inquiries.",
+    "identityDirectCard": "Manufacturer of stretch ceilings and walls — direct delivery and installation.",
+    "costLine": "How much does a stretch ceiling cost in {place}? Calculate the price per m²",
+    "identityPlKicker": "Produced in Poland and Belgium",
+    "identityPlTitle": "Two EU plants: Częstochowa and Beveren-Waas",
+    "identityPlBody": "STRETCH manufactures in two plants of its own: Alto Design Sp. z o.o. in Częstochowa and Stretch Productions BV in Beveren-Waas, Belgium. Ceilings for {place} are welded to size in Częstochowa and installed by our own teams or a certified partner — a manufacturer with a factory you can visit, not an importer.",
+    "factoryKicker": "Our plant",
+    "factoryTitle": "The STRETCH plant in Częstochowa",
+    "factoryBody": "This is where the group produces in Poland: Alto Design Sp. z o.o. cuts and welds PVC membranes to size, runs the Polish-language installer training and builds the STRETCH network for Poland — a named factory you can find on a map, not just a business address.",
+    "factoryTraining": "Installer training in Częstochowa",
+    "factoryCta": "Visit altodesign.pl",
+    "why1Pl": "Made in the EU — every ceiling is welded to size in our own plants in Częstochowa and Beveren-Waas and arrives ready to install.",
+    "regionSwitzerland": "Switzerland & Liechtenstein",
+    "liechtenstein": "Liechtenstein",
+    "driveTime": "About {minutes} min from the showroom in Rickenbach LU",
+    "contactHeading": "Your contact for Switzerland and Liechtenstein",
+    "generalAgent": "General representative of STRETCH for Switzerland & Liechtenstein",
+    "showroomLabel": "Showroom & training room",
+    "showroomCta": "Schedule a showroom appointment",
+    "servicesHeading": "Services",
+    "serviceConsulting": "Consulting and showroom",
+    "serviceInstallation": "Installation through trained partners",
+    "serviceTraining": "Installer training in its own training room",
+    "serviceStock": "Materials from Swiss stock"
   },
   "datasheetEmail": {
     "subject": "Your STRETCH datasheet — {title}",
@@ -5534,7 +5603,6 @@
     "priceEyebrow": "Price & ordering",
     "priceTitle": "Ordering your kit",
     "priceOnRequest": "Price on request — send your measurements and we reply with a tailored quote within one business day.",
-    "currencyNotice": "All prices and payments are in EUR. The £ amount is an indication at the ECB reference rate of {asOf}; your bank or card converts at its own rate.",
     "deliveryPoints": [
       "Delivered DDP by courier parcel — we handle customs and import paperwork, the price we confirm is the price you pay",
       "Shipping across the EU and the UK",
@@ -5772,5 +5840,12 @@
     "captchaFailed": "The security check failed. Please try again.",
     "captchaLoadFailed": "The security check could not load. Please refresh the page or email us at {email}.",
     "tooManyRequests": "Too many requests. Please wait a few minutes and try again."
+  },
+  "currency": {
+    "indicationNote": "The {currency} amount is an indication at the ECB reference rate of {asOf}; all prices and payments are in EUR. Your bank or card converts at its own rate.",
+    "settlementNote": "All prices and payments are in {currency}.",
+    "indicationAria": "{eur} — indication only, all payments in EUR",
+    "guideNoteTitle": "In {currency}, approximately",
+    "guideNoteBody": "The figures in this guide are in EUR, the currency we invoice in. For a sense of scale, here are the same ranges at the ECB reference rate of {asOf}:"
   }
 }

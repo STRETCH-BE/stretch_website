@@ -22,6 +22,8 @@ const LOCALE_IDS: Record<string, string | undefined> = {
   fr: process.env.NEXT_PUBLIC_CLARITY_ID_FR,
   pl: process.env.NEXT_PUBLIC_CLARITY_ID_PL,
   de: process.env.NEXT_PUBLIC_CLARITY_ID_DE,
+  ch: process.env.NEXT_PUBLIC_CLARITY_ID_CH,
+  'fr-ch': process.env.NEXT_PUBLIC_CLARITY_ID_CH, // same project: one Swiss domain
   es: process.env.NEXT_PUBLIC_CLARITY_ID_ES,
   pt: process.env.NEXT_PUBLIC_CLARITY_ID_PT,
   da: process.env.NEXT_PUBLIC_CLARITY_ID_DA,

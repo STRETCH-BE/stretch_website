@@ -67,6 +67,8 @@ function mimeFor(filename: string): string {
 /** Send one e-mail via Graph as MS_GRAPH_SENDER. Throws on failure. */
 export async function sendGraphMail(msg: {
   to: string;
+  /** Carbon-copy recipients (Swiss leads: STRETCH in copy of QuinLay AG). */
+  cc?: string[];
   replyTo?: string;
   subject: string;
   html: string;
@@ -79,6 +81,7 @@ export async function sendGraphMail(msg: {
       subject: msg.subject,
       body: { contentType: 'HTML', content: msg.html },
       toRecipients: [{ emailAddress: { address: msg.to } }],
+      ...(msg.cc && msg.cc.length ? { ccRecipients: msg.cc.map((address) => ({ emailAddress: { address } })) } : {}),
       ...(msg.replyTo ? { replyTo: [{ emailAddress: { address: msg.replyTo } }] } : {}),
       attachments: (msg.attachments ?? []).map((a) => ({
         '@odata.type': '#microsoft.graph.fileAttachment',

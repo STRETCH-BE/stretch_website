@@ -21,7 +21,8 @@
       "faq": "Algengar spurningar",
       "clientLogin": "Innskráning viðskiptavina",
       "materials": "Efni",
-      "architects": "Arkitektar"
+      "architects": "Arkitektar",
+      "priceCalculator": "Verðreiknivél"
     },
     "cta": {
       "freeQuote": "Ókeypis tilboð",
@@ -43,24 +44,24 @@
     }
   },
   "meta": {
-    "homeTitle": "STRETCH — Nýtt loft á einum degi | Strekkiloft & strekkiveggir",
-    "homeDescription": "Strekkiloft og strekkiveggir, samskeytalaus og sett upp á einum degi — ekkert ryk, engin málning. Hljóðvist, lýsing og prent. Handgert í Belgíu.",
-    "productsTitle": "Strekkiloft & hljóðvistarlausnir | STRETCH",
-    "productsDescription": "Strekkiloft úr pólýester og PVC, hljóðvistarkerfi, baklýst og prentuð hönnun og forsmíðaðar einingar — samskeytalaust upp í 6,5 m, 25 ára ábyrgð.",
+    "homeTitle": "STRETCH — Nýtt loft á einum degi | Dúkaloft & dúkur á veggi",
+    "homeDescription": "Dúkaloft og veggir með dúk, samskeytalaus og sett upp á einum degi — ekkert ryk, engin málning. Hljóðvist, lýsing og prent. Handgert í Belgíu.",
+    "productsTitle": "Dúkaloft & hljóðvistarlausnir | STRETCH",
+    "productsDescription": "Dúkaloft úr pólýester og PVC, hljóðvistarkerfi, baklýst og prentuð hönnun og forsmíðaðar einingar — samskeytalaust upp í 6,5 m, 25 ára ábyrgð.",
     "partnersTitle": "Gerstu STRETCH-endursöluaðili — heildsöluverð & fyrirspurnir | STRETCH",
-    "partnersDescription": "Bættu strekkiloftum við þjónustuframboð þitt: heildsöluverð, sérsmíði úr belgíska verkstæðinu okkar, verkleg þjálfun og áframsendar staðbundnar fyrirspurnir.",
-    "trainingTitle": "Þjálfun í uppsetningu strekkilofta — vottun á 2–3 dögum | STRETCH",
-    "trainingDescription": "Verkleg þjálfun í uppsetningu strekkilofta: köld pólýester- og heit PVC-uppsetning í einni vottun, litlir hópar, fastar dagsetningar og byrjendasett.",
-    "inspirationTitle": "Innblástur — raunveruleg strekkiloftaverkefni | STRETCH",
+    "partnersDescription": "Bættu dúkaloftum við þjónustuframboð þitt: heildsöluverð, sérsmíði úr belgíska verkstæðinu okkar, verkleg þjálfun og áframsendar staðbundnar fyrirspurnir.",
+    "trainingTitle": "Þjálfun í uppsetningu dúkalofta — vottun á 2–3 dögum | STRETCH",
+    "trainingDescription": "Verkleg þjálfun í uppsetningu dúkalofta: köld pólýester- og heit PVC-uppsetning í einni vottun, litlir hópar, fastar dagsetningar og byrjendasett.",
+    "inspirationTitle": "Innblástur — raunveruleg verkefni með dúkaloft | STRETCH",
     "inspirationDescription": "Raunveruleg STRETCH-verkefni í stúdíóum, skrifstofum, heimilum og hótelum — eftir lausnum: hljóðvist, ljós & prent, heimili og atvinnuhúsnæði.",
     "samplesTitle": "Panta lita- & RAL-sýnishorn | STRETCH",
     "samplesDescription": "Pantaðu áþreifanleg lita- og RAL-sýnishorn af STRETCH pólýester-, PVC- og hljóðvistardúkum — ókeypis fyrir samstarfsaðila. Afhent heim að dyrum.",
-    "faqTitle": "Algengar spurningar um strekkiloft — uppsetning, hljóðvist & verð | STRETCH",
-    "faqDescription": "Algengar spurningar um strekkiloft: uppsetning, ending, hljóðvist, samskeytalaus höf, lýsing, verð og samstarfsáætlunin.",
-    "blogTitle": "Leiðbeiningar & fróðleikur um strekkiloft | STRETCH",
-    "blogDescription": "Auðskiljanlegar leiðbeiningar um strekkiloft — hvernig þau virka, hljóðvist útskýrð, áferðir og notkunarsvið — frá STRETCH-teyminu í Belgíu.",
+    "faqTitle": "Algengar spurningar um dúkaloft — uppsetning, hljóðvist & verð | STRETCH",
+    "faqDescription": "Algengar spurningar um dúkaloft: uppsetning, ending, hljóðvist, samskeytalaus höf, lýsing, verð og samstarfsáætlunin.",
+    "blogTitle": "Leiðbeiningar & fróðleikur um dúkaloft | STRETCH",
+    "blogDescription": "Auðskiljanlegar leiðbeiningar um dúkaloft — hvernig þau virka, hljóðvist útskýrð, áferðir og notkunarsvið — frá STRETCH-teyminu í Belgíu.",
     "aboutTitle": "Um STRETCH — handgerð loft frá Belgíu | STRETCH",
-    "aboutDescription": "STRETCH handgerir samskeytalaus strekkiloft og strekkiveggi í Belgíu — sett upp á einum degi um alla Evrópu og í Bandaríkjunum. Hluti af STRETCH Group.",
+    "aboutDescription": "STRETCH handgerir samskeytalaus dúkaloft og veggi með dúk í Belgíu — sett upp á einum degi um alla Evrópu og í Bandaríkjunum. Hluti af STRETCH Group.",
     "contactTitle": "Hafðu samband við STRETCH — tilboð, söluaðilar & samstarf | STRETCH",
     "contactDescription": "Náðu í STRETCH-sérfræðingana fyrir tilboð, næsta söluaðila eða samstarf. Höfuðstöðvar í Beveren-Waas, skrifstofur í Bandaríkjunum og Póllandi.",
     "privacyTitle": "Persónuverndarstefna | STRETCH",
@@ -70,23 +71,23 @@
     "notFoundTitle": "Síða fannst ekki | STRETCH",
     "notFoundDescription": "Síðan sem þú leitar að fannst ekki.",
     "datasheetsTitle": "Tæknibliöð | STRETCH",
-    "datasheetsDescription": "Sæktu tæknibliöð fyrir STRETCH-strekkiloftakerfi — tækniupplýsingar, brunaflokkar, hljóðvistargildi αw / flokkar og ábyrgðarskilmálar.",
+    "datasheetsDescription": "Sæktu tæknibliöð fyrir STRETCH-kerfi fyrir dúkaloft — tækniupplýsingar, brunaflokkar, hljóðvistargildi αw / flokkar og ábyrgðarskilmálar.",
     "portalTitle": "Viðskiptavinagátt | STRETCH",
     "portalDescription": "Skráðu þig inn til að sjá STRETCH-verðskrána þína og aðgangsupplýsingar.",
-    "materialsTitle": "Efni og fylgihlutir fyrir strekkloft | STRETCH",
-    "materialsDescription": "Efni fyrir strekkiloft: prófílar, dúkar og filmur, lýsing, fylgihlutir og verkfæri — biddu um tilboð fyrir hverja vöru og við svörum með verði.",
-    "architectsTitle": "Fyrir arkitekta — skilgreindu strekkloft | STRETCH",
+    "materialsTitle": "Efni og fylgihlutir fyrir dúkaloft | STRETCH",
+    "materialsDescription": "Efni fyrir dúkaloft: prófílar, dúkar og filmur, lýsing, fylgihlutir og verkfæri — biddu um tilboð fyrir hverja vöru og við svörum með verði.",
+    "architectsTitle": "Fyrir arkitekta — skilgreindu dúkaloft | STRETCH",
     "architectsDescription": "Ókeypis arkitektasvæði: tækniblöð, útboðstextar, CAD/BIM, mæld dæmi, leiðbeinandi €/m² kostnaðarbil, viðburðir og verkefnastuðningur.",
-    "kitTitle": "DIY-strekkiloftssett — eftir máli | STRETCH",
-    "kitDescription": "Strekkiloftssett eftir þínum málum: pólýesterdúkur, prófílar og leiðbeiningar í einum pakka. Köld uppsetning, afhending í ESB og Bretlandi.",
-    "supplyTitle": "Efni og sérsníðing strekkilofta fyrir uppsetningaraðila | STRETCH",
+    "kitTitle": "DIY-sett fyrir dúkaloft — eftir máli | STRETCH",
+    "kitDescription": "Sett fyrir dúkaloft eftir þínum málum: pólýesterdúkur, prófílar og leiðbeiningar í einum pakka. Köld uppsetning, afhending í ESB og Bretlandi.",
+    "supplyTitle": "Efni og sérsníðing dúkalofta fyrir uppsetningaraðila | STRETCH",
     "supplyDescription": "Verksmiðjuafhending fyrir fagfólk: dúkar og filmur, prófílar, lýsing og sérsniðin dúkavinnsla, send um alla Evrópu. Reikningar í EUR.",
-    "supplyCzSkTitle": "Strekkiloftaefni fyrir Tékkland & Slóvakíu | STRETCH",
-    "supplyCzSkDescription": "Hágæðaefni fyrir strekkiloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila — framleitt í Póllandi, dags eða tveggja leið. EUR eða PLN.",
-    "projectsExportTitle": "Strekkiloft fyrir alþjóðleg verkefni | STRETCH",
-    "projectsExportDescription": "Hálfgagnsæ, prentuð og hljóðvistarstrekkiloft fyrir innréttingafyrirtæki um allan heim — soðin í ESB-verksmiðju, flugfrakt, skjalfestir brunaflokkar.",
-    "priceCalculatorTitle": "Verðreiknivél strekkilofta — verð á m² | STRETCH",
-    "priceCalculatorDescription": "Strax viðmiðunarverð fyrir strekkiloftið þitt: m² × loftgerð samkvæmt útgefnum bilum €70–200/m². Ókeypis fast tilboð, yfirleitt samdægurs."
+    "supplyCzSkTitle": "Efni í dúkaloft fyrir Tékkland & Slóvakíu | STRETCH",
+    "supplyCzSkDescription": "Hágæðaefni fyrir dúkaloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila — framleitt í Póllandi, dags eða tveggja leið. EUR eða PLN.",
+    "projectsExportTitle": "Dúkaloft fyrir alþjóðleg verkefni | STRETCH",
+    "projectsExportDescription": "Hálfgagnsæ, prentuð og hljóðvistardúkaloft fyrir innréttingafyrirtæki um allan heim — soðin í ESB-verksmiðju, flugfrakt, skjalfestir brunaflokkar.",
+    "priceCalculatorTitle": "Verðreiknivél dúkalofta — verð á m² | STRETCH",
+    "priceCalculatorDescription": "Strax viðmiðunarverð fyrir dúkaloftið þitt: m² × loftgerð samkvæmt útgefnum bilum €70–200/m². Ókeypis fast tilboð, yfirleitt samdægurs."
   },
   "cookies": {
     "title": "Við virðum friðhelgi þína",
@@ -152,7 +153,7 @@
     }
   },
   "footer": {
-    "tagline": "Handunnin strekkloft og strekkveggir úr okkar eigin belgísku framleiðslu — framleiðandi, ekki innflytjandi — sett upp um alla Evrópu og í Bandaríkjunum á einum degi.",
+    "tagline": "Handunnin dúkaloft og dúkur á veggi úr okkar eigin belgísku framleiðslu — framleiðandi, ekki innflytjandi — sett upp um alla Evrópu og í Bandaríkjunum á einum degi.",
     "solutionsHeading": "Lausnir",
     "companyHeading": "Fyrirtæki",
     "hqHeading": "Höfuðstöðvar — Belgía",
@@ -179,7 +180,9 @@
       "priceCalculator": "Reikna verð"
     },
     "dealers": "Söluaðilanet",
-    "worldwideHeading": "STRETCH um allan heim"
+    "worldwideHeading": "STRETCH um allan heim",
+    "swissPartnerHeading": "Aðalumboðsaðili — Sviss & Liechtenstein",
+    "manufacturerHeading": "Framleiðandi — Belgía"
   },
   "portal": {
     "login": {
@@ -443,7 +446,7 @@
           "kicker": "Stretch®-loft — uppsett á einum degi",
           "line1": "Nýtt loft",
           "line2": "á einum degi.",
-          "subhead": "Samskeytalaus strekkiloft, kaldsett á einum degi — ekkert ryk, ekkert vesen.",
+          "subhead": "Samskeytalaus dúkaloft, kaldsett á einum degi — ekkert ryk, ekkert vesen.",
           "tabName": "Loft",
           "tabDesc": "Pólýester & PVC"
         },
@@ -456,7 +459,7 @@
           "tabDesc": "Plötur & hljóð"
         },
         "2": {
-          "kicker": "Strekkiveggir — samskeytalaus klæðning",
+          "kicker": "Dúkur á veggi — samskeytalaus klæðning",
           "line1": "Veggir sem",
           "line2": "gleypa hljóð.",
           "subhead": "Samskeytalaus strekkt veggklæðning sem gleypir hljóð og felur allar misfellur.",
@@ -493,7 +496,7 @@
       "3": "Endurvinnanlegt (PVC)"
     },
     "why": {
-      "eyebrow": "Af hverju strekkiloft",
+      "eyebrow": "Af hverju dúkaloft",
       "title": "Betra loft — af ásettu ráði.",
       "intro": "Ein himna, strekkt köld yfir allt rýmið. Ekkert niðurrif, enginn þurrktími, engar málamiðlanir — hönnuð til að endast lengur en hefðbundnar gifsplötur.",
       "cells": {
@@ -531,7 +534,7 @@
             "3": "Hljóðvist & þvottekta"
           },
           "cta": "Skoðaðu pólýester",
-          "alt": "Matt pólýester strekkiloft"
+          "alt": "Matt pólýester dúkaloft"
         },
         "1": {
           "mount": "Heit uppsetning",
@@ -545,7 +548,7 @@
             "3": "Hljóðvist & þvottekta"
           },
           "cta": "Skoðaðu PVC",
-          "alt": "Glansandi PVC-filmu strekkiloft"
+          "alt": "Glansandi PVC-filmu dúkaloft"
         }
       }
     },
@@ -577,7 +580,7 @@
     },
     "apps": {
       "eyebrow": "Notkunarsvið",
-      "title1": "Þar sem strekkiloft",
+      "title1": "Þar sem dúkaloft",
       "title2": "virka best.",
       "intro": "Frá einni stofu upp í heilt hótel — sama samskeytalausa kerfið, aðlagað kröfum hvers rýmis.",
       "areas": {
@@ -618,7 +621,7 @@
     "installer": {
       "eyebrow": "Fyrir fagfólk",
       "title": "Gerstu STRETCH-uppsetjari.",
-      "intro": "STRETCH er B2B-fyrirtæki. Bættu strekkiloftum við þjónustuna þína, fáðu þjálfun í höfuðstöðvum okkar, pantaðu sérsniðið frá Belgíu og fáðu áframsendar staðbundnar fyrirspurnir.",
+      "intro": "STRETCH er B2B-fyrirtæki. Bættu dúkaloftum við þjónustuna þína, fáðu þjálfun í höfuðstöðvum okkar, pantaðu sérsniðið frá Belgíu og fáðu áframsendar staðbundnar fyrirspurnir.",
       "steps": {
         "0": {
           "title": "Þjálfun á nokkrum dögum",
@@ -642,6 +645,12 @@
       "ratedOn": "Einkunn á {source}",
       "titlePlain": "Það sem viðskiptavinir segja",
       "provenance": "Staðfestar Google-umsagnir, teknar orðréttar af opinberu Google-fyrirtækjasíðunni okkar."
+    },
+    "estimator": {
+      "kicker": "Verðreiknivél",
+      "title": "Hvað kostar dúkaloft?",
+      "sub": "Sláðu inn flatarmálið og loftgerðina — útgefið viðmiðunarbil birtist strax; fast tilboð er ókeypis.",
+      "cta": "Reikna verð"
     }
   },
   "ctaBand": {
@@ -677,7 +686,8 @@
     "dealer": "Finndu næsta söluaðila",
     "chartCount": "{count, plural, one {# litur} other {# litir}}",
     "anyRal": "Hvaða RAL-litur sem er eftir ósk",
-    "dealerDirect": "Við afhendum og setjum upp beint — hafðu samband"
+    "dealerDirect": "Við afhendum og setjum upp beint — hafðu samband",
+    "priceLink": "Hvað kostar þetta á m²?"
   },
   "productsPage": {
     "eyebrow": "Lausnirnar okkar",
@@ -694,12 +704,12 @@
   },
   "catalog": {
     "polyester": {
-      "name": "Pólýester strekkiloft",
+      "name": "Pólýester dúkaloft",
       "short": "Polyester",
       "category": "Kaldsett himna",
       "mount": "Köld uppsetning",
       "intro": "Falleg og hagnýt strekkihimna fyrir nýbyggingar jafnt sem endurbætur. Handstrekt köld fyrir gallalausa, mjög matta áferð — með innbyggðum hljóðvistar- og þvottheldum valkostum.",
-      "summary": "Kaldsett pólýester strekkiloft með mjög mattri áferð, samskeytalaust að 5,15 m og með 10 ára ábyrgð.",
+      "summary": "Kaldsett pólýester dúkaloft með mjög mattri áferð, samskeytalaust að 5,15 m og með 10 ára ábyrgð.",
       "chips": [
         "Samskeytalaust að 5,15 m",
         "+25 ára ending",
@@ -783,12 +793,12 @@
       "colourChartNote": "Allir litir eru fáanlegir í hefðbundinni og hljóðdempandi útfærslu."
     },
     "pvc": {
-      "name": "Strekkiloft úr PVC-filmu",
+      "name": "Dúkaloft úr PVC-filmu",
       "short": "PVC Film",
       "category": "Heitsett filma",
       "mount": "Heit uppsetning",
       "intro": "Hituð PVC-filma sem er strekkt við uppsetningu — fullkomlega endurvinnanleg og auðveld í niðurtekt. Skiptu þreyttu lofti út fyrir gallalaust nýtt á einum degi.",
-      "summary": "Heitsett strekkiloft úr PVC-filmu, 100% endurvinnanlegt og fjarlægjanlegt, samskeytalaust að 6,5 m með 10 ára ábyrgð.",
+      "summary": "Heitsett dúkaloft úr PVC-filmu, 100% endurvinnanlegt og fjarlægjanlegt, samskeytalaust að 6,5 m með 10 ára ábyrgð.",
       "chips": [
         "Samskeytalaust að 6,5 m",
         "100% endurvinnanlegt",
@@ -965,7 +975,7 @@
       "category": "Hálfgegnsæ himna",
       "mount": "Kalt / heitt",
       "intro": "Hálfgegnsæjar strekkifilmur sem breyta heilu lofti í mjúkan, jafnan ljósgjafa — eða í prentaðan striga með hvaða mynd sem þú velur.",
-      "summary": "Hálfgegnsæ, baklýst strekkiloft og hönnun prentuð út í kanta — þar á meðal stjörnuhimins-áferðir með ljósleiðurum.",
+      "summary": "Hálfgegnsæ, baklýst dúkaloft og hönnun prentuð út í kanta — þar á meðal stjörnuhimins-áferðir með ljósleiðurum.",
       "chips": [
         "Jöfn baklýsing",
         "Valkostur: LED-lína",
@@ -1052,7 +1062,7 @@
       "short": "Forsmíðaðar grindur",
       "category": "Forsmíðuð burðargrind",
       "mount": "Forsmíðað",
-      "intro": "Forsmíðaðar burðargrindur fyrir strekkiloftsverkefni — bitar úr áli, stáli og viði, loftlistar og hæðarmunar-smáatriði, sérsmíðað í pólsku framleiðslunni okkar og sent til söluaðila um allan heim.",
+      "intro": "Forsmíðaðar burðargrindur fyrir verkefni með dúkaloft — bitar úr áli, stáli og viði, loftlistar og hæðarmunar-smáatriði, sérsmíðað í pólsku framleiðslunni okkar og sent til söluaðila um allan heim.",
       "summary": "Sérsniðnar forsmíðaðar burðargrindur úr áli, stáli og viði — bitar fyrir rastaloft, loftlistar fyrir svífandi loft og hrein hæðarmunar-smáatriði.",
       "chips": [
         "Ál / stál / viður",
@@ -1140,8 +1150,8 @@
       "short": "Stjörnuhiminn",
       "category": "Ljósleiðari / baklýst",
       "mount": "Baklýst",
-      "intro": "Strekkiloft stráð hundruðum ljósleiðarapunkta — rólegur, tindrandi næturhiminn yfir bíóinu, svefnherberginu eða heilsulindinni.",
-      "summary": "Stjörnuhimins-strekkiloft með ljósleiðurum og LED: hundruð deyfanlegra stjörnupunkta, valkvæð stjörnuhröp og RGB, á samskeytalausri himnu.",
+      "intro": "Dúkaloft stráð hundruðum ljósleiðarapunkta — rólegur, tindrandi næturhiminn yfir bíóinu, svefnherberginu eða heilsulindinni.",
+      "summary": "Stjörnuhimins-dúkaloft með ljósleiðurum og LED: hundruð deyfanlegra stjörnupunkta, valkvæð stjörnuhröp og RGB, á samskeytalausri himnu.",
       "chips": [
         "Hundruð stjarna",
         "Deyfanlegt",
@@ -1228,8 +1238,8 @@
       "short": "Skoðunarlúga",
       "category": "Aðgangslausn",
       "mount": "Innbyggt",
-      "intro": "Lítt áberandi þjónustuaðgangur í gegnum strekkiloft — náðu í loka, tengidósir og búnað án þess að skera eða skipta um himnuna.",
-      "summary": "Innbyggðar skoðunarlúgur fyrir strekkiloft: nánast ósýnilegur, enduropnanlegur aðgangur að lögnum yfir himnunni, í hvaða stærð sem er.",
+      "intro": "Lítt áberandi þjónustuaðgangur í gegnum dúkaloft — náðu í loka, tengidósir og búnað án þess að skera eða skipta um himnuna.",
+      "summary": "Innbyggðar skoðunarlúgur fyrir dúkaloft: nánast ósýnilegur, enduropnanlegur aðgangur að lögnum yfir himnunni, í hvaða stærð sem er.",
       "chips": [
         "Nánast ósýnileg",
         "Enduropnanleg",
@@ -1316,8 +1326,8 @@
       "short": "Sérsniðið prent",
       "category": "Prentuð himna",
       "mount": "Heitt eða kalt",
-      "intro": "Hvaða ljósmynd, listaverk eða mynstur sem er, prentað út í kanta á samskeytalausu strekkilofti — myndin þín, vegg í vegg, án sýnilegra samskeyta.",
-      "summary": "Strekkiloft prentuð út í kanta: hvaða háupplausnarmynd, ljósmynd eða vörumerkjagrafík sem er á samskeytalausri himnu, með valkvæðri baklýsingu.",
+      "intro": "Hvaða ljósmynd, listaverk eða mynstur sem er, prentað út í kanta á samskeytalausu dúkalofti — myndin þín, vegg í vegg, án sýnilegra samskeyta.",
+      "summary": "Dúkaloft prentuð út í kanta: hvaða háupplausnarmynd, ljósmynd eða vörumerkjagrafík sem er á samskeytalausri himnu, með valkvæðri baklýsingu.",
       "chips": [
         "Hvaða mynd sem er",
         "Út í kanta",
@@ -1498,6 +1508,10 @@
             {
               "title": "Öll loftakerfi",
               "sub": "Berðu saman úrvalið"
+            },
+            {
+              "title": "Verðreiknivél",
+              "sub": "Verðið þitt á m² á 30 sekúndum"
             }
           ]
         },
@@ -1595,7 +1609,7 @@
       "promoCta": "Spyrja spurningar",
       "cats": [
         {
-          "title": "Pólýester strekkiloft",
+          "title": "Pólýester dúkaloft",
           "desc": "Kaldsett himna",
           "items": [
             {
@@ -1625,7 +1639,7 @@
           ]
         },
         {
-          "title": "PVC strekkiloft",
+          "title": "PVC dúkaloft",
           "desc": "Heitsett filma",
           "items": [
             {
@@ -2238,13 +2252,14 @@
           "placeholder": "Loftgerðir, fyrirliggjandi teikningar, tímalína…"
         }
       }
-    }
+    },
+    "swissPartnerNote": "Fyrirspurn þín fer til QuinLay AG, Rickenbach LU, aðalumboðsaðila STRETCH fyrir Sviss og Liechtenstein, með afriti til STRETCH. QuinLay AG hringir til baka."
   },
   "faqPage": {
     "items": [
       {
-        "q": "Hvað er strekkiloft?",
-        "a": "Strekkiloft er þunn, saumlaus himna — pólýester eða PVC-filma — sem er strekkt yfir rýmið og smellt í nettan jaðarprófíl. Það lítur út eins og fullkomlega slétt, málað loft en er sett upp án múrvinnu, slípunar og málningar og felur allt sem er fyrir ofan."
+        "q": "Hvað er dúkaloft?",
+        "a": "Dúkaloft er þunn, saumlaus himna — pólýester eða PVC-filma — sem er strekkt yfir rýmið og smellt í nettan jaðarprófíl. Það lítur út eins og fullkomlega slétt, málað loft en er sett upp án múrvinnu, slípunar og málningar og felur allt sem er fyrir ofan."
       },
       {
         "q": "Hvað tekur uppsetningin langan tíma?",
@@ -2255,7 +2270,7 @@
         "a": "Nei. Það er ekkert niðurrif, ekkert ryk, engin slípun og engin málning, svo uppsetningin getur farið fram í rými með húsgögnum sem er í notkun. Gamla loftið getur yfirleitt verið áfram fyrir ofan."
       },
       {
-        "q": "Hvað endist strekkiloft lengi?",
+        "q": "Hvað endist dúkaloft lengi?",
         "a": "Kerfin okkar eru með 25 ára ábyrgð. Yfirborðið er þvottekta og rakaþolið og mun hvorki springa, flagna, gulna né þurfa endurmálun."
       },
       {
@@ -2271,7 +2286,7 @@
         "a": "Já. Hálfgegnsæjar filmur gefa jafna, dimmanlega baklýsingu án ljósbletta, LED-ljóslínur falla inn í flötinn og hvaða mynd sem er — þar á meðal stjörnuhiminn — er hægt að prenta út í jaðra."
       },
       {
-        "q": "Hvað kostar strekkiloft?",
+        "q": "Hvað kostar dúkaloft?",
         "a": "Verðið fer eftir verkefninu — eftir flatarmáli, kerfi, áferð og hvers kyns ljósa- eða hljóðvistarlausnum. Fáðu ókeypis tilboð án skuldbindinga og sérfræðingur svarar innan tveggja virkra daga."
       },
       {
@@ -2282,16 +2297,16 @@
     "eyebrow": "Algengar spurningar",
     "titleA": "Góðar",
     "titleB": "spurningar",
-    "lead": "Allt sem fólk spyr venjulega um strekkiloft — uppsetning, ending, hljóðvist, breidd og verð. Enn í vafa? Spurðu okkur bara.",
+    "lead": "Allt sem fólk spyr venjulega um dúkaloft — uppsetning, ending, hljóðvist, breidd og verð. Enn í vafa? Spurðu okkur bara.",
     "asideKicker": "Ertu enn með spurningu?",
-    "asideTitle": "Talaðu við sérfræðing í strekkiloftum.",
+    "asideTitle": "Talaðu við sérfræðing í dúkaloftum.",
     "asideBody": "Segðu okkur frá rýminu þínu og við svörum — ókeypis og án skuldbindinga.",
     "asideCta": "Fá ókeypis tilboð"
   },
   "catalogFaqs": {
     "polyester": [
       {
-        "q": "Hvað tekur langan tíma að setja upp strekkiloft úr pólýester?",
+        "q": "Hvað tekur langan tíma að setja upp dúkaloft úr pólýester?",
         "a": "Flest rými eru tilbúin á einum degi. Tveggja manna teymi setur upp allt að um 50 m² á dag, og þar sem himnan er strekkt köld er enginn þurrktími áður en rýmið er aftur í notkun."
       },
       {
@@ -2309,7 +2324,7 @@
     ],
     "pvc": [
       {
-        "q": "Hvers vegna er PVC-strekkiloft „100% endurvinnanlegt“?",
+        "q": "Hvers vegna er PVC-dúkaloft „100% endurvinnanlegt“?",
         "a": "Filman er endurvinnanleg í hráefni þegar líftíma hennar lýkur, og hana má taka niður meðan á notkun stendur — þú smellir henni úr til að komast að lögnunum fyrir ofan og strekkir hana aftur á nokkrum mínútum, í stað þess að rífa niður og endurnýja gifsloft."
       },
       {
@@ -2359,7 +2374,7 @@
     ],
     "prefab": [
       {
-        "q": "Hvað er forsmíðuð strekkilofts-eining?",
+        "q": "Hvað er forsmíðuð eining fyrir dúkaloft?",
         "a": "Það er fullbúin lofteining — rammi og strekkt himna — sett saman og gæðaprófuð á belgíska verkstæðinu okkar og afhent tilbúin til að smella í jaðarramma á verkstað."
       },
       {
@@ -2387,7 +2402,7 @@
     ],
     "hatch": [
       {
-        "q": "Kemst maður að lögnum bak við strekkiloft?",
+        "q": "Kemst maður að lögnum bak við dúkaloft?",
         "a": "Já — innbyggð skoðunarlúga veitir látlausan aðgang sem má opna aftur og aftur að ventlum, tengidósum og tengingum fyrir ofan himnuna, svo aldrei þarf að skera loftið eða skipta því út til að ná til þeirra."
       },
       {
@@ -2395,7 +2410,7 @@
         "a": "Varla. Ramminn er felldur inn í jaðarfráganginn og klæddur sömu himnu, svo hún rennur saman við flötinn og tekur maður fyrst eftir henni þegar leitað er að henni."
       },
       {
-        "q": "Er hægt að bæta lúgu við strekkiloft sem er þegar uppi?",
+        "q": "Er hægt að bæta lúgu við dúkaloft sem er þegar uppi?",
         "a": "Í flestum tilfellum, já. Lúgur má setja eftir á í loft sem fyrir er, í stærð og staðsetningu sem hentar lögninni sem þarf að vera aðgengileg fyrir aftan."
       }
     ],
@@ -2419,7 +2434,7 @@
       "name": "Stofur & heimabíó",
       "shortName": "Stofa & bíó",
       "eyebrow": "Stofa & bíó",
-      "metaDescription": "Strekkiloft fyrir stofur og heimabíó — saumlaus áferð, innfelld lýsing, stjörnuhiminn úr ljósleiðurum og betri hljóðvist, sett upp á einum degi.",
+      "metaDescription": "Dúkaloft fyrir stofur og heimabíó — saumlaus áferð, innfelld lýsing, stjörnuhiminn úr ljósleiðurum og betri hljóðvist, sett upp á einum degi.",
       "intro": "Gallalaust loft setur tóninn fyrir stofuna. STRETCH gefur þér fullkomlega slétta, saumlausa áferð — með falinni lýsingu, stjörnuhimni úr ljósleiðurum fyrir bíóið og hljóðvistarþægindum, allt sett upp kalt á einum degi.",
       "benefits": [
         {
@@ -2440,7 +2455,7 @@
       "name": "Baðherbergi & eldhús",
       "shortName": "Bað & eldhús",
       "eyebrow": "Bað & eldhús",
-      "metaDescription": "Rakaþolin strekkiloft fyrir baðherbergi og eldhús — vatnsheld, mygluvarin og auðþrifin, með innfelldri lýsingu, sett upp á einum degi.",
+      "metaDescription": "Rakaþolin dúkaloft fyrir baðherbergi og eldhús — vatnsheld, mygluvarin og auðþrifin, með innfelldri lýsingu, sett upp á einum degi.",
       "intro": "Baðherbergi og eldhús fara illa með loft. STRETCH-himna er vatnsheld, mygluvarin og þvottekta — hún felur lagnir og stokka bak við gallalausan flöt, með snyrtilega innfelldum ljósum og útsogi.",
       "benefits": [
         {
@@ -2461,7 +2476,7 @@
       "name": "Skrifstofur & verslun",
       "shortName": "Skrifstofa & verslun",
       "eyebrow": "Skrifstofa & verslun",
-      "metaDescription": "Strekkiloft fyrir skrifstofur, verslun og veitingarými — hljóðvist allt að flokki A, prentuð loft með vörumerkinu og innfelld lýsing, sett upp hratt án rasks.",
+      "metaDescription": "Dúkaloft fyrir skrifstofur, verslun og veitingarými — hljóðvist allt að flokki A, prentuð loft með vörumerkinu og innfelld lýsing, sett upp hratt án rasks.",
       "intro": "Atvinnuhúsnæði þarf að líta vel út og hljóma rétt. STRETCH veitir hljóðvistarþægindi allt að flokki A, prentuð loft með vörumerkinu þínu og innfellda lýsingu — sett upp kalt og hratt, með lágmarksraski fyrir rými í notkun.",
       "benefits": [
         {
@@ -2482,7 +2497,7 @@
       "name": "Sundlaugar & heilsulindir",
       "shortName": "Sundlaug & heilsulind",
       "eyebrow": "Sundlaug & heilsulind",
-      "metaDescription": "Strekkloft fyrir sundlaugar, spa og heilsulindir — raka- og klórþolnar himnur með No-Stain-áferð, innbyggðri lýsingu og hljóðdempun, sett upp án lokunar.",
+      "metaDescription": "Dúkaloft fyrir sundlaugar, spa og heilsulindir — raka- og klórþolnar himnur með No-Stain-áferð, innbyggðri lýsingu og hljóðdempun, sett upp án lokunar.",
       "intro": "Sundlaugasalir og heilsulindir eyðileggja máluð loft: þétting, klórgufa og hiti láta málningu flagna á fáum árum. Strekkt himna er ónæm fyrir öllu þrennu — og færir ljós og hljóðvist inn í blautustu rými hússins.",
       "benefits": [
         {
@@ -2500,11 +2515,11 @@
       ]
     },
     "walls": {
-      "name": "Strekkveggir & hljóðvist veggja",
+      "name": "Dúkur á veggi & hljóðvist veggja",
       "shortName": "Veggir",
       "eyebrow": "Veggir",
-      "metaDescription": "Strekkveggir og veggklæðningar úr textíl og flaueli, prentaðar eða hljóðdempandi — veggir án samskeyta með ísogið falið á bak við yfirborðið.",
-      "intro": "Allt sem strekkloft getur, getur veggur líka. Strekktir textíl- og flauelsveggir gefa slétt, djúpmatt yfirborð án samskeyta; prentaðar himnur breyta vegg í listaverk; og hljóðdempandi uppbyggingar fela alvöru hljóðísog á bak við dúkinn — engin sýnileg spjöld.",
+      "metaDescription": "Veggir með dúk og veggklæðningar úr textíl og flaueli, prentaðar eða hljóðdempandi — veggir án samskeyta með ísogið falið á bak við yfirborðið.",
+      "intro": "Allt sem dúkaloft getur, getur veggur líka. Strekktir textíl- og flauelsveggir gefa slétt, djúpmatt yfirborð án samskeyta; prentaðar himnur breyta vegg í listaverk; og hljóðdempandi uppbyggingar fela alvöru hljóðísog á bak við dúkinn — engin sýnileg spjöld.",
       "benefits": [
         {
           "title": "Textílfletir án samskeyta",
@@ -2516,7 +2531,7 @@
         },
         {
           "title": "Hvaða mynd sem er, í veggstærð",
-          "body": "Prentaðir strekkveggir bera ljósmynd, listaverk eða vörumerki út í hvert horn — baklýstir ef þú vilt að myndin ljómi."
+          "body": "Veggir með prentuðum dúk bera ljósmynd, listaverk eða vörumerki út í hvert horn — baklýstir ef þú vilt að myndin ljómi."
         }
       ]
     }
@@ -2595,7 +2610,7 @@
       }
     ],
     "polyester": {
-      "label": "Strekkiloft úr pólýester",
+      "label": "Dúkaloft úr pólýester",
       "short": "Pólýester",
       "blurb": "Pólýesterhimna í kaldri uppsetningu — mjög matt, saumlaust loft sem er strekkt með höndunum.",
       "fireSafety": {
@@ -2654,13 +2669,13 @@
         "blocks": [
           {
             "type": "p",
-            "text": "Útvega skal og setja upp kaldstrekkt strekkiloftskerfi úr pólýester [STRETCH eða samþykkt jafngilt]. Himnan skal vera prjónað pólýesterefni, strekkt kalt í jaðarprófíl með smellufestingu án hitanotkunar, og mynda saumlaust, mjög matt yfirborð allt að 5.15 m á breidd. Brunaviðbrögð skulu vera í flokki B-s1,d0 samkvæmt EN 13501-1 (flokki A2-s1,d0 þar sem það er tilgreint). Kerfið skal vera þvottekta og rakaþolið, hæft til uppsetningar í rýmum í notkun, og með [10] ára framleiðandaábyrgð. Litur: [RAL ____]. Þar sem krafist er hljóðvistareiginleika skal nota örgataða himnu með þéttu ísogsundirlagi sem nær hljóðísogi allt að flokki A."
+            "text": "Útvega skal og setja upp kaldstrekkt kerfi fyrir dúkaloft úr pólýester [STRETCH eða samþykkt jafngilt]. Himnan skal vera prjónað pólýesterefni, strekkt kalt í jaðarprófíl með smellufestingu án hitanotkunar, og mynda saumlaust, mjög matt yfirborð allt að 5.15 m á breidd. Brunaviðbrögð skulu vera í flokki B-s1,d0 samkvæmt EN 13501-1 (flokki A2-s1,d0 þar sem það er tilgreint). Kerfið skal vera þvottekta og rakaþolið, hæft til uppsetningar í rýmum í notkun, og með [10] ára framleiðandaábyrgð. Litur: [RAL ____]. Þar sem krafist er hljóðvistareiginleika skal nota örgataða himnu með þéttu ísogsundirlagi sem nær hljóðísogi allt að flokki A."
           }
         ]
       }
     },
     "pvc": {
-      "label": "Strekkiloft úr PVC",
+      "label": "Dúkaloft úr PVC",
       "short": "PVC-filma",
       "blurb": "Heitt uppsett PVC-filma — að fullu endurvinnanleg, fjarlægjanleg og saumlaus allt að 6.5 m.",
       "fireSafety": {
@@ -2715,11 +2730,11 @@
         "blocks": [
           {
             "type": "heading",
-            "text": "STRETCH® strekkloftskerfi [eða sambærilegt]"
+            "text": "STRETCH® kerfi fyrir dúkaloft [eða sambærilegt]"
           },
           {
             "type": "p",
-            "text": "Dúkgerð: STRETCH® PVC-dúkur, SM-lína [SM-tilvísun]. Strekkloft í samræmi við evrópska staðalinn EN 14716 — CE-merkt."
+            "text": "Dúkgerð: STRETCH® PVC-dúkur, SM-lína [SM-tilvísun]. Dúkaloft í samræmi við evrópska staðalinn EN 14716 — CE-merkt."
           },
           {
             "type": "heading",
@@ -2739,7 +2754,7 @@
           },
           {
             "type": "p",
-            "text": "Strekkloftið er framleitt í mál á verkstæði eftir málum rýmisins. Dúkurinn er strekktur eftir upphitun rýmisins og festur í STRETCH-prófílana sem áður hafa verið settir upp."
+            "text": "Dúkaloftið er framleitt í mál á verkstæði eftir málum rýmisins. Dúkurinn er strekktur eftir upphitun rýmisins og festur í STRETCH-prófílana sem áður hafa verið settir upp."
           },
           {
             "type": "heading",
@@ -2835,7 +2850,7 @@
           {
             "type": "bullets",
             "items": [
-              "Gera skal nauðsynlegar ráðstafanir svo að rýmið fyrir ofan strekkloftið sé nægilega loftþétt.",
+              "Gera skal nauðsynlegar ráðstafanir svo að rýmið fyrir ofan dúkaloftið sé nægilega loftþétt.",
               "Of stór loft eru hólfuð niður með ósýnilegum skilprófíl úr rafhúðuðu áli, hengdum upp í málmfestingar.",
               "Innfelldir hlutir (kastarar, ristar, úðarar, hátalarar) fá viðeigandi burðarvirki og styrktarhringi.",
               "Sýnishorn skulu lögð fyrir arkitekt til samþykktar."
@@ -2870,8 +2885,8 @@
     "prefab-ceiling-unit": {
       "name": "Forsmíðaðar burðargrindur",
       "eyebrow": "Forsmíðaðar burðargrindur",
-      "metaDescription": "Forsmíðaðar burðargrindur eftir máli fyrir strekkiloft — bitar úr áli, stáli og viði, sagað, soðið og duftlakkað í okkar eigin framleiðslu.",
-      "intro": "Forsmíðaðar burðargrindur fyrir strekkiloftsverkefni — bitar fyrir raster- og grindarloft, listar fyrir svífandi loft og hrein hæðarmunardeili. Hver grind er smíðuð eftir máli samkvæmt teikningum þínum, alfarið innanhúss í okkar eigin framleiðslu í Póllandi, og send söluaðilum okkar um allan heim.",
+      "metaDescription": "Forsmíðaðar burðargrindur eftir máli fyrir dúkaloft — bitar úr áli, stáli og viði, sagað, soðið og duftlakkað í okkar eigin framleiðslu.",
+      "intro": "Forsmíðaðar burðargrindur fyrir verkefni með dúkaloft — bitar fyrir raster- og grindarloft, listar fyrir svífandi loft og hrein hæðarmunardeili. Hver grind er smíðuð eftir máli samkvæmt teikningum þínum, alfarið innanhúss í okkar eigin framleiðslu í Póllandi, og send söluaðilum okkar um allan heim.",
       "makeHeading": "Hvað við smíðum",
       "make": [
         {
@@ -2880,7 +2895,7 @@
         },
         {
           "title": "Listar — svífandi loft",
-          "body": "Listar meðfram jöðrum sem lyfta strekkiloftinu frá veggjunum og skapa svífandi áhrif með skuggafúgu, með rás fyrir falda lýsingu þar sem þarf."
+          "body": "Listar meðfram jöðrum sem lyfta dúkaloftinu frá veggjunum og skapa svífandi áhrif með skuggafúgu, með rás fyrir falda lýsingu þar sem þarf."
         },
         {
           "title": "Frágangur við hæðarmun",
@@ -3003,7 +3018,7 @@
   "projects": {
     "da-tweekaz-studio": {
       "title": "Da Tweekaz Studio",
-      "summary": "Hljóðvistarstrekkiloft og -veggir fyrir hljóðver til tónlistarframleiðslu.",
+      "summary": "Hljóðvistardúkaloft og -veggir fyrir hljóðver til tónlistarframleiðslu.",
       "hook": "Hreint, hljóðvistarstýrt rými fyrir eitt þekktasta nafnið í hardstyle-tónlist.",
       "description": [
         "Í upptökuveri Da Tweekaz í Hollandi meðhöndlar hljóðvistarkerfi frá STRETCH bæði loftið og veggina. Endurkast er haft í skefjum svo rýmið helst nákvæmt að vinna í — með saumlausri, nútímalegri áferð og engum sýnilegum plötum yfir höfði."
@@ -3056,7 +3071,7 @@
     },
     "notary-ampe-anthony": {
       "title": "Lögbókandastofa Ampe Anthony",
-      "summary": "350 m² af hljóðvistarstrekkiloftum í hágæða lögbókandastofu.",
+      "summary": "350 m² af hljóðvistardúkaloftum í hágæða lögbókandastofu.",
       "hook": "Heildarinnrétting hágæða skrifstofu þar sem þurfti að hemja hörð, endurkastandi efni — án þess að tapa hreinu, mínimalísku yfirbragði.",
       "description": [
         "Árið 2019 var lögbókandastofan Ampe Anthony í Kruibeke endurbyggð frá grunni sem hágæða innrétting með meðvitað hreinu, mínimalísku yfirbragði — slípuð steypugólf, stálgluggakarmar og fjöldi harðra yfirborða. Ekkert var til sparað svo frágangurinn yrði fullkominn.",
@@ -3113,7 +3128,7 @@
         },
         {
           "q": "Hversu lengi endist loftið?",
-          "a": "Eins og með öll strekkiloft fer endingin eftir þrifum, en það endist auðveldlega í um 25 ár. Eftir það gæti aðeins þurft að skipta um himnuna — ramminn sem fyrir er situr áfram."
+          "a": "Eins og með öll dúkaloft fer endingin eftir þrifum, en það endist auðveldlega í um 25 ár. Eftir það gæti aðeins þurft að skipta um himnuna — ramminn sem fyrir er situr áfram."
         }
       ]
     },
@@ -3126,7 +3141,7 @@
         "Hápunkturinn er matartorgið Barista Bar, sem tekur á móti starfsfólki og gestum á nokkrum hæðum. Hot Corner ber fram heita rétti undir lofti úr messingþynnum sem minnir á loga; Fresh Corner býður salöt hæðinni ofar; og Sweet Corner lokar hringnum með eftirréttum — hver afgreiðsla á sér spegilmynd svo hægt er að setja saman heila máltíð hvar sem er."
       ],
       "highlights": [
-        "≈2,000 m² af strekkiloftum",
+        "≈2,000 m² af dúkaloftum",
         "STRETCH Light + Acoustic saman",
         "Barista Bar matartorg á mörgum hæðum",
         "Skrautloft með messingþynnum sem “logar”"
@@ -3158,17 +3173,17 @@
     },
     "van-der-valk-boost-wellness": {
       "title": "Boost Wellness",
-      "summary": "Heildarendurnýjun heilsulindar Van der Valk Beveren — 700 m² af hljóðísogandi, prentuðum og upplýstum strekkiloftum í hönnun frá Maison Max.",
+      "summary": "Heildarendurnýjun heilsulindar Van der Valk Beveren — 700 m² af hljóðísogandi, prentuðum og upplýstum dúkaloftum í hönnun frá Maison Max.",
       "hook": "Tuttugu árum eftir að fyrsta himnan var spennt upp leitaði Van der Valk Beveren aftur til okkar — í þetta sinn til að kóróna glænýja heilsulind.",
       "description": [
-        "Þegar Van der Valk Hotel Beveren ákvað að endurnýja allt heilsulindar- og laugarsvæðið — sem opnaði aftur undir nafninu Boost Wellness — var fljótgert að velja samstarfsaðila fyrir loftin. STRETCH-loft hanga nú þegar víðar í hótelinu og samstarfið á sér margra ára sögu. Verkefnið lokaði meira að segja fjölskylduhring: fyrsta verkið var að taka niður strekkiloftið sem Benjamin Nicasens hjá Plafondlux BV — faðir Michael Nicasens hjá STRETCH — hafði sett þar upp tuttugu árum áður.",
+        "Þegar Van der Valk Hotel Beveren ákvað að endurnýja allt heilsulindar- og laugarsvæðið — sem opnaði aftur undir nafninu Boost Wellness — var fljótgert að velja samstarfsaðila fyrir loftin. STRETCH-loft hanga nú þegar víðar í hótelinu og samstarfið á sér margra ára sögu. Verkefnið lokaði meira að segja fjölskylduhring: fyrsta verkið var að taka niður dúkaloftið sem Benjamin Nicasens hjá Plafondlux BV — faðir Michael Nicasens hjá STRETCH — hafði sett þar upp tuttugu árum áður.",
         "Þegar verkkaupinn hafði strípað heilsulindar- og laugarsvæðið inn að burðarvirkinu unnum við hönd í hönd með innanhússhönnunarstofunni Maison Max frá Temse, sem mótaði alla hönnunina og heildarásýndina. Tim, eigandi hótelsins, og Paulina, eiginkona hans, komu að verkefninu frá upphafi til enda — Paulina lagði sjálf fram sterkar hönnunarhugmyndir, sem Maison Max fléttaði inn í áætlanirnar, og saman völdu þau efnin í hvern einasta hluta verkefnisins. Fyrir loftin þýddi það hlýja, slétta hljóðvistarhönnun með mörgum hæðarþrepum yfir höfði, svo ekkert rými virkar nokkurn tíma flatt eða tilbreytingarlaust.",
-        "Hvert svæði fékk þá himnu sem hentar því. Í alblautu rýmunum — laug, sturtum og spa — spenntum við upp strekkiloft úr PVC, sterkasta kostinn þar sem raki er stöðugur. Búningsklefarnir, nuddherbergin og naglastofan fengu strekkiloft úr pólýester (vefnaðarefni), en hlý textílbygging þeirra skapar ofurmatta áferð.",
+        "Hvert svæði fékk þá himnu sem hentar því. Í alblautu rýmunum — laug, sturtum og spa — spenntum við upp dúkaloft úr PVC, sterkasta kostinn þar sem raki er stöðugur. Búningsklefarnir, nuddherbergin og naglastofan fengu dúkaloft úr pólýester (vefnaðarefni), en hlý textílbygging þeirra skapar ofurmatta áferð.",
         "Spaið er skrautfjöðrin. Paulina vildi náttúrulegan, lífrænt sveigðan vegg — og loftið varð að fylgja því flókna, flæðandi formi. Í prentaða, brúntóna loftið bað hún einnig um hringlaga þakglugga, ekki með beinni brún heldur mjúkt sveigðri. Forsmíðaðar burðareiningar úr áli mynda ljósakassann og hæðarmuninn, og útkoman er ein flóknasta — og fallegasta — uppsetning sem við höfum skilað.",
         "Á 700 m² var áherslan á endingu, hljóðvist og flókna hönnun: hljóðísogandi himnur með PET-ísogsplötum að baki, innbyggðir LED-kastarar, aðgangslúgur, hátalarar og loftlistar úr áli — hvert einasta tæknilega smáatriði rennur saman í eitt hlýtt, saumlaust yfirborð. Heildarendurnýjunin tók sex mánuði frá niðurrifi til enduropnunar."
       ],
       "highlights": [
-        "700 m² af strekkiloftum um alla heilsulindina",
+        "700 m² af dúkaloftum um alla heilsulindina",
         "Prentað loft sem fylgir lífrænt sveigðum vegg",
         "Hringlaga þakgluggi með flæðandi sveigðri brún",
         "Hlý hljóðvistarloft á mörgum hæðarþrepum",
@@ -3219,7 +3234,7 @@
           "a": "Himnan fylgir aðstæðum rýmisins. Í rýmunum sem eru stöðugt blaut — laug, sturtum og spa — er PVC sterkasti kosturinn: það er algjörlega ósnortið af raka og auðvelt að strjúka hreint. Í búningsklefunum, nuddherbergjunum og naglastofunni spenntum við þess í stað upp pólýester: vefnaðarhimnu þar sem ofin byggingin gefur hlýrri, ofurmatta áferð."
         },
         {
-          "q": "Hvernig fylgir strekkiloft sveigðum, lífrænum vegg?",
+          "q": "Hvernig fylgir dúkaloft sveigðum, lífrænum vegg?",
           "a": "Sveigði veggurinn var útfærður í forsmíðuðum burðareiningum úr áli sem bera prófílana, ljósakassann og hæðarmuninn. Himnan er síðan spennt í þá umgjörð og fylgir þannig lífræna forminu nákvæmlega — þar með talið hringlaga þakglugganum með mjúkri, sveigðri brún."
         },
         {
@@ -3227,8 +3242,8 @@
           "a": "Heilsulindin sameinar hljóðísogandi strekkihimnur og PET-ísogsplötur þar fyrir aftan: hljóðið fer í gegnum yfirborðið og er fangað í stað þess að endurkastast. Ásamt loftahönnuninni á mörgum hæðarþrepum heldur þetta stórum rýmum með hörðum flötum rólegum og hljóðlátum — nákvæmlega það sem heilsulind þarf."
         },
         {
-          "q": "Hversu lengi endist strekkiloft?",
-          "a": "Þetta verkefni er sjálft svarið: fyrra strekkiloftið hér var sett upp fyrir tuttugu árum og vék aðeins vegna þess að hótelið vildi glænýja heilsulind. Gerðu ráð fyrir áratuga endingu — og þegar hönnunin breytist er aðeins himnan endurnýjuð, ekki burðarvirkið."
+          "q": "Hversu lengi endist dúkaloft?",
+          "a": "Þetta verkefni er sjálft svarið: fyrra dúkaloftið hér var sett upp fyrir tuttugu árum og vék aðeins vegna þess að hótelið vildi glænýja heilsulind. Gerðu ráð fyrir áratuga endingu — og þegar hönnunin breytist er aðeins himnan endurnýjuð, ekki burðarvirkið."
         }
       ]
     },
@@ -3362,7 +3377,7 @@
       "faqs": [
         {
           "q": "Hversu langan tíma tók uppsetningin?",
-          "a": "Uppsetning hljóðvistarstrekkiloftsins, sem hleypir ljósi í gegn, tók einn virkan dag."
+          "a": "Uppsetning hljóðvistardúkaloftsins, sem hleypir ljósi í gegn, tók einn virkan dag."
         },
         {
           "q": "Hversu margir uppsetningaraðilar unnu að verkefninu?",
@@ -3370,7 +3385,7 @@
         },
         {
           "q": "Hversu lengi endist loftið?",
-          "a": "Eins og með öll strekkiloft fer endingin eftir þrifum, en það endist auðveldlega í um 25 ár; eftir það gæti aðeins þurft að skipta um himnuna en ramminn sem fyrir er situr áfram."
+          "a": "Eins og með öll dúkaloft fer endingin eftir þrifum, en það endist auðveldlega í um 25 ár; eftir það gæti aðeins þurft að skipta um himnuna en ramminn sem fyrir er situr áfram."
         }
       ]
     },
@@ -3380,7 +3395,7 @@
       "hook": "Eitt baklýst loft sem hægt er að taka niður — hannað einu sinni og endurtekið í 2.608 forsmíðuðum baðherbergiseiningum í tveimur heimsálfum.",
       "description": [
         "CitizenM byggir hótel sín úr forsmíðuðum einingum og samstarfsaðilinn Saniskill framleiðir fyrirferðarlitlu baðherbergiseiningarnar. STRETCH hannaði og afhenti upplýsta loftið í hverri einingu: ljóshleypandi STRETCH Backlit-dúk sem breytir öllu lofti litla rýmisins í mjúkan, jafnan ljósgjafa.",
-        "Hvert loft er byggt úr tveimur upplýstum strekkloftsplötum — og hverja plötu má taka niður. Sami hluturinn og ber ljósið gegnir hlutverki skoðunarlúgu: lagnir fyrir ofan eininguna eru alltaf aðgengilegar án einnar einustu aukaopnunar í hreinum fletinum.",
+        "Hvert loft er byggt úr tveimur upplýstum plötum með dúkalofti — og hverja plötu má taka niður. Sami hluturinn og ber ljósið gegnir hlutverki skoðunarlúgu: lagnir fyrir ofan eininguna eru alltaf aðgengilegar án einnar einustu aukaopnunar í hreinum fletinum.",
         "Alls voru 2.608 sturtueiningar afhentar í Evrópu og Ameríku — frá Paris Opera og Rådhuspladsen í Kaupmannahöfn til New York, Chicago, Miami Brickell, Washington DC, Seattle, San Francisco, Los Angeles og Nuenen. Einingarnar eru byggðar utan verkstaðar og koma allar með sama endurtakanlega hótelfráganginn."
       ],
       "highlights": [
@@ -3474,7 +3489,7 @@
     },
     "vier-emmershof-lokeren": {
       "title": "’t Vier Emmershof",
-      "summary": "Hljóðdempandi strekkloft í gegnum skúlptúrískt hús í miðjum skógi.",
+      "summary": "Hljóðdempandi dúkaloft í gegnum skúlptúrískt hús í miðjum skógi.",
       "hook": "Skúlptúrískt heimili á milli grenitrjánna — jafn kyrrlátt að innan og skógurinn í kring.",
       "description": [
         "Á ’t Vier Emmershof í Lokeren stendur skúlptúrískt íbúðarhús á milli varðveittra grenitrjáa, og bakhliðin, sem er alveg úr gleri, dregur skóginn inn í íverurýmin. Náttúruleg efni skapa hlýtt og kyrrlátt innra rými.",
@@ -3804,13 +3819,13 @@
   "blogPosts": {
     "posts": {
       "what-is-a-stretch-ceiling": {
-        "title": "Hvað er strekkiloft? Einfaldur leiðarvísir",
-        "excerpt": "Strekkiloft er þunn himna sem er strekkt yfir rýmið og smellt í nettan jaðarprófíl — sett upp kalt eða með hita, á einum degi. Hér sérðu hvernig það virkar og hvar það hentar.",
+        "title": "Hvað er dúkaloft? Einfaldur leiðarvísir",
+        "excerpt": "Dúkaloft er þunn himna sem er strekkt yfir rýmið og smellt í nettan jaðarprófíl — sett upp kalt eða með hita, á einum degi. Hér sérðu hvernig það virkar og hvar það hentar.",
         "body": [
           {
             "heading": "Stutta útgáfan",
             "paragraphs": [
-              "Strekkiloft er þunn, saumlaus himna — annaðhvort prjónað pólýester eða kalandreruð PVC-filma — sem er strekkt yfir rýmið og smellt í nettan prófíl sem festur er á veggina allan hringinn. Útkoman lítur út eins og fullkomlega slétt, nýmálað loft, en án múrverks, pússunar og málningar.",
+              "Dúkaloft er þunn, saumlaus himna — annaðhvort prjónað pólýester eða kalandreruð PVC-filma — sem er strekkt yfir rýmið og smellt í nettan prófíl sem festur er á veggina allan hringinn. Útkoman lítur út eins og fullkomlega slétt, nýmálað loft, en án múrverks, pússunar og málningar.",
               "Þar sem himnan er fest í ramma en ekki beint í burðarvirkið fyrir ofan felur hún lagnir, raflagnir, ójafna steypu og gömul loft algjörlega — og uppsetningin tekur aðeins einn dag, í rými sem helst áfram með húsgögnum og í notkun."
             ]
           },
@@ -3824,32 +3839,32 @@
           {
             "heading": "Hvað má fella inn í það",
             "paragraphs": [
-              "Strekkiloft er meira en áferð. Örgötuð útgáfa með þéttri hljóðísogsmottu fyrir aftan nær allt að flokki A í hljóðísogi og róar rými full af bergmáli. Hálfgegnsæjar filmur verða að jafnri, deyfanlegri ljósgjafa án ljósbletta, og hvaða mynd sem er — þar á meðal stjörnuhiminn úr ljósleiðurum — má prenta út í jaðra.",
+              "Dúkaloft er meira en áferð. Örgötuð útgáfa með þéttri hljóðísogsmottu fyrir aftan nær allt að flokki A í hljóðísogi og róar rými full af bergmáli. Hálfgegnsæjar filmur verða að jafnri, deyfanlegri ljósgjafa án ljósbletta, og hvaða mynd sem er — þar á meðal stjörnuhiminn úr ljósleiðurum — má prenta út í jaðra.",
               "Jafnvel hátalara má fela algjörlega bak við himnuna fyrir hreinan hljóm án sýnilegrar uppsprettu. Allt rúmast þetta í einum saumlausum fleti."
             ]
           },
           {
             "heading": "Hvar það hentar",
             "paragraphs": [
-              "Heimili nota strekkiloft í stofum, baðherbergjum og heimabíóum; fyrirtæki í skrifstofum, veitingastöðum, stúdíóum, verslunum og gistiþjónustu. Þau henta jafnt nýbyggingum sem endurbótum, og PVC-kerfið lætur raka ekki á sig fá — sterkur kostur fyrir votrými.",
+              "Heimili nota dúkaloft í stofum, baðherbergjum og heimabíóum; fyrirtæki í skrifstofum, veitingastöðum, stúdíóum, verslunum og gistiþjónustu. Þau henta jafnt nýbyggingum sem endurbótum, og PVC-kerfið lætur raka ekki á sig fá — sterkur kostur fyrir votrými.",
               "Viltu vita hvort það hentar verkefninu þínu? Fáðu ókeypis tilboð án skuldbindinga og sérfræðingur svarar þér innan tveggja virkra daga."
             ]
           }
         ]
       },
       "stretch-ceiling-acoustics-explained": {
-        "title": "Hljóðvist strekkilofta – einföld skýring",
+        "title": "Hljóðvist dúkalofta – einföld skýring",
         "excerpt": "Örgötuð strekkt himna með þéttri hljóðísogsmottu fyrir aftan getur náð allt að flokki A í hljóðísogi — án sýnilegra hljóðvistarplatna. Hér er hvernig það virkar og hvað αw og NRC þýða.",
         "body": [
           {
             "heading": "Af hverju rými hljóma hörð",
             "paragraphs": [
               "Harðir, sléttir fletir — gler, steypa, gifsplötur — endurkasta hljóði aftur inn í rýmið. Endurkastið hleðst upp sem eftirómur, sem gerir tal erfiðara að fylgja og tónlist eða bakgrunnshljóð þreytandi. Lausnin er að gleypa hluta af orkunni áður en hún endurkastast.",
-              "Hefðbundna leiðin er sýnilegar hljóðvistarplötur eða hljóðdempandi einingar. Með strekkilofti geturðu gert það ósýnilega."
+              "Hefðbundna leiðin er sýnilegar hljóðvistarplötur eða hljóðdempandi einingar. Með dúkalofti geturðu gert það ósýnilega."
             ]
           },
           {
-            "heading": "Svona virkar hljóðvistarstrekkiloft",
+            "heading": "Svona virkar hljóðvistardúkaloft",
             "paragraphs": [
               "Sýnilega hliðin er örgötuð himna: þúsundir örsmárra gata hleypa hljóðinu í gegn í þétta hljóðísogsmottu úr pólýesterull sem er fest fyrir aftan. Rýmið sýnist áfram með eitt gallalaust, saumlaust loft, en hljóðorkan er fönguð í stað þess að endurkastast.",
               "Vel útfært nær þetta allt að flokki A í hljóðísogi — hæsta flokknum — yfir allan meðhöndlaða flötinn."
@@ -3873,7 +3888,7 @@
       },
       "houten-planchetten-plafond-renoveren-of-vernieuwen": {
         "title": "Að endurnýja loft með viðarpanel: mála það eða klæða yfir?",
-        "excerpt": "Loft með viðarpanel láta rými virka dimmt og gamaldags. Þú átt tvo raunhæfa kosti: að slípa og mála panelinn eða setja nýtt loft upp fyrir neðan hann. Hér er hreinskilinn samanburður — þar á meðal hvenær strekkloft er skynsamlegri leiðin.",
+        "excerpt": "Loft með viðarpanel láta rými virka dimmt og gamaldags. Þú átt tvo raunhæfa kosti: að slípa og mála panelinn eða setja nýtt loft upp fyrir neðan hann. Hér er hreinskilinn samanburður — þar á meðal hvenær dúkaloft er skynsamlegri leiðin.",
         "body": [
           {
             "heading": "Af hverju panelloft virka gamaldags",
@@ -3893,14 +3908,14 @@
             "heading": "Kostur 2 — nýtt loft fyrir neðan panelinn",
             "paragraphs": [
               "Hinn kosturinn er að láta panelinn vera og setja upp nýtt, fullkomlega slétt loft nokkrum sentimetrum fyrir neðan hann. Klassíska leiðin er gifsloft: grind, plötur, samskeyti, slípun og málun — traust lausn, en vika af vinnu og hús fullt af ryki.",
-              "Strekkloft nær sama slétta árangri eftir annarri leið. Grannur prófíll er festur meðfram öllum köntum rýmisins og dúkur strekktur í hann — yfir panelinn sem fyrir er, á einum degi, án slípiryks og yfirleitt án þess að húsgögnin þurfi einu sinni að fara út. Kastarar, loftræsting og skynjarar eru felld inn í sömu heimsókn."
+              "Dúkaloft nær sama slétta árangri eftir annarri leið. Grannur prófíll er festur meðfram öllum köntum rýmisins og dúkur strekktur í hann — yfir panelinn sem fyrir er, á einum degi, án slípiryks og yfirleitt án þess að húsgögnin þurfi einu sinni að fara út. Kastarar, loftræsting og skynjarar eru felld inn í sömu heimsókn."
             ]
           },
           {
             "heading": "Hvorn kostinn áttu að velja?",
             "paragraphs": [
               "Málaðu ef fjárhagurinn er þröngur, borðin eru í góðu ástandi og þú hefur ekkert á móti því að rifflaða útlitið haldi sér. Veldu nýtt loft fyrir neðan ef þú vilt samskeytalausan, nútímalegan flöt, þarft að fela kapla, lagnir eða lélegar viðgerðir eða vilt innfellda lýsingu.",
-              "Milli gifss og strekklofts: gifs vinnur á því hve kunnuglegt það er fyrir þá sem gera sjálfir, strekkloft vinnur á hraða, hreinlæti og viðhaldi — dúkurinn sprungur aldrei, þarf aldrei að mála aftur, og matt hvít áferð verður ekki greind frá nýspörsluðu lofti."
+              "Milli gifss og dúkalofts: gifs vinnur á því hve kunnuglegt það er fyrir þá sem gera sjálfir, dúkaloft vinnur á hraða, hreinlæti og viðhaldi — dúkurinn sprungur aldrei, þarf aldrei að mála aftur, og matt hvít áferð verður ekki greind frá nýspörsluðu lofti."
             ]
           },
           {
@@ -3914,7 +3929,7 @@
       },
       "scheuren-in-plafond-herstellen": {
         "title": "Að gera við sprungur í lofti — og koma í veg fyrir að þær snúi aftur",
-        "excerpt": "Flestar sprungur í lofti eru meinlausar, sumar eru viðvaranir. Þessi leiðarvísir fer yfir hvað veldur þeim, hvernig á að gera rétt við litlar og stórar sprungur — og af hverju strekkloft er eina lausnin sem tryggir að þær sjáist aldrei aftur.",
+        "excerpt": "Flestar sprungur í lofti eru meinlausar, sumar eru viðvaranir. Þessi leiðarvísir fer yfir hvað veldur þeim, hvernig á að gera rétt við litlar og stórar sprungur — og af hverju dúkaloft er eina lausnin sem tryggir að þær sjáist aldrei aftur.",
         "body": [
           {
             "heading": "Hvaðan sprungur í lofti koma",
@@ -3939,14 +3954,14 @@
           {
             "heading": "Lausnin sem getur ekki sprungið",
             "paragraphs": [
-              "Hér breytir strekkloft rökfræðinni. Í stað þess að gera enn einu sinni við stífa flötinn strekkir þú sveigjanlegan dúk nokkrum sentimetrum fyrir neðan hann. Gamla loftið — með sprungum og öllu — hverfur sjónum, og af því að dúkurinn er teygjanlegur geta hreyfingar hússins einfaldlega ekki markað hann.",
+              "Hér breytir dúkaloft rökfræðinni. Í stað þess að gera enn einu sinni við stífa flötinn strekkir þú sveigjanlegan dúk nokkrum sentimetrum fyrir neðan hann. Gamla loftið — með sprungum og öllu — hverfur sjónum, og af því að dúkurinn er teygjanlegur geta hreyfingar hússins einfaldlega ekki markað hann.",
               "Uppsetningin tekur einn dag í venjulegu rými, myndar ekkert ryk og ekki þarf að gera við gamla loftið fyrst. Útkoman er fullkomlega sléttur flötur, matt, satín eða gljái, sem aldrei þarf að mála aftur."
             ]
           },
           {
             "heading": "Gera við eða klæða yfir: fljótlegur ákvörðunarleiðarvísir",
             "paragraphs": [
-              "Ein stöðug hársprunga í annars góðu lofti: gerðu við hana og málaðu aftur. Loft með mörgum sprungum, gömlum viðgerðum sem snúa sífellt aftur eða lélegum fleti í heild: að klæða það með strekklofti er yfirleitt fljótlegra, hreinlegra og varanlegt.",
+              "Ein stöðug hársprunga í annars góðu lofti: gerðu við hana og málaðu aftur. Loft með mörgum sprungum, gömlum viðgerðum sem snúa sífellt aftur eða lélegum fleti í heild: að klæða það með dúkalofti er yfirleitt fljótlegra, hreinlegra og varanlegt.",
               "Sendu okkur mynd af loftinu þínu ásamt málum rýmisins og við segjum þér hreinskilnislega hvora leiðina við myndum fara — og hvað hún myndi kosta."
             ]
           }
@@ -3978,7 +3993,7 @@
           {
             "heading": "Þegar hver sentimetri skiptir máli",
             "paragraphs": [
-              "Því lægra sem rýmið er, þeim mun meira máli skiptir frágangskerfið. Klassískt niðurhengt gifsloft með grind kostar að jafnaði 7 til 15 cm; bætir þú við innfelldum kösturum tapast enn meira. Strekkloft þarf aðeins fáeina sentimetra — hæð prófílsins — og fellir flata LED-lýsingu inn án aukadýptar.",
+              "Því lægra sem rýmið er, þeim mun meira máli skiptir frágangskerfið. Klassískt niðurhengt gifsloft með grind kostar að jafnaði 7 til 15 cm; bætir þú við innfelldum kösturum tapast enn meira. Dúkaloft þarf aðeins fáeina sentimetra — hæð prófílsins — og fellir flata LED-lýsingu inn án aukadýptar.",
               "Sá munur ræður því hvort 2.50 m rými helst í þægilegum 2.46 m eða fellur niður í áberandi lága 2.38 m. Í kjöllurum, baðherbergjum og endurbættum risum er þetta oft röksemdin sem sker úr um kerfisvalið."
             ]
           },
@@ -4033,11 +4048,11 @@
         ]
       },
       "spanplafond-buiten": {
-        "title": "Strekkloft utandyra: yfirbyggðar verandir, þakskegg og sundlaugarhús",
-        "excerpt": "Strekkloft er ekki bara innivara. Undir þakskeggjum, bílskýlum, veröndum og sundlaugarhúsum gefur útidúkur samskeytalausa, þvottheldna áferð sem múrverk utandyra getur aldrei jafnað.",
+        "title": "Dúkaloft utandyra: yfirbyggðar verandir, þakskegg og sundlaugarhús",
+        "excerpt": "Dúkaloft er ekki bara innivara. Undir þakskeggjum, bílskýlum, veröndum og sundlaugarhúsum gefur útidúkur samskeytalausa, þvottheldna áferð sem múrverk utandyra getur aldrei jafnað.",
         "body": [
           {
-            "heading": "Hvar strekkloft utandyra á heima",
+            "heading": "Hvar dúkaloft utandyra á heima",
             "paragraphs": [
               "Hugsaðu um hvert yfirbyggt útirými þar sem þú horfir upp á hráa steypu, timbur eða kapla: þakskeggið meðfram nútímalegri framhlið, bílskýlið, veröndina eða pergóluna, sundlaugarhúsið, inngang verslunar eða hótels. Strekktur dúkur breytir þeim í fullbúinn arkitektúr á einum degi.",
               "Skilyrðið er að loftið sé í skjóli — undir þaki, ekki útsett fyrir uppsöfnuðu vatni eða beinni slagrigningu. Við venjulegar belgískar útiaðstæður heldur dúkurinn spennu sinni og lit árstíð eftir árstíð."
@@ -4073,7 +4088,7 @@
             "heading": "Hvað klímaloft er",
             "paragraphs": [
               "Klímaloft notar loftflötinn til að hita og kæla rýmið. Í stað ofna á vegg eða loftkælingar sem blæs á hnakkann á þér fer loftslagsstýringin fram fyrir ofan þig, dreifð yfir stærsta frjálsa flöt rýmisins — og einmitt þess vegna er útkoman svona jöfn.",
-              "Ásamt strekklofti hverfur tæknin alveg: dúkurinn myndar sýnilega flötinn og klímabúnaðurinn býr í holrýminu fyrir aftan hann."
+              "Ásamt dúkalofti hverfur tæknin alveg: dúkurinn myndar sýnilega flötinn og klímabúnaðurinn býr í holrýminu fyrir aftan hann."
             ]
           },
           {
@@ -4105,14 +4120,14 @@
         ]
       },
       "kan-je-een-spanplafond-afwassen": {
-        "title": "Má þvo strekkloft?",
-        "excerpt": "Já — og það er einn af hljóðlátu ofurkröftum þess. Hvað þú getur örugglega notað á dúk úr PVC eða pólýester, hvað ber að forðast og hvernig þú heldur strekklofti eins og nýju áratugum saman.",
+        "title": "Má þvo dúkaloft?",
+        "excerpt": "Já — og það er einn af hljóðlátu ofurkröftum þess. Hvað þú getur örugglega notað á dúk úr PVC eða pólýester, hvað ber að forðast og hvernig þú heldur dúkalofti eins og nýju áratugum saman.",
         "body": [
           {
             "heading": "Stutta svarið",
             "paragraphs": [
-              "Strekkloft úr PVC eða pólýester má þvo. Dúkurinn er lokaður flötur sem drekkur ekki í sig óhreinindi eins og málning eða múr gerir, svo hversdagsblettir sitja ofan á — þar sem þú getur fjarlægt þá.",
-              "Það gerir strekkloft að praktíska valinu í eldhús, baðherbergi og atvinnuhúsnæði, þar sem málað loft þyrfti endurmálun á fárra ára fresti."
+              "Dúkaloft úr PVC eða pólýester má þvo. Dúkurinn er lokaður flötur sem drekkur ekki í sig óhreinindi eins og málning eða múr gerir, svo hversdagsblettir sitja ofan á — þar sem þú getur fjarlægt þá.",
+              "Það gerir dúkaloft að praktíska valinu í eldhús, baðherbergi og atvinnuhúsnæði, þar sem málað loft þyrfti endurmálun á fárra ára fresti."
             ]
           },
           {
@@ -4139,13 +4154,13 @@
         ]
       },
       "spanplafond-zelf-plaatsen": {
-        "title": "Að setja upp strekkloft sjálfur: hreinskilin ráð",
-        "excerpt": "Getur handlaginn einstaklingur sett upp strekkloft? Stundum — með rétta kerfinu. Hvað verkið felur raunverulega í sér, hvar það fer úrskeiðis og hvenær það er betri áætlun að hringja í vottaðan uppsetningaraðila (eða verða einn sjálfur).",
+        "title": "Að setja upp dúkaloft sjálfur: hreinskilin ráð",
+        "excerpt": "Getur handlaginn einstaklingur sett upp dúkaloft? Stundum — með rétta kerfinu. Hvað verkið felur raunverulega í sér, hvar það fer úrskeiðis og hvenær það er betri áætlun að hringja í vottaðan uppsetningaraðila (eða verða einn sjálfur).",
         "body": [
           {
             "heading": "Hvað verkið felur í sér",
             "paragraphs": [
-              "Hvert strekkloft fylgir sömu röð. Fyrst undirbúningurinn: mældu rýmið nákvæmlega, veldu dúkgerð og fjarlægðu lausan búnað af undirlaginu. Síðan fer kantprófíllinn upp, festur láréttur allan hringinn — þessi braut ber alla spennuna, svo beinar línur og traust festing eru allt. Að lokum er dúkurinn strekktur í prófílinn og frágangurinn fylgir: listar, kastarar, loftræsting.",
+              "Hvert dúkaloft fylgir sömu röð. Fyrst undirbúningurinn: mældu rýmið nákvæmlega, veldu dúkgerð og fjarlægðu lausan búnað af undirlaginu. Síðan fer kantprófíllinn upp, festur láréttur allan hringinn — þessi braut ber alla spennuna, svo beinar línur og traust festing eru allt. Að lokum er dúkurinn strekktur í prófílinn og frágangurinn fylgir: listar, kastarar, loftræsting.",
               "Á pappír er þetta dagsverk í venjulegu rými. Í reynd liggur munurinn á strekktri, samskeytalausri útkomu og bylgjóttum vonbrigðum í smáatriðum hvers skrefs."
             ]
           },
@@ -4164,7 +4179,7 @@
             ]
           },
           {
-            "heading": "Þrjár góðar leiðir að strekklofti",
+            "heading": "Þrjár góðar leiðir að dúkalofti",
             "paragraphs": [
               "Leið eitt: láta setja það upp. Vottaður uppsetningaraðili klárar venjulegt rými á degi, ábyrgist útkomuna, og verðmunurinn á því og að gera sjálfur er minni en flestir búast við þegar efni og verkfæri eru talin með.",
               "Leið tvö: kalda pólýestersettið fyrir örugga heimalagningamanninn — við afhendum dúk, prófíla og leiðbeiningar í gegnum efnisskrána okkar. Leið þrjú: ef loft eru fagið þitt, farðu í uppsetningarþjálfunina okkar og gerðu þetta almennilega með hita, harpún og öllu — þannig byrjuðu flestir samstarfsuppsetningaraðilar okkar."
@@ -4174,7 +4189,7 @@
       },
       "schuin-dak": {
         "title": "Að klæða skáþak að innan — lag fyrir lag",
-        "excerpt": "Innrétting á risi stendur og fellur með uppbyggingunni á bak við áferðina: einangrun, rakavarnarlagi, loftþéttleika. Svona er skáþak byggt upp lag fyrir lag frá þaksteini að innra byrði, og svona lýkur strekkloft súðinni samskeytalaust.",
+        "excerpt": "Innrétting á risi stendur og fellur með uppbyggingunni á bak við áferðina: einangrun, rakavarnarlagi, loftþéttleika. Svona er skáþak byggt upp lag fyrir lag frá þaksteini að innra byrði, og svona lýkur dúkaloft súðinni samskeytalaust.",
         "body": [
           {
             "heading": "Þekktu þakvirkið þitt",
@@ -4193,7 +4208,7 @@
             "heading": "Frágangur súðarinnar: sýnilega lagið",
             "paragraphs": [
               "Klassíski frágangurinn er gifsplötur á lektur: kunnuglegt, en á súð þýðir það sparsl og slípun upp fyrir sig, og hver framtíðarhreyfing í þaktimbrinu getur skilað sér sem sprunga í gegnum málninguna.",
-              "Strekkloft tekur súðina öðruvísi: prófílar meðfram köntum hvers flatar, dúkur strekktur á milli — samskeytalaust, sprungulaust og létt. Súðir, lága veggi og jafnvel skilin yfir í láréttan lofthluta má klæða með sama efni, sem lætur lítil risherbergi lesa sig sem eitt rólegt rými."
+              "Dúkaloft tekur súðina öðruvísi: prófílar meðfram köntum hvers flatar, dúkur strekktur á milli — samskeytalaust, sprungulaust og létt. Súðir, lága veggi og jafnvel skilin yfir í láréttan lofthluta má klæða með sama efni, sem lætur lítil risherbergi lesa sig sem eitt rólegt rými."
             ]
           },
           {
@@ -4207,7 +4222,7 @@
       },
       "sterrenhemel": {
         "title": "Stjörnuhiminn í loftinu: svona virkar hann",
-        "excerpt": "Á daginn stílhreint, samskeytalaust loft, á nóttunni himinn fullur af stjörnum. Svona breyta ljósleiðarar strekklofti í stjörnuhiminn, hvaða áhrif eru möguleg og hvað uppsetning felur í sér.",
+        "excerpt": "Á daginn stílhreint, samskeytalaust loft, á nóttunni himinn fullur af stjörnum. Svona breyta ljósleiðarar dúkalofti í stjörnuhiminn, hvaða áhrif eru möguleg og hvað uppsetning felur í sér.",
         "body": [
           {
             "heading": "Hugmyndin",
@@ -4226,7 +4241,7 @@
           {
             "heading": "Hvar hann nýtur sín best",
             "paragraphs": [
-              "Svefnherbergi og heimabíó eru klassíkin — rými þar sem þú liggur eða hallar þér aftur og loftið verður útsýnið. Hótel, vellíðunarsvítur og veitingastaðir nota sömu tækni sem einkennismerki. Af því að grunnurinn er venjulegt strekkloft getur stjörnuhlutinn verið eitt svæði í stærri samskeytalausum fleti."
+              "Svefnherbergi og heimabíó eru klassíkin — rými þar sem þú liggur eða hallar þér aftur og loftið verður útsýnið. Hótel, vellíðunarsvítur og veitingastaðir nota sömu tækni sem einkennismerki. Af því að grunnurinn er venjulegt dúkaloft getur stjörnuhlutinn verið eitt svæði í stærri samskeytalausum fleti."
             ]
           },
           {
@@ -4239,21 +4254,21 @@
         ]
       },
       "spanplafond-prijs": {
-        "title": "Hvað kostar strekkloft? Heiðarlegur verðleiðarvísir",
-        "excerpt": "Verð á strekklofti liggur að jafnaði á bilinu 10.000 kr. til 30.000 kr. per m² með uppsetningu, eftir gerð lofts og rými. Hér færðu skýringuna á verðbilinu, viðmiðunarverð fyrir hverja gerð lofts – og hvernig þú færð fast verð fyrir þitt verkefni.",
+        "title": "Hvað kostar dúkaloft? Heiðarlegur verðleiðarvísir",
+        "excerpt": "Verð á dúkalofti liggur að jafnaði á bilinu 70 EUR til 200 EUR per m² með uppsetningu, eftir gerð lofts og rými. Hér færðu skýringuna á verðbilinu, viðmiðunarverð fyrir hverja gerð lofts – og hvernig þú færð fast verð fyrir þitt verkefni.",
         "body": [
           {
             "heading": "Stutta svarið",
             "paragraphs": [
-              "Fyrir strekkloft sem fagfólk setur upp máttu gera ráð fyrir um það bil 10.000 kr. til 30.000 kr. á fermetra án vsk, með uppsetningu innifalinni. Bilið er raunverulegt: einfalt, matt hvítt loft í rétthyrndri stofu er neðst á bilinu, en baklýst baðherbergisloft með innbyggðri lýsingu er efst.",
+              "Fyrir dúkaloft sem fagfólk setur upp máttu gera ráð fyrir um það bil 70 EUR til 200 EUR á fermetra án vsk, með uppsetningu innifalinni. Bilið er raunverulegt: einfalt, matt hvítt loft í rétthyrndri stofu er neðst á bilinu, en baklýst baðherbergisloft með innbyggðri lýsingu er efst.",
               "Allar tölur í þessum leiðarvísi eru viðmiðunarbil – ekki tilboð. Dúkurinn er framleiddur eftir máli fyrir þitt rými, svo heiðarlega lokatalan kemur alltaf úr ókeypis og óskuldbindandi tilboði."
             ]
           },
           {
             "heading": "Viðmiðunarverð eftir gerð lofts",
             "paragraphs": [
-              "Einfalt, einlitt loft úr PVC eða pólýester er upphafspunkturinn á um 10.000 kr. til 13.000 kr. per m² – hröð og samskeytalaus uppfærsla fyrir stofur, svefnherbergi og skrifstofur. Prentuð hönnun bætir við myndefni og undirbúningi og endar í kringum 13.000 kr. til 15.000 kr. per m².",
-              "Hljóðdempandi loft – örgataður dúkur með hljóðísogi fyrir ofan – kostar um 15.000 kr. til 22.000 kr. per m² eftir uppbyggingu. Hálfgegnsætt, baklýst loft með LED-flötum bak við dúkinn liggur í kringum 19.000 kr. til 24.000 kr. per m² að meðtöldum ljósfletinum. Baðherbergisverkefni sem sameina rakaþolinn dúk og innbyggða lýsingu ná yfirleitt 22.000 kr. til 30.000 kr. per m².",
+              "Einfalt, einlitt loft úr PVC eða pólýester er upphafspunkturinn á um 70 EUR til 90 EUR per m² – hröð og samskeytalaus uppfærsla fyrir stofur, svefnherbergi og skrifstofur. Prentuð hönnun bætir við myndefni og undirbúningi og endar í kringum 90 EUR til 100 EUR per m².",
+              "Hljóðdempandi loft – örgataður dúkur með hljóðísogi fyrir ofan – kostar um 100 EUR til 150 EUR per m² eftir uppbyggingu. Hálfgegnsætt, baklýst loft með LED-flötum bak við dúkinn liggur í kringum 130 EUR til 160 EUR per m² að meðtöldum ljósfletinum. Baðherbergisverkefni sem sameina rakaþolinn dúk og innbyggða lýsingu ná yfirleitt 150 EUR til 200 EUR per m².",
               "Sérverkefni – stjörnuhiminn, prentuð baklýst hönnun, forsmíðaðar einingar – eru hönnuð fyrir hvert verkefni og verðlögð eftir hönnun."
             ]
           },
@@ -4268,7 +4283,7 @@
             "heading": "Hvað er innifalið í verðinu – og hvað það sparar síðar",
             "paragraphs": [
               "Tölurnar okkar innihalda dúkinn sem er soðinn eftir máli í belgísku framleiðslunni okkar, kantprófílana og faglega uppsetningu – fyrir venjulegt rými á einum degi, án niðurrifs og ryks.",
-              "Það sem samanburður per m² nær ekki: strekkloft þarf aldrei að mála upp á nýtt. Múrhúðað loft kallar á nýja málningu á nokkurra ára fresti og springur með húsinu; dúkurinn helst strekktur, auðþrifinn og óbreyttur áratugum saman. Yfir tíu ár er \"dýra\" loftið yfirleitt það ódýra."
+              "Það sem samanburður per m² nær ekki: dúkaloft þarf aldrei að mála upp á nýtt. Múrhúðað loft kallar á nýja málningu á nokkurra ára fresti og springur með húsinu; dúkurinn helst strekktur, auðþrifinn og óbreyttur áratugum saman. Yfir tíu ár er \"dýra\" loftið yfirleitt það ódýra."
             ]
           },
           {
@@ -4281,13 +4296,13 @@
         ]
       },
       "clipso-spanplafonds": {
-        "title": "Clipso-strekkloft: hvað þau eru og hvar þú færð þau",
-        "excerpt": "Clipso er þekktasta vörumerkið í pólýesterdúk fyrir strekkloft og strekkveggi — hljóðdempandi dúkaloftið sem margir arkitektar tilgreina með nafni. Hér er hvað dúkur af Clipso-gerð er, hvað hann gerir vel og hvernig við útvegum hann, prentum á hann, sníðum og setjum upp.",
+        "title": "Clipso-dúkaloft: hvað þau eru og hvar þú færð þau",
+        "excerpt": "Clipso er þekktasta vörumerkið í pólýesterdúk fyrir dúkaloft og veggi með dúk — hljóðdempandi dúkaloftið sem margir arkitektar tilgreina með nafni. Hér er hvað dúkur af Clipso-gerð er, hvað hann gerir vel og hvernig við útvegum hann, prentum á hann, sníðum og setjum upp.",
         "body": [
           {
             "heading": "Hvað „Clipso“ þýðir í raun",
             "paragraphs": [
-              "Clipso er franskframleiddur prjónaður pólýesterdúkur fyrir strekkt loft og veggi — svo þekktur að vörumerkið er orðið samheiti yfir allan flokk dúkastrekklofta (rétt eins og fólk segir Gyproc um gifsplötur). Frá 2022 hefur merkið tilheyrt Ecophon, hluta af Saint-Gobain-samstæðunni.",
+              "Clipso er franskframleiddur prjónaður pólýesterdúkur fyrir strekkt loft og veggi — svo þekktur að vörumerkið er orðið samheiti yfir allan flokk dúkalofta úr textíl (rétt eins og fólk segir Gyproc um gifsplötur). Frá 2022 hefur merkið tilheyrt Ecophon, hluta af Saint-Gobain-samstæðunni.",
               "Dúkurinn er settur upp kaldur: engin upphitun á rýminu, engin suða á staðnum. Prjónaefnið er breiðara en PVC — samskeytalaust upp í um fimm metra — andar og fæst í staðalútgáfu, hljóðdempandi útgáfu og hálfgegnsærri útgáfu."
             ]
           },
@@ -4320,13 +4335,13 @@
         ]
       },
       "plafond-tendu-avantages-et-inconvenients": {
-        "title": "Strekkiloft: kostir og gallar, hreint út sagt (verðyfirlit 2026)",
-        "excerpt": "Strekkiloft gefur þér nýtt, samskeytalaust loft á einum degi — en það er ekki rétta lausnin fyrir öll rými eða öll fjárráð. Hér eru raunverulegu kostirnir, gallarnir sagðir hreint út og verðbil ársins 2026.",
+        "title": "Dúkaloft: kostir og gallar, hreint út sagt (verðyfirlit 2026)",
+        "excerpt": "Dúkaloft gefur þér nýtt, samskeytalaust loft á einum degi — en það er ekki rétta lausnin fyrir öll rými eða öll fjárráð. Hér eru raunverulegu kostirnir, gallarnir sagðir hreint út og verðbil ársins 2026.",
         "body": [
           {
-            "heading": "Hvað strekkiloft er í raun og veru",
+            "heading": "Hvað dúkaloft er í raun og veru",
             "paragraphs": [
-              "Strekkiloft er þunnur dúkur — PVC-filma eða pólýesterefni — sem er strekktur þvert yfir rýmið og smelltur fastur í mjóan kantprófíl fáeinum sentimetrum neðan við núverandi loft. PVC-dúkur er settur upp með hita og strekkist við kólnun þar til hann er þaninn eins og trommuskinn; pólýesterdúkur er settur upp kaldur, án hitabyssu.",
+              "Dúkaloft er þunnur dúkur — PVC-filma eða pólýesterefni — sem er strekktur þvert yfir rýmið og smelltur fastur í mjóan kantprófíl fáeinum sentimetrum neðan við núverandi loft. PVC-dúkur er settur upp með hita og strekkist við kólnun þar til hann er þaninn eins og trommuskinn; pólýesterdúkur er settur upp kaldur, án hitabyssu.",
               "Gamla loftið fær að vera á sínum stað. Sprungur, kaplar, lagnir og áratugagömul málningarlög hverfa á bak við eitt fullkomlega slétt yfirborð — og í venjulegu herbergi tekur öll uppsetningin aðeins einn dag."
             ]
           },
@@ -4344,8 +4359,8 @@
             "paragraphs": [
               "Þú tapar nokkrum sentimetrum af lofthæð: prófíllinn þarf sitt pláss og innfelld lýsing aðeins meira. Í flestum rýmum sést það ekki; í lágum kjallara getur það skipt máli.",
               "Dúkurinn er sterkur en ekki ósæranlegur: oddhvass hlutur sem þrýst er í hann getur stungið gat. Smáskemmdir má gera við og skemmdum fleti má skipta út, en kampavínstappi er betri saga en horn á stiga.",
-              "Gæðin standa og falla með uppsetningaraðilanum. Strekkiloft er mælt og soðið upp á millimetra; slæleg mæling eða ódýr dúkur leynir sér ekki. Veldu þjálfaðan uppsetningaraðila með vottun og spurðu hvaða dúkamerki fer upp fyrir ofan höfuðið á þér.",
-              "Og svo verðið: strekkiloft kostar meira en ein umferð af málningu á loft sem er þegar í góðu lagi. Það keppir á heildarkostnaði — við múrhúðun að viðbættri málningu og endurmálun á nokkurra ára fresti — ekki við málningarrúlluna."
+              "Gæðin standa og falla með uppsetningaraðilanum. Dúkaloft er mælt og soðið upp á millimetra; slæleg mæling eða ódýr dúkur leynir sér ekki. Veldu þjálfaðan uppsetningaraðila með vottun og spurðu hvaða dúkamerki fer upp fyrir ofan höfuðið á þér.",
+              "Og svo verðið: dúkaloft kostar meira en ein umferð af málningu á loft sem er þegar í góðu lagi. Það keppir á heildarkostnaði — við múrhúðun að viðbættri málningu og endurmálun á nokkurra ára fresti — ekki við málningarrúlluna."
             ]
           },
           {
@@ -4356,16 +4371,16 @@
             ]
           },
           {
-            "heading": "Strekkiloft eða gifsplata?",
+            "heading": "Dúkaloft eða gifsplata?",
             "paragraphs": [
               "Gifsplata er ódýrari á fyrsta degi fyrir einfalt, slétt loft — ef rýmið er tómt, ryk er ásættanlegt og frágangurinn (spörslun samskeyta, pússning, grunnun og tvær umferðir af málningu) er tekinn með í samanburðinn.",
-              "Strekkiloftið vinnur á hraða í endurbótum, á stórum samskeytalausum flötum, í rökum rýmum, á innfelldri lýsingu og hljóðvist — og á árunum sem á eftir koma: engar sprungur, engin endurmálun og yfirborð sem lítur enn út eins og nýtt eftir áratug. Þess vegna er það orðið staðallinn í endurbótum á fullbúnum heimilum með öllum húsgögnum inni."
+              "Dúkaloftið vinnur á hraða í endurbótum, á stórum samskeytalausum flötum, í rökum rýmum, á innfelldri lýsingu og hljóðvist — og á árunum sem á eftir koma: engar sprungur, engin endurmálun og yfirborð sem lítur enn út eins og nýtt eftir áratug. Þess vegna er það orðið staðallinn í endurbótum á fullbúnum heimilum með öllum húsgögnum inni."
             ]
           },
           {
             "heading": "Hvenær það er rétti kosturinn",
             "paragraphs": [
-              "Veldu strekkiloft þegar búið er í rýminu og loftið fyrir ofan er orðið lúið; þegar þú vilt lýsinguna inni í loftinu frekar en utan á því; þegar baðherbergi eða laugarrými þarf rakaþolinn frágang; eða þegar skrifstofa eða læknastofa þarf hljóðvistarró án sýnilegra platna.",
+              "Veldu dúkaloft þegar búið er í rýminu og loftið fyrir ofan er orðið lúið; þegar þú vilt lýsinguna inni í loftinu frekar en utan á því; þegar baðherbergi eða laugarrými þarf rakaþolinn frágang; eða þegar skrifstofa eða læknastofa þarf hljóðvistarró án sýnilegra platna.",
               "Ertu í vafa um kerfi, liti eða fjárhag? Sendu okkur mynd og mál rýmisins gegnum tilboðshnappinn — þú færð heiðarlega ráðgjöf og ókeypis tilboð, án allra skuldbindinga."
             ]
           }
@@ -4498,8 +4513,8 @@
         ]
       },
       "plafond-afwerken-na-isolatie": {
-        "title": "Loftaklæðning eftir einangrun: gifsplata eða strekkloft?",
-        "excerpt": "Eftir einangrun þaks, háaloftsgólfs eða útveggjar að innan þarf nýtt loft eða nýjan vegg. Múrhúð, gifsplata eða strekkloft: hér er munurinn í tíma, ryki og aðgengi að einangruninni — og svona heldurðu styrknum fyrir einangrunina öruggum.",
+        "title": "Loftaklæðning eftir einangrun: gifsplata eða dúkaloft?",
+        "excerpt": "Eftir einangrun þaks, háaloftsgólfs eða útveggjar að innan þarf nýtt loft eða nýjan vegg. Múrhúð, gifsplata eða dúkaloft: hér er munurinn í tíma, ryki og aðgengi að einangruninni — og svona heldurðu styrknum fyrir einangrunina öruggum.",
         "body": [
           {
             "heading": "Af hverju frágangurinn eftir einangrun er öðruvísi",
@@ -4516,9 +4531,9 @@
             ]
           },
           {
-            "heading": "Kostur 2: strekkloft sem frágangur",
+            "heading": "Kostur 2: dúkaloft sem frágangur",
             "paragraphs": [
-              "Strekkloft er strekkt í nettan prófíl meðfram veggjunum, nokkrum sentimetrum undir nýja einangrunarlaginu. Uppsetningin tekur yfirleitt einn dag — án ryks, án þurrktíma og án þess að tæma rýmið. Dúkurinn er samskeytalaus upp í 5,15 m (pólýester) eða 6,5 m (PVC) og fylgir líka hallandi flötum og kvistum."
+              "Dúkaloft er strekkt í nettan prófíl meðfram veggjunum, nokkrum sentimetrum undir nýja einangrunarlaginu. Uppsetningin tekur yfirleitt einn dag — án ryks, án þurrktíma og án þess að tæma rýmið. Dúkurinn er samskeytalaus upp í 5,15 m (pólýester) eða 6,5 m (PVC) og fylgir líka hallandi flötum og kvistum."
             ],
             "bullets": [
               "Aðgengið helst: PVC-dúk má losa úr prófílnum og setja aftur í, eða þú lætur setja ósýnilega skoðunarlúgu. Hentugt við lekaleit, auka lagnir eða síðari breytingu á einangruninni.",
@@ -4532,11 +4547,11 @@
                 "href": "/products/inspection-hatch"
               },
               {
-                "label": "Hljóðvistarstrekkloft",
+                "label": "Hljóðvistardúkaloft",
                 "href": "/products/acoustic-stretch-system"
               },
               {
-                "label": "Strekkloft undir súð",
+                "label": "Dúkaloft undir súð",
                 "href": "/blog/schuin-dak"
               }
             ]
@@ -4544,13 +4559,13 @@
           {
             "heading": "Rakasperra og holrými: tæknilegu atriðin",
             "paragraphs": [
-              "Strekkloft er frágangur, ekki rakasperra. Rakasperran situr áfram hlýja megin einangrunarinnar, órofin og límd, nákvæmlega eins og einangrunarverktakinn mælir fyrir um. Slepptu henni aldrei bara af því að dúkur kemur hvort sem er undir.",
+              "Dúkaloft er frágangur, ekki rakasperra. Rakasperran situr áfram hlýja megin einangrunarinnar, órofin og límd, nákvæmlega eins og einangrunarverktakinn mælir fyrir um. Slepptu henni aldrei bara af því að dúkur kemur hvort sem er undir.",
               "Milli einangrunar og dúks er holrými upp á nokkra sentimetra. Þar rúmast rör, kaplar og innfelldu dósirnar fyrir kastarana. Þungir hlutir, eins og loftvifta eða stórt ljós, eru hengdir í burðarvirkið fyrir ofan, ekki í dúkinn. Ákveðið prófílhæð og staðsetningu kastara áður en einangrunarverktakinn lýkur verki — þá þarf enginn að koma aftur.",
-              "Við innri einangrun veggja gildir það sama um strekkvegg: fyrst einangrun og rakasperra, svo veggjakerfið yfir, með römmum fyrir innstungur og rofa."
+              "Við innri einangrun veggja gildir það sama um dúk á veggi: fyrst einangrun og rakasperra, svo veggjakerfið yfir, með römmum fyrir innstungur og rofa."
             ],
             "links": [
               {
-                "label": "Strekkveggjakerfi",
+                "label": "Kerfi fyrir dúk á veggi",
                 "href": "/applications/walls"
               }
             ]
@@ -4570,8 +4585,8 @@
           {
             "heading": "Hvað kostar það og hvernig skipuleggurðu það",
             "paragraphs": [
-              "Gerðu ráð fyrir um það bil 70 til 200 evrum á m² án vsk, uppsettu, fyrir strekkloft eftir gerð og lýsingu; gifsloft með spörslun og málun lendir oftast á milli 35 og 70 evra á m² en tekur viku á verkstað. Bilið minnkar um leið og þú telur með kastarana, hljóðvistina og töpuðu dagana.",
-              "Hagnýt áætlun: dagur eitt og tvö einangrun og rakasperra, dagur þrjú strekkloftið — og sama kvöld er kveikt á ljósunum. STRETCH-uppsetningaraðili á þínu svæði mælir rýmið án endurgjalds og stillir prófílana af við grind einangrunarverktakans."
+              "Gerðu ráð fyrir um það bil 70 til 200 evrum á m² án vsk, uppsettu, fyrir dúkaloft eftir gerð og lýsingu; gifsloft með spörslun og málun lendir oftast á milli 35 og 70 evra á m² en tekur viku á verkstað. Bilið minnkar um leið og þú telur með kastarana, hljóðvistina og töpuðu dagana.",
+              "Hagnýt áætlun: dagur eitt og tvö einangrun og rakasperra, dagur þrjú dúkaloftið — og sama kvöld er kveikt á ljósunum. STRETCH-uppsetningaraðili á þínu svæði mælir rýmið án endurgjalds og stillir prófílana af við grind einangrunarverktakans."
             ],
             "links": [
               {
@@ -4588,13 +4603,13 @@
       },
       "plafond-renoveren-opties": {
         "title": "Að endurnýja loft: fjórir kostir bornir saman (2026)",
-        "excerpt": "Múrhúða upp á nýtt, gifsplötur, viðarpanell eða strekkloft? Hvað hver kostur kostar á m², hve langan tíma verkið tekur, hve mikið ryk þú sættir þig við og hvað virðisaukaskatturinn gerir — svo þú veljir út frá loftinu þínu en ekki af vana.",
+        "excerpt": "Múrhúða upp á nýtt, gifsplötur, viðarpanell eða dúkaloft? Hvað hver kostur kostar á m², hve langan tíma verkið tekur, hve mikið ryk þú sættir þig við og hvað virðisaukaskatturinn gerir — svo þú veljir út frá loftinu þínu en ekki af vana.",
         "body": [
           {
             "heading": "Stutta svarið",
             "paragraphs": [
-              "Fyrir gamalt loft með sprungum, blettum eða úreltum frágangi eru fjórar raunhæfar leiðir: múrhúða upp á nýtt (eða sparsla og mála), nýtt gifsloft, viðarpanell eða plötur — og strekkloft. Á fermetra liggja þær nær hver annarri en flestir halda; munurinn liggur í tímanum á verkstað, rykinu, aðgenginu að því sem er fyrir ofan og endingunni.",
-              "Þumalputtaregla: Sé undirlagið heilt og slétt er málun eða spörslun ódýrust. Sé loftið sprungið, ójafnt eða fullt af lögnum, eða viljirðu bæta við lýsingu og hljóðvist, vinnur strekkloftið á heildarkostnaði og tíma. Gifs liggur þar á milli; panell er stílval."
+              "Fyrir gamalt loft með sprungum, blettum eða úreltum frágangi eru fjórar raunhæfar leiðir: múrhúða upp á nýtt (eða sparsla og mála), nýtt gifsloft, viðarpanell eða plötur — og dúkaloft. Á fermetra liggja þær nær hver annarri en flestir halda; munurinn liggur í tímanum á verkstað, rykinu, aðgenginu að því sem er fyrir ofan og endingunni.",
+              "Þumalputtaregla: Sé undirlagið heilt og slétt er málun eða spörslun ódýrust. Sé loftið sprungið, ójafnt eða fullt af lögnum, eða viljirðu bæta við lýsingu og hljóðvist, vinnur dúkaloftið á heildarkostnaði og tíma. Gifs liggur þar á milli; panell er stílval."
             ]
           },
           {
@@ -4630,7 +4645,7 @@
             ]
           },
           {
-            "heading": "Kostur 4: strekkloft",
+            "heading": "Kostur 4: dúkaloft",
             "paragraphs": [
               "Dúkur úr PVC eða pólýester er strekktur í nettan prófíl meðfram veggjunum, nokkrum sentimetrum undir gamla loftinu. Allt fyrir ofan — sprungur, panell, lagnir, ójöfn steinplata — hverfur á bak við einn samskeytalausan flöt. Sett upp á einum degi, án ryks, án þurrktíma og með húsgögnin inni í stofunni."
             ],
@@ -4647,11 +4662,11 @@
                 "href": "/blog/spanplafond-prijs"
               },
               {
-                "label": "PVC-strekkloft",
+                "label": "PVC-dúkaloft",
                 "href": "/products/pvc-stretch-ceiling"
               },
               {
-                "label": "Pólýester-strekkloft",
+                "label": "Pólýester-dúkaloft",
                 "href": "/products/polyester-stretch-ceiling"
               }
             ]
@@ -4660,19 +4675,19 @@
             "heading": "Samanburður í fljótu bragði",
             "paragraphs": [],
             "bullets": [
-              "Kostnaður á m² (án vsk, til viðmiðunar): málun 10–20 € · ný múrhúð 25–45 € · gifs 35–70 € · panell 40–90 € · strekkloft 70–200 €.",
-              "Tími á verkstað fyrir 30 m² stofu: málun 1–2 dagar · ný múrhúð 3–5 dagar · gifs 4–7 dagar · panell 2–3 dagar · strekkloft 1 dagur.",
-              "Ryk og þurrktími: múrhúð og gifs mikið · panell lítið · strekkloft ekkert.",
-              "Felur lagnir og ójöfnur: múrhúð nei · gifs já · panell já · strekkloft já.",
-              "Aðgengi eftir á: múrhúð og gifs nei · panell takmarkað · strekkloft já (PVC).",
-              "Lýsing og hljóðvist innbyggð: gifs að hluta · strekkloft að fullu.",
+              "Kostnaður á m² (án vsk, til viðmiðunar): málun 10–20 € · ný múrhúð 25–45 € · gifs 35–70 € · panell 40–90 € · dúkaloft 70–200 €.",
+              "Tími á verkstað fyrir 30 m² stofu: málun 1–2 dagar · ný múrhúð 3–5 dagar · gifs 4–7 dagar · panell 2–3 dagar · dúkaloft 1 dagur.",
+              "Ryk og þurrktími: múrhúð og gifs mikið · panell lítið · dúkaloft ekkert.",
+              "Felur lagnir og ójöfnur: múrhúð nei · gifs já · panell já · dúkaloft já.",
+              "Aðgengi eftir á: múrhúð og gifs nei · panell takmarkað · dúkaloft já (PVC).",
+              "Lýsing og hljóðvist innbyggð: gifs að hluta · dúkaloft að fullu.",
               "Styrkir: Þar sem þeir eru til gilda þeir um einangrunina fyrir ofan loftið, aldrei um fráganginn. Vsk: fer eftir landsreglum — í ýmsum löndum er lægra þrep á endurbótum."
             ]
           },
           {
             "heading": "Hvaða kostur fyrir hvaða loft?",
             "paragraphs": [
-              "Heilt, slétt loft með þreyttri málningu: mála. Sprungur í gömlu múrhúðuðu lofti: Finndu fyrst orsökina, sparslaðu svo — eða strekktu yfir ef þær koma sífellt aftur. Panell sem þú ert orðinn þreyttur á: Strekktu yfir í stað þess að rífa. Lagnir, ójöfn steypa eða endurbætur með nýrri lýsingu og hljóðvist: strekkloft. Gifs á áfram rétt á sér þar sem þungt tæki þarf að hanga í loftinu eða þar sem þú vilt meðvitað klassíska, fasta smíði.",
+              "Heilt, slétt loft með þreyttri málningu: mála. Sprungur í gömlu múrhúðuðu lofti: Finndu fyrst orsökina, sparslaðu svo — eða strekktu yfir ef þær koma sífellt aftur. Panell sem þú ert orðinn þreyttur á: Strekktu yfir í stað þess að rífa. Lagnir, ójöfn steypa eða endurbætur með nýrri lýsingu og hljóðvist: dúkaloft. Gifs á áfram rétt á sér þar sem þungt tæki þarf að hanga í loftinu eða þar sem þú vilt meðvitað klassíska, fasta smíði.",
               "Ef þú einangrar í sömu lotu skaltu velja fráganginn fyrst eftir einangrunina; styrkurinn fylgir einangruninni, ekki loftinu. STRETCH-uppsetningaraðili á þínu svæði mælir rýmið án endurgjalds og gefur fast verð."
             ],
             "links": [
@@ -4695,9 +4710,11 @@
       "updatedOn": "Uppfært",
       "backToBlog": "Allir leiðarvísar",
       "eyebrow": "Leiðarvísar",
-      "ctaTitle": "Ertu að hugsa um strekkiloft?",
+      "ctaTitle": "Ertu að hugsa um dúkaloft?",
       "ctaBody": "Fáðu ókeypis tilboð án skuldbindinga fyrir rýmið þitt.",
-      "ctaBtn": "Fá ókeypis tilboð"
+      "ctaBtn": "Fá ókeypis tilboð",
+      "calculatorTitle": "Hvað mun loftið þitt kosta?",
+      "calculatorBody": "Fermetrar × loftgerð gefa þér útgefið viðmiðunarbil á 30 sekúndum."
     }
   },
   "inspirationPage": {
@@ -4817,7 +4834,7 @@
           "Uppsetningaraðilinn þinn lýkur fyrst verklegu þjálfuninni okkar",
           "Pantaðu eftir máli frá belgíska verkstæðinu okkar"
         ],
-        "bestFor": "uppsetningaraðila, innréttingafyrirtæki og sérfræðinga í gifsvinnu sem vilja bæta strekkiloftum við eigin uppsetningarþjónustu.",
+        "bestFor": "uppsetningaraðila, innréttingafyrirtæki og sérfræðinga í gifsvinnu sem vilja bæta dúkaloftum við eigin uppsetningarþjónustu.",
         "cta": "Sæktu um að verða sölu- og uppsetningaraðili",
         "trainingLink": "Sjá þjálfunina"
       }
@@ -4880,18 +4897,23 @@
         },
         {
           "title": "Markaðsstuðningur",
-          "body": "Vörumyndir, prufur og söluefni sem hjálpa þér að vinna og landa strekkiloftsverkefnum."
+          "body": "Vörumyndir, prufur og söluefni sem hjálpa þér að vinna og landa verkefnum með dúkaloft."
         }
       ],
       "supplyCard": {
         "title": "Viltu bara kaupa efni?",
         "body": "Aðfangareikningur er ekki samstarf: pantaðu efni og sérsniðna dúkavinnslu á þínu verðþrepi, án skuldbindinga.",
         "cta": "Aðföng uppsetningaraðila"
+      },
+      "quinlayCard": {
+        "title": "Sviss & Liechtenstein: QuinLay AG",
+        "body": "Aðalumboðsaðili okkar fyrir Sviss og Liechtenstein: sýningarsalur og kennslurými í Rickenbach LU, efni af lager í Sviss og uppsetningaraðilar um allt land.",
+        "cta": "Heimsækja quinlay.ch"
       }
     },
     "how": {
       "eyebrow": "Svona virkar það",
-      "title": "Stutt leið að sölu strekkilofta — á þinn hátt.",
+      "title": "Stutt leið að sölu dúkalofta — á þinn hátt.",
       "resellerPath": "Leið söluaðila",
       "dealerPath": "Leið sölu- og uppsetningaraðila",
       "resellerSteps": [
@@ -4901,7 +4923,7 @@
         },
         {
           "title": "Komdu þér af stað",
-          "body": "Fagverð, prufur og söluefni — engin þjálfun nauðsynleg. Byrjaðu strax að gera tilboð í strekkiloft."
+          "body": "Fagverð, prufur og söluefni — engin þjálfun nauðsynleg. Byrjaðu strax að gera tilboð í dúkaloft."
         },
         {
           "title": "Þú selur — við setjum upp",
@@ -4938,10 +4960,10 @@
   "trainingPage": {
     "crumb": "Þjálfun uppsetningaraðila",
     "courseName": "STRETCH-vottun uppsetningaraðila",
-    "courseDescription": "Verkleg vottun uppsetningaraðila strekkilofta í höfuðstöðvum STRETCH í Belgíu: sérsníðing himnunnar, prófílar, köld og heit uppsetning, ljós, hljóðvist, frágangur og tilboðsgerð.",
+    "courseDescription": "Verkleg vottun uppsetningaraðila dúkalofta í höfuðstöðvum STRETCH í Belgíu: sérsníðing himnunnar, prófílar, köld og heit uppsetning, ljós, hljóðvist, frágangur og tilboðsgerð.",
     "hero": {
       "eyebrow": "Þjálfun uppsetningaraðila",
-      "titleA": "Þjálfun í uppsetningu strekkilofta",
+      "titleA": "Þjálfun í uppsetningu dúkalofta",
       "titleB": "vottun",
       "titleC": "á 2–3 dögum",
       "lead": "Verkleg vottun í belgísku höfuðstöðvunum okkar. Lærðu sérsníðingu himnunnar, prófíla, kalda og heita uppsetningu, ljós og hljóðvist — engin fyrri reynsla nauðsynleg.",
@@ -4991,7 +5013,7 @@
         },
         {
           "title": "Tilboðsgerð og sala",
-          "body": "Að mæla upp verk, gera tilboð af öryggi og kynna strekkiloft fyrir viðskiptavinum."
+          "body": "Að mæla upp verk, gera tilboð af öryggi og kynna dúkaloft fyrir viðskiptavinum."
         }
       ]
     },
@@ -5000,7 +5022,10 @@
       "title": "Tryggðu þér sæti",
       "lead": "Litlir hópar, fyrstur kemur, fyrstur fær. Sérsniðin námskeið á þínum stað í boði sé þess óskað.",
       "onRequestTitle": "Eftir samkomulagi",
-      "onRequestNote": "Sérsniðið námskeið á staðnum"
+      "onRequestNote": "Sérsniðið námskeið á staðnum",
+      "externalCta": "Dagsetningar & skráning á quinlay.ch",
+      "swissRoom": "Námskeiðin fara fram í eigin kennslu- og prófunarrými QuinLay AG í Rickenbach LU.",
+      "secondaryCta": "Spurningar um námskeiðið? Hafðu samband"
     },
     "book": {
       "eyebrow": "Skipuleggðu þjálfunina",
@@ -5028,7 +5053,7 @@
       "titleA": "Handunnið",
       "titleB": "í",
       "titleC": "Belgíu",
-      "lead": "{name} hannar og framleiðir saumlaus strekkiloft og strekkiveggi — þróuð í Belgíu, sett upp á einum degi og gerð til að endast áratugum saman.",
+      "lead": "{name} hannar og framleiðir saumlaus dúkaloft og dúk á veggi — þróuð í Belgíu, sett upp á einum degi og gerð til að endast áratugum saman.",
       "imageAlt": "Verkstæði og teymi STRETCH"
     },
     "stats": [
@@ -5112,7 +5137,16 @@
     "hours": "mán–fös · 08:30–17:00",
     "directTitle": "Engin þörf á staðbundnum söluaðila.",
     "directBody": "STRETCH afhendir og setur upp beint frá eigin framleiðslu á meðan staðbundið net byggist upp — eitt teymi, ein ábyrgð.",
-    "directCta": "Fáðu ókeypis tilboð"
+    "directCta": "Fáðu ókeypis tilboð",
+    "swissPartnerKicker": "Sviss & Liechtenstein",
+    "swissPartnerTitle": "Tengiliður þinn í Sviss og Liechtenstein: QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG er aðalumboðsaðili STRETCH fyrir Sviss og Liechtenstein: sýningarsalur og kennslurými í Rickenbach LU, efni af lager í Sviss og uppsetning í gegnum þjálfaða samstarfsaðila. Öllum fyrirspurnum frá Sviss svarar QuinLay AG, með afriti til STRETCH.",
+    "swissCallback": "QuinLay AG hringir til baka",
+    "impressumHeading": "Lagalegar upplýsingar — Sviss & Liechtenstein",
+    "impressumManufacturer": "Framleiðandi",
+    "impressumSwissParty": "Samningsaðili fyrir Sviss og Liechtenstein",
+    "impressumNote": "Tilboð, afhending og reikningar fyrir Sviss og Liechtenstein eru í höndum QuinLay AG.",
+    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch"
   },
   "datasheetsPage": {
     "eyebrow": "Tækniblöð",
@@ -5139,7 +5173,7 @@
   "blogPage": {
     "eyebrow": "Leiðbeiningar og fróðleikur",
     "crumb": "Leiðbeiningar",
-    "titleA": "Strekkiloft,",
+    "titleA": "Dúkaloft,",
     "titleB": "útskýrð",
     "postMeta": "{date} · {minutes} mín. lestur",
     "readArticle": "Lesa greinina"
@@ -5151,7 +5185,7 @@
   "materials": {
     "eyebrow": "Efni og fylgihlutir",
     "title": "Efni",
-    "intro": "Prófílar, dúkur, lýsing og allt efni í kringum strekkloft — sama efnið og framleiðslan okkar og uppsetningaraðilar nota. Veldu það sem þú þarft og biddu um tilboð; við svörum persónulega með verði og afhendingartíma.",
+    "intro": "Prófílar, dúkur, lýsing og allt efni í kringum dúkaloft — sama efnið og framleiðslan okkar og uppsetningaraðilar nota. Veldu það sem þú þarft og biddu um tilboð; við svörum persónulega með verði og afhendingartíma.",
     "how1Title": "Veldu vörur",
     "how1Body": "Skoðaðu vöruflokkana — engin verð á netinu, engin karfa, enginn aðgangur nauðsynlegur.",
     "how2Title": "Biddu um tilboð",
@@ -5204,16 +5238,16 @@
     "profiles": {
       "name": "Prófílar & brautir",
       "eyebrow": "Prófílar",
-      "metaTitle": "Strekkloftsprófílar — ál & PVC | STRETCH",
-      "metaDescription": "Strekkloftsprófílar úr áli og PVC, LED-línuprófílar og endastykki, beint úr eigin framleiðslu. Óskaðu eftir tilboði — við svörum með verði og afhendingartíma.",
+      "metaTitle": "Prófílar fyrir dúkaloft — ál & PVC | STRETCH",
+      "metaDescription": "Prófílar úr áli og PVC fyrir dúkaloft, LED-línuprófílar og endastykki, beint úr eigin framleiðslu. Óskaðu eftir tilboði — við svörum með verði og afhendingartíma.",
       "intro": "Brautirnar sem halda hverju STRETCH-lofti: jaðarprófílar úr áli og PVC, LED-línuprófílar og frágangsstykki — sömu prófílar og okkar eigin uppsetningarmenn nota, skornir og sendir úr framleiðslunni okkar.",
       "items": [
         {
-          "name": "Álprófílar fyrir strekkloft",
+          "name": "Álprófílar fyrir dúkaloft",
           "body": "Stífir jaðar- og skilprófílar úr áli fyrir kalda og heita uppsetningu — beinar lengdir, tilbúnar í uppsetningu."
         },
         {
-          "name": "PVC-prófílar fyrir strekkloft",
+          "name": "PVC-prófílar fyrir dúkaloft",
           "body": "Sveigjanlegir PVC-harpúnprófílar fyrir bogadregna veggi og einfaldan jaðarfrágang."
         },
         {
@@ -5222,15 +5256,15 @@
         },
         {
           "name": "Tracklight 48V prófíll",
-          "body": "Segulbrautin 48V sem fellur slétt inn í strekkloftið — burðarásinn í tracklight-kerfinu."
+          "body": "Segulbrautin 48V sem fellur slétt inn í dúkaloftið — burðarásinn í tracklight-kerfinu."
         }
       ]
     },
     "fabrics": {
       "name": "Dúkar & filmur",
       "eyebrow": "Dúkar",
-      "metaTitle": "Strekkloftsdúkur & PVC-filma — á rúllu, skorið í lengd, sérsniðið | STRETCH",
-      "metaDescription": "PVC-filma fyrir strekkloft (MSD, Bauf, Teqtum, Renolit) á rúllu, skorin í lengd eða soðin eftir máli — matt, glansandi, hálfgegnsæ og lituð.",
+      "metaTitle": "Dúkur fyrir dúkaloft & PVC-filma — á rúllu, skorið í lengd, sérsniðið | STRETCH",
+      "metaDescription": "PVC-filma fyrir dúkaloft (MSD, Bauf, Teqtum, Renolit) á rúllu, skorin í lengd eða soðin eftir máli — matt, glansandi, hálfgegnsæ og lituð.",
       "intro": "Dúkur eins og þú þarft hann: heilar rúllur fyrir eigin framleiðslu, filma skorin í lengd eða fullbúið loft soðið eftir máli með harpún — í mattri, satín, glansandi, hálfgegnsærri og litaðri áferð frá stóru filmumerkjunum.",
       "items": [
         {
@@ -5238,19 +5272,19 @@
           "body": "Loftið þitt soðið og skorið eftir nákvæmum málum rýmisins í framleiðslu okkar — með harpún, brotið saman, merkt og tilbúið til að hengja í prófílinn."
         },
         {
-          "name": "Dúkastrekkloft skorið eftir máli",
+          "name": "Dúkaloft úr textíl skorið eftir máli",
           "body": "Loft úr pólýesterdúk skorið eftir þínum málum í eigin framleiðslu — dúkalínurnar úr litakortinu."
         },
         {
-          "name": "Pólýester-strekkloft á rúllu",
+          "name": "Pólýester-dúkaloft á rúllu",
           "body": "Heilar rúllur af pólýesterdúk fyrir samstarfsaðila með eigin framleiðslu."
         },
         {
-          "name": "PVC-strekkloft á rúllu",
+          "name": "PVC-dúkaloft á rúllu",
           "body": "PVC-filma á rúllu — matt, satín, glans, hálfgegnsæjar og litaðar línur frá stóru filmumerkjunum."
         },
         {
-          "name": "Strekkloftasett úr pólýester (DIY)",
+          "name": "Sett fyrir dúkaloft úr pólýester (DIY)",
           "body": "Heildarsettið fyrir kalda uppsetningu: pólýesterdúkur sniðinn að rýminu þínu, prófílar, hornstykki og leiðbeiningar — leiðin til að setja upp samskeytalaust dúkaloft á eigin spýtur."
         }
       ]
@@ -5258,8 +5292,8 @@
     "lighting": {
       "name": "Lýsing",
       "eyebrow": "Lýsing",
-      "metaTitle": "Strekkloftslýsing — 48V tracklight, LED-einingar, kastarahringir | STRETCH",
-      "metaDescription": "Lýsing fyrir strekkloft: 48V segulbrautarlýsing, kastarar, LED-einingar fyrir baklýst loft og kastarahringir. Óskaðu eftir tilboði í dag.",
+      "metaTitle": "Lýsing fyrir dúkaloft — 48V tracklight, LED-einingar, kastarahringir | STRETCH",
+      "metaDescription": "Lýsing fyrir dúkaloft: 48V segulbrautarlýsing, kastarar, LED-einingar fyrir baklýst loft og kastarahringir. Óskaðu eftir tilboði í dag.",
       "intro": "Allt sem lýsir upp STRETCH-loft: 48V tracklight-fjölskyldan með seglum, LED-flataeiningar fyrir baklýst loft og hringirnir sem ganga snyrtilega frá hverjum kastara.",
       "items": [
         {
@@ -5279,8 +5313,8 @@
     "accessories": {
       "name": "Fylgihlutir",
       "eyebrow": "Fylgihlutir",
-      "metaTitle": "Fylgihlutir fyrir strekkloft — harpún, hringir, festingar | STRETCH",
-      "metaDescription": "Fylgihlutir fyrir strekkloft: harpún, hlífðarhringir, lím, festingar og frágangsstykki — allt í kringum dúkinn. Óskaðu eftir tilboði.",
+      "metaTitle": "Fylgihlutir fyrir dúkaloft — harpún, hringir, festingar | STRETCH",
+      "metaDescription": "Fylgihlutir fyrir dúkaloft: harpún, hlífðarhringir, lím, festingar og frágangsstykki — allt í kringum dúkinn. Óskaðu eftir tilboði.",
       "intro": "Smáhlutirnir sem gera verkið snyrtilegt: harpún til suðu, hlífðarhringir, lím og festingar — rekstrarvörurnar sem hver uppsetningarmaður notar jafnt og þétt.",
       "items": [
         {
@@ -5325,8 +5359,8 @@
     "tools-cleaning": {
       "name": "Verkfæri & þrif",
       "eyebrow": "Verkfæri",
-      "metaTitle": "Strekkloftsverkfæri & STRETCH Cleaner | STRETCH",
-      "metaDescription": "Handverkfæri til uppsetningar á strekkloftum og STRETCH Cleaner sem heldur dúkunum flekklausum (1 L og 5 L). Óskaðu eftir tilboði.",
+      "metaTitle": "Verkfæri fyrir dúkaloft & STRETCH Cleaner | STRETCH",
+      "metaDescription": "Handverkfæri til uppsetningar á dúkaloftum og STRETCH Cleaner sem heldur dúkunum flekklausum (1 L og 5 L). Óskaðu eftir tilboði.",
       "intro": "Handverkfæri uppsetningarmannsins og hreinsiefnið sem gert er fyrir strekkdúka — sömu vörur og í kennslurýminu okkar og okkar eigin bílum.",
       "items": [
         {
@@ -5351,8 +5385,8 @@
   "dealersPage": {
     "crumbDealers": "Söluaðilar",
     "eyebrow": "Söluaðilanet",
-    "h1": "Strekkloft í {place}",
-    "introDealer": "Strekkloft frá STRETCH í {place} byrjar hjá vottaða söluaðilanum okkar hér að neðan: mælt á staðnum, soðið eftir máli í okkar eigin framleiðslu í Belgíu og sett upp á einum degi.",
+    "h1": "Dúkaloft í {place}",
+    "introDealer": "Dúkaloft frá STRETCH í {place} byrjar hjá vottaða söluaðilanum okkar hér að neðan: mælt á staðnum, soðið eftir máli í okkar eigin framleiðslu í Belgíu og sett upp á einum degi.",
     "introRecruit": "Enn er enginn vottaður STRETCH-söluaðili í {place} — svo í bili þjónum við {place} beint frá framleiðslu okkar í Belgíu og leitum að rétta samstarfsaðilanum á staðnum.",
     "dealerBadge": "Vottaður STRETCH-söluaðili",
     "dealerBadgeShort": "Söluaðili",
@@ -5370,23 +5404,58 @@
     "nearbyHeading": "Einnig í {province}",
     "nearbyHeadingProvince": "Staðir í {place}",
     "backToAll": "Öll svæði",
-    "metaTitleDealer": "Strekkloft {place} — vottaður STRETCH-söluaðili",
-    "metaTitleRecruit": "Strekkloft {place} — uppsetning beint frá framleiðslu okkar í Belgíu",
-    "metaDescDealer": "Ertu að leita að strekklofti í {place}? Vottaði STRETCH-söluaðilinn okkar mælir á staðnum og setur upp loft sem eru soðin eftir máli í framleiðslu okkar í Belgíu. Fáðu ókeypis tilboð.",
-    "metaDescRecruit": "Strekkloft í {place}? Við setjum upp beint frá framleiðslu okkar í Belgíu — og leitum að söluaðila á staðnum. Fáðu tilboð eða gerstu samstarfsaðili okkar í {place}.",
+    "metaTitleDealer": "Dúkaloft {place} — vottaður STRETCH-söluaðili",
+    "metaTitleRecruit": "Dúkaloft {place} — uppsetning beint frá framleiðslu okkar í Belgíu",
+    "metaDescDealer": "Ertu að leita að dúkalofti í {place}? Vottaði STRETCH-söluaðilinn okkar mælir á staðnum og setur upp loft sem eru soðin eftir máli í framleiðslu okkar í Belgíu. Fáðu ókeypis tilboð.",
+    "metaDescRecruit": "Dúkaloft í {place}? Við setjum upp beint frá framleiðslu okkar í Belgíu — og leitum að söluaðila á staðnum. Fáðu tilboð eða gerstu samstarfsaðili okkar í {place}.",
     "ovMetaTitle": "STRETCH-söluaðilar — Belgía & Holland | STRETCH",
     "ovMetaDescription": "Finndu vottaðan STRETCH-söluaðila í Flæmingjalandi, Brussel, Vallóníu eða Hollandi. Hvert loft kemur úr okkar eigin framleiðslu í Belgíu.",
     "ovEyebrow": "Sölunet",
     "ovTitle": "Söluaðilar",
-    "ovIntro": "Strekkloft frá STRETCH eru mæld og sett upp af vottuðum samstarfsaðilum á hverjum stað, studd af okkar eigin framleiðslu nálægt Lokeren. Finndu þitt svæði — eða gríptu þau sem enn eru laus.",
+    "ovIntro": "Dúkaloft frá STRETCH eru mæld og sett upp af vottuðum samstarfsaðilum á hverjum stað, studd af okkar eigin framleiðslu nálægt Lokeren. Finndu þitt svæði — eða gríptu þau sem enn eru laus.",
     "regionFlanders": "Flæmingjaland & Brussel",
-    "regionWallonia": "Vallónía",
+    "regionWallonia": "Vallónía · Belgía",
     "regionNetherlands": "Holland",
     "lookingLabel": "Söluaðili óskast",
     "ovRecruitTitle": "Enginn söluaðili á þínu svæði enn?",
     "ovRecruitBody": "Við afhendum og setjum upp beint frá framleiðslunni á meðan netið stækkar — og uppsetningaraðilar sem tryggja sér laust svæði fá fyrirspurnir þess, söluaðilaverð og þjálfun.",
     "regionLuxembourg": "Lúxemborg (Stórhertogadæmið)",
-    "regionAustria": "Austurríki"
+    "regionAustria": "Austurríki",
+    "regionGermany": "Þýskaland",
+    "regionPoland": "Pólland",
+    "regionFrance": "Frakkland",
+    "nearbyHeadingRegion": "Einnig í {region}",
+    "identityBeKicker": "Belgískur framleiðandi",
+    "identityBeTitle": "Framleitt í Beveren-Waas í Belgíu",
+    "identityBeBody": "STRETCH er belgískur framleiðandi: hvert loft fyrir {place} er mælt á staðnum, síðan sniðið og soðið eftir máli í okkar eigin framleiðslu í Beveren-Waas (Austur-Flæmingjalandi) og sett upp af okkar eigin teymum eða vottuðum söluaðila. Eitt belgískt fyrirtæki, ein ábyrgð á einum stað.",
+    "identityVat": "VSK",
+    "identityVatArticle": "Styrkir og VSK fyrir dúkaloft í Belgíu",
+    "identityDirectKicker": "Þjónað beint",
+    "identityDirectTitle": "{place} — þjónað beint frá framleiðslu okkar",
+    "identityDirectBody": "Á meðan uppsetningaraðilanet okkar á þessu svæði stækkar afhendir STRETCH og setur upp beint í {place}: mælt á staðnum, soðið eftir máli í okkar eigin framleiðslu innan ESB og sett upp á einum degi af okkar eigin teymum. Uppsetningaraðilar sem tryggja sér svæðið fá fyrirspurnir þess.",
+    "identityDirectCard": "Framleiðandi dúkalofta og strekktra veggja — bein afhending og uppsetning.",
+    "costLine": "Hvað kostar dúkaloft í {place}? Reiknaðu verðið á m²",
+    "identityPlKicker": "Framleitt í Póllandi og Belgíu",
+    "identityPlTitle": "Tvær verksmiðjur í ESB: Częstochowa og Beveren-Waas",
+    "identityPlBody": "STRETCH framleiðir í tveimur eigin verksmiðjum: Alto Design Sp. z o.o. í Częstochowa og Stretch Productions BV í Beveren-Waas í Belgíu. Loft fyrir {place} eru soðin eftir máli í Częstochowa og sett upp af okkar eigin teymum eða vottuðum samstarfsaðila — framleiðandi með verksmiðju sem þú getur heimsótt, ekki innflytjandi.",
+    "factoryKicker": "Verksmiðjan okkar",
+    "factoryTitle": "STRETCH-verksmiðjan í Częstochowa",
+    "factoryBody": "Hér framleiðir samstæðan í Póllandi: Alto Design Sp. z o.o. sníður og sýður PVC-dúka eftir máli, heldur uppsetningarnámskeið á pólsku og byggir upp STRETCH-netið fyrir Pólland — nafngreind verksmiðja sem hægt er að heimsækja, ekki bara skráð heimilisfang.",
+    "factoryTraining": "Uppsetningarnámskeið í Częstochowa",
+    "factoryCta": "Heimsækja altodesign.pl",
+    "why1Pl": "Framleitt í ESB — hvert loft er soðið eftir máli í okkar eigin verksmiðjum í Częstochowa og Beveren-Waas og kemur tilbúið til uppsetningar.",
+    "regionSwitzerland": "Sviss & Liechtenstein",
+    "liechtenstein": "Liechtenstein",
+    "driveTime": "Um {minutes} mín. frá sýningarsalnum í Rickenbach LU",
+    "contactHeading": "Tengiliður þinn fyrir Sviss og Liechtenstein",
+    "generalAgent": "Aðalumboðsaðili STRETCH fyrir Sviss & Liechtenstein",
+    "showroomLabel": "Sýningarsalur & kennslurými",
+    "showroomCta": "Bókaðu tíma í sýningarsalnum",
+    "servicesHeading": "Þjónusta",
+    "serviceConsulting": "Ráðgjöf og sýningarsalur",
+    "serviceInstallation": "Uppsetning í gegnum þjálfaða samstarfsaðila",
+    "serviceTraining": "Uppsetningarnámskeið í eigin kennslurými",
+    "serviceStock": "Efni af lager í Sviss"
   },
   "datasheetEmail": {
     "subject": "STRETCH-tækniblaðið þitt — {title}",
@@ -5407,7 +5476,7 @@
   "architectsPage": {
     "crumb": "Arkitektar",
     "eyebrow": "Fyrir arkitekta",
-    "titleA": "Skilgreindu strekkloft",
+    "titleA": "Skilgreindu dúkaloft",
     "titleB": "af öryggi",
     "lead": "Einn ókeypis aðgangur með öllu sem þarf til að skilgreina: skjöl, útboðstextar, CAD/BIM, mæld dæmi, leiðbeinandi kostnaðarbil, viðburðir og sérstakur ráðgjafi.",
     "ctaCreate": "Stofnaðu ókeypis aðgang",
@@ -5500,29 +5569,29 @@
     "ctaBody": "Stofnaðu ókeypis aðgang — hvert skjal, kostnaðarbil og dæmi er einum smelli frá, auk sérstaks ráðgjafa fyrir verkefnin þín."
   },
   "alt": {
-    "heroCeilings": "Samskeytalaust matt strekkiloft í nútímalegri stofu",
-    "heroAcoustic": "Hljóðdempandi strekkiloft í björtu, opnu rými",
+    "heroCeilings": "Samskeytalaust matt dúkaloft í nútímalegri stofu",
+    "heroAcoustic": "Hljóðdempandi dúkaloft í björtu, opnu rými",
     "heroWalls": "Strekktur textílveggur í nútímalegu rými",
-    "heroLight": "Baklýst strekkiloft með jafnri birtu í herberginu",
-    "why": "Gallalaust hvítt strekkiloft í fullbúnu rými",
-    "solutionsPolyester": "Matt strekkiloft úr pólýester í bjartri stofu",
-    "solutionsPvc": "Glansandi PVC-strekkiloft sem speglar nútímalegt eldhús",
-    "acoustics": "Hljóðdempandi strekkiloft í upptökustúdíói",
-    "appLiving": "Strekkiloft með innbyggðri lýsingu í stofu",
-    "appBathroom": "Rakaþolið strekkiloft á nútímalegu baðherbergi",
-    "appOffice": "Hljóðdempandi strekkiloft á opinni skrifstofu",
-    "appCinema": "Dökkt strekkiloft með kösturum í heimabíói",
-    "appLight": "Stjörnuhiminn-strekkiloft með ljósleiðaralýsingu",
-    "appCommercial": "Prentað strekkiloft í verslunarrými",
-    "installer": "Vottaður STRETCH-uppsetningaraðili setur upp strekkiloft"
+    "heroLight": "Baklýst dúkaloft með jafnri birtu í herberginu",
+    "why": "Gallalaust hvítt dúkaloft í fullbúnu rými",
+    "solutionsPolyester": "Matt dúkaloft úr pólýester í bjartri stofu",
+    "solutionsPvc": "Glansandi PVC-dúkaloft sem speglar nútímalegt eldhús",
+    "acoustics": "Hljóðdempandi dúkaloft í upptökustúdíói",
+    "appLiving": "Dúkaloft með innbyggðri lýsingu í stofu",
+    "appBathroom": "Rakaþolið dúkaloft á nútímalegu baðherbergi",
+    "appOffice": "Hljóðdempandi dúkaloft á opinni skrifstofu",
+    "appCinema": "Dökkt dúkaloft með kösturum í heimabíói",
+    "appLight": "Stjörnuhiminn-dúkaloft með ljósleiðaralýsingu",
+    "appCommercial": "Prentað dúkaloft í verslunarrými",
+    "installer": "Vottaður STRETCH-uppsetningaraðili setur upp dúkaloft"
   },
   "kitPage": {
     "eyebrow": "DIY-sett",
     "crumb": "Sett",
     "titleA": "Nýtt loft",
     "titleB": "í einum kassa.",
-    "intro": "STRETCH DIY-settið: strekkiloft úr pólýester, skorið eftir rýminu þínu í okkar eigin ESB-verkstæði og sent heim sem létt pakki. Köld uppsetning — engin hitabyssa, ekkert múrverk, engin málning.",
-    "heroAlt": "STRETCH DIY-strekkiloftssettið tilbúið til uppsetningar",
+    "intro": "STRETCH DIY-settið: dúkaloft úr pólýester, skorið eftir rýminu þínu í okkar eigin ESB-verkstæði og sent heim sem létt pakki. Köld uppsetning — engin hitabyssa, ekkert múrverk, engin málning.",
+    "heroAlt": "STRETCH DIY-settið fyrir dúkaloft tilbúið til uppsetningar",
     "ctaOrder": "Panta settið",
     "ctaMaterials": "Öll efni",
     "boxEyebrow": "Í kassanum",
@@ -5537,12 +5606,11 @@
     "howEyebrow": "Uppsetning",
     "howTitle": "Get ég sett það upp sjálf(ur)?",
     "howBody": "Já — settið er til einmitt þess vegna. Dúkurinn er settur kaldur í kantprófílana með venjulegum verkfærum; leiðbeiningarnar sem fylgja ná yfir hvert skref. Lestu fyrst hreinskilna leiðarvísinn okkar, og ef þú ætlar að setja upp loft oftar — taktu eins dags námskeiðið í belgísku höfuðstöðvunum.",
-    "howBlog": "Lesa: setja upp strekkiloft sjálf(ur)",
+    "howBlog": "Lesa: setja upp dúkaloft sjálf(ur)",
     "howTraining": "Viltu frekar námskeið fyrst? Uppsetningarnámskeið",
     "priceEyebrow": "Verð & pöntun",
     "priceTitle": "Að panta settið",
     "priceOnRequest": "Verð eftir beiðni — sendu málin og þú færð sérsniðið tilboð innan eins virks dags.",
-    "currencyNotice": "Öll verð og greiðslur eru í EUR. £-upphæðin er vísbending á viðmiðunargengi ECB frá {asOf}; bankinn þinn eða kortið umreiknar á eigin gengi.",
     "deliveryPoints": [
       "Afhent DDP með hraðsendingu — við sjáum um tolla og innflutningspappíra, staðfest verð er verðið sem þú greiðir",
       "Sending um allt ESB og Bretland",
@@ -5580,7 +5648,7 @@
     "ctaPortal": "Stofna reikning uppsetningaraðila",
     "ctaInquiry": "Talaðu við aðfangateymið",
     "groupsEyebrow": "Það sem við afhendum",
-    "groupsTitle": "Allt á bak við strekkiloft",
+    "groupsTitle": "Allt á bak við dúkaloft",
     "groupsCta": "Skoða úrvalið",
     "confection": {
       "eyebrow": "Sérsníðing",
@@ -5627,8 +5695,8 @@
       "body": "Verkleg vottun í belgísku höfuðstöðvunum — dúkavinnsla, prófílar, köld og heit uppsetning, lýsing og hljóðvist. Alþjóðleg námskeið á ensku og þýsku eru væntanleg.",
       "cta": "Sjá þjálfunardaga"
     },
-    "serviceName": "Afhending efna og sérsníðingar fyrir strekkiloft",
-    "serviceDescription": "Verksmiðjuafhending á efnum fyrir strekkiloft, sérsniðin dúkavinnsla og þjálfun uppsetningaraðila fyrir fagfólk um alla Evrópu.",
+    "serviceName": "Afhending efna og sérsníðingar fyrir dúkaloft",
+    "serviceDescription": "Verksmiðjuafhending á efnum fyrir dúkaloft, sérsniðin dúkavinnsla og þjálfun uppsetningaraðila fyrir fagfólk um alla Evrópu.",
     "regional": {
       "label": "Svæðisbundið",
       "czsk": "Tékkland & Slóvakía — afhent úr pólsku framleiðslunni okkar",
@@ -5640,7 +5708,7 @@
     "eyebrow": "Tékkland & Slóvakía",
     "titleA": "Hágæðaefni og sérsníðing,",
     "titleB": "framleitt í næsta húsi — í Póllandi.",
-    "lead": "Hágæðaefni fyrir strekkiloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila — úr eigin pólskri framleiðslu, studd af belgísku samstæðunni.",
+    "lead": "Hágæðaefni fyrir dúkaloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila — úr eigin pólskri framleiðslu, studd af belgísku samstæðunni.",
     "freight": "Eins til tveggja daga flutningur frá Tékklandi og Slóvakíu.",
     "ctaInquiry": "Talaðu við aðfangateymið",
     "why": {
@@ -5667,15 +5735,15 @@
       ]
     },
     "backToSupply": "Öll aðfangaþjónusta",
-    "serviceName": "Strekkiloftaaðföng fyrir Tékkland & Slóvakíu",
-    "serviceDescription": "Hágæðaefni fyrir strekkiloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila, framleitt í Póllandi með ESB-gæðum."
+    "serviceName": "TODO(is): Aðföng fyrir dúkaloft fyrir Tékkland & Slóvakíu",
+    "serviceDescription": "Hágæðaefni fyrir dúkaloft og sérsniðin dúkavinnsla fyrir tékkneska og slóvakíska fagaðila, framleitt í Póllandi með ESB-gæðum."
   },
   "projectsExportPage": {
     "crumb": "Verkefnaútflutningur",
     "eyebrow": "Verkefnaafhending",
     "titleA": "Verkefnaloft,",
     "titleB": "send um allan heim.",
-    "lead": "Sérsniðin strekkiloft fyrir innréttinga- og frágangsverktaka — hönnuð og soðin í ESB-verksmiðjunni okkar, send með flugi sem léttir pakkar og tilbúin til uppsetningar á staðnum.",
+    "lead": "Sérsniðin dúkaloft fyrir innréttinga- og frágangsverktaka — hönnuð og soðin í ESB-verksmiðjunni okkar, send með flugi sem léttir pakkar og tilbúin til uppsetningar á staðnum.",
     "cta": "Óska eftir verkefnatilboði",
     "ctaDatasheets": "Tæknileg gagnablöð",
     "capabilities": {
@@ -5753,13 +5821,13 @@
       ],
       "architectsLink": "Heimsækja arkitektasvæðið"
     },
-    "serviceName": "Alþjóðleg verkefnaafhending strekkilofta",
-    "serviceDescription": "Sérsniðin hálfgagnsæ, prentuð og hljóðvistarstrekkiloft fyrir innréttingafyrirtæki um allan heim — hönnuð í ESB og send með flugi."
+    "serviceName": "Alþjóðleg verkefnaafhending dúkalofta",
+    "serviceDescription": "Sérsniðin hálfgagnsæ, prentuð og hljóðvistardúkaloft fyrir innréttingafyrirtæki um allan heim — hönnuð í ESB og send með flugi."
   },
   "priceCalculatorPage": {
     "crumb": "Reikna verð",
     "eyebrow": "Verðreiknivél",
-    "titleA": "Reiknaðu verð strekkiloftsins",
+    "titleA": "Reiknaðu verð dúkaloftsins",
     "titleB": "á 30 sekúndum.",
     "lead": "Fermetrar × loftgerð gefa þér strax útgefið viðmiðunarbil — endanleg tala kemur með ókeypis tilboði, yfirleitt samdægurs á virkum degi.",
     "areaLabel": "Loftflötur (m²)",
@@ -5780,5 +5848,12 @@
     "captchaFailed": "Öryggisathugunin mistókst. Reyndu aftur.",
     "captchaLoadFailed": "Ekki tókst að hlaða öryggisathuguninni. Endurhladdu síðunni eða sendu okkur póst á {email}.",
     "tooManyRequests": "Of margar beiðnir. Bíddu í nokkrar mínútur og reyndu aftur."
+  },
+  "currency": {
+    "indicationNote": "Upphæðin í {currency} er aðeins vísbending, miðuð við viðmiðunargengi ECB frá {asOf}; öll verð og greiðslur eru í EUR. Bankinn þinn eða kortið umreiknar á eigin gengi.",
+    "settlementNote": "Öll verð og greiðslur eru í {currency}.",
+    "indicationAria": "{eur} — aðeins vísbending, allar greiðslur í EUR",
+    "guideNoteTitle": "Í {currency}, um það bil",
+    "guideNoteBody": "Tölurnar í þessum leiðarvísi eru í EUR, gjaldmiðlinum sem við sendum reikninga í. Til viðmiðunar eru hér sömu bil á viðmiðunargengi ECB frá {asOf}:"
   }
 }

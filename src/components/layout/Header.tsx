@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { ChevronDown, ArrowUpRight } from 'lucide-react';
-import { contact } from '@/lib/site-config';
+import { localContactFor } from '@/lib/local-contact';
 import { isDealerMarket } from '@/lib/dealers';
 import type { Locale } from '@/i18n/config';
 import { ModalButton } from '@/components/ui/ModalButton';
@@ -26,6 +26,8 @@ export default function Header() {
   const technicalMenu = useTechnicalMenu();
   const pathname = usePathname();
   const [open, setOpen] = useState<OpenMenu>(null);
+  // ch: QuinLay AG's number (the Swiss general representative) instead of the Belgian HQ.
+  const local = localContactFor(locale);
 
   // Close any open mega menu whenever the route changes.
   useEffect(() => {
@@ -49,20 +51,22 @@ export default function Header() {
       {/* Utility bar */}
       <div style={{ background: 'var(--black)', color: '#fff' }}>
         <div className="container" style={{ height: 42, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 11.5, letterSpacing: '.16em', textTransform: 'uppercase', fontWeight: 600 }}>
-            <span style={{ width: 8, height: 8, background: 'var(--red)', display: 'inline-block' }} />
-            <span>{t('handMadeInBelgium')}</span>
+          {/* Tagline truncates (ellipsis) instead of wrapping the 42px bar; the
+              utility links never wrap (hdr-util / hdr-tag in globals.css). */}
+          <div className="hdr-tag" style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 11.5, letterSpacing: '.16em', textTransform: 'uppercase', fontWeight: 600 }}>
+            <span style={{ width: 8, height: 8, background: 'var(--red)', display: 'inline-block', flexShrink: 0 }} />
+            <span className="hdr-tag__text">{t('handMadeInBelgium')}</span>
           </div>
-          <div className="only-desktop" style={{ display: 'flex', alignItems: 'center', gap: 26, fontSize: 11.5, letterSpacing: '.12em', textTransform: 'uppercase', fontWeight: 600 }}>
+          <div className="only-desktop hdr-util" style={{ display: 'flex', alignItems: 'center', gap: 26, fontSize: 11.5, letterSpacing: '.12em', textTransform: 'uppercase', fontWeight: 600 }}>
             <Link href="/partners" className="lnk">{t('nav.reseller')}</Link>
             {/* Training only exists on dealer markets (N2) — no dead link on us. */}
-            {isDealerMarket(locale) && (
+            {isDealerMarket(locale) && locale !== 'pl' && (
               <Link href="/installer-training" className="lnk">{t('nav.training')}</Link>
             )}
             <PortalLink href="/portal" className="lnk">{t('nav.clientLogin')}</PortalLink>
             <span style={{ opacity: 0.4 }}>|</span>
-            <a href={contact.phoneHref} className="lnk" style={{ color: 'var(--red-bright)' }} onClick={() => analytics.phoneClick('header_utility')}>
-              {contact.phoneDisplay}
+            <a href={local.phoneHref} className="lnk" style={{ color: 'var(--red-bright)' }} onClick={() => analytics.phoneClick('header_utility')}>
+              {local.phoneDisplay}
             </a>
             <LanguageSwitcher />
           </div>
@@ -76,9 +80,14 @@ export default function Header() {
           <span style={{ color: 'var(--red)', fontWeight: 900, fontSize: 16 }}>®</span>
         </Link>
 
-        <nav className="only-desktop" aria-label="Primary" style={{ display: 'flex', alignItems: 'center', gap: 30, fontSize: 13.5, fontWeight: 600, letterSpacing: '.03em', textTransform: 'uppercase' }}>
+        <nav className="only-desktop hdr-nav" aria-label="Primary" style={{ display: 'flex', alignItems: 'center', gap: 30, fontSize: 13.5, fontWeight: 600, letterSpacing: '.03em', textTransform: 'uppercase' }}>
           <NavDrop label={t('nav.solutions')} href="/products" active={open === 'solutions'} onEnter={() => setOpen('solutions')} />
           <NavDrop label={t('nav.technical')} href="/products" active={open === 'technical'} onEnter={() => setOpen('technical')} />
+          {/* Poland: the academy is the differentiator — installer training is a
+              PRIMARY nav item on stretch-sufit.pl (per-market audit, T7). */}
+          {locale === 'pl' && (
+            <Link href="/installer-training" className="lnk" onMouseEnter={close}>{t('nav.training')}</Link>
+          )}
           <Link href="/materials" className="lnk" onMouseEnter={close}>{t('nav.materials')}</Link>
           <Link href="/inspiration" className="lnk" onMouseEnter={close}>{t('nav.inspiration')}</Link>
           <Link href="/partners" className="lnk" onMouseEnter={close}>{t('nav.partners')}</Link>
@@ -86,7 +95,7 @@ export default function Header() {
           <Link href="/contact" className="lnk" onMouseEnter={close}>{t('nav.contact')}</Link>
         </nav>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexShrink: 0 }}>
           <ModalButton type="quote" source="header" trackQuote className="btn btn--primary btn--sm only-desktop">
             {t('cta.freeQuote')} <ArrowUpRight size={14} />
           </ModalButton>

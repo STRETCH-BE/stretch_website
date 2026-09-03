@@ -20,7 +20,8 @@ import PriceIndication from '@/components/ui/PriceIndication';
 import { ModalButton } from '@/components/ui/ModalButton';
 import { Link } from '@/i18n/navigation';
 import { localeBase } from '@/lib/seo';
-import { KIT_RETAIL_PRICE_EUR, asOf } from '@/lib/currency';
+import { blogPath } from '@/lib/blog-slugs';
+import { KIT_RETAIL_PRICE_EUR, asOf, displayPolicyFor, hasIndication, pricesPublished, settlementCurrencyFor } from '@/lib/currency';
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   return pageMetadata({ locale: params.locale, route: '/kit', titleKey: 'kitTitle', descKey: 'kitDescription' });
@@ -31,6 +32,15 @@ export default async function KitPage({ params }: { params: { locale: string } }
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   const t = await getTranslations('kitPage');
   const tp = await getTranslations('productPage');
+  const tc = await getTranslations('currency');
+  // Settlement note always; the "≈ local" note only where an indication renders.
+  // Neither on a locale without public prices (Switzerland: QuinLay AG quotes
+  // and invoices in CHF — pricesPublished() in src/lib/currency.ts).
+  const currencyNote = !pricesPublished(locale)
+    ? null
+    : hasIndication(locale)
+      ? `${tc('settlementNote', { currency: settlementCurrencyFor(locale) })} ${tc('indicationNote', { currency: displayPolicyFor(locale).currency, asOf })}`
+      : tc('settlementNote', { currency: settlementCurrencyFor(locale) });
 
   const boxItems = t.raw('boxItems') as string[];
   const deliveryPoints = t.raw('deliveryPoints') as string[];
@@ -100,7 +110,7 @@ export default async function KitPage({ params }: { params: { locale: string } }
         {sectionHead('03', t('howEyebrow'), t('howTitle'))}
         <p style={{ maxWidth: '62ch', color: 'var(--text-body)', margin: '0 0 20px' }}>{t('howBody')}</p>
         <div style={{ display: 'flex', gap: 22, flexWrap: 'wrap' }}>
-          <Link href="/blog/spanplafond-zelf-plaatsen" className="lnk" style={{ fontWeight: 700 }}>
+          <Link href={blogPath('spanplafond-zelf-plaatsen', locale)} className="lnk" style={{ fontWeight: 700 }}>
             {t('howBlog')} →
           </Link>
           {/* Training route only exists on dealer markets (N2). */}
@@ -117,16 +127,18 @@ export default async function KitPage({ params }: { params: { locale: string } }
         <div className="container section--sm">
           <Eyebrow num="04" label={t('priceEyebrow')} tone="dark" />
           <h2 className="h2 h2--sm" style={{ margin: '0 0 18px' }}>{t('priceTitle')}</h2>
-          {KIT_RETAIL_PRICE_EUR !== null ? (
+          {KIT_RETAIL_PRICE_EUR !== null && pricesPublished(locale) ? (
             <div style={{ margin: '0 0 14px' }}>
               <PriceIndication eur={KIT_RETAIL_PRICE_EUR} />
             </div>
           ) : (
             <p style={{ fontSize: 17, fontWeight: 700, margin: '0 0 14px', maxWidth: '56ch' }}>{t('priceOnRequest')}</p>
           )}
-          <p style={{ fontSize: 13.5, color: 'var(--on-dark-muted)', maxWidth: '68ch', margin: '0 0 26px' }}>
-            {t('currencyNotice', { asOf })}
-          </p>
+          {currencyNote && (
+            <p style={{ fontSize: 13.5, color: 'var(--on-dark-muted)', maxWidth: '68ch', margin: '0 0 26px' }}>
+              {currencyNote}
+            </p>
+          )}
           <ModalButton type="kit_order" source="kit_order" className="btn btn--primary">
             {t('ctaOrder')} <ArrowUpRight size={15} />
           </ModalButton>
@@ -161,11 +173,11 @@ export default async function KitPage({ params }: { params: { locale: string } }
         )}
       </section>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 900px) {
           .kit-grid { grid-template-columns: 1fr !important; }
         }
-      `}</style>
+      ` }} />
     </>
   );
 }

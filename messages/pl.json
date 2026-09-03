@@ -5,7 +5,7 @@
     "closeMenu": "Zamknij menu",
     "close": "Zamknij",
     "menu": "Menu",
-    "handMadeInBelgium": "Ręcznie wykonane w Belgii",
+    "handMadeInBelgium": "Produkcja: Częstochowa · Beveren-Waas",
     "languageLabel": "Język",
     "nav": {
       "solutions": "Rozwiązania",
@@ -21,7 +21,8 @@
       "faq": "FAQ",
       "clientLogin": "Strefa klienta",
       "materials": "Materiały",
-      "architects": "Architekci"
+      "architects": "Architekci",
+      "priceCalculator": "Kalkulator cen"
     },
     "cta": {
       "freeQuote": "Darmowa wycena",
@@ -86,7 +87,7 @@
     "projectsExportTitle": "Sufity napinane do projektów międzynarodowych | STRETCH",
     "projectsExportDescription": "Transparentne, drukowane i akustyczne sufity napinane dla firm fit-out na świecie — zgrzewane w fabryce w UE, fracht lotniczy, udokumentowane klasy ogniowe.",
     "priceCalculatorTitle": "Kalkulator sufitów napinanych — cena za m² | STRETCH",
-    "priceCalculatorDescription": "Cena orientacyjna sufitu napinanego od ręki: m² × typ sufitu według widełek €70–200/m². Bezpłatna wiążąca wycena, zwykle tego samego dnia roboczego."
+    "priceCalculatorDescription": "Cena orientacyjna sufitu napinanego od ręki: m² × typ sufitu według widełek 150–450 zł/m². Bezpłatna wiążąca wycena, zwykle tego samego dnia roboczego."
   },
   "cookies": {
     "title": "Szanujemy Twoją prywatność",
@@ -152,7 +153,7 @@
     }
   },
   "footer": {
-    "tagline": "Ręcznie wykonywane sufity napinane i ściany z naszej własnej belgijskiej produkcji — producent, nie importer — montowane w całej Europie i USA w jeden dzień.",
+    "tagline": "Ręcznie wykonywane sufity napinane i ściany z naszych własnych zakładów w Częstochowie i Beveren-Waas — producent z dwiema fabrykami w UE, nie importer — montowane w całej Europie i USA w jeden dzień.",
     "solutionsHeading": "Rozwiązania",
     "companyHeading": "Firma",
     "hqHeading": "Siedziba główna — Belgia",
@@ -179,7 +180,9 @@
       "priceCalculator": "Kalkulator cen"
     },
     "dealers": "Sieć dealerów",
-    "worldwideHeading": "STRETCH na świecie"
+    "worldwideHeading": "STRETCH na świecie",
+    "swissPartnerHeading": "Generalny przedstawiciel — Szwajcaria i Liechtenstein",
+    "manufacturerHeading": "Producent — Belgia"
   },
   "portal": {
     "login": {
@@ -616,9 +619,9 @@
       "cta": "Zobacz całe portfolio"
     },
     "installer": {
-      "eyebrow": "Dla fachowców",
-      "title": "Zostań monterem STRETCH.",
-      "intro": "STRETCH działa w modelu B2B. Dodaj sufity napinane do swojej oferty, przeszkol się w naszej centrali, zamawiaj na wymiar z Belgii i otrzymuj lokalne zapytania od klientów.",
+      "eyebrow": "Akademia STRETCH",
+      "title": "Akademia STRETCH: szkolenia dla monterów i wykonawców.",
+      "intro": "STRETCH działa w modelu B2B. Jesteś monterem lub wykonawcą? Dodaj sufity napinane do swojej oferty, zdobądź certyfikat w Akademii STRETCH — w Beveren-Waas lub po polsku w Częstochowie — zamawiaj membrany i profile na wymiar z naszych zakładów i otrzymuj lokalne zapytania od klientów.",
       "steps": {
         "0": {
           "title": "Szkolenie w kilka dni",
@@ -642,6 +645,12 @@
       "ratedOn": "Ocena w {source}",
       "titlePlain": "Co mówią klienci",
       "provenance": "Zweryfikowane opinie Google, cytowane dosłownie z naszego publicznego profilu firmy w Google."
+    },
+    "estimator": {
+      "kicker": "Kalkulator cen",
+      "title": "Ile kosztuje sufit napinany?",
+      "sub": "Podaj powierzchnię i typ sufitu — opublikowany przedział orientacyjny pojawi się od razu, a wiążąca wycena jest bezpłatna.",
+      "cta": "Oblicz cenę"
     }
   },
   "ctaBand": {
@@ -677,7 +686,8 @@
     "dealer": "Znajdź najbliższego dystrybutora",
     "chartCount": "{count, plural, one {# kolor} few {# kolory} many {# kolorów} other {# koloru}}",
     "anyRal": "Dowolny kolor RAL na zamówienie",
-    "dealerDirect": "Dostarczamy i montujemy bezpośrednio — skontaktuj się z nami"
+    "dealerDirect": "Dostarczamy i montujemy bezpośrednio — skontaktuj się z nami",
+    "priceLink": "Ile to kosztuje za m²?"
   },
   "productsPage": {
     "eyebrow": "Nasze rozwiązania",
@@ -1498,6 +1508,10 @@
             {
               "title": "Wszystkie systemy sufitowe",
               "sub": "Porównaj ofertę"
+            },
+            {
+              "title": "Kalkulator cen",
+              "sub": "Twoja cena za m² w 30 sekund"
             }
           ]
         },
@@ -2238,7 +2252,8 @@
           "placeholder": "Rodzaje sufitów, dostępne rysunki, harmonogram…"
         }
       }
-    }
+    },
+    "swissPartnerNote": "Twoje zapytanie trafia do QuinLay AG w Rickenbach LU, generalnego przedstawiciela STRETCH na Szwajcarię i Liechtenstein, a STRETCH otrzymuje kopię. Oddzwoni do Ciebie QuinLay AG."
   },
   "faqPage": {
     "items": [
@@ -4351,7 +4366,7 @@
           {
             "heading": "Ile to kosztuje w 2026 roku",
             "paragraphs": [
-              "Przy profesjonalnym montażu licz się z kwotą od około €70 do €200 za metr kwadratowy bez VAT, z montażem w cenie. Gładki sufit w jednym kolorze to około €70–90 za m², wersja z nadrukiem około €90–100, zabudowa akustyczna około €100–150, a projekty z podświetleniem lub łazienkowe ze zintegrowanym oświetleniem €130–200 za m².",
+              "Przy profesjonalnym montażu licz się z kwotą od około 150 zł do 450 zł za metr kwadratowy netto, z montażem w cenie. Gładki sufit w jednym kolorze to około 150–200 zł za m², wersja z nadrukiem około 200–250 zł, zabudowa akustyczna około 250–350 zł, a projekty z podświetleniem lub łazienkowe ze zintegrowanym oświetleniem 300–450 zł za m².",
               "To widełki orientacyjne, nie wycena — membranę wykonuje się na wymiar, dokładnie pod twoje pomieszczenie. Większe pomieszczenia wychodzą taniej w przeliczeniu na metr kwadratowy; narożniki, łuki i integracje to dodatkowa praca. Pełne zestawienie znajdziesz w naszym przewodniku cenowym, a bezpłatna wycena daje już konkretną kwotę — zwykle jeszcze tego samego dnia roboczego."
             ]
           },
@@ -4660,7 +4675,7 @@
             "heading": "Porównanie w pigułce",
             "paragraphs": [],
             "bullets": [
-              "Koszt za m² (netto, orientacyjnie): malowanie 10–20 € · ponowne tynkowanie 25–45 € · płyta g-k 35–70 € · boazeria 40–90 € · sufit napinany 70–200 €.",
+              "Koszt za m² (netto, orientacyjnie): malowanie 10–20 € · ponowne tynkowanie 25–45 € · płyta g-k 35–70 € · boazeria 40–90 € · sufit napinany 150–450 zł.",
               "Czas prac dla salonu 30 m²: malowanie 1–2 dni · ponowne tynkowanie 3–5 dni · płyta g-k 4–7 dni · boazeria 2–3 dni · sufit napinany 1 dzień.",
               "Kurz i czas schnięcia: tynk i płyta g-k dużo · boazeria mało · sufit napinany wcale.",
               "Ukrywa przewody i nierówności: tynk nie · płyta g-k tak · boazeria tak · sufit napinany tak.",
@@ -4697,7 +4712,9 @@
       "eyebrow": "Poradniki",
       "ctaTitle": "Myślisz o suficie napinanym?",
       "ctaBody": "Otrzymaj bezpłatną, niezobowiązującą wycenę dla swojego wnętrza.",
-      "ctaBtn": "Poproś o bezpłatną wycenę"
+      "ctaBtn": "Poproś o bezpłatną wycenę",
+      "calculatorTitle": "Ile będzie kosztował Twój sufit?",
+      "calculatorBody": "Metry kwadratowe × typ sufitu — opublikowany przedział orientacyjny w 30 sekund."
     }
   },
   "inspirationPage": {
@@ -4887,6 +4904,11 @@
         "title": "Chcesz tylko kupować materiały?",
         "body": "Konto zaopatrzeniowe to nie partnerstwo: zamawiaj materiały i konfekcję na wymiar w swoim cenniku montera, bez zobowiązań.",
         "cta": "Zaopatrzenie monterów"
+      },
+      "quinlayCard": {
+        "title": "Szwajcaria i Liechtenstein: QuinLay AG",
+        "body": "Nasz generalny przedstawiciel na Szwajcarię i Liechtenstein: showroom i sala szkoleniowa w Rickenbach LU, materiały z magazynu w Szwajcarii, partnerzy montażowi w całym kraju.",
+        "cta": "Odwiedź quinlay.ch"
       }
     },
     "how": {
@@ -5000,7 +5022,10 @@
       "title": "Zarezerwuj miejsce",
       "lead": "Małe grupy, o miejscu decyduje kolejność zgłoszeń. Na życzenie organizujemy sesje wyjazdowe u Ciebie.",
       "onRequestTitle": "Na życzenie",
-      "onRequestNote": "Indywidualna sesja na miejscu"
+      "onRequestNote": "Indywidualna sesja na miejscu",
+      "externalCta": "Terminy i rezerwacja na quinlay.ch",
+      "swissRoom": "Szkolenia odbywają się we własnej sali szkoleniowo-testowej QuinLay AG w Rickenbach LU.",
+      "secondaryCta": "Masz pytania o szkolenie? Skontaktuj się z nami"
     },
     "book": {
       "eyebrow": "Zaplanuj szkolenie",
@@ -5112,7 +5137,16 @@
     "hours": "pn–pt · 08:30–17:00",
     "directTitle": "Nie potrzebujesz lokalnego dealera.",
     "directBody": "STRETCH dostarcza i montuje bezpośrednio z własnej produkcji, podczas gdy lokalna sieć dopiero powstaje — jeden zespół, jedna gwarancja.",
-    "directCta": "Poproś o bezpłatną wycenę"
+    "directCta": "Poproś o bezpłatną wycenę",
+    "swissPartnerKicker": "Szwajcaria i Liechtenstein",
+    "swissPartnerTitle": "Twój kontakt w Szwajcarii i Liechtensteinie: QuinLay AG, Rickenbach LU",
+    "swissPartnerBody": "QuinLay AG jest generalnym przedstawicielem STRETCH na Szwajcarię i Liechtenstein: showroom i sala szkoleniowa w Rickenbach LU, materiały z magazynu w Szwajcarii, montaż przez przeszkolonych partnerów. Na każde zapytanie ze Szwajcarii odpowiada QuinLay AG, a STRETCH otrzymuje kopię.",
+    "swissCallback": "Oddzwoni QuinLay AG",
+    "impressumHeading": "Nota prawna — Szwajcaria i Liechtenstein",
+    "impressumManufacturer": "Producent",
+    "impressumSwissParty": "Strona umowy dla Szwajcarii i Liechtensteinu",
+    "impressumNote": "Za wyceny, dostawy i faktury dla Szwajcarii i Liechtensteinu odpowiada QuinLay AG.",
+    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch"
   },
   "datasheetsPage": {
     "eyebrow": "Karty techniczne",
@@ -5353,13 +5387,13 @@
     "eyebrow": "Sieć dealerów",
     "h1": "Sufity napinane w {place}",
     "introDealer": "Sufit napinany STRETCH w {place} zaczyna się od certyfikowanego dealera, którego znajdziesz poniżej: pomiar na miejscu, zgrzewanie na wymiar w naszym własnym zakładzie w Belgii i montaż w jeden dzień.",
-    "introRecruit": "W {place} nie ma jeszcze certyfikowanego dealera STRETCH — dlatego na razie obsługujemy {place} bezpośrednio z naszego zakładu w Belgii i szukamy odpowiedniego lokalnego partnera.",
+    "introRecruit": "W {place} nie ma jeszcze certyfikowanego dealera STRETCH — dlatego na razie obsługujemy {place} bezpośrednio z naszych zakładów w Częstochowie i w Belgii, a jednocześnie szukamy odpowiedniego lokalnego partnera.",
     "dealerBadge": "Certyfikowany dealer STRETCH",
     "dealerBadgeShort": "Dealer",
     "visitSite": "Odwiedź stronę",
     "quoteCta": "Poproś o bezpłatną wycenę",
     "whyTitle": "Dlaczego warto wybrać STRETCH właśnie tutaj",
-    "why1": "Wyprodukowano w Belgii — każdy sufit zgrzewamy na wymiar we własnym zakładzie i dostarczamy gotowy do montażu.",
+    "why1": "Wyprodukowano w UE — każdy sufit zgrzewamy na wymiar w naszych własnych zakładach w Częstochowie i w Belgii, a dostarczamy go gotowy do montażu.",
     "why2": "Certyfikowany montaż — nasi dealerzy przechodzą szkolenie montażystów STRETCH i pracują z naszymi profilami, membranami i oświetleniem.",
     "why3": "Jedna gwarancja — materiał i montaż pod jednym dachem, a za wszystkim stoi STRETCH.",
     "recruitChip": "Szukamy dealera",
@@ -5371,22 +5405,57 @@
     "nearbyHeadingProvince": "Miejscowości w {place}",
     "backToAll": "Wszystkie regiony",
     "metaTitleDealer": "Sufity napinane {place} — certyfikowany dealer STRETCH",
-    "metaTitleRecruit": "Sufity napinane {place} — montaż prosto z naszego belgijskiego zakładu",
+    "metaTitleRecruit": "Sufity napinane {place} — montaż prosto z naszych zakładów w Częstochowie i Belgii",
     "metaDescDealer": "Szukasz sufitu napinanego w {place}? Nasz certyfikowany dealer STRETCH wykonuje pomiar na miejscu i montuje sufity zgrzewane na wymiar w naszym belgijskim zakładzie. Poproś o bezpłatną wycenę.",
-    "metaDescRecruit": "Sufit napinany w {place}? Montujemy bezpośrednio z naszego zakładu w Belgii — i szukamy lokalnego dealera. Poproś o wycenę albo zostań naszym partnerem w {place}.",
-    "ovMetaTitle": "Dealerzy STRETCH — Belgia i Holandia | STRETCH",
-    "ovMetaDescription": "Znajdź certyfikowanego dealera STRETCH we Flandrii, Brukseli, Walonii lub Holandii. Każdy sufit powstaje w naszym własnym zakładzie w Belgii.",
+    "metaDescRecruit": "Sufit napinany w {place}? Montujemy bezpośrednio z naszych zakładów w Częstochowie i w Belgii — i szukamy lokalnego dealera. Poproś o wycenę albo zostań naszym partnerem w {place}.",
+    "ovMetaTitle": "Dealerzy STRETCH — Polska, Belgia i Holandia | STRETCH",
+    "ovMetaDescription": "Certyfikowani dealerzy STRETCH w Polsce (Częstochowa, Warszawa, Kraków), we Flandrii, Brukseli, Walonii i Holandii. Każdy sufit powstaje w naszych własnych zakładach w Częstochowie i w Belgii.",
     "ovEyebrow": "Sieć",
     "ovTitle": "Dealerzy",
-    "ovIntro": "Sufity napinane STRETCH mierzą i montują certyfikowani lokalni partnerzy, wspierani przez nasz własny zakład produkcyjny koło Lokeren. Znajdź swój region — albo zajmij wolne miejsca.",
+    "ovIntro": "Sufity napinane STRETCH mierzą i montują certyfikowani lokalni partnerzy, wspierani przez nasze własne zakłady produkcyjne w Częstochowie i w Belgii. Znajdź swój region — od Częstochowy, Warszawy i Krakowa po Belgię i Holandię — albo zajmij wolne miejsca.",
     "regionFlanders": "Flandria i Bruksela",
-    "regionWallonia": "Walonia",
+    "regionWallonia": "Walonia · Belgia",
     "regionNetherlands": "Holandia",
     "lookingLabel": "Szukamy dealera",
     "ovRecruitTitle": "Nie ma jeszcze dealera w Twojej okolicy?",
-    "ovRecruitBody": "Dopóki sieć się rozbudowuje, dostarczamy i montujemy bezpośrednio z naszego zakładu — a montażyści, którzy przejmą wolny region, zyskują zapytania z tego regionu, ceny dealerskie i szkolenia.",
+    "ovRecruitBody": "Dopóki sieć się rozbudowuje, dostarczamy i montujemy bezpośrednio z naszych zakładów w Częstochowie i w Belgii — a montażyści, którzy przejmą wolny region, zyskują zapytania z tego regionu, ceny dealerskie i szkolenia.",
     "regionLuxembourg": "Luksemburg (Wielkie Księstwo)",
-    "regionAustria": "Austria"
+    "regionAustria": "Austria",
+    "regionGermany": "Niemcy",
+    "regionPoland": "Polska",
+    "regionFrance": "Francja",
+    "nearbyHeadingRegion": "Inne miejscowości: {region}",
+    "identityBeKicker": "Belgijski producent",
+    "identityBeTitle": "Wyprodukowano w Beveren-Waas w Belgii",
+    "identityBeBody": "STRETCH to belgijski producent: każdy sufit dla klienta w {place} mierzymy na miejscu, następnie kroimy i zgrzewamy na wymiar w naszym własnym zakładzie w Beveren-Waas (Flandria Wschodnia), a montaż wykonują nasze własne ekipy lub certyfikowany dealer. Jedna belgijska firma, jedna gwarancja.",
+    "identityVat": "VAT",
+    "identityVatArticle": "Dotacje i VAT na sufit napinany w Belgii",
+    "identityDirectKicker": "Obsługa bezpośrednia",
+    "identityDirectTitle": "{place} — dostawa i montaż prosto z naszego zakładu",
+    "identityDirectBody": "Dopóki nasza sieć monterów w tym regionie się rozbudowuje, STRETCH dostarcza i montuje w {place} bezpośrednio: pomiar na miejscu, zgrzewanie na wymiar w naszym własnym zakładzie w UE i montaż w jeden dzień przez nasze własne ekipy. Monterzy, którzy przejmą ten region, zyskują płynące z niego zapytania.",
+    "identityDirectCard": "Producent sufitów i ścian napinanych — dostawa i montaż bezpośrednio od nas.",
+    "costLine": "{place} — ile kosztuje sufit napinany? Oblicz cenę za m²",
+    "identityPlKicker": "Produkcja w Polsce i Belgii",
+    "identityPlTitle": "Dwa zakłady w UE: Częstochowa i Beveren-Waas",
+    "identityPlBody": "STRETCH produkuje w dwóch własnych zakładach: Alto Design Sp. z o.o. w Częstochowie i Stretch Productions BV w Beveren-Waas w Belgii. Każdy sufit dla klienta w {place} zgrzewamy na wymiar w Częstochowie, a montaż wykonują nasze własne ekipy lub certyfikowany partner — jesteśmy producentem z fabryką, którą można odwiedzić, a nie importerem.",
+    "factoryKicker": "Nasz zakład",
+    "factoryTitle": "Zakład STRETCH w Częstochowie",
+    "factoryBody": "To tutaj grupa produkuje w Polsce: Alto Design Sp. z o.o. kroi i zgrzewa membrany PVC na wymiar, prowadzi polskojęzyczne szkolenia monterów i buduje sieć STRETCH w Polsce — fabryka z nazwą i adresem, którą można odwiedzić, a nie tylko adres handlowy.",
+    "factoryTraining": "Szkolenie monterów w Częstochowie",
+    "factoryCta": "Odwiedź altodesign.pl",
+    "why1Pl": "Wyprodukowano w UE — każdy sufit zgrzewamy na wymiar w naszych własnych zakładach w Częstochowie i Beveren-Waas, a dostarczamy go gotowy do montażu.",
+    "regionSwitzerland": "Szwajcaria i Liechtenstein",
+    "liechtenstein": "Liechtenstein",
+    "driveTime": "Ok. {minutes} min od showroomu w Rickenbach LU",
+    "contactHeading": "Twój kontakt dla Szwajcarii i Liechtensteinu",
+    "generalAgent": "Generalny przedstawiciel STRETCH na Szwajcarię i Liechtenstein",
+    "showroomLabel": "Showroom i sala szkoleniowa",
+    "showroomCta": "Umów wizytę w showroomie",
+    "servicesHeading": "Usługi",
+    "serviceConsulting": "Doradztwo i showroom",
+    "serviceInstallation": "Montaż przez przeszkolonych partnerów",
+    "serviceTraining": "Szkolenie monterów we własnej sali szkoleniowej",
+    "serviceStock": "Materiały z magazynu w Szwajcarii"
   },
   "datasheetEmail": {
     "subject": "Twoja karta techniczna STRETCH — {title}",
@@ -5542,7 +5611,6 @@
     "priceEyebrow": "Cena i zamówienie",
     "priceTitle": "Zamawianie zestawu",
     "priceOnRequest": "Cena na zapytanie — prześlij wymiary, a w ciągu jednego dnia roboczego otrzymasz wycenę na miarę.",
-    "currencyNotice": "Wszystkie ceny i płatności są w EUR. Kwota w £ to orientacja według kursu referencyjnego EBC z {asOf}; Twój bank lub karta przelicza po własnym kursie.",
     "deliveryPoints": [
       "Dostawa DDP paczką kurierską — cło i formalności importowe bierzemy na siebie, potwierdzona cena to cena, którą płacisz",
       "Wysyłka po całej UE i do Wielkiej Brytanii",
@@ -5780,5 +5848,12 @@
     "captchaFailed": "Weryfikacja bezpieczeństwa nie powiodła się. Spróbuj ponownie.",
     "captchaLoadFailed": "Nie udało się załadować weryfikacji bezpieczeństwa. Odśwież stronę lub napisz do nas: {email}.",
     "tooManyRequests": "Zbyt wiele żądań. Odczekaj kilka minut i spróbuj ponownie."
+  },
+  "currency": {
+    "indicationNote": "Kwota w {currency} to orientacja według kursu referencyjnego EBC z {asOf}; wszystkie ceny i płatności są w EUR. Twój bank lub karta przelicza po własnym kursie.",
+    "settlementNote": "Wszystkie ceny i płatności są w {currency}.",
+    "indicationAria": "{eur} — wyłącznie orientacyjnie, wszystkie płatności w EUR",
+    "guideNoteTitle": "Orientacyjnie w {currency}",
+    "guideNoteBody": "Kwoty w tym przewodniku podajemy w EUR — walucie, w której wystawiamy faktury. Dla orientacji te same widełki według kursu referencyjnego EBC z {asOf}:"
   }
 }
