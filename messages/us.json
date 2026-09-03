@@ -5138,7 +5138,12 @@
     "impressumManufacturer": "Manufacturer",
     "impressumSwissParty": "Contracting party for Switzerland and Liechtenstein",
     "impressumNote": "Quotes, supplies and invoices for Switzerland and Liechtenstein are issued by QuinLay AG.",
-    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch"
+    "ticinoLine": "Tessin / Ticino: contattateci in italiano — office@quinlay.ch",
+    "map": {
+      "load": "Load map",
+      "note": "The map is loaded from Google Maps, which sets Google cookies.",
+      "open": "Open in Google Maps"
+    }
   },
   "datasheetsPage": {
     "eyebrow": "Technical datasheets",

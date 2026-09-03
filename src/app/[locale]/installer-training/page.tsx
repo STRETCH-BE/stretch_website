@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ArrowRight, ArrowUpRight, Check, MapPin } from 'lucide-react';
-import { isValidLocale, type Locale } from '@/i18n/config';
+import { isValidLocale, type Locale, localeFullCodes } from '@/i18n/config';
 import { siteUrl, brand, contact } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
@@ -115,10 +115,15 @@ export default async function TrainingPage({ params }: { params: { locale: strin
 
       {/* Hero */}
       <section className="container" style={{ padding: 'clamp(36px,5vw,72px) 0 clamp(40px,5vw,72px)' }}>
-        <div className="tr-hero" style={{ display: 'grid', gridTemplateColumns: '1.1fr .9fr', gap: 'clamp(28px,4vw,64px)', alignItems: 'center' }}>
-          <div>
+        {/* minmax(0, …) columns: the headline's longest word must never set the
+            text column's minimum width and squeeze the photo (it collapsed to
+            ~230px with the global 142px h1 on stretch.mt). The h1 is sized for
+            this page's long words (nl "gecertificeerd", sv "spänntaksmontering")
+            with hyphenation as the fallback. */}
+        <div className="tr-hero" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.1fr) minmax(0, .9fr)', gap: 'clamp(28px,4vw,64px)', alignItems: 'center' }}>
+          <div style={{ minWidth: 0 }}>
             <Eyebrow num="01" label={t('hero.eyebrow')} />
-            <h1 className="h1" style={{ margin: '0 0 24px' }}>
+            <h1 className="h1" lang={localeFullCodes[locale]} style={{ margin: '0 0 24px', fontSize: 'clamp(32px, 4.5vw, 62px)', hyphens: 'auto', overflowWrap: 'anywhere' }}>
               {t('hero.titleA')}
               <br />
               {t('hero.titleB')} <span className="accent">{t('hero.titleC')}.</span>
@@ -138,8 +143,10 @@ export default async function TrainingPage({ params }: { params: { locale: strin
               <a href="#dates" className="btn btn--ghost">{t('hero.ctaDates')} <ArrowRight size={16} className="btn__arrow" /></a>
             </div>
           </div>
-          <div style={{ position: 'relative' }}>
-            <Placeholder label={t('hero.imageLabel')} src={pageImages.training} sizes="(max-width: 860px) 100vw, 50vw" priority ratio="4/3.4" />
+          <div style={{ position: 'relative', minWidth: 0 }}>
+            {/* The training photo is portrait (1536×2048): a 4/5 slot shows it
+                almost uncropped beside the tall headline; 4/3 on mobile. */}
+            <Placeholder label={t('hero.imageLabel')} src={pageImages.training} sizes="(max-width: 860px) 100vw, 45vw" priority ratio="4/5" className="tr-hero-img" />
           </div>
         </div>
 
@@ -284,6 +291,7 @@ export default async function TrainingPage({ params }: { params: { locale: strin
       <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 860px) {
           .tr-hero { grid-template-columns: 1fr !important; }
+          .tr-hero-img { aspect-ratio: 4/3 !important; }
           .tr-curric { grid-template-columns: 1fr 1fr !important; }
           .tr-dates { grid-template-columns: 1fr 1fr !important; }
           .tr-intl { grid-template-columns: 1fr !important; }
