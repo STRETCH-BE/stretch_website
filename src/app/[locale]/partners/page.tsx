@@ -216,8 +216,12 @@ export default async function PartnersPage({ params }: { params: { locale: strin
                       <a key="quinlay-card" href={swissPartner.url} target="_blank" rel="noopener" style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)', display: 'block', textDecoration: 'none', color: 'inherit' }}>
                         {/* Logo only once the file is in the repo — no empty white box before that. */}
                         {QUINLAY_LOGO && (
-                          <div style={{ width: 120, height: 44, marginBottom: 18, position: 'relative' }}>
-                            <Placeholder label="QuinLay AG" src={QUINLAY_LOGO} alt={swissPartner.name} sizes="120px" fit="contain" bg="#fff" />
+                          // Emblem + wordmark (1366×1070, taupe/grey on transparent): a
+                          // white tile keeps it legible on the black card.
+                          <div style={{ width: 128, marginBottom: 18, background: '#fff', padding: 10 }}>
+                            <div style={{ position: 'relative', aspectRatio: '1366 / 1070' }}>
+                              <Placeholder label="QuinLay AG" src={QUINLAY_LOGO} alt={swissPartner.name} sizes="108px" fit="contain" />
+                            </div>
                           </div>
                         )}
                         <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 21, letterSpacing: '-.01em', margin: '0 0 11px' }}>{t('why.quinlayCard.title')}</h3>
