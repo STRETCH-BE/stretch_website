@@ -7,7 +7,7 @@
 // Client-safe: only reads site-config constants.
 // ============================================================================
 import { isSwissLocale, type Locale } from '@/i18n/config';
-import { contact, offices, swissPartner, type Office } from '@/lib/site-config';
+import { contact, offices, swissPartner, polishEntity, type Office, type PolishPhoneKey } from '@/lib/site-config';
 import type { MapPlace } from '@/lib/maps';
 
 export type LocalContact = {
@@ -16,6 +16,8 @@ export type LocalContact = {
   email: string;
   /** The organisation the visitor actually reaches. */
   name: string;
+  /** pl only: which of Alto Design's labelled lines this is (label + aria text in common.plContact). */
+  phoneLine?: PolishPhoneKey;
 };
 
 export function localContactFor(locale: Locale): LocalContact {
@@ -27,8 +29,16 @@ export function localContactFor(locale: Locale): LocalContact {
       name: swissPartner.name,
     };
   }
+  if (isPolishLocale(locale)) {
+    // stretch-sufit.pl: Alto Design's domestic-projects line and inbox (4 Sep 2026).
+    const line = polishEntity.phones[0];
+    return { phoneDisplay: line.display, phoneHref: line.href, email: polishEntity.email, name: polishEntity.name, phoneLine: line.key };
+  }
   return { phoneDisplay: contact.phoneDisplay, phoneHref: contact.phoneHref, email: contact.email, name: 'STRETCH' };
 }
+
+/** True on stretch-sufit.pl — Alto Design Sp. z o.o. is the point of contact. */
+export const isPolishLocale = (locale: Locale): boolean => locale === 'pl';
 
 /**
  * The Google listing the contact-page map shows, plus the office whose

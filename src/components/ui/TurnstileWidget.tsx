@@ -27,6 +27,8 @@ import {
 import { useLocale, useTranslations } from 'next-intl';
 import { turnstileSiteKeyFor, isTurnstileEnabled } from '@/lib/turnstile';
 import { contact } from '@/lib/site-config';
+import { localContactFor, isPolishLocale } from '@/lib/local-contact';
+import type { Locale } from '@/i18n/config';
 
 declare global {
   interface Window {
@@ -144,7 +146,7 @@ const TurnstileWidget = forwardRef<TurnstileHandle, { onToken: (token: string | 
         <div ref={holder} />
         {loadFailed && (
           <p style={{ fontSize: 12.5, color: 'var(--text-faint)', margin: '8px 0 0', lineHeight: 1.5 }} role="status">
-            {t('captchaLoadFailed', { email: contact.email })}
+            {t('captchaLoadFailed', { email: isPolishLocale(locale as Locale) ? localContactFor(locale as Locale).email : contact.email })}
           </p>
         )}
       </div>

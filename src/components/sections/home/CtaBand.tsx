@@ -11,6 +11,7 @@ import type { Locale } from '@/i18n/config';
 
 export default function CtaBand() {
   const t = useTranslations('ctaBand');
+  const tc = useTranslations('common');
   const locale = useLocale() as Locale;
   const local = localContactFor(locale);
   return (
@@ -50,7 +51,7 @@ export default function CtaBand() {
 
         <p style={{ marginTop: 30, fontSize: 13.5, color: 'var(--on-dark-soft)' }}>
           {t('preferTalk')}{' '}
-          <a href={local.phoneHref} style={{ color: '#fff', fontWeight: 600 }}>
+          <a href={local.phoneHref} style={{ color: '#fff', fontWeight: 600 }} {...(local.phoneLine ? { 'aria-label': tc(`plContact.call.${local.phoneLine}`) } : {})}>
             {local.phoneDisplay}
           </a>{' '}
           · {t('hours')}

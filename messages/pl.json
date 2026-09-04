@@ -41,6 +41,25 @@
       "seeDates": "Zobacz terminy",
       "requestSeat": "Zarezerwuj miejsce",
       "sendMessage": "Wyślij wiadomość"
+    },
+    "plContact": {
+      "officeHeading": "Biuro i produkcja — Polska",
+      "hqHeading": "Siedziba główna — Belgia",
+      "hqCountry": "Belgia",
+      "hoursLabel": "Godziny",
+      "shareCapitalLabel": "Kapitał zakładowy",
+      "lines": {
+        "domestic": "Projekty krajowe",
+        "production": "Produkcja",
+        "export": "Eksport",
+        "exportProjects": "Projekty eksportowe"
+      },
+      "call": {
+        "domestic": "Zadzwoń — projekty krajowe",
+        "production": "Zadzwoń — produkcja",
+        "export": "Zadzwoń — eksport",
+        "exportProjects": "Zadzwoń — projekty eksportowe"
+      }
     }
   },
   "meta": {

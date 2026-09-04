@@ -259,6 +259,7 @@ export default function MobileMenu() {
             </button>
             <a
               href={local.phoneHref}
+              {...(local.phoneLine ? { 'aria-label': t(`plContact.call.${local.phoneLine}`) } : {})}
               onClick={() => analytics.phoneClick('mobile_menu')}
               style={{
                 marginTop: 18,

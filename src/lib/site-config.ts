@@ -52,10 +52,14 @@ export const contact = {
   hoursDisplay: 'Mon–Fri · 08:30–17:00',
   address: {
     street: 'Gentseweg 309 A3 (Beverpark)',
+    streetShort: 'Gentseweg 309 A3',
     city: 'Beveren-Waas',
     postalCode: '9120',
     region: 'Oost-Vlaanderen',
     country: 'BE',
+    // The HQ block of the footer, exactly as printed on every non-Polish
+    // domain (English, as before — moved here from Footer.tsx, 4 Sep 2026).
+    footerLines: ['Beverpark, Gentseweg 309 A3', '9120 Beveren-Waas, Belgium'],
   },
   geo: { lat: 51.1953188, lng: 4.2239015 },
   // Google Business Profile of the HQ — the contact-page map embeds this
@@ -104,6 +108,46 @@ export const swissPartner = {
     lng: undefined as number | undefined,
     region: 'ch',
   } satisfies MapPlace,
+} as const;
+
+// Alto Design Sp. z o.o. — the group's Polish company (Częstochowa plant) and
+// the PRIMARY point of contact on stretch-sufit.pl (Michael, 4 Sep 2026). The
+// header, CTA band, mobile menu, footer, contact page, Polish place pages AND
+// the LocalBusiness JSON-LD all read from here, so the visible NAP and the
+// structured data always match character for character. Nothing here is
+// shown on any other locale.
+export type PolishPhoneKey = 'domestic' | 'production' | 'export' | 'exportProjects';
+export const polishEntity = {
+  name: 'Alto Design Sp. z o.o.',
+  street: 'ul. Legionów 59',
+  postalCode: '42-200',
+  city: 'Częstochowa',
+  country: 'PL',
+  countryName: 'Polska',
+  email: 'info@stretch-sufit.pl',
+  /** Opening hours as printed ("Godziny: …"), Europe/Warsaw. */
+  hours: 'pn–pt 08:30–17:00',
+  timeZone: 'Europe/Warsaw',
+  opens: '08:30',
+  closes: '17:00',
+  /** Labelled lines, in display order. Labels/aria texts: messages common.plContact. */
+  phones: [
+    { key: 'domestic', display: '+48 730 700 333', e164: '+48730700333', href: 'tel:+48730700333', languages: 'PL/EN' },
+    { key: 'production', display: '+48 455 444 475', e164: '+48455444475', href: 'tel:+48455444475', languages: 'PL/UA' },
+    { key: 'export', display: '+32 474 52 20 90', e164: '+32474522090', href: 'tel:+32474522090', languages: 'EN/NL/FR/DE' },
+    { key: 'exportProjects', display: '+32 485 48 30 35', e164: '+32485483035', href: 'tel:+32485483035', languages: '' },
+  ] as ReadonlyArray<{ key: PolishPhoneKey; display: string; e164: string; href: string; languages: string }>,
+  registry: {
+    krs: '0000786996',
+    nip: '5732911703',
+    regon: '383390837',
+    // TODO (Michael): confirm the registry court wording (division number).
+    court: 'Sąd Rejonowy w Częstochowie, Wydział Gospodarczy KRS',
+    // TODO (Michael): share capital, e.g. '5 000'. Empty = the "Kapitał
+    // zakładowy … PLN" segment is left out of the legal strip until filled.
+    shareCapital: '',
+  },
+  vatId: 'PL5732911703',
 } as const;
 
 export type Office = {

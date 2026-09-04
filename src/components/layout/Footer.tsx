@@ -7,8 +7,8 @@ import { Link } from '@/i18n/navigation';
 import { usePathname } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { footerNav } from '@/lib/site-config';
-import { contact, swissPartner } from '@/lib/site-config';
-import { localContactFor, isSwissLocale } from '@/lib/local-contact';
+import { contact, swissPartner, polishEntity, brand } from '@/lib/site-config';
+import { localContactFor, isSwissLocale, isPolishLocale } from '@/lib/local-contact';
 import { isDealerMarket } from '@/lib/dealers';
 import PortalLink from '@/components/ui/PortalLink';
 import { CONSENT_OPEN_BANNER_EVENT } from '@/lib/consent';
@@ -30,6 +30,10 @@ export default function Footer() {
   const locale = useLocale() as Locale;
   const local = localContactFor(locale);
   const swiss = isSwissLocale(locale);
+  const polish = isPolishLocale(locale);
+  // pl-only keys live under common.plContact in pl.json only; every call below is guarded by `polish`.
+  const tpc = useTranslations('common');
+  const tp = (k: string) => tpc(`plContact.${k}`);
   const pathname = usePathname(); // locale-agnostic path (blog slugs translate per locale below)
   const pathOn = (l: Locale) => {
     const p = pathForLocale(pathname, locale, l);
@@ -115,8 +119,47 @@ export default function Footer() {
             ))}
           </FooterCol>
 
-          {/* HQ */}
+          {/* HQ — pl: Alto Design (office & production) first, the group HQ below. */}
           <div>
+            {polish && (
+              <>
+                <p style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--red-bright)', margin: '0 0 18px' }}>
+                  {tp('officeHeading')}
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--on-dark-soft)', margin: '0 0 14px' }}>
+                  {polishEntity.name}
+                  <br />
+                  {polishEntity.street}
+                  <br />
+                  {`${polishEntity.postalCode} ${polishEntity.city}, ${polishEntity.countryName}`}
+                </p>
+                <ul style={{ listStyle: 'none', margin: '0 0 12px', padding: 0, display: 'flex', flexDirection: 'column', gap: 9 }}>
+                  {polishEntity.phones.map((ph) => (
+                    <li key={ph.key} style={{ lineHeight: 1.35 }}>
+                      <span style={{ display: 'block', fontSize: 11, fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--on-dark-muted)' }}>{tp(`lines.${ph.key}`)}</span>
+                      <a
+                        href={ph.href}
+                        aria-label={tp(`call.${ph.key}`)}
+                        onClick={() => analytics.phoneClick('footer')}
+                        style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 16, color: '#fff' }}
+                      >
+                        {ph.display}
+                      </a>
+                      {ph.languages && <span style={{ fontSize: 11.5, color: 'var(--on-dark-muted)', marginLeft: 8 }}>{ph.languages}</span>}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={`mailto:${polishEntity.email}`}
+                  className="lnk"
+                  style={{ fontSize: 14, color: 'var(--red-bright)' }}
+                  onClick={() => analytics.emailClick('footer')}
+                >
+                  {polishEntity.email}
+                </a>
+                <p style={{ fontSize: 13, lineHeight: 1.6, color: 'var(--on-dark-soft)', margin: '8px 0 22px' }}>{`${tp('hoursLabel')}: ${polishEntity.hours}`}</p>
+              </>
+            )}
             {/* Not a document heading (fixes heading-order audit); brighter
                 red for AA contrast of 11.5px text on the black footer. */}
             <p
@@ -140,40 +183,51 @@ export default function Footer() {
                 <br />
                 {swissPartner.postalCode} {swissPartner.city} {swissPartner.canton}
               </p>
+            ) : polish ? (
+              /* pl: group HQ, reduced — the +32 line is already the export line above. */
+              <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--on-dark-soft)', margin: '0 0 16px' }}>
+                {brand.parentCompany}
+                <br />
+                {contact.address.footerLines[0]}
+                <br />
+                {`${contact.address.postalCode} ${contact.address.city}, ${tp('hqCountry')}`}
+              </p>
             ) : (
               <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--on-dark-soft)', margin: '0 0 16px' }}>
-                Beverpark, Gentseweg 309 A3
+                {contact.address.footerLines[0]}
                 <br />
-                9120 Beveren-Waas, Belgium
+                {contact.address.footerLines[1]}
               </p>
             )}
+            {!polish && (
+              <a
+                href={local.phoneHref}
+                onClick={() => analytics.phoneClick('footer')}
+                style={{
+                  display: 'block',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 800,
+                  fontSize: 19,
+                  color: '#fff',
+                  marginBottom: 6,
+                }}
+              >
+                {local.phoneDisplay}
+              </a>
+            )}
             <a
-              href={local.phoneHref}
-              onClick={() => analytics.phoneClick('footer')}
-              style={{
-                display: 'block',
-                fontFamily: 'var(--font-display)',
-                fontWeight: 800,
-                fontSize: 19,
-                color: '#fff',
-                marginBottom: 6,
-              }}
-            >
-              {local.phoneDisplay}
-            </a>
-            <a
-              href={`mailto:${local.email}`}
+              href={`mailto:${polish ? contact.email : local.email}`}
               className="lnk"
               style={{ fontSize: 14, color: 'var(--red-bright)' }}
               onClick={() => analytics.emailClick('footer')}
             >
-              {local.email}
+              {polish ? contact.email : local.email}
             </a>
             {swiss && (
               <p style={{ fontSize: 12.5, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: '14px 0 0' }}>
                 <span style={{ fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', fontSize: 11 }}>{t('manufacturerHeading')}</span>
                 <br />
-                Stretch Productions BV · Gentseweg 309 A3 · 9120 Beveren-Waas
+                {`${brand.legalName} · ${contact.address.streetShort} · ${contact.address.postalCode} ${contact.address.city}`}
               </p>
             )}
             <div
@@ -233,6 +287,20 @@ export default function Footer() {
               </a>
             ))}
         </nav>
+
+        {/* pl: company-register strip (KRS / NIP / REGON / court / share capital). */}
+        {polish && (
+          <p style={{ fontSize: 12, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: '22px 0 0', letterSpacing: '.02em', overflowWrap: 'anywhere' }}>
+            {[
+              polishEntity.name,
+              `KRS ${polishEntity.registry.krs}`,
+              `NIP ${polishEntity.registry.nip}`,
+              `REGON ${polishEntity.registry.regon}`,
+              polishEntity.registry.court,
+              ...(polishEntity.registry.shareCapital ? [`${tp('shareCapitalLabel')} ${polishEntity.registry.shareCapital} PLN`] : []),
+            ].join(' · ')}
+          </p>
+        )}
 
         {/* Legal row */}
         <div
