@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nagalmtijd berekenen — STRETCH</title>
+
+<!--
+  ============================================================================
+  STRETCH · NAGALMTIJD CALCULATOR   ·  één bestand, geen dependencies
+  ============================================================================
+
+  PLAATSEN OP DE WEBSITE
+
+  1) Als los bestand + iframe (aanbevolen, geen conflict met de site-CSS)
+     Upload naar bv. /tools/nagalmtijd.html en plaats:
+
+     <iframe src="/tools/nagalmtijd.html" title="Nagalmtijd berekenen"
+             style="width:100%;border:0;min-height:1200px" id="nagalm"></iframe>
+     <script>
+       addEventListener('message', function (e) {
+         if (e.data && e.data.type === 'nagalm:height') {
+           document.getElementById('nagalm').style.height = e.data.height + 'px';
+         }
+       });
+     </script>
+
+  2) Rechtstreeks in een pagina: plak <style>, de .wrap en het <script> in de template.
+
+  DONKER OF LICHT
+     Standaard donker (#0D0D0D), zoals de zwarte secties van de site.
+     Voor een lichte sectie: <html lang="nl" data-theme="light">
+     of, bij inbouw in een template, data-theme="light" op een wrapper-div.
+
+  HUISSTIJL
+     Alle kleuren staan in :root — bemonsterd van stretchgroup.be
+     (rood #DB2412, zwart #0D0D0D, lijnen #2F2F2F, grijs #8F8B84).
+     Het lettertype is Archivo van Google Fonts, als benadering van de
+     display-letter van de site. Gebruikt u een gelicentieerde huisletter,
+     vervang dan de <link> en pas --font aan.
+
+  CTA-LINKS
+     Zoek op "CTA-OFFERTE" en "CTA-DEALER" en zet de eigen URL's erin.
+
+  FORMULE
+     Sabine, zoals in de Excel: T = V / (6 x A), met A = som(oppervlak x alfa).
+     Panelen tellen per stuk. Materiaalwaarden staan onderaan in het script
+     (MATERIALEN / PANELEN / DOELEN) en zijn 1-op-1 uit de werkmap overgenomen.
+  ============================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --red:#db2412;
+  --red-2:#b31c0d;
+  --bg:#0d0d0d;
+  --fg:#ffffff;
+  --muted:#8f8b84;
+  --line:#2f2f2f;
+  --field:#161616;
+  --field-line:#333333;
+  --track:#232323;
+  --before:#56524e;
+  --font:Archivo,"Helvetica Neue",Arial,sans-serif;
+  --pad:clamp(16px,4vw,28px);
+}
+[data-theme=light]{
+  --bg:#f6f6f6;
+  --fg:#0d0d0d;
+  --muted:#6b6864;
+  --line:#dcdcdc;
+  --field:#ffffff;
+  --field-line:#cfcfcf;
+  --track:#e2e2e2;
+  --before:#b4b0ab;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:var(--font);font-size:16px;line-height:1.5;
+  font-variant-numeric:tabular-nums;
+}
+.wrap{max-width:1200px;margin:0 auto;padding:clamp(28px,5vw,64px) var(--pad) 96px}
+
+/* ── kop ───────────────────────────────────────────────── */
+.eyebrow{
+  display:flex;align-items:center;gap:14px;margin:0 0 22px;
+  font-size:.6875rem;font-weight:600;font-variation-settings:'wght' 600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+}
+.eyebrow i{display:block;width:34px;height:2px;background:var(--red);flex:none}
+h1{
+  margin:0 0 22px;text-transform:uppercase;
+  font-size:clamp(2.5rem,7.4vw,5rem);line-height:.88;
+  font-weight:800;font-variation-settings:'wdth' 108,'wght' 800;letter-spacing:-.022em;
+}
+h1 span{color:var(--red)}
+.lead{margin:0;max-width:54ch;color:var(--muted);font-size:1rem}
+.masthead{padding-bottom:38px}
+
+/* ── raster ────────────────────────────────────────────── */
+.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,4vw,64px);align-items:start}
+@media (max-width:940px){.grid{grid-template-columns:1fr;gap:36px}}
+
+/* ── invoer ────────────────────────────────────────────── */
+.step{border-top:1px solid var(--line);padding:26px 0 6px}
+.step-head{
+  display:flex;align-items:center;gap:12px;margin:0 0 18px;
+  font-size:.6875rem;font-weight:700;font-variation-settings:'wght' 700;
+  letter-spacing:.16em;text-transform:uppercase;
+}
+.step-head b{color:var(--red);font-weight:700;font-variation-settings:'wght' 700}
+.step-note{font-size:.8125rem;color:var(--muted);margin:-6px 0 18px;max-width:56ch}
+
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+label{
+  font-size:.625rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);font-weight:600;font-variation-settings:'wght' 600;
+}
+input,select{
+  font:inherit;font-size:.9375rem;color:var(--fg);
+  background:var(--field);border:1px solid var(--field-line);border-radius:0;
+  padding:11px 12px;width:100%;min-width:0;
+}
+input::placeholder{color:var(--muted);opacity:.7}
+select{
+  appearance:none;padding-right:34px;cursor:pointer;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'><path d='M1 1l4 4 4-4' fill='none' stroke='%238f8b84' stroke-width='1.5'/></svg>");
+  background-repeat:no-repeat;background-position:right 12px center;
+}
+input:focus,select:focus{border-color:var(--red)}
+input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{
+  outline:2px solid var(--red);outline-offset:2px
+}
+.row{display:grid;gap:12px}
+.row-3{grid-template-columns:repeat(3,1fr)}
+.row-2{grid-template-columns:1fr 1fr}
+@media (max-width:620px){.row-3.mats{grid-template-columns:1fr}}
+@media (max-width:460px){.row-2{grid-template-columns:1fr}}
+
+.volume{
+  display:flex;flex-wrap:wrap;gap:6px 22px;
+  border-top:1px solid var(--line);margin-top:18px;padding-top:12px;
+  font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+}
+.volume b{color:var(--fg);font-weight:700;font-variation-settings:'wght' 700;letter-spacing:.02em}
+
+.line{display:grid;grid-template-columns:minmax(0,1fr) 104px 34px;gap:12px;align-items:end;margin-bottom:12px}
+.line.surface{grid-template-columns:112px minmax(0,1fr) 92px 34px}
+@media (max-width:600px){
+  .line,.line.surface{grid-template-columns:1fr 1fr}
+  .line .field:first-child,.line.surface .field:nth-child(2){grid-column:1/-1}
+  .line .kill{justify-self:start}
+}
+.kill{
+  background:none;border:1px solid var(--field-line);color:var(--muted);cursor:pointer;
+  font-size:1rem;line-height:1;padding:10px 0;width:34px;border-radius:0;
+}
+.kill:hover{color:var(--fg);border-color:var(--red);background:var(--red)}
+.add{
+  background:none;border:1px solid var(--field-line);color:var(--red);
+  font:inherit;font-size:.6875rem;font-weight:700;font-variation-settings:'wght' 700;
+  letter-spacing:.13em;text-transform:uppercase;
+  padding:11px 18px;border-radius:0;cursor:pointer;margin-top:2px;
+}
+.add:hover{border-color:var(--red)}
+
+/* ── resultaat ─────────────────────────────────────────── */
+.results{position:sticky;top:24px}
+@media (max-width:940px){.results{position:static}}
+
+.hero{background:var(--red);color:#fff;padding:clamp(22px,3.4vw,32px)}
+.hero-label{
+  margin:0 0 18px;font-size:.6875rem;letter-spacing:.16em;
+  text-transform:uppercase;font-weight:700;font-variation-settings:'wght' 700;color:rgba(255,255,255,.72);
+}
+.readout{display:flex;align-items:baseline;gap:10px}
+.big{
+  font-size:clamp(3.5rem,11vw,5.25rem);line-height:.82;
+  font-weight:800;font-variation-settings:'wdth' 112,'wght' 800;letter-spacing:-.035em;
+}
+.unit{font-size:1.5rem;font-weight:700;font-variation-settings:'wght' 700;color:rgba(255,255,255,.72)}
+.status{margin:18px 0 0;font-size:.8125rem;line-height:1.45}
+.status .chip{
+  display:inline-block;background:#0d0d0d;color:#fff;padding:3px 9px;margin-right:8px;
+  font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;font-variation-settings:'wght' 700;
+}
+
+.box{border:1px solid var(--line);border-top:0;padding:clamp(20px,3vw,26px)}
+.hero + .box{border-top:0}
+.box h3{
+  margin:0 0 20px;font-size:.6875rem;letter-spacing:.16em;
+  text-transform:uppercase;font-weight:700;font-variation-settings:'wght' 700;color:var(--muted);
+}
+
+/* verval-balken */
+.dbar{margin-bottom:18px}
+.dbar-top{
+  display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;
+  font-size:.6875rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+}
+.dbar-top b{color:var(--fg);font-size:.9375rem;letter-spacing:-.01em;font-weight:700;font-variation-settings:'wght' 700}
+.track{position:relative;height:12px;background:var(--track)}
+.fill{height:100%;width:0;transition:width .35s cubic-bezier(.2,.7,.3,1)}
+.fill.before{background:var(--before)}
+.fill.after{background:var(--red)}
+.target-line{position:relative;height:24px;margin-top:3px}
+.target-tick{position:absolute;top:0;transform:translateX(-50%);text-align:center;transition:left .35s cubic-bezier(.2,.7,.3,1)}
+.target-tick i{display:block;width:1px;height:8px;background:var(--fg);margin:0 auto;opacity:.6}
+.target-tick span{
+  display:block;margin-top:3px;font-size:.625rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);white-space:nowrap;
+}
+.axis{
+  display:flex;justify-content:space-between;margin-top:2px;
+  font-size:.625rem;letter-spacing:.1em;color:var(--muted);
+}
+
+/* octaafbanden */
+.chart{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;align-items:end;height:108px}
+.grp{display:flex;gap:3px;align-items:flex-end;height:100%}
+.grp i{flex:1;min-height:2px;transition:height .35s cubic-bezier(.2,.7,.3,1)}
+.grp i.b{background:var(--before)}
+.grp i.a{background:var(--red)}
+.chart-x,.vals{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}
+.chart-x{margin-top:9px;border-top:1px solid var(--line);padding-top:8px}
+.chart-x span{font-size:.625rem;letter-spacing:.08em;text-align:center;color:var(--muted)}
+.vals span{font-size:.6875rem;text-align:center;color:var(--muted);font-weight:600;font-variation-settings:'wght' 600}
+.vals.a span{color:var(--red)}
+.legend{
+  display:flex;gap:20px;margin-top:18px;
+  font-size:.625rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+}
+.legend b{display:inline-block;width:10px;height:10px;margin-right:7px;vertical-align:-1px}
+
+.warn{
+  border:1px solid var(--red);border-top:0;padding:14px clamp(20px,3vw,26px);
+  font-size:.8125rem;color:var(--fg);background:rgba(219,36,18,.08);
+}
+
+/* knoppen */
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{
+  font:inherit;font-size:.6875rem;font-weight:700;font-variation-settings:'wght' 700;
+  letter-spacing:.13em;text-transform:uppercase;
+  padding:14px 22px;border-radius:0;cursor:pointer;text-decoration:none;
+  display:inline-flex;align-items:center;gap:10px;border:1px solid transparent;
+}
+.btn.red{background:var(--red);color:#fff}
+.btn.red:hover{background:var(--red-2)}
+.btn.ghost{background:none;color:var(--fg);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--fg)}
+
+details{border-top:1px solid var(--line);margin-top:26px;padding-top:18px}
+summary{
+  cursor:pointer;list-style:none;font-size:.6875rem;letter-spacing:.13em;
+  text-transform:uppercase;font-weight:700;font-variation-settings:'wght' 700;
+}
+summary::-webkit-details-marker{display:none}
+summary::before{content:'+';color:var(--red);margin-right:10px}
+details[open] summary::before{content:'–'}
+details p{font-size:.8125rem;color:var(--muted);max-width:58ch}
+details code{color:var(--fg);background:var(--field);border:1px solid var(--field-line);padding:1px 6px}
+
+/* mobiele samenvatting */
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:9;display:none;
+  background:var(--red);color:#fff;padding:11px var(--pad);
+  align-items:center;justify-content:space-between;gap:14px;
+}
+.sticky p{margin:0;font-size:.625rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.sticky b{font-size:1.5rem;font-weight:800;font-variation-settings:'wdth' 110,'wght' 800;letter-spacing:-.03em}
+.sticky button{
+  font:inherit;font-size:.625rem;font-weight:700;font-variation-settings:'wght' 700;letter-spacing:.13em;
+  text-transform:uppercase;background:#0d0d0d;border:0;color:#fff;padding:11px 15px;cursor:pointer;flex:none;
+}
+@media (max-width:940px){.sticky{display:flex}.wrap{padding-bottom:112px}}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ══ RAPPORT — exact template van STRETCH, alleen genest onder #report ══ */
+@page{ size:A4; margin:0; }
+#report * { margin:0; padding:0; box-sizing:border-box; }
+#report { font-family:"Inter","Liberation Sans",sans-serif; color:#0D0D0D; background:#FFF;
+         -webkit-font-smoothing:antialiased; font-size:9.2pt; line-height:1.55; }
+#report .page { width:210mm; height:296.5mm; position:relative; overflow:hidden; page-break-after:always; }
+#report .page.last { page-break-after:auto; }
+#report .wrap { padding:0 17mm; }
+#report .util { background:#0D0D0D; color:#FFF; padding:2.7mm 17mm; font-size:6.5pt;
+          letter-spacing:0.16em; text-transform:uppercase; font-weight:600; }
+#report .util:after { content:""; display:block; clear:both; }
+#report .util .sq { display:inline-block; width:1.5mm; height:1.5mm; background:#DB2412;
+              margin-right:2.2mm; vertical-align:middle; margin-top:-0.6mm; }
+#report .util .r { float:right; color:#8F8B84; }
+#report .util .r b { color:#DB2412; font-weight:600; }
+#report .mast { padding:4.5mm 17mm 4mm 17mm; border-bottom:1px solid #0D0D0D; }
+#report .mast:after { content:""; display:block; clear:both; }
+#report .wm { float:left; font-family:"Inter Display","Inter",sans-serif; font-weight:900;
+        font-size:19pt; letter-spacing:-0.045em; line-height:1; }
+#report .wm sup { font-size:7.5pt; font-weight:700; color:#DB2412; vertical-align:super; letter-spacing:0; }
+#report .mast-r { float:right; text-align:right; font-size:6.8pt; letter-spacing:0.16em;
+            text-transform:uppercase; color:#8F8B84; font-weight:600; line-height:1.5; padding-top:1.6mm; }
+#report .mast-r b { color:#0D0D0D; font-weight:700; }
+#report .eye { font-size:6.9pt; letter-spacing:0.19em; text-transform:uppercase; font-weight:700;
+         color:#0D0D0D; margin-top:8mm; }
+#report .eye .rule { display:inline-block; width:9mm; height:1.6px; background:#DB2412;
+               vertical-align:middle; margin-right:3.5mm; margin-top:-0.5mm; }
+#report .meta { font-size:6.9pt; letter-spacing:0.15em; text-transform:uppercase; color:#8F8B84;
+          font-weight:600; margin-top:3mm; }
+#report h1 { font-family:"Inter Display","Inter",sans-serif; font-size:47pt; line-height:0.87;
+       letter-spacing:-0.028em; font-weight:900; text-transform:uppercase; margin:4mm 0 5mm 0; }
+#report h1 .red { color:#DB2412; }
+#report .lede { font-size:10.2pt; line-height:1.5; color:#3F3D3A; max-width:150mm; }
+#report p { margin-bottom:2.6mm; color:#3F3D3A; }
+#report p.tight { margin-bottom:0; }
+#report strong { font-weight:600; color:#0D0D0D; }
+#report .hero { background:#0D0D0D; color:#FFF; margin:6mm -17mm 0 -17mm; padding:7mm 17mm; }
+#report .hero table { width:100%; border-collapse:collapse; }
+#report .hero td { vertical-align:middle; }
+#report .hero .lbl { font-size:6.6pt; letter-spacing:0.19em; text-transform:uppercase;
+               color:#8F8B84; font-weight:700; margin-bottom:2.5mm; }
+#report .big { font-family:"Inter Display","Inter",sans-serif; font-size:36pt; font-weight:900;
+         letter-spacing:-0.045em; line-height:0.9; }
+#report .big.was { color:#5E5B57; }
+#report .big.now { color:#DB2412; }
+#report .big.wht { color:#FFF; }
+#report .unit { font-size:14pt; font-weight:700; letter-spacing:0; padding-left:1.2mm; }
+#report .sub { font-size:7.2pt; color:#9C9892; margin-top:2.6mm; line-height:1.45; }
+#report .arrow { text-align:center; font-size:17pt; color:#5E5B57; width:18mm; }
+#report .dv { border-left:1px solid #333230; padding-left:8mm; }
+#report .marq { background:#DB2412; color:#FFF; margin:0 -17mm; padding:2.4mm 17mm; font-size:6.2pt;
+          letter-spacing:0.13em; text-transform:uppercase; font-weight:700; text-align:center; white-space:nowrap; }
+#report .marq i { display:inline-block; width:1.3mm; height:1.3mm; background:#0D0D0D;
+            margin:0 3mm; vertical-align:middle; font-style:normal; }
+#report .sec { margin-top:7mm; }
+#report .sec-h { border-top:1.6px solid #0D0D0D; padding-top:3mm; margin-bottom:4.5mm; }
+#report .sec-lab { font-size:6.9pt; letter-spacing:0.17em; text-transform:uppercase; font-weight:700; color:#8F8B84; }
+#report .sec-lab b { color:#DB2412; font-weight:700; margin-right:3mm; }
+#report .sec-t { font-family:"Inter Display","Inter",sans-serif; font-size:21pt; font-weight:900;
+           letter-spacing:-0.028em; line-height:0.95; text-transform:uppercase; margin-top:3mm; }
+#report .sec-t .red { color:#DB2412; }
+#report .prod { background:#0D0D0D; color:#FFF; padding:6.5mm 8mm; }
+#report .prod .k { font-size:6.6pt; letter-spacing:0.19em; text-transform:uppercase; color:#DB2412; font-weight:700; }
+#report .prod .n { font-family:"Inter Display","Inter",sans-serif; font-size:20pt; font-weight:900;
+             letter-spacing:-0.03em; margin-top:3mm; line-height:1.06; text-transform:uppercase; }
+#report .prod .n em { font-style:normal; color:#DB2412; }
+#report .prod .d { font-size:8.8pt; color:#9C9892; margin-top:3.4mm; line-height:1.55; max-width:136mm; }
+#report .prod .chips { margin-top:4.5mm; }
+#report .chip { display:inline-block; border:1px solid #3A3937; color:#FFF; font-size:6.5pt;
+          letter-spacing:0.12em; text-transform:uppercase; padding:1.5mm 3mm; margin:0 1.5mm 1.5mm 0; font-weight:700; }
+#report table.d { width:100%; border-collapse:collapse; }
+#report table.d th { font-size:6.6pt; letter-spacing:0.16em; text-transform:uppercase; color:#8F8B84;
+               font-weight:700; text-align:left; padding:0 0 2mm 0; border-bottom:1.4px solid #0D0D0D; }
+#report table.d td { padding:1.9mm 0; border-bottom:1px solid #E4E2DE; font-size:8.9pt; color:#3F3D3A; }
+#report table.d td.v { text-align:right; font-weight:600; color:#0D0D0D; }
+#report table.d tr:last-child td { border-bottom:none; }
+#report table.f { width:100%; border-collapse:collapse; }
+#report table.f th { font-size:6.6pt; letter-spacing:0.14em; text-transform:uppercase; color:#8F8B84;
+               font-weight:700; padding:0 2mm 2.2mm 0; border-bottom:1.6px solid #0D0D0D; text-align:right; }
+#report table.f th.l { text-align:left; }
+#report table.f td { padding:1.9mm 2mm 1.9mm 0; border-bottom:1px solid #E4E2DE; font-size:8.9pt; text-align:right; }
+#report table.f td.l { text-align:left; font-weight:700; color:#0D0D0D; }
+#report table.f td.was { color:#9C9892; }
+#report table.f td.now { color:#DB2412; font-weight:800; }
+#report table.f td.dl { color:#3F3D3A; font-weight:600; }
+#report table.f tr.hl td { background:#F6F6F6; }
+#report table.f td.bar { padding-right:0; padding-left:6mm; }
+#report .b1, #report .b2 { height:2.3mm; display:block; }
+#report .b1 { background:#D8D5D0; margin-bottom:1mm; }
+#report .b2 { background:#DB2412; }
+#report table.a { width:100%; border-collapse:collapse; }
+#report table.a th { font-size:7.2pt; letter-spacing:0.05em; color:#8F8B84; font-weight:600;
+               padding:0 0 2mm 0; border-bottom:1.4px solid #0D0D0D; text-align:center; }
+#report table.a th.l { text-align:left; letter-spacing:0.16em; text-transform:uppercase; font-size:6.6pt; font-weight:700; }
+#report table.a td { padding:2.6mm 0; font-size:10pt; font-weight:800; color:#DB2412; text-align:center;
+               border-bottom:1px solid #E4E2DE; }
+#report table.a td.l { text-align:left; font-size:8.4pt; font-weight:400; color:#3F3D3A; }
+#report table.cards { width:100%; border-collapse:collapse; }
+#report table.cards td { border:1px solid #0D0D0D; padding:3.54mm 3.85mm 3.85mm 3.85mm; vertical-align:top; width:33.33%; }
+#report .cn { font-size:7.2pt; font-weight:800; color:#DB2412; letter-spacing:0.06em; }
+#report .ct { font-family:"Inter Display","Inter",sans-serif; font-size:10.5pt; font-weight:800;
+        letter-spacing:-0.02em; line-height:1.12; margin-top:3mm; }
+#report .cb { font-size:7.8pt; color:#63615D; line-height:1.5; margin-top:2.2mm; }
+#report .stats { border-top:1.6px solid #0D0D0D; border-bottom:1px solid #E4E2DE; margin-top:4.23mm; }
+#report .stats table { width:100%; border-collapse:collapse; }
+#report .stats td { padding:3.08mm 0 2.69mm 0; vertical-align:top; }
+#report .sn { font-family:"Inter Display","Inter",sans-serif; font-size:22pt; font-weight:900; letter-spacing:-0.045em; line-height:1; }
+#report .sn .red { color:#DB2412; }
+#report .sl { font-size:6.5pt; letter-spacing:0.16em; text-transform:uppercase; color:#8F8B84; font-weight:700; margin-top:2.4mm; }
+#report .cta { background:#DB2412; color:#FFF; margin:4.23mm -17mm 0 -17mm; padding:5.38mm 17mm; }
+#report .cta:after { content:""; display:block; clear:both; }
+#report .cta table { width:100%; border-collapse:collapse; }
+#report .cta .l { width:57%; vertical-align:top; }
+#report .cta .r { width:43%; vertical-align:top; text-align:right; font-size:8pt; color:#F6C7C1; line-height:1.75; }
+#report .cta .r b { color:#FFF; font-weight:700; }
+#report .cta .k { font-size:6.6pt; letter-spacing:0.19em; text-transform:uppercase; font-weight:700; color:#FFF; opacity:0.75; }
+#report .cta h3 { font-family:"Inter Display","Inter",sans-serif; font-size:21pt; font-weight:900;
+            letter-spacing:-0.028em; margin:2.31mm 0 2.31mm 0; line-height:0.95; text-transform:uppercase; }
+#report .cta p { color:#FBDDD9; font-size:8pt; margin:0 0 3.46mm 0; max-width:88mm; }
+#report .btn { display:inline-block; background:#0D0D0D; color:#FFF; font-size:7pt; font-weight:700;
+         letter-spacing:0.15em; text-transform:uppercase; padding:2.6mm 5mm; }
+#report .note { border-left:2.5px solid #DB2412; padding:0.5mm 0 0.5mm 4mm; font-size:8.2pt; color:#3F3D3A; line-height:1.5; }
+#report .cols:after { content:""; display:block; clear:both; }
+#report .c1 { float:left; width:48%; }
+#report .c2 { float:right; width:48%; }
+#report .foot { position:absolute; left:0; right:0; bottom:0; background:#0D0D0D; color:#8F8B84;
+          padding:3mm 17mm; font-size:6.4pt; letter-spacing:0.1em; }
+#report .foot:after { content:""; display:block; clear:both; }
+#report .foot .r { float:right; color:#FFF; }
+#report .foot sup { color:#DB2412; }
+#report .val { color:#0D0D0D; font-weight:700; }
+#report .fv { color:#FFF; font-weight:700; }
+#report{display:none}
+@media print{
+  html,body{background:#fff}
+  body > .wrap, body > .sticky{display:none!important}
+  #report{display:block}
+  /* niets te rapporteren? dan toch de rekenmodule afdrukken i.p.v. een lege pagina */
+  body:has(#report:empty) > .wrap{display:block!important}
+  body:has(#report:empty) .results{position:static}
+}
+#report, #report *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow"><i></i>Akoestiektool — gratis en vrijblijvend</p>
+    <h1>Hoe lang galmt<br>uw ruimte na<span>?</span></h1>
+    <p class="lead">Geef de afmetingen en de afwerking van uw ruimte in en zie meteen hoe lang het geluid nagalmt — voor en na het plaatsen van akoestische panelen. De voorbeeldwaarden hieronder mag u overschrijven.</p>
+  </header>
+
+  <div class="grid">
+
+    <!-- ══════════ invoer ══════════ -->
+    <form id="form" autocomplete="off">
+
+      <section class="step">
+        <p class="step-head"><b>(01)</b> De ruimte</p>
+        <div class="row row-2" style="margin-bottom:12px">
+          <div class="field">
+            <label for="naam">Naam of omschrijving</label>
+            <input type="text" id="naam" value="Vergaderzaal" placeholder="bv. leslokaal 2.14">
+          </div>
+          <div class="field">
+            <label for="type">Type ruimte</label>
+            <select id="type"></select>
+          </div>
+        </div>
+        <div class="row row-3">
+          <div class="field"><label for="L">Lengte (m)</label><input type="text" inputmode="decimal" id="L" value="8,4"></div>
+          <div class="field"><label for="B">Breedte (m)</label><input type="text" inputmode="decimal" id="B" value="5,2"></div>
+          <div class="field"><label for="H">Hoogte (m)</label><input type="text" inputmode="decimal" id="H" value="2,8"></div>
+        </div>
+        <p class="volume">
+          <span>Volume <b id="vol">—</b></span>
+          <span>Vloer en plafond <b id="svp">—</b></span>
+          <span>Wanden <b id="sw">—</b></span>
+        </p>
+      </section>
+
+      <section class="step">
+        <p class="step-head"><b>(02)</b> Afwerking</p>
+        <p class="step-note">Het hoofdmateriaal van elk vlak. Afwijkende delen zoals ramen of tapijt geeft u in stap 03 op.</p>
+        <div class="row row-3 mats">
+          <div class="field"><label for="mVloer">Vloer</label><select id="mVloer" data-mat></select></div>
+          <div class="field"><label for="mPlafond">Plafond</label><select id="mPlafond" data-mat></select></div>
+          <div class="field"><label for="mWand">Wanden</label><select id="mWand" data-mat></select></div>
+        </div>
+      </section>
+
+      <section class="step">
+        <p class="step-head"><b>(03)</b> Afwijkende vlakken</p>
+        <p class="step-note">Ramen, deuren, gordijnen, een tapijt: geef het vlak op waar het toe behoort en de oppervlakte. Die wordt van het hoofdmateriaal afgetrokken.</p>
+        <div id="vlakken"></div>
+        <button type="button" class="add" id="addVlak">+ Vlak toevoegen</button>
+      </section>
+
+      <section class="step">
+        <p class="step-head"><b>(04)</b> Akoestische panelen</p>
+        <p class="step-note">Het aantal panelen dat u wil plaatsen, per stuk gerekend. Voor een afwijkend formaat rekent u met een regel van drie: een paneel van 1350×1200 mm telt als 0,5 stuk van het model 2700×1200 mm.</p>
+        <div id="panelen"></div>
+        <button type="button" class="add" id="addPaneel">+ Paneel toevoegen</button>
+      </section>
+
+      <section class="step">
+        <p class="step-head"><b>(05)</b> Rapportgegevens</p>
+        <p class="step-note">Optioneel. Deze namen komen op het geëxporteerde rapport te staan.</p>
+        <div class="row row-2">
+          <div class="field"><label for="project">Projectnaam</label><input type="text" id="project" placeholder="bv. Kantoor Beveren"></div>
+          <div class="field"><label for="klant">Opgemaakt voor</label><input type="text" id="klant" placeholder="bv. Architectenbureau X"></div>
+        </div>
+      </section>
+
+    </form>
+
+    <!-- ══════════ resultaat ══════════ -->
+    <aside class="results">
+
+      <div class="hero">
+        <p class="hero-label">Nagalmtijd na plaatsing</p>
+        <div class="readout">
+          <span class="big" id="tNa" aria-live="polite">—</span>
+          <span class="unit">seconden</span>
+        </div>
+        <p class="status" id="status">—</p>
+      </div>
+
+      <div class="box">
+        <h3>Voor en na</h3>
+        <div class="dbar">
+          <div class="dbar-top"><span>Huidige situatie</span><b id="tVoorLbl">—</b></div>
+          <div class="track"><div class="fill before" id="barVoor"></div></div>
+        </div>
+        <div class="dbar" style="margin-bottom:0">
+          <div class="dbar-top"><span>Met panelen</span><b id="tNaLbl">—</b></div>
+          <div class="track"><div class="fill after" id="barNa"></div></div>
+          <div class="target-line"><div class="target-tick" id="tick"><i></i><span id="tickLbl"></span></div></div>
+        </div>
+        <div class="axis"><span>0 s</span><span id="axMax">—</span></div>
+      </div>
+
+      <div class="box">
+        <h3>Per octaafband, in seconden</h3>
+        <div class="chart" id="chart"></div>
+        <div class="chart-x" id="chartX"></div>
+        <div class="vals" id="valsB"></div>
+        <div class="vals a" id="valsA"></div>
+        <div class="legend">
+          <span><b style="background:#56524e"></b>Huidig</span>
+          <span><b style="background:#db2412"></b>Met panelen</span>
+        </div>
+      </div>
+
+      <div class="warn" id="warn" hidden></div>
+
+      <div class="cta">
+        <!-- CTA-OFFERTE: vervang # door de offertepagina -->
+        <a class="btn red" href="#">Vraag een gratis offerte →</a>
+        <!-- CTA-DEALER: vervang # door de dealerpagina, of vervang deze knop -->
+        <button type="button" class="btn ghost" id="print">Rapport exporteren (pdf)</button>
+      </div>
+
+      <details>
+        <summary>Hoe wordt dit berekend?</summary>
+        <p>De nagalmtijd volgt uit de formule van Sabine: <code>T = V / (6 × A)</code>, met V het volume van de ruimte en A de totale absorptie — de som van elk oppervlak maal zijn absorptiecoëfficiënt in die octaafband. Panelen tellen per stuk mee, met de equivalente absorptie per paneel.</p>
+        <p>Het getal bovenaan is het gemiddelde van 500, 1000 en 2000 Hz. Dat zijn de spraakfrequenties, en die bepalen bij zowat elke ruimte behalve een muziekstudio of opnamelokaal of ze goed klinkt.</p>
+        <p>De uitkomst is een raming op basis van tabelwaarden. Meubilair, mensen en onregelmatige vormen zitten er niet in, dus in de praktijk ligt de nagalmtijd vaak iets lager.</p>
+      </details>
+
+    </aside>
+  </div>
+</div>
+
+<div class="sticky">
+  <div><p>Na plaatsing</p><b id="stickyVal">—</b></div>
+  <button type="button" id="stickyBtn">Bekijk resultaat</button>
+</div>
+
+<div id="report" aria-hidden="true"></div>
+
+<script>
+(function () {
+  'use strict';
+
+  var BANDS = [125, 250, 500, 1000, 2000, 4000];
+  var SPEECH = [2, 3, 4];               // 500, 1000, 2000 Hz
+
+  /* ---- Materialen ruimte (tabblad "Materialen structuur") ---- */
+  var MATERIALEN = [
+    { nr: 1,  naam: 'Beton', en: 'Concrete',                       a: [0.01, 0.01, 0.02, 0.02, 0.02, 0.03] },
+    { nr: 2,  naam: 'Marmer', en: 'Marble',                      a: [0.01, 0.01, 0.01, 0.01, 0.01, 0.01] },
+    { nr: 3,  naam: 'Parket', en: 'Wood flooring',                      a: [0.04, 0.04, 0.07, 0.07, 0.07, 0.07] },
+    { nr: 4,  naam: 'Vloertegels', en: 'Floor tiles',                 a: [0.01, 0.05, 0.09, 0.10, 0.10, 0.10] },
+    { nr: 5,  naam: 'Linoleum', en: 'Linoleum',                    a: [0.04, 0.06, 0.08, 0.12, 0.04, 0.04] },
+    { nr: 6,  naam: 'Tapijt', en: 'Carpet',                      a: [0.09, 0.08, 0.21, 0.26, 0.27, 0.37] },
+    { nr: 7,  naam: 'Pleisterwerk', en: 'Plaster',                a: [0.01, 0.01, 0.02, 0.03, 0.04, 0.05] },
+    { nr: 8,  naam: 'Gipskartonplaat', en: 'Plasterboard',             a: [0.39, 0.13, 0.04, 0.02, 0.03, 0.06] },
+    { nr: 9,  naam: 'Metselwerk, open voegen', en: 'Brickwork, open joints',     a: [0.06, 0.44, 0.30, 0.31, 0.42, 0.45] },
+    { nr: 10, naam: 'Metselwerk, harde afwerking', en: 'Brickwork, hard finish', a: [0.02, 0.03, 0.03, 0.04, 0.05, 0.07] },
+    { nr: 11, naam: 'Glas enkel', en: 'Single glazing',                  a: [0.10, 0.04, 0.03, 0.02, 0.02, 0.02] },
+    { nr: 12, naam: 'Glas dubbel', en: 'Double glazing',                 a: [0.03, 0.03, 0.03, 0.02, 0.02, 0.02] },
+    { nr: 13, naam: 'Hout gelakt', en: 'Lacquered wood',                 a: [0.05, 0.04, 0.03, 0.03, 0.03, 0.03] },
+    { nr: 14, naam: 'Gordijnen licht', en: 'Light curtains',             a: [0.08, 0.53, 0.85, 0.94, 1.26, 1.12] },
+    { nr: 15, naam: 'Gordijnen zwaar', en: 'Heavy curtains',             a: [0.15, 0.45, 0.96, 0.91, 1.06, 1.02] },
+    { nr: 16, naam: 'Staalplaat geperforeerd 22%', en: 'Perforated steel sheet 22%', a: [0.45, 0.57, 0.64, 0.60, 0.90, 0.93] }
+  ];
+
+  /* ---- Absorbers, per stuk (tabblad "Materialen absorbers") ---- */
+  var PANELEN = [
+    { nr: 20, naam: 'STRETCH Acoustic - 495AC D2040', a: [0.30, 0.80, 0.80, 0.75, 0.75, 0.65] },
+    { nr: 21, naam: 'STRETCH Acoustic - 495AC D2050', a: [0.25, 0.70, 1.00, 1.00, 0.95, 0.90] },
+    { nr: 22, naam: 'STRETCH Acoustic - 495AC D4010', a: [0.15, 0.30, 0.45, 0.60, 0.85, 0.95] },
+    { nr: 23, naam: 'STRETCH Acoustic - 495D D2040',  a: [0.30, 0.85, 0.95, 0.85, 0.95, 0.90] },
+    { nr: 24, naam: 'STRETCH Acoustic - 495D D2020',  a: [0.20, 0.70, 0.90, 0.75, 0.90, 0.90] },
+    { nr: 25, naam: 'STRETCH Acoustic - 495D',        a: [0.15, 0.35, 0.65, 0.60, 0.55, 0.60] },
+    { nr: 26, naam: 'STRETCH Acoustic - 495D D2050',  a: [0.25, 0.75, 1.00, 1.00, 0.95, 0.90] },
+    { nr: 27, naam: 'STRETCH Acoustic - 495D D4010',  a: [0.15, 0.25, 0.50, 0.70, 0.90, 0.95] }
+  ];
+
+  /* ---- Na te streven nagalmtijden (tabblad "Gewenste nagalmtijden") ---- */
+  var DOELEN = [
+    { naam: 'Kantoorruimte', en: 'Office', t: 0.8 },     { naam: 'Callcenter', en: 'Call centre', t: 0.7 },
+    { naam: 'Vergaderzaal', en: 'Meeting room', t: 0.8 },      { naam: 'Receptie', en: 'Reception', t: 1.0 },
+    { naam: 'Wachtlokaal', en: 'Waiting room', t: 1.0 },       { naam: 'Sporthal', en: 'Sports hall', t: 1.5 },
+    { naam: 'Zwembad', en: 'Swimming pool', t: 1.5 },           { naam: 'Leslokaal', en: 'Classroom', t: 0.8 },
+    { naam: 'Kinderdagverblijf', en: 'Nursery', t: 0.8 }, { naam: 'Restaurant', en: 'Restaurant', t: 0.7 },
+    { naam: 'Café of bar', en: 'Café or bar', t: 0.7 },       { naam: 'Muziekcafé', en: 'Music café', t: 1.0 },
+    { naam: 'Muziekstudio', en: 'Music studio', t: 0.4 },      { naam: 'Repeteerruimte', en: 'Rehearsal room', t: 0.9 },
+    { naam: 'Magazijn', en: 'Warehouse', t: 1.0 },          { naam: 'Werkplaats', en: 'Workshop', t: 1.0 },
+    { naam: 'Woonkamer', en: 'Living room', t: 0.8 },         { naam: 'Thuisbioscoop', en: 'Home cinema', t: 0.5 }
+  ];
+
+  var VLAKKEN = [
+    { key: 'vloer',   label: 'Vloer', en: 'Floor',   zin: 'de vloer' },
+    { key: 'plafond', label: 'Plafond', en: 'Ceiling', zin: 'het plafond' },
+    { key: 'wand',    label: 'Wand', en: 'Wall',    zin: 'de wanden' }
+  ];
+
+  var $ = function (id) { return document.getElementById(id); };
+  var el = function (tag, cls) { var n = document.createElement(tag); if (cls) n.className = cls; return n; };
+
+  function getal(v) {
+    var n = parseFloat(String(v == null ? '' : v).replace(',', '.').replace(/\s/g, ''));
+    return isFinite(n) && n > 0 ? n : 0;
+  }
+  function fmt(n, d) {
+    d = d == null ? 2 : d;
+    return n.toFixed(d).replace('.', ',');
+  }
+
+  function vulSelect(sel, lijst, leeg) {
+    sel.innerHTML = '';
+    if (leeg) { var o = el('option'); o.value = ''; o.textContent = leeg; sel.appendChild(o); }
+    lijst.forEach(function (m, i) {
+      var opt = el('option');
+      opt.value = String(i);
+      opt.textContent = m.naam;
+      sel.appendChild(opt);
+    });
+  }
+
+  /* ---------- opbouw ---------- */
+  var typeSel = $('type');
+  DOELEN.forEach(function (d, i) {
+    var o = el('option');
+    o.value = String(i);
+    o.textContent = d.naam + ' — ' + fmt(d.t, 1) + ' s';
+    typeSel.appendChild(o);
+  });
+  typeSel.value = '2';                                   // Vergaderzaal
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-mat]'), function (s) {
+    vulSelect(s, MATERIALEN);
+  });
+  $('mVloer').value = '3';                               // Vloertegels
+  $('mPlafond').value = '7';                             // Gipskartonplaat
+  $('mWand').value = '6';                                // Pleisterwerk
+
+  function vlakRegel(surface, matIndex, opp) {
+    var r = el('div', 'line surface');
+
+    var f1 = el('div', 'field');
+    var l1 = el('label'); l1.textContent = 'Vlak';
+    var s1 = el('select');
+    VLAKKEN.forEach(function (v, i) {
+      var o = el('option'); o.value = String(i); o.textContent = v.label; s1.appendChild(o);
+    });
+    s1.value = String(surface);
+    f1.appendChild(l1); f1.appendChild(s1);
+
+    var f2 = el('div', 'field');
+    var l2 = el('label'); l2.textContent = 'Materiaal';
+    var s2 = el('select');
+    vulSelect(s2, MATERIALEN, 'Kies materiaal');
+    s2.value = matIndex == null ? '' : String(matIndex);
+    f2.appendChild(l2); f2.appendChild(s2);
+
+    var f3 = el('div', 'field');
+    var l3 = el('label'); l3.textContent = 'm²';
+    var i3 = el('input');
+    i3.type = 'text'; i3.inputMode = 'decimal'; i3.value = opp || '';
+    f3.appendChild(l3); f3.appendChild(i3);
+
+    var b = el('button', 'kill');
+    b.type = 'button'; b.innerHTML = '&times;';
+    b.setAttribute('aria-label', 'Vlak verwijderen');
+    b.onclick = function () { r.remove(); reken(); };
+
+    r.appendChild(f1); r.appendChild(f2); r.appendChild(f3); r.appendChild(b);
+    $('vlakken').appendChild(r);
+    return r;
+  }
+
+  function paneelRegel(panelIndex, aantal) {
+    var r = el('div', 'line');
+
+    var f1 = el('div', 'field');
+    var l1 = el('label'); l1.textContent = 'Paneel';
+    var s1 = el('select');
+    vulSelect(s1, PANELEN, 'Kies paneel');
+    s1.value = panelIndex == null ? '' : String(panelIndex);
+    f1.appendChild(l1); f1.appendChild(s1);
+
+    var f2 = el('div', 'field');
+    var l2 = el('label'); l2.textContent = 'Aantal stuks';
+    var i2 = el('input');
+    i2.type = 'text'; i2.inputMode = 'decimal'; i2.value = aantal || '';
+    f2.appendChild(l2); f2.appendChild(i2);
+
+    var b = el('button', 'kill');
+    b.type = 'button'; b.innerHTML = '&times;';
+    b.setAttribute('aria-label', 'Paneel verwijderen');
+    b.onclick = function () { r.remove(); reken(); };
+
+    r.appendChild(f1); r.appendChild(f2); r.appendChild(b);
+    $('panelen').appendChild(r);
+    return r;
+  }
+
+  /* grafiek-skelet */
+  var staven = [];
+  (function () {
+    var chart = $('chart'), x = $('chartX'), vb = $('valsB'), va = $('valsA');
+    BANDS.forEach(function (f) {
+      var g = el('div', 'grp');
+      var b = el('i', 'b'), a = el('i', 'a');
+      g.appendChild(b); g.appendChild(a); chart.appendChild(g);
+      staven.push({ b: b, a: a });
+
+      var s = el('span'); s.textContent = f >= 1000 ? (f / 1000) + 'k' : f; x.appendChild(s);
+      vb.appendChild(el('span'));
+      va.appendChild(el('span'));
+    });
+  }());
+
+  /* ---------- rekenen ---------- */
+  function reken() {
+    var L = getal($('L').value), B = getal($('B').value), H = getal($('H').value);
+    var V = Math.round(L * B * H * 10) / 10;
+
+    var opp = { vloer: L * B, plafond: L * B, wand: 2 * (L + B) * H };
+    var extra = [];
+
+    Array.prototype.forEach.call($('vlakken').children, function (r) {
+      var sels = r.querySelectorAll('select'), inp = r.querySelector('input');
+      var vlak = VLAKKEN[parseInt(sels[0].value, 10)];
+      var mat = MATERIALEN[parseInt(sels[1].value, 10)];
+      var m2 = getal(inp.value);
+      if (!vlak || !mat || !m2) return;
+      opp[vlak.key] -= m2;
+      extra.push({ m2: m2, a: mat.a, vlakEn: nm(vlak), matEn: nm(mat) });
+    });
+
+    var tekort = [];
+    VLAKKEN.forEach(function (v) {
+      if (opp[v.key] < 0) { tekort.push(v.zin); opp[v.key] = 0; }
+    });
+
+    var leeg = { naam: '—', a: [0, 0, 0, 0, 0, 0] };
+    var mV = MATERIALEN[parseInt($('mVloer').value, 10)]   || leeg;
+    var mP = MATERIALEN[parseInt($('mPlafond').value, 10)] || leeg;
+    var mW = MATERIALEN[parseInt($('mWand').value, 10)]    || leeg;
+    var hoofd = [
+      { m2: opp.vloer,   a: mV.a },
+      { m2: opp.plafond, a: mP.a },
+      { m2: opp.wand,    a: mW.a }
+    ];
+
+    var panelen = [];
+    Array.prototype.forEach.call($('panelen').children, function (r) {
+      var p = PANELEN[parseInt(r.querySelector('select').value, 10)];
+      var n = getal(r.querySelector('input').value);
+      if (p && n) panelen.push({ n: n, a: p.a, p: p });
+    });
+
+    var vlakkenLijst = hoofd.concat(extra);
+    var tVoor = [], tNa = [];
+    for (var i = 0; i < 6; i++) {
+      var A = 0, j;
+      for (j = 0; j < vlakkenLijst.length; j++) A += vlakkenLijst[j].m2 * vlakkenLijst[j].a[i];
+      var Ana = A;
+      for (j = 0; j < panelen.length; j++) Ana += panelen[j].n * panelen[j].a[i];
+      tVoor.push(V > 0 && A > 0 ? V / (6 * A) : 0);
+      tNa.push(V > 0 && Ana > 0 ? V / (6 * Ana) : 0);
+    }
+
+    var gem = function (arr) {
+      return SPEECH.reduce(function (s, i) { return s + arr[i]; }, 0) / SPEECH.length;
+    };
+
+    toon({
+      V: V, L: L, B: B, H: H, opp: opp, tekort: tekort, geldig: V > 0 && gem(tVoor) > 0,
+      tVoor: tVoor, tNa: tNa, gVoor: gem(tVoor), gNa: gem(tNa),
+      doel: DOELEN[parseInt(typeSel.value, 10)].t,
+      type: DOELEN[parseInt(typeSel.value, 10)],
+      mV: mV, mP: mP, mW: mW, extra: extra,
+      paneelLijst: panelen, panelen: panelen.length
+    });
+  }
+
+  /* ---------- tonen ---------- */
+  var huidig = null;
+  function toon(r) {
+    huidig = r;
+    $('vol').textContent = r.V > 0 ? fmt(r.V, 1) + ' m³' : '—';
+    $('svp').textContent = r.V > 0 ? fmt(r.opp.vloer, 1) + ' m²' : '—';
+    $('sw').textContent  = r.V > 0 ? fmt(r.opp.wand, 1) + ' m²' : '—';
+
+    if (!r.geldig) {
+      $('tNa').textContent = '—';
+      $('tVoorLbl').textContent = $('tNaLbl').textContent = '—';
+      $('stickyVal').textContent = '—';
+      $('status').textContent = 'Vul de afmetingen en de afwerking in.';
+      $('barVoor').style.width = $('barNa').style.width = '0%';
+      staven.forEach(function (s) { s.b.style.height = s.a.style.height = '0'; });
+      Array.prototype.forEach.call($('valsB').children, function (n) { n.textContent = ''; });
+      Array.prototype.forEach.call($('valsA').children, function (n) { n.textContent = ''; });
+      $('warn').hidden = true;
+      hoogte();
+      return;
+    }
+
+    $('tNa').textContent = fmt(r.gNa, 2);
+    $('stickyVal').textContent = fmt(r.gNa, 2) + ' s';
+    $('tVoorLbl').textContent = fmt(r.gVoor, 2) + ' s';
+    $('tNaLbl').textContent = fmt(r.gNa, 2) + ' s';
+
+    var s = $('status'), doelTxt = 'streefwaarde van ' + fmt(r.doel, 1) + ' s';
+    s.innerHTML = '';
+    var chip = el('span', 'chip');
+    var tekst = el('span');
+    if (r.gNa <= r.doel) {
+      chip.textContent = 'Doel gehaald';
+      tekst.textContent = 'Binnen de ' + doelTxt + ' voor dit type ruimte.';
+    } else {
+      chip.textContent = fmt(r.gNa - r.doel, 2) + ' s te veel';
+      tekst.textContent = 'Nog boven de ' + doelTxt + '. Voeg panelen toe of kies een type met meer absorptie.';
+    }
+    s.appendChild(chip); s.appendChild(tekst);
+
+    /* verval-balken op een gedeelde as */
+    var as = Math.max(1, Math.ceil(Math.max(r.gVoor, r.doel * 1.4) * 2) / 2);
+    $('barVoor').style.width = Math.min(100, r.gVoor / as * 100) + '%';
+    $('barNa').style.width   = Math.min(100, r.gNa / as * 100) + '%';
+    $('axMax').textContent   = fmt(as, 1) + ' s';
+    $('tick').style.left     = Math.min(100, r.doel / as * 100) + '%';
+    $('tickLbl').textContent = 'Doel ' + fmt(r.doel, 1);
+
+    /* octaafbanden */
+    var top = Math.max.apply(null, r.tVoor.concat([0.1]));
+    staven.forEach(function (st, i) {
+      st.b.style.height = Math.max(2, r.tVoor[i] / top * 100) + '%';
+      st.a.style.height = Math.max(2, r.tNa[i] / top * 100) + '%';
+    });
+    Array.prototype.forEach.call($('valsB').children, function (n, i) { n.textContent = fmt(r.tVoor[i], 1); });
+    Array.prototype.forEach.call($('valsA').children, function (n, i) { n.textContent = fmt(r.tNa[i], 1); });
+
+    var w = $('warn');
+    if (r.tekort.length) {
+      w.hidden = false;
+      w.textContent = 'De opgegeven vlakken zijn samen groter dan ' + r.tekort.join(' en ') +
+                      '. Controleer de oppervlaktes in stap 03.';
+    } else if (!r.panelen) {
+      w.hidden = false;
+      w.textContent = 'Er zijn nog geen panelen ingegeven, dus beide waarden zijn gelijk.';
+    } else {
+      w.hidden = true;
+    }
+    hoogte();
+  }
+
+  /* ---------- iframe-hoogte doorgeven ---------- */
+  var laatste = 0;
+  function hoogte() {
+    if (window.parent === window) return;
+    var h = Math.ceil(document.documentElement.scrollHeight);
+    if (Math.abs(h - laatste) < 4) return;
+    laatste = h;
+    try { window.parent.postMessage({ type: 'nagalm:height', height: h }, '*'); } catch (e) {}
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     RAPPORT
+     ══════════════════════════════════════════════════════════ */
+
+  /* Taal van het rapport: ?lang=en in de URL, of data-report-lang="en" op <html>.
+     De rekenmodule zelf blijft Nederlands. */
+  var TAAL = (function () {
+    var m = /[?&]lang=(nl|en)/.exec(location.search);
+    return m ? m[1] : (document.documentElement.getAttribute('data-report-lang') || 'nl');
+  }());
+  function nm(o) { return (TAAL === 'en' && o && o.en) ? o.en : (o ? o.naam || o.label : '—'); }
+
+  /* Technische fiche per paneel. Aangevuld vanuit het bestaande
+     STRETCH Acoustic Report; controleer dichtheid en dikte per model. */
+  var SPECS = {
+    20: { membraan: '495AC', absorber: 'D20/40', dichtheid: 20, dikte: 40 },
+    21: { membraan: '495AC', absorber: 'D20/50', dichtheid: 20, dikte: 50 },
+    22: { membraan: '495AC', absorber: 'D40/10', dichtheid: 40, dikte: 10 },
+    23: { membraan: '495D',  absorber: 'D20/40', dichtheid: 20, dikte: 40 },
+    24: { membraan: '495D',  absorber: 'D20/20', dichtheid: 20, dikte: 20 },
+    25: { membraan: '495D',  absorber: null,     dichtheid: null, dikte: null },
+    26: { membraan: '495D',  absorber: 'D20/50', dichtheid: 20, dikte: 50 },
+    27: { membraan: '495D',  absorber: 'D40/10', dichtheid: 40, dikte: 10 }
+  };
+  var VAST = { brandklasse: 'B-s1, d0', maxBreedte: 5.15 };
+
+  /* Eenheid van het aantal in het rapport. Standaard stuks, voor losse panelen.
+     Bij een volledig plafond is m² juister: ?unit=m2 in de URL, of hieronder wijzigen. */
+  var EENHEID = /[?&]unit=m2/.test(location.search) ? 'm2' : 'st';
+
+  var BEDRIJF = {
+    naam: 'STRETCH Group',
+    adres: ['Beverpark, Gentseweg 309 A3', '9120 Beveren-Waas, Belgium'],
+    tel: '+32 474 52 20 90',
+    mail: 'info@stretchgroup.be'
+  };
+
+  var TEKST = {
+    nl: {
+      site: 'stretchgroup.be', uren: 'ma–vr 08:30–17:00',
+      made: 'Handgemaakt in België',
+      rapport: 'Akoestisch rapport', rapportSub: 'Nagalmstudie & oplossing',
+      eyebrow: 'Acoustic — nagalmstudie',
+      project: 'Project', voor: 'Opgemaakt voor', geenProject: 'Zonder projectnaam',
+      van: 'Van', naar: 'naar', sec: 'seconden.',
+      vandaag: 'Vandaag', naBeh: 'Na behandeling', verbetering: 'Verbetering',
+      subVandaag: 'Nagalmtijd over de spraakfrequenties',
+      subNa: 'Binnen het comfortbereik voor spraak',
+      subNaOver: 'Nog boven de streefwaarde',
+      subVerb: 'korter dan vandaag',
+      strip: ['Geplaatst in één dag', 'Klasse A akoestiek', '25 jaar levensduur', 'Geen stof · geen verf', 'Handgemaakt in België'],
+      s1: 'De ruimte vandaag', s2: 'De oplossing', s3: 'Het resultaat',
+      s4: 'In de ruimte', s5: 'Technische gegevens',
+      tblRuimte: 'De ruimte', tblWaarde: 'Waarde',
+      tblAfwerking: 'Huidige afwerking', tblOpp: 'Oppervlakte',
+      lengte: 'Lengte', breedte: 'Breedte', hoogte: 'Hoogte',
+      vloerOpp: 'Vloeroppervlak', volume: 'Volume',
+      vloer: 'Vloer', plafond: 'Plafond', wanden: 'Wanden',
+      h2Solution: ['Akoestiek,', 'ingebouwd.'],
+      aanbeveling: 'Onze aanbeveling', met: 'met', absorber: 'absorber',
+      chips: ['Klasse A absorptie', 'Naadloos', 'Brandklasse B-s1, d0', 'Geplaatst in één dag', 'Afwasbaar'],
+      colFreq: 'Frequentie', colToday: 'Vandaag', colAfter: 'Na behandeling',
+      colChange: 'Verschil', colVis: 'Visueel', spraakGem: 'Spraakgemiddelde',
+      h2Notice: ['Wat u zal', 'merken.'],
+      kaarten: [
+        ['U verstaat elkaar', 'Geen woorden meer die over elkaar heen tuimelen.'],
+        ['Niemand verheft zijn stem', 'Minder stemvermoeidheid op het einde van de dag.'],
+        ['De ruimte voelt rustiger', 'Ook met meerdere mensen tegelijk erin.'],
+        ['Niets te zien', 'Een vlak plafond, zonder zichtbare perforaties of panelen.'],
+        ['In één dag geplaatst', 'Koud gemonteerd, zonder stof en zonder schilderwerk.'],
+        ['25 jaar levensduur', 'Afwasbaar, in elke kleur of RAL-tint die u wenst.']
+      ],
+      h2Spec: ['De', 'specificatie.'],
+      coeff: 'Absorptiecoëfficiënt',
+      systeem: 'Systeem', eigenschappen: 'Eigenschappen',
+      membraan: 'Membraan', absorberR: 'Absorber', dichtheid: 'Dichtheid · dikte',
+      aantalR: 'Aantal panelen', montage: 'Montage', montageV: 'Koud, klemprofiel',
+      maxBreedte: 'Max. naadloze breedte', brandklasse: 'Brandklasse', behandeld: 'Behandelde oppervlakte',
+      kleur: 'Kleur', kleurV: 'Standaard of RAL naar keuze',
+      kpi: [['1', 'Dag om te plaatsen', 1], ['+25', 'Jaar levensduur', 1], ['A', 'Absorptieklasse', 0], ['5.0', 'Score op Google', 0]],
+      ctaLb: 'Klaar wanneer u dat bent',
+      ctaH: ['Zullen we dit', 'inplannen?'],
+      ctaBtn: 'Vraag uw offerte →',
+      voetnoot: 'Handgemaakte spanplafonds & spanwanden uit eigen Belgische productie. Fabrikant, geen invoerder.',
+      pagina: 'Pagina', vanP: 'van',
+      st: 'st', m2: 'm²'
+    },
+    en: {
+      site: 'stretch-ceilings.uk', uren: 'Mon–Fri 08:30–17:00',
+      made: 'Hand made in Belgium',
+      rapport: 'Acoustic report', rapportSub: 'Reverberation study & solution',
+      eyebrow: 'Acoustic — reverberation study',
+      project: 'Project', voor: 'Prepared for', geenProject: 'Untitled project',
+      van: 'From', naar: 'to', sec: 'seconds.',
+      vandaag: 'Today', naBeh: 'After treatment', verbetering: 'Improvement',
+      subVandaag: 'Reverberation across speech frequencies',
+      subNa: 'Within the comfort range for speech',
+      subNaOver: 'Still above the target value',
+      subVerb: 'shorter than today',
+      strip: ['Installed in one day', 'Class A acoustics', '25-year lifespan', 'No dust · no paint', 'Hand made in Belgium'],
+      s1: 'The room today', s2: 'The solution', s3: 'The result',
+      s4: 'In the room', s5: 'Technical data',
+      tblRuimte: 'The room', tblWaarde: 'Value',
+      tblAfwerking: 'Existing finishes', tblOpp: 'Area',
+      lengte: 'Length', breedte: 'Width', hoogte: 'Height',
+      vloerOpp: 'Floor area', volume: 'Volume',
+      vloer: 'Floor', plafond: 'Ceiling', wanden: 'Walls',
+      h2Solution: ['Acoustics,', 'built in.'],
+      aanbeveling: 'Our recommendation', met: 'with', absorber: 'absorber',
+      chips: ['Class A absorption', 'Seamless', 'Fire class B-s1, d0', 'Fitted in one day', 'Washable'],
+      colFreq: 'Frequency', colToday: 'Today', colAfter: 'After treatment',
+      colChange: 'Change', colVis: 'Visual', spraakGem: 'Speech average',
+      h2Notice: ['What you will', 'notice.'],
+      kaarten: [
+        ['You understand each other', 'No more words tumbling over one another.'],
+        ['Nobody raises their voice', 'Less vocal fatigue by the end of the day.'],
+        ['The room feels calmer', 'Even with several people in it at once.'],
+        ['Nothing to see', 'A flawless ceiling, with no visible perforations or panels.'],
+        ['Fitted in one day', 'Cold-mounted, with no dust and no painting.'],
+        ['25-year lifespan', 'Washable, in any colour or RAL shade you like.']
+      ],
+      h2Spec: ['The', 'specification.'],
+      coeff: 'Absorption coefficient',
+      systeem: 'System', eigenschappen: 'Properties',
+      membraan: 'Membrane', absorberR: 'Absorber', dichtheid: 'Density · thickness',
+      aantalR: 'Number of panels', montage: 'Mounting', montageV: 'Cold, clip profile',
+      maxBreedte: 'Max. seamless width', brandklasse: 'Fire class', behandeld: 'Treated area',
+      kleur: 'Colour', kleurV: 'Standard or RAL to match',
+      kpi: [['1', 'Day to install', 1], ['+25', 'Year lifespan', 1], ['A', 'Absorption class', 0], ['5.0', 'Rated on Google', 0]],
+      ctaLb: 'Ready when you are',
+      ctaH: ['Shall we get', 'this booked in?'],
+      ctaBtn: 'Request your quote →',
+      voetnoot: 'Hand-made stretch ceilings & walls from our own Belgian production. Manufacturer, not importer.',
+      pagina: 'Page', vanP: 'of',
+      st: 'pcs', m2: 'm²'
+    }
+  };
+
+  /* getalnotatie van het rapport volgt de rapporttaal (1.5 vs 1,5) */
+  function fr(n, d) {
+    var s = n.toFixed(d == null ? 2 : d);
+    return TAAL === 'en' ? s : s.replace('.', ',');
+  }
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  function pct(voor, na) {
+    if (!voor) return '';
+    return '−' + Math.round((1 - na / voor) * 100) + '%';
+  }
+
+  /* Adaptieve koppen en lopende tekst, afhankelijk van de uitkomst */
+  function kop1(t, g) {
+    if (TAAL === 'en') {
+      if (g > 4) return ['Nothing here absorbs', 'sound.'];
+      if (g > 1.5) return ['This room rings', 'for too long.'];
+      return ['There is absorption,', 'just not enough.'];
+    }
+    if (g > 4) return ['Niets hier absorbeert', 'geluid.'];
+    if (g > 1.5) return ['Deze ruimte galmt', 'te lang na.'];
+    return ['Er is absorptie,', 'maar te weinig.'];
+  }
+  function kop3(t, f, gehaald) {
+    var n = f >= 9.5 ? String(Math.round(f)) : fr(f, 1);
+    if (f >= 2) return TAAL === 'en' ? [n + '×', 'shorter.'] : [n + '×', 'korter.'];
+    if (gehaald) return TAAL === 'en' ? ['Inside the', 'target range.'] : ['Binnen de', 'streefwaarde.'];
+    return TAAL === 'en' ? ['Not enough', 'yet.'] : ['Nog niet', 'genoeg.'];
+  }
+  function vergelijk(g, doel) {
+    if (TAAL === 'en') {
+      if (g > 4.5) return 'A large church typically sits between 5 and 8 seconds.';
+      if (g > 2.5) return 'A sports hall typically sits around 1.5 seconds.';
+      return 'A room of this type is generally aimed at ' + fr(doel, 1) + ' seconds.';
+    }
+    if (g > 4.5) return 'Een grote kerk zit doorgaans tussen 5 en 8 seconden.';
+    if (g > 2.5) return 'Een sporthal zit doorgaans rond 1,5 seconden.';
+    return 'Voor een ruimte van dit type wordt ' + fr(doel, 1) + ' seconden nagestreefd.';
+  }
+
+  function paneelNaam(p) {
+    var s = SPECS[p.nr] || {};
+    var l1 = 'STRETCH Acoustic ' + (s.membraan || '');
+    var l2 = s.absorber ? (TEKST[TAAL].met + ' ' + s.absorber + ' ' + TEKST[TAAL].absorber) : '';
+    return [l1, l2];
+  }
+  function paneelOmschrijving(p) {
+    var s = SPECS[p.nr] || {};
+    if (TAAL === 'en') {
+      return s.absorber
+        ? 'A micro-perforated membrane backed with ' + s.dikte + ' mm of high-density polyester wool (' + s.dichtheid + ' kg/m³). Sound passes straight through the membrane and is absorbed behind it — all you see is a flawless, seamless surface, with no visible perforations or panels.'
+        : 'A micro-perforated membrane, cold-mounted into a clip profile. Sound passes straight through the membrane — all you see is a flawless, seamless surface.';
+    }
+    return s.absorber
+      ? 'Een microgeperforeerd membraan met ' + s.dikte + ' mm hoogdensiteit polyestervlies (' + s.dichtheid + ' kg/m³) erachter. Het geluid gaat dwars door het membraan en wordt erachter geabsorbeerd — u ziet enkel een vlak, naadloos oppervlak, zonder zichtbare perforaties of panelen.'
+      : 'Een microgeperforeerd membraan, koud gemonteerd in een klemprofiel. Het geluid gaat dwars door het membraan — u ziet enkel een vlak, naadloos oppervlak.';
+  }
+
+  /* ---- vaste onderdelen van elke pagina ---- */
+  function util(t) {
+    return '<div class="util"><span class="sq"></span>' + esc(t.made) +
+      '<span class="r">' + esc(t.site) + ' &nbsp;|&nbsp; <b>' + esc(BEDRIJF.tel) + '</b></span></div>' +
+      '<div class="mast"><div class="wm">STRETCH<sup>&reg;</sup></div>' +
+      '<div class="mast-r"><b>' + esc(t.rapport) + '</b><br>' + esc(t.rapportSub) + '</div></div>';
+  }
+  function voet(t, project, klant, nr) {
+    return '<div class="foot">' + esc(t.rapport) + ' &mdash; <span class="fv">' + esc(project) + '</span>' +
+      (klant ? ' &nbsp;&middot;&nbsp; ' + esc(klant) : '') +
+      '<span class="r">STRETCH<sup>&reg;</sup> &nbsp;&middot;&nbsp; ' + esc(t.site) +
+      ' &nbsp;&middot;&nbsp; ' + t.pagina + ' ' + nr + ' ' + t.vanP + ' 3</span></div>';
+  }
+  function sech(num, lab, a, b) {
+    return '<div class="sec-h"><div class="sec-lab"><b>(' + num + ')</b> ' + esc(lab) + '</div>' +
+      '<div class="sec-t">' + esc(a) + (a ? ' ' : '') + '<span class="red">' + esc(b) + '</span></div></div>';
+  }
+
+  function bouwRapport() {
+    var r = huidig, t = TEKST[TAAL];
+    if (!r || !r.geldig) return false;
+
+    var project = ($('project').value || '').trim() || ($('naam').value || '').trim() || t.geenProject;
+    var klant = ($('klant').value || '').trim();
+    var datum = new Date().toLocaleDateString(TAAL === 'en' ? 'en-GB' : 'nl-BE',
+                  { day: 'numeric', month: 'long', year: 'numeric' });
+    var gehaald = r.gNa <= r.doel;
+    var factor = r.gNa > 0 ? r.gVoor / r.gNa : 0;
+    var k1 = kop1(t, r.gVoor), k3 = kop3(t, factor, gehaald);
+    var top = Math.max.apply(null, r.tVoor.concat([0.1]));
+
+    /* unieke afwerkingen, zodat er geen "pleisterwerk en pleisterwerk" ontstaat */
+    var afw = [];
+    [r.mV, r.mP, r.mW].forEach(function (m) {
+      var n2 = nm(m).toLowerCase();
+      if (afw.indexOf(n2) < 0) afw.push(n2);
+    });
+    var afwTxt = afw.length > 1
+      ? afw.slice(0, -1).join(', ') + (TAAL === 'en' ? ' and ' : ' en ') + afw[afw.length - 1]
+      : afw[0];
+
+    /* ══════════ pagina 1 ══════════ */
+    var afwerking =
+      rij(t.vloer + ' &mdash; ' + nm(r.mV).toLowerCase(), fr(r.opp.vloer, 2) + ' m&sup2;') +
+      rij(t.plafond + ' &mdash; ' + nm(r.mP).toLowerCase(), fr(r.opp.plafond, 2) + ' m&sup2;') +
+      rij(t.wanden + ' &mdash; ' + nm(r.mW).toLowerCase(), fr(r.opp.wand, 2) + ' m&sup2;');
+    r.extra.slice(0, 4).forEach(function (e) {
+      afwerking += rij(e.vlakEn + ' &mdash; ' + e.matEn.toLowerCase(), fr(e.m2, 2) + ' m&sup2;');
+    });
+
+    var lede = TAAL === 'en'
+      ? 'We ran the reverberation calculation for your room. As it stands it is ' +
+        (r.gVoor > 1.5 ? 'far too live to hold a comfortable conversation in' : 'still above the value aimed at for a room like this') +
+        ' &mdash; the treatment set out below brings it to ' + fr(r.gNa, 2) + ' seconds.'
+      : 'We hebben uw ruimte doorgerekend. Zoals ze nu is, ' +
+        (r.gVoor > 1.5 ? 'galmt ze veel te lang na voor een comfortabel gesprek' : 'ligt ze nog boven wat voor zo\'n ruimte wordt nagestreefd') +
+        ' &mdash; de behandeling hieronder brengt haar op ' + fr(r.gNa, 2) + ' seconden.';
+
+    var p1 =
+      '<div class="page">' + util(t) +
+      '<div class="wrap">' +
+      '<div class="eye"><span class="rule"></span>Stretch<sup>&reg;</sup> ' + esc(t.eyebrow) + '</div>' +
+      '<div class="meta">' + esc(t.project) + ' <span class="val">' + esc(project) + '</span>' +
+        (klant ? ' &nbsp;&middot;&nbsp; ' + esc(t.voor) + ' <span class="val">' + esc(klant) + '</span>' : '') +
+        ' &nbsp;&middot;&nbsp; ' + esc(datum) + '</div>' +
+      '<h1>' + esc(t.van) + ' ' + fr(r.gVoor, 2) + ' ' + esc(t.naar) +
+        '<br><span class="red">' + fr(r.gNa, 2) + ' ' + esc(t.sec) + '</span></h1>' +
+      '<div class="lede">' + lede + '</div>' +
+      '<div class="hero"><table><tr>' +
+        '<td width="28%"><div class="lbl">' + esc(t.vandaag) + '</div>' +
+          '<div class="big was">' + fr(r.gVoor, 2) + '<span class="unit">s</span></div>' +
+          '<div class="sub">' + esc(t.subVandaag) + '</div></td>' +
+        '<td class="arrow">&#8594;</td>' +
+        '<td width="28%"><div class="lbl">' + esc(t.naBeh) + '</div>' +
+          '<div class="big now">' + fr(r.gNa, 2) + '<span class="unit">s</span></div>' +
+          '<div class="sub">' + esc(gehaald ? t.subNa : t.subNaOver) + '</div></td>' +
+        '<td class="dv"><div class="lbl">' + esc(t.verbetering) + '</div>' +
+          '<div class="big wht">' + pct(r.gVoor, r.gNa) + '</div>' +
+          '<div class="sub">' + fr(factor, 1) + '&times; ' + esc(t.subVerb) + '</div></td>' +
+      '</tr></table></div>' +
+      '<div class="marq">' + t.strip.map(esc).join(' <i></i> ') + '</div>' +
+      '<div class="sec">' + sech('01', t.s1, k1[0], k1[1]) +
+        '<div class="cols"><div class="c1">' +
+          '<p>' + (TAAL === 'en'
+            ? 'The room is finished in <strong>' + esc(afwTxt) + '</strong>. Together those surfaces take in very little sound, so it keeps bouncing until it runs out of energy on its own.'
+            : 'De ruimte is afgewerkt in <strong>' + esc(afwTxt) + '</strong>. Die vlakken nemen samen weinig geluid op, dus blijft het weerkaatsen tot het vanzelf uitdooft.') + '</p>' +
+          '<p>' + (TAAL === 'en'
+            ? 'The result is a reverberation time of <strong>' + fr(r.gVoor, 2) + ' seconds</strong> across the speech frequencies. ' + vergelijk(r.gVoor, r.doel) +
+              ' For a ' + esc(nm(r.type).toLowerCase()) + ', ' + fr(r.doel, 1) + ' seconds is the value to aim at.'
+            : 'Het resultaat is een nagalmtijd van <strong>' + fr(r.gVoor, 2) + ' seconden</strong> over de spraakfrequenties. ' + vergelijk(r.gVoor, r.doel) +
+              ' Voor een ' + esc(nm(r.type).toLowerCase()) + ' is ' + fr(r.doel, 1) + ' seconden de waarde om naar te streven.') + '</p>' +
+          '<p>' + (TAAL === 'en'
+            ? 'The frequencies that matter most for speech are 500, 1000 and 2000 Hz.'
+            : 'De frequenties die het meest tellen voor spraak zijn 500, 1000 en 2000 Hz.') + '</p>' +
+          '<div class="note" style="margin-top:4.5mm">' + (TAAL === 'en'
+            ? 'Calculated per octave band from 125 to 4000 Hz, using your dimensions and the actual materials in the room.'
+            : 'Per octaafband berekend van 125 tot 4000 Hz, op basis van uw afmetingen en de werkelijke materialen in de ruimte.') + '</div>' +
+        '</div><div class="c2">' +
+          '<table class="d"><tr><th>' + esc(t.tblRuimte) + '</th><th style="text-align:right">' + esc(t.tblWaarde) + '</th></tr>' +
+            rij(t.lengte, fr(r.L, 2) + ' m') + rij(t.breedte, fr(r.B, 2) + ' m') + rij(t.hoogte, fr(r.H, 2) + ' m') +
+            rij(t.vloerOpp, fr(r.L * r.B, 2) + ' m&sup2;') + rij(t.volume, fr(r.V, 2) + ' m&sup3;') + '</table>' +
+          '<table class="d" style="margin-top:4.5mm"><tr><th>' + esc(t.tblAfwerking) + '</th><th style="text-align:right">' + esc(t.tblOpp) + '</th></tr>' +
+            afwerking + '</table>' +
+        '</div></div></div>' +
+      '</div>' + voet(t, project, klant, 1) + '</div>';
+
+    /* ══════════ pagina 2 ══════════ */
+    var eerste = r.paneelLijst.length ? r.paneelLijst[0].p : null;
+    var pn = eerste ? paneelNaam(eerste) : ['', ''];
+    var lijst = r.paneelLijst.map(function (x) {
+      return fr(x.n, x.n % 1 ? 1 : 0) + ' ' + t[EENHEID] + ' ' + x.p.naam;
+    }).join(' &middot; ');
+
+    var rijen = '';
+    BANDS.forEach(function (f, i) {
+      var sp = SPEECH.indexOf(i) >= 0;
+      rijen += '<tr' + (sp ? ' class="hl"' : '') + '>' +
+        '<td class="l">' + f + ' Hz</td>' +
+        '<td class="was">' + fr(r.tVoor[i], 2) + '</td>' +
+        '<td class="now">' + fr(r.tNa[i], 2) + '</td>' +
+        '<td class="dl">' + pct(r.tVoor[i], r.tNa[i]) + '</td>' +
+        '<td class="bar"><span class="b1" style="width:' + (r.tVoor[i] / top * 100).toFixed(1) + '%"></span>' +
+          '<span class="b2" style="width:' + Math.max(1.5, r.tNa[i] / top * 100).toFixed(1) + '%"></span></td></tr>';
+    });
+    var pt = ' style="padding-top:3.2mm"';
+    rijen += '<tr><td class="l"' + pt + '>' + esc(t.spraakGem) + '</td>' +
+      '<td class="was"' + pt + '>' + fr(r.gVoor, 2) + '</td>' +
+      '<td class="now"' + pt + '>' + fr(r.gNa, 2) + '</td>' +
+      '<td class="dl"' + pt + '>' + pct(r.gVoor, r.gNa) + '</td><td class="bar"></td></tr>';
+
+    var p2 =
+      '<div class="page">' + util(t) +
+      '<div class="wrap">' +
+      '<div class="sec" style="margin-top:8mm">' + sech('02', t.s2, t.h2Solution[0], t.h2Solution[1]) +
+        (eerste
+          ? '<div class="prod"><div class="k">' + esc(t.aanbeveling) + '</div>' +
+            '<div class="n">' + esc(pn[0]) + (pn[1] ? '<br><em>' + esc(pn[1]) + '</em>' : '') + '</div>' +
+            '<div class="d">' + paneelOmschrijving(eerste) + '</div>' +
+            '<div class="chips">' + t.chips.map(function (c) { return '<span class="chip">' + esc(c) + '</span>'; }).join('') + '</div></div>' +
+            '<p style="margin-top:4.5mm" class="tight">' + (TAAL === 'en'
+              ? 'Applied across <strong>' + esc(lijst) + '</strong>. That is exactly what is needed to reach the result below.'
+              : 'Toegepast als <strong>' + esc(lijst) + '</strong>. Dat is precies wat nodig is om het resultaat hieronder te halen.') + '</p>'
+          : '<p>' + (TAAL === 'en' ? 'No panels selected yet.' : 'Er zijn nog geen panelen gekozen.') + '</p>') +
+      '</div>' +
+      '<div class="sec">' + sech('03', t.s3, k3[0], k3[1]) +
+        '<p style="margin-bottom:4.5mm">' + (TAAL === 'en'
+          ? 'Reverberation time in seconds, before and after fitting. The three highlighted bands are the speech frequencies.'
+          : 'Nagalmtijd in seconden, voor en na plaatsing. De drie gemarkeerde banden zijn de spraakfrequenties.') + '</p>' +
+        '<table class="f"><tr><th class="l" width="17%">' + esc(t.colFreq) + '</th>' +
+          '<th width="13%">' + esc(t.colToday) + '</th><th width="16%">' + esc(t.colAfter) + '</th>' +
+          '<th width="12%">' + esc(t.colChange) + '</th>' +
+          '<th class="l" style="text-align:left;padding-left:6mm">' + esc(t.colVis) + '</th></tr>' + rijen + '</table>' +
+        '<div style="margin-top:4.5mm" class="note"><strong>' + fr(r.gNa, 2) + ' ' + (TAAL === 'en' ? 'seconds' : 'seconden') + '</strong> ' +
+          (TAAL === 'en'
+            ? (gehaald
+              ? 'sits inside the range generally considered comfortable for speech in a room of this type (guide value ' + fr(r.doel, 1) + ' s). The low 125 Hz band stays higher &mdash; that is normal for this type of treatment and has little bearing on how well you understand each other.'
+              : 'is still above the guide value of ' + fr(r.doel, 1) + ' s for this type of room. Adding treated area brings it down further.')
+            : (gehaald
+              ? 'ligt binnen wat voor een ruimte van dit type als comfortabel geldt (richtwaarde ' + fr(r.doel, 1) + ' s). De lage 125 Hz-band blijft hoger &mdash; dat is normaal bij dit type behandeling en heeft weinig invloed op hoe goed u elkaar verstaat.'
+              : 'ligt nog boven de richtwaarde van ' + fr(r.doel, 1) + ' s voor dit type ruimte. Meer behandeld oppervlak brengt de nagalmtijd verder omlaag.')) + '</div>' +
+      '</div>' +
+      '</div>' + voet(t, project, klant, 2) + '</div>';
+
+    /* ══════════ pagina 3 ══════════ */
+    var coeffRijen = r.paneelLijst.map(function (x) {
+      var s = SPECS[x.p.nr] || {};
+      return '<tr><td class="l">' + esc((s.membraan || '') + (s.absorber ? ' + ' + s.absorber : '')) + '</td>' +
+        x.a.map(function (v) { return '<td>' + fr(v, 2) + '</td>'; }).join('') + '</tr>';
+    }).join('');
+    var sp0 = eerste ? (SPECS[eerste.nr] || {}) : {};
+    var totaal = r.paneelLijst.reduce(function (s, x) { return s + x.n; }, 0);
+    var totaalTxt = fr(totaal, totaal % 1 ? 1 : 0) + ' ' + t[EENHEID];
+
+    var p3 =
+      '<div class="page last">' + util(t) +
+      '<div class="wrap">' +
+      '<div class="sec" style="margin-top:6.15mm">' + sech('04', t.s4, t.h2Notice[0], t.h2Notice[1]) +
+        '<table class="cards"><tr>' +
+          t.kaarten.slice(0, 3).map(function (c, i) {
+            return '<td><div class="cn">0' + (i + 1) + '</div><div class="ct">' + esc(c[0]) + '</div>' +
+              '<div class="cb">' + esc(c[1]) + '</div></td>';
+          }).join('') + '</tr><tr>' +
+          t.kaarten.slice(3, 6).map(function (c, i) {
+            return '<td><div class="cn">0' + (i + 4) + '</div><div class="ct">' + esc(c[0]) + '</div>' +
+              '<div class="cb">' + esc(c[1]) + '</div></td>';
+          }).join('') + '</tr></table>' +
+      '</div>' +
+      '<div class="sec">' + sech('05', t.s5, t.h2Spec[0], t.h2Spec[1]) +
+        '<table class="a"><tr><th class="l" width="34%">' + esc(t.coeff) +
+          ' <span style="text-transform:none;font-size:7.23pt">&alpha;</span></th>' +
+          BANDS.map(function (f) { return '<th>' + f + ' Hz</th>'; }).join('') + '</tr>' + coeffRijen + '</table>' +
+        '<div class="cols" style="margin-top:5mm">' +
+          '<div class="c1"><table class="d"><tr><th>' + esc(t.systeem) + '</th><th style="text-align:right">&nbsp;</th></tr>' +
+            rij(t.membraan, 'STRETCH Acoustic ' + (sp0.membraan || '&mdash;')) +
+            rij(t.absorberR, sp0.absorber ? 'Polyester ' + sp0.absorber : '&mdash;') +
+            rij(t.dichtheid, sp0.dichtheid ? sp0.dichtheid + ' kg/m&sup3; &middot; ' + sp0.dikte + ' mm' : '&mdash;') +
+            rij(EENHEID === 'm2' ? t.behandeld : t.aantalR, totaalTxt) + '</table></div>' +
+          '<div class="c2"><table class="d"><tr><th>' + esc(t.eigenschappen) + '</th><th style="text-align:right">&nbsp;</th></tr>' +
+            rij(t.montage, t.montageV) + rij(t.maxBreedte, fr(VAST.maxBreedte, 2) + ' m') +
+            rij(t.brandklasse, VAST.brandklasse) + rij(t.kleur, t.kleurV) + '</table></div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="stats"><table><tr>' + t.kpi.map(function (k) {
+        return '<td width="25%"><div class="sn">' + esc(k[0]) + (k[2] ? '<span class="red">.</span>' : '') + '</div>' +
+          '<div class="sl">' + esc(k[1]) + '</div></td>';
+      }).join('') + '</tr></table></div>' +
+      '<div class="cta"><table><tr><td class="l">' +
+        '<div class="k">' + esc(t.ctaLb) + '</div>' +
+        '<h3>' + esc(t.ctaH[0]) + '<br>' + esc(t.ctaH[1]) + '</h3>' +
+        '<p>' + (TAAL === 'en'
+          ? 'Tell us when it suits and we will come back with a quote for ' + totaalTxt + ' fitted, plus a proposed installation date &mdash; free and without obligation, within two working days.'
+          : 'Laat weten wanneer het u past en wij bezorgen u een prijs voor ' + totaalTxt + ' geplaatst, met een voorgestelde plaatsingsdatum &mdash; gratis en vrijblijvend, binnen twee werkdagen.') + '</p>' +
+        '<span class="btn">' + esc(t.ctaBtn) + '</span></td>' +
+        '<td class="r"><b>' + esc(BEDRIJF.naam) + '</b><br>' + BEDRIJF.adres.map(esc).join('<br>') + '<br>' +
+          esc(BEDRIJF.tel) + ' &middot; ' + esc(t.uren) + '<br>' + esc(BEDRIJF.mail) + '<br>' +
+          '<b>' + esc(t.site) + '</b></td></tr></table></div>' +
+      '</div>' +
+      '<div class="foot">STRETCH<sup>&reg;</sup> &mdash; ' + esc(t.voetnoot) +
+        '<span class="r">' + t.pagina + ' 3 ' + t.vanP + ' 3</span></div></div>';
+
+    $('report').innerHTML = p1 + p2 + p3;
+    return true;
+  }
+
+  function rij(label, waarde) {
+    return '<tr><td>' + label + '</td><td class="v">' + waarde + '</td></tr>';
+  }
+
+  /* ---------- events ---------- */
+  document.addEventListener('input', reken);
+  document.addEventListener('change', reken);
+  $('addVlak').onclick = function () { vlakRegel(2, null, ''); reken(); };
+  $('addPaneel').onclick = function () { paneelRegel(null, ''); reken(); };
+  $('print').onclick = function () {
+    if (!bouwRapport()) { alert('Vul eerst de afmetingen en de afwerking in.'); return; }
+    window.print();
+  };
+  $('stickyBtn').onclick = function () {
+    document.querySelector('.results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  addEventListener('resize', hoogte);
+  addEventListener('beforeprint', bouwRapport);
+
+  /* ---------- startwaarden ---------- */
+  vlakRegel(2, 11, '9');          // 9 m² dubbel glas in de wand
+  paneelRegel(6, '20');           // 20 × STRETCH Acoustic 495D D2050
+  reken();
+}());
+</script>
+
+</body>
+</html>
