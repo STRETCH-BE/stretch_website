@@ -1,3 +1,83 @@
+## 2026-09-04 (35) — Client portal: the acoustic calculator (/portal/acoustics)
+
+Michael's reverberation-time calculator — a finished single-file HTML tool
+(Sabine, T = V / (6 × A), per octave band 125–4000 Hz, headline = the mean
+of 500 / 1000 / 2000 Hz, tables transcribed from
+berekening-nagalmtijd-website-23.xlsx, 3-page A4 report in the STRETCH
+template) — is now a portal feature, integrated the way the ceiling
+designer is. Nothing in its acoustics, tables or report template changed.
+
+The file lives in the repo root (`acoustic-calculator.html`) and ships as
+base64 in `src/lib/portal/acoustic-html.ts`, served only by the
+authenticated `/api/portal/acoustics` route (host guard, session check,
+`window.PORTAL_USER` and `window.PORTAL_LOCALE` injected into `</head>`),
+embedded full-height on `/portal/acoustics`. Rooms are saved through
+`/api/portal/acoustics/projects` and usage through `…/event`, both via
+`src/lib/portal/acoustic-store.ts` — best-effort like the designer store:
+demo mode, no service-role key or missing tables answer `storage:'none'`
+and the tool carries on with its browser autosave. Two tables in
+`supabase/schema.sql` (`acoustic_projects`, `acoustic_events`, RLS with no
+policies, safe to re-run). `scripts/update-acoustics.mjs` (documented in
+`scripts/update-acoustics.md`) regenerates the base64 module AND
+`acoustic-data.ts`, the material / absorber / target tables lifted out of
+the HTML — that is how the API recomputes a saved room's headline results
+server-side (`acoustic-summary.ts`) without a second copy of the tables:
+the denormalised columns are derived from the submitted state, never
+trusted from the client, and anything missing or not finite is stored as
+null.
+
+Access is the one decision to flag: the designer is trade-only because it
+embeds the price matrix; the calculator has no pricing and its natural
+audience includes architects and consumers, so every signed-in account
+gets it, through a single helper — `hasAcousticsAccess()` in
+`src/lib/portal/types.ts` — used by the page, the three routes, the nav
+item and the tiles. Tightening it is a one-line change there. Because
+architects never see the main dashboard (they get `ArchitectDashboard`),
+the tile was added there too, in "Project tools".
+
+Inside the tool, the new PORTAL BRIDGE (same plain ES5 style, bottom of
+the script) serialises the whole form — room name, project, client, room
+type, L/B/H, the three finishes, every deviating surface row, every panel
+row — as `{app:'stretch-acoustic', version:1}`, referencing materials and
+panels by their stable `nr`; offers Save / Save as / Open / Delete in a
+toolbar built from the existing tokens, hidden until the API reports a
+database; autosaves to the browser every 25 s and on every change as a
+crash-net; and fires `open`, `calc` (at most once a minute), `cloud_save`,
+`cloud_load` and `report_export`. The Dutch interface strings moved into a
+`UI` object next to the report's `TEKST`, with `nl` and `en` filled in and
+`en` the fallback: `be` and `nl` get Dutch, every other portal locale
+English, and the report follows the same language (`?lang=` still
+overrides). In the English interface the on-screen decimals use a point;
+the report's own formatting is untouched. The tool's "free quote" button,
+a documented hook that pointed at `#`, now opens the site's contact page
+in the parent window.
+
+Portal strings (`portal.nav.acoustics`, `portal.acoustics.*`,
+`portal.dash.tileAcoustics*`, `portal.architect.acousticsTile*`) are in all
+16 files: written in English, Dutch, French and German; pl, es, pt, da,
+sv, no and is carry the English text (TODO-i18n).
+
+Verified: typecheck clean; ESLint (Next core-web-vitals rules, temporary
+config as in entry 34) clean on every new and touched file;
+`check:client-messages` OK (`portal` was already a page-level namespace);
+production build 3170 pages. Hand checks, automated with Playwright
+against a demo-mode build: signed out, `/portal/acoustics` and the API
+route both redirect to the login; a demo account sees the nav item, the
+dashboard tile and the calculator in its iframe with `PORTAL_USER` and
+`PORTAL_LOCALE` injected, computing the default room (2.64 → 0.74 s) with
+the cloud toolbar hidden (`storage:'none'`); `be` gives the Dutch
+interface with comma decimals, `?lang=` still overrides; the exported PDF
+is exactly 3 A4 pages with the black and red bands; against a mocked
+project API, save → reload → open returns the byte-identical state with
+two deviating-surface rows and two panel rows, and the browser autosave
+restores the last edit after a reload; the architect dashboard carries
+the tile and the page renders for an architect. The server-side summary
+of the tool's default room gives room_type Vergaderzaal, 122.3 m³, 2.641 →
+0.743 s, target 0.8 s, 20 st of 495D D2050 — the same figures the tool
+shows — and null for an empty or unresolvable room. Not verified here: a
+real `acoustic_projects` row (no Supabase in this environment) — the
+column derivation is the part that was unit-tested.
+
 ## 2026-09-04 (34) — stretch-sufit.pl: Alto Design Sp. z o.o. as the point of contact
 
 Michael's brief: the Polish domain showed only Belgian contact data (top
@@ -99,6 +179,11 @@ prints 42-200 everywhere per the brief, the shared data was left alone
 so the other locales stay identical — confirm which is right and I align
 the rest; (2) the registry court wording (division number) and (3) the
 share capital.
+
+Resolved 4 Sep 2026: Michael confirmed **42-200**. `offices[]`
+(addressLines and the maps query), the branch JSON-LD comment and the
+Polish article in `content.ts` now say 42-200 as well, so every locale
+prints the same postcode for Częstochowa. (2) and (3) stay open.
 
 ## 2026-09-03 (33) — PageSpeed round: client messages subset, lead modal on demand, grid LCP images, contrast
 

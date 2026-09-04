@@ -243,7 +243,8 @@
       "demoBadge": "Demo",
       "allMarkets": "Todos los mercados",
       "designer": "Diseñador de techos",
-      "budgetGuide": "Guía de presupuesto"
+      "budgetGuide": "Guía de presupuesto",
+      "acoustics": "Acoustic calculator"
     },
     "dash": {
       "eyebrow": "Portal de clientes",
@@ -268,7 +269,9 @@
       "tileAccountBody": "Los datos de su cuenta STRETCH. Presupuestos, documentos e historial de pedidos aparecerán aquí.",
       "tileTrade": "Acceso profesional",
       "tileTradeBody": "¿Instalador o distribuidor? Obtenga precios de distribuidor y el diseñador de techos con una cuenta profesional.",
-      "tradeCta": "Hágase partner"
+      "tradeCta": "Hágase partner",
+      "tileAcoustics": "Acoustic calculator",
+      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template."
     },
     "docs": {
       "title": "Documentos",
@@ -425,7 +428,10 @@
       "advisorBody": "Un especialista para especificación, acústica, presupuestos y muestras — respuesta en un día laborable.",
       "advisorCta": "Reservar una llamada",
       "download": "Descargar",
-      "comingSoon": "Próximamente"
+      "comingSoon": "Próximamente",
+      "acousticsTileTitle": "Reverberation study",
+      "acousticsTileBody": "Calculate a room's reverberation time per octave band against the target for its use, and export a 3-page report.",
+      "acousticsTileCta": "Open the calculator"
     },
     "budget": {
       "eyebrow": "Área de arquitectos",
@@ -437,6 +443,10 @@
       "perUnit": "por unidad instalada, sin IVA",
       "ctaBody": "¿Necesita un número real para un proyecto activo? Regístrelo y un asesor dedicado lo valora correctamente en un día laborable.",
       "ctaButton": "Registrar su proyecto"
+    },
+    "acoustics": {
+      "eyebrow": "Acoustic calculator",
+      "hint": "Enter the room's dimensions and finishes, add STRETCH Acoustic panels and see the reverberation time before and after, per octave band, against the target for the room type. Export a 3-page PDF report; Save keeps the room in your account."
     }
   },
   "home": {

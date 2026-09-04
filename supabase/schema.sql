@@ -517,3 +517,47 @@ select cron.schedule(
         and (ip is not null or user_agent is not null)
   $$
 );
+
+-- ============================================================================
+-- ACOUSTIC CALCULATOR — saved rooms and usage events (/portal/acoustics).
+-- Added 4 Sep 2026. Safe to re-run (create if not exists).
+-- All access goes through the service-role key in the portal API routes,
+-- which verify the caller's session first — hence RLS with no policies.
+-- ============================================================================
+create table if not exists public.acoustic_projects (
+  id           uuid primary key default gen_random_uuid(),
+  user_id      uuid references public.portal_users (id) on delete cascade,
+  user_email   text not null,
+  name         text not null default 'Untitled',
+  -- The calculator's own measurement format (app:'stretch-acoustic').
+  state        jsonb not null,
+  -- Denormalised headline results so list and admin views never parse jsonb.
+  -- Derived SERVER-SIDE from `state` (src/lib/portal/acoustic-summary.ts).
+  room_type    text,
+  volume_m3    numeric,
+  rt_before_s  numeric,
+  rt_after_s   numeric,
+  target_s     numeric,
+  treated_qty  numeric,
+  treated_unit text,
+  product_code text,
+  created_at   timestamptz not null default now(),
+  updated_at   timestamptz not null default now()
+);
+create index if not exists acoustic_projects_user_idx
+  on public.acoustic_projects (user_email, updated_at desc);
+
+create table if not exists public.acoustic_events (
+  id         bigint generated always as identity primary key,
+  created_at timestamptz not null default now(),
+  event      text not null,
+  user_email text,
+  demo       boolean not null default false,
+  meta       jsonb not null default '{}'::jsonb
+);
+create index if not exists acoustic_events_created_idx
+  on public.acoustic_events (created_at desc);
+
+alter table public.acoustic_projects enable row level security;
+alter table public.acoustic_events   enable row level security;
+-- No policies on purpose: service-role only, via the authenticated API routes.

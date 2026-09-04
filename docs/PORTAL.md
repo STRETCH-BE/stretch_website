@@ -146,3 +146,30 @@ Implementation notes:
   a "portal launching soon" notice and no credentials work. Set
   `NEXT_PUBLIC_PORTAL_DEMO=1` (preview deployments only!) to restore the old
   listed demo accounts. Never set it in production.
+
+---
+
+## Acoustic calculator — added 4 Sep 2026
+
+`/portal/acoustics` embeds the reverberation-time calculator
+(`acoustic-calculator.html`, repo root) the same way the ceiling designer is
+embedded: an iframe onto the authenticated `/api/portal/acoustics` route,
+which decodes the base64 module `src/lib/portal/acoustic-html.ts` per
+request and injects `window.PORTAL_USER` and `window.PORTAL_LOCALE`.
+
+- **Access:** every signed-in account — trade, b2c and architects — via
+  `hasAcousticsAccess()` in `src/lib/portal/types.ts`, the one place to
+  tighten it. The tool carries no pricing.
+- **Persistence:** `/api/portal/acoustics/projects` (GET list / GET ?id /
+  POST / DELETE) → `acoustic_projects`; `/api/portal/acoustics/event` →
+  `acoustic_events`. Best-effort like the designer: demo mode, no
+  service-role key or missing tables answer `storage:'none'` and the tool
+  keeps working on its browser autosave. The headline columns (room type,
+  volume, RT before/after, target, treated quantity, product) are derived
+  server-side from the saved state by `acoustic-summary.ts`, using the
+  tables generated from the tool (`acoustic-data.ts`).
+- **Languages:** the tool's interface is Dutch or English (`UI` object in
+  the HTML); `be` and `nl` get Dutch, every other locale English. The PDF
+  report follows the same language.
+- **Updating the tool:** `node scripts/update-acoustics.mjs` — see
+  `scripts/update-acoustics.md`.

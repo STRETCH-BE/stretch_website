@@ -243,7 +243,8 @@
       "demoBadge": "Demo",
       "allMarkets": "Alle Märkte",
       "designer": "Decken-Designer",
-      "budgetGuide": "Budget-Guide"
+      "budgetGuide": "Budget-Guide",
+      "acoustics": "Akustikrechner"
     },
     "dash": {
       "eyebrow": "Kundenportal",
@@ -268,7 +269,9 @@
       "tileAccountBody": "Ihre STRETCH-Kontodaten. Offerten, Dokumente und Bestellhistorie erscheinen hier.",
       "tileTrade": "Händlerzugang",
       "tileTradeBody": "Monteur oder Händler? Mit einem Händlerkonto erhalten Sie Händlerpreise und den Deckendesigner.",
-      "tradeCta": "Partner werden"
+      "tradeCta": "Partner werden",
+      "tileAcoustics": "Akustikrechner",
+      "tileAcousticsBody": "Nachhallzeit eines Raums vor und nach Akustikpaneelen, mit PDF-Bericht im STRETCH-Layout."
     },
     "docs": {
       "title": "Dokumente",
@@ -425,7 +428,10 @@
       "advisorBody": "Ein Spezialist für Ausschreibung, Akustikziele, Budgets und Muster — Antwort innerhalb eines Werktags.",
       "advisorCta": "Gespräch buchen",
       "download": "Download",
-      "comingSoon": "Bald verfügbar"
+      "comingSoon": "Bald verfügbar",
+      "acousticsTileTitle": "Nachhallstudie",
+      "acousticsTileBody": "Berechnen Sie die Nachhallzeit eines Raums je Oktavband gegenüber dem Zielwert für seine Nutzung und exportieren Sie einen 3-seitigen Bericht.",
+      "acousticsTileCta": "Rechner öffnen"
     },
     "budget": {
       "eyebrow": "Architektenbereich",
@@ -437,6 +443,10 @@
       "perUnit": "pro Einheit montiert, zzgl. 8.1 % MwSt.",
       "ctaBody": "Sie brauchen eine echte Zahl für ein laufendes Projekt? Registrieren Sie es — ein fester Berater kalkuliert innerhalb eines Werktags.",
       "ctaButton": "Projekt registrieren"
+    },
+    "acoustics": {
+      "eyebrow": "Akustikrechner",
+      "hint": "Geben Sie Masse und Oberflächen des Raums ein, fügen Sie STRETCH-Acoustic-Paneele hinzu und sehen Sie die Nachhallzeit vorher und nachher, je Oktavband, gegenüber dem Zielwert für den Raumtyp. Exportieren Sie einen 3-seitigen PDF-Bericht; mit Speichern bleibt der Raum in Ihrem Konto."
     }
   },
   "home": {

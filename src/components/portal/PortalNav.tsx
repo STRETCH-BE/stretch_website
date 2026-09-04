@@ -13,13 +13,15 @@ type Props = {
   trade: boolean;
   /** Architect (or admin) accounts see the budget guide. */
   architect: boolean;
+  /** The acoustic calculator (hasAcousticsAccess — every signed-in account today). */
+  acoustics: boolean;
   demo: boolean;
   company: string;
   email: string;
   marketsLabel: string;
 };
 
-export default function PortalNav({ isAdmin, trade, architect, demo, company, email, marketsLabel }: Props) {
+export default function PortalNav({ isAdmin, trade, architect, acoustics, demo, company, email, marketsLabel }: Props) {
   const t = useTranslations('portal.nav');
   const pathname = usePathname();
   const router = useRouter();
@@ -35,6 +37,7 @@ export default function PortalNav({ isAdmin, trade, architect, demo, company, em
           { href: '/portal/orders', label: t('orders'), exact: false },
         ]
       : []),
+    ...(acoustics ? [{ href: '/portal/acoustics', label: t('acoustics'), exact: false }] : []),
     ...(architect ? [{ href: '/portal/budget-guide', label: t('budgetGuide'), exact: false }] : []),
     ...(isAdmin ? [{ href: '/portal/admin', label: t('admin'), exact: false }] : []),
   ];

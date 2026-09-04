@@ -262,7 +262,8 @@
       "demoBadge": "Demo",
       "allMarkets": "Wszystkie rynki",
       "designer": "Projektant sufitu",
-      "budgetGuide": "Przewodnik budżetowy"
+      "budgetGuide": "Przewodnik budżetowy",
+      "acoustics": "Acoustic calculator"
     },
     "dash": {
       "eyebrow": "Panel klienta",
@@ -287,7 +288,9 @@
       "tileAccountBody": "Dane Twojego konta STRETCH. Wyceny, dokumenty i historia zamówień pojawią się tutaj.",
       "tileTrade": "Dostęp handlowy",
       "tileTradeBody": "Monter lub dystrybutor? Z kontem handlowym otrzymasz ceny dealerskie i projektant sufitów.",
-      "tradeCta": "Zostań partnerem"
+      "tradeCta": "Zostań partnerem",
+      "tileAcoustics": "Acoustic calculator",
+      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template."
     },
     "docs": {
       "title": "Dokumenty",
@@ -444,7 +447,10 @@
       "advisorBody": "Jeden specjalista od specyfikacji, akustyki, budżetów i próbek — odpowiedź w jeden dzień roboczy.",
       "advisorCta": "Umów rozmowę",
       "download": "Pobierz",
-      "comingSoon": "Wkrótce"
+      "comingSoon": "Wkrótce",
+      "acousticsTileTitle": "Reverberation study",
+      "acousticsTileBody": "Calculate a room's reverberation time per octave band against the target for its use, and export a 3-page report.",
+      "acousticsTileCta": "Open the calculator"
     },
     "budget": {
       "eyebrow": "Strefa architekta",
@@ -456,6 +462,10 @@
       "perUnit": "za sztukę z montażem, netto",
       "ctaBody": "Potrzebujesz realnej wyceny aktywnego projektu? Zarejestruj go, a dedykowany doradca wyceni go rzetelnie w jeden dzień roboczy.",
       "ctaButton": "Zarejestruj projekt"
+    },
+    "acoustics": {
+      "eyebrow": "Acoustic calculator",
+      "hint": "Enter the room's dimensions and finishes, add STRETCH Acoustic panels and see the reverberation time before and after, per octave band, against the target for the room type. Export a 3-page PDF report; Save keeps the room in your account."
     }
   },
   "home": {

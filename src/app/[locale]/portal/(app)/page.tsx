@@ -3,10 +3,10 @@
 // history are staged as the next data sources on this platform.
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { ArrowRight, FileSpreadsheet, FolderOpen, Handshake, PackageSearch, PencilRuler, Settings2, UserRound } from 'lucide-react';
+import { ArrowRight, AudioLines, FileSpreadsheet, FolderOpen, Handshake, PackageSearch, PencilRuler, Settings2, UserRound } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
-import { hasTradeAccess } from '@/lib/portal/types';
+import { hasAcousticsAccess, hasTradeAccess } from '@/lib/portal/types';
 import { getPricebook } from '@/lib/portal/data';
 import ArchitectDashboard from '@/components/portal/ArchitectDashboard';
 
@@ -112,6 +112,21 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
               </span>
             </Link>
           </>
+        )}
+
+        {/* Acoustic calculator — live for every account (no pricing inside; hasAcousticsAccess) */}
+        {hasAcousticsAccess(session.profile) && (
+          <Link href="/portal/acoustics" className="portal-tile portal-tile--live">
+            <div className="portal-tile__head">
+              <AudioLines size={20} />
+              <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
+            </div>
+            <h2>{t('tileAcoustics')}</h2>
+            <p>{t('tileAcousticsBody')}</p>
+            <span className="portal-tile__cta">
+              {t('open')} <ArrowRight size={14} />
+            </span>
+          </Link>
         )}
 
         {/* Documents — the technical library, direct downloads */}
