@@ -243,7 +243,8 @@
       "demoBadge": "Demo",
       "allMarkets": "Alle markten",
       "designer": "Plafond-designer",
-      "budgetGuide": "Budgetgids"
+      "budgetGuide": "Budgetgids",
+      "acoustics": "Akoestiekcalculator"
     },
     "dash": {
       "eyebrow": "Klantenportaal",
@@ -268,7 +269,9 @@
       "tileAccountBody": "Uw STRETCH-accountgegevens. Offertes, documenten en bestelhistoriek verschijnen hier.",
       "tileTrade": "Handelstoegang",
       "tileTradeBody": "Plaatser of verdeler? Krijg dealerprijzen en de plafonddesigner met een handelsaccount.",
-      "tradeCta": "Word partner"
+      "tradeCta": "Word partner",
+      "tileAcoustics": "Akoestiekcalculator",
+      "tileAcousticsBody": "Nagalmtijd van een ruimte voor en na akoestische panelen, met een pdf-rapport in de STRETCH-huisstijl."
     },
     "docs": {
       "title": "Documenten",
@@ -425,7 +428,10 @@
       "advisorBody": "Eén specialist voor bestekvragen, akoestiekdoelen, budgetten en stalen — antwoord binnen één werkdag.",
       "advisorCta": "Plan een gesprek",
       "download": "Download",
-      "comingSoon": "Binnenkort"
+      "comingSoon": "Binnenkort",
+      "acousticsTileTitle": "Nagalmstudie",
+      "acousticsTileBody": "Bereken de nagalmtijd van een ruimte per octaafband tegenover de streefwaarde voor haar gebruik en exporteer een rapport van 3 pagina's.",
+      "acousticsTileCta": "Open de calculator"
     },
     "budget": {
       "eyebrow": "Architectenzone",
@@ -437,6 +443,10 @@
       "perUnit": "per stuk geplaatst, excl. btw",
       "ctaBody": "Een echt cijfer nodig voor een lopend project? Registreer het en een vaste adviseur prijst het correct binnen één werkdag.",
       "ctaButton": "Registreer uw project"
+    },
+    "acoustics": {
+      "eyebrow": "Akoestiekcalculator",
+      "hint": "Geef de afmetingen en afwerking van de ruimte in, voeg STRETCH Acoustic-panelen toe en zie de nagalmtijd voor en na, per octaafband, tegenover de streefwaarde voor het type ruimte. Exporteer een rapport van 3 pagina's als pdf; met Opslaan bewaart u de ruimte in uw account."
     }
   },
   "home": {

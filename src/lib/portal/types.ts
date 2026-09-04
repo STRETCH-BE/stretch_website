@@ -102,6 +102,17 @@ export function hasTradeAccess(profile: PortalProfile): boolean {
   );
 }
 
+/**
+ * The acoustic (reverberation-time) calculator — /portal/acoustics, its API
+ * routes, nav item and dashboard tiles. It carries NO pricing, so every
+ * signed-in account gets it: the trade tiers, b2c and architects alike
+ * (architects are its main audience). Decision of 4 Sep 2026 — the ONE place
+ * to tighten it, e.g. `return hasTradeAccess(profile) || hasArchitectAccess(profile)`.
+ */
+export function hasAcousticsAccess(_profile: PortalProfile): boolean {
+  return true;
+}
+
 /** The architect area (dashboard, budget guide) — architects and admins. */
 export function hasArchitectAccess(profile: PortalProfile): boolean {
   return profile.role === 'admin' || profile.accountType === 'architect';

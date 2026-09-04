@@ -243,7 +243,8 @@
       "demoBadge": "Demo",
       "allMarkets": "All markets",
       "designer": "Ceiling designer",
-      "budgetGuide": "Budget guide"
+      "budgetGuide": "Budget guide",
+      "acoustics": "Acoustic calculator"
     },
     "dash": {
       "eyebrow": "Client portal",
@@ -268,7 +269,9 @@
       "tileAccountBody": "Your STRETCH account details. Quotes, documents and order history will appear here.",
       "tileTrade": "Trade access",
       "tileTradeBody": "Installer or reseller? Get dealer pricing and the ceiling designer with a trade account.",
-      "tradeCta": "Become a partner"
+      "tradeCta": "Become a partner",
+      "tileAcoustics": "Acoustic calculator",
+      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template."
     },
     "docs": {
       "title": "Documents",
@@ -425,7 +428,10 @@
       "advisorBody": "One specialist for spec questions, acoustics targets, budgets and samples — reply within one working day.",
       "advisorCta": "Book a call",
       "download": "Download",
-      "comingSoon": "Coming soon"
+      "comingSoon": "Coming soon",
+      "acousticsTileTitle": "Reverberation study",
+      "acousticsTileBody": "Calculate a room's reverberation time per octave band against the target for its use, and export a 3-page report.",
+      "acousticsTileCta": "Open the calculator"
     },
     "budget": {
       "eyebrow": "Architect area",
@@ -437,6 +443,10 @@
       "perUnit": "per unit installed, excl. VAT",
       "ctaBody": "Need a real number for a live project? Register it and a dedicated advisor prices it properly within one working day.",
       "ctaButton": "Register your project"
+    },
+    "acoustics": {
+      "eyebrow": "Acoustic calculator",
+      "hint": "Enter the room's dimensions and finishes, add STRETCH Acoustic panels and see the reverberation time before and after, per octave band, against the target for the room type. Export a 3-page PDF report; Save keeps the room in your account."
     }
   },
   "home": {

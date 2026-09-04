@@ -243,7 +243,8 @@
       "demoBadge": "Demo",
       "allMarkets": "Alle markeder",
       "designer": "Loftsdesigner",
-      "budgetGuide": "Budgetguide"
+      "budgetGuide": "Budgetguide",
+      "acoustics": "Acoustic calculator"
     },
     "dash": {
       "eyebrow": "Kundeportal",
@@ -268,7 +269,9 @@
       "tileAccountBody": "Dine STRETCH-kontooplysninger. Tilbud, dokumenter og ordrehistorik vises her.",
       "tileTrade": "Forhandleradgang",
       "tileTradeBody": "Montør eller forhandler? Få forhandlerpriser og loftdesigneren med en forhandlerkonto.",
-      "tradeCta": "Bliv partner"
+      "tradeCta": "Bliv partner",
+      "tileAcoustics": "Acoustic calculator",
+      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template."
     },
     "docs": {
       "title": "Dokumenter",
@@ -425,7 +428,10 @@
       "advisorBody": "Én specialist til udbud, akustikmål, budgetter og prøver — svar inden for én arbejdsdag.",
       "advisorCta": "Book et opkald",
       "download": "Download",
-      "comingSoon": "Kommer snart"
+      "comingSoon": "Kommer snart",
+      "acousticsTileTitle": "Reverberation study",
+      "acousticsTileBody": "Calculate a room's reverberation time per octave band against the target for its use, and export a 3-page report.",
+      "acousticsTileCta": "Open the calculator"
     },
     "budget": {
       "eyebrow": "Arkitektområde",
@@ -437,6 +443,10 @@
       "perUnit": "pr. enhed monteret, ekskl. moms",
       "ctaBody": "Brug for et rigtigt tal til et aktivt projekt? Registrér det, så prissætter en fast rådgiver det korrekt inden for én arbejdsdag.",
       "ctaButton": "Registrér dit projekt"
+    },
+    "acoustics": {
+      "eyebrow": "Acoustic calculator",
+      "hint": "Enter the room's dimensions and finishes, add STRETCH Acoustic panels and see the reverberation time before and after, per octave band, against the target for the room type. Export a 3-page PDF report; Save keeps the room in your account."
     }
   },
   "home": {

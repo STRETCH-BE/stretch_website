@@ -243,7 +243,8 @@
       "demoBadge": "Demo",
       "allMarkets": "Todos os mercados",
       "designer": "Designer de tetos",
-      "budgetGuide": "Guia de orçamento"
+      "budgetGuide": "Guia de orçamento",
+      "acoustics": "Acoustic calculator"
     },
     "dash": {
       "eyebrow": "Portal do cliente",
@@ -268,7 +269,9 @@
       "tileAccountBody": "Os dados da sua conta STRETCH. Orçamentos, documentos e histórico de encomendas aparecerão aqui.",
       "tileTrade": "Acesso profissional",
       "tileTradeBody": "Instalador ou revendedor? Obtenha preços de revenda e o designer de tetos com uma conta profissional.",
-      "tradeCta": "Torne-se parceiro"
+      "tradeCta": "Torne-se parceiro",
+      "tileAcoustics": "Acoustic calculator",
+      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template."
     },
     "docs": {
       "title": "Documentos",
@@ -425,7 +428,10 @@
       "advisorBody": "Um especialista para especificação, acústica, orçamentos e amostras — resposta num dia útil.",
       "advisorCta": "Marcar uma chamada",
       "download": "Transferir",
-      "comingSoon": "Em breve"
+      "comingSoon": "Em breve",
+      "acousticsTileTitle": "Reverberation study",
+      "acousticsTileBody": "Calculate a room's reverberation time per octave band against the target for its use, and export a 3-page report.",
+      "acousticsTileCta": "Open the calculator"
     },
     "budget": {
       "eyebrow": "Área de arquitetos",
@@ -437,6 +443,10 @@
       "perUnit": "por unidade instalada, sem IVA",
       "ctaBody": "Precisa de um número real para um projeto ativo? Registe-o e um consultor dedicado orçamenta-o corretamente num dia útil.",
       "ctaButton": "Registar o seu projeto"
+    },
+    "acoustics": {
+      "eyebrow": "Acoustic calculator",
+      "hint": "Enter the room's dimensions and finishes, add STRETCH Acoustic panels and see the reverberation time before and after, per octave band, against the target for the room type. Export a 3-page PDF report; Save keeps the room in your account."
     }
   },
   "home": {

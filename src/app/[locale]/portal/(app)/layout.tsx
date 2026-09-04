@@ -8,7 +8,7 @@ import { clientMessagesWith, PAGE_NAMESPACES } from '@/i18n/client-messages';
 import { redirect } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
-import { hasArchitectAccess, hasTradeAccess, priceGroupForTier } from '@/lib/portal/types';
+import { hasAcousticsAccess, hasArchitectAccess, hasTradeAccess, priceGroupForTier } from '@/lib/portal/types';
 import PortalNav from '@/components/portal/PortalNav';
 
 export default async function PortalAppLayout({
@@ -35,6 +35,7 @@ export default async function PortalAppLayout({
         isAdmin={profile.role === 'admin'}
         trade={hasTradeAccess(profile)}
         architect={hasArchitectAccess(profile)}
+        acoustics={hasAcousticsAccess(profile)}
         demo={session!.demo}
         company={profile.company ?? profile.email}
         email={profile.email}

@@ -243,7 +243,8 @@
       "demoBadge": "Demo",
       "allMarkets": "Alla marknader",
       "designer": "Takdesigner",
-      "budgetGuide": "Budgetguide"
+      "budgetGuide": "Budgetguide",
+      "acoustics": "Acoustic calculator"
     },
     "dash": {
       "eyebrow": "Kundportal",
@@ -268,7 +269,9 @@
       "tileAccountBody": "Dina STRETCH-kontouppgifter. Offerter, dokument och orderhistorik visas här.",
       "tileTrade": "Återförsäljaråtkomst",
       "tileTradeBody": "Montör eller återförsäljare? Få återförsäljarpriser och takdesignern med ett företagskonto.",
-      "tradeCta": "Bli partner"
+      "tradeCta": "Bli partner",
+      "tileAcoustics": "Acoustic calculator",
+      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template."
     },
     "docs": {
       "title": "Dokument",
@@ -425,7 +428,10 @@
       "advisorBody": "En specialist för föreskrivning, akustikmål, budgetar och prover — svar inom en arbetsdag.",
       "advisorCta": "Boka ett samtal",
       "download": "Ladda ner",
-      "comingSoon": "Kommer snart"
+      "comingSoon": "Kommer snart",
+      "acousticsTileTitle": "Reverberation study",
+      "acousticsTileBody": "Calculate a room's reverberation time per octave band against the target for its use, and export a 3-page report.",
+      "acousticsTileCta": "Open the calculator"
     },
     "budget": {
       "eyebrow": "Arkitektområde",
@@ -437,6 +443,10 @@
       "perUnit": "per enhet monterad, exkl. moms",
       "ctaBody": "Behöver du en riktig siffra för ett aktivt projekt? Registrera det så prissätter en dedikerad rådgivare det korrekt inom en arbetsdag.",
       "ctaButton": "Registrera ditt projekt"
+    },
+    "acoustics": {
+      "eyebrow": "Acoustic calculator",
+      "hint": "Enter the room's dimensions and finishes, add STRETCH Acoustic panels and see the reverberation time before and after, per octave band, against the target for the room type. Export a 3-page PDF report; Save keeps the room in your account."
     }
   },
   "home": {

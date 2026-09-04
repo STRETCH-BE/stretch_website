@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nagalmtijd berekenen — STRETCH</title>
+<title data-ui="pageTitle">Nagalmtijd berekenen — STRETCH</title>
 
 <!--
   ============================================================================
@@ -433,9 +433,9 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
 <div class="wrap">
 
   <header class="masthead">
-    <p class="eyebrow"><i></i>Akoestiektool — gratis en vrijblijvend</p>
-    <h1>Hoe lang galmt<br>uw ruimte na<span>?</span></h1>
-    <p class="lead">Geef de afmetingen en de afwerking van uw ruimte in en zie meteen hoe lang het geluid nagalmt — voor en na het plaatsen van akoestische panelen. De voorbeeldwaarden hieronder mag u overschrijven.</p>
+    <p class="eyebrow"><i></i><span data-ui="eyebrow">Akoestiektool — gratis en vrijblijvend</span></p>
+    <h1 data-ui-html="title">Hoe lang galmt<br>uw ruimte na<span>?</span></h1>
+    <p class="lead" data-ui="lead">Geef de afmetingen en de afwerking van uw ruimte in en zie meteen hoe lang het geluid nagalmt — voor en na het plaatsen van akoestische panelen. De voorbeeldwaarden hieronder mag u overschrijven.</p>
   </header>
 
   <div class="grid">
@@ -444,59 +444,59 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
     <form id="form" autocomplete="off">
 
       <section class="step">
-        <p class="step-head"><b>(01)</b> De ruimte</p>
+        <p class="step-head"><b>(01)</b> <span data-ui="step1">De ruimte</span></p>
         <div class="row row-2" style="margin-bottom:12px">
           <div class="field">
-            <label for="naam">Naam of omschrijving</label>
-            <input type="text" id="naam" value="Vergaderzaal" placeholder="bv. leslokaal 2.14">
+            <label for="naam" data-ui="roomName">Naam of omschrijving</label>
+            <input type="text" id="naam" value="Vergaderzaal" placeholder="bv. leslokaal 2.14" data-ui-ph="roomNamePh" data-ui-val="roomNameDefault">
           </div>
           <div class="field">
-            <label for="type">Type ruimte</label>
+            <label for="type" data-ui="roomType">Type ruimte</label>
             <select id="type"></select>
           </div>
         </div>
         <div class="row row-3">
-          <div class="field"><label for="L">Lengte (m)</label><input type="text" inputmode="decimal" id="L" value="8,4"></div>
-          <div class="field"><label for="B">Breedte (m)</label><input type="text" inputmode="decimal" id="B" value="5,2"></div>
-          <div class="field"><label for="H">Hoogte (m)</label><input type="text" inputmode="decimal" id="H" value="2,8"></div>
+          <div class="field"><label for="L" data-ui="length">Lengte (m)</label><input type="text" inputmode="decimal" id="L" value="8,4"></div>
+          <div class="field"><label for="B" data-ui="width">Breedte (m)</label><input type="text" inputmode="decimal" id="B" value="5,2"></div>
+          <div class="field"><label for="H" data-ui="height">Hoogte (m)</label><input type="text" inputmode="decimal" id="H" value="2,8"></div>
         </div>
         <p class="volume">
-          <span>Volume <b id="vol">—</b></span>
-          <span>Vloer en plafond <b id="svp">—</b></span>
-          <span>Wanden <b id="sw">—</b></span>
+          <span><span data-ui="volume">Volume</span> <b id="vol">—</b></span>
+          <span><span data-ui="floorCeiling">Vloer en plafond</span> <b id="svp">—</b></span>
+          <span><span data-ui="walls">Wanden</span> <b id="sw">—</b></span>
         </p>
       </section>
 
       <section class="step">
-        <p class="step-head"><b>(02)</b> Afwerking</p>
-        <p class="step-note">Het hoofdmateriaal van elk vlak. Afwijkende delen zoals ramen of tapijt geeft u in stap 03 op.</p>
+        <p class="step-head"><b>(02)</b> <span data-ui="step2">Afwerking</span></p>
+        <p class="step-note" data-ui="step2Note">Het hoofdmateriaal van elk vlak. Afwijkende delen zoals ramen of tapijt geeft u in stap 03 op.</p>
         <div class="row row-3 mats">
-          <div class="field"><label for="mVloer">Vloer</label><select id="mVloer" data-mat></select></div>
-          <div class="field"><label for="mPlafond">Plafond</label><select id="mPlafond" data-mat></select></div>
-          <div class="field"><label for="mWand">Wanden</label><select id="mWand" data-mat></select></div>
+          <div class="field"><label for="mVloer" data-ui="floor">Vloer</label><select id="mVloer" data-mat></select></div>
+          <div class="field"><label for="mPlafond" data-ui="ceiling">Plafond</label><select id="mPlafond" data-mat></select></div>
+          <div class="field"><label for="mWand" data-ui="walls">Wanden</label><select id="mWand" data-mat></select></div>
         </div>
       </section>
 
       <section class="step">
-        <p class="step-head"><b>(03)</b> Afwijkende vlakken</p>
-        <p class="step-note">Ramen, deuren, gordijnen, een tapijt: geef het vlak op waar het toe behoort en de oppervlakte. Die wordt van het hoofdmateriaal afgetrokken.</p>
+        <p class="step-head"><b>(03)</b> <span data-ui="step3">Afwijkende vlakken</span></p>
+        <p class="step-note" data-ui="step3Note">Ramen, deuren, gordijnen, een tapijt: geef het vlak op waar het toe behoort en de oppervlakte. Die wordt van het hoofdmateriaal afgetrokken.</p>
         <div id="vlakken"></div>
-        <button type="button" class="add" id="addVlak">+ Vlak toevoegen</button>
+        <button type="button" class="add" id="addVlak" data-ui="addSurface">+ Vlak toevoegen</button>
       </section>
 
       <section class="step">
-        <p class="step-head"><b>(04)</b> Akoestische panelen</p>
-        <p class="step-note">Het aantal panelen dat u wil plaatsen, per stuk gerekend. Voor een afwijkend formaat rekent u met een regel van drie: een paneel van 1350×1200 mm telt als 0,5 stuk van het model 2700×1200 mm.</p>
+        <p class="step-head"><b>(04)</b> <span data-ui="step4">Akoestische panelen</span></p>
+        <p class="step-note" data-ui="step4Note">Het aantal panelen dat u wil plaatsen, per stuk gerekend. Voor een afwijkend formaat rekent u met een regel van drie: een paneel van 1350×1200 mm telt als 0,5 stuk van het model 2700×1200 mm.</p>
         <div id="panelen"></div>
-        <button type="button" class="add" id="addPaneel">+ Paneel toevoegen</button>
+        <button type="button" class="add" id="addPaneel" data-ui="addPanel">+ Paneel toevoegen</button>
       </section>
 
       <section class="step">
-        <p class="step-head"><b>(05)</b> Rapportgegevens</p>
-        <p class="step-note">Optioneel. Deze namen komen op het geëxporteerde rapport te staan.</p>
+        <p class="step-head"><b>(05)</b> <span data-ui="step5">Rapportgegevens</span></p>
+        <p class="step-note" data-ui="step5Note">Optioneel. Deze namen komen op het geëxporteerde rapport te staan.</p>
         <div class="row row-2">
-          <div class="field"><label for="project">Projectnaam</label><input type="text" id="project" placeholder="bv. Kantoor Beveren"></div>
-          <div class="field"><label for="klant">Opgemaakt voor</label><input type="text" id="klant" placeholder="bv. Architectenbureau X"></div>
+          <div class="field"><label for="project" data-ui="projectName">Projectnaam</label><input type="text" id="project" placeholder="bv. Kantoor Beveren" data-ui-ph="projectPh"></div>
+          <div class="field"><label for="klant" data-ui="preparedFor">Opgemaakt voor</label><input type="text" id="klant" placeholder="bv. Architectenbureau X" data-ui-ph="clientPh"></div>
         </div>
       </section>
 
@@ -506,22 +506,22 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
     <aside class="results">
 
       <div class="hero">
-        <p class="hero-label">Nagalmtijd na plaatsing</p>
+        <p class="hero-label" data-ui="afterLabel">Nagalmtijd na plaatsing</p>
         <div class="readout">
           <span class="big" id="tNa" aria-live="polite">—</span>
-          <span class="unit">seconden</span>
+          <span class="unit" data-ui="seconds">seconden</span>
         </div>
         <p class="status" id="status">—</p>
       </div>
 
       <div class="box">
-        <h3>Voor en na</h3>
+        <h3 data-ui="beforeAfter">Voor en na</h3>
         <div class="dbar">
-          <div class="dbar-top"><span>Huidige situatie</span><b id="tVoorLbl">—</b></div>
+          <div class="dbar-top"><span data-ui="today">Huidige situatie</span><b id="tVoorLbl">—</b></div>
           <div class="track"><div class="fill before" id="barVoor"></div></div>
         </div>
         <div class="dbar" style="margin-bottom:0">
-          <div class="dbar-top"><span>Met panelen</span><b id="tNaLbl">—</b></div>
+          <div class="dbar-top"><span data-ui="withPanels">Met panelen</span><b id="tNaLbl">—</b></div>
           <div class="track"><div class="fill after" id="barNa"></div></div>
           <div class="target-line"><div class="target-tick" id="tick"><i></i><span id="tickLbl"></span></div></div>
         </div>
@@ -529,14 +529,14 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
       </div>
 
       <div class="box">
-        <h3>Per octaafband, in seconden</h3>
+        <h3 data-ui="perBand">Per octaafband, in seconden</h3>
         <div class="chart" id="chart"></div>
         <div class="chart-x" id="chartX"></div>
         <div class="vals" id="valsB"></div>
         <div class="vals a" id="valsA"></div>
         <div class="legend">
-          <span><b style="background:#56524e"></b>Huidig</span>
-          <span><b style="background:#db2412"></b>Met panelen</span>
+          <span><b style="background:#56524e"></b><span data-ui="legendToday">Huidig</span></span>
+          <span><b style="background:#db2412"></b><span data-ui="withPanels">Met panelen</span></span>
         </div>
       </div>
 
@@ -544,16 +544,16 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
 
       <div class="cta">
         <!-- CTA-OFFERTE: vervang # door de offertepagina -->
-        <a class="btn red" href="#">Vraag een gratis offerte →</a>
+        <a class="btn red" href="/contact" target="_top" data-ui="quoteCta">Vraag een gratis offerte →</a>
         <!-- CTA-DEALER: vervang # door de dealerpagina, of vervang deze knop -->
-        <button type="button" class="btn ghost" id="print">Rapport exporteren (pdf)</button>
+        <button type="button" class="btn ghost" id="print" data-ui="exportCta">Rapport exporteren (pdf)</button>
       </div>
 
       <details>
-        <summary>Hoe wordt dit berekend?</summary>
-        <p>De nagalmtijd volgt uit de formule van Sabine: <code>T = V / (6 × A)</code>, met V het volume van de ruimte en A de totale absorptie — de som van elk oppervlak maal zijn absorptiecoëfficiënt in die octaafband. Panelen tellen per stuk mee, met de equivalente absorptie per paneel.</p>
-        <p>Het getal bovenaan is het gemiddelde van 500, 1000 en 2000 Hz. Dat zijn de spraakfrequenties, en die bepalen bij zowat elke ruimte behalve een muziekstudio of opnamelokaal of ze goed klinkt.</p>
-        <p>De uitkomst is een raming op basis van tabelwaarden. Meubilair, mensen en onregelmatige vormen zitten er niet in, dus in de praktijk ligt de nagalmtijd vaak iets lager.</p>
+        <summary data-ui="howSummary">Hoe wordt dit berekend?</summary>
+        <p data-ui-html="how1">De nagalmtijd volgt uit de formule van Sabine: <code>T = V / (6 × A)</code>, met V het volume van de ruimte en A de totale absorptie — de som van elk oppervlak maal zijn absorptiecoëfficiënt in die octaafband. Panelen tellen per stuk mee, met de equivalente absorptie per paneel.</p>
+        <p data-ui="how2">Het getal bovenaan is het gemiddelde van 500, 1000 en 2000 Hz. Dat zijn de spraakfrequenties, en die bepalen bij zowat elke ruimte behalve een muziekstudio of opnamelokaal of ze goed klinkt.</p>
+        <p data-ui="how3">De uitkomst is een raming op basis van tabelwaarden. Meubilair, mensen en onregelmatige vormen zitten er niet in, dus in de praktijk ligt de nagalmtijd vaak iets lager.</p>
       </details>
 
     </aside>
@@ -561,8 +561,8 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
 </div>
 
 <div class="sticky">
-  <div><p>Na plaatsing</p><b id="stickyVal">—</b></div>
-  <button type="button" id="stickyBtn">Bekijk resultaat</button>
+  <div><p data-ui="stickyLabel">Na plaatsing</p><b id="stickyVal">—</b></div>
+  <button type="button" id="stickyBtn" data-ui="stickyBtn">Bekijk resultaat</button>
 </div>
 
 <div id="report" aria-hidden="true"></div>
@@ -573,6 +573,121 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
 
   var BANDS = [125, 250, 500, 1000, 2000, 4000];
   var SPEECH = [2, 3, 4];               // 500, 1000, 2000 Hz
+
+  /* ---- Taal ----
+     Eén taal voor de rekenmodule én het rapport. Volgorde: ?lang=nl|en in de
+     URL (blijft werken als override), anders window.PORTAL_LOCALE (door de
+     portal-route ingevuld: be en nl → nl, elke andere locale → en), anders
+     data-report-lang op <html>, anders Nederlands. */
+  var LANG = (function () {
+    var m = /[?&]lang=(nl|en)/.exec(location.search);
+    if (m) return m[1];
+    var pl = String(window.PORTAL_LOCALE || '').toLowerCase();
+    if (pl === 'be' || pl === 'nl') return 'nl';
+    if (pl) return 'en';
+    return document.documentElement.getAttribute('data-report-lang') === 'en' ? 'en' : 'nl';
+  }());
+
+  /* ---- UI-teksten van de rekenmodule (nl + en; en is de fallback voor elke
+     andere portal-taal). De rapportteksten staan apart in TEKST. Statische
+     tekst hangt aan data-ui / data-ui-html / data-ui-ph / data-ui-val in de
+     opmaak; dynamische tekst wordt hieronder via ui('sleutel') opgehaald. ---- */
+  var UI = {
+    nl: {
+      pageTitle: 'Nagalmtijd berekenen — STRETCH',
+      eyebrow: 'Akoestiektool — gratis en vrijblijvend',
+      title: 'Hoe lang galmt<br>uw ruimte na<span>?</span>',
+      lead: 'Geef de afmetingen en de afwerking van uw ruimte in en zie meteen hoe lang het geluid nagalmt — voor en na het plaatsen van akoestische panelen. De voorbeeldwaarden hieronder mag u overschrijven.',
+      step1: 'De ruimte', roomName: 'Naam of omschrijving', roomNamePh: 'bv. leslokaal 2.14', roomNameDefault: 'Vergaderzaal',
+      roomType: 'Type ruimte', length: 'Lengte (m)', width: 'Breedte (m)', height: 'Hoogte (m)',
+      volume: 'Volume', floorCeiling: 'Vloer en plafond', walls: 'Wanden',
+      step2: 'Afwerking', step2Note: 'Het hoofdmateriaal van elk vlak. Afwijkende delen zoals ramen of tapijt geeft u in stap 03 op.',
+      floor: 'Vloer', ceiling: 'Plafond',
+      step3: 'Afwijkende vlakken', step3Note: 'Ramen, deuren, gordijnen, een tapijt: geef het vlak op waar het toe behoort en de oppervlakte. Die wordt van het hoofdmateriaal afgetrokken.',
+      addSurface: '+ Vlak toevoegen', surface: 'Vlak', material: 'Materiaal', m2: 'm²', chooseMaterial: 'Kies materiaal', removeSurface: 'Vlak verwijderen',
+      step4: 'Akoestische panelen', step4Note: 'Het aantal panelen dat u wil plaatsen, per stuk gerekend. Voor een afwijkend formaat rekent u met een regel van drie: een paneel van 1350×1200 mm telt als 0,5 stuk van het model 2700×1200 mm.',
+      addPanel: '+ Paneel toevoegen', panel: 'Paneel', qty: 'Aantal stuks', qtyM2: 'Oppervlakte (m²)', choosePanel: 'Kies paneel', removePanel: 'Paneel verwijderen',
+      step5: 'Rapportgegevens', step5Note: 'Optioneel. Deze namen komen op het geëxporteerde rapport te staan.',
+      projectName: 'Projectnaam', projectPh: 'bv. Kantoor Beveren', preparedFor: 'Opgemaakt voor', clientPh: 'bv. Architectenbureau X',
+      afterLabel: 'Nagalmtijd na plaatsing', seconds: 'seconden', beforeAfter: 'Voor en na', today: 'Huidige situatie', withPanels: 'Met panelen',
+      perBand: 'Per octaafband, in seconden', legendToday: 'Huidig',
+      quoteCta: 'Vraag een gratis offerte →', exportCta: 'Rapport exporteren (pdf)',
+      howSummary: 'Hoe wordt dit berekend?',
+      how1: 'De nagalmtijd volgt uit de formule van Sabine: <code>T = V / (6 × A)</code>, met V het volume van de ruimte en A de totale absorptie — de som van elk oppervlak maal zijn absorptiecoëfficiënt in die octaafband. Panelen tellen per stuk mee, met de equivalente absorptie per paneel.',
+      how2: 'Het getal bovenaan is het gemiddelde van 500, 1000 en 2000 Hz. Dat zijn de spraakfrequenties, en die bepalen bij zowat elke ruimte behalve een muziekstudio of opnamelokaal of ze goed klinkt.',
+      how3: 'De uitkomst is een raming op basis van tabelwaarden. Meubilair, mensen en onregelmatige vormen zitten er niet in, dus in de praktijk ligt de nagalmtijd vaak iets lager.',
+      stickyLabel: 'Na plaatsing', stickyBtn: 'Bekijk resultaat',
+      fillIn: 'Vul de afmetingen en de afwerking in.', fillInFirst: 'Vul eerst de afmetingen en de afwerking in.',
+      targetOf: 'streefwaarde van {t} s', goalMet: 'Doel gehaald', tooMuch: '{d} s te veel',
+      withinTarget: 'Binnen de {doel} voor dit type ruimte.', aboveTarget: 'Nog boven de {doel}. Voeg panelen toe of kies een type met meer absorptie.',
+      goalTick: 'Doel {t}',
+      warnArea: 'De opgegeven vlakken zijn samen groter dan {list}. Controleer de oppervlaktes in stap 03.', warnAnd: ' en ',
+      warnNoPanels: 'Er zijn nog geen panelen ingegeven, dus beide waarden zijn gelijk.',
+      theFloor: 'de vloer', theCeiling: 'het plafond', theWalls: 'de wanden',
+      /* portal-bridge (opslaan in het klantenportaal) */
+      pbMine: '☁ Mijn ruimtes…', pbSave: 'Opslaan', pbSaveAs: 'Opslaan als', pbOpen: 'Openen', pbDelete: 'Verwijderen',
+      pbNamePrompt: 'Geef deze ruimte een naam:', pbNothing: 'Nog niets om op te slaan.', pbSaved: 'Opgeslagen in uw STRETCH-account.',
+      pbLoaded: 'Geopend.', pbDeleteConfirm: 'Deze ruimte verwijderen uit uw account?', pbDeleted: 'Verwijderd.',
+      pbRestored: 'Vorige sessie hersteld.', pbSignedIn: 'Aangemeld als',
+      pbFailed: 'Dat is niet gelukt. Probeer het straks opnieuw.'
+    },
+    en: {
+      pageTitle: 'Reverberation calculator — STRETCH',
+      eyebrow: 'Acoustic tool — free and without obligation',
+      title: 'How long does<br>your room ring<span>?</span>',
+      lead: 'Enter the dimensions and finishes of your room and see straight away how long sound keeps ringing — before and after fitting acoustic panels. You can overwrite the example values below.',
+      step1: 'The room', roomName: 'Name or description', roomNamePh: 'e.g. classroom 2.14', roomNameDefault: 'Meeting room',
+      roomType: 'Room type', length: 'Length (m)', width: 'Width (m)', height: 'Height (m)',
+      volume: 'Volume', floorCeiling: 'Floor and ceiling', walls: 'Walls',
+      step2: 'Finishes', step2Note: 'The main material of each surface. Deviating parts such as windows or carpet go in step 03.',
+      floor: 'Floor', ceiling: 'Ceiling',
+      step3: 'Deviating surfaces', step3Note: 'Windows, doors, curtains, a rug: pick the surface it belongs to and enter its area. It is deducted from the main material.',
+      addSurface: '+ Add surface', surface: 'Surface', material: 'Material', m2: 'm²', chooseMaterial: 'Choose material', removeSurface: 'Remove surface',
+      step4: 'Acoustic panels', step4Note: 'The number of panels you want to fit, counted per piece. For another size use a rule of three: a 1350×1200 mm panel counts as 0.5 of the 2700×1200 mm model.',
+      addPanel: '+ Add panel', panel: 'Panel', qty: 'Number of pieces', qtyM2: 'Area (m²)', choosePanel: 'Choose panel', removePanel: 'Remove panel',
+      step5: 'Report details', step5Note: 'Optional. These names appear on the exported report.',
+      projectName: 'Project name', projectPh: 'e.g. Office Beveren', preparedFor: 'Prepared for', clientPh: 'e.g. Architects X',
+      afterLabel: 'Reverberation time after fitting', seconds: 'seconds', beforeAfter: 'Before and after', today: 'Current situation', withPanels: 'With panels',
+      perBand: 'Per octave band, in seconds', legendToday: 'Current',
+      quoteCta: 'Request a free quote →', exportCta: 'Export report (pdf)',
+      howSummary: 'How is this calculated?',
+      how1: 'The reverberation time follows from Sabine\'s formula: <code>T = V / (6 × A)</code>, with V the volume of the room and A the total absorption — the sum of every surface times its absorption coefficient in that octave band. Panels count per piece, with the equivalent absorption per panel.',
+      how2: 'The headline figure is the mean of 500, 1000 and 2000 Hz. Those are the speech frequencies, and in almost every room except a music studio or recording room they decide whether it sounds right.',
+      how3: 'The outcome is an estimate based on tabulated values. Furniture, people and irregular shapes are not included, so in practice the reverberation time is often slightly lower.',
+      stickyLabel: 'After fitting', stickyBtn: 'View result',
+      fillIn: 'Enter the dimensions and the finishes.', fillInFirst: 'Enter the dimensions and the finishes first.',
+      targetOf: 'target of {t} s', goalMet: 'Target met', tooMuch: '{d} s too long',
+      withinTarget: 'Within the {doel} for this room type.', aboveTarget: 'Still above the {doel}. Add panels or choose a type with more absorption.',
+      goalTick: 'Target {t}',
+      warnArea: 'The surfaces entered together exceed {list}. Check the areas in step 03.', warnAnd: ' and ',
+      warnNoPanels: 'No panels entered yet, so both values are the same.',
+      theFloor: 'the floor', theCeiling: 'the ceiling', theWalls: 'the walls',
+      pbMine: '☁ My rooms…', pbSave: 'Save', pbSaveAs: 'Save as', pbOpen: 'Open', pbDelete: 'Delete',
+      pbNamePrompt: 'Name this room:', pbNothing: 'Nothing to save yet.', pbSaved: 'Saved to your STRETCH account.',
+      pbLoaded: 'Opened.', pbDeleteConfirm: 'Delete this room from your account?', pbDeleted: 'Deleted.',
+      pbRestored: 'Previous session restored.', pbSignedIn: 'Signed in as',
+      pbFailed: 'That did not work. Please try again later.'
+    }
+  };
+  /* Eenheid van het aantal: standaard stuks, voor losse panelen. Bij een
+     volledig plafond is m² juister: ?unit=m2 in de URL. */
+  var EENHEID = /[?&]unit=m2/.test(location.search) ? 'm2' : 'st';
+  var UIT = UI[LANG] || UI.en;
+  function ui(key, vars) {
+    var s = UIT[key] != null ? UIT[key] : (UI.en[key] != null ? UI.en[key] : key);
+    if (vars) for (var k in vars) if (vars.hasOwnProperty(k)) s = s.replace('{' + k + '}', vars[k]);
+    return s;
+  }
+  /* naam van een tabelwaarde in de UI-taal (het rapport gebruikt nm() met TAAL) */
+  function un(o) { return (LANG === 'en' && o && o.en) ? o.en : (o ? o.naam || o.label : '—'); }
+  /* statische opmaak vertalen; in het Nederlands verandert er niets */
+  (function applyUI() {
+    document.documentElement.lang = LANG;
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ui]'), function (n) { n.textContent = ui(n.getAttribute('data-ui')); });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ui-html]'), function (n) { n.innerHTML = ui(n.getAttribute('data-ui-html')); });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ui-ph]'), function (n) { n.placeholder = ui(n.getAttribute('data-ui-ph')); });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ui-val]'), function (n) { n.value = ui(n.getAttribute('data-ui-val')); });
+  }());
 
   /* ---- Materialen ruimte (tabblad "Materialen structuur") ---- */
   var MATERIALEN = [
@@ -620,9 +735,9 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
   ];
 
   var VLAKKEN = [
-    { key: 'vloer',   label: 'Vloer', en: 'Floor',   zin: 'de vloer' },
-    { key: 'plafond', label: 'Plafond', en: 'Ceiling', zin: 'het plafond' },
-    { key: 'wand',    label: 'Wand', en: 'Wall',    zin: 'de wanden' }
+    { key: 'vloer',   label: 'Vloer', en: 'Floor',   zin: 'de vloer',    zinKey: 'theFloor' },
+    { key: 'plafond', label: 'Plafond', en: 'Ceiling', zin: 'het plafond', zinKey: 'theCeiling' },
+    { key: 'wand',    label: 'Wand', en: 'Wall',    zin: 'de wanden',   zinKey: 'theWalls' }
   ];
 
   var $ = function (id) { return document.getElementById(id); };
@@ -634,7 +749,7 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
   }
   function fmt(n, d) {
     d = d == null ? 2 : d;
-    return n.toFixed(d).replace('.', ',');
+    return LANG === 'en' ? n.toFixed(d) : n.toFixed(d).replace('.', ',');
   }
 
   function vulSelect(sel, lijst, leeg) {
@@ -643,7 +758,7 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
     lijst.forEach(function (m, i) {
       var opt = el('option');
       opt.value = String(i);
-      opt.textContent = m.naam;
+      opt.textContent = un(m);
       sel.appendChild(opt);
     });
   }
@@ -653,7 +768,7 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
   DOELEN.forEach(function (d, i) {
     var o = el('option');
     o.value = String(i);
-    o.textContent = d.naam + ' — ' + fmt(d.t, 1) + ' s';
+    o.textContent = un(d) + ' — ' + fmt(d.t, 1) + ' s';
     typeSel.appendChild(o);
   });
   typeSel.value = '2';                                   // Vergaderzaal
@@ -669,30 +784,30 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
     var r = el('div', 'line surface');
 
     var f1 = el('div', 'field');
-    var l1 = el('label'); l1.textContent = 'Vlak';
+    var l1 = el('label'); l1.textContent = ui('surface');
     var s1 = el('select');
     VLAKKEN.forEach(function (v, i) {
-      var o = el('option'); o.value = String(i); o.textContent = v.label; s1.appendChild(o);
+      var o = el('option'); o.value = String(i); o.textContent = un(v); s1.appendChild(o);
     });
     s1.value = String(surface);
     f1.appendChild(l1); f1.appendChild(s1);
 
     var f2 = el('div', 'field');
-    var l2 = el('label'); l2.textContent = 'Materiaal';
+    var l2 = el('label'); l2.textContent = ui('material');
     var s2 = el('select');
-    vulSelect(s2, MATERIALEN, 'Kies materiaal');
+    vulSelect(s2, MATERIALEN, ui('chooseMaterial'));
     s2.value = matIndex == null ? '' : String(matIndex);
     f2.appendChild(l2); f2.appendChild(s2);
 
     var f3 = el('div', 'field');
-    var l3 = el('label'); l3.textContent = 'm²';
+    var l3 = el('label'); l3.textContent = ui('m2');
     var i3 = el('input');
     i3.type = 'text'; i3.inputMode = 'decimal'; i3.value = opp || '';
     f3.appendChild(l3); f3.appendChild(i3);
 
     var b = el('button', 'kill');
     b.type = 'button'; b.innerHTML = '&times;';
-    b.setAttribute('aria-label', 'Vlak verwijderen');
+    b.setAttribute('aria-label', ui('removeSurface'));
     b.onclick = function () { r.remove(); reken(); };
 
     r.appendChild(f1); r.appendChild(f2); r.appendChild(f3); r.appendChild(b);
@@ -704,21 +819,21 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
     var r = el('div', 'line');
 
     var f1 = el('div', 'field');
-    var l1 = el('label'); l1.textContent = 'Paneel';
+    var l1 = el('label'); l1.textContent = ui('panel');
     var s1 = el('select');
-    vulSelect(s1, PANELEN, 'Kies paneel');
+    vulSelect(s1, PANELEN, ui('choosePanel'));
     s1.value = panelIndex == null ? '' : String(panelIndex);
     f1.appendChild(l1); f1.appendChild(s1);
 
     var f2 = el('div', 'field');
-    var l2 = el('label'); l2.textContent = 'Aantal stuks';
+    var l2 = el('label'); l2.textContent = ui(EENHEID === 'm2' ? 'qtyM2' : 'qty');
     var i2 = el('input');
     i2.type = 'text'; i2.inputMode = 'decimal'; i2.value = aantal || '';
     f2.appendChild(l2); f2.appendChild(i2);
 
     var b = el('button', 'kill');
     b.type = 'button'; b.innerHTML = '&times;';
-    b.setAttribute('aria-label', 'Paneel verwijderen');
+    b.setAttribute('aria-label', ui('removePanel'));
     b.onclick = function () { r.remove(); reken(); };
 
     r.appendChild(f1); r.appendChild(f2); r.appendChild(b);
@@ -762,7 +877,7 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
 
     var tekort = [];
     VLAKKEN.forEach(function (v) {
-      if (opp[v.key] < 0) { tekort.push(v.zin); opp[v.key] = 0; }
+      if (opp[v.key] < 0) { tekort.push(ui(v.zinKey)); opp[v.key] = 0; }
     });
 
     var leeg = { naam: '—', a: [0, 0, 0, 0, 0, 0] };
@@ -819,7 +934,7 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
       $('tNa').textContent = '—';
       $('tVoorLbl').textContent = $('tNaLbl').textContent = '—';
       $('stickyVal').textContent = '—';
-      $('status').textContent = 'Vul de afmetingen en de afwerking in.';
+      $('status').textContent = ui('fillIn');
       $('barVoor').style.width = $('barNa').style.width = '0%';
       staven.forEach(function (s) { s.b.style.height = s.a.style.height = '0'; });
       Array.prototype.forEach.call($('valsB').children, function (n) { n.textContent = ''; });
@@ -834,16 +949,16 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
     $('tVoorLbl').textContent = fmt(r.gVoor, 2) + ' s';
     $('tNaLbl').textContent = fmt(r.gNa, 2) + ' s';
 
-    var s = $('status'), doelTxt = 'streefwaarde van ' + fmt(r.doel, 1) + ' s';
+    var s = $('status'), doelTxt = ui('targetOf', { t: fmt(r.doel, 1) });
     s.innerHTML = '';
     var chip = el('span', 'chip');
     var tekst = el('span');
     if (r.gNa <= r.doel) {
-      chip.textContent = 'Doel gehaald';
-      tekst.textContent = 'Binnen de ' + doelTxt + ' voor dit type ruimte.';
+      chip.textContent = ui('goalMet');
+      tekst.textContent = ui('withinTarget', { doel: doelTxt });
     } else {
-      chip.textContent = fmt(r.gNa - r.doel, 2) + ' s te veel';
-      tekst.textContent = 'Nog boven de ' + doelTxt + '. Voeg panelen toe of kies een type met meer absorptie.';
+      chip.textContent = ui('tooMuch', { d: fmt(r.gNa - r.doel, 2) });
+      tekst.textContent = ui('aboveTarget', { doel: doelTxt });
     }
     s.appendChild(chip); s.appendChild(tekst);
 
@@ -853,7 +968,7 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
     $('barNa').style.width   = Math.min(100, r.gNa / as * 100) + '%';
     $('axMax').textContent   = fmt(as, 1) + ' s';
     $('tick').style.left     = Math.min(100, r.doel / as * 100) + '%';
-    $('tickLbl').textContent = 'Doel ' + fmt(r.doel, 1);
+    $('tickLbl').textContent = ui('goalTick', { t: fmt(r.doel, 1) });
 
     /* octaafbanden */
     var top = Math.max.apply(null, r.tVoor.concat([0.1]));
@@ -867,11 +982,10 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
     var w = $('warn');
     if (r.tekort.length) {
       w.hidden = false;
-      w.textContent = 'De opgegeven vlakken zijn samen groter dan ' + r.tekort.join(' en ') +
-                      '. Controleer de oppervlaktes in stap 03.';
+      w.textContent = ui('warnArea', { list: r.tekort.join(ui('warnAnd')) });
     } else if (!r.panelen) {
       w.hidden = false;
-      w.textContent = 'Er zijn nog geen panelen ingegeven, dus beide waarden zijn gelijk.';
+      w.textContent = ui('warnNoPanels');
     } else {
       w.hidden = true;
     }
@@ -892,12 +1006,9 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
      RAPPORT
      ══════════════════════════════════════════════════════════ */
 
-  /* Taal van het rapport: ?lang=en in de URL, of data-report-lang="en" op <html>.
-     De rekenmodule zelf blijft Nederlands. */
-  var TAAL = (function () {
-    var m = /[?&]lang=(nl|en)/.exec(location.search);
-    return m ? m[1] : (document.documentElement.getAttribute('data-report-lang') || 'nl');
-  }());
+  /* Taal van het rapport = de taal van de rekenmodule (LANG, zie bovenaan:
+     ?lang=nl|en, anders de portal-locale, anders data-report-lang op <html>). */
+  var TAAL = LANG;
   function nm(o) { return (TAAL === 'en' && o && o.en) ? o.en : (o ? o.naam || o.label : '—'); }
 
   /* Technische fiche per paneel. Aangevuld vanuit het bestaande
@@ -914,9 +1025,7 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
   };
   var VAST = { brandklasse: 'B-s1, d0', maxBreedte: 5.15 };
 
-  /* Eenheid van het aantal in het rapport. Standaard stuks, voor losse panelen.
-     Bij een volledig plafond is m² juister: ?unit=m2 in de URL, of hieronder wijzigen. */
-  var EENHEID = /[?&]unit=m2/.test(location.search) ? 'm2' : 'st';
+  /* EENHEID (stuks of m²) staat bovenaan het script, naast LANG. */
 
   var BEDRIJF = {
     naam: 'STRETCH Group',
@@ -1319,7 +1428,8 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
   $('addVlak').onclick = function () { vlakRegel(2, null, ''); reken(); };
   $('addPaneel').onclick = function () { paneelRegel(null, ''); reken(); };
   $('print').onclick = function () {
-    if (!bouwRapport()) { alert('Vul eerst de afmetingen en de afwerking in.'); return; }
+    if (!bouwRapport()) { alert(ui('fillInFirst')); return; }
+    if (window.AcousticBridge) window.AcousticBridge.event('report_export', { lang: TAAL, unit: EENHEID });
     window.print();
   };
   $('stickyBtn').onclick = function () {
@@ -1332,6 +1442,208 @@ details code{color:var(--fg);background:var(--field);border:1px solid var(--fiel
   vlakRegel(2, 11, '9');          // 9 m² dubbel glas in de wand
   paneelRegel(6, '20');           // 20 × STRETCH Acoustic 495D D2050
   reken();
+
+  /* ══════════════════════════════════════════════════════════
+     PORTAL BRIDGE — opslaan in het klantenportaal, autosave, events
+     Praat met de portal-API op dezelfde origin (sessiecookie):
+       GET/POST/DELETE /api/portal/acoustics/projects, POST …/event.
+     Zonder API (demo-modus, geen Supabase, netwerkfout) verdwijnt enkel
+     de werkbalk; rekenen, rapport en de browser-autosave werken gewoon
+     door. Nooit een ruwe fout aan de klant tonen.
+     ══════════════════════════════════════════════════════════ */
+  var PB = window.AcousticBridge = { cloudId: null, storage: 'unknown' };
+  var USER = window.PORTAL_USER || null;
+  var AUTOSAVE_KEY = 'stretch-acoustic:autosave';
+  var STATE_APP = 'stretch-acoustic';
+
+  function api(path, opts) {
+    opts = opts || {};
+    opts.credentials = 'same-origin';
+    if (opts.body && !opts.headers) opts.headers = { 'Content-Type': 'application/json' };
+    return fetch('/api/portal/acoustics' + path, opts);
+  }
+  PB.event = function (name, meta) {
+    try { api('/event', { method: 'POST', body: JSON.stringify({ event: name, meta: meta || {} }) }).catch(function () {}); } catch (e) {}
+  };
+
+  /* ---- formulier ↔ state-object {app:'stretch-acoustic', version:1} ----
+     Materialen en panelen worden op hun vaste nr bewaard (niet op de
+     positie in de keuzelijst), afmetingen en aantallen als getypte tekst,
+     zodat een geopende ruimte er exact zo uitziet als bij het opslaan. */
+  function nrOf(lijst, sel) { var m = lijst[parseInt(sel.value, 10)]; return m ? m.nr : null; }
+  function idxOfNr(lijst, nr) { for (var i = 0; i < lijst.length; i++) if (lijst[i].nr === nr) return i; return null; }
+  function getState() {
+    var doel = DOELEN[parseInt(typeSel.value, 10)];
+    var surfaces = [], panels = [];
+    Array.prototype.forEach.call($('vlakken').children, function (r) {
+      var sels = r.querySelectorAll('select'), inp = r.querySelector('input');
+      var v = VLAKKEN[parseInt(sels[0].value, 10)];
+      surfaces.push({ surface: v ? v.key : 'wand', nr: nrOf(MATERIALEN, sels[1]), m2: inp.value });
+    });
+    Array.prototype.forEach.call($('panelen').children, function (r) {
+      panels.push({ nr: nrOf(PANELEN, r.querySelector('select')), qty: r.querySelector('input').value });
+    });
+    return {
+      app: STATE_APP, version: 1, unit: EENHEID, lang: LANG,
+      room: {
+        name: $('naam').value, project: $('project').value, client: $('klant').value,
+        type: doel ? doel.naam : null, L: $('L').value, B: $('B').value, H: $('H').value,
+        floor: nrOf(MATERIALEN, $('mVloer')), ceiling: nrOf(MATERIALEN, $('mPlafond')), walls: nrOf(MATERIALEN, $('mWand'))
+      },
+      surfaces: surfaces, panels: panels
+    };
+  }
+  function applyState(s) {
+    if (!s || s.app !== STATE_APP || !s.room) return false;
+    var room = s.room, i, mi;
+    $('naam').value = room.name || ''; $('project').value = room.project || ''; $('klant').value = room.client || '';
+    $('L').value = room.L || ''; $('B').value = room.B || ''; $('H').value = room.H || '';
+    for (i = 0; i < DOELEN.length; i++) if (DOELEN[i].naam === room.type) { typeSel.value = String(i); break; }
+    mi = idxOfNr(MATERIALEN, room.floor);   if (mi != null) $('mVloer').value = String(mi);
+    mi = idxOfNr(MATERIALEN, room.ceiling); if (mi != null) $('mPlafond').value = String(mi);
+    mi = idxOfNr(MATERIALEN, room.walls);   if (mi != null) $('mWand').value = String(mi);
+    $('vlakken').innerHTML = ''; $('panelen').innerHTML = '';
+    (s.surfaces || []).forEach(function (x) {
+      var si = 2, k;
+      for (k = 0; k < VLAKKEN.length; k++) if (VLAKKEN[k].key === x.surface) si = k;
+      vlakRegel(si, idxOfNr(MATERIALEN, x.nr), x.m2 || '');
+    });
+    (s.panels || []).forEach(function (x) { paneelRegel(idxOfNr(PANELEN, x.nr), x.qty || ''); });
+    reken();
+    return true;
+  }
+  PB.getState = getState;
+  PB.applyState = applyState;
+  PB.buildReport = bouwRapport;
+  PB.result = function () { return huidig; };
+
+  /* ---- werkbalk: bestaande tokens (--line, --field, .add), verborgen tot
+     de API 'db' meldt ---- */
+  function pbBtn(key, fn) { var b = el('button', 'add'); b.type = 'button'; b.textContent = ui(key); b.onclick = fn; return b; }
+  var bar = el('div', 'pbar'); bar.id = 'pbar'; bar.style.display = 'none';
+  var sel = el('select'); sel.id = 'pbSel'; sel.setAttribute('aria-label', ui('pbMine'));
+  var note = el('span', 'pbar-note'); note.id = 'pbNote';
+  var who = el('span', 'pbar-who');
+  if (USER && USER.email) who.textContent = ui('pbSignedIn') + ' ' + (USER.company || USER.email);
+  bar.appendChild(sel);
+  bar.appendChild(pbBtn('pbOpen', function () { if (sel.value) cloudLoad(sel.value); }));
+  bar.appendChild(pbBtn('pbSave', function () { cloudSave(false); }));
+  bar.appendChild(pbBtn('pbSaveAs', function () { cloudSave(true); }));
+  bar.appendChild(pbBtn('pbDelete', function () { if (sel.value) cloudDelete(sel.value); }));
+  bar.appendChild(note); bar.appendChild(who);
+  var css = el('style');
+  css.textContent = '.pbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:0 0 26px}' +
+    '.pbar select{width:auto;min-width:220px;flex:1 1 220px}.pbar .add{margin-top:0}' +
+    '.pbar-note{font-size:.75rem;color:var(--muted);flex:1 1 auto}' +
+    '.pbar-who{font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-left:auto}' +
+    '@media print{.pbar{display:none!important}}';
+  document.head.appendChild(css);
+  var mast = document.querySelector('.masthead');
+  mast.parentNode.insertBefore(bar, mast.nextSibling);
+
+  function flash(msg) { note.textContent = msg; clearTimeout(flash.t); flash.t = setTimeout(function () { note.textContent = ''; }, 4000); }
+  function hideCloudUI() { bar.style.display = 'none'; hoogte(); }
+  function showCloudUI() { bar.style.display = 'flex'; hoogte(); }
+  function fmtWhen(iso) {
+    try { var d = new Date(iso); return d.toLocaleDateString() + ' ' + ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2); }
+    catch (e) { return ''; }
+  }
+
+  /* ---- cloud: lijst / opslaan / openen / verwijderen ---- */
+  function refreshList() {
+    return api('/projects').then(function (r) { return r.json(); }).then(function (j) {
+      if (!j || !j.ok || j.storage !== 'db') { PB.storage = (j && j.storage) || 'none'; hideCloudUI(); return; }
+      PB.storage = 'db';
+      var keep = sel.value;
+      sel.innerHTML = '';
+      var o0 = el('option'); o0.value = ''; o0.textContent = ui('pbMine'); sel.appendChild(o0);
+      (j.projects || []).forEach(function (p) {
+        var o = el('option'); o.value = p.id; o.textContent = p.name + ' · ' + fmtWhen(p.updated_at); sel.appendChild(o);
+      });
+      sel.value = keep || '';
+      showCloudUI();
+    }).catch(function () { PB.storage = 'none'; hideCloudUI(); });
+  }
+  function cloudSave(asNew) {
+    if (!huidig || !huidig.geldig) { flash(ui('pbNothing')); return; }
+    var st = getState();
+    var name = (st.room.project || st.room.name || '').trim();
+    if (asNew || !name) {
+      name = (prompt(ui('pbNamePrompt'), name || (un(DOELEN[parseInt(typeSel.value, 10)]) + ' ' + new Date().toLocaleDateString())) || '').trim();
+      if (!name) return;
+    }
+    api('/projects', { method: 'POST', body: JSON.stringify({ id: asNew ? null : PB.cloudId, name: name, state: st }) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j && j.ok && j.id) {
+          PB.cloudId = j.id;
+          PB.event('cloud_save', { id: j.id });
+          flash(ui('pbSaved'));
+          autosaveNow();
+          refreshList().then(function () { sel.value = j.id; });
+        } else if (j && j.storage === 'none') {
+          PB.storage = 'none'; hideCloudUI();
+        } else {
+          flash(ui('pbFailed'));
+        }
+      })
+      .catch(function () { flash(ui('pbFailed')); });
+  }
+  function cloudLoad(id) {
+    api('/projects?id=' + encodeURIComponent(id)).then(function (r) { return r.json(); }).then(function (j) {
+      if (!j || !j.ok || !j.project || !applyState(j.project.state)) { flash(ui('pbFailed')); return; }
+      PB.cloudId = j.project.id;
+      PB.event('cloud_load', { id: j.project.id });
+      flash(ui('pbLoaded'));
+      autosaveNow();
+    }).catch(function () { flash(ui('pbFailed')); });
+  }
+  function cloudDelete(id) {
+    if (!confirm(ui('pbDeleteConfirm'))) return;
+    api('/projects?id=' + encodeURIComponent(id), { method: 'DELETE' }).then(function () {
+      if (PB.cloudId === id) PB.cloudId = null;
+      sel.value = '';
+      flash(ui('pbDeleted'));
+      refreshList();
+    }).catch(function () { flash(ui('pbFailed')); });
+  }
+  PB.cloudSave = cloudSave; PB.cloudLoad = cloudLoad; PB.cloudDelete = cloudDelete; PB.refreshList = refreshList;
+
+  /* ---- browser-autosave als vangnet (elke 25 s, bij wijziging en bij
+     verlaten); bij het openen hersteld zolang er geen cloud-ruimte is ---- */
+  function autosaveNow() {
+    try { var st = getState(); st.cloudId = PB.cloudId; localStorage.setItem(AUTOSAVE_KEY, JSON.stringify(st)); } catch (e) {}
+  }
+  var autosaveTimer = null;
+  function autosaveSoon() { clearTimeout(autosaveTimer); autosaveTimer = setTimeout(autosaveNow, 800); }
+  document.addEventListener('input', autosaveSoon);
+  document.addEventListener('change', autosaveSoon);
+  setInterval(autosaveNow, 25000);
+  addEventListener('beforeunload', autosaveNow);
+  (function restore() {
+    try {
+      var raw = localStorage.getItem(AUTOSAVE_KEY);
+      if (!raw) return;
+      var st = JSON.parse(raw);
+      if (applyState(st)) { PB.cloudId = st.cloudId || null; flash(ui('pbRestored')); }
+    } catch (e) {}
+  }());
+
+  /* ---- gebruiksevents: open, calc (max. één per minuut), cloud_save,
+     cloud_load, report_export (in de printknop) ---- */
+  var lastCalc = 0;
+  function calcEvent() {
+    if (!huidig || !huidig.geldig) return;
+    var now = Date.now();
+    if (now - lastCalc < 60000) return;
+    lastCalc = now;
+    PB.event('calc', { volume: huidig.V, rtBefore: Math.round(huidig.gVoor * 100) / 100, rtAfter: Math.round(huidig.gNa * 100) / 100, target: huidig.doel, panels: huidig.panelen });
+  }
+  document.addEventListener('input', calcEvent);
+  document.addEventListener('change', calcEvent);
+
+  refreshList();
+  PB.event('open', { lang: LANG, unit: EENHEID });
 }());
 </script>
 

@@ -243,7 +243,8 @@
       "demoBadge": "Prufa",
       "allMarkets": "Allir markaðir",
       "designer": "Loftahönnuður",
-      "budgetGuide": "Kostnaðarleiðarvísir"
+      "budgetGuide": "Kostnaðarleiðarvísir",
+      "acoustics": "Acoustic calculator"
     },
     "dash": {
       "eyebrow": "Viðskiptavinagátt",
@@ -268,7 +269,9 @@
       "tileAccountBody": "Upplýsingar um STRETCH-aðganginn þinn. Tilboð, skjöl og pöntunarsaga birtast hér.",
       "tileTrade": "Söluaðilaaðgangur",
       "tileTradeBody": "Uppsetningaraðili eða söluaðili? Fáðu söluaðilaverð og loftahönnuðinn með fyrirtækjaaðgangi.",
-      "tradeCta": "Gerast samstarfsaðili"
+      "tradeCta": "Gerast samstarfsaðili",
+      "tileAcoustics": "Acoustic calculator",
+      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template."
     },
     "docs": {
       "title": "Skjöl",
@@ -425,7 +428,10 @@
       "advisorBody": "Einn sérfræðingur fyrir útboðstexta, hljóðvist, kostnað og sýnishorn — svar innan eins virks dags.",
       "advisorCta": "Bóka símtal",
       "download": "Sækja",
-      "comingSoon": "Væntanlegt"
+      "comingSoon": "Væntanlegt",
+      "acousticsTileTitle": "Reverberation study",
+      "acousticsTileBody": "Calculate a room's reverberation time per octave band against the target for its use, and export a 3-page report.",
+      "acousticsTileCta": "Open the calculator"
     },
     "budget": {
       "eyebrow": "Arkitektasvæði",
@@ -437,6 +443,10 @@
       "perUnit": "á einingu uppsetta, án VSK",
       "ctaBody": "Vantar þig raunverulega tölu fyrir virkt verkefni? Skráðu það og sérstakur ráðgjafi verðleggur það rétt innan eins virks dags.",
       "ctaButton": "Skráðu verkefnið þitt"
+    },
+    "acoustics": {
+      "eyebrow": "Acoustic calculator",
+      "hint": "Enter the room's dimensions and finishes, add STRETCH Acoustic panels and see the reverberation time before and after, per octave band, against the target for the room type. Export a 3-page PDF report; Save keeps the room in your account."
     }
   },
   "home": {

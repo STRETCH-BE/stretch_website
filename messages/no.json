@@ -243,7 +243,8 @@
       "demoBadge": "Demo",
       "allMarkets": "Alle markeder",
       "designer": "Takdesigner",
-      "budgetGuide": "Budsjettguide"
+      "budgetGuide": "Budsjettguide",
+      "acoustics": "Acoustic calculator"
     },
     "dash": {
       "eyebrow": "Kundeportal",
@@ -268,7 +269,9 @@
       "tileAccountBody": "Dine STRETCH-kontoopplysninger. Tilbud, dokumenter og ordrehistorikk vises her.",
       "tileTrade": "Forhandlertilgang",
       "tileTradeBody": "Montør eller forhandler? Få forhandlerpriser og takdesigneren med en forhandlerkonto.",
-      "tradeCta": "Bli partner"
+      "tradeCta": "Bli partner",
+      "tileAcoustics": "Acoustic calculator",
+      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template."
     },
     "docs": {
       "title": "Dokumenter",
@@ -425,7 +428,10 @@
       "advisorBody": "Én spesialist for beskrivelse, akustikkmål, budsjetter og prøver — svar innen én arbeidsdag.",
       "advisorCta": "Book en samtale",
       "download": "Last ned",
-      "comingSoon": "Kommer snart"
+      "comingSoon": "Kommer snart",
+      "acousticsTileTitle": "Reverberation study",
+      "acousticsTileBody": "Calculate a room's reverberation time per octave band against the target for its use, and export a 3-page report.",
+      "acousticsTileCta": "Open the calculator"
     },
     "budget": {
       "eyebrow": "Arkitektområde",
@@ -437,6 +443,10 @@
       "perUnit": "per enhet montert, ekskl. mva.",
       "ctaBody": "Trenger du et ekte tall for et aktivt prosjekt? Registrer det, så priser en fast rådgiver det riktig innen én arbeidsdag.",
       "ctaButton": "Registrer prosjektet ditt"
+    },
+    "acoustics": {
+      "eyebrow": "Acoustic calculator",
+      "hint": "Enter the room's dimensions and finishes, add STRETCH Acoustic panels and see the reverberation time before and after, per octave band, against the target for the room type. Export a 3-page PDF report; Save keeps the room in your account."
     }
   },
   "home": {

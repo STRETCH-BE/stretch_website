@@ -22,6 +22,7 @@ import {
   Package,
   PhoneCall,
   Ruler,
+  AudioLines,
 } from 'lucide-react';
 import { datasheetsByCategory } from '@/lib/datasheets';
 import { architectResourcesByCategory, type ArchitectResource } from '@/lib/architect-resources';
@@ -191,6 +192,13 @@ export default async function ArchitectDashboard({
             <h3>{t('budgetTileTitle')}</h3>
             <p>{t('budgetTileBody')}</p>
             <span className="arch-tile__cta">{t('budgetTileCta')} <ArrowRight size={14} /></span>
+          </Link>
+          {/* Acoustic calculator — the reverberation study architects ask for (hasAcousticsAccess). */}
+          <Link href="/portal/acoustics" className="arch-tile arch-tile--link">
+            <div className="arch-tile__head"><AudioLines size={19} /></div>
+            <h3>{t('acousticsTileTitle')}</h3>
+            <p>{t('acousticsTileBody')}</p>
+            <span className="arch-tile__cta">{t('acousticsTileCta')} <ArrowRight size={14} /></span>
           </Link>
           <div className="arch-tile">
             <div className="arch-tile__head"><LineChart size={19} /></div>

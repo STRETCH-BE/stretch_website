@@ -243,7 +243,8 @@
       "demoBadge": "Démo",
       "allMarkets": "Tous les marchés",
       "designer": "Concepteur de plafond",
-      "budgetGuide": "Guide budgétaire"
+      "budgetGuide": "Guide budgétaire",
+      "acoustics": "Calculateur acoustique"
     },
     "dash": {
       "eyebrow": "Espace client",
@@ -268,7 +269,9 @@
       "tileAccountBody": "Les données de votre compte STRETCH. Devis, documents et historique de commandes apparaîtront ici.",
       "tileTrade": "Accès pro",
       "tileTradeBody": "Installateur ou revendeur ? Obtenez les prix pro et le designer de plafonds avec un compte professionnel.",
-      "tradeCta": "Devenir partenaire"
+      "tradeCta": "Devenir partenaire",
+      "tileAcoustics": "Calculateur acoustique",
+      "tileAcousticsBody": "Temps de réverbération d'une pièce avant et après panneaux acoustiques, avec un rapport PDF au modèle STRETCH."
     },
     "docs": {
       "title": "Documents",
@@ -425,7 +428,10 @@
       "advisorBody": "Un spécialiste pour la prescription, l’acoustique, les budgets et les échantillons — réponse sous un jour ouvré.",
       "advisorCta": "Réserver un appel",
       "download": "Télécharger",
-      "comingSoon": "Bientôt"
+      "comingSoon": "Bientôt",
+      "acousticsTileTitle": "Étude de réverbération",
+      "acousticsTileBody": "Calculez le temps de réverbération d'une pièce par bande d'octave face à la valeur cible pour son usage et exportez un rapport de 3 pages.",
+      "acousticsTileCta": "Ouvrir le calculateur"
     },
     "budget": {
       "eyebrow": "Espace architectes",
@@ -437,6 +443,10 @@
       "perUnit": "par unité posée, hors TVA",
       "ctaBody": "Besoin d’un chiffre réel pour un projet en cours ? Enregistrez-le : un conseiller dédié le chiffre correctement sous un jour ouvré.",
       "ctaButton": "Enregistrer votre projet"
+    },
+    "acoustics": {
+      "eyebrow": "Calculateur acoustique",
+      "hint": "Saisissez les dimensions et les finitions de la pièce, ajoutez des panneaux STRETCH Acoustic et voyez le temps de réverbération avant et après, par bande d'octave, face à la valeur cible pour ce type de pièce. Exportez un rapport PDF de 3 pages ; Enregistrer conserve la pièce dans votre compte."
     }
   },
   "home": {
