@@ -1,3 +1,105 @@
+## 2026-09-04 (34) — stretch-sufit.pl: Alto Design Sp. z o.o. as the point of contact
+
+Michael's brief: the Polish domain showed only Belgian contact data (top
+bar, CTA band and footer all +32 474 52 20 90, the footer's only address the
+Beveren-Waas HQ). On the pl locale Alto Design (Częstochowa) is now the
+primary contact; the group HQ stays visible as secondary. **No other
+locale changes** — verified byte-identical (see below).
+
+Audit first (repo-wide grep for "+32 474 52 20 90", "474522090",
+"info@stretchgroup.be", "Gentseweg"): the only hard-coded occurrences in
+components were the two footer strings ("Beverpark, Gentseweg 309 A3 /
+9120 Beveren-Waas, Belgium" and the Swiss manufacturer line); everything
+else already read `contact` from `src/lib/site-config.ts`. Those two now
+come from `contact.address.footerLines` / `streetShort` (same output).
+Other hits: `structured-data.ts` (streetAddress literal, unchanged),
+`reviews.ts` (Google Maps query URLs), `content.ts` (two Polish article
+paragraphs that mention both plants — editorial, left), and the three
+`supabase/email-templates/*.txt` footers (transactional e-mails, out of
+scope, listed for Michael).
+
+Where the data lives: `polishEntity` in `src/lib/site-config.ts` (name,
+address, e-mail, hours, the four labelled lines with E.164 numbers, KRS /
+NIP / REGON, registry court, share capital, VAT id). Every consumer — the
+utility bar, CTA band, mobile menu, footer, contact page, Polish place
+pages and the JSON-LD — reads the same constants, so the visible NAP and
+the structured data match character for character. The *labels* (line
+names, "Zadzwoń — …" aria texts, block headings, "Godziny", "Kapitał
+zakładowy", "Belgia") are messages under `common.plContact` in all 16
+files (English fallback text elsewhere; only pl renders them). Decision:
+the values stay in site-config rather than the catalogues because that is
+the repo's existing pattern (Belgian HQ, QuinLay AG) and the single
+source is what guarantees NAP consistency between the footer and the
+LocalBusiness node.
+
+- **Top bar (pl)**: "Projekty krajowe +48 730 700 333" (label hidden below
+  1280px so the "Produkcja: Częstochowa · Beveren-Waas" line never
+  truncates); `aria-label="Zadzwoń — projekty krajowe"`.
+- **CTA band (pl)**: "Wolisz porozmawiać? +48 730 700 333 · pn–pt ·
+  08:30–17:00" — same markup, number swapped, aria-label added.
+- **Footer (pl)**: the HQ column holds two blocks — "Biuro i produkcja —
+  Polska" (Alto Design, ul. Legionów 59, 42-200 Częstochowa, Polska; the
+  four labelled lines with the language tag as muted text outside the
+  link; info@stretch-sufit.pl; Godziny) then "Siedziba główna — Belgia"
+  reduced to STRETCH Group, Beverpark, Gentseweg 309 A3, 9120
+  Beveren-Waas, Belgia, info@stretchgroup.be (no +32 — it is the export
+  line above). The "US · New York / PL · Częstochowa / AT · Vienna" row
+  stays. A legal strip above the copyright row: "Alto Design Sp. z o.o. ·
+  KRS 0000786996 · NIP 5732911703 · REGON 383390837 · Sąd Rejonowy w
+  Częstochowie, Wydział Gospodarczy KRS" — the "Kapitał zakładowy … PLN"
+  segment appears once `polishEntity.registry.shareCapital` is filled
+  (empty on purpose: nothing invented). Layout checked at 1440 / 1024 /
+  768 / 390px.
+- **Contact page (pl)**: call card = +48 730 700 333 (pn–pt · 08:30–17:00),
+  e-mail card = info@stretch-sufit.pl (Alto Design); a bordered block —
+  Alto Design with the four labelled lines, e-mail and hours, the group HQ
+  card beside it; the box under the map and the PL office card in the
+  offices grid read the same constants; the FAQ side card and the
+  captcha-failure note use the Polish line / inbox. The chat card still
+  links the Belgian WhatsApp number (no Polish WhatsApp was supplied).
+- **Polish place pages (pl)**: identity card = Alto Design + the domestic
+  line, STRETCH Group below.
+- **Structured data (pl)**: `polishBusinessSchema()` — LocalBusiness
+  "Alto Design Sp. z o.o.", ul. Legionów 59, 42-200 Częstochowa, PL,
+  telephone +48730700333, e-mail, geo, openingHoursSpecification Mo–Fr
+  08:30–17:00, areaServed PL, vatID PL5732911703, taxID 5732911703, four
+  contactPoints, parentOrganization → the STRETCH Group organization
+  node. Emitted on the pl home (instead of the Belgian LocalBusiness), on
+  /contact (next to the HQ node; it replaces the generic `#branch-pl`
+  node there) and on Polish place pages.
+- **hreflang / canonical**: pl → stretch-sufit.pl (`localeDomains`),
+  `pl-PL` (`localeFullCodes`); verified on the built pages.
+
+Verification: typecheck clean; ESLint with Next's core-web-vitals rules
+(the repo has no ESLint config or dependency — `next lint` only offers to
+create one — so it ran from a temporary config outside the repo; the one
+report is a pre-existing `eslint-disable` comment in `src/lib/spam/email.ts`
+naming a rule that config does not load); build 3154 pages; the rendered
+HTML of 82 pages on be, nl, fr, de, en, us, sv and ch (+ /fr/) compared
+before and after — byte-identical once chunk hashes, build id and the
+`now` timestamp are normalised; the 11 pl pages differ as intended. On
+pl: JSON-LD name/address/phone/e-mail/hours/VAT/parent checked against
+the constants, every `tel:` href is E.164, Polish aria-labels present,
+canonical and `hreflang="pl-PL"` point at stretch-sufit.pl, and the
+footer at 1440 / 1024 / 768 / 390px keeps its columns aligned with the
+legal strip wrapping inside (58px tall on a phone). Pre-existing and
+untouched: the contact page's h1 "Porozmawiajmy o sufitach." is wider
+than its container (the word "Porozmawiajmy" at the global h1 size) and
+gives the page a few px of horizontal scroll at 1440 and 390px — a
+headline-size issue like entry 31, not part of this brief.
+
+The `common.plContact` keys exist in pl.json only (every read is behind
+the pl guard); adding English fallbacks to the other 15 files would have
+changed their hydration payload, which the brief forbids.
+
+Open for Michael: (1) the postcode — the brief says **42-200**, while
+`offices[]` (offices grid on every locale, generic branch JSON-LD) and
+the Polish article in `content.ts` say **42-202**; the pl locale now
+prints 42-200 everywhere per the brief, the shared data was left alone
+so the other locales stay identical — confirm which is right and I align
+the rest; (2) the registry court wording (division number) and (3) the
+share capital.
+
 ## 2026-09-03 (33) — PageSpeed round: client messages subset, lead modal on demand, grid LCP images, contrast
 
 Google's PageSpeed Insights API was over its anonymous daily quota from

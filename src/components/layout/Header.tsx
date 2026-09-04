@@ -71,7 +71,11 @@ export default function Header() {
             )}
             <PortalLink href="/portal" className="lnk">{t('nav.clientLogin')}</PortalLink>
             <span style={{ opacity: 0.4 }}>|</span>
-            <a href={local.phoneHref} className="lnk" style={{ color: 'var(--red-bright)' }} onClick={() => analytics.phoneClick('header_utility')}>
+            {/* pl: Alto Design's domestic-projects line, labelled (label hidden ≤1280px, globals.css). */}
+            {local.phoneLine && (
+              <span className="hdr-phone-label" style={{ color: 'var(--on-dark-muted)' }}>{t(`plContact.lines.${local.phoneLine}`)}</span>
+            )}
+            <a href={local.phoneHref} className="lnk" style={{ color: 'var(--red-bright)' }} {...(local.phoneLine ? { 'aria-label': t(`plContact.call.${local.phoneLine}`) } : {})} onClick={() => analytics.phoneClick('header_utility')}>
               {local.phoneDisplay}
             </a>
             <LanguageSwitcher />

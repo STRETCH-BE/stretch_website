@@ -3,7 +3,7 @@
 // Render output via <JsonLd data={...} />. Uses @id URIs so schemas
 // cross-reference instead of duplicating. Never fabricates ratings or prices.
 // ============================================================================
-import { siteUrl, brand, contact, offices, salesTerritory, social } from '@/lib/site-config';
+import { siteUrl, brand, contact, offices, salesTerritory, social, polishEntity } from '@/lib/site-config';
 import { locales, localeFullCodes, originForLocale, type Locale } from '@/i18n/config';
 import { indicativePriceRange } from '@/lib/indicative-prices';
 import { settlementCurrencyFor, pricesPublished } from '@/lib/currency';
@@ -268,6 +268,55 @@ export function localBusinessSchema() {
     ],
     areaServed: salesTerritory,
     parentOrganization: { '@id': ORG_ID },
+  };
+}
+
+/**
+ * Alto Design Sp. z o.o. — the LocalBusiness node of the Polish company, emitted
+ * on the pl locale only (home, contact, Polish place pages) INSTEAD of the
+ * generic PL branch node. Same @id as that branch node so it stays one entity
+ * across pages. Every NAP value comes from site-config polishEntity — the
+ * same source the footer prints — so name, address and phone match the
+ * visible text character for character.
+ */
+export function polishBusinessSchema() {
+  const e = polishEntity;
+  const geo = offices.find((o) => o.country === 'PL')?.geo;
+  const contactTypes: Record<string, string> = { domestic: 'sales', production: 'production', export: 'export sales', exportProjects: 'export projects' };
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${siteUrl}/#branch-pl`,
+    name: e.name,
+    url: originForLocale('pl'),
+    telephone: e.phones[0].e164,
+    email: e.email,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: e.street,
+      postalCode: e.postalCode,
+      addressLocality: e.city,
+      addressCountry: e.country,
+    },
+    ...(geo ? { geo: { '@type': 'GeoCoordinates', latitude: geo.lat, longitude: geo.lng } } : {}),
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: e.opens,
+        closes: e.closes,
+      },
+    ],
+    areaServed: 'PL',
+    vatID: e.vatId,
+    taxID: e.registry.nip,
+    contactPoint: e.phones.map((ph) => ({
+      '@type': 'ContactPoint',
+      telephone: ph.e164,
+      contactType: contactTypes[ph.key],
+      ...(ph.languages ? { availableLanguage: ph.languages.split('/').map((l) => l.toLowerCase()) } : {}),
+    })),
+    parentOrganization: { '@id': ORG_ID, name: brand.parentCompany },
   };
 }
 

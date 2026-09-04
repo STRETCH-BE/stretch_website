@@ -23,9 +23,9 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, Calculator, Car, Factory, Mail, MapPin, Phone } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
-import { brand, contact, offices, siteUrl, swissPartner } from '@/lib/site-config';
+import { brand, contact, offices, siteUrl, swissPartner, polishEntity } from '@/lib/site-config';
 import { localeBase, buildAlternates, apiBase } from '@/lib/seo';
-import { breadcrumbSchema, localBusinessSchema, branchLocalBusinessSchema } from '@/lib/structured-data';
+import { breadcrumbSchema, localBusinessSchema, branchLocalBusinessSchema, polishBusinessSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
@@ -118,6 +118,8 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
   // identity card names them — never the Belgian office line.
   const swissPlace = place!.region === 'switzerland';
   const plOffice = offices.find((o) => o.country === 'PL');
+  const tcom = await getTranslations('common');
+  const tpl = (k: string) => tcom(`plContact.${k}`); // pl-only keys, only called on the pl locale
   // The Belgian grants/VAT article exists on be/nl/fr/en/uk only — link it
   // where it exists (it is the most Belgium-specific proof on the site).
   const vatPost = belgian ? blogPostsFor(locale).find((p) => p.slug === 'spanplafond-premie-btw') : undefined;
@@ -130,7 +132,7 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
   // LocalBusiness: the Belgian manufacturer on Belgian/Luxembourg pages, the
   // Częstochowa plant on Polish pages. French/German/Austrian pages emit no
   // local entity node — there is no local address to claim.
-  const localBusiness = belgian ? localBusinessSchema() : entity === 'pl' ? branchLocalBusinessSchema('PL') : undefined;
+  const localBusiness = belgian ? localBusinessSchema() : entity === 'pl' ? (locale === 'pl' ? polishBusinessSchema() : branchLocalBusinessSchema('PL')) : undefined;
   // Dealers with a full contact block (QuinLay AG) get their own LocalBusiness
   // node: the showroom is a real, locatable local entity.
   const dealerNodes = found
@@ -311,7 +313,18 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
             </p>
           </div>
           <div className="dlr-identity__card">
-            {entity === 'pl' && plOffice ? (
+            {entity === 'pl' && locale === 'pl' ? (
+              /* stretch-sufit.pl: Alto Design's NAP from site-config (same source as the footer and JSON-LD). */
+              <>
+                <div className="dlr-identity__name">{polishEntity.name}</div>
+                <div>{`${polishEntity.street}, ${polishEntity.postalCode} ${polishEntity.city}`}</div>
+                <div>{polishEntity.countryName}</div>
+                <a href={polishEntity.phones[0].href} className="lnk" aria-label={tpl('call.domestic')} style={{ display: 'inline-block', marginTop: 10, fontWeight: 700 }}>{polishEntity.phones[0].display}</a>
+                <div className="dlr-identity__name" style={{ marginTop: 12 }}>{brand.parentCompany}</div>
+                <div>{`${contact.address.streetShort}, ${contact.address.postalCode} ${contact.address.city}`}</div>
+                <div>{tpl('hqCountry')}</div>
+              </>
+            ) : entity === 'pl' && plOffice ? (
               <>
                 <div className="dlr-identity__name">{plOffice.name}</div>
                 <div>{plOffice.addressLines.join(', ')}</div>

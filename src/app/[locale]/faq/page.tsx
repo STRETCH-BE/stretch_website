@@ -6,6 +6,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ArrowRight, Phone } from 'lucide-react';
 import { isValidLocale, type Locale, localeFullCodes } from '@/i18n/config';
 import { siteUrl, contact } from '@/lib/site-config';
+import { localContactFor, isPolishLocale } from '@/lib/local-contact';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema, faqPageSchema } from '@/lib/structured-data';
 import type { Faq } from '@/lib/content';
@@ -22,6 +23,10 @@ export default async function FaqPage({ params }: { params: { locale: string } }
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   const t = await getTranslations('faqPage');
+  // pl: Alto Design's domestic-projects line instead of the Belgian HQ number.
+  const plLocal = isPolishLocale(locale) ? localContactFor(locale) : null;
+  const tc = await getTranslations('common');
+  const tpl = (k: string) => tc(`plContact.${k}`); // pl-only keys, only called when plLocal is set
   const tp = await getTranslations('productPage');
   const faqs = t.raw('items') as Faq[];
 
@@ -78,8 +83,8 @@ export default async function FaqPage({ params }: { params: { locale: string } }
               <ModalButton type="quote" source="faq_aside" trackQuote className="btn btn--primary" style={{ width: '100%', justifyContent: 'center' }}>
                 {t('asideCta')} <ArrowRight size={15} />
               </ModalButton>
-              <a href={contact.phoneHref} className="faq-call">
-                <Phone size={15} /> {contact.phoneDisplay}
+              <a href={plLocal?.phoneHref ?? contact.phoneHref} className="faq-call" {...(plLocal?.phoneLine ? { 'aria-label': tpl(`call.${plLocal.phoneLine}`) } : {})}>
+                <Phone size={15} /> {plLocal?.phoneDisplay ?? contact.phoneDisplay}
               </a>
             </div>
           </aside>
