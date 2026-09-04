@@ -167,7 +167,7 @@ export function branchLocalBusinessSchemas() {
   return offices
     .filter((o) => o.geo && o.role !== 'Headquarters')
     .map((o) => {
-      // addressLines[1] is "postal locality" ("42-202 Częstochowa",
+      // addressLines[1] is "postal locality" ("42-200 Częstochowa",
       // "1100 Vienna") — split so postalCode is its own property, matching
       // the HQ node's shape.
       const cityLine = o.addressLines[1] ?? '';

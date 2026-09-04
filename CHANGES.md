@@ -180,6 +180,11 @@ so the other locales stay identical — confirm which is right and I align
 the rest; (2) the registry court wording (division number) and (3) the
 share capital.
 
+Resolved 4 Sep 2026: Michael confirmed **42-200**. `offices[]`
+(addressLines and the maps query), the branch JSON-LD comment and the
+Polish article in `content.ts` now say 42-200 as well, so every locale
+prints the same postcode for Częstochowa. (2) and (3) stay open.
+
 ## 2026-09-03 (33) — PageSpeed round: client messages subset, lead modal on demand, grid LCP images, contrast
 
 Google's PageSpeed Insights API was over its anonymous daily quota from

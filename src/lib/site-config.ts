@@ -188,7 +188,7 @@ export const offices: Office[] = [
     country: 'PL',
     countryName: 'Poland',
     name: 'Alto Design Sp. z o.o.',
-    addressLines: ['Legionów 59', '42-202 Częstochowa'],
+    addressLines: ['Legionów 59', '42-200 Częstochowa'],
     email: 'info@stretch-sufit.pl',
     // Group-owned installer brand — linked from the shared footer so Google
     // reads the two domains as related, not competing.
@@ -197,7 +197,7 @@ export const offices: Office[] = [
     // The stretch-sufit.pl contact map shows this listing (Michael, 3 Sep 2026).
     maps: {
       name: 'Alto Design Sufity napinane',
-      query: 'Alto Design Sufity napinane, Legionów 59, 42-202 Częstochowa',
+      query: 'Alto Design Sufity napinane, Legionów 59, 42-200 Częstochowa',
       shareUrl: 'https://maps.app.goo.gl/qYH9brkHhnA2uUKC9',
       ftid: '', // TODO: "0x…:0x…" from the listing URL
       lat: 50.8074338,
