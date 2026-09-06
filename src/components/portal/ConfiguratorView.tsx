@@ -109,14 +109,20 @@ const INITIAL: ConfigState = {
   fabricKind: 'standard',
   profileSlug: '',
   cornerSlug: '',
-  cornersInside: '',
-  cornersOutside: '',
+  cornersInside: '4',
+  cornersOutside: '0',
   platforms: [],
   absorberSlug: '',
   lightSlug: '',
   lightColourSlug: '',
   lights: '0',
 };
+
+/** Mirrors CORNER_DEFAULTS in bom.ts — the form prefills, the engine agrees. */
+const CORNERS_FOR_SHAPE = {
+  flat: { inside: 4, outside: 0 },
+  sloped: { inside: 4, outside: 2 },
+} as const;
 
 const KIND_GROUP_TITLES: Record<string, string> = {
   ceiling: 'Ceiling',
@@ -390,9 +396,24 @@ export default function ConfiguratorView({
   .cfg-err { color: var(--red); font-size: 13px; font-weight: 600; margin: 10px 0 0; }
   .spin { animation: cfgspin 1s linear infinite; }
   @keyframes cfgspin { to { transform: rotate(360deg); } }
+  .cfg-bottombar { display: none; }
   @media (max-width: 1080px) {
     .cfg-grid { grid-template-columns: 1fr; }
     .cfg-result .sticky { position: static; }
+    .cfg { padding-bottom: 96px; }
+    .cfg-bottombar {
+      display: flex; align-items: center; gap: 14px;
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+      background: var(--black); color: #fff; padding: 10px 16px;
+      padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    }
+    .cfg-bottombar .l { display: block; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #b9b9b9; }
+    .cfg-bottombar strong { font-size: 19px; font-weight: 900; font-variant-numeric: tabular-nums; }
+    .cfg-bottombar .b {
+      margin-left: auto; background: var(--red); color: #fff; text-decoration: none;
+      font-size: 12.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+      padding: 12px 22px;
+    }
   }
   @media (max-width: 520px) {
     .derived { gap: 14px; }
@@ -474,7 +495,16 @@ export default function ConfiguratorView({
                   key={s}
                   type="button"
                   className={config.shape === s ? 'on' : ''}
-                  onClick={() => set('shape', s)}
+                  onClick={() => {
+                    // The corner counts follow the shape, then stay editable.
+                    const d = CORNERS_FOR_SHAPE[s];
+                    setConfig((c) => ({
+                      ...c,
+                      shape: s,
+                      cornersInside: String(d.inside),
+                      cornersOutside: String(d.outside),
+                    }));
+                  }}
                 >
                   {s === 'flat' ? 'Flat ceiling' : 'Flat + angled'}
                 </button>
@@ -577,19 +607,17 @@ export default function ConfiguratorView({
 
           <Section n="05" title="Corners">
             <div className="row">
-              <Field label="Inside" hint={`Default for this shape: ${config.shape === 'sloped' ? 4 : 4}`}>
+              <Field label="Inside" hint={`Default for this shape: ${CORNERS_FOR_SHAPE[config.shape].inside}`}>
                 <input
                   inputMode="numeric"
-                  placeholder={String(quote?.cornersInside ?? 4)}
                   value={config.cornersInside}
                   onChange={(e) => set('cornersInside', e.target.value)}
                   aria-label="Inside corners"
                 />
               </Field>
-              <Field label="Outside" hint={`Default for this shape: ${config.shape === 'sloped' ? 2 : 0}`}>
+              <Field label="Outside" hint={`Default for this shape: ${CORNERS_FOR_SHAPE[config.shape].outside}`}>
                 <input
                   inputMode="numeric"
-                  placeholder={String(quote?.cornersOutside ?? 0)}
                   value={config.cornersOutside}
                   onChange={(e) => set('cornersOutside', e.target.value)}
                   aria-label="Outside corners"
@@ -827,6 +855,7 @@ export default function ConfiguratorView({
               {quote?.pricebookUpdatedAt ? ` · updated ${String(quote.pricebookUpdatedAt).slice(0, 10)}` : ''}
             </p>
 
+            <div id="cfg-order" />
             <ConfiguratorOrder
               quote={quote}
               config={config}
@@ -840,6 +869,17 @@ export default function ConfiguratorView({
             />
           </div>
         </aside>
+      </div>
+
+      {/* Mobile only: the running total stays in view while you scroll the form. */}
+      <div className="cfg-bottombar" role="status" aria-live="polite">
+        <div>
+          <span className="l">{quote?.needsManualPricing ? 'From, ex VAT' : 'Total, ex VAT'}</span>
+          <strong>{total ?? '—'}</strong>
+        </div>
+        <a href="#cfg-order" className="b">
+          Order
+        </a>
       </div>
 
       <style jsx>{`
@@ -900,9 +940,24 @@ export default function ConfiguratorView({
   .cfg-err { color: var(--red); font-size: 13px; font-weight: 600; margin: 10px 0 0; }
   .spin { animation: cfgspin 1s linear infinite; }
   @keyframes cfgspin { to { transform: rotate(360deg); } }
+  .cfg-bottombar { display: none; }
   @media (max-width: 1080px) {
     .cfg-grid { grid-template-columns: 1fr; }
     .cfg-result .sticky { position: static; }
+    .cfg { padding-bottom: 96px; }
+    .cfg-bottombar {
+      display: flex; align-items: center; gap: 14px;
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+      background: var(--black); color: #fff; padding: 10px 16px;
+      padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    }
+    .cfg-bottombar .l { display: block; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #b9b9b9; }
+    .cfg-bottombar strong { font-size: 19px; font-weight: 900; font-variant-numeric: tabular-nums; }
+    .cfg-bottombar .b {
+      margin-left: auto; background: var(--red); color: #fff; text-decoration: none;
+      font-size: 12.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+      padding: 12px 22px;
+    }
   }
   @media (max-width: 520px) {
     .derived { gap: 14px; }

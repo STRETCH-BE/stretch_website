@@ -1,3 +1,59 @@
+## 2026-09-06 (37) — Configurator: the prototype, and three things it caught
+
+`claude/kit-configurator-prototype.jsx` — the agreed behaviour and layout
+reference from the v2 brief — is now in the repo. It arrived after entry 36
+had shipped, so this entry is the reconciliation. It is reference material:
+nothing imports it, and it is not part of any route.
+
+Read against what shipped, the prototype agreed on the substance — the same
+corner defaults (4 inside, +2 outside on a fold), the same weld arithmetic
+(`ceil(short / roll) − 1` welds of the long side), the same
+narrowest-roll-that-fits rule, the same "always the ceiling surface" absorber,
+the same companion rings and one-driver-per-N — and disagreed on three things
+worth fixing:
+
+1. **A light colour is the product, not an extra line.** The engine was
+   pricing the base light AND the chosen colour, which charges the fitting
+   twice: 3000K / 4000K / 6000K are separate pricebook rows of the SAME
+   fitting, exactly as the prototype models them. A chosen colour now
+   REPLACES the base light; with no colour chosen the base light still
+   prices; and a colour the catalogue has since lost shows as a visible
+   un-priced line rather than vanishing. Latent rather than live — nothing
+   is charged until Michael activates a light_colour option — but wrong.
+2. **The corner counts are prefilled, not empty with a placeholder.** The
+   brief said "prefilled from the shape defaults and freely editable"; the
+   form showed blank fields with the default only as grey placeholder text.
+   They now carry real values that re-apply when the shape changes, and stay
+   editable after that. `CORNERS_FOR_SHAPE` in the view mirrors
+   `CORNER_DEFAULTS` in `bom.ts`, with a comment on each pointing at the
+   other.
+3. **The mobile bottom total bar was missing.** The brief asked for a
+   "fixed bottom total bar on mobile" and the prototype has one; the build
+   only had the sticky desktop panel. There is now a fixed bar below 1080 px
+   carrying the running total (labelled "From, ex VAT" when lines are still
+   open) and an Order button that jumps to the order step. It is
+   `display: none` on desktop, where the panel is sticky instead, and the
+   page reserves 96 px so the bar never covers the last field.
+
+Three things in the prototype were deliberately NOT copied, because the pack
+says the pack wins and the repo is the truth about the data:
+
+- Its five markets ("West Europe", "East Europe", "Key account", "USA",
+  "Installer") are sample data. The live pricebook has exactly three price
+  groups, and the account's tier picks one.
+- Its section 0 market switch is a test affordance. In the portal only
+  admins and all-markets accounts get a price-group selector; an ordinary
+  installer is priced on its own tier with no say in it.
+- Its per-session order history is replaced by the real `/portal/orders`,
+  which reads the frozen line snapshot out of the database.
+
+Verification: `npm test` is now 87 checks (four new ones on the light-colour
+rule, three on corner defaults and overrides); `npm run typecheck`, ESLint
+and `npm run check:client-messages` clean; `npm run build` exit 0 at 3186
+pages; the live UI suite is 30 checks, including that the bottom bar is
+fixed to the viewport bottom on mobile with the total and the Order button,
+and hidden on desktop.
+
 ## 2026-09-06 (36) — Client portal: the kit configurator and direct ordering
 
 `/portal/configurator` turns a room into a priced bill of materials, and

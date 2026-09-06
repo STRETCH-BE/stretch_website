@@ -211,7 +211,11 @@ console.log('\nbuildBom — geometry, quantities, companions');
   check('sloped: surface adds the slope panel (14.28 + 4.2 × 1.2)', near(sloped.area, 19.32), String(sloped.area));
   check('sloped: perimeter = 2L + 2W + 2S', near(sloped.perimeter, 17.6), String(sloped.perimeter));
   check('sloped: fold edge = the shared side, in metres', near(sloped.lines.find((l) => l.slug === 'trans').qty, 4.2));
-  check('sloped: corner defaults become 4 inside + 2 outside', sloped.cornersOutside === 2);
+  check('sloped: corner defaults become 4 inside + 2 outside', sloped.cornersInside === 4 && sloped.cornersOutside === 2);
+  check('flat: corner defaults are 4 inside + 0 outside', flat.cornersInside === 4 && flat.cornersOutside === 0);
+  const overridden = buildBom({ ...base, cornersInside: 6, cornersOutside: 3 }, CATALOGUE);
+  check('an explicit corner count always wins over the default',
+    overridden.lines.find((l) => l.slug === 'corner-in').qty === 9);
   check('sloped widest span is still the widest of the two panels',
     near(sloped.need, 3.4), String(sloped.need));
 
@@ -243,6 +247,21 @@ console.log('\nbuildBom — geometry, quantities, companions');
   const lit = buildBom({ ...base, lightSlug: 'spot', lights: 7 }, CATALOGUE);
   check('lights price per unit', lit.lines.find((l) => l.slug === 'spot').qty === 7);
   check('one driver per 6 lights → 2 for 7 lights', lit.lines.find((l) => l.slug === 'driver').qty === 2);
+
+  // A colour temperature is a pricebook row of the SAME fitting, so choosing
+  // one replaces the base light. Pricing both would charge the fitting twice.
+  const spot3000 = opt({ kind: 'light_colour', slug: 'spot-3000k', label: 'Magnetic Grille Light 10W 3000K', qtyRule: 'per_unit', matchCode: 'SL-MGL-2010S-30', maxWidthCm: null, material: null, finish: null, colourGroup: null });
+  const COLOURED = [...CATALOGUE, spot3000];
+  const coloured = buildBom({ ...base, lightSlug: 'spot', lightColourSlug: 'spot-3000k', lights: 6 }, COLOURED);
+  check('a chosen light colour REPLACES the base light, never doubles it',
+    coloured.lines.filter((l) => l.kind === 'light' || l.kind === 'light_colour').length === 1,
+    coloured.lines.filter((l) => l.kind === 'light' || l.kind === 'light_colour').map((l) => l.slug).join(','));
+  check('…and it is the colour row that prices', coloured.lines.some((l) => l.slug === 'spot-3000k' && l.qty === 6));
+  const noColour = buildBom({ ...base, lightSlug: 'spot', lightColourSlug: null, lights: 6 }, COLOURED);
+  check('with no colour chosen the base light still prices', noColour.lines.some((l) => l.slug === 'spot' && l.qty === 6));
+  const goneColour = buildBom({ ...base, lightSlug: null, lightColourSlug: 'spot-9000k', lights: 6 }, COLOURED);
+  check('a colour the catalogue lost is visible, not silent',
+    goneColour.lines.some((l) => l.slug === 'spot-9000k' && l.missing === true));
 
   const absM2 = buildBom({ ...base, absorberSlug: 'abs-m2' }, CATALOGUE);
   check('absorber surface is ALWAYS the ceiling surface', near(absM2.lines.find((l) => l.slug === 'abs-m2').qty, 14.28));

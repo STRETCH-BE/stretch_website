@@ -275,21 +275,25 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
     if (!p.slug || qty <= 0) continue;
     perUnit.push({ option: catalogue.get(p.slug) ?? null, slug: p.slug, qty, kind: 'platform' });
   }
-  if (config.lightSlug && pos(config.lights) > 0) {
-    perUnit.push({
-      option: catalogue.get(config.lightSlug) ?? null,
-      slug: config.lightSlug,
-      qty: Math.floor(pos(config.lights)),
-      kind: 'light',
-    });
-  }
-  if (config.lightColourSlug && pos(config.lights) > 0) {
-    perUnit.push({
-      option: catalogue.get(config.lightColourSlug) ?? null,
-      slug: config.lightColourSlug,
-      qty: Math.floor(pos(config.lights)),
-      kind: 'light_colour',
-    });
+  // The light colour IS the product row (3000K / 4000K / 6000K are separate
+  // pricebook rows of the same fitting), so a chosen colour REPLACES the base
+  // light — pricing both would charge the fitting twice.
+  const lightQty = Math.floor(pos(config.lights));
+  const lightColour = config.lightColourSlug ? catalogue.get(config.lightColourSlug) : null;
+  if (lightQty > 0) {
+    if (config.lightColourSlug && lightColour) {
+      perUnit.push({ option: lightColour, slug: config.lightColourSlug, qty: lightQty, kind: 'light_colour' });
+    } else if (config.lightSlug) {
+      perUnit.push({
+        option: catalogue.get(config.lightSlug) ?? null,
+        slug: config.lightSlug,
+        qty: lightQty,
+        kind: 'light',
+      });
+    } else if (config.lightColourSlug) {
+      // A colour the catalogue no longer has: visible, never silent.
+      perUnit.push({ option: null, slug: config.lightColourSlug, qty: lightQty, kind: 'light_colour' });
+    }
   }
 
   for (const entry of perUnit) {
