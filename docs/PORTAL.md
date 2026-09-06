@@ -173,3 +173,52 @@ request and injects `window.PORTAL_USER` and `window.PORTAL_LOCALE`.
   report follows the same language.
 - **Updating the tool:** `node scripts/update-acoustics.mjs` — see
   `scripts/update-acoustics.md`.
+
+---
+
+## Kit configurator — added 6 Sep 2026
+
+`/portal/configurator` turns a room into a priced bill of materials, and
+`/api/portal/order` turns that into an order. Three layers keep a pricebook
+upload from ever breaking it:
+
+```
+public.pricebook            ← the Excel, untouched. The only price source.
+public.configurator_options ← maps an option to its pricebook row + the
+                              quantity rule that fills it (admin ▸ Configurator)
+the BOM engine              ← dimensions → line items → server-side pricing
+```
+
+- **Access:** installers, producers and admins — `hasConfiguratorAccess()` in
+  `src/lib/portal/types.ts`, built on `hasTradeAccess` so it can never drift
+  from the pricelist and the designer. b2c and architect accounts are
+  redirected off the page AND refused by every API route.
+- **No price ever comes from the browser.** The client posts a configuration;
+  `quoteFor()` rebuilds the bill of materials, re-runs the foil choice and
+  re-prices from the account's own rows. The order route does the same again.
+- **Missing prices are visible, never zero.** `resolveOption()` reports
+  `no_row` (the Excel dropped the product) and `no_price` (no price for this
+  market) as first-class states: the line reads "price on request", the total
+  reads "from € X", and the order still submits flagged
+  `needs_manual_pricing`.
+- **The foil is chosen, not picked.** `pickFoil()` takes the NARROWEST roll
+  that covers the room's widest span in one piece, and welds only when the
+  family has nothing wide enough. The reason is shown to the installer in
+  plain language.
+- **Orders** are written to `portal_orders` + `portal_order_lines`, where the
+  lines are a SNAPSHOT: a later pricebook never changes an existing order. Two
+  e-mails go out through the usual chain (Graph → webhook → SMTP → log): the
+  customer's confirmation and our production sheet
+  (`ORDER_NOTIFY_EMAIL`, default `order@stretchgroup.be`). No payment is taken
+  — the proforma follows by hand, and both the UI and the mail say so.
+- **Seeding:** `node scripts/seed-configurator-options.mjs` (dry run) →
+  `--write` → admin ▸ Configurator to activate what is real. Everything
+  arrives inactive on purpose. `--from-demo` classifies the bundled sample
+  pricebook without database access.
+- **Tests:** `npm test` covers `pickFoil`, `resolveOption` and `buildBom`
+  (geometry, profiles per metre and per piece, corners, welds, companions,
+  the absorber conversion).
+
+Run the two SQL blocks at the end of `supabase/schema.sql` (KIT CONFIGURATOR
+option catalogue, then KIT CONFIGURATOR orders) in the Supabase SQL editor.
+Both are idempotent.

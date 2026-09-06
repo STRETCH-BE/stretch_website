@@ -3,10 +3,10 @@
 // history are staged as the next data sources on this platform.
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { ArrowRight, AudioLines, FileSpreadsheet, FolderOpen, Handshake, PackageSearch, PencilRuler, Settings2, UserRound } from 'lucide-react';
+import { ArrowRight, AudioLines, Calculator, FileSpreadsheet, FolderOpen, Handshake, PackageSearch, PencilRuler, Settings2, UserRound } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { getPortalSession } from '@/lib/portal/auth';
-import { hasAcousticsAccess, hasTradeAccess } from '@/lib/portal/types';
+import { hasAcousticsAccess, hasConfiguratorAccess, hasTradeAccess } from '@/lib/portal/types';
 import { getPricebook } from '@/lib/portal/data';
 import ArchitectDashboard from '@/components/portal/ArchitectDashboard';
 
@@ -73,6 +73,21 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
                 {t('open')} <ArrowRight size={14} />
               </span>
             </Link>
+
+            {/* Kit configurator — live (installers + admins; prices the account's own tier) */}
+            {hasConfiguratorAccess(session.profile) && (
+              <Link href="/portal/configurator" className="portal-tile portal-tile--live">
+                <div className="portal-tile__head">
+                  <Calculator size={20} />
+                  <span className="portal-tile__badge portal-tile__badge--live">{t('live')}</span>
+                </div>
+                <h2>{t('tileConfigurator')}</h2>
+                <p>{t('tileConfiguratorBody')}</p>
+                <span className="portal-tile__cta">
+                  {t('open')} <ArrowRight size={14} />
+                </span>
+              </Link>
+            )}
 
             {/* Ceiling designer — live (trade accounts) */}
             <Link href="/portal/designer" className="portal-tile portal-tile--live">

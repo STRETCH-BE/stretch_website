@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test": "node scripts/spam-score.test.mjs",
+    "test": "node scripts/spam-score.test.mjs && node scripts/configurator.test.mjs",
     "check:client-messages": "node scripts/check-client-messages.mjs"
   },
   "dependencies": {

@@ -113,6 +113,43 @@ export function hasAcousticsAccess(_profile: PortalProfile): boolean {
   return true;
 }
 
+/**
+ * The kit configurator (/portal/configurator), its API routes, nav item and
+ * dashboard tile — and the orders it produces.
+ *
+ * INSTALLERS AND ADMINS ONLY (Michael, 6 Sep 2026): the tool quotes the
+ * account's own trade prices, so b2c and architect accounts must never reach
+ * it — not the page, not the API. It is deliberately built on hasTradeAccess
+ * so it can never drift from the pricelist and the designer, plus the market
+ * check the configurator additionally needs: an account with no resolvable
+ * price group would see a form that prices nothing.
+ *
+ * NOTE on the brief's rule "(all_markets OR markets is non-empty)": in this
+ * codebase markets[] is legitimately EMPTY for a normal installer — the tier
+ * itself grants a price group through priceGroupForTier(). Requiring a
+ * non-empty markets[] would lock out every ordinary installer, so the check
+ * is "resolves to a price group", which is the same intent.
+ */
+export function hasConfiguratorAccess(profile: PortalProfile): boolean {
+  if (!hasTradeAccess(profile)) return false;
+  return profile.allMarkets || profile.markets.length > 0 || priceGroupForTier(profile.accountType) !== null;
+}
+
+/**
+ * The price group the configurator prices in. Admins (and all_markets
+ * accounts) may pick any group; everyone else is priced on their own tier
+ * with no selector.
+ */
+export function configuratorMarket(profile: PortalProfile, requested?: string | null): string {
+  const canChoose = profile.role === 'admin' || profile.allMarkets;
+  const valid = (PRICE_MARKETS as readonly string[]).includes(requested ?? '');
+  if (canChoose && valid) return requested as string;
+  if (canChoose) return 'Installer';
+  const own = priceGroupForTier(profile.accountType);
+  if (own) return own;
+  return profile.markets[0] ?? 'Installer';
+}
+
 /** The architect area (dashboard, budget guide) — architects and admins. */
 export function hasArchitectAccess(profile: PortalProfile): boolean {
   return profile.role === 'admin' || profile.accountType === 'architect';
