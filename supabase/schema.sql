@@ -561,3 +561,169 @@ create index if not exists acoustic_events_created_idx
 alter table public.acoustic_projects enable row level security;
 alter table public.acoustic_events   enable row level security;
 -- No policies on purpose: service-role only, via the authenticated API routes.
+
+-- ============================================================================
+-- KIT CONFIGURATOR — option catalogue (/portal/configurator). Added 6 Sep 2026.
+-- Safe to re-run (create if not exists).
+--
+-- Three layers keep a pricebook upload from ever breaking the tool:
+--   public.pricebook            ← the Excel, untouched. The ONLY price source.
+--   public.configurator_options ← this table: maps an option to its pricebook
+--                                 row + the quantity rule that fills it.
+--                                 Edited in the portal admin, never in code.
+--   the BOM engine              ← dimensions → line items → server-side prices.
+--
+-- Nothing here stores a price. A row that no longer resolves to a pricebook
+-- row surfaces as "needs attention" in the admin and as "price on request" in
+-- the configurator — never as a silent zero.
+-- ============================================================================
+create table if not exists public.configurator_options (
+  id            bigint generated always as identity primary key,
+  kind          text not null check (kind in
+                ('ceiling','profile','transition','corner','platform','absorber','light','light_colour','service')),
+  slug          text not null,
+  label         text not null,
+  description   text,
+  -- Where the price comes from. Resolution order: match_code → then
+  -- match_category + match_product, always narrowed by the account's market
+  -- and by match_seq (the pricebook legitimately holds same-named — and even
+  -- same-coded — rows that are different products, kept apart by seq).
+  match_code     text,
+  match_category text,
+  match_product  text,
+  match_seq      integer default 1,
+  -- Foil matrix (kind='ceiling' only) — what makes auto-selection work.
+  material      text check (material in ('PVC','fabric')),
+  finish        text check (finish in ('matte','satin','gloss','translucent','print')),
+  colour_group  text check (colour_group in ('white','colour','black')),
+  fabric_kind   text check (fabric_kind in ('standard','acoustic','translucent')),
+  max_width_cm  integer,            -- roll width; drives selection AND the weld rule
+  -- How much of it a configuration needs.
+  qty_rule      text not null check (qty_rule in
+                ('area','perimeter_m','perimeter_pieces','fold_edge_m','fold_edge_pieces',
+                 'per_unit','per_corner','per_n_units','fixed','weld_m')),
+  -- Multiplies the rule's raw quantity. Also the unit conversion for options
+  -- sold by the piece off an area rule: a 1.2 × 1.0 m absorber sheet is
+  -- qty_rule 'area' with qty_factor 0.8333 and round_mode 'ceil'.
+  qty_factor    numeric(10,4) not null default 1,
+  piece_length_m numeric(10,3),     -- for *_pieces rules (profiles sell per 2 m piece)
+  per_n         integer,            -- for per_n_units (1 driver per N lights)
+  min_qty       numeric(10,3) not null default 0,
+  round_mode    text not null default 'ceil' check (round_mode in ('ceil','round','exact')),
+  companion_slug text,              -- a platform pulls in its protective ring
+  companion_per_unit numeric(10,3) not null default 1,
+  requires      text[] not null default '{}',
+  excludes      text[] not null default '{}',
+  sort          integer not null default 0,
+  active        boolean not null default true,
+  created_at    timestamptz not null default now(),
+  unique (kind, slug)
+);
+
+create index if not exists configurator_options_kind_idx
+  on public.configurator_options (kind, sort);
+
+alter table public.configurator_options enable row level security;
+
+-- Any ACTIVE portal account may read the catalogue. It holds no prices, so
+-- this leaks nothing: prices are resolved per account, server-side.
+drop policy if exists configurator_options_read on public.configurator_options;
+create policy configurator_options_read
+  on public.configurator_options for select
+  to authenticated
+  using (
+    exists (
+      select 1 from public.portal_users u
+      where u.id = auth.uid() and u.active
+    )
+  );
+
+-- No write policies on purpose: writes go through the service role in the
+-- admin API, exactly like pricebook.
+
+-- ============================================================================
+-- KIT CONFIGURATOR — orders (/portal/configurator → /portal/orders).
+-- Added 6 Sep 2026. Safe to re-run (create if not exists).
+--
+-- portal_order_lines is a SNAPSHOT: prices freeze at order time and are never
+-- recomputed from a later pricebook. NO payment is taken here — placing an
+-- order sends two e-mails and we invoice by proforma afterwards.
+-- ============================================================================
+create sequence if not exists public.portal_order_ref_seq;
+
+create table if not exists public.portal_orders (
+  id            uuid primary key default gen_random_uuid(),
+  reference     text not null unique,          -- STR-2026-0042
+  user_id       uuid references auth.users (id) on delete set null,
+  email         text not null,
+  company       text,
+  market        text not null,
+  currency      text not null default 'EUR' check (currency in ('EUR','PLN')),
+  config        jsonb not null,                -- the configuration as submitted
+  foil_code     text,                          -- what the engine chose, for production
+  foil_product  text,
+  weld_required boolean not null default false,
+  subtotal      numeric(12,2) not null default 0,
+  needs_manual_pricing boolean not null default false,
+  status        text not null default 'received'
+                check (status in ('received','confirmed','in_production','shipped','cancelled')),
+  pricebook_version text,
+  project_ref   text,
+  delivery_address text,
+  note          text,
+  -- Admin-only, never mailed to the customer.
+  internal_note text,
+  idempotency_key text unique,
+  created_at    timestamptz not null default now(),
+  updated_at    timestamptz not null default now()
+);
+
+create table if not exists public.portal_order_lines (
+  id         bigint generated always as identity primary key,
+  order_id   uuid not null references public.portal_orders (id) on delete cascade,
+  line_no    integer not null,
+  kind       text,
+  code       text,
+  product    text not null,
+  unit       text,
+  qty        numeric(12,3) not null,
+  unit_price numeric(12,2),        -- null = price on request
+  line_total numeric(12,2),
+  note       text
+);
+
+create index if not exists portal_orders_user_idx on public.portal_orders (user_id, created_at desc);
+create index if not exists portal_orders_email_idx on public.portal_orders (email, created_at desc);
+create index if not exists portal_order_lines_order_idx on public.portal_order_lines (order_id, line_no);
+
+-- Existing databases (created before the admin note): run this once.
+alter table public.portal_orders add column if not exists internal_note text;
+
+alter table public.portal_orders      enable row level security;
+alter table public.portal_order_lines enable row level security;
+
+-- A user reads their own orders; admins read all. No client write policies —
+-- the API writes with the service role after verifying the session.
+drop policy if exists portal_orders_read_own on public.portal_orders;
+create policy portal_orders_read_own
+  on public.portal_orders for select
+  to authenticated
+  using (
+    user_id = auth.uid()
+    or exists (select 1 from public.portal_users u where u.id = auth.uid() and u.role = 'admin' and u.active)
+  );
+
+drop policy if exists portal_order_lines_read_own on public.portal_order_lines;
+create policy portal_order_lines_read_own
+  on public.portal_order_lines for select
+  to authenticated
+  using (
+    exists (
+      select 1 from public.portal_orders o
+      where o.id = portal_order_lines.order_id
+        and (
+          o.user_id = auth.uid()
+          or exists (select 1 from public.portal_users u where u.id = auth.uid() and u.role = 'admin' and u.active)
+        )
+    )
+  );

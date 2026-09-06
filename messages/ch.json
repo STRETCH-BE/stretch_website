@@ -244,7 +244,8 @@
       "allMarkets": "Alle Märkte",
       "designer": "Decken-Designer",
       "budgetGuide": "Budget-Guide",
-      "acoustics": "Akustikrechner"
+      "acoustics": "Akustikrechner",
+      "configurator": "Konfigurator"
     },
     "dash": {
       "eyebrow": "Kundenportal",
@@ -271,7 +272,9 @@
       "tileTradeBody": "Monteur oder Händler? Mit einem Händlerkonto erhalten Sie Händlerpreise und den Deckendesigner.",
       "tradeCta": "Partner werden",
       "tileAcoustics": "Akustikrechner",
-      "tileAcousticsBody": "Nachhallzeit eines Raums vor und nach Akustikpaneelen, mit PDF-Bericht im STRETCH-Layout."
+      "tileAcousticsBody": "Nachhallzeit eines Raums vor und nach Akustikpaneelen, mit PDF-Bericht im STRETCH-Layout.",
+      "tileConfigurator": "Kit-Konfigurator",
+      "tileConfiguratorBody": "Raum und Ausführung eingeben: Die Rechenlogik wählt die Folie, ermittelt Profile, Ecken und Schweissnähte und kalkuliert jede Position mit Ihrer eigenen Preisliste."
     },
     "docs": {
       "title": "Dokumente",

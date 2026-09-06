@@ -244,7 +244,8 @@
       "allMarkets": "Tous les marchés",
       "designer": "Concepteur de plafond",
       "budgetGuide": "Guide budgétaire",
-      "acoustics": "Calculateur acoustique"
+      "acoustics": "Calculateur acoustique",
+      "configurator": "Configurateur"
     },
     "dash": {
       "eyebrow": "Espace client",
@@ -271,7 +272,9 @@
       "tileTradeBody": "Installateur ou revendeur ? Obtenez les prix pro et le designer de plafonds avec un compte professionnel.",
       "tradeCta": "Devenir partenaire",
       "tileAcoustics": "Calculateur acoustique",
-      "tileAcousticsBody": "Temps de réverbération d'une pièce avant et après panneaux acoustiques, avec un rapport PDF au modèle STRETCH."
+      "tileAcousticsBody": "Temps de réverbération d'une pièce avant et après panneaux acoustiques, avec un rapport PDF au modèle STRETCH.",
+      "tileConfigurator": "Configurateur de kit",
+      "tileConfiguratorBody": "Entrez la pièce et la finition : le moteur choisit la toile, calcule les profilés, les angles et les soudures, et chiffre chaque ligne sur votre propre tarif."
     },
     "docs": {
       "title": "Documents",

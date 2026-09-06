@@ -1,3 +1,128 @@
+## 2026-09-06 (36) — Client portal: the kit configurator and direct ordering
+
+`/portal/configurator` turns a room into a priced bill of materials, and
+`/api/portal/order` turns that into an order. Four parts of Michael's v2
+brief, shipped together: the option catalogue and foil matrix, the
+calculator, ordering with two e-mails, and the admin side.
+
+**Three layers, so a pricebook upload never breaks the tool.** The Excel
+stays the only price source (`public.pricebook`, untouched); the new
+`public.configurator_options` maps each option to its pricebook row and to
+the quantity rule that fills it, edited in the portal admin and never in
+code; the BOM engine turns dimensions into line items. Nothing in the
+configurator stores a price, and no price is ever read from a request
+body: the browser posts a CONFIGURATION, and `quoteFor()` rebuilds the
+bill of materials, re-runs the foil choice and re-prices from the
+account's own rows. The order route does all of it again from scratch, so
+a tampered body carrying its own prices or its own foil changes nothing.
+
+**Missing prices are visible, never zero.** `resolveOption()` reports two
+first-class states that travel all the way to the UI: `no_row` (the Excel
+dropped or renamed the product) and `no_price` (the row exists but carries
+no price for this account's market — fabric is Installer-only today).
+Those lines read "price on request", the total reads "from € X", and the
+order still submits, flagged `needs_manual_pricing`, with the internal
+e-mail listing exactly which lines need a hand. A silent € 0 line is the
+one failure mode the design rules out.
+
+**The foil is chosen, not picked.** The installer selects material, then
+finish and colour (PVC) or fabric kind — never a roll width or a product
+name. `pickFoil()` takes the NARROWEST roll that covers the room's widest
+span in one piece (narrower is cheaper per m², so that is the cheapest
+correct answer, not merely the first that fits), and welds only when the
+family has nothing wide enough. The reason is shown in plain language:
+"500 cm roll covers your 3.4 m span in one piece — no weld." A
+combination with no roll says so instead of quietly falling back to
+another finish.
+
+**Geometry.** Surface, perimeter and the widest span are derived and shown
+directly under the size fields, as outputs the installer cannot type into.
+A flat + angled ceiling adds a second panel; the perimeter is
+2L + 2W + 2S whichever side the fold runs along (the derivation is a
+comment in `bom.ts`), the fold edge itself is priced as a transition
+profile, and the widest span is the largest of each panel's SHORTER side,
+because a roll's length is unlimited and only its width constrains.
+Profiles follow the pricebook `unit`: metres for `m` rows, pieces of 2 m
+otherwise. The acoustic absorber has no quantity field at all — its
+surface is always the ceiling surface, and an absorber sold by the sheet
+converts that same surface through `qty_factor`.
+
+**Ordering.** `portal_orders` + `portal_order_lines`, where the lines are
+a SNAPSHOT: prices freeze at order time and are never recomputed from a
+later pricebook. One idempotency key per submit, so a double click returns
+the original order instead of a second one. Two e-mails go out through the
+existing chain (Microsoft Graph → webhook → SMTP → log): the customer's
+confirmation, and our copy written as a production sheet — panel sizes and
+the weld requirement first, then the foil code, then profiles in metres
+AND pieces. Both say, in substance and verbatim, that this is not an
+invoice and no payment has been taken. The order is stored BEFORE the
+mails, so a mail failure can never lose it, and the UI only promises a
+confirmation when one was actually sent.
+
+**Admin.** Two new cards: Configurator (the catalogue grouped by kind,
+inline editing of every field, the pricebook row chosen from a searchable
+list rather than typed, a red "needs attention" badge and count, plus
+warnings for any finish + colour combination with no active roll and for
+two active rolls sharing a combination and a width) and Orders (filters,
+search, paging, the frozen line snapshot, status changes, an internal note
+that is never mailed, "send the confirmation again" rebuilt from the
+snapshot, CSV of the filtered list and of one order's lines with plain
+decimal points for Exact Online, and counters for this month and for
+orders awaiting manual pricing).
+
+**Where the brief and the codebase disagreed, the codebase won** — five
+places, all flagged to Michael:
+
+1. There is no `b2b` account type. The tiers are `producer`, `installer`,
+   `b2c`, `architect`, and legacy `b2b` values already normalise to
+   `installer`. The gate is `hasConfiguratorAccess()`, built on the
+   existing `hasTradeAccess`, so producers are included with installers
+   and admins; b2c and architects are excluded exactly as asked.
+2. The brief's "AND (all_markets OR markets is non-empty)" would lock out
+   every ordinary installer: `markets[]` is legitimately empty because the
+   tier itself grants a price group through `priceGroupForTier()`. The
+   check is "resolves to a price group", which is the same intent.
+3. The mail chain is Microsoft Graph → webhook → SMTP → log. There is no
+   Resend in this repo, and `sendTransactionalEmail()` already existed for
+   exactly this job.
+4. Twelve locales is now sixteen; all sixteen carry the new keys
+   (`portal.nav.configurator`, `portal.dash.tileConfigurator`,
+   `…Body`), with English placeholders for the seven languages nobody has
+   written yet (pl, es, pt, da, sv, no, is) and the Swiss overlays
+   regenerated.
+5. `/portal/orders` already existed for designer orders, so the
+   configurator's orders were added to that page rather than shipping a
+   second, overlapping history. The dashboard's orders tile was already
+   live for trade accounts — no "coming soon" tile to replace.
+
+Also worth knowing about the live data, from a dry run of the seeder
+against the real pricelist shape: ceiling rows carry no `code`, so they
+match on category + product + seq; the 14 aluminium profiles are ALL named
+"Aluminium profile" and are only told apart by their code; ten codes are
+duplicated inside one market, so `match_seq` disambiguates and the
+resolver is deterministic either way; and the only colour-temperature rows
+in the book are LED strips in "LED modules" — the 48 V tracklight spots
+have no colour variants, so the light-colour selector stays hidden until
+such rows exist.
+
+Verification: `npm run typecheck`, `npm run lint` on the new and touched
+files, `npm run check:client-messages`, `npm test` (49 checks — pickFoil
+exact fit / narrowest-of-several / no-fit-so-weld / empty family,
+resolveOption's four states and seq disambiguation, and buildBom for flat,
+flat + slope on each side, per-metre and per-piece profiles, the
+step-up-instead-of-weld case and its gloss counterpart that does weld,
+multi-platform, companions, the driver per N lights, both absorber units
+and the minimum billable surface), and `npm run build`. Not verifiable
+here: a real Supabase row, since this environment has no service-role key.
+
+Michael still owes the tool six answers before the numbers are right in
+every case — the corner defaults, which pricebook row prices a weld (and
+whether welding is already inside the made-to-measure m² price), whether
+the harpoon is separate, which protective ring pairs with which platform,
+one driver per how many lights, and any minimum order value. Each is a
+single field in the admin or one constant in `bom.ts`; none of them blocks
+the tool from shipping.
+
 ## 2026-09-04 (35) — Client portal: the acoustic calculator (/portal/acoustics)
 
 Michael's reverberation-time calculator — a finished single-file HTML tool

@@ -244,7 +244,8 @@
       "allMarkets": "Alle markten",
       "designer": "Plafond-designer",
       "budgetGuide": "Budgetgids",
-      "acoustics": "Akoestiekcalculator"
+      "acoustics": "Akoestiekcalculator",
+      "configurator": "Configurator"
     },
     "dash": {
       "eyebrow": "Klantenportaal",
@@ -271,7 +272,9 @@
       "tileTradeBody": "Plaatser of verdeler? Krijg dealerprijzen en de plafonddesigner met een handelsaccount.",
       "tradeCta": "Word partner",
       "tileAcoustics": "Akoestiekcalculator",
-      "tileAcousticsBody": "Nagalmtijd van een ruimte voor en na akoestische panelen, met een pdf-rapport in de STRETCH-huisstijl."
+      "tileAcousticsBody": "Nagalmtijd van een ruimte voor en na akoestische panelen, met een pdf-rapport in de STRETCH-huisstijl.",
+      "tileConfigurator": "Kit-configurator",
+      "tileConfiguratorBody": "Geef de ruimte en de afwerking in; de rekenmodule kiest de folie, berekent profielen, hoeken en lassen, en prijst elke lijn op uw eigen prijslijst."
     },
     "docs": {
       "title": "Documenten",

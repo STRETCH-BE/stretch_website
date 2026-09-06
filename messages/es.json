@@ -244,7 +244,8 @@
       "allMarkets": "Todos los mercados",
       "designer": "Diseñador de techos",
       "budgetGuide": "Guía de presupuesto",
-      "acoustics": "Acoustic calculator"
+      "acoustics": "Acoustic calculator",
+      "configurator": "Configurator"
     },
     "dash": {
       "eyebrow": "Portal de clientes",
@@ -271,7 +272,9 @@
       "tileTradeBody": "¿Instalador o distribuidor? Obtenga precios de distribuidor y el diseñador de techos con una cuenta profesional.",
       "tradeCta": "Hágase partner",
       "tileAcoustics": "Acoustic calculator",
-      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template."
+      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template.",
+      "tileConfigurator": "Kit configurator",
+      "tileConfiguratorBody": "Enter the room and the finish; the engine picks the foil, works out profiles, corners and welds, and prices every line on your own pricelist."
     },
     "docs": {
       "title": "Documentos",

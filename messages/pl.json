@@ -263,7 +263,8 @@
       "allMarkets": "Wszystkie rynki",
       "designer": "Projektant sufitu",
       "budgetGuide": "Przewodnik budżetowy",
-      "acoustics": "Acoustic calculator"
+      "acoustics": "Acoustic calculator",
+      "configurator": "Configurator"
     },
     "dash": {
       "eyebrow": "Panel klienta",
@@ -290,7 +291,9 @@
       "tileTradeBody": "Monter lub dystrybutor? Z kontem handlowym otrzymasz ceny dealerskie i projektant sufitów.",
       "tradeCta": "Zostań partnerem",
       "tileAcoustics": "Acoustic calculator",
-      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template."
+      "tileAcousticsBody": "Reverberation time of a room before and after acoustic panels, with a PDF report in the STRETCH template.",
+      "tileConfigurator": "Kit configurator",
+      "tileConfiguratorBody": "Enter the room and the finish; the engine picks the foil, works out profiles, corners and welds, and prices every line on your own pricelist."
     },
     "docs": {
       "title": "Dokumenty",
