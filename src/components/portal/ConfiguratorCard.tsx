@@ -82,9 +82,9 @@ function resolve(option: OptionRow, market: string, products: ProductRow[]): Res
 const KIND_TITLES: Record<string, string> = {
   ceiling: 'Ceilings — the foil matrix',
   profile: 'Perimeter profiles',
-  transition: 'Transition / angle profiles',
+  transition: 'Fold-edge / angle profiles',
   corner: 'Corners',
-  platform: 'Spot platforms & rings',
+  platform: 'Light supports, platforms & rings',
   absorber: 'Acoustic absorbers',
   light: 'Lights',
   light_colour: 'Light colours',

@@ -47,6 +47,10 @@ const PROFILE_CATEGORIES = new Set([
 ]);
 const CORNER_CATEGORIES = new Set(['Profile accessories', 'Profiles accessories']);
 const ACCESSORY_CATEGORIES = new Set(['Accessories PVC']);
+// Light supports. The WHOLE category is offered (spotholders, round and square
+// supports, the chandelier support, perforated tape, dimmers) — an installer
+// mounting lights buys from all of it, so no term filter here.
+const LIGHT_SUPPORT_CATEGORIES = new Set(['Lighting accessories']);
 const ABSORBER_CATEGORIES = new Set(['Absorbers - polyesterwool']);
 const LIGHT_CATEGORIES = new Set(['Tracklighting 48V', 'Tracklighting', 'Light fixtures', 'LED modules']);
 
@@ -208,6 +212,15 @@ function proposeFor(product, rows) {
         isArea || sheetM2
           ? null
           : `sold per ${unit} but no sheet size in the name — set qty_factor by hand`,
+    };
+  }
+
+  if (LIGHT_SUPPORT_CATEGORIES.has(cat)) {
+    return {
+      ...base,
+      kind: 'platform',
+      slug: slugify('plat', first.code || product),
+      qty_rule: 'per_unit',
     };
   }
 

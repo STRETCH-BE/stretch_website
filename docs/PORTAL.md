@@ -219,10 +219,18 @@ the BOM engine              ← dimensions → line items → server-side pricin
   (geometry, profiles per metre and per piece, corners, welds, companions,
   the absorber conversion).
 
-- **Lights:** a colour temperature is a pricebook row of the SAME fitting, so
-  choosing a light colour REPLACES the base light line — pricing both would
-  charge the fitting twice. The colour selector stays hidden until
-  `light_colour` options exist.
+- **Lights and light supports are LISTS**, not single choices: add a type, set
+  a count, remove it. A colour temperature is a pricebook row of the SAME
+  fitting, so it is picked *instead of* the plain fitting — never alongside it,
+  which would charge the fitting twice.
+- **Picked by the engine, not by the installer:** the fold-edge (`transition`)
+  profile, the `corner` piece and the welding `service` are chosen by the
+  ceiling's material, so at most ONE of each may be active per material or the
+  pick is arbitrary. The form asks for corner *counts* only when a corner piece
+  exists for the material.
+- **Materials with no active roll are not offered** at Foil at all. Today that
+  means polyester only; activating a PVC roll brings the choice back with no
+  code change.
 - **Behaviour reference:** `claude/kit-configurator-prototype.jsx` is the
   agreed prototype. Reference material only — nothing imports it. Where it
   and the brief disagree the brief wins; where either disagrees with the

@@ -36,6 +36,10 @@ const { buildBom } = loadTs('../src/lib/portal/configurator/bom.ts', {
   './types': types,
   './foil': { pickFoil, foilFamily, weldsForPanel },
 });
+const { parseConfig } = loadTs('../src/lib/portal/configurator/parse-config.ts', {
+  './types': types,
+  './bom': { buildBom },
+});
 
 let failures = 0;
 function check(label, ok, detail = '') {
@@ -194,8 +198,8 @@ console.log('\nbuildBom — geometry, quantities, companions');
   const base = {
     length: 4.2, width: 3.4, shape: 'flat', slopeRun: 0, foldSide: 'length',
     material: 'PVC', finish: 'matte', colourGroup: 'white', fabricKind: null,
-    profileSlug: 'alu-m', cornerSlug: 'corner-in', cornersInside: null, cornersOutside: null,
-    platforms: [], absorberSlug: null, lightSlug: null, lightColourSlug: null, lights: 0,
+    profileSlug: 'alu-m', cornersInside: null, cornersOutside: null,
+    platforms: [], absorberSlug: null, lights: [],
   };
 
   const flat = buildBom(base, CATALOGUE);
@@ -244,24 +248,34 @@ console.log('\nbuildBom — geometry, quantities, companions');
   check('two platform types both price', multi.lines.find((l) => l.slug === 'plat-100').qty === 3 && multi.lines.find((l) => l.slug === 'plat-200').qty === 2);
   check('a platform pulls in its protective ring as a VISIBLE line', multi.lines.find((l) => l.slug === 'ring-100')?.qty === 3);
 
-  const lit = buildBom({ ...base, lightSlug: 'spot', lights: 7 }, CATALOGUE);
+  const lit = buildBom({ ...base, lights: [{ slug: 'spot', qty: 7 }] }, CATALOGUE);
   check('lights price per unit', lit.lines.find((l) => l.slug === 'spot').qty === 7);
   check('one driver per 6 lights → 2 for 7 lights', lit.lines.find((l) => l.slug === 'driver').qty === 2);
 
-  // A colour temperature is a pricebook row of the SAME fitting, so choosing
-  // one replaces the base light. Pricing both would charge the fitting twice.
+  // Lighting is a LIST, like the platforms: a real ceiling mixes fittings.
   const spot3000 = opt({ kind: 'light_colour', slug: 'spot-3000k', label: 'Magnetic Grille Light 10W 3000K', qtyRule: 'per_unit', matchCode: 'SL-MGL-2010S-30', maxWidthCm: null, material: null, finish: null, colourGroup: null });
-  const COLOURED = [...CATALOGUE, spot3000];
-  const coloured = buildBom({ ...base, lightSlug: 'spot', lightColourSlug: 'spot-3000k', lights: 6 }, COLOURED);
-  check('a chosen light colour REPLACES the base light, never doubles it',
-    coloured.lines.filter((l) => l.kind === 'light' || l.kind === 'light_colour').length === 1,
-    coloured.lines.filter((l) => l.kind === 'light' || l.kind === 'light_colour').map((l) => l.slug).join(','));
-  check('…and it is the colour row that prices', coloured.lines.some((l) => l.slug === 'spot-3000k' && l.qty === 6));
-  const noColour = buildBom({ ...base, lightSlug: 'spot', lightColourSlug: null, lights: 6 }, COLOURED);
-  check('with no colour chosen the base light still prices', noColour.lines.some((l) => l.slug === 'spot' && l.qty === 6));
-  const goneColour = buildBom({ ...base, lightSlug: null, lightColourSlug: 'spot-9000k', lights: 6 }, COLOURED);
-  check('a colour the catalogue lost is visible, not silent',
+  const gu10 = opt({ kind: 'light', slug: 'gu10', label: 'GU10 fitting', qtyRule: 'per_unit', matchCode: 'GU10-Fitting', maxWidthCm: null, material: null, finish: null, colourGroup: null });
+  const COLOURED = [...CATALOGUE, spot3000, gu10];
+  const mixed = buildBom(
+    { ...base, lights: [{ slug: 'spot', qty: 4 }, { slug: 'gu10', qty: 4 }, { slug: 'spot-3000k', qty: 2 }] },
+    COLOURED,
+  );
+  check('three light types all price, each once',
+    mixed.lines.filter((l) => l.slug === 'spot').length === 1 &&
+    mixed.lines.find((l) => l.slug === 'spot').qty === 4 &&
+    mixed.lines.find((l) => l.slug === 'gu10').qty === 4 &&
+    mixed.lines.find((l) => l.slug === 'spot-3000k').qty === 2);
+  // A colour temperature is a pricebook row of the SAME fitting. It is picked
+  // INSTEAD of the plain fitting, so the fitting can never be charged twice.
+  const coloured = buildBom({ ...base, lights: [{ slug: 'spot-3000k', qty: 6 }] }, COLOURED);
+  check('a light colour is one row on its own, and prices as light_colour',
+    coloured.lines.filter((l) => l.kind === 'light' || l.kind === 'light_colour').length === 1 &&
+    coloured.lines.some((l) => l.slug === 'spot-3000k' && l.kind === 'light_colour' && l.qty === 6));
+  const goneColour = buildBom({ ...base, lights: [{ slug: 'spot-9000k', qty: 6 }] }, COLOURED);
+  check('a light the catalogue lost is visible, not silent',
     goneColour.lines.some((l) => l.slug === 'spot-9000k' && l.missing === true));
+  const zeroLights = buildBom({ ...base, lights: [{ slug: 'spot', qty: 0 }] }, COLOURED);
+  check('a light type with no quantity produces no line', !zeroLights.lines.some((l) => l.slug === 'spot'));
 
   const absM2 = buildBom({ ...base, absorberSlug: 'abs-m2' }, CATALOGUE);
   check('absorber surface is ALWAYS the ceiling surface', near(absM2.lines.find((l) => l.slug === 'abs-m2').qty, 14.28));
@@ -281,8 +295,9 @@ console.log('\nbuildBom — geometry, quantities, companions');
   {
     const weldPvc = opt({ kind: 'service', slug: 'weld-pvc', label: 'Welding, PVC', qtyRule: 'weld_m', matchCode: 'SRV-WELD-PVC', material: 'PVC', finish: null, colourGroup: null, maxWidthCm: null, roundMode: 'exact' });
     const transPvc = opt({ kind: 'transition', slug: 'trans-pvc', label: 'Angle, PVC', qtyRule: 'fold_edge_m', matchCode: 'T-PVC', material: 'PVC', finish: null, colourGroup: null, maxWidthCm: null, roundMode: 'exact' });
+    const cornerPvc = opt({ kind: 'corner', slug: 'corner-pvc', label: 'Corner, PVC', qtyRule: 'per_corner', matchCode: 'SRV-CORNER-PVC', material: 'PVC', finish: null, colourGroup: null, maxWidthCm: null });
     const fabricRoll = opt({ slug: 'fab-200', label: 'Fabric 2,00 m', material: 'fabric', finish: null, colourGroup: null, fabricKind: 'standard', maxWidthCm: 200, matchProduct: 'Fabric 2,00 m', roundMode: 'exact' });
-    const MAT = [...CEILINGS.filter((o) => o.active), fabricRoll, weldPvc, transPvc];
+    const MAT = [...CEILINGS.filter((o) => o.active), fabricRoll, weldPvc, transPvc, cornerPvc];
 
     const pvcWeld = buildBom({ ...base, length: 8, width: 5.5, finish: 'gloss' }, MAT);
     check('a PVC ceiling that welds uses the PVC welding service',
@@ -301,11 +316,53 @@ console.log('\nbuildBom — geometry, quantities, companions');
 
     const pvcFold = buildBom({ ...base, shape: 'sloped', slopeRun: 1.2 }, MAT);
     check('a PVC fold DOES use the PVC angle profile', pvcFold.lines.some((l) => l.slug === 'trans-pvc'));
+
+    // The corner piece is no longer a choice in the form — the engine takes
+    // the one for the material, so a polyester ceiling gets no corner line
+    // rather than silently borrowing the PVC one.
+    check('a PVC ceiling gets its corner piece without being asked',
+      pvcFold.lines.find((l) => l.slug === 'corner-pvc')?.qty === 6);
+    const fabCorner = buildBom({ ...base, material: 'fabric', fabricKind: 'standard', finish: null, colourGroup: null }, MAT);
+    check('a FABRIC ceiling does NOT borrow the PVC corner piece',
+      !fabCorner.lines.some((l) => l.kind === 'corner'));
   }
 
   const missingTransition = buildBom({ ...base, shape: 'sloped', slopeRun: 1.2 }, CATALOGUE.filter((o) => o.slug !== 'trans'));
   check('no transition option in the catalogue → a visible no_row line, not a silent drop',
     missingTransition.lines.some((l) => l.kind === 'transition' && l.missing === true));
+}
+
+// ---------------------------------------------------------------------------
+console.log('\nparseConfig — the payload the form actually posts');
+{
+  // The browser posts a bare config object (see toPayload in ConfiguratorView).
+  const posted = {
+    length: 4.2, width: 3.4, shape: 'sloped', slopeRun: 4.2, foldSide: 'length',
+    material: 'fabric', finish: null, colourGroup: null, fabricKind: 'standard',
+    profileSlug: 'prof-s-pp-c01-w-2m', cornersInside: null, cornersOutside: null,
+    platforms: [{ slug: 'plat-e-cs80', qty: 6 }],
+    absorberSlug: 'abs-d40-10-w-40m',
+    lights: [{ slug: 'light-sl-5061-white', qty: 6 }, { slug: 'light-gu10-fitting', qty: 6 }],
+    market: 'Installer',
+  };
+  const r = parseConfig(posted);
+  check('the posted payload parses', r.ok === true, r.error);
+  check('both light types survive the round trip',
+    r.ok && r.config.lights.length === 2 &&
+    r.config.lights[0].slug === 'light-sl-5061-white' && r.config.lights[0].qty === 6 &&
+    r.config.lights[1].slug === 'light-gu10-fitting',
+    JSON.stringify(r.ok ? r.config.lights : r));
+
+  const dup = parseConfig({ ...posted, lights: [{ slug: 'a', qty: 2 }, { slug: 'a', qty: 5 }] });
+  check('the same light type twice is collapsed to one', dup.ok && dup.config.lights.length === 1,
+    JSON.stringify(dup.ok ? dup.config.lights : dup));
+  const zero = parseConfig({ ...posted, lights: [{ slug: 'a', qty: 0 }] });
+  check('a light with no quantity is dropped', zero.ok && zero.config.lights.length === 0);
+  const huge = parseConfig({ ...posted, lights: [{ slug: 'a', qty: 999999 }] });
+  check('an absurd light count is rejected, not clamped silently',
+    huge.ok === false && huge.error === 'too_many_lights', JSON.stringify(huge));
+  const junk = parseConfig({ ...posted, lights: 'lots' });
+  check('a non-array lights field yields no lights, never a crash', junk.ok && junk.config.lights.length === 0);
 }
 
 // ---------------------------------------------------------------------------

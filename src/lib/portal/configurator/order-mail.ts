@@ -60,11 +60,11 @@ function specLines(input: OrderMailInput): [string, string][] {
     ['Corners', `${q.cornersInside} inside · ${q.cornersOutside} outside`],
   ];
   if (c.platforms.length) {
-    rows.push(['Platforms', c.platforms.map((p) => `${p.qty} × ${p.slug}`).join(', ')]);
+    rows.push(['Light supports', c.platforms.map((p) => `${p.qty} × ${p.slug}`).join(', ')]);
   }
   if (c.absorberSlug) rows.push(['Absorber', `${c.absorberSlug} — ${q.area.toFixed(2)} m² (the ceiling surface)`]);
-  if (c.lightSlug && c.lights > 0) {
-    rows.push(['Lights', `${c.lights} × ${c.lightSlug}${c.lightColourSlug ? ` (${c.lightColourSlug})` : ''}`]);
+  if (c.lights.length) {
+    rows.push(['Lights', c.lights.map((l) => `${l.qty} × ${l.slug}`).join(', ')]);
   }
   if (input.meta.projectRef) rows.push(['Project reference', input.meta.projectRef]);
   return rows;
