@@ -85,6 +85,8 @@ export type ConfigState = {
   width: string;
   shape: 'flat' | 'sloped';
   slopeRun: string;
+  /** The angled ceiling's own length along the fold. */
+  foldLength: string;
   foldSide: 'length' | 'width';
   seamDirection: 'auto' | 'length' | 'width';
   material: 'PVC' | 'fabric';
@@ -105,6 +107,7 @@ const INITIAL: ConfigState = {
   width: '3.40',
   shape: 'flat',
   slopeRun: '',
+  foldLength: '',
   foldSide: 'length',
   seamDirection: 'auto',
   material: 'PVC',
@@ -149,6 +152,7 @@ export function toPayload(c: ConfigState, market: string) {
     width: num(c.width),
     shape: c.shape,
     slopeRun: c.shape === 'sloped' ? num(c.slopeRun) : 0,
+    foldLength: c.shape === 'sloped' && num(c.foldLength) > 0 ? num(c.foldLength) : null,
     foldSide: c.foldSide,
     seamDirection: c.seamDirection,
     material: c.material,
@@ -226,14 +230,18 @@ export default function ConfiguratorView({
   const L = num(config.length);
   const W = num(config.width);
   const S = config.shape === 'sloped' ? num(config.slopeRun) : 0;
-  const foldEdge = config.foldSide === 'width' ? W : L;
+  const foldFrom = config.foldSide === 'width' ? W : L;
+  // The angled ceiling's own fold length; empty = as long as the side it folds from.
+  const foldEdge = num(config.foldLength) > 0 ? num(config.foldLength) : foldFrom;
   const derived = useMemo(() => {
-    const area = L * W + (S > 0 ? foldEdge * S : 0);
-    const perimeter = 2 * L + 2 * W + (S > 0 ? 2 * S : 0);
+    const flatArea = L * W;
+    const angledArea = S > 0 ? foldEdge * S : 0;
+    const shared = S > 0 ? Math.min(foldEdge, foldFrom) : 0;
+    const perimeter = 2 * L + 2 * W + (S > 0 ? 2 * foldEdge + 2 * S - 2 * shared : 0);
     const spans = [Math.min(L, W)];
     if (S > 0) spans.push(Math.min(foldEdge, S));
-    return { area, perimeter, need: Math.max(...spans, 0) };
-  }, [L, W, S, foldEdge]);
+    return { area: flatArea + angledArea, flatArea, angledArea, perimeter, need: Math.max(...spans, 0) };
+  }, [L, W, S, foldEdge, foldFrom]);
 
   // --- pricing (debounced; typing is never blocked on the network) ---------
   const price = useCallback(
@@ -429,6 +437,7 @@ export default function ConfiguratorView({
   .iconbtn { align-self: flex-end; border: 1px solid var(--border-input); background: #fff; padding: 9px 10px; cursor: pointer; color: var(--text-muted); }
   .add { display: inline-flex; align-items: center; gap: 7px; font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--red); background: none; border: 0; cursor: pointer; padding: 12px 0 0; }
   .add:disabled { opacity: .4; cursor: not-allowed; }
+  .subhead { font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); margin: 14px 0 6px; }
   .running { font-size: 12.5px; color: var(--text-muted); margin: 10px 0 0; }
   .cfg-result .sticky { position: sticky; top: 18px; }
   .facts { display: flex; gap: 18px; flex-wrap: wrap; margin: 14px 0; }
@@ -519,7 +528,7 @@ export default function ConfiguratorView({
       <div className="cfg-grid">
         {/* ------------------------------------------------------------- form */}
         <div className="cfg-form">
-          <Section n={step()} title="The room">
+          <Section n={step()} title={config.shape === 'sloped' ? 'The flat ceiling' : 'The room'}>
             {/* Names this ceiling. A job is several of them, and "Living room"
                 beats "the 4.20 × 3.40 one" on the production sheet. */}
             <Field label="Reference" hint="What you call this ceiling — it travels with the order.">
@@ -553,7 +562,15 @@ export default function ConfiguratorView({
             <dl className="derived">
               <div>
                 <dt>Surface</dt>
-                <dd>{derived.area.toFixed(2)} m²</dd>
+                <dd>
+                  {derived.area.toFixed(2)} m²
+                  {derived.angledArea > 0 && (
+                    <span className="sub">
+                      {' '}
+                      flat {derived.flatArea.toFixed(2)} + angled {derived.angledArea.toFixed(2)}
+                    </span>
+                  )}
+                </dd>
               </div>
               <div>
                 <dt>Perimeter</dt>
@@ -589,22 +606,43 @@ export default function ConfiguratorView({
               ))}
             </div>
             {config.shape === 'sloped' && (
-              <div className="row">
-                <Field label="Slope run (m)" hint="Measured along the slope, not the horizontal projection.">
-                  <input
-                    inputMode="decimal"
-                    value={config.slopeRun}
-                    onChange={(e) => set('slopeRun', e.target.value)}
-                    aria-label="Slope run in metres"
-                  />
-                </Field>
-                <Field label="The fold runs along">
-                  <select value={config.foldSide} onChange={(e) => set('foldSide', e.target.value as 'length' | 'width')}>
-                    <option value="length">the length ({L.toFixed(2)} m)</option>
-                    <option value="width">the width ({W.toFixed(2)} m)</option>
-                  </select>
-                </Field>
-              </div>
+              <>
+                {/* The angled ceiling is its own size — Michael, 7 Sep 2026:
+                    "We should be able to add the size of the angled ceiling
+                    separately." It is not the flat ceiling's side × a slope. */}
+                <p className="subhead">Angled ceiling</p>
+                <div className="row">
+                  <Field label="Along the fold (m)" hint={`Its length where it meets the flat ceiling. Empty = the whole ${config.foldSide} (${foldFrom.toFixed(2)} m).`}>
+                    <input
+                      inputMode="decimal"
+                      value={config.foldLength}
+                      onChange={(e) => set('foldLength', e.target.value)}
+                      placeholder={foldFrom.toFixed(2)}
+                      aria-label="Angled ceiling length along the fold in metres"
+                    />
+                  </Field>
+                  <Field label="Slope run (m)" hint="Measured along the slope, not the horizontal projection.">
+                    <input
+                      inputMode="decimal"
+                      value={config.slopeRun}
+                      onChange={(e) => set('slopeRun', e.target.value)}
+                      aria-label="Slope run in metres"
+                    />
+                  </Field>
+                  <Field label="The fold runs along">
+                    <select value={config.foldSide} onChange={(e) => set('foldSide', e.target.value as 'length' | 'width')}>
+                      <option value="length">the length ({L.toFixed(2)} m)</option>
+                      <option value="width">the width ({W.toFixed(2)} m)</option>
+                    </select>
+                  </Field>
+                </div>
+                {S > 0 && (
+                  <p className="running">
+                    Angled ceiling {foldEdge.toFixed(2)} × {S.toFixed(2)} m = {(foldEdge * S).toFixed(2)} m², on top of the flat{' '}
+                    {(L * W).toFixed(2)} m².
+                  </p>
+                )}
+              </>
             )}
           </Section>
 
@@ -884,6 +922,7 @@ export default function ConfiguratorView({
               length={L}
               width={W}
               slope={S}
+              foldLength={foldEdge}
               foldSide={config.foldSide}
               shape={config.shape}
             />
@@ -1058,6 +1097,7 @@ export default function ConfiguratorView({
   .iconbtn { align-self: flex-end; border: 1px solid var(--border-input); background: #fff; padding: 9px 10px; cursor: pointer; color: var(--text-muted); }
   .add { display: inline-flex; align-items: center; gap: 7px; font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--red); background: none; border: 0; cursor: pointer; padding: 12px 0 0; }
   .add:disabled { opacity: .4; cursor: not-allowed; }
+  .subhead { font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); margin: 14px 0 6px; }
   .running { font-size: 12.5px; color: var(--text-muted); margin: 10px 0 0; }
   .cfg-result .sticky { position: sticky; top: 18px; }
   .facts { display: flex; gap: 18px; flex-wrap: wrap; margin: 14px 0; }
@@ -1188,12 +1228,15 @@ function PlanView({
   length,
   width,
   slope,
+  foldLength,
   foldSide,
   shape,
 }: {
   length: number;
   width: number;
   slope: number;
+  /** The angled panel's own length along the fold. */
+  foldLength: number;
   foldSide: 'length' | 'width';
   shape: 'flat' | 'sloped';
 }) {
@@ -1201,9 +1244,12 @@ function PlanView({
   const W = Math.max(width, 0.1);
   const S = shape === 'sloped' ? Math.max(slope, 0) : 0;
   const alongLength = foldSide === 'length';
-  // Total drawn extent: the slope panel sits beyond the fold edge.
-  const totalW = alongLength ? W + S : W;
-  const totalL = alongLength ? L : L + S;
+  const foldFrom = alongLength ? L : W;
+  const F = S > 0 ? Math.max(foldLength, 0.1) : 0;
+  // Total drawn extent: the slope panel sits beyond the fold edge, and may be
+  // shorter or longer than the side it folds from.
+  const totalW = alongLength ? W + S : Math.max(W, F);
+  const totalL = alongLength ? Math.max(L, F) : L + S;
   const pad = 34;
   const box = 300;
   const scale = Math.min((box - pad * 2) / totalL, (box * 0.72 - pad * 2) / totalW);
@@ -1211,23 +1257,26 @@ function PlanView({
   const h = totalW * scale;
   const x = (box - w) / 2;
   const y = (box * 0.72 - h) / 2;
-  const flatH = alongLength ? W * scale : h;
-  const flatW = alongLength ? w : L * scale;
+  const flatH = alongLength ? W * scale : Math.min(W, totalW) * scale;
+  const flatW = alongLength ? Math.min(L, totalL) * scale : L * scale;
+  // The angled panel starts at the fold's origin and runs F along it.
+  const foldPx = F * scale;
+  const slopePx = S * scale;
 
   return (
     <svg viewBox={`0 0 ${box} ${box * 0.72}`} className="plan" role="img" aria-label="Plan view of the ceiling">
       <rect x={x} y={y} width={flatW} height={flatH} fill="#f4f4f5" stroke="#111" strokeWidth="1.5" />
       {S > 0 &&
         (alongLength ? (
-          <rect x={x} y={y + flatH} width={flatW} height={S * scale} fill="#e6e6e8" stroke="#111" strokeWidth="1.5" />
+          <rect x={x} y={y + flatH} width={foldPx} height={slopePx} fill="#e6e6e8" stroke="#111" strokeWidth="1.5" />
         ) : (
-          <rect x={x + flatW} y={y} width={S * scale} height={flatH} fill="#e6e6e8" stroke="#111" strokeWidth="1.5" />
+          <rect x={x + flatW} y={y} width={slopePx} height={foldPx} fill="#e6e6e8" stroke="#111" strokeWidth="1.5" />
         ))}
       {S > 0 &&
         (alongLength ? (
-          <line x1={x} y1={y + flatH} x2={x + flatW} y2={y + flatH} stroke="#e2001a" strokeWidth="2.5" />
+          <line x1={x} y1={y + flatH} x2={x + Math.min(foldPx, flatW)} y2={y + flatH} stroke="#e2001a" strokeWidth="2.5" />
         ) : (
-          <line x1={x + flatW} y1={y} x2={x + flatW} y2={y + flatH} stroke="#e2001a" strokeWidth="2.5" />
+          <line x1={x + flatW} y1={y} x2={x + flatW} y2={y + Math.min(foldPx, flatH)} stroke="#e2001a" strokeWidth="2.5" />
         ))}
       <text x={x + flatW / 2} y={y - 10} textAnchor="middle" fontSize="11" fill="#555">
         {length.toFixed(2)} m
@@ -1244,13 +1293,13 @@ function PlanView({
       </text>
       {S > 0 && (
         <text
-          x={alongLength ? x + flatW / 2 : x + flatW + (S * scale) / 2}
-          y={alongLength ? y + flatH + (S * scale) / 2 + 4 : y + flatH + 16}
+          x={alongLength ? x + foldPx / 2 : x + flatW + slopePx / 2}
+          y={alongLength ? y + flatH + slopePx / 2 + 4 : y + Math.min(foldPx, flatH) + 16}
           textAnchor="middle"
           fontSize="10.5"
           fill="#e2001a"
         >
-          slope {slope.toFixed(2)} m
+          {foldLength.toFixed(2)} × {slope.toFixed(2)} m
         </text>
       )}
       <style jsx>{`

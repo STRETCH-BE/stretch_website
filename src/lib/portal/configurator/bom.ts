@@ -73,6 +73,14 @@ export type ConfiguratorConfig = {
   shape: CeilingShape;
   /** Slope run in metres, measured ALONG the slope (not its horizontal projection). */
   slopeRun: number;
+  /**
+   * The angled ceiling's side along the fold, in metres — its OWN size, not
+   * the flat ceiling's. null = as long as the flat ceiling's side it folds
+   * from (the pre-Sep-2026 behaviour, kept for stored configurations).
+   * Michael, 7 Sep 2026: "We should be able to add the size of the angled
+   * ceiling separately."
+   */
+  foldLength: number | null;
   foldSide: FoldSide;
   seamDirection: SeamDirection;
   material: Material;
@@ -203,7 +211,11 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
   const W = pos(config.width);
   const sloped = config.shape === 'sloped';
   const S = sloped ? pos(config.slopeRun) : 0;
-  const foldEdge = config.foldSide === 'width' ? W : L;
+  // The side of the flat ceiling the angled one folds from, and the angled
+  // ceiling's own length along that fold. They are independent: a 6.20 x 5.50
+  // room may carry a 4.00 x 2.50 angled section, not a 6.20 x S one.
+  const foldFrom = config.foldSide === 'width' ? W : L;
+  const foldEdge = pos(config.foldLength) > 0 ? pos(config.foldLength) : foldFrom;
 
   // (a) Panels ---------------------------------------------------------------
   const panels: Panel[] = [{ a: L, b: W, label: 'Flat panel', aAxis: 'length' }];
@@ -231,11 +243,13 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
   const area = rawArea > 0 ? Math.max(Math.ceil(rawArea * 100) / 100, MIN_BILLABLE_M2) : 0;
 
   // (c) Perimeter ------------------------------------------------------------
-  // Flat: 2(L + W). Flat + slope: 2L + 2W + 2S. Derivation — the two panels'
-  // own perimeters are 2(L + W) + 2(X + S), and the shared fold edge X is
-  // counted once in each, so removing both occurrences leaves 2L + 2W + 2S,
-  // whichever side the fold runs along.
-  const perimeter = round2(2 * L + 2 * W + (sloped && S > 0 ? 2 * S : 0));
+  // Flat: 2(L + W). Flat + angled: the two panels' own perimeters, 2(L + W)
+  // and 2(X + S), minus the fold they share twice over. The shared length is
+  // the angled panel's fold edge X, or the flat side it folds from if X is
+  // longer than that. With X no longer than the side (the usual case) this is
+  // 2L + 2W + 2S, whichever side the fold runs along.
+  const shared = sloped && S > 0 && foldEdge > 0 ? Math.min(foldEdge, foldFrom) : 0;
+  const perimeter = round2(2 * L + 2 * W + (sloped && S > 0 && foldEdge > 0 ? 2 * foldEdge + 2 * S - 2 * shared : 0));
 
   // (d) Widest span — a roll's LENGTH is unlimited, only its width constrains,
   // so each panel is limited by its shorter side.

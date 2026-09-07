@@ -229,6 +229,13 @@ the BOM engine              ← dimensions → line items → server-side pricin
   pick is arbitrary. The form asks for corner *counts* only when a corner piece
   exists for the material. These three are set by hand in admin ▸ Configurator;
   the seeder does not invent them.
+- **Geometry.** The angled ceiling is its own size — `foldLength` (its length
+  along the fold) × `slopeRun`; a null fold length means the whole side it
+  folds from, which is what orders stored before 7 Sep 2026 mean. Surface =
+  L × W + F × S. Perimeter = both panels' own perimeters minus twice the fold
+  they share, min(F, side) — 2L + 2W + 2S in the normal case. Widest span =
+  the largest of each panel's shorter side. The fold-edge profile is cut for
+  F (ceil(F / 2) pieces of P-CCMIDNO).
 - **Fabric is sold by the LINEAR metre and cut into PIECES; PVC by the m².**
   Every fabric row in the pricebook carries `unit = 'm'` — `495D … 5,10m` at
   €135.92 buys one metre of cloth 5.10 m wide — so fabric ceilings use

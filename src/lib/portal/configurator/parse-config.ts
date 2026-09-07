@@ -73,6 +73,14 @@ export function parseConfig(body: unknown): ParseResult {
   if (!isFinite(slopeRun) || slopeRun < 0) slopeRun = 0;
   if (slopeRun > LIMITS.maxSlope) return { ok: false, error: 'slope_too_large' };
   if (shape === 'sloped' && slopeRun <= 0) return { ok: false, error: 'missing_slope' };
+  // The angled ceiling's own length along the fold. Absent = as long as the
+  // side it folds from (older payloads and stored orders).
+  let foldLength: number | null = null;
+  if (shape === 'sloped' && b.foldLength != null && b.foldLength !== '') {
+    foldLength = n(b.foldLength);
+    if (!isFinite(foldLength) || foldLength <= 0) return { ok: false, error: 'bad_fold_length' };
+    if (foldLength > LIMITS.maxSide) return { ok: false, error: 'too_large' };
+  }
 
   const material = inSet(b.material, MATERIALS);
   if (!material) return { ok: false, error: 'bad_material' };
@@ -118,6 +126,7 @@ export function parseConfig(body: unknown): ParseResult {
     width,
     shape,
     slopeRun: shape === 'sloped' ? slopeRun : 0,
+    foldLength,
     foldSide: b.foldSide === 'width' ? 'width' : 'length',
     seamDirection: b.seamDirection === 'length' || b.seamDirection === 'width' ? b.seamDirection : 'auto',
     material,
