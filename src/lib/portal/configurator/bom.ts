@@ -135,6 +135,19 @@ function bySlug(options: ConfiguratorOption[]): Map<string, ConfiguratorOption> 
   return m;
 }
 
+/**
+ * Options the ENGINE picks by itself (the fold-edge profile, the welding
+ * service) must match the ceiling's material: welding a PVC seam and welding
+ * a polyester seam are different products at different prices. An option with
+ * no material recorded is treated as suiting any material.
+ *
+ * Options the INSTALLER picks explicitly (perimeter profile, corner product)
+ * are priced as chosen — the form only offers the ones that fit.
+ */
+function suitsMaterial(option: ConfiguratorOption, material: Material): boolean {
+  return option.active && (option.material === null || option.material === material);
+}
+
 /** A line for an option the catalogue does not have — visible, never silent. */
 function missingLine(kind: OptionKind, slug: string, qty: number, rule: string): BomLine {
   return {
@@ -211,7 +224,7 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
 
   // (e) The fold edge itself -------------------------------------------------
   if (sloped && S > 0 && foldEdge > 0) {
-    const transition = options.find((o) => o.active && o.kind === 'transition');
+    const transition = options.find((o) => o.kind === 'transition' && suitsMaterial(o, config.material));
     if (transition) {
       const raw =
         transition.qtyRule === 'fold_edge_pieces'
@@ -365,7 +378,9 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
     notes.push(
       `${weldCount} weld${weldCount > 1 ? 's' : ''} — ${weldMetres} m in total, because the ceiling is wider than the ${foil.option?.maxWidthCm} cm roll.`,
     );
-    const weldService = options.find((o) => o.active && o.kind === 'service' && o.qtyRule === 'weld_m');
+    const weldService = options.find(
+      (o) => o.kind === 'service' && o.qtyRule === 'weld_m' && suitsMaterial(o, config.material),
+    );
     if (weldService) {
       lines.push({
         kind: 'service',

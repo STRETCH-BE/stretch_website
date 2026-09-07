@@ -276,6 +276,33 @@ console.log('\nbuildBom — geometry, quantities, companions');
   check('a combination with no roll marks the configuration incomplete',
     noFoil.foil.option === null && noFoil.incomplete === true);
 
+  // The engine's OWN picks (fold edge, welding) follow the ceiling's material:
+  // welding a PVC seam and a polyester seam are different products.
+  {
+    const weldPvc = opt({ kind: 'service', slug: 'weld-pvc', label: 'Welding, PVC', qtyRule: 'weld_m', matchCode: 'SRV-WELD-PVC', material: 'PVC', finish: null, colourGroup: null, maxWidthCm: null, roundMode: 'exact' });
+    const transPvc = opt({ kind: 'transition', slug: 'trans-pvc', label: 'Angle, PVC', qtyRule: 'fold_edge_m', matchCode: 'T-PVC', material: 'PVC', finish: null, colourGroup: null, maxWidthCm: null, roundMode: 'exact' });
+    const fabricRoll = opt({ slug: 'fab-200', label: 'Fabric 2,00 m', material: 'fabric', finish: null, colourGroup: null, fabricKind: 'standard', maxWidthCm: 200, matchProduct: 'Fabric 2,00 m', roundMode: 'exact' });
+    const MAT = [...CEILINGS.filter((o) => o.active), fabricRoll, weldPvc, transPvc];
+
+    const pvcWeld = buildBom({ ...base, length: 8, width: 5.5, finish: 'gloss' }, MAT);
+    check('a PVC ceiling that welds uses the PVC welding service',
+      pvcWeld.lines.some((l) => l.slug === 'weld-pvc'));
+
+    const fabWeld = buildBom({ ...base, material: 'fabric', fabricKind: 'standard', finish: null, colourGroup: null, length: 8, width: 5.5 }, MAT);
+    check('a FABRIC ceiling that welds does NOT borrow the PVC welding price',
+      !fabWeld.lines.some((l) => l.slug === 'weld-pvc'));
+    check('…it shows welding as a visible un-priced line instead',
+      fabWeld.lines.some((l) => l.kind === 'service' && l.missing === true));
+
+    const fabFold = buildBom({ ...base, material: 'fabric', fabricKind: 'standard', finish: null, colourGroup: null, shape: 'sloped', slopeRun: 1.2 }, MAT);
+    check('the fold edge does not borrow the PVC angle profile either',
+      !fabFold.lines.some((l) => l.slug === 'trans-pvc') &&
+        fabFold.lines.some((l) => l.kind === 'transition' && l.missing === true));
+
+    const pvcFold = buildBom({ ...base, shape: 'sloped', slopeRun: 1.2 }, MAT);
+    check('a PVC fold DOES use the PVC angle profile', pvcFold.lines.some((l) => l.slug === 'trans-pvc'));
+  }
+
   const missingTransition = buildBom({ ...base, shape: 'sloped', slopeRun: 1.2 }, CATALOGUE.filter((o) => o.slug !== 'trans'));
   check('no transition option in the catalogue → a visible no_row line, not a silent drop',
     missingTransition.lines.some((l) => l.kind === 'transition' && l.missing === true));
