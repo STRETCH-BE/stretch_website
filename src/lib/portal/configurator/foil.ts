@@ -176,6 +176,75 @@ export function cutPanel(
   return { strips, stripLength: long + extra, seams, seamMetres: seams * long };
 }
 
+/**
+ * One piece of cloth as it comes off a roll: WHICH roll, and how long.
+ * Several pieces of one panel may come off DIFFERENT rolls.
+ */
+export type ClothPiece = {
+  option: ConfiguratorOption;
+  widthCm: number | null;
+  /** Running metres, allowance included. */
+  length: number;
+  /** The width this piece actually has to cover (for the bench). */
+  covers: number;
+  /** True for the piece that closes a seamed panel off a narrower roll. */
+  remainder: boolean;
+};
+
+export type PanelPieces = {
+  pieces: ClothPiece[];
+  seams: number;
+  seamMetres: number;
+};
+
+/**
+ * Cut one panel from a FAMILY of rolls — the same cloth in several widths.
+ *
+ * Michael, 7 Sep 2026: "it shouldn't multiply. It should add the necessary
+ * width of extra fabric." A panel that fits a roll takes the NARROWEST roll
+ * that covers its short side + allowance. A panel wider than the widest roll
+ * takes full-width pieces of that widest roll until what is LEFT fits, and
+ * the last piece is cut from the narrowest roll that covers the leftover —
+ * a 5.50 m span on a 5.10 roll is one 5.10 strip plus a 0.60 m remainder off
+ * the 1.50 roll, not two 5.10 strips. Every piece is cut allowance longer.
+ * The family must be sorted narrowest first (foilFamily does that).
+ */
+export function cutPanelFromFamily(
+  panel: { a: number; b: number },
+  family: ConfiguratorOption[],
+  allowanceM = 0,
+): PanelPieces {
+  const short = Math.min(panel.a, panel.b);
+  const long = Math.max(panel.a, panel.b);
+  if (!(short > 0) || !(long > 0) || family.length === 0) return { pieces: [], seams: 0, seamMetres: 0 };
+  const extra = allowanceM > 0 ? allowanceM : 0;
+  const length = long + extra;
+  const sized = family.filter((o) => widthM(o) != null);
+  if (sized.length === 0) {
+    // No width recorded anywhere in the family: one piece off the first
+    // roll, width unknown — the un-priced/unknown path makes it visible.
+    return {
+      pieces: [{ option: family[0], widthCm: null, length, covers: short + extra, remainder: false }],
+      seams: 0,
+      seamMetres: 0,
+    };
+  }
+  const widest = sized[sized.length - 1];
+  const widestM = widthM(widest)!;
+  const pieces: ClothPiece[] = [];
+  let left = short + extra;
+  // Full-width strips of the widest roll while more than a roll is left.
+  while (left > widestM + 1e-9) {
+    pieces.push({ option: widest, widthCm: widest.maxWidthCm, length, covers: widestM, remainder: false });
+    left = Math.round((left - widestM) * 1000) / 1000;
+  }
+  // What is left — the whole panel, or the remainder — off the narrowest roll that covers it.
+  const roll = sized.find((o) => widthM(o)! >= left - 1e-9) ?? widest;
+  pieces.push({ option: roll, widthCm: roll.maxWidthCm, length, covers: left, remainder: pieces.length > 0 });
+  const seams = pieces.length - 1;
+  return { pieces, seams, seamMetres: seams * long };
+}
+
 /** Seams and seam length for one panel — a view on cutPanel(). */
 export function weldsForPanel(
   panel: { a: number; b: number },

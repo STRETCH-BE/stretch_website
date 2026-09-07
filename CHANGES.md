@@ -1,3 +1,69 @@
+## 2026-09-07 (43) — Configurator: a seam adds the leftover width, not another full roll
+
+Michael, 7 Sep 2026, with two screenshots: *"It's multiplying fabrics, its not
+suposed to do that"* — then, asked to analyse it: *"it shouldn't multiply. It
+should add the necersary width off extra fabric."*
+
+**What was wrong.** (42) chose ONE roll for the whole ceiling — the narrowest
+that covered the widest span + 20 cm — and then cut every panel from that
+same roll, one full-width strip per seam. Two consequences, both visible in
+his screenshots:
+
+- **A seam doubled the widest roll.** A 5.50 × 6.00 panel needs 5.70 m of
+  width; on the 5.10 roll that became *two* strips of 5.10 × 6.20 m — 10.20 m
+  of width bought for 5.70 m of ceiling. His 5.50 × 6.00 + 5.50 m slope read
+  four 5.10 strips, 23.80 m, **€2.603,72** of cloth.
+- **Every panel took the widest span's roll.** In 5.50 × 3.40 + 4.20 m slope,
+  the flat panel needs only 3.60 m of width (the 4.10 roll) but was cut from
+  the 4.50 roll the angled panel needs.
+
+**The rule now — `cutPanelFromFamily()` in `foil.ts`.** The *family* is the
+same cloth in every width the pricelist carries (705S: 1.50 → 5.10, seven
+widths). Each panel takes the **narrowest roll that covers its own short side
++ 20 cm**. A panel wider than the widest roll takes full-width strips of the
+widest roll only while more than a roll is left, and the **last piece is the
+leftover, off the narrowest roll that covers it** — 5.70 m on the 5.10 is one
+5.10 strip plus a 0.60 m remainder off the 1.50 roll. Every piece is cut 20 cm
+long; seams = pieces − 1 per panel. One cut model still feeds both the cloth
+lines and the seam line.
+
+- Screenshot 2 becomes 5.10 × 6.20 + **1.50 × 6.20** (remainder 0.60 m) for
+  the flat panel and 5.10 × 5.70 + **1.50 × 5.70** for the angled one — still
+  four pieces and two seams, but **€1.684,81** of cloth instead of €2.603,72.
+  A 9 × 7 m room: one 5.10 strip plus a 2.10 m remainder off the 2.50 roll,
+  €1.499,88 instead of €2.012,96.
+- Screenshot 1 becomes flat on the **4.10** roll (3.60 m needed) and angled on
+  the 4.50 — two pieces of 5.70 m, €1.029,71 instead of €1.056,78.
+- Michael's own 4.20 × 3.40 + 4.20 m room: flat off the 4.10, angled off the
+  4.50, 8.80 m in all.
+
+**What the installer and the bench see.** Each cloth line names its own roll
+(the pricebook product carries the width) and its cut: *"Piece 2 of 4 — flat
+panel, remainder 0.60 m: 1.50 m wide × 6.20 m long (incl. 20 cm to grip)"*.
+The Cloth figure lists every width used (*8.80 m · 2 pieces off 410 / 450
+cm*); the "Foil chosen for you" box still names the roll the widest span
+takes and adds *"The pieces are cut from the 410, 450 cm rolls — a seam's
+remainder comes off the narrowest roll that covers it"*; the production sheet's
+Cloth row lists the rolls, and "Roll width" is labelled as the widest span's.
+
+**Not changed, deliberately.** The roll's width still covers the panel's
+*shorter* side and strips run along the longer side — the layout the seam
+arithmetic has always assumed. Orienting the roll the other way can be
+cheaper in some rooms (5.50 × 6.00 flat: width across the 6.00 side saves
+0.50 m per piece); that is a cutting policy for Michael to set, not one to
+invent. Whether a seam needs its own overlap beyond the 20 cm total is the
+same kind of question.
+
+**Verified.** 118 configurator checks (140 under `npm test`), 20 of them new:
+the narrowest-roll choice per panel, remainder sizing at 0.60 / 1.00 / 2.10 /
+3.60 m, three strips for 11 m, the exact-fit boundary, a single-width family
+and an empty family, both screenshots reproduced line for line under the new
+rule, PVC untouched. 29 engine checks against the live catalogue and prices.
+9 live UI checks in Chromium including the Cloth widths and each piece naming
+its own roll. Clean typecheck, lint and client-message parity; build green.
+
+---
+
 ## 2026-09-07 (42) — Configurator: fabric is cut into pieces and billed per running metre; a ceiling can be named
 
 Michael, 7 Sep 2026, with a screenshot of the bill: *"For fabric, the

@@ -236,10 +236,17 @@ the BOM engine              ← dimensions → line items → server-side pricin
   and seams: the roll's width covers the panel's shorter side, strips run along
   the longer side, and the bill carries **one line per piece** with its cut
   measurements. Fabric gets a **20 cm gripping allowance both ways**
-  (`FABRIC_ALLOWANCE_M` in `bom.ts`): the roll is chosen on span + 20 cm and
-  every piece is cut 20 cm long. Flat + angled = two pieces; each seam adds
-  one. PVC rows carry `unit = 'm²'`, keep `area`, one line, no allowance. If a
-  new ceiling row is ever added, set its rule from the pricebook's own unit.
+  (`FABRIC_ALLOWANCE_M` in `bom.ts`): every piece is cut 20 cm long and each
+  panel takes the **narrowest roll of its family that covers its short side
+  + 20 cm** (`cutPanelFromFamily()`). A panel wider than the widest roll takes
+  full-width strips of the widest roll only while more than a roll is left;
+  the last piece is the **leftover, off the narrowest roll that covers it** —
+  never another full-width strip ("it should add the necessary width of
+  extra fabric", Michael, 7 Sep 2026). Flat + angled = two pieces; each seam
+  adds one; pieces of one ceiling may come off different rolls, and each
+  line names its own. PVC rows carry `unit = 'm²'`, keep `area`, one line, no
+  allowance. If a new ceiling row is ever added, set its rule from the
+  pricebook's own unit.
 - **A seam is not always a weld.** A PVC seam is welded and billed by the metre
   (`weld_m`); a polyester seam is joined with the `P-CCMIDNO 2m` mid-joint
   profile and billed per 2 m piece (`weld_pieces`). The same pricebook row
