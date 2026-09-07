@@ -600,7 +600,7 @@ create table if not exists public.configurator_options (
   max_width_cm  integer,            -- roll width; drives selection AND the seam rule
   -- How much of it a configuration needs.
   qty_rule      text not null check (qty_rule in
-                ('area','perimeter_m','perimeter_pieces','fold_edge_m','fold_edge_pieces',
+                ('area','roll_m','perimeter_m','perimeter_pieces','fold_edge_m','fold_edge_pieces',
                  'per_unit','per_corner','per_n_units','fixed','weld_m','weld_pieces')),
   -- Multiplies the rule's raw quantity. Also the unit conversion for options
   -- sold by the piece off an area rule: a 1.2 × 1.0 m absorber sheet is
@@ -623,14 +623,15 @@ create table if not exists public.configurator_options (
 create index if not exists configurator_options_kind_idx
   on public.configurator_options (kind, sort);
 
--- Existing databases (created before 'weld_pieces', Sep 2026): `create table
--- if not exists` above leaves an older CHECK in place, so replace it. A
--- polyester seam is joined with a 2 m profile, not welded by the metre.
+-- Existing databases (created before 'weld_pieces' / 'roll_m', Sep 2026):
+-- `create table if not exists` above leaves an older CHECK in place, so
+-- replace it. A polyester seam is joined with a 2 m profile, not welded by
+-- the metre; fabric is billed per running metre of roll, not per m².
 alter table public.configurator_options
   drop constraint if exists configurator_options_qty_rule_check;
 alter table public.configurator_options
   add constraint configurator_options_qty_rule_check check (qty_rule in
-    ('area','perimeter_m','perimeter_pieces','fold_edge_m','fold_edge_pieces',
+    ('area','roll_m','perimeter_m','perimeter_pieces','fold_edge_m','fold_edge_pieces',
      'per_unit','per_corner','per_n_units','fixed','weld_m','weld_pieces'));
 
 alter table public.configurator_options enable row level security;
@@ -678,6 +679,7 @@ create table if not exists public.portal_orders (
   status        text not null default 'received'
                 check (status in ('received','confirmed','in_production','shipped','cancelled')),
   pricebook_version text,
+  ceiling_ref   text,                          -- what the installer calls this ceiling
   project_ref   text,
   delivery_address text,
   note          text,
@@ -687,6 +689,9 @@ create table if not exists public.portal_orders (
   created_at    timestamptz not null default now(),
   updated_at    timestamptz not null default now()
 );
+
+-- Existing databases (created before the ceiling reference, Sep 2026): run once.
+alter table public.portal_orders add column if not exists ceiling_ref text;
 
 create table if not exists public.portal_order_lines (
   id         bigint generated always as identity primary key,

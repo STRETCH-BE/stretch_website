@@ -7,7 +7,7 @@
 //
 // Unit-tested by scripts/configurator.test.mjs.
 // ============================================================================
-import { pickFoil, weldsForPanel, type FoilPick } from './foil';
+import { cutPanel, pickFoil, type FoilPick } from './foil';
 import type {
   ColourGroup,
   ConfiguratorOption,
@@ -27,6 +27,14 @@ export const MIN_BILLABLE_M2 = 1;
 
 /** Spare added to the perimeter before profiles are cut to pieces (0 = none). */
 export const PROFILE_SPARE_PCT = 0;
+
+/**
+ * Gripping allowance for FABRIC, in metres, across the width AND along the
+ * length of every piece (Michael, 7 Sep 2026): a 4.00 m span wants a 4.20 m
+ * roll, a 4.01 m span wants more than 4.20 m, and each piece is cut 20 cm
+ * long. PVC is welded to size and gets none.
+ */
+export const FABRIC_ALLOWANCE_M = 0.2;
 
 /**
  * Corner counts the form starts from. The installer overrides them freely.
@@ -95,6 +103,10 @@ export type Bom = {
   panels: Panel[];
   /** Billable surface, m². */
   area: number;
+  /** Running metres of roll the panels consume (fabric is priced per m1). */
+  rollMetres: number;
+  /** Pieces of cloth — one per panel, one more per seam. 0 for PVC. */
+  clothPieces: number;
   perimeter: number;
   /** The widest span the foil has to cover in one piece, m². */
   need: number;
@@ -196,6 +208,7 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
   const need = panels.reduce((max, p) => Math.max(max, Math.min(p.a, p.b)), 0);
 
   // Foil ---------------------------------------------------------------------
+  const allowance = config.material === 'fabric' ? FABRIC_ALLOWANCE_M : 0;
   const foil = pickFoil(
     {
       material: config.material,
@@ -205,13 +218,49 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
     },
     need,
     options,
+    allowance,
   );
+
+  // How each panel is cut from the roll: pieces, their length, the seams
+  // between them. ONE model feeds the cloth lines and the seam line, so the
+  // two can never disagree about how the fabric is cut.
+  const cuts = foil.option
+    ? panels.map((p) => ({ panel: p, cut: cutPanel({ a: p.a, b: p.b }, foil.option!.maxWidthCm, allowance) }))
+    : [];
+  const rollMetres = round2(cuts.reduce((sum, c) => sum + c.cut.strips * c.cut.stripLength, 0));
+  const clothPieces = cuts.reduce((sum, c) => sum + c.cut.strips, 0);
 
   let incomplete = area <= 0 || L <= 0 || W <= 0;
   if (!foil.option) {
     incomplete = true;
     notes.push(foil.reason);
+  } else if (foil.option.qtyRule === 'roll_m') {
+    // Fabric: sold by the running metre of a roll of a given width, and cut
+    // into PIECES — one per panel, one more per seam — each listed with its
+    // own measurements so production cuts exactly what is billed
+    // (Michael, 7 Sep 2026: "if the ceiling is flat + angled you need 2
+    // fabrics … a ceiling can have multiple seams, so also multiple fabrics").
+    const widthM = (foil.option.maxWidthCm ?? 0) / 100;
+    let piece = 0;
+    for (const { panel, cut } of cuts) {
+      for (let i = 1; i <= cut.strips; i += 1) {
+        piece += 1;
+        const which = cut.strips > 1 ? `, strip ${i} of ${cut.strips}` : '';
+        lines.push({
+          kind: 'ceiling',
+          slug: foil.option.slug,
+          label: foil.option.label,
+          qty: finalQty(cut.stripLength, foil.option),
+          rule: 'roll_m',
+          note: `Piece ${piece} of ${clothPieces} — ${panel.label.toLowerCase()}${which}: ${
+            widthM ? `${widthM.toFixed(2)} m wide × ` : ''
+          }${cut.stripLength.toFixed(2)} m long (incl. ${Math.round(allowance * 100)} cm to grip).`,
+        });
+      }
+    }
+    notes.push(foil.reason);
   } else {
+    // PVC: welded to size, billed on the ceiling's surface.
     lines.push({
       kind: 'ceiling',
       slug: foil.option.slug,
@@ -355,16 +404,8 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
   }
 
   // (h) Welding --------------------------------------------------------------
-  let weldMetres = 0;
-  let weldCount = 0;
-  if (foil.option) {
-    for (const p of panels) {
-      const w = weldsForPanel({ a: p.a, b: p.b }, foil.option.maxWidthCm);
-      weldCount += w.welds;
-      weldMetres += w.metres;
-    }
-  }
-  weldMetres = round2(weldMetres);
+  const weldCount = cuts.reduce((sum, c) => sum + c.cut.seams, 0);
+  const weldMetres = round2(cuts.reduce((sum, c) => sum + c.cut.seamMetres, 0));
   if (weldCount > 0) {
     notes.push(
       `${weldCount} seam${weldCount > 1 ? 's' : ''} — ${weldMetres} m in total, because the ceiling is wider than the ${foil.option?.maxWidthCm} cm roll.`,
@@ -400,6 +441,8 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
     foil,
     panels,
     area,
+    rollMetres,
+    clothPieces: foil.option?.qtyRule === 'roll_m' ? clothPieces : 0,
     perimeter,
     need: round2(need),
     cornersInside,

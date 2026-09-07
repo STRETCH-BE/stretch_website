@@ -77,6 +77,7 @@ export async function POST(request: NextRequest) {
 
   // Contact fields may travel at the top level of the order body too.
   const meta = {
+    reference: parsed.meta.reference ?? (typeof body.reference === 'string' ? body.reference.slice(0, 120) : null),
     projectRef: parsed.meta.projectRef ?? (typeof body.projectRef === 'string' ? body.projectRef.slice(0, 120) : null),
     deliveryAddress:
       parsed.meta.deliveryAddress ?? (typeof body.deliveryAddress === 'string' ? body.deliveryAddress.slice(0, 400) : null),

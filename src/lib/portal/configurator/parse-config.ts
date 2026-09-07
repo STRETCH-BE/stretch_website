@@ -22,7 +22,17 @@ export const LIMITS = {
 } as const;
 
 export type ParseResult =
-  | { ok: true; config: ConfiguratorConfig; meta: { projectRef: string | null; deliveryAddress: string | null; note: string | null } }
+  | {
+      ok: true;
+      config: ConfiguratorConfig;
+      meta: {
+        /** What the installer calls this ceiling — "Living room", "Unit 4B". */
+        reference: string | null;
+        projectRef: string | null;
+        deliveryAddress: string | null;
+        note: string | null;
+      };
+    }
   | { ok: false; error: string };
 
 function n(v: unknown): number {
@@ -125,6 +135,7 @@ export function parseConfig(body: unknown): ParseResult {
     ok: true,
     config,
     meta: {
+      reference: text(b.reference, 120),
       projectRef: text(b.projectRef, 120),
       deliveryAddress: text(b.deliveryAddress),
       note: text(b.note),

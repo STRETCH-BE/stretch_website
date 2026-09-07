@@ -23,7 +23,7 @@ function loadTs(relPath, extraModules = {}) {
 }
 
 const types = loadTs('../src/lib/portal/configurator/types.ts');
-const { pickFoil, foilFamily, weldsForPanel } = loadTs('../src/lib/portal/configurator/foil.ts', {
+const { pickFoil, foilFamily, weldsForPanel, rollMetresForPanel, cutPanel } = loadTs('../src/lib/portal/configurator/foil.ts', {
   './types': types,
 });
 // options.ts imports the Supabase client; stub it — resolveOption is pure.
@@ -34,7 +34,7 @@ const { resolveOption } = loadTs('../src/lib/portal/configurator/options.ts', {
 });
 const { buildBom } = loadTs('../src/lib/portal/configurator/bom.ts', {
   './types': types,
-  './foil': { pickFoil, foilFamily, weldsForPanel },
+  './foil': { pickFoil, foilFamily, weldsForPanel, rollMetresForPanel, cutPanel },
 });
 const { parseConfig } = loadTs('../src/lib/portal/configurator/parse-config.ts', {
   './types': types,
@@ -357,6 +357,106 @@ console.log('\nbuildBom — geometry, quantities, companions');
 }
 
 // ---------------------------------------------------------------------------
+console.log('\nfabric is billed per RUNNING METRE of roll, not per m\u00b2');
+{
+  // Michael, 7 Sep 2026: "For fabric, the measurements off the fabrics are per
+  // m1 in the pricelist correspondenting with the width off the fabric."
+  // Every fabric row in the pricebook carries unit 'm': "495D … 5,10m" at
+  // EUR 135.92 buys ONE METRE of cloth 5.10 m wide. Billing the ceiling's m²
+  // against that price charges the roll width over again.
+  //
+  // And: "always make sure that 20cm in width is free … in the length also
+  // take always minimum 20cm extra length for each ceiling. If the ceiling is
+  // flat + angled you need 2 fabrics; if it has a seam, add a second fabric
+  // and add the measurements to it. A ceiling can have multiple seams, so
+  // also multiple fabrics."
+  const A = 0.2;
+  check('a panel inside the roll width takes its long side + 20 cm',
+    near(rollMetresForPanel({ a: 4.2, b: 3.4 }, 510, A), 4.4), String(rollMetresForPanel({ a: 4.2, b: 3.4 }, 510, A)));
+  check('without an allowance (PVC) it is the bare long side',
+    rollMetresForPanel({ a: 4.2, b: 3.4 }, 510) === 4.2);
+  check('a panel wider than the roll takes one strip per width, each + 20 cm',
+    near(rollMetresForPanel({ a: 8, b: 5.5 }, 510, A), 16.4), String(rollMetresForPanel({ a: 8, b: 5.5 }, 510, A)));
+  check('the 20 cm across the width can FORCE a second strip: 5.00 m on a 5.10 roll',
+    cutPanel({ a: 6, b: 5.0 }, 510, A).strips === 2 && cutPanel({ a: 6, b: 5.0 }, 510).strips === 1);
+  check('strips and seams come from the same cut',
+    cutPanel({ a: 8, b: 5.5 }, 510, A).seams === cutPanel({ a: 8, b: 5.5 }, 510, A).strips - 1);
+  check('the seam length is the panel\u2019s long side, no allowance',
+    weldsForPanel({ a: 8, b: 5.5 }, 510, A).metres === 8);
+  check('a roll with no width recorded assumes a single strip',
+    near(rollMetresForPanel({ a: 4.2, b: 3.4 }, null, A), 4.4));
+  check('an empty panel consumes nothing', rollMetresForPanel({ a: 0, b: 3 }, 510, A) === 0);
+
+  // The roll is chosen on span + 20 cm: 4.00 m wants 4.20, 4.01 wants more.
+  const fab410 = opt({ slug: 'fab-410', label: '705S 4,10m', material: 'fabric', finish: null, colourGroup: null,
+    fabricKind: 'standard', maxWidthCm: 410, qtyRule: 'roll_m', roundMode: 'exact', matchCode: '742 SD 0002' });
+  const fab450 = opt({ slug: 'fab-450', label: '705S 4,50m', material: 'fabric', finish: null, colourGroup: null,
+    fabricKind: 'standard', maxWidthCm: 450, qtyRule: 'roll_m', roundMode: 'exact', matchCode: '746 SD 0002' });
+  const fab510 = opt({ slug: 'fab-510', label: '495D Acoustic 5,10m', material: 'fabric', finish: null,
+    colourGroup: null, fabricKind: 'acoustic', maxWidthCm: 510, qtyRule: 'roll_m', roundMode: 'exact',
+    matchCode: '49552 DD 0002' });
+  const pvcM2 = opt({ slug: 'pvc-m2', label: 'MSD Matte White 500', material: 'PVC', finish: 'matte',
+    colourGroup: 'white', maxWidthCm: 500, qtyRule: 'area', roundMode: 'exact', matchCode: 'MSD-500' });
+  const CLOTH = [fab410, fab450, fab510, pvcM2];
+  const std = { material: 'fabric', fabricKind: 'standard' };
+  check('a 4.00 m span picks the 4.50 roll, not the 4.10 (4.00 + 0.20 = 4.20 > 4.10)',
+    pickFoil(std, 4.0, CLOTH, A).option === fab450, pickFoil(std, 4.0, CLOTH, A).option?.slug);
+  check('…the same span WITHOUT an allowance would have taken the 4.10',
+    pickFoil(std, 4.0, CLOTH).option === fab410);
+  check('a 3.90 m span still fits the 4.10 roll (3.90 + 0.20 = 4.10)',
+    pickFoil(std, 3.9, CLOTH, A).option === fab410);
+  check('the reason line shows the allowance',
+    /3\.9 m span \+ 0\.2 m in one piece/.test(pickFoil(std, 3.9, CLOTH, A).reason), pickFoil(std, 3.9, CLOTH, A).reason);
+
+  const room = {
+    length: 4.2, width: 3.4, shape: 'sloped', slopeRun: 4.2, foldSide: 'length',
+    material: 'fabric', finish: null, colourGroup: null, fabricKind: 'acoustic',
+    profileSlug: null, cornersInside: null, cornersOutside: null,
+    platforms: [], absorberSlug: null, lights: [],
+  };
+  // Michael's own screenshot: 4.20 x 3.40 flat + a 4.20 m slope along the
+  // length. Flat + angled = TWO fabrics: 4.40 m each (4.20 + 20 cm), on the
+  // 5.10 roll (4.20 + 0.20 = 4.40 > 4.10). Total 8.80 m, NOT 31.92 m2.
+  const bom = buildBom(room, CLOTH);
+  const cloth = bom.lines.filter((l) => l.kind === 'ceiling');
+  check('the ceiling surface is still 31.92 m\u00b2', near(bom.area, 31.92), String(bom.area));
+  check('flat + angled = two pieces of cloth', bom.clothPieces === 2 && cloth.length === 2, `${bom.clothPieces} / ${cloth.length}`);
+  check('each piece is 4.40 m (4.20 + 20 cm), billed in metres',
+    cloth.every((l) => l.rule === 'roll_m' && near(l.qty, 4.4)), cloth.map((l) => `${l.rule} ${l.qty}`).join(','));
+  check('the cloth totals 8.80 running metres', near(bom.rollMetres, 8.8), String(bom.rollMetres));
+  check('each piece carries its own measurements for production',
+    /Piece 1 of 2 — flat panel: 5\.10 m wide × 4\.40 m long/.test(cloth[0].note) &&
+    /Piece 2 of 2 — angled panel: 5\.10 m wide × 4\.40 m long/.test(cloth[1].note),
+    cloth.map((l) => l.note).join(' | '));
+  check('the roll reason is kept as a note, once', bom.notes.filter((n) => /510 cm roll/.test(n)).length === 1);
+
+  // The same room in PVC keeps the m2 rule and ONE line — one catalogue, two units.
+  const pvcRoom = { ...room, material: 'PVC', finish: 'matte', colourGroup: 'white', fabricKind: null };
+  const pvcBom = buildBom(pvcRoom, CLOTH);
+  const pvcLines = pvcBom.lines.filter((l) => l.kind === 'ceiling');
+  check('a PVC ceiling is still ONE line billed per m\u00b2',
+    pvcLines.length === 1 && pvcLines[0].rule === 'area' && near(pvcLines[0].qty, 31.92),
+    pvcLines.map((l) => `${l.rule} ${l.qty}`).join(','));
+  check('PVC reports no cloth pieces', pvcBom.clothPieces === 0);
+
+  // A seam adds a piece: 9 x 7 flat on the 5.10 roll → 7.20 needs 2 strips of 9.20 m.
+  const wide = buildBom({ ...room, shape: 'flat', slopeRun: 0, length: 9, width: 7 }, CLOTH);
+  const wideCloth = wide.lines.filter((l) => l.kind === 'ceiling');
+  check('a seam means a second piece of cloth', wide.clothPieces === 2 && wideCloth.length === 2);
+  check('each strip is 9.20 m (9 + 20 cm) → 18.40 m in total',
+    wideCloth.every((l) => near(l.qty, 9.2)) && near(wide.rollMetres, 18.4), String(wide.rollMetres));
+  check('the pieces say which strip they are',
+    /strip 1 of 2/.test(wideCloth[0].note) && /strip 2 of 2/.test(wideCloth[1].note), wideCloth.map((l) => l.note).join(' | '));
+  check('one seam, 9 m long, for those two strips', wide.weldCount === 1 && near(wide.weldMetres, 9));
+
+  // Multiple seams → multiple fabrics, one per strip.
+  const huge = buildBom({ ...room, shape: 'flat', slopeRun: 0, length: 12, width: 11 }, CLOTH);
+  check('11 m wide on a 5.10 roll: 3 strips, 3 pieces, 2 seams',
+    huge.clothPieces === 3 && huge.weldCount === 2 && huge.lines.filter((l) => l.kind === 'ceiling').length === 3,
+    `${huge.clothPieces} pieces, ${huge.weldCount} seams`);
+}
+
+// ---------------------------------------------------------------------------
 console.log('\nparseConfig — the payload the form actually posts');
 {
   // The browser posts a bare config object (see toPayload in ConfiguratorView).
@@ -369,8 +469,12 @@ console.log('\nparseConfig — the payload the form actually posts');
     lights: [{ slug: 'light-sl-5061-white', qty: 6 }, { slug: 'light-gu10-fitting', qty: 6 }],
     market: 'Installer',
   };
-  const r = parseConfig(posted);
+  const r = parseConfig({ ...posted, reference: '  Living room  ' });
   check('the posted payload parses', r.ok === true, r.error);
+  check('the ceiling reference is carried and trimmed', r.ok && r.meta.reference === 'Living room',
+    JSON.stringify(r.ok ? r.meta.reference : r));
+  check('an empty reference is null, never an empty string',
+    parseConfig({ ...posted, reference: '   ' }).meta.reference === null);
   check('both light types survive the round trip',
     r.ok && r.config.lights.length === 2 &&
     r.config.lights[0].slug === 'light-sl-5061-white' && r.config.lights[0].qty === 6 &&

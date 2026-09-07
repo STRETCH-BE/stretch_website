@@ -28,6 +28,7 @@ export type PortalOrderRow = {
   needs_manual_pricing: boolean;
   status: PortalOrderStatus;
   pricebook_version: string | null;
+  ceiling_ref: string | null;
   project_ref: string | null;
   delivery_address: string | null;
   note: string | null;
@@ -102,7 +103,7 @@ export async function storeOrder(input: {
   profile: PortalProfile;
   quote: PricedBom;
   config: ConfiguratorConfig;
-  meta: { projectRef: string | null; deliveryAddress: string | null; note: string | null };
+  meta: { reference: string | null; projectRef: string | null; deliveryAddress: string | null; note: string | null };
   idempotencyKey: string | null;
 }): Promise<PortalOrderRow | null> {
   const supabase = createServiceClient();
@@ -125,6 +126,7 @@ export async function storeOrder(input: {
         subtotal: quote.currency === 'PLN' && quote.subtotalPln != null ? quote.subtotalPln : quote.subtotalEur,
         needs_manual_pricing: quote.needsManualPricing,
         pricebook_version: quote.pricebookVersion,
+        ceiling_ref: input.meta.reference,
         project_ref: input.meta.projectRef,
         delivery_address: input.meta.deliveryAddress,
         note: input.meta.note,

@@ -36,6 +36,9 @@ export type FabricKind = (typeof FABRIC_KINDS)[number];
 /**
  * How a configuration's dimensions turn into a quantity of this option.
  *   area              — the ceiling surface (m²)
+ *   roll_m            — running metres off the roll at its own width. Fabric
+ *                       is priced per linear metre of a roll of a given width,
+ *                       so its quantity is metres of cloth, not m² of ceiling.
  *   perimeter_m       — the perimeter in metres
  *   perimeter_pieces  — the perimeter in pieces of piece_length_m
  *   fold_edge_m       — the fold between a flat and an angled panel, in metres
@@ -50,6 +53,7 @@ export type FabricKind = (typeof FABRIC_KINDS)[number];
  */
 export const QTY_RULES = [
   'area',
+  'roll_m',
   'perimeter_m',
   'perimeter_pieces',
   'fold_edge_m',

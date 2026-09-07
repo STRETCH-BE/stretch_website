@@ -19,7 +19,7 @@ export type OrderMailInput = {
   quote: PricedBom;
   config: ConfiguratorConfig;
   account: { email: string; company: string | null };
-  meta: { projectRef: string | null; deliveryAddress: string | null; note: string | null };
+  meta: { reference: string | null; projectRef: string | null; deliveryAddress: string | null; note: string | null };
 };
 
 const RED = '#e2001a';
@@ -48,7 +48,9 @@ function totalOf(quote: PricedBom): string {
 /** The configuration in plain words — the same list in both e-mails. */
 function specLines(input: OrderMailInput): [string, string][] {
   const { config: c, quote: q } = input;
-  const rows: [string, string][] = [
+  const rows: [string, string][] = [];
+  if (input.meta.reference) rows.push(['Ceiling', input.meta.reference]);
+  rows.push(
     ['Room', `${c.length.toFixed(2)} × ${c.width.toFixed(2)} m`],
     ['Shape', c.shape === 'sloped' ? `Flat + angled (slope ${c.slopeRun.toFixed(2)} m along the ${c.foldSide})` : 'Flat ceiling'],
     ['Surface', `${q.area.toFixed(2)} m²`],
@@ -58,7 +60,7 @@ function specLines(input: OrderMailInput): [string, string][] {
     ['Roll width', q.foil.widthCm ? `${q.foil.widthCm} cm` : '—'],
     ['Seams', q.weldCount > 0 ? `${q.weldCount} seam(s), ${q.weldMetres.toFixed(2)} m` : 'none'],
     ['Corners', `${q.cornersInside} inside · ${q.cornersOutside} outside`],
-  ];
+  );
   if (c.platforms.length) {
     rows.push(['Light supports', c.platforms.map((p) => `${p.qty} × ${p.slug}`).join(', ')]);
   }
@@ -94,6 +96,8 @@ function linesTableHtml(quote: PricedBom): string {
         (l) => `<tr>
       <td style="padding:7px 0;border-bottom:1px solid #e8e8ea">${esc(l.label)}${l.code ? ` <span style="color:#999">[${esc(l.code)}]</span>` : ''}${
         l.status !== 'ok' ? ` <span style="color:${RED};font-weight:700">· price on request</span>` : ''
+      }${
+        l.kind === 'ceiling' && l.note ? `<br><span style="font-size:11px;color:#666">${esc(l.note)}</span>` : ''
       }</td>
       <td align="right" style="padding:7px 0;border-bottom:1px solid #e8e8ea;white-space:nowrap">${esc(l.qty)} ${esc(l.unit ?? '')}</td>
       <td align="right" style="padding:7px 0;border-bottom:1px solid #e8e8ea;white-space:nowrap">${esc(money(quote, l.unitPriceEur, l.unitPricePln))}</td>
@@ -208,6 +212,11 @@ export function buildInternalEmail(input: OrderMailInput): { subject: string; ht
     ['Foil code', quote.foil.code ?? '—'],
     ['Foil product', quote.foil.product ?? quote.foil.label ?? '—'],
     ['Roll width', quote.foil.widthCm ? `${quote.foil.widthCm} cm` : '—'],
+    // Fabric is cut into pieces and bought by the running metre — the bench
+    // needs the pieces, the m² is only the ceiling.
+    ...(quote.clothPieces > 0
+      ? ([['Cloth', `${quote.clothPieces} piece(s), ${quote.rollMetres.toFixed(2)} m off the ${quote.foil.widthCm ?? '?'} cm roll — measurements per piece in the bill below`]] as [string, string][])
+      : []),
     ['Surface', `${quote.area.toFixed(2)} m²`],
     ['Perimeter', `${quote.perimeter.toFixed(2)} m`],
   ];
@@ -226,6 +235,7 @@ export function buildInternalEmail(input: OrderMailInput): { subject: string; ht
     ['Price group', quote.market],
     ['Pricelist', `${quote.pricebookVersion}${quote.pricebookUpdatedAt ? ` (${String(quote.pricebookUpdatedAt).slice(0, 10)})` : ''}`],
     ['Delivery', input.meta.deliveryAddress ?? '—'],
+    ['Ceiling', input.meta.reference ?? '—'],
     ['Project ref', input.meta.projectRef ?? '—'],
     ['Note', input.meta.note ?? '—'],
     ['Shape', c.shape === 'sloped' ? `Flat + angled, slope ${c.slopeRun.toFixed(2)} m along the ${c.foldSide}` : 'Flat'],
@@ -269,7 +279,10 @@ export function buildInternalEmail(input: OrderMailInput): { subject: string; ht
     '',
     'BILL OF MATERIALS',
     ...quote.lines.map(
-      (l) => `  ${l.qty} ${l.unit ?? ''} × ${l.label}${l.code ? ` [${l.code}]` : ''} — ${money(quote, l.lineTotalEur, l.lineTotalPln)}`,
+      (l) =>
+        `  ${l.qty} ${l.unit ?? ''} × ${l.label}${l.code ? ` [${l.code}]` : ''} — ${money(quote, l.lineTotalEur, l.lineTotalPln)}${
+          l.kind === 'ceiling' && l.note ? `\n      ${l.note}` : ''
+        }`,
     ),
     '',
     `SUBTOTAL (ex VAT, ex shipping): ${totalOf(quote)}`,

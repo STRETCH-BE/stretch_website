@@ -55,6 +55,8 @@ export type Quote = {
   needsManualPricing: boolean;
   unpricedCount: number;
   area: number;
+  rollMetres: number;
+  clothPieces: number;
   perimeter: number;
   need: number;
   cornersInside: number;
@@ -77,6 +79,7 @@ export type Quote = {
 };
 
 export type ConfigState = {
+  reference: string;
   length: string;
   width: string;
   shape: 'flat' | 'sloped';
@@ -95,6 +98,7 @@ export type ConfigState = {
 };
 
 const INITIAL: ConfigState = {
+  reference: '',
   length: '4.20',
   width: '3.40',
   shape: 'flat',
@@ -153,6 +157,7 @@ export function toPayload(c: ConfigState, market: string) {
     platforms: c.platforms.filter((p) => p.slug && num(p.qty) > 0).map((p) => ({ slug: p.slug, qty: num(p.qty) })),
     absorberSlug: c.absorberSlug || null,
     lights: c.lights.filter((l) => l.slug && num(l.qty) > 0).map((l) => ({ slug: l.slug, qty: num(l.qty) })),
+    reference: c.reference.trim() || null,
     market,
   };
 }
@@ -426,6 +431,8 @@ export default function ConfiguratorView({
   .facts div { display: flex; flex-direction: column; gap: 2px; }
   .facts dt { font-size: 9.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-faint-2); }
   .facts dd { margin: 0; font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .facts dd .sub { font-size: 10.5px; font-weight: 600; color: var(--text-faint-2); }
+  .tablewrap .cut { display: block; font-size: 11px; color: var(--text-muted); margin-top: 2px; line-height: 1.4; }
   .warnings { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 7px; }
   .warnings li { display: flex; gap: 8px; align-items: flex-start; font-size: 12.5px; line-height: 1.5; color: #8a5b12; background: #fff7e6; border: 1px solid #f2dfb3; padding: 8px 10px; }
   .tablewrap { overflow-x: auto; border: 1px solid var(--border); background: #fff; }
@@ -509,6 +516,17 @@ export default function ConfiguratorView({
         {/* ------------------------------------------------------------- form */}
         <div className="cfg-form">
           <Section n={step()} title="The room">
+            {/* Names this ceiling. A job is several of them, and "Living room"
+                beats "the 4.20 × 3.40 one" on the production sheet. */}
+            <Field label="Reference" hint="What you call this ceiling — it travels with the order.">
+              <input
+                value={config.reference}
+                onChange={(e) => set('reference', e.target.value)}
+                maxLength={120}
+                placeholder="Living room"
+                aria-label="Ceiling reference"
+              />
+            </Field>
             <div className="row">
               <Field label="Length (m)">
                 <input
@@ -853,6 +871,19 @@ export default function ConfiguratorView({
                 <dt>Surface</dt>
                 <dd>{(quote?.area ?? derived.area).toFixed(2)} m²</dd>
               </div>
+              {/* Fabric is bought by the running metre of roll, so the figure
+                  the ceiling line is billed on is shown, not just the m². */}
+              {quote && quote.rollMetres > 0 && quote.foil.widthCm && (
+                <div>
+                  <dt>Cloth</dt>
+                  <dd>
+                    {quote.rollMetres.toFixed(2)} m{' '}
+                    <span className="sub">
+                      {quote.clothPieces} piece{quote.clothPieces === 1 ? '' : 's'} of {quote.foil.widthCm} cm
+                    </span>
+                  </dd>
+                </div>
+              )}
               <div>
                 <dt>Perimeter</dt>
                 <dd>{(quote?.perimeter ?? derived.perimeter).toFixed(2)} m</dd>
@@ -900,6 +931,9 @@ export default function ConfiguratorView({
                             {l.label}
                             {l.companionOf && <span className="tag">with {l.companionOf}</span>}
                             {l.status !== 'ok' && <span className="tag warn">price on request</span>}
+                            {/* A piece of cloth carries its cut measurements —
+                                production cuts exactly what is billed. */}
+                            {l.kind === 'ceiling' && l.note && <span className="cut">{l.note}</span>}
                           </td>
                           <td className="n">
                             {l.qty} {l.unit ?? ''}
@@ -1005,6 +1039,8 @@ export default function ConfiguratorView({
   .facts div { display: flex; flex-direction: column; gap: 2px; }
   .facts dt { font-size: 9.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-faint-2); }
   .facts dd { margin: 0; font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .facts dd .sub { font-size: 10.5px; font-weight: 600; color: var(--text-faint-2); }
+  .tablewrap .cut { display: block; font-size: 11px; color: var(--text-muted); margin-top: 2px; line-height: 1.4; }
   .warnings { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 7px; }
   .warnings li { display: flex; gap: 8px; align-items: flex-start; font-size: 12.5px; line-height: 1.5; color: #8a5b12; background: #fff7e6; border: 1px solid #f2dfb3; padding: 8px 10px; }
   .tablewrap { overflow-x: auto; border: 1px solid var(--border); background: #fff; }
