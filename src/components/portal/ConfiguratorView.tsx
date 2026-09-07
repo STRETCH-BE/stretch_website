@@ -273,10 +273,36 @@ export default function ConfiguratorView({
     };
   }, [config, market, ready, price]);
 
+  // A profile or corner that belongs to the other material must not survive a
+  // material switch — it would silently price the wrong product.
+  useEffect(() => {
+    setConfig((c) => {
+      const fits = (slug: string) =>
+        !slug ||
+        options.some((o) => o.slug === slug && (o.material === null || o.material === c.material));
+      if (fits(c.profileSlug) && fits(c.cornerSlug)) return c;
+      return {
+        ...c,
+        profileSlug: fits(c.profileSlug) ? c.profileSlug : '',
+        cornerSlug: fits(c.cornerSlug) ? c.cornerSlug : '',
+      };
+    });
+  }, [config.material, options]);
+
   // --- option lists ---------------------------------------------------------
   const byKind = useCallback((kind: string) => options.filter((o) => o.kind === kind), [options]);
-  const profiles = useMemo(() => byKind('profile'), [byKind]);
-  const corners = useMemo(() => byKind('corner'), [byKind]);
+  /**
+   * The perimeter profile and the corner product differ by material — an ALU
+   * profile for a PVC ceiling, a PVC profile for a polyester one — so only
+   * offer what fits. An option with no material recorded suits either.
+   */
+  const forMaterial = useCallback(
+    (kind: string) =>
+      options.filter((o) => o.kind === kind && (o.material === null || o.material === config.material)),
+    [options, config.material],
+  );
+  const profiles = useMemo(() => forMaterial('profile'), [forMaterial]);
+  const corners = useMemo(() => forMaterial('corner'), [forMaterial]);
   const platformOptions = useMemo(() => byKind('platform'), [byKind]);
   const absorbers = useMemo(() => byKind('absorber'), [byKind]);
   const lights = useMemo(() => byKind('light'), [byKind]);

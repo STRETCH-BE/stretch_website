@@ -1,3 +1,58 @@
+## 2026-09-07 (38) — Configurator: seeded, curated, and material-aware
+
+The catalogue is live. `configurator_options` holds 492 options seeded from
+the real pricebook (166 ceilings, 131 profiles, 93 platforms, 84 lights, 9
+light colours, 9 absorbers); every one resolves to a pricebook row. The
+seeding ran against the live database — the classification in
+`scripts/seed-configurator-options.mjs` remains the documented path for
+re-running it.
+
+**Michael's answers, applied (7 Sep 2026).**
+
+- **Corners** — PVC only, € 1.50/pc ex VAT. **Welding a seam** — PVC only,
+  € 1.00/m ex VAT. Neither product existed in the workbook, so both are now
+  rows in `pricebook` (`SRV-CORNER-PVC` in Profile accessories,
+  `SRV-WELD-PVC` in Ceilings made-to-measure), priced for all three price
+  groups. ⚠ A pricelist upload DELETES rows that are not in the workbook, so
+  these two must be added to the Excel or the next sync removes them and the
+  lines fall back to "price on request".
+- **Perimeter profile follows the material**: `SP-PVC-SP-AA-O1` (Aluminium,
+  per metre, all three markets) for PVC ceilings; `P-CCMIDNO 2m` (PVC
+  profile, 2 m pieces, Installer-only) for polyester ones.
+- **The foil matrix, kept simple**: MSD only, white, in matte, satin, gloss
+  and translucent — 9 rolls. Matte reaches 580 cm; the rest 320 and 500.
+  The other three brands (Bauf, Renolit, Teqtum) stay inactive so no two
+  active rolls ever share a combination and a width.
+  Of the two MSD translucent families, "Translucent Satin/Mat" is active and
+  "Translucent Glossy" is not: they share the SAME combination and the SAME
+  widths, so activating both would leave the engine picking by sort order.
+  One click in the admin swaps them.
+
+**Code: the engine's own picks now follow the material.** Welding a PVC seam
+and welding a polyester seam are different products at different prices, and
+the same is true of the fold-edge profile. `suitsMaterial()` in `bom.ts`
+means the transition profile and the welding service are only used when their
+material matches the ceiling's (an option with no material recorded still
+suits either). A fabric ceiling that welds therefore shows welding as a
+visible un-priced line rather than quietly borrowing the PVC price. The form
+does the matching half: the perimeter-profile and corner lists only offer
+what fits the chosen material, and a profile or corner belonging to the other
+material is dropped when the material is switched. What the INSTALLER picks
+explicitly is still priced as picked — only what the ENGINE picks by itself
+is constrained.
+
+Still inactive on purpose: platforms, absorbers and lights (each is one click
+in the admin once the ring pairings and the driver-per-N rule are settled),
+and every fabric ceiling — so the Fabric button is disabled and the polyester
+profile is not reachable yet. Naming the fabric range is the next decision.
+
+Verification: `npm test` 92 checks (four new ones pin the material rule);
+typecheck, ESLint and `npm run check:client-messages` clean; `npm run build`
+exit 0 at 3186 pages. A 4.20 × 3.40 m flat matte-white ceiling on an
+Installer account prices from the live rows as € 80.82 foil (14.28 m² ×
+5.66) + € 60.95 profile (15.20 m × 4.01) + € 6.00 corners (4 × 1.50) =
+€ 147.78 ex VAT, with no weld — the 500 cm roll covers the 3.40 m span.
+
 ## 2026-09-06 (37) — Configurator: the prototype, and three things it caught
 
 `claude/kit-configurator-prototype.jsx` — the agreed behaviour and layout
