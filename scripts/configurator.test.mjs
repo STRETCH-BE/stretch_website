@@ -551,6 +551,71 @@ console.log('\nseam direction — the installer chooses which way the seams run'
 }
 
 // ---------------------------------------------------------------------------
+console.log('\nthe angled ceiling has its own size');
+{
+  // Michael, 7 Sep 2026, after seeing a 6.20 x 5.50 room + a 6.20 m slope
+  // double the ceiling and seam every panel: "We should be able to add the
+  // size off the angled ceiling sepperately." The angled panel is foldLength
+  // x slopeRun — its own two dimensions — not the flat side x the slope.
+  const A = 0.2;
+  const roll = (w) => opt({ slug: `fab-${w}`, label: `705S 0002 ${(w / 100).toFixed(2)}m`, material: 'fabric',
+    finish: null, colourGroup: null, fabricKind: 'standard', maxWidthCm: w, qtyRule: 'roll_m', roundMode: 'exact',
+    matchCode: `705S-${w}`, sort: w });
+  const CLOTH = [150, 250, 335, 410, 450, 510].map(roll);
+  const trans = opt({ kind: 'transition', slug: 'fold', label: 'P-CCMIDNO 2m', qtyRule: 'fold_edge_pieces', pieceLengthM: 2,
+    matchCode: 'P-CCMIDNO 2m', material: 'fabric', finish: null, colourGroup: null, maxWidthCm: null });
+  const CAT = [...CLOTH, trans];
+  const base = {
+    length: 6.2, width: 5.5, shape: 'sloped', slopeRun: 2.5, foldLength: 4, foldSide: 'length', seamDirection: 'auto',
+    material: 'fabric', finish: null, colourGroup: null, fabricKind: 'standard',
+    profileSlug: null, cornersInside: null, cornersOutside: null, platforms: [], absorberSlug: null, lights: [],
+  };
+  const b = buildBom(base, CAT);
+  check('the angled panel is foldLength x slope: 4.00 x 2.50', b.panels.length === 2 && near(b.panels[1].a, 4) && near(b.panels[1].b, 2.5),
+    JSON.stringify(b.panels));
+  check('surface = flat 34.10 + angled 10.00 = 44.10 m²', near(b.area, 44.1), String(b.area));
+  check('perimeter = 2L + 2W + 2S (the 4.00 m fold is shared and drops out): 12.4 + 11 + 5 = 28.40',
+    near(b.perimeter, 28.4), String(b.perimeter));
+  check('the fold-edge profile is cut for the angled panel\u2019s OWN fold: ceil(4.00 / 2) = 2 pieces',
+    b.lines.find((l) => l.kind === 'transition')?.qty === 2, String(b.lines.find((l) => l.kind === 'transition')?.qty));
+  // The whole point: the angled panel no longer inherits the room's width.
+  check('the angled panel fits a roll on its own: 2.50 + 0.20 → the 3.35 roll, ONE piece, no seam',
+    b.lines.filter((l) => l.kind === 'ceiling' && l.slug === 'fab-335').length === 1);
+  check('only the flat panel (5.50 + 0.20) seams — one seam, not two',
+    b.weldCount === 1 && near(b.weldMetres, 6.2), `${b.weldCount} ${b.weldMetres}`);
+  check('cloth: flat 5.10 + 1.50 pieces of 6.40 m, angled one 3.35 piece of 4.20 m = 17.00 m',
+    b.clothPieces === 3 && near(b.rollMetres, 6.4 + 6.4 + 4.2), `${b.clothPieces} ${b.rollMetres}`);
+
+  // null foldLength = the old behaviour: as long as the side it folds from.
+  const legacy = buildBom({ ...base, foldLength: null }, CAT);
+  check('foldLength null → the fold is the whole length, 6.20 (stored orders keep meaning)',
+    near(legacy.panels[1].a, 6.2) && near(legacy.area, 6.2 * 5.5 + 6.2 * 2.5), String(legacy.area));
+  // Fold along the width: the angled panel's fold lies on the width axis.
+  const fw = buildBom({ ...base, foldSide: 'width', foldLength: 3 }, CAT);
+  check('fold along the width: angled 3.00 x 2.50, perimeter 2L + 2W + 2S = 28.40',
+    near(fw.panels[1].a, 3) && near(fw.perimeter, 28.4), `${fw.panels[1].a} ${fw.perimeter}`);
+  // A fold LONGER than the side it folds from: the excess is outer edge.
+  const longFold = buildBom({ ...base, foldSide: 'width', foldLength: 7 }, CAT);
+  check('a 7.00 m fold on a 5.50 m side shares only 5.50: perimeter = 12.4 + 11 + 14 + 5 − 11 = 31.40',
+    near(longFold.perimeter, 31.4), String(longFold.perimeter));
+  // Seam direction still maps through the room axes with an independent fold length.
+  const forced = buildBom({ ...base, seamDirection: 'width' }, CAT);
+  check('seams along the width: the angled panel spans its 4.00 fold (4.20 → the 4.50 roll), still no seam there',
+    forced.lines.some((l) => l.kind === 'ceiling' && l.slug === 'fab-450') && forced.weldCount === 1,
+    `${forced.weldCount} ${forced.lines.filter((l) => l.kind === 'ceiling').map((l) => l.slug).join(',')}`);
+
+  // parseConfig: the field is optional, validated when given.
+  const posted = { ...base, foldLength: '4', market: 'Installer' };
+  const r = parseConfig(posted);
+  check('foldLength "4" parses to 4', r.ok && r.config.foldLength === 4, JSON.stringify(r.ok ? r.config.foldLength : r));
+  check('an absent foldLength is null', parseConfig({ ...posted, foldLength: undefined }).config.foldLength === null);
+  check('an empty foldLength is null', parseConfig({ ...posted, foldLength: '' }).config.foldLength === null);
+  check('a zero or negative foldLength is rejected', parseConfig({ ...posted, foldLength: 0 }).ok === false && parseConfig({ ...posted, foldLength: -1 }).ok === false);
+  check('an absurd foldLength is rejected', parseConfig({ ...posted, foldLength: 999 }).error === 'too_large');
+  check('a flat ceiling ignores foldLength', parseConfig({ ...posted, shape: 'flat', foldLength: '4' }).config.foldLength === null);
+}
+
+// ---------------------------------------------------------------------------
 console.log('\nparseConfig — the payload the form actually posts');
 {
   // The browser posts a bare config object (see toPayload in ConfiguratorView).

@@ -1,3 +1,50 @@
+## 2026-09-07 (45) — Configurator: the angled ceiling has its own size
+
+Michael, 7 Sep 2026, with two screenshots of a 6.20 × 5.50 room: *"Flat
+ceiling is perfect, but when i change to flat+angle it's multiplying the
+ceiling and seam, this is not correct. We should be able to add the size off
+the angled ceiling sepperately."*
+
+**What was wrong.** The angled panel's fold edge was *tied* to the flat
+ceiling's side: flat + angled meant the whole L × W flat ceiling **plus** an
+(L or W) × slope panel on top. A 6.20 m slope on that room made a 6.20 × 6.20
+angled panel — the surface went from 34.10 to 72.54 m², both panels were
+wider than the 5.10 roll, so both seamed and the seam service doubled.
+
+**Now.** The angled ceiling is entered as its own two dimensions in section
+(02): **Along the fold (m)** — its length where it meets the flat ceiling —
+and **Slope run (m)**. Section (01) is retitled *The flat ceiling* while an
+angled one exists, the surface read-out splits into flat + angled, the plan
+view draws the angled panel at its own length, and the row under the fields
+states it plainly: *"Angled ceiling 4.00 × 2.50 m = 10.00 m², on top of the
+flat 34.10 m²."* Leaving the fold field empty means the whole side (the
+placeholder shows it), which is also what stored orders from before today
+mean (`foldLength: null`).
+
+- **Geometry.** Surface = L × W + F × S. Perimeter = the two panels' own
+  perimeters minus the fold they share twice over, the shared length being
+  min(F, the side folded from) — 2L + 2W + 2S in the normal case, and a fold
+  longer than its side leaves the excess as outer edge. The fold-edge profile
+  is cut for F (ceil(F / 2) pieces of P-CCMIDNO). Seam direction still maps
+  the angled panel through the fold's axis.
+- **The seams.** With a 6.20 × 5.50 flat ceiling and a 4.00 × 2.50 angled
+  one: the flat panel still needs its one seam (5.70 m on the 5.10 roll), the
+  angled panel takes the 3.35 roll in one piece — one seam, three pieces,
+  17.00 m of cloth, instead of two seams and four pieces.
+
+**Verified.** 149 configurator checks (171 under `npm test`), 17 new: the
+angled panel as F × S, surface, perimeter (fold along the length, along the
+width, and longer than its side), the fold-edge profile on F, the angled
+panel fitting a roll on its own, the legacy `null`, seam direction with an
+independent fold, and the parser's validation (empty → null, zero and
+absurd rejected, ignored on a flat ceiling). 29 engine checks against the
+live catalogue. 11 browser checks: the field appears with the shape, its
+placeholder, the retitled section, the split surface, the read-out, the
+perimeter, the plan label, and the posted `foldLength` for a value and for
+empty. Clean typecheck, lint and message parity; build green.
+
+---
+
 ## 2026-09-07 (44) — Configurator: the installer chooses which way the seams run
 
 Michael, 7 Sep 2026: *"Give the user the option to choose direction of the

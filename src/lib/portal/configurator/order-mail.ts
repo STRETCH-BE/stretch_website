@@ -52,7 +52,12 @@ function specLines(input: OrderMailInput): [string, string][] {
   if (input.meta.reference) rows.push(['Ceiling', input.meta.reference]);
   rows.push(
     ['Room', `${c.length.toFixed(2)} × ${c.width.toFixed(2)} m`],
-    ['Shape', c.shape === 'sloped' ? `Flat + angled (slope ${c.slopeRun.toFixed(2)} m along the ${c.foldSide})` : 'Flat ceiling'],
+    [
+      'Shape',
+      c.shape === 'sloped'
+        ? `Flat ${c.length.toFixed(2)} × ${c.width.toFixed(2)} m + angled ${(c.foldLength ?? (c.foldSide === 'width' ? c.width : c.length)).toFixed(2)} × ${c.slopeRun.toFixed(2)} m (fold along the ${c.foldSide})`
+        : 'Flat ceiling',
+    ],
     ['Surface', `${q.area.toFixed(2)} m²`],
     ['Perimeter', `${q.perimeter.toFixed(2)} m`],
     ['Widest span', `${q.need.toFixed(2)} m`],
