@@ -53,6 +53,13 @@ export const CORNER_DEFAULTS = {
 
 export type CeilingShape = 'flat' | 'sloped';
 export type FoldSide = 'length' | 'width';
+/**
+ * Which way the seams run. 'auto' lays the roll's width across each panel's
+ * shorter side (fewest seams); 'length' / 'width' is the installer's call —
+ * seams then run along that side of the room, on every panel.
+ */
+export type SeamDirection = 'auto' | 'length' | 'width';
+export const SEAM_DIRECTIONS: readonly SeamDirection[] = ['auto', 'length', 'width'];
 
 export type PlatformPick = { slug: string; qty: number };
 
@@ -67,6 +74,7 @@ export type ConfiguratorConfig = {
   /** Slope run in metres, measured ALONG the slope (not its horizontal projection). */
   slopeRun: number;
   foldSide: FoldSide;
+  seamDirection: SeamDirection;
   material: Material;
   finish: Finish | null;
   colourGroup: ColourGroup | null;
@@ -94,7 +102,14 @@ export type BomLine = {
   note?: string;
 };
 
-export type Panel = { a: number; b: number; label: string };
+/**
+ * A panel's two sides, and which room axis side `a` lies on. The flat panel's
+ * `a` is the length. The angled panel's `a` is the fold edge — the length or
+ * the width, whichever the fold runs along — and its `b` (the slope) then
+ * runs across the OTHER axis. That is what lets "seams along the length" mean
+ * the same thing on both panels.
+ */
+export type Panel = { a: number; b: number; label: string; aAxis: 'length' | 'width' };
 
 export type Bom = {
   lines: BomLine[];
@@ -191,8 +206,25 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
   const foldEdge = config.foldSide === 'width' ? W : L;
 
   // (a) Panels ---------------------------------------------------------------
-  const panels: Panel[] = [{ a: L, b: W, label: 'Flat panel' }];
-  if (sloped && S > 0 && foldEdge > 0) panels.push({ a: foldEdge, b: S, label: 'Angled panel' });
+  const panels: Panel[] = [{ a: L, b: W, label: 'Flat panel', aAxis: 'length' }];
+  if (sloped && S > 0 && foldEdge > 0) {
+    panels.push({ a: foldEdge, b: S, label: 'Angled panel', aAxis: config.foldSide === 'width' ? 'width' : 'length' });
+  }
+
+  // Seams run along the length ⇒ the pieces run along the length ⇒ the roll's
+  // width spans the side on the WIDTH axis, and vice versa. 'auto' spans the
+  // shorter side, which is the fewest seams.
+  const direction: SeamDirection = config.seamDirection === 'length' || config.seamDirection === 'width' ? config.seamDirection : 'auto';
+  const coverOf = (p: Panel): 'short' | 'a' | 'b' => {
+    if (direction === 'auto') return 'short';
+    // The side to span is the one on the axis the seams do NOT run along.
+    const spanAxis = direction === 'length' ? 'width' : 'length';
+    return p.aAxis === spanAxis ? 'a' : 'b';
+  };
+  const spanOf = (p: Panel): number => {
+    const c = coverOf(p);
+    return c === 'a' ? p.a : c === 'b' ? p.b : Math.min(p.a, p.b);
+  };
 
   // (b) Surface --------------------------------------------------------------
   const rawArea = L * W + (sloped ? foldEdge * S : 0);
@@ -207,7 +239,9 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
 
   // (d) Widest span — a roll's LENGTH is unlimited, only its width constrains,
   // so each panel is limited by its shorter side.
-  const need = panels.reduce((max, p) => Math.max(max, Math.min(p.a, p.b)), 0);
+  // With a chosen seam direction the span is whatever side the roll has to
+  // cover on that layout — it may be the longer one, and then seams appear.
+  const need = panels.reduce((max, p) => Math.max(max, spanOf(p)), 0);
 
   // Foil ---------------------------------------------------------------------
   const allowance = config.material === 'fabric' ? FABRIC_ALLOWANCE_M : 0;
@@ -227,7 +261,7 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
   // How each panel is cut: which roll, how long, the seams between pieces.
   // ONE model feeds the cloth lines and the seam line, so they cannot disagree.
   const cuts = foil.option
-    ? panels.map((p) => ({ panel: p, cut: cutPanelFromFamily({ a: p.a, b: p.b }, family, allowance) }))
+    ? panels.map((p) => ({ panel: p, cut: cutPanelFromFamily({ a: p.a, b: p.b }, family, allowance, coverOf(p)) }))
     : [];
   const pieces: { panel: Panel; piece: ClothPiece; index: number; of: number }[] = [];
   for (const { panel, cut } of cuts) {
@@ -416,7 +450,9 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
   const weldMetres = round2(cuts.reduce((sum, c) => sum + c.cut.seamMetres, 0));
   if (weldCount > 0) {
     notes.push(
-      `${weldCount} seam${weldCount > 1 ? 's' : ''} — ${weldMetres} m in total, because the ceiling is wider than the ${foil.option?.maxWidthCm} cm roll.`,
+      `${weldCount} seam${weldCount > 1 ? 's' : ''} — ${weldMetres} m in total, running along the ${
+        direction === 'auto' ? 'longer side of each panel' : direction
+      }, because the ceiling is wider than the ${foil.option?.maxWidthCm} cm roll.`,
     );
     // How a seam is MADE differs by material: a PVC seam is welded and billed
     // per metre, a polyester one is joined with a profile and billed per piece.

@@ -119,6 +119,7 @@ export function parseConfig(body: unknown): ParseResult {
     shape,
     slopeRun: shape === 'sloped' ? slopeRun : 0,
     foldSide: b.foldSide === 'width' ? 'width' : 'length',
+    seamDirection: b.seamDirection === 'length' || b.seamDirection === 'width' ? b.seamDirection : 'auto',
     material,
     finish: material === 'PVC' ? inSet(b.finish, FINISHES) : null,
     colourGroup: material === 'PVC' ? inSet(b.colourGroup, COLOUR_GROUPS) : null,

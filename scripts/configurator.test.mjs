@@ -480,6 +480,77 @@ console.log('\nfabric is billed per RUNNING METRE of roll, not per m\u00b2');
 }
 
 // ---------------------------------------------------------------------------
+console.log('\nseam direction — the installer chooses which way the seams run');
+{
+  // Michael, 7 Sep 2026: "Give the user the option to choose direction of the
+  // seam." 'auto' spans the shorter side (fewest seams); 'length' / 'width'
+  // runs the seams along that side of the room on EVERY panel.
+  const A = 0.2;
+  const roll = (w) => opt({ slug: `fab-${w}`, label: `705S 0002 ${(w / 100).toFixed(2)}m`, material: 'fabric',
+    finish: null, colourGroup: null, fabricKind: 'standard', maxWidthCm: w, qtyRule: 'roll_m', roundMode: 'exact',
+    matchCode: `705S-${w}`, sort: w });
+  const R = { 150: roll(150), 250: roll(250), 410: roll(410), 450: roll(450), 510: roll(510) };
+  const CLOTH = Object.values(R);
+  const fam = foilFamily({ material: 'fabric', fabricKind: 'standard' }, CLOTH);
+
+  // The cut itself: which side the roll spans.
+  const auto = cutPanelFromFamily({ a: 5.5, b: 6 }, fam, A);
+  const alongA = cutPanelFromFamily({ a: 5.5, b: 6 }, fam, A, 'b'); // roll spans b (6.00) ⇒ pieces run along a
+  check('spanning the 6.00 side: 6.20 needed → 5.10 + a 1.10 m remainder, pieces 5.70 long, seam 5.50 m',
+    alongA.pieces.length === 2 && alongA.pieces[1].option === R[150] && near(alongA.pieces[1].covers, 1.1) &&
+    alongA.pieces.every((p) => near(p.length, 5.7)) && near(alongA.seamMetres, 5.5),
+    alongA.pieces.map((p) => `${p.option.slug} covers ${p.covers} len ${p.length}`).join(','));
+  check('spanning the 5.50 side is what auto does', near(auto.pieces[0].length, 6.2) && near(auto.seamMetres, 6));
+
+  const base = {
+    length: 4, width: 6, shape: 'flat', slopeRun: 0, foldSide: 'length', seamDirection: 'auto',
+    material: 'fabric', finish: null, colourGroup: null, fabricKind: 'standard',
+    profileSlug: null, cornersInside: null, cornersOutside: null, platforms: [], absorberSlug: null, lights: [],
+  };
+  // 4.00 x 6.00: auto spans 4.00 (+0.20 → the 4.50 roll), no seam.
+  const a = buildBom(base, CLOTH);
+  check('auto: 4.00 + 20 cm fits the 4.50 roll in one piece — no seam',
+    a.weldCount === 0 && a.clothPieces === 1 && a.foil.option === R[450], `${a.weldCount} ${a.clothPieces} ${a.foil.option?.slug}`);
+  // Seams along the LENGTH (4.00): the roll spans the width 6.00 → 6.20 → 5.10 + 1.10 → 2 pieces, 1 seam of 4.00 m.
+  const len = buildBom({ ...base, seamDirection: 'length' }, CLOTH);
+  check('seams along the length: the roll spans the 6.00 width → two pieces and one seam of 4.00 m',
+    len.weldCount === 1 && near(len.weldMetres, 4) && len.clothPieces === 2 && len.clothWidthsCm.join(',') === '150,510',
+    `${len.weldCount} ${len.weldMetres} ${len.clothPieces} ${len.clothWidthsCm}`);
+  check('…the pieces run along the length: 4.00 + 20 cm = 4.20 m each',
+    len.lines.filter((l) => l.kind === 'ceiling').every((l) => near(l.qty, 4.2)));
+  check('…the roll the widest span takes is now the 5.10 and the reason says seam profile',
+    len.foil.option === R[510] && /seam profile/.test(len.foil.reason), len.foil.reason);
+  check('…the note says which way the seam runs', len.notes.some((n) => /along the length/.test(n)), len.notes.join(' | '));
+  // Seams along the WIDTH (6.00): the roll spans the length 4.00 → same as auto here.
+  const wid = buildBom({ ...base, seamDirection: 'width' }, CLOTH);
+  check('seams along the width: the roll spans the 4.00 length — same single piece as auto',
+    wid.weldCount === 0 && wid.clothPieces === 1 && wid.foil.option === R[450]);
+
+  // Flat + angled: the choice applies to BOTH panels through the room axes.
+  // 5.50 x 3.40, slope 4.20 along the length. Angled panel: a = 5.50 (length axis), b = 4.20 (width axis).
+  const slope = { ...base, length: 5.5, width: 3.4, shape: 'sloped', slopeRun: 4.2, foldSide: 'length' };
+  const sAuto = buildBom(slope, CLOTH);
+  check('sloped, auto: flat spans 3.40 (4.10 roll), angled spans 4.20 (4.50 roll), no seam',
+    sAuto.weldCount === 0 && sAuto.clothWidthsCm.join(',') === '410,450', sAuto.clothWidthsCm.join(','));
+  const sWidth = buildBom({ ...slope, seamDirection: 'width' }, CLOTH);
+  check('sloped, seams along the width: BOTH panels span their length-axis side 5.50 → 5.70 → a seam on each',
+    sWidth.weldCount === 2 && sWidth.clothPieces === 4, `${sWidth.weldCount} ${sWidth.clothPieces}`);
+  check('…the flat seam is 3.40 m and the angled seam 4.20 m (the pieces run along the width)',
+    near(sWidth.weldMetres, 3.4 + 4.2), String(sWidth.weldMetres));
+  const sLength = buildBom({ ...slope, seamDirection: 'length' }, CLOTH);
+  check('sloped, seams along the length: the roll spans 3.40 and 4.20 — the same as auto here',
+    sLength.weldCount === 0 && sLength.clothWidthsCm.join(',') === '410,450');
+  // The fold along the WIDTH swaps the angled panel's axes: a = W (width axis), b = S (length axis).
+  const foldW = { ...base, length: 5.5, width: 3.4, shape: 'sloped', slopeRun: 4.2, foldSide: 'width', seamDirection: 'width' };
+  const fw = buildBom(foldW, CLOTH);
+  check('fold along the width, seams along the width: flat spans 5.50 (seam), angled spans its slope 4.20 (no seam)',
+    fw.weldCount === 1 && near(fw.weldMetres, 3.4), `${fw.weldCount} ${fw.weldMetres}`);
+
+  // Nonsense is 'auto', never a crash.
+  check('an unknown direction behaves as auto', buildBom({ ...base, seamDirection: 'diagonal' }, CLOTH).weldCount === 0);
+}
+
+// ---------------------------------------------------------------------------
 console.log('\nparseConfig — the payload the form actually posts');
 {
   // The browser posts a bare config object (see toPayload in ConfiguratorView).
