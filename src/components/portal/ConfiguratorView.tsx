@@ -57,6 +57,7 @@ export type Quote = {
   area: number;
   rollMetres: number;
   clothPieces: number;
+  clothWidthsCm: number[];
   perimeter: number;
   need: number;
   cornersInside: number;
@@ -662,7 +663,11 @@ export default function ConfiguratorView({
               {quote?.foil.slug ? (
                 <>
                   <p className="v">{quote.foil.product ?? quote.foil.label}</p>
-                  <p className="why">{quote.foil.reason}</p>
+                  <p className="why">
+                    {quote.foil.reason}
+                    {(quote.clothWidthsCm ?? []).length > 1 &&
+                      ` The pieces are cut from the ${quote.clothWidthsCm.join(', ')} cm rolls — a seam's remainder comes off the narrowest roll that covers it.`}
+                  </p>
                 </>
               ) : (
                 <p className="why">{quote?.foil.reason ?? 'Enter the room to see which foil fits.'}</p>
@@ -873,13 +878,16 @@ export default function ConfiguratorView({
               </div>
               {/* Fabric is bought by the running metre of roll, so the figure
                   the ceiling line is billed on is shown, not just the m². */}
-              {quote && quote.rollMetres > 0 && quote.foil.widthCm && (
+              {quote && quote.rollMetres > 0 && quote.clothPieces > 0 && (
                 <div>
                   <dt>Cloth</dt>
                   <dd>
                     {quote.rollMetres.toFixed(2)} m{' '}
                     <span className="sub">
-                      {quote.clothPieces} piece{quote.clothPieces === 1 ? '' : 's'} of {quote.foil.widthCm} cm
+                      {quote.clothPieces} piece{quote.clothPieces === 1 ? '' : 's'}
+                      {/* Pieces may come off different rolls — a seam's
+                          remainder is cut from a narrower one. */}
+                      {(quote.clothWidthsCm ?? []).length > 0 && ` off ${quote.clothWidthsCm.join(' / ')} cm`}
                     </span>
                   </dd>
                 </div>

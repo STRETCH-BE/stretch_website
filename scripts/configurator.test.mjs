@@ -23,7 +23,7 @@ function loadTs(relPath, extraModules = {}) {
 }
 
 const types = loadTs('../src/lib/portal/configurator/types.ts');
-const { pickFoil, foilFamily, weldsForPanel, rollMetresForPanel, cutPanel } = loadTs('../src/lib/portal/configurator/foil.ts', {
+const { pickFoil, foilFamily, weldsForPanel, rollMetresForPanel, cutPanel, cutPanelFromFamily } = loadTs('../src/lib/portal/configurator/foil.ts', {
   './types': types,
 });
 // options.ts imports the Supabase client; stub it — resolveOption is pure.
@@ -34,7 +34,7 @@ const { resolveOption } = loadTs('../src/lib/portal/configurator/options.ts', {
 });
 const { buildBom } = loadTs('../src/lib/portal/configurator/bom.ts', {
   './types': types,
-  './foil': { pickFoil, foilFamily, weldsForPanel, rollMetresForPanel, cutPanel },
+  './foil': { pickFoil, foilFamily, weldsForPanel, rollMetresForPanel, cutPanel, cutPanelFromFamily },
 });
 const { parseConfig } = loadTs('../src/lib/portal/configurator/parse-config.ts', {
   './types': types,
@@ -365,95 +365,118 @@ console.log('\nfabric is billed per RUNNING METRE of roll, not per m\u00b2');
   // EUR 135.92 buys ONE METRE of cloth 5.10 m wide. Billing the ceiling's m²
   // against that price charges the roll width over again.
   //
-  // And: "always make sure that 20cm in width is free … in the length also
-  // take always minimum 20cm extra length for each ceiling. If the ceiling is
+  // "always make sure that 20cm in width is free … in the length also take
+  // always minimum 20cm extra length for each ceiling. If the ceiling is
   // flat + angled you need 2 fabrics; if it has a seam, add a second fabric
-  // and add the measurements to it. A ceiling can have multiple seams, so
-  // also multiple fabrics."
+  // and add the measurements to it." And, after the first cut at it:
+  // "it shouldn't multiply. It should add the necessary width of extra
+  // fabric." — the second piece is the LEFTOVER width off a narrower roll.
   const A = 0.2;
   check('a panel inside the roll width takes its long side + 20 cm',
     near(rollMetresForPanel({ a: 4.2, b: 3.4 }, 510, A), 4.4), String(rollMetresForPanel({ a: 4.2, b: 3.4 }, 510, A)));
   check('without an allowance (PVC) it is the bare long side',
     rollMetresForPanel({ a: 4.2, b: 3.4 }, 510) === 4.2);
-  check('a panel wider than the roll takes one strip per width, each + 20 cm',
-    near(rollMetresForPanel({ a: 8, b: 5.5 }, 510, A), 16.4), String(rollMetresForPanel({ a: 8, b: 5.5 }, 510, A)));
-  check('the 20 cm across the width can FORCE a second strip: 5.00 m on a 5.10 roll',
-    cutPanel({ a: 6, b: 5.0 }, 510, A).strips === 2 && cutPanel({ a: 6, b: 5.0 }, 510).strips === 1);
   check('strips and seams come from the same cut',
     cutPanel({ a: 8, b: 5.5 }, 510, A).seams === cutPanel({ a: 8, b: 5.5 }, 510, A).strips - 1);
   check('the seam length is the panel\u2019s long side, no allowance',
     weldsForPanel({ a: 8, b: 5.5 }, 510, A).metres === 8);
-  check('a roll with no width recorded assumes a single strip',
-    near(rollMetresForPanel({ a: 4.2, b: 3.4 }, null, A), 4.4));
   check('an empty panel consumes nothing', rollMetresForPanel({ a: 0, b: 3 }, 510, A) === 0);
 
-  // The roll is chosen on span + 20 cm: 4.00 m wants 4.20, 4.01 wants more.
-  const fab410 = opt({ slug: 'fab-410', label: '705S 4,10m', material: 'fabric', finish: null, colourGroup: null,
-    fabricKind: 'standard', maxWidthCm: 410, qtyRule: 'roll_m', roundMode: 'exact', matchCode: '742 SD 0002' });
-  const fab450 = opt({ slug: 'fab-450', label: '705S 4,50m', material: 'fabric', finish: null, colourGroup: null,
-    fabricKind: 'standard', maxWidthCm: 450, qtyRule: 'roll_m', roundMode: 'exact', matchCode: '746 SD 0002' });
-  const fab510 = opt({ slug: 'fab-510', label: '495D Acoustic 5,10m', material: 'fabric', finish: null,
-    colourGroup: null, fabricKind: 'acoustic', maxWidthCm: 510, qtyRule: 'roll_m', roundMode: 'exact',
-    matchCode: '49552 DD 0002' });
+  // The live 705S range: seven widths of the same cloth.
+  const roll = (w, price) => opt({ slug: `fab-${w}`, label: `705S 0002 ${(w / 100).toFixed(2)}m`, material: 'fabric',
+    finish: null, colourGroup: null, fabricKind: 'standard', maxWidthCm: w, qtyRule: 'roll_m', roundMode: 'exact',
+    matchCode: `705S-${w}`, sort: w });
+  const R = { 150: roll(150), 200: roll(200), 250: roll(250), 335: roll(335), 410: roll(410), 450: roll(450), 510: roll(510) };
+  const FAMILY = Object.values(R);
   const pvcM2 = opt({ slug: 'pvc-m2', label: 'MSD Matte White 500', material: 'PVC', finish: 'matte',
     colourGroup: 'white', maxWidthCm: 500, qtyRule: 'area', roundMode: 'exact', matchCode: 'MSD-500' });
-  const CLOTH = [fab410, fab450, fab510, pvcM2];
+  const CLOTH = [...FAMILY, pvcM2];
   const std = { material: 'fabric', fabricKind: 'standard' };
+  const fam = foilFamily(std, CLOTH);
+  check('the family is sorted narrowest first', fam.map((o) => o.maxWidthCm).join(',') === '150,200,250,335,410,450,510');
+
+  // The roll is chosen on span + 20 cm: 4.00 m wants 4.20, 4.01 wants more.
   check('a 4.00 m span picks the 4.50 roll, not the 4.10 (4.00 + 0.20 = 4.20 > 4.10)',
-    pickFoil(std, 4.0, CLOTH, A).option === fab450, pickFoil(std, 4.0, CLOTH, A).option?.slug);
+    pickFoil(std, 4.0, CLOTH, A).option === R[450], pickFoil(std, 4.0, CLOTH, A).option?.slug);
   check('…the same span WITHOUT an allowance would have taken the 4.10',
-    pickFoil(std, 4.0, CLOTH).option === fab410);
+    pickFoil(std, 4.0, CLOTH).option === R[410]);
   check('a 3.90 m span still fits the 4.10 roll (3.90 + 0.20 = 4.10)',
-    pickFoil(std, 3.9, CLOTH, A).option === fab410);
+    pickFoil(std, 3.9, CLOTH, A).option === R[410]);
   check('the reason line shows the allowance',
     /3\.9 m span \+ 0\.2 m in one piece/.test(pickFoil(std, 3.9, CLOTH, A).reason), pickFoil(std, 3.9, CLOTH, A).reason);
 
-  const room = {
-    length: 4.2, width: 3.4, shape: 'sloped', slopeRun: 4.2, foldSide: 'length',
-    material: 'fabric', finish: null, colourGroup: null, fabricKind: 'acoustic',
+  // --- cutting a panel from the FAMILY: the narrowest roll that covers ----
+  const one = cutPanelFromFamily({ a: 5.5, b: 3.4 }, fam, A);
+  check('a panel that fits takes the NARROWEST roll that covers its width: 3.40 + 0.20 → the 4.10',
+    one.pieces.length === 1 && one.pieces[0].option === R[410] && near(one.pieces[0].length, 5.7) && one.seams === 0,
+    one.pieces.map((p) => `${p.option.slug}×${p.length}`).join(','));
+  // "It should add the necessary width of extra fabric": 5.50 + 0.20 = 5.70 on a
+  // 5.10 roll is ONE 5.10 strip plus a 0.60 m remainder off the 1.50 roll.
+  const seamed = cutPanelFromFamily({ a: 6, b: 5.5 }, fam, A);
+  check('a seamed panel is a full 5.10 strip PLUS the leftover off the narrowest roll that covers it',
+    seamed.pieces.length === 2 && seamed.pieces[0].option === R[510] && seamed.pieces[1].option === R[150],
+    seamed.pieces.map((p) => `${p.option.slug} covers ${p.covers}`).join(','));
+  check('…the remainder is 0.60 m and marked as such',
+    near(seamed.pieces[1].covers, 0.6) && seamed.pieces[1].remainder === true && seamed.pieces[0].remainder === false);
+  check('…both pieces are cut 6.20 m long (6 + 20 cm), one seam of 6 m',
+    seamed.pieces.every((p) => near(p.length, 6.2)) && seamed.seams === 1 && near(seamed.seamMetres, 6));
+  const big = cutPanelFromFamily({ a: 12, b: 11 }, fam, A);
+  check('11.00 + 0.20 m: two full 5.10 strips + 1.00 m remainder off the 1.50 roll — three pieces, two seams',
+    big.pieces.length === 3 && big.pieces[0].option === R[510] && big.pieces[1].option === R[510] &&
+    big.pieces[2].option === R[150] && near(big.pieces[2].covers, 1.0) && big.seams === 2,
+    big.pieces.map((p) => `${p.option.slug} covers ${p.covers}`).join(','));
+  const exact = cutPanelFromFamily({ a: 6, b: 4.9 }, fam, A);
+  check('4.90 + 0.20 = 5.10 exactly still fits the 5.10 roll in one piece', exact.pieces.length === 1 && exact.pieces[0].option === R[510]);
+  // The SHORT side is the constraint — 12 x 8.50, so 8.50 is the span.
+  const remainderBig = cutPanelFromFamily({ a: 12, b: 8.5 }, fam, A);
+  check('8.50 + 0.20: one 5.10 strip + 3.60 m remainder → the 4.10 roll, not another 5.10',
+    remainderBig.pieces.length === 2 && remainderBig.pieces[1].option === R[410], remainderBig.pieces.map((p) => p.option.slug).join(','));
+  const narrowOnly = cutPanelFromFamily({ a: 8, b: 5.5 }, [R[200]], A);
+  check('a family of one width falls back to strips of that width (5.70 on 2.00 → 3 pieces)',
+    narrowOnly.pieces.length === 3 && narrowOnly.pieces.every((p) => p.option === R[200]) && narrowOnly.seams === 2);
+  check('an empty family yields nothing', cutPanelFromFamily({ a: 4, b: 3 }, [], A).pieces.length === 0);
+
+  // --- Michael's screenshot 1: 5.50 x 3.40 + a 4.20 m slope along the length ---
+  const room1 = {
+    length: 5.5, width: 3.4, shape: 'sloped', slopeRun: 4.2, foldSide: 'length',
+    material: 'fabric', finish: null, colourGroup: null, fabricKind: 'standard',
     profileSlug: null, cornersInside: null, cornersOutside: null,
     platforms: [], absorberSlug: null, lights: [],
   };
-  // Michael's own screenshot: 4.20 x 3.40 flat + a 4.20 m slope along the
-  // length. Flat + angled = TWO fabrics: 4.40 m each (4.20 + 20 cm), on the
-  // 5.10 roll (4.20 + 0.20 = 4.40 > 4.10). Total 8.80 m, NOT 31.92 m2.
-  const bom = buildBom(room, CLOTH);
-  const cloth = bom.lines.filter((l) => l.kind === 'ceiling');
-  check('the ceiling surface is still 31.92 m\u00b2', near(bom.area, 31.92), String(bom.area));
-  check('flat + angled = two pieces of cloth', bom.clothPieces === 2 && cloth.length === 2, `${bom.clothPieces} / ${cloth.length}`);
-  check('each piece is 4.40 m (4.20 + 20 cm), billed in metres',
-    cloth.every((l) => l.rule === 'roll_m' && near(l.qty, 4.4)), cloth.map((l) => `${l.rule} ${l.qty}`).join(','));
-  check('the cloth totals 8.80 running metres', near(bom.rollMetres, 8.8), String(bom.rollMetres));
-  check('each piece carries its own measurements for production',
-    /Piece 1 of 2 — flat panel: 5\.10 m wide × 4\.40 m long/.test(cloth[0].note) &&
-    /Piece 2 of 2 — angled panel: 5\.10 m wide × 4\.40 m long/.test(cloth[1].note),
-    cloth.map((l) => l.note).join(' | '));
-  check('the roll reason is kept as a note, once', bom.notes.filter((n) => /510 cm roll/.test(n)).length === 1);
+  const bom1 = buildBom(room1, CLOTH);
+  const cloth1 = bom1.lines.filter((l) => l.kind === 'ceiling');
+  check('screenshot 1: two pieces, each from ITS OWN roll — flat 3.60 → 4.10, angled 4.40 → 4.50',
+    cloth1.length === 2 && cloth1[0].slug === 'fab-410' && cloth1[1].slug === 'fab-450',
+    cloth1.map((l) => l.slug).join(','));
+  check('…each 5.70 m long (5.50 + 20 cm), 11.40 m in total',
+    cloth1.every((l) => near(l.qty, 5.7)) && near(bom1.rollMetres, 11.4) && bom1.clothPieces === 2);
+  check('…the widths used are reported', bom1.clothWidthsCm.join(',') === '410,450', bom1.clothWidthsCm.join(','));
+  check('…the "chosen foil" is still the roll for the widest span (4.50)', bom1.foil.option === R[450]);
+  check('…no seam', bom1.weldCount === 0);
+
+  // --- Michael's screenshot 2: 5.50 x 6.00 + a 5.50 m slope — "It's multiplying fabrics" ---
+  const room2 = { ...room1, width: 6, slopeRun: 5.5 };
+  const bom2 = buildBom(room2, CLOTH);
+  const cloth2 = bom2.lines.filter((l) => l.kind === 'ceiling');
+  check('screenshot 2: four pieces — but NOT four 5.10 strips',
+    cloth2.length === 4 && cloth2.map((l) => l.slug).join(',') === 'fab-510,fab-150,fab-510,fab-150',
+    cloth2.map((l) => l.slug).join(','));
+  check('…flat panel: a 5.10 strip of 6.20 m + a 0.60 m remainder off the 1.50 roll, also 6.20 m',
+    near(cloth2[0].qty, 6.2) && near(cloth2[1].qty, 6.2) && /remainder 0\.60 m/.test(cloth2[1].note), cloth2[1].note);
+  check('…angled panel: a 5.10 strip of 5.70 m + a 0.60 m remainder off the 1.50 roll',
+    near(cloth2[2].qty, 5.7) && near(cloth2[3].qty, 5.7) && /remainder 0\.60 m/.test(cloth2[3].note));
+  check('…23.80 m of cloth in total, but off the 150 and 510 rolls', near(bom2.rollMetres, 23.8) && bom2.clothWidthsCm.join(',') === '150,510');
+  check('…two seams, 6.00 + 5.50 = 11.50 m', bom2.weldCount === 2 && near(bom2.weldMetres, 11.5));
+  check('…each piece note names its roll width', /5\.10 m wide/.test(cloth2[0].note) && /1\.50 m wide/.test(cloth2[1].note), cloth2[1].note);
 
   // The same room in PVC keeps the m2 rule and ONE line — one catalogue, two units.
-  const pvcRoom = { ...room, material: 'PVC', finish: 'matte', colourGroup: 'white', fabricKind: null };
+  const pvcRoom = { ...room1, material: 'PVC', finish: 'matte', colourGroup: 'white', fabricKind: null };
   const pvcBom = buildBom(pvcRoom, CLOTH);
   const pvcLines = pvcBom.lines.filter((l) => l.kind === 'ceiling');
   check('a PVC ceiling is still ONE line billed per m\u00b2',
-    pvcLines.length === 1 && pvcLines[0].rule === 'area' && near(pvcLines[0].qty, 31.92),
+    pvcLines.length === 1 && pvcLines[0].rule === 'area' && near(pvcLines[0].qty, 5.5 * 3.4 + 5.5 * 4.2),
     pvcLines.map((l) => `${l.rule} ${l.qty}`).join(','));
-  check('PVC reports no cloth pieces', pvcBom.clothPieces === 0);
-
-  // A seam adds a piece: 9 x 7 flat on the 5.10 roll → 7.20 needs 2 strips of 9.20 m.
-  const wide = buildBom({ ...room, shape: 'flat', slopeRun: 0, length: 9, width: 7 }, CLOTH);
-  const wideCloth = wide.lines.filter((l) => l.kind === 'ceiling');
-  check('a seam means a second piece of cloth', wide.clothPieces === 2 && wideCloth.length === 2);
-  check('each strip is 9.20 m (9 + 20 cm) → 18.40 m in total',
-    wideCloth.every((l) => near(l.qty, 9.2)) && near(wide.rollMetres, 18.4), String(wide.rollMetres));
-  check('the pieces say which strip they are',
-    /strip 1 of 2/.test(wideCloth[0].note) && /strip 2 of 2/.test(wideCloth[1].note), wideCloth.map((l) => l.note).join(' | '));
-  check('one seam, 9 m long, for those two strips', wide.weldCount === 1 && near(wide.weldMetres, 9));
-
-  // Multiple seams → multiple fabrics, one per strip.
-  const huge = buildBom({ ...room, shape: 'flat', slopeRun: 0, length: 12, width: 11 }, CLOTH);
-  check('11 m wide on a 5.10 roll: 3 strips, 3 pieces, 2 seams',
-    huge.clothPieces === 3 && huge.weldCount === 2 && huge.lines.filter((l) => l.kind === 'ceiling').length === 3,
-    `${huge.clothPieces} pieces, ${huge.weldCount} seams`);
+  check('PVC reports no cloth pieces or widths', pvcBom.clothPieces === 0 && pvcBom.clothWidthsCm.length === 0);
 }
 
 // ---------------------------------------------------------------------------

@@ -374,7 +374,7 @@ export default function OrdersCard({ demo }: { demo: boolean }) {
                               {String(o.config?.colourGroup ?? '')}
                               <br />
                               Foil chosen: <strong>{o.foil_product ?? '—'}</strong>
-                              {o.foil_code ? ` [${o.foil_code}]` : ''} · {o.weld_required ? 'WELDED' : 'no weld'} ·
+                              {o.foil_code ? ` [${o.foil_code}]` : ''} · {o.weld_required ? 'SEAMED' : 'no seam'} ·
                               pricelist {o.pricebook_version ?? '—'}
                               {o.delivery_address ? <><br />Delivery: {o.delivery_address}</> : null}
                               {o.note ? <><br />Customer note: {o.note}</> : null}

@@ -57,7 +57,7 @@ function specLines(input: OrderMailInput): [string, string][] {
     ['Perimeter', `${q.perimeter.toFixed(2)} m`],
     ['Widest span', `${q.need.toFixed(2)} m`],
     ['Foil', q.foil.product ?? q.foil.label ?? '—'],
-    ['Roll width', q.foil.widthCm ? `${q.foil.widthCm} cm` : '—'],
+    ['Roll width', q.foil.widthCm ? `${q.foil.widthCm} cm (widest span)` : '—'],
     ['Seams', q.weldCount > 0 ? `${q.weldCount} seam(s), ${q.weldMetres.toFixed(2)} m` : 'none'],
     ['Corners', `${q.cornersInside} inside · ${q.cornersOutside} outside`],
   );
@@ -211,11 +211,14 @@ export function buildInternalEmail(input: OrderMailInput): { subject: string; ht
     ['Seams', quote.weldCount > 0 ? `${quote.weldCount} seam(s), ${quote.weldMetres.toFixed(2)} m — ${quote.foil.reason}` : 'none'],
     ['Foil code', quote.foil.code ?? '—'],
     ['Foil product', quote.foil.product ?? quote.foil.label ?? '—'],
-    ['Roll width', quote.foil.widthCm ? `${quote.foil.widthCm} cm` : '—'],
+    ['Roll width', quote.foil.widthCm ? `${quote.foil.widthCm} cm (widest span)` : '—'],
     // Fabric is cut into pieces and bought by the running metre — the bench
-    // needs the pieces, the m² is only the ceiling.
+    // needs the pieces, the m² is only the ceiling. Pieces may come off
+    // different rolls: a seam's remainder is cut from a narrower one.
     ...(quote.clothPieces > 0
-      ? ([['Cloth', `${quote.clothPieces} piece(s), ${quote.rollMetres.toFixed(2)} m off the ${quote.foil.widthCm ?? '?'} cm roll — measurements per piece in the bill below`]] as [string, string][])
+      ? ([['Cloth', `${quote.clothPieces} piece(s), ${quote.rollMetres.toFixed(2)} m off the ${
+          (quote.clothWidthsCm ?? []).length ? quote.clothWidthsCm.join(' / ') : quote.foil.widthCm ?? '?'
+        } cm roll(s) — roll and measurements per piece in the bill below`]] as [string, string][])
       : []),
     ['Surface', `${quote.area.toFixed(2)} m²`],
     ['Perimeter', `${quote.perimeter.toFixed(2)} m`],

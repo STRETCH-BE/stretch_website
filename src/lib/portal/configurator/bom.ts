@@ -7,7 +7,7 @@
 //
 // Unit-tested by scripts/configurator.test.mjs.
 // ============================================================================
-import { cutPanel, pickFoil, type FoilPick } from './foil';
+import { cutPanelFromFamily, foilFamily, pickFoil, type ClothPiece, type FoilPick } from './foil';
 import type {
   ColourGroup,
   ConfiguratorOption,
@@ -107,6 +107,8 @@ export type Bom = {
   rollMetres: number;
   /** Pieces of cloth — one per panel, one more per seam. 0 for PVC. */
   clothPieces: number;
+  /** Every roll width the pieces come off, narrowest first. */
+  clothWidthsCm: number[];
   perimeter: number;
   /** The widest span the foil has to cover in one piece, m². */
   need: number;
@@ -209,26 +211,31 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
 
   // Foil ---------------------------------------------------------------------
   const allowance = config.material === 'fabric' ? FABRIC_ALLOWANCE_M : 0;
-  const foil = pickFoil(
-    {
-      material: config.material,
-      finish: config.finish,
-      colourGroup: config.colourGroup,
-      fabricKind: config.fabricKind,
-    },
-    need,
-    options,
-    allowance,
-  );
+  const choice = {
+    material: config.material,
+    finish: config.finish,
+    colourGroup: config.colourGroup,
+    fabricKind: config.fabricKind,
+  };
+  // The family is the same cloth in every width the pricelist carries. The
+  // "chosen foil" is the roll the WIDEST span takes — what the box on the form
+  // and the production sheet name — but each piece of cloth is cut from the
+  // narrowest roll that covers ITS OWN width (see cutPanelFromFamily).
+  const family = foilFamily(choice, options);
+  const foil = pickFoil(choice, need, options, allowance);
 
-  // How each panel is cut from the roll: pieces, their length, the seams
-  // between them. ONE model feeds the cloth lines and the seam line, so the
-  // two can never disagree about how the fabric is cut.
+  // How each panel is cut: which roll, how long, the seams between pieces.
+  // ONE model feeds the cloth lines and the seam line, so they cannot disagree.
   const cuts = foil.option
-    ? panels.map((p) => ({ panel: p, cut: cutPanel({ a: p.a, b: p.b }, foil.option!.maxWidthCm, allowance) }))
+    ? panels.map((p) => ({ panel: p, cut: cutPanelFromFamily({ a: p.a, b: p.b }, family, allowance) }))
     : [];
-  const rollMetres = round2(cuts.reduce((sum, c) => sum + c.cut.strips * c.cut.stripLength, 0));
-  const clothPieces = cuts.reduce((sum, c) => sum + c.cut.strips, 0);
+  const pieces: { panel: Panel; piece: ClothPiece; index: number; of: number }[] = [];
+  for (const { panel, cut } of cuts) {
+    cut.pieces.forEach((piece, i) => pieces.push({ panel, piece, index: i + 1, of: cut.pieces.length }));
+  }
+  const rollMetres = round2(pieces.reduce((sum, p) => sum + p.piece.length, 0));
+  const clothPieces = pieces.length;
+  const clothWidthsCm = [...new Set(pieces.map((p) => p.piece.widthCm).filter((w): w is number => w != null))].sort((a, b) => a - b);
 
   let incomplete = area <= 0 || L <= 0 || W <= 0;
   if (!foil.option) {
@@ -237,26 +244,27 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
   } else if (foil.option.qtyRule === 'roll_m') {
     // Fabric: sold by the running metre of a roll of a given width, and cut
     // into PIECES — one per panel, one more per seam — each listed with its
-    // own measurements so production cuts exactly what is billed
-    // (Michael, 7 Sep 2026: "if the ceiling is flat + angled you need 2
-    // fabrics … a ceiling can have multiple seams, so also multiple fabrics").
-    const widthM = (foil.option.maxWidthCm ?? 0) / 100;
-    let piece = 0;
-    for (const { panel, cut } of cuts) {
-      for (let i = 1; i <= cut.strips; i += 1) {
-        piece += 1;
-        const which = cut.strips > 1 ? `, strip ${i} of ${cut.strips}` : '';
-        lines.push({
-          kind: 'ceiling',
-          slug: foil.option.slug,
-          label: foil.option.label,
-          qty: finalQty(cut.stripLength, foil.option),
-          rule: 'roll_m',
-          note: `Piece ${piece} of ${clothPieces} — ${panel.label.toLowerCase()}${which}: ${
-            widthM ? `${widthM.toFixed(2)} m wide × ` : ''
-          }${cut.stripLength.toFixed(2)} m long (incl. ${Math.round(allowance * 100)} cm to grip).`,
-        });
-      }
+    // own roll and measurements so production cuts exactly what is billed.
+    // Michael, 7 Sep 2026: "if the ceiling is flat + angled you need 2
+    // fabrics … a ceiling can have multiple seams, so also multiple fabrics"
+    // and "it shouldn't multiply. It should add the necessary width of extra
+    // fabric" — so a seam's second piece is the LEFTOVER width off a narrower
+    // roll, never another full-width strip.
+    let n = 0;
+    for (const { panel, piece, index, of } of pieces) {
+      n += 1;
+      const width = piece.widthCm != null ? `${(piece.widthCm / 100).toFixed(2)} m wide` : 'width not recorded';
+      const which = of > 1 ? (piece.remainder ? `, remainder ${piece.covers.toFixed(2)} m` : `, strip ${index} of ${of}`) : '';
+      lines.push({
+        kind: 'ceiling',
+        slug: piece.option.slug,
+        label: piece.option.label,
+        qty: finalQty(piece.length, piece.option),
+        rule: 'roll_m',
+        note: `Piece ${n} of ${clothPieces} — ${panel.label.toLowerCase()}${which}: ${width} × ${piece.length.toFixed(
+          2,
+        )} m long (incl. ${Math.round(allowance * 100)} cm to grip).`,
+      });
     }
     notes.push(foil.reason);
   } else {
@@ -443,6 +451,7 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
     area,
     rollMetres,
     clothPieces: foil.option?.qtyRule === 'roll_m' ? clothPieces : 0,
+    clothWidthsCm: foil.option?.qtyRule === 'roll_m' ? clothWidthsCm : [],
     perimeter,
     need: round2(need),
     cornersInside,

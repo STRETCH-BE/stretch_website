@@ -49,6 +49,7 @@ export type PricedBom = {
   /** Running metres of roll — what a fabric ceiling is actually billed on. */
   rollMetres: number;
   clothPieces: number;
+  clothWidthsCm: number[];
   perimeter: number;
   need: number;
   cornersInside: number;
@@ -174,6 +175,7 @@ export function priceBom(
     area: bom.area,
     rollMetres: bom.rollMetres,
     clothPieces: bom.clothPieces,
+    clothWidthsCm: bom.clothWidthsCm,
     perimeter: bom.perimeter,
     need: bom.need,
     cornersInside: bom.cornersInside,
