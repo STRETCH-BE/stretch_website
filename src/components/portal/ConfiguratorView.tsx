@@ -273,6 +273,36 @@ export default function ConfiguratorView({
     };
   }, [config, market, ready, price]);
 
+  // The form must never OPEN on a combination the catalogue cannot price. The
+  // material, finish, colour and fabric kind it starts on are only defaults:
+  // once the catalogue is known, move to the first choice that has a roll.
+  useEffect(() => {
+    const ceilings = options.filter((o) => o.kind === 'ceiling');
+    if (ceilings.length === 0) return;
+    setConfig((c) => {
+      const has = (m: string) => ceilings.some((o) => o.material === m);
+      const material = has(c.material) ? c.material : has('PVC') ? 'PVC' : 'fabric';
+      if (!has(material)) return c;
+      const family = ceilings.filter((o) => o.material === material);
+      const pick = (current: string, values: (string | null)[]) => {
+        const list = values.filter((v): v is string => Boolean(v));
+        return list.includes(current) ? current : (list[0] ?? current);
+      };
+      if (material === 'fabric') {
+        const fabricKind = pick(c.fabricKind, family.map((o) => o.fabricKind));
+        return c.material === material && c.fabricKind === fabricKind ? c : { ...c, material, fabricKind };
+      }
+      const finish = pick(c.finish, family.map((o) => o.finish));
+      const colourGroup = pick(
+        c.colourGroup,
+        family.filter((o) => o.finish === finish).map((o) => o.colourGroup),
+      );
+      return c.material === material && c.finish === finish && c.colourGroup === colourGroup
+        ? c
+        : { ...c, material, finish, colourGroup };
+    });
+  }, [options]);
+
   // A profile or corner that belongs to the other material must not survive a
   // material switch — it would silently price the wrong product.
   useEffect(() => {

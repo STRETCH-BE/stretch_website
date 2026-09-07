@@ -1,3 +1,50 @@
+## 2026-09-07 (39) — Configurator: polyester only, ten profiles, PVC parked
+
+Michael, 7 Sep 2026: "Take out everything for PVC stretch ceilings, because
+this makes it more difficult at the moment, only use polyester (fabric)
+stretch ceilings."
+
+**Active catalogue — 25 options, all polyester.**
+
+- **Ceilings, 15 rolls, exactly one per kind and width** so the engine never
+  picks between two: standard `705S … 0002` at 150 / 200 / 250 / 335 / 410 /
+  450 / 510 cm (€32.18 → €109.40/m², Installer), acoustic `495D … 0002` at
+  200 / 250 / 335 / 410 / 510 (€53.30 → €135.92), translucent
+  `308 T … 0004 Blanc translucide` at 250 / 335 / 510 (€79.38 → €161.93).
+  The 495 colour range (65 rolls) and the 0001/0003/9999 colourways stay
+  inactive — they duplicate widths, and one white per width is what "simple
+  for now" means. Any of them is one click.
+- **Perimeter profiles, the ten Michael named**, all `Profiles PVC`, all 2 m
+  pieces, all Installer-only: S-PP-C01-W-2m and -B (€9.80), P-CC1P 2m white
+  and Black (€16.18), P-CWS Blanc/Noir 2m (€10.34), P-C6 Blanc/Noir 2m
+  (€9.58), P-C10QS 2m (€25.30), P-C11QS 2m (€26.30). `P-CCMIDNO 2m`, the
+  earlier stand-in, is off.
+- **PVC is parked, not deleted.** Every PVC-material option — the nine MSD
+  rolls, the ALU profile, the corner and the welding service — is inactive.
+  The rows stay, so restoring PVC is a filter flip in the admin.
+
+**Code: the form can no longer open on a dead combination.** It used to start
+on PVC + matte + white regardless of the catalogue, which after this change
+would have opened on "not in the pricelist". The starting material, finish,
+colour and fabric kind are now only defaults: once the catalogue loads, the
+form moves to the first choice that actually has a roll. The PVC button
+stays visible but disabled while no PVC roll is active.
+
+**Two consequences of PVC-only-off worth knowing.** Corners and welding were
+both scoped to PVC by Michael, so a polyester ceiling has no corner product
+and no weld price: a room wider than 5.10 m on both sides welds, and that
+line reads "price on request" and flags the order for manual pricing. Both
+are one answer away — what a polyester seam costs per metre, and whether
+polyester ceilings take a corner piece at all.
+
+Verification: `npm test` 92 checks; typecheck, ESLint and
+`check:client-messages` clean; `npm run build` exit 0 at 3186 pages. Nine
+live UI checks against the real catalogue shape: the form opens on Fabric
+with PVC disabled, a 3.40 m span picks a polyester roll, the ten profiles
+are offered and no PVC-ceiling profile is, the profile bills in 2 m pieces
+(ceil(15.2 / 2) = 8), and an 8 × 6 m ceiling welds with the welding line
+un-priced rather than borrowing the € 1.00/m PVC rate.
+
 ## 2026-09-07 (38) — Configurator: seeded, curated, and material-aware
 
 The catalogue is live. `configurator_options` holds 492 options seeded from
