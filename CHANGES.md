@@ -1,3 +1,73 @@
+## 2026-09-07 (42) — Configurator: fabric is cut into pieces and billed per running metre; a ceiling can be named
+
+Michael, 7 Sep 2026, with a screenshot of the bill: *"For fabric, the
+measurements off the fabrics are per m1 in the pricelist correspondenting with
+the width off the fabric"*; then *"always make sure that 20cm in width is free
+… in the length also take always minimum 20cm extra length for each ceiling. If
+the ceiling is flat + angled you need 2 fabrics; if the ceiling has a
+joint/seam … add a second fabric and add the measurements to it. A ceiling can
+have multiple seams, so also multiple fabrics"*; and *"create the abillity to
+add a refference to the ceiling"*.
+
+**The pricing bug — a fabric ceiling was billed roughly four times over.**
+
+Every fabric row in the pricebook carries `unit = 'm'`: `495D … 5,10m` at
+€135.92 buys **one metre of cloth 5.10 m wide**, and the price tracks the width
+exactly (135.92 / 5.10 = €26.65/m² on every 495D width; 109.40 / 5.10 =
+32.18 / 1.50 = €21.45/m² on every 705S). The engine was billing the ceiling's
+**m² surface** against that per-metre price. On Michael's own room — 4.20 ×
+3.40 with a 4.20 m slope — that read `31.92 m × €135.92 = €4.338,57`.
+
+**How fabric is cut now — one model for cloth AND seams.**
+
+- **`cutPanel()`** decides, per panel, how many strips a roll yields, how long
+  each is, and the seams between them. The roll's width covers the panel's
+  shorter side; strips and seams run along the longer side. Both the cloth
+  lines and the seam line read from it, so they can never disagree.
+- **20 cm to grip, both ways** (`FABRIC_ALLOWANCE_M = 0.2`, one tunable): the
+  roll is chosen on *span + 20 cm* — a 4.00 m span wants a 4.20 m roll, so the
+  4.50; a 3.90 m span still fits the 4.10 — and every piece is cut *20 cm
+  longer* than its panel. The 20 cm across the width can force a second
+  strip: 5.00 m on a 5.10 roll is now two pieces. PVC is welded to size and
+  gets no allowance.
+- **One bill line per piece of cloth**, each with its own measurements for the
+  bench: *"Piece 1 of 2 — flat panel: 4.50 m wide × 4.40 m long (incl. 20 cm to
+  grip)"*. Flat + angled = two pieces; a seam adds a piece; three strips are
+  three pieces. Michael's room: **2 × 4.40 m = 8.80 m** of cloth on the 4.50
+  roll — not 31.92 "m". A 9 × 7 m room on the 5.10 roll: 7.20 m needs two
+  strips of 9.20 m = 18.40 m, and exactly the one 9 m seam the seam line
+  charges for.
+- **New quantity rule `roll_m`**; all **114 fabric ceilings** moved to it, all
+  **52 PVC rows stay `area`** (`unit = 'm²'`). One catalogue, two units,
+  chosen by the option's own rule rather than the engine guessing.
+- The quote panel gains a **Cloth** figure (`8.80 m · 2 pieces of 450 cm`), the
+  bill shows each piece's cut under its product line, and the production
+  sheet carries a Cloth row plus the per-piece measurements in both HTML and
+  plain text. The foil reason says *"4.2 m span + 0.2 m in one piece"*.
+
+**A ceiling can be named.** A "Reference" field opens section (01) — *Living
+room*, *Unit 4B*. It travels with the configuration into the order, the stored
+snapshot (`portal_orders.ceiling_ref`), the customer's confirmation and the
+production sheet. A job is several ceilings, and "Living room" beats "the
+4.20 × 3.40 one" on the bench.
+
+**Schema.** `qty_rule` CHECK widened for `roll_m` (with the explicit drop/add
+for existing databases) and `alter table public.portal_orders add column if not
+exists ceiling_ref text`. Both applied to the live project.
+
+**Verified.** 111 configurator checks (133 under `npm test`), 27 of them new:
+the cut arithmetic per panel, the allowance forcing a second strip, roll
+choice at 3.90 / 4.00 / 4.01 m, strips and seams agreeing, fabric on `roll_m`
+and PVC still one `area` line in the same catalogue, three strips → three
+pieces, the reference trimmed and nulled. 27 engine checks against the
+**live** catalogue and live prices — Michael's room bills two pieces of 4.40 m,
+the 9 × 7 m room two of 9.20 m. 8 live UI checks in Chromium: the Reference
+field, its value in the posted payload, the Cloth figure, and each piece's cut
+shown under its line. Clean typecheck, lint and client-message parity; build
+green.
+
+---
+
 ## 2026-09-07 (41) — Configurator: the polyester seam is a profile, not a weld
 
 Michael, 7 Sep 2026: *"Polyester doesn't take a cost per corner, the cost for

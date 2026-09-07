@@ -127,7 +127,12 @@ export async function PATCH(request: NextRequest) {
       quote,
       config: cfg,
       account: { email: order.email, company: order.company },
-      meta: { projectRef: order.project_ref, deliveryAddress: order.delivery_address, note: order.note },
+      meta: {
+        reference: order.ceiling_ref ?? null,
+        projectRef: order.project_ref,
+        deliveryAddress: order.delivery_address,
+        note: order.note,
+      },
     });
     const res = await sendTransactionalEmail({
       to: order.email,

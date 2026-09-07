@@ -46,6 +46,9 @@ export type PricedBom = {
   needsManualPricing: boolean;
   unpricedCount: number;
   area: number;
+  /** Running metres of roll — what a fabric ceiling is actually billed on. */
+  rollMetres: number;
+  clothPieces: number;
   perimeter: number;
   need: number;
   cornersInside: number;
@@ -169,6 +172,8 @@ export function priceBom(
     needsManualPricing: unpriced > 0,
     unpricedCount: unpriced,
     area: bom.area,
+    rollMetres: bom.rollMetres,
+    clothPieces: bom.clothPieces,
     perimeter: bom.perimeter,
     need: bom.need,
     cornersInside: bom.cornersInside,

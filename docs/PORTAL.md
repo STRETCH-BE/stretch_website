@@ -229,6 +229,17 @@ the BOM engine              ← dimensions → line items → server-side pricin
   pick is arbitrary. The form asks for corner *counts* only when a corner piece
   exists for the material. These three are set by hand in admin ▸ Configurator;
   the seeder does not invent them.
+- **Fabric is sold by the LINEAR metre and cut into PIECES; PVC by the m².**
+  Every fabric row in the pricebook carries `unit = 'm'` — `495D … 5,10m` at
+  €135.92 buys one metre of cloth 5.10 m wide — so fabric ceilings use
+  `qty_rule = 'roll_m'`. `cutPanel()` in `foil.ts` is the one model for cloth
+  and seams: the roll's width covers the panel's shorter side, strips run along
+  the longer side, and the bill carries **one line per piece** with its cut
+  measurements. Fabric gets a **20 cm gripping allowance both ways**
+  (`FABRIC_ALLOWANCE_M` in `bom.ts`): the roll is chosen on span + 20 cm and
+  every piece is cut 20 cm long. Flat + angled = two pieces; each seam adds
+  one. PVC rows carry `unit = 'm²'`, keep `area`, one line, no allowance. If a
+  new ceiling row is ever added, set its rule from the pricebook's own unit.
 - **A seam is not always a weld.** A PVC seam is welded and billed by the metre
   (`weld_m`); a polyester seam is joined with the `P-CCMIDNO 2m` mid-joint
   profile and billed per 2 m piece (`weld_pieces`). The same pricebook row

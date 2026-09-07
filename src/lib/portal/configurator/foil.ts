@@ -86,6 +86,8 @@ export function pickFoil(
   choice: FoilChoice,
   needMetres: number,
   options: ConfiguratorOption[],
+  /** Extra width the cloth needs beyond the span (fabric: 20 cm to grip). */
+  allowanceM = 0,
 ): FoilPick {
   const family = foilFamily(choice, options);
 
@@ -99,10 +101,14 @@ export function pickFoil(
   }
 
   const span = typeof needMetres === 'number' && isFinite(needMetres) && needMetres > 0 ? needMetres : 0;
+  const extra = typeof allowanceM === 'number' && isFinite(allowanceM) && allowanceM > 0 ? allowanceM : 0;
+  // A 4.00 m span needs a 4.20 m roll; a 4.01 m span needs more than 4.20 m.
+  const required = span > 0 ? span + extra : 0;
+  const plus = extra ? ` + ${fmt(extra)} m` : '';
 
   const fits = family.filter((o) => {
     const w = widthM(o);
-    return w != null && w >= span;
+    return w != null && w >= required;
   });
 
   if (fits.length > 0) {
@@ -111,7 +117,7 @@ export function pickFoil(
     return {
       option,
       reason: span
-        ? `${option.maxWidthCm} cm roll covers your ${fmt(span)} m span in one piece — no seam.`
+        ? `${option.maxWidthCm} cm roll covers your ${fmt(span)} m span${plus} in one piece — no seam.`
         : `${option.maxWidthCm} cm roll — the narrowest in this finish.`,
       weldRequired: false,
       family,
@@ -127,25 +133,73 @@ export function pickFoil(
     reason:
       w == null
         ? `No roll width is recorded for this finish, so the ceiling may have to be ${joined}.`
-        : `Widest roll in this finish is ${option.maxWidthCm} cm, so the ceiling is ${joined} to reach ${fmt(span)} m.`,
+        : `Widest roll in this finish is ${option.maxWidthCm} cm, so the ceiling is ${joined} to reach ${fmt(span)} m${plus}.`,
     weldRequired: true,
     family,
   };
 }
 
 /**
- * Welds and weld length for one panel against a roll width.
+ * How one panel is cut from a roll.
+ *
  * A roll is unlimited in length, so only the panel's SHORTER side is
- * constrained: the seams then run along its longer side.
+ * constrained by the roll's width: the strips, and therefore the seams, run
+ * along the longer side. Fabric needs a gripping allowance — 20 cm across the
+ * width and 20 cm along the length of EVERY piece (Michael, 7 Sep 2026) — so
+ * a 4.00 m span wants a 4.20 m roll and each piece is cut 20 cm long.
  */
+export type PanelCut = {
+  /** Pieces of cloth this panel needs (1 = no seam). */
+  strips: number;
+  /** Running metres per piece, allowance included. */
+  stripLength: number;
+  /** Seams between the strips. */
+  seams: number;
+  /** Geometric seam length — seams × the panel's long side. */
+  seamMetres: number;
+};
+
+export function cutPanel(
+  panel: { a: number; b: number },
+  rollWidthCm: number | null,
+  allowanceM = 0,
+): PanelCut {
+  const short = Math.min(panel.a, panel.b);
+  const long = Math.max(panel.a, panel.b);
+  if (!(short > 0) || !(long > 0)) return { strips: 0, stripLength: 0, seams: 0, seamMetres: 0 };
+  const extra = allowanceM > 0 ? allowanceM : 0;
+  const w = rollWidthCm && rollWidthCm > 0 ? rollWidthCm / 100 : null;
+  // No width recorded: one strip is the best assumption, and the un-priced
+  // path elsewhere makes the missing data visible.
+  const strips = w ? Math.max(1, Math.ceil((short + extra) / w)) : 1;
+  const seams = strips - 1;
+  return { strips, stripLength: long + extra, seams, seamMetres: seams * long };
+}
+
+/** Seams and seam length for one panel — a view on cutPanel(). */
 export function weldsForPanel(
   panel: { a: number; b: number },
   rollWidthCm: number | null,
+  allowanceM = 0,
 ): { welds: number; metres: number } {
-  const short = Math.min(panel.a, panel.b);
-  const long = Math.max(panel.a, panel.b);
-  const w = rollWidthCm && rollWidthCm > 0 ? rollWidthCm / 100 : null;
-  if (!w || short <= w) return { welds: 0, metres: 0 };
-  const welds = Math.ceil(short / w) - 1;
-  return { welds, metres: welds * long };
+  const cut = cutPanel(panel, rollWidthCm, allowanceM);
+  return { welds: cut.seams, metres: cut.seamMetres };
+}
+
+/**
+ * RUNNING METRES of roll one panel consumes — every piece, allowance included.
+ *
+ * Fabric is sold by the linear metre AT A GIVEN ROLL WIDTH — the pricelist
+ * carries "495D … 5,10m" at EUR 135.92 per metre, which buys 1 m × 5.10 m of
+ * cloth. Billing the ceiling's m² against that price charges roughly the roll
+ * width over again, so the quantity has to be metres OFF THE ROLL, not surface.
+ * The offcut across the width is paid for: that is what "cut to measure" means.
+ */
+export function rollMetresForPanel(
+  panel: { a: number; b: number },
+  rollWidthCm: number | null,
+  allowanceM = 0,
+): number {
+  const cut = cutPanel(panel, rollWidthCm, allowanceM);
+  return cut.strips * cut.stripLength;
 }
