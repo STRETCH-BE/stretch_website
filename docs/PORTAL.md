@@ -219,6 +219,15 @@ the BOM engine              ← dimensions → line items → server-side pricin
   (geometry, profiles per metre and per piece, corners, welds, companions,
   the absorber conversion).
 
+- **Lights:** a colour temperature is a pricebook row of the SAME fitting, so
+  choosing a light colour REPLACES the base light line — pricing both would
+  charge the fitting twice. The colour selector stays hidden until
+  `light_colour` options exist.
+- **Behaviour reference:** `claude/kit-configurator-prototype.jsx` is the
+  agreed prototype. Reference material only — nothing imports it. Where it
+  and the brief disagree the brief wins; where either disagrees with the
+  pricebook, the pricebook wins.
+
 Run the two SQL blocks at the end of `supabase/schema.sql` (KIT CONFIGURATOR
 option catalogue, then KIT CONFIGURATOR orders) in the Supabase SQL editor.
 Both are idempotent.
