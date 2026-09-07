@@ -1,3 +1,42 @@
+## 2026-09-07 (41) — Configurator: the polyester seam is a profile, not a weld
+
+Michael, 7 Sep 2026: *"Polyester doesn't take a cost per corner, the cost for
+the seam is the price of the p-ccmidno profile."*
+
+Both open questions from (40) are now closed, and they close in opposite
+directions — one adds a line, the other confirms there is none.
+
+- **A polyester seam is JOINED, not welded.** Where a PVC seam is welded and
+  billed by the metre, two polyester panels are joined with the `P-CCMIDNO 2m`
+  mid-joint profile and billed **per 2 m piece**. Added as a `service` option
+  `seam-fabric` pointing at the same pricebook row as the fold edge (€9.58/pc)
+  with a different quantity rule — which is exactly what the mapping table is
+  for. A 9 × 7 m ceiling on the 510 cm roll takes one 9 m seam → ceil(9 / 2) =
+  5 pieces.
+- **New quantity rule `weld_pieces`**, mirroring the `perimeter_m` /
+  `perimeter_pieces` and `fold_edge_m` / `fold_edge_pieces` pairs the engine
+  already had. `supabase/schema.sql` carries the widened CHECK **and** an
+  explicit `alter table … drop/add constraint` for databases created before it,
+  because `create table if not exists` leaves an older CHECK in place.
+- **Polyester takes no corner piece** — confirmed, and already the behaviour
+  since (40): the engine picks the corner by material, there is none for
+  fabric, so no corner line is emitted and the form shows no Corners section.
+  Nothing to change; the catalogue is now correct rather than incomplete.
+- **"Weld" became "seam" in every line the installer reads.** A polyester
+  ceiling was being told it would be "welded", which is wrong. `pickFoil` now
+  says *"joined with a seam profile"* for fabric and keeps *"welded"* for PVC;
+  the note, the order summary and the production sheet all say seam. The
+  engine's internal names (`weldCount`, `weldMetres`) are unchanged.
+
+**Verified.** 84 configurator checks (106 under `npm test`) including six new
+ones on the seam — priced in pieces for fabric, still by the metre for PVC,
+never borrowed across materials, and absent when the roll covers the room; and
+19 engine checks against the live catalogue and live prices, on both Michael's
+4.20 × 3.40 + 4.20 m room and a 9 × 7 m room that forces a seam. No un-priced
+line in either.
+
+---
+
 ## 2026-09-07 (40) — Configurator: lighting as a list, fold edge priced, PVC hidden
 
 Michael, 7 Sep 2026: *"For light supports use everything in the 'Lighting
@@ -58,11 +97,10 @@ remove / no-duplicate-type, and the posted `lights: [{slug, qty}]` shape); and
 live prices — 31.92 m², fold edge 3 pieces of P-CCMIDNO, one wool roll, both
 light types priced separately, no un-priced line anywhere.
 
-**Still open for Michael.** What a *polyester* seam costs per metre, and
-whether polyester ceilings take a corner piece at all — both are absent for
-fabric today. The two service rows (`SRV-CORNER-PVC` €1.50/pc,
-`SRV-WELD-PVC` €1.00/m) still need adding to the Excel or the next pricelist
-upload deletes them.
+**Answered in (41) below.** The polyester seam and the polyester corner were
+the two open questions here. The two PVC service rows (`SRV-CORNER-PVC`
+€1.50/pc, `SRV-WELD-PVC` €1.00/m) still need adding to the Excel or the next
+pricelist upload deletes them.
 
 ---
 

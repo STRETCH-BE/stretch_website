@@ -367,21 +367,30 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
   weldMetres = round2(weldMetres);
   if (weldCount > 0) {
     notes.push(
-      `${weldCount} weld${weldCount > 1 ? 's' : ''} — ${weldMetres} m in total, because the ceiling is wider than the ${foil.option?.maxWidthCm} cm roll.`,
+      `${weldCount} seam${weldCount > 1 ? 's' : ''} — ${weldMetres} m in total, because the ceiling is wider than the ${foil.option?.maxWidthCm} cm roll.`,
     );
+    // How a seam is MADE differs by material: a PVC seam is welded and billed
+    // per metre, a polyester one is joined with a profile and billed per piece.
     const weldService = options.find(
-      (o) => o.kind === 'service' && o.qtyRule === 'weld_m' && suitsMaterial(o, config.material),
+      (o) =>
+        o.kind === 'service' &&
+        (o.qtyRule === 'weld_m' || o.qtyRule === 'weld_pieces') &&
+        suitsMaterial(o, config.material),
     );
     if (weldService) {
+      const raw =
+        weldService.qtyRule === 'weld_pieces'
+          ? Math.ceil(weldMetres / (weldService.pieceLengthM || 2))
+          : weldMetres;
       lines.push({
         kind: 'service',
         slug: weldService.slug,
         label: weldService.label,
-        qty: finalQty(weldMetres, weldService),
-        rule: 'weld_m',
+        qty: finalQty(raw, weldService),
+        rule: weldService.qtyRule,
       });
     } else {
-      lines.push(missingLine('service', 'welding', weldMetres, 'weld_m'));
+      lines.push(missingLine('service', 'seam', weldMetres, 'weld_m'));
     }
   }
 

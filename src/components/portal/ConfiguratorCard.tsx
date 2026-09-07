@@ -88,7 +88,7 @@ const KIND_TITLES: Record<string, string> = {
   absorber: 'Acoustic absorbers',
   light: 'Lights',
   light_colour: 'Light colours',
-  service: 'Services (welding …)',
+  service: 'Services (seams …)',
 };
 
 export default function ConfiguratorCard({ demo }: { demo: boolean }) {

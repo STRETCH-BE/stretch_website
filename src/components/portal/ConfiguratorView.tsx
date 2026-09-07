@@ -488,7 +488,7 @@ export default function ConfiguratorView({
         </p>
         <h1>Build the ceiling, see the price.</h1>
         <p className="lead">
-          Enter the room and the finish. The engine picks the foil, works out the profiles, corners and welds, and
+          Enter the room and the finish. The engine picks the foil, works out the profiles, seams and corners, and
           prices every line against your own pricelist.
         </p>
         {canChooseMarket && (

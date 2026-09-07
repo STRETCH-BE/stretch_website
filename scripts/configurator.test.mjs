@@ -118,8 +118,8 @@ console.log('\npickFoil — selection and welding');
 
   const narrowest = pickFoil(pvcMatteWhite, 3.4, CEILINGS);
   check('3.4 m takes the NARROWEST that fits (500, not 580)', narrowest.option === matteWhite500 && !narrowest.weldRequired);
-  check('reason names the roll and says no weld',
-    /500 cm roll covers your 3.4 m span in one piece — no weld\./.test(narrowest.reason), narrowest.reason);
+  check('reason names the roll and says no seam',
+    /500 cm roll covers your 3.4 m span in one piece — no seam\./.test(narrowest.reason), narrowest.reason);
 
   const stepUp = pickFoil(pvcMatteWhite, 5.5, CEILINGS);
   check('5.5 m matte white steps up to the 580 roll instead of welding', stepUp.option === matteWhite580 && !stepUp.weldRequired);
@@ -242,7 +242,7 @@ console.log('\nbuildBom — geometry, quantities, companions');
   check('the same change on gloss white (no 580 roll) welds and prices the weld service',
     gloss.foil.weldRequired && gloss.lines.some((l) => l.slug === 'weld'));
   check('weld length = 1 weld × the long side (8.0 m)', near(gloss.lines.find((l) => l.slug === 'weld').qty, 8), String(gloss.lines.find((l) => l.slug === 'weld')?.qty));
-  check('weld emits a plain-language note', gloss.notes.some((n) => /weld/i.test(n)));
+  check('a seam emits a plain-language note', gloss.notes.some((n) => /seam/i.test(n)));
 
   const multi = buildBom({ ...base, platforms: [{ slug: 'plat-100', qty: 3 }, { slug: 'plat-200', qty: 2 }] }, CATALOGUE);
   check('two platform types both price', multi.lines.find((l) => l.slug === 'plat-100').qty === 3 && multi.lines.find((l) => l.slug === 'plat-200').qty === 2);
@@ -304,10 +304,34 @@ console.log('\nbuildBom — geometry, quantities, companions');
       pvcWeld.lines.some((l) => l.slug === 'weld-pvc'));
 
     const fabWeld = buildBom({ ...base, material: 'fabric', fabricKind: 'standard', finish: null, colourGroup: null, length: 8, width: 5.5 }, MAT);
-    check('a FABRIC ceiling that welds does NOT borrow the PVC welding price',
+    check('a FABRIC ceiling that seams does NOT borrow the PVC welding price',
       !fabWeld.lines.some((l) => l.slug === 'weld-pvc'));
-    check('…it shows welding as a visible un-priced line instead',
+    check('…it shows the seam as a visible un-priced line instead',
       fabWeld.lines.some((l) => l.kind === 'service' && l.missing === true));
+
+    // Michael, 7 Sep 2026: "the cost for the seam is the price of the
+    // p-ccmidno profile" — a polyester seam is JOINED with a 2 m profile, so
+    // it is billed in pieces, not by the metre like a welded PVC seam.
+    const seamFabric = opt({ kind: 'service', slug: 'seam-fabric', label: 'Seam joint profile P-CCMIDNO 2m', qtyRule: 'weld_pieces', pieceLengthM: 2, matchCode: 'P-CCMIDNO 2m', material: 'fabric', finish: null, colourGroup: null, maxWidthCm: null, roundMode: 'ceil' });
+    const SEAM = [...MAT, seamFabric];
+    const fabBase = { ...base, material: 'fabric', fabricKind: 'standard', finish: null, colourGroup: null, profileSlug: null };
+    const fabSeam = buildBom({ ...fabBase, length: 8, width: 5.5 }, SEAM);
+    // 200 cm roll, 5.5 m short side → ceil(5.5/2) − 1 = 2 seams × 8 m = 16 m.
+    check('a polyester seam is priced by the P-CCMIDNO profile', fabSeam.lines.some((l) => l.slug === 'seam-fabric'));
+    check('…in 2 m PIECES, not metres: ceil(16 / 2) = 8',
+      fabSeam.lines.find((l) => l.slug === 'seam-fabric')?.qty === 8,
+      `${fabSeam.weldMetres} m → ${fabSeam.lines.find((l) => l.slug === 'seam-fabric')?.qty}`);
+    check('…and nothing is left un-priced', !fabSeam.lines.some((l) => l.missing),
+      fabSeam.lines.filter((l) => l.missing).map((l) => `${l.kind}:${l.slug}`).join(','));
+    check('a PVC seam is still welded BY THE METRE, not in pieces',
+      buildBom({ ...base, length: 8, width: 5.5, finish: 'gloss' }, SEAM).lines
+        .find((l) => l.kind === 'service')?.rule === 'weld_m');
+    check('the polyester seam profile is NOT borrowed by a PVC ceiling',
+      !buildBom({ ...base, length: 8, width: 5.5, finish: 'gloss' }, SEAM).lines.some((l) => l.slug === 'seam-fabric'));
+    const fabNoSeam = buildBom({ ...fabBase, length: 1.8, width: 1.5 }, SEAM);
+    check('a polyester ceiling that needs no seam gets no seam line',
+      fabNoSeam.weldCount === 0 && !fabNoSeam.lines.some((l) => l.slug === 'seam-fabric'),
+      `${fabNoSeam.weldCount} seam(s)`);
 
     const fabFold = buildBom({ ...base, material: 'fabric', fabricKind: 'standard', finish: null, colourGroup: null, shape: 'sloped', slopeRun: 1.2 }, MAT);
     check('the fold edge does not borrow the PVC angle profile either',

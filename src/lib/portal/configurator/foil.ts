@@ -78,7 +78,9 @@ export function foilFamily(choice: FoilChoice, options: ConfiguratorOption[]): C
  * The rule (Michael, 6 Sep 2026): the NARROWEST roll that still covers the
  * span in one piece — narrower is cheaper per m², so this is the cheapest
  * correct answer, not merely the first that fits. When nothing in the family
- * is wide enough, take the widest and tell the user it will be welded.
+ * is wide enough, take the widest and tell the user the ceiling needs a seam.
+ * How that seam is MADE depends on the material — a PVC seam is welded, a
+ * polyester one is joined with a seam profile — so the wording follows it.
  */
 export function pickFoil(
   choice: FoilChoice,
@@ -109,22 +111,23 @@ export function pickFoil(
     return {
       option,
       reason: span
-        ? `${option.maxWidthCm} cm roll covers your ${fmt(span)} m span in one piece — no weld.`
+        ? `${option.maxWidthCm} cm roll covers your ${fmt(span)} m span in one piece — no seam.`
         : `${option.maxWidthCm} cm roll — the narrowest in this finish.`,
       weldRequired: false,
       family,
     };
   }
 
-  // Nothing fits: the widest roll in the family, welded.
+  // Nothing fits: the widest roll in the family, seamed.
   const option = family[family.length - 1];
   const w = widthM(option);
+  const joined = choice.material === 'PVC' ? 'welded' : 'joined with a seam profile';
   return {
     option,
     reason:
       w == null
-        ? 'No roll width is recorded for this finish, so the ceiling may have to be welded.'
-        : `Widest roll in this finish is ${option.maxWidthCm} cm, so the ceiling is welded to reach ${fmt(span)} m.`,
+        ? `No roll width is recorded for this finish, so the ceiling may have to be ${joined}.`
+        : `Widest roll in this finish is ${option.maxWidthCm} cm, so the ceiling is ${joined} to reach ${fmt(span)} m.`,
     weldRequired: true,
     family,
   };

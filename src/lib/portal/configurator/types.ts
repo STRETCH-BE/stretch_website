@@ -44,7 +44,9 @@ export type FabricKind = (typeof FABRIC_KINDS)[number];
  *   per_corner        — one per corner
  *   per_n_units       — one per `per_n` units of the option that requires it
  *   fixed             — a flat quantity (qty_factor)
- *   weld_m            — metres of weld the panel layout forces
+ *   weld_m            — metres of seam the panel layout forces
+ *   weld_pieces       — the same, in pieces of piece_length_m (a polyester
+ *                       seam is joined with a profile, not welded)
  */
 export const QTY_RULES = [
   'area',
@@ -57,6 +59,7 @@ export const QTY_RULES = [
   'per_n_units',
   'fixed',
   'weld_m',
+  'weld_pieces',
 ] as const;
 export type QtyRule = (typeof QTY_RULES)[number];
 

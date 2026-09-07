@@ -224,10 +224,17 @@ the BOM engine              ← dimensions → line items → server-side pricin
   fitting, so it is picked *instead of* the plain fitting — never alongside it,
   which would charge the fitting twice.
 - **Picked by the engine, not by the installer:** the fold-edge (`transition`)
-  profile, the `corner` piece and the welding `service` are chosen by the
+  profile, the `corner` piece and the seam `service` are chosen by the
   ceiling's material, so at most ONE of each may be active per material or the
   pick is arbitrary. The form asks for corner *counts* only when a corner piece
-  exists for the material.
+  exists for the material. These three are set by hand in admin ▸ Configurator;
+  the seeder does not invent them.
+- **A seam is not always a weld.** A PVC seam is welded and billed by the metre
+  (`weld_m`); a polyester seam is joined with the `P-CCMIDNO 2m` mid-joint
+  profile and billed per 2 m piece (`weld_pieces`). The same pricebook row
+  therefore appears twice in the catalogue — once as the fold edge, once as the
+  seam — under different quantity rules. Polyester takes **no corner piece** at
+  all (Michael, 7 Sep 2026).
 - **Materials with no active roll are not offered** at Foil at all. Today that
   means polyester only; activating a PVC roll brings the choice back with no
   code change.

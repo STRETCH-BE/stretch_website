@@ -109,7 +109,7 @@ export default function ConfiguratorOrder({
       `${Number(config.length.replace(',', '.')) || 0} × ${Number(config.width.replace(',', '.')) || 0} m`,
       `${quote.area.toFixed(2)} m²`,
       quote.foil.product ?? quote.foil.label ?? '—',
-      quote.weldCount > 0 ? `${quote.weldCount} weld(s)` : 'no welds',
+      quote.weldCount > 0 ? `${quote.weldCount} seam(s)` : 'no seams',
     ].join(' · ');
   }, [quote, config.length, config.width]);
 
