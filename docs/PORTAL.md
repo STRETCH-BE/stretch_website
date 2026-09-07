@@ -244,7 +244,11 @@ the BOM engine              ← dimensions → line items → server-side pricin
   never another full-width strip ("it should add the necessary width of
   extra fabric", Michael, 7 Sep 2026). Flat + angled = two pieces; each seam
   adds one; pieces of one ceiling may come off different rolls, and each
-  line names its own. PVC rows carry `unit = 'm²'`, keep `area`, one line, no
+  line names its own. **Seam direction** is the installer's (`seamDirection`:
+  `auto` spans each panel's shorter side for the fewest seams; `length` /
+  `width` runs the seams along that side of the room on every panel, the
+  angled panel mapped through the fold's axis) — it can add a seam and change
+  which rolls the pieces come off. PVC rows carry `unit = 'm²'`, keep `area`, one line, no
   allowance. If a new ceiling row is ever added, set its rule from the
   pricebook's own unit.
 - **A seam is not always a weld.** A PVC seam is welded and billed by the metre

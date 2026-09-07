@@ -213,12 +213,20 @@ export function cutPanelFromFamily(
   panel: { a: number; b: number },
   family: ConfiguratorOption[],
   allowanceM = 0,
+  /**
+   * Which side of the panel the roll's WIDTH spans. 'short' (the default)
+   * gives the fewest seams. 'a' or 'b' forces it — the installer choosing
+   * which way the seams run — and the pieces then run along the other side.
+   */
+  cover: 'short' | 'a' | 'b' = 'short',
 ): PanelPieces {
-  const short = Math.min(panel.a, panel.b);
-  const long = Math.max(panel.a, panel.b);
-  if (!(short > 0) || !(long > 0) || family.length === 0) return { pieces: [], seams: 0, seamMetres: 0 };
+  const covered = cover === 'a' ? panel.a : cover === 'b' ? panel.b : Math.min(panel.a, panel.b);
+  const run = cover === 'a' ? panel.b : cover === 'b' ? panel.a : Math.max(panel.a, panel.b);
+  if (!(covered > 0) || !(run > 0) || family.length === 0) return { pieces: [], seams: 0, seamMetres: 0 };
   const extra = allowanceM > 0 ? allowanceM : 0;
-  const length = long + extra;
+  const length = run + extra;
+  const short = covered;
+  const long = run;
   const sized = family.filter((o) => widthM(o) != null);
   if (sized.length === 0) {
     // No width recorded anywhere in the family: one piece off the first

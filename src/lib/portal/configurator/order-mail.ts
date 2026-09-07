@@ -58,7 +58,7 @@ function specLines(input: OrderMailInput): [string, string][] {
     ['Widest span', `${q.need.toFixed(2)} m`],
     ['Foil', q.foil.product ?? q.foil.label ?? '—'],
     ['Roll width', q.foil.widthCm ? `${q.foil.widthCm} cm (widest span)` : '—'],
-    ['Seams', q.weldCount > 0 ? `${q.weldCount} seam(s), ${q.weldMetres.toFixed(2)} m` : 'none'],
+    ['Seams', q.weldCount > 0 ? `${q.weldCount} seam(s), ${q.weldMetres.toFixed(2)} m, along the ${c.seamDirection === 'auto' ? 'longer side' : c.seamDirection}` : 'none'],
     ['Corners', `${q.cornersInside} inside · ${q.cornersOutside} outside`],
   );
   if (c.platforms.length) {
@@ -208,7 +208,7 @@ export function buildInternalEmail(input: OrderMailInput): { subject: string; ht
 
   const production: [string, string][] = [
     ['Panels', quote.panels.map((p) => `${p.label}: ${p.a.toFixed(2)} × ${p.b.toFixed(2)} m`).join(' | ')],
-    ['Seams', quote.weldCount > 0 ? `${quote.weldCount} seam(s), ${quote.weldMetres.toFixed(2)} m — ${quote.foil.reason}` : 'none'],
+    ['Seams', quote.weldCount > 0 ? `${quote.weldCount} seam(s), ${quote.weldMetres.toFixed(2)} m, along the ${input.config.seamDirection === 'auto' ? 'longer side' : input.config.seamDirection} — ${quote.foil.reason}` : 'none'],
     ['Foil code', quote.foil.code ?? '—'],
     ['Foil product', quote.foil.product ?? quote.foil.label ?? '—'],
     ['Roll width', quote.foil.widthCm ? `${quote.foil.widthCm} cm (widest span)` : '—'],

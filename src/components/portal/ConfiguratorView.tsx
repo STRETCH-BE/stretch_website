@@ -86,6 +86,7 @@ export type ConfigState = {
   shape: 'flat' | 'sloped';
   slopeRun: string;
   foldSide: 'length' | 'width';
+  seamDirection: 'auto' | 'length' | 'width';
   material: 'PVC' | 'fabric';
   finish: string;
   colourGroup: string;
@@ -105,6 +106,7 @@ const INITIAL: ConfigState = {
   shape: 'flat',
   slopeRun: '',
   foldSide: 'length',
+  seamDirection: 'auto',
   material: 'PVC',
   finish: 'matte',
   colourGroup: 'white',
@@ -148,6 +150,7 @@ export function toPayload(c: ConfigState, market: string) {
     shape: c.shape,
     slopeRun: c.shape === 'sloped' ? num(c.slopeRun) : 0,
     foldSide: c.foldSide,
+    seamDirection: c.seamDirection,
     material: c.material,
     finish: c.material === 'PVC' ? c.finish : null,
     colourGroup: c.material === 'PVC' ? c.colourGroup : null,
@@ -655,6 +658,20 @@ export default function ConfiguratorView({
                 </select>
               </Field>
             )}
+
+            {/* Which way the seams run is the installer's call: it decides
+                which side the roll has to span, so it can add or remove a
+                seam and change which rolls the pieces come off. */}
+            <Field
+              label="Seams run along"
+              hint="Automatic lays the cloth for the fewest seams. Choose a side to run them the other way."
+            >
+              <select value={config.seamDirection} onChange={(e) => set('seamDirection', e.target.value as ConfigState['seamDirection'])}>
+                <option value="auto">automatic — fewest seams</option>
+                <option value="length">the length ({(L || 0).toFixed(2)} m)</option>
+                <option value="width">the width ({(W || 0).toFixed(2)} m)</option>
+              </select>
+            </Field>
 
             {/* The engine's choice, with its reason — the installer never
                 picks a roll width or a product name. */}

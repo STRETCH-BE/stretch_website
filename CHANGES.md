@@ -1,3 +1,41 @@
+## 2026-09-07 (44) — Configurator: the installer chooses which way the seams run
+
+Michael, 7 Sep 2026: *"Give the user the option to choose direction of the
+seam."*
+
+(43) laid the roll's width across each panel's shorter side — the fewest
+seams — and left the other orientation as a policy question. It is now the
+installer's choice, per ceiling.
+
+- **"Seams run along" in section (03) Foil:** *automatic — fewest seams*, *the
+  length (L m)*, *the width (W m)*. The dimensions in the labels follow the
+  room fields. It is posted as `seamDirection` and travels with the order.
+- **What it does.** Seams along the length means the pieces run along the
+  length, so the roll's width spans the side on the width axis — and the
+  other way round. The span the roll has to cover may then be the *longer*
+  side: a 4.00 × 6.00 room that fits the 4.50 roll in one piece becomes, with
+  seams along the length, a 5.10 strip plus a 1.10 m remainder off the 1.50
+  roll and one 4.00 m seam. The roll choice, the pieces, the seam line and
+  the note all follow from the one cut model (`cutPanelFromFamily()` grew a
+  `cover` argument: `'short' | 'a' | 'b'`).
+- **Flat + angled follows the room axes.** Each panel records which room axis
+  its first side lies on: the flat panel's is the length; the angled panel's
+  is the fold edge — the length or the width, whichever the fold runs along —
+  and its slope runs across the *other* axis. "Along the length" therefore
+  means the same thing on both panels, whichever side the fold is on.
+- The seam note names the direction (*"2 seams — 7.60 m in total, running
+  along the width"*), and both e-mails' Seams row carries it.
+
+**Verified.** 132 configurator checks (154 under `npm test`), 14 of them new —
+the cut spanning a chosen side, a room that gains a seam when forced, one
+that does not, both panels of a sloped room following the axes with the fold
+along the length and along the width, and nonsense treated as automatic. 29
+engine checks against the live catalogue. 8 browser checks: the select, its
+three options with live dimensions, the posted value, the label tracking the
+length field. Clean typecheck, lint and message parity; build green.
+
+---
+
 ## 2026-09-07 (43) — Configurator: a seam adds the leftover width, not another full roll
 
 Michael, 7 Sep 2026, with two screenshots: *"It's multiplying fabrics, its not
