@@ -5,7 +5,7 @@
 // exactly as the quote it came from. Anything the browser sends that is not a
 // dimension or a slug is dropped here; prices are never read from the body.
 // ============================================================================
-import type { ConfiguratorConfig, PlatformPick } from './bom';
+import type { ConfiguratorConfig, LightPick, PlatformPick } from './bom';
 import { COLOUR_GROUPS, FABRIC_KINDS, FINISHES, MATERIALS } from './types';
 
 /** Room limits — a stretch ceiling outside these is not a web order. */
@@ -14,6 +14,7 @@ export const LIMITS = {
   maxSide: 30,
   maxSlope: 15,
   maxLights: 500,
+  maxLightTypes: 12,
   maxPlatformTypes: 12,
   maxPlatformQty: 500,
   maxCorners: 60,
@@ -81,9 +82,20 @@ export function parseConfig(body: unknown): ParseResult {
     }
   }
 
-  const lightsRaw = Math.floor(n(b.lights));
-  const lights = isFinite(lightsRaw) && lightsRaw > 0 ? lightsRaw : 0;
-  if (lights > LIMITS.maxLights) return { ok: false, error: 'too_many_lights' };
+  const lights: LightPick[] = [];
+  if (Array.isArray(b.lights)) {
+    for (const raw of b.lights.slice(0, LIMITS.maxLightTypes)) {
+      if (!raw || typeof raw !== 'object') continue;
+      const r = raw as Record<string, unknown>;
+      const s = slug(r.slug);
+      const qty = Math.floor(n(r.qty));
+      if (!s || !isFinite(qty) || qty <= 0) continue;
+      if (qty > LIMITS.maxLights) return { ok: false, error: 'too_many_lights' };
+      // Each type at most once — the form enforces it, the server insists.
+      if (lights.some((l) => l.slug === s)) continue;
+      lights.push({ slug: s, qty });
+    }
+  }
 
   const cornersInside = b.cornersInside == null ? null : Math.floor(n(b.cornersInside));
   const cornersOutside = b.cornersOutside == null ? null : Math.floor(n(b.cornersOutside));
@@ -102,13 +114,10 @@ export function parseConfig(body: unknown): ParseResult {
     colourGroup: material === 'PVC' ? inSet(b.colourGroup, COLOUR_GROUPS) : null,
     fabricKind: material === 'fabric' ? inSet(b.fabricKind, FABRIC_KINDS) : null,
     profileSlug: slug(b.profileSlug),
-    cornerSlug: slug(b.cornerSlug),
     cornersInside,
     cornersOutside,
     platforms,
     absorberSlug: slug(b.absorberSlug),
-    lightSlug: slug(b.lightSlug),
-    lightColourSlug: slug(b.lightColourSlug),
     lights,
   };
 

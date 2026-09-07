@@ -1,3 +1,109 @@
+## 2026-09-07 (41) — Configurator: the polyester seam is a profile, not a weld
+
+Michael, 7 Sep 2026: *"Polyester doesn't take a cost per corner, the cost for
+the seam is the price of the p-ccmidno profile."*
+
+Both open questions from (40) are now closed, and they close in opposite
+directions — one adds a line, the other confirms there is none.
+
+- **A polyester seam is JOINED, not welded.** Where a PVC seam is welded and
+  billed by the metre, two polyester panels are joined with the `P-CCMIDNO 2m`
+  mid-joint profile and billed **per 2 m piece**. Added as a `service` option
+  `seam-fabric` pointing at the same pricebook row as the fold edge (€9.58/pc)
+  with a different quantity rule — which is exactly what the mapping table is
+  for. A 9 × 7 m ceiling on the 510 cm roll takes one 9 m seam → ceil(9 / 2) =
+  5 pieces.
+- **New quantity rule `weld_pieces`**, mirroring the `perimeter_m` /
+  `perimeter_pieces` and `fold_edge_m` / `fold_edge_pieces` pairs the engine
+  already had. `supabase/schema.sql` carries the widened CHECK **and** an
+  explicit `alter table … drop/add constraint` for databases created before it,
+  because `create table if not exists` leaves an older CHECK in place.
+- **Polyester takes no corner piece** — confirmed, and already the behaviour
+  since (40): the engine picks the corner by material, there is none for
+  fabric, so no corner line is emitted and the form shows no Corners section.
+  Nothing to change; the catalogue is now correct rather than incomplete.
+- **"Weld" became "seam" in every line the installer reads.** A polyester
+  ceiling was being told it would be "welded", which is wrong. `pickFoil` now
+  says *"joined with a seam profile"* for fabric and keeps *"welded"* for PVC;
+  the note, the order summary and the production sheet all say seam. The
+  engine's internal names (`weldCount`, `weldMetres`) are unchanged.
+
+**Verified.** 84 configurator checks (106 under `npm test`) including six new
+ones on the seam — priced in pieces for fabric, still by the metre for PVC,
+never borrowed across materials, and absent when the roll covers the room; and
+19 engine checks against the live catalogue and live prices, on both Michael's
+4.20 × 3.40 + 4.20 m room and a 9 × 7 m room that forces a seam. No un-priced
+line in either.
+
+---
+
+## 2026-09-07 (40) — Configurator: lighting as a list, fold edge priced, PVC hidden
+
+Michael, 7 Sep 2026: *"For light supports use everything in the 'Lighting
+accessories' cattegory, for absorbers use all in 'Absorbers - polyesterwool'
+category, for lighting use all in 'Light fixtures' category also add the option
+for the 'light' itself (GU10...). For now in the configurator only show at Foil
+'Fabric' dont show PVC, and delete 'Corner product'. Fold edge profile is
+'PVC profile: P-CCMIDNO 2m'. Also 'Lighting' should be configured like 'Spot
+platforms', so multiple types off lights should be possible."*
+
+**Active catalogue — 66 options, every one resolving to an Installer price.**
+
+- **Light supports (kind `platform`) — the whole `Lighting accessories`
+  category, 20 rows**, created fresh: the category had produced *no* options
+  before, because the seeder never named it. Spotholders E-CS80 / E-CS200 as
+  single pieces and as 50-packs, round supports 60 → 90 and 50-100 / 60-120,
+  square supports 60-90 / 90-140 / 150-200, the chandelier support, perforated
+  fixing tape and the two LED dimmers (€2.03 → €485.00). Section (05) is
+  renamed **Light supports** to match what is now in it.
+- **Absorbers — the whole `Absorbers - polyesterwool` category, 9 rows.**
+  Three of them are *rolls*, and their `qty_factor` was 1: a 31.92 m² ceiling
+  would have been billed 32 rolls of wool at €326.88 each. Converted to
+  pieces-per-m² before activating — 1/48 for the 1.2 × 40 m roll, 1/60 for the
+  1.2 × 50 m, 1/35.5 for the 1.42 × 25 m — so that ceiling now takes one roll.
+- **Lights — the whole `Light fixtures` category, 11 rows**, and the light
+  itself is in it: `GU10-Fitting`, "GU10 fitting voor LED spot", €1.83/pc.
+- **The fold edge is priced.** `P-CCMIDNO 2m` (€9.58/pc, 2 m pieces) is now a
+  `transition` option for polyester, so a flat + angled ceiling no longer says
+  "No angle/transition profile is set up yet". `SP-PVC-SP-AA-O1` (€4.01/m) is
+  in as the PVC counterpart, inactive with the rest of PVC.
+
+**Form.**
+
+- **Lighting is a list, like the light supports** — add a type, set a count,
+  remove it. A real ceiling mixes fittings (six round spots, the GU10
+  lampholders that go in them), which one dropdown could not express. The old
+  base-light + light-colour pair is gone: a colour temperature is simply
+  another pricebook row, picked *instead of* the plain fitting, so the fitting
+  still cannot be charged twice.
+- **Foil offers Fabric only.** A material with no active roll is no longer
+  rendered at all rather than greyed out — a disabled button is a dead end the
+  installer still has to read. PVC returns by itself the day a PVC roll is
+  activated; nothing is hardcoded.
+- **"Corner product" is gone, and with it the Corners section for polyester.**
+  There is one corner piece per material, so the engine now takes it the way it
+  takes the fold edge, and the form only asks for corner *counts* on a material
+  that has one. Polyester has none, so the section does not appear — and a
+  polyester ceiling can no longer borrow the PVC corner price.
+- **Section numbers are handed out as the form renders**, so a hidden section
+  leaves no gap: (01) → (07) with Corners absent.
+
+**Verified.** 100 checks under `npm test` — 78 of them configurator, including
+a new `parseConfig` section asserting the exact payload the form posts; 19 live UI checks in
+Chromium against the live catalogue (Fabric-only foil, no corner field,
+contiguous numbering, 20 supports, 9 absorbers, 11 lights with GU10, add /
+remove / no-duplicate-type, and the posted `lights: [{slug, qty}]` shape); and
+13 engine checks on Michael's own room (4.20 × 3.40 + 4.20 m slope) against
+live prices — 31.92 m², fold edge 3 pieces of P-CCMIDNO, one wool roll, both
+light types priced separately, no un-priced line anywhere.
+
+**Answered in (41) below.** The polyester seam and the polyester corner were
+the two open questions here. The two PVC service rows (`SRV-CORNER-PVC`
+€1.50/pc, `SRV-WELD-PVC` €1.00/m) still need adding to the Excel or the next
+pricelist upload deletes them.
+
+---
+
 ## 2026-09-07 (39) — Configurator: polyester only, ten profiles, PVC parked
 
 Michael, 7 Sep 2026: "Take out everything for PVC stretch ceilings, because

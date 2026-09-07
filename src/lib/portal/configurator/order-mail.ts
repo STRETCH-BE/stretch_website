@@ -56,15 +56,15 @@ function specLines(input: OrderMailInput): [string, string][] {
     ['Widest span', `${q.need.toFixed(2)} m`],
     ['Foil', q.foil.product ?? q.foil.label ?? '—'],
     ['Roll width', q.foil.widthCm ? `${q.foil.widthCm} cm` : '—'],
-    ['Welding', q.weldCount > 0 ? `${q.weldCount} weld(s), ${q.weldMetres.toFixed(2)} m` : 'none'],
+    ['Seams', q.weldCount > 0 ? `${q.weldCount} seam(s), ${q.weldMetres.toFixed(2)} m` : 'none'],
     ['Corners', `${q.cornersInside} inside · ${q.cornersOutside} outside`],
   ];
   if (c.platforms.length) {
-    rows.push(['Platforms', c.platforms.map((p) => `${p.qty} × ${p.slug}`).join(', ')]);
+    rows.push(['Light supports', c.platforms.map((p) => `${p.qty} × ${p.slug}`).join(', ')]);
   }
   if (c.absorberSlug) rows.push(['Absorber', `${c.absorberSlug} — ${q.area.toFixed(2)} m² (the ceiling surface)`]);
-  if (c.lightSlug && c.lights > 0) {
-    rows.push(['Lights', `${c.lights} × ${c.lightSlug}${c.lightColourSlug ? ` (${c.lightColourSlug})` : ''}`]);
+  if (c.lights.length) {
+    rows.push(['Lights', c.lights.map((l) => `${l.qty} × ${l.slug}`).join(', ')]);
   }
   if (input.meta.projectRef) rows.push(['Project reference', input.meta.projectRef]);
   return rows;
@@ -204,7 +204,7 @@ export function buildInternalEmail(input: OrderMailInput): { subject: string; ht
 
   const production: [string, string][] = [
     ['Panels', quote.panels.map((p) => `${p.label}: ${p.a.toFixed(2)} × ${p.b.toFixed(2)} m`).join(' | ')],
-    ['Welding', quote.weldCount > 0 ? `${quote.weldCount} weld(s), ${quote.weldMetres.toFixed(2)} m — ${quote.foil.reason}` : 'none'],
+    ['Seams', quote.weldCount > 0 ? `${quote.weldCount} seam(s), ${quote.weldMetres.toFixed(2)} m — ${quote.foil.reason}` : 'none'],
     ['Foil code', quote.foil.code ?? '—'],
     ['Foil product', quote.foil.product ?? quote.foil.label ?? '—'],
     ['Roll width', quote.foil.widthCm ? `${quote.foil.widthCm} cm` : '—'],

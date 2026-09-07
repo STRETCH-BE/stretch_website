@@ -87,14 +87,11 @@ export type ConfigState = {
   colourGroup: string;
   fabricKind: string;
   profileSlug: string;
-  cornerSlug: string;
   cornersInside: string;
   cornersOutside: string;
   platforms: { slug: string; qty: string }[];
   absorberSlug: string;
-  lightSlug: string;
-  lightColourSlug: string;
-  lights: string;
+  lights: { slug: string; qty: string }[];
 };
 
 const INITIAL: ConfigState = {
@@ -108,14 +105,11 @@ const INITIAL: ConfigState = {
   colourGroup: 'white',
   fabricKind: 'standard',
   profileSlug: '',
-  cornerSlug: '',
   cornersInside: '4',
   cornersOutside: '0',
   platforms: [],
   absorberSlug: '',
-  lightSlug: '',
-  lightColourSlug: '',
-  lights: '0',
+  lights: [],
 };
 
 /** Mirrors CORNER_DEFAULTS in bom.ts — the form prefills, the engine agrees. */
@@ -129,7 +123,7 @@ const KIND_GROUP_TITLES: Record<string, string> = {
   profile: 'Perimeter profile',
   transition: 'Fold edge',
   corner: 'Corners',
-  platform: 'Spot platforms',
+  platform: 'Light supports',
   absorber: 'Acoustic absorber',
   light: 'Lighting',
   light_colour: 'Light colour',
@@ -154,14 +148,11 @@ export function toPayload(c: ConfigState, market: string) {
     colourGroup: c.material === 'PVC' ? c.colourGroup : null,
     fabricKind: c.material === 'fabric' ? c.fabricKind : null,
     profileSlug: c.profileSlug || null,
-    cornerSlug: c.cornerSlug || null,
     cornersInside: c.cornersInside === '' ? null : num(c.cornersInside),
     cornersOutside: c.cornersOutside === '' ? null : num(c.cornersOutside),
     platforms: c.platforms.filter((p) => p.slug && num(p.qty) > 0).map((p) => ({ slug: p.slug, qty: num(p.qty) })),
     absorberSlug: c.absorberSlug || null,
-    lightSlug: c.lightSlug || null,
-    lightColourSlug: c.lightColourSlug || null,
-    lights: num(c.lights),
+    lights: c.lights.filter((l) => l.slug && num(l.qty) > 0).map((l) => ({ slug: l.slug, qty: num(l.qty) })),
     market,
   };
 }
@@ -303,19 +294,15 @@ export default function ConfiguratorView({
     });
   }, [options]);
 
-  // A profile or corner that belongs to the other material must not survive a
-  // material switch — it would silently price the wrong product.
+  // A profile that belongs to the other material must not survive a material
+  // switch — it would silently price the wrong product. (The fold edge and the
+  // corner piece are picked by the engine per material, so they cannot drift.)
   useEffect(() => {
     setConfig((c) => {
-      const fits = (slug: string) =>
-        !slug ||
-        options.some((o) => o.slug === slug && (o.material === null || o.material === c.material));
-      if (fits(c.profileSlug) && fits(c.cornerSlug)) return c;
-      return {
-        ...c,
-        profileSlug: fits(c.profileSlug) ? c.profileSlug : '',
-        cornerSlug: fits(c.cornerSlug) ? c.cornerSlug : '',
-      };
+      const fits =
+        !c.profileSlug ||
+        options.some((o) => o.slug === c.profileSlug && (o.material === null || o.material === c.material));
+      return fits ? c : { ...c, profileSlug: '' };
     });
   }, [config.material, options]);
 
@@ -332,11 +319,19 @@ export default function ConfiguratorView({
     [options, config.material],
   );
   const profiles = useMemo(() => forMaterial('profile'), [forMaterial]);
+  /** Empty for polyester today — the corner piece is a PVC product. */
   const corners = useMemo(() => forMaterial('corner'), [forMaterial]);
   const platformOptions = useMemo(() => byKind('platform'), [byKind]);
   const absorbers = useMemo(() => byKind('absorber'), [byKind]);
-  const lights = useMemo(() => byKind('light'), [byKind]);
-  const lightColours = useMemo(() => byKind('light_colour'), [byKind]);
+  /**
+   * A fitting and a colour temperature of that fitting are both just pricebook
+   * rows, so they share one list: the installer picks rows and a count each,
+   * and no fitting can be charged twice.
+   */
+  const lightOptions = useMemo(
+    () => [...byKind('light'), ...byKind('light_colour')],
+    [byKind],
+  );
 
   /** Finishes and colours that actually have a roll — never offer a dead end. */
   const available = useMemo(() => {
@@ -480,6 +475,11 @@ export default function ConfiguratorView({
     );
   }
 
+  // Section numbers are handed out as the form renders, so a section that is
+  // not shown (Corners, on a material with no corner piece) leaves no gap.
+  let sectionNo = 0;
+  const step = () => (sectionNo += 1);
+
   return (
     <div className="container cfg">
       <header className="cfg-head">
@@ -488,7 +488,7 @@ export default function ConfiguratorView({
         </p>
         <h1>Build the ceiling, see the price.</h1>
         <p className="lead">
-          Enter the room and the finish. The engine picks the foil, works out the profiles, corners and welds, and
+          Enter the room and the finish. The engine picks the foil, works out the profiles, seams and corners, and
           prices every line against your own pricelist.
         </p>
         {canChooseMarket && (
@@ -508,7 +508,7 @@ export default function ConfiguratorView({
       <div className="cfg-grid">
         {/* ------------------------------------------------------------- form */}
         <div className="cfg-form">
-          <Section n="01" title="The room">
+          <Section n={step()} title="The room">
             <div className="row">
               <Field label="Length (m)">
                 <input
@@ -544,7 +544,7 @@ export default function ConfiguratorView({
             </dl>
           </Section>
 
-          <Section n="02" title="Shape">
+          <Section n={step()} title="Shape">
             <div className="seg">
               {(['flat', 'sloped'] as const).map((s) => (
                 <button
@@ -586,19 +586,23 @@ export default function ConfiguratorView({
             )}
           </Section>
 
-          <Section n="03" title="Foil">
+          <Section n={step()} title="Foil">
+            {/* A material with no active roll is not offered at all — a greyed
+                button is a dead end the installer still has to read. PVC comes
+                back by itself the day a PVC roll is activated. */}
             <div className="seg">
-              {(['PVC', 'fabric'] as const).map((m) => (
-                <button
-                  key={m}
-                  type="button"
-                  className={config.material === m ? 'on' : ''}
-                  disabled={m === 'PVC' ? !available.hasPvc : !available.hasFabric}
-                  onClick={() => set('material', m)}
-                >
-                  {m === 'PVC' ? 'PVC' : 'Fabric'}
-                </button>
-              ))}
+              {(['PVC', 'fabric'] as const)
+                .filter((m) => (m === 'PVC' ? available.hasPvc : available.hasFabric))
+                .map((m) => (
+                  <button
+                    key={m}
+                    type="button"
+                    className={config.material === m ? 'on' : ''}
+                    onClick={() => set('material', m)}
+                  >
+                    {m === 'PVC' ? 'PVC' : 'Fabric'}
+                  </button>
+                ))}
             </div>
             {config.material === 'PVC' ? (
               <div className="row">
@@ -648,7 +652,7 @@ export default function ConfiguratorView({
             </div>
           </Section>
 
-          <Section n="04" title="Perimeter profile">
+          <Section n={step()} title="Perimeter profile">
             <Field label="Profile">
               <select value={config.profileSlug} onChange={(e) => set('profileSlug', e.target.value)}>
                 <option value="">— none —</option>
@@ -661,7 +665,12 @@ export default function ConfiguratorView({
             </Field>
           </Section>
 
-          <Section n="05" title="Corners">
+          {/* Only a material that HAS a corner piece asks for corner counts —
+              a polyester ceiling has none, so nothing to count. The piece
+              itself is not a choice: the engine takes the one for the
+              material, exactly as it does the fold edge. */}
+          {corners.length > 0 && (
+          <Section n={step()} title="Corners">
             <div className="row">
               <Field label="Inside" hint={`Default for this shape: ${CORNERS_FOR_SHAPE[config.shape].inside}`}>
                 <input
@@ -679,20 +688,11 @@ export default function ConfiguratorView({
                   aria-label="Outside corners"
                 />
               </Field>
-              <Field label="Corner product">
-                <select value={config.cornerSlug} onChange={(e) => set('cornerSlug', e.target.value)}>
-                  <option value="">— none —</option>
-                  {corners.map((o) => (
-                    <option key={o.slug} value={o.slug}>
-                      {o.label}
-                    </option>
-                  ))}
-                </select>
-              </Field>
             </div>
           </Section>
+          )}
 
-          <Section n="06" title="Spot platforms">
+          <Section n={step()} title="Light supports">
             {config.platforms.map((p, i) => (
               <div className="row" key={i}>
                 <Field label="Type">
@@ -725,14 +725,14 @@ export default function ConfiguratorView({
                         platforms: c.platforms.map((x, j) => (j === i ? { ...x, qty: e.target.value } : x)),
                       }))
                     }
-                    aria-label="Platform quantity"
+                    aria-label="Light support quantity"
                   />
                 </Field>
                 <button
                   type="button"
                   className="iconbtn"
                   onClick={() => setConfig((c) => ({ ...c, platforms: c.platforms.filter((_, j) => j !== i) }))}
-                  aria-label="Remove this platform type"
+                  aria-label="Remove this light support type"
                 >
                   <Trash2 size={15} />
                 </button>
@@ -748,13 +748,13 @@ export default function ConfiguratorView({
             </button>
             {config.platforms.length > 0 && (
               <p className="running">
-                {config.platforms.reduce((s, p) => s + num(p.qty), 0)} platform
+                {config.platforms.reduce((s, p) => s + num(p.qty), 0)} support
                 {config.platforms.reduce((s, p) => s + num(p.qty), 0) === 1 ? '' : 's'} in total
               </p>
             )}
           </Section>
 
-          <Section n="07" title="Acoustic absorber">
+          <Section n={step()} title="Acoustic absorber">
             <Field label="Type">
               <select value={config.absorberSlug} onChange={(e) => set('absorberSlug', e.target.value)}>
                 <option value="">None</option>
@@ -771,39 +771,69 @@ export default function ConfiguratorView({
             </p>
           </Section>
 
-          <Section n="08" title="Lighting">
-            <div className="row">
-              <Field label="Type">
-                <select value={config.lightSlug} onChange={(e) => set('lightSlug', e.target.value)}>
-                  <option value="">— none —</option>
-                  {lights.map((o) => (
-                    <option key={o.slug} value={o.slug}>
-                      {o.label}
-                    </option>
-                  ))}
-                </select>
-              </Field>
-              {lightColours.length > 0 && (
-                <Field label="Light colour">
-                  <select value={config.lightColourSlug} onChange={(e) => set('lightColourSlug', e.target.value)}>
-                    <option value="">— none —</option>
-                    {lightColours.map((o) => (
-                      <option key={o.slug} value={o.slug}>
-                        {o.label}
-                      </option>
-                    ))}
+          {/* Lighting works exactly like the light supports above: a real ceiling
+              mixes fittings — six round spots, two tilting ones, the GU10
+              lampholders that go in them — so it is a list, not one choice. */}
+          <Section n={step()} title="Lighting">
+            {config.lights.map((l, i) => (
+              <div className="row" key={i}>
+                <Field label="Type">
+                  <select
+                    value={l.slug}
+                    onChange={(e) =>
+                      setConfig((c) => ({
+                        ...c,
+                        lights: c.lights.map((x, j) => (j === i ? { ...x, slug: e.target.value } : x)),
+                      }))
+                    }
+                  >
+                    <option value="">— choose —</option>
+                    {lightOptions
+                      .filter((o) => o.slug === l.slug || !config.lights.some((x) => x.slug === o.slug))
+                      .map((o) => (
+                        <option key={o.slug} value={o.slug}>
+                          {o.label}
+                        </option>
+                      ))}
                   </select>
                 </Field>
-              )}
-              <Field label="Quantity">
-                <input
-                  inputMode="numeric"
-                  value={config.lights}
-                  onChange={(e) => set('lights', e.target.value)}
-                  aria-label="Number of lights"
-                />
-              </Field>
-            </div>
+                <Field label="Quantity">
+                  <input
+                    inputMode="numeric"
+                    value={l.qty}
+                    onChange={(e) =>
+                      setConfig((c) => ({
+                        ...c,
+                        lights: c.lights.map((x, j) => (j === i ? { ...x, qty: e.target.value } : x)),
+                      }))
+                    }
+                    aria-label="Light quantity"
+                  />
+                </Field>
+                <button
+                  type="button"
+                  className="iconbtn"
+                  onClick={() => setConfig((c) => ({ ...c, lights: c.lights.filter((_, j) => j !== i) }))}
+                  aria-label="Remove this light type"
+                >
+                  <Trash2 size={15} />
+                </button>
+              </div>
+            ))}
+            <button
+              type="button"
+              className="add"
+              disabled={config.lights.length >= lightOptions.length}
+              onClick={() => setConfig((c) => ({ ...c, lights: [...c.lights, { slug: '', qty: '1' }] }))}
+            >
+              <Plus size={14} /> Add another type
+            </button>
+            {config.lights.length > 0 && (
+              <p className="running">
+                {config.lights.reduce((s, l) => s + num(l.qty), 0)} light
+                {config.lights.reduce((s, l) => s + num(l.qty), 0) === 1 ? '' : 's'} in total
+              </p>
+            )}
           </Section>
         </div>
 
@@ -1025,11 +1055,11 @@ export default function ConfiguratorView({
 }
 
 // ---------------------------------------------------------------------------
-function Section({ n, title, children }: { n: string; title: string; children: React.ReactNode }) {
+function Section({ n, title, children }: { n: number; title: string; children: React.ReactNode }) {
   return (
     <section className="sec">
       <h2>
-        <span className="n">({n})</span> {title}
+        <span className="n">({String(n).padStart(2, '0')})</span> {title}
       </h2>
       {children}
       <style jsx>{`

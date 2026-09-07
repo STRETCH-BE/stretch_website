@@ -48,6 +48,9 @@ export type FoldSide = 'length' | 'width';
 
 export type PlatformPick = { slug: string; qty: number };
 
+/** Lights are picked exactly like platforms: several types, a count each. */
+export type LightPick = { slug: string; qty: number };
+
 /** Everything the installer entered. This is what the browser posts. */
 export type ConfiguratorConfig = {
   length: number;
@@ -61,15 +64,12 @@ export type ConfiguratorConfig = {
   colourGroup: ColourGroup | null;
   fabricKind: FabricKind | null;
   profileSlug: string | null;
-  cornerSlug: string | null;
   /** null = use the shape default. */
   cornersInside: number | null;
   cornersOutside: number | null;
   platforms: PlatformPick[];
   absorberSlug: string | null;
-  lightSlug: string | null;
-  lightColourSlug: string | null;
-  lights: number;
+  lights: LightPick[];
 };
 
 export type BomLine = {
@@ -136,13 +136,13 @@ function bySlug(options: ConfiguratorOption[]): Map<string, ConfiguratorOption> 
 }
 
 /**
- * Options the ENGINE picks by itself (the fold-edge profile, the welding
- * service) must match the ceiling's material: welding a PVC seam and welding
- * a polyester seam are different products at different prices. An option with
- * no material recorded is treated as suiting any material.
+ * Options the ENGINE picks by itself (the fold-edge profile, the corner piece,
+ * the welding service) must match the ceiling's material: welding a PVC seam
+ * and welding a polyester seam are different products at different prices. An
+ * option with no material recorded is treated as suiting any material.
  *
- * Options the INSTALLER picks explicitly (perimeter profile, corner product)
- * are priced as chosen — the form only offers the ones that fit.
+ * Options the INSTALLER picks explicitly (perimeter profile, light supports,
+ * lights) are priced as chosen — the form only offers the ones that fit.
  */
 function suitsMaterial(option: ConfiguratorOption, material: Material): boolean {
   return option.active && (option.material === null || option.material === material);
@@ -268,10 +268,11 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
   const cornersInside = config.cornersInside ?? defaults.inside;
   const cornersOutside = config.cornersOutside ?? defaults.outside;
   const corners = Math.max(0, cornersInside) + Math.max(0, cornersOutside);
-  const corner = config.cornerSlug ? catalogue.get(config.cornerSlug) : null;
-  if (config.cornerSlug && !corner) {
-    lines.push(missingLine('corner', config.cornerSlug, corners, 'per_corner'));
-  } else if (corner && corners > 0) {
+  // The corner piece is not a choice — there is one per material, so the engine
+  // picks it the way it picks the fold edge. A material with no corner piece
+  // (polyester today) simply has no corner line.
+  const corner = options.find((o) => o.kind === 'corner' && suitsMaterial(o, config.material)) ?? null;
+  if (corner && corners > 0) {
     lines.push({
       kind: 'corner',
       slug: corner.slug,
@@ -288,25 +289,15 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
     if (!p.slug || qty <= 0) continue;
     perUnit.push({ option: catalogue.get(p.slug) ?? null, slug: p.slug, qty, kind: 'platform' });
   }
-  // The light colour IS the product row (3000K / 4000K / 6000K are separate
-  // pricebook rows of the same fitting), so a chosen colour REPLACES the base
-  // light — pricing both would charge the fitting twice.
-  const lightQty = Math.floor(pos(config.lights));
-  const lightColour = config.lightColourSlug ? catalogue.get(config.lightColourSlug) : null;
-  if (lightQty > 0) {
-    if (config.lightColourSlug && lightColour) {
-      perUnit.push({ option: lightColour, slug: config.lightColourSlug, qty: lightQty, kind: 'light_colour' });
-    } else if (config.lightSlug) {
-      perUnit.push({
-        option: catalogue.get(config.lightSlug) ?? null,
-        slug: config.lightSlug,
-        qty: lightQty,
-        kind: 'light',
-      });
-    } else if (config.lightColourSlug) {
-      // A colour the catalogue no longer has: visible, never silent.
-      perUnit.push({ option: null, slug: config.lightColourSlug, qty: lightQty, kind: 'light_colour' });
-    }
+  // Lights are a list of types, like the platforms. One entry IS one pricebook
+  // row — a colour temperature (3000K / 4000K / 6000K) is its own row of the
+  // same fitting, so it is picked instead of the plain fitting, never on top
+  // of it, and the fitting can never be charged twice.
+  for (const l of config.lights ?? []) {
+    const qty = Math.max(0, Math.floor(pos(l.qty)));
+    if (!l.slug || qty <= 0) continue;
+    const option = catalogue.get(l.slug) ?? null;
+    perUnit.push({ option, slug: l.slug, qty, kind: option?.kind === 'light_colour' ? 'light_colour' : 'light' });
   }
 
   for (const entry of perUnit) {
@@ -376,21 +367,30 @@ export function buildBom(config: ConfiguratorConfig, options: ConfiguratorOption
   weldMetres = round2(weldMetres);
   if (weldCount > 0) {
     notes.push(
-      `${weldCount} weld${weldCount > 1 ? 's' : ''} — ${weldMetres} m in total, because the ceiling is wider than the ${foil.option?.maxWidthCm} cm roll.`,
+      `${weldCount} seam${weldCount > 1 ? 's' : ''} — ${weldMetres} m in total, because the ceiling is wider than the ${foil.option?.maxWidthCm} cm roll.`,
     );
+    // How a seam is MADE differs by material: a PVC seam is welded and billed
+    // per metre, a polyester one is joined with a profile and billed per piece.
     const weldService = options.find(
-      (o) => o.kind === 'service' && o.qtyRule === 'weld_m' && suitsMaterial(o, config.material),
+      (o) =>
+        o.kind === 'service' &&
+        (o.qtyRule === 'weld_m' || o.qtyRule === 'weld_pieces') &&
+        suitsMaterial(o, config.material),
     );
     if (weldService) {
+      const raw =
+        weldService.qtyRule === 'weld_pieces'
+          ? Math.ceil(weldMetres / (weldService.pieceLengthM || 2))
+          : weldMetres;
       lines.push({
         kind: 'service',
         slug: weldService.slug,
         label: weldService.label,
-        qty: finalQty(weldMetres, weldService),
-        rule: 'weld_m',
+        qty: finalQty(raw, weldService),
+        rule: weldService.qtyRule,
       });
     } else {
-      lines.push(missingLine('service', 'welding', weldMetres, 'weld_m'));
+      lines.push(missingLine('service', 'seam', weldMetres, 'weld_m'));
     }
   }
 
