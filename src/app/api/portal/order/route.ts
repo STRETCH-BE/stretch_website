@@ -12,17 +12,24 @@ import { getPortalSession } from '@/lib/portal/auth';
 import { hasConfiguratorAccess } from '@/lib/portal/types';
 import { isPortalAllowedHost } from '@/lib/portal/host';
 import { rateLimit } from '@/lib/rate-limit';
-import { parseConfig } from '@/lib/portal/configurator/parse-config';
+import { parseOrderBody } from '@/lib/portal/configurator/parse-config';
 import { quoteFor } from '@/lib/portal/configurator/pricing';
 import { buildCustomerEmail, buildInternalEmail } from '@/lib/portal/configurator/order-mail';
-import { findByIdempotencyKey, nextReference, storeOrder } from '@/lib/portal/configurator/order-store';
+import {
+  findByIdempotencyKey,
+  nextReference,
+  orderTotals,
+  storeOrder,
+  type OrderCeiling,
+} from '@/lib/portal/configurator/order-store';
 import { sendTransactionalEmail } from '@/lib/transactional';
 import { contact } from '@/lib/site-config';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const MAX_BODY_BYTES = 20_000;
+// Up to LIMITS.maxCeilings configurations in one body.
+const MAX_BODY_BYTES = 120_000;
 const ORDERS_PER_HOUR = 10;
 
 function notifyEmail(): string {
@@ -72,26 +79,27 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  const parsed = parseConfig(body.config ?? body);
-  if (!parsed.ok) return NextResponse.json({ ok: false, error: parsed.error }, { status: 400 });
-
-  // Contact fields may travel at the top level of the order body too.
-  const meta = {
-    reference: parsed.meta.reference ?? (typeof body.reference === 'string' ? body.reference.slice(0, 120) : null),
-    projectRef: parsed.meta.projectRef ?? (typeof body.projectRef === 'string' ? body.projectRef.slice(0, 120) : null),
-    deliveryAddress:
-      parsed.meta.deliveryAddress ?? (typeof body.deliveryAddress === 'string' ? body.deliveryAddress.slice(0, 400) : null),
-    note: parsed.meta.note ?? (typeof body.note === 'string' ? body.note.slice(0, 400) : null),
-  };
+  // One or several ceilings — the older single-configuration shapes still parse.
+  const parsed = parseOrderBody(body);
+  if (!parsed.ok) {
+    return NextResponse.json({ ok: false, error: parsed.error, ceiling: parsed.ceiling ?? null }, { status: 400 });
+  }
+  const meta = parsed.meta;
 
   const requestedMarket = typeof body.market === 'string' ? body.market : null;
-  const result = await quoteFor(session, parsed.config, requestedMarket);
-  if ('error' in result) return NextResponse.json({ ok: false, error: result.error }, { status: 503 });
-  const { quote } = result;
-
-  if (quote.incomplete || quote.lines.length === 0) {
-    return NextResponse.json({ ok: false, error: 'incomplete_configuration' }, { status: 400 });
+  const ceilings: OrderCeiling[] = [];
+  for (const c of parsed.ceilings) {
+    const result = await quoteFor(session, c.config, requestedMarket);
+    if ('error' in result) return NextResponse.json({ ok: false, error: result.error }, { status: 503 });
+    if (result.quote.incomplete || result.quote.lines.length === 0) {
+      return NextResponse.json(
+        { ok: false, error: 'incomplete_configuration', ceiling: ceilings.length + 1 },
+        { status: 400 },
+      );
+    }
+    ceilings.push({ config: c.config, quote: result.quote, reference: c.reference });
   }
+  const totals = orderTotals(ceilings);
 
   // Demo sessions: acknowledge, never store or e-mail.
   if (session.demo) {
@@ -105,8 +113,7 @@ export async function POST(request: NextRequest) {
   const reference = await nextReference();
   const mailInput = {
     reference,
-    quote,
-    config: parsed.config,
+    ceilings,
     account: { email: session.profile.email, company: session.profile.company },
     meta,
   };
@@ -115,8 +122,7 @@ export async function POST(request: NextRequest) {
   const order = await storeOrder({
     reference,
     profile: session.profile,
-    quote,
-    config: parsed.config,
+    ceilings,
     meta,
     idempotencyKey,
   });
@@ -137,8 +143,8 @@ export async function POST(request: NextRequest) {
   console.info(
     `[configurator-order] ${reference}: internal → ${notifyEmail()} via ${internalRes.method}` +
       `${internalRes.ok ? '' : ' (NOT delivered)'}; confirmation via ${customerRes.method}` +
-      `${customerRes.ok ? '' : ' (NOT delivered)'}; stored=${Boolean(order)}; market=${quote.market}; ` +
-      `lines=${quote.lines.length}; unpriced=${quote.unpricedCount}; leadInbox=${contact.leadDestination}`,
+      `${customerRes.ok ? '' : ' (NOT delivered)'}; stored=${Boolean(order)}; market=${totals.market}; ` +
+      `ceilings=${ceilings.length}; lines=${totals.lineCount}; unpriced=${totals.unpricedCount}; leadInbox=${contact.leadDestination}`,
   );
 
   return NextResponse.json({
@@ -147,7 +153,8 @@ export async function POST(request: NextRequest) {
     stored: Boolean(order),
     // The UI says "the confirmation is on its way" only when it really is.
     confirmed: customerRes.ok,
-    needsManualPricing: quote.needsManualPricing,
-    unpricedCount: quote.unpricedCount,
+    ceilings: ceilings.length,
+    needsManualPricing: totals.needsManualPricing,
+    unpricedCount: totals.unpricedCount,
   });
 }

@@ -11,7 +11,7 @@
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Plus, Trash2, TriangleAlert, RefreshCw } from 'lucide-react';
 import { PRICE_MARKETS } from '@/lib/portal/types';
-import ConfiguratorOrder from './ConfiguratorOrder';
+import ConfiguratorOrder, { type OrderCeilingInput } from './ConfiguratorOrder';
 
 // ---------------------------------------------------------------------------
 // Shapes mirrored from the API (kept local so the client bundle stays small)
@@ -387,13 +387,56 @@ export default function ConfiguratorView({
     [quote?.currency, fmt, fmtPln],
   );
 
-  const total = quote
+  const thisTotal = quote
     ? quote.currency === 'PLN' && quote.subtotalPln != null
       ? fmtPln.format(quote.subtotalPln)
       : fmt.format(quote.subtotalEur)
     : null;
 
-  const orderable = Boolean(quote && !quote.incomplete && quote.lines.length > 0 && L > 0 && W > 0);
+  const complete = Boolean(quote && !quote.incomplete && quote.lines.length > 0 && L > 0 && W > 0);
+
+  // --- the order: several ceilings ------------------------------------------
+  // Michael, 8 Sep 2026: "Create the ability to order multiple ceiling kits."
+  // "Add to order" freezes the ceiling being edited (its configuration and the
+  // server's quote for it) into this list and clears the form for the next
+  // one. The order is the list plus the ceiling being edited when that one is
+  // complete — so a single ceiling still orders without an extra click.
+  const [basket, setBasket] = useState<{ id: string; config: ConfigState; quote: Quote }[]>([]);
+  const addToOrder = useCallback(() => {
+    if (!quote || !complete) return;
+    const id = `c-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
+    setBasket((b) => [...b, { id, config: { ...config, platforms: [...config.platforms], lights: [...config.lights] }, quote }]);
+    // The next ceiling keeps the job's choices (foil, profile, seams, extras)
+    // and starts with a fresh room and no name.
+    setConfig((c) => ({ ...c, reference: '', length: INITIAL.length, width: INITIAL.width, shape: 'flat', slopeRun: '', foldLength: '' }));
+    setQuote(null);
+  }, [quote, complete, config]);
+  const removeFromOrder = useCallback((id: string) => setBasket((b) => b.filter((x) => x.id !== id)), []);
+  const editFromOrder = useCallback(
+    (id: string) => {
+      const item = basket.find((x) => x.id === id);
+      if (!item) return;
+      setBasket((b) => b.filter((x) => x.id !== id));
+      setConfig(item.config);
+      setQuote(item.quote);
+    },
+    [basket],
+  );
+  const orderCeilings = useMemo<OrderCeilingInput[]>(
+    () => [
+      ...basket.map((b) => ({ config: b.config, quote: b.quote })),
+      ...(quote && complete ? [{ config, quote, current: true }] : []),
+    ],
+    [basket, quote, complete, config],
+  );
+  const orderable = orderCeilings.length > 0;
+  const orderFrom = orderCeilings.some((c) => c.quote.needsManualPricing);
+  const total = useMemo(() => {
+    if (orderCeilings.length === 0) return null;
+    const allPln = orderCeilings.every((c) => c.quote.currency === 'PLN' && c.quote.subtotalPln != null);
+    const sum = orderCeilings.reduce((s, c) => s + (allPln ? c.quote.subtotalPln ?? 0 : c.quote.subtotalEur), 0);
+    return allPln ? fmtPln.format(sum) : fmt.format(sum);
+  }, [orderCeilings, fmt, fmtPln]);
 
   // -------------------------------------------------------------------------
   if (ready === false) {
@@ -437,6 +480,22 @@ export default function ConfiguratorView({
   .iconbtn { align-self: flex-end; border: 1px solid var(--border-input); background: #fff; padding: 9px 10px; cursor: pointer; color: var(--text-muted); }
   .add { display: inline-flex; align-items: center; gap: 7px; font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--red); background: none; border: 0; cursor: pointer; padding: 12px 0 0; }
   .add:disabled { opacity: .4; cursor: not-allowed; }
+  .basket { margin: 18px 0 0; border-top: 1px solid var(--border); padding-top: 14px; }
+  .basket-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .basket-head .k { font-size: 10.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin: 0; }
+  .basket .add { margin: 0; }
+  .basket-hint { font-size: 12px; color: var(--text-faint); line-height: 1.55; margin: 8px 0 0; }
+  .basket-list { list-style: none; margin: 10px 0 0; padding: 0; border: 1px solid var(--border); }
+  .basket-list li { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; border-bottom: 1px solid var(--border); font-size: 12.5px; }
+  .basket-list li:last-child { border-bottom: 0; }
+  .basket-list li.current { background: #fafafa; color: var(--text-muted); }
+  .basket-list .meta { color: var(--text-muted); }
+  .basket-list .right { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+  .basket-list .amt { font-weight: 800; font-variant-numeric: tabular-nums; }
+  .basket-list .lnk { font: inherit; font-size: 11.5px; font-weight: 700; background: none; border: 0; padding: 2px 4px; cursor: pointer; color: var(--red); display: inline-flex; align-items: center; }
+  .basket-total { display: flex; align-items: baseline; justify-content: space-between; margin: 10px 0 0; }
+  .basket-total span { font-size: 10.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
+  .basket-total strong { font-size: 18px; font-weight: 900; font-variant-numeric: tabular-nums; }
   .subhead { font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); margin: 14px 0 6px; }
   .running { font-size: 12.5px; color: var(--text-muted); margin: 10px 0 0; }
   .cfg-result .sticky { position: sticky; top: 18px; }
@@ -1039,10 +1098,79 @@ export default function ConfiguratorView({
               {quote?.pricebookUpdatedAt ? ` · updated ${String(quote.pricebookUpdatedAt).slice(0, 10)}` : ''}
             </p>
 
+            {/* Several ceilings in one order. */}
+            <div className="basket">
+              <div className="basket-head">
+                <p className="k">Ceilings in this order</p>
+                <button type="button" className="add" disabled={!complete} onClick={addToOrder} aria-label="Add this ceiling to the order">
+                  <Plus size={14} /> Add this ceiling, start the next
+                </button>
+              </div>
+              {basket.length === 0 && quote && complete && (
+                <p className="basket-hint">
+                  One ceiling orders as it is. For a job with several, add this one and configure the next — every ceiling is
+                  listed, priced and sent together.
+                </p>
+              )}
+              {basket.length > 0 && (
+                <ol className="basket-list">
+                  {basket.map((b, i) => (
+                    <li key={b.id}>
+                      <div>
+                        <strong>{b.config.reference.trim() || `Ceiling ${i + 1}`}</strong>
+                        <span className="meta">
+                          {' '}
+                          {b.config.length} × {b.config.width} m
+                          {b.config.shape === 'sloped' && Number(b.config.slopeRun.replace(',', '.')) > 0
+                            ? ` + ${b.config.foldLength || (b.config.foldSide === 'width' ? b.config.width : b.config.length)} × ${b.config.slopeRun} m`
+                            : ''}{' '}
+                          · {b.quote.area.toFixed(2)} m² · {b.quote.foil.product ?? b.quote.foil.label ?? '—'}
+                        </span>
+                      </div>
+                      <div className="right">
+                        <span className="amt">
+                          {b.quote.needsManualPricing ? 'from ' : ''}
+                          {money(b.quote.subtotalEur, b.quote.subtotalPln)}
+                        </span>
+                        <button type="button" className="lnk" onClick={() => editFromOrder(b.id)} aria-label={`Edit ceiling ${i + 1}`}>
+                          Edit
+                        </button>
+                        <button type="button" className="lnk" onClick={() => removeFromOrder(b.id)} aria-label={`Remove ceiling ${i + 1}`}>
+                          <Trash2 size={13} />
+                        </button>
+                      </div>
+                    </li>
+                  ))}
+                  {quote && complete && (
+                    <li className="current">
+                      <div>
+                        <strong>{config.reference.trim() || `Ceiling ${basket.length + 1}`}</strong>
+                        <span className="meta"> — the one you are editing, included as it stands</span>
+                      </div>
+                      <div className="right">
+                        <span className="amt">
+                          {quote.needsManualPricing ? 'from ' : ''}
+                          {thisTotal}
+                        </span>
+                      </div>
+                    </li>
+                  )}
+                </ol>
+              )}
+              {basket.length > 0 && (
+                <p className="basket-total">
+                  <span>
+                    {orderFrom ? 'From' : 'Total'} — {orderCeilings.length} ceiling{orderCeilings.length === 1 ? '' : 's'}
+                  </span>
+                  <strong>{total ?? '—'}</strong>
+                </p>
+              )}
+            </div>
+
             <div id="cfg-order" />
             <ConfiguratorOrder
+              ceilings={orderCeilings}
               quote={quote}
-              config={config}
               market={market}
               orderable={orderable}
               demo={demo}
@@ -1058,8 +1186,11 @@ export default function ConfiguratorView({
       {/* Mobile only: the running total stays in view while you scroll the form. */}
       <div className="cfg-bottombar" role="status" aria-live="polite">
         <div>
-          <span className="l">{quote?.needsManualPricing ? 'From, ex VAT' : 'Total, ex VAT'}</span>
-          <strong>{total ?? '—'}</strong>
+          <span className="l">
+            {orderFrom ? 'From, ex VAT' : 'Total, ex VAT'}
+            {orderCeilings.length > 1 ? ` · ${orderCeilings.length} ceilings` : ''}
+          </span>
+          <strong>{total ?? thisTotal ?? '—'}</strong>
         </div>
         <a href="#cfg-order" className="b">
           Order
@@ -1097,6 +1228,22 @@ export default function ConfiguratorView({
   .iconbtn { align-self: flex-end; border: 1px solid var(--border-input); background: #fff; padding: 9px 10px; cursor: pointer; color: var(--text-muted); }
   .add { display: inline-flex; align-items: center; gap: 7px; font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--red); background: none; border: 0; cursor: pointer; padding: 12px 0 0; }
   .add:disabled { opacity: .4; cursor: not-allowed; }
+  .basket { margin: 18px 0 0; border-top: 1px solid var(--border); padding-top: 14px; }
+  .basket-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .basket-head .k { font-size: 10.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin: 0; }
+  .basket .add { margin: 0; }
+  .basket-hint { font-size: 12px; color: var(--text-faint); line-height: 1.55; margin: 8px 0 0; }
+  .basket-list { list-style: none; margin: 10px 0 0; padding: 0; border: 1px solid var(--border); }
+  .basket-list li { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; border-bottom: 1px solid var(--border); font-size: 12.5px; }
+  .basket-list li:last-child { border-bottom: 0; }
+  .basket-list li.current { background: #fafafa; color: var(--text-muted); }
+  .basket-list .meta { color: var(--text-muted); }
+  .basket-list .right { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+  .basket-list .amt { font-weight: 800; font-variant-numeric: tabular-nums; }
+  .basket-list .lnk { font: inherit; font-size: 11.5px; font-weight: 700; background: none; border: 0; padding: 2px 4px; cursor: pointer; color: var(--red); display: inline-flex; align-items: center; }
+  .basket-total { display: flex; align-items: baseline; justify-content: space-between; margin: 10px 0 0; }
+  .basket-total span { font-size: 10.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
+  .basket-total strong { font-size: 18px; font-weight: 900; font-variant-numeric: tabular-nums; }
   .subhead { font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); margin: 14px 0 6px; }
   .running { font-size: 12.5px; color: var(--text-muted); margin: 10px 0 0; }
   .cfg-result .sticky { position: sticky; top: 18px; }

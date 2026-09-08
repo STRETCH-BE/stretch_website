@@ -19,6 +19,8 @@ export const LIMITS = {
   maxPlatformQty: 500,
   maxCorners: 60,
   maxTextLength: 400,
+  /** Ceilings in one order — a job, not a warehouse. */
+  maxCeilings: 20,
 } as const;
 
 export type ParseResult =
@@ -150,5 +152,52 @@ export function parseConfig(body: unknown): ParseResult {
       deliveryAddress: text(b.deliveryAddress),
       note: text(b.note),
     },
+  };
+}
+
+// ---------------------------------------------------------------------------
+// An ORDER: one or several ceilings, plus the order-level contact fields.
+// ---------------------------------------------------------------------------
+
+export type ParsedCeiling = { config: ConfiguratorConfig; reference: string | null };
+
+export type ParsedOrder =
+  | {
+      ok: true;
+      ceilings: ParsedCeiling[];
+      meta: { projectRef: string | null; deliveryAddress: string | null; note: string | null };
+    }
+  | { ok: false; error: string; ceiling?: number };
+
+/**
+ * Accepts three body shapes, oldest first: a bare configuration, `{ config }`,
+ * and `{ ceilings: [config, …] }` (Michael, 8 Sep 2026: "Create the ability
+ * to order multiple ceiling kits"). Every ceiling is parsed with the same
+ * rules as a quote; the first bad one names itself. Contact fields travel at
+ * the order level, or — older clients — inside the single configuration.
+ */
+export function parseOrderBody(input: unknown): ParsedOrder {
+  const b = (input && typeof input === 'object' ? input : {}) as Record<string, unknown>;
+  const raw: unknown[] = Array.isArray(b.ceilings)
+    ? b.ceilings
+    : b.config && typeof b.config === 'object'
+      ? [b.config]
+      : [b];
+  if (raw.length === 0) return { ok: false, error: 'no_ceilings' };
+  if (raw.length > LIMITS.maxCeilings) return { ok: false, error: 'too_many_ceilings' };
+
+  const ceilings: ParsedCeiling[] = [];
+  for (let i = 0; i < raw.length; i += 1) {
+    const r = parseConfig(raw[i]);
+    if (!r.ok) return { ok: false, error: r.error, ceiling: i + 1 };
+    ceilings.push({ config: r.config, reference: r.meta.reference });
+  }
+  // Order-level fields win; a single old-style body may carry them inside.
+  const first = raw[0] && typeof raw[0] === 'object' ? (raw[0] as Record<string, unknown>) : {};
+  const pick = (k: string, max?: number) => text(b[k], max) ?? (ceilings.length === 1 ? text(first[k], max) : null);
+  return {
+    ok: true,
+    ceilings,
+    meta: { projectRef: pick('projectRef', 120), deliveryAddress: pick('deliveryAddress'), note: pick('note') },
   };
 }

@@ -7,7 +7,7 @@
 // ============================================================================
 import { createServiceClient } from '../supabase';
 import type { PortalProfile } from '../types';
-import type { PricedBom } from './pricing';
+import { orderTotals, type PricedBom } from './pricing';
 import type { ConfiguratorConfig } from './bom';
 
 export const ORDER_STATUSES = ['received', 'confirmed', 'in_production', 'shipped', 'cancelled'] as const;
@@ -28,6 +28,9 @@ export type PortalOrderRow = {
   needs_manual_pricing: boolean;
   status: PortalOrderStatus;
   pricebook_version: string | null;
+  /** How many ceilings the order holds; config is { ceilings: [...] }. */
+  ceiling_count: number;
+  /** The ceilings' references, "; "-joined. */
   ceiling_ref: string | null;
   project_ref: string | null;
   delivery_address: string | null;
@@ -39,6 +42,9 @@ export type PortalOrderRow = {
 
 export type PortalOrderLineRow = {
   line_no: number;
+  /** 1-based ceiling within the order, and that ceiling's reference. */
+  ceiling_no: number;
+  ceiling_ref: string | null;
   kind: string | null;
   code: string | null;
   product: string;
@@ -96,19 +102,26 @@ export async function findByIdempotencyKey(key: string): Promise<PortalOrderRow 
   }
 }
 
+/** One ceiling of an order: its configuration, its priced bill, its name. */
+export type OrderCeiling = { config: ConfiguratorConfig; quote: PricedBom; reference: string | null };
+
+export { orderTotals } from './pricing';
+
 /** Write the order and its frozen line snapshot. Returns null when it could
  *  not be stored — the route then still e-mails, and says so. */
 export async function storeOrder(input: {
   reference: string;
   profile: PortalProfile;
-  quote: PricedBom;
-  config: ConfiguratorConfig;
-  meta: { reference: string | null; projectRef: string | null; deliveryAddress: string | null; note: string | null };
+  ceilings: OrderCeiling[];
+  meta: { projectRef: string | null; deliveryAddress: string | null; note: string | null };
   idempotencyKey: string | null;
 }): Promise<PortalOrderRow | null> {
   const supabase = createServiceClient();
   if (!supabase) return null;
-  const { quote } = input;
+  const { ceilings } = input;
+  const first = ceilings[0];
+  if (!first) return null;
+  const totals = orderTotals(ceilings);
   try {
     const { data, error } = await supabase
       .from('portal_orders')
@@ -117,16 +130,21 @@ export async function storeOrder(input: {
         user_id: input.profile.id,
         email: input.profile.email,
         company: input.profile.company,
-        market: quote.market,
-        currency: quote.currency,
-        config: input.config as unknown as Record<string, unknown>,
-        foil_code: quote.foil.code,
-        foil_product: quote.foil.product ?? quote.foil.label,
-        weld_required: quote.foil.weldRequired || quote.weldCount > 0,
-        subtotal: quote.currency === 'PLN' && quote.subtotalPln != null ? quote.subtotalPln : quote.subtotalEur,
-        needs_manual_pricing: quote.needsManualPricing,
-        pricebook_version: quote.pricebookVersion,
-        ceiling_ref: input.meta.reference,
+        market: totals.market,
+        currency: totals.currency,
+        // Every ceiling as submitted. Readers accept the older single-config
+        // shape too (orders placed before 8 Sep 2026).
+        config: { ceilings: ceilings.map((c) => ({ ...c.config, reference: c.reference })) } as unknown as Record<string, unknown>,
+        // The FIRST ceiling's foil, for the list view; every line below says
+        // which ceiling it belongs to.
+        foil_code: first.quote.foil.code,
+        foil_product: first.quote.foil.product ?? first.quote.foil.label,
+        weld_required: ceilings.some((c) => c.quote.foil.weldRequired || c.quote.weldCount > 0),
+        subtotal: totals.currency === 'PLN' && totals.subtotalPln != null ? totals.subtotalPln : totals.subtotalEur,
+        needs_manual_pricing: totals.needsManualPricing,
+        pricebook_version: first.quote.pricebookVersion,
+        ceiling_count: ceilings.length,
+        ceiling_ref: ceilings.map((c, i) => c.reference ?? `Ceiling ${i + 1}`).join('; ').slice(0, 400) || null,
         project_ref: input.meta.projectRef,
         delivery_address: input.meta.deliveryAddress,
         note: input.meta.note,
@@ -137,18 +155,26 @@ export async function storeOrder(input: {
     if (error) throw new Error(error.message);
 
     const order = data as PortalOrderRow;
-    const lines = quote.lines.map((l, i) => ({
-      order_id: order.id,
-      line_no: i + 1,
-      kind: l.kind,
-      code: l.code,
-      product: l.label,
-      unit: l.unit,
-      qty: l.qty,
-      unit_price: quote.currency === 'PLN' ? l.unitPricePln : l.unitPriceEur,
-      line_total: quote.currency === 'PLN' ? l.lineTotalPln : l.lineTotalEur,
-      note: l.status === 'ok' ? l.note ?? null : l.status === 'no_row' ? 'no pricebook row' : `no ${quote.market} price`,
-    }));
+    let lineNo = 0;
+    const lines = ceilings.flatMap((c, ci) =>
+      c.quote.lines.map((l) => {
+        lineNo += 1;
+        return {
+          order_id: order.id,
+          line_no: lineNo,
+          ceiling_no: ci + 1,
+          ceiling_ref: c.reference,
+          kind: l.kind,
+          code: l.code,
+          product: l.label,
+          unit: l.unit,
+          qty: l.qty,
+          unit_price: totals.currency === 'PLN' ? l.unitPricePln : l.unitPriceEur,
+          line_total: totals.currency === 'PLN' ? l.lineTotalPln : l.lineTotalEur,
+          note: l.status === 'ok' ? l.note ?? null : l.status === 'no_row' ? 'no pricebook row' : `no ${c.quote.market} price`,
+        };
+      }),
+    );
     if (lines.length) {
       const { error: lineErr } = await supabase.from('portal_order_lines').insert(lines);
       if (lineErr) log('storeOrderLines', new Error(lineErr.message));
@@ -192,7 +218,7 @@ export async function getOrder(
     const order = data as PortalOrderRow;
     const { data: lines } = await supabase
       .from('portal_order_lines')
-      .select('line_no, kind, code, product, unit, qty, unit_price, line_total, note')
+      .select('line_no, ceiling_no, ceiling_ref, kind, code, product, unit, qty, unit_price, line_total, note')
       .eq('order_id', order.id)
       .order('line_no');
     return { order, lines: (lines ?? []) as PortalOrderLineRow[] };

@@ -229,6 +229,14 @@ the BOM engine              ← dimensions → line items → server-side pricin
   pick is arbitrary. The form asks for corner *counts* only when a corner piece
   exists for the material. These three are set by hand in admin ▸ Configurator;
   the seeder does not invent them.
+- **Several ceilings per order** (8 Sep 2026): the form keeps a list of
+  frozen ceilings (configuration + the server's quote) and posts
+  `{ ceilings: [config, …] }`; the route re-prices each, `orderTotals()` sums
+  them (PLN only when every ceiling prices in PLN). `portal_orders.config` is
+  `{ ceilings: [...] }`, `ceiling_count` says how many, the foil columns
+  describe the first ceiling, and every `portal_order_lines` row carries
+  `ceiling_no` / `ceiling_ref`. Readers accept the older single-configuration
+  snapshot. Both e-mails render a block per ceiling and a grand total.
 - **Geometry.** The angled ceiling is its own size — `foldLength` (its length
   along the fold) × `slopeRun`; a null fold length means the whole side it
   folds from, which is what orders stored before 7 Sep 2026 mean. Surface =

@@ -9,14 +9,30 @@ import { CheckCircle2 } from 'lucide-react';
 import type { ConfigState, Quote } from './ConfiguratorView';
 import { toPayload } from './ConfiguratorView';
 
+/** One ceiling going into the order, as configured and as the server priced it. */
+export type OrderCeilingInput = { config: ConfigState; quote: Quote; current?: boolean };
+
 type Placed = {
   reference: string;
   confirmed: boolean;
   stored: boolean;
   needsManualPricing: boolean;
   unpricedCount: number;
+  ceilings: number;
   demo?: boolean;
 };
+
+function nameOf(c: OrderCeilingInput, i: number): string {
+  return c.config.reference.trim() || `Ceiling ${i + 1}`;
+}
+
+function sizeOf(c: OrderCeilingInput): string {
+  const L = Number(c.config.length.replace(',', '.')) || 0;
+  const W = Number(c.config.width.replace(',', '.')) || 0;
+  const S = c.config.shape === 'sloped' ? Number(c.config.slopeRun.replace(',', '.')) || 0 : 0;
+  const F = c.config.shape === 'sloped' ? Number(c.config.foldLength.replace(',', '.')) || (c.config.foldSide === 'width' ? W : L) : 0;
+  return `${L} × ${W} m${S > 0 ? ` + ${F} × ${S} m` : ''}`;
+}
 
 /** One key per submit — a repeat returns the original order, never a second. */
 function newKey(): string {
@@ -28,8 +44,8 @@ function newKey(): string {
 }
 
 export default function ConfiguratorOrder({
+  ceilings,
   quote,
-  config,
   market,
   orderable,
   demo,
@@ -38,14 +54,18 @@ export default function ConfiguratorOrder({
   money,
   total,
 }: {
+  /** Everything that will be sent: the ceilings added to the order, plus the
+   *  one being edited when it is complete (flagged `current`). */
+  ceilings: OrderCeilingInput[];
+  /** The ceiling being edited — for the "why not orderable" hint only. */
   quote: Quote | null;
-  config: ConfigState;
   market: string;
   orderable: boolean;
   demo: boolean;
   accountEmail: string;
   company: string | null;
   money: (eur: number | null, pln: number | null) => string;
+  /** The ORDER total, formatted. */
   total: string | null;
 }) {
   const [open, setOpen] = useState(false);
@@ -59,7 +79,7 @@ export default function ConfiguratorOrder({
   const [key, setKey] = useState<string>(() => newKey());
 
   const submit = useCallback(async () => {
-    if (!quote) return;
+    if (ceilings.length === 0) return;
     setBusy(true);
     setErr(null);
     try {
@@ -67,7 +87,8 @@ export default function ConfiguratorOrder({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          config: toPayload(config, market),
+          // Every ceiling as a CONFIGURATION — the server re-prices each one.
+          ceilings: ceilings.map((c) => toPayload(c.config, market)),
           market,
           projectRef: projectRef || null,
           deliveryAddress: deliveryAddress || null,
@@ -77,12 +98,15 @@ export default function ConfiguratorOrder({
       });
       const json = await res.json();
       if (!json.ok) {
+        const which = json.ceiling ? ` (ceiling ${json.ceiling})` : '';
         setErr(
           json.error === 'rate_limited'
             ? 'That is a lot of orders in one hour. Give it a moment, or call us.'
             : json.error === 'incomplete_configuration'
-              ? 'The configuration is not complete yet.'
-              : 'The order could not be placed. Nothing was charged — try again, or call us.',
+              ? `A configuration is not complete yet${which}.`
+              : json.error === 'too_many_ceilings'
+                ? 'That is more ceilings than one order takes — split it in two.'
+                : 'The order could not be placed. Nothing was charged — try again, or call us.',
         );
         return;
       }
@@ -92,6 +116,7 @@ export default function ConfiguratorOrder({
         stored: Boolean(json.stored),
         needsManualPricing: Boolean(json.needsManualPricing),
         unpricedCount: Number(json.unpricedCount ?? 0),
+        ceilings: Number(json.ceilings ?? ceilings.length),
         demo: Boolean(json.demo),
       });
       setOpen(false);
@@ -101,23 +126,31 @@ export default function ConfiguratorOrder({
     } finally {
       setBusy(false);
     }
-  }, [quote, config, market, projectRef, deliveryAddress, note, key]);
+  }, [ceilings, market, projectRef, deliveryAddress, note, key]);
 
-  const summary = useMemo(() => {
-    if (!quote) return null;
-    return [
-      `${Number(config.length.replace(',', '.')) || 0} × ${Number(config.width.replace(',', '.')) || 0} m`,
-      `${quote.area.toFixed(2)} m²`,
-      quote.foil.product ?? quote.foil.label ?? '—',
-      quote.weldCount > 0 ? `${quote.weldCount} seam(s)` : 'no seams',
-    ].join(' · ');
-  }, [quote, config.length, config.width]);
+  const summary = useMemo(
+    () =>
+      ceilings.map((c, i) => ({
+        name: nameOf(c, i),
+        current: Boolean(c.current),
+        text: [
+          sizeOf(c),
+          `${c.quote.area.toFixed(2)} m²`,
+          c.quote.foil.product ?? c.quote.foil.label ?? '—',
+          c.quote.weldCount > 0 ? `${c.quote.weldCount} seam(s)` : 'no seams',
+        ].join(' · '),
+        total: money(c.quote.subtotalEur, c.quote.subtotalPln),
+        from: c.quote.needsManualPricing,
+      })),
+    [ceilings, money],
+  );
 
   if (placed) {
     return (
       <div className="ord-done">
         <p className="k">
           <CheckCircle2 size={16} /> Order {placed.reference}
+          {placed.ceilings > 1 ? ` — ${placed.ceilings} ceilings` : ''}
         </p>
         <p>
           {placed.demo
@@ -144,7 +177,10 @@ export default function ConfiguratorOrder({
   .btns { display: flex; gap: 8px; margin-top: 12px; }
   .confirm { border: 1px solid var(--border); background: #fff; padding: 16px; }
   .confirm .k, .ord-done .k { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 8px; }
-  .summary { font-size: 12.5px; color: var(--text-muted); margin: 0 0 14px; line-height: 1.5; }
+  .summary { font-size: 12.5px; color: var(--text-muted); margin: 0 0 14px; padding-left: 18px; line-height: 1.5; }
+  .summary li { margin: 0 0 6px; }
+  .summary strong { color: var(--black); }
+  .summary em { font-style: normal; color: var(--text-faint); }
   .confirm label { display: block; margin: 0 0 10px; }
   .confirm label span { display: block; font-size: 10px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 4px; }
   .confirm input, .confirm textarea { font: inherit; font-size: 13.5px; padding: 8px 10px; border: 1px solid var(--border-input); width: 100%; background: #fff; resize: vertical; }
@@ -167,7 +203,7 @@ export default function ConfiguratorOrder({
       {!open ? (
         <>
           <button type="button" className="cta" disabled={!orderable} onClick={() => setOpen(true)}>
-            Place order
+            Place order{ceilings.length > 1 ? ` — ${ceilings.length} ceilings` : ''}
           </button>
           {!orderable && (
             <p className="small">
@@ -177,8 +213,18 @@ export default function ConfiguratorOrder({
         </>
       ) : (
         <div className="confirm">
-          <p className="k">Confirm your order</p>
-          <p className="summary">{summary}</p>
+          <p className="k">Confirm your order{ceilings.length > 1 ? ` — ${ceilings.length} ceilings` : ''}</p>
+          <ol className="summary">
+            {summary.map((c, i) => (
+              <li key={i}>
+                <strong>{c.name}</strong>
+                {c.current && ceilings.length > 1 ? <em> (the one you are editing)</em> : null}
+                <br />
+                {c.text} — {c.from ? 'from ' : ''}
+                {c.total}
+              </li>
+            ))}
+          </ol>
           <label>
             <span>E-mail for the confirmation</span>
             <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" />
@@ -196,7 +242,7 @@ export default function ConfiguratorOrder({
             <textarea rows={2} value={note} onChange={(e) => setNote(e.target.value)} />
           </label>
           <p className="totalline">
-            <span>{quote?.needsManualPricing ? 'From' : 'Total'}</span>
+            <span>{summary.some((c) => c.from) ? 'From' : 'Total'}</span>
             <strong>{total ?? '—'}</strong>
           </p>
           <p className="small">
@@ -222,7 +268,10 @@ export default function ConfiguratorOrder({
   .btns { display: flex; gap: 8px; margin-top: 12px; }
   .confirm { border: 1px solid var(--border); background: #fff; padding: 16px; }
   .confirm .k, .ord-done .k { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 8px; }
-  .summary { font-size: 12.5px; color: var(--text-muted); margin: 0 0 14px; line-height: 1.5; }
+  .summary { font-size: 12.5px; color: var(--text-muted); margin: 0 0 14px; padding-left: 18px; line-height: 1.5; }
+  .summary li { margin: 0 0 6px; }
+  .summary strong { color: var(--black); }
+  .summary em { font-style: normal; color: var(--text-faint); }
   .confirm label { display: block; margin: 0 0 10px; }
   .confirm label span { display: block; font-size: 10px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 4px; }
   .confirm input, .confirm textarea { font: inherit; font-size: 13.5px; padding: 8px 10px; border: 1px solid var(--border-input); width: 100%; background: #fff; resize: vertical; }
