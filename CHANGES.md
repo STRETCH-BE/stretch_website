@@ -1,3 +1,41 @@
+## 2026-09-08 (47) — Configurator: phone layout
+
+Michael, 8 Sep 2026, with five iPhone screenshots: *"Improve layout/visual on
+smartphone."* The screenshots showed content flush against the left edge and
+the right column — the read-outs, the bill's Total column, the order list's
+amounts and buttons, the fixed bar's ORDER button — clipped off the right.
+
+**Two root causes, both in the configurator's own CSS.**
+
+- The `.cfg` rule set its padding with the shorthand `padding: X 0 Y`, which
+  zeroed the site container's side gutters. Invisible on a wide screen, where
+  the container is narrower than the viewport; on a phone it put everything
+  at x = 0. Now `padding-top` / `padding-bottom` only.
+- Grid children default to `min-width: auto`, so a long product name or a
+  `nowrap` price made the result column as wide as its content and the whole
+  grid wider than the phone. Now `grid-template-columns: minmax(0, 1fr) 420px`
+  and `min-width: 0` on the grid's children and the field rows.
+
+**Phone rules (≤ 520 px).** Two fields to a row, a third wrapping under them;
+16 px inputs so iOS does not zoom on focus; the surface's *flat + angled*
+split on its own line; the read-outs as a two-column grid; a tighter bill
+table that needs no sideways scroll; the order list's amount and Edit /
+Remove dropping under the ceiling's name; the add button full width; the
+fixed bar's text allowed to wrap and its button never clipped; the headline
+sized to the screen.
+
+**Verified.** 16 checks in Chromium at an iPhone 13 viewport (390 px, DPR 3,
+touch): no horizontal scroll on the document or the result column, the
+gutter restored and headings inside it, the three angled-ceiling fields all
+in frame with two on the first line, every read-out tile in frame, the bill
+table needing no sideways scroll and its Total column in frame, the order
+list's amounts and buttons in frame, the add button unclipped, the fixed bar
+shown with its button whole and naming the ceiling count — and still no
+horizontal scroll with two ceilings in the order. Four screenshots reviewed.
+Clean typecheck, lint and message parity; build green.
+
+---
+
 ## 2026-09-08 (46) — Configurator: several ceilings in one order
 
 Michael, 8 Sep 2026: *"Create the abbillity to order multiple ceiling kits."*
