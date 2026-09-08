@@ -36,7 +36,15 @@ const { buildBom } = loadTs('../src/lib/portal/configurator/bom.ts', {
   './types': types,
   './foil': { pickFoil, foilFamily, weldsForPanel, rollMetresForPanel, cutPanel, cutPanelFromFamily },
 });
-const { parseConfig } = loadTs('../src/lib/portal/configurator/parse-config.ts', {
+// pricing.ts reaches for the database in quoteFor(); orderTotals() is pure.
+const { orderTotals } = loadTs('../src/lib/portal/configurator/pricing.ts', {
+  '../types': { configuratorMarket: () => 'Installer' },
+  '../data': { getPricebook: async () => null },
+  './options': { resolveOption, loadOptions: async () => null },
+  './bom': { buildBom },
+  './types': types,
+});
+const { parseConfig, parseOrderBody } = loadTs('../src/lib/portal/configurator/parse-config.ts', {
   './types': types,
   './bom': { buildBom },
 });
@@ -650,6 +658,67 @@ console.log('\nparseConfig — the payload the form actually posts');
     huge.ok === false && huge.error === 'too_many_lights', JSON.stringify(huge));
   const junk = parseConfig({ ...posted, lights: 'lots' });
   check('a non-array lights field yields no lights, never a crash', junk.ok && junk.config.lights.length === 0);
+}
+
+// ---------------------------------------------------------------------------
+console.log('\nparseOrderBody — one order, several ceilings');
+{
+  // Michael, 8 Sep 2026: "Create the ability to order multiple ceiling kits."
+  const cfg = (over = {}) => ({
+    length: 4.2, width: 3.4, shape: 'flat', slopeRun: 0, foldSide: 'length', seamDirection: 'auto',
+    material: 'fabric', finish: null, colourGroup: null, fabricKind: 'standard',
+    profileSlug: null, cornersInside: null, cornersOutside: null, platforms: [], absorberSlug: null, lights: [],
+    ...over,
+  });
+  const two = parseOrderBody({
+    ceilings: [cfg({ reference: 'Living room' }), cfg({ length: 6, width: 5, reference: 'Kitchen' })],
+    projectRef: 'Job 44', deliveryAddress: 'Gentseweg 309', note: 'Deliver Friday',
+  });
+  check('two ceilings parse, each with its own reference',
+    two.ok && two.ceilings.length === 2 && two.ceilings[0].reference === 'Living room' && two.ceilings[1].reference === 'Kitchen',
+    JSON.stringify(two.ok ? two.ceilings.map((c) => c.reference) : two));
+  check('…each keeps its own geometry', two.ok && two.ceilings[1].config.length === 6 && two.ceilings[0].config.length === 4.2);
+  check('order-level contact fields are read from the body',
+    two.ok && two.meta.projectRef === 'Job 44' && two.meta.deliveryAddress === 'Gentseweg 309' && two.meta.note === 'Deliver Friday');
+
+  // The two OLDER shapes still work: { config } and a bare configuration.
+  const wrapped = parseOrderBody({ config: cfg({ reference: 'Hall' }), projectRef: 'P1' });
+  check('{ config } is one ceiling', wrapped.ok && wrapped.ceilings.length === 1 && wrapped.ceilings[0].reference === 'Hall' && wrapped.meta.projectRef === 'P1');
+  const bare = parseOrderBody(cfg({ reference: 'Bare', projectRef: 'inside', note: 'n' }));
+  check('a bare configuration is one ceiling, contact fields read from inside it',
+    bare.ok && bare.ceilings.length === 1 && bare.meta.projectRef === 'inside' && bare.meta.note === 'n');
+  const bodyWins = parseOrderBody({ config: cfg({ projectRef: 'inside' }), projectRef: 'outside' });
+  check('order-level fields win over fields inside a single configuration', bodyWins.ok && bodyWins.meta.projectRef === 'outside');
+
+  // Failures name the ceiling.
+  const bad = parseOrderBody({ ceilings: [cfg(), cfg({ length: 0 })] });
+  check('a bad second ceiling fails and says which', bad.ok === false && bad.ceiling === 2 && bad.error === 'too_small', JSON.stringify(bad));
+  check('an empty list is refused', parseOrderBody({ ceilings: [] }).error === 'no_ceilings');
+  check('more than the limit is refused', parseOrderBody({ ceilings: Array.from({ length: 21 }, () => cfg()) }).error === 'too_many_ceilings');
+  check('junk is refused, not a crash', parseOrderBody(null).ok === false && parseOrderBody('x').ok === false);
+}
+
+// ---------------------------------------------------------------------------
+console.log('\norderTotals — what several ceilings come to');
+{
+  const q = (over = {}) => ({
+    market: 'Installer', currency: 'EUR', lines: [{}, {}], subtotalEur: 100, subtotalPln: null,
+    needsManualPricing: false, unpricedCount: 0, ...over,
+  });
+  const two = orderTotals([{ quote: q({ subtotalEur: 500.5 }) }, { quote: q({ subtotalEur: 149.55, lines: [{}] }) }]);
+  check('the subtotal is the sum, to the cent', two.subtotalEur === 650.05 && two.currency === 'EUR' && two.lineCount === 3,
+    JSON.stringify(two));
+  const pln = orderTotals([
+    { quote: q({ currency: 'PLN', subtotalPln: 400 }) },
+    { quote: q({ currency: 'PLN', subtotalPln: 250.25 }) },
+  ]);
+  check('PLN when every ceiling prices in PLN', pln.currency === 'PLN' && pln.subtotalPln === 650.25 && pln.subtotalEur === 200);
+  const mixed = orderTotals([{ quote: q({ currency: 'PLN', subtotalPln: 400 }) }, { quote: q() }]);
+  check('one EUR ceiling makes the whole order EUR', mixed.currency === 'EUR' && mixed.subtotalPln === null);
+  const open = orderTotals([{ quote: q() }, { quote: q({ needsManualPricing: true, unpricedCount: 2 }) }, { quote: q({ unpricedCount: 1, needsManualPricing: true }) }]);
+  check('manual pricing when ANY ceiling needs it, open lines summed', open.needsManualPricing === true && open.unpricedCount === 3);
+  const none = orderTotals([]);
+  check('an empty order is zero, EUR, nothing open', none.subtotalEur === 0 && none.currency === 'EUR' && none.needsManualPricing === false && none.lineCount === 0);
 }
 
 // ---------------------------------------------------------------------------

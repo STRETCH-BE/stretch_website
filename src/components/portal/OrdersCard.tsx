@@ -29,6 +29,8 @@ type OrderRow = {
   needs_manual_pricing: boolean;
   status: Status;
   pricebook_version: string | null;
+  ceiling_count?: number;
+  ceiling_ref?: string | null;
   project_ref: string | null;
   delivery_address: string | null;
   note: string | null;
@@ -38,6 +40,8 @@ type OrderRow = {
 
 type LineRow = {
   line_no: number;
+  ceiling_no?: number;
+  ceiling_ref?: string | null;
   kind: string | null;
   code: string | null;
   product: string;
@@ -187,7 +191,7 @@ export default function OrdersCard({ demo }: { demo: boolean }) {
     download(
       `stretch-orders-${new Date().toISOString().slice(0, 10)}.csv`,
       csv([
-        ['Reference', 'Date', 'Company', 'Email', 'Market', 'Currency', 'Subtotal', 'Needs manual pricing', 'Status', 'Foil', 'Welded', 'Pricelist', 'Project ref'],
+        ['Reference', 'Date', 'Company', 'Email', 'Market', 'Currency', 'Subtotal', 'Needs manual pricing', 'Status', 'Ceilings', 'Ceiling refs', 'Foil (first ceiling)', 'Seamed', 'Pricelist', 'Project ref'],
         ...filtered.map((o) => [
           o.reference,
           o.created_at.slice(0, 10),
@@ -198,6 +202,8 @@ export default function OrdersCard({ demo }: { demo: boolean }) {
           Number(o.subtotal).toFixed(2),
           o.needs_manual_pricing ? 'yes' : 'no',
           o.status,
+          Number(o.ceiling_count ?? 1),
+          o.ceiling_ref ?? '',
           o.foil_product ?? '',
           o.weld_required ? 'yes' : 'no',
           o.pricebook_version ?? '',
@@ -212,10 +218,12 @@ export default function OrdersCard({ demo }: { demo: boolean }) {
       download(
         `${o.reference}-lines.csv`,
         csv([
-          ['Reference', 'Line', 'Kind', 'Code', 'Product', 'Unit', 'Qty', 'Unit price', 'Line total', 'Note'],
+          ['Reference', 'Line', 'Ceiling', 'Ceiling ref', 'Kind', 'Code', 'Product', 'Unit', 'Qty', 'Unit price', 'Line total', 'Note'],
           ...lines.map((l) => [
             o.reference,
             l.line_no,
+            Number(l.ceiling_no ?? 1),
+            l.ceiling_ref ?? '',
             l.kind ?? '',
             l.code ?? '',
             l.product,
@@ -365,15 +373,24 @@ export default function OrdersCard({ demo }: { demo: boolean }) {
                       <tr>
                         <td colSpan={7}>
                           <div className="padm-sub">
-                            <span className="lbl">Configuration</span>
+                            <span className="lbl">Configuration{Number(o.ceiling_count ?? 1) > 1 ? ` — ${o.ceiling_count} ceilings` : ''}</span>
                             <p className="padm-meta" style={{ margin: 0, lineHeight: 1.7 }}>
-                              {String(o.config?.length ?? '?')} × {String(o.config?.width ?? '?')} m ·{' '}
-                              {String(o.config?.shape ?? 'flat')}
-                              {o.config?.shape === 'sloped' ? ` (slope ${String(o.config?.slopeRun ?? '?')} m along the ${String(o.config?.foldSide ?? '?')})` : ''} ·{' '}
-                              {String(o.config?.material ?? '')} {String(o.config?.finish ?? o.config?.fabricKind ?? '')}{' '}
-                              {String(o.config?.colourGroup ?? '')}
-                              <br />
-                              Foil chosen: <strong>{o.foil_product ?? '—'}</strong>
+                              {/* Orders since 8 Sep 2026 hold { ceilings: [...] }; older ones a single configuration. */}
+                              {((Array.isArray(o.config?.ceilings) ? o.config.ceilings : [o.config ?? {}]) as Record<string, unknown>[]).map(
+                                (c, i, all) => (
+                                  <Fragment key={i}>
+                                    {all.length > 1 && <strong>{i + 1}. {String(c.reference ?? `Ceiling ${i + 1}`)} · </strong>}
+                                    {String(c.length ?? '?')} × {String(c.width ?? '?')} m · {String(c.shape ?? 'flat')}
+                                    {c.shape === 'sloped'
+                                      ? ` (angled ${String(c.foldLength ?? (c.foldSide === 'width' ? c.width : c.length) ?? '?')} × ${String(c.slopeRun ?? '?')} m, fold along the ${String(c.foldSide ?? '?')})`
+                                      : ''}{' '}
+                                    · {String(c.material ?? '')} {String(c.finish ?? c.fabricKind ?? '')} {String(c.colourGroup ?? '')}
+                                    {c.seamDirection && c.seamDirection !== 'auto' ? ` · seams along the ${String(c.seamDirection)}` : ''}
+                                    <br />
+                                  </Fragment>
+                                ),
+                              )}
+                              Foil chosen{Number(o.ceiling_count ?? 1) > 1 ? ' (first ceiling)' : ''}: <strong>{o.foil_product ?? '—'}</strong>
                               {o.foil_code ? ` [${o.foil_code}]` : ''} · {o.weld_required ? 'SEAMED' : 'no seam'} ·
                               pricelist {o.pricebook_version ?? '—'}
                               {o.delivery_address ? <><br />Delivery: {o.delivery_address}</> : null}
@@ -393,8 +410,17 @@ export default function OrdersCard({ demo }: { demo: boolean }) {
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  {lines.map((l) => (
-                                    <tr key={l.line_no}>
+                                  {lines.map((l, i) => (
+                                    <Fragment key={l.line_no}>
+                                      {Number(o.ceiling_count ?? 1) > 1 &&
+                                        (i === 0 || Number(lines[i - 1].ceiling_no ?? 1) !== Number(l.ceiling_no ?? 1)) && (
+                                          <tr>
+                                            <td colSpan={5} style={{ fontWeight: 800, background: '#f6f6f7' }}>
+                                              {Number(l.ceiling_no ?? 1)}. {l.ceiling_ref ?? `Ceiling ${Number(l.ceiling_no ?? 1)}`}
+                                            </td>
+                                          </tr>
+                                        )}
+                                    <tr>
                                       <td>{l.line_no}</td>
                                       <td>
                                         {l.product}
@@ -411,6 +437,7 @@ export default function OrdersCard({ demo }: { demo: boolean }) {
                                         {l.line_total == null ? '—' : Number(l.line_total).toFixed(2)}
                                       </td>
                                     </tr>
+                                    </Fragment>
                                   ))}
                                   {lines.length === 0 && (
                                     <tr>

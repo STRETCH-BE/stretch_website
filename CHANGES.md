@@ -1,3 +1,60 @@
+## 2026-09-08 (46) — Configurator: several ceilings in one order
+
+Michael, 8 Sep 2026: *"Create the abbillity to order multiple ceiling kits."*
+
+A job is several ceilings; an order now is too.
+
+**Form.** A *Ceilings in this order* panel above the order button. **Add
+this ceiling, start the next** freezes the ceiling being edited — its
+configuration and the server's quote for it — into the list and clears the
+form for the next one (the job's choices stay: foil, profile, seam direction,
+supports, absorber, lights; the room and the name start fresh). Each listed
+ceiling shows its name, room, surface, foil and total, with **Edit** (back
+into the form) and **Remove**. The ceiling being edited is listed too, as *the
+one you are editing, included as it stands*, so a single ceiling still orders
+without an extra click. The order total is the sum; the mobile bar and the
+button say how many ceilings (*Place order — 3 ceilings*). The confirm step
+lists them by name, and a server refusal names the ceiling it refused.
+
+**Server.** `POST /api/portal/order` takes `{ ceilings: [config, …] }` — the
+older `{ config }` and bare-configuration bodies still parse as one ceiling
+(`parseOrderBody()`, at most 20 ceilings, first bad one names itself). Every
+ceiling is re-priced server-side as before; `orderTotals()` (pure, in
+`pricing.ts`) sums them and settles the currency — PLN only when *every*
+ceiling could be priced in PLN. Body limit raised to 120 KB.
+
+**Storage.** `portal_orders.config` now holds `{ ceilings: [...] }` with each
+ceiling's reference inside; `ceiling_count`; `foil_code` / `foil_product` /
+`weld_required` describe the **first** ceiling (documented as such) and
+`ceiling_ref` lists every name. `portal_order_lines` gains `ceiling_no` and
+`ceiling_ref`; line numbers run on across ceilings. Both in `schema.sql` with
+`add column if not exists`, and applied to the live project. Every reader
+accepts the older single-configuration snapshot.
+
+**E-mails.** Both render one block per ceiling — heading with its name, spec
+or production rows, lines, the ceiling's subtotal — then the grand total. The
+subject carries the count; the "needs manual pricing" list names the ceiling
+each open line belongs to; the account rows list the ceilings. Single-ceiling
+orders read exactly as before.
+
+**Admin and customer views.** The orders list shows *N ceilings*; the admin
+card summarises every ceiling, groups the line snapshot under a heading per
+ceiling, and both CSV exports carry the ceiling columns. The customer list
+sums the surface across ceilings and says *seamed* rather than *welded*.
+
+**Verified.** 164 configurator checks (186 under `npm test`) — nine on
+`parseOrderBody` (three body shapes, order-level fields winning, the failing
+ceiling named, empty / over-limit / junk refused) and five on `orderTotals`
+(the sum to the cent, PLN only when all PLN, one EUR ceiling making the order
+EUR, manual pricing when any with open lines summed, the empty order);
+17 browser checks in Chromium covering the whole flow: add, cleared form, the
+edited ceiling listed and summed, Edit back into the form, Remove, the button
+and confirm step naming the ceilings, and the posted `ceilings[]` with each
+ceiling's own reference and room and **no prices**. Clean typecheck, lint and
+message parity; build green.
+
+---
+
 ## 2026-09-07 (45) — Configurator: the angled ceiling has its own size
 
 Michael, 7 Sep 2026, with two screenshots of a 6.20 × 5.50 room: *"Flat

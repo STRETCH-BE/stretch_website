@@ -75,60 +75,79 @@ export async function PATCH(request: NextRequest) {
   // re-priced from a newer pricebook.
   if (body.resend === true) {
     const order = found.order;
-    const quote = {
-      market: order.market,
-      currency: order.currency,
-      lines: found.lines.map((l) => ({
-        kind: l.kind ?? '',
-        slug: '',
-        label: l.product,
-        code: l.code,
-        qty: Number(l.qty),
-        unit: l.unit,
-        unitPriceEur: l.unit_price == null ? null : Number(l.unit_price),
-        lineTotalEur: l.line_total == null ? null : Number(l.line_total),
-        unitPricePln: null,
-        lineTotalPln: null,
-        status: l.line_total == null ? ('no_price' as const) : ('ok' as const),
-        note: l.note ?? undefined,
-      })),
-      notes: [],
-      subtotalEur: Number(order.subtotal),
-      subtotalPln: null,
-      needsManualPricing: order.needs_manual_pricing,
-      unpricedCount: found.lines.filter((l) => l.line_total == null).length,
-      area: 0,
-      perimeter: 0,
-      need: 0,
-      cornersInside: 0,
-      cornersOutside: 0,
-      weldMetres: 0,
-      weldCount: order.weld_required ? 1 : 0,
-      incomplete: false,
-      foil: {
-        slug: null,
-        label: order.foil_product,
-        code: order.foil_code,
-        product: order.foil_product,
-        widthCm: null,
-        reason: '',
-        weldRequired: order.weld_required,
-      },
-      panels: [],
-      pricebookVersion: order.pricebook_version ?? '—',
-      pricebookUpdatedAt: '',
-    } as unknown as PricedBom;
-
-    const cfg = order.config as unknown as ConfiguratorConfig;
-    // The snapshot has no geometry read-outs; take what the config carries.
-    quote.area = Number(cfg?.length ?? 0) * Number(cfg?.width ?? 0);
+    // Rebuild the ceilings from the frozen snapshot. Orders since 8 Sep 2026
+    // hold { ceilings: [...] } and lines carry ceiling_no; older ones hold a
+    // single configuration and every line is ceiling 1.
+    const cfgRoot = (order.config ?? {}) as Record<string, unknown>;
+    const configs = (Array.isArray(cfgRoot.ceilings) ? cfgRoot.ceilings : [cfgRoot]) as unknown as ConfiguratorConfig[];
+    const count = Math.max(1, configs.length, ...found.lines.map((l) => Number(l.ceiling_no ?? 1)));
+    const ceilings = Array.from({ length: count }, (_, i) => {
+      const cfg = configs[i] ?? configs[0] ?? ({} as ConfiguratorConfig);
+      const mine = found.lines.filter((l) => Number(l.ceiling_no ?? 1) === i + 1);
+      const subtotal = mine.reduce((sum, l) => sum + (l.line_total == null ? 0 : Number(l.line_total)), 0);
+      const L = Number(cfg?.length ?? 0);
+      const W = Number(cfg?.width ?? 0);
+      const F = Number(cfg?.foldLength ?? (cfg?.foldSide === 'width' ? W : L));
+      const S = cfg?.shape === 'sloped' ? Number(cfg?.slopeRun ?? 0) : 0;
+      const quote = {
+        market: order.market,
+        currency: order.currency,
+        lines: mine.map((l) => ({
+          kind: l.kind ?? '',
+          slug: '',
+          label: l.product,
+          code: l.code,
+          qty: Number(l.qty),
+          unit: l.unit,
+          unitPriceEur: l.unit_price == null ? null : Number(l.unit_price),
+          lineTotalEur: l.line_total == null ? null : Number(l.line_total),
+          unitPricePln: null,
+          lineTotalPln: null,
+          status: l.line_total == null ? ('no_price' as const) : ('ok' as const),
+          note: l.note ?? undefined,
+        })),
+        notes: [],
+        subtotalEur: Math.round(subtotal * 100) / 100,
+        subtotalPln: null,
+        needsManualPricing: mine.some((l) => l.line_total == null),
+        unpricedCount: mine.filter((l) => l.line_total == null).length,
+        // The snapshot has no geometry read-outs; take what the config carries.
+        area: L * W + F * S,
+        rollMetres: 0,
+        clothPieces: 0,
+        clothWidthsCm: [],
+        perimeter: 0,
+        need: 0,
+        cornersInside: 0,
+        cornersOutside: 0,
+        weldMetres: 0,
+        weldCount: i === 0 && order.weld_required ? 1 : 0,
+        incomplete: false,
+        foil: {
+          slug: null,
+          label: i === 0 ? order.foil_product : null,
+          code: i === 0 ? order.foil_code : null,
+          product: i === 0 ? order.foil_product : null,
+          widthCm: null,
+          reason: '',
+          weldRequired: i === 0 && order.weld_required,
+        },
+        panels: [],
+        pricebookVersion: order.pricebook_version ?? '—',
+        pricebookUpdatedAt: '',
+      } as unknown as PricedBom;
+      const stored = (cfg ?? {}) as unknown as { reference?: unknown };
+      const reference =
+        (typeof stored.reference === 'string' ? stored.reference : null) ??
+        mine[0]?.ceiling_ref ??
+        (count === 1 ? order.ceiling_ref : null);
+      return { config: cfg, quote, reference };
+    });
     const mail = buildCustomerEmail({
       reference: order.reference,
-      quote,
-      config: cfg,
+      ceilings,
       account: { email: order.email, company: order.company },
       meta: {
-        reference: order.ceiling_ref ?? null,
         projectRef: order.project_ref,
         deliveryAddress: order.delivery_address,
         note: order.note,

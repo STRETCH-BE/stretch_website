@@ -679,7 +679,11 @@ create table if not exists public.portal_orders (
   status        text not null default 'received'
                 check (status in ('received','confirmed','in_production','shipped','cancelled')),
   pricebook_version text,
-  ceiling_ref   text,                          -- what the installer calls this ceiling
+  -- One order, several ceilings (Sep 2026). config holds { ceilings: [...] };
+  -- foil_code / foil_product / weld_required describe the FIRST ceiling and
+  -- ceiling_ref lists every ceiling's reference — the list view reads them.
+  ceiling_count integer not null default 1,
+  ceiling_ref   text,                          -- what the installer calls the ceiling(s)
   project_ref   text,
   delivery_address text,
   note          text,
@@ -692,6 +696,7 @@ create table if not exists public.portal_orders (
 
 -- Existing databases (created before the ceiling reference, Sep 2026): run once.
 alter table public.portal_orders add column if not exists ceiling_ref text;
+alter table public.portal_orders add column if not exists ceiling_count integer not null default 1;
 
 create table if not exists public.portal_order_lines (
   id         bigint generated always as identity primary key,
@@ -704,8 +709,15 @@ create table if not exists public.portal_order_lines (
   qty        numeric(12,3) not null,
   unit_price numeric(12,2),        -- null = price on request
   line_total numeric(12,2),
-  note       text
+  note       text,
+  -- Which ceiling of the order this line belongs to (1-based), and its name.
+  ceiling_no  integer not null default 1,
+  ceiling_ref text
 );
+
+-- Existing databases (created before multi-ceiling orders, Sep 2026): run once.
+alter table public.portal_order_lines add column if not exists ceiling_no integer not null default 1;
+alter table public.portal_order_lines add column if not exists ceiling_ref text;
 
 create index if not exists portal_orders_user_idx on public.portal_orders (user_id, created_at desc);
 create index if not exists portal_orders_email_idx on public.portal_orders (email, created_at desc);

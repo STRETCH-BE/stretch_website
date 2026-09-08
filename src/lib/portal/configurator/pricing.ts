@@ -218,3 +218,32 @@ export async function quoteFor(
   const quote = priceBom(bom, options, market, rows, meta, { preferPln: country === 'PL' });
   return { quote, options };
 }
+
+// ---------------------------------------------------------------------------
+// An ORDER is several ceilings. What it comes to is the sum of them.
+// ---------------------------------------------------------------------------
+export type OrderTotals = {
+  market: string;
+  currency: 'EUR' | 'PLN';
+  subtotalEur: number;
+  subtotalPln: number | null;
+  needsManualPricing: boolean;
+  unpricedCount: number;
+  lineCount: number;
+};
+
+/** PLN only when EVERY ceiling could be priced in PLN — one currency per order. */
+export function orderTotals(ceilings: { quote: PricedBom }[]): OrderTotals {
+  const first = ceilings[0]?.quote;
+  const allPln = ceilings.length > 0 && ceilings.every((c) => c.quote.currency === 'PLN' && c.quote.subtotalPln != null);
+  const round = (n: number) => Math.round(n * 100) / 100;
+  return {
+    market: first?.market ?? '',
+    currency: allPln ? 'PLN' : 'EUR',
+    subtotalEur: round(ceilings.reduce((s, c) => s + c.quote.subtotalEur, 0)),
+    subtotalPln: allPln ? round(ceilings.reduce((s, c) => s + (c.quote.subtotalPln ?? 0), 0)) : null,
+    needsManualPricing: ceilings.some((c) => c.quote.needsManualPricing),
+    unpricedCount: ceilings.reduce((s, c) => s + c.quote.unpricedCount, 0),
+    lineCount: ceilings.reduce((s, c) => s + c.quote.lines.length, 0),
+  };
+}

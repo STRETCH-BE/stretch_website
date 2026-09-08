@@ -112,11 +112,18 @@ export default async function PortalOrdersPage({ params }: { params: { locale: s
               </thead>
               <tbody>
                 {configuratorOrders.map((o) => {
+                  // Orders hold { ceilings: [...] } since 8 Sep 2026; older ones a single configuration.
                   const cfg = (o.config ?? {}) as Record<string, unknown>;
-                  const area =
-                    typeof cfg.length === 'number' && typeof cfg.width === 'number'
-                      ? (cfg.length * cfg.width).toFixed(2)
-                      : '—';
+                  const ceilingCfgs = (Array.isArray(cfg.ceilings) ? cfg.ceilings : [cfg]) as Record<string, unknown>[];
+                  const m2 = ceilingCfgs.reduce((sum, c) => {
+                    const L = typeof c.length === 'number' ? c.length : 0;
+                    const W = typeof c.width === 'number' ? c.width : 0;
+                    const F = typeof c.foldLength === 'number' ? c.foldLength : c.foldSide === 'width' ? W : L;
+                    const S = c.shape === 'sloped' && typeof c.slopeRun === 'number' ? c.slopeRun : 0;
+                    return sum + L * W + F * S;
+                  }, 0);
+                  const area = m2 > 0 ? m2.toFixed(2) : '—';
+                  const ceilingCount = Number((o as { ceiling_count?: number }).ceiling_count ?? ceilingCfgs.length) || 1;
                   const tone = CFG_STATUS_TONE[o.status] ?? CFG_STATUS_TONE.received;
                   return (
                     <tr key={o.id} style={{ borderBottom: '1px solid var(--border)' }}>
@@ -126,9 +133,12 @@ export default async function PortalOrdersPage({ params }: { params: { locale: s
                       </td>
                       {isAdmin && <td style={{ padding: '11px 14px' }}>{o.company || o.email}</td>}
                       <td style={{ padding: '11px 14px' }}>
+                        {ceilingCount > 1 && (
+                          <span style={{ fontWeight: 700 }}>{ceilingCount} ceilings · </span>
+                        )}
                         {o.foil_product ?? '—'}
                         {o.weld_required && (
-                          <span style={{ color: 'var(--red)', fontSize: 11, fontWeight: 700 }}> · welded</span>
+                          <span style={{ color: 'var(--red)', fontSize: 11, fontWeight: 700 }}> · seamed</span>
                         )}
                       </td>
                       <td style={{ padding: '11px 14px', whiteSpace: 'nowrap' }}>{area}</td>

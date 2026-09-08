@@ -11,16 +11,29 @@
 // plain-text alternative alongside every HTML body.
 // ============================================================================
 import { contact } from '@/lib/site-config';
-import type { PricedBom } from './pricing';
+import { orderTotals, type PricedBom } from './pricing';
 import type { ConfiguratorConfig } from './bom';
+
+/** One ceiling of the order, as configured and as priced. */
+export type MailCeiling = { config: ConfiguratorConfig; quote: PricedBom; reference: string | null };
 
 export type OrderMailInput = {
   reference: string;
-  quote: PricedBom;
-  config: ConfiguratorConfig;
+  /** One or several — Michael, 8 Sep 2026: "order multiple ceiling kits". */
+  ceilings: MailCeiling[];
   account: { email: string; company: string | null };
-  meta: { reference: string | null; projectRef: string | null; deliveryAddress: string | null; note: string | null };
+  meta: { projectRef: string | null; deliveryAddress: string | null; note: string | null };
 };
+
+/** "Living room" or "Ceiling 2" — never blank on a sheet. */
+function ceilingName(c: MailCeiling, i: number): string {
+  return c.reference ?? `Ceiling ${i + 1}`;
+}
+
+function totalsOf(input: OrderMailInput): string {
+  const t = orderTotals(input.ceilings);
+  return t.currency === 'PLN' && t.subtotalPln != null ? `PLN ${t.subtotalPln.toFixed(2)}` : `€ ${t.subtotalEur.toFixed(2)}`;
+}
 
 const RED = '#e2001a';
 const INK = '#111111';
@@ -46,10 +59,10 @@ function totalOf(quote: PricedBom): string {
 }
 
 /** The configuration in plain words — the same list in both e-mails. */
-function specLines(input: OrderMailInput): [string, string][] {
-  const { config: c, quote: q } = input;
+function specLines(ceiling: MailCeiling): [string, string][] {
+  const { config: c, quote: q } = ceiling;
   const rows: [string, string][] = [];
-  if (input.meta.reference) rows.push(['Ceiling', input.meta.reference]);
+  if (ceiling.reference) rows.push(['Ceiling', ceiling.reference]);
   rows.push(
     ['Room', `${c.length.toFixed(2)} × ${c.width.toFixed(2)} m`],
     [
@@ -73,8 +86,27 @@ function specLines(input: OrderMailInput): [string, string][] {
   if (c.lights.length) {
     rows.push(['Lights', c.lights.map((l) => `${l.qty} × ${l.slug}`).join(', ')]);
   }
-  if (input.meta.projectRef) rows.push(['Project reference', input.meta.projectRef]);
   return rows;
+}
+
+const H2 = 'font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:0 0 10px';
+
+/** A ceiling's block in the customer's mail: heading (when several), spec, lines, subtotal (when several). */
+function customerCeilingHtml(c: MailCeiling, i: number, of: number): string {
+  return `${
+    of > 1
+      ? `<h2 style="font-size:15px;font-weight:900;text-transform:uppercase;margin:26px 0 12px;padding-top:18px;border-top:2px solid ${INK}">${i + 1}. ${esc(ceilingName(c, i))}</h2>`
+      : ''
+  }
+     <h2 style="${H2}">What you configured</h2>
+     ${specTableHtml(specLines(c))}
+     <h2 style="${H2}">Bill of materials</h2>
+     ${linesTableHtml(c.quote)}
+     ${
+       of > 1
+         ? `<p style="text-align:right;font-size:13px;margin:0 0 6px;color:#444">${esc(ceilingName(c, i))} — ${c.quote.needsManualPricing ? 'from ' : ''}<strong>${esc(totalOf(c.quote))}</strong></p>`
+         : ''
+     }`;
 }
 
 function specTableHtml(rows: [string, string][]): string {
@@ -138,56 +170,67 @@ const NO_PAYMENT_EN =
 
 /** a. The customer's confirmation. */
 export function buildCustomerEmail(input: OrderMailInput): { subject: string; html: string; text: string } {
-  const { reference, quote } = input;
-  const rows = specLines(input);
-  const subject = `Your STRETCH order ${reference}`;
+  const { reference, ceilings } = input;
+  const totals = orderTotals(ceilings);
+  const many = ceilings.length > 1;
+  const subject = `Your STRETCH order ${reference}${many ? ` — ${ceilings.length} ceilings` : ''}`;
 
   const html = shell(
     'Order confirmation',
     `<p style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:0 0 6px">Order ${esc(reference)}</p>
      <h1 style="font-size:26px;font-weight:900;text-transform:uppercase;margin:0 0 16px;line-height:1.1">Thank you — we have your order.</h1>
      <p style="font-size:14px;line-height:1.65;color:#444;margin:0 0 22px">${esc(NO_PAYMENT_EN)}</p>
-     <h2 style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:0 0 10px">What you configured</h2>
-     ${specTableHtml(rows)}
-     <h2 style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:0 0 10px">Bill of materials</h2>
-     ${linesTableHtml(quote)}
-     <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">
-       <tr><td style="padding:12px 0;border-top:2px solid ${INK};font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#666">${
-         quote.needsManualPricing ? 'From' : 'Total'
-       }</td>
-       <td align="right" style="padding:12px 0;border-top:2px solid ${INK};font-size:22px;font-weight:900">${esc(totalOf(quote))}</td></tr>
-     </table>
      ${
-       quote.needsManualPricing
-         ? `<p style="font-size:13px;color:#8a5b12;background:#fff7e6;border:1px solid #f2dfb3;padding:10px 12px;margin:12px 0 0;line-height:1.55">${quote.unpricedCount} line${
-             quote.unpricedCount === 1 ? '' : 's'
-           } still need a price. We work ${quote.unpricedCount === 1 ? 'it' : 'them'} out by hand and confirm on the proforma invoice.</p>`
+       many
+         ? `<p style="font-size:14px;line-height:1.6;margin:0 0 6px"><strong>${ceilings.length} ceilings:</strong> ${ceilings
+             .map((c, i) => esc(ceilingName(c, i)))
+             .join(' · ')}</p>`
          : ''
      }
-     ${input.meta.deliveryAddress ? `<h2 style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:22px 0 8px">Delivery</h2><p style="font-size:14px;line-height:1.6;margin:0;white-space:pre-line">${esc(input.meta.deliveryAddress)}</p>` : ''}
-     ${input.meta.note ? `<h2 style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:22px 0 8px">Your note</h2><p style="font-size:14px;line-height:1.6;margin:0;white-space:pre-line">${esc(input.meta.note)}</p>` : ''}
-     <h2 style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:24px 0 8px">What happens next</h2>
+     ${input.meta.projectRef ? `<p style="font-size:13px;color:#666;margin:0 0 18px">Project reference: ${esc(input.meta.projectRef)}</p>` : ''}
+     ${ceilings.map((c, i) => customerCeilingHtml(c, i, ceilings.length)).join('')}
+     <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;margin-top:${many ? 18 : 0}px">
+       <tr><td style="padding:12px 0;border-top:2px solid ${INK};font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#666">${
+         totals.needsManualPricing ? 'From' : 'Total'
+       }${many ? ` — ${ceilings.length} ceilings` : ''}</td>
+       <td align="right" style="padding:12px 0;border-top:2px solid ${INK};font-size:22px;font-weight:900">${esc(totalsOf(input))}</td></tr>
+     </table>
+     ${
+       totals.needsManualPricing
+         ? `<p style="font-size:13px;color:#8a5b12;background:#fff7e6;border:1px solid #f2dfb3;padding:10px 12px;margin:12px 0 0;line-height:1.55">${totals.unpricedCount} line${
+             totals.unpricedCount === 1 ? '' : 's'
+           } still need a price. We work ${totals.unpricedCount === 1 ? 'it' : 'them'} out by hand and confirm on the proforma invoice.</p>`
+         : ''
+     }
+     ${input.meta.deliveryAddress ? `<h2 style="${H2};margin-top:22px">Delivery</h2><p style="font-size:14px;line-height:1.6;margin:0;white-space:pre-line">${esc(input.meta.deliveryAddress)}</p>` : ''}
+     ${input.meta.note ? `<h2 style="${H2};margin-top:22px">Your note</h2><p style="font-size:14px;line-height:1.6;margin:0;white-space:pre-line">${esc(input.meta.note)}</p>` : ''}
+     <h2 style="${H2};margin-top:24px">What happens next</h2>
      <p style="font-size:14px;line-height:1.65;color:#444;margin:0 0 8px">We check the configuration, price anything still open, and send you a proforma invoice in EUR. Production starts once that is settled.</p>
      <p style="font-size:14px;line-height:1.65;color:#444;margin:0">Questions about this order? Reply to this e-mail or call us — quote ${esc(reference)}.</p>`,
   );
 
   const text = [
-    `Your STRETCH order ${reference}`,
+    `Your STRETCH order ${reference}${many ? ` — ${ceilings.length} ceilings` : ''}`,
     '',
     NO_PAYMENT_EN,
+    input.meta.projectRef ? `\nProject reference: ${input.meta.projectRef}` : '',
+    ...ceilings.flatMap((c, i) => [
+      '',
+      many ? `=== ${i + 1}. ${ceilingName(c, i).toUpperCase()} ===` : '',
+      'WHAT YOU CONFIGURED',
+      ...specLines(c).map(([k, v]) => `  ${k}: ${v}`),
+      '',
+      'BILL OF MATERIALS',
+      ...c.quote.lines.map(
+        (l) =>
+          `  ${l.qty} ${l.unit ?? ''} × ${l.label}${l.code ? ` [${l.code}]` : ''} — ${money(c.quote, l.lineTotalEur, l.lineTotalPln)}`,
+      ),
+      many ? `  ${ceilingName(c, i)}: ${c.quote.needsManualPricing ? 'from ' : ''}${totalOf(c.quote)}` : '',
+    ]),
     '',
-    'WHAT YOU CONFIGURED',
-    ...rows.map(([k, v]) => `  ${k}: ${v}`),
-    '',
-    'BILL OF MATERIALS',
-    ...quote.lines.map(
-      (l) =>
-        `  ${l.qty} ${l.unit ?? ''} × ${l.label}${l.code ? ` [${l.code}]` : ''} — ${money(quote, l.lineTotalEur, l.lineTotalPln)}`,
-    ),
-    '',
-    `${quote.needsManualPricing ? 'FROM' : 'TOTAL'}: ${totalOf(quote)}`,
-    quote.needsManualPricing
-      ? `${quote.unpricedCount} line(s) still need a price; we confirm them on the proforma invoice.`
+    `${totals.needsManualPricing ? 'FROM' : 'TOTAL'}${many ? ` (${ceilings.length} ceilings)` : ''}: ${totalsOf(input)}`,
+    totals.needsManualPricing
+      ? `${totals.unpricedCount} line(s) still need a price; we confirm them on the proforma invoice.`
       : '',
     '',
     input.meta.deliveryAddress ? `DELIVERY\n  ${input.meta.deliveryAddress}` : '',
@@ -205,15 +248,13 @@ export function buildCustomerEmail(input: OrderMailInput): { subject: string; ht
   return { subject, html, text };
 }
 
-/** b. Our copy — a production sheet. */
-export function buildInternalEmail(input: OrderMailInput): { subject: string; html: string; text: string } {
-  const { reference, quote, config: c, account } = input;
-  const flag = quote.needsManualPricing ? ' ⚠ NEEDS MANUAL PRICING' : '';
-  const subject = `Order ${reference} — ${account.company || account.email} (${quote.market})${flag}`;
-
-  const production: [string, string][] = [
+/** Production rows for ONE ceiling — the bench reads these top to bottom. */
+function productionRows(c: MailCeiling): [string, string][] {
+  const { quote, config } = c;
+  const rows: [string, string][] = [
     ['Panels', quote.panels.map((p) => `${p.label}: ${p.a.toFixed(2)} × ${p.b.toFixed(2)} m`).join(' | ')],
-    ['Seams', quote.weldCount > 0 ? `${quote.weldCount} seam(s), ${quote.weldMetres.toFixed(2)} m, along the ${input.config.seamDirection === 'auto' ? 'longer side' : input.config.seamDirection} — ${quote.foil.reason}` : 'none'],
+    ['Shape', config.shape === 'sloped' ? `Flat ${config.length.toFixed(2)} × ${config.width.toFixed(2)} m + angled ${(config.foldLength ?? (config.foldSide === 'width' ? config.width : config.length)).toFixed(2)} × ${config.slopeRun.toFixed(2)} m (fold along the ${config.foldSide})` : 'Flat'],
+    ['Seams', quote.weldCount > 0 ? `${quote.weldCount} seam(s), ${quote.weldMetres.toFixed(2)} m, along the ${config.seamDirection === 'auto' ? 'longer side' : config.seamDirection} — ${quote.foil.reason}` : 'none'],
     ['Foil code', quote.foil.code ?? '—'],
     ['Foil product', quote.foil.product ?? quote.foil.label ?? '—'],
     ['Roll width', quote.foil.widthCm ? `${quote.foil.widthCm} cm (widest span)` : '—'],
@@ -228,72 +269,98 @@ export function buildInternalEmail(input: OrderMailInput): { subject: string; ht
     ['Surface', `${quote.area.toFixed(2)} m²`],
     ['Perimeter', `${quote.perimeter.toFixed(2)} m`],
   ];
-
   const profiles = quote.lines.filter((l) => l.kind === 'profile' || l.kind === 'transition');
   if (profiles.length) {
-    production.push([
+    rows.push([
       'Profiles',
       profiles.map((l) => `${l.label}: ${l.qty} ${l.unit ?? ''}${l.unit === 'pc' ? ` (${(l.qty * 2).toFixed(1)} m at 2 m/piece)` : ''}`).join(' | '),
     ]);
   }
+  return rows;
+}
+
+function unpricedOf(quote: PricedBom) {
+  return quote.lines.filter((l) => l.status !== 'ok');
+}
+
+/** b. Our copy — a production sheet, one block per ceiling. */
+export function buildInternalEmail(input: OrderMailInput): { subject: string; html: string; text: string } {
+  const { reference, ceilings, account } = input;
+  const totals = orderTotals(ceilings);
+  const many = ceilings.length > 1;
+  const flag = totals.needsManualPricing ? ' ⚠ NEEDS MANUAL PRICING' : '';
+  const subject = `Order ${reference} — ${account.company || account.email} (${totals.market})${many ? ` — ${ceilings.length} ceilings` : ''}${flag}`;
 
   const account_rows: [string, string][] = [
     ['Account', account.email],
     ['Company', account.company ?? '—'],
-    ['Price group', quote.market],
-    ['Pricelist', `${quote.pricebookVersion}${quote.pricebookUpdatedAt ? ` (${String(quote.pricebookUpdatedAt).slice(0, 10)})` : ''}`],
+    ['Price group', totals.market],
+    ['Pricelist', `${ceilings[0]?.quote.pricebookVersion ?? '—'}${ceilings[0]?.quote.pricebookUpdatedAt ? ` (${String(ceilings[0].quote.pricebookUpdatedAt).slice(0, 10)})` : ''}`],
     ['Delivery', input.meta.deliveryAddress ?? '—'],
-    ['Ceiling', input.meta.reference ?? '—'],
+    ['Ceilings', ceilings.map((c, i) => ceilingName(c, i)).join('; ')],
     ['Project ref', input.meta.projectRef ?? '—'],
     ['Note', input.meta.note ?? '—'],
-    ['Shape', c.shape === 'sloped' ? `Flat + angled, slope ${c.slopeRun.toFixed(2)} m along the ${c.foldSide}` : 'Flat'],
   ];
 
-  const unpriced = quote.lines.filter((l) => l.status !== 'ok');
+  const allUnpriced = ceilings.flatMap((c, i) => unpricedOf(c.quote).map((l) => ({ l, name: ceilingName(c, i), market: c.quote.market })));
 
   const html = shell(
     'New order',
-    `<p style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:0 0 6px">Order ${esc(reference)}</p>
+    `<p style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:0 0 6px">Order ${esc(reference)}${many ? ` · ${ceilings.length} ceilings` : ''}</p>
      <h1 style="font-size:24px;font-weight:900;text-transform:uppercase;margin:0 0 16px;line-height:1.1">${esc(account.company || account.email)}</h1>
      ${
-       unpriced.length
+       allUnpriced.length
          ? `<div style="border:2px solid ${RED};background:#fdeaea;padding:12px 14px;margin:0 0 20px">
-              <p style="margin:0 0 6px;font-weight:900;color:${RED};font-size:13px;letter-spacing:.05em;text-transform:uppercase">Needs manual pricing — ${unpriced.length} line${unpriced.length === 1 ? '' : 's'}</p>
-              <ul style="margin:0;padding-left:18px;font-size:13px;line-height:1.6">${unpriced
-                .map((l) => `<li>${esc(l.label)} — ${esc(l.qty)} ${esc(l.unit ?? '')} (${esc(l.status === 'no_row' ? 'no pricebook row' : `no ${quote.market} price`)})</li>`)
+              <p style="margin:0 0 6px;font-weight:900;color:${RED};font-size:13px;letter-spacing:.05em;text-transform:uppercase">Needs manual pricing — ${allUnpriced.length} line${allUnpriced.length === 1 ? '' : 's'}</p>
+              <ul style="margin:0;padding-left:18px;font-size:13px;line-height:1.6">${allUnpriced
+                .map(({ l, name, market }) => `<li>${many ? `${esc(name)}: ` : ''}${esc(l.label)} — ${esc(l.qty)} ${esc(l.unit ?? '')} (${esc(l.status === 'no_row' ? 'no pricebook row' : `no ${market} price`)})</li>`)
                 .join('')}</ul>
             </div>`
          : ''
      }
-     <h2 style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:0 0 10px">Production</h2>
-     ${specTableHtml(production)}
-     <h2 style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:0 0 10px">Bill of materials</h2>
-     ${linesTableHtml(quote)}
-     <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;margin:0 0 22px">
-       <tr><td style="padding:12px 0;border-top:2px solid ${INK};font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#666">Subtotal (ex VAT, ex shipping)</td>
-       <td align="right" style="padding:12px 0;border-top:2px solid ${INK};font-size:22px;font-weight:900">${esc(totalOf(quote))}</td></tr>
+     ${ceilings
+       .map(
+         (c, i) => `${
+           many
+             ? `<h2 style="font-size:15px;font-weight:900;text-transform:uppercase;margin:26px 0 12px;padding-top:18px;border-top:2px solid ${INK}">${i + 1}. ${esc(ceilingName(c, i))}</h2>`
+             : ''
+         }
+     <h2 style="${H2}">Production</h2>
+     ${specTableHtml(productionRows(c))}
+     <h2 style="${H2}">Bill of materials</h2>
+     ${linesTableHtml(c.quote)}
+     ${many ? `<p style="text-align:right;font-size:13px;margin:0 0 6px;color:#444">${esc(ceilingName(c, i))} — <strong>${esc(totalOf(c.quote))}</strong></p>` : ''}`,
+       )
+       .join('')}
+     <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;margin:${many ? 18 : 0}px 0 22px">
+       <tr><td style="padding:12px 0;border-top:2px solid ${INK};font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#666">Subtotal (ex VAT, ex shipping)${many ? ` — ${ceilings.length} ceilings` : ''}</td>
+       <td align="right" style="padding:12px 0;border-top:2px solid ${INK};font-size:22px;font-weight:900">${esc(totalsOf(input))}</td></tr>
      </table>
-     <h2 style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:0 0 10px">Account</h2>
+     <h2 style="${H2}">Account</h2>
      ${specTableHtml(account_rows)}`,
   );
 
   const text = [
-    `ORDER ${reference} — ${account.company || account.email} (${quote.market})`,
-    quote.needsManualPricing ? `\n*** NEEDS MANUAL PRICING — ${unpriced.length} line(s) ***` : '',
-    ...unpriced.map((l) => `  ! ${l.label} — ${l.qty} ${l.unit ?? ''} (${l.status === 'no_row' ? 'no pricebook row' : `no ${quote.market} price`})`),
+    `ORDER ${reference} — ${account.company || account.email} (${totals.market})${many ? ` — ${ceilings.length} CEILINGS` : ''}`,
+    totals.needsManualPricing ? `\n*** NEEDS MANUAL PRICING — ${allUnpriced.length} line(s) ***` : '',
+    ...allUnpriced.map(({ l, name, market }) => `  ! ${many ? `${name}: ` : ''}${l.label} — ${l.qty} ${l.unit ?? ''} (${l.status === 'no_row' ? 'no pricebook row' : `no ${market} price`})`),
+    ...ceilings.flatMap((c, i) => [
+      '',
+      many ? `=== ${i + 1}. ${ceilingName(c, i).toUpperCase()} ===` : '',
+      'PRODUCTION',
+      ...productionRows(c).map(([k, v]) => `  ${k}: ${v}`),
+      '',
+      'BILL OF MATERIALS',
+      ...c.quote.lines.map(
+        (l) =>
+          `  ${l.qty} ${l.unit ?? ''} × ${l.label}${l.code ? ` [${l.code}]` : ''} — ${money(c.quote, l.lineTotalEur, l.lineTotalPln)}${
+            l.kind === 'ceiling' && l.note ? `\n      ${l.note}` : ''
+          }`,
+      ),
+      many ? `  ${ceilingName(c, i)}: ${totalOf(c.quote)}` : '',
+    ]),
     '',
-    'PRODUCTION',
-    ...production.map(([k, v]) => `  ${k}: ${v}`),
-    '',
-    'BILL OF MATERIALS',
-    ...quote.lines.map(
-      (l) =>
-        `  ${l.qty} ${l.unit ?? ''} × ${l.label}${l.code ? ` [${l.code}]` : ''} — ${money(quote, l.lineTotalEur, l.lineTotalPln)}${
-          l.kind === 'ceiling' && l.note ? `\n      ${l.note}` : ''
-        }`,
-    ),
-    '',
-    `SUBTOTAL (ex VAT, ex shipping): ${totalOf(quote)}`,
+    `SUBTOTAL (ex VAT, ex shipping)${many ? ` — ${ceilings.length} ceilings` : ''}: ${totalsOf(input)}`,
     '',
     'ACCOUNT',
     ...account_rows.map(([k, v]) => `  ${k}: ${v}`),
