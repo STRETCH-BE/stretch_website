@@ -450,7 +450,7 @@ export default function ConfiguratorView({
         </p>
         {err && <p className="cfg-err">{err}</p>}
         <style jsx>{`
-  .cfg { padding: clamp(24px,3vw,44px) 0 clamp(60px,7vw,90px); }
+  .cfg { padding-top: clamp(24px,3vw,44px); padding-bottom: clamp(60px,7vw,90px); }
   .cfg-empty { padding: clamp(40px,6vw,90px) 0; max-width: 640px; }
   .cfg-empty h1 { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; font-size: clamp(26px,3.4vw,42px); margin: 0 0 12px; }
   .cfg-empty p { color: var(--text-muted); font-size: 15px; line-height: 1.65; }
@@ -461,7 +461,9 @@ export default function ConfiguratorView({
   .cfg-head .lead { color: var(--text-muted); font-size: 15px; line-height: 1.6; max-width: 620px; margin: 0 0 14px; }
   .cfg-market { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
   .cfg-market select { font: inherit; font-size: 13px; text-transform: none; letter-spacing: 0; padding: 5px 8px; border: 1px solid var(--border-input); background: #fff; }
-  .cfg-grid { display: grid; grid-template-columns: 1fr 420px; gap: 34px; align-items: start; margin-top: 18px; }
+  .cfg-grid { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 34px; align-items: start; margin-top: 18px; }
+  .cfg-grid > * { min-width: 0; }
+  .cfg-form .row > * { min-width: 0; }
   .cfg-form .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
   .cfg-form input, .cfg-form select { font: inherit; font-size: 14px; padding: 9px 11px; border: 1px solid var(--border-input); background: #fff; width: 100%; min-width: 0; }
   .derived { display: flex; gap: 22px; flex-wrap: wrap; margin: 14px 0 0; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); }
@@ -546,8 +548,32 @@ export default function ConfiguratorView({
     }
   }
   @media (max-width: 520px) {
-    .derived { gap: 14px; }
+    .cfg-head h1 { font-size: clamp(26px, 8.5vw, 34px); }
+    .cfg-head .lead { font-size: 14px; }
+    .derived { gap: 10px 16px; padding: 10px 12px; }
+    .derived dd { font-size: 15px; }
+    .derived dd .sub { display: block; font-size: 11px; font-weight: 600; }
+    /* Two fields to a row, a third wraps under them at half width. */
     .cfg-form .row { gap: 10px; }
+    .cfg-form .row > * { flex: 1 1 calc(50% - 5px); }
+    .cfg-form input, .cfg-form select { font-size: 16px; padding: 10px 11px; } /* 16px: no iOS zoom on focus */
+    .seg button { padding: 11px 14px; font-size: 11.5px; }
+    /* The read-outs: a tidy two-column grid instead of a row that clips. */
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin: 12px 0; }
+    .facts dd .sub { display: block; }
+    .foilbox .v { font-size: 14px; }
+    .cfg-result th, .cfg-result td { padding: 7px 8px; }
+    .cfg-result table { font-size: 12px; }
+    /* Ceilings in the order: the amount and the buttons drop under the name. */
+    .basket-list li { flex-wrap: wrap; padding: 9px 10px; }
+    .basket-list .right { width: 100%; justify-content: space-between; }
+    .basket .add { width: 100%; justify-content: center; }
+    /* The fixed bar: the total may wrap, the button never clips. */
+    .cfg-bottombar { gap: 10px; padding: 9px 12px; padding-bottom: calc(9px + env(safe-area-inset-bottom, 0px)); }
+    .cfg-bottombar > div { min-width: 0; }
+    .cfg-bottombar .l { font-size: 9.5px; letter-spacing: .08em; white-space: normal; }
+    .cfg-bottombar strong { font-size: 17px; }
+    .cfg-bottombar .b { flex: 0 0 auto; white-space: nowrap; padding: 11px 16px; font-size: 12px; }
   }
 `}</style>
       </div>
@@ -1198,7 +1224,7 @@ export default function ConfiguratorView({
       </div>
 
       <style jsx>{`
-  .cfg { padding: clamp(24px,3vw,44px) 0 clamp(60px,7vw,90px); }
+  .cfg { padding-top: clamp(24px,3vw,44px); padding-bottom: clamp(60px,7vw,90px); }
   .cfg-empty { padding: clamp(40px,6vw,90px) 0; max-width: 640px; }
   .cfg-empty h1 { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; font-size: clamp(26px,3.4vw,42px); margin: 0 0 12px; }
   .cfg-empty p { color: var(--text-muted); font-size: 15px; line-height: 1.65; }
@@ -1209,7 +1235,9 @@ export default function ConfiguratorView({
   .cfg-head .lead { color: var(--text-muted); font-size: 15px; line-height: 1.6; max-width: 620px; margin: 0 0 14px; }
   .cfg-market { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
   .cfg-market select { font: inherit; font-size: 13px; text-transform: none; letter-spacing: 0; padding: 5px 8px; border: 1px solid var(--border-input); background: #fff; }
-  .cfg-grid { display: grid; grid-template-columns: 1fr 420px; gap: 34px; align-items: start; margin-top: 18px; }
+  .cfg-grid { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 34px; align-items: start; margin-top: 18px; }
+  .cfg-grid > * { min-width: 0; }
+  .cfg-form .row > * { min-width: 0; }
   .cfg-form .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
   .cfg-form input, .cfg-form select { font: inherit; font-size: 14px; padding: 9px 11px; border: 1px solid var(--border-input); background: #fff; width: 100%; min-width: 0; }
   .derived { display: flex; gap: 22px; flex-wrap: wrap; margin: 14px 0 0; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); }
@@ -1294,8 +1322,32 @@ export default function ConfiguratorView({
     }
   }
   @media (max-width: 520px) {
-    .derived { gap: 14px; }
+    .cfg-head h1 { font-size: clamp(26px, 8.5vw, 34px); }
+    .cfg-head .lead { font-size: 14px; }
+    .derived { gap: 10px 16px; padding: 10px 12px; }
+    .derived dd { font-size: 15px; }
+    .derived dd .sub { display: block; font-size: 11px; font-weight: 600; }
+    /* Two fields to a row, a third wraps under them at half width. */
     .cfg-form .row { gap: 10px; }
+    .cfg-form .row > * { flex: 1 1 calc(50% - 5px); }
+    .cfg-form input, .cfg-form select { font-size: 16px; padding: 10px 11px; } /* 16px: no iOS zoom on focus */
+    .seg button { padding: 11px 14px; font-size: 11.5px; }
+    /* The read-outs: a tidy two-column grid instead of a row that clips. */
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin: 12px 0; }
+    .facts dd .sub { display: block; }
+    .foilbox .v { font-size: 14px; }
+    .cfg-result th, .cfg-result td { padding: 7px 8px; }
+    .cfg-result table { font-size: 12px; }
+    /* Ceilings in the order: the amount and the buttons drop under the name. */
+    .basket-list li { flex-wrap: wrap; padding: 9px 10px; }
+    .basket-list .right { width: 100%; justify-content: space-between; }
+    .basket .add { width: 100%; justify-content: center; }
+    /* The fixed bar: the total may wrap, the button never clips. */
+    .cfg-bottombar { gap: 10px; padding: 9px 12px; padding-bottom: calc(9px + env(safe-area-inset-bottom, 0px)); }
+    .cfg-bottombar > div { min-width: 0; }
+    .cfg-bottombar .l { font-size: 9.5px; letter-spacing: .08em; white-space: normal; }
+    .cfg-bottombar strong { font-size: 17px; }
+    .cfg-bottombar .b { flex: 0 0 auto; white-space: nowrap; padding: 11px 16px; font-size: 12px; }
   }
 `}</style>
     </div>
