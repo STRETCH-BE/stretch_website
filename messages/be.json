@@ -3915,7 +3915,7 @@
             "links": [
               {
                 "label": "belcabines voor open kantoren",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5285,7 +5285,10 @@
     "orderKitCta": "Bestel de kit",
     "acousticResoundBefore": "Wandabsorbers, plafondeilanden en belcabines komen van ons zusterbedrijf in de STRETCH Group: ",
     "acousticResoundLink": "wandabsorbers en eilanden van Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " Wilt u een warme, zichtbare afwerking, dan zijn er ook ",
+    "acousticResoundWoodLink": "houten akoestische panelen",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {

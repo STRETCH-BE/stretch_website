@@ -18,7 +18,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { isValidLocale, type Locale } from '@/i18n/config';
-import { brand } from '@/lib/site-config';
+import { brand, resoundUrlFor } from '@/lib/site-config';
 import { buildAlternates, buildCanonical, buildOgLocales, apiBase, localeBase } from '@/lib/seo';
 import { breadcrumbSchema, faqPageSchema } from '@/lib/structured-data';
 import { acousticsSlugs, acousticsMarkets, acousticsHref, ACOUSTIC_PRODUCT_ROUTE } from '@/lib/page-slugs';
@@ -86,13 +86,17 @@ function H2({ text, className, style }: { text: string; className?: string; styl
 }
 const num = (n: number) => (Number.isInteger(n) ? String(n) : dec(n, 1));
 
-function Segments({ parts }: { parts: Segment[] }) {
+function Segments({ parts, locale }: { parts: Segment[]; locale: Locale }) {
   return (
     <>
       {parts.map((s, i) =>
         s.href ? (
-          /^https?:\/\//.test(s.href) ? (
-            // Sister-company link: a normal followed anchor (no nofollow/sponsored).
+          s.href.startsWith('resound:') ? (
+            // Sister-company link: "resound:<range>" → that range's page in this
+            // locale's Re-Sound language (else the locale root). A normal followed
+            // anchor, no nofollow/sponsored.
+            <a key={i} href={resoundUrlFor(locale, s.href.slice('resound:'.length))} className="lnk">{s.text}</a>
+          ) : /^https?:\/\//.test(s.href) ? (
             <a key={i} href={s.href} className="lnk">{s.text}</a>
           ) : (
             <Link key={i} href={s.href} className="lnk">{s.text}</Link>
@@ -306,7 +310,7 @@ export async function AcousticsView({ localeParam, slug }: { localeParam: string
           <div>
             {c.cannotFix.paragraphs.map((parts, i) => (
               <p key={i} style={{ fontSize: 15.5, lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 14px' }}>
-                <Segments parts={parts} />
+                <Segments parts={parts} locale={locale} />
               </p>
             ))}
           </div>

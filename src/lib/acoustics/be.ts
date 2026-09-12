@@ -167,8 +167,15 @@ export const be: AcousticsContent = {
           text: 'In een landschapskantoor telt niet alleen hoe snel geluid uitdooft, maar ook hoe ver spraak draagt: ISO 3382-3 drukt dat uit in de afname D2,S en de afleidingsafstand rD. Een absorberend plafond helpt, maar spraak blijft in rechte lijn tussen bureaus lopen. Daarom combineren we het plafond met schermen, ',
         },
         {
-          text: 'akoestische wandpanelen en belcabines van Re-Sound',
-          href: 'https://re-sound.be/nl',
+          text: 'PET-wandpanelen van Re-Sound',
+          href: 'resound:panels',
+        },
+        {
+          text: ' en ',
+        },
+        {
+          text: 'akoestische belcabines',
+          href: 'resound:booths',
         },
         {
           text: '. Die cabines worden binnen de STRETCH Group gebouwd in de eigen fabriek in Częstochowa.',

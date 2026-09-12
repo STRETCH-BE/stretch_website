@@ -3915,7 +3915,7 @@
             "links": [
               {
                 "label": "telefonbokse til storrumskontorer",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5275,7 +5275,10 @@
     "orderKitCta": "Bestil kittet",
     "acousticResoundBefore": "Vægabsorbenter, loftsøer og telefonbokse kommer fra vores søsterselskab i STRETCH Group: ",
     "acousticResoundLink": "vægabsorbenter og loftsøer fra Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " Ønsker du et varmt trælook, findes der også ",
+    "acousticResoundWoodLink": "akustikpaneler i træ",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {

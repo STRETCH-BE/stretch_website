@@ -3915,7 +3915,7 @@
             "links": [
               {
                 "label": "Telefonboxen für das Grossraumbüro",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5275,7 +5275,10 @@
     "orderKitCta": "Kit bestellen",
     "acousticResoundBefore": "Wandabsorber, Deckensegel und Telefonboxen kommen von unserem Schwesterunternehmen in der STRETCH Group: ",
     "acousticResoundLink": "Wandabsorber und Deckensegel von Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " Für eine warme Holzoptik gibt es ausserdem ",
+    "acousticResoundWoodLink": "Akustikpaneele aus Holz",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {

@@ -183,8 +183,15 @@ export const de: AcousticsContent = {
           text: 'Für Arbeitsstätten konkretisiert die ASR A3.7 „Lärm“ die Arbeitsstättenverordnung. Sie fordert raumakustische Maßnahmen im Arbeitsraum – genau das leistet die Absorption an der Decke. Sie ist aber nicht mit Schalldämmung zu verwechseln: Luftschall und Trittschall aus dem Nachbarraum werden über Bauteile nach DIN 4109 (R\'w, DnT,w, L\'n,w) begrenzt, nicht über Absorber; ebenso wenig senkt eine Akustikdecke den Pegel einer lauten Lüftungsanlage an der Quelle. Und wo Beschäftigte vertraulich telefonieren oder ungestört arbeiten müssen, braucht es eine raumtrennende Lösung: geschlossene Räume oder Boxen. Passende ',
         },
         {
-          text: 'Akustikpaneele für Wände und Telefonboxen von Re-Sound',
-          href: 'https://re-sound.be/de',
+          text: 'PET-Akustikpaneele von Re-Sound',
+          href: 'resound:panels',
+        },
+        {
+          text: ' und ',
+        },
+        {
+          text: 'Telefon- und Meetingboxen',
+          href: 'resound:booths',
         },
         {
           text: ' gibt es innerhalb der STRETCH Group.',

@@ -293,8 +293,34 @@ export const resoundLocaleFor: Record<Locale, 'nl' | 'fr' | 'de' | 'es' | 'pt' |
   pl: 'en',
 };
 
-export function resoundUrlFor(locale: Locale, path = ''): string {
-  return `${groupSites.resound}/${resoundLocaleFor[locale]}${path}`;
+export type ResoundLocale = (typeof resoundLocaleFor)[Locale];
+export type ResoundRange = 'booths' | 'panels' | 'wood';
+
+/**
+ * Re-Sound's range pages per Re-Sound locale — every link into re-sound.be
+ * goes to the LOCAL route (Michael, 12 Sep 2026). Only the Dutch paths are
+ * confirmed so far; a locale without a confirmed path for a range links to
+ * its locale root until its URL is known. Add a path here and every footer,
+ * product, materials, article and acoustics-guide link picks it up.
+ */
+export const resoundRangePaths: Partial<Record<ResoundLocale, Partial<Record<ResoundRange, string>>>> = {
+  nl: {
+    booths: '/products/akoestische-belcabines',
+    panels: '/products/pet-akoestische-panelen',
+    wood: '/products/houten-akoestische-panelen',
+  },
+};
+
+/** True when this locale's Re-Sound language has a confirmed page for the range. */
+export function hasResoundRange(locale: Locale, range: ResoundRange): boolean {
+  return typeof resoundRangePaths[resoundLocaleFor[locale]]?.[range] === 'string';
+}
+
+/** re-sound.be URL for this locale: the range page when confirmed, else the locale root. */
+export function resoundUrlFor(locale: Locale, range?: ResoundRange | string): string {
+  const rl = resoundLocaleFor[locale];
+  const path = range ? resoundRangePaths[rl]?.[range as ResoundRange] ?? '' : '';
+  return `${groupSites.resound}/${rl}${path}`;
 }
 
 // ---------------------------------------------------------------------------

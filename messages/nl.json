@@ -3915,7 +3915,7 @@
             "links": [
               {
                 "label": "concentratiecabines voor de kantoortuin",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5291,7 +5291,10 @@
     "orderKitCta": "Bestel de kit",
     "acousticResoundBefore": "Voor wanden, eilanden en telefooncellen werkt u met ons zusterbedrijf uit dezelfde groep: ",
     "acousticResoundLink": "akoestische wandabsorbers van Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " Liever een warme houtlook? Dan zijn er ook ",
+    "acousticResoundWoodLink": "houten akoestische wandpanelen",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {

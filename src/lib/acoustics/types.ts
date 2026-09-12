@@ -4,8 +4,10 @@
 // (AcousticsRoute.tsx) computes the Sabine worked example from `sabine.room`
 // so the printed arithmetic can never disagree with the prose.
 
-/** A run of text, optionally a link. External hrefs render as a plain
- *  followed <a>; locale-relative hrefs render through next-intl's Link. */
+/** A run of text, optionally a link. "resound:<range>" resolves to that
+ *  Re-Sound range page in the locale's Re-Sound language (site-config
+ *  resoundRangePaths); other external hrefs render as a plain followed <a>;
+ *  locale-relative hrefs render through next-intl's Link. */
 export type Segment = { text: string; href?: string };
 
 export type AcousticsSurface = { material: string; alpha: number };

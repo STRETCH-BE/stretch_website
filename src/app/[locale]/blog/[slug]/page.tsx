@@ -145,8 +145,9 @@ export default async function BlogPostPage({ params }: { params: { locale: strin
                 <p style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 20px', fontWeight: 600 }}>
                   {section.links.map((link, i) =>
                     link.href.startsWith('resound:') ? (
-                      // Sister-company link: the marker resolves to this locale's
-                      // Re-Sound language (resoundLocaleFor) — a normal followed link.
+                      // Sister-company link: "resound:<range>" resolves to that range's
+                      // page in this locale's Re-Sound language (resoundRangePaths), else
+                      // the locale root — a normal followed link.
                       <a key={i} href={resoundUrlFor(locale, link.href.slice('resound:'.length))}>
                         {link.label}
                       </a>

@@ -173,8 +173,15 @@ export const nl: AcousticsContent = {
           text: 'De nagalmtijd zegt hoe lang geluid blijft hangen, niet hoe ver het komt. In het rekenvoorbeeld zakt de kantoortuin van 1,6 s naar ongeveer 0,4 s, en toch is een collega op acht meter dan nog steeds woordelijk te verstaan: het plafond haalt de reflecties weg, maar het rechtstreekse geluid van mond naar oor blijft. NEN-EN-ISO 3382-3 meet daarom de spraakafname per verdubbeling van de afstand (D2,S) en de afleidingsafstand rD. Om die te verbeteren heeft u schermen tussen de bureaus, absorptie op de reflecterende wanden en aparte ruimtes voor bellen en overleg nodig. Daarvoor werken wij binnen de STRETCH Group samen met ons zusterbedrijf: ',
         },
         {
-          text: 'de akoestische wandpanelen en focusruimtes van Re-Sound',
-          href: 'https://re-sound.be/nl',
+          text: 'de PET-wandpanelen van Re-Sound',
+          href: 'resound:panels',
+        },
+        {
+          text: ' en de ',
+        },
+        {
+          text: 'focus- en belcellen',
+          href: 'resound:booths',
         },
         {
           text: ' vullen het plafond aan waar de absorptie boven uw hoofd ophoudt.',

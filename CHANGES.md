@@ -1,3 +1,28 @@
+## 2026-09-12 (49) — Re-Sound links go to the range pages, not the locale root
+
+Michael, 12 Sep 2026: *"Each time use the local route"* — with the Dutch
+range pages: `/nl/products/akoestische-belcabines`,
+`/nl/products/pet-akoestische-panelen`,
+`/nl/products/houten-akoestische-panelen`.
+
+`resoundRangePaths` in `src/lib/site-config.ts` now maps each Re-Sound
+locale to its booths / PET panels / wooden panels pages;
+`resoundUrlFor(locale, range)` returns the range page where it is
+confirmed and the locale root otherwise. Every placement asks for a
+range: the product-page spec note and the materials entry → PET panels
+(the materials entry adds a wooden-panels link where that page exists),
+the article's link row → booths (`resound:booths` marker), and the four
+acoustics guides now carry two links each — PET panels and booths — with
+their own anchors. The footer company link stays on the locale root.
+Only the Dutch paths are known; fr, de, en, es and pt still resolve to
+their root until their URLs are added to the map (one line each).
+
+Verified on the dev server per domain: .be/.nl links resolve to the
+three Dutch pages, .fr/.de/.dk fall back to their Re-Sound root; parity
+16/16 for the new `materials.acousticResoundWood*` keys and the
+`resound:booths` marker; overlays fresh; tsc, lint and
+check:client-messages clean.
+
 ## 2026-09-12 (48) — Re-Sound cross-links: group footer, Organization schema, four acoustics guides, three contextual links
 
 Michael's SEO brief, 12 Sep 2026: re-sound.be (the group's acoustic
