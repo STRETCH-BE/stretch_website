@@ -4,8 +4,11 @@ Michael, 12 Sep 2026, with the URL list for all ten Re-Sound languages:
 `/{locale}/products/acoustic-phone-booths`, `/pet-acoustic-panels`,
 `/wood-acoustic-panels`. `resoundRangePaths` now covers en, fr, de, es and
 pt with that pattern; nl keeps the Dutch slugs given earlier as "the Dutch
-version of the pages" (the two messages differ on /nl — to confirm with
-Re-Sound; one line to change). The Nordic domains keep linking to /en
+version of the pages". Michael's definitive list then showed that French
+and German have localised slugs too (`cabines-acoustiques`,
+`panneaux-acoustiques-pet`, `panneaux-acoustiques-bois`; `telefonboxen`,
+`pet-akustikpaneele`, `holz-akustikpaneele`) — mapped in the same
+commit series. The Nordic domains keep linking to /en
 because the Nordic Re-Sound locales are noindex. With every language
 mapped, the materials entry's wooden-panels link now appears on all
 domains. Report updated.
