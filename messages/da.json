@@ -182,7 +182,14 @@
     "dealers": "Forhandlernetværk",
     "worldwideHeading": "STRETCH i verden",
     "swissPartnerHeading": "Generalagent — Schweiz & Liechtenstein",
-    "manufacturerHeading": "Producent — Belgien"
+    "manufacturerHeading": "Producent — Belgien",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "strækloft og vægge",
+      "resound": "akustikpaneler og telefonbokse",
+      "metal": "metalbearbejdning",
+      "alto": "produktion, Polen"
+    }
   },
   "portal": {
     "login": {

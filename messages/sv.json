@@ -182,7 +182,14 @@
     "dealers": "Återförsäljarnätverk",
     "worldwideHeading": "STRETCH i världen",
     "swissPartnerHeading": "Generalagent — Schweiz & Liechtenstein",
-    "manufacturerHeading": "Tillverkare — Belgien"
+    "manufacturerHeading": "Tillverkare — Belgien",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "spänntak och väggar",
+      "resound": "akustikpaneler och telefonbås",
+      "metal": "metallbearbetning",
+      "alto": "produktion, Polen"
+    }
   },
   "portal": {
     "login": {

@@ -182,7 +182,14 @@
     "dealers": "Dealer network",
     "worldwideHeading": "STRETCH worldwide",
     "swissPartnerHeading": "General representative — Switzerland & Liechtenstein",
-    "manufacturerHeading": "Manufacturer — Belgium"
+    "manufacturerHeading": "Manufacturer — Belgium",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "stretch ceilings and walls",
+      "resound": "acoustic panels and phone booths",
+      "metal": "metalworking",
+      "alto": "production, Poland"
+    }
   },
   "portal": {
     "login": {

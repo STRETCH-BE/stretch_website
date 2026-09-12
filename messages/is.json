@@ -182,7 +182,14 @@
     "dealers": "Söluaðilanet",
     "worldwideHeading": "STRETCH um allan heim",
     "swissPartnerHeading": "Aðalumboðsaðili — Sviss & Liechtenstein",
-    "manufacturerHeading": "Framleiðandi — Belgía"
+    "manufacturerHeading": "Framleiðandi — Belgía",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "dúkaloft og veggir",
+      "resound": "hljóðdeyfiplötur og símaklefar",
+      "metal": "málmvinnsla",
+      "alto": "framleiðsla, Pólland"
+    }
   },
   "portal": {
     "login": {

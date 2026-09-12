@@ -182,7 +182,14 @@
     "dealers": "Réseau de revendeurs",
     "worldwideHeading": "STRETCH dans le monde",
     "swissPartnerHeading": "Représentant général — Suisse & Liechtenstein",
-    "manufacturerHeading": "Fabricant — Belgique"
+    "manufacturerHeading": "Fabricant — Belgique",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "plafonds et murs tendus",
+      "resound": "panneaux acoustiques et cabines acoustiques",
+      "metal": "métallerie",
+      "alto": "production, Pologne"
+    }
   },
   "portal": {
     "login": {

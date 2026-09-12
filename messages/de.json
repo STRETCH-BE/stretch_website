@@ -182,7 +182,14 @@
     "dealers": "Händlernetz",
     "worldwideHeading": "STRETCH weltweit",
     "swissPartnerHeading": "Generalvertretung — Schweiz & Liechtenstein",
-    "manufacturerHeading": "Hersteller — Belgien"
+    "manufacturerHeading": "Hersteller — Belgien",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "Spanndecken und Spannwände",
+      "resound": "Akustikpaneele und Telefonboxen",
+      "metal": "Metallverarbeitung",
+      "alto": "Produktion, Polen"
+    }
   },
   "portal": {
     "login": {

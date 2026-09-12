@@ -182,7 +182,14 @@
     "dealers": "Dealernetwerk",
     "worldwideHeading": "STRETCH wereldwijd",
     "swissPartnerHeading": "Algemeen vertegenwoordiger — Zwitserland & Liechtenstein",
-    "manufacturerHeading": "Fabrikant — België"
+    "manufacturerHeading": "Fabrikant — België",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "spanplafonds en wanden",
+      "resound": "akoestische panelen en belcabines",
+      "metal": "metaalbewerking",
+      "alto": "productie Polen"
+    }
   },
   "portal": {
     "login": {

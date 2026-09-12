@@ -201,7 +201,14 @@
     "dealers": "Sieć dealerów",
     "worldwideHeading": "STRETCH na świecie",
     "swissPartnerHeading": "Generalny przedstawiciel — Szwajcaria i Liechtenstein",
-    "manufacturerHeading": "Producent — Belgia"
+    "manufacturerHeading": "Producent — Belgia",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "sufity napinane i ściany",
+      "resound": "panele akustyczne i budki akustyczne",
+      "metal": "obróbka metali",
+      "alto": "produkcja, Polska"
+    }
   },
   "portal": {
     "login": {
