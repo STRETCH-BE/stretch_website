@@ -298,17 +298,29 @@ export type ResoundRange = 'booths' | 'panels' | 'wood';
 
 /**
  * Re-Sound's range pages per Re-Sound locale — every link into re-sound.be
- * goes to the LOCAL route (Michael, 12 Sep 2026). Only the Dutch paths are
- * confirmed so far; a locale without a confirmed path for a range links to
- * its locale root until its URL is known. Add a path here and every footer,
- * product, materials, article and acoustics-guide link picks it up.
+ * goes to the LOCAL route (Michael, 12 Sep 2026). Dutch uses the Dutch
+ * slugs Michael gave as "the Dutch version of the pages"; the other
+ * languages follow the site-wide pattern /{locale}/products/{english-slug}
+ * from his URL list. A locale without a path for a range links to its
+ * locale root. The Nordic Re-Sound locales exist but are noindex, so the
+ * Nordic domains keep linking to /en (resoundLocaleFor).
  */
+const RESOUND_EN_SLUGS: Record<ResoundRange, string> = {
+  booths: '/products/acoustic-phone-booths',
+  panels: '/products/pet-acoustic-panels',
+  wood: '/products/wood-acoustic-panels',
+};
 export const resoundRangePaths: Partial<Record<ResoundLocale, Partial<Record<ResoundRange, string>>>> = {
   nl: {
     booths: '/products/akoestische-belcabines',
     panels: '/products/pet-akoestische-panelen',
     wood: '/products/houten-akoestische-panelen',
   },
+  en: RESOUND_EN_SLUGS,
+  fr: RESOUND_EN_SLUGS,
+  de: RESOUND_EN_SLUGS,
+  es: RESOUND_EN_SLUGS,
+  pt: RESOUND_EN_SLUGS,
 };
 
 /** True when this locale's Re-Sound language has a confirmed page for the range. */
