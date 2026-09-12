@@ -22,7 +22,8 @@
       "clientLogin": "Klantenzone",
       "materials": "Materialen",
       "architects": "Architecten",
-      "priceCalculator": "Prijscalculator"
+      "priceCalculator": "Prijscalculator",
+      "acoustics": "Akoestiek"
     },
     "cta": {
       "freeQuote": "Gratis offerte",
@@ -1550,6 +1551,10 @@
             {
               "title": "Technische fiche",
               "sub": "αw- & klassewaarden"
+            },
+            {
+              "title": "Akoestiek uitgelegd",
+              "sub": "Nagalmtijd, richtlijnen en rekenvoorbeeld"
             }
           ]
         },

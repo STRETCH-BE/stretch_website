@@ -22,7 +22,8 @@
       "clientLogin": "Espace client",
       "materials": "Matériaux",
       "architects": "Architectes",
-      "priceCalculator": "Calculateur de prix"
+      "priceCalculator": "Calculateur de prix",
+      "acoustics": "Acoustique"
     },
     "cta": {
       "freeQuote": "Devis gratuit",
@@ -1550,6 +1551,10 @@
             {
               "title": "Fiche technique",
               "sub": "Valeurs αw & classes"
+            },
+            {
+              "title": "L’acoustique en pratique",
+              "sub": "Temps de réverbération, normes et calcul"
             }
           ]
         },

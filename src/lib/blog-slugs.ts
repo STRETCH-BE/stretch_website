@@ -15,6 +15,7 @@
 // ============================================================================
 import type { Locale } from '@/i18n/config';
 import slugMap from './blog-slugs.json';
+import { isAcousticsRoute, acousticsHref } from './page-slugs';
 
 export type BlogSlugMap = Record<string, Partial<Record<Locale, string>>>;
 
@@ -77,6 +78,9 @@ export function localizeHref(href: string, locale: Locale): string {
  * paths pass through unchanged.
  */
 export function pathForLocale(pathname: string, from: Locale, to: Locale): string {
+  // The acoustics guide has a slug per locale and exists on a few markets
+  // only: the switcher lands on the target's own slug, else on the product.
+  if (isAcousticsRoute(pathname)) return acousticsHref(to);
   const m = /^\/blog\/([^/?#]+)(.*)$/.exec(pathname);
   if (!m) return pathname;
   const slugInUrl = m[1];

@@ -22,7 +22,8 @@
       "clientLogin": "Innskráning viðskiptavina",
       "materials": "Efni",
       "architects": "Arkitektar",
-      "priceCalculator": "Verðreiknivél"
+      "priceCalculator": "Verðreiknivél",
+      "acoustics": "Hljóðvist"
     },
     "cta": {
       "freeQuote": "Ókeypis tilboð",
@@ -1550,6 +1551,10 @@
             {
               "title": "Tæknilegt gagnablað",
               "sub": "αw- og flokkagildi"
+            },
+            {
+              "title": "Leiðbeiningar um hljóðvist",
+              "sub": "Ómtími, staðlar og reikningsdæmi"
             }
           ]
         },

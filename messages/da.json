@@ -22,7 +22,8 @@
       "clientLogin": "Kundelogin",
       "materials": "Materialer",
       "architects": "Arkitekter",
-      "priceCalculator": "Prisberegner"
+      "priceCalculator": "Prisberegner",
+      "acoustics": "Rumakustik"
     },
     "cta": {
       "freeQuote": "Gratis tilbud",
@@ -1550,6 +1551,10 @@
             {
               "title": "Teknisk datablad",
               "sub": "αw- & klasseværdier"
+            },
+            {
+              "title": "Guide til rumakustik",
+              "sub": "Efterklangstid, normer og regneeksempel"
             }
           ]
         },

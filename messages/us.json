@@ -22,7 +22,8 @@
       "clientLogin": "Client login",
       "materials": "Materials",
       "architects": "Architects",
-      "priceCalculator": "Price calculator"
+      "priceCalculator": "Price calculator",
+      "acoustics": "Room acoustics"
     },
     "cta": {
       "freeQuote": "Free quote",
@@ -1550,6 +1551,10 @@
             {
               "title": "Technical datasheet",
               "sub": "αw & class values"
+            },
+            {
+              "title": "Room acoustics guide",
+              "sub": "Reverberation, standards, worked example"
             }
           ]
         },

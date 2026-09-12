@@ -22,7 +22,8 @@
       "clientLogin": "Kundenlogin",
       "materials": "Material",
       "architects": "Architekten",
-      "priceCalculator": "Kostenrechner"
+      "priceCalculator": "Kostenrechner",
+      "acoustics": "Raumakustik"
     },
     "cta": {
       "freeQuote": "Kostenloses Angebot",
@@ -1550,6 +1551,10 @@
             {
               "title": "Technisches Datenblatt",
               "sub": "αw- & Klassenwerte"
+            },
+            {
+              "title": "Raumakustik in der Praxis",
+              "sub": "Nachhallzeit, DIN 18041 und Rechenbeispiel"
             }
           ]
         },

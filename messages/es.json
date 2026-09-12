@@ -22,7 +22,8 @@
       "clientLogin": "Acceso clientes",
       "materials": "Materiales",
       "architects": "Arquitectos",
-      "priceCalculator": "Calculadora de precios"
+      "priceCalculator": "Calculadora de precios",
+      "acoustics": "Acústica"
     },
     "cta": {
       "freeQuote": "Presupuesto gratis",
@@ -1550,6 +1551,10 @@
             {
               "title": "Ficha técnica",
               "sub": "Valores αw y clases"
+            },
+            {
+              "title": "Guía de acústica de salas",
+              "sub": "Reverberación, normas y ejemplo de cálculo"
             }
           ]
         },

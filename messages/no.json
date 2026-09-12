@@ -22,7 +22,8 @@
       "clientLogin": "Kundeinnlogging",
       "materials": "Materialer",
       "architects": "Arkitekter",
-      "priceCalculator": "Prisberegner"
+      "priceCalculator": "Prisberegner",
+      "acoustics": "Romakustikk"
     },
     "cta": {
       "freeQuote": "Gratis tilbud",
@@ -1550,6 +1551,10 @@
             {
               "title": "Teknisk datablad",
               "sub": "αw- & klasseverdier"
+            },
+            {
+              "title": "Guide til romakustikk",
+              "sub": "Etterklangstid, normer og regneeksempel"
             }
           ]
         },
