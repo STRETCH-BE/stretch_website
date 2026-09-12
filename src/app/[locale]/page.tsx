@@ -10,7 +10,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { defaultLocale, isValidLocale, type Locale } from '@/i18n/config';
 import JsonLd from '@/components/seo/JsonLd';
-import { organizationSchema, websiteSchema, localBusinessSchema, polishBusinessSchema } from '@/lib/structured-data';
+import { websiteSchema, localBusinessSchema, polishBusinessSchema } from '@/lib/structured-data';
 
 import Hero from '@/components/sections/home/Hero';
 import HomeEstimator from '@/components/sections/home/HomeEstimator';
@@ -40,7 +40,6 @@ export default async function HomePage({ params }: { params: { locale: string } 
 
   return (
     <>
-      <JsonLd data={organizationSchema()} />
       <JsonLd data={websiteSchema({ locale, description: t('homeDescription'), hasSearch: false })} />
       {/* pl: Alto Design Sp. z o.o. (Częstochowa) is the local entity, not the Belgian HQ. */}
       <JsonLd data={locale === 'pl' ? polishBusinessSchema() : localBusinessSchema()} />

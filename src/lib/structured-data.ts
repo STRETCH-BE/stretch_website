@@ -3,7 +3,7 @@
 // Render output via <JsonLd data={...} />. Uses @id URIs so schemas
 // cross-reference instead of duplicating. Never fabricates ratings or prices.
 // ============================================================================
-import { siteUrl, brand, contact, offices, salesTerritory, social, polishEntity } from '@/lib/site-config';
+import { siteUrl, brand, contact, offices, salesTerritory, social, polishEntity, groupSites } from '@/lib/site-config';
 import { locales, localeFullCodes, originForLocale, type Locale } from '@/i18n/config';
 import { indicativePriceRange } from '@/lib/indicative-prices';
 import { settlementCurrencyFor, pricesPublished } from '@/lib/currency';
@@ -38,7 +38,7 @@ export function organizationSchema() {
     logo: { '@type': 'ImageObject', url: logoUrl, width: 512, height: 512 },
     description: brand.description,
     foundingDate: String(brand.founded),
-    parentOrganization: { '@type': 'Organization', name: brand.parentCompany },
+    parentOrganization: { '@type': 'Organization', name: brand.parentCompany, url: groupSites.group },
     address: postalAddress,
     contactPoint: [
       {
@@ -50,7 +50,9 @@ export function organizationSchema() {
         availableLanguage: availableLanguages,
       },
     ],
-    sameAs: social.map((s) => s.url),
+    // Social profiles plus the sister companies — the group's other sites are
+    // the same entity's presence elsewhere on the web.
+    sameAs: [...social.map((s) => s.url), groupSites.resound, groupSites.metal, groupSites.alto],
   };
 }
 

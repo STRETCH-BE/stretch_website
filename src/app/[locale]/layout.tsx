@@ -21,6 +21,8 @@ import { LeadModalProvider } from '@/components/LeadGenModal';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CookieConsent from '@/components/layout/CookieConsent';
+import JsonLd from '@/components/seo/JsonLd';
+import { organizationSchema } from '@/lib/structured-data';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -88,6 +90,9 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <body>
+        {/* The ONE Organization node, on every page of every domain — pages
+            reference its @id instead of re-emitting it. */}
+        <JsonLd data={organizationSchema()} />
         <NextIntlClientProvider locale={locale} messages={clientMessages(messages)}>
       {/* Consent Mode v2 defaults — must run before analytics. */}
       <ConsentModeDefaults />
