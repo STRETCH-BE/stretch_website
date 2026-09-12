@@ -727,7 +727,10 @@
     "chartCount": "{count, plural, one {# kolor} few {# kolory} many {# kolorów} other {# koloru}}",
     "anyRal": "Dowolny kolor RAL na zamówienie",
     "dealerDirect": "Dostarczamy i montujemy bezpośrednio — skontaktuj się z nami",
-    "priceLink": "Ile to kosztuje za m²?"
+    "priceLink": "Ile to kosztuje za m²?",
+    "acousticWallBefore": "Ściany nadal odbijają dźwięk? ",
+    "acousticWallLink": "Panele akustyczne ścienne Re-Sound",
+    "acousticWallAfter": ", naszej spółki siostrzanej w STRETCH Group, uzupełniają sufit."
   },
   "productsPage": {
     "eyebrow": "Nasze rozwiązania",
@@ -3925,7 +3928,14 @@
             "heading": "Gdzie naprawdę się opłaca",
             "paragraphs": [
               "Studia nagrań, kina domowe, biura open space, restauracje, sale lekcyjne i placówki ochrony zdrowia — wszystkie na tym korzystają. Ten sam system obejmuje też podwieszane wyspy sufitowe i dekoracyjne panele ścienne tam, gdzie pełny sufit nie wchodzi w grę.",
+              "Gdy sam sufit nie wystarcza — równoległe twarde ściany, rozmowy telefoniczne w open space — nasza spółka siostrzana Re-Sound uzupełnia go absorberami ściennymi i budkami produkowanymi w STRETCH Group.",
               "Jeśli walczysz z pogłosem w konkretnym pomieszczeniu, poproś o wycenę i podaj wymiary oraz przeznaczenie — doradzimy właściwy absorber i wykończenie."
+            ],
+            "links": [
+              {
+                "label": "budki akustyczne do biur open space",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5281,7 +5291,10 @@
     "colourPrinted": "Z nadrukiem",
     "colourCodeLabel": "Kod koloru",
     "colourCodePlaceholder": "np. RAL 9016 lub nr z wzornika",
-    "orderKitCta": "Zamów zestaw"
+    "orderKitCta": "Zamów zestaw",
+    "acousticResoundBefore": "Absorbery ścienne, wyspy sufitowe i budki akustyczne pochodzą od naszej spółki siostrzanej w STRETCH Group: ",
+    "acousticResoundLink": "absorbery ścienne i wyspy sufitowe Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

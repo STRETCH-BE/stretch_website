@@ -13,6 +13,7 @@ import { pricesPublished } from '@/lib/currency';
 import type { Locale } from '@/i18n/config';
 import { localizeProduct, type CatalogEntry } from '@/lib/localize-product';
 import { productImage, pimg } from '@/lib/product-images';
+import { resoundUrlFor } from '@/lib/site-config';
 import ColourChart from '@/components/sections/ColourChart';
 
 // Renders a colour name as a real swatch background (solid colour or a gradient
@@ -192,6 +193,15 @@ export default function SolutionPage({ product: baseProduct }: { product: Produc
               </div>
             ))}
           </div>
+          {product.key === 'acoustic' && (
+            // Hand-off to the sister company for walls and booths (STRETCH Group):
+            // a normal followed link with its own anchor per locale.
+            <p style={{ margin: '24px 0 0', maxWidth: 760, fontSize: 14.5, lineHeight: 1.65, color: 'var(--on-dark-muted)' }}>
+              {t('acousticWallBefore')}
+              <a href={resoundUrlFor(locale)} style={{ color: '#fff', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 }}>{t('acousticWallLink')}</a>
+              {t('acousticWallAfter')}
+            </p>
+          )}
         </div>
       </section>
 

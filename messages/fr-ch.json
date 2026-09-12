@@ -708,7 +708,10 @@
     "chartCount": "{count, plural, one {# couleur} other {# couleurs}}",
     "anyRal": "Toute teinte RAL sur demande",
     "dealerDirect": "Livraison et pose en direct — contactez-nous",
-    "priceLink": "Quel est le prix au m² ?"
+    "priceLink": "Quel est le prix au m² ?",
+    "acousticWallBefore": "Les murs réfléchissent encore ? Les ",
+    "acousticWallLink": "panneaux muraux acoustiques de Re-Sound",
+    "acousticWallAfter": ", notre société sœur au sein du STRETCH Group, complètent le plafond."
   },
   "productsPage": {
     "eyebrow": "Nos solutions",
@@ -3906,7 +3909,14 @@
             "heading": "Là où il fait la différence",
             "paragraphs": [
               "Studios d'enregistrement, home cinémas, bureaux paysagers, restaurants, salles de classe et espaces de santé : tous y gagnent. Le même système se décline en îlots acoustiques suspendus et en panneaux muraux décoratifs là où un plafond complet n'est pas possible.",
+              "Quand le plafond seul ne suffit pas — murs durs parallèles, appels en open space — notre société sœur Re-Sound complète avec des absorbeurs muraux et des cabines fabriqués au sein du STRETCH Group.",
               "Vous luttez contre la réverbération dans une pièce précise ? Demandez un devis en indiquant les dimensions et l'usage — nous vous conseillerons l'absorbant et la finition adaptés."
+            ],
+            "links": [
+              {
+                "label": "cabines acoustiques pour open space",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5271,7 +5281,10 @@
     "colourPrinted": "Imprimé",
     "colourCodeLabel": "Code couleur",
     "colourCodePlaceholder": "p. ex. RAL 9016 ou n° du nuancier",
-    "orderKitCta": "Commander le kit"
+    "orderKitCta": "Commander le kit",
+    "acousticResoundBefore": "Absorbeurs muraux, îlots et cabines acoustiques viennent de notre société sœur au sein du STRETCH Group : ",
+    "acousticResoundLink": "absorbeurs muraux et îlots acoustiques Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

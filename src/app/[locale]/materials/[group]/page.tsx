@@ -9,7 +9,7 @@ import { Link } from '@/i18n/navigation';
 import PortalLink from '@/components/ui/PortalLink';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { isValidLocale, locales, type Locale } from '@/i18n/config';
-import { brand } from '@/lib/site-config';
+import { brand, resoundUrlFor } from '@/lib/site-config';
 import { localeBase, buildAlternates, apiBase } from '@/lib/seo';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
@@ -83,6 +83,14 @@ export default async function MaterialGroupPage({ params }: { params: { locale: 
           {g.name}<span className="accent">.</span>
         </h1>
         <p className="lead" style={{ maxWidth: 640, margin: 0 }}>{g.intro}</p>
+        {g.slug === 'acoustic-panels' && (
+          // Walls, islands and booths come from Re-Sound (STRETCH Group) — followed link, own anchor per locale.
+          <p style={{ maxWidth: 640, margin: '14px 0 0', fontSize: 15, lineHeight: 1.6, color: 'var(--text-muted)' }}>
+            {t('acousticResoundBefore')}
+            <a href={resoundUrlFor(locale)} style={{ color: 'var(--black)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: 3 }}>{t('acousticResoundLink')}</a>
+            {t('acousticResoundAfter')}
+          </p>
+        )}
       </section>
 
       {/* Items */}

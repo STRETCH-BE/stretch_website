@@ -708,7 +708,10 @@
     "chartCount": "{count, plural, one {# cor} other {# cores}}",
     "anyRal": "Qualquer cor RAL sob pedido",
     "dealerDirect": "Entregamos e instalamos diretamente — contacte-nos",
-    "priceLink": "Quanto custa por m²?"
+    "priceLink": "Quanto custa por m²?",
+    "acousticWallBefore": "As paredes continuam a refletir o som? Os ",
+    "acousticWallLink": "painéis acústicos de parede da Re-Sound",
+    "acousticWallAfter": ", a nossa empresa-irmã no STRETCH Group, completam o teto."
   },
   "productsPage": {
     "eyebrow": "As nossas soluções",
@@ -3906,7 +3909,14 @@
             "heading": "Onde mostra o seu valor",
             "paragraphs": [
               "Estúdios de gravação, cinemas em casa, escritórios em open space, restaurantes, salas de aula e espaços de saúde: todos beneficiam. O mesmo sistema estende-se a ilhas de teto suspensas e painéis decorativos de parede onde um teto completo não é possível.",
+              "Quando o teto sozinho não chega — paredes duras paralelas, chamadas num escritório aberto — a nossa empresa-irmã Re-Sound completa com absorsores de parede e cabines fabricados no STRETCH Group.",
               "Se luta contra a reverberação numa divisão específica, peça um orçamento e indique-nos as dimensões e a utilização — aconselharemos o absorsor e o acabamento certos."
+            ],
+            "links": [
+              {
+                "label": "cabines acústicas para escritórios abertos",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5262,7 +5272,10 @@
     "colourPrinted": "Com impressão",
     "colourCodeLabel": "Código de cor",
     "colourCodePlaceholder": "p. ex. RAL 9016 ou n.º da carta",
-    "orderKitCta": "Encomendar o kit"
+    "orderKitCta": "Encomendar o kit",
+    "acousticResoundBefore": "Absorsores de parede, ilhas e cabines acústicas vêm da nossa empresa-irmã no STRETCH Group: ",
+    "acousticResoundLink": "absorsores de parede e ilhas acústicas da Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

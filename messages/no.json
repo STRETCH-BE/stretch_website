@@ -708,7 +708,10 @@
     "chartCount": "{count, plural, one {# farge} other {# farger}}",
     "anyRal": "Enhver RAL-farge på forespørsel",
     "dealerDirect": "Vi leverer og monterer direkte — kontakt oss",
-    "priceLink": "Hva koster dette per m²?"
+    "priceLink": "Hva koster dette per m²?",
+    "acousticWallBefore": "Kaster veggene fortsatt lyden tilbake? ",
+    "acousticWallLink": "Akustiske veggpaneler fra Re-Sound",
+    "acousticWallAfter": ", vårt søsterselskap i STRETCH Group, utfyller taket."
   },
   "productsPage": {
     "eyebrow": "Våre løsninger",
@@ -3906,7 +3909,14 @@
             "heading": "Hvor den virkelig gjør nytte for seg",
             "paragraphs": [
               "Lydstudioer, hjemmekinoer, åpne kontorlandskap, restauranter, klasserom og helsebygg har alle nytte av det. Samme system finnes som fritthengende himlingsøyer og dekorative veggpaneler der en hel himling ikke er mulig.",
+              "Når taket alene ikke er nok — parallelle harde vegger, telefonsamtaler i kontorlandskapet — supplerer søsterselskapet vårt Re-Sound med veggabsorbenter og bokser fra STRETCH Group.",
               "Sliter du med etterklang i et bestemt rom? Be om et tilbud og fortell oss mål og bruk — vi anbefaler riktig absorbent og overflate."
+            ],
+            "links": [
+              {
+                "label": "telefonbokser for åpne kontorlandskap",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5262,7 +5272,10 @@
     "colourPrinted": "Med trykk",
     "colourCodeLabel": "Fargekode",
     "colourCodePlaceholder": "f.eks. RAL 9016 eller kartnr.",
-    "orderKitCta": "Bestill kitet"
+    "orderKitCta": "Bestill kitet",
+    "acousticResoundBefore": "Veggabsorbenter, takøyer og telefonbokser kommer fra vårt søsterselskap i STRETCH Group: ",
+    "acousticResoundLink": "veggabsorbenter og takøyer fra Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

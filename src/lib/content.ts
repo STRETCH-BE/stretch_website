@@ -736,7 +736,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'A micro-perforated stretch membrane backed with a high-density absorber can reach up to Class A sound absorption — without any visible acoustic panels. Here is how it works and what αw and NRC mean.',
     datePublished: '2026-01-22',
-    dateModified: '2026-01-22',
+    dateModified: '2026-09-12', // Re-Sound wall-panel/booth paragraph + link (STRETCH Group),
     author: 'STRETCH',
     readMinutes: 6,
     // Reuses the acoustic product photo. Point this at a dedicated image

@@ -708,7 +708,10 @@
     "chartCount": "{count, plural, one {# färg} other {# färger}}",
     "anyRal": "Alla RAL-kulörer på begäran",
     "dealerDirect": "Vi levererar och monterar direkt — kontakta oss",
-    "priceLink": "Vad kostar det här per m²?"
+    "priceLink": "Vad kostar det här per m²?",
+    "acousticWallBefore": "Studsar ljudet fortfarande mellan väggarna? ",
+    "acousticWallLink": "Akustiska väggpaneler från Re-Sound",
+    "acousticWallAfter": ", vårt systerbolag i STRETCH Group, kompletterar taket."
   },
   "productsPage": {
     "eyebrow": "Våra lösningar",
@@ -3906,7 +3909,14 @@
             "heading": "Där det verkligen gör skillnad",
             "paragraphs": [
               "Inspelningsstudior, hemmabior, öppna kontorslandskap, restauranger, klassrum och vårdmiljöer har alla nytta av det. Samma system finns som frihängande taköar och dekorativa väggpaneler där ett helt tak inte är möjligt.",
+              "När taket ensamt inte räcker — parallella hårda väggar, telefonsamtal i kontorslandskapet — kompletterar vårt systerbolag Re-Sound med väggabsorbenter och bås från STRETCH Group.",
               "Kämpar du med efterklang i ett visst rum? Begär en offert och berätta mått och användning — vi ger råd om rätt absorbent och yta."
+            ],
+            "links": [
+              {
+                "label": "telefonbås för öppna kontorslandskap",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5262,7 +5272,10 @@
     "colourPrinted": "Med tryck",
     "colourCodeLabel": "Färgkod",
     "colourCodePlaceholder": "t.ex. RAL 9016 eller kartnr",
-    "orderKitCta": "Beställ kitet"
+    "orderKitCta": "Beställ kitet",
+    "acousticResoundBefore": "Väggabsorbenter, taköar och telefonbås kommer från vårt systerbolag i STRETCH Group: ",
+    "acousticResoundLink": "väggabsorbenter och taköar från Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

@@ -708,7 +708,10 @@
     "chartCount": "{count, plural, one {# litur} other {# litir}}",
     "anyRal": "Hvaða RAL-litur sem er eftir ósk",
     "dealerDirect": "Við afhendum og setjum upp beint — hafðu samband",
-    "priceLink": "Hvað kostar þetta á m²?"
+    "priceLink": "Hvað kostar þetta á m²?",
+    "acousticWallBefore": "Endurkasta veggirnir enn hljóðinu? ",
+    "acousticWallLink": "Hljóðdeyfiplötur á veggi frá Re-Sound",
+    "acousticWallAfter": ", systurfyrirtæki okkar í STRETCH Group, fullkomna loftið."
   },
   "productsPage": {
     "eyebrow": "Lausnirnar okkar",
@@ -3906,7 +3909,14 @@
             "heading": "Hvar það sannar gildi sitt",
             "paragraphs": [
               "Upptökustúdíó, heimabíó, opin skrifstofurými, veitingastaðir, kennslustofur og heilbrigðisrými njóta öll góðs af. Sama kerfi nær líka til hangandi lofteyja og skrautlegra veggplatna þar sem heilt loft er ekki mögulegt.",
+              "Þegar loftið eitt dugar ekki — harðir samsíða veggir, símtöl í opnu skrifstofurými — bætir systurfyrirtæki okkar Re-Sound við veggdeyfum og klefum sem framleiddir eru innan STRETCH Group.",
               "Ef þú glímir við eftiróm í tilteknu rými skaltu biðja um tilboð og láta okkur vita stærðir og notkun — við ráðleggjum um réttu ísogsmottuna og áferðina."
+            ],
+            "links": [
+              {
+                "label": "símaklefar fyrir opin skrifstofurými",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5262,7 +5272,10 @@
     "colourPrinted": "Með prenti",
     "colourCodeLabel": "Litakóði",
     "colourCodePlaceholder": "t.d. RAL 9016 eða númer af litakorti",
-    "orderKitCta": "Panta settið"
+    "orderKitCta": "Panta settið",
+    "acousticResoundBefore": "Veggdeyfar, loftseyjar og símaklefar koma frá systurfyrirtæki okkar í STRETCH Group: ",
+    "acousticResoundLink": "veggdeyfar og loftseyjar frá Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

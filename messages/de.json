@@ -708,7 +708,10 @@
     "chartCount": "{count, plural, one {# Farbe} other {# Farben}}",
     "anyRal": "Jede RAL-Farbe auf Anfrage",
     "dealerDirect": "Wir liefern und montieren direkt — kontaktieren Sie uns",
-    "priceLink": "Was kostet das pro m²?"
+    "priceLink": "Was kostet das pro m²?",
+    "acousticWallBefore": "Bleibt zwischen harten Wänden ein Echo? ",
+    "acousticWallLink": "Akustikpaneele für Wände von Re-Sound",
+    "acousticWallAfter": ", unserem Schwesterunternehmen in der STRETCH Group, ergänzen die Decke."
   },
   "productsPage": {
     "eyebrow": "Unsere Lösungen",
@@ -3906,7 +3909,14 @@
             "heading": "Wo sie sich bezahlt macht",
             "paragraphs": [
               "Tonstudios, Heimkinos, Großraumbüros, Restaurants, Klassenzimmer und Gesundheitsbauten profitieren gleichermaßen. Dasselbe System gibt es auch als frei hängende Deckensegel und dekorative Wandpaneele, wo eine vollflächige Decke nicht möglich ist.",
+              "Reicht die Decke allein nicht — parallele harte Wände, Telefonate im Großraumbüro —, ergänzt unser Schwesterunternehmen Re-Sound mit Wandabsorbern und Boxen aus der STRETCH Group.",
               "Kämpfen Sie in einem bestimmten Raum mit Nachhall? Fordern Sie ein Angebot an und nennen Sie uns Maße und Nutzung — wir empfehlen Ihnen den passenden Absorber und das richtige Finish."
+            ],
+            "links": [
+              {
+                "label": "Telefonboxen für das Großraumbüro",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5262,7 +5272,10 @@
     "colourPrinted": "Druckdesign",
     "colourCodeLabel": "Farbcode",
     "colourCodePlaceholder": "z. B. RAL 9016 oder Kartennr.",
-    "orderKitCta": "Kit bestellen"
+    "orderKitCta": "Kit bestellen",
+    "acousticResoundBefore": "Wandabsorber, Deckensegel und Telefonboxen kommen von unserem Schwesterunternehmen in der STRETCH Group: ",
+    "acousticResoundLink": "Wandabsorber und Deckensegel von Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

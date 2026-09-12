@@ -708,7 +708,10 @@
     "chartCount": "{count, plural, one {# color} other {# colors}}",
     "anyRal": "Any RAL on request",
     "dealerDirect": "We deliver & install directly — contact us",
-    "priceLink": "How much does this cost per m²?"
+    "priceLink": "How much does this cost per m²?",
+    "acousticWallBefore": "Still hearing echo off the walls? ",
+    "acousticWallLink": "sound-absorbing wall panels from Re-Sound",
+    "acousticWallAfter": ", our sister company in the STRETCH Group, round out the ceiling."
   },
   "productsPage": {
     "eyebrow": "Our solutions",
@@ -3906,7 +3909,14 @@
             "heading": "Where it earns its keep",
             "paragraphs": [
               "Recording studios, home cinemas, open-plan offices, restaurants, classrooms and healthcare spaces all benefit. The same system extends to free-hanging ceiling islands and decorative wall panels where a full ceiling is not possible.",
+              "If the ceiling alone doesn't get you there — parallel hard walls, or calls in an open office — our sister company Re-Sound adds wall absorbers and booths made within the STRETCH Group.",
               "If you are fighting reverberation in a specific room, request a quote and tell us the dimensions and use — we will advise on the right absorber and finish."
+            ],
+            "links": [
+              {
+                "label": "phone booths for open offices",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5254,7 +5264,10 @@
     "colourPrinted": "Printed design",
     "colourCodeLabel": "Color code",
     "colourCodePlaceholder": "e.g. RAL 9016 or chart no.",
-    "orderKitCta": "Order the kit"
+    "orderKitCta": "Order the kit",
+    "acousticResoundBefore": "Wall absorbers, ceiling clouds and phone booths come from our sister company in the STRETCH Group: ",
+    "acousticResoundLink": "wall absorbers and ceiling clouds by Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

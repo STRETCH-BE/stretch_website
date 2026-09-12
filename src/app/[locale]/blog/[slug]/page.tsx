@@ -10,7 +10,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { ArrowLeft, ArrowRight, Calculator } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { isValidLocale, locales, type Locale } from '@/i18n/config';
-import { brand } from '@/lib/site-config';
+import { brand, resoundUrlFor } from '@/lib/site-config';
 import { localeBase, buildAlternates, buildOgLocales, apiBase } from '@/lib/seo';
 import { localeFullCodes } from '@/i18n/config';
 import { blogPostsFor, blogPostForSlug, blogHref, slugForLocale } from '@/lib/content';
@@ -144,7 +144,13 @@ export default async function BlogPostPage({ params }: { params: { locale: strin
               {section.links && section.links.length > 0 && (
                 <p style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 20px', fontWeight: 600 }}>
                   {section.links.map((link, i) =>
-                    link.href.startsWith('https://') ? (
+                    link.href.startsWith('resound:') ? (
+                      // Sister-company link: the marker resolves to this locale's
+                      // Re-Sound language (resoundLocaleFor) — a normal followed link.
+                      <a key={i} href={resoundUrlFor(locale, link.href.slice('resound:'.length))}>
+                        {link.label}
+                      </a>
+                    ) : link.href.startsWith('https://') ? (
                       <a key={i} href={link.href} target="_blank" rel="noopener noreferrer">
                         {link.label}
                       </a>
