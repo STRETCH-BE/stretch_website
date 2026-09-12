@@ -20,6 +20,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import type { Locale } from '@/i18n/config';
 import { localizeHref } from '@/lib/blog-slugs';
 import { pricesPublished } from '@/lib/currency';
+import { ACOUSTICS_NAV, acousticsHref, hasAcoustics } from '@/lib/page-slugs';
 import { Link } from '@/i18n/navigation';
 import { ModalButton } from '@/components/ui/ModalButton';
 import PortalLink from '@/components/ui/PortalLink';
@@ -64,6 +65,9 @@ const SOLUTIONS_SKELETON: Skeleton = [
       { href: '/products/acoustic-stretch-system' },
       { href: '/blog/stretch-ceiling-acoustics-explained' },
       { href: '/datasheets' },
+      // Appended (index-keyed labels): the market acoustics guide, rendered
+      // only where that locale has its own page (hasAcoustics).
+      { href: ACOUSTICS_NAV },
     ],
   },
   {
@@ -147,9 +151,11 @@ function buildCategories(skeleton: Skeleton, t: ReturnType<typeof useTranslation
     items: c.items
       .map((item, j) => ({ item, j }))
       .filter(({ item }) => item.href !== '/price-calculator' || pricesPublished(locale))
+      .filter(({ item }) => item.href !== ACOUSTICS_NAV || hasAcoustics(locale))
       .map(({ item, j }) => ({
-      // Blog links are written with the canonical slug → this locale's own slug.
-      href: localizeHref(item.href, locale),
+      // Blog links are written with the canonical slug → this locale's own slug;
+      // the acoustics guide resolves to this locale's own slug.
+      href: item.href === ACOUSTICS_NAV ? acousticsHref(locale) : localizeHref(item.href, locale),
       soon: item.soon,
       title: t(`cats.${i}.items.${j}.title`),
       sub: t(`cats.${i}.items.${j}.sub`),

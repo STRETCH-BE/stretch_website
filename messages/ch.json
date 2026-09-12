@@ -22,7 +22,8 @@
       "clientLogin": "Kundenlogin",
       "materials": "Material",
       "architects": "Architekten",
-      "priceCalculator": "Kostenrechner"
+      "priceCalculator": "Kostenrechner",
+      "acoustics": "Raumakustik"
     },
     "cta": {
       "freeQuote": "Kostenlose Offerte",
@@ -182,7 +183,14 @@
     "dealers": "Händlernetz",
     "worldwideHeading": "STRETCH weltweit",
     "swissPartnerHeading": "Generalvertretung Schweiz & Liechtenstein",
-    "manufacturerHeading": "Hersteller – Belgien"
+    "manufacturerHeading": "Hersteller – Belgien",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "Spanndecken und Spannwände",
+      "resound": "Akustikpaneele und Telefonboxen",
+      "metal": "Metallverarbeitung",
+      "alto": "Produktion, Polen"
+    }
   },
   "portal": {
     "login": {
@@ -700,7 +708,10 @@
     "chartCount": "{count, plural, one {# Farbe} other {# Farben}}",
     "anyRal": "Jede RAL-Farbe auf Anfrage",
     "dealerDirect": "Wir liefern und montieren direkt — kontaktieren Sie uns",
-    "priceLink": "Was kostet das pro m²?"
+    "priceLink": "Was kostet das pro m²?",
+    "acousticWallBefore": "Bleibt zwischen harten Wänden ein Echo? ",
+    "acousticWallLink": "Akustikpaneele für Wände von Re-Sound",
+    "acousticWallAfter": ", unserem Schwesterunternehmen in der STRETCH Group, ergänzen die Decke."
   },
   "productsPage": {
     "eyebrow": "Unsere Lösungen",
@@ -1543,6 +1554,10 @@
             {
               "title": "Technisches Datenblatt",
               "sub": "αw- & Klassenwerte"
+            },
+            {
+              "title": "Raumakustik in der Praxis",
+              "sub": "Nachhallzeit, DIN 18041 und Rechenbeispiel"
             }
           ]
         },
@@ -3894,7 +3909,14 @@
             "heading": "Wo sie sich bezahlt macht",
             "paragraphs": [
               "Tonstudios, Heimkinos, Grossraumbüros, Restaurants, Klassenzimmer und Gesundheitsbauten profitieren gleichermassen. Dasselbe System gibt es auch als frei hängende Deckensegel und dekorative Wandpaneele, wo eine vollflächige Decke nicht möglich ist.",
+              "Reicht die Decke allein nicht — parallele harte Wände, Telefonate im Grossraumbüro —, ergänzt unser Schwesterunternehmen Re-Sound mit Wandabsorbern und Boxen aus der STRETCH Group.",
               "Kämpfen Sie in einem bestimmten Raum mit Nachhall? Fordern Sie eine Offerte an und nennen Sie uns Masse und Nutzung — wir empfehlen Ihnen den passenden Absorber und das richtige Finish."
+            ],
+            "links": [
+              {
+                "label": "Telefonboxen für das Grossraumbüro",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5250,7 +5272,10 @@
     "colourPrinted": "Druckdesign",
     "colourCodeLabel": "Farbcode",
     "colourCodePlaceholder": "z. B. RAL 9016 oder Kartennr.",
-    "orderKitCta": "Kit bestellen"
+    "orderKitCta": "Kit bestellen",
+    "acousticResoundBefore": "Wandabsorber, Deckensegel und Telefonboxen kommen von unserem Schwesterunternehmen in der STRETCH Group: ",
+    "acousticResoundLink": "Wandabsorber und Deckensegel von Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

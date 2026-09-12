@@ -532,6 +532,24 @@ const priceGuideChRules = LOCALE_DOMAINS.filter(([h]) => h !== 'stretchdecken.ch
 );
 
 // ---------------------------------------------------------------------------
+// ACOUSTICS GUIDE — one slug per locale (src/lib/page-slugs.json, the same
+// JSON the app reads). Another market's slug on a host that has the page
+// 308s to that host's own slug; a host without the page sends every
+// acoustics slug to its acoustic product page instead of a 404. Romandie
+// (stretchdecken.ch/fr/…) has no page yet either.
+// ---------------------------------------------------------------------------
+const PAGE_SLUGS = requireJson('./src/lib/page-slugs.json');
+const ACOUSTICS_SLUGS = [...new Set(Object.values(PAGE_SLUGS.acoustics))];
+const ACOUSTIC_PRODUCT = '/products/acoustic-stretch-system';
+const acousticsRules = [
+  ...LOCALE_DOMAINS.flatMap(([h, l]) => {
+    const own = PAGE_SLUGS.acoustics[l];
+    return ACOUSTICS_SLUGS.filter((s) => s !== own).map((s) => R(h, `/${s}`, own ? `/${own}` : ACOUSTIC_PRODUCT));
+  }),
+  ...ACOUSTICS_SLUGS.map((s) => R('stretchdecken.ch', `/fr/${s}`, `/fr${ACOUSTIC_PRODUCT}`)),
+];
+
+// ---------------------------------------------------------------------------
 export const legacyRedirects = [
   ...localePrefixStrips,
   ...dutchRules('stretchplafond.be'),
@@ -552,6 +570,7 @@ export const legacyRedirects = [
   ...swissHostRedirects,
   ...romandieRules,
   ...priceGuideChRules,
+  ...acousticsRules,
 ];
 
 export default legacyRedirects;

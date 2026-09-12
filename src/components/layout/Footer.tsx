@@ -7,7 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { usePathname } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { footerNav } from '@/lib/site-config';
-import { contact, swissPartner, polishEntity, brand } from '@/lib/site-config';
+import { contact, swissPartner, polishEntity, brand, groupSites, resoundUrlFor } from '@/lib/site-config';
 import { localContactFor, isSwissLocale, isPolishLocale } from '@/lib/local-contact';
 import { isDealerMarket } from '@/lib/dealers';
 import PortalLink from '@/components/ui/PortalLink';
@@ -286,6 +286,41 @@ export default function Footer() {
                 {localeNames[l] ?? l}
               </a>
             ))}
+        </nav>
+
+        {/* STRETCH Group — the sister companies, on every page of every domain.
+            Ordinary followed links (a real corporate relationship). Re-Sound
+            gets the locale that matches THIS market, never a blanket /en. The
+            anchors carry a localised descriptor, so no two languages ship the
+            same anchor text. prefetch={false}: these are footer links and
+            prefetching them on every page load costs the mobile score. */}
+        <nav
+          aria-label={t('group.heading')}
+          className="group-nav"
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'baseline',
+            gap: '8px 22px',
+            paddingTop: 18,
+            marginBottom: 4,
+          }}
+        >
+          <span style={{ fontSize: 11.5, fontWeight: 600, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--on-dark-muted)' }}>
+            {t('group.heading')}
+          </span>
+          <Link href="/" prefetch={false} className="lnk" style={{ fontSize: 12.5, color: 'var(--on-dark-muted)' }}>
+            {`STRETCH — ${t('group.stretch')}`}
+          </Link>
+          <a href={resoundUrlFor(locale)} className="lnk" style={{ fontSize: 12.5, color: 'var(--on-dark-muted)' }}>
+            {`Re-Sound — ${t('group.resound')}`}
+          </a>
+          <a href={groupSites.metal} className="lnk" style={{ fontSize: 12.5, color: 'var(--on-dark-muted)' }}>
+            {`Stretch Metal — ${t('group.metal')}`}
+          </a>
+          <a href={groupSites.alto} className="lnk" style={{ fontSize: 12.5, color: 'var(--on-dark-muted)' }}>
+            {`Alto Design — ${t('group.alto')}`}
+          </a>
         </nav>
 
         {/* pl: company-register strip (KRS / NIP / REGON / court / share capital). */}

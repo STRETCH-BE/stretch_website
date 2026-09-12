@@ -1,3 +1,4 @@
+import type { Locale } from '@/i18n/config';
 // ============================================================================
 // SITE CONFIG — single source of truth for brand data.
 // Pulled from the finalized brand brief + design mockups. Anything that varies
@@ -254,6 +255,47 @@ export const salesTerritory = [
 export const social: { label: string; short: string; url: string }[] = [
   { label: 'Telegram', short: 'tg', url: contact.telegram },
 ];
+
+// ---------------------------------------------------------------------------
+// STRETCH Group — the sister companies. Ordinary followed links: a real
+// corporate relationship, which is exactly what Google's guidance treats as
+// legitimate. Used by the footer's group block and the Organization schema.
+// ---------------------------------------------------------------------------
+export const groupSites = {
+  group: 'https://stretchgroup.be',
+  resound: 'https://re-sound.be',
+  metal: 'https://stretchmetal.pl',
+  alto: 'https://altodesign.pl',
+} as const;
+
+/**
+ * The Re-Sound locale each of our markets links into. Not always /en: a Dutch
+ * reader lands on Dutch pages. The Nordic Re-Sound locales are noindex
+ * pending translation, so da / no / sv / is (and pl, which Re-Sound does not
+ * have) go to /en until they exist.
+ */
+export const resoundLocaleFor: Record<Locale, 'nl' | 'fr' | 'de' | 'es' | 'pt' | 'en'> = {
+  be: 'nl',
+  nl: 'nl',
+  fr: 'fr',
+  'fr-ch': 'fr',
+  de: 'de',
+  ch: 'de',
+  es: 'es',
+  pt: 'pt',
+  en: 'en',
+  us: 'en',
+  uk: 'en',
+  da: 'en',
+  no: 'en',
+  sv: 'en',
+  is: 'en',
+  pl: 'en',
+};
+
+export function resoundUrlFor(locale: Locale, path = ''): string {
+  return `${groupSites.resound}/${resoundLocaleFor[locale]}${path}`;
+}
 
 // ---------------------------------------------------------------------------
 // Navigation

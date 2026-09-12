@@ -585,5 +585,5 @@ export function getProduct(slug: string): Product | undefined {
 }
 
 /** Sitemap <lastmod> for /products/[slug] — bump when product copy/data changes (F12). */
-export const productsUpdatedAt = '2026-08-28'; // PVC seamless width 6.4 m -> 6.5 m
+export const productsUpdatedAt = '2026-09-12'; // acoustic: Re-Sound wall-panel note under the specs
 export const productSlugs = products.map((p) => p.slug);

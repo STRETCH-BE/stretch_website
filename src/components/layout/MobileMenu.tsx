@@ -28,6 +28,7 @@ import { isDealerMarket } from '@/lib/dealers';
 import { analytics } from '@/lib/analytics';
 import { pathForLocale } from '@/lib/blog-slugs';
 import { pricesPublished } from '@/lib/currency';
+import { acousticsHref, hasAcoustics } from '@/lib/page-slugs';
 
 // Shared style for the primary drawer links (Link and PortalLink render alike).
 const drawerLinkStyle = {
@@ -219,6 +220,15 @@ export default function MobileMenu() {
                 {tc(`${p.key}.name`)}
               </Link>
             ))}
+            {/* The market acoustics guide — only where this locale has its own page. */}
+            {hasAcoustics(locale) && (
+              <Link
+                href={acousticsHref(locale)}
+                style={{ padding: '9px 0', fontSize: 15, fontWeight: 600, color: 'var(--text-muted)' }}
+              >
+                {t('nav.acoustics')}
+              </Link>
+            )}
 
             <div
               style={{

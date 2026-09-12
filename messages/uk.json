@@ -22,7 +22,8 @@
       "clientLogin": "Client login",
       "materials": "Materials",
       "architects": "Architects",
-      "priceCalculator": "Price calculator"
+      "priceCalculator": "Price calculator",
+      "acoustics": "Room acoustics"
     },
     "cta": {
       "freeQuote": "Free quote",
@@ -182,7 +183,14 @@
     "dealers": "Dealer network",
     "worldwideHeading": "STRETCH worldwide",
     "swissPartnerHeading": "General representative — Switzerland & Liechtenstein",
-    "manufacturerHeading": "Manufacturer — Belgium"
+    "manufacturerHeading": "Manufacturer — Belgium",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "stretch ceilings and walls",
+      "resound": "acoustic panels and phone booths",
+      "metal": "metalworking",
+      "alto": "production, Poland"
+    }
   },
   "portal": {
     "login": {
@@ -700,7 +708,10 @@
     "chartCount": "{count, plural, one {# colour} other {# colours}}",
     "anyRal": "Any RAL on request",
     "dealerDirect": "We deliver & install directly — contact us",
-    "priceLink": "What does this cost per m²?"
+    "priceLink": "What does this cost per m²?",
+    "acousticWallBefore": "Still getting reflections off hard walls? ",
+    "acousticWallLink": "Re-Sound acoustic wall panels",
+    "acousticWallAfter": ", made by our sister company in the STRETCH Group, finish the job the ceiling starts."
   },
   "productsPage": {
     "eyebrow": "Our solutions",
@@ -1543,6 +1554,10 @@
             {
               "title": "Technical datasheet",
               "sub": "αw & class values"
+            },
+            {
+              "title": "Room acoustics guide",
+              "sub": "Reverberation time, standards, worked example"
             }
           ]
         },
@@ -3894,7 +3909,14 @@
             "heading": "Where it earns its keep",
             "paragraphs": [
               "Recording studios, home cinemas, open-plan offices, restaurants, classrooms and healthcare spaces all benefit. The same system extends to free-hanging ceiling islands and decorative wall panels where a full ceiling is not possible.",
+              "When the ceiling on its own is not enough — hard parallel walls, or phone calls in an open-plan office — our sister company Re-Sound supplies wall absorbers and booths made within the STRETCH Group.",
               "If you are fighting reverberation in a specific room, request a quote and tell us the dimensions and use — we will advise on the right absorber and finish."
+            ],
+            "links": [
+              {
+                "label": "acoustic phone booths for open-plan offices",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5260,7 +5282,10 @@
     "colourPrinted": "Printed design",
     "colourCodeLabel": "Colour code",
     "colourCodePlaceholder": "e.g. RAL 9016 or chart no.",
-    "orderKitCta": "Order the kit"
+    "orderKitCta": "Order the kit",
+    "acousticResoundBefore": "Wall absorbers, ceiling rafts and phone booths come from our sister company in the STRETCH Group: ",
+    "acousticResoundLink": "wall absorbers and ceiling rafts from Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

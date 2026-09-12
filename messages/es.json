@@ -22,7 +22,8 @@
       "clientLogin": "Acceso clientes",
       "materials": "Materiales",
       "architects": "Arquitectos",
-      "priceCalculator": "Calculadora de precios"
+      "priceCalculator": "Calculadora de precios",
+      "acoustics": "Acústica"
     },
     "cta": {
       "freeQuote": "Presupuesto gratis",
@@ -182,7 +183,14 @@
     "dealers": "Red de distribuidores",
     "worldwideHeading": "STRETCH en el mundo",
     "swissPartnerHeading": "Representante general — Suiza y Liechtenstein",
-    "manufacturerHeading": "Fabricante — Bélgica"
+    "manufacturerHeading": "Fabricante — Bélgica",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "techos y paredes tensados",
+      "resound": "paneles acústicos y cabinas acústicas",
+      "metal": "trabajo del metal",
+      "alto": "producción, Polonia"
+    }
   },
   "portal": {
     "login": {
@@ -700,7 +708,10 @@
     "chartCount": "{count, plural, one {# color} other {# colores}}",
     "anyRal": "Cualquier color RAL bajo pedido",
     "dealerDirect": "Entregamos e instalamos directamente — contáctenos",
-    "priceLink": "¿Cuánto cuesta por m²?"
+    "priceLink": "¿Cuánto cuesta por m²?",
+    "acousticWallBefore": "¿Las paredes siguen reflejando el sonido? Los ",
+    "acousticWallLink": "paneles acústicos de pared de Re-Sound",
+    "acousticWallAfter": ", nuestra empresa hermana en STRETCH Group, completan el techo."
   },
   "productsPage": {
     "eyebrow": "Nuestras soluciones",
@@ -1543,6 +1554,10 @@
             {
               "title": "Ficha técnica",
               "sub": "Valores αw y clases"
+            },
+            {
+              "title": "Guía de acústica de salas",
+              "sub": "Reverberación, normas y ejemplo de cálculo"
             }
           ]
         },
@@ -3894,7 +3909,14 @@
             "heading": "Dónde rinde de verdad",
             "paragraphs": [
               "Estudios de grabación, cines en casa, oficinas diáfanas, restaurantes, aulas y espacios sanitarios: todos salen ganando. El mismo sistema se extiende a islas acústicas suspendidas y paneles murales decorativos allí donde un techo completo no es posible.",
+              "Cuando el techo no basta — paredes duras paralelas, llamadas en una oficina abierta — nuestra empresa hermana Re-Sound lo completa con absorbentes de pared y cabinas fabricados dentro de STRETCH Group.",
               "Si luchas contra la reverberación en una estancia concreta, solicita un presupuesto e indícanos las dimensiones y el uso — te aconsejaremos el absorbente y el acabado adecuados."
+            ],
+            "links": [
+              {
+                "label": "cabinas acústicas para oficinas abiertas",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5250,7 +5272,10 @@
     "colourPrinted": "Con impresión",
     "colourCodeLabel": "Código de color",
     "colourCodePlaceholder": "p. ej. RAL 9016 o n.º de carta",
-    "orderKitCta": "Pedir el kit"
+    "orderKitCta": "Pedir el kit",
+    "acousticResoundBefore": "Los absorbentes de pared, las islas y las cabinas acústicas vienen de nuestra empresa hermana en STRETCH Group: ",
+    "acousticResoundLink": "absorbentes de pared e islas acústicas de Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

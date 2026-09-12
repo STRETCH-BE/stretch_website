@@ -22,7 +22,8 @@
       "clientLogin": "Kundelogin",
       "materials": "Materialer",
       "architects": "Arkitekter",
-      "priceCalculator": "Prisberegner"
+      "priceCalculator": "Prisberegner",
+      "acoustics": "Rumakustik"
     },
     "cta": {
       "freeQuote": "Gratis tilbud",
@@ -182,7 +183,14 @@
     "dealers": "Forhandlernetværk",
     "worldwideHeading": "STRETCH i verden",
     "swissPartnerHeading": "Generalagent — Schweiz & Liechtenstein",
-    "manufacturerHeading": "Producent — Belgien"
+    "manufacturerHeading": "Producent — Belgien",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "strækloft og vægge",
+      "resound": "akustikpaneler og telefonbokse",
+      "metal": "metalbearbejdning",
+      "alto": "produktion, Polen"
+    }
   },
   "portal": {
     "login": {
@@ -700,7 +708,10 @@
     "chartCount": "{count, plural, one {# farve} other {# farver}}",
     "anyRal": "Enhver RAL-farve på forespørgsel",
     "dealerDirect": "Vi leverer og monterer direkte — kontakt os",
-    "priceLink": "Hvad koster det pr. m²?"
+    "priceLink": "Hvad koster det pr. m²?",
+    "acousticWallBefore": "Kaster væggene stadig lyden tilbage? ",
+    "acousticWallLink": "Akustiske vægpaneler fra Re-Sound",
+    "acousticWallAfter": ", vores søsterselskab i STRETCH Group, supplerer loftet."
   },
   "productsPage": {
     "eyebrow": "Vores løsninger",
@@ -1543,6 +1554,10 @@
             {
               "title": "Teknisk datablad",
               "sub": "αw- & klasseværdier"
+            },
+            {
+              "title": "Guide til rumakustik",
+              "sub": "Efterklangstid, normer og regneeksempel"
             }
           ]
         },
@@ -3894,7 +3909,14 @@
             "heading": "Hvor det for alvor gør en forskel",
             "paragraphs": [
               "Lydstudier, hjemmebiografer, storrumskontorer, restauranter, klasselokaler og sundhedsbyggeri har alle glæde af det. Samme system fås som frithængende loftøer og dekorative vægpaneler, hvor et helt loft ikke er muligt.",
+              "Når loftet alene ikke er nok — parallelle hårde vægge, telefonsamtaler i storrumskontoret — supplerer vores søsterselskab Re-Sound med vægabsorbenter og bokse fra STRETCH Group.",
               "Kæmper du med efterklang i et bestemt rum, så bed om et tilbud og fortæl os mål og anvendelse — vi rådgiver dig om den rette absorbent og overflade."
+            ],
+            "links": [
+              {
+                "label": "telefonbokse til storrumskontorer",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5250,7 +5272,10 @@
     "colourPrinted": "Med print",
     "colourCodeLabel": "Farvekode",
     "colourCodePlaceholder": "f.eks. RAL 9016 eller kortnr.",
-    "orderKitCta": "Bestil kittet"
+    "orderKitCta": "Bestil kittet",
+    "acousticResoundBefore": "Vægabsorbenter, loftsøer og telefonbokse kommer fra vores søsterselskab i STRETCH Group: ",
+    "acousticResoundLink": "vægabsorbenter og loftsøer fra Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

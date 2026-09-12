@@ -22,7 +22,8 @@
       "clientLogin": "Klantenzone",
       "materials": "Materialen",
       "architects": "Architecten",
-      "priceCalculator": "Prijscalculator"
+      "priceCalculator": "Prijscalculator",
+      "acoustics": "Akoestiek"
     },
     "cta": {
       "freeQuote": "Gratis offerte",
@@ -182,7 +183,14 @@
     "dealers": "Dealernetwerk",
     "worldwideHeading": "STRETCH wereldwijd",
     "swissPartnerHeading": "Algemeen vertegenwoordiger — Zwitserland & Liechtenstein",
-    "manufacturerHeading": "Fabrikant — België"
+    "manufacturerHeading": "Fabrikant — België",
+    "group": {
+      "heading": "STRETCH Group",
+      "stretch": "spanplafonds en wanden",
+      "resound": "akoestische panelen en belcabines",
+      "metal": "metaalbewerking",
+      "alto": "productie Polen"
+    }
   },
   "portal": {
     "login": {
@@ -700,7 +708,10 @@
     "chartCount": "{count, plural, one {# kleur} other {# kleuren}}",
     "anyRal": "Elke RAL-kleur op aanvraag",
     "dealerDirect": "Wij leveren en plaatsen rechtstreeks — contacteer ons",
-    "priceLink": "Wat kost dit per m²?"
+    "priceLink": "Wat kost dit per m²?",
+    "acousticWallBefore": "Blijft er galm hangen tussen harde wanden? ",
+    "acousticWallLink": "akoestische wandpanelen van Re-Sound",
+    "acousticWallAfter": ", ons zusterbedrijf binnen de STRETCH Group, vullen het plafond aan."
   },
   "productsPage": {
     "eyebrow": "Onze oplossingen",
@@ -1543,6 +1554,10 @@
             {
               "title": "Technische fiche",
               "sub": "αw- & klassewaarden"
+            },
+            {
+              "title": "Akoestiek in de praktijk",
+              "sub": "Nagalmtijd, normen en rekenvoorbeeld"
             }
           ]
         },
@@ -3894,7 +3909,14 @@
             "heading": "Waar het zich bewijst",
             "paragraphs": [
               "Opnamestudio's, thuisbioscopen, landschapskantoren, restaurants, klaslokalen en zorgruimtes: ze varen er allemaal wel bij. Hetzelfde systeem bestaat ook als vrijhangende plafondeilanden en decoratieve wandpanelen waar een volledig plafond niet mogelijk is.",
+              "Volstaat het plafond niet — harde evenwijdige wanden, telefoongesprekken in een open kantoor — dan vult ons zusterbedrijf Re-Sound aan met wandabsorbers en cabines uit dezelfde groep.",
               "Kampt u met galm in een specifieke ruimte? Vraag een offerte aan en bezorg ons de afmetingen en het gebruik — wij adviseren u de juiste absorber en afwerking."
+            ],
+            "links": [
+              {
+                "label": "belcabines voor open kantoren",
+                "href": "resound:"
+              }
             ]
           }
         ]
@@ -5260,7 +5282,10 @@
     "colourPrinted": "Print",
     "colourCodeLabel": "Kleurcode",
     "colourCodePlaceholder": "bv. RAL 9016 of kaartnummer",
-    "orderKitCta": "Bestel de kit"
+    "orderKitCta": "Bestel de kit",
+    "acousticResoundBefore": "Wandabsorbers, plafondeilanden en belcabines komen van ons zusterbedrijf in de STRETCH Group: ",
+    "acousticResoundLink": "wandabsorbers en eilanden van Re-Sound",
+    "acousticResoundAfter": "."
   },
   "materialsData": {
     "profiles": {

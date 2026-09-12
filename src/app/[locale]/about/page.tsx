@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
 import { siteUrl, brand, offices } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
-import { breadcrumbSchema, organizationSchema } from '@/lib/structured-data';
+import { breadcrumbSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
@@ -36,7 +36,6 @@ export default async function AboutPage({ params }: { params: { locale: string }
   return (
     <>
       <JsonLd data={crumbs} />
-      <JsonLd data={organizationSchema()} />
 
       {/* Hero */}
       <section className="container" style={{ padding: 'clamp(36px,5vw,72px) 0 clamp(36px,4vw,56px)' }}>

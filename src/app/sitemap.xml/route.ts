@@ -25,6 +25,7 @@ import { dealerPlaceSlugs, isDealerMarket, dealersUpdatedAt } from '@/lib/dealer
 import { pricesPublished } from '@/lib/currency';
 import { techMembranes, techTopicKeys, technicalUpdatedAt } from '@/lib/technical';
 import { materialGroupSlugs, materialsUpdatedAt } from '@/lib/materials';
+import { hasAcoustics, acousticsHref, isAcousticsRoute, acousticsUpdatedAt } from '@/lib/page-slugs';
 
 // No force-dynamic: reading request.headers already keeps this handler
 // request-dynamic, and every <lastmod> below is a real content date (F12) —
@@ -61,9 +62,13 @@ function collectRoutes(locale: Locale): string[] {
     .filter((r) => r !== '/price-calculator' || pricesPublished(locale));
   // The Swiss CHF price guide: de-CH only, and only once QuinLay's ranges are in.
   const swissGuide = locale === 'ch' && priceGuideChReady ? [priceGuideCh.route] : [];
+  // The acoustics guide: only the markets with their own written page, each
+  // at its own slug (page-slugs.json) — never via staticRoutes.
+  const acoustics = hasAcoustics(locale) ? [acousticsHref(locale)] : [];
   return [
     ...statics,
     ...swissGuide,
+    ...acoustics,
     ...productRoutes,
     ...applicationRoutes,
     ...technicalRoutes,
@@ -79,6 +84,7 @@ function priorityFor(route: string): number {
   if (route === '/products' || route.startsWith('/products/')) return 0.9;
   if (['/contact', '/partners', '/installer-training', '/price-calculator', '/dealers'].includes(route)) return 0.8;
   if (route === '/inspiration' || route === '/samples' || route === '/blog') return 0.7;
+  if (isAcousticsRoute(route)) return 0.7;
   if (route.startsWith('/blog/')) return 0.6;
   if (route.startsWith('/technical/')) return 0.6;
   if (route.startsWith('/inspiration/')) return 0.6;
@@ -105,6 +111,7 @@ function lastModFor(route: string, locale: Locale): string {
   if (!d && route.startsWith('/technical/')) d = technicalUpdatedAt;
   if (!d && route.startsWith('/materials/')) d = materialsUpdatedAt;
   if (!d && route.startsWith('/dealers/')) d = dealersUpdatedAt;
+  if (!d && isAcousticsRoute(route)) d = acousticsUpdatedAt;
   return `${d ?? BUILD_DATE}T00:00:00.000Z`;
 }
 
@@ -126,6 +133,7 @@ function localesForRoute(route: string, locale: Locale): readonly Locale[] {
   }
   if (route === '/price-calculator') return liveLocales.filter(pricesPublished);
   if (route === priceGuideCh.route) return liveLocales.filter((l) => l === 'ch');
+  if (isAcousticsRoute(route)) return liveLocales.filter(hasAcoustics);
   return liveLocales;
 }
 
@@ -151,7 +159,8 @@ export function GET(request: Request) {
       // Blog posts carry a different slug per locale: every alternate must
       // name THAT locale's own path (per-market audit 2 Sep 2026, defect 1).
       const post = route.startsWith('/blog/') ? blogPostForSlug(locale, route.slice('/blog/'.length)) : undefined;
-      const routeOn = (l: Locale) => (post ? blogHref(post, l) : route);
+      // The acoustics guide likewise: each alternate names that locale's own slug.
+      const routeOn = (l: Locale) => (post ? blogHref(post, l) : isAcousticsRoute(route) ? acousticsHref(l) : route);
       const alternates = routeLocales
         .map(
           (l) =>

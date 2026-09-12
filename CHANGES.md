@@ -1,3 +1,64 @@
+## 2026-09-12 (48) — Re-Sound cross-links: group footer, Organization schema, four acoustics guides, three contextual links
+
+Michael's SEO brief, 12 Sep 2026: re-sound.be (the group's acoustic
+panels and phone booths) received zero inbound links from the fifteen
+ceiling domains. Branch `seo/resound-crosslinks`, one commit per section,
+nothing pushed or deployed. Full link inventory, per locale, in
+`docs/resound-crosslinks-report.md`.
+
+**1 · Footer "STRETCH Group" block** on every domain, above the legal
+row: STRETCH (this site, current locale), Re-Sound (re-sound.be in the
+matching locale — be/nl → /nl, fr → /fr, de/ch → /de, es, pt, and /en for
+the English, Nordic and Polish domains, because the Nordic Re-Sound
+locales are noindex), Stretch Metal and Alto Design. Localised
+descriptors after the name (`footer.group.*`, all 16 files), normal
+followed anchors, `prefetch={false}` on the internal one.
+
+**2 · Organization JSON-LD**: `parentOrganization` STRETCH Group
+(stretchgroup.be) and the sister sites in `sameAs`; the node is now
+emitted once from the `[locale]` layout instead of separately on the
+home and about pages.
+
+**3 · Acoustics guide** — `/akoestiek` (be, nl), `/acoustique` (fr),
+`/akustik` (de). Four pages written for their own market, not
+translated: the norms (NBN S 01-400-2; Frisse Scholen, NPR 3438; arrêté
+du 25 avril 2003 + NF S 31-080; DIN 18041 with the A3 formula printed,
+VDI 2569, ASR A3.7 — ISO 22955, ISO 3382-3, ISO 11654 and EN 13501-1 on
+all four), the vocabulary, the worked example (a Flemish classroom, a
+kantoortuin, a brasserie, a Besprechungsraum — the route computes
+T = 0,161 · V / A from the module's room so the printed arithmetic
+cannot drift from the prose), the FAQ and the combined-project block.
+Every page says the exact requirement is the acoustician's call. The
+single Re-Sound link per page sits in "what the ceiling cannot fix",
+with a different descriptive anchor per market. Routing follows the
+Swiss price-guide precedent (`dynamicParams = false`, locales from
+`src/lib/page-slugs.json`): no other locale has the page, a nav entry,
+a sitemap URL or an hreflang alternate. Wired into the mega menu and
+mobile drawer (gated by `hasAcoustics`), the language switcher, the
+sitemap (four domains, four-locale cluster, x-default nl-BE) and
+`redirects.mjs` (a foreign slug 308s to the host's own; domains without
+the page send the slugs to the acoustic product). Adding a market =
+one content module + one line of JSON.
+
+**4 · Three contextual links** from existing pages, each with its own
+anchor per locale: the acoustic product page (end of the spec section),
+the acoustics article (paragraph + link row in the wall-panel section,
+`resound:` marker resolved per locale by the blog route) and the
+acoustic-panels materials entry.
+
+**Verified:** `tsc` clean; clean `next build` exit 0, 3190 pages,
+no MISSING_MESSAGE; every new key in all 16 message files; ch/fr-ch
+overlays `--check` green; `check:client-messages` OK; on `next start`
+with Host headers: the guide 200 on its four domains and 404 elsewhere,
+sitemaps and hreflang as designed, redirects as designed, the menu item
+only where the page exists, no horizontal overflow at 360/390 px.
+Lighthouse mobile (local, throttled, median of 3): homepage nl-BE median 94.5 on this branch vs 94.5 on main (8 interleaved runs each), the new /akoestiek page 95; accessibility, best-practices and SEO 100 throughout.
+
+Re-sound.be is unreachable from the build sandbox, so every link lands
+on the locale root of re-sound.be; the report lists where to swap in the
+range hubs once known, and which STRETCH URLs Re-Sound should link back
+to.
+
 ## 2026-09-08 (47) — Configurator: phone layout
 
 Michael, 8 Sep 2026, with five iPhone screenshots: *"Improve layout/visual on
