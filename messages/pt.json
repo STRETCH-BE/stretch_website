@@ -3915,7 +3915,7 @@
             "links": [
               {
                 "label": "cabines acústicas para escritórios abertos",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5275,7 +5275,10 @@
     "orderKitCta": "Encomendar o kit",
     "acousticResoundBefore": "Absorsores de parede, ilhas e cabines acústicas vêm da nossa empresa-irmã no STRETCH Group: ",
     "acousticResoundLink": "absorsores de parede e ilhas acústicas da Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " Para um acabamento quente em madeira há também ",
+    "acousticResoundWoodLink": "painéis acústicos de madeira",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {

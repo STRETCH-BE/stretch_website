@@ -185,11 +185,18 @@ export const fr: AcousticsContent = {
           text: 'Dans un open space, le problème change de nature : ce n\'est plus la durée du son qui compte, mais la distance à laquelle on entend distinctement un collègue. L\'ISO 3382-3 la mesure avec la décroissance spatiale D2,S et la distance de distraction rD. Le plafond fait baisser le niveau global, mais pour raccourcir rD il faut couper la ligne de vue entre les postes : des écrans, ainsi que des ',
         },
         {
-          text: 'panneaux muraux acoustiques et cabines acoustiques Re-Sound',
-          href: 'https://re-sound.be/fr',
+          text: 'panneaux muraux en PET de Re-Sound',
+          href: 'resound:panels',
         },
         {
-          text: '. Les panneaux traitent les murs qui renvoient la voix d\'un poste à l\'autre ; les cabines téléphoniques et de réunion, fabriquées par le groupe dans son atelier de Częstochowa, en Pologne, sortent l\'appel du plateau et isolent dans les deux sens.',
+          text: ' et des ',
+        },
+        {
+          text: 'cabines téléphoniques et de réunion',
+          href: 'resound:booths',
+        },
+        {
+          text: '. Les panneaux traitent les murs qui renvoient la voix d\'un poste à l\'autre ; les cabines, fabriquées par le groupe dans son atelier de Częstochowa, en Pologne, sortent l\'appel du plateau et isolent dans les deux sens.',
         },
       ],
       [

@@ -3915,7 +3915,7 @@
             "links": [
               {
                 "label": "phone booths for open-plan offices",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5285,7 +5285,10 @@
     "orderKitCta": "Order the kit",
     "acousticResoundBefore": "Wall absorbers, ceiling islands and phone booths come from our sister company in the STRETCH Group: ",
     "acousticResoundLink": "wall absorbers and ceiling islands by Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " For a warm, visible finish there are also ",
+    "acousticResoundWoodLink": "wooden acoustic panels",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {

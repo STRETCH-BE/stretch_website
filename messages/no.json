@@ -3915,7 +3915,7 @@
             "links": [
               {
                 "label": "telefonbokser for åpne kontorlandskap",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5275,7 +5275,10 @@
     "orderKitCta": "Bestill kitet",
     "acousticResoundBefore": "Veggabsorbenter, takøyer og telefonbokser kommer fra vårt søsterselskap i STRETCH Group: ",
     "acousticResoundLink": "veggabsorbenter og takøyer fra Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " Ønsker du et varmt trepreg, finnes det også ",
+    "acousticResoundWoodLink": "akustikkpaneler i tre",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {

@@ -3915,7 +3915,7 @@
             "links": [
               {
                 "label": "phone booths for open offices",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5267,7 +5267,10 @@
     "orderKitCta": "Order the kit",
     "acousticResoundBefore": "Wall absorbers, ceiling clouds and phone booths come from our sister company in the STRETCH Group: ",
     "acousticResoundLink": "wall absorbers and ceiling clouds by Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " Want a warm wood look instead? There are also ",
+    "acousticResoundWoodLink": "wood acoustic panels",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {

@@ -3915,7 +3915,7 @@
             "links": [
               {
                 "label": "símaklefar fyrir opin skrifstofurými",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5275,7 +5275,10 @@
     "orderKitCta": "Panta settið",
     "acousticResoundBefore": "Veggdeyfar, loftseyjar og símaklefar koma frá systurfyrirtæki okkar í STRETCH Group: ",
     "acousticResoundLink": "veggdeyfar og loftseyjar frá Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " Fyrir hlýlegt viðaryfirbragð eru einnig til ",
+    "acousticResoundWoodLink": "hljóðdeyfiplötur úr viði",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {

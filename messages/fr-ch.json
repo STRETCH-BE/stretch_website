@@ -3915,7 +3915,7 @@
             "links": [
               {
                 "label": "cabines acoustiques pour open space",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5284,7 +5284,10 @@
     "orderKitCta": "Commander le kit",
     "acousticResoundBefore": "Absorbeurs muraux, îlots et cabines acoustiques viennent de notre société sœur au sein du STRETCH Group : ",
     "acousticResoundLink": "absorbeurs muraux et îlots acoustiques Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " Pour une finition bois chaleureuse, il existe aussi des ",
+    "acousticResoundWoodLink": "panneaux acoustiques en bois",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {

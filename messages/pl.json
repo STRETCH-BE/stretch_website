@@ -3934,7 +3934,7 @@
             "links": [
               {
                 "label": "budki akustyczne do biur open space",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5294,7 +5294,10 @@
     "orderKitCta": "Zamów zestaw",
     "acousticResoundBefore": "Absorbery ścienne, wyspy sufitowe i budki akustyczne pochodzą od naszej spółki siostrzanej w STRETCH Group: ",
     "acousticResoundLink": "absorbery ścienne i wyspy sufitowe Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " Dla ciepłego wykończenia z drewna są też ",
+    "acousticResoundWoodLink": "drewniane panele akustyczne",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {

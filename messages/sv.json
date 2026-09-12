@@ -3915,7 +3915,7 @@
             "links": [
               {
                 "label": "telefonbås för öppna kontorslandskap",
-                "href": "resound:"
+                "href": "resound:booths"
               }
             ]
           }
@@ -5275,7 +5275,10 @@
     "orderKitCta": "Beställ kitet",
     "acousticResoundBefore": "Väggabsorbenter, taköar och telefonbås kommer från vårt systerbolag i STRETCH Group: ",
     "acousticResoundLink": "väggabsorbenter och taköar från Re-Sound",
-    "acousticResoundAfter": "."
+    "acousticResoundAfter": ".",
+    "acousticResoundWoodBefore": " Vill du ha en varm träkänsla finns även ",
+    "acousticResoundWoodLink": "akustikpaneler i trä",
+    "acousticResoundWoodAfter": "."
   },
   "materialsData": {
     "profiles": {
