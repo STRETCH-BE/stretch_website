@@ -1,3 +1,29 @@
+## 2026-09-13 (51) — Probe paths returned 500 instead of 404
+
+Michael's Vercel log export (13 Sep, 03:50–08:11 UTC): 192 rows, every
+one a 500 from the `/[locale]` function with "Page changed from static to
+dynamic at runtime …, reason: headers". Vercel's 7-day error clusters
+showed the same failure since 5 August: 3,802 occurrences over 50 paths,
+all scanner probes or stray icon requests — `/wp-login.php` (492),
+`/.env` (252), `/wp-sitemap*.xml`, `/index.php`, `/sitemap_index.xml`,
+`/ads.txt`, `/license.txt`, `/sftp-config.json`, `/.env.*`,
+`/apple-touch-icon-precomposed.png`, `/favicon.png`, … Every path
+contains a dot, and that is the mechanism: the middleware matcher skips
+anything with a dot, so those requests never get the locale rewrite and
+reach the `[locale]` segment with the file name as the "locale". Next
+rendered the prerendered `/[locale]` tree on demand, next-intl read
+`headers()` for the request locale, and the render died. Reproduced on a
+local production build: `/.env`, `/wp-login.php`, `/favicon.png` → 500,
+`/foo` (through the middleware) → 404.
+
+Fix: `export const dynamicParams = false` on `src/app/[locale]/layout.tsx`
+— a first segment outside `generateStaticParams` (the 16 locales) now
+short-circuits to a plain 404 before anything renders. Nested dynamic
+segments keep their own settings; every real route passes through the
+middleware with a valid locale and is unaffected. Verified on the rebuilt
+app: the probe paths 404, the home page, the acoustics guide, a product
+page, an article and the sitemap still 200/308 as before.
+
 ## 2026-09-12 (50) — Re-Sound range pages for every language
 
 Michael, 12 Sep 2026, with the URL list for all ten Re-Sound languages:
