@@ -28,6 +28,17 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+// Only the 16 locales exist as a first segment. Without this, a path the
+// middleware never sees (its matcher skips anything containing a dot:
+// /.env, /wp-login.php, /wp-sitemap.xml, /favicon.png, …) reaches this
+// segment with the file name as the "locale"; Next then renders the
+// prerendered /[locale] tree on demand, next-intl reads headers() for the
+// request locale, and the render dies with "Page changed from static to
+// dynamic at runtime" — a 500 instead of a 404 (3,800 such 500s in the
+// week to 13 Sep 2026, every one a scanner probe or a stray icon request).
+// A param outside generateStaticParams now short-circuits to a plain 404.
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
