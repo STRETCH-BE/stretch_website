@@ -396,7 +396,7 @@
     },
     "designer": {
       "eyebrow": "Decken-Designer",
-      "hint": "Zeichnen Sie die Decke aus Wand- und Diagonalmassen, platzieren Sie Nähte und Aussparungen, prüfen Sie den Preis und bestellen Sie. Mit Save speichern Sie ein Aufmass als Datei."
+      "hint": "Zeichnen Sie die Decke aus Wand- und Diagonalmassen, platzieren Sie Nähte und Aussparungen, prüfen Sie den Preis und bestellen Sie. Mit Save speichern Sie ein Aufmass als Datei. Open liest auch DXF-Zeichnungen aus CAD (DWG zuerst als DXF speichern)."
     },
     "businessTypes": {
       "installer": "Monteur",

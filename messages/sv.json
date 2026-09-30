@@ -396,7 +396,7 @@
     },
     "designer": {
       "eyebrow": "Takdesigner",
-      "hint": "Rita taket från vägg- och diagonalmått, placera skarvar och urtag, kontrollera priset och lägg ordern. Använd Save för att spara en mätning som fil."
+      "hint": "Rita taket från vägg- och diagonalmått, placera skarvar och urtag, kontrollera priset och lägg ordern. Använd Save för att spara en mätning som fil. Open läser även DXF-ritningar från CAD (spara DWG som DXF först)."
     },
     "businessTypes": {
       "installer": "Montör",

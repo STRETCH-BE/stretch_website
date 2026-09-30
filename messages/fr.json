@@ -396,7 +396,7 @@
     },
     "designer": {
       "eyebrow": "Concepteur de plafond",
-      "hint": "Dessinez le plafond à partir des murs et des diagonales, placez soudures et découpes, vérifiez le prix et passez la commande. Utilisez Save pour conserver un fichier de mesures."
+      "hint": "Dessinez le plafond à partir des murs et des diagonales, placez soudures et découpes, vérifiez le prix et passez la commande. Utilisez Save pour conserver un fichier de mesures. Open lit aussi les dessins DXF issus de la CAO (enregistrez d'abord le DWG en DXF)."
     },
     "businessTypes": {
       "installer": "Installateur",

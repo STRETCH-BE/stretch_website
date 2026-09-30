@@ -396,7 +396,7 @@
     },
     "designer": {
       "eyebrow": "Plafond-designer",
-      "hint": "Teken het plafond uit muur- en diagonaalmaten, plaats lasnaden en uitsparingen, controleer de prijs en plaats de bestelling. Gebruik Save om een opmeting als bestand te bewaren."
+      "hint": "Teken het plafond uit muur- en diagonaalmaten, plaats lasnaden en uitsparingen, controleer de prijs en plaats de bestelling. Gebruik Save om een opmeting als bestand te bewaren. Open leest ook DXF-tekeningen uit CAD (sla DWG eerst op als DXF)."
     },
     "businessTypes": {
       "installer": "Installateur",

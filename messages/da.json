@@ -396,7 +396,7 @@
     },
     "designer": {
       "eyebrow": "Loftsdesigner",
-      "hint": "Tegn loftet ud fra væg- og diagonalmål, placer samlinger og udskæringer, tjek prisen og afgiv ordren. Brug Save til at gemme en opmåling som fil."
+      "hint": "Tegn loftet ud fra væg- og diagonalmål, placer samlinger og udskæringer, tjek prisen og afgiv ordren. Brug Save til at gemme en opmåling som fil. Open læser også DXF-tegninger fra CAD (gem DWG som DXF først)."
     },
     "businessTypes": {
       "installer": "Montør",

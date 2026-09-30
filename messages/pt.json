@@ -396,7 +396,7 @@
     },
     "designer": {
       "eyebrow": "Designer de tetos",
-      "hint": "Desenhe o teto a partir de paredes e diagonais, posicione emendas e recortes, verifique o preço e faça a encomenda. Use Save para guardar uma medição como ficheiro."
+      "hint": "Desenhe o teto a partir de paredes e diagonais, posicione emendas e recortes, verifique o preço e faça a encomenda. Use Save para guardar uma medição como ficheiro. Open também lê desenhos DXF de CAD (guarde primeiro o DWG como DXF)."
     },
     "businessTypes": {
       "installer": "Instalador",

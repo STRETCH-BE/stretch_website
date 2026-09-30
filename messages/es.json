@@ -396,7 +396,7 @@
     },
     "designer": {
       "eyebrow": "Diseñador de techos",
-      "hint": "Dibuje el techo a partir de paredes y diagonales, coloque costuras y recortes, compruebe el precio y realice el pedido. Use Save para guardar una medición como archivo."
+      "hint": "Dibuje el techo a partir de paredes y diagonales, coloque costuras y recortes, compruebe el precio y realice el pedido. Use Save para guardar una medición como archivo. Open también lee dibujos DXF de CAD (guarde antes el DWG como DXF)."
     },
     "businessTypes": {
       "installer": "Instalador",

@@ -396,7 +396,7 @@
     },
     "designer": {
       "eyebrow": "Ceiling designer",
-      "hint": "Draw the ceiling from wall + diagonal measurements, position seams and cut-outs, check the price and place the order. Use Save to keep a measurement file for later."
+      "hint": "Draw the ceiling from wall + diagonal measurements, position seams and cut-outs, check the price and place the order. Use Save to keep a measurement file for later. Open also reads DXF drawings from CAD (save DWG as DXF first)."
     },
     "businessTypes": {
       "installer": "Installer",

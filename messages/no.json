@@ -396,7 +396,7 @@
     },
     "designer": {
       "eyebrow": "Takdesigner",
-      "hint": "Tegn taket fra vegg- og diagonalmål, plasser skjøter og utsparinger, sjekk prisen og legg inn bestillingen. Bruk Save for å lagre en måling som fil."
+      "hint": "Tegn taket fra vegg- og diagonalmål, plasser skjøter og utsparinger, sjekk prisen og legg inn bestillingen. Bruk Save for å lagre en måling som fil. Open leser også DXF-tegninger fra CAD (lagre DWG som DXF først)."
     },
     "businessTypes": {
       "installer": "Montør",

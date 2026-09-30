@@ -415,7 +415,7 @@
     },
     "designer": {
       "eyebrow": "Projektant sufitu",
-      "hint": "Narysuj sufit z wymiarów ścian i przekątnych, rozmieść zgrzewy i wycięcia, sprawdź cenę i złóż zamówienie. Użyj Save, aby zapisać pomiar jako plik."
+      "hint": "Narysuj sufit z wymiarów ścian i przekątnych, rozmieść zgrzewy i wycięcia, sprawdź cenę i złóż zamówienie. Użyj Save, aby zapisać pomiar jako plik. Open otwiera też rysunki DXF z CAD (DWG zapisz najpierw jako DXF)."
     },
     "businessTypes": {
       "installer": "Monter",

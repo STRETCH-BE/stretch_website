@@ -396,7 +396,7 @@
     },
     "designer": {
       "eyebrow": "Loftahönnuður",
-      "hint": "Teiknaðu loftið út frá veggja- og hornalínumálum, staðsettu samskeyti og úrtök, athugaðu verðið og sendu pöntunina. Notaðu Save til að vista mælingu sem skrá."
+      "hint": "Teiknaðu loftið út frá veggja- og hornalínumálum, staðsettu samskeyti og úrtök, athugaðu verðið og sendu pöntunina. Notaðu Save til að vista mælingu sem skrá. Open les líka DXF-teikningar úr CAD (vistaðu DWG fyrst sem DXF)."
     },
     "businessTypes": {
       "installer": "Uppsetningaraðili",
