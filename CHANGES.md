@@ -1,3 +1,173 @@
+## 2026-10-02 (52) — Switzerland, one month in: sitemap guard, 301s, hreflang guard, QuinLay schema, the price guide ships, Vercel Analytics
+
+Michael's 1-month review of stretchdecken.ch (2 Oct 2026) listed seven
+fixes. Everything below is on `claude/beautiful-pascal-9cx14f`; the Vercel
+settings Michael changes himself are listed at the end.
+
+**1 · Sitemap.** The review's premise ("only 61 static URLs, every dynamic
+route missing") did not reproduce: fetched through Vercel on 2 Oct 2026,
+20:49 UTC (`x-vercel-cache: MISS`, so rendered by the deployed function),
+`stretchdecken.ch/sitemap.xml` held **368 URLs** — 99 dealer places, 14
+articles, 22 projects, 10 product pages, 5 applications, 12 technical pages
+and 7 material groups on each of its two locales — and `stretchdecken.de`
+**193**. Nothing on the route side had regressed; the likeliest reading is a
+fetch that cut the 658 KB response off early (the first 61 entries end at
+~114 KB) — hence the build-time guard below. What *was* wrong, and is
+fixed:
+- the Swiss host built and listed **all ~100 places** — a German page for
+  Berlin, a French one for Antwerpen, thin duplicates of the .de and .be
+  pages with no Swiss angle. `placesForLocale()` in `src/lib/dealers.ts`
+  now scopes **de-CH to its 12 places** (Luzern, Zug, Zürich, Aargau, Bern,
+  Basel, Solothurn, Winterthur, St. Gallen, Thurgau, Graubünden, Vaduz)
+  and **fr-CH to the 6 Romandie places**, and ONE function feeds
+  `generateStaticParams`, the `/dealers` overview, the sitemap, every
+  hreflang set (`localesForPlace` — a place's alternates are exactly the
+  locales it is built on, so `/dealers/berlin` on .de no longer advertises
+  a de-CH/fr-CH twin) and the language switcher (`pathForLocale` lands on
+  `/dealers` when the target locale lacks the place). The dropped Swiss
+  URLs redirect: a Romandie slug on the German side 308s to `/fr/dealers/…`
+  and vice versa, every other former place URL to the Swiss directory
+  (`swissPlaceRedirects` in `redirects.mjs`, slug lists mirrored from
+  dealers.ts). Every other locale keeps all places, unchanged.
+- `/spanndecke-preis-schweiz` had no `<lastmod>` source (fell through to
+  the build date) and was out of the sitemap while its ranges are open —
+  it now carries `priceGuideCh.updatedAt`, priority 0.8, and is listed
+  (see 5). `dealersUpdatedAt` bumped to 2026-10-02.
+- **`scripts/check-sitemap.ts`** (tsx): for every live host it renders the
+  real `/sitemap.xml` handler with that Host header and compares the
+  `<loc>` set with the pages `next build` actually produced
+  (`.next/prerender-manifest.json`, i.e. the union of every
+  `generateStaticParams`): every built page that is indexable and
+  self-canonical in its own HTML must be listed, every listed URL must be a
+  built page, no duplicates — exit 1 otherwise, offending URLs printed.
+  Built pages the sitemap must not list are recognised from their HTML
+  (a `noindex` robots meta: portal, 404, the calculator on a no-price
+  locale; a canonical elsewhere: `/applications/custom-print`,
+  `/prefab-ceiling-unit`, `/training`), never from a hand-kept list.
+  Wired into **`postbuild`** with the hreflang check, so a Vercel build
+  fails on a mismatch; also `npm run check:sitemap` and `npm run verify`.
+  Per host, this build:
+
+```
+  OK   stretch.mt             sitemap  190 · built indexable  190 · (en: 190) · 4 built pages rightly skipped
+  OK   stretch-ceilings.uk    sitemap  190 · built indexable  190 · (uk: 190) · 4 built pages rightly skipped
+  OK   stretchceiling.us      sitemap   89 · built indexable   89 · (us: 89) · 4 built pages rightly skipped
+  OK   stretchplafond.be      sitemap  191 · built indexable  191 · (be: 191) · 4 built pages rightly skipped
+  OK   stretchplafond.nl      sitemap  191 · built indexable  191 · (nl: 191) · 4 built pages rightly skipped
+  OK   stretchplafond.fr      sitemap  194 · built indexable  194 · (fr: 194) · 4 built pages rightly skipped
+  OK   stretch-sufit.pl       sitemap  192 · built indexable  192 · (pl: 192) · 4 built pages rightly skipped
+  OK   stretchdecken.de       sitemap  193 · built indexable  193 · (de: 193) · 4 built pages rightly skipped
+  OK   stretchdecken.ch       sitemap  191 · built indexable  191 · (ch: 99, fr-ch: 92) · 8 built pages rightly skipped
+  OK   stretchtecho.es        sitemap  189 · built indexable  189 · (es: 189) · 4 built pages rightly skipped
+  OK   straekloft.dk          sitemap  189 · built indexable  189 · (da: 189) · 4 built pages rightly skipped
+  OK   stretchceilings.se     sitemap  189 · built indexable  189 · (sv: 189) · 4 built pages rightly skipped
+  OK   stretch.is             sitemap  189 · built indexable  189 · (is: 189) · 4 built pages rightly skipped
+```
+
+**2 · Redirects.** Vercel's edge answered **308** for
+`https://stretchdecken.li/` on 2 Oct (Location
+`https://stretchdecken.ch/dealers/vaduz`), not 302. Layers checked:
+`stretchdecken.li` is attached to the Vercel project as a *serving* domain
+(no domain-level redirect, `redirectStatusCode: null`), so the status comes
+from `redirects.mjs` (`permanent: true` → 308) — Vercel's domain setting
+produced nothing. No layer we control emits a 302; a 302 can only have come
+from the registrar's URL forwarding before the .li DNS reached Vercel (it
+resolves to 216.150.1.1, Vercel, from here). The .li rules — and the new
+`www.stretchdecken.ch` → `stretchdecken.ch` rule — now use
+`statusCode: 301` (`R301` helper; the stretchgroup.* safety nets stay 308).
+**`www.stretchdecken.ch` and `www.stretchdecken.li` do not resolve at all
+(NXDOMAIN) and are not attached to the project** — see the to-dos.
+
+**3 · Hreflang.** **`scripts/check-hreflang.ts`** reads the prerendered
+HTML of `/`, `/dealers/luzern`, `/products/pvc-stretch-ceiling` and
+`/fr/dealers/lausanne` straight from `.next/server/app` and asserts a
+self-referencing canonical, de-CH / de-DE / x-default (the en host) on
+every page, fr-CH wherever the page exists on fr-CH (so not on the
+German-Swiss place pages, which Romandie does not carry — and de-CH not on
+`/fr/dealers/lausanne`), de-AT byte-identical to de-DE, every URL on the
+locale's own domain + public prefix, no pending locale, and the exact tag
+count. Expected hosts come from `src/i18n/config.ts`, never literals. The
+alternates builder needed no change. Runs in `postbuild`.
+
+**4 · LocalBusiness on the Swiss place pages.**
+`swissRepresentativeSchema()` in `structured-data.ts`: a
+`HomeAndConstructionBusiness` (LocalBusiness subtype) named "QuinLay AG –
+STRETCH Generalvertretung Schweiz & Liechtenstein", `@id`
+`…/#dealer-quinlay` (one showroom, one entity), address Stierenberg Park 1A,
+6221 Rickenbach, addressRegion LU, CH, telephone +41413134732, email, url
+quinlay.ch, `sameAs` = the place page, `areaServed` = the place name
+(Vaduz: + "Liechtenstein"), `parentOrganization` → the STRETCH Organization
+node. NAP read from `swissPartner` in site-config — the same source the
+footer prints. No rating, no priceRange. Emitted on the 12 de-CH places
+(and on the same places on every other dealer market); the Romandie
+recruitment pages emit nothing. Replaces the generic dealer node.
+
+**5 · Swiss price guide ships.** `src/lib/price-guide-ch.ts`: every
+`low`/`high` is still `null` (TODO(Michael), from QuinLay) and renders as a
+dashed **"Richtwerte folgen"** badge — never a figure; the VAT line reads
+"Richtwerte inkl. 8.1 % MwSt., Montage durch QuinLay AG bzw.
+STRETCH-Partner, unverbindlich"; six price drivers (room shape, corners,
+spots, Akustikschicht, Lichtdecke, access); the Offerte section is now
+three steps — Showroom Rickenbach LU → Aufmass vor Ort → Offerte in CHF —
+with the lead time from `offerteWithinDays` (TODO(Michael), `null` →
+"innerhalb weniger Werktage (genaue Frist folgt)"); five FAQs (+ "Gelten die
+Richtwerte auch in Liechtenstein?"). The page is **indexed, in the ch
+sitemap and linked**: a third CTA in the ch home hero ("Was kostet eine
+Spanndecke?"), the ch footer's Solutions column ("Richtpreise Schweiz &
+Liechtenstein", where the calculator link is hidden), every de-CH place page
+("Was kostet eine Spanndecke in {place}? Richtpreise in CHF pro m²") and
+the ch FAQ page. The `priceGuideChReady` gate now only controls the notice.
+Still de-CH only: 404 on every other locale, the existing 308s to each
+domain's own price article stay. `src/lib/price-guide-ch-route.ts` holds
+the route so client components link it without bundling the copy.
+
+**6 · QuinLay blocks + Swiss internal links.** Footer (ch + fr-ch): the
+"Generalvertretung Schweiz & Liechtenstein" block now names QuinLay AG in
+the display face and adds a followed `www.quinlay.ch` link
+(`rel="noopener"`). Partners page (ch + fr-ch): the QuinLay card is a block
+with name, role, address, phone (`tel:`), e-mail (`mailto:`) and the
+followed quinlay.ch link — no longer one big anchor, so the inner links are
+valid HTML. Every Swiss place page: "In der Nähe" shows the **two
+geographically nearest places** of the locale (haversine on the new `geo`
+coordinates of the 18 Swiss places) plus a "Monteur-Schulung bei der
+QuinLay AG" chip to `/installer-training`.
+
+**7 · Vercel Web Analytics.** `@vercel/analytics` 1.6.1;
+`components/analytics/VercelAnalytics.tsx` mounts `<Analytics />`
+(`@vercel/analytics/next`) only after analytics consent, exactly like
+Clarity, and its `beforeSend` drops every event once consent is withdrawn.
+Mounted through `AnalyticsScripts` in the locale (root) layout. No env var;
+Michael enables Web Analytics in the project. No other tracking change.
+
+**Messages.** Six keys in all 16 files — `home.hero.priceGuide`,
+`footer.links.priceGuide`, `dealersPage.nearestHeading`,
+`dealersPage.trainingLink`, `dealersPage.priceGuideLine`,
+`faqPage.priceGuideLink` (`grep -c '"priceGuideLine"' messages/*.json` = 16 ×
+1); `de.json` changed by those six lines only; ch/fr-ch regenerated by their
+overlays (Swiss overrides 58 → 62 / 58 → 59, `--check` clean); ’ in the
+French strings. `tsx` added as a devDependency for the two checks.
+
+**Verified.** `tsc` clean, `npm test`, `check:client-messages`,
+`check:overlays`, `next build` (3012 static pages),
+`check-sitemap` (table above) and `check-hreflang` all pass; the built
+`/spanndecke-preis-schweiz` shows the H1, six "Richtwerte folgen" rows,
+the 8.1 % line, the three Offerte steps with "genaue Frist folgt",
+five FAQs, source `price_guide_ch`, `index, follow`; the built
+`/dealers/luzern` carries the QuinLay node; redirects.mjs loads with the
+.li / www rules at 301.
+
+**Vercel / DNS — Michael:** (1) Project → Analytics → enable **Web
+Analytics**. (2) Settings → Domains: add **www.stretchdecken.ch** and
+**www.stretchdecken.li**, each "Redirect to stretchdecken.ch" with status
+**301**, and create the `www` CNAMEs Vercel shows at the registrar —
+today both names do not exist. (3) Keep `stretchdecken.li` as a serving
+domain (the code 301s `/` to the Vaduz page; a Vercel-level redirect would
+send it to the home). (4) Check that the project's Build Command is
+`npm run build` (not a bare `next build`) so `postbuild` runs the two
+checks. (5) Production is currently deployed from branch
+`claude/great-johnson-xdymsx` (a redeploy of 30 Sep), not `main` — merge
+this branch and redeploy from the branch you intend to be production.
+
 ## 2026-09-13 (51) — Probe paths returned 500 instead of 404
 
 Michael's Vercel log export (13 Sep, 03:50–08:11 UTC): 192 rows, every

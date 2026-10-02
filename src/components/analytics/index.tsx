@@ -6,6 +6,7 @@ import GoogleAnalytics from './GoogleAnalytics';
 import Clarity from './Clarity';
 import MetaPixel from './MetaPixel';
 import BingUET from './BingUET';
+import VercelAnalytics from './VercelAnalytics';
 
 export { default as ConsentModeDefaults } from './ConsentModeDefaults';
 export { default as ScrollTracker } from './ScrollTracker';
@@ -13,6 +14,7 @@ export { default as GoogleAnalytics } from './GoogleAnalytics';
 export { default as Clarity } from './Clarity';
 export { default as MetaPixel } from './MetaPixel';
 export { default as BingUET } from './BingUET';
+export { default as VercelAnalytics } from './VercelAnalytics';
 
 export function AnalyticsScripts() {
   return (
@@ -21,6 +23,8 @@ export function AnalyticsScripts() {
       <Clarity />
       <MetaPixel />
       <BingUET />
+      {/* Vercel Web Analytics — consent-gated like Clarity (2 Oct 2026). */}
+      <VercelAnalytics />
     </>
   );
 }

@@ -16,6 +16,7 @@
 import type { Locale } from '@/i18n/config';
 import slugMap from './blog-slugs.json';
 import { isAcousticsRoute, acousticsHref } from './page-slugs';
+import { isDealerMarket, placeExistsOn } from './dealers';
 
 export type BlogSlugMap = Record<string, Partial<Record<Locale, string>>>;
 
@@ -81,6 +82,14 @@ export function pathForLocale(pathname: string, from: Locale, to: Locale): strin
   // The acoustics guide has a slug per locale and exists on a few markets
   // only: the switcher lands on the target's own slug, else on the product.
   if (isAcousticsRoute(pathname)) return acousticsHref(to);
+  // A place page exists on its own locales only (the Swiss locales carry
+  // their own places, `us` has no directory): otherwise the directory hub,
+  // or the home where there is no directory at all.
+  const dm = /^\/dealers\/([^/?#]+)/.exec(pathname);
+  if (dm) {
+    if (!isDealerMarket(to)) return '/';
+    return placeExistsOn(dm[1], to) ? pathname : '/dealers';
+  }
   const m = /^\/blog\/([^/?#]+)(.*)$/.exec(pathname);
   if (!m) return pathname;
   const slugInUrl = m[1];

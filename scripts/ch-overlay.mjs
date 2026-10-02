@@ -168,6 +168,12 @@ const OVERRIDES = {
   // Supply / export copy: the contracting party for CH & FL is QuinLay AG.
   'supplyPage.currencyLine': 'Preise und Rechnungsstellung in CHF durch die QuinLay AG (Schweiz & Liechtenstein).',
   'projectsExportPage.how.currencyLine': 'Rechnungsstellung in CHF durch die QuinLay AG (Schweiz & Liechtenstein).',
+  // Swiss review, 2 Oct 2026: the CHF price guide links (hero, footer, place
+  // pages, FAQ) and the training chip on every Swiss place page.
+  'footer.links.priceGuide': 'Richtpreise Schweiz & Liechtenstein',
+  'dealersPage.trainingLink': 'Monteur-Schulung bei der QuinLay AG',
+  'dealersPage.priceGuideLine': 'Was kostet eine Spanndecke in {place}? Richtpreise in CHF pro m²',
+  'faqPage.priceGuideLink': 'Richtpreise Schweiz & Liechtenstein: Was kostet eine Spanndecke in der Schweiz?',
 };
 
 // ---- helpers ---------------------------------------------------------------

@@ -14,6 +14,7 @@ import PortalLink from '@/components/ui/PortalLink';
 import { CONSENT_OPEN_BANNER_EVENT } from '@/lib/consent';
 import { pathForLocale } from '@/lib/blog-slugs';
 import { pricesPublished } from '@/lib/currency';
+import { priceGuideChRoute } from '@/lib/price-guide-ch-route';
 import { analytics } from '@/lib/analytics';
 import {
   liveLocales,
@@ -97,6 +98,14 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            {/* de-CH: the Swiss CHF price guide in the calculator's place (review, 2 Oct 2026). */}
+            {locale === 'ch' && (
+              <li>
+                <Link href={priceGuideChRoute} className="lnk" style={{ color: 'var(--on-dark-soft)' }}>
+                  {t('links.priceGuide')}
+                </Link>
+              </li>
+            )}
           </FooterCol>
 
           {/* Company */}
@@ -177,7 +186,7 @@ export default function Footer() {
             {swiss ? (
               /* ch: QuinLay AG first (the Swiss contracting party), the manufacturer below. */
               <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--on-dark-soft)', margin: '0 0 16px' }}>
-                {swissPartner.name}
+                <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, color: '#fff' }}>{swissPartner.name}</span>
                 <br />
                 {swissPartner.street}
                 <br />
@@ -223,6 +232,19 @@ export default function Footer() {
             >
               {polish ? contact.email : local.email}
             </a>
+            {/* ch / fr-ch: the representative's own site — an ordinary followed
+                link (we WANT quinlay.ch linked from every Swiss page). */}
+            {swiss && (
+              <a
+                href={swissPartner.url}
+                rel="noopener"
+                target="_blank"
+                className="lnk"
+                style={{ display: 'block', fontSize: 14, color: 'var(--on-dark-soft)', marginTop: 8 }}
+              >
+                {swissPartner.url.replace(/^https?:\/\//, '')}
+              </a>
+            )}
             {swiss && (
               <p style={{ fontSize: 12.5, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: '14px 0 0' }}>
                 <span style={{ fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', fontSize: 11 }}>{t('manufacturerHeading')}</span>

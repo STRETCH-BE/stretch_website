@@ -178,7 +178,8 @@
       "kit": "DIY-sett",
       "supply": "Aðföng uppsetningaraðila",
       "projectsExport": "Verkefnaútflutningur",
-      "priceCalculator": "Reikna verð"
+      "priceCalculator": "Reikna verð",
+      "priceGuide": "Verðleiðbeiningar"
     },
     "dealers": "Söluaðilanet",
     "worldwideHeading": "STRETCH um allan heim",
@@ -499,7 +500,8 @@
       "quote": "Fáðu ókeypis tilboð",
       "explore": "Skoðaðu lausnirnar",
       "rated": "Einkunn á Google",
-      "tabsAria": "Finndu þína lausn"
+      "tabsAria": "Finndu þína lausn",
+      "priceGuide": "Hvað kostar dúkaloft?"
     },
     "ticker": {
       "0": "Uppsett á einum degi",
@@ -2329,7 +2331,8 @@
     "asideKicker": "Ertu enn með spurningu?",
     "asideTitle": "Talaðu við sérfræðing í dúkaloftum.",
     "asideBody": "Segðu okkur frá rýminu þínu og við svörum — ókeypis og án skuldbindinga.",
-    "asideCta": "Fá ókeypis tilboð"
+    "asideCta": "Fá ókeypis tilboð",
+    "priceGuideLink": "Viðmiðunarverð: hvað kostar dúkaloft?"
   },
   "catalogFaqs": {
     "polyester": [
@@ -5501,7 +5504,10 @@
     "serviceConsulting": "Ráðgjöf og sýningarsalur",
     "serviceInstallation": "Uppsetning í gegnum þjálfaða samstarfsaðila",
     "serviceTraining": "Uppsetningarnámskeið í eigin kennslurými",
-    "serviceStock": "Efni af lager í Sviss"
+    "serviceStock": "Efni af lager í Sviss",
+    "nearestHeading": "Í nágrenninu",
+    "trainingLink": "Þjálfun uppsetningaraðila",
+    "priceGuideLine": "Hvað kostar dúkaloft í {place}? Viðmiðunarverð á m²"
   },
   "datasheetEmail": {
     "subject": "STRETCH-tækniblaðið þitt — {title}",

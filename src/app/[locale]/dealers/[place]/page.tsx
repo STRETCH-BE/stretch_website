@@ -17,22 +17,30 @@
 //       on every Swiss place: contact block (showroom, phone, e-mail, services,
 //       drive time from Rickenbach) + its LocalBusiness node; Vaduz names
 //       Liechtenstein; no price line (pricesPublished).
+//       1-month review (2 Oct 2026): the Swiss locales build their OWN places
+//       only (placesForLocale — de-CH the German-speaking cantons + Vaduz,
+//       fr-CH Romandie), the representative's HomeAndConstructionBusiness
+//       node names the place as areaServed, every Swiss place links its two
+//       nearest neighbours + the training page, and de-CH links the CHF price
+//       guide ("Was kostet eine Spanndecke in {place}?").
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, Calculator, Car, Factory, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, Calculator, Car, Factory, GraduationCap, Mail, MapPin, Phone } from 'lucide-react';
 import { isValidLocale, type Locale } from '@/i18n/config';
-import { brand, contact, offices, siteUrl, swissPartner, polishEntity } from '@/lib/site-config';
+import { brand, contact, offices, swissPartner, polishEntity } from '@/lib/site-config';
 import { localeBase, buildAlternates, apiBase } from '@/lib/seo';
-import { breadcrumbSchema, localBusinessSchema, branchLocalBusinessSchema, polishBusinessSchema } from '@/lib/structured-data';
+import { breadcrumbSchema, localBusinessSchema, branchLocalBusinessSchema, polishBusinessSchema, swissRepresentativeSchema } from '@/lib/structured-data';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { ModalButton } from '@/components/ui/ModalButton';
 import {
   getDealerPlace,
-  dealerPlaceSlugs,
+  placesForLocale,
+  localesForPlace,
+  nearestPlaces,
   placeDealers,
   nearbyPlaces,
   getDealerPlace as getPlace,
@@ -44,7 +52,7 @@ import {
 } from '@/lib/dealers';
 import { getProjectBySlug, blogPostsFor, blogHref } from '@/lib/content';
 import { pricesPublished } from '@/lib/currency';
-import { priceGuideCh, priceGuideChReady } from '@/lib/price-guide-ch';
+import { priceGuideCh } from '@/lib/price-guide-ch';
 import { localizeProject, type ProjectMessages } from '@/lib/localize-content';
 
 // Every valid (locale, place) pair is enumerated below. dynamicParams=false →
@@ -54,16 +62,18 @@ import { localizeProject, type ProjectMessages } from '@/lib/localize-content';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  // Market-restricted (N2): place pages are only built for dealer markets.
-  return dealerMarkets.flatMap((locale) => dealerPlaceSlugs.map((place) => ({ locale, place })));
+  // Market-restricted (N2): place pages are only built for dealer markets —
+  // and the Swiss locales build their own places only (placesForLocale).
+  return dealerMarkets.flatMap((locale) => placesForLocale(locale).map((p) => ({ locale, place: p.slug })));
 }
 
 export async function generateMetadata({ params }: { params: { locale: string; place: string } }): Promise<Metadata> {
   if (!isValidLocale(params.locale)) return {};
   if (!isDealerMarket(params.locale as Locale)) return {};
   const place = getDealerPlace(params.place);
-  if (!place) return {};
   const locale = params.locale as Locale;
+  // Not built on this locale (a non-Swiss place on the Swiss host) → no metadata.
+  if (!place || !localesForPlace(place).includes(locale)) return {};
   const t = await getTranslations({ locale, namespace: 'dealersPage' });
   const hasDealers = placeDealers(place).length > 0;
   const placeLabel = place.country === 'LI' ? `${place.name} / ${t('liechtenstein')}` : place.name;
@@ -76,7 +86,9 @@ export async function generateMetadata({ params }: { params: { locale: string; p
   return {
     title: { absolute: fullTitle },
     description,
-    alternates: buildAlternates(locale, route, dealerMarkets),
+    // hreflang: exactly the locales this place is built on (Swiss places
+    // on their own Swiss locale only, every other place everywhere but there).
+    alternates: buildAlternates(locale, route, localesForPlace(place)),
     openGraph: {
       type: 'website', siteName: brand.name, title, description, url: `${localeBase(locale)}${route}`,
       images: [{ url: ogImg, width: 1200, height: 630, alt: brand.name }],
@@ -91,7 +103,8 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
   // Market-restricted (N2): no dealer network on this locale → 404.
   if (!isDealerMarket(locale)) notFound();
   const place = getDealerPlace(params.place);
-  if (!place) notFound();
+  // Unknown slug, or a place the Swiss host does not carry → 404 (never built).
+  if (!place || !localesForPlace(place).includes(locale)) notFound();
 
   const t = await getTranslations('dealersPage');
   const tp = await getTranslations('productPage');
@@ -100,7 +113,14 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
   const hasDealers = found.length > 0;
   // Vaduz belongs to Liechtenstein: the H1 and every {place} slot say so.
   const placeLabel = place!.country === 'LI' ? `${place!.name} / ${t('liechtenstein')}` : place!.name;
-  const near = nearbyPlaces(place!);
+  // Swiss places (any locale): the two geographically nearest places this
+  // locale carries, plus the training page below (review, 2 Oct 2026). Every
+  // other place: the province / region list, limited to what the locale builds.
+  const swissPlace = place!.region === 'switzerland';
+  const pool = placesForLocale(locale);
+  const near = swissPlace
+    ? nearestPlaces(place!, pool.filter((p) => p.region === 'switzerland'), 2)
+    : nearbyPlaces(place!).filter((p) => pool.some((q) => q.slug === p.slug));
   const province = place!.province ? getPlace(place!.province) : undefined;
   const regionLabel = t(regionLabelKeys[place!.region]);
   const projects = (place!.projects ?? [])
@@ -115,8 +135,7 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
   const entity = placeEntity(place!);
   const belgian = isBelgianPlace(place!) || place!.region === 'luxembourg';
   // Swiss places (any locale): the contracting party is QuinLay AG, so the
-  // identity card names them — never the Belgian office line.
-  const swissPlace = place!.region === 'switzerland';
+  // identity card names them — never the Belgian office line (swissPlace above).
   const plOffice = offices.find((o) => o.country === 'PL');
   const tcom = await getTranslations('common');
   const tpl = (k: string) => tcom(`plContact.${k}`); // pl-only keys, only called on the pl locale
@@ -133,38 +152,22 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
   // Częstochowa plant on Polish pages. French/German/Austrian pages emit no
   // local entity node — there is no local address to claim.
   const localBusiness = belgian ? localBusinessSchema() : entity === 'pl' ? (locale === 'pl' ? polishBusinessSchema() : branchLocalBusinessSchema('PL')) : undefined;
-  // Dealers with a full contact block (QuinLay AG) get their own LocalBusiness
-  // node: the showroom is a real, locatable local entity.
-  const dealerNodes = found
-    .filter((d) => d.contact)
-    .map((d) => {
-      const c = d.contact!;
-      const m = (c.addressLines[1] ?? '').match(/^(\S+)\s+(.+)$/);
-      return {
-        '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
-        '@id': `${siteUrl}/#dealer-${d.id}`,
-        name: d.name,
-        url: d.url,
-        telephone: c.phone,
-        email: c.email,
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: c.addressLines[0],
-          ...(m ? { postalCode: m[1], addressLocality: m[2] } : { addressLocality: c.addressLines[1] }),
-          addressCountry: 'CH',
-        },
-        parentOrganization: { '@id': `${siteUrl}/#organization` },
-      };
-    });
+  // Swiss places served by QuinLay AG: the representative's
+  // HomeAndConstructionBusiness node (NAP from site-config, the place as
+  // areaServed — Vaduz adds Liechtenstein — the page in sameAs). The Romandie
+  // recruitment pages have no dealer and emit no local node.
+  const swissNode = swissPlace && hasDealers
+    ? swissRepresentativeSchema({
+        pageUrl: `${localeBase(locale)}/dealers/${place!.slug}`,
+        areaServed: place!.country === 'LI' ? [place!.name, 'Liechtenstein'] : [place!.name],
+      })
+    : undefined;
 
   return (
     <>
       <JsonLd data={crumbs} />
       {localBusiness && <JsonLd data={localBusiness} />}
-      {dealerNodes.map((n) => (
-        <JsonLd key={n['@id']} data={n} />
-      ))}
+      {swissNode && <JsonLd data={swissNode} />}
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="container" style={{ paddingTop: 'clamp(20px,3vw,30px)' }}>
@@ -192,15 +195,16 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
           </p>
         )}
         {/* "What does a stretch ceiling cost in <place>?" → the calculator (T6);
-            on de-CH the Swiss CHF price guide instead, once QuinLay's ranges are in. */}
+            on de-CH the Swiss CHF price guide instead (placeholders visible until
+            QuinLay's ranges are in — review, 2 Oct 2026). */}
         {pricesPublished(locale) && (
           <Link href="/price-calculator" className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, fontWeight: 700, fontSize: 14.5 }}>
             <Calculator size={16} style={{ color: 'var(--red)' }} /> {t('costLine', { place: placeLabel })} →
           </Link>
         )}
-        {locale === 'ch' && priceGuideChReady && (
+        {locale === 'ch' && (
           <Link href={priceGuideCh.route} className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, fontWeight: 700, fontSize: 14.5 }}>
-            <Calculator size={16} style={{ color: 'var(--red)' }} /> {t('costLine', { place: placeLabel })} →
+            <Calculator size={16} style={{ color: 'var(--red)' }} /> {t('priceGuideLine', { place: placeLabel })} →
           </Link>
         )}
       </section>
@@ -401,11 +405,13 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
         {near.length > 0 && (
           <>
             <h2 style={{ fontSize: 12.5, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text-muted)', margin: '0 0 12px' }}>
-              {place!.kind === 'province'
-                ? t('nearbyHeadingProvince', { place: placeLabel })
-                : province
-                  ? t('nearbyHeading', { province: province.name })
-                  : t('nearbyHeadingRegion', { region: regionLabel })}
+              {swissPlace
+                ? t('nearestHeading')
+                : place!.kind === 'province'
+                  ? t('nearbyHeadingProvince', { place: placeLabel })
+                  : province
+                    ? t('nearbyHeading', { province: province.name })
+                    : t('nearbyHeadingRegion', { region: regionLabel })}
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 22 }}>
               {province && place!.kind === 'city' && (
@@ -414,6 +420,12 @@ export default async function DealerPlacePage({ params }: { params: { locale: st
               {near.map((n) => (
                 <Link key={n.slug} href={`/dealers/${n.slug}`} className="dlr-chip">{n.name}</Link>
               ))}
+              {/* Swiss places: the installer training (QuinLay's day courses on ch) next to the neighbours. */}
+              {swissPlace && (
+                <Link href="/installer-training" className="dlr-chip dlr-chip--dark" style={{ gap: 7, alignItems: 'center' }}>
+                  <GraduationCap size={14} /> {t('trainingLink')}
+                </Link>
+              )}
             </div>
           </>
         )}

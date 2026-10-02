@@ -178,7 +178,8 @@
       "kit": "Doe-het-zelfkit",
       "supply": "Levering voor installateurs",
       "projectsExport": "Projectexport",
-      "priceCalculator": "Prijs berekenen"
+      "priceCalculator": "Prijs berekenen",
+      "priceGuide": "Prijsgids"
     },
     "dealers": "Dealernetwerk",
     "worldwideHeading": "STRETCH wereldwijd",
@@ -499,7 +500,8 @@
       "quote": "Vraag een gratis offerte",
       "explore": "Ontdek de oplossingen",
       "rated": "Beoordeeld op Google",
-      "tabsAria": "Vind uw oplossing"
+      "tabsAria": "Vind uw oplossing",
+      "priceGuide": "Wat kost een spanplafond?"
     },
     "ticker": {
       "0": "Geplaatst in één dag",
@@ -2329,7 +2331,8 @@
     "asideKicker": "Nog een vraag?",
     "asideTitle": "Praat met een spanplafond­specialist.",
     "asideBody": "Vertel ons over uw ruimte en we antwoorden — gratis en vrijblijvend.",
-    "asideCta": "Vraag een gratis offerte aan"
+    "asideCta": "Vraag een gratis offerte aan",
+    "priceGuideLink": "Richtprijzen: wat kost een spanplafond?"
   },
   "catalogFaqs": {
     "polyester": [
@@ -5511,7 +5514,10 @@
     "serviceConsulting": "Advies en showroom",
     "serviceInstallation": "Plaatsing door opgeleide partners",
     "serviceTraining": "Installateursopleiding in eigen opleidingslokaal",
-    "serviceStock": "Materialen uit Zwitserse voorraad"
+    "serviceStock": "Materialen uit Zwitserse voorraad",
+    "nearestHeading": "In de buurt",
+    "trainingLink": "Monteursopleiding",
+    "priceGuideLine": "Wat kost een spanplafond in {place}? Richtprijzen per m²"
   },
   "datasheetEmail": {
     "subject": "Uw STRETCH-datasheet — {title}",

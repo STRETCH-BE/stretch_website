@@ -16,12 +16,12 @@ import {
   type Locale,
 } from '@/i18n/config';
 import { buildCanonical } from '@/lib/seo';
-import { priceGuideCh, priceGuideChReady } from '@/lib/price-guide-ch';
+import { priceGuideCh } from '@/lib/price-guide-ch';
 import { staticRoutes, staticRouteDates } from '@/lib/site-config';
 import { productSlugs, productsUpdatedAt } from '@/lib/products';
 import { applicationSlugs, applicationsUpdatedAt } from '@/lib/applications';
 import { blogPostsFor, blogHref, blogPostForSlug, projectSlugs, projectsUpdatedAt } from '@/lib/content';
-import { dealerPlaceSlugs, isDealerMarket, dealersUpdatedAt } from '@/lib/dealers';
+import { placesForLocale, localesForPlace, getDealerPlace, isDealerMarket, dealersUpdatedAt } from '@/lib/dealers';
 import { pricesPublished } from '@/lib/currency';
 import { techMembranes, techTopicKeys, technicalUpdatedAt } from '@/lib/technical';
 import { materialGroupSlugs, materialsUpdatedAt } from '@/lib/materials';
@@ -49,7 +49,10 @@ function collectRoutes(locale: Locale): string[] {
   // the sitemaps of the domains they exist on, each at THIS locale's slug.
   const blogRoutes = blogPostsFor(locale).map((p) => blogHref(p, locale));
   // Dealer directory + installer training exist on dealer markets only (N2).
-  const dealerRoutes = isDealerMarket(locale) ? dealerPlaceSlugs.map((s) => `/dealers/${s}`) : [];
+  // The Swiss locales list their OWN places only (de-CH: the German-speaking
+  // cantons/cities + Vaduz, fr-CH: Romandie) — exactly the pages that are
+  // built for them (placesForLocale, 2 Oct 2026); other locales list all.
+  const dealerRoutes = placesForLocale(locale).map((p) => `/dealers/${p.slug}`);
   const technicalRoutes = Object.keys(techMembranes).flatMap((m) =>
     techTopicKeys.map((t) => `/technical/${m}/${t}`),
   );
@@ -60,8 +63,9 @@ function collectRoutes(locale: Locale): string[] {
     : staticRoutes.filter((r) => r !== '/dealers' && r !== '/installer-training'))
     // No public prices on this locale → no calculator page (pricesPublished).
     .filter((r) => r !== '/price-calculator' || pricesPublished(locale));
-  // The Swiss CHF price guide: de-CH only, and only once QuinLay's ranges are in.
-  const swissGuide = locale === 'ch' && priceGuideChReady ? [priceGuideCh.route] : [];
+  // The Swiss CHF price guide: de-CH only. Listed with its placeholders
+  // visible since the 1-month review (2 Oct 2026) — the ranges arrive later.
+  const swissGuide = locale === 'ch' ? [priceGuideCh.route] : [];
   // The acoustics guide: only the markets with their own written page, each
   // at its own slug (page-slugs.json) — never via staticRoutes.
   const acoustics = hasAcoustics(locale) ? [acousticsHref(locale)] : [];
@@ -82,7 +86,7 @@ function collectRoutes(locale: Locale): string[] {
 function priorityFor(route: string): number {
   if (route === '/') return 1;
   if (route === '/products' || route.startsWith('/products/')) return 0.9;
-  if (['/contact', '/partners', '/installer-training', '/price-calculator', '/dealers'].includes(route)) return 0.8;
+  if (['/contact', '/partners', '/installer-training', '/price-calculator', '/dealers', priceGuideCh.route].includes(route)) return 0.8;
   if (route === '/inspiration' || route === '/samples' || route === '/blog') return 0.7;
   if (isAcousticsRoute(route)) return 0.7;
   if (route.startsWith('/blog/')) return 0.6;
@@ -111,6 +115,7 @@ function lastModFor(route: string, locale: Locale): string {
   if (!d && route.startsWith('/technical/')) d = technicalUpdatedAt;
   if (!d && route.startsWith('/materials/')) d = materialsUpdatedAt;
   if (!d && route.startsWith('/dealers/')) d = dealersUpdatedAt;
+  if (!d && route === priceGuideCh.route) d = priceGuideCh.updatedAt;
   if (!d && isAcousticsRoute(route)) d = acousticsUpdatedAt;
   return `${d ?? BUILD_DATE}T00:00:00.000Z`;
 }
@@ -126,9 +131,16 @@ function localesForRoute(route: string, locale: Locale): readonly Locale[] {
     const post = blogPostForSlug(locale, route.slice('/blog/'.length));
     if (post?.markets?.length) return liveLocales.filter((l) => post.markets!.includes(l));
   }
+  // A place page: exactly the locales it is built on (the Swiss locales carry
+  // their own places only) — the same set the page's own hreflang declares.
+  if (route.startsWith('/dealers/')) {
+    const place = getDealerPlace(route.slice('/dealers/'.length));
+    const on = place ? localesForPlace(place) : [];
+    return liveLocales.filter((l) => on.includes(l));
+  }
   // Dealer directory + installer training: dealer markets only (N2) — no
   // domain may advertise an en-US alternate for them.
-  if (route === '/dealers' || route.startsWith('/dealers/') || route === '/installer-training') {
+  if (route === '/dealers' || route === '/installer-training') {
     return liveLocales.filter(isDealerMarket);
   }
   if (route === '/price-calculator') return liveLocales.filter(pricesPublished);

@@ -87,6 +87,9 @@ export type DealerPlace = {
   country?: 'LI';
   /** Approximate drive time from the dealer's showroom (Swiss pages). */
   driveMinutes?: number;
+  /** Approximate centre of the place (WGS84) — Swiss places only so far. Used
+   *  for the "nearest places" links; never rendered as an address. */
+  geo?: { lat: number; lng: number };
 };
 
 export const dealers: Dealer[] = [
@@ -234,28 +237,30 @@ export const dealerPlaces: DealerPlace[] = [
   // REAL dealer pages (QuinLay AG serves every one of them), not the
   // recruitment variant. Cantons without a namesake city are 'province'
   // entries; drive times are approximate, from the Rickenbach showroom.
-  { slug: 'luzern', name: 'Luzern', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 15 },
-  { slug: 'zug', name: 'Zug', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 25 },
-  { slug: 'zuerich', name: 'Zürich', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 50 },
-  { slug: 'aargau', name: 'Aargau', kind: 'province', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 45 },
-  { slug: 'bern', name: 'Bern', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 75 },
-  { slug: 'basel', name: 'Basel', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 80 },
-  { slug: 'solothurn', name: 'Solothurn', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 60 },
-  { slug: 'winterthur', name: 'Winterthur', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 65 },
-  { slug: 'st-gallen', name: 'St. Gallen', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 100 },
-  { slug: 'thurgau', name: 'Thurgau', kind: 'province', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 85 },
-  { slug: 'graubuenden', name: 'Graubünden', kind: 'province', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 110 },
-  { slug: 'vaduz', name: 'Vaduz', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], country: 'LI', driveMinutes: 105 },
+  // `geo` is the approximate town centre (canton: its capital) — it only
+  // ranks the "nearest places" links (2 Oct 2026), nothing else reads it.
+  { slug: 'luzern', name: 'Luzern', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 15, geo: { lat: 47.0502, lng: 8.3093 } },
+  { slug: 'zug', name: 'Zug', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 25, geo: { lat: 47.1662, lng: 8.5155 } },
+  { slug: 'zuerich', name: 'Zürich', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 50, geo: { lat: 47.3769, lng: 8.5417 } },
+  { slug: 'aargau', name: 'Aargau', kind: 'province', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 45, geo: { lat: 47.3925, lng: 8.0442 } },
+  { slug: 'bern', name: 'Bern', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 75, geo: { lat: 46.9480, lng: 7.4474 } },
+  { slug: 'basel', name: 'Basel', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 80, geo: { lat: 47.5596, lng: 7.5886 } },
+  { slug: 'solothurn', name: 'Solothurn', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 60, geo: { lat: 47.2088, lng: 7.5323 } },
+  { slug: 'winterthur', name: 'Winterthur', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 65, geo: { lat: 47.4984, lng: 8.7241 } },
+  { slug: 'st-gallen', name: 'St. Gallen', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 100, geo: { lat: 47.4245, lng: 9.3767 } },
+  { slug: 'thurgau', name: 'Thurgau', kind: 'province', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 85, geo: { lat: 47.5536, lng: 8.8986 } },
+  { slug: 'graubuenden', name: 'Graubünden', kind: 'province', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], driveMinutes: 110, geo: { lat: 46.8499, lng: 9.5329 } },
+  { slug: 'vaduz', name: 'Vaduz', kind: 'city', region: 'switzerland', primaryLocale: 'ch', dealerIds: ['quinlay'], country: 'LI', driveMinutes: 105, geo: { lat: 47.1410, lng: 9.5209 } },
   // Romandie (French-speaking Switzerland — fr-ch on stretchdecken.ch/fr/,
   // 3 Sep 2026): RECRUITMENT variant, no installer named yet. The identity
   // card and every lead from these pages point at QuinLay AG as the Swiss
   // representative; Michael adds an installer here the day QuinLay names one.
-  { slug: 'lausanne', name: 'Lausanne', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
-  { slug: 'geneve', name: 'Genève', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
-  { slug: 'fribourg', name: 'Fribourg', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
-  { slug: 'neuchatel', name: 'Neuchâtel', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
-  { slug: 'sion', name: 'Sion', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
-  { slug: 'yverdon', name: 'Yverdon-les-Bains', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [] },
+  { slug: 'lausanne', name: 'Lausanne', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [], geo: { lat: 46.5197, lng: 6.6323 } },
+  { slug: 'geneve', name: 'Genève', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [], geo: { lat: 46.2044, lng: 6.1432 } },
+  { slug: 'fribourg', name: 'Fribourg', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [], geo: { lat: 46.8065, lng: 7.1620 } },
+  { slug: 'neuchatel', name: 'Neuchâtel', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [], geo: { lat: 46.9900, lng: 6.9293 } },
+  { slug: 'sion', name: 'Sion', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [], geo: { lat: 46.2330, lng: 7.3606 } },
+  { slug: 'yverdon', name: 'Yverdon-les-Bains', kind: 'city', region: 'switzerland', primaryLocale: 'fr-ch', dealerIds: [], geo: { lat: 46.7785, lng: 6.6412 } },
 ];
 
 /** Slugs of the Swiss/Liechtenstein places — lead sources `dealers_<slug>`
@@ -332,8 +337,58 @@ export const dealerMarkets: readonly Locale[] = locales.filter(
 export const isDealerMarket = (l: Locale): boolean => dealerMarkets.includes(l);
 
 /** Sitemap <lastmod> for /dealers/[place] — bump when places/dealers change (F12). */
-export const dealersUpdatedAt = '2026-09-03'; // Swiss QuinLay pages + Romandie recruitment places
+export const dealersUpdatedAt = '2026-10-02'; // Swiss pages: QuinLay LocalBusiness node, nearest places, price-guide link
 export const dealerPlaceSlugs = dealerPlaces.map((p) => p.slug);
+
+// ---------------------------------------------------------------------------
+// PLACES PER LOCALE (Swiss review, 2 Oct 2026). Every dealer market used to
+// build and list all ~100 places — so stretchdecken.ch carried a German page
+// for Berlin and a French one for Antwerpen, thin duplicates of the .de /
+// .be pages with no Swiss angle. The Swiss host now keeps to its own places:
+// de-CH builds and lists the German-speaking cantons/cities plus Vaduz, fr-CH
+// (stretchdecken.ch/fr/) the Romandie places. Every other locale is
+// unchanged (all places). generateStaticParams, the /dealers overview, the
+// sitemap, the hreflang sets and the language switcher all read this ONE
+// function, so a page that is not built is never linked or advertised.
+// ---------------------------------------------------------------------------
+export function placesForLocale(locale: Locale): DealerPlace[] {
+  if (!isDealerMarket(locale)) return [];
+  if (locale === 'ch' || locale === 'fr-ch') return dealerPlaces.filter((p) => p.primaryLocale === locale);
+  return dealerPlaces;
+}
+
+/** True when /dealers/<slug> is built on this locale. */
+export function placeExistsOn(slug: string, locale: Locale): boolean {
+  return placesForLocale(locale).some((p) => p.slug === slug);
+}
+
+/** The locales a place page exists on — the hreflang / sitemap alternate set. */
+export function localesForPlace(place: DealerPlace): Locale[] {
+  return dealerMarkets.filter((l) => placeExistsOn(place.slug, l));
+}
+
+/** Great-circle distance in km between two places with `geo` (haversine). */
+function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: number }): number {
+  const toRad = (d: number) => (d * Math.PI) / 180;
+  const dLat = toRad(b.lat - a.lat);
+  const dLng = toRad(b.lng - a.lng);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * 6371 * Math.asin(Math.sqrt(h));
+}
+
+/** The `n` places geographically nearest to `place` within `pool` (both need
+ *  `geo`; places without coordinates are skipped). Swiss place pages link
+ *  their two nearest neighbours this way. */
+export function nearestPlaces(place: DealerPlace, pool: readonly DealerPlace[], n = 2): DealerPlace[] {
+  if (!place.geo) return [];
+  const from = place.geo;
+  return pool
+    .filter((p): p is DealerPlace & { geo: NonNullable<DealerPlace['geo']> } => p.slug !== place.slug && Boolean(p.geo))
+    .map((p) => ({ p, d: distanceKm(from, p.geo) }))
+    .sort((a, b) => a.d - b.d)
+    .slice(0, n)
+    .map((x) => x.p);
+}
 export const getDealerPlace = (slug: string): DealerPlace | undefined =>
   dealerPlaces.find((p) => p.slug === slug);
 export const getDealer = (id: string): Dealer | undefined => dealers.find((d) => d.id === id);

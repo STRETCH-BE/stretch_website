@@ -178,7 +178,8 @@
       "kit": "Gør-det-selv-kit",
       "supply": "Levering til montører",
       "projectsExport": "Projekteksport",
-      "priceCalculator": "Beregn pris"
+      "priceCalculator": "Beregn pris",
+      "priceGuide": "Prisguide"
     },
     "dealers": "Forhandlernetværk",
     "worldwideHeading": "STRETCH i verden",
@@ -499,7 +500,8 @@
       "quote": "Få et gratis tilbud",
       "explore": "Se løsningerne",
       "rated": "Bedømt på Google",
-      "tabsAria": "Find din løsning"
+      "tabsAria": "Find din løsning",
+      "priceGuide": "Hvad koster et strækloft?"
     },
     "ticker": {
       "0": "Monteret på én dag",
@@ -2329,7 +2331,8 @@
     "asideKicker": "Har du stadig et spørgsmål?",
     "asideTitle": "Tal med en specialist i strækloft.",
     "asideBody": "Fortæl os om dit rum, så svarer vi — gratis og uforpligtende.",
-    "asideCta": "Få et gratis tilbud"
+    "asideCta": "Få et gratis tilbud",
+    "priceGuideLink": "Vejledende priser: hvad koster et strækloft?"
   },
   "catalogFaqs": {
     "polyester": [
@@ -5501,7 +5504,10 @@
     "serviceConsulting": "Rådgivning og showroom",
     "serviceInstallation": "Montering gennem uddannede partnere",
     "serviceTraining": "Montøruddannelse i eget undervisningslokale",
-    "serviceStock": "Materialer fra schweizisk lager"
+    "serviceStock": "Materialer fra schweizisk lager",
+    "nearestHeading": "I nærheden",
+    "trainingLink": "Montøruddannelse",
+    "priceGuideLine": "Hvad koster et strækloft i {place}? Vejledende priser pr. m²"
   },
   "datasheetEmail": {
     "subject": "Dit STRETCH-datablad — {title}",

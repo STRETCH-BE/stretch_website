@@ -178,7 +178,8 @@
       "kit": "Kit DIY",
       "supply": "Fornecimento a instaladores",
       "projectsExport": "Exportação de projetos",
-      "priceCalculator": "Calcular preço"
+      "priceCalculator": "Calcular preço",
+      "priceGuide": "Guia de preços"
     },
     "dealers": "Rede de revendedores",
     "worldwideHeading": "STRETCH no mundo",
@@ -499,7 +500,8 @@
       "quote": "Peça um orçamento gratuito",
       "explore": "Descubra as soluções",
       "rated": "Avaliado no Google",
-      "tabsAria": "Encontre a sua solução"
+      "tabsAria": "Encontre a sua solução",
+      "priceGuide": "Quanto custa um teto tensionado?"
     },
     "ticker": {
       "0": "Instalado num dia",
@@ -2329,7 +2331,8 @@
     "asideKicker": "Ainda tem uma pergunta?",
     "asideTitle": "Fale com um especialista em tetos tensionados.",
     "asideBody": "Fale-nos da sua divisão e nós respondemos — grátis e sem compromisso.",
-    "asideCta": "Pedir orçamento grátis"
+    "asideCta": "Pedir orçamento grátis",
+    "priceGuideLink": "Preços indicativos: quanto custa um teto tensionado?"
   },
   "catalogFaqs": {
     "polyester": [
@@ -5501,7 +5504,10 @@
     "serviceConsulting": "Aconselhamento e showroom",
     "serviceInstallation": "Instalação através de parceiros formados",
     "serviceTraining": "Formação de instaladores em sala de formação própria",
-    "serviceStock": "Materiais em stock na Suíça"
+    "serviceStock": "Materiais em stock na Suíça",
+    "nearestHeading": "Perto daqui",
+    "trainingLink": "Formação de instaladores",
+    "priceGuideLine": "Quanto custa um teto tensionado em {place}? Preços indicativos por m²"
   },
   "datasheetEmail": {
     "subject": "A sua ficha técnica STRETCH — {title}",

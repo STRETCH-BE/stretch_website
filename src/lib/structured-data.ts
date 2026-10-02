@@ -3,7 +3,7 @@
 // Render output via <JsonLd data={...} />. Uses @id URIs so schemas
 // cross-reference instead of duplicating. Never fabricates ratings or prices.
 // ============================================================================
-import { siteUrl, brand, contact, offices, salesTerritory, social, polishEntity, groupSites } from '@/lib/site-config';
+import { siteUrl, brand, contact, offices, salesTerritory, social, polishEntity, groupSites, swissPartner } from '@/lib/site-config';
 import { locales, localeFullCodes, originForLocale, type Locale } from '@/i18n/config';
 import { indicativePriceRange } from '@/lib/indicative-prices';
 import { settlementCurrencyFor, pricesPublished } from '@/lib/currency';
@@ -319,6 +319,41 @@ export function polishBusinessSchema() {
       ...(ph.languages ? { availableLanguage: ph.languages.split('/').map((l) => l.toLowerCase()) } : {}),
     })),
     parentOrganization: { '@id': ORG_ID, name: brand.parentCompany },
+  };
+}
+
+/**
+ * QuinLay AG — the Swiss general representative — as the local entity of
+ * every Swiss place page (Switzerland review, 2 Oct 2026). A
+ * HomeAndConstructionBusiness (LocalBusiness subtype) with the showroom's
+ * NAP straight from site-config `swissPartner` (the same source the footer
+ * and contact page print), the place of the page as areaServed (Vaduz adds
+ * Liechtenstein), the page itself in sameAs and the global Organization as
+ * parent. One @id across the Swiss pages: one showroom, one entity. No
+ * rating, no priceRange — nothing is invented. The Romandie recruitment
+ * pages emit no node (no local installer named yet).
+ */
+export function swissRepresentativeSchema(opts: { pageUrl: string; areaServed: readonly string[] }) {
+  const p = swissPartner;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HomeAndConstructionBusiness',
+    '@id': `${siteUrl}/#dealer-quinlay`,
+    name: `${p.name} – STRETCH Generalvertretung Schweiz & Liechtenstein`,
+    url: p.url,
+    telephone: p.phone,
+    email: p.email,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: p.street,
+      postalCode: p.postalCode,
+      addressLocality: p.city,
+      addressRegion: p.canton,
+      addressCountry: p.country,
+    },
+    areaServed: [...opts.areaServed],
+    sameAs: [opts.pageUrl],
+    parentOrganization: { '@id': ORG_ID, name: brand.name },
   };
 }
 

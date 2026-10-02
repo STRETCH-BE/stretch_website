@@ -3,8 +3,10 @@
 // JSON-LD. Content is drafted and flagged in CHANGES.md.
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight, Calculator, Phone } from 'lucide-react';
+import { Link } from '@/i18n/navigation';
 import { isValidLocale, type Locale, localeFullCodes } from '@/i18n/config';
+import { priceGuideChRoute } from '@/lib/price-guide-ch-route';
 import { siteUrl, contact } from '@/lib/site-config';
 import { localContactFor, isPolishLocale } from '@/lib/local-contact';
 import { pageMetadata } from '@/lib/page-meta';
@@ -64,6 +66,14 @@ export default async function FaqPage({ params }: { params: { locale: string } }
                 <p className="faq-a">{f.a}</p>
               </details>
             ))}
+            {/* de-CH: the CHF price guide answers the cost question properly (review, 2 Oct 2026). */}
+            {locale === 'ch' && (
+              <p style={{ margin: '24px 0 0', fontSize: 15, fontWeight: 700 }}>
+                <Link href={priceGuideChRoute} className="lnk" style={{ display: 'inline-flex', alignItems: 'center', gap: 9 }}>
+                  <Calculator size={16} style={{ color: 'var(--red)' }} /> {t('priceGuideLink')} →
+                </Link>
+              </p>
+            )}
           </div>
 
           <aside className="faq-aside">

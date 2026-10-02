@@ -178,7 +178,8 @@
       "kit": "Gjør-det-selv-kit",
       "supply": "Levering til montører",
       "projectsExport": "Prosjekteksport",
-      "priceCalculator": "Beregn pris"
+      "priceCalculator": "Beregn pris",
+      "priceGuide": "Prisguide"
     },
     "dealers": "Forhandlernettverk",
     "worldwideHeading": "STRETCH i verden",
@@ -499,7 +500,8 @@
       "quote": "Be om et gratis tilbud",
       "explore": "Utforsk løsningene",
       "rated": "Vurdert på Google",
-      "tabsAria": "Finn din løsning"
+      "tabsAria": "Finn din løsning",
+      "priceGuide": "Hva koster et strekktak?"
     },
     "ticker": {
       "0": "Montert på én dag",
@@ -2329,7 +2331,8 @@
     "asideKicker": "Har du fortsatt et spørsmål?",
     "asideTitle": "Snakk med en strekkhimling-spesialist.",
     "asideBody": "Fortell oss om rommet ditt, så svarer vi — gratis og uforpliktende.",
-    "asideCta": "Be om et gratis tilbud"
+    "asideCta": "Be om et gratis tilbud",
+    "priceGuideLink": "Veiledende priser: hva koster et strekktak?"
   },
   "catalogFaqs": {
     "polyester": [
@@ -5501,7 +5504,10 @@
     "serviceConsulting": "Rådgivning og showroom",
     "serviceInstallation": "Montering gjennom opplærte partnere",
     "serviceTraining": "Montøropplæring i eget kursrom",
-    "serviceStock": "Materialer fra sveitsisk lager"
+    "serviceStock": "Materialer fra sveitsisk lager",
+    "nearestHeading": "I nærheten",
+    "trainingLink": "Montøropplæring",
+    "priceGuideLine": "Hva koster et strekktak i {place}? Veiledende priser per m²"
   },
   "datasheetEmail": {
     "subject": "Ditt STRETCH-datablad — {title}",

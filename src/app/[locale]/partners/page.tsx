@@ -4,7 +4,7 @@
 // per-path how-it-works, and a tagged application form. BreadcrumbList JSON-LD.
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { ArrowRight, TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone, Store, Wrench, Check, Factory, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, Package, MapPin, GraduationCap, Megaphone, Store, Wrench, Check, Factory, ArrowUpRight, Phone, Mail } from 'lucide-react';
 import { swissPartner } from '@/lib/site-config';
 import { isValidLocale, type Locale, isSwissLocale } from '@/i18n/config';
 import { isDealerMarket } from '@/lib/dealers';
@@ -208,12 +208,15 @@ export default async function PartnersPage({ params }: { params: { locale: strin
               // Supply-only teaser — right next to the buy-from-the-factory
               // card: installers can buy materials without partner commitment.
               // ch: the general representative sits beside the factory card
-              // (logo slot: /images/partners/quinlay.png — Michael supplies it).
+              // (logo slot: /images/partners/quinlay.png — Michael supplies it):
+              // name, role, phone, e-mail and a followed link to quinlay.ch
+              // (review, 2 Oct 2026 — a block, not one big anchor, so the
+              // tel: / mailto: links are valid HTML).
               return [
                 card,
                 ...(isSwissLocale(locale)
                   ? [
-                      <a key="quinlay-card" href={swissPartner.url} target="_blank" rel="noopener" style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)', display: 'block', textDecoration: 'none', color: 'inherit' }}>
+                      <div key="quinlay-card" style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)' }}>
                         {/* Logo only once the file is in the repo — no empty white box before that. */}
                         {QUINLAY_LOGO && (
                           // Emblem + wordmark (1366×1070, taupe/grey on transparent): a
@@ -226,10 +229,27 @@ export default async function PartnersPage({ params }: { params: { locale: strin
                         )}
                         <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 21, letterSpacing: '-.01em', margin: '0 0 11px' }}>{t('why.quinlayCard.title')}</h3>
                         <p style={{ fontSize: 14, lineHeight: 1.6, color: 'var(--on-dark-muted)', margin: '0 0 14px' }}>{t('why.quinlayCard.body')}</p>
-                        <span style={{ color: 'var(--red-bright)', fontWeight: 700, fontSize: 14, display: 'inline-flex', alignItems: 'center', gap: 7 }}>
+                        <p style={{ fontSize: 13.5, lineHeight: 1.7, color: 'var(--on-dark-soft)', margin: '0 0 14px' }}>
+                          {swissPartner.name} · {swissPartner.role}
+                          <br />
+                          {swissPartner.street}, {swissPartner.postalCode} {swissPartner.city} {swissPartner.canton}
+                        </p>
+                        <ul style={{ listStyle: 'none', margin: '0 0 14px', padding: 0, display: 'flex', flexDirection: 'column', gap: 6, fontSize: 14 }}>
+                          <li>
+                            <a href={swissPartner.phoneHref} className="lnk" style={{ color: '#fff', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 7 }}>
+                              <Phone size={14} style={{ color: 'var(--red-bright)' }} /> {swissPartner.phoneDisplay}
+                            </a>
+                          </li>
+                          <li>
+                            <a href={`mailto:${swissPartner.email}`} className="lnk" style={{ color: '#fff', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 7 }}>
+                              <Mail size={14} style={{ color: 'var(--red-bright)' }} /> {swissPartner.email}
+                            </a>
+                          </li>
+                        </ul>
+                        <a href={swissPartner.url} target="_blank" rel="noopener" style={{ color: 'var(--red-bright)', fontWeight: 700, fontSize: 14, display: 'inline-flex', alignItems: 'center', gap: 7 }}>
                           {t('why.quinlayCard.cta')} <ArrowUpRight size={15} />
-                        </span>
-                      </a>,
+                        </a>
+                      </div>,
                     ]
                   : []),
                 <Link key="supply-card" href="/supply" style={{ background: 'var(--black)', padding: 'clamp(26px,3vw,40px)', display: 'block', textDecoration: 'none', color: 'inherit' }}>

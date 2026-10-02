@@ -28,6 +28,10 @@ The site runs with **zero configuration**: with no env vars, analytics no-op and
 | `npm run start` | Serve the production build |
 | `npm run lint` | Run ESLint (next/core-web-vitals) |
 | `npm run typecheck` | `tsc --noEmit` — must pass clean |
+| `npm run check:sitemap` | After a build: every host's `/sitemap.xml` vs the pages the build produced (`scripts/check-sitemap.ts`, exit 1 on a mismatch). Runs automatically in `postbuild`. |
+| `npm run check:hreflang` | After a build: canonical + hreflang set of four stretchdecken.ch pages from the build output (`scripts/check-hreflang.ts`). Runs in `postbuild` too. |
+| `npm run check:overlays` | `messages/ch.json` and `messages/fr-ch.json` are up to date with their overlays |
+| `npm run verify` | typecheck + tests + client-messages + overlays + sitemap + hreflang (run `npm run build` first) |
 
 ---
 
@@ -40,6 +44,7 @@ Every variable is **optional**. See `.env.example` for the full annotated list. 
 | `NEXT_PUBLIC_SITE_URL` | Absolute production URL (canonical, sitemap, OG, JSON-LD `@id`). |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics 4 ID (`G-…`). Consent-gated. |
 | `NEXT_PUBLIC_CLARITY_ID` | Microsoft Clarity project ID. Consent-gated. |
+| *(none)* | Vercel Web Analytics (`@vercel/analytics`, pageviews by country/path): no variable — enable **Web Analytics** in the Vercel project. Mounted only after analytics consent, like Clarity. |
 | `NEXT_PUBLIC_META_PIXEL_ID` | Meta Pixel ID. Off by default per brief. |
 | `NEXT_PUBLIC_BING_UET_ID` | Bing UET tag ID. Off by default per brief. |
 | `LEAD_DESTINATION` | Address all form submissions are delivered to. |
@@ -87,7 +92,7 @@ data + demo logins, listed on the login page). Full setup & data model:
 - [ ] Configure a lead-delivery method (Microsoft Graph — the four `MS_*` variables — recommended).
 - [ ] Submit each form once and confirm the email arrives at `LEAD_DESTINATION`.
 - [ ] Add `NEXT_PUBLIC_GA_ID` and `NEXT_PUBLIC_CLARITY_ID`; accept cookies and confirm tags fire.
-- [ ] Verify `/sitemap.xml` and `/robots.txt` resolve on the live domain.
+- [ ] Verify `/sitemap.xml` and `/robots.txt` resolve on the live domain (`npm run check:sitemap` after the build compares every host's sitemap with the pages actually built).
 - [ ] Submit the sitemap in Google Search Console.
 - [ ] Spot-check OG images: `/api/og` and e.g. `/api/og/polyester-stretch-ceiling`.
 - [ ] Replace placeholder imagery (see "Image placeholders" below).
@@ -104,7 +109,7 @@ src/
     layout.tsx              # Root <html lang="en-BE"> + font variable + global CSS
     globals.css             # Design tokens (CSS vars) + utility classes
     fonts.ts                # Self-hosted Archivo (variable: weight + width axes)
-    sitemap.ts              # Dynamic sitemap (locales × routes + hreflang)
+    sitemap.xml/route.ts    # Host-aware sitemap (the host's locales × routes + hreflang)
     [locale]/
       layout.tsx            # Locale provider, header/footer chrome, analytics, modal
       page.tsx              # Home (10 sections)

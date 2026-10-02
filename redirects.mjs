@@ -31,6 +31,16 @@ const R = (h, source, destination) => ({
   destination,
   permanent: true,
 });
+// A host move as a classic 301 (Swiss review, 2 Oct 2026: stretchdecken.li
+// and www.stretchdecken.ch must answer 301, not 308 — same permanence for
+// Google, the status code Michael's monitoring expects). `statusCode`
+// replaces `permanent` in Next's redirect schema.
+const R301 = (h, source, destination) => ({
+  source,
+  has: host(h),
+  destination,
+  statusCode: 301,
+});
 
 // ---------------------------------------------------------------------------
 // PER-LOCALE BLOG SLUGS (per-market audit 2 Sep 2026, defect 1). Every locale
@@ -467,22 +477,51 @@ const norwegianRules = [...blogSlugRules('stretchtak.no', 'no'), ...genericRules
 // ones, then the generic WP/Woo sweep.
 //   stretchdecken.li  → stretchdecken.ch (root → the Vaduz / Liechtenstein
 //                       place page, everything else path-preserving)
+//   www.stretchdecken.ch / www.stretchdecken.li → the bare host, same path.
+//                       Neither www host is attached to the Vercel project yet
+//                       (DNS: NXDOMAIN, 2 Oct 2026) — Michael adds them in
+//                       Vercel (Settings → Domains, "Redirect to
+//                       stretchdecken.ch", 301) and points the CNAME; these
+//                       rules are the safety net should they ever be served.
 //   stretchgroup.ch / stretchgroup.li → stretchdecken.ch — Michael points
 //                       them there at the registrar; these host rules are the
 //                       safety net should either host ever reach Vercel.
-// All absolute-destination 308s; the .at → .de redirect stays at Vercel level.
+// The .li and www moves are 301s (R301, review 2 Oct 2026); the group hosts
+// stay 308; the .at → .de redirect stays at Vercel level.
 // ---------------------------------------------------------------------------
 const swissRules = [...blogSlugRules('stretchdecken.ch', 'ch'), ...genericRules('stretchdecken.ch')];
 const CH_ORIGIN = 'https://stretchdecken.ch';
 const swissHostRedirects = [
-  R('stretchdecken.li', '/', `${CH_ORIGIN}/dealers/vaduz`),
-  R('stretchdecken.li', '/:path*', `${CH_ORIGIN}/:path*`),
-  R('www.stretchdecken.li', '/', `${CH_ORIGIN}/dealers/vaduz`),
-  R('www.stretchdecken.li', '/:path*', `${CH_ORIGIN}/:path*`),
+  R301('stretchdecken.li', '/', `${CH_ORIGIN}/dealers/vaduz`),
+  R301('stretchdecken.li', '/:path*', `${CH_ORIGIN}/:path*`),
+  R301('www.stretchdecken.li', '/', `${CH_ORIGIN}/dealers/vaduz`),
+  R301('www.stretchdecken.li', '/:path*', `${CH_ORIGIN}/:path*`),
+  R301('www.stretchdecken.ch', '/:path*', `${CH_ORIGIN}/:path*`),
   R('stretchgroup.ch', '/:path*', `${CH_ORIGIN}/:path*`),
   R('www.stretchgroup.ch', '/:path*', `${CH_ORIGIN}/:path*`),
   R('stretchgroup.li', '/:path*', `${CH_ORIGIN}/:path*`),
   R('www.stretchgroup.li', '/:path*', `${CH_ORIGIN}/:path*`),
+];
+
+// ---------------------------------------------------------------------------
+// SWISS DEALER PAGES — the Swiss host builds its OWN places only since the
+// 1-month review (2 Oct 2026, placesForLocale in src/lib/dealers.ts): de-CH
+// the German-speaking cantons/cities + Vaduz, fr-CH (/fr/) Romandie. The
+// ~100 German/French pages for Belgian, Dutch, German, … places that
+// stretchdecken.ch used to serve are gone; a Romandie slug on the German
+// side (and vice versa) 308s to the sibling locale's page, every other
+// former place URL to the Swiss directory. KEEP THE TWO SLUG LISTS IN SYNC
+// with dealers.ts (region 'switzerland', by primaryLocale) — redirects.mjs
+// cannot import TypeScript.
+// ---------------------------------------------------------------------------
+const CH_DE_PLACES = ['luzern', 'zug', 'zuerich', 'aargau', 'bern', 'basel', 'solothurn', 'winterthur', 'st-gallen', 'thurgau', 'graubuenden', 'vaduz'];
+const CH_FR_PLACES = ['lausanne', 'geneve', 'fribourg', 'neuchatel', 'sion', 'yverdon'];
+const notOneOf = (slugs) => `(?!(?:${slugs.join('|')})$)[^/]+`;
+const swissPlaceRedirects = [
+  R('stretchdecken.ch', `/dealers/:place(${CH_FR_PLACES.join('|')})`, '/fr/dealers/:place'),
+  R('stretchdecken.ch', `/fr/dealers/:place(${CH_DE_PLACES.join('|')})`, '/dealers/:place'),
+  R('stretchdecken.ch', `/dealers/:place(${notOneOf(CH_DE_PLACES)})`, '/dealers'),
+  R('stretchdecken.ch', `/fr/dealers/:place(${notOneOf(CH_FR_PLACES)})`, '/fr/dealers'),
 ];
 
 // ---------------------------------------------------------------------------
@@ -568,6 +607,7 @@ export const legacyRedirects = [
   ...norwegianRules,
   ...swissRules,
   ...swissHostRedirects,
+  ...swissPlaceRedirects,
   ...romandieRules,
   ...priceGuideChRules,
   ...acousticsRules,

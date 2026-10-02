@@ -148,6 +148,8 @@ const OVERRIDES = {
   // Supply / export copy: the contracting party for CH & FL is QuinLay AG.
   'supplyPage.currencyLine': 'Prix et facturation en CHF par QuinLay AG (Suisse & Liechtenstein).',
   'projectsExportPage.how.currencyLine': 'Facturation en CHF par QuinLay AG (Suisse & Liechtenstein).',
+  // Swiss review, 2 Oct 2026: the training chip on every Romandie place page.
+  'dealersPage.trainingLink': 'Formation d’installateur chez QuinLay AG',
 };
 
 // ---- helpers ---------------------------------------------------------------

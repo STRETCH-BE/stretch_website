@@ -178,7 +178,8 @@
       "kit": "Gör-det-själv-kit",
       "supply": "Leverans till montörer",
       "projectsExport": "Projektexport",
-      "priceCalculator": "Beräkna pris"
+      "priceCalculator": "Beräkna pris",
+      "priceGuide": "Prisguide"
     },
     "dealers": "Återförsäljarnätverk",
     "worldwideHeading": "STRETCH i världen",
@@ -499,7 +500,8 @@
       "quote": "Begär en kostnadsfri offert",
       "explore": "Utforska lösningarna",
       "rated": "Betyg på Google",
-      "tabsAria": "Hitta din lösning"
+      "tabsAria": "Hitta din lösning",
+      "priceGuide": "Vad kostar ett spänntak?"
     },
     "ticker": {
       "0": "Monterat på en dag",
@@ -2329,7 +2331,8 @@
     "asideKicker": "Har du fler frågor?",
     "asideTitle": "Prata med en spänntaks­specialist.",
     "asideBody": "Berätta om ditt rum så svarar vi — gratis och utan förpliktelser.",
-    "asideCta": "Begär en kostnadsfri offert"
+    "asideCta": "Begär en kostnadsfri offert",
+    "priceGuideLink": "Riktpriser: vad kostar ett spänntak?"
   },
   "catalogFaqs": {
     "polyester": [
@@ -5501,7 +5504,10 @@
     "serviceConsulting": "Rådgivning och showroom",
     "serviceInstallation": "Montering genom utbildade partner",
     "serviceTraining": "Montörsutbildning i eget utbildningsrum",
-    "serviceStock": "Material från schweiziskt lager"
+    "serviceStock": "Material från schweiziskt lager",
+    "nearestHeading": "I närheten",
+    "trainingLink": "Montörsutbildning",
+    "priceGuideLine": "Vad kostar ett spänntak i {place}? Riktpriser per m²"
   },
   "datasheetEmail": {
     "subject": "Ditt STRETCH-datablad — {title}",

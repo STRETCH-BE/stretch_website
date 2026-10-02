@@ -178,7 +178,8 @@
       "kit": "DIY-Kit",
       "supply": "Belieferung für Verarbeiter",
       "projectsExport": "Projektexport",
-      "priceCalculator": "Kosten berechnen"
+      "priceCalculator": "Kosten berechnen",
+      "priceGuide": "Richtpreise"
     },
     "dealers": "Händlernetz",
     "worldwideHeading": "STRETCH weltweit",
@@ -499,7 +500,8 @@
       "quote": "Kostenloses Angebot anfordern",
       "explore": "Lösungen entdecken",
       "rated": "Bewertet auf Google",
-      "tabsAria": "Finden Sie Ihre Lösung"
+      "tabsAria": "Finden Sie Ihre Lösung",
+      "priceGuide": "Was kostet eine Spanndecke?"
     },
     "ticker": {
       "0": "Montiert an einem Tag",
@@ -2329,7 +2331,8 @@
     "asideKicker": "Noch eine Frage?",
     "asideTitle": "Sprechen Sie mit einem Spanndecken-Spezialisten.",
     "asideBody": "Erzählen Sie uns von Ihrem Raum und wir antworten — kostenlos und unverbindlich.",
-    "asideCta": "Kostenloses Angebot anfordern"
+    "asideCta": "Kostenloses Angebot anfordern",
+    "priceGuideLink": "Richtpreise: Was kostet eine Spanndecke?"
   },
   "catalogFaqs": {
     "polyester": [
@@ -5501,7 +5504,10 @@
     "serviceConsulting": "Beratung und Showroom",
     "serviceInstallation": "Montage durch geschulte Partner",
     "serviceTraining": "Monteurschulung im eigenen Schulungsraum",
-    "serviceStock": "Material ab Schweizer Lager"
+    "serviceStock": "Material ab Schweizer Lager",
+    "nearestHeading": "In der Nähe",
+    "trainingLink": "Monteur-Schulung",
+    "priceGuideLine": "Was kostet eine Spanndecke in {place}? Richtpreise pro m²"
   },
   "datasheetEmail": {
     "subject": "Ihr STRETCH-Datenblatt — {title}",

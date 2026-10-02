@@ -6,9 +6,10 @@
 // always rendered at full opacity (no fade-in). A pinned tab row lets visitors
 // jump straight to a slide.
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import { priceGuideChRoute } from '@/lib/price-guide-ch-route';
 import { ModalButton } from '@/components/ui/ModalButton';
 import Placeholder from '@/components/ui/Placeholder';
 import { homeImages } from '@/lib/home-images';
@@ -28,6 +29,7 @@ const ADVANCE_MS = 5000;
 export default function Hero() {
   const t = useTranslations('home.hero');
   const ta = useTranslations('alt');
+  const locale = useLocale();
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   // Mount the three hidden crossfade layers only after the window load event:
@@ -95,6 +97,13 @@ export default function Hero() {
           <Link href="/products" className="btn btn--ghost-light btn--lg">
             {t('explore')} <ArrowRight size={16} className="btn__arrow" />
           </Link>
+          {/* de-CH: the Swiss CHF price guide — the question every Swiss visitor
+              arrives with (review, 2 Oct 2026). No other locale has the page. */}
+          {locale === 'ch' && (
+            <Link href={priceGuideChRoute} className="btn btn--ghost-light btn--lg">
+              {t('priceGuide')} <ArrowRight size={16} className="btn__arrow" />
+            </Link>
+          )}
           {/* The "5.0 ★ Rated on Google" badge is removed until it can be
               backed by real, verifiable Google reviews (ranking audit §1.4 —
               presenting non-genuine review claims violates the UCPD). */}

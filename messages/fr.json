@@ -178,7 +178,8 @@
       "kit": "Kit à poser soi-même",
       "supply": "Fourniture poseurs",
       "projectsExport": "Export projets",
-      "priceCalculator": "Calculer le prix"
+      "priceCalculator": "Calculer le prix",
+      "priceGuide": "Guide des prix"
     },
     "dealers": "Réseau de revendeurs",
     "worldwideHeading": "STRETCH dans le monde",
@@ -499,7 +500,8 @@
       "quote": "Demander un devis gratuit",
       "explore": "Découvrir les solutions",
       "rated": "Noté sur Google",
-      "tabsAria": "Trouvez votre solution"
+      "tabsAria": "Trouvez votre solution",
+      "priceGuide": "Combien coûte un plafond tendu ?"
     },
     "ticker": {
       "0": "Posé en un jour",
@@ -2329,7 +2331,8 @@
     "asideKicker": "Encore une question ?",
     "asideTitle": "Parlez à un spécialiste du plafond tendu.",
     "asideBody": "Décrivez-nous votre pièce et nous vous répondons — gratuit et sans engagement.",
-    "asideCta": "Demander un devis gratuit"
+    "asideCta": "Demander un devis gratuit",
+    "priceGuideLink": "Prix indicatifs : combien coûte un plafond tendu ?"
   },
   "catalogFaqs": {
     "polyester": [
@@ -5510,7 +5513,10 @@
     "serviceConsulting": "Conseil et showroom",
     "serviceInstallation": "Pose par des partenaires formés",
     "serviceTraining": "Formation installateur dans sa propre salle de formation",
-    "serviceStock": "Matériaux en stock en Suisse"
+    "serviceStock": "Matériaux en stock en Suisse",
+    "nearestHeading": "À proximité",
+    "trainingLink": "Formation d’installateur",
+    "priceGuideLine": "Combien coûte un plafond tendu à {place} ? Prix indicatifs au m²"
   },
   "datasheetEmail": {
     "subject": "Votre fiche technique STRETCH — {title}",

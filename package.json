@@ -6,15 +6,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "tsx scripts/check-sitemap.ts && tsx scripts/check-hreflang.ts",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "node scripts/spam-score.test.mjs && node scripts/configurator.test.mjs",
-    "check:client-messages": "node scripts/check-client-messages.mjs"
+    "check:client-messages": "node scripts/check-client-messages.mjs",
+    "check:sitemap": "tsx scripts/check-sitemap.ts",
+    "check:hreflang": "tsx scripts/check-hreflang.ts",
+    "check:overlays": "node scripts/ch-overlay.mjs --check && node scripts/fr-ch-overlay.mjs --check",
+    "verify": "npm run typecheck && npm run test && npm run check:client-messages && npm run check:overlays && npm run check:sitemap && npm run check:hreflang"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
     "@supabase/supabase-js": "^2.110.1",
+    "@vercel/analytics": "^1.6.1",
     "disposable-email-domains": "^1.0.62",
     "lucide-react": "^0.383.0",
     "next": "14.2.15",
@@ -31,6 +37,7 @@
     "@types/nodemailer": "^6.4.15",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "tsx": "^4.23.15",
     "typescript": "^5.5.3"
   },
   "engines": {

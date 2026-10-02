@@ -178,7 +178,8 @@
       "kit": "Kit DIY",
       "supply": "Suministro a instaladores",
       "projectsExport": "Exportación de proyectos",
-      "priceCalculator": "Calcular precio"
+      "priceCalculator": "Calcular precio",
+      "priceGuide": "Guía de precios"
     },
     "dealers": "Red de distribuidores",
     "worldwideHeading": "STRETCH en el mundo",
@@ -499,7 +500,8 @@
       "quote": "Solicita un presupuesto gratis",
       "explore": "Descubre las soluciones",
       "rated": "Valorado en Google",
-      "tabsAria": "Encuentra tu solución"
+      "tabsAria": "Encuentra tu solución",
+      "priceGuide": "¿Cuánto cuesta un techo tensado?"
     },
     "ticker": {
       "0": "Instalado en un día",
@@ -2329,7 +2331,8 @@
     "asideKicker": "¿Te queda alguna pregunta?",
     "asideTitle": "Habla con un especialista en techos tensados.",
     "asideBody": "Cuéntanos cómo es tu estancia y te respondemos — gratis y sin compromiso.",
-    "asideCta": "Solicitar presupuesto gratuito"
+    "asideCta": "Solicitar presupuesto gratuito",
+    "priceGuideLink": "Precios orientativos: ¿cuánto cuesta un techo tensado?"
   },
   "catalogFaqs": {
     "polyester": [
@@ -5501,7 +5504,10 @@
     "serviceConsulting": "Asesoramiento y showroom",
     "serviceInstallation": "Instalación a través de socios formados",
     "serviceTraining": "Formación de instaladores en su propia sala de formación",
-    "serviceStock": "Materiales en stock en Suiza"
+    "serviceStock": "Materiales en stock en Suiza",
+    "nearestHeading": "Cerca de aquí",
+    "trainingLink": "Formación de instaladores",
+    "priceGuideLine": "¿Cuánto cuesta un techo tensado en {place}? Precios orientativos por m²"
   },
   "datasheetEmail": {
     "subject": "Su ficha técnica STRETCH — {title}",

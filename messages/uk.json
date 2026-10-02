@@ -178,7 +178,8 @@
       "kit": "DIY kit",
       "supply": "Installer supply",
       "projectsExport": "Project export",
-      "priceCalculator": "Price calculator"
+      "priceCalculator": "Price calculator",
+      "priceGuide": "Price guide"
     },
     "dealers": "Dealer network",
     "worldwideHeading": "STRETCH worldwide",
@@ -499,7 +500,8 @@
       "quote": "Request a free quote",
       "explore": "Explore solutions",
       "rated": "Rated on Google",
-      "tabsAria": "Find your solution"
+      "tabsAria": "Find your solution",
+      "priceGuide": "What does a stretch ceiling cost?"
     },
     "ticker": {
       "0": "Installed in one day",
@@ -2329,7 +2331,8 @@
     "asideKicker": "Still have a question?",
     "asideTitle": "Talk to a stretch-ceiling specialist.",
     "asideBody": "Tell us about your room and we’ll answer — free and without obligation.",
-    "asideCta": "Request a free quote"
+    "asideCta": "Request a free quote",
+    "priceGuideLink": "Indicative prices: what does a stretch ceiling cost?"
   },
   "catalogFaqs": {
     "polyester": [
@@ -5511,7 +5514,10 @@
     "serviceConsulting": "Consulting and showroom",
     "serviceInstallation": "Installation through trained partners",
     "serviceTraining": "Installer training in its own training room",
-    "serviceStock": "Materials from Swiss stock"
+    "serviceStock": "Materials from Swiss stock",
+    "nearestHeading": "Nearby",
+    "trainingLink": "Installer training",
+    "priceGuideLine": "What does a stretch ceiling cost in {place}? Indicative prices per m²"
   },
   "datasheetEmail": {
     "subject": "Your STRETCH datasheet — {title}",

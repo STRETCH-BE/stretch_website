@@ -197,7 +197,8 @@
       "kit": "Zestaw DIY",
       "supply": "Zaopatrzenie monterów",
       "projectsExport": "Eksport projektów",
-      "priceCalculator": "Kalkulator cen"
+      "priceCalculator": "Kalkulator cen",
+      "priceGuide": "Przewodnik cenowy"
     },
     "dealers": "Sieć dealerów",
     "worldwideHeading": "STRETCH na świecie",
@@ -518,7 +519,8 @@
       "quote": "Poproś o darmową wycenę",
       "explore": "Poznaj rozwiązania",
       "rated": "Oceniane w Google",
-      "tabsAria": "Znajdź swoje rozwiązanie"
+      "tabsAria": "Znajdź swoje rozwiązanie",
+      "priceGuide": "Ile kosztuje sufit napinany?"
     },
     "ticker": {
       "0": "Montaż w jeden dzień",
@@ -2348,7 +2350,8 @@
     "asideKicker": "Masz jeszcze pytanie?",
     "asideTitle": "Porozmawiaj ze specjalistą od sufitów napinanych.",
     "asideBody": "Opowiedz nam o swoim pomieszczeniu, a odpowiemy — bezpłatnie i bez zobowiązań.",
-    "asideCta": "Poproś o bezpłatną wycenę"
+    "asideCta": "Poproś o bezpłatną wycenę",
+    "priceGuideLink": "Ceny orientacyjne: ile kosztuje sufit napinany?"
   },
   "catalogFaqs": {
     "polyester": [
@@ -5520,7 +5523,10 @@
     "serviceConsulting": "Doradztwo i showroom",
     "serviceInstallation": "Montaż przez przeszkolonych partnerów",
     "serviceTraining": "Szkolenie monterów we własnej sali szkoleniowej",
-    "serviceStock": "Materiały z magazynu w Szwajcarii"
+    "serviceStock": "Materiały z magazynu w Szwajcarii",
+    "nearestHeading": "W pobliżu",
+    "trainingLink": "Szkolenie monterów",
+    "priceGuideLine": "Ile kosztuje sufit napinany w {place}? Orientacyjne ceny za m²"
   },
   "datasheetEmail": {
     "subject": "Twoja karta techniczna STRETCH — {title}",

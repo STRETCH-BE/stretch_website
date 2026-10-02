@@ -1,7 +1,9 @@
-// DEALERS — directory overview (/dealers). Eight regions (Flanders & Brussels,
-// Wallonia, Netherlands, Luxembourg, Austria, Germany, Poland, France) with
-// province + city links, the visitor's home regions first; places without a
-// dealer show the "dealer wanted" chip. Recruitment band at the bottom.
+// DEALERS — directory overview (/dealers). Nine regions (Flanders & Brussels,
+// Wallonia, Netherlands, Luxembourg, Austria, Germany, Poland, France,
+// Switzerland & Liechtenstein) with province + city links, the visitor's home
+// regions first; places without a dealer show the "dealer wanted" chip.
+// Recruitment band at the bottom. The Swiss locales show their OWN places
+// only (placesForLocale, 2 Oct 2026) — the pages that are built for them.
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -16,7 +18,7 @@ import Eyebrow from '@/components/ui/Eyebrow';
 import Placeholder from '@/components/ui/Placeholder';
 import { pageImages } from '@/lib/page-images';
 import { ModalButton } from '@/components/ui/ModalButton';
-import { dealerPlaces, placeDealers, dealerMarkets, isDealerMarket, regionsForLocale, regionLabelKeys } from '@/lib/dealers';
+import { placesForLocale, placeDealers, dealerMarkets, isDealerMarket, regionsForLocale, regionLabelKeys } from '@/lib/dealers';
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   if (!isValidLocale(params.locale)) return {};
@@ -47,8 +49,12 @@ export default async function DealersOverviewPage({ params }: { params: { locale
   if (!isDealerMarket(locale)) notFound();
   const t = await getTranslations('dealersPage');
   const tp = await getTranslations('productPage');
-  // Home regions first (Germany before Flanders on stretchdecken.de …).
-  const regions = regionsForLocale(locale).map((key) => ({ key, labelKey: regionLabelKeys[key] }));
+  // Home regions first (Germany before Flanders on stretchdecken.de …) —
+  // only the regions this locale has places in (Switzerland alone on ch / fr-ch).
+  const pool = placesForLocale(locale);
+  const regions = regionsForLocale(locale)
+    .filter((key) => pool.some((p) => p.region === key))
+    .map((key) => ({ key, labelKey: regionLabelKeys[key] }));
 
   const crumbs = breadcrumbSchema([
     { name: tp('home'), url: `${localeBase(locale)}` },
@@ -75,8 +81,8 @@ export default async function DealersOverviewPage({ params }: { params: { locale
       {/* Regions */}
       <section className="container" style={{ paddingBottom: 'clamp(40px,5vw,64px)' }}>
         {regions.map((r) => {
-          const provinces = dealerPlaces.filter((p) => p.region === r.key && p.kind === 'province');
-          const cities = dealerPlaces.filter((p) => p.region === r.key && p.kind === 'city');
+          const provinces = pool.filter((p) => p.region === r.key && p.kind === 'province');
+          const cities = pool.filter((p) => p.region === r.key && p.kind === 'city');
           return (
             <div key={r.key} style={{ marginBottom: 'clamp(28px,3.4vw,44px)' }}>
               <h2 className="h2 h2--sm" style={{ margin: '0 0 14px' }}>{t(r.labelKey)}</h2>
