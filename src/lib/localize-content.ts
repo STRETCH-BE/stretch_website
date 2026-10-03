@@ -8,6 +8,7 @@ import type { Application } from '@/lib/applications';
 import type { TechMembrane } from '@/lib/technical';
 import type { PrefabPageData } from '@/lib/prefab';
 import type { Project, BlogPost } from '@/lib/content';
+import type { Locale } from '@/i18n/config';
 
 // ---- Lead modals -----------------------------------------------------------
 export type ModalMessages = {
@@ -153,9 +154,11 @@ export function localizeProject(project: Project, raw: ProjectMessages | undefin
 // ---- Blog posts --------------------------------------------------------------
 export type BlogPostMessages = Pick<BlogPost, 'title' | 'excerpt' | 'body'>;
 
-export function localizeBlogPost(post: BlogPost, raw: BlogPostMessages | undefined): BlogPost {
-  if (!raw) return post;
-  return { ...post, title: raw.title, excerpt: raw.excerpt, body: raw.body };
+export function localizeBlogPost(post: BlogPost, raw: BlogPostMessages | undefined, locale?: Locale): BlogPost {
+  // Per-locale hero (text in the market language), else the shared one.
+  const image = (locale && post.imageByLocale?.[locale]) ?? post.image;
+  if (!raw) return { ...post, image };
+  return { ...post, image, title: raw.title, excerpt: raw.excerpt, body: raw.body };
 }
 
 export function localizePrefab(data: PrefabPageData, raw: PrefabMessages | undefined): PrefabPageData {

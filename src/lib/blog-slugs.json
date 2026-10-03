@@ -128,12 +128,14 @@
     "us": "ceiling-renovation-options-compared"
   },
   "plafond-tendu-avantages-et-inconvenients": {
+    "be": "spanplafond-voordelen-en-nadelen",
     "ch": "spanndecke-vor-und-nachteile",
     "da": "straekloft-fordele-og-ulemper",
     "de": "spanndecke-vor-und-nachteile",
     "en": "stretch-ceiling-pros-and-cons",
     "es": "techo-tensado-ventajas-y-desventajas",
     "is": "dukaloft-kostir-og-gallar",
+    "nl": "spanplafond-voordelen-en-nadelen",
     "no": "strekktak-fordeler-og-ulemper",
     "pl": "sufit-napinany-zalety-i-wady",
     "pt": "teto-tensionado-vantagens-e-desvantagens",
@@ -244,6 +246,7 @@
     "us": "starry-sky-ceiling"
   },
   "stretch-ceiling-acoustics-explained": {
+    "be": "akoestiek-van-spanplafonds",
     "ch": "spanndecken-akustik-erklaert",
     "da": "akustik-i-straekloft-forklaret",
     "de": "spanndecken-akustik-erklaert",
@@ -251,12 +254,14 @@
     "fr": "acoustique-des-plafonds-tendus",
     "fr-ch": "acoustique-des-plafonds-tendus",
     "is": "hljodvist-dukalofta-einfold-skyring",
+    "nl": "akoestiek-van-spanplafonds",
     "no": "strekktak-akustikk-forklart",
     "pl": "akustyka-sufitow-napinanych",
     "pt": "acustica-tetos-tensionados-explicada",
     "sv": "spanntak-akustik-forklarat"
   },
   "what-is-a-stretch-ceiling": {
+    "be": "wat-is-een-spanplafond",
     "ch": "was-ist-eine-spanndecke",
     "da": "hvad-er-et-straekloft",
     "de": "was-ist-eine-spanndecke",
@@ -264,6 +269,7 @@
     "fr": "qu-est-ce-qu-un-plafond-tendu",
     "fr-ch": "qu-est-ce-qu-un-plafond-tendu",
     "is": "hvad-er-dukaloft",
+    "nl": "wat-is-een-spanplafond",
     "no": "hva-er-et-strekktak",
     "pl": "czym-jest-sufit-napinany",
     "pt": "o-que-e-um-teto-tensionado",

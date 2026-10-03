@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: { locale: string; s
   const base = blogPostForSlug(locale, params.slug);
   if (!base) return {};
   const tb = await getTranslations({ locale, namespace: 'blogPosts' });
-  const post = localizeBlogPost(base, (tb.raw('posts') as Record<string, BlogPostMessages>)[base.slug]);
+  const post = localizeBlogPost(base, (tb.raw('posts') as Record<string, BlogPostMessages>)[base.slug], locale);
 
   const route = blogHref(base, locale);
   // hreflang + OG alternates only span the locales the post exists on, and
@@ -80,7 +80,7 @@ export default async function BlogPostPage({ params }: { params: { locale: strin
   if (!base) notFound();
   const tb = await getTranslations('blogPosts');
   const tp = await getTranslations('productPage');
-  const post = localizeBlogPost(base, (tb.raw('posts') as Record<string, BlogPostMessages>)[base.slug]);
+  const post = localizeBlogPost(base, (tb.raw('posts') as Record<string, BlogPostMessages>)[base.slug], locale);
 
   const crumbs = breadcrumbSchema([
     { name: tp('home'), url: `${localeBase(locale)}` },

@@ -4,7 +4,7 @@
 // FAQ are DRAFTED (evergreen, educational) and flagged in CHANGES.md for review;
 // none fabricate testimonials, prices or claims beyond the brief.
 // ============================================================================
-import type { Locale } from '@/i18n/config';
+import { locales, localeFullCodes, type Locale } from '@/i18n/config';
 import { blogSlugMap, marketOnlyBlogSlugs } from '@/lib/blog-slugs';
 import { pricesPublished } from '@/lib/currency';
 
@@ -656,9 +656,16 @@ export type BlogPost = {
    * Per-locale URL slugs (per-market audit 2 Sep 2026, defect 1). Sourced from
    * src/lib/blog-slugs.json at module load — never set here by hand: that JSON
    * is also what redirects.mjs reads to 301 the old paths. A locale absent
-   * from the map keeps `slug`. `be`/`nl` are never remapped (those URLs rank).
+   * from the map keeps `slug`. be/nl are listed only where the canonical slug
+   * is not Dutch (the Dutch canonical URLs rank and stay).
    */
   slugs?: Partial<Record<Locale, string>>;
+  /**
+   * Language of the canonical slug; default 'nl', native posts default to
+   * `native`. Checked at module load: a locale in another language needs its
+   * own slug in blog-slugs.json, or the build fails (no foreign URLs).
+   */
+  slugLang?: string;
   title: string;
   excerpt: string;
   datePublished: string; // ISO
@@ -667,6 +674,11 @@ export type BlogPost = {
   readMinutes: number;
   /** Optional hero photo path from /public. Empty = branded placeholder. */
   image?: string;
+  /**
+   * Per-locale hero (images that carry text in the market language). Resolved
+   * by localizeBlogPost; `image` stays the fallback. Build with blogHeroByLocale.
+   */
+  imageByLocale?: Partial<Record<Locale, string>>;
   /** Locales the post exists on. Absent = every locale (the default). */
   markets?: Locale[];
   /**
@@ -689,9 +701,32 @@ export type BlogPost = {
   body: BlogSection[];
 };
 
+/** Language subtag of a locale (be → nl, ch → de, fr-ch → fr, uk/us → en, no → nb). */
+export function localeLanguage(locale: Locale): string {
+  return localeFullCodes[locale].split('-')[0];
+}
+
+/**
+ * Per-locale hero map: /images/blog/<slug>.<key>.jpg for every locale, where
+ * the key is the locale code (default) or its language subtag ('language':
+ * one image per language, shared by be/nl, uk/us/en, de/ch, fr/fr-ch).
+ * `except` drops locales the post never renders on (no file for them).
+ */
+function blogHeroByLocale(
+  slug: string,
+  { by = 'locale', except = [] }: { by?: 'locale' | 'language'; except?: readonly Locale[] } = {},
+): Partial<Record<Locale, string>> {
+  return Object.fromEntries(
+    locales
+      .filter((l) => !except.includes(l))
+      .map((l) => [l, `/images/blog/${slug}.${by === 'language' ? localeLanguage(l) : l}.jpg`]),
+  );
+}
+
 export const blogPosts: BlogPost[] = [
   {
     slug: 'what-is-a-stretch-ceiling',
+    slugLang: 'en',
     title: 'What is a stretch ceiling? A plain-English guide',
     excerpt:
       'A stretch ceiling is a thin membrane tensioned across a room and clipped into a slim perimeter profile — installed cold or with heat, in a single day. Here is how it works and where it makes sense.',
@@ -699,6 +734,9 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-01-15',
     author: 'STRETCH',
     readMinutes: 5,
+    // Section diagram, labels in the reader's language (one image per language).
+    image: '/images/blog/what-is-a-stretch-ceiling.jpg',
+    imageByLocale: blogHeroByLocale('what-is-a-stretch-ceiling', { by: 'language' }),
     body: [
       {
         heading: 'The short version',
@@ -732,6 +770,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'stretch-ceiling-acoustics-explained',
+    slugLang: 'en',
     title: 'Stretch ceiling acoustics, explained',
     excerpt:
       'A micro-perforated stretch membrane backed with a high-density absorber can reach up to Class A sound absorption — without any visible acoustic panels. Here is how it works and what αw and NRC mean.',
@@ -928,6 +967,9 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-07',
     author: 'STRETCH',
     readMinutes: 5,
+    // Labels in the market language and units (one image per locale).
+    image: '/images/blog/geluidsoverlast-van-uw-bovenburen.en.jpg',
+    imageByLocale: blogHeroByLocale('geluidsoverlast-van-uw-bovenburen'),
     body: [
       {
         heading: 'Two kinds of noise, two problems',
@@ -1101,6 +1143,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-07',
     author: 'STRETCH',
     readMinutes: 5,
+    image: '/images/blog/spanplafond-zelf-plaatsen.jpg',
     body: [
       {
         heading: 'What the job involves',
@@ -1181,6 +1224,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-07',
     author: 'STRETCH',
     readMinutes: 4,
+    image: '/images/blog/sterrenhemel.jpg',
     body: [
       {
         heading: 'The idea',
@@ -1224,6 +1268,9 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-07',
     author: 'STRETCH',
     readMinutes: 5,
+    // One image per locale; never rendered on ch/fr-ch (hidePrices).
+    image: '/images/blog/spanplafond-prijs.en.jpg',
+    imageByLocale: blogHeroByLocale('spanplafond-prijs', { except: ['ch', 'fr-ch'] }),
     body: [
       {
         heading: 'The short answer',
@@ -1272,6 +1319,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-07',
     author: 'STRETCH',
     readMinutes: 5,
+    image: '/images/blog/clipso-spanplafonds.jpg',
     body: [
       {
         heading: 'What "Clipso" actually means',
@@ -1315,6 +1363,7 @@ export const blogPosts: BlogPost[] = [
     // as the planchetten article on .be. Prices mirror the published
     // price-guide article (€70–200/m²) — indicative only, never a quote.
     slug: 'plafond-tendu-avantages-et-inconvenients',
+    slugLang: 'fr',
     hidePrices: true, // quotes €/m² figures
     title: 'Stretch ceilings: the advantages and disadvantages, honestly (2026 price guide)',
     excerpt:
@@ -1323,6 +1372,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-22',
     author: 'STRETCH',
     readMinutes: 6,
+    image: '/images/blog/plafond-tendu-avantages-et-inconvenients.jpg',
     body: [
       {
         heading: 'What a stretch ceiling actually is',
@@ -1381,7 +1431,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-22',
     author: 'STRETCH',
     readMinutes: 7,
-    // Hero: add image: '/images/blog/spanplafond-premie-btw.jpg' once the photo exists.
+    image: '/images/blog/spanplafond-premie-btw.jpg',
     // Belgium-specific: the Dutch/French markets + both English domains.
     markets: ['be', 'nl', 'fr', 'en', 'uk'],
     body: [
@@ -1487,7 +1537,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-22',
     author: 'STRETCH',
     readMinutes: 6,
-    // Hero: add image: '/images/blog/plafond-afwerken-na-isolatie.jpg' once the photo exists.
+    image: '/images/blog/plafond-afwerken-na-isolatie.jpg',
     body: [
       {
         heading: 'Why the finish after insulation is different',
@@ -1569,7 +1619,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-08-22',
     author: 'STRETCH',
     readMinutes: 6,
-    // Hero: add image: '/images/blog/plafond-renoveren-opties.jpg' once the photo exists.
+    image: '/images/blog/plafond-renoveren-opties.jpg',
     body: [
       {
         heading: 'The short answer',
@@ -3045,6 +3095,15 @@ for (const p of blogPosts) {
   // switcher uses, or a cross-domain link to them 404s on the sibling domain.
   if (p.native && marketOnlyBlogSlugs[p.slug] !== p.native) {
     throw new Error(`content.ts: market-native post "${p.slug}" is missing from marketOnlyBlogSlugs (src/lib/blog-slugs.ts)`);
+  }
+  // No foreign URLs: every locale the post exists on whose language differs
+  // from the canonical slug's must have its own slug in blog-slugs.json.
+  const slugLang = p.slugLang ?? (p.native ? localeLanguage(p.native) : 'nl');
+  for (const l of locales) {
+    if (p.markets && !p.markets.includes(l)) continue;
+    if (localeLanguage(l) !== slugLang && !p.slugs?.[l]) {
+      throw new Error(`content.ts: blog post "${p.slug}" (slug language '${slugLang}') has no ${l} slug in src/lib/blog-slugs.json — it would publish a foreign URL on ${l}`);
+    }
   }
 }
 
