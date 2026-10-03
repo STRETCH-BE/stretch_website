@@ -106,7 +106,9 @@ export const localeStatus: Record<Locale, 'live' | 'pending'> = {
   ch: 'live',
   'fr-ch': 'live',
   es: 'live',
-  pt: 'pending', // stretchteto.pt — no DNS yet
+  // stretchteto.pt — live since 3 Oct 2026 (DNS on Vercel, domain verified,
+  // serves pt-PT): back in hreflang, the sitemaps and the switcher on every domain.
+  pt: 'live',
   da: 'live',
   sv: 'live',
   no: 'pending', // stretchtak.no — no DNS yet (name question open: strekktak.no is taken)
