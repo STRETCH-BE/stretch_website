@@ -1,3 +1,22 @@
+## 2026-10-03 (52) — Portuguese locale live: stretchteto.pt back in the switcher
+
+Michael, 3 Oct 2026: "I don't see the .pt domain in the language switcher"
+on any domain. Checked on the live English site (stretch.mt): the switcher
+listed every market except Português and Norsk, and the page HTML had no
+reference to stretchteto.pt at all — so it was missing from the footer
+country list and the hreflang set too, on every domain alike. Cause:
+`localeStatus.pt` in `src/i18n/config.ts` was still `'pending'` from the
+30 Aug audit (entry 22, T1/F2), when the domain had no DNS. That flag
+removes a locale from `liveLocales`, which the switcher, the mobile menu,
+the footer, `buildAlternates` and the sitemap all read. The reason was
+stale: stretchteto.pt now resolves to Vercel, is attached and verified on
+the stretch-website project, and serves the pt-PT site with a 200.
+
+Fix: `pt: 'live'`. Nothing else changes — the one flag restores Portuguese
+in the switcher, the footer, hreflang and the sitemaps on all domains, and
+stretchteto.pt's own sitemap stops being empty. `no` (stretchtak.no) stays
+`'pending'`: that domain still has no DNS record.
+
 ## 2026-09-13 (51) — Probe paths returned 500 instead of 404
 
 Michael's Vercel log export (13 Sep, 03:50–08:11 UTC): 192 rows, every
