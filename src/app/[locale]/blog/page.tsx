@@ -47,7 +47,7 @@ export default async function BlogIndex({ params }: { params: { locale: string }
 
         <div className="blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 18 }}>
           {blogPostsFor(locale).map((base, i) => {
-            const p = localizeBlogPost(base, (tb.raw('posts') as Record<string, BlogPostMessages>)[base.slug]);
+            const p = localizeBlogPost(base, (tb.raw('posts') as Record<string, BlogPostMessages>)[base.slug], locale);
             return (
             <article key={p.slug} style={{ border: '1px solid var(--border)', background: '#fff', display: 'flex', flexDirection: 'column' }}>
               <Link href={blogHref(base, locale)} className="zoom-wrap" aria-label={p.title} style={{ display: 'block', overflow: 'hidden' }}>
