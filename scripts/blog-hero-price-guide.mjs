@@ -21,14 +21,11 @@
 //   npm i --no-save playwright && npx playwright install chromium
 //   node scripts/blog-hero-price-guide.mjs            # all locales
 //   node scripts/blog-hero-price-guide.mjs pl is      # a subset
-// Then commit the JPGs. See scripts/blog-hero-price-guide.md.
+// Then commit the JPGs. See scripts/blog-heroes.md.
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { chromium } from 'playwright';
+import { repo, renderAll, postMessages, frameTop, document_, esc } from './blog-hero-lib.mjs';
 
-const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const outDir = path.join(repo, 'public/images/blog');
 const only = process.argv.slice(2);
 
 // Per m² installed, excl. VAT — mirrors src/lib/indicative-prices.ts (checked below).
@@ -70,14 +67,8 @@ const L = {
   pl: { cur: 'PLN', fig: (a, b) => `${a}–${b}`, unit: 'zł za m²', money: (a, b) => `${a}–${b} zł`, caption: 'Cena orientacyjna · z montażem · netto' },
 };
 
-// The site's own Archivo subset (wdth 100–125, wght 400–900): the display look is wdth 125.
-const fontB64 = fs.readFileSync(path.join(repo, 'src/fonts/archivo-var.woff2')).toString('base64');
-
-const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
 function html(locale) {
-  const m = JSON.parse(fs.readFileSync(path.join(repo, `messages/${locale}.json`), 'utf8'));
-  const post = m.blogPosts.posts['spanplafond-prijs'];
+  const { messages: m, post } = postMessages(locale, 'spanplafond-prijs');
   const types = m.priceCalculatorPage.types;
   const cfg = L[locale];
   const b = buckets[cfg.cur];
@@ -96,20 +87,7 @@ function html(locale) {
     })
     .join('');
 
-  return `<!doctype html><html lang="${locale}"><head><meta charset="utf-8">
-<style>
-@font-face{font-family:Archivo;src:url(data:font/woff2;base64,${fontB64}) format('woff2');font-weight:400 900;font-stretch:100% 125%;font-display:block}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{width:2400px;height:1200px;overflow:hidden}
-body{background:#f4f3f1;color:#0a0a0a;font-family:Archivo,system-ui,sans-serif;position:relative}
-.sheet{position:absolute;inset:0;padding:104px 110px 0}
-.disp{font-variation-settings:'wdth' 125;font-weight:900;text-transform:uppercase}
-.top{display:flex;justify-content:space-between;align-items:baseline;height:44px}
-.eyebrow{display:flex;align-items:center;gap:22px;color:#e00000;font-size:30px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
-.mark{display:flex;align-items:baseline;gap:4px}
-.mark .w{font-size:46px;letter-spacing:-.02em}
-.mark .r{color:#e00000;font-weight:900;font-size:26px}
-.rule{height:3px;background:#0a0a0a;margin-top:26px}
+  const css = `
 .fig{display:flex;align-items:baseline;gap:30px;margin-top:40px;white-space:nowrap;height:282px}
 .fig .n{font-size:282px;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
 .fig .u{font-size:84px;letter-spacing:-.03em;color:#e00000;line-height:1}
@@ -125,43 +103,26 @@ body{background:#f4f3f1;color:#0a0a0a;font-family:Archivo,system-ui,sans-serif;p
 .track i{position:absolute;top:0;bottom:0;width:1.5px;background:#dedbd5}
 .track b{position:absolute;top:50%;height:26px;margin-top:-13px;background:#0a0a0a}
 .val{font-size:34px;font-weight:800;text-align:right;font-variant-numeric:tabular-nums;letter-spacing:-.01em;white-space:nowrap}
-</style></head><body>
-<div class="sheet">
-  <div class="top">
-    <div class="eyebrow"><span style="display:inline-block;width:54px;height:7px;background:#e00000"></span>${esc(cfg.caption)}</div>
-    <div class="mark disp"><span class="w">STRETCH</span><span class="r">®</span></div>
-  </div>
-  <div class="rule"></div>
+`;
+  const body = `${frameTop(cfg.caption)}
   <div class="fig disp"><span class="n" id="n">${esc(cfg.fig(b.basic[0], b.bathroom[1]))}</span><span class="u">${esc(cfg.unit)}</span></div>
   <div class="chart">
     <div class="ch-head"><div class="ch-title">${esc(post.body[1].heading)}</div><div class="ticks">${t.map((v) => `<span style="left:${pct(v)}%">${v}</span>`).join('')}</div></div>
     ${rows}
-  </div>
-</div>
-<script>
-  // Shrink the big figure until it (plus the unit) fits the sheet width. Run
-  // only after the webfont is in — measured in the fallback font it lies.
+  </div>`;
+  // Shrink the big figure until it (plus the unit) fits the sheet width. Runs
+  // after the webfont is in (renderAll) — measured in the fallback font it lies.
+  const script = `
   window.fit = () => {
     const n = document.getElementById('n'), u = document.querySelector('.fig .u');
     const avail = 2400 - 220 - 30 - u.getBoundingClientRect().width;
     let size = 282; n.style.fontSize = size + 'px';
     while (n.getBoundingClientRect().width > avail && size > 120) { size -= 4; n.style.fontSize = size + 'px'; }
-    return size;
-  };
-</script>
-</body></html>`;
+    return 'figure ' + size + 'px';
+  };`;
+  return document_(locale, css, body, script);
 }
 
 const locales = only.length ? only : Object.keys(L);
 for (const l of locales) if (!L[l]) { console.error(`no hero recipe for locale "${l}"`); process.exit(1); }
-
-const browser = await chromium.launch();
-const page = await browser.newPage({ viewport: { width: 2400, height: 1200 }, deviceScaleFactor: 1 });
-for (const loc of locales) {
-  await page.setContent(html(loc), { waitUntil: 'load' });
-  const size = await page.evaluate(async () => { await document.fonts.ready; return window.fit(); });
-  const file = path.join(outDir, `spanplafond-prijs.${loc}.jpg`);
-  await page.screenshot({ path: file, type: 'jpeg', quality: 92, clip: { x: 0, y: 0, width: 2400, height: 1200 } });
-  console.log(`${loc}  ${path.relative(repo, file)}  ${(fs.statSync(file).size / 1024).toFixed(0)} KB  figure ${size}px`);
-}
-await browser.close();
+await renderAll({ slug: 'spanplafond-prijs', locales, html });
