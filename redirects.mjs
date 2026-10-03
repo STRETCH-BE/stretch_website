@@ -38,7 +38,8 @@ const R = (h, source, destination) => ({
 // listed in src/lib/blog-slugs.json now serves its OWN slug and the old path
 // must 301. The rules are derived from the SAME JSON the app reads (via
 // src/lib/blog-slugs.ts), so the redirect map and the routes cannot drift.
-// `be`/`nl` are never in the map — their Dutch URLs rank and stay.
+// be/nl are listed only where the canonical slug is not Dutch — the Dutch
+// canonical URLs rank and stay.
 // Each host's rules are spread BEFORE that host's genericRules spread
 // (first match wins; a /blog path never collides with the shop catch-alls,
 // but the ordering discipline is the same as for the kit rules).
@@ -57,7 +58,7 @@ const blogSlugRules = (h, locale) =>
 // DUTCH RULES — applied to stretchplafond.be AND stretchplafond.nl
 // Order matters: specific slugs BEFORE the /spanplafond(s)-:tail fallbacks.
 // ---------------------------------------------------------------------------
-const dutchRules = (h) => [
+const dutchRules = (h, locale) => [
   // --- commerce (GSC: 731 clicks; catch-alls agreed 6 Aug) ---
   R(h, '/shop/:path*', SHOP_TARGET),
   R(h, '/shop-2', SHOP_TARGET),
@@ -156,9 +157,9 @@ const dutchRules = (h) => [
   R(h, '/bereken-prijs-spanplafond', '/blog/spanplafond-prijs'),
   R(h, '/clipso-spanplafonds', '/blog/clipso-spanplafonds'),
   R(h, '/clipso-spanplafond', '/blog/clipso-spanplafonds'), // singular variant still linked externally (404 on .be, 3 Sep 2026)
-  R(h, '/wat-is-een-spanplafond', '/blog/what-is-a-stretch-ceiling'),
-  R(h, '/blog-wat-is-een-spanplafond', '/blog/what-is-a-stretch-ceiling'),
-  R(h, '/le-plafond-tendu', '/blog/what-is-a-stretch-ceiling'),
+  R(h, '/wat-is-een-spanplafond', blog(locale, 'what-is-a-stretch-ceiling')),
+  R(h, '/blog-wat-is-een-spanplafond', blog(locale, 'what-is-a-stretch-ceiling')),
+  R(h, '/le-plafond-tendu', blog(locale, 'what-is-a-stretch-ceiling')),
   // Knowledge-base long tail + WP docs archives → specs & downloads library
   // (/technical has no index page — the hub's entry points are the per-material
   // leaf pages; /datasheets is the "All specs & downloads" library.)
@@ -552,8 +553,10 @@ const acousticsRules = [
 // ---------------------------------------------------------------------------
 export const legacyRedirects = [
   ...localePrefixStrips,
-  ...dutchRules('stretchplafond.be'),
-  ...dutchRules('stretchplafond.nl'),
+  ...blogSlugRules('stretchplafond.be', 'be'),
+  ...dutchRules('stretchplafond.be', 'be'),
+  ...blogSlugRules('stretchplafond.nl', 'nl'),
+  ...dutchRules('stretchplafond.nl', 'nl'),
   ...englishRules,
   ...ukRules,
   ...usRules,
