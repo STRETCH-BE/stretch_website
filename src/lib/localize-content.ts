@@ -154,16 +154,11 @@ export function localizeProject(project: Project, raw: ProjectMessages | undefin
 // ---- Blog posts --------------------------------------------------------------
 export type BlogPostMessages = Pick<BlogPost, 'title' | 'excerpt' | 'body'>;
 
-/**
- * Text overlay from messages + the hero for THIS locale: a post with
- * `imageByLocale` (a hero that carries text) resolves to the locale's own file,
- * else keeps `image`. Pass `locale` wherever a hero is rendered.
- */
 export function localizeBlogPost(post: BlogPost, raw: BlogPostMessages | undefined, locale?: Locale): BlogPost {
-  const image = (locale && post.imageByLocale?.[locale]) || post.image;
-  const base = image === post.image ? post : { ...post, image };
-  if (!raw) return base;
-  return { ...base, title: raw.title, excerpt: raw.excerpt, body: raw.body };
+  // Per-locale hero (text in the market language), else the shared one.
+  const image = (locale && post.imageByLocale?.[locale]) ?? post.image;
+  if (!raw) return { ...post, image };
+  return { ...post, image, title: raw.title, excerpt: raw.excerpt, body: raw.body };
 }
 
 export function localizePrefab(data: PrefabPageData, raw: PrefabMessages | undefined): PrefabPageData {

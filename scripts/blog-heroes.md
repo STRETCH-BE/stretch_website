@@ -16,7 +16,7 @@ public/images/blog/<canonical slug>.<locale>.jpg      2400×1200 (ratio 16/8)
 `scripts/blog-hero-lib.mjs` is the shared frame (surface tone, Archivo subset
 from `src/fonts`, red kicker + eyebrow, STRETCH® mark, rule, the 16/9-crop
 safe area, the render loop). `src/lib/content.ts` lists the files through
-`imageByLocale: blogHeroByLocale('<slug>'[, locales])` and
+`imageByLocale: blogHeroByLocale('<slug>'[, { by, except }])` and
 `localizeBlogPost(post, raw, locale)` resolves the locale's file into `image`.
 A locale without an entry shows the branded placeholder rather than another
 market's words. `npm test` runs `scripts/check-blog-heroes.mjs`, which fails

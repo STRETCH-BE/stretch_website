@@ -6,7 +6,9 @@
 //
 // blog-slugs.json maps CANONICAL slug → { locale: localized slug }. A locale
 // absent from the map keeps the canonical slug, so nothing changes until a
-// locale opts in. `be` and `nl` are never listed: those Dutch URLs rank.
+// locale opts in. be/nl are listed only where the canonical slug is not
+// Dutch (the Dutch canonical URLs rank and stay); content.ts fails the build
+// when a locale would otherwise serve a slug in another language.
 //
 // Kept deliberately tiny and dependency-free: the mega menu (a client
 // component) resolves blog links through it, and redirects.mjs derives the
