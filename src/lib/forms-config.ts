@@ -51,46 +51,24 @@ export type ModalConfig = {
   fields: FormField[];
 };
 
-export const TRAINING_DATES = [
-  '15–16 Sep 2026',
-  '06–08 Oct 2026',
-  '17–18 Nov 2026',
-  'English session — new dates soon',
-  'German session — new dates soon',
-  'Polish session — new dates soon',
-  'Custom on-site session',
-];
-
+// ---------------------------------------------------------------------------
+// TRAINING — the Beveren-Waas days live in public.training_sessions (Supabase,
+// edited in /portal/admin; src/lib/training/). This file only knows the
+// PARTNER-RUN locales, whose courses replace the HQ days entirely.
+// ---------------------------------------------------------------------------
 export type TrainingSession = {
+  /** Card title / select label (the partner's course name and public price line). */
   date: string;
   note: string;
   /** Language(s) of instruction — rendered as badges (codes stay untranslated). */
   languages: string[];
-  /** EN/DE/PL international sessions: interest capture until real dates land
-   *  (Michael confirms them) — booked via source 'training_international'. */
-  international?: boolean;
-  /** ISO dates for scheduled sessions only — drive the Event JSON-LD on
-   *  /installer-training. Keep in sync with src/lib/events.ts. */
-  isoStart?: string;
   /** Public course price line (only QuinLay's Swiss course prices may be public). */
   price?: string;
   /** Booked externally (QuinLay AG on quinlay.ch): link instead of the modal. */
   external?: { href: string };
   /** Lead-modal source for the secondary CTA on external sessions. */
   source?: string;
-  isoEnd?: string;
 };
-
-export const TRAINING_DATE_DETAIL: TrainingSession[] = [
-  { date: '15–16 Sep 2026', note: 'Beveren-Waas · 4 seats', languages: ['NL'], isoStart: '2026-09-15', isoEnd: '2026-09-16' },
-  { date: '06–08 Oct 2026', note: 'Beveren-Waas · 6 seats', languages: ['NL'], isoStart: '2026-10-06', isoEnd: '2026-10-08' },
-  { date: '17–18 Nov 2026', note: 'Beveren-Waas · 8 seats', languages: ['NL'], isoStart: '2026-11-17', isoEnd: '2026-11-18' },
-  { date: 'English session — new dates soon', note: 'Beveren-Waas · international group', languages: ['EN'], international: true },
-  { date: 'German session — new dates soon', note: 'Beveren-Waas · international group', languages: ['DE'], international: true },
-  // Polish-language sessions run at the Alto Design site in Częstochowa once
-  // dates are confirmed — interest capture until then (ranking audit §2.1).
-  { date: 'Polish session — new dates soon', note: 'Częstochowa (PL) · Polish-language group', languages: ['PL'], international: true },
-];
 
 // ---------------------------------------------------------------------------
 // PER-LOCALE SESSION OVERRIDES — a locale whose training is run by a partner
@@ -141,10 +119,11 @@ export const TRAINING_SESSIONS_BY_LOCALE: Partial<Record<string, TrainingSession
   ],
 };
 
-/** Sessions for a locale: the partner override when one exists, else the HQ list. */
+/** Is this locale partner-run, and with which courses? The HQ days are not
+ *  here: they come from public.training_sessions (src/lib/training/). */
 export function trainingSessionsFor(locale: string): { sessions: TrainingSession[]; partnerRun: boolean } {
   const override = TRAINING_SESSIONS_BY_LOCALE[locale];
-  return override ? { sessions: override, partnerRun: true } : { sessions: TRAINING_DATE_DETAIL, partnerRun: false };
+  return override ? { sessions: override, partnerRun: true } : { sessions: [], partnerRun: false };
 }
 
 // ---------------------------------------------------------------------------
@@ -240,7 +219,8 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
       cityField(),
       countryField(),
-      { name: 'preferredDate', kind: 'select', label: 'Preferred date', options: TRAINING_DATES },
+      // Filled at runtime from the training view's choices (src/lib/training/).
+      { name: 'preferredDate', kind: 'select', label: 'Preferred date', options: [] },
       { name: 'attendees', kind: 'select', label: 'Attendees', options: ['1 person', '2 people', '3 people', '4+ people'] },
     ],
   },
@@ -256,7 +236,8 @@ export const MODAL_CONFIGS: Record<ModalType, ModalConfig> = {
       { name: 'email', kind: 'text', inputType: 'email', label: 'Email', placeholder: 'you@company.com', required: true },
       { name: 'phone', kind: 'text', inputType: 'tel', label: 'Phone', placeholder: '+32 ...', required: true },
       countryField(),
-      { name: 'preferredDate', kind: 'select', label: 'Preferred date', options: TRAINING_DATES },
+      // Filled at runtime from the training view's choices (src/lib/training/).
+      { name: 'preferredDate', kind: 'select', label: 'Preferred date', options: [] },
     ],
   },
   partner: {

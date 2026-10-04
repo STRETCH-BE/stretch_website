@@ -74,7 +74,8 @@ const SOURCE_LABELS: Record<string, string> = {
   dates: 'Training booking',
   training_hero: 'Training booking',
   training_book: 'Training booking',
-  training_international: 'International training interest (EN/DE)',
+  training_card: 'Training booking',
+  training_international: 'International training request (EN/DE/PL)',
   partner: 'Partner application',
   call: 'Call-back request',
   samples: 'Sample request',
@@ -129,7 +130,8 @@ function labelFor(key: string): string {
 const ORDER = Object.keys(FIELD_LABELS);
 
 function orderedEntries(payload: LeadPayload): [string, unknown][] {
-  const skip = new Set(['source']);
+  // trainingSessionId links a booking to its day in leads.payload — never shown in the mail.
+  const skip = new Set(['source', 'trainingSessionId']);
   const keys = Object.keys(payload).filter((k) => !skip.has(k));
   keys.sort((a, b) => {
     const ia = ORDER.indexOf(a);

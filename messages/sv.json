@@ -1833,16 +1833,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Önskat datum",
-          "options": [
-            "15–16 sep 2026",
-            "06–08 okt 2026",
-            "17–18 nov 2026",
-            "Session på engelska — nya datum inom kort",
-            "Session på tyska — nya datum inom kort",
-            "Session på polska — nya datum inom kort",
-            "Skräddarsydd session på plats"
-          ]
+          "label": "Önskat datum"
         },
         "attendees": {
           "label": "Deltagare",
@@ -1875,16 +1866,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Önskat datum",
-          "options": [
-            "15–16 sep 2026",
-            "06–08 okt 2026",
-            "17–18 nov 2026",
-            "Session på engelska — nya datum inom kort",
-            "Session på tyska — nya datum inom kort",
-            "Session på polska — nya datum inom kort",
-            "Skräddarsydd session på plats"
-          ]
+          "label": "Önskat datum"
         }
       }
     },
@@ -2066,22 +2048,38 @@
       "rateLimited": "För många förfrågningar från din anslutning — försök igen om en timme.",
       "architectInvite": "Arkitekt? Vårt kostnadsfria arkitektområde har vägledande budgetband, uppmätta fallstudier och alla dokument med ett klick."
     },
-    "trainingDates": [
-      "15–16 sep 2026",
-      "06–08 okt 2026",
-      "17–18 nov 2026",
-      "Session på engelska — nya datum inom kort",
-      "Session på tyska — nya datum inom kort",
-      "Session på polska — nya datum inom kort"
-    ],
-    "trainingDateNotes": [
-      "Beveren-Waas · 4 platser",
-      "Beveren-Waas · 6 platser",
-      "Beveren-Waas · 8 platser",
-      "Beveren-Waas · internationell grupp",
-      "Beveren-Waas · internationell grupp",
-      "Częstochowa (PL) · polskspråkig grupp"
-    ],
+    "trainingSessions": {
+      "systems": {
+        "polyester": "Spänntak i polyester",
+        "pvc": "Spänntak i PVC",
+        "both": "Polyester + PVC"
+      },
+      "seatsLeft": "{count, plural, one {# plats kvar} other {# platser kvar}}",
+      "full": "Fullbokad",
+      "reserve": "Reservera",
+      "noDates": "Nya datum planeras — lämna dina uppgifter nedan så bekräftar vi din plats.",
+      "languageTitle": {
+        "EN": "Utbildningsdagar på engelska",
+        "DE": "Utbildningsdagar på tyska",
+        "PL": "Utbildningsdagar på polska"
+      },
+      "eventTitle": "Montörsutbildning — {system}",
+      "interest": {
+        "EN": {
+          "label": "Session på engelska — nya datum inom kort",
+          "note": "Beveren-Waas · internationell grupp"
+        },
+        "DE": {
+          "label": "Session på tyska — nya datum inom kort",
+          "note": "Beveren-Waas · internationell grupp"
+        },
+        "PL": {
+          "label": "Session på polska — nya datum inom kort",
+          "note": "Częstochowa (PL) · polskspråkig grupp"
+        }
+      },
+      "custom": "Skräddarsydd session på plats"
+    },
     "close": "Stäng",
     "downloadDatasheet": "Ladda ner datablad",
     "select": "Välj…",

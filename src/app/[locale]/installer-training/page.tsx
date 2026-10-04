@@ -1,6 +1,9 @@
 // Installer training page (/installer-training). Hero + format band, the
 // six-cell curriculum, upcoming-date cards, and the booking form (→ /api/lead).
-// BreadcrumbList + a Course JSON-LD describing the programme.
+// BreadcrumbList + a Course JSON-LD describing the programme, plus one Event
+// per upcoming Beveren-Waas day. The days come from public.training_sessions
+// (src/lib/training/, edited in /portal/admin): statically rendered, re-read
+// hourly and at once after an admin save.
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
@@ -9,7 +12,9 @@ import { isValidLocale, type Locale, localeFullCodes } from '@/i18n/config';
 import { siteUrl, brand, contact } from '@/lib/site-config';
 import { pageMetadata } from '@/lib/page-meta';
 import { breadcrumbSchema } from '@/lib/structured-data';
-import { TRAINING_DATE_DETAIL, trainingSessionsFor } from '@/lib/forms-config';
+import { trainingSessionsFor } from '@/lib/forms-config';
+import { TRAINING_DEFAULT_LOCATION } from '@/lib/training/config';
+import { getTrainingView } from '@/lib/training/sessions';
 import { dealerMarkets, isDealerMarket } from '@/lib/dealers';
 import JsonLd from '@/components/seo/JsonLd';
 import Eyebrow from '@/components/ui/Eyebrow';
@@ -18,6 +23,10 @@ import { pageImages } from '@/lib/page-images';
 import { ModalButton } from '@/components/ui/ModalButton';
 import InlineLeadForm from '@/components/sections/InlineLeadForm';
 import { localeBase } from '@/lib/seo';
+
+// Hourly safety net for the training days (an admin save revalidates at once).
+// Segment config must be a literal — keep equal to TRAINING_REVALIDATE_SECONDS.
+export const revalidate = 3600;
 
 export function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   // `only` (N2): training exists on dealer markets only — no en-US alternate.
@@ -37,21 +46,14 @@ export default async function TrainingPage({ params }: { params: { locale: strin
   const curriculum = t.raw('curriculum.items') as { title: string; body: string }[];
   const included = t.raw('book.included') as string[];
 
-  // Localize by GLOBAL index into modals.trainingDates/Notes, then split:
-  // scheduled sessions fill the dates grid, EN/DE international sessions get
-  // their own funnel section (booked via source 'training_international').
-  // ch: QuinLay AG runs the courses (per-locale override, copy in the config
-  // itself — not index-localized through modals.trainingDates).
-  const { sessions, partnerRun } = trainingSessionsFor(locale);
-  const localizedSessions = partnerRun
-    ? sessions
-    : sessions.map((d, di) => ({
-        ...d,
-        date: (tm.raw('trainingDates') as string[])[di] ?? d.date,
-        note: (tm.raw('trainingDateNotes') as string[])[di] ?? d.note,
-      }));
-  const scheduledSessions = localizedSessions.filter((d) => !d.international);
-  const internationalSessions = partnerRun ? [] : localizedSessions.filter((d) => d.international);
+  // The training view, built once per render: the upcoming Beveren-Waas days
+  // (public.training_sessions) with localized labels, the preferred-date
+  // choices for both forms and the EN/DE/PL interest state. ch / fr-ch:
+  // QuinLay AG runs the courses (per-locale override in forms-config, copy in
+  // the config itself) — no DB days, no interest cards, no Events.
+  const view = await getTrainingView(locale);
+  const { sessions: partnerSessions, partnerRun } = trainingSessionsFor(locale);
+  const fullLabel = tm('trainingSessions.full');
 
   const langBadges = (languages: string[]) => (
     <div style={{ display: 'flex', gap: 6, marginBottom: 10 }}>
@@ -75,9 +77,8 @@ export default async function TrainingPage({ params }: { params: { locale: strin
     provider: { '@type': 'Organization', name: brand.name, sameAs: siteUrl },
     url: `${localeBase(locale)}/installer-training`,
   };
-  // Event nodes for the SCHEDULED sessions only (real ISO dates from
-  // forms-config; TBA interest-capture sessions carry no Event). No offers
-  // node — training pricing is not published (open decision per market).
+  // One Event per visible day (open and full) — interest cards carry no Event.
+  // No offers node — training pricing is not published (open decision per market).
   const trainingLocation = {
     '@type': 'Place',
     name: `${brand.name} HQ`,
@@ -89,28 +90,29 @@ export default async function TrainingPage({ params }: { params: { locale: strin
       addressCountry: contact.address.country,
     },
   };
-  const sessionEvents = (partnerRun ? [] : TRAINING_DATE_DETAIL).map((d, di) => ({ d, di }))
-    .filter(({ d }) => d.isoStart)
-    .map(({ d, di }) => ({
-    '@context': 'https://schema.org',
-    '@type': 'Event',
-    name: `${t('courseName')} — ${(tm.raw('trainingDates') as string[])[di] ?? d.date}`,
-    startDate: d.isoStart,
-    endDate: d.isoEnd,
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    eventStatus: 'https://schema.org/EventScheduled',
-    location: trainingLocation,
-    inLanguage: d.languages.map((l) => l.toLowerCase()),
-    organizer: { '@type': 'Organization', name: brand.name, url: siteUrl },
-    url: `${localeBase(locale)}/installer-training#dates`,
-    }));
+  const sessionEvents = view.sessions.map((s) => ({
+    id: s.id,
+    data: {
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: `${t('courseName')} — ${s.systemLabel}`,
+      startDate: s.startsOn,
+      endDate: s.endsOn ?? s.startsOn,
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      eventStatus: 'https://schema.org/EventScheduled',
+      location: s.location === TRAINING_DEFAULT_LOCATION ? trainingLocation : { '@type': 'Place', name: s.location },
+      inLanguage: s.languages.map((l) => l.toLowerCase()),
+      organizer: { '@type': 'Organization', name: brand.name, url: siteUrl },
+      url: `${localeBase(locale)}/installer-training#dates`,
+    },
+  }));
 
   return (
     <>
       <JsonLd data={crumbs} />
       <JsonLd data={course} />
       {sessionEvents.map((e) => (
-        <JsonLd key={e.startDate} data={e} />
+        <JsonLd key={e.id} data={e.data} />
       ))}
 
       {/* Hero */}
@@ -137,7 +139,7 @@ export default async function TrainingPage({ params }: { params: { locale: strin
               {t('hero.travel')}
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14 }}>
-              <ModalButton type="training" source="training_hero" className="btn btn--primary">
+              <ModalButton type="training" source="training_hero" trainingView={view} className="btn btn--primary">
                 {t('hero.ctaBook')} <ArrowRight size={16} />
               </ModalButton>
               <a href="#dates" className="btn btn--ghost">{t('hero.ctaDates')} <ArrowRight size={16} className="btn__arrow" /></a>
@@ -197,21 +199,46 @@ export default async function TrainingPage({ params }: { params: { locale: strin
           </p>
         </div>
         <div className="tr-dates" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 14 }}>
-          {scheduledSessions.map((d) => (
-            <div key={d.date} style={{ border: '1px solid var(--border)', background: '#fff', padding: 'clamp(22px,2.4vw,28px)', display: 'flex', flexDirection: 'column' }}>
-              {langBadges(d.languages)}
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 20, letterSpacing: '-.01em', marginBottom: 8 }}>{d.date}</div>
-              <div style={{ fontSize: 13, color: 'var(--text-faint)', flex: 1 }}>{d.note}</div>
-              {d.external && (
-                /* Partner-run course (QuinLay AG): booking on quinlay.ch, our modal as the secondary CTA. */
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 16 }}>
-                  <a href={d.external.href} target="_blank" rel="noopener" className="btn btn--primary btn--sm" style={{ justifyContent: 'center' }}>
-                    {t('dates.externalCta')} <ArrowUpRight size={14} />
-                  </a>
-                  <ModalButton type="training" source={d.source ?? 'training_hero'} className="btn btn--ghost btn--sm" style={{ justifyContent: 'center' }}>
-                    {t('dates.secondaryCta')}
-                  </ModalButton>
-                </div>
+          {/* Partner-run courses (QuinLay AG): booking on quinlay.ch, our modal as the secondary CTA. */}
+          {partnerRun &&
+            partnerSessions.map((d) => (
+              <div key={d.date} style={{ border: '1px solid var(--border)', background: '#fff', padding: 'clamp(22px,2.4vw,28px)', display: 'flex', flexDirection: 'column' }}>
+                {langBadges(d.languages)}
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 20, letterSpacing: '-.01em', marginBottom: 8 }}>{d.date}</div>
+                <div style={{ fontSize: 13, color: 'var(--text-faint)', flex: 1 }}>{d.note}</div>
+                {d.external && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 16 }}>
+                    <a href={d.external.href} target="_blank" rel="noopener" className="btn btn--primary btn--sm" style={{ justifyContent: 'center' }}>
+                      {t('dates.externalCta')} <ArrowUpRight size={14} />
+                    </a>
+                    <ModalButton type="training" source={d.source ?? 'training_hero'} trainingView={view} className="btn btn--ghost btn--sm" style={{ justifyContent: 'center' }}>
+                      {t('dates.secondaryCta')}
+                    </ModalButton>
+                  </div>
+                )}
+              </div>
+            ))}
+          {/* One card per upcoming Beveren-Waas day: a full day keeps its card with a
+              "Full" tag and no button until its date; an open day reserves a seat. */}
+          {view.sessions.map((s) => (
+            <div key={s.id} style={{ border: '1px solid var(--border)', background: '#fff', padding: 'clamp(22px,2.4vw,28px)', display: 'flex', flexDirection: 'column' }}>
+              {langBadges(s.languages)}
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 20, letterSpacing: '-.01em', marginBottom: 6 }}>{s.dateLabel}</div>
+              <div style={{ fontSize: 14, fontWeight: 700, marginBottom: 8 }}>{s.systemLabel}</div>
+              <div style={{ fontSize: 13, color: 'var(--text-faint)', flex: 1, display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                {s.full ? (
+                  <>
+                    <span>{s.location}</span>
+                    <span style={{ fontSize: 10.5, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', background: 'var(--black)', color: '#fff', padding: '3px 8px' }}>{fullLabel}</span>
+                  </>
+                ) : (
+                  s.note
+                )}
+              </div>
+              {!s.full && (
+                <ModalButton type="training" source="training_card" prefill={{ preferredDate: s.id }} trainingView={view} className="btn btn--ghost btn--sm" style={{ justifyContent: 'center', marginTop: 16 }}>
+                  {tm('trainingSessions.reserve')} <ArrowRight size={14} />
+                </ModalButton>
               )}
             </div>
           ))}
@@ -222,6 +249,9 @@ export default async function TrainingPage({ params }: { params: { locale: strin
             </div>
           )}
         </div>
+        {!partnerRun && view.sessions.length === 0 && (
+          <p style={{ fontSize: 14, fontWeight: 600, color: 'var(--text-muted)', margin: '18px 0 0', maxWidth: '60ch' }}>{tm('trainingSessions.noDates')}</p>
+        )}
         {partnerRun && (
           <p style={{ display: 'flex', alignItems: 'center', gap: 9, fontSize: 14, fontWeight: 600, color: 'var(--text-muted)', margin: '18px 0 0' }}>
             <MapPin size={15} style={{ color: 'var(--red)' }} /> {t('dates.swissRoom')}
@@ -229,7 +259,7 @@ export default async function TrainingPage({ params }: { params: { locale: strin
         )}
       </section>
 
-      {/* International sessions — EN/DE interest funnel (not on partner-run locales) */}
+      {/* International — EN/DE/PL: real days when one is taught in that language, an interest card otherwise (not on partner-run locales) */}
       {!partnerRun && (
       <section id="international" className="section--surface">
         <div className="container section--sm">
@@ -241,18 +271,35 @@ export default async function TrainingPage({ params }: { params: { locale: strin
               <p style={{ fontSize: 14, lineHeight: 1.65, color: 'var(--text-muted)', maxWidth: '48ch', margin: 0 }}>{t('international.body')}</p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-              {internationalSessions.map((d) => (
-                <div key={d.date} style={{ border: '1px solid var(--border)', background: '#fff', padding: 'clamp(20px,2.2vw,26px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 18, flexWrap: 'wrap' }}>
-                  <div>
-                    {langBadges(d.languages)}
-                    <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 19, letterSpacing: '-.01em', marginBottom: 6 }}>{d.date}</div>
-                    <div style={{ fontSize: 13, color: 'var(--text-faint)' }}>{d.note}</div>
+              {view.interest.map((i) =>
+                i.sessions.length > 0 ? (
+                  <div key={i.language} style={{ border: '1px solid var(--border)', background: '#fff', padding: 'clamp(20px,2.2vw,26px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 18, flexWrap: 'wrap' }}>
+                    <div>
+                      {langBadges([i.language])}
+                      <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 19, letterSpacing: '-.01em', marginBottom: 6 }}>{tm(`trainingSessions.languageTitle.${i.language}`)}</div>
+                      <div style={{ fontSize: 13, color: 'var(--text-faint)', display: 'flex', flexDirection: 'column', gap: 3 }}>
+                        {i.sessions.map((s) => (
+                          <span key={s.id}>{s.dateLabel} · {s.systemLabel}</span>
+                        ))}
+                      </div>
+                    </div>
+                    <ModalButton type="training" source="training_international" prefill={{ preferredDate: i.sessions[0].id }} trainingView={view} className="btn btn--ghost btn--sm">
+                      {tm('trainingSessions.reserve')} <ArrowRight size={14} />
+                    </ModalButton>
                   </div>
-                  <ModalButton type="dates" source="training_international" className="btn btn--ghost btn--sm">
-                    {t('international.cta')} <ArrowRight size={14} />
-                  </ModalButton>
-                </div>
-              ))}
+                ) : (
+                  <div key={i.language} style={{ border: '1px solid var(--border)', background: '#fff', padding: 'clamp(20px,2.2vw,26px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 18, flexWrap: 'wrap' }}>
+                    <div>
+                      {langBadges([i.language])}
+                      <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 19, letterSpacing: '-.01em', marginBottom: 6 }}>{i.card?.label}</div>
+                      <div style={{ fontSize: 13, color: 'var(--text-faint)' }}>{i.card?.note}</div>
+                    </div>
+                    <ModalButton type="dates" source="training_international" prefill={{ preferredDate: `interest:${i.language}` }} trainingView={view} className="btn btn--ghost btn--sm">
+                      {t('international.cta')} <ArrowRight size={14} />
+                    </ModalButton>
+                  </div>
+                ),
+              )}
             </div>
           </div>
         </div>
@@ -282,7 +329,7 @@ export default async function TrainingPage({ params }: { params: { locale: strin
               )}
             </div>
             <div style={{ background: '#fff', padding: 'clamp(26px,3vw,40px)', border: '1px solid var(--border)' }}>
-              <InlineLeadForm type="training" source="training_book" />
+              <InlineLeadForm type="training" source="training_book" trainingView={view} />
             </div>
           </div>
         </div>

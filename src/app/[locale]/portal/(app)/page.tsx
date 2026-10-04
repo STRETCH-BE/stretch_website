@@ -20,7 +20,7 @@ export default async function PortalOverviewPage({ params }: { params: { locale:
   // Architects get their own dashboard — a completely separate surface with
   // no pricing-shaped content beyond the budget-guide link.
   if (session.profile.accountType === 'architect' && session.profile.role !== 'admin') {
-    return <ArchitectDashboard profile={session.profile} demo={session.demo} />;
+    return <ArchitectDashboard profile={session.profile} demo={session.demo} locale={locale} />;
   }
 
   const t = await getTranslations('portal.dash');

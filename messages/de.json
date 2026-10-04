@@ -1833,16 +1833,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Wunschtermin",
-          "options": [
-            "15.–16. Sep. 2026",
-            "06.–08. Okt. 2026",
-            "17.–18. Nov. 2026",
-            "Session auf Englisch — neue Termine in Kürze",
-            "Session auf Deutsch — neue Termine in Kürze",
-            "Session auf Polnisch — neue Termine in Kürze",
-            "Individuelle Vor-Ort-Schulung"
-          ]
+          "label": "Wunschtermin"
         },
         "attendees": {
           "label": "Teilnehmer",
@@ -1875,16 +1866,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Wunschtermin",
-          "options": [
-            "15.–16. Sep. 2026",
-            "06.–08. Okt. 2026",
-            "17.–18. Nov. 2026",
-            "Session auf Englisch — neue Termine in Kürze",
-            "Session auf Deutsch — neue Termine in Kürze",
-            "Session auf Polnisch — neue Termine in Kürze",
-            "Individuelle Vor-Ort-Schulung"
-          ]
+          "label": "Wunschtermin"
         }
       }
     },
@@ -2066,22 +2048,38 @@
       "rateLimited": "Zu viele Anfragen von Ihrer Verbindung — bitte versuchen Sie es in einer Stunde erneut.",
       "architectInvite": "Architekt? Unser kostenloser Architektenbereich bietet indikative Budgetbänder, gemessene Fallstudien und jedes Dokument mit einem Klick."
     },
-    "trainingDates": [
-      "15.–16. Sep. 2026",
-      "06.–08. Okt. 2026",
-      "17.–18. Nov. 2026",
-      "Session auf Englisch — neue Termine in Kürze",
-      "Session auf Deutsch — neue Termine in Kürze",
-      "Session auf Polnisch — neue Termine in Kürze"
-    ],
-    "trainingDateNotes": [
-      "Beveren-Waas · 4 Plätze",
-      "Beveren-Waas · 6 Plätze",
-      "Beveren-Waas · 8 Plätze",
-      "Beveren-Waas · internationale Gruppe",
-      "Beveren-Waas · internationale Gruppe",
-      "Częstochowa (PL) · polnischsprachige Gruppe"
-    ],
+    "trainingSessions": {
+      "systems": {
+        "polyester": "Polyester-Spanndecken",
+        "pvc": "PVC-Spanndecken",
+        "both": "Polyester + PVC"
+      },
+      "seatsLeft": "{count, plural, one {# Platz frei} other {# Plätze frei}}",
+      "full": "Ausgebucht",
+      "reserve": "Reservieren",
+      "noDates": "Neue Termine werden geplant — hinterlassen Sie unten Ihre Daten und wir bestätigen Ihren Platz.",
+      "languageTitle": {
+        "EN": "Schulungstage auf Englisch",
+        "DE": "Schulungstage auf Deutsch",
+        "PL": "Schulungstage auf Polnisch"
+      },
+      "eventTitle": "Monteurschulung — {system}",
+      "interest": {
+        "EN": {
+          "label": "Session auf Englisch — neue Termine in Kürze",
+          "note": "Beveren-Waas · internationale Gruppe"
+        },
+        "DE": {
+          "label": "Session auf Deutsch — neue Termine in Kürze",
+          "note": "Beveren-Waas · internationale Gruppe"
+        },
+        "PL": {
+          "label": "Session auf Polnisch — neue Termine in Kürze",
+          "note": "Częstochowa (PL) · polnischsprachige Gruppe"
+        }
+      },
+      "custom": "Individuelle Vor-Ort-Schulung"
+    },
     "close": "Schließen",
     "downloadDatasheet": "Datenblatt herunterladen",
     "select": "Auswählen…",

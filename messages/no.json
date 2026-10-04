@@ -1833,16 +1833,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Ønsket dato",
-          "options": [
-            "15.–16. sep. 2026",
-            "06.–08. okt. 2026",
-            "17.–18. nov. 2026",
-            "Økt på engelsk — nye datoer snart",
-            "Økt på tysk — nye datoer snart",
-            "Økt på polsk — nye datoer snart",
-            "Skreddersydd økt hos dere"
-          ]
+          "label": "Ønsket dato"
         },
         "attendees": {
           "label": "Deltakere",
@@ -1875,16 +1866,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Ønsket dato",
-          "options": [
-            "15.–16. sep. 2026",
-            "06.–08. okt. 2026",
-            "17.–18. nov. 2026",
-            "Økt på engelsk — nye datoer snart",
-            "Økt på tysk — nye datoer snart",
-            "Økt på polsk — nye datoer snart",
-            "Skreddersydd økt hos dere"
-          ]
+          "label": "Ønsket dato"
         }
       }
     },
@@ -2066,22 +2048,38 @@
       "rateLimited": "For mange forespørsler fra tilkoblingen din — prøv igjen om en time.",
       "architectInvite": "Arkitekt? Vårt gratis arkitektområde har veiledende budsjettbånd, målte casestudier og alle dokumenter med ett klikk."
     },
-    "trainingDates": [
-      "15.–16. sep. 2026",
-      "06.–08. okt. 2026",
-      "17.–18. nov. 2026",
-      "Økt på engelsk — nye datoer snart",
-      "Økt på tysk — nye datoer snart",
-      "Økt på polsk — nye datoer snart"
-    ],
-    "trainingDateNotes": [
-      "Beveren-Waas · 4 plasser",
-      "Beveren-Waas · 6 plasser",
-      "Beveren-Waas · 8 plasser",
-      "Beveren-Waas · internasjonal gruppe",
-      "Beveren-Waas · internasjonal gruppe",
-      "Częstochowa (PL) · polskspråklig gruppe"
-    ],
+    "trainingSessions": {
+      "systems": {
+        "polyester": "Strekkhimling i polyester",
+        "pvc": "Strekkhimling i PVC",
+        "both": "Polyester + PVC"
+      },
+      "seatsLeft": "{count, plural, one {# ledig plass} other {# ledige plasser}}",
+      "full": "Fulltegnet",
+      "reserve": "Reserver",
+      "noDates": "Nye datoer planlegges — legg igjen opplysningene dine nedenfor, så bekrefter vi plassen din.",
+      "languageTitle": {
+        "EN": "Kursdager på engelsk",
+        "DE": "Kursdager på tysk",
+        "PL": "Kursdager på polsk"
+      },
+      "eventTitle": "Montøropplæring — {system}",
+      "interest": {
+        "EN": {
+          "label": "Økt på engelsk — nye datoer snart",
+          "note": "Beveren-Waas · internasjonal gruppe"
+        },
+        "DE": {
+          "label": "Økt på tysk — nye datoer snart",
+          "note": "Beveren-Waas · internasjonal gruppe"
+        },
+        "PL": {
+          "label": "Økt på polsk — nye datoer snart",
+          "note": "Częstochowa (PL) · polskspråklig gruppe"
+        }
+      },
+      "custom": "Skreddersydd økt hos dere"
+    },
     "close": "Lukk",
     "downloadDatasheet": "Last ned datablad",
     "select": "Velg…",

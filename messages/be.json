@@ -1833,16 +1833,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Voorkeursdatum",
-          "options": [
-            "15–16 sep 2026",
-            "06–08 okt 2026",
-            "17–18 nov 2026",
-            "Engelstalige sessie — nieuwe data binnenkort",
-            "Duitstalige sessie — nieuwe data binnenkort",
-            "Poolstalige sessie — nieuwe data binnenkort",
-            "Sessie op maat op locatie"
-          ]
+          "label": "Voorkeursdatum"
         },
         "attendees": {
           "label": "Deelnemers",
@@ -1875,16 +1866,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Voorkeursdatum",
-          "options": [
-            "15–16 sep 2026",
-            "06–08 okt 2026",
-            "17–18 nov 2026",
-            "Engelstalige sessie — nieuwe data binnenkort",
-            "Duitstalige sessie — nieuwe data binnenkort",
-            "Poolstalige sessie — nieuwe data binnenkort",
-            "Sessie op maat op locatie"
-          ]
+          "label": "Voorkeursdatum"
         }
       }
     },
@@ -2066,22 +2048,38 @@
       "rateLimited": "Te veel aanvragen vanaf uw verbinding — probeer het over een uur opnieuw.",
       "architectInvite": "Architect? Onze gratis architectenzone biedt indicatieve budgetbanden, gemeten casestudy’s en elk document met één klik."
     },
-    "trainingDates": [
-      "15–16 sep 2026",
-      "06–08 okt 2026",
-      "17–18 nov 2026",
-      "Engelstalige sessie — nieuwe data binnenkort",
-      "Duitstalige sessie — nieuwe data binnenkort",
-      "Poolstalige sessie — nieuwe data binnenkort"
-    ],
-    "trainingDateNotes": [
-      "Beveren-Waas · 4 plaatsen",
-      "Beveren-Waas · 6 plaatsen",
-      "Beveren-Waas · 8 plaatsen",
-      "Beveren-Waas · internationale groep",
-      "Beveren-Waas · internationale groep",
-      "Częstochowa (PL) · Poolstalige groep"
-    ],
+    "trainingSessions": {
+      "systems": {
+        "polyester": "Polyester spanplafonds",
+        "pvc": "PVC-spanplafonds",
+        "both": "Polyester + PVC"
+      },
+      "seatsLeft": "{count, plural, one {# plaats vrij} other {# plaatsen vrij}}",
+      "full": "Volzet",
+      "reserve": "Reserveer",
+      "noDates": "Nieuwe data worden ingepland — laat hieronder uw gegevens achter en we bevestigen uw plaats.",
+      "languageTitle": {
+        "EN": "Engelstalige opleidingsdagen",
+        "DE": "Duitstalige opleidingsdagen",
+        "PL": "Poolstalige opleidingsdagen"
+      },
+      "eventTitle": "Installateursopleiding — {system}",
+      "interest": {
+        "EN": {
+          "label": "Engelstalige sessie — nieuwe data binnenkort",
+          "note": "Beveren-Waas · internationale groep"
+        },
+        "DE": {
+          "label": "Duitstalige sessie — nieuwe data binnenkort",
+          "note": "Beveren-Waas · internationale groep"
+        },
+        "PL": {
+          "label": "Poolstalige sessie — nieuwe data binnenkort",
+          "note": "Częstochowa (PL) · Poolstalige groep"
+        }
+      },
+      "custom": "Sessie op maat op locatie"
+    },
     "close": "Sluiten",
     "downloadDatasheet": "Download technische fiche",
     "select": "Selecteer…",

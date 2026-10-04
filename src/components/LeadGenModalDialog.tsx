@@ -25,11 +25,12 @@ import { X, ArrowRight, Check } from 'lucide-react';
 import {
   MODAL_CONFIGS,
   defaultCountryForLocale,
-  TRAINING_DATE_DETAIL,
   trainingSessionsFor,
   type ModalType,
   type FormField,
 } from '@/lib/forms-config';
+import { applyTrainingChoice } from '@/lib/training/choices';
+import { useTrainingView } from '@/lib/training/use-training-view';
 import { localizeModalConfig, type ModalMessages, type SharedFieldMessages } from '@/lib/localize-content';
 import { analytics, sha256, normalizeEmail, normalizePhone } from '@/lib/analytics';
 import { getConsent } from '@/lib/consent';
@@ -112,18 +113,30 @@ export default function LeadGenModal({
     tm.raw(type) as ModalMessages,
     tm.raw('shared') as SharedFieldMessages,
   );
-  // Partner-run locale (QuinLay AG on ch): the partner's courses replace the
-  // Beveren-Waas dates — in the cards AND in the preferred-date select.
+  // Training/dates forms: the Beveren-Waas days come from the training view
+  // (public.training_sessions) — passed in by the page, else fetched for this
+  // locale. Partner-run locale (QuinLay AG on ch): the partner's courses
+  // replace the Beveren-Waas dates — in the cards AND in the select.
+  const trainingView = useTrainingView(type, options.trainingView);
   const { sessions: partnerSessions, partnerRun } = trainingSessionsFor(locale);
   const dateCards = partnerRun
-    ? partnerSessions.map((d) => ({ date: d.date, note: d.note }))
-    : TRAINING_DATE_DETAIL.map((d, i) => ({
-        date: (tm.raw('trainingDates') as string[])[i] ?? d.date,
-        note: (tm.raw('trainingDateNotes') as string[])[i] ?? d.note,
-      }));
-  const fields = partnerRun
-    ? cfg.fields.map((f) => (f.name === 'preferredDate' ? { ...f, options: partnerSessions.map((d) => d.date), optionValues: partnerSessions.map((d) => d.date) } : f))
-    : cfg.fields;
+    ? partnerSessions.map((d) => ({ key: d.date, title: d.date, system: null as string | null, note: d.note }))
+    : [
+        ...trainingView.sessions.map((d) => ({
+          key: d.id,
+          title: d.dateLabel,
+          system: d.systemLabel,
+          note: d.full ? `${d.location} · ${tm('trainingSessions.full')}` : d.note,
+        })),
+        ...trainingView.interest
+          .filter((i) => i.card)
+          .map((i) => ({ key: `interest:${i.language}`, title: i.card!.label, system: null as string | null, note: i.card!.note })),
+      ];
+  const fields = cfg.fields.map((f) =>
+    f.name === 'preferredDate'
+      ? { ...f, options: trainingView.choices.map((c) => c.label), optionValues: trainingView.choices.map((c) => c.value) }
+      : f,
+  );
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const titleId = useId();
   const descId = useId();
@@ -314,6 +327,9 @@ export default function LeadGenModal({
       data[f.name] = String(fd.get(f.name) ?? '').trim();
     }
     if (!validate(data)) return;
+    // Preferred date: submit the English canonical line (the e-mail text) and,
+    // for a real day, the session id — never the localized label or raw id.
+    if (type === 'training' || type === 'dates') applyTrainingChoice(data, trainingView.choices);
 
     setStatus('sending');
     const gotcha = String(fd.get('_gotcha') ?? '');
@@ -627,7 +643,7 @@ export default function LeadGenModal({
                 >
                   {dateCards.map((d) => (
                     <div
-                      key={d.date}
+                      key={d.key}
                       style={{
                         display: 'flex',
                         alignItems: 'center',
@@ -645,9 +661,14 @@ export default function LeadGenModal({
                           letterSpacing: '-.01em',
                         }}
                       >
-                        {d.date}
+                        {d.title}
+                        {d.system && (
+                          <span style={{ display: 'block', fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 12.5, letterSpacing: 0, color: 'var(--text-muted)', marginTop: 2 }}>
+                            {d.system}
+                          </span>
+                        )}
                       </span>
-                      <span style={{ fontSize: 12.5, color: 'var(--text-faint)' }}>{d.note}</span>
+                      <span style={{ fontSize: 12.5, color: 'var(--text-faint)', textAlign: 'right' }}>{d.note}</span>
                     </div>
                   ))}
                 </div>
@@ -800,9 +821,9 @@ function Field({
             {tm('select')}
           </option>
           {/* Submit the stable optionValues[i] (server logic) while showing
-              the localized options[i] label. */}
+              the localized options[i] label. Keys are the values, not the labels. */}
           {field.options?.map((o, i) => (
-            <option key={o} value={field.optionValues?.[i] ?? o}>
+            <option key={field.optionValues?.[i] ?? o} value={field.optionValues?.[i] ?? o}>
               {o}
             </option>
           ))}

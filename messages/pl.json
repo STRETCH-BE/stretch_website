@@ -1852,16 +1852,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Preferowany termin",
-          "options": [
-            "15–16 wrz 2026",
-            "06–08 paź 2026",
-            "17–18 lis 2026",
-            "Sesja po angielsku — nowe terminy wkrótce",
-            "Sesja po niemiecku — nowe terminy wkrótce",
-            "Sesja po polsku — nowe terminy wkrótce",
-            "Indywidualna sesja wyjazdowa"
-          ]
+          "label": "Preferowany termin"
         },
         "attendees": {
           "label": "Uczestnicy",
@@ -1894,16 +1885,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Preferowany termin",
-          "options": [
-            "15–16 wrz 2026",
-            "06–08 paź 2026",
-            "17–18 lis 2026",
-            "Sesja po angielsku — nowe terminy wkrótce",
-            "Sesja po niemiecku — nowe terminy wkrótce",
-            "Sesja po polsku — nowe terminy wkrótce",
-            "Indywidualna sesja wyjazdowa"
-          ]
+          "label": "Preferowany termin"
         }
       }
     },
@@ -2085,22 +2067,38 @@
       "rateLimited": "Zbyt wiele zapytań z Twojego łącza — spróbuj ponownie za godzinę.",
       "architectInvite": "Architekt? Nasza bezpłatna strefa architekta oferuje orientacyjne widełki budżetowe, zmierzone studia przypadków i każdy dokument jednym kliknięciem."
     },
-    "trainingDates": [
-      "15–16 wrz 2026",
-      "06–08 paź 2026",
-      "17–18 lis 2026",
-      "Sesja po angielsku — nowe terminy wkrótce",
-      "Sesja po niemiecku — nowe terminy wkrótce",
-      "Sesja po polsku — nowe terminy wkrótce"
-    ],
-    "trainingDateNotes": [
-      "Beveren-Waas · 4 miejsca",
-      "Beveren-Waas · 6 miejsc",
-      "Beveren-Waas · 8 miejsc",
-      "Beveren-Waas · grupa międzynarodowa",
-      "Beveren-Waas · grupa międzynarodowa",
-      "Częstochowa (Alto Design) · grupa polskojęzyczna"
-    ],
+    "trainingSessions": {
+      "systems": {
+        "polyester": "Sufity napinane poliestrowe",
+        "pvc": "Sufity napinane PVC",
+        "both": "Poliester + PVC"
+      },
+      "seatsLeft": "{count, plural, one {# wolne miejsce} few {# wolne miejsca} many {# wolnych miejsc} other {# wolnego miejsca}}",
+      "full": "Brak miejsc",
+      "reserve": "Zarezerwuj",
+      "noDates": "Planujemy nowe terminy — zostaw poniżej swoje dane, a potwierdzimy Twoje miejsce.",
+      "languageTitle": {
+        "EN": "Dni szkoleniowe po angielsku",
+        "DE": "Dni szkoleniowe po niemiecku",
+        "PL": "Dni szkoleniowe po polsku"
+      },
+      "eventTitle": "Szkolenie dla montażystów — {system}",
+      "interest": {
+        "EN": {
+          "label": "Sesja po angielsku — nowe terminy wkrótce",
+          "note": "Beveren-Waas · grupa międzynarodowa"
+        },
+        "DE": {
+          "label": "Sesja po niemiecku — nowe terminy wkrótce",
+          "note": "Beveren-Waas · grupa międzynarodowa"
+        },
+        "PL": {
+          "label": "Sesja po polsku — nowe terminy wkrótce",
+          "note": "Częstochowa (Alto Design) · grupa polskojęzyczna"
+        }
+      },
+      "custom": "Indywidualna sesja wyjazdowa"
+    },
     "close": "Zamknij",
     "downloadDatasheet": "Pobierz kartę techniczną",
     "select": "Wybierz…",

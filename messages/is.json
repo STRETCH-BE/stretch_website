@@ -1833,16 +1833,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Æskileg dagsetning",
-          "options": [
-            "15.–16. sep. 2026",
-            "06.–08. okt. 2026",
-            "17.–18. nóv. 2026",
-            "Námskeið á ensku — nýjar dagsetningar væntanlegar",
-            "Námskeið á þýsku — nýjar dagsetningar væntanlegar",
-            "Námskeið á pólsku — nýjar dagsetningar væntanlegar",
-            "Sérsniðin þjálfun á staðnum"
-          ]
+          "label": "Æskileg dagsetning"
         },
         "attendees": {
           "label": "Þátttakendur",
@@ -1875,16 +1866,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Æskileg dagsetning",
-          "options": [
-            "15.–16. sep. 2026",
-            "06.–08. okt. 2026",
-            "17.–18. nóv. 2026",
-            "Námskeið á ensku — nýjar dagsetningar væntanlegar",
-            "Námskeið á þýsku — nýjar dagsetningar væntanlegar",
-            "Námskeið á pólsku — nýjar dagsetningar væntanlegar",
-            "Sérsniðin þjálfun á staðnum"
-          ]
+          "label": "Æskileg dagsetning"
         }
       }
     },
@@ -2066,22 +2048,38 @@
       "rateLimited": "Of margar beiðnir frá tengingunni þinni — reyndu aftur eftir klukkustund.",
       "architectInvite": "Arkitekt? Ókeypis arkitektasvæðið okkar býður leiðbeinandi kostnaðarbil, mæld dæmi og öll skjöl með einum smelli."
     },
-    "trainingDates": [
-      "15.–16. sep. 2026",
-      "06.–08. okt. 2026",
-      "17.–18. nóv. 2026",
-      "Námskeið á ensku — nýjar dagsetningar væntanlegar",
-      "Námskeið á þýsku — nýjar dagsetningar væntanlegar",
-      "Námskeið á pólsku — nýjar dagsetningar væntanlegar"
-    ],
-    "trainingDateNotes": [
-      "Beveren-Waas · 4 sæti",
-      "Beveren-Waas · 6 sæti",
-      "Beveren-Waas · 8 sæti",
-      "Beveren-Waas · alþjóðlegur hópur",
-      "Beveren-Waas · alþjóðlegur hópur",
-      "Częstochowa (PL) · pólskumælandi hópur"
-    ],
+    "trainingSessions": {
+      "systems": {
+        "polyester": "Pólýester dúkaloft",
+        "pvc": "PVC-dúkaloft",
+        "both": "Pólýester + PVC"
+      },
+      "seatsLeft": "{count, plural, one {# sæti laust} other {# sæti laus}}",
+      "full": "Fullbókað",
+      "reserve": "Bóka",
+      "noDates": "Nýjar dagsetningar eru í undirbúningi — skildu eftir upplýsingarnar þínar hér fyrir neðan og við staðfestum sætið þitt.",
+      "languageTitle": {
+        "EN": "Námskeiðsdagar á ensku",
+        "DE": "Námskeiðsdagar á þýsku",
+        "PL": "Námskeiðsdagar á pólsku"
+      },
+      "eventTitle": "Uppsetningarnámskeið — {system}",
+      "interest": {
+        "EN": {
+          "label": "Námskeið á ensku — nýjar dagsetningar væntanlegar",
+          "note": "Beveren-Waas · alþjóðlegur hópur"
+        },
+        "DE": {
+          "label": "Námskeið á þýsku — nýjar dagsetningar væntanlegar",
+          "note": "Beveren-Waas · alþjóðlegur hópur"
+        },
+        "PL": {
+          "label": "Námskeið á pólsku — nýjar dagsetningar væntanlegar",
+          "note": "Częstochowa (PL) · pólskumælandi hópur"
+        }
+      },
+      "custom": "Sérsniðin þjálfun á staðnum"
+    },
     "close": "Loka",
     "downloadDatasheet": "Sækja tækniblað",
     "select": "Velja…",

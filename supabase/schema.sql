@@ -754,3 +754,37 @@ create policy portal_order_lines_read_own
         )
     )
   );
+
+-- ============================================================================
+-- TRAINING DAYS — installer training sessions at Beveren-Waas.
+-- Read by /installer-training (every HQ locale), both booking forms, the
+-- architects' events and the Event JSON-LD. Managed in /portal/admin.
+-- Added 4 Oct 2026. Safe to re-run.
+-- ============================================================================
+create table if not exists public.training_sessions (
+  id          uuid primary key default gen_random_uuid(),
+  starts_on   date not null,
+  ends_on     date,                                -- null = a one-day session
+  system      text not null check (system in ('polyester', 'pvc', 'both')),
+  languages   text[] not null default array['NL']::text[]
+              check (cardinality(languages) > 0
+                     and languages <@ array['NL', 'FR', 'EN', 'DE', 'PL']::text[]),
+  location    text not null default 'Beveren-Waas',
+  seats_left  int check (seats_left is null or seats_left between 0 and 99),
+  status      text not null default 'open' check (status in ('open', 'full')),
+  published   boolean not null default true,
+  note        text,                                -- internal, never shown on the site
+  created_at  timestamptz not null default now(),
+  updated_at  timestamptz not null default now(),
+  check (ends_on is null or ends_on >= starts_on)
+);
+
+create index if not exists training_sessions_starts_on_idx
+  on public.training_sessions (starts_on);
+
+-- No policies on purpose: the site reads and the admin writes server-side
+-- with the service-role key, exactly like public.leads.
+alter table public.training_sessions enable row level security;
+
+comment on table public.training_sessions is
+  'Installer training days shown on /installer-training, in both booking forms, the architects events and the Event JSON-LD. Managed in /portal/admin.';

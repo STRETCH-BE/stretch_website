@@ -27,6 +27,8 @@ import {
 import { datasheetsByCategory } from '@/lib/datasheets';
 import { architectResourcesByCategory, type ArchitectResource } from '@/lib/architect-resources';
 import { upcomingEvents } from '@/lib/events';
+import { getTrainingView } from '@/lib/training/sessions';
+import type { Locale } from '@/i18n/config';
 import { contact } from '@/lib/site-config';
 import { ModalButton } from '@/components/ui/ModalButton';
 import type { PortalProfile } from '@/lib/portal/types';
@@ -109,9 +111,11 @@ function ResourceRows({
 export default async function ArchitectDashboard({
   profile,
   demo,
+  locale,
 }: {
   profile: PortalProfile;
   demo: boolean;
+  locale: Locale;
 }) {
   const t = await getTranslations('portal.architect');
 
@@ -119,7 +123,9 @@ export default async function ArchitectDashboard({
   const cad = architectResourcesByCategory('cad');
   const photos = architectResourcesByCategory('photos');
   const cases = architectResourcesByCategory('case-study');
-  const events = upcomingEvents();
+  // Training days come from the database (src/lib/training/); the view also
+  // feeds the booking form each training event opens.
+  const [events, trainingView] = await Promise.all([upcomingEvents(locale), getTrainingView(locale)]);
   const sheetGroups = datasheetsByCategory();
 
   const office = profile.office ?? profile.company ?? profile.email;
@@ -350,7 +356,8 @@ export default async function ArchitectDashboard({
                     type={e.kind === 'training' ? 'training' : 'call'}
                     source={`architect_event_${e.slug}`}
                     product={e.kind === 'training' ? e.title : undefined}
-                    prefill={prefill}
+                    prefill={e.sessionId ? { ...prefill, preferredDate: e.sessionId } : prefill}
+                    trainingView={e.kind === 'training' ? trainingView : undefined}
                     className="btn btn--ghost btn--sm"
                   >
                     {t('register')} <ArrowRight size={13} />

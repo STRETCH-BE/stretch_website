@@ -1833,16 +1833,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Fecha preferida",
-          "options": [
-            "15–16 sep 2026",
-            "06–08 oct 2026",
-            "17–18 nov 2026",
-            "Sesión en inglés — nuevas fechas próximamente",
-            "Sesión en alemán — nuevas fechas próximamente",
-            "Sesión en polaco — nuevas fechas próximamente",
-            "Sesión a medida in situ"
-          ]
+          "label": "Fecha preferida"
         },
         "attendees": {
           "label": "Asistentes",
@@ -1875,16 +1866,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Fecha preferida",
-          "options": [
-            "15–16 sep 2026",
-            "06–08 oct 2026",
-            "17–18 nov 2026",
-            "Sesión en inglés — nuevas fechas próximamente",
-            "Sesión en alemán — nuevas fechas próximamente",
-            "Sesión en polaco — nuevas fechas próximamente",
-            "Sesión a medida in situ"
-          ]
+          "label": "Fecha preferida"
         }
       }
     },
@@ -2066,22 +2048,38 @@
       "rateLimited": "Demasiadas solicitudes desde su conexión — inténtelo de nuevo en una hora.",
       "architectInvite": "¿Arquitecto? Nuestra área de arquitectos gratuita ofrece rangos de presupuesto indicativos, casos de estudio medidos y cada documento a un clic."
     },
-    "trainingDates": [
-      "15–16 sep 2026",
-      "06–08 oct 2026",
-      "17–18 nov 2026",
-      "Sesión en inglés — nuevas fechas próximamente",
-      "Sesión en alemán — nuevas fechas próximamente",
-      "Sesión en polaco — nuevas fechas próximamente"
-    ],
-    "trainingDateNotes": [
-      "Beveren-Waas · 4 plazas",
-      "Beveren-Waas · 6 plazas",
-      "Beveren-Waas · 8 plazas",
-      "Beveren-Waas · grupo internacional",
-      "Beveren-Waas · grupo internacional",
-      "Częstochowa (PL) · grupo en polaco"
-    ],
+    "trainingSessions": {
+      "systems": {
+        "polyester": "Techos tensados de poliéster",
+        "pvc": "Techos tensados de PVC",
+        "both": "Poliéster + PVC"
+      },
+      "seatsLeft": "{count, plural, one {# plaza libre} other {# plazas libres}}",
+      "full": "Completo",
+      "reserve": "Reservar",
+      "noDates": "Estamos planificando nuevas fechas — déjenos sus datos abajo y confirmaremos su plaza.",
+      "languageTitle": {
+        "EN": "Jornadas en inglés",
+        "DE": "Jornadas en alemán",
+        "PL": "Jornadas en polaco"
+      },
+      "eventTitle": "Formación de instaladores — {system}",
+      "interest": {
+        "EN": {
+          "label": "Sesión en inglés — nuevas fechas próximamente",
+          "note": "Beveren-Waas · grupo internacional"
+        },
+        "DE": {
+          "label": "Sesión en alemán — nuevas fechas próximamente",
+          "note": "Beveren-Waas · grupo internacional"
+        },
+        "PL": {
+          "label": "Sesión en polaco — nuevas fechas próximamente",
+          "note": "Częstochowa (PL) · grupo en polaco"
+        }
+      },
+      "custom": "Sesión a medida in situ"
+    },
     "close": "Cerrar",
     "downloadDatasheet": "Descargar ficha técnica",
     "select": "Seleccionar…",

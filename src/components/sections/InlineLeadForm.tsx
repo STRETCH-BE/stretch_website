@@ -8,8 +8,11 @@ import { useState } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { MODAL_CONFIGS, TRAINING_DATE_DETAIL, defaultCountryForLocale, trainingSessionsFor, type ModalType } from '@/lib/forms-config';
+import { MODAL_CONFIGS, defaultCountryForLocale, trainingSessionsFor, type ModalType } from '@/lib/forms-config';
 import { localizeModalConfig, type ModalMessages, type SharedFieldMessages } from '@/lib/localize-content';
+import { applyTrainingChoice } from '@/lib/training/choices';
+import type { TrainingView } from '@/lib/training/types';
+import { useTrainingView } from '@/lib/training/use-training-view';
 import { analytics } from '@/lib/analytics';
 import TurnstileWidget from '@/components/ui/TurnstileWidget';
 import { useFormSecurity } from '@/lib/use-form-security';
@@ -24,11 +27,15 @@ export default function InlineLeadForm({
   type,
   source,
   dark = false,
+  trainingView: providedView,
 }: {
   type: ModalType;
   source: string;
   /** Render for a dark/red background (lightens labels & borders). */
   dark?: boolean;
+  /** Training/dates forms: the page's training view (sessions + choices);
+   *  fetched for the locale when absent. */
+  trainingView?: TrainingView;
 }) {
   const tf = useTranslations('forms');
   const ti = useTranslations('inlineLead');
@@ -40,18 +47,28 @@ export default function InlineLeadForm({
     tm.raw(type) as ModalMessages,
     tm.raw('shared') as SharedFieldMessages,
   );
-  // Partner-run locale (QuinLay AG on ch): the partner's courses replace the
-  // Beveren-Waas dates — in the cards AND in the preferred-date select.
+  // Training/dates forms: the Beveren-Waas days come from the training view
+  // (public.training_sessions). Partner-run locale (QuinLay AG on ch): the
+  // partner's courses replace the Beveren-Waas dates — cards AND select.
+  const trainingView = useTrainingView(type, providedView);
   const { sessions: partnerSessions, partnerRun } = trainingSessionsFor(locale);
   const dateCards = partnerRun
-    ? partnerSessions.map((d) => ({ date: d.date, note: d.note }))
-    : TRAINING_DATE_DETAIL.map((d, i) => ({
-        date: (tm.raw('trainingDates') as string[])[i] ?? d.date,
-        note: (tm.raw('trainingDateNotes') as string[])[i] ?? d.note,
-      }));
-  const fields = partnerRun
-    ? cfg.fields.map((f) => (f.name === 'preferredDate' ? { ...f, options: partnerSessions.map((d) => d.date), optionValues: partnerSessions.map((d) => d.date) } : f))
-    : cfg.fields;
+    ? partnerSessions.map((d) => ({ key: d.date, title: d.date, note: d.note }))
+    : [
+        ...trainingView.sessions.map((d) => ({
+          key: d.id,
+          title: d.dateLabel,
+          note: `${d.systemLabel} · ${d.full ? tm('trainingSessions.full') : d.note}`,
+        })),
+        ...trainingView.interest
+          .filter((i) => i.card)
+          .map((i) => ({ key: `interest:${i.language}`, title: i.card!.label, note: i.card!.note })),
+      ];
+  const fields = cfg.fields.map((f) =>
+    f.name === 'preferredDate'
+      ? { ...f, options: trainingView.choices.map((c) => c.label), optionValues: trainingView.choices.map((c) => c.value) }
+      : f,
+  );
   const [status, setStatus] = useState<Status>('idle');
   const [consent, setConsent] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -72,6 +89,8 @@ export default function InlineLeadForm({
     if (!consent) next.__consent = tf('validation.consent');
     setErrors(next);
     if (Object.keys(next).length > 0) return;
+    // Preferred date → English canonical line (+ the session id for a real day).
+    if (type === 'training' || type === 'dates') applyTrainingChoice(data, trainingView.choices);
 
     setStatus('sending');
     const post = async (retried: boolean): Promise<void> => {
@@ -138,8 +157,8 @@ export default function InlineLeadForm({
       {cfg.showDates && (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 10, marginBottom: 20 }}>
           {dateCards.map((d) => (
-            <div key={d.date} style={{ border: cardBorder, padding: '14px 16px', background: cardBg }}>
-              <div style={{ fontWeight: 700, fontSize: 14, color: dark ? '#fff' : 'var(--black)' }}>{d.date}</div>
+            <div key={d.key} style={{ border: cardBorder, padding: '14px 16px', background: cardBg }}>
+              <div style={{ fontWeight: 700, fontSize: 14, color: dark ? '#fff' : 'var(--black)' }}>{d.title}</div>
               <div style={{ fontSize: 12, color: dark ? 'rgba(255,255,255,.75)' : 'var(--text-faint)', marginTop: 4 }}>{d.note}</div>
             </div>
           ))}
@@ -168,9 +187,9 @@ export default function InlineLeadForm({
                     {tm('select')}
                   </option>
                 )}
-                {/* Submit the stable optionValues[i]; show the localized label. */}
+                {/* Submit the stable optionValues[i]; show the localized label. Keys = values. */}
                 {f.options?.map((o, i) => (
-                  <option key={o} value={f.optionValues?.[i] ?? o}>
+                  <option key={f.optionValues?.[i] ?? o} value={f.optionValues?.[i] ?? o}>
                     {o}
                   </option>
                 ))}

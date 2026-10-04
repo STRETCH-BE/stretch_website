@@ -1833,16 +1833,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Preferred date",
-          "options": [
-            "15–16 Sep 2026",
-            "06–08 Oct 2026",
-            "17–18 Nov 2026",
-            "English session — new dates soon",
-            "German session — new dates soon",
-            "Polish session — new dates soon",
-            "Custom on-site session"
-          ]
+          "label": "Preferred date"
         },
         "attendees": {
           "label": "Attendees",
@@ -1875,16 +1866,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Preferred date",
-          "options": [
-            "15–16 Sep 2026",
-            "06–08 Oct 2026",
-            "17–18 Nov 2026",
-            "English session — new dates soon",
-            "German session — new dates soon",
-            "Polish session — new dates soon",
-            "Custom on-site session"
-          ]
+          "label": "Preferred date"
         }
       }
     },
@@ -2066,22 +2048,38 @@
       "rateLimited": "Too many requests from your connection — please try again in an hour.",
       "architectInvite": "Architect? Our free architect area has indicative budget bands, measured case studies and every document one click away."
     },
-    "trainingDates": [
-      "15–16 Sep 2026",
-      "06–08 Oct 2026",
-      "17–18 Nov 2026",
-      "English session — new dates soon",
-      "German session — new dates soon",
-      "Polish session — new dates soon"
-    ],
-    "trainingDateNotes": [
-      "Beveren-Waas · 4 seats",
-      "Beveren-Waas · 6 seats",
-      "Beveren-Waas · 8 seats",
-      "Beveren-Waas · international group",
-      "Beveren-Waas · international group",
-      "Częstochowa (PL) · Polish-language group"
-    ],
+    "trainingSessions": {
+      "systems": {
+        "polyester": "Polyester ceilings",
+        "pvc": "PVC ceilings",
+        "both": "Polyester + PVC"
+      },
+      "seatsLeft": "{count, plural, one {# seat left} other {# seats left}}",
+      "full": "Full",
+      "reserve": "Reserve",
+      "noDates": "New dates are being planned — leave your details below and we’ll confirm your seat.",
+      "languageTitle": {
+        "EN": "English-language days",
+        "DE": "German-language days",
+        "PL": "Polish-language days"
+      },
+      "eventTitle": "Installer training — {system}",
+      "interest": {
+        "EN": {
+          "label": "English session — new dates soon",
+          "note": "Beveren-Waas · international group"
+        },
+        "DE": {
+          "label": "German session — new dates soon",
+          "note": "Beveren-Waas · international group"
+        },
+        "PL": {
+          "label": "Polish session — new dates soon",
+          "note": "Częstochowa (PL) · Polish-language group"
+        }
+      },
+      "custom": "Custom on-site session"
+    },
     "close": "Close",
     "downloadDatasheet": "Download datasheet",
     "select": "Select…",

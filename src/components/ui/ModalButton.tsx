@@ -7,6 +7,7 @@
 import type { ReactNode } from 'react';
 import { useLeadModal, preloadLeadModal } from '@/components/LeadGenModal';
 import type { ModalType } from '@/lib/forms-config';
+import type { TrainingView } from '@/lib/training/types';
 import { analytics } from '@/lib/analytics';
 
 type ModalButtonProps = {
@@ -15,6 +16,8 @@ type ModalButtonProps = {
   product?: string;
   /** Pre-filled default values for matching form fields (still editable). */
   prefill?: Record<string, string>;
+  /** Training/dates forms: the page's training view (see OpenOptions). */
+  trainingView?: TrainingView;
   children: ReactNode;
   className?: string;
   style?: React.CSSProperties;
@@ -27,6 +30,7 @@ export function ModalButton({
   source,
   product,
   prefill,
+  trainingView,
   children,
   className = 'btn btn--primary',
   style,
@@ -42,7 +46,7 @@ export function ModalButton({
       style={style}
       onClick={() => {
         if (trackQuote) analytics.quoteClick(product, source);
-        open(type, { source, product, prefill });
+        open(type, { source, product, prefill, trainingView });
       }}
     >
       {children}

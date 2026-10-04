@@ -8,6 +8,7 @@
 import dynamic from 'next/dynamic';
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
 import type { ModalType } from '@/lib/forms-config';
+import type { TrainingView } from '@/lib/training/types';
 
 const LeadGenModalDialog = dynamic(() => import('./LeadGenModalDialog'), { ssr: false });
 
@@ -26,6 +27,10 @@ export type OpenOptions = {
   /** Pre-filled default values for matching field names (e.g. from a signed-in
    *  portal profile). The visitor can still edit everything. */
   prefill?: Record<string, string>;
+  /** Training/dates forms: the locale's training view built by the page
+   *  (sessions + preferred-date choices). Without it the dialog fetches
+   *  /api/training/sessions for its locale. */
+  trainingView?: TrainingView;
 };
 
 type LeadModalContextValue = {

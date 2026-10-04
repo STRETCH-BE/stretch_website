@@ -1,3 +1,82 @@
+## 2026-10-04 (53) — Training days from the database: page, forms, events, Google
+
+Michael, 22 Sep / 2 Oct 2026: 6–8 Oct is fully booked; the next free days
+are Thu 19 Nov (polyester) and Fri 20 Nov (PVC), one day or both, also
+offered to an English-speaking team. On 4 Oct the live training page still
+offered 15–16 Sep, offered 6–8 Oct with "6 seats", showed 17–18 Nov instead
+of 19 + 20 Nov, and nothing ever hid a past date. Cause: one date lived in
+67 places, all matched by array position — `TRAINING_DATES` and
+`TRAINING_DATE_DETAIL` in `src/lib/forms-config.ts`, three training entries
+in `src/lib/events.ts`, and four arrays in each of the 16 message files
+(`modals.trainingDates`, `modals.trainingDateNotes`, the `preferredDate`
+options of the training and dates modals).
+
+Now one Supabase table, `public.training_sessions` (one row = one training
+day for one system; a multi-day block stays possible for groups), is the
+single source for the Beveren-Waas days. Michael created and seeded it in
+the SQL editor (19 Nov polyester, 20 Nov PVC, NL + EN, open); the table
+block is recorded at the end of `supabase/schema.sql`. RLS on, no
+policies: read server-side with the service-role client only.
+
+- **`src/lib/training/`** — `config.ts` (the knobs: hourly revalidate,
+  full days shown with a tag, the five badge languages, default location
+  Beveren-Waas, time zone Europe/Brussels, the cache tag), `types.ts`,
+  `sessions.ts` (the cached loader: published rows from yesterday on, every
+  column but the internal note, `unstable_cache` tagged `training-sessions`,
+  one entry for all locales; no env or a query error → `[]` plus one log
+  line, never a throw into a page; `upcomingSessions()` keeps days AFTER
+  today in Brussels, so a day disappears on its own date), `view.ts` (the
+  per-locale view: Intl date labels in the locale's BCP-47 code with
+  `timeZone: 'UTC'` on `Date.UTC(y, m − 1, d)` so a date never shifts —
+  be "do 19 nov 2026", en "Thu, 19 Nov 2026", us "Thu, Nov 19, 2026", de
+  "Do., 19. Nov. 2026", pl "czw., 19 lis 2026", pt "quinta, 19 de novembro
+  de 2026" (long month: pt-PT 'short' prints 19/11/2026); system labels and
+  the seats plural from `modals.trainingSessions`; the preferred-date
+  choices with their English canonical line; the EN/DE/PL interest state),
+  `choices.ts` (client-safe: a submitted value → canonical label + session
+  id) and `use-training-view.ts` (a form without the page's view fetches
+  it). A new date needs no translation and no deploy.
+- **Training page** (`export const revalidate = 3600`): one card per day —
+  badges, date, system on its own line, location · seats; a full day keeps
+  its card with a "Full" tag and no button; an open day gets "Reserve"
+  (source `training_card`, the day pre-selected). No upcoming day → the
+  on-request card plus the "new dates are being planned" line. The
+  international block shows real English/German/Polish days with "Reserve"
+  when one exists, the interest card otherwise. One Event JSON-LD node per
+  visible day (name "course — system", start/end dates, the HQ Place,
+  inLanguage); still no offers node. stretchdecken.ch and /fr keep the
+  QuinLay course cards exactly as they were (no DB days, no Events).
+- **Both forms** (modal + inline): the preferred-date select lists the open
+  days, then an interest option for each of EN/DE/PL WITHOUT an open day in
+  that language, then the custom option; option keys are the values. On
+  submit the value maps to its English canonical line, so the e-mail always
+  reads "Thu, 19 Nov 2026 — Polyester ceilings (NL/EN) · Beveren-Waas"
+  whatever the visitor's language, and a real day also sends
+  `trainingSessionId` (stored in `leads.payload`, skipped in the mail —
+  the admin card counts requests per day with it). A training/dates form
+  opened anywhere else (header, footer, architect portal) fetches
+  `GET /api/training/sessions?locale=xx` (public, s-maxage 300, never the
+  note column) and shows the interest + custom choices until it arrives.
+- **Events**: the three hand-written training entries are gone;
+  `upcomingEvents(locale)` is async and adds one 'training' event per
+  upcoming day (localized title "Installer training — Polyester ceilings",
+  date label, location, the note as blurb, open = status open); the
+  architects page gets `revalidate = 3600`; the architect dashboard's
+  "Register" pre-selects the day and passes the view.
+- **Messages ×16**: `modals.trainingDates`, `modals.trainingDateNotes` and
+  both `preferredDate.options` arrays removed; `modals.trainingSessions`
+  added — the EN/DE/PL interest labels + notes and the custom option MOVED
+  (not retranslated), plus `systems.polyester|pvc|both`, `seatsLeft`
+  (ICU plural; pl one/few/many/other), `full`, `reserve`, `noDates`,
+  `languageTitle.EN|DE|PL`, `eventTitle` in each locale's product
+  terminology. 16/16 parity, no `'` in strings.
+- **`src/lib/email.ts`**: `training_card` → "Training booking",
+  `training_international` → "International training request (EN/DE/PL)".
+- Verified: production build passes without the Supabase env vars (the
+  training pages render the on-request card, the three interest cards and
+  the noDates line; no Event node; `/api/training/sessions?locale=pl`
+  answers Polish labels and no note; `/ch/installer-training` unchanged).
+
 ## 2026-10-03 (52) — Portuguese locale live: stretchteto.pt back in the switcher
 
 Michael, 3 Oct 2026: "I don't see the .pt domain in the language switcher"

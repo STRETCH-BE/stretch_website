@@ -1,17 +1,20 @@
 // =============================================================================
 // EVENTS — trainings, lunch & learns, showroom days and fairs, shown in the
-// architect area and on /architects. Hand-edited control file: add an entry,
-// commit, done. Past events (isoDate before today) are hidden automatically.
-// Keep the training entries in sync with TRAINING_DATE_DETAIL in
-// forms-config.ts.
+// architect area and on /architects. The lunch & learns, showroom days and
+// fairs are hand-edited here: add an entry, commit, done. The Beveren-Waas
+// TRAINING days are NOT: they come from public.training_sessions through the
+// training view (src/lib/training/), one 'training' event per upcoming day,
+// and partner-run locales (QuinLay AG) get none. Past events are hidden.
 // =============================================================================
+import type { Locale } from '@/i18n/config';
+import { getTrainingView } from '@/lib/training/sessions';
 
 export type EventKind = 'lunch-learn' | 'showroom' | 'fair' | 'training';
 
 export type StretchEvent = {
   slug: string;
   title: string;
-  /** Human date label, e.g. '15–16 Sep 2026'. */
+  /** Human date label, e.g. 'do 19 nov 2026' / 'Oct 2026 · date TBC'. */
   dateLabel: string;
   /** ISO date of the (first) day — used for sorting + hiding past events. */
   isoDate: string;
@@ -20,39 +23,11 @@ export type StretchEvent = {
   blurb: string;
   /** Still open for registration? */
   open: boolean;
+  /** Training events: the public.training_sessions id (prefills the booking form). */
+  sessionId?: string;
 };
 
 export const events: StretchEvent[] = [
-  {
-    slug: 'training-sep-2026',
-    title: 'Installer training — 2 days',
-    dateLabel: '15–16 Sep 2026',
-    isoDate: '2026-09-15',
-    location: 'Beveren-Waas',
-    kind: 'training',
-    blurb: 'Hands-on certification at our Belgian HQ — 4 seats.',
-    open: true,
-  },
-  {
-    slug: 'training-oct-2026',
-    title: 'Installer training — 3 days',
-    dateLabel: '06–08 Oct 2026',
-    isoDate: '2026-10-06',
-    location: 'Beveren-Waas',
-    kind: 'training',
-    blurb: 'Hands-on certification at our Belgian HQ — 6 seats.',
-    open: true,
-  },
-  {
-    slug: 'training-nov-2026',
-    title: 'Installer training — 2 days',
-    dateLabel: '17–18 Nov 2026',
-    isoDate: '2026-11-17',
-    location: 'Beveren-Waas',
-    kind: 'training',
-    blurb: 'Hands-on certification at our Belgian HQ — 8 seats.',
-    open: true,
-  },
   // PLACEHOLDER lunch & learns — Michael confirms dates and topics.
   {
     slug: 'lunch-learn-acoustics',
@@ -76,10 +51,24 @@ export const events: StretchEvent[] = [
   },
 ];
 
-/** Upcoming events, soonest first. `now` injectable for tests. */
-export function upcomingEvents(now = new Date()): StretchEvent[] {
+/**
+ * Upcoming events for a locale, soonest first: the hand-edited events plus one
+ * training event per upcoming Beveren-Waas day (localized title, date label and
+ * note from the training view). `now` injectable for tests.
+ */
+export async function upcomingEvents(locale: Locale, now: Date = new Date()): Promise<StretchEvent[]> {
   const today = now.toISOString().slice(0, 10);
-  return events
-    .filter((e) => e.isoDate >= today)
-    .sort((a, b) => a.isoDate.localeCompare(b.isoDate));
+  const view = await getTrainingView(locale, now);
+  const training: StretchEvent[] = view.sessions.map((s) => ({
+    slug: `training-${s.id}`,
+    title: s.eventTitle,
+    dateLabel: s.dateLabel,
+    isoDate: s.startsOn,
+    location: s.location,
+    kind: 'training',
+    blurb: s.note,
+    open: !s.full,
+    sessionId: s.id,
+  }));
+  return [...events.filter((e) => e.isoDate >= today), ...training].sort((a, b) => a.isoDate.localeCompare(b.isoDate));
 }

@@ -1833,16 +1833,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Foretrukken dato",
-          "options": [
-            "15.–16. sep. 2026",
-            "06.–08. okt. 2026",
-            "17.–18. nov. 2026",
-            "Session på engelsk — nye datoer snart",
-            "Session på tysk — nye datoer snart",
-            "Session på polsk — nye datoer snart",
-            "Skræddersyet session hos jer"
-          ]
+          "label": "Foretrukken dato"
         },
         "attendees": {
           "label": "Deltagere",
@@ -1875,16 +1866,7 @@
           "placeholder": "+32 ..."
         },
         "preferredDate": {
-          "label": "Foretrukken dato",
-          "options": [
-            "15.–16. sep. 2026",
-            "06.–08. okt. 2026",
-            "17.–18. nov. 2026",
-            "Session på engelsk — nye datoer snart",
-            "Session på tysk — nye datoer snart",
-            "Session på polsk — nye datoer snart",
-            "Skræddersyet session hos jer"
-          ]
+          "label": "Foretrukken dato"
         }
       }
     },
@@ -2066,22 +2048,38 @@
       "rateLimited": "For mange anmodninger fra din forbindelse — prøv igen om en time.",
       "architectInvite": "Arkitekt? Vores gratis arkitektområde har vejledende budgetbånd, målte casestudier og alle dokumenter med ét klik."
     },
-    "trainingDates": [
-      "15.–16. sep. 2026",
-      "06.–08. okt. 2026",
-      "17.–18. nov. 2026",
-      "Session på engelsk — nye datoer snart",
-      "Session på tysk — nye datoer snart",
-      "Session på polsk — nye datoer snart"
-    ],
-    "trainingDateNotes": [
-      "Beveren-Waas · 4 pladser",
-      "Beveren-Waas · 6 pladser",
-      "Beveren-Waas · 8 pladser",
-      "Beveren-Waas · international gruppe",
-      "Beveren-Waas · international gruppe",
-      "Częstochowa (PL) · polsksproget gruppe"
-    ],
+    "trainingSessions": {
+      "systems": {
+        "polyester": "Strækloft i polyester",
+        "pvc": "Strækloft i PVC",
+        "both": "Polyester + PVC"
+      },
+      "seatsLeft": "{count, plural, one {# ledig plads} other {# ledige pladser}}",
+      "full": "Fuldt booket",
+      "reserve": "Reservér",
+      "noDates": "Nye datoer er på vej — efterlad dine oplysninger nedenfor, så bekræfter vi din plads.",
+      "languageTitle": {
+        "EN": "Kursusdage på engelsk",
+        "DE": "Kursusdage på tysk",
+        "PL": "Kursusdage på polsk"
+      },
+      "eventTitle": "Montøruddannelse — {system}",
+      "interest": {
+        "EN": {
+          "label": "Session på engelsk — nye datoer snart",
+          "note": "Beveren-Waas · international gruppe"
+        },
+        "DE": {
+          "label": "Session på tysk — nye datoer snart",
+          "note": "Beveren-Waas · international gruppe"
+        },
+        "PL": {
+          "label": "Session på polsk — nye datoer snart",
+          "note": "Częstochowa (PL) · polsksproget gruppe"
+        }
+      },
+      "custom": "Skræddersyet session hos jer"
+    },
     "close": "Luk",
     "downloadDatasheet": "Download datablad",
     "select": "Vælg…",

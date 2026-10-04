@@ -32,13 +32,18 @@ export function generateMetadata({ params }: { params: { locale: string } }): Pr
 
 const VALUE_ICONS = [FileText, ScrollText, Layers, Camera, LineChart, Euro, CalendarDays, UserRound];
 
+// The events list carries the Beveren-Waas training days from the database
+// (src/lib/training/): re-rendered hourly, and at once after an admin save.
+// Keep equal to TRAINING_REVALIDATE_SECONDS (segment config must be a literal).
+export const revalidate = 3600;
+
 export default async function ArchitectsPage({ params }: { params: { locale: string } }) {
   if (isValidLocale(params.locale)) setRequestLocale(params.locale as Locale);
   const locale = (isValidLocale(params.locale) ? params.locale : 'en') as Locale;
   const t = await getTranslations('architectsPage');
   const tp = await getTranslations('productPage');
 
-  const events = upcomingEvents().slice(0, 3);
+  const events = (await upcomingEvents(locale)).slice(0, 3);
   const crumbs = breadcrumbSchema([
     { name: tp('home'), url: `${localeBase(locale)}` },
     { name: t('crumb'), url: `${localeBase(locale)}/architects` },
