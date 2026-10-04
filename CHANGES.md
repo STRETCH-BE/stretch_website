@@ -1,3 +1,46 @@
+## 2026-10-04 (54) — "Training days" card in the portal admin
+
+The editor for the table entry 53 introduced: a **Training days** card on
+`/portal/admin` (admin-only, English-only, hardcoded strings like the
+anti-spam cards), mounted directly under the pricelist/blocklist grid and
+above the client accounts.
+
+- **API** `src/app/api/portal/training-sessions/route.ts`, on the pattern of
+  the blocklist route (`isPortalAllowedHost` → `getAdminSession` → demo or
+  unconfigured answers `persisted: false` with the two seed days as sample
+  rows). GET lists every row from today − 90 days on, unpublished and
+  internal note included, each with `requests` = the non-flagged leads whose
+  `payload->>'trainingSessionId'` is that id (one query on the JSON path,
+  counted in code). POST / PATCH (partial, by id, `updated_at = now()`) /
+  DELETE. Validation in `src/lib/training/validate.ts` (pure, tested):
+  ISO start date; end date null or ≥ start; system polyester | pvc | both;
+  languages a non-empty subset of NL FR EN DE PL (upper-cased,
+  de-duplicated); location 1–80 chars (default Beveren-Waas); seats null or
+  0–99; status open | full; published boolean; note ≤ 500 chars — the first
+  invalid field is named: `400 { ok: false, error: '<field>' }`. After every
+  successful write: `revalidateTag('training-sessions')`,
+  `revalidatePath('/[locale]/installer-training', 'page')`,
+  `revalidatePath('/[locale]/architects', 'page')`, then the fresh list.
+- **Card** `src/components/portal/TrainingSessionsCard.tsx` (CARD_CSS):
+  upcoming table — Date ("Thu 19 Nov 2026"; "Thu 19 – Fri 20 Nov 2026" for a
+  block), System, Languages (pills), Location, Seats ("—" when empty),
+  Status (Open / Full pill; seats 0 counts as full), On site (shown /
+  hidden), Requests, and per row Edit · Mark full / Reopen · Hide / Show ·
+  Duplicate (the form with everything but the date) · Delete (confirm:
+  "Delete this day? Requests already received keep their date text."). A
+  closed "Past 90 days" `<details>` lists finished days read-only with their
+  request counts. The form (Add a day / Edit): Date*, End date (only for a
+  multi-day block), System*, Languages* (NL ticked by default), Location
+  (default Beveren-Waas), Seats left (empty = no seat count on the site),
+  Status, Show on the website (checked), Internal note (never shown on the
+  site); inline errors; after a save the list reloads with "Saved — live on
+  the sites within a minute." Demo mode: the sample rows and "Demo mode —
+  nothing is persisted."
+- **Docs:** `docs/PORTAL.md` gains a "Training days" section (what the card
+  controls, the visibility rules — published, date after today in Brussels,
+  full days shown with a tag, seats 0 = full — and that a website booking
+  never changes the seats).
+
 ## 2026-10-04 (53) — Training days from the database: page, forms, events, Google
 
 Michael, 22 Sep / 2 Oct 2026: 6–8 Oct is fully booked; the next free days

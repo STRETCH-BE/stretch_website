@@ -6,6 +6,7 @@
 //   3. Client accounts — search/filter/pending review, approve/reject,
 //      delete / mark-as-spam (single + bulk), signup metadata.
 //   4. Leads — flagged review, "Deliver now", CSV export.
+//   5. Training days — public.training_sessions (TrainingSessionsCard).
 // The panel is admin-only and EN-only (like the whole portal): the strings
 // introduced by the anti-spam work are deliberately hardcoded English —
 // only pre-existing keys keep using the portal.admin messages namespace.
@@ -30,6 +31,7 @@ import { signupCountryOptions } from '@/lib/signup-countries';
 import { CARD_CSS } from './admin-css';
 import ConfiguratorCard from './ConfiguratorCard';
 import OrdersCard from './OrdersCard';
+import TrainingSessionsCard from './TrainingSessionsCard';
 
 type PortalUserRow = {
   id: string;
@@ -122,6 +124,9 @@ export default function AdminPanel({ demo }: { demo: boolean }) {
       <div className="adm-grid">
         <SyncCard demo={demo} />
         <BlocklistCard demo={demo} />
+      </div>
+      <div style={{ marginTop: 18 }}>
+        <TrainingSessionsCard demo={demo} />
       </div>
       <div style={{ marginTop: 18 }}>
         <UsersCard demo={demo} />

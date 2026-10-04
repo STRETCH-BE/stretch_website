@@ -283,3 +283,47 @@ the BOM engine              ← dimensions → line items → server-side pricin
 Run the two SQL blocks at the end of `supabase/schema.sql` (KIT CONFIGURATOR
 option catalogue, then KIT CONFIGURATOR orders) in the Supabase SQL editor.
 Both are idempotent.
+
+## Training days — added 4 Oct 2026
+
+The **Training days** card on `/portal/admin` edits `public.training_sessions`:
+the Beveren-Waas installer-training days shown on `/installer-training` of
+every HQ site, in both booking forms (the modal and the inline form), in the
+architects' events (`/architects` and the architect dashboard) and in
+Google's Event data on the training page. One row = one training day for one
+system (polyester, PVC, or both for a group block with an end date).
+
+- **Live within a minute, no deploy.** Every save calls
+  `revalidateTag('training-sessions')` plus `revalidatePath` on
+  `/[locale]/installer-training` and `/[locale]/architects`; the pages are
+  static and re-render on the next request. Without a save they re-read the
+  table hourly (`TRAINING_REVALIDATE_SECONDS` in `src/lib/training/config.ts`).
+- **Visibility rules.** A day is on the sites when it is *published* ("Show on
+  the website") and its date is **after today in Europe/Brussels** — it
+  disappears by itself on its own date. A **full** day (status Full, or seats
+  left = 0) stays visible with a "Full" tag until its date and can no longer
+  be picked in the forms (`TRAINING_SHOW_FULL = false` hides full days at
+  once). An English, German or Polish day automatically switches that
+  language's card in the international block from "Register interest" to the
+  real dates.
+- **Seats.** "Seats left" is optional: empty = no seat count on the site. A
+  **website booking never changes the seats** — it is a request (a lead),
+  confirmed by pro forma; the team sets the seats or ticks Full here once the
+  pro forma is paid. The **Requests** column counts the non-flagged website
+  bookings linked to the day (`leads.payload.trainingSessionId`); their
+  e-mails carry the day in English ("Thu, 19 Nov 2026 — Polyester ceilings
+  (NL/EN) · Beveren-Waas") whatever the visitor's language.
+- **Internal note** is never shown on the site and never returned by the
+  public read route (`GET /api/training/sessions?locale=xx`).
+- **Row actions:** Edit · Mark full / Reopen · Hide / Show · Duplicate (a new
+  day with everything but the date) · Delete (requests already received keep
+  their date text). "Past 90 days" lists finished days read-only with their
+  request counts.
+- **API:** `/api/portal/training-sessions` (admin only, same guard as the
+  blocklist): GET / POST / PATCH / DELETE; invalid input answers
+  `400 { ok: false, error: '<field>' }`. Demo mode shows the two seeded days
+  as sample rows and persists nothing.
+
+The table block (create table / index / RLS / comment) is at the end of
+`supabase/schema.sql`; it is idempotent. Service-role access only — no RLS
+policies, exactly like `public.leads`.

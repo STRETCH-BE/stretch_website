@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test": "node scripts/spam-score.test.mjs && node scripts/configurator.test.mjs && node --no-warnings scripts/check-blog-heroes.mjs",
+    "test": "node scripts/spam-score.test.mjs && node scripts/configurator.test.mjs && node --no-warnings scripts/training.test.mjs && node --no-warnings scripts/check-blog-heroes.mjs",
     "check:client-messages": "node scripts/check-client-messages.mjs",
     "check:blog-heroes": "node --no-warnings scripts/check-blog-heroes.mjs"
   },
