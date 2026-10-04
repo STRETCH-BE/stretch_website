@@ -51,7 +51,7 @@
     "productsDescription": "Stretch ceilings in polyester and PVC, acoustic systems, backlit and printed designs and prefab units — seamless to 6.5 m, 25-year warranty.",
     "partnersTitle": "Become a STRETCH reseller — trade pricing & leads | STRETCH",
     "partnersDescription": "Add stretch ceilings to your offer with trade pricing, made-to-measure supply from our Belgian workshop, hands-on training and referred local leads.",
-    "trainingTitle": "Stretch ceiling installer training — certified in 2–3 days | STRETCH",
+    "trainingTitle": "Stretch ceiling installer training — certified in 1–2 days | STRETCH",
     "trainingDescription": "Hands-on stretch ceiling installer training at our Belgian HQ: cold polyester and heated PVC in one certification, small groups, dated sessions, starter kit.",
     "inspirationTitle": "Inspiration — real stretch ceiling projects | STRETCH",
     "inspirationDescription": "Studios, offices, homes and hotels finished with STRETCH. Browse real projects by solution — acoustic, light & print, living, bathroom, office and commercial.",
@@ -2075,7 +2075,7 @@
         },
         "PL": {
           "label": "Polish session — new dates soon",
-          "note": "Częstochowa (PL) · Polish-language group"
+          "note": "Beveren-Waas · Polish-speaking instructor — in Poland for groups of 4+"
         }
       },
       "custom": "Custom on-site session"
@@ -5017,8 +5017,8 @@
     },
     "format": [
       {
-        "value": "2–3",
-        "label": "Days, hands-on"
+        "value": "1–2",
+        "label": "Days — one per system"
       },
       {
         "value": "HQ",
@@ -5063,7 +5063,7 @@
     "dates": {
       "eyebrow": "Upcoming dates",
       "title": "Reserve your seat",
-      "lead": "Small groups, booked first-come. Custom on-site sessions available on request.",
+      "lead": "Small groups, booked first-come. Each day covers one system — book one or both. Custom on-site sessions on request.",
       "onRequestTitle": "On request",
       "onRequestNote": "Custom on-site session",
       "externalCta": "Dates & booking on quinlay.ch",
@@ -5085,7 +5085,7 @@
       "eyebrow": "International",
       "title": "Train in English, German or Polish",
       "lead": "Installers from all over Europe certify at our Belgian HQ — one short trip, hands-on days on real frames, and materials shipped to your country afterwards.",
-      "body": "Same programme, international group: the full hands-on certification taught in English, German or Polish — and one course covers both systems, cold-mounted polyester and heat-mounted PVC. Leave your details and we confirm your seat the moment the next dates are set.",
+      "body": "Same programme, international group: the full hands-on certification taught in English, German or Polish. Each day covers one system — cold-mounted polyester one day, heat-mounted PVC the other — so you book one day or both. No date in your language yet? Leave your details and we confirm your seat as soon as one is set.",
       "cta": "Register interest"
     }
   },
@@ -5495,7 +5495,7 @@
     "factoryKicker": "Our plant",
     "factoryTitle": "The STRETCH plant in Częstochowa",
     "factoryBody": "This is where the group produces in Poland: Alto Design Sp. z o.o. cuts and welds PVC membranes to size, runs the Polish-language installer training and builds the STRETCH network for Poland — a named, locatable factory, not a trading address.",
-    "factoryTraining": "Installer training in Częstochowa",
+    "factoryTraining": "Installer training",
     "factoryCta": "Visit altodesign.pl",
     "why1Pl": "Produced in the EU — every ceiling is welded to size in our own plants in Częstochowa and Beveren-Waas and arrives ready to install.",
     "regionSwitzerland": "Switzerland & Liechtenstein",

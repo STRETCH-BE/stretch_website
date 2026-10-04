@@ -2075,7 +2075,7 @@
         },
         "PL": {
           "label": "Poolstalige sessie — nieuwe data binnenkort",
-          "note": "Częstochowa (PL) · Poolstalige groep"
+          "note": "Beveren-Waas · Poolstalige lesgever — in Polen voor groepen vanaf 4"
         }
       },
       "custom": "Sessie op maat op locatie"
@@ -5023,8 +5023,8 @@
     },
     "format": [
       {
-        "value": "2–3",
-        "label": "Praktijkdagen"
+        "value": "1–2",
+        "label": "Dagen — één per systeem"
       },
       {
         "value": "HQ",
@@ -5069,7 +5069,7 @@
     "dates": {
       "eyebrow": "Komende data",
       "title": "Reserveer uw plaats",
-      "lead": "Kleine groepen, wie eerst boekt, eerst plaats. Sessies op locatie mogelijk op aanvraag.",
+      "lead": "Kleine groepen, wie eerst boekt, eerst plaats. Elke dag behandelt één systeem — volg er één of beide. Sessies op locatie mogelijk op aanvraag.",
       "onRequestTitle": "Op aanvraag",
       "onRequestNote": "Sessie op locatie op maat",
       "externalCta": "Data & boeking op quinlay.ch",
@@ -5091,7 +5091,7 @@
       "eyebrow": "Internationaal",
       "title": "Training in het Engels, Duits of Pools",
       "lead": "Installateurs uit heel Europa certificeren zich op ons Belgische hoofdkantoor — één korte reis, hands-on dagen op echte frames, en daarna materialen verzonden naar uw land.",
-      "body": "Zelfde programma, internationale groep: de volledige hands-on certificering in het Engels, Duits of Pools — en één opleiding dekt beide systemen, koud gemonteerd polyester en warm gemonteerd pvc. Laat uw gegevens achter en we bevestigen uw plaats zodra de volgende data vastliggen.",
+      "body": "Zelfde programma, internationale groep: de volledige praktijkcertificering in het Engels, Duits of Pools. Elke dag behandelt één systeem — koud gemonteerd polyester de ene dag, warm gemonteerd pvc de andere — dus u volgt één dag of beide. Nog geen datum in uw taal? Laat uw gegevens achter en we bevestigen uw plaats zodra die vastligt.",
       "cta": "Interesse melden"
     }
   },
@@ -5501,7 +5501,7 @@
     "factoryKicker": "Onze fabriek",
     "factoryTitle": "De STRETCH-fabriek in Częstochowa",
     "factoryBody": "Hier produceert de groep in Polen: Alto Design Sp. z o.o. snijdt en last pvc-membranen op maat, geeft de Poolstalige installateursopleiding en bouwt het STRETCH-netwerk voor Polen uit — een fabriek met naam en locatie, geen handelsadres.",
-    "factoryTraining": "Installateursopleiding in Częstochowa",
+    "factoryTraining": "Installateursopleiding",
     "factoryCta": "Bezoek altodesign.pl",
     "why1Pl": "Geproduceerd in de EU — elk plafond wordt op maat gelast in onze eigen fabrieken in Częstochowa en Beveren-Waas en komt installatieklaar aan.",
     "regionSwitzerland": "Zwitserland & Liechtenstein",

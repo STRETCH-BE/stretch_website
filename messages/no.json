@@ -51,7 +51,7 @@
     "productsDescription": "Strekktak i polyester og PVC, akustikksystemer, bakbelyste og trykte design og prefab-enheter — skjøtefritt opptil 6,5 m, 25 års garanti.",
     "partnersTitle": "Bli STRETCH-forhandler — forhandlerpriser & leads | STRETCH",
     "partnersDescription": "Legg til strekktak i tilbudet ditt med forhandlerpriser, skreddersydd levering fra vårt belgiske verksted, praktisk opplæring og videresendte lokale leads.",
-    "trainingTitle": "Kurs i montering av strekkhimling — sertifisert på 2–3 dager | STRETCH",
+    "trainingTitle": "Kurs i montering av strekkhimling — sertifisert på 1–2 dager | STRETCH",
     "trainingDescription": "Praktisk kurs i montering av strekkhimlinger: kald polyester- og varm PVC-montering i én sertifisering, små grupper, faste datoer og startpakke.",
     "inspirationTitle": "Inspirasjon — ekte strekktakprosjekter | STRETCH",
     "inspirationDescription": "Studioer, kontorer, boliger og hoteller utført med STRETCH. Bla gjennom ekte prosjekter etter løsning — akustikk, lys & print, bolig, bad, kontor og næring.",
@@ -2075,7 +2075,7 @@
         },
         "PL": {
           "label": "Økt på polsk — nye datoer snart",
-          "note": "Częstochowa (PL) · polskspråklig gruppe"
+          "note": "Beveren-Waas · polsktalende instruktør — i Polen for grupper på 4+"
         }
       },
       "custom": "Skreddersydd økt hos dere"
@@ -4998,7 +4998,7 @@
       "eyebrow": "Montørkurs",
       "titleA": "Kurs i montering av strekkhimling",
       "titleB": "sertifisert",
-      "titleC": "på 2–3 dager",
+      "titleC": "på 1–2 dager",
       "lead": "Praktisk sertifisering ved det belgiske hovedkontoret vårt. Lær konfeksjonering av membranen, profiler, kald og varm montering, lys og akustikk — ingen forkunnskaper nødvendig.",
       "ctaBook": "Book kurset ditt",
       "ctaDates": "Se datoer",
@@ -5007,8 +5007,8 @@
     },
     "format": [
       {
-        "value": "2–3",
-        "label": "Dager, hands-on"
+        "value": "1–2",
+        "label": "Dager — én per system"
       },
       {
         "value": "HQ",
@@ -5053,7 +5053,7 @@
     "dates": {
       "eyebrow": "Kommende datoer",
       "title": "Reserver plassen din",
-      "lead": "Små grupper, førstemann til mølla. Skreddersydde kurs hos dere er tilgjengelig på forespørsel.",
+      "lead": "Små grupper, førstemann til mølla. Hver dag dekker ett system — book én dag eller begge. Skreddersydde kurs hos dere er tilgjengelig på forespørsel.",
       "onRequestTitle": "På forespørsel",
       "onRequestNote": "Skreddersydd kurs på stedet",
       "externalCta": "Datoer & påmelding på quinlay.ch",
@@ -5075,7 +5075,7 @@
       "eyebrow": "Internasjonalt",
       "title": "Kurs på engelsk, tysk eller polsk",
       "lead": "Montører fra hele Europa sertifiserer seg ved vårt belgiske hovedkontor — en kort reise, praktiske dager på ekte rammer, og etterpå sendes materialene til ditt land.",
-      "body": "Samme program, internasjonal gruppe: hele den praktiske sertifiseringen på engelsk, tysk eller polsk — og ett kurs dekker begge systemene, kaldmontert polyester og varmmontert PVC. Legg igjen opplysningene dine, så bekrefter vi plassen din så snart de neste datoene er satt.",
+      "body": "Samme program, internasjonal gruppe: hele den praktiske sertifiseringen på engelsk, tysk eller polsk. Hver dag dekker ett system — kaldmontert polyester den ene dagen, varmmontert PVC den andre — så du booker én dag eller begge. Ingen dato på ditt språk ennå? Legg igjen opplysningene dine, så bekrefter vi plassen din så snart en er satt.",
       "cta": "Meld interesse"
     }
   },
@@ -5485,7 +5485,7 @@
     "factoryKicker": "Vår fabrikk",
     "factoryTitle": "STRETCH-fabrikken i Częstochowa",
     "factoryBody": "Her produserer konsernet i Polen: Alto Design Sp. z o.o. skjærer og sveiser PVC-membraner på mål, holder den polskspråklige montøropplæringen og bygger STRETCH-nettverket for Polen — en navngitt fabrikk du finner på kartet, ikke bare en forretningsadresse.",
-    "factoryTraining": "Montøropplæring i Częstochowa",
+    "factoryTraining": "Montøropplæring",
     "factoryCta": "Besøk altodesign.pl",
     "why1Pl": "Produsert i EU — hvert tak sveises på mål i våre egne fabrikker i Częstochowa og Beveren-Waas og leveres klart til montering.",
     "regionSwitzerland": "Sveits & Liechtenstein",

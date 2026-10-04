@@ -2075,7 +2075,7 @@
         },
         "PL": {
           "label": "Session auf Polnisch — neue Termine in Kürze",
-          "note": "Częstochowa (PL) · polnischsprachige Gruppe"
+          "note": "Beveren-Waas · polnischsprachiger Trainer — in Polen für Gruppen ab 4 Personen"
         }
       },
       "custom": "Individuelle Vor-Ort-Schulung"
@@ -4998,7 +4998,7 @@
       "eyebrow": "Monteurschulung",
       "titleA": "Spanndecken Schulung",
       "titleB": "zum Fachverleger",
-      "titleC": "in 2–3 Tagen",
+      "titleC": "in 1–2 Tagen",
       "lead": "Praxiszertifizierung in unserer belgischen Zentrale. Lernen Sie Membrankonfektion, Profile, Kalt- & Warmmontage, Licht und Akustik — keine Vorkenntnisse nötig.",
       "ctaBook": "Schulung buchen",
       "ctaDates": "Termine ansehen",
@@ -5007,8 +5007,8 @@
     },
     "format": [
       {
-        "value": "2–3",
-        "label": "Praxistage"
+        "value": "1–2",
+        "label": "Tage — einer pro System"
       },
       {
         "value": "Zentrale",
@@ -5053,7 +5053,7 @@
     "dates": {
       "eyebrow": "Nächste Termine",
       "title": "Sichern Sie sich Ihren Platz",
-      "lead": "Kleine Gruppen, Vergabe nach Buchungseingang. Individuelle Schulungen vor Ort auf Anfrage.",
+      "lead": "Kleine Gruppen, Vergabe nach Buchungseingang. Jeder Tag behandelt ein System — buchen Sie einen Tag oder beide. Individuelle Schulungen vor Ort auf Anfrage.",
       "onRequestTitle": "Auf Anfrage",
       "onRequestNote": "Individuelle Schulung vor Ort",
       "externalCta": "Termine & Buchung auf quinlay.ch",
@@ -5075,7 +5075,7 @@
       "eyebrow": "International",
       "title": "Schulung auf Englisch, Deutsch oder Polnisch",
       "lead": "Verarbeiter aus ganz Europa zertifizieren sich an unserem belgischen Hauptsitz — eine kurze Anreise, Praxistage an echten Rahmen, danach werden die Materialien in Ihr Land geliefert.",
-      "body": "Gleiches Programm, internationale Gruppe: die komplette Praxis-Zertifizierung auf Englisch, Deutsch oder Polnisch — und ein Kurs deckt beide Systeme ab, kalt montiertes Polyester und warm montiertes PVC. Hinterlassen Sie Ihre Daten und wir bestätigen Ihren Platz, sobald die nächsten Termine feststehen.",
+      "body": "Gleiches Programm, internationale Gruppe: die komplette Praxis-Zertifizierung auf Englisch, Deutsch oder Polnisch. Jeder Tag behandelt ein System — kalt montiertes Polyester an einem Tag, warm montiertes PVC am anderen — Sie buchen also einen Tag oder beide. Noch kein Termin in Ihrer Sprache? Hinterlassen Sie Ihre Daten und wir bestätigen Ihren Platz, sobald einer feststeht.",
       "cta": "Interesse anmelden"
     }
   },
@@ -5485,7 +5485,7 @@
     "factoryKicker": "Unser Werk",
     "factoryTitle": "Das STRETCH-Werk in Częstochowa",
     "factoryBody": "Hier produziert die Gruppe in Polen: Alto Design Sp. z o.o. schneidet PVC-Folien zu und verschweißt sie maßgenau, führt die polnischsprachige Monteurschulung durch und baut das STRETCH-Netzwerk für Polen auf — ein Werk mit Namen und Standort, keine bloße Handelsadresse.",
-    "factoryTraining": "Monteurschulung in Częstochowa",
+    "factoryTraining": "Monteurschulung",
     "factoryCta": "altodesign.pl besuchen",
     "why1Pl": "Produziert in der EU — jede Decke wird in unseren eigenen Werken in Częstochowa und Beveren-Waas maßgenau verschweißt und kommt montagefertig an.",
     "regionSwitzerland": "Schweiz & Liechtenstein",

@@ -51,7 +51,7 @@
     "productsDescription": "Techos tensados de poliéster y PVC, sistemas acústicos, diseños retroiluminados e impresos y unidades prefab — sin juntas hasta 6,5 m, 25 años de garantía.",
     "partnersTitle": "Hazte distribuidor STRETCH — precios profesionales y leads | STRETCH",
     "partnersDescription": "Añade techos tensados a tu oferta con precios profesionales, fabricación a medida en nuestro taller belga, formación práctica y leads locales referidos.",
-    "trainingTitle": "Formación en instalación de techos tensados — certificado en 2–3 días | STRETCH",
+    "trainingTitle": "Formación en instalación de techos tensados — certificado en 1–2 días | STRETCH",
     "trainingDescription": "Formación práctica de instalación de techos tensados: montaje en frío (poliéster) y en caliente (PVC) en una certificación, grupos pequeños y fechas fijas.",
     "inspirationTitle": "Inspiración — proyectos reales de techos tensados | STRETCH",
     "inspirationDescription": "Proyectos reales con STRETCH en estudios, oficinas, viviendas y hoteles — por solución: acústica, luz e impresión, vivienda, baño y comercial.",
@@ -2075,7 +2075,7 @@
         },
         "PL": {
           "label": "Sesión en polaco — nuevas fechas próximamente",
-          "note": "Częstochowa (PL) · grupo en polaco"
+          "note": "Beveren-Waas · formador de habla polaca — en Polonia para grupos de 4 o más"
         }
       },
       "custom": "Sesión a medida in situ"
@@ -4998,7 +4998,7 @@
       "eyebrow": "Formación de instaladores",
       "titleA": "Formación en techos tensados",
       "titleB": "instalador certificado",
-      "titleC": "en 2–3 días",
+      "titleC": "en 1–2 días",
       "lead": "Certificación práctica en nuestra sede belga. Aprende confección de la membrana, perfiles, montaje en frío y en caliente, luz y acústica, sin experiencia previa.",
       "ctaBook": "Reserva tu formación",
       "ctaDates": "Ver fechas",
@@ -5007,8 +5007,8 @@
     },
     "format": [
       {
-        "value": "2–3",
-        "label": "Días de práctica"
+        "value": "1–2",
+        "label": "Días — uno por sistema"
       },
       {
         "value": "Sede",
@@ -5053,7 +5053,7 @@
     "dates": {
       "eyebrow": "Próximas fechas",
       "title": "Reserva tu plaza",
-      "lead": "Grupos reducidos, por orden de reserva. Sesiones a medida en tus instalaciones bajo petición.",
+      "lead": "Grupos reducidos, por orden de reserva. Cada día cubre un sistema — reserva uno o los dos. Sesiones a medida en tus instalaciones bajo petición.",
       "onRequestTitle": "Bajo petición",
       "onRequestNote": "Sesión a medida in situ",
       "externalCta": "Fechas y reservas en quinlay.ch",
@@ -5075,7 +5075,7 @@
       "eyebrow": "Internacional",
       "title": "Formación en inglés, alemán o polaco",
       "lead": "Instaladores de toda Europa se certifican en nuestra sede belga: un viaje corto, jornadas prácticas sobre marcos reales y los materiales enviados después a su país.",
-      "body": "Mismo programa, grupo internacional: la certificación práctica completa impartida en inglés, alemán o polaco — y un solo curso cubre ambos sistemas, poliéster montado en frío y PVC montado en caliente. Déjenos sus datos y confirmaremos su plaza en cuanto se fijen las próximas fechas.",
+      "body": "Mismo programa, grupo internacional: la certificación práctica completa impartida en inglés, alemán o polaco. Cada día cubre un sistema — poliéster montado en frío un día, PVC montado en caliente el otro — así que reserve un día o los dos. ¿Aún no hay fecha en su idioma? Déjenos sus datos y confirmaremos su plaza en cuanto se fije una.",
       "cta": "Registrar interés"
     }
   },
@@ -5485,7 +5485,7 @@
     "factoryKicker": "Nuestra fábrica",
     "factoryTitle": "La fábrica STRETCH de Częstochowa",
     "factoryBody": "Aquí es donde el grupo produce en Polonia: Alto Design Sp. z o.o. corta y suelda a medida las membranas de PVC, imparte la formación de instaladores en polaco y construye la red STRETCH para Polonia — una fábrica con nombre y ubicación reales, no una simple dirección comercial.",
-    "factoryTraining": "Formación de instaladores en Częstochowa",
+    "factoryTraining": "Formación de instaladores",
     "factoryCta": "Visitar altodesign.pl",
     "why1Pl": "Producido en la UE — cada techo se suelda a medida en nuestras propias fábricas de Częstochowa y Beveren-Waas y llega listo para instalar.",
     "regionSwitzerland": "Suiza y Liechtenstein",

@@ -1,3 +1,60 @@
+## 2026-10-04 (55) — Training copy: one day per system, Polish sessions at HQ
+
+Copy only, no logic. Michael's replies of 22 Sep and 4 Oct 2026: each
+training day covers ONE system — polyester one day, PVC the other — and a
+participant books one day or both (fact 1); Polish-language training takes
+place at the HQ in Beveren-Waas with a Polish-speaking instructor, and for
+groups of 4 or more it can also be organised in Poland (fact 2). Some
+training copy still described the older 2–3-day format, and the Polish
+site placed the Polish sessions in Częstochowa. Production in Częstochowa
+(Alto Design, the PVC plant) is untouched everywhere; the ch and fr-ch
+training copy (QuinLay) is byte-identical to before; no prices.
+
+- **Format — the 14 HQ locales** (all but ch, fr-ch):
+  `trainingPage.format[0]` "2–3" → "1–2" with the label "Days — one per
+  system" (en/uk/us) · "Dagen — één per systeem" (be/nl) · "Jours — un par
+  système" (fr) · "Dni — jeden na system" (pl) · "Tage — einer pro System"
+  (de) · es, pt, da, sv, no, is translated. `trainingPage.hero.titleC` where
+  it said 2–3 → 1–2 in the same grammar (da "på 1–2 dage", de "in 1–2
+  Tagen", es "en 1–2 días", is "á 1–2 dögum", no "på 1–2 dager", pl "w 1–2
+  dni", pt "em 1–2 dias", sv "på 1–2 dagar"); en/uk/us "in days", be/nl "in
+  enkele dagen" and fr "en quelques jours" stay. `meta.trainingTitle` 2–3 →
+  1–2 in da, en, es, is, no, pl, pt, sv, uk, us. `trainingPage.dates.lead`
+  carries fact 1 ("Each day covers one system — book one or both.") and
+  `trainingPage.international.body` the full version ("cold-mounted
+  polyester one day, heat-mounted PVC the other — so you book one day or
+  both. No date in your language yet? …") in every HQ locale; us spells
+  "program".
+- **Polish venue — fact 2:** `modals.trainingSessions.interest.PL.note`
+  in all 16 files ("Beveren-Waas · Polish-speaking instructor — in Poland
+  for groups of 4+", translated). pl.json: `meta.trainingDescription` ends
+  "Szkolenia po polsku z polskojęzycznym instruktorem."; `hero.travel`
+  "Beveren-Waas (Belgia) · szkolenia po polsku z polskojęzycznym
+  instruktorem"; `international.title` "Szkolenia po polsku";
+  `international.body` names the HQ, the Polish-speaking instructor,
+  Poland for groups of 4+ and one system per day; `home.installer.intro`
+  "w Beveren-Waas, także po polsku". `dealersPage.factoryTraining` in all
+  16 files drops the venue ("Installer training", "Installateursopleiding",
+  "Szkolenie dla montażystów", …).
+- **`src/lib/content.ts`, the three Polish posts** — only the training
+  clauses, every production fact kept: co-to-jest-sufit-napinany (the
+  "polskojęzyczne szkolenia w częstochowskim zakładzie" clause and the
+  closing "zacznij od szkolenia" paragraph), sufit-napinany-pvc-czy-tkanina
+  (the "trwa 2–3 dni … w naszym zakładzie w Częstochowie" sentence),
+  o-co-zapytac-producenta-sufitow-napinanych (four places: the plant
+  address keeps its Częstochowa line without "tam też organizujemy
+  polskojęzyczne szkolenia", "a w obu też szkolimy montażystów", the
+  "Certyfikacja montażysty STRETCH to 2–3 dni praktyki … Sesje po polsku
+  … w Częstochowie" paragraph and the closing "Zapisz się na szkolenie"
+  call) now say: one day polyester, the other PVC, one day or both; Polish
+  sessions with a Polish-speaking instructor in Beveren-Waas, in Poland
+  for groups of 4+. The posts still name the Częstochowa plant for PVC
+  production.
+- Verified: 16-file key parity unchanged; no "2–3" left in the HQ
+  `format`, `hero.titleC` or `meta.trainingTitle`; no "Częstoch" in
+  pl.json under trainingPage, meta.training*, home.installer.intro,
+  dealersPage.factoryTraining or modals.trainingSessions.
+
 ## 2026-10-04 (54) — "Training days" card in the portal admin
 
 The editor for the table entry 53 introduced: a **Training days** card on

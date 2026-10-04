@@ -2075,7 +2075,7 @@
         },
         "PL": {
           "label": "Session en polonais — nouvelles dates bientôt",
-          "note": "Częstochowa (PL) · groupe polonophone"
+          "note": "Beveren-Waas · formateur polonophone — en Pologne pour les groupes de 4 et plus"
         }
       },
       "custom": "Session sur mesure sur site"
@@ -5016,8 +5016,8 @@
     },
     "format": [
       {
-        "value": "2–3",
-        "label": "Jours de pratique"
+        "value": "1–2",
+        "label": "Jours — un par système"
       },
       {
         "value": "Siège",
@@ -5062,7 +5062,7 @@
     "dates": {
       "eyebrow": "Prochaines dates",
       "title": "Réservez votre place",
-      "lead": "Petits groupes, premiers inscrits, premiers servis. Sessions sur site personnalisées disponibles sur demande.",
+      "lead": "Petits groupes, premiers inscrits, premiers servis. Chaque journée couvre un système — réservez-en une ou les deux. Sessions sur site personnalisées sur demande.",
       "onRequestTitle": "Sur demande",
       "onRequestNote": "Session sur site personnalisée",
       "externalCta": "Dates & réservation sur quinlay.ch",
@@ -5084,7 +5084,7 @@
       "eyebrow": "International",
       "title": "Formation en anglais, allemand ou polonais",
       "lead": "Des installateurs de toute l’Europe se certifient à notre siège belge — un court déplacement, des journées pratiques sur de vrais cadres, puis les matériaux expédiés dans votre pays.",
-      "body": "Même programme, groupe international : la certification pratique complète, dispensée en anglais, en allemand ou en polonais — et une seule formation couvre les deux systèmes, polyester posé à froid et PVC posé à chaud. Laissez vos coordonnées et nous confirmons votre place dès que les prochaines dates sont fixées.",
+      "body": "Même programme, groupe international : la certification pratique complète, dispensée en anglais, en allemand ou en polonais. Chaque journée couvre un système — le polyester posé à froid un jour, le PVC posé à chaud l’autre — vous réservez donc une journée ou les deux. Pas encore de date dans votre langue ? Laissez vos coordonnées et nous confirmons votre place dès qu’une date est fixée.",
       "cta": "Signaler mon intérêt"
     }
   },
@@ -5494,7 +5494,7 @@
     "factoryKicker": "Notre usine",
     "factoryTitle": "L’usine STRETCH de Częstochowa",
     "factoryBody": "C’est ici que le groupe produit en Pologne : Alto Design Sp. z o.o. découpe et soude les toiles PVC sur mesure, assure la formation d’installateur en polonais et développe le réseau STRETCH pour la Pologne — une usine qui a un nom et une adresse sur la carte, pas une simple domiciliation commerciale.",
-    "factoryTraining": "Formation d’installateur à Częstochowa",
+    "factoryTraining": "Formation d’installateur",
     "factoryCta": "Visiter altodesign.pl",
     "why1Pl": "Produit dans l’UE — chaque plafond est soudé sur mesure dans nos propres usines de Częstochowa et de Beveren-Waas et arrive prêt à poser.",
     "regionSwitzerland": "Suisse & Liechtenstein",

@@ -51,7 +51,7 @@
     "productsDescription": "Strækloft i polyester og PVC, akustiksystemer, bagbelyste og printede designs og præfab-enheder — fugefrit op til 6,5 m, 25 års garanti.",
     "partnersTitle": "Bliv STRETCH-forhandler — forhandlerpriser & leads | STRETCH",
     "partnersDescription": "Tilføj strækloft til dit sortiment med forhandlerpriser, målsyet levering fra vores belgiske værksted, praktisk uddannelse og henviste lokale leads.",
-    "trainingTitle": "Kursus i montering af strækloft — certificeret på 2–3 dage | STRETCH",
+    "trainingTitle": "Kursus i montering af strækloft — certificeret på 1–2 dage | STRETCH",
     "trainingDescription": "Praktisk kursus i montering af strækloft: kold polyester- og varm PVC-montering i én certificering, små hold, faste datoer og startkit.",
     "inspirationTitle": "Inspiration — rigtige projekter med strækloft | STRETCH",
     "inspirationDescription": "Rigtige STRETCH-projekter i studier, kontorer, boliger og hoteller — efter løsning: akustik, lys & print, bolig, badeværelse og erhverv.",
@@ -2075,7 +2075,7 @@
         },
         "PL": {
           "label": "Session på polsk — nye datoer snart",
-          "note": "Częstochowa (PL) · polsksproget gruppe"
+          "note": "Beveren-Waas · polsktalende instruktør — i Polen for hold på 4+"
         }
       },
       "custom": "Skræddersyet session hos jer"
@@ -4998,7 +4998,7 @@
       "eyebrow": "Montørkursus",
       "titleA": "Kursus i montering af strækloft",
       "titleB": "certificeret",
-      "titleC": "på 2–3 dage",
+      "titleC": "på 1–2 dage",
       "lead": "Praktisk certificering på vores belgiske hovedkontor. Lær konfektionering af membranen, profiler, kold og varm montering, lys og akustik — ingen forudgående erfaring nødvendig.",
       "ctaBook": "Book dit kursus",
       "ctaDates": "Se datoer",
@@ -5007,8 +5007,8 @@
     },
     "format": [
       {
-        "value": "2–3",
-        "label": "Dage, hands-on"
+        "value": "1–2",
+        "label": "Dage — én pr. system"
       },
       {
         "value": "HQ",
@@ -5053,7 +5053,7 @@
     "dates": {
       "eyebrow": "Kommende datoer",
       "title": "Reservér din plads",
-      "lead": "Små hold — først til mølle. Skræddersyede kurser på jeres adresse fås på forespørgsel.",
+      "lead": "Små hold — først til mølle. Hver dag dækker ét system — book én dag eller begge. Skræddersyede kurser på jeres adresse fås på forespørgsel.",
       "onRequestTitle": "På forespørgsel",
       "onRequestNote": "Skræddersyet kursus på stedet",
       "externalCta": "Datoer & tilmelding på quinlay.ch",
@@ -5075,7 +5075,7 @@
       "eyebrow": "Internationalt",
       "title": "Kursus på engelsk, tysk eller polsk",
       "lead": "Montører fra hele Europa certificeres på vores belgiske hovedkontor — en kort rejse, praktiske dage på rigtige rammer, og bagefter sendes materialerne til dit land.",
-      "body": "Samme program, international gruppe: den fulde praktiske certificering undervist på engelsk, tysk eller polsk — og ét kursus dækker begge systemer, koldmonteret polyester og varmmonteret PVC. Efterlad dine oplysninger, så bekræfter vi din plads, så snart de næste datoer ligger fast.",
+      "body": "Samme program, international gruppe: den fulde praktiske certificering undervist på engelsk, tysk eller polsk. Hver dag dækker ét system — koldmonteret polyester den ene dag, varmmonteret PVC den anden — så du booker én dag eller begge. Ingen dato på dit sprog endnu? Efterlad dine oplysninger, så bekræfter vi din plads, så snart en ligger fast.",
       "cta": "Meld interesse"
     }
   },
@@ -5485,7 +5485,7 @@
     "factoryKicker": "Vores fabrik",
     "factoryTitle": "STRETCH-fabrikken i Częstochowa",
     "factoryBody": "Her producerer koncernen i Polen: Alto Design Sp. z o.o. skærer og svejser PVC-membraner på mål, står for montøruddannelsen på polsk og bygger STRETCH-netværket i Polen op — en navngiven fabrik på en adresse, du kan finde, ikke bare en handelsadresse.",
-    "factoryTraining": "Montøruddannelse i Częstochowa",
+    "factoryTraining": "Montøruddannelse",
     "factoryCta": "Besøg altodesign.pl",
     "why1Pl": "Produceret i EU — hvert loft svejses på mål på vores egne fabrikker i Częstochowa og Beveren-Waas og leveres klar til montering.",
     "regionSwitzerland": "Schweiz & Liechtenstein",

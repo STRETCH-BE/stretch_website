@@ -70,8 +70,8 @@
     "productsDescription": "Sufity napinane z poliestru i PCV, systemy akustyczne, wzory podświetlane i drukowane oraz moduły prefab — bez szwów do 6,5 m, 25 lat gwarancji.",
     "partnersTitle": "Zostań dystrybutorem STRETCH — ceny hurtowe i leady | STRETCH",
     "partnersDescription": "Dodaj sufity napinane do swojej oferty: ceny hurtowe, produkcja na wymiar w naszej belgijskiej pracowni, praktyczne szkolenia i przekazywane lokalne leady.",
-    "trainingTitle": "Szkolenie z montażu sufitów napinanych — certyfikat w 2–3 dni | STRETCH",
-    "trainingDescription": "Praktyczne szkolenie z montażu sufitów napinanych: montaż na zimno (poliester) i na ciepło (PVC). Sesje po polsku w Częstochowie — wkrótce.",
+    "trainingTitle": "Szkolenie z montażu sufitów napinanych — certyfikat w 1–2 dni | STRETCH",
+    "trainingDescription": "Praktyczne szkolenie z montażu sufitów napinanych: montaż na zimno (poliester) i na ciepło (PVC). Szkolenia po polsku z polskojęzycznym instruktorem.",
     "inspirationTitle": "Inspiracje — prawdziwe realizacje sufitów napinanych | STRETCH",
     "inspirationDescription": "Prawdziwe realizacje STRETCH w studiach, biurach, domach i hotelach — według rozwiązania: akustyka, światło i nadruk, mieszkania, łazienki i biura.",
     "samplesTitle": "Zamów próbki kolorów i RAL | STRETCH",
@@ -661,7 +661,7 @@
     "installer": {
       "eyebrow": "Akademia STRETCH",
       "title": "Akademia STRETCH: szkolenia dla monterów i wykonawców.",
-      "intro": "STRETCH działa w modelu B2B. Jesteś monterem lub wykonawcą? Dodaj sufity napinane do swojej oferty, zdobądź certyfikat w Akademii STRETCH — w Beveren-Waas lub po polsku w Częstochowie — zamawiaj membrany i profile na wymiar z naszych zakładów i otrzymuj lokalne zapytania od klientów.",
+      "intro": "STRETCH działa w modelu B2B. Jesteś monterem lub wykonawcą? Dodaj sufity napinane do swojej oferty, zdobądź certyfikat w Akademii STRETCH — w Beveren-Waas, także po polsku — zamawiaj membrany i profile na wymiar z naszych zakładów i otrzymuj lokalne zapytania od klientów.",
       "steps": {
         "0": {
           "title": "Szkolenie w kilka dni",
@@ -2094,7 +2094,7 @@
         },
         "PL": {
           "label": "Sesja po polsku — nowe terminy wkrótce",
-          "note": "Częstochowa (Alto Design) · grupa polskojęzyczna"
+          "note": "Beveren-Waas · polskojęzyczny instruktor — w Polsce dla grup od 4 osób"
         }
       },
       "custom": "Indywidualna sesja wyjazdowa"
@@ -5017,17 +5017,17 @@
       "eyebrow": "Szkolenie dla monterów",
       "titleA": "Szkolenie z montażu sufitów napinanych",
       "titleB": "certyfikat",
-      "titleC": "w 2–3 dni",
+      "titleC": "w 1–2 dni",
       "lead": "Praktyczna certyfikacja w naszej belgijskiej centrali. Naucz się konfekcjonowania membrany, profili, montażu na zimno i na ciepło, światła i akustyki — bez wcześniejszego doświadczenia.",
       "ctaBook": "Zarezerwuj szkolenie",
       "ctaDates": "Zobacz terminy",
       "imageLabel": "Zdjęcie ze szkolenia / warsztatu",
-      "travel": "Beveren-Waas (Belgia) · sesje po polsku: Częstochowa — nowe terminy wkrótce"
+      "travel": "Beveren-Waas (Belgia) · szkolenia po polsku z polskojęzycznym instruktorem"
     },
     "format": [
       {
-        "value": "2–3",
-        "label": "Dni praktyki"
+        "value": "1–2",
+        "label": "Dni — jeden na system"
       },
       {
         "value": "Centrala",
@@ -5072,7 +5072,7 @@
     "dates": {
       "eyebrow": "Najbliższe terminy",
       "title": "Zarezerwuj miejsce",
-      "lead": "Małe grupy, o miejscu decyduje kolejność zgłoszeń. Na życzenie organizujemy sesje wyjazdowe u Ciebie.",
+      "lead": "Małe grupy, o miejscu decyduje kolejność zgłoszeń. Każdy dzień to jeden system — zapisz się na jeden dzień lub oba. Na życzenie organizujemy sesje wyjazdowe u Ciebie.",
       "onRequestTitle": "Na życzenie",
       "onRequestNote": "Indywidualna sesja na miejscu",
       "externalCta": "Terminy i rezerwacja na quinlay.ch",
@@ -5092,9 +5092,9 @@
     },
     "international": {
       "eyebrow": "Międzynarodowe",
-      "title": "Sesje po polsku — w Częstochowie",
+      "title": "Szkolenia po polsku",
       "lead": "Instalatorzy z całej Europy certyfikują się w naszej belgijskiej centrali — krótka podróż, praktyczne dni na prawdziwych ramach, a potem materiały wysyłane do Twojego kraju.",
-      "body": "Ten sam program, pełna praktyczna certyfikacja: sesje polskojęzyczne odbędą się w zakładzie Alto Design w Częstochowie, a jedno szkolenie obejmuje oba systemy — montaż na zimno (poliester) i na ciepło (PVC). Zostaw swoje dane, a potwierdzimy miejsce, gdy tylko ustalimy terminy.",
+      "body": "Ten sam program, pełna praktyczna certyfikacja po polsku: szkolenia prowadzimy w naszej siedzibie w Beveren-Waas z polskojęzycznym instruktorem, a dla grup od 4 osób możemy je zorganizować także w Polsce. Każdy dzień to jeden system — jeden dzień sufity poliestrowe, drugi dzień sufity PVC — można wybrać jeden dzień lub oba. Zostaw swoje dane, a potwierdzimy Twoje miejsce.",
       "cta": "Zgłoś zainteresowanie"
     }
   },
@@ -5504,7 +5504,7 @@
     "factoryKicker": "Nasz zakład",
     "factoryTitle": "Zakład STRETCH w Częstochowie",
     "factoryBody": "To tutaj grupa produkuje w Polsce: Alto Design Sp. z o.o. kroi i zgrzewa membrany PVC na wymiar, prowadzi polskojęzyczne szkolenia monterów i buduje sieć STRETCH w Polsce — fabryka z nazwą i adresem, którą można odwiedzić, a nie tylko adres handlowy.",
-    "factoryTraining": "Szkolenie monterów w Częstochowie",
+    "factoryTraining": "Szkolenie dla montażystów",
     "factoryCta": "Odwiedź altodesign.pl",
     "why1Pl": "Wyprodukowano w UE — każdy sufit zgrzewamy na wymiar w naszych własnych zakładach w Częstochowie i Beveren-Waas, a dostarczamy go gotowy do montażu.",
     "regionSwitzerland": "Szwajcaria i Liechtenstein",
