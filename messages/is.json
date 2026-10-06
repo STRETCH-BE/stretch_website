@@ -23,7 +23,8 @@
       "materials": "Efni",
       "architects": "Arkitektar",
       "priceCalculator": "Verðreiknivél",
-      "acoustics": "Hljóðvist"
+      "acoustics": "Hljóðvist",
+      "careers": "Laus störf"
     },
     "cta": {
       "freeQuote": "Ókeypis tilboð",
@@ -88,7 +89,9 @@
     "projectsExportTitle": "Dúkaloft fyrir alþjóðleg verkefni | STRETCH",
     "projectsExportDescription": "Hálfgagnsæ, prentuð og hljóðvistardúkaloft fyrir innréttingafyrirtæki um allan heim — soðin í ESB-verksmiðju, flugfrakt, skjalfestir brunaflokkar.",
     "priceCalculatorTitle": "Verðreiknivél dúkalofta — verð á m² | STRETCH",
-    "priceCalculatorDescription": "Strax viðmiðunarverð fyrir dúkaloftið þitt: m² × loftgerð samkvæmt útgefnum bilum €70–200/m². Ókeypis fast tilboð, yfirleitt samdægurs."
+    "priceCalculatorDescription": "Strax viðmiðunarverð fyrir dúkaloftið þitt: m² × loftgerð samkvæmt útgefnum bilum €70–200/m². Ókeypis fast tilboð, yfirleitt samdægurs.",
+    "careersTitle": "Störf hjá STRETCH — laus störf í Belgíu og Póllandi | STRETCH",
+    "careersDescription": "Vinnðu hjá framleiðanda, ekki innflytjanda. Laus störf hjá STRETCH Group í Beveren-Waas (Belgíu) og Częstochowa (Póllandi): verkefnastjórnun, innisala og fleira."
   },
   "cookies": {
     "title": "Við virðum friðhelgi þína",
@@ -178,7 +181,8 @@
       "kit": "DIY-sett",
       "supply": "Aðföng uppsetningaraðila",
       "projectsExport": "Verkefnaútflutningur",
-      "priceCalculator": "Reikna verð"
+      "priceCalculator": "Reikna verð",
+      "careers": "Laus störf"
     },
     "dealers": "Söluaðilanet",
     "worldwideHeading": "STRETCH um allan heim",
@@ -5120,6 +5124,326 @@
     "cta": {
       "title": "Byggjum eitthvað saumlaust.",
       "button": "Fá ókeypis tilboð"
+    }
+  },
+  "careersPage": {
+    "crumb": "Laus störf",
+    "eyebrow": "Störf hjá STRETCH",
+    "titleA": "Einn dagur í uppsetningu.",
+    "titleB": "Starfsferill til að",
+    "titleC": "byggja",
+    "lead": "STRETCH hannar, framleiðir og setur upp samskeytalaus dúkaloft og dúkaveggi frá Beveren-Waas (Belgíu) og Częstochowa (Póllandi) — framleiðandi, ekki innflytjandi, með verkefni um alla Evrópu og í Bandaríkjunum. Við erum að vaxa og leitum að fólki sem tekur ábyrgð.",
+    "heroImageAlt": "Verkstæði STRETCH í Beveren-Waas",
+    "facts": [
+      "Sett upp á einum degi",
+      "25 ára líftími",
+      "100 % endurvinnanlegt",
+      "Handgert í Belgíu"
+    ],
+    "openEyebrow": "Laus störf",
+    "openTitle": "Hér erum við að ráða núna",
+    "openLead": "Tvö fyrirtæki, ein samstæða: Stretch Productions BV í Beveren-Waas (Belgíu) og Alto Design Sp. z o.o. í Częstochowa (Póllandi). Hvert starf tilgreinir staðsetningu og vinnuveitanda.",
+    "noOpenings": "Engin störf eru laus eins og er — almenn umsókn er alltaf velkomin.",
+    "locationLabel": "Staðsetning",
+    "contractLabel": "Ráðning",
+    "employerLabel": "Vinnuveitandi",
+    "languagesLabel": "Tungumál",
+    "viewVacancy": "Skoða starfið",
+    "mfx": "(kk/kvk/x)",
+    "aboutEyebrow": "Um STRETCH",
+    "about": {
+      "title": "Handgert í Belgíu. Sett upp á einum degi.",
+      "p1": "STRETCH hannar, framleiðir og setur upp samskeytalaus dúkaloft og dúkaveggi — kaldsett upp á einum degi, án ryks, brotajárns eða málningar. Hljóðvist, lýsing og prentun renna saman í eitt samfellt yfirborð sem endist lengur en hefðbundin gifsloft.",
+      "p2": "STRETCH er hluti af STRETCH Group ásamt Alto Design (framleiðslu okkar í Częstochowa í Póllandi), Re-Sound (hljóðvistarplötum og símaklefum) og Stretch Metal (málmsmíði): framleiðandi, ekki innflytjandi. Frá Beveren-Waas afhendum við verkefni um alla Belgíu, Evrópu og Bandaríkin — allt frá stofu til heilsulindar á hóteli, höfuðstöðva banka eða hljóðvers."
+    },
+    "spontaneous": {
+      "eyebrow": "Almenn umsókn",
+      "title": "Ekkert starf sem hentar? Segðu okkur hvað þú hefur fram að færa.",
+      "body": "Við höfum alltaf áhuga á uppsetningaraðilum, verkefnafólki og sölufólki sem vill vinna með vöru sem við framleiðum sjálf. Sendu ferilskrána þína og nokkrar línur um þig með efnislínunni „Almenn umsókn“.",
+      "button": "Senda almenna umsókn",
+      "subject": "Almenn umsókn"
+    },
+    "detail": {
+      "back": "Öll störf",
+      "vacancyEyebrow": "Laust starf",
+      "published": "Birt {date}",
+      "reportingHeading": "Boðleiðir",
+      "roleEyebrow": "Starfið",
+      "doEyebrow": "Verkefni þín",
+      "whoEyebrow": "Hver þú ert",
+      "offerEyebrow": "Við bjóðum",
+      "applyEyebrow": "Hvernig á að sækja um",
+      "applyButton": "Sækja um með tölvupósti",
+      "emailLabel": "Netfang",
+      "questionsLabel": "Spurningar",
+      "subjectNote": "Efnislína: „{subject}“",
+      "otherEyebrow": "Önnur laus störf"
+    },
+    "jobs": {
+      "project-manager": {
+        "title": "Project Manager",
+        "location": "Beveren-Waas, Belgíu",
+        "contract": "Fullt starf, ótímabundið",
+        "languages": "Hollenska og enska — franska er kostur",
+        "summary": "Frá því að verkefni er selt og þar til því er skilað — og í gegnum tíu ára ábyrgð sem fylgir — er það þitt.",
+        "facts": [
+          {
+            "label": "Staðsetning",
+            "value": "Höfuðstöðvar í Beveren-Waas + verkstaðir, aðallega í Belgíu, stöku sinnum erlendis"
+          },
+          {
+            "label": "Ráðning",
+            "value": "Fullt starf, ótímabundið · Upphaf: sem fyrst"
+          },
+          {
+            "label": "Kjör",
+            "value": "Bíll og eldsneytiskort frá fyrirtækinu, einnig til einkanota · matarmiðar · sjúkrahústrygging"
+          },
+          {
+            "label": "Heyrir undir",
+            "value": "Forstjóra og stjórnsýsluteymi · Bein lína, stuttar boðleiðir"
+          }
+        ],
+        "role": {
+          "title": "Ein manneskja ber hvert verkefni. Það ert þú.",
+          "p1": "Hvert verkefni sem STRETCH selur þarf eiganda: einhvern sem tekur við því frá sölunni við undirritun, leiðir það í gegnum skipulag, framleiðslu og uppsetningu, skilar því til ánægðs viðskiptavinar — og er áfram tengiliður þess allan tíu ára ábyrgðartímann.",
+          "p2": "Þú ert hlekkurinn milli sölu, stjórnsýsluteymisins, framleiðslunnar og uppsetningarteymisins og sú eina manneskja sem viðskiptavinurinn, arkitektinn og verktakinn geta alltaf náð í. Þú situr fundina, heldur verkefnamöppunni fullkominni, teiknar og tilgreinir það sem þarf, gætir fjárhagsáætlunar og tryggir að uppsetningaraðilarnir á verkstað hafi allt sem þeir þurfa til að skila.",
+          "lines": [
+            {
+              "label": "Heyrir undir",
+              "value": "Michael Nicasens, forstjóra"
+            },
+            {
+              "label": "Vinnur með",
+              "value": "Stjórnsýsluteyminu"
+            },
+            {
+              "label": "Samhæfir",
+              "value": "Uppsetningarteymið, söluna og framleiðsluna hjá Alto Design í Częstochowa (PL)"
+            }
+          ]
+        },
+        "do": {
+          "title": "Selt. Skipulagt. Byggt. Afhent. Ábyrgst.",
+          "intro": "Sex ábyrgðarsvið, í þeirri röð sem verkefni fer í gegnum þau.",
+          "areas": [
+            {
+              "title": "Yfirtaka verkefnis og skipulag",
+              "items": [
+                "Taktu við hverju seldu verkefni frá sölunni: farðu yfir tilboð, teikningar og umfang og staðfestu að það sem var selt sé hægt að byggja eins og það var selt.",
+                "Skipuleggðu verkefnið frá upphafi til enda: tímalínu, efnispantanir, framleiðslutíma, uppsetningarhóp og flutninga á verkstað.",
+                "Skipuleggðu eða framkvæmdu mælingar á staðnum og athugaðu hvort verkstaðurinn sé tilbúinn áður en uppsetning er tímasett."
+              ]
+            },
+            {
+              "title": "Fundir og samskipti",
+              "items": [
+                "Sittu alla nauðsynlega verkefnafundi: verkfundi, samræmingarfundi og fundi með viðskiptavinum.",
+                "Skrifaðu samantekt eftir hvern fund og vistaðu hana sama dag í verkefnamöppunni á OneDrive.",
+                "Vertu eini tengiliðurinn fyrir viðskiptavininn, arkitektinn og aðalverktakann; samræmdu við aðrar iðngreinar (rafmagn, lýsingu, loftræstingu, úðakerfi) alls staðar þar sem loftið tengist þeirra vinnu.",
+                "Gefðu yfirmanni þínum og stjórnsýsluteyminu vikulega stöðu á öllum verkefnum í gangi: skipulag, fjárhagsáætlun og áhættur."
+              ]
+            },
+            {
+              "title": "Tæknileg skjölun",
+              "items": [
+                "Gerðu tækniteikningar og verklýsingar hvenær sem verkefni krefst þess.",
+                "Safnaðu öllum gögnum fyrir hvert verkefni: teikningum, efnisblöðum, bruna- og hljóðvistarvottorðum, pöntunarstaðfestingum, myndum af verkstað og raunteikningum.",
+                "Haltu verkefnamöppunni á OneDrive fullkominni og uppfærðri svo hver sem er í teyminu geti tekið við verkefninu hvenær sem er."
+              ]
+            },
+            {
+              "title": "Fjárhagsáætlun og framkvæmd",
+              "items": [
+                "Skilaðu hverju verkefni innan fjárhagsáætlunar: fylgstu með kostnaði miðað við tilboðið, pantaðu efni tímanlega og vektu athygli á frávikum snemma.",
+                "Stýrðu viðbótarverkum og breytingum: afmarkaðu þau, láttu verðleggja þau og samþykkja áður en þau eru framkvæmd.",
+                "Styddu uppsetningarteymið við að ná markmiðum verkefnisins: undirbúðu uppsetningarkynningu, tryggðu að efni, verkfæri og aðgangur að verkstað séu tilbúin og leystu vandamál á staðnum."
+              ]
+            },
+            {
+              "title": "Gæði, afhending og lokun",
+              "items": [
+                "Framkvæmdu lokaúttekt, haltu utan um úrbótalista og skipuleggðu formlega afhendingu með viðskiptavininum.",
+                "Lokaðu verkefninu: fullgerðu skjölunina, staðfestu við stjórnsýsluteymið að hægt sé að gera reikning og skráðu lærdóminn."
+              ]
+            },
+            {
+              "title": "Ábyrgð — tíu ár",
+              "items": [
+                "Vertu áfram tengiliður verkefnisins allan tíu ára ábyrgðartímann.",
+                "Skráðu og metðu ábyrgðarkröfur, skipuleggðu þjónustuheimsóknir með uppsetningarteyminu og haltu ábyrgðarskrá verkefnisins uppfærðri."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Skipulögð á pappír. Praktísk á verkstað.",
+          "items": [
+            "Sannreynd reynsla af verkefnastjórnun í byggingariðnaði, innanhússfrágangi eða tæknilegu uppsetningarfyrirtæki.",
+            "Þú lest og gerir tækniteikningar og verklýsingar af öryggi (AutoCAD, SketchUp eða sambærilegt).",
+            "Skipulögð og skjölunarmiðuð: fullkomin verkefnamappa er þinn staðall, ekki eftiráhugsun.",
+            "Meðvituð um fjárhagsáætlun og vakandi í viðskiptum: þú tekur eftir frávikum áður en þau verða að kostnaði.",
+            "Jafn heima á verkstað með uppsetningaraðilum og í fundarherbergi með arkitektum og verktökum.",
+            "Reiprennandi hollenska og enska; franska er mikill kostur fyrir verkefni í Brussel og Vallóníu.",
+            "Vön Microsoft 365 — OneDrive, Teams, Outlook og Excel.",
+            "Ökuréttindi B: þú ferð á milli skrifstofunnar, verkstaða og viðskiptavina."
+          ]
+        },
+        "offer": {
+          "title": "Skýr kjör. Starf með raunverulegri ábyrgð.",
+          "items": [
+            {
+              "title": "Ótímabundinn samningur",
+              "sub": "Fullt starf með föstum mánaðarlegum heildarlaunum."
+            },
+            {
+              "title": "Bíll frá fyrirtækinu",
+              "sub": "Með eldsneytiskorti — einnig til einkanota. Frá upphafi."
+            },
+            {
+              "title": "Matarmiðar",
+              "sub": "8 € á hvern vinnudag. Eftir 3 mánuði."
+            },
+            {
+              "title": "Sjúkrahústrygging",
+              "sub": "Dekkar sjúkrahúskostnað þinn. Eftir 3 mánuði."
+            }
+          ],
+          "closing": "Ofan á kjörin: starf sem er þitt frá fyrsta degi, bein lína til forstjórans, vara handgerð í Belgíu sem er sett upp um alla Evrópu og í Bandaríkjunum, og svigrúm til að móta hvernig verkefnum er stýrt innan vaxandi alþjóðlegrar samstæðu."
+        },
+        "apply": {
+          "title": "Tilbúin að bera næsta verkefni?",
+          "body": "Sendu ferilskrána þína og stutt kynningarbréf með efnislínunni „Project Manager“. Fyrsta samtalið fer fram í höfuðstöðvum okkar í Beveren-Waas — með forstjóranum og teyminu sem þú munt vinna með á hverjum degi.",
+          "hours": "mán–fös · 08:30–17:00"
+        }
+      },
+      "inside-sales": {
+        "title": "Sölufulltrúi í innisölu (Inside Sales)",
+        "location": "Częstochowa, Póllandi",
+        "contract": "Fullt starf, ótímabundið",
+        "languages": "Pólska og enska — þýska, hollenska eða franska er kostur",
+        "summary": "Þú breytir hverri fyrirspurn sem berst Alto Design — frá uppsetningaraðila, söluaðila, arkitekt eða einstaklingi — í skýrt tilboð, fullkomna pöntun og viðskiptavin sem kemur aftur.",
+        "facts": [
+          {
+            "label": "Staðsetning",
+            "value": "Alto Design, ul. Legionów 59, Częstochowa — skrifstofustarf í pólsku framleiðsluverksmiðjunni okkar"
+          },
+          {
+            "label": "Ráðning",
+            "value": "Fullt starf, ótímabundið · Upphaf: sem fyrst"
+          },
+          {
+            "label": "Tungumál",
+            "value": "Pólska og enska daglega · þýska, hollenska eða franska er kostur gagnvart útflutningsviðskiptavinum"
+          },
+          {
+            "label": "Heyrir undir",
+            "value": "Stjórnendur Alto Design · stuttar boðleiðir til framleiðslunnar og til samstæðunnar í Belgíu"
+          }
+        ],
+        "role": {
+          "title": "Hver fyrirspurn á skilið svar. Hratt, nákvæmt — og frá þér.",
+          "p1": "Alto Design Sp. z o.o. er framleiðsluverksmiðja STRETCH Group í Częstochowa og tengiliður fyrir pólska markaðinn og uppsetningaraðila í Mið- og Austur-Evrópu. Fyrirspurnir berast á hverjum degi — í síma, með tölvupósti, í gegnum vefsíðuna og viðskiptavinagáttina — frá uppsetningaraðilum sem þurfa efni, söluaðilum sem vilja tilboð, arkitektum sem þurfa verklýsingu og einstaklingum sem vilja loft. Þú svarar þeim.",
+          "p2": "Í innisölu vinnur þú frá skrifstofunni, ekki á ferðinni. Þú metur hverja fyrirspurn, útbýrð tilboðið, fylgir því eftir þar til það verður pöntun og afhendir framleiðslunni fullkomna, rétta pöntun. Þú heldur viðskiptavininum upplýstum fram að afhendingu — og sérð til þess að hann hugsi fyrst um Alto Design næst.",
+          "lines": [
+            {
+              "label": "Heyrir undir",
+              "value": "Stjórnendur Alto Design"
+            },
+            {
+              "label": "Vinnur með",
+              "value": "Framleiðslu og skipulagi í Częstochowa; stjórnsýslu- og verkefnateymunum í Beveren-Waas"
+            },
+            {
+              "label": "Þjónar",
+              "value": "Uppsetningaraðilum, söluaðilum, arkitektum og einstaklingum í Póllandi og á útflutningsmörkuðum"
+            }
+          ]
+        },
+        "do": {
+          "title": "Fyrirspurn. Tilboð. Pöntun. Afhent.",
+          "intro": "Fimm ábyrgðarsvið, í þeirri röð sem fyrirspurn fer í gegnum þau.",
+          "areas": [
+            {
+              "title": "Innkomnar fyrirspurnir",
+              "items": [
+                "Svaraðu hverri innkominni fyrirspurn — síma, tölvupósti, vefeyðublöðum og viðskiptavinagátt — sama virka dag.",
+                "Metðu beiðnina: hver spyr, hvaða rými, hvaða kerfi, hvaða tímamörk og hvort viðskiptavinurinn þurfi enn uppsetningaraðila.",
+                "Skráðu hverja ábendingu og hvern tengilið í CRM-kerfið svo ekkert glatist og hvaða samstarfsmaður sem er geti tekið við málinu."
+              ]
+            },
+            {
+              "title": "Tilboð",
+              "items": [
+                "Útbúðu tilboð í dúka, prófíla, lýsingu og fylgihluti út frá teikningum, mælingum og myndum, með verðlistanum og settaráðgjafanum.",
+                "Ráðleggðu um rétta kerfið — pólýester eða PVC, hljóðvistar-, baklýst eða prentað — og um hvað framleiðslan þarf til að sníða það rétt.",
+                "Fylgdu hverju tilboði eftir tímanlega, svaraðu spurningum og aðlagaðu þar til viðskiptavinurinn getur ákveðið sig."
+              ]
+            },
+            {
+              "title": "Pantanir og framleiðsla",
+              "items": [
+                "Breyttu samþykktum tilboðum í fullkomnar pantanir: mál, samskeyti, áferðir, útskurði fyrir lýsingu, afhendingarstað og -dagsetningu — allt staðfest skriflega.",
+                "Semdu um afhendingartíma við framleiðslu og skipulag, staðfestu þá við viðskiptavininn og vektu strax athygli á öllum breytingum.",
+                "Farðu yfir pöntunarstaðfestingar og reikningsupplýsingar með skrifstofunni áður en pöntun fer í framleiðslu."
+              ]
+            },
+            {
+              "title": "Samstarfsaðilar og þjálfun",
+              "items": [
+                "Taktu á móti nýjum uppsetningaraðilum og söluaðilum: opnaðu aðgang þeirra að viðskiptavinagáttinni og útskýrðu verðlistann, settaráðgjafann og pöntunarferlið.",
+                "Kynntu STRETCH-þjálfun fyrir uppsetningaraðila og haltu listanum yfir þjálfaða uppsetningaraðila uppfærðum svo hægt sé að vísa einstaklingum á samstarfsaðila í nágrenninu.",
+                "Haltu upplýsingum um samstarfsaðila, verðum og vöruupplýsingum réttum í gáttinni og CRM-kerfinu."
+              ]
+            },
+            {
+              "title": "Skýrslugjöf",
+              "items": [
+                "Gefðu stjórnendum vikulega skýrslu um fyrirspurnir, tilboð, pantanir og árangurshlutfall.",
+                "Komdu auga á endurteknar spurningar, upplýsingar sem vantar og töpuð tilboð — og leggðu til hverju eigi að breyta."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Sölumiðuð í síma. Nákvæm á pappír.",
+          "items": [
+            "Reynsla af innisölu, þjónustu við viðskiptavini eða pöntunarvinnslu í B2B-umhverfi — helst byggingariðnaði, innanhússfrágangi eða byggingavörum.",
+            "Þú lest grunnmynd og tækniteikningu og spyrð réttu spurninganna þegar mál vantar.",
+            "Reiprennandi pólska og góð enska í ræðu og riti; þýska, hollenska eða franska er mikill kostur gagnvart útflutningsviðskiptavinum.",
+            "Skipulögð og nákvæm: fullkomin, rétt pöntun er þinn staðall, ekki eftiráhugsun.",
+            "Vön Microsoft 365 (Outlook, Teams, Excel) og fljót að læra á CRM-kerfi, viðskiptavinagátt og settaráðgjafa.",
+            "Vingjarnleg og þrautseig eftirfylgni: þú lokar hverju tilboði."
+          ]
+        },
+        "offer": {
+          "title": "Stöðugt starf í vaxandi samstæðu.",
+          "items": [
+            {
+              "title": "Ótímabundinn samningur",
+              "sub": "Ráðningarsamningur í fullu starfi hjá Alto Design Sp. z o.o."
+            },
+            {
+              "title": "Vöruþjálfun",
+              "sub": "Verkleg þjálfun í verksmiðju okkar í Częstochowa og með teyminu í Beveren-Waas."
+            },
+            {
+              "title": "Skrifstofustarf",
+              "sub": "Fastur vinnustaður við ul. Legionów 59 í Częstochowa, mánudaga til föstudaga."
+            },
+            {
+              "title": "Alþjóðlegt teymi",
+              "sub": "Dagleg samskipti við uppsetningaraðila, söluaðila og samstarfsfólk um alla Evrópu."
+            }
+          ],
+          "closing": "Ofan á kjörin: vara sem við framleiðum sjálf — ekki flytjum inn — bein lína til framleiðslunnar og svigrúm til að vaxa með pólska markaðnum og útflutningsstarfsemi STRETCH Group."
+        },
+        "apply": {
+          "title": "Tilbúin að svara næstu fyrirspurn?",
+          "body": "Sendu ferilskrána þína og stutt kynningarbréf á pólsku eða ensku með efnislínunni „Inside Sales“. Fyrsta samtalið fer fram hjá Alto Design í Częstochowa — með stjórnendum og samstarfsfólkinu sem þú munt vinna með á hverjum degi.",
+          "hours": "mán–fös · 08:30–17:00"
+        }
+      }
     }
   },
   "contactPage": {

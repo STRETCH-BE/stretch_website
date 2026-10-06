@@ -9,6 +9,7 @@ import { indicativePriceRange } from '@/lib/indicative-prices';
 import { settlementCurrencyFor, pricesPublished } from '@/lib/currency';
 import type { Product, Faq } from '@/lib/products';
 import { blogHref, type BlogPost } from '@/lib/content';
+import type { Vacancy } from '@/lib/careers';
 import { localeBase } from '@/lib/seo';
 
 const ORG_ID = `${siteUrl}/#organization`;
@@ -339,6 +340,51 @@ export function articleSchema(post: BlogPost, locale: Locale) {
     image: { '@type': 'ImageObject', url: `${siteUrl}/api/og/${post.slug}`, width: 1200, height: 630 },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     inLanguage: localeFullCodes[locale] ?? 'en-BE',
+  };
+}
+
+/**
+ * JobPosting node for a vacancy page (/careers/[slug]). The description is
+ * the page's own text as simple HTML (Google reads HTML here). Deliberately
+ * NO baseSalary — the salary is not published on the website — and no
+ * validThrough: Google's guidance is to omit it when a posting has no fixed
+ * closing date, rather than let the listing expire silently. The hiring
+ * entity is inlined (name + sameAs), not an @id reference, so the Rich
+ * Results Test never reads it as a dangling node.
+ */
+export function jobPostingSchema(
+  vacancy: Vacancy,
+  opts: { locale: Locale; title: string; description: string; url: string },
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'JobPosting',
+    '@id': `${opts.url}#job`,
+    title: opts.title,
+    description: opts.description,
+    datePosted: vacancy.datePosted,
+    employmentType: vacancy.employmentType,
+    hiringOrganization: {
+      '@type': 'Organization',
+      name: vacancy.employer.name,
+      sameAs: vacancy.employer.url,
+      ...(vacancy.employer.name === brand.legalName ? { logo: logoUrl } : {}),
+    },
+    jobLocation: {
+      '@type': 'Place',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: vacancy.address.street,
+        addressLocality: vacancy.address.city,
+        postalCode: vacancy.address.postalCode,
+        ...(vacancy.address.region ? { addressRegion: vacancy.address.region } : {}),
+        addressCountry: vacancy.address.country,
+      },
+    },
+    identifier: { '@type': 'PropertyValue', name: brand.parentCompany, value: vacancy.slug },
+    url: opts.url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': opts.url },
+    inLanguage: localeFullCodes[opts.locale] ?? 'en',
   };
 }
 

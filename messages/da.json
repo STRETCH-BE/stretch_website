@@ -23,7 +23,8 @@
       "materials": "Materialer",
       "architects": "Arkitekter",
       "priceCalculator": "Prisberegner",
-      "acoustics": "Rumakustik"
+      "acoustics": "Rumakustik",
+      "careers": "Ledige stillinger"
     },
     "cta": {
       "freeQuote": "Gratis tilbud",
@@ -88,7 +89,9 @@
     "projectsExportTitle": "Strækloft til internationale projekter | STRETCH",
     "projectsExportDescription": "Translucent, printet og akustisk strækloft til fit-out i hele verden — svejset på vores EU-fabrik, luftfragt, dokumenterede brandklasser.",
     "priceCalculatorTitle": "Beregn strækloft pris — pris pr. m² | STRETCH",
-    "priceCalculatorDescription": "Øjeblikkelig vejledende pris på dit strækloft: m² × loftstype efter intervallerne €70–200/m². Gratis fast tilbud, normalt samme arbejdsdag."
+    "priceCalculatorDescription": "Øjeblikkelig vejledende pris på dit strækloft: m² × loftstype efter intervallerne €70–200/m². Gratis fast tilbud, normalt samme arbejdsdag.",
+    "careersTitle": "Job hos STRETCH — ledige stillinger i Belgien og Polen | STRETCH",
+    "careersDescription": "Arbejd hos en producent, ikke en importør. Ledige stillinger i STRETCH Group i Beveren-Waas (Belgien) og Częstochowa (Polen): projektledelse, inside sales og mere."
   },
   "cookies": {
     "title": "Vi værner om dit privatliv",
@@ -178,7 +181,8 @@
       "kit": "Gør-det-selv-kit",
       "supply": "Levering til montører",
       "projectsExport": "Projekteksport",
-      "priceCalculator": "Beregn pris"
+      "priceCalculator": "Beregn pris",
+      "careers": "Ledige stillinger"
     },
     "dealers": "Forhandlernetværk",
     "worldwideHeading": "STRETCH i verden",
@@ -5120,6 +5124,326 @@
     "cta": {
       "title": "Lad os bygge noget sømløst.",
       "button": "Få et gratis tilbud"
+    }
+  },
+  "careersPage": {
+    "crumb": "Ledige stillinger",
+    "eyebrow": "Job hos STRETCH",
+    "titleA": "Én dag at montere.",
+    "titleB": "En karriere at",
+    "titleC": "bygge",
+    "lead": "STRETCH designer, producerer og monterer sømløse strækloft og strækvægge fra Beveren-Waas (Belgien) og Częstochowa (Polen) — en producent, ikke en importør, med projekter i hele Europa og USA. Vi vokser, og vi søger mennesker, der tager ansvar.",
+    "heroImageAlt": "STRETCH-værkstedet i Beveren-Waas",
+    "facts": [
+      "Monteret på én dag",
+      "25 års levetid",
+      "100 % genanvendeligt",
+      "Håndlavet i Belgien"
+    ],
+    "openEyebrow": "Ledige stillinger",
+    "openTitle": "Her ansætter vi lige nu",
+    "openLead": "To virksomheder, én koncern: Stretch Productions BV i Beveren-Waas (Belgien) og Alto Design Sp. z o.o. i Częstochowa (Polen). Hver stilling angiver sit arbejdssted og sin arbejdsgiver.",
+    "noOpenings": "Der er ingen ledige stillinger lige nu — en uopfordret ansøgning er altid velkommen.",
+    "locationLabel": "Arbejdssted",
+    "contractLabel": "Ansættelse",
+    "employerLabel": "Arbejdsgiver",
+    "languagesLabel": "Sprog",
+    "viewVacancy": "Se stillingen",
+    "mfx": "(m/k/x)",
+    "aboutEyebrow": "Om STRETCH",
+    "about": {
+      "title": "Håndlavet i Belgien. Monteret på én dag.",
+      "p1": "STRETCH designer, producerer og monterer sømløse strækloft og strækvægge — koldmonteret på en enkelt dag, uden støv, murbrokker eller maling. Akustik, lys og print samles i én sømløs flade, der holder længere end almindelige gipslofter.",
+      "p2": "STRETCH er en del af STRETCH Group sammen med Alto Design (vores produktion i Częstochowa, Polen), Re-Sound (akustikpaneler og telefonbokse) og Stretch Metal (metalarbejde): en producent, ikke en importør. Fra Beveren-Waas leverer vi projekter i hele Belgien, Europa og USA — fra en stue til et hotelwellness, et bankhovedkvarter eller et lydstudie."
+    },
+    "spontaneous": {
+      "eyebrow": "Uopfordret ansøgning",
+      "title": "Ingen stilling, der passer? Fortæl os, hvad du kan bidrage med.",
+      "body": "Vi er altid interesserede i montører, projektfolk og salgsprofiler, der vil arbejde med et produkt, vi selv fremstiller. Send dit CV og et par linjer om dig selv med emnet “Uopfordret ansøgning”.",
+      "button": "Send uopfordret ansøgning",
+      "subject": "Uopfordret ansøgning"
+    },
+    "detail": {
+      "back": "Alle stillinger",
+      "vacancyEyebrow": "Ledig stilling",
+      "published": "Offentliggjort {date}",
+      "reportingHeading": "Referencelinjer",
+      "roleEyebrow": "Stillingen",
+      "doEyebrow": "Dine opgaver",
+      "whoEyebrow": "Din profil",
+      "offerEyebrow": "Vi tilbyder",
+      "applyEyebrow": "Sådan søger du",
+      "applyButton": "Søg via e-mail",
+      "emailLabel": "E-mail",
+      "questionsLabel": "Spørgsmål",
+      "subjectNote": "Emne: “{subject}”",
+      "otherEyebrow": "Andre ledige stillinger"
+    },
+    "jobs": {
+      "project-manager": {
+        "title": "Project Manager",
+        "location": "Beveren-Waas, Belgien",
+        "contract": "Fuldtid, fastansættelse",
+        "languages": "Nederlandsk og engelsk — fransk er en fordel",
+        "summary": "Fra det øjeblik et projekt er solgt, til den dag det afleveres — og gennem de ti års garanti, der følger — er det dit.",
+        "facts": [
+          {
+            "label": "Arbejdssted",
+            "value": "Hovedkontoret i Beveren-Waas + byggepladser, primært i Belgien, af og til i udlandet"
+          },
+          {
+            "label": "Ansættelse",
+            "value": "Fuldtid, fastansættelse · Start: hurtigst muligt"
+          },
+          {
+            "label": "Pakke",
+            "value": "Firmabil og brændstofkort, også til privat brug · frokostkuponer · hospitalsforsikring"
+          },
+          {
+            "label": "Refererer til",
+            "value": "CEO og administrationsteamet · Direkte linje, korte beslutningsveje"
+          }
+        ],
+        "role": {
+          "title": "Én person bærer hvert projekt. Det er dig.",
+          "p1": "Hvert projekt, STRETCH sælger, har brug for en ejer: en, der overtager det fra salg ved underskriften, fører det gennem planlægning, produktion og montage, afleverer det til en tilfreds kunde — og forbliver dets kontaktperson i hele den tiårige garantiperiode.",
+          "p2": "Du er bindeleddet mellem salg, administrationsteamet, produktionen og montageteamet og den ene person, som kunden, arkitekten og entreprenøren altid kan få fat i. Du deltager i møderne, holder projektmappen komplet, tegner og specificerer det, der kræver det, vogter budgettet og sørger for, at montørerne på pladsen har alt, hvad de skal bruge for at levere.",
+          "lines": [
+            {
+              "label": "Refererer til",
+              "value": "Michael Nicasens, CEO"
+            },
+            {
+              "label": "Arbejder sammen med",
+              "value": "Administrationsteamet"
+            },
+            {
+              "label": "Koordinerer",
+              "value": "Montageteamet, salg og produktionen hos Alto Design i Częstochowa (PL)"
+            }
+          ]
+        },
+        "do": {
+          "title": "Solgt. Planlagt. Bygget. Afleveret. Garanteret.",
+          "intro": "Seks ansvarsområder i den rækkefølge, et projekt gennemløber dem.",
+          "areas": [
+            {
+              "title": "Projektovertagelse og planlægning",
+              "items": [
+                "Overtag hvert solgt projekt fra salg: gennemgå tilbud, tegninger og omfang, og bekræft, at det solgte kan bygges, som det er solgt.",
+                "Planlæg projektet fra start til slut: tidsplan, materialebestillinger, produktionsslots, montagehold og logistik på pladsen.",
+                "Organisér eller udfør opmålingen på stedet, og kontrollér, at pladsen er klar, før montagen planlægges."
+              ]
+            },
+            {
+              "title": "Møder og kommunikation",
+              "items": [
+                "Deltag i alle nødvendige projektmøder: byggemøder, koordineringsmøder og kundemøder.",
+                "Skriv et referat efter hvert møde, og gem det samme dag i projektmappen på OneDrive.",
+                "Vær den ene kontaktperson for kunden, arkitekten og hovedentreprenøren; koordinér med de øvrige fag (el, belysning, ventilation, sprinkler), overalt hvor loftet integreres med deres arbejde.",
+                "Giv din leder og administrationsteamet en ugentlig status på alle igangværende projekter: planlægning, budget og risici."
+              ]
+            },
+            {
+              "title": "Teknisk dokumentation",
+              "items": [
+                "Udarbejd tekniske tegninger og specifikationsdokumenter, når et projekt kræver det.",
+                "Saml al dokumentation for hvert projekt: tegninger, materialedatablade, brand- og akustikcertifikater, ordrebekræftelser, fotos fra pladsen og as-built-information.",
+                "Hold projektmappen på OneDrive komplet og opdateret, så alle i teamet kan overtage projektet når som helst."
+              ]
+            },
+            {
+              "title": "Budget og udførelse",
+              "items": [
+                "Lever hvert projekt inden for budgettet: følg omkostningerne op mod tilbuddet, bestil materialer til tiden, og flag afvigelser tidligt.",
+                "Styr ekstraarbejder og ændringer: afgræns dem, og få dem prissat og godkendt, før de udføres.",
+                "Støt montageteamet i at nå projektets mål: forbered montagebriefingen, sørg for, at materialer, værktøj og adgang til pladsen er klar, og løs problemer på stedet."
+              ]
+            },
+            {
+              "title": "Kvalitet, aflevering og afslutning",
+              "items": [
+                "Gennemfør den afsluttende kontrol, håndter mangellisten, og organisér den formelle aflevering med kunden.",
+                "Afslut projektet: færdiggør dokumentationen, bekræft med administrationsteamet, at der kan faktureres, og notér erfaringerne."
+              ]
+            },
+            {
+              "title": "Garanti — ti år",
+              "items": [
+                "Forbliv projektets kontaktperson i hele den tiårige garantiperiode.",
+                "Registrér og vurder garantisager, planlæg serviceindsatser med montageteamet, og hold projektets garantilog opdateret."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Struktureret på papiret. Praktisk på pladsen.",
+          "items": [
+            "Dokumenteret erfaring med projektledelse i byggeri, indvendig aptering eller en teknisk installationsvirksomhed.",
+            "Du læser og udarbejder tekniske tegninger og specifikationer med sikker hånd (AutoCAD, SketchUp eller lignende).",
+            "Struktureret og dokumentationsorienteret: en komplet projektmappe er din standard, ikke en eftertanke.",
+            "Budgetbevidst og kommercielt vågen: du opdager afvigelser, før de bliver til omkostninger.",
+            "Lige så hjemmevant på en byggeplads blandt montører som i et mødelokale med arkitekter og entreprenører.",
+            "Flydende nederlandsk og engelsk; fransk er en stor fordel ved projekter i Bruxelles og Vallonien.",
+            "Fortrolig med Microsoft 365 — OneDrive, Teams, Outlook og Excel.",
+            "Kørekort B: du bevæger dig mellem kontoret, pladserne og kunderne."
+          ]
+        },
+        "offer": {
+          "title": "En klar pakke. En stilling med reelt ejerskab.",
+          "items": [
+            {
+              "title": "Fastansættelse",
+              "sub": "Fuldtid med en fast månedlig bruttoløn."
+            },
+            {
+              "title": "Firmabil",
+              "sub": "Inklusive brændstofkort — også til privat brug. Fra start."
+            },
+            {
+              "title": "Frokostkuponer",
+              "sub": "8 € pr. arbejdsdag. Efter 3 måneder."
+            },
+            {
+              "title": "Hospitalsforsikring",
+              "sub": "Dækker dine hospitalsudgifter. Efter 3 måneder."
+            }
+          ],
+          "closing": "Ud over pakken: en stilling, der er din fra dag ét, en direkte linje til CEO’en, et produkt håndlavet i Belgien og monteret i hele Europa og USA, og plads til at præge, hvordan projekter drives i en voksende international koncern."
+        },
+        "apply": {
+          "title": "Klar til at bære det næste projekt?",
+          "body": "Send dit CV og en kort motivation med emnet “Project Manager”. Den første samtale finder sted på vores hovedkontor i Beveren-Waas — med CEO’en og med det team, du skal arbejde sammen med hver dag.",
+          "hours": "man–fre · 08:30–17:00"
+        }
+      },
+      "inside-sales": {
+        "title": "Inside Sales-medarbejder",
+        "location": "Częstochowa, Polen",
+        "contract": "Fuldtid, fastansættelse",
+        "languages": "Polsk og engelsk — tysk, nederlandsk eller fransk er en fordel",
+        "summary": "Du forvandler hver henvendelse, der når Alto Design — fra en montør, en forhandler, en arkitekt eller en privatkunde — til et klart tilbud, en komplet ordre og en kunde, der kommer igen.",
+        "facts": [
+          {
+            "label": "Arbejdssted",
+            "value": "Alto Design, ul. Legionów 59, Częstochowa — kontorbaseret på vores polske produktionsfabrik"
+          },
+          {
+            "label": "Ansættelse",
+            "value": "Fuldtid, fastansættelse · Start: hurtigst muligt"
+          },
+          {
+            "label": "Sprog",
+            "value": "Polsk og engelsk i det daglige · tysk, nederlandsk eller fransk er en fordel over for eksportkunder"
+          },
+          {
+            "label": "Refererer til",
+            "value": "Ledelsen hos Alto Design · korte veje til produktionen og til koncernen i Belgien"
+          }
+        ],
+        "role": {
+          "title": "Hver henvendelse fortjener et svar. Hurtigt, præcist — og fra dig.",
+          "p1": "Alto Design Sp. z o.o. er STRETCH Groups produktionsfabrik i Częstochowa og kontaktpunktet for det polske marked og for montører i Central- og Østeuropa. Der kommer henvendelser hver dag — pr. telefon, pr. e-mail, via hjemmesiden og via kundeportalen — fra montører, der mangler materialer, forhandlere, der vil have et tilbud, arkitekter, der søger en specifikation, og privatkunder, der ønsker et loft. Du svarer dem.",
+          "p2": "Som inside sales arbejder du fra kontoret, ikke på landevejen. Du kvalificerer hver henvendelse, udarbejder tilbuddet, følger op, til det bliver en ordre, og afleverer en komplet, korrekt ordre til produktionen. Du holder kunden orienteret frem til leveringen — og sørger for, at kunden tænker på Alto Design først næste gang.",
+          "lines": [
+            {
+              "label": "Refererer til",
+              "value": "Ledelsen hos Alto Design"
+            },
+            {
+              "label": "Arbejder sammen med",
+              "value": "Produktion og planlægning i Częstochowa; administrations- og projektteamet i Beveren-Waas"
+            },
+            {
+              "label": "Betjener",
+              "value": "Montører, forhandlere, arkitekter og privatkunder i Polen og på eksportmarkederne"
+            }
+          ]
+        },
+        "do": {
+          "title": "Henvendelse. Tilbud. Ordre. Leveret.",
+          "intro": "Fem ansvarsområder i den rækkefølge, en henvendelse gennemløber dem.",
+          "areas": [
+            {
+              "title": "Indgående henvendelser",
+              "items": [
+                "Besvar hver indgående henvendelse — telefon, e-mail, formularer på hjemmesiden og kundeportalen — samme arbejdsdag.",
+                "Kvalificér forespørgslen: hvem spørger, hvilket rum, hvilket system, hvilken deadline, og om kunden stadig mangler en montør.",
+                "Registrér hvert lead og hver kontakt i CRM-systemet, så intet går tabt, og enhver kollega kan overtage sagen."
+              ]
+            },
+            {
+              "title": "Tilbud",
+              "items": [
+                "Udarbejd tilbud på duge, profiler, belysning og tilbehør ud fra tegninger, opmålinger og fotos med prislisten og kit-konfiguratoren.",
+                "Rådgiv om det rigtige system — polyester eller PVC, akustisk, bagbelyst eller printet — og om, hvad produktionen skal bruge for at konfektionere det korrekt.",
+                "Følg op på hvert tilbud til tiden, besvar spørgsmål, og justér, indtil kunden kan beslutte sig."
+              ]
+            },
+            {
+              "title": "Ordrer og produktion",
+              "items": [
+                "Omsæt accepterede tilbud til komplette ordrer: mål, samlinger, overflader, udskæringer til belysning, leveringsadresse og -dato — alt bekræftet skriftligt.",
+                "Aftal leveringstider med produktion og planlægning, bekræft dem over for kunden, og flag enhver ændring med det samme.",
+                "Kontrollér ordrebekræftelser og faktureringsoplysninger med administrationen, før en ordre går i produktion."
+              ]
+            },
+            {
+              "title": "Partnere og uddannelse",
+              "items": [
+                "Tag imod nye montører og forhandlere: opret deres konto på kundeportalen, og forklar prislisten, konfiguratoren og bestillingsprocessen.",
+                "Promovér STRETCH’ montøruddannelse, og hold listen over uddannede montører opdateret, så privatkunder kan henvises til en partner i nærheden.",
+                "Hold partnerdata, priser og produktinformation ajour i portalen og CRM-systemet."
+              ]
+            },
+            {
+              "title": "Rapportering",
+              "items": [
+                "Rapportér ugentligt til ledelsen om henvendelser, tilbud, ordrer og konvertering.",
+                "Spot tilbagevendende spørgsmål, manglende oplysninger og tabte tilbud — og foreslå, hvad der skal ændres."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Sælger i telefonen. Præcis på papiret.",
+          "items": [
+            "Erfaring med inside sales, kundeservice eller ordrebehandling i et B2B-miljø — gerne byggeri, indvendig aptering eller byggematerialer.",
+            "Du læser en plantegning og en teknisk tegning og stiller de rigtige spørgsmål, når et mål mangler.",
+            "Flydende polsk og godt engelsk i skrift og tale; tysk, nederlandsk eller fransk er en stor fordel over for eksportkunder.",
+            "Organiseret og præcis: en komplet, korrekt ordre er din standard, ikke en eftertanke.",
+            "Fortrolig med Microsoft 365 (Outlook, Teams, Excel) og hurtig til at lære et CRM-system, en kundeportal og en konfigurator.",
+            "En venlig, vedholdende opfølgningsstil: du lukker hvert tilbud."
+          ]
+        },
+        "offer": {
+          "title": "En stabil stilling i en voksende koncern.",
+          "items": [
+            {
+              "title": "Fastansættelse",
+              "sub": "Fuldtidsansættelse hos Alto Design Sp. z o.o."
+            },
+            {
+              "title": "Produktoplæring",
+              "sub": "Praktisk oplæring på vores fabrik i Częstochowa og sammen med teamet i Beveren-Waas."
+            },
+            {
+              "title": "Kontorbaseret",
+              "sub": "En fast arbejdsplads på ul. Legionów 59 i Częstochowa, mandag til fredag."
+            },
+            {
+              "title": "Internationalt team",
+              "sub": "Daglig kontakt med montører, forhandlere og kolleger i hele Europa."
+            }
+          ],
+          "closing": "Ud over pakken: et produkt, vi selv fremstiller — ikke importerer — en direkte linje til produktionen og plads til at vokse med det polske marked og STRETCH Groups eksportforretning."
+        },
+        "apply": {
+          "title": "Klar til at besvare den næste henvendelse?",
+          "body": "Send dit CV og en kort motivation på polsk eller engelsk med emnet “Inside Sales”. Den første samtale finder sted hos Alto Design i Częstochowa — med ledelsen og med de kolleger, du skal arbejde sammen med hver dag.",
+          "hours": "man–fre · 08:30–17:00"
+        }
+      }
     }
   },
   "contactPage": {

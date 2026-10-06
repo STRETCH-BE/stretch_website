@@ -23,7 +23,8 @@
       "materials": "Matériaux",
       "architects": "Architectes",
       "priceCalculator": "Calculateur de prix",
-      "acoustics": "Acoustique"
+      "acoustics": "Acoustique",
+      "careers": "Carrières"
     },
     "cta": {
       "freeQuote": "Devis gratuit",
@@ -88,7 +89,9 @@
     "projectsExportTitle": "Plafonds tendus pour projets internationaux | STRETCH",
     "projectsExportDescription": "Plafonds tendus translucides, imprimés et acoustiques pour le fit-out dans le monde — soudés dans notre usine UE, expédiés par avion, classes feu documentées.",
     "priceCalculatorTitle": "Calculer le prix d’un plafond tendu — coût au m² | STRETCH",
-    "priceCalculatorDescription": "Prix indicatif immédiat pour votre plafond tendu : m² × type, selon les fourchettes publiées de 70 à 200 €/m². Devis ferme gratuit, souvent le jour même."
+    "priceCalculatorDescription": "Prix indicatif immédiat pour votre plafond tendu : m² × type, selon les fourchettes publiées de 70 à 200 €/m². Devis ferme gratuit, souvent le jour même.",
+    "careersTitle": "Carrières chez STRETCH — offres d’emploi en Belgique et en Pologne | STRETCH",
+    "careersDescription": "Rejoignez un fabricant, pas un importateur. Postes ouverts chez STRETCH Group à Beveren-Waas (Belgique) et Częstochowa (Pologne) : gestion de projet, inside sales et plus."
   },
   "cookies": {
     "title": "Nous respectons votre vie privée",
@@ -178,7 +181,8 @@
       "kit": "Kit à poser soi-même",
       "supply": "Fourniture poseurs",
       "projectsExport": "Export projets",
-      "priceCalculator": "Calculer le prix"
+      "priceCalculator": "Calculer le prix",
+      "careers": "Carrières"
     },
     "dealers": "Réseau de revendeurs",
     "worldwideHeading": "STRETCH dans le monde",
@@ -5129,6 +5133,326 @@
     "cta": {
       "title": "Construisons ensemble, sans soudure.",
       "button": "Demander un devis gratuit"
+    }
+  },
+  "careersPage": {
+    "crumb": "Carrières",
+    "eyebrow": "Carrières chez STRETCH",
+    "titleA": "Un jour pour poser.",
+    "titleB": "Une carrière à",
+    "titleC": "construire",
+    "lead": "STRETCH conçoit, fabrique et pose des plafonds et murs tendus sans soudure depuis Beveren-Waas (Belgique) et Częstochowa (Pologne) — un fabricant, pas un importateur, avec des projets dans toute l’Europe et aux États-Unis. Nous grandissons et nous cherchons des personnes qui prennent les choses en main.",
+    "heroImageAlt": "L’atelier STRETCH à Beveren-Waas",
+    "facts": [
+      "Posé en un jour",
+      "25 ans de durée de vie",
+      "100 % recyclable",
+      "Fait main en Belgique"
+    ],
+    "openEyebrow": "Postes ouverts",
+    "openTitle": "Où nous recrutons aujourd’hui",
+    "openLead": "Deux sociétés, un groupe : Stretch Productions BV à Beveren-Waas (Belgique) et Alto Design Sp. z o.o. à Częstochowa (Pologne). Chaque offre indique son lieu et son employeur.",
+    "noOpenings": "Aucun poste n’est ouvert pour le moment — une candidature spontanée est toujours la bienvenue.",
+    "locationLabel": "Lieu",
+    "contractLabel": "Contrat",
+    "employerLabel": "Employeur",
+    "languagesLabel": "Langues",
+    "viewVacancy": "Voir l’offre",
+    "mfx": "(h/f/x)",
+    "aboutEyebrow": "À propos de STRETCH",
+    "about": {
+      "title": "Fait main en Belgique. Posé en un jour.",
+      "p1": "STRETCH conçoit, fabrique et pose des plafonds et murs tendus sans soudure — posés à froid en une seule journée, sans poussière, sans gravats, sans peinture. Acoustique, lumière et impression s’intègrent dans une seule surface continue qui survit au plafonnage classique.",
+      "p2": "STRETCH fait partie de STRETCH Group, avec Alto Design (notre production à Częstochowa, en Pologne), Re-Sound (panneaux et cabines acoustiques) et Stretch Metal (métallerie) : un fabricant, pas un importateur. Depuis Beveren-Waas, nous livrons des projets dans toute la Belgique, en Europe et aux États-Unis — d’un salon à un wellness d’hôtel, un siège de banque ou un studio d’enregistrement."
+    },
+    "spontaneous": {
+      "eyebrow": "Candidature spontanée",
+      "title": "Aucun poste ne vous correspond ? Dites-nous ce que vous apportez.",
+      "body": "Nous sommes toujours intéressés par des poseurs, des profils projet et des profils commerciaux qui veulent travailler avec un produit fabriqué chez nous. Envoyez votre CV et quelques lignes sur vous avec l’objet « Candidature spontanée ».",
+      "button": "Envoyer une candidature spontanée",
+      "subject": "Candidature spontanée"
+    },
+    "detail": {
+      "back": "Toutes les offres",
+      "vacancyEyebrow": "Offre d’emploi",
+      "published": "Publiée le {date}",
+      "reportingHeading": "Lignes hiérarchiques",
+      "roleEyebrow": "Le poste",
+      "doEyebrow": "Vos missions",
+      "whoEyebrow": "Votre profil",
+      "offerEyebrow": "Ce que nous offrons",
+      "applyEyebrow": "Comment postuler",
+      "applyButton": "Postuler par e-mail",
+      "emailLabel": "E-mail",
+      "questionsLabel": "Questions",
+      "subjectNote": "Objet : « {subject} »",
+      "otherEyebrow": "Autres postes ouverts"
+    },
+    "jobs": {
+      "project-manager": {
+        "title": "Project Manager",
+        "location": "Beveren-Waas, Belgique",
+        "contract": "Temps plein, CDI",
+        "languages": "Néerlandais et anglais — le français est un atout",
+        "summary": "Du moment où un projet est vendu jusqu’au jour de sa réception — et pendant les dix ans de garantie qui suivent — il est à vous.",
+        "facts": [
+          {
+            "label": "Lieu",
+            "value": "Siège de Beveren-Waas + chantiers, surtout en Belgique, parfois à l’étranger"
+          },
+          {
+            "label": "Contrat",
+            "value": "Temps plein, CDI · Début : dès que possible"
+          },
+          {
+            "label": "Package",
+            "value": "Voiture de société et carte carburant, aussi à usage privé · chèques-repas · assurance hospitalisation"
+          },
+          {
+            "label": "Rapporte à",
+            "value": "CEO et équipe Admin · Ligne directe, décisions rapides"
+          }
+        ],
+        "role": {
+          "title": "Une seule personne porte chaque projet. C’est vous.",
+          "p1": "Chaque projet vendu par STRETCH a besoin d’un responsable : quelqu’un qui le reprend des ventes à la signature, le conduit à travers la planification, la production et la pose, le remet à un client satisfait — et reste son interlocuteur pendant toute la période de garantie de dix ans.",
+          "p2": "Vous êtes le lien entre les ventes, l’équipe Admin, la production et l’équipe de pose, et la seule personne que le client, l’architecte et l’entrepreneur peuvent toujours joindre. Vous assistez aux réunions, tenez le dossier de projet complet, dessinez et spécifiez ce qui le nécessite, surveillez le budget et veillez à ce que les poseurs sur chantier aient tout ce qu’il faut pour livrer.",
+          "lines": [
+            {
+              "label": "Rapporte à",
+              "value": "Michael Nicasens, CEO"
+            },
+            {
+              "label": "Travaille avec",
+              "value": "L’équipe Admin"
+            },
+            {
+              "label": "Coordonne",
+              "value": "L’équipe de pose, les ventes et la production chez Alto Design à Częstochowa (PL)"
+            }
+          ]
+        },
+        "do": {
+          "title": "Vendu. Planifié. Construit. Réceptionné. Garanti.",
+          "intro": "Six domaines de responsabilité, dans l’ordre où un projet les traverse.",
+          "areas": [
+            {
+              "title": "Reprise du projet et planification",
+              "items": [
+                "Reprenez chaque projet vendu auprès des ventes : relisez l’offre, les plans et le périmètre, et confirmez que ce qui a été vendu peut être construit tel que vendu.",
+                "Planifiez le projet de bout en bout : calendrier, commandes de matériaux, créneaux de production, équipe de pose et logistique de chantier.",
+                "Organisez ou réalisez le relevé sur place et vérifiez que le chantier est prêt avant de planifier la pose."
+              ]
+            },
+            {
+              "title": "Réunions et communication",
+              "items": [
+                "Assistez à chaque réunion de projet nécessaire : réunions de chantier, de coordination et avec le client.",
+                "Après chaque réunion, rédigez un compte rendu et classez-le le jour même dans le dossier de projet sur OneDrive.",
+                "Soyez l’interlocuteur unique du client, de l’architecte et de l’entrepreneur général ; coordonnez-vous avec les autres corps de métier (électricité, éclairage, HVAC, sprinklers) partout où le plafond s’intègre à leur travail.",
+                "Donnez chaque semaine à votre responsable et à l’équipe Admin l’état de tous les projets en cours : planning, budget et risques."
+              ]
+            },
+            {
+              "title": "Documentation technique",
+              "items": [
+                "Réalisez les plans techniques et les documents de spécification chaque fois qu’un projet l’exige.",
+                "Rassemblez toute la documentation de chaque projet : plans, fiches techniques des matériaux, certificats feu et acoustiques, confirmations de commande, photos de chantier et informations as-built.",
+                "Tenez le dossier de projet sur OneDrive complet et à jour, pour que n’importe qui dans l’équipe puisse reprendre le projet à tout moment."
+              ]
+            },
+            {
+              "title": "Budget et exécution",
+              "items": [
+                "Livrez chaque projet dans le budget : suivez les coûts par rapport à l’offre, commandez les matériaux à temps et signalez tôt les écarts.",
+                "Gérez les travaux supplémentaires et les modifications : délimitez-les, faites-les chiffrer et approuver avant leur exécution.",
+                "Aidez l’équipe de pose à atteindre les objectifs du projet : préparez le briefing de pose, assurez-vous que matériaux, outils et accès au chantier sont prêts, et résolvez les problèmes sur place."
+              ]
+            },
+            {
+              "title": "Qualité, réception et clôture",
+              "items": [
+                "Réalisez le contrôle final, gérez la liste des réserves et organisez la réception formelle avec le client.",
+                "Clôturez le projet : complétez la documentation, confirmez avec l’équipe Admin que la facturation peut partir et consignez les enseignements."
+              ]
+            },
+            {
+              "title": "Garantie — dix ans",
+              "items": [
+                "Restez l’interlocuteur du projet pendant toute la période de garantie de dix ans.",
+                "Enregistrez et évaluez les demandes de garantie, planifiez les interventions de service avec l’équipe de pose et tenez à jour le journal de garantie du projet."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Structuré sur papier. Pratique sur chantier.",
+          "items": [
+            "Expérience confirmée en gestion de projet dans la construction, le parachèvement intérieur ou une entreprise d’installation technique.",
+            "Vous lisez et produisez plans techniques et spécifications avec assurance (AutoCAD, SketchUp ou équivalent).",
+            "Structuré et attaché à la documentation : un dossier de projet complet est votre norme, pas une réflexion après coup.",
+            "Attentif au budget et commercialement vigilant : vous repérez les écarts avant qu’ils ne deviennent des coûts.",
+            "À l’aise sur un chantier avec les poseurs comme en salle de réunion avec architectes et entrepreneurs.",
+            "Néerlandais et anglais courants ; le français est un atout majeur pour les projets à Bruxelles et en Wallonie.",
+            "À l’aise avec Microsoft 365 — OneDrive, Teams, Outlook et Excel.",
+            "Permis B : vous vous déplacez entre le bureau, les chantiers et les clients."
+          ]
+        },
+        "offer": {
+          "title": "Un package clair. Un poste avec de vraies responsabilités.",
+          "items": [
+            {
+              "title": "Contrat à durée indéterminée",
+              "sub": "Temps plein, avec un salaire brut mensuel fixe."
+            },
+            {
+              "title": "Voiture de société",
+              "sub": "Avec carte carburant — aussi à usage privé. Dès le début."
+            },
+            {
+              "title": "Chèques-repas",
+              "sub": "8 € par jour presté. Après 3 mois."
+            },
+            {
+              "title": "Assurance hospitalisation",
+              "sub": "Couvre vos frais d’hospitalisation. Après 3 mois."
+            }
+          ],
+          "closing": "En plus du package : un poste qui est le vôtre dès le premier jour, une ligne directe avec le CEO, un produit fait main en Belgique et posé dans toute l’Europe et aux États-Unis, et la liberté de façonner la façon dont les projets sont menés dans un groupe international en croissance."
+        },
+        "apply": {
+          "title": "Prêt à porter le prochain projet ?",
+          "body": "Envoyez votre CV et une courte motivation avec l’objet « Project Manager ». Le premier entretien a lieu à notre siège de Beveren-Waas — avec le CEO et avec l’équipe avec laquelle vous travaillerez chaque jour.",
+          "hours": "lun–ven · 08h30–17h00"
+        }
+      },
+      "inside-sales": {
+        "title": "Commercial sédentaire (Inside Sales)",
+        "location": "Częstochowa, Pologne",
+        "contract": "Temps plein, CDI",
+        "languages": "Polonais et anglais — l’allemand, le néerlandais ou le français est un atout",
+        "summary": "Vous transformez chaque demande qui arrive chez Alto Design — d’un poseur, d’un revendeur, d’un architecte ou d’un particulier — en une offre claire, une commande complète et un client qui revient.",
+        "facts": [
+          {
+            "label": "Lieu",
+            "value": "Alto Design, ul. Legionów 59, Częstochowa — au bureau, dans notre usine de production polonaise"
+          },
+          {
+            "label": "Contrat",
+            "value": "Temps plein, CDI · Début : dès que possible"
+          },
+          {
+            "label": "Langues",
+            "value": "Polonais et anglais au quotidien · l’allemand, le néerlandais ou le français est un atout pour les clients export"
+          },
+          {
+            "label": "Rapporte à",
+            "value": "La direction d’Alto Design · lignes courtes vers la production et vers le groupe en Belgique"
+          }
+        ],
+        "role": {
+          "title": "Chaque demande mérite une réponse. Rapide, précise — et de vous.",
+          "p1": "Alto Design Sp. z o.o. est l’usine de production de STRETCH Group à Częstochowa et le point de contact du marché polonais et des poseurs d’Europe centrale et orientale. Des demandes arrivent chaque jour — par téléphone, par e-mail, via le site et via le portail clients — de poseurs qui ont besoin de matériel, de revendeurs qui veulent une offre, d’architectes qui cherchent une spécification et de particuliers qui veulent un plafond. C’est vous qui répondez.",
+          "p2": "En inside sales, vous travaillez au bureau, pas sur la route. Vous qualifiez chaque demande, préparez l’offre, la suivez jusqu’à ce qu’elle devienne une commande et transmettez à la production une commande complète et correcte. Vous tenez le client informé jusqu’à la livraison — et vous faites en sorte que la prochaine fois, il pense d’abord à Alto Design.",
+          "lines": [
+            {
+              "label": "Rapporte à",
+              "value": "La direction d’Alto Design"
+            },
+            {
+              "label": "Travaille avec",
+              "value": "La production et le planning à Częstochowa ; les équipes Admin et projet à Beveren-Waas"
+            },
+            {
+              "label": "Sert",
+              "value": "Poseurs, revendeurs, architectes et clients particuliers en Pologne et sur les marchés export"
+            }
+          ]
+        },
+        "do": {
+          "title": "Demande. Offre. Commande. Livré.",
+          "intro": "Cinq domaines de responsabilité, dans l’ordre où une demande les traverse.",
+          "areas": [
+            {
+              "title": "Demandes entrantes",
+              "items": [
+                "Répondez à chaque demande entrante — téléphone, e-mail, formulaires du site et portail clients — le jour ouvrable même.",
+                "Qualifiez la demande : qui demande, quelle pièce, quel système, quel délai, et si le client a encore besoin d’un poseur.",
+                "Enregistrez chaque lead et chaque contact dans le CRM, pour que rien ne se perde et que n’importe quel collègue puisse reprendre le dossier."
+              ]
+            },
+            {
+              "title": "Offres",
+              "items": [
+                "Préparez des offres pour toiles, profilés, éclairage et accessoires à partir de plans, de relevés et de photos, avec la liste de prix et le configurateur de kits.",
+                "Conseillez le bon système — polyester ou PVC, acoustique, rétroéclairé ou imprimé — et ce dont la production a besoin pour le confectionner correctement.",
+                "Relancez chaque offre à temps, répondez aux questions et ajustez jusqu’à ce que le client puisse décider."
+              ]
+            },
+            {
+              "title": "Commandes et production",
+              "items": [
+                "Transformez les offres acceptées en commandes complètes : dimensions, soudures, finitions, découpes d’éclairage, adresse et date de livraison — le tout confirmé par écrit.",
+                "Convenez des délais avec la production et le planning, confirmez-les au client et signalez immédiatement tout changement.",
+                "Vérifiez les confirmations de commande et les données de facturation avec l’administration avant qu’une commande ne parte en production."
+              ]
+            },
+            {
+              "title": "Partenaires et formation",
+              "items": [
+                "Accueillez les nouveaux poseurs et revendeurs : ouvrez leur compte sur le portail clients et expliquez la liste de prix, le configurateur et le processus de commande.",
+                "Faites connaître la formation de poseurs STRETCH et tenez à jour la liste des poseurs formés, pour orienter les particuliers vers un partenaire près de chez eux.",
+                "Gardez les données partenaires, les prix et les informations produits à jour dans le portail et le CRM."
+              ]
+            },
+            {
+              "title": "Reporting",
+              "items": [
+                "Rendez compte chaque semaine à la direction des demandes, offres, commandes et du taux de conversion.",
+                "Repérez les questions récurrentes, les informations manquantes et les offres perdues — et proposez ce qu’il faut changer."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Commercial au téléphone. Précis sur papier.",
+          "items": [
+            "Expérience en inside sales, service clients ou traitement des commandes en environnement B2B — idéalement construction, parachèvement intérieur ou matériaux de construction.",
+            "Vous lisez un plan et un dessin technique, et vous posez les bonnes questions quand une cote manque.",
+            "Polonais courant et bon anglais écrit et parlé ; l’allemand, le néerlandais ou le français est un atout majeur pour les clients export.",
+            "Organisé et précis : une commande complète et correcte est votre norme, pas une réflexion après coup.",
+            "À l’aise avec Microsoft 365 (Outlook, Teams, Excel) et rapide à prendre en main un CRM, un portail clients et un configurateur.",
+            "Un style de relance aimable et persévérant : vous bouclez chaque offre."
+          ]
+        },
+        "offer": {
+          "title": "Un poste stable dans un groupe en croissance.",
+          "items": [
+            {
+              "title": "Contrat à durée indéterminée",
+              "sub": "Contrat de travail à temps plein chez Alto Design Sp. z o.o."
+            },
+            {
+              "title": "Formation produit",
+              "sub": "Formation pratique dans notre usine de Częstochowa et avec l’équipe de Beveren-Waas."
+            },
+            {
+              "title": "Au bureau",
+              "sub": "Un poste de travail fixe au ul. Legionów 59 à Częstochowa, du lundi au vendredi."
+            },
+            {
+              "title": "Équipe internationale",
+              "sub": "Contact quotidien avec des poseurs, des revendeurs et des collègues dans toute l’Europe."
+            }
+          ],
+          "closing": "En plus du package : un produit fabriqué chez nous — pas importé — une ligne directe avec la production, et la liberté de grandir avec le marché polonais et l’activité export de STRETCH Group."
+        },
+        "apply": {
+          "title": "Prêt à répondre à la prochaine demande ?",
+          "body": "Envoyez votre CV et une courte motivation en polonais ou en anglais avec l’objet « Inside Sales ». Le premier entretien a lieu chez Alto Design à Częstochowa — avec la direction et avec les collègues avec lesquels vous travaillerez chaque jour.",
+          "hours": "lun–ven · 08h30–17h00"
+        }
+      }
     }
   },
   "contactPage": {

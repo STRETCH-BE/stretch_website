@@ -23,7 +23,8 @@
       "materials": "Materials",
       "architects": "Architects",
       "priceCalculator": "Price calculator",
-      "acoustics": "Room acoustics"
+      "acoustics": "Room acoustics",
+      "careers": "Careers"
     },
     "cta": {
       "freeQuote": "Free quote",
@@ -88,7 +89,9 @@
     "projectsExportTitle": "Stretch ceilings for international projects | STRETCH",
     "projectsExportDescription": "Translucent, printed and acoustic stretch ceilings for fit-out contractors worldwide — welded in our EU factory, shipped by air, documented fire classes.",
     "priceCalculatorTitle": "Stretch ceiling price calculator — cost per m² | STRETCH",
-    "priceCalculatorDescription": "Instant indicative price for your stretch ceiling: m² × ceiling type using the published €70–200/m² ranges. Free firm quote, usually the same working day."
+    "priceCalculatorDescription": "Instant indicative price for your stretch ceiling: m² × ceiling type using the published €70–200/m² ranges. Free firm quote, usually the same working day.",
+    "careersTitle": "Careers at STRETCH — vacancies in Belgium and Poland | STRETCH",
+    "careersDescription": "Join a manufacturer, not an importer. Open positions at STRETCH Group in Beveren-Waas (Belgium) and Częstochowa (Poland): project management, inside sales and more."
   },
   "cookies": {
     "title": "We value your privacy",
@@ -178,7 +181,8 @@
       "kit": "DIY kit",
       "supply": "Installer supply",
       "projectsExport": "Project export",
-      "priceCalculator": "Price calculator"
+      "priceCalculator": "Price calculator",
+      "careers": "Careers"
     },
     "dealers": "Dealer network",
     "worldwideHeading": "STRETCH worldwide",
@@ -5130,6 +5134,326 @@
     "cta": {
       "title": "Let’s build something seamless.",
       "button": "Request a free quote"
+    }
+  },
+  "careersPage": {
+    "crumb": "Careers",
+    "eyebrow": "Careers at STRETCH",
+    "titleA": "One day to install.",
+    "titleB": "A career to",
+    "titleC": "build",
+    "lead": "STRETCH designs, manufactures and installs seamless stretch ceilings and walls from Beveren-Waas (Belgium) and Częstochowa (Poland) — a manufacturer, not an importer, delivering projects across Europe and the US. We are growing, and we are looking for people who take ownership.",
+    "heroImageAlt": "The STRETCH workshop in Beveren-Waas",
+    "facts": [
+      "Installed in one day",
+      "25-year lifespan",
+      "100% recyclable",
+      "Handmade in Belgium"
+    ],
+    "openEyebrow": "Open positions",
+    "openTitle": "Where we are hiring now",
+    "openLead": "Two companies, one group: Stretch Productions BV in Beveren-Waas (Belgium) and Alto Design Sp. z o.o. in Częstochowa (Poland). Every vacancy names its location and its employer.",
+    "noOpenings": "There are no open positions at the moment — an open application is always welcome.",
+    "locationLabel": "Location",
+    "contractLabel": "Contract",
+    "employerLabel": "Employer",
+    "languagesLabel": "Languages",
+    "viewVacancy": "View vacancy",
+    "mfx": "(m/f/x)",
+    "aboutEyebrow": "About STRETCH",
+    "about": {
+      "title": "Handmade in Belgium. Installed in one day.",
+      "p1": "STRETCH designs, manufactures and installs seamless stretch ceilings and walls — cold-fitted in a single day, without dust, rubble or paint. Acoustics, light and print integrate into one seamless surface that outlives conventional plasterboard.",
+      "p2": "STRETCH is part of STRETCH Group, together with Alto Design (our production in Częstochowa, Poland), Re-Sound (acoustic panels and booths) and Stretch Metal (metalwork): a manufacturer, not an importer. From Beveren-Waas we deliver projects across Belgium, Europe and the US — from a living room to a hotel wellness, a bank headquarters or a recording studio."
+    },
+    "spontaneous": {
+      "eyebrow": "Open application",
+      "title": "No matching role? Tell us what you would bring.",
+      "body": "We are always interested in installers, project people and sales profiles who want to work with a product made in-house. Send your CV and a few lines about yourself with the subject line “Open application”.",
+      "button": "Send an open application",
+      "subject": "Open application"
+    },
+    "detail": {
+      "back": "All vacancies",
+      "vacancyEyebrow": "Vacancy",
+      "published": "Published on {date}",
+      "reportingHeading": "Reporting lines",
+      "roleEyebrow": "The role",
+      "doEyebrow": "What you will do",
+      "whoEyebrow": "Who you are",
+      "offerEyebrow": "What we offer",
+      "applyEyebrow": "How to apply",
+      "applyButton": "Apply by e-mail",
+      "emailLabel": "E-mail",
+      "questionsLabel": "Questions",
+      "subjectNote": "Subject line: “{subject}”",
+      "otherEyebrow": "Other open positions"
+    },
+    "jobs": {
+      "project-manager": {
+        "title": "Project Manager",
+        "location": "Beveren-Waas, Belgium",
+        "contract": "Full-time, permanent",
+        "languages": "Dutch & English — French is an asset",
+        "summary": "From the moment a project is sold until the day it is handed over — and through the ten years of warranty that follow — you own it.",
+        "facts": [
+          {
+            "label": "Location",
+            "value": "Beveren-Waas HQ + project sites, mainly in Belgium, occasionally abroad"
+          },
+          {
+            "label": "Contract",
+            "value": "Full-time, permanent · Start: as soon as possible"
+          },
+          {
+            "label": "Package",
+            "value": "Company car & fuel card, also for private use · meal vouchers · hospitalisation insurance"
+          },
+          {
+            "label": "Reports to",
+            "value": "CEO & Admin team · Direct line, short decisions"
+          }
+        ],
+        "role": {
+          "title": "One person carries every project. That is you.",
+          "p1": "Every project STRETCH sells needs an owner: someone who takes it over from sales at signature, carries it through planning, production and installation, hands it over to a satisfied client — and stays its point of contact for the full ten-year warranty period.",
+          "p2": "You are the link between sales, the Admin team, production and the installation team, and the one person the client, the architect and the contractor can always reach. You attend the meetings, keep the project folder complete, draw and specify what needs it, guard the budget and make sure the installers on site have everything they need to deliver.",
+          "lines": [
+            {
+              "label": "Reports to",
+              "value": "Michael Nicasens, CEO"
+            },
+            {
+              "label": "Works with",
+              "value": "The Admin team"
+            },
+            {
+              "label": "Coordinates",
+              "value": "The installation team, sales, and production at Alto Design in Częstochowa (PL)"
+            }
+          ]
+        },
+        "do": {
+          "title": "Sold. Planned. Built. Handed over. Guaranteed.",
+          "intro": "Six areas of responsibility, in the order a project moves through them.",
+          "areas": [
+            {
+              "title": "Project takeover & planning",
+              "items": [
+                "Take over every sold project from sales: review the quotation, drawings and scope, and confirm that what was sold can be built as sold.",
+                "Plan the project end-to-end: timeline, material orders, production slots, installation crew and site logistics.",
+                "Organise or carry out the site measurement and check site readiness before installation is scheduled."
+              ]
+            },
+            {
+              "title": "Meetings & communication",
+              "items": [
+                "Attend every necessary project meeting: site meetings, coordination meetings and client meetings.",
+                "After each meeting, write a summary and file it the same day in the project folder on OneDrive.",
+                "Be the single point of contact for the client, the architect and the general contractor; coordinate with the other trades (electrical, lighting, HVAC, sprinklers) wherever the ceiling integrates with their work.",
+                "Give your manager and the Admin team a weekly status of all running projects: planning, budget and risks."
+              ]
+            },
+            {
+              "title": "Technical documentation",
+              "items": [
+                "Create technical drawings and specification documents whenever a project requires them.",
+                "Gather all documentation for every project: drawings, material datasheets, fire and acoustic certificates, order confirmations, site photos and as-built information.",
+                "Keep the project folder on OneDrive complete and up to date, so anyone in the team can pick up the project at any moment."
+              ]
+            },
+            {
+              "title": "Budget & execution",
+              "items": [
+                "Deliver every project within budget: track costs against the quotation, order materials on time and flag deviations early.",
+                "Manage additional works and changes: scope them, have them quoted and approved before they are executed.",
+                "Support the installation team in reaching the project goals: prepare the installation briefing, make sure materials, tools and site access are ready, and solve problems on site."
+              ]
+            },
+            {
+              "title": "Quality, handover & closing",
+              "items": [
+                "Carry out the final inspection, manage the snag list and organise the formal handover with the client.",
+                "Close the project: complete the documentation, confirm invoicing readiness with the Admin team and record the lessons learned."
+              ]
+            },
+            {
+              "title": "Warranty — ten years",
+              "items": [
+                "Remain the point of contact for the project during the full ten-year warranty period.",
+                "Register and assess warranty claims, plan service interventions with the installation team, and keep the project’s warranty log up to date."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Structured on paper. Practical on site.",
+          "items": [
+            "Proven experience in project management in construction, interior finishing or a technical installation business.",
+            "You read and produce technical drawings and specifications with confidence (AutoCAD, SketchUp or similar).",
+            "Structured and documentation-minded: a complete project folder is your standard, not an afterthought.",
+            "Budget-aware and commercially alert: you notice deviations before they become costs.",
+            "At ease on a construction site with installers and in a meeting room with architects and contractors.",
+            "Fluent in Dutch and English; French is a strong asset for projects in Brussels and Wallonia.",
+            "Fluent with Microsoft 365 — OneDrive, Teams, Outlook and Excel.",
+            "Driving licence B: you move between the office, the sites and the clients."
+          ]
+        },
+        "offer": {
+          "title": "A clear package. A role with real ownership.",
+          "items": [
+            {
+              "title": "Permanent contract",
+              "sub": "Full-time, with a fixed monthly gross salary."
+            },
+            {
+              "title": "Company car",
+              "sub": "Including fuel card — also for private use. From the start."
+            },
+            {
+              "title": "Meal vouchers",
+              "sub": "€ 8 per working day. After 3 months."
+            },
+            {
+              "title": "Hospitalisation insurance",
+              "sub": "Covers your hospital costs. After 3 months."
+            }
+          ],
+          "closing": "On top of the package: a role you own from day one, a direct line to the CEO, a product handmade in Belgium that is installed across Europe and the US, and the room to shape how projects are run inside a growing international group."
+        },
+        "apply": {
+          "title": "Ready to carry the next project?",
+          "body": "Send your CV and a short motivation with the subject line “Project Manager”. The first conversation takes place at our headquarters in Beveren-Waas — with the CEO, and with the team you will work with every day.",
+          "hours": "Mon–Fri · 08:30–17:00"
+        }
+      },
+      "inside-sales": {
+        "title": "Inside Sales Representative",
+        "location": "Częstochowa, Poland",
+        "contract": "Full-time, permanent",
+        "languages": "Polish & English — German, Dutch or French is an asset",
+        "summary": "You turn every enquiry that reaches Alto Design — from an installer, a dealer, an architect or a homeowner — into a clear quotation, a complete order and a client who comes back.",
+        "facts": [
+          {
+            "label": "Location",
+            "value": "Alto Design, ul. Legionów 59, Częstochowa — office-based, at our Polish production plant"
+          },
+          {
+            "label": "Contract",
+            "value": "Full-time, permanent · Start: as soon as possible"
+          },
+          {
+            "label": "Languages",
+            "value": "Polish and English in daily use · German, Dutch or French are an asset for export clients"
+          },
+          {
+            "label": "Reports to",
+            "value": "The management of Alto Design · short lines to production and to the group in Belgium"
+          }
+        ],
+        "role": {
+          "title": "Every enquiry deserves an answer. Fast, precise — and from you.",
+          "p1": "Alto Design Sp. z o.o. is the STRETCH Group’s production plant in Częstochowa and the point of contact for the Polish market and for installers across Central and Eastern Europe. Enquiries arrive every day — by phone, by e-mail, through the website and through the client portal — from installers who need material, dealers who need a quotation, architects who need a specification and homeowners who want a ceiling. You answer them.",
+          "p2": "As inside sales you work from the office, not on the road. You qualify each enquiry, prepare the quotation, follow it up until it becomes an order, and hand a complete, correct order to production. You keep the client informed until delivery — and you make sure they think of Alto Design first the next time.",
+          "lines": [
+            {
+              "label": "Reports to",
+              "value": "The management of Alto Design"
+            },
+            {
+              "label": "Works with",
+              "value": "Production and planning in Częstochowa; the Admin and project teams in Beveren-Waas"
+            },
+            {
+              "label": "Serves",
+              "value": "Installers, dealers, architects and private clients in Poland and the export markets"
+            }
+          ]
+        },
+        "do": {
+          "title": "Enquiry. Quotation. Order. Delivered.",
+          "intro": "Five areas of responsibility, in the order an enquiry moves through them.",
+          "areas": [
+            {
+              "title": "Inbound enquiries",
+              "items": [
+                "Answer every incoming enquiry — phone, e-mail, website forms and the client portal — the same working day.",
+                "Qualify the request: who is asking, which room, which system, which deadline, and whether the client still needs an installer.",
+                "Register every lead and every contact in the CRM, so nothing is lost and any colleague can pick up the file."
+              ]
+            },
+            {
+              "title": "Quotations",
+              "items": [
+                "Prepare quotations for membranes, profiles, lighting and accessories from drawings, measurements and photos, using the price list and the kit configurator.",
+                "Advise on the right system — polyester or PVC, acoustic, backlit or printed — and on what production needs to confection it correctly.",
+                "Follow up every quotation on time, answer questions and adjust until the client can decide."
+              ]
+            },
+            {
+              "title": "Orders & production",
+              "items": [
+                "Convert accepted quotations into complete orders: dimensions, seams, finishes, lighting cut-outs, delivery address and date — all confirmed in writing.",
+                "Agree lead times with production and planning, confirm them to the client and flag any change immediately.",
+                "Check order confirmations and invoicing details with the administration before an order goes into production."
+              ]
+            },
+            {
+              "title": "Partners & training",
+              "items": [
+                "Onboard new installers and dealers: open their client portal account and explain the price list, the configurator and the ordering process.",
+                "Promote the STRETCH installer training and keep the list of trained installers up to date, so private clients can be referred to a partner near them.",
+                "Keep partner data, prices and product information current in the portal and the CRM."
+              ]
+            },
+            {
+              "title": "Reporting",
+              "items": [
+                "Report weekly on enquiries, quotations, orders and conversion to the management.",
+                "Spot recurring questions, missing information and lost quotations — and propose what to change."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Commercial on the phone. Precise on paper.",
+          "items": [
+            "Experience in inside sales, customer service or order handling in a B2B environment — ideally construction, interior finishing or building materials.",
+            "You read a floor plan and a technical drawing, and you ask the right questions when a measurement is missing.",
+            "Fluent Polish and good written and spoken English; German, Dutch or French are a strong asset for export clients.",
+            "Organised and accurate: a complete, correct order is your standard, not an afterthought.",
+            "Comfortable with Microsoft 365 (Outlook, Teams, Excel) and quick to learn a CRM, a client portal and a configurator.",
+            "A friendly, persistent follow-up style: you close the loop on every quotation."
+          ]
+        },
+        "offer": {
+          "title": "A stable role in a growing group.",
+          "items": [
+            {
+              "title": "Permanent contract",
+              "sub": "Full-time employment contract with Alto Design Sp. z o.o."
+            },
+            {
+              "title": "Product training",
+              "sub": "Hands-on training in our Częstochowa plant and with the team in Beveren-Waas."
+            },
+            {
+              "title": "Office-based",
+              "sub": "A fixed workplace at ul. Legionów 59 in Częstochowa, Monday to Friday."
+            },
+            {
+              "title": "International team",
+              "sub": "Daily contact with installers, dealers and colleagues across Europe."
+            }
+          ],
+          "closing": "On top of the package: a product made in-house — not imported — a direct line to production, and the room to grow with the Polish market and the export business of STRETCH Group."
+        },
+        "apply": {
+          "title": "Ready to answer the next enquiry?",
+          "body": "Send your CV and a short motivation in Polish or English with the subject line “Inside Sales”. The first conversation takes place at Alto Design in Częstochowa — with the management and the colleagues you will work with every day.",
+          "hours": "Mon–Fri · 08:30–17:00"
+        }
+      }
     }
   },
   "contactPage": {

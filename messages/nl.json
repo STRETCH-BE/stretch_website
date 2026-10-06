@@ -23,7 +23,8 @@
       "materials": "Materialen",
       "architects": "Architecten",
       "priceCalculator": "Prijscalculator",
-      "acoustics": "Akoestiek"
+      "acoustics": "Akoestiek",
+      "careers": "Vacatures"
     },
     "cta": {
       "freeQuote": "Gratis offerte",
@@ -88,7 +89,9 @@
     "projectsExportTitle": "Spanplafonds voor internationale projecten | STRETCH",
     "projectsExportDescription": "Translucente, bedrukte en akoestische spanplafonds voor fit-out-aannemers wereldwijd — gelast in onze EU-fabriek, per luchtvracht, met brandklassen.",
     "priceCalculatorTitle": "Spanplafond prijs berekenen — prijs per m² | STRETCH",
-    "priceCalculatorDescription": "Meteen een richtprijs voor uw spanplafond: m² × plafondtype met de gepubliceerde vorken van €70–200/m². Gratis vaste offerte, meestal dezelfde werkdag."
+    "priceCalculatorDescription": "Meteen een richtprijs voor uw spanplafond: m² × plafondtype met de gepubliceerde vorken van €70–200/m². Gratis vaste offerte, meestal dezelfde werkdag.",
+    "careersTitle": "Werken bij STRETCH — vacatures in België en Polen | STRETCH",
+    "careersDescription": "Werk bij een fabrikant, niet bij een importeur. Openstaande functies bij STRETCH Group in Beveren-Waas (België) en Częstochowa (Polen): projectmanagement, inside sales en meer."
   },
   "cookies": {
     "title": "We hechten waarde aan je privacy",
@@ -178,7 +181,8 @@
       "kit": "Doe-het-zelfkit",
       "supply": "Levering voor installateurs",
       "projectsExport": "Projectexport",
-      "priceCalculator": "Prijs berekenen"
+      "priceCalculator": "Prijs berekenen",
+      "careers": "Vacatures"
     },
     "dealers": "Dealernetwerk",
     "worldwideHeading": "STRETCH wereldwijd",
@@ -5136,6 +5140,326 @@
     "cta": {
       "title": "Laten we samen iets naadloos bouwen.",
       "button": "Vraag een gratis offerte aan"
+    }
+  },
+  "careersPage": {
+    "crumb": "Vacatures",
+    "eyebrow": "Werken bij STRETCH",
+    "titleA": "Eén dag om te plaatsen.",
+    "titleB": "Een loopbaan om te",
+    "titleC": "bouwen",
+    "lead": "STRETCH ontwerpt, produceert en plaatst naadloze spanplafonds en spanwanden vanuit Beveren-Waas (België) en Częstochowa (Polen) — een fabrikant, geen importeur, met projecten in heel Europa en de VS. We groeien, en we zoeken mensen die verantwoordelijkheid nemen.",
+    "heroImageAlt": "Het STRETCH-atelier in Beveren-Waas",
+    "facts": [
+      "Geplaatst in één dag",
+      "25 jaar levensduur",
+      "100% recycleerbaar",
+      "Handgemaakt in België"
+    ],
+    "openEyebrow": "Openstaande functies",
+    "openTitle": "Waar we nu aanwerven",
+    "openLead": "Twee bedrijven, één groep: Stretch Productions BV in Beveren-Waas (België) en Alto Design Sp. z o.o. in Częstochowa (Polen). Elke vacature vermeldt haar locatie en haar werkgever.",
+    "noOpenings": "Er zijn op dit moment geen openstaande functies — een spontane sollicitatie is altijd welkom.",
+    "locationLabel": "Locatie",
+    "contractLabel": "Contract",
+    "employerLabel": "Werkgever",
+    "languagesLabel": "Talen",
+    "viewVacancy": "Bekijk vacature",
+    "mfx": "(m/v/x)",
+    "aboutEyebrow": "Over STRETCH",
+    "about": {
+      "title": "Handgemaakt in België. Geplaatst in één dag.",
+      "p1": "STRETCH ontwerpt, produceert en plaatst naadloze spanplafonds en spanwanden — koud gemonteerd in één dag, zonder stof, puin of verf. Akoestiek, licht en print versmelten tot één naadloos oppervlak dat klassieke gipsplaat overleeft.",
+      "p2": "STRETCH maakt deel uit van STRETCH Group, samen met Alto Design (onze productie in Częstochowa, Polen), Re-Sound (akoestische panelen en belcabines) en Stretch Metal (metaalbewerking): een fabrikant, geen importeur. Vanuit Beveren-Waas leveren we projecten in heel België, Europa en de VS — van een woonkamer tot een hotelwellness, een bankhoofdkantoor of een opnamestudio."
+    },
+    "spontaneous": {
+      "eyebrow": "Spontane sollicitatie",
+      "title": "Geen passende functie? Vertel ons wat jij meebrengt.",
+      "body": "We zijn altijd geïnteresseerd in plaatsers, projectmensen en commerciële profielen die willen werken met een product dat we zelf maken. Stuur je cv en een paar regels over jezelf met als onderwerp “Spontane sollicitatie”.",
+      "button": "Solliciteer spontaan",
+      "subject": "Spontane sollicitatie"
+    },
+    "detail": {
+      "back": "Alle vacatures",
+      "vacancyEyebrow": "Vacature",
+      "published": "Gepubliceerd op {date}",
+      "reportingHeading": "Rapporteringslijnen",
+      "roleEyebrow": "De functie",
+      "doEyebrow": "Wat je zult doen",
+      "whoEyebrow": "Wie je bent",
+      "offerEyebrow": "Wat wij bieden",
+      "applyEyebrow": "Hoe solliciteren",
+      "applyButton": "Solliciteer via e-mail",
+      "emailLabel": "E-mail",
+      "questionsLabel": "Vragen",
+      "subjectNote": "Onderwerp: “{subject}”",
+      "otherEyebrow": "Andere openstaande functies"
+    },
+    "jobs": {
+      "project-manager": {
+        "title": "Project Manager",
+        "location": "Beveren-Waas, België",
+        "contract": "Voltijds, onbepaalde duur",
+        "languages": "Nederlands & Engels — Frans is een troef",
+        "summary": "Vanaf het moment dat een project verkocht is tot de dag van de oplevering — en de tien jaar garantie die daarop volgen — is het van jou.",
+        "facts": [
+          {
+            "label": "Locatie",
+            "value": "Hoofdkantoor Beveren-Waas + werven, vooral in België, af en toe in het buitenland"
+          },
+          {
+            "label": "Contract",
+            "value": "Voltijds, onbepaalde duur · Start: zo snel mogelijk"
+          },
+          {
+            "label": "Pakket",
+            "value": "Bedrijfswagen & tankkaart, ook voor privégebruik · maaltijdcheques · hospitalisatieverzekering"
+          },
+          {
+            "label": "Rapporteert aan",
+            "value": "CEO & Admin-team · Directe lijn, korte beslissingen"
+          }
+        ],
+        "role": {
+          "title": "Eén persoon draagt elk project. Dat ben jij.",
+          "p1": "Elk project dat STRETCH verkoopt heeft een eigenaar nodig: iemand die het bij de ondertekening overneemt van sales, het door planning, productie en plaatsing loodst, het oplevert aan een tevreden klant — en het aanspreekpunt blijft voor de volledige garantieperiode van tien jaar.",
+          "p2": "Jij bent de schakel tussen sales, het Admin-team, productie en het plaatsingsteam, en de ene persoon die de klant, de architect en de aannemer altijd kunnen bereiken. Je woont de vergaderingen bij, houdt het projectdossier volledig, tekent en specificeert wat nodig is, bewaakt het budget en zorgt dat de plaatsers op de werf alles hebben om te leveren.",
+          "lines": [
+            {
+              "label": "Rapporteert aan",
+              "value": "Michael Nicasens, CEO"
+            },
+            {
+              "label": "Werkt samen met",
+              "value": "Het Admin-team"
+            },
+            {
+              "label": "Coördineert",
+              "value": "Het plaatsingsteam, sales en de productie bij Alto Design in Częstochowa (PL)"
+            }
+          ]
+        },
+        "do": {
+          "title": "Verkocht. Gepland. Gebouwd. Opgeleverd. Gegarandeerd.",
+          "intro": "Zes verantwoordelijkheidsgebieden, in de volgorde waarin een project ze doorloopt.",
+          "areas": [
+            {
+              "title": "Projectovername & planning",
+              "items": [
+                "Neem elk verkocht project over van sales: bekijk de offerte, de tekeningen en de scope, en bevestig dat wat verkocht is, gebouwd kan worden zoals verkocht.",
+                "Plan het project van begin tot einde: timing, materiaalbestellingen, productieslots, plaatsingsploeg en werflogistiek.",
+                "Organiseer of voer de opmeting uit en controleer of de werf klaar is voordat de plaatsing wordt ingepland."
+              ]
+            },
+            {
+              "title": "Vergaderingen & communicatie",
+              "items": [
+                "Woon elke noodzakelijke projectvergadering bij: werfvergaderingen, coördinatievergaderingen en klantenvergaderingen.",
+                "Schrijf na elke vergadering een verslag en bewaar het dezelfde dag in het projectdossier op OneDrive.",
+                "Wees het enige aanspreekpunt voor de klant, de architect en de hoofdaannemer; stem af met de andere disciplines (elektriciteit, verlichting, HVAC, sprinklers) overal waar het plafond met hun werk integreert.",
+                "Geef je manager en het Admin-team wekelijks een stand van zaken van alle lopende projecten: planning, budget en risico’s."
+              ]
+            },
+            {
+              "title": "Technische documentatie",
+              "items": [
+                "Maak technische tekeningen en specificatiedocumenten telkens een project dat vereist.",
+                "Verzamel alle documentatie voor elk project: tekeningen, materiaalfiches, brand- en akoestische attesten, orderbevestigingen, werffoto’s en as-built-informatie.",
+                "Houd het projectdossier op OneDrive volledig en up-to-date, zodat iedereen in het team het project op elk moment kan overnemen."
+              ]
+            },
+            {
+              "title": "Budget & uitvoering",
+              "items": [
+                "Lever elk project binnen budget: volg de kosten op tegenover de offerte, bestel materialen op tijd en signaleer afwijkingen vroeg.",
+                "Beheer meerwerken en wijzigingen: baken ze af, laat ze offreren en goedkeuren voordat ze worden uitgevoerd.",
+                "Ondersteun het plaatsingsteam bij het halen van de projectdoelen: bereid de plaatsingsbriefing voor, zorg dat materialen, gereedschap en werftoegang klaar zijn en los problemen op de werf op."
+              ]
+            },
+            {
+              "title": "Kwaliteit, oplevering & afsluiting",
+              "items": [
+                "Voer de eindcontrole uit, beheer de opleveringspunten en organiseer de formele oplevering met de klant.",
+                "Sluit het project af: vervolledig de documentatie, bevestig met het Admin-team dat er gefactureerd kan worden en noteer de geleerde lessen."
+              ]
+            },
+            {
+              "title": "Garantie — tien jaar",
+              "items": [
+                "Blijf het aanspreekpunt voor het project gedurende de volledige garantieperiode van tien jaar.",
+                "Registreer en beoordeel garantieclaims, plan service-interventies met het plaatsingsteam en houd het garantielogboek van het project bij."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Gestructureerd op papier. Praktisch op de werf.",
+          "items": [
+            "Aantoonbare ervaring in projectmanagement in de bouw, interieurafwerking of een technisch installatiebedrijf.",
+            "Je leest en maakt technische tekeningen en specificaties met vertrouwen (AutoCAD, SketchUp of vergelijkbaar).",
+            "Gestructureerd en documentatiegericht: een volledig projectdossier is je standaard, geen bijzaak.",
+            "Budgetbewust en commercieel alert: je merkt afwijkingen op voordat ze kosten worden.",
+            "Even thuis op een werf tussen de plaatsers als in een vergaderzaal met architecten en aannemers.",
+            "Vlot in het Nederlands en het Engels; Frans is een sterke troef voor projecten in Brussel en Wallonië.",
+            "Vertrouwd met Microsoft 365 — OneDrive, Teams, Outlook en Excel.",
+            "Rijbewijs B: je beweegt je tussen het kantoor, de werven en de klanten."
+          ]
+        },
+        "offer": {
+          "title": "Een duidelijk pakket. Een functie met echte verantwoordelijkheid.",
+          "items": [
+            {
+              "title": "Contract van onbepaalde duur",
+              "sub": "Voltijds, met een vast maandelijks brutoloon."
+            },
+            {
+              "title": "Bedrijfswagen",
+              "sub": "Inclusief tankkaart — ook voor privégebruik. Vanaf de start."
+            },
+            {
+              "title": "Maaltijdcheques",
+              "sub": "€ 8 per gewerkte dag. Na 3 maanden."
+            },
+            {
+              "title": "Hospitalisatieverzekering",
+              "sub": "Dekt je ziekenhuiskosten. Na 3 maanden."
+            }
+          ],
+          "closing": "Bovenop het pakket: een functie die vanaf dag één van jou is, een directe lijn met de CEO, een product handgemaakt in België dat in heel Europa en de VS wordt geplaatst, en de ruimte om mee te bepalen hoe projecten worden geleid binnen een groeiende internationale groep."
+        },
+        "apply": {
+          "title": "Klaar om het volgende project te dragen?",
+          "body": "Stuur je cv en een korte motivatie met als onderwerp “Project Manager”. Het eerste gesprek vindt plaats op ons hoofdkantoor in Beveren-Waas — met de CEO en met het team waarmee je elke dag zult samenwerken.",
+          "hours": "ma–vr · 08:30–17:00"
+        }
+      },
+      "inside-sales": {
+        "title": "Inside Sales Medewerker",
+        "location": "Częstochowa, Polen",
+        "contract": "Voltijds, onbepaalde duur",
+        "languages": "Pools & Engels — Duits, Nederlands of Frans is een troef",
+        "summary": "Jij maakt van elke aanvraag die Alto Design bereikt — van een plaatser, een dealer, een architect of een particulier — een duidelijke offerte, een volledige bestelling en een klant die terugkomt.",
+        "facts": [
+          {
+            "label": "Locatie",
+            "value": "Alto Design, ul. Legionów 59, Częstochowa — op kantoor, in onze Poolse productievestiging"
+          },
+          {
+            "label": "Contract",
+            "value": "Voltijds, onbepaalde duur · Start: zo snel mogelijk"
+          },
+          {
+            "label": "Talen",
+            "value": "Pools en Engels in dagelijks gebruik · Duits, Nederlands of Frans is een troef voor exportklanten"
+          },
+          {
+            "label": "Rapporteert aan",
+            "value": "De directie van Alto Design · korte lijnen met de productie en met de groep in België"
+          }
+        ],
+        "role": {
+          "title": "Elke aanvraag verdient een antwoord. Snel, precies — en van jou.",
+          "p1": "Alto Design Sp. z o.o. is de productievestiging van STRETCH Group in Częstochowa en het aanspreekpunt voor de Poolse markt en voor plaatsers in Centraal- en Oost-Europa. Elke dag komen er aanvragen binnen — telefonisch, per e-mail, via de website en via het klantenportaal — van plaatsers die materiaal nodig hebben, dealers die een offerte willen, architecten die een bestek zoeken en particulieren die een plafond willen. Jij beantwoordt ze.",
+          "p2": "Als inside sales werk je vanop kantoor, niet op de baan. Je kwalificeert elke aanvraag, maakt de offerte op, volgt ze op tot ze een bestelling wordt en geeft een volledige, correcte bestelling door aan de productie. Je houdt de klant op de hoogte tot aan de levering — en zorgt ervoor dat die de volgende keer eerst aan Alto Design denkt.",
+          "lines": [
+            {
+              "label": "Rapporteert aan",
+              "value": "De directie van Alto Design"
+            },
+            {
+              "label": "Werkt samen met",
+              "value": "Productie en planning in Częstochowa; het Admin- en projectteam in Beveren-Waas"
+            },
+            {
+              "label": "Bedient",
+              "value": "Plaatsers, dealers, architecten en particuliere klanten in Polen en de exportmarkten"
+            }
+          ]
+        },
+        "do": {
+          "title": "Aanvraag. Offerte. Bestelling. Geleverd.",
+          "intro": "Vijf verantwoordelijkheidsgebieden, in de volgorde waarin een aanvraag ze doorloopt.",
+          "areas": [
+            {
+              "title": "Inkomende aanvragen",
+              "items": [
+                "Beantwoord elke inkomende aanvraag — telefoon, e-mail, websiteformulieren en het klantenportaal — dezelfde werkdag.",
+                "Kwalificeer de vraag: wie vraagt, welke ruimte, welk systeem, welke deadline, en of de klant nog een plaatser nodig heeft.",
+                "Registreer elke lead en elk contact in het CRM, zodat niets verloren gaat en elke collega het dossier kan overnemen."
+              ]
+            },
+            {
+              "title": "Offertes",
+              "items": [
+                "Maak offertes op voor doeken, profielen, verlichting en toebehoren op basis van tekeningen, opmetingen en foto’s, met de prijslijst en de kit-configurator.",
+                "Adviseer over het juiste systeem — polyester of pvc, akoestisch, verlicht of bedrukt — en over wat de productie nodig heeft om het correct te confectioneren.",
+                "Volg elke offerte tijdig op, beantwoord vragen en pas aan tot de klant kan beslissen."
+              ]
+            },
+            {
+              "title": "Bestellingen & productie",
+              "items": [
+                "Zet aanvaarde offertes om in volledige bestellingen: afmetingen, naden, afwerkingen, uitsparingen voor verlichting, leveradres en -datum — allemaal schriftelijk bevestigd.",
+                "Spreek levertermijnen af met productie en planning, bevestig ze aan de klant en signaleer elke wijziging onmiddellijk.",
+                "Controleer orderbevestigingen en factuurgegevens met de administratie voordat een bestelling in productie gaat."
+              ]
+            },
+            {
+              "title": "Partners & opleiding",
+              "items": [
+                "Verwelkom nieuwe plaatsers en dealers: open hun account op het klantenportaal en leg de prijslijst, de configurator en het bestelproces uit.",
+                "Promoot de STRETCH-plaatsersopleiding en houd de lijst van opgeleide plaatsers up-to-date, zodat particuliere klanten naar een partner in hun buurt kunnen worden doorverwezen.",
+                "Houd partnergegevens, prijzen en productinformatie actueel in het portaal en het CRM."
+              ]
+            },
+            {
+              "title": "Rapportering",
+              "items": [
+                "Rapporteer wekelijks over aanvragen, offertes, bestellingen en conversie aan de directie.",
+                "Herken terugkerende vragen, ontbrekende informatie en verloren offertes — en stel voor wat er moet veranderen."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Commercieel aan de telefoon. Precies op papier.",
+          "items": [
+            "Ervaring in inside sales, klantendienst of orderverwerking in een B2B-omgeving — bij voorkeur bouw, interieurafwerking of bouwmaterialen.",
+            "Je leest een grondplan en een technische tekening, en je stelt de juiste vragen wanneer een maat ontbreekt.",
+            "Vlot Pools en goed Engels, gesproken en geschreven; Duits, Nederlands of Frans is een sterke troef voor exportklanten.",
+            "Georganiseerd en nauwkeurig: een volledige, correcte bestelling is je standaard, geen bijzaak.",
+            "Vertrouwd met Microsoft 365 (Outlook, Teams, Excel) en snel thuis in een CRM, een klantenportaal en een configurator.",
+            "Een vriendelijke, volhardende opvolgstijl: je rondt elke offerte af."
+          ]
+        },
+        "offer": {
+          "title": "Een stabiele functie in een groeiende groep.",
+          "items": [
+            {
+              "title": "Contract van onbepaalde duur",
+              "sub": "Voltijdse arbeidsovereenkomst bij Alto Design Sp. z o.o."
+            },
+            {
+              "title": "Productopleiding",
+              "sub": "Praktijkopleiding in onze vestiging in Częstochowa en met het team in Beveren-Waas."
+            },
+            {
+              "title": "Op kantoor",
+              "sub": "Een vaste werkplek aan ul. Legionów 59 in Częstochowa, van maandag tot vrijdag."
+            },
+            {
+              "title": "Internationaal team",
+              "sub": "Dagelijks contact met plaatsers, dealers en collega’s in heel Europa."
+            }
+          ],
+          "closing": "Bovenop het pakket: een product dat we zelf maken — niet importeren — een directe lijn met de productie, en de ruimte om mee te groeien met de Poolse markt en de exportactiviteiten van STRETCH Group."
+        },
+        "apply": {
+          "title": "Klaar om de volgende aanvraag te beantwoorden?",
+          "body": "Stuur je cv en een korte motivatie in het Pools of het Engels met als onderwerp “Inside Sales”. Het eerste gesprek vindt plaats bij Alto Design in Częstochowa — met de directie en met de collega’s waarmee je elke dag zult samenwerken.",
+          "hours": "ma–vr · 08:30–17:00"
+        }
+      }
     }
   },
   "contactPage": {

@@ -26,6 +26,7 @@ import { pricesPublished } from '@/lib/currency';
 import { techMembranes, techTopicKeys, technicalUpdatedAt } from '@/lib/technical';
 import { materialGroupSlugs, materialsUpdatedAt } from '@/lib/materials';
 import { hasAcoustics, acousticsHref, isAcousticsRoute, acousticsUpdatedAt } from '@/lib/page-slugs';
+import { vacancySlugs, careersUpdatedAt } from '@/lib/careers';
 
 // No force-dynamic: reading request.headers already keeps this handler
 // request-dynamic, and every <lastmod> below is a real content date (F12) —
@@ -55,6 +56,8 @@ function collectRoutes(locale: Locale): string[] {
   );
   const projectRoutes = projectSlugs.map((s) => `/inspiration/${s}`);
   const materialRoutes = materialGroupSlugs.map((s) => `/materials/${s}`);
+  // Vacancy pages: the same slug on every locale (/careers itself is a static route).
+  const careerRoutes = vacancySlugs.map((s) => `/careers/${s}`);
   const statics = (isDealerMarket(locale)
     ? [...staticRoutes]
     : staticRoutes.filter((r) => r !== '/dealers' && r !== '/installer-training'))
@@ -74,6 +77,7 @@ function collectRoutes(locale: Locale): string[] {
     ...technicalRoutes,
     ...projectRoutes,
     ...materialRoutes,
+    ...careerRoutes,
     ...blogRoutes,
     ...dealerRoutes,
   ];
@@ -88,6 +92,7 @@ function priorityFor(route: string): number {
   if (route.startsWith('/blog/')) return 0.6;
   if (route.startsWith('/technical/')) return 0.6;
   if (route.startsWith('/inspiration/')) return 0.6;
+  if (route === '/careers' || route.startsWith('/careers/')) return 0.5;
   return 0.4;
 }
 
@@ -111,6 +116,7 @@ function lastModFor(route: string, locale: Locale): string {
   if (!d && route.startsWith('/technical/')) d = technicalUpdatedAt;
   if (!d && route.startsWith('/materials/')) d = materialsUpdatedAt;
   if (!d && route.startsWith('/dealers/')) d = dealersUpdatedAt;
+  if (!d && route.startsWith('/careers/')) d = careersUpdatedAt;
   if (!d && isAcousticsRoute(route)) d = acousticsUpdatedAt;
   return `${d ?? BUILD_DATE}T00:00:00.000Z`;
 }

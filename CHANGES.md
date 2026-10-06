@@ -1,3 +1,92 @@
+## 2026-10-06 (53) — Careers page: Project Manager (Beveren-Waas) and Inside Sales (Częstochowa)
+
+Michael, 6 Oct 2026, with the vacancy document "STRETCH — Vacancy — Project
+Manager" (September 2026): *"Create a vacancy page on the website, and add a
+vacancy for a project manager … just don't add the salary into it on the
+website, this is a position for Belgium. For Poland add a position as an
+inside sales person."*
+
+**Routes.** `/careers` (the list) and `/careers/[slug]` (one vacancy in
+full) on every locale, the same English slugs everywhere like `/about` and
+`/contact`. Structure — slug, hiring entity, workplace, date posted, how to
+apply — lives in `src/lib/careers.ts`; every word a visitor reads lives in
+the messages under `careersPage` (UI strings, a shared "About STRETCH"
+block, `jobs.<slug>` per vacancy) in all 16 files. The visitor's own
+market's vacancy is listed first (`vacanciesFor`: be/nl → Project Manager,
+pl → Inside Sales). `dynamicParams = false` on the detail route, so any
+other slug 404s; closing a vacancy is deleting its entry in `careers.ts`.
+
+**Project Manager — Stretch Productions BV, Beveren-Waas.** The six sections
+of the document, in its order and wording: the role, "Sold. Planned. Built.
+Handed over. Guaranteed." (six areas), who you are, what we offer, how to
+apply (CV + motivation to info@stretchgroup.be, subject "Project Manager",
++32 474 52 20 90, Mon–Fri 08:30–17:00). **Left out on purpose:** the
+€ 3,300 gross monthly salary — the package card says "Permanent contract ·
+full-time, with a fixed monthly gross salary" and the JobPosting node has no
+`baseSalary`. Kept from the document: company car + fuel card (private use,
+from the start), meal vouchers (€ 8 per working day, after 3 months),
+hospitalisation insurance (after 3 months). Also left out: the Admin team
+member's name in the reporting lines ("Works with: the Admin team") and the
+"(at this moment)" qualifiers; the CEO is named, as he is elsewhere on the
+site. Both are one message key each if Michael wants them back.
+
+**Inside Sales — Alto Design Sp. z o.o., Częstochowa. DRAFTED, for review.**
+No brief beyond the role name, so the copy is written from what the site
+already says about Alto Design (the Polish contact point, the four labelled
+lines, the client portal, the configurator, the installer training) in the
+same six-section shape: inbound enquiries → quotations → orders &
+production → partners & training → reporting. Office-based at ul. Legionów
+59; Polish + English, German/Dutch/French an asset; reports to "the
+management of Alto Design"; apply to info@stretch-sufit.pl, subject "Inside
+Sales", +48 730 700 333. **No salary or bonus structure is stated** (the
+offer card says "Permanent contract — full-time employment contract with
+Alto Design Sp. z o.o."). Michael to confirm: the reporting line, the
+language requirement, whether the role also covers export enquiries, and
+the title ("Specjalista ds. sprzedaży wewnętrznej (Inside Sales)" on pl).
+
+**Chrome.** Footer "Company" column gets a Careers link (`footer.links.
+careers`) under About; the mobile drawer gets the same link
+(`common.nav.careers`). Not in the desktop primary nav (already at capacity
+on Polish and Icelandic, see entry 32). `/careers` added to `staticRoutes`
+(+ `staticRouteDates`), the two vacancy URLs to the sitemap with
+`careersUpdatedAt` as lastmod, priority 0.5. `redirects.mjs`: the old
+WordPress job URLs on .be/.nl (`/jobs`, `/jobs/*`, `/vacature-*`) now 308 to
+`/careers` instead of `/about`, and `/project-manager-spanplafonds` — the
+old site's own PM vacancy — to `/careers/project-manager`. `public/llms.txt`
+lists the page.
+
+**Structured data.** `jobPostingSchema()` in `src/lib/structured-data.ts`:
+JobPosting with title, the page's own text as HTML description, datePosted,
+employmentType FULL_TIME, hiringOrganization inlined (Stretch Productions
+BV + logo / Alto Design Sp. z o.o. + altodesign.pl), jobLocation from
+site-config (Gentseweg 309 A3 / ul. Legionów 59), identifier, inLanguage.
+No baseSalary (not published), no validThrough (Google: omit when there is
+no fixed closing date). BreadcrumbList on both routes. Apply buttons are
+mailto links with the subject pre-filled and fire the existing
+`email_click` event (`careers_<slug>`, `careers_<slug>_apply`,
+`careers_open_application`).
+
+**Translations.** Written per language, not machine-copied: en (uk = en;
+us with American spelling), Dutch (be = nl, as the existing files), fr,
+de, pl, es, pt, da, sv, no, is. ch and fr-ch regenerated from de / fr by
+the overlay scripts; `careersPage.` is on both scripts' price-prefix lists
+so the Belgian meal-voucher amount stays in € on the Swiss domain (ß→ss
+and Angebot→Offerte apply as usual). Parity check: every `careersPage` key
+path, array length and ICU placeholder identical across the 16 files.
+
+**Verified.** `tsc` clean; `npm test` green; `check:client-messages` OK
+(careersPage is server-only); both overlays `--check` green; `next build`
+exit 0, 3238 static pages (48 new: 16 locales × 3), the only warning the
+pre-existing Supabase edge-runtime notice; on the dev server all 16
+locales × 3 pages return 200 with the locale's own text, the JobPosting
+node and the footer link, no MISSING_MESSAGE; on `next start` with Host
+headers: stretchplafond.be, stretch-sufit.pl, stretch.mt, stretchdecken.ch
+and /fr/ serve the pages unprefixed with the right title and canonical,
+`/careers/nope` 404s, `/jobs` and `/project-manager-spanplafonds` 308 to
+the new URLs, `/be/careers` 308s to the clean URL, and the pl sitemap
+carries the vacancy URL with the 2026-10-06 lastmod; layout checked at
+1440 and 390 px on the list and both vacancy pages (en, pl, be).
+
 ## 2026-10-03 (52) — Portuguese locale live: stretchteto.pt back in the switcher
 
 Michael, 3 Oct 2026: "I don't see the .pt domain in the language switcher"

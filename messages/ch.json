@@ -23,7 +23,8 @@
       "materials": "Material",
       "architects": "Architekten",
       "priceCalculator": "Kostenrechner",
-      "acoustics": "Raumakustik"
+      "acoustics": "Raumakustik",
+      "careers": "Karriere"
     },
     "cta": {
       "freeQuote": "Kostenlose Offerte",
@@ -88,7 +89,9 @@
     "projectsExportTitle": "Spanndecken für internationale Projekte | STRETCH",
     "projectsExportDescription": "Transluzente, bedruckte und akustische Spanndecken für Fit-out-Unternehmen weltweit — geschweisst im EU-Werk, per Luftfracht, dokumentierte Brandklassen.",
     "priceCalculatorTitle": "Spanndecken Kosten berechnen — Preis pro m² | STRETCH",
-    "priceCalculatorDescription": "Sofortiger Richtpreis für Ihre Spanndecke: m² × Deckentyp nach den Spannen von €70–200/m². Kostenlose verbindliche Offerte, meist am selben Tag."
+    "priceCalculatorDescription": "Sofortiger Richtpreis für Ihre Spanndecke: m² × Deckentyp nach den Spannen von €70–200/m². Kostenlose verbindliche Offerte, meist am selben Tag.",
+    "careersTitle": "Karriere bei STRETCH — Stellenangebote in Belgien und Polen | STRETCH",
+    "careersDescription": "Arbeiten Sie bei einem Hersteller, nicht bei einem Importeur. Offene Stellen bei STRETCH Group in Beveren-Waas (Belgien) und Częstochowa (Polen): Projektmanagement, Inside Sales und mehr."
   },
   "cookies": {
     "title": "Wir respektieren Ihre Privatsphäre",
@@ -178,7 +181,8 @@
       "kit": "DIY-Kit",
       "supply": "Belieferung für Verarbeiter",
       "projectsExport": "Projektexport",
-      "priceCalculator": "Kosten berechnen"
+      "priceCalculator": "Kosten berechnen",
+      "careers": "Karriere"
     },
     "dealers": "Händlernetz",
     "worldwideHeading": "STRETCH weltweit",
@@ -5120,6 +5124,326 @@
     "cta": {
       "title": "Bauen wir etwas Nahtloses.",
       "button": "Kostenlose Offerte anfordern"
+    }
+  },
+  "careersPage": {
+    "crumb": "Karriere",
+    "eyebrow": "Karriere bei STRETCH",
+    "titleA": "Ein Tag für die Montage.",
+    "titleB": "Eine Karriere zum",
+    "titleC": "Aufbauen",
+    "lead": "STRETCH entwirft, fertigt und montiert fugenlose Spanndecken und Spannwände von Beveren-Waas (Belgien) und Częstochowa (Polen) aus — ein Hersteller, kein Importeur, mit Projekten in ganz Europa und den USA. Wir wachsen und suchen Menschen, die Verantwortung übernehmen.",
+    "heroImageAlt": "Die STRETCH-Werkstatt in Beveren-Waas",
+    "facts": [
+      "Montiert an einem Tag",
+      "25 Jahre Lebensdauer",
+      "100 % recycelbar",
+      "Handgefertigt in Belgien"
+    ],
+    "openEyebrow": "Offene Stellen",
+    "openTitle": "Wo wir gerade einstellen",
+    "openLead": "Zwei Unternehmen, eine Gruppe: Stretch Productions BV in Beveren-Waas (Belgien) und Alto Design Sp. z o.o. in Częstochowa (Polen). Jede Stelle nennt ihren Standort und ihren Arbeitgeber.",
+    "noOpenings": "Derzeit sind keine Stellen offen — eine Initiativbewerbung ist jederzeit willkommen.",
+    "locationLabel": "Standort",
+    "contractLabel": "Vertrag",
+    "employerLabel": "Arbeitgeber",
+    "languagesLabel": "Sprachen",
+    "viewVacancy": "Stelle ansehen",
+    "mfx": "(m/w/d)",
+    "aboutEyebrow": "Über STRETCH",
+    "about": {
+      "title": "Handgefertigt in Belgien. Montiert an einem Tag.",
+      "p1": "STRETCH entwirft, fertigt und montiert fugenlose Spanndecken und Spannwände — kalt montiert an einem einzigen Tag, ohne Staub, Schutt oder Farbe. Akustik, Licht und Druck verbinden sich zu einer einzigen fugenlosen Fläche, die herkömmliche Gipskartondecken überdauert.",
+      "p2": "STRETCH gehört zur STRETCH Group, zusammen mit Alto Design (unsere Produktion in Częstochowa, Polen), Re-Sound (Akustikpaneele und Telefonboxen) und Stretch Metal (Metallbau): ein Hersteller, kein Importeur. Von Beveren-Waas aus realisieren wir Projekte in ganz Belgien, Europa und den USA — vom Wohnzimmer bis zum Hotel-Wellness, zur Bankzentrale oder zum Tonstudio."
+    },
+    "spontaneous": {
+      "eyebrow": "Initiativbewerbung",
+      "title": "Keine passende Stelle? Sagen Sie uns, was Sie mitbringen.",
+      "body": "Wir freuen uns immer über Monteure, Projektleute und Vertriebsprofile, die mit einem Produkt arbeiten möchten, das wir selbst herstellen. Senden Sie Ihren Lebenslauf und ein paar Zeilen zu sich selbst mit dem Betreff „Initiativbewerbung“.",
+      "button": "Initiativbewerbung senden",
+      "subject": "Initiativbewerbung"
+    },
+    "detail": {
+      "back": "Alle Stellen",
+      "vacancyEyebrow": "Stellenangebot",
+      "published": "Veröffentlicht am {date}",
+      "reportingHeading": "Berichtslinien",
+      "roleEyebrow": "Die Stelle",
+      "doEyebrow": "Ihre Aufgaben",
+      "whoEyebrow": "Ihr Profil",
+      "offerEyebrow": "Was wir bieten",
+      "applyEyebrow": "So bewerben Sie sich",
+      "applyButton": "Per E-Mail bewerben",
+      "emailLabel": "E-Mail",
+      "questionsLabel": "Fragen",
+      "subjectNote": "Betreff: „{subject}“",
+      "otherEyebrow": "Weitere offene Stellen"
+    },
+    "jobs": {
+      "project-manager": {
+        "title": "Project Manager",
+        "location": "Beveren-Waas, Belgien",
+        "contract": "Vollzeit, unbefristet",
+        "languages": "Niederländisch und Englisch — Französisch von Vorteil",
+        "summary": "Vom Moment des Verkaufs bis zum Tag der Übergabe — und durch die zehn Jahre Garantie danach — gehört das Projekt Ihnen.",
+        "facts": [
+          {
+            "label": "Standort",
+            "value": "Hauptsitz Beveren-Waas + Baustellen, vor allem in Belgien, gelegentlich im Ausland"
+          },
+          {
+            "label": "Vertrag",
+            "value": "Vollzeit, unbefristet · Beginn: so bald wie möglich"
+          },
+          {
+            "label": "Paket",
+            "value": "Firmenwagen und Tankkarte, auch zur privaten Nutzung · Essensgutscheine · Krankenhausversicherung"
+          },
+          {
+            "label": "Berichtet an",
+            "value": "CEO und Admin-Team · Direkter Draht, kurze Entscheidungen"
+          }
+        ],
+        "role": {
+          "title": "Eine Person trägt jedes Projekt. Das sind Sie.",
+          "p1": "Jedes Projekt, das STRETCH verkauft, braucht einen Verantwortlichen: jemanden, der es bei Vertragsunterzeichnung vom Vertrieb übernimmt, es durch Planung, Produktion und Montage führt, es an einen zufriedenen Kunden übergibt — und über die gesamte zehnjährige Garantiezeit sein Ansprechpartner bleibt.",
+          "p2": "Sie sind das Bindeglied zwischen Vertrieb, Admin-Team, Produktion und Montageteam und die eine Person, die Kunde, Architekt und Bauunternehmer jederzeit erreichen. Sie nehmen an den Besprechungen teil, halten die Projektakte vollständig, zeichnen und spezifizieren, was es braucht, wachen über das Budget und sorgen dafür, dass die Monteure auf der Baustelle alles haben, um zu liefern.",
+          "lines": [
+            {
+              "label": "Berichtet an",
+              "value": "Michael Nicasens, CEO"
+            },
+            {
+              "label": "Arbeitet mit",
+              "value": "Dem Admin-Team"
+            },
+            {
+              "label": "Koordiniert",
+              "value": "Das Montageteam, den Vertrieb und die Produktion bei Alto Design in Częstochowa (PL)"
+            }
+          ]
+        },
+        "do": {
+          "title": "Verkauft. Geplant. Gebaut. Übergeben. Garantiert.",
+          "intro": "Sechs Verantwortungsbereiche, in der Reihenfolge, in der ein Projekt sie durchläuft.",
+          "areas": [
+            {
+              "title": "Projektübernahme und Planung",
+              "items": [
+                "Übernehmen Sie jedes verkaufte Projekt vom Vertrieb: Prüfen Sie Offerte, Zeichnungen und Leistungsumfang und bestätigen Sie, dass das Verkaufte so gebaut werden kann, wie es verkauft wurde.",
+                "Planen Sie das Projekt von Anfang bis Ende: Zeitplan, Materialbestellungen, Produktionsslots, Montageteam und Baustellenlogistik.",
+                "Organisieren oder übernehmen Sie das Aufmass vor Ort und prüfen Sie die Baustellenbereitschaft, bevor die Montage terminiert wird."
+              ]
+            },
+            {
+              "title": "Besprechungen und Kommunikation",
+              "items": [
+                "Nehmen Sie an jeder nötigen Projektbesprechung teil: Baubesprechungen, Koordinationsrunden und Kundentermine.",
+                "Verfassen Sie nach jeder Besprechung ein Protokoll und legen Sie es noch am selben Tag in der Projektakte auf OneDrive ab.",
+                "Seien Sie der zentrale Ansprechpartner für Kunde, Architekt und Generalunternehmer; stimmen Sie sich mit den anderen Gewerken (Elektro, Beleuchtung, HLK, Sprinkler) überall dort ab, wo die Decke in deren Arbeit eingreift.",
+                "Geben Sie Ihrem Vorgesetzten und dem Admin-Team wöchentlich einen Status aller laufenden Projekte: Planung, Budget und Risiken."
+              ]
+            },
+            {
+              "title": "Technische Dokumentation",
+              "items": [
+                "Erstellen Sie technische Zeichnungen und Spezifikationsdokumente, wann immer ein Projekt sie erfordert.",
+                "Sammeln Sie die komplette Dokumentation jedes Projekts: Zeichnungen, Materialdatenblätter, Brandschutz- und Akustikzertifikate, Auftragsbestätigungen, Baustellenfotos und As-built-Informationen.",
+                "Halten Sie die Projektakte auf OneDrive vollständig und aktuell, damit jeder im Team das Projekt jederzeit übernehmen kann."
+              ]
+            },
+            {
+              "title": "Budget und Ausführung",
+              "items": [
+                "Liefern Sie jedes Projekt im Budget: Verfolgen Sie die Kosten gegen die Offerte, bestellen Sie Material rechtzeitig und melden Sie Abweichungen früh.",
+                "Steuern Sie Zusatzleistungen und Änderungen: Grenzen Sie sie ab, lassen Sie sie anbieten und freigeben, bevor sie ausgeführt werden.",
+                "Unterstützen Sie das Montageteam beim Erreichen der Projektziele: Bereiten Sie das Montagebriefing vor, stellen Sie sicher, dass Material, Werkzeug und Baustellenzugang bereitstehen, und lösen Sie Probleme vor Ort."
+              ]
+            },
+            {
+              "title": "Qualität, Übergabe und Abschluss",
+              "items": [
+                "Führen Sie die Endabnahme durch, verwalten Sie die Mängelliste und organisieren Sie die formelle Übergabe mit dem Kunden.",
+                "Schliessen Sie das Projekt ab: Vervollständigen Sie die Dokumentation, bestätigen Sie mit dem Admin-Team die Rechnungsreife und halten Sie die Lessons Learned fest."
+              ]
+            },
+            {
+              "title": "Garantie — zehn Jahre",
+              "items": [
+                "Bleiben Sie über die gesamte zehnjährige Garantiezeit Ansprechpartner für das Projekt.",
+                "Erfassen und bewerten Sie Garantiefälle, planen Sie Serviceeinsätze mit dem Montageteam und führen Sie das Garantieprotokoll des Projekts."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Strukturiert auf Papier. Praktisch auf der Baustelle.",
+          "items": [
+            "Nachweisliche Erfahrung im Projektmanagement im Bauwesen, im Innenausbau oder in einem technischen Installationsbetrieb.",
+            "Sie lesen und erstellen technische Zeichnungen und Spezifikationen sicher (AutoCAD, SketchUp oder vergleichbar).",
+            "Strukturiert und dokumentationsstark: Eine vollständige Projektakte ist Ihr Standard, kein Nachgedanke.",
+            "Budgetbewusst und kaufmännisch wach: Sie erkennen Abweichungen, bevor sie zu Kosten werden.",
+            "Auf der Baustelle mit den Monteuren ebenso zu Hause wie im Besprechungsraum mit Architekten und Bauunternehmern.",
+            "Fliessend Niederländisch und Englisch; Französisch ist ein grosser Vorteil für Projekte in Brüssel und der Wallonie.",
+            "Sicher in Microsoft 365 — OneDrive, Teams, Outlook und Excel.",
+            "Führerschein Klasse B: Sie bewegen sich zwischen Büro, Baustellen und Kunden."
+          ]
+        },
+        "offer": {
+          "title": "Ein klares Paket. Eine Stelle mit echter Verantwortung.",
+          "items": [
+            {
+              "title": "Unbefristeter Vertrag",
+              "sub": "Vollzeit, mit einem festen monatlichen Bruttogehalt."
+            },
+            {
+              "title": "Firmenwagen",
+              "sub": "Mit Tankkarte — auch zur privaten Nutzung. Von Anfang an."
+            },
+            {
+              "title": "Essensgutscheine",
+              "sub": "8 € pro Arbeitstag. Nach 3 Monaten."
+            },
+            {
+              "title": "Krankenhausversicherung",
+              "sub": "Deckt Ihre Krankenhauskosten. Nach 3 Monaten."
+            }
+          ],
+          "closing": "Über das Paket hinaus: eine Stelle, die vom ersten Tag an Ihnen gehört, ein direkter Draht zum CEO, ein in Belgien handgefertigtes Produkt, das in ganz Europa und den USA montiert wird, und der Raum, in einer wachsenden internationalen Gruppe mitzugestalten, wie Projekte geführt werden."
+        },
+        "apply": {
+          "title": "Bereit, das nächste Projekt zu tragen?",
+          "body": "Senden Sie Ihren Lebenslauf und eine kurze Motivation mit dem Betreff „Project Manager“. Das erste Gespräch findet an unserem Hauptsitz in Beveren-Waas statt — mit dem CEO und mit dem Team, mit dem Sie täglich arbeiten werden.",
+          "hours": "Mo–Fr · 08:30–17:00"
+        }
+      },
+      "inside-sales": {
+        "title": "Mitarbeiter Vertriebsinnendienst (Inside Sales)",
+        "location": "Częstochowa, Polen",
+        "contract": "Vollzeit, unbefristet",
+        "languages": "Polnisch und Englisch — Deutsch, Niederländisch oder Französisch von Vorteil",
+        "summary": "Sie machen aus jeder Anfrage, die Alto Design erreicht — von einem Monteur, einem Händler, einem Architekten oder einem Privatkunden — eine klare Offerte, einen vollständigen Auftrag und einen Kunden, der wiederkommt.",
+        "facts": [
+          {
+            "label": "Standort",
+            "value": "Alto Design, ul. Legionów 59, Częstochowa — im Büro, in unserem polnischen Produktionswerk"
+          },
+          {
+            "label": "Vertrag",
+            "value": "Vollzeit, unbefristet · Beginn: so bald wie möglich"
+          },
+          {
+            "label": "Sprachen",
+            "value": "Polnisch und Englisch im Alltag · Deutsch, Niederländisch oder Französisch von Vorteil für Exportkunden"
+          },
+          {
+            "label": "Berichtet an",
+            "value": "Die Geschäftsleitung von Alto Design · kurze Wege zur Produktion und zur Gruppe in Belgien"
+          }
+        ],
+        "role": {
+          "title": "Jede Anfrage verdient eine Antwort. Schnell, präzise — und von Ihnen.",
+          "p1": "Alto Design Sp. z o.o. ist das Produktionswerk der STRETCH Group in Częstochowa und die Anlaufstelle für den polnischen Markt und für Monteure in Mittel- und Osteuropa. Täglich kommen Anfragen herein — per Telefon, per E-Mail, über die Website und über das Kundenportal — von Monteuren, die Material brauchen, Händlern, die eine Offerte wollen, Architekten, die eine Spezifikation suchen, und Privatkunden, die eine Decke möchten. Sie beantworten sie.",
+          "p2": "Im Vertriebsinnendienst arbeiten Sie vom Büro aus, nicht unterwegs. Sie qualifizieren jede Anfrage, erstellen die Offerte, verfolgen es, bis es zum Auftrag wird, und übergeben der Produktion einen vollständigen, korrekten Auftrag. Sie halten den Kunden bis zur Lieferung auf dem Laufenden — und sorgen dafür, dass er beim nächsten Mal zuerst an Alto Design denkt.",
+          "lines": [
+            {
+              "label": "Berichtet an",
+              "value": "Die Geschäftsleitung von Alto Design"
+            },
+            {
+              "label": "Arbeitet mit",
+              "value": "Produktion und Planung in Częstochowa; Admin- und Projektteam in Beveren-Waas"
+            },
+            {
+              "label": "Betreut",
+              "value": "Monteure, Händler, Architekten und Privatkunden in Polen und auf den Exportmärkten"
+            }
+          ]
+        },
+        "do": {
+          "title": "Anfrage. Offerte. Auftrag. Geliefert.",
+          "intro": "Fünf Verantwortungsbereiche, in der Reihenfolge, in der eine Anfrage sie durchläuft.",
+          "areas": [
+            {
+              "title": "Eingehende Anfragen",
+              "items": [
+                "Beantworten Sie jede eingehende Anfrage — Telefon, E-Mail, Website-Formulare und Kundenportal — noch am selben Arbeitstag.",
+                "Qualifizieren Sie die Anfrage: Wer fragt, welcher Raum, welches System, welcher Termin, und braucht der Kunde noch einen Monteur?",
+                "Erfassen Sie jeden Lead und jeden Kontakt im CRM, damit nichts verloren geht und jeder Kollege den Vorgang übernehmen kann."
+              ]
+            },
+            {
+              "title": "Offerten",
+              "items": [
+                "Erstellen Sie Offerten für Membranen, Profile, Beleuchtung und Zubehör aus Zeichnungen, Aufmassen und Fotos — mit der Preisliste und dem Kit-Konfigurator.",
+                "Beraten Sie zum richtigen System — Polyester oder PVC, akustisch, hinterleuchtet oder bedruckt — und dazu, was die Produktion für die korrekte Konfektion braucht.",
+                "Fassen Sie bei jeder Offerte rechtzeitig nach, beantworten Sie Fragen und passen Sie an, bis der Kunde entscheiden kann."
+              ]
+            },
+            {
+              "title": "Aufträge und Produktion",
+              "items": [
+                "Wandeln Sie angenommene Offerten in vollständige Aufträge um: Masse, Nähte, Oberflächen, Ausschnitte für Beleuchtung, Lieferadresse und -termin — alles schriftlich bestätigt.",
+                "Stimmen Sie Lieferzeiten mit Produktion und Planung ab, bestätigen Sie sie dem Kunden und melden Sie jede Änderung sofort.",
+                "Prüfen Sie Auftragsbestätigungen und Rechnungsdaten mit der Verwaltung, bevor ein Auftrag in die Produktion geht."
+              ]
+            },
+            {
+              "title": "Partner und Schulung",
+              "items": [
+                "Nehmen Sie neue Monteure und Händler an Bord: Legen Sie ihr Kundenportal-Konto an und erklären Sie Preisliste, Konfigurator und Bestellprozess.",
+                "Bewerben Sie die STRETCH-Monteurschulung und halten Sie die Liste der geschulten Monteure aktuell, damit Privatkunden an einen Partner in ihrer Nähe vermittelt werden können.",
+                "Halten Sie Partnerdaten, Preise und Produktinformationen im Portal und im CRM aktuell."
+              ]
+            },
+            {
+              "title": "Reporting",
+              "items": [
+                "Berichten Sie der Geschäftsleitung wöchentlich über Anfragen, Offerten, Aufträge und Abschlussquote.",
+                "Erkennen Sie wiederkehrende Fragen, fehlende Informationen und verlorene Offerten — und schlagen Sie vor, was sich ändern sollte."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Verkäuferisch am Telefon. Präzise auf Papier.",
+          "items": [
+            "Erfahrung im Vertriebsinnendienst, Kundenservice oder in der Auftragsabwicklung im B2B-Umfeld — idealerweise Bau, Innenausbau oder Baustoffe.",
+            "Sie lesen einen Grundriss und eine technische Zeichnung und stellen die richtigen Fragen, wenn ein Mass fehlt.",
+            "Fliessend Polnisch und gutes Englisch in Wort und Schrift; Deutsch, Niederländisch oder Französisch ist ein grosser Vorteil für Exportkunden.",
+            "Organisiert und genau: Ein vollständiger, korrekter Auftrag ist Ihr Standard, kein Nachgedanke.",
+            "Sicher in Microsoft 365 (Outlook, Teams, Excel) und schnell eingearbeitet in ein CRM, ein Kundenportal und einen Konfigurator.",
+            "Ein freundlicher, hartnäckiger Nachfass-Stil: Sie bringen jede Offerte zum Abschluss."
+          ]
+        },
+        "offer": {
+          "title": "Eine stabile Stelle in einer wachsenden Gruppe.",
+          "items": [
+            {
+              "title": "Unbefristeter Vertrag",
+              "sub": "Vollzeit-Arbeitsvertrag bei Alto Design Sp. z o.o."
+            },
+            {
+              "title": "Produktschulung",
+              "sub": "Praxisschulung in unserem Werk in Częstochowa und mit dem Team in Beveren-Waas."
+            },
+            {
+              "title": "Im Büro",
+              "sub": "Ein fester Arbeitsplatz in der ul. Legionów 59 in Częstochowa, Montag bis Freitag."
+            },
+            {
+              "title": "Internationales Team",
+              "sub": "Täglicher Kontakt mit Monteuren, Händlern und Kollegen in ganz Europa."
+            }
+          ],
+          "closing": "Über das Paket hinaus: ein Produkt, das wir selbst herstellen — nicht importieren —, ein direkter Draht zur Produktion und der Raum, mit dem polnischen Markt und dem Exportgeschäft der STRETCH Group zu wachsen."
+        },
+        "apply": {
+          "title": "Bereit, die nächste Anfrage zu beantworten?",
+          "body": "Senden Sie Ihren Lebenslauf und eine kurze Motivation auf Polnisch oder Englisch mit dem Betreff „Inside Sales“. Das erste Gespräch findet bei Alto Design in Częstochowa statt — mit der Geschäftsleitung und mit den Kollegen, mit denen Sie täglich arbeiten werden.",
+          "hours": "Mo–Fr · 08:30–17:00"
+        }
+      }
     }
   },
   "contactPage": {

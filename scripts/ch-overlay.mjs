@@ -41,6 +41,7 @@ const args = new Set(process.argv.slice(2));
 // ---- 4. Strings that quote product prices: never converted to CHF ----------
 // Matched by key-path prefix. Everything here is hidden on ch by code.
 const PRICE_STRING_PREFIXES = [
+  'careersPage.', // the Belgian vacancy's meal vouchers (€ 8 / day) are a Belgian benefit, not a Swiss price
   'blogPosts.posts.', // every € inside an article body is a product price or a Belgian grant
   'meta.priceCalculatorDescription', // "€70–200/m²" — page is 404 on ch
   'meta.supplyCzSkDescription', // Czech/Slovak supply invoiced from Poland in EUR/PLN

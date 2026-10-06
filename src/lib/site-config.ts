@@ -383,6 +383,8 @@ export const footerNav = {
     { key: 'architects', href: '/architects' },
     { key: 'inspiration', href: '/inspiration' },
     { key: 'about', href: '/about' },
+    // Careers — the group's open positions (label: footer.links.careers).
+    { key: 'careers', href: '/careers' },
     { key: 'faq', href: '/faq' },
     // Client portal — private client area (login-gated, noindex).
     { key: 'clientPortal', href: '/portal' },
@@ -398,6 +400,7 @@ export const footerNav = {
 export const staticRoutes = [
   '/',
   '/about',
+  '/careers',
   '/contact',
   '/products',
   '/partners',
@@ -428,6 +431,7 @@ export const staticRoutes = [
 export const staticRouteDates: Record<string, string> = {
   '/': '2026-08-30', // reviews section + schema cleanup
   '/about': '2026-08-06',
+  '/careers': '2026-10-06', // careers page + the first two vacancies
   '/contact': '2026-08-30', // direct-installation band (N2)
   '/products': '2026-08-06',
   '/partners': '2026-08-30',

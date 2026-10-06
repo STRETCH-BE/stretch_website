@@ -23,7 +23,8 @@
       "materials": "Materiały",
       "architects": "Architekci",
       "priceCalculator": "Kalkulator cen",
-      "acoustics": "Akustyka"
+      "acoustics": "Akustyka",
+      "careers": "Kariera"
     },
     "cta": {
       "freeQuote": "Darmowa wycena",
@@ -107,7 +108,9 @@
     "projectsExportTitle": "Sufity napinane do projektów międzynarodowych | STRETCH",
     "projectsExportDescription": "Transparentne, drukowane i akustyczne sufity napinane dla firm fit-out na świecie — zgrzewane w fabryce w UE, fracht lotniczy, udokumentowane klasy ogniowe.",
     "priceCalculatorTitle": "Kalkulator sufitów napinanych — cena za m² | STRETCH",
-    "priceCalculatorDescription": "Cena orientacyjna sufitu napinanego od ręki: m² × typ sufitu według widełek 150–450 zł/m². Bezpłatna wiążąca wycena, zwykle tego samego dnia roboczego."
+    "priceCalculatorDescription": "Cena orientacyjna sufitu napinanego od ręki: m² × typ sufitu według widełek 150–450 zł/m². Bezpłatna wiążąca wycena, zwykle tego samego dnia roboczego.",
+    "careersTitle": "Kariera w STRETCH — oferty pracy w Polsce i Belgii | STRETCH",
+    "careersDescription": "Pracuj u producenta, nie u importera. Otwarte stanowiska w STRETCH Group w Częstochowie (Alto Design) i Beveren-Waas (Belgia): sprzedaż wewnętrzna, zarządzanie projektami i więcej."
   },
   "cookies": {
     "title": "Szanujemy Twoją prywatność",
@@ -197,7 +200,8 @@
       "kit": "Zestaw DIY",
       "supply": "Zaopatrzenie monterów",
       "projectsExport": "Eksport projektów",
-      "priceCalculator": "Kalkulator cen"
+      "priceCalculator": "Kalkulator cen",
+      "careers": "Kariera"
     },
     "dealers": "Sieć dealerów",
     "worldwideHeading": "STRETCH na świecie",
@@ -5139,6 +5143,326 @@
     "cta": {
       "title": "Zbudujmy razem coś bez łączeń.",
       "button": "Poproś o bezpłatną wycenę"
+    }
+  },
+  "careersPage": {
+    "crumb": "Kariera",
+    "eyebrow": "Kariera w STRETCH",
+    "titleA": "Jeden dzień montażu.",
+    "titleB": "Kariera do",
+    "titleC": "zbudowania",
+    "lead": "STRETCH projektuje, produkuje i montuje bezszwowe sufity napinane i ściany z dwóch własnych zakładów — w Częstochowie (Alto Design) i Beveren-Waas (Belgia). Producent, nie importer, z projektami w całej Europie i USA. Rośniemy i szukamy ludzi, którzy biorą odpowiedzialność.",
+    "heroImageAlt": "Zakład STRETCH w Beveren-Waas",
+    "facts": [
+      "Montaż w jeden dzień",
+      "25 lat żywotności",
+      "100% do recyklingu",
+      "Własna produkcja w UE"
+    ],
+    "openEyebrow": "Otwarte stanowiska",
+    "openTitle": "Gdzie teraz rekrutujemy",
+    "openLead": "Dwie firmy, jedna grupa: Alto Design Sp. z o.o. w Częstochowie i Stretch Productions BV w Beveren-Waas (Belgia). Każda oferta podaje lokalizację i pracodawcę.",
+    "noOpenings": "Obecnie nie mamy otwartych stanowisk — aplikacje spontaniczne są zawsze mile widziane.",
+    "locationLabel": "Lokalizacja",
+    "contractLabel": "Umowa",
+    "employerLabel": "Pracodawca",
+    "languagesLabel": "Języki",
+    "viewVacancy": "Zobacz ofertę",
+    "mfx": "(k/m/x)",
+    "aboutEyebrow": "O STRETCH",
+    "about": {
+      "title": "Dwie fabryki w UE. Montaż w jeden dzień.",
+      "p1": "STRETCH projektuje, produkuje i montuje bezszwowe sufity napinane i ściany — montowane na zimno w jeden dzień, bez kurzu, gruzu i malowania. Akustyka, światło i nadruk łączą się w jedną bezszwową powierzchnię, która przetrwa klasyczną płytę gipsowo-kartonową.",
+      "p2": "STRETCH należy do STRETCH Group razem z Alto Design (nasza produkcja w Częstochowie), Re-Sound (panele i budki akustyczne) oraz Stretch Metal (obróbka metali): producent, nie importer. Z Częstochowy i Beveren-Waas realizujemy projekty w Polsce, Belgii, całej Europie i USA — od salonu po hotelowe wellness, siedzibę banku czy studio nagrań."
+    },
+    "spontaneous": {
+      "eyebrow": "Aplikacja spontaniczna",
+      "title": "Nie ma pasującego stanowiska? Powiedz nam, co wnosisz.",
+      "body": "Zawsze interesują nas monterzy, osoby od projektów i profile sprzedażowe, które chcą pracować z produktem wytwarzanym u nas. Wyślij CV i kilka zdań o sobie z tematem „Aplikacja spontaniczna”.",
+      "button": "Wyślij aplikację spontaniczną",
+      "subject": "Aplikacja spontaniczna"
+    },
+    "detail": {
+      "back": "Wszystkie oferty",
+      "vacancyEyebrow": "Oferta pracy",
+      "published": "Opublikowano {date}",
+      "reportingHeading": "Podległość służbowa",
+      "roleEyebrow": "Stanowisko",
+      "doEyebrow": "Zakres obowiązków",
+      "whoEyebrow": "Kogo szukamy",
+      "offerEyebrow": "Co oferujemy",
+      "applyEyebrow": "Jak aplikować",
+      "applyButton": "Aplikuj przez e-mail",
+      "emailLabel": "E-mail",
+      "questionsLabel": "Pytania",
+      "subjectNote": "Temat wiadomości: „{subject}”",
+      "otherEyebrow": "Pozostałe otwarte stanowiska"
+    },
+    "jobs": {
+      "project-manager": {
+        "title": "Project Manager",
+        "location": "Beveren-Waas, Belgia",
+        "contract": "Pełny etat, na czas nieokreślony",
+        "languages": "Niderlandzki i angielski — francuski mile widziany",
+        "summary": "Od chwili sprzedaży projektu do dnia jego odbioru — i przez dziesięć lat gwarancji, które następują potem — projekt jest Twój.",
+        "facts": [
+          {
+            "label": "Lokalizacja",
+            "value": "Siedziba w Beveren-Waas + budowy, głównie w Belgii, czasem za granicą"
+          },
+          {
+            "label": "Umowa",
+            "value": "Pełny etat, na czas nieokreślony · Start: od zaraz"
+          },
+          {
+            "label": "Pakiet",
+            "value": "Samochód służbowy i karta paliwowa, także do użytku prywatnego · bony żywieniowe · ubezpieczenie szpitalne"
+          },
+          {
+            "label": "Podlega",
+            "value": "CEO i zespół administracji · Bezpośredni kontakt, szybkie decyzje"
+          }
+        ],
+        "role": {
+          "title": "Jedna osoba prowadzi każdy projekt. To Ty.",
+          "p1": "Każdy projekt sprzedany przez STRETCH potrzebuje właściciela: kogoś, kto przejmuje go od działu sprzedaży w momencie podpisania umowy, prowadzi przez planowanie, produkcję i montaż, przekazuje zadowolonemu klientowi — i pozostaje jego osobą kontaktową przez cały dziesięcioletni okres gwarancji.",
+          "p2": "Jesteś łącznikiem między sprzedażą, zespołem administracji, produkcją i ekipą montażową oraz jedyną osobą, do której klient, architekt i wykonawca zawsze mogą się zwrócić. Uczestniczysz w spotkaniach, dbasz o kompletność teczki projektu, rysujesz i specyfikujesz to, co tego wymaga, pilnujesz budżetu i dbasz, by monterzy na budowie mieli wszystko, czego potrzebują.",
+          "lines": [
+            {
+              "label": "Podlega",
+              "value": "Michael Nicasens, CEO"
+            },
+            {
+              "label": "Współpracuje z",
+              "value": "Zespołem administracji"
+            },
+            {
+              "label": "Koordynuje",
+              "value": "Ekipę montażową, sprzedaż i produkcję w Alto Design w Częstochowie (PL)"
+            }
+          ]
+        },
+        "do": {
+          "title": "Sprzedane. Zaplanowane. Zbudowane. Odebrane. Z gwarancją.",
+          "intro": "Sześć obszarów odpowiedzialności, w kolejności, w jakiej przechodzi przez nie projekt.",
+          "areas": [
+            {
+              "title": "Przejęcie projektu i planowanie",
+              "items": [
+                "Przejmuj każdy sprzedany projekt od działu sprzedaży: sprawdź ofertę, rysunki i zakres i potwierdź, że to, co sprzedano, da się wykonać tak, jak sprzedano.",
+                "Zaplanuj projekt od początku do końca: harmonogram, zamówienia materiałów, sloty produkcyjne, ekipę montażową i logistykę na budowie.",
+                "Zorganizuj lub wykonaj pomiar na miejscu i sprawdź gotowość budowy, zanim montaż zostanie zaplanowany."
+              ]
+            },
+            {
+              "title": "Spotkania i komunikacja",
+              "items": [
+                "Uczestnicz w każdym potrzebnym spotkaniu projektowym: naradach na budowie, spotkaniach koordynacyjnych i spotkaniach z klientem.",
+                "Po każdym spotkaniu spisz podsumowanie i tego samego dnia zapisz je w teczce projektu na OneDrive.",
+                "Bądź jedyną osobą kontaktową dla klienta, architekta i generalnego wykonawcy; koordynuj prace z innymi branżami (elektryka, oświetlenie, HVAC, tryskacze) wszędzie tam, gdzie sufit łączy się z ich pracą.",
+                "Co tydzień przekazuj przełożonemu i zespołowi administracji status wszystkich bieżących projektów: harmonogram, budżet i ryzyka."
+              ]
+            },
+            {
+              "title": "Dokumentacja techniczna",
+              "items": [
+                "Twórz rysunki techniczne i dokumenty specyfikacyjne zawsze, gdy wymaga tego projekt.",
+                "Gromadź pełną dokumentację każdego projektu: rysunki, karty materiałów, certyfikaty ogniowe i akustyczne, potwierdzenia zamówień, zdjęcia z budowy i dokumentację powykonawczą.",
+                "Utrzymuj teczkę projektu na OneDrive kompletną i aktualną, tak aby każdy w zespole mógł w dowolnej chwili przejąć projekt."
+              ]
+            },
+            {
+              "title": "Budżet i realizacja",
+              "items": [
+                "Realizuj każdy projekt w ramach budżetu: śledź koszty względem oferty, zamawiaj materiały na czas i wcześnie sygnalizuj odchylenia.",
+                "Zarządzaj pracami dodatkowymi i zmianami: określ ich zakres, zadbaj o wycenę i akceptację, zanim zostaną wykonane.",
+                "Wspieraj ekipę montażową w realizacji celów projektu: przygotuj odprawę montażową, zadbaj o materiały, narzędzia i dostęp do budowy oraz rozwiązuj problemy na miejscu."
+              ]
+            },
+            {
+              "title": "Jakość, odbiór i zamknięcie",
+              "items": [
+                "Przeprowadź odbiór końcowy, zarządzaj listą usterek i zorganizuj formalne przekazanie klientowi.",
+                "Zamknij projekt: skompletuj dokumentację, potwierdź z zespołem administracji gotowość do fakturowania i zapisz wnioski na przyszłość."
+              ]
+            },
+            {
+              "title": "Gwarancja — dziesięć lat",
+              "items": [
+                "Pozostań osobą kontaktową dla projektu przez cały dziesięcioletni okres gwarancji.",
+                "Rejestruj i oceniaj zgłoszenia gwarancyjne, planuj interwencje serwisowe z ekipą montażową i prowadź dziennik gwarancyjny projektu."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Uporządkowany na papierze. Praktyczny na budowie.",
+          "items": [
+            "Udokumentowane doświadczenie w zarządzaniu projektami w budownictwie, wykończeniach wnętrz lub firmie instalacyjnej.",
+            "Pewnie czytasz i tworzysz rysunki techniczne oraz specyfikacje (AutoCAD, SketchUp lub podobne).",
+            "Uporządkowanie i dbałość o dokumentację: kompletna teczka projektu to Twój standard, nie dodatek.",
+            "Świadomość budżetu i czujność handlowa: zauważasz odchylenia, zanim staną się kosztami.",
+            "Równie swobodnie czujesz się na budowie wśród monterów, jak w sali spotkań z architektami i wykonawcami.",
+            "Biegły niderlandzki i angielski; francuski to duży atut przy projektach w Brukseli i Walonii.",
+            "Biegła obsługa Microsoft 365 — OneDrive, Teams, Outlook i Excel.",
+            "Prawo jazdy kat. B: poruszasz się między biurem, budowami i klientami."
+          ]
+        },
+        "offer": {
+          "title": "Przejrzysty pakiet. Rola z prawdziwą odpowiedzialnością.",
+          "items": [
+            {
+              "title": "Umowa na czas nieokreślony",
+              "sub": "Pełny etat, ze stałym miesięcznym wynagrodzeniem brutto."
+            },
+            {
+              "title": "Samochód służbowy",
+              "sub": "Z kartą paliwową — także do użytku prywatnego. Od pierwszego dnia."
+            },
+            {
+              "title": "Bony żywieniowe",
+              "sub": "8 € za każdy dzień pracy. Po 3 miesiącach."
+            },
+            {
+              "title": "Ubezpieczenie szpitalne",
+              "sub": "Pokrywa koszty pobytu w szpitalu. Po 3 miesiącach."
+            }
+          ],
+          "closing": "Poza pakietem: rola, która jest Twoja od pierwszego dnia, bezpośredni kontakt z CEO, produkt wytwarzany ręcznie w Belgii i montowany w całej Europie i USA oraz przestrzeń, by kształtować sposób prowadzenia projektów w rosnącej międzynarodowej grupie."
+        },
+        "apply": {
+          "title": "Gotowy poprowadzić kolejny projekt?",
+          "body": "Wyślij CV i krótki list motywacyjny z tematem „Project Manager”. Pierwsza rozmowa odbywa się w naszej siedzibie w Beveren-Waas — z CEO i z zespołem, z którym będziesz pracować na co dzień.",
+          "hours": "pn–pt · 08:30–17:00"
+        }
+      },
+      "inside-sales": {
+        "title": "Specjalista ds. sprzedaży wewnętrznej (Inside Sales)",
+        "location": "Częstochowa, Polska",
+        "contract": "Pełny etat, na czas nieokreślony",
+        "languages": "Polski i angielski — niemiecki, niderlandzki lub francuski mile widziany",
+        "summary": "Zamieniasz każde zapytanie, które trafia do Alto Design — od montażysty, dealera, architekta czy klienta prywatnego — w czytelną ofertę, kompletne zamówienie i klienta, który wraca.",
+        "facts": [
+          {
+            "label": "Lokalizacja",
+            "value": "Alto Design, ul. Legionów 59, Częstochowa — praca stacjonarna w biurze przy naszym zakładzie produkcyjnym"
+          },
+          {
+            "label": "Umowa",
+            "value": "Pełny etat, na czas nieokreślony · Start: od zaraz"
+          },
+          {
+            "label": "Języki",
+            "value": "Polski i angielski na co dzień · niemiecki, niderlandzki lub francuski to atut w kontaktach z klientami eksportowymi"
+          },
+          {
+            "label": "Podlega",
+            "value": "Zarządowi Alto Design · krótka droga do produkcji i do grupy w Belgii"
+          }
+        ],
+        "role": {
+          "title": "Każde zapytanie zasługuje na odpowiedź. Szybką, precyzyjną — i od Ciebie.",
+          "p1": "Alto Design Sp. z o.o. to zakład produkcyjny STRETCH Group w Częstochowie i punkt kontaktowy dla polskiego rynku oraz dla montażystów z Europy Środkowej i Wschodniej. Zapytania przychodzą codziennie — telefonicznie, e-mailem, przez stronę internetową i panel klienta — od montażystów potrzebujących materiału, dealerów proszących o ofertę, architektów szukających specyfikacji i klientów prywatnych, którzy chcą nowy sufit. Ty na nie odpowiadasz.",
+          "p2": "Jako inside sales pracujesz z biura, nie w terenie. Kwalifikujesz każde zapytanie, przygotowujesz ofertę, pilnujesz jej aż stanie się zamówieniem i przekazujesz produkcji kompletne, poprawne zlecenie. Informujesz klienta aż do dostawy — i dbasz o to, by następnym razem w pierwszej kolejności pomyślał o Alto Design.",
+          "lines": [
+            {
+              "label": "Podlega",
+              "value": "Zarządowi Alto Design"
+            },
+            {
+              "label": "Współpracuje z",
+              "value": "Produkcją i planowaniem w Częstochowie; zespołem administracji i projektów w Beveren-Waas"
+            },
+            {
+              "label": "Obsługuje",
+              "value": "Montażystów, dealerów, architektów i klientów prywatnych w Polsce i na rynkach eksportowych"
+            }
+          ]
+        },
+        "do": {
+          "title": "Zapytanie. Oferta. Zamówienie. Dostawa.",
+          "intro": "Pięć obszarów odpowiedzialności, w kolejności, w jakiej przechodzi przez nie zapytanie.",
+          "areas": [
+            {
+              "title": "Zapytania przychodzące",
+              "items": [
+                "Odpowiadaj na każde przychodzące zapytanie — telefon, e-mail, formularze na stronie i panel klienta — tego samego dnia roboczego.",
+                "Kwalifikuj zapytanie: kto pyta, jakie pomieszczenie, jaki system, jaki termin i czy klient potrzebuje jeszcze montażysty.",
+                "Rejestruj każdy lead i każdy kontakt w CRM, aby nic nie ginęło i każdy współpracownik mógł przejąć sprawę."
+              ]
+            },
+            {
+              "title": "Oferty",
+              "items": [
+                "Przygotowuj oferty na membrany, profile, oświetlenie i akcesoria na podstawie rysunków, pomiarów i zdjęć, korzystając z cennika i konfiguratora zestawów.",
+                "Doradzaj właściwy system — poliester lub PCV, akustyczny, podświetlany lub z nadrukiem — oraz to, czego produkcja potrzebuje, by poprawnie go skonfekcjonować.",
+                "Pilnuj terminowo każdej oferty, odpowiadaj na pytania i koryguj ją, aż klient będzie mógł podjąć decyzję."
+              ]
+            },
+            {
+              "title": "Zamówienia i produkcja",
+              "items": [
+                "Zamieniaj zaakceptowane oferty w kompletne zamówienia: wymiary, łączenia, wykończenia, wycięcia pod oświetlenie, adres i termin dostawy — wszystko potwierdzone pisemnie.",
+                "Ustalaj terminy realizacji z produkcją i planowaniem, potwierdzaj je klientowi i natychmiast sygnalizuj każdą zmianę.",
+                "Sprawdzaj potwierdzenia zamówień i dane do faktury z administracją, zanim zamówienie trafi do produkcji."
+              ]
+            },
+            {
+              "title": "Partnerzy i szkolenia",
+              "items": [
+                "Wdrażaj nowych montażystów i dealerów: zakładaj im konta w panelu klienta i objaśniaj cennik, konfigurator i proces zamawiania.",
+                "Promuj szkolenia STRETCH dla montażystów i aktualizuj listę przeszkolonych montażystów, aby klientów prywatnych kierować do partnera w ich okolicy.",
+                "Dbaj o aktualność danych partnerów, cen i informacji o produktach w panelu i w CRM."
+              ]
+            },
+            {
+              "title": "Raportowanie",
+              "items": [
+                "Co tydzień raportuj zarządowi zapytania, oferty, zamówienia i konwersję.",
+                "Wychwytuj powtarzające się pytania, brakujące informacje i utracone oferty — i proponuj, co zmienić."
+              ]
+            }
+          ]
+        },
+        "who": {
+          "title": "Handlowo przez telefon. Precyzyjnie na papierze.",
+          "items": [
+            "Doświadczenie w sprzedaży wewnętrznej, obsłudze klienta lub obsłudze zamówień w środowisku B2B — najlepiej w budownictwie, wykończeniach wnętrz lub materiałach budowlanych.",
+            "Czytasz rzut pomieszczenia i rysunek techniczny i zadajesz właściwe pytania, gdy brakuje wymiaru.",
+            "Biegły polski i dobry angielski w mowie i piśmie; niemiecki, niderlandzki lub francuski to duży atut w kontaktach z klientami eksportowymi.",
+            "Zorganizowanie i dokładność: kompletne, poprawne zamówienie to Twój standard, nie dodatek.",
+            "Swobodna praca w Microsoft 365 (Outlook, Teams, Excel) i szybkie opanowanie CRM, panelu klienta i konfiguratora.",
+            "Życzliwy, konsekwentny styl follow-upu: domykasz każdą ofertę."
+          ]
+        },
+        "offer": {
+          "title": "Stabilna rola w rosnącej grupie.",
+          "items": [
+            {
+              "title": "Umowa na czas nieokreślony",
+              "sub": "Umowa o pracę na pełny etat w Alto Design Sp. z o.o."
+            },
+            {
+              "title": "Szkolenie produktowe",
+              "sub": "Praktyczne szkolenie w naszym zakładzie w Częstochowie i z zespołem w Beveren-Waas."
+            },
+            {
+              "title": "Praca stacjonarna",
+              "sub": "Stałe miejsce pracy przy ul. Legionów 59 w Częstochowie, od poniedziałku do piątku."
+            },
+            {
+              "title": "Międzynarodowy zespół",
+              "sub": "Codzienny kontakt z montażystami, dealerami i współpracownikami z całej Europy."
+            }
+          ],
+          "closing": "Poza pakietem: produkt wytwarzany u nas — nie importowany — bezpośredni kontakt z produkcją oraz przestrzeń, by rosnąć razem z polskim rynkiem i eksportem STRETCH Group."
+        },
+        "apply": {
+          "title": "Gotowy odpowiedzieć na kolejne zapytanie?",
+          "body": "Wyślij CV i krótki list motywacyjny po polsku lub po angielsku z tematem „Inside Sales”. Pierwsza rozmowa odbywa się w Alto Design w Częstochowie — z zarządem i ze współpracownikami, z którymi będziesz pracować na co dzień.",
+          "hours": "pn–pt · 08:30–17:00"
+        }
+      }
     }
   },
   "contactPage": {

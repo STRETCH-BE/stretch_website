@@ -181,6 +181,7 @@ export default function MobileMenu() {
               { href: '/architects', label: t('nav.architects') },
               { href: '/faq', label: t('nav.faq') },
               { href: '/about', label: t('nav.about') },
+              { href: '/careers', label: t('nav.careers') },
               { href: '/contact', label: t('nav.contact') },
               { href: '/portal', label: t('nav.clientLogin') },
             ]

@@ -109,7 +109,7 @@ src/
       layout.tsx            # Locale provider, header/footer chrome, analytics, modal
       page.tsx              # Home (10 sections)
       products/             # Solutions overview + 5 product routes (one folder each)
-      contact/  partners/  installer-training/  inspiration/
+      contact/  partners/  installer-training/  inspiration/  careers/  careers/[slug]/
       samples/  faq/  blog/  blog/[slug]/  about/  privacy/  terms/
       not-found.tsx
     api/
